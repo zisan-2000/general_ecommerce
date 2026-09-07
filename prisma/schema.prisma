@@ -3658,6 +3658,14 @@ model sitesettings {
   youtubeLink       String?
 }
 
+model StoreFeature {
+  id        Int             @id @default(autoincrement())
+  key       StoreFeatureKey @unique
+  enabled   Boolean         @default(false)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
 model Banner {
   id          Int        @id @default(autoincrement())
   title       String
@@ -4066,6 +4074,16 @@ model ActivityLog {
   @@index([entity, entityId])
   @@index([userId])
   @@index([createdAt])
+}
+
+enum StoreFeatureKey {
+  PC_BUILDER
+  BOOKS
+  AUTHORS
+  COMPARE
+  DIGITAL_PRODUCTS
+  SERVICE_PRODUCTS
+  BUNDLES
 }
 
 enum ProductType {
