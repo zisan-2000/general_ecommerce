@@ -233,7 +233,10 @@ test("all order terminal-status entry points use the atomic inventory lifecycle"
   assert.match(inventory, /buildOrderInventoryRestockPlan/);
   assert.match(inventory, /where: \{ orderId \}/);
   assert.match(inventory, /quantity: \{ increment: allocation\.quantity \}/);
-  assert.match(checkout, /deductVariantInventory\(\{ tx, orderId: o\.id,/);
+  assert.match(
+    checkout,
+    /deductVariantInventory\(\{\s*tx,\s*orderId:\s*o\.id,/,
+  );
   assert.match(lifecycle, /FOR UPDATE/);
   assert.match(lifecycle, /OrderStatus\.CANCELLED/);
   assert.match(lifecycle, /OrderStatus\.FAILED/);

@@ -76,7 +76,9 @@ test("checkout route performs replay lookup before stock validation and rechecks
     read("../prisma/migrations/20260903_order_checkout_idempotency/migration.sql"),
   ]);
 
-  const earlyReplay = route.indexOf("findExistingOrderIdempotencyOrderId(prisma");
+  const earlyReplay = route.search(
+    /findExistingOrderIdempotencyOrderId\(\s*prisma,\s*idempotency,?\s*\)/,
+  );
   const productLookup = route.indexOf("prisma.product.findMany");
 
   assert.ok(earlyReplay >= 0, "expected an early replay lookup");
@@ -85,8 +87,11 @@ test("checkout route performs replay lookup before stock validation and rechecks
     earlyReplay < productLookup,
     "idempotent replay must happen before product/stock checks",
   );
-  assert.match(route, /acquireOrderIdempotencyLock\(tx, idempotency\)/);
-  assert.match(route, /findExistingOrderIdempotencyOrderId\(tx, idempotency\)/);
+  assert.match(route, /acquireOrderIdempotencyLock\(\s*tx,\s*idempotency,?\s*\)/);
+  assert.match(
+    route,
+    /findExistingOrderIdempotencyOrderId\(\s*tx,\s*idempotency,?\s*\)/,
+  );
   assert.match(
     route,
     /commercialContext:\s*orderIdempotencyCommercialContext\(idempotency\)/,

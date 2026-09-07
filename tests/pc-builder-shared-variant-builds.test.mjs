@@ -112,8 +112,10 @@ test("cart identity migration and routes keep build-specific rows distinct", asy
   assert.match(cartRoute, /pcBuilderCartLineKey/);
   assert.match(cartRoute, /PC_BUILDER_CART_LINE_UNAVAILABLE/);
   assert.match(cartCore, /lineKey[\s\S]{0,30}standard/);
-  assert.match(orderCore, /Array\.from\(new Set/);
   assert.match(orderCore, /selectionQueues/);
+  assert.match(orderCore, /const queue = selectionQueues\.get\(selectionId\) \?\? \[\]/);
+  assert.match(orderCore, /const item = queue\?\.shift\(\)/);
+  assert.match(orderCore, /item\.quantity !== 1/);
   assert.match(context, /window\.location\.pathname\.includes\("\/pc-builder"\)/);
   assert.doesNotMatch(config, /"public\.CartItem"/);
   assert.match(config, /"public\.PcBuildCartItem"/);
