@@ -31,6 +31,5 @@ jobs:
           git add lib/book-metadata.ts 'app/api/book-metadata/[productId]/route.ts'
           git add scripts/verify-book-metadata.ts tests/book-module-decoupling.test.mjs
           git add docs/universal-ecommerce-phase8.md package.json
-          git add .github/workflows/universal-ecommerce-phase7.yml .github/workflows/universal-ecommerce-phase8.yml
           git commit -m 'feat: implement Phase 8 book module decoupling'
           git push origin HEAD:phase8-book-module-decoupling
