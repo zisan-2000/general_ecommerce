@@ -28,7 +28,14 @@ jobs:
 
       - name: Apply Phase 8 source patch
         run: |
-          sed -i 's/${label}/\\${label}/g' scripts/phase8-apply.mjs
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/phase8-apply.mjs')
+          s = p.read_text()
+          s = s.replace('${label}', '\\${label}')
+          s = s.replace(r'\\${name}', r'\\\${name}')
+          p.write_text(s)
+          PY
           node scripts/phase8-apply.mjs
 
       - name: Install dependencies
