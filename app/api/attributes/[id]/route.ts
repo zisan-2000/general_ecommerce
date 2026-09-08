@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { requireProductManager } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { parseAttributeDefinitionInput } from "@/lib/attribute-schema";
 import { NextResponse } from "next/server";
 
 /* =========================
@@ -20,14 +21,14 @@ export async function PUT(
       return NextResponse.json({ error: "Invalid id" }, { status: 400 });
     }
 
-    const body = await req.json();
-    const name = String(body.name || "").trim();
-    if (!name || name.length > 100) {
+    const parsed = parseAttributeDefinitionInput(await req.json());
+    if (!parsed.ok) {
       return NextResponse.json(
-        { error: "Name must be between 1 and 100 characters" },
+        { error: parsed.error },
         { status: 400 },
       );
     }
+    const { name, type, unit } = parsed.value;
     const duplicate = await prisma.attribute.findFirst({
       where: { name, id: { not: id } },
       select: { id: true },
@@ -41,7 +42,7 @@ export async function PUT(
 
     const updated = await prisma.attribute.update({
       where: { id },
-      data: { name },
+      data: { name, type, unit },
     });
 
     revalidateStorefrontCatalog();
@@ -75,6 +76,7 @@ export async function DELETE(
 
     await prisma.$transaction(async (tx) => {
       await tx.productAttribute.deleteMany({ where: { attributeId: id } });
+      await tx.categoryAttribute.deleteMany({ where: { attributeId: id } });
       await tx.attributeValue.deleteMany({ where: { attributeId: id } });
       await tx.attribute.delete({ where: { id } });
     });

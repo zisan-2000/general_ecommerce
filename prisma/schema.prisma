@@ -298,17 +298,18 @@ model Publisher {
 }
 
 model Category {
-  id        Int        @id @default(autoincrement())
-  name      String
-  slug      String     @unique
-  image     String?
-  parentId  Int?
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
-  deleted   Boolean    @default(false)
-  parent    Category?  @relation("CategoryToCategory", fields: [parentId], references: [id])
-  children  Category[] @relation("CategoryToCategory")
-  products  Product[]
+  id                 Int                 @id @default(autoincrement())
+  name               String
+  slug               String              @unique
+  image              String?
+  parentId           Int?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  deleted            Boolean             @default(false)
+  parent             Category?           @relation("CategoryToCategory", fields: [parentId], references: [id])
+  children           Category[]          @relation("CategoryToCategory")
+  products           Product[]
+  categoryAttributes CategoryAttribute[]
 
   @@index([parentId])
 }
@@ -562,29 +563,57 @@ model DownloadLog {
 }
 
 model Attribute {
-  id                Int                @id @default(autoincrement())
-  name              String
-  values            AttributeValue[]
-  productAttributes ProductAttribute[]
+  id                 Int                 @id @default(autoincrement())
+  name               String
+  type               AttributeType       @default(SELECT)
+  unit               String?
+  values             AttributeValue[]
+  productAttributes  ProductAttribute[]
+  categoryAttributes CategoryAttribute[]
 }
 
 model AttributeValue {
-  id          Int       @id @default(autoincrement())
-  value       String
-  attributeId Int
-  attribute   Attribute @relation(fields: [attributeId], references: [id])
+  id                Int                @id @default(autoincrement())
+  value             String
+  attributeId       Int
+  attribute         Attribute          @relation(fields: [attributeId], references: [id])
+  productAttributes ProductAttribute[]
+}
+
+model CategoryAttribute {
+  id           Int       @id @default(autoincrement())
+  categoryId   Int
+  attributeId  Int
+  isRequired   Boolean   @default(false)
+  isFilterable Boolean   @default(true)
+  isVariant    Boolean   @default(false)
+  sortOrder    Int       @default(0)
+  attribute    Attribute @relation(fields: [attributeId], references: [id], onDelete: Cascade)
+  category     Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, attributeId])
+  @@index([categoryId, sortOrder])
+  @@index([attributeId])
 }
 
 model ProductAttribute {
-  id          Int       @id @default(autoincrement())
-  productId   Int
-  attributeId Int
-  value       String
-  attribute   Attribute @relation(fields: [attributeId], references: [id])
-  product     Product   @relation(fields: [productId], references: [id])
+  id               Int             @id @default(autoincrement())
+  productId        Int
+  attributeId      Int
+  value            String
+  valueText        String?
+  valueNumber      Decimal?        @db.Decimal(18, 6)
+  valueBoolean     Boolean?
+  attributeValueId Int?
+  attribute        Attribute       @relation(fields: [attributeId], references: [id])
+  attributeValue   AttributeValue? @relation(fields: [attributeValueId], references: [id], onDelete: SetNull)
+  product          Product         @relation(fields: [productId], references: [id])
 
   @@index([attributeId, value], map: "Catalog_ProductAttribute_attribute_value_idx")
   @@index([productId, attributeId], map: "Catalog_ProductAttribute_product_attribute_idx")
+  @@index([attributeId, valueNumber])
+  @@index([attributeId, valueBoolean])
+  @@index([attributeValueId])
 }
 
 model VatClass {
@@ -4091,6 +4120,15 @@ enum ProductType {
   DIGITAL
   SERVICE
   BUNDLE
+}
+
+enum AttributeType {
+  TEXT
+  NUMBER
+  SELECT
+  MULTI_SELECT
+  BOOLEAN
+  COLOR
 }
 
 enum InventoryItemClass {

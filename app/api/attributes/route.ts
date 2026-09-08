@@ -4,6 +4,7 @@ import {
   requireProductManager,
 } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { parseAttributeDefinitionInput } from "@/lib/attribute-schema";
 import { NextResponse } from "next/server";
 
 /* =========================
@@ -22,6 +23,10 @@ export async function GET() {
       include: {
         values: {
           orderBy: { id: "desc" },
+        },
+        categoryAttributes: {
+          orderBy: [{ sortOrder: "asc" }, { id: "asc" }],
+          include: { category: { select: { id: true, name: true, slug: true } } },
         },
       },
     });
@@ -44,14 +49,14 @@ export async function POST(req: Request) {
     const denied = await requireProductManager();
     if (denied) return denied;
 
-    const body = await req.json();
-    const name = String(body.name || "").trim();
-    if (!name || name.length > 100) {
+    const parsed = parseAttributeDefinitionInput(await req.json());
+    if (!parsed.ok) {
       return NextResponse.json(
-        { error: "Name must be between 1 and 100 characters" },
+        { error: parsed.error },
         { status: 400 },
       );
     }
+    const { name, type, unit } = parsed.value;
     const existing = await prisma.attribute.findFirst({
       where: { name },
       select: { id: true },
@@ -64,7 +69,7 @@ export async function POST(req: Request) {
     }
 
     const created = await prisma.attribute.create({
-      data: { name },
+      data: { name, type, unit },
     });
 
     revalidateStorefrontCatalog();

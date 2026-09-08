@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { requireProductManager } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { NextResponse } from "next/server";
+import { buildTypedProductAttributeData } from "@/lib/attribute-schema";
 
 /* =========================
    GET PRODUCT ATTRIBUTES
@@ -83,7 +84,11 @@ export async function POST(req: Request) {
       }),
       prisma.attribute.findUnique({
         where: { id: attributeId },
-        select: { id: true },
+        select: {
+          id: true,
+          type: true,
+          values: { select: { id: true, value: true } },
+        },
       }),
       prisma.productAttribute.findFirst({
         where: { productId, attributeId },
@@ -97,15 +102,16 @@ export async function POST(req: Request) {
         { status: 404 },
       );
     }
+    const storage = buildTypedProductAttributeData(attribute, value);
 
     const created = existing
       ? await prisma.productAttribute.update({
           where: { id: existing.id },
-          data: { value },
+          data: storage,
           include: { attribute: true },
         })
       : await prisma.productAttribute.create({
-          data: { productId, attributeId, value },
+          data: { productId, attributeId, ...storage },
           include: { attribute: true },
         });
 

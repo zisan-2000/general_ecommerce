@@ -23,6 +23,7 @@ import { storefrontProductSelect } from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import { buildProductAttributeStorageRows } from "@/lib/attribute-schema";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 const createVariantSku = (slug: string, index: number) =>
@@ -354,18 +355,28 @@ export async function POST(req: Request) {
       );
     }
     const productAttributes = parsedProductAttributes.value;
+    let productAttributeRows: ReturnType<typeof buildProductAttributeStorageRows> = [];
     if (productAttributes.length > 0) {
-      const attributeCount = await prisma.attribute.count({
+      const attributeDefinitions = await prisma.attribute.findMany({
         where: {
           id: { in: productAttributes.map((item) => item.attributeId) },
         },
+        select: {
+          id: true,
+          type: true,
+          values: { select: { id: true, value: true } },
+        },
       });
-      if (attributeCount !== productAttributes.length) {
+      if (attributeDefinitions.length !== productAttributes.length) {
         return NextResponse.json(
           { error: "One or more product attributes do not exist" },
           { status: 400 },
         );
       }
+      productAttributeRows = buildProductAttributeStorageRows(
+        productAttributes,
+        attributeDefinitions,
+      );
     }
 
     const variantsInput = Array.isArray(body.variants) ? body.variants : [];
@@ -497,15 +508,12 @@ export async function POST(req: Request) {
         },
       });
 
-      if (productAttributes.length > 0) {
+      if (productAttributeRows.length > 0) {
         await tx.productAttribute.createMany({
-          data: productAttributes.map(
-            (item: { attributeId: number; value: string }) => ({
-              productId: created.id,
-              attributeId: item.attributeId,
-              value: item.value,
-            })
-          ),
+          data: productAttributeRows.map((item) => ({
+            productId: created.id,
+            ...item,
+          })),
         });
       }
 

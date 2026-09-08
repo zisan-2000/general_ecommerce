@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { requireProductManager } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { NextResponse } from "next/server";
+import { buildTypedProductAttributeData } from "@/lib/attribute-schema";
 
 /* =========================
    UPDATE PRODUCT ATTRIBUTE
@@ -31,7 +32,16 @@ export async function PUT(
 
     const existing = await prisma.productAttribute.findUnique({
       where: { id },
-      select: { id: true },
+      select: {
+        id: true,
+        attribute: {
+          select: {
+            id: true,
+            type: true,
+            values: { select: { id: true, value: true } },
+          },
+        },
+      },
     });
     if (!existing) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
@@ -39,7 +49,7 @@ export async function PUT(
 
     const updated = await prisma.productAttribute.update({
       where: { id },
-      data: { value },
+      data: buildTypedProductAttributeData(existing.attribute, value),
       include: { attribute: true },
     });
 

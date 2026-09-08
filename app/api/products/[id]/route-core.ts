@@ -24,6 +24,7 @@ import {
   parseProductAvailabilityPatch,
 } from "@/lib/product-availability";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import { buildProductAttributeStorageRows } from "@/lib/attribute-schema";
 import {
   gateProductType,
   getDisabledStorefrontProductTypes,
@@ -385,16 +386,27 @@ export async function PUT(
       );
     }
     const nextAttributes = parsedNextAttributes?.value ?? null;
+    let nextAttributeRows: ReturnType<typeof buildProductAttributeStorageRows> | null =
+      nextAttributes === null ? null : [];
     if (nextAttributes && nextAttributes.length > 0) {
-      const attributeCount = await prisma.attribute.count({
+      const attributeDefinitions = await prisma.attribute.findMany({
         where: { id: { in: nextAttributes.map((item) => item.attributeId) } },
+        select: {
+          id: true,
+          type: true,
+          values: { select: { id: true, value: true } },
+        },
       });
-      if (attributeCount !== nextAttributes.length) {
+      if (attributeDefinitions.length !== nextAttributes.length) {
         return NextResponse.json(
           { error: "One or more product attributes do not exist" },
           { status: 400 },
         );
       }
+      nextAttributeRows = buildProductAttributeStorageRows(
+        nextAttributes,
+        attributeDefinitions,
+      );
     }
 
     const hasVariantOptionsPayload = body.variantOptions !== undefined;
@@ -533,14 +545,13 @@ export async function PUT(
         },
       });
 
-      if (nextAttributes !== null) {
+      if (nextAttributeRows !== null) {
         await tx.productAttribute.deleteMany({ where: { productId: id } });
-        if (nextAttributes.length > 0) {
+        if (nextAttributeRows.length > 0) {
           await tx.productAttribute.createMany({
-            data: nextAttributes.map((item: (typeof nextAttributes)[number]) => ({
+            data: nextAttributeRows.map((item) => ({
               productId: id,
-              attributeId: item.attributeId,
-              value: item.value,
+              ...item,
             })),
           });
         }
