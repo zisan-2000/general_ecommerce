@@ -50,7 +50,8 @@ function buildCurrencyParts(settings: StorefrontCurrencySettings) {
   const currencyToken =
     currencyFormatter.formatToParts(0).find((part) => part.type === "currency")
       ?.value ?? safeCurrency;
-  const fractionDigits = currencyFormatter.resolvedOptions().maximumFractionDigits;
+  const fractionDigits =
+    currencyFormatter.resolvedOptions().maximumFractionDigits ?? 2;
   const numberFormatter = new Intl.NumberFormat(safeLocale, {
     minimumFractionDigits: 0,
     maximumFractionDigits: Math.min(2, fractionDigits),
