@@ -28,46 +28,11 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Normalize storefront home patch target
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('lib/storefront-home.ts')
-          source = path.read_text()
-          before = '''        prisma.category.findMany({
-          where: { deleted: false },
-          orderBy: { id: "desc" },
-          select: {
-            id: true,
-            name: true,
-            slug: true,
-            image: true,
-            parentId: true,'''
-          after = '''      prisma.category.findMany({
-        where: { deleted: false, isActive: true },
-        orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
-        select: {
-          id: true,
-          name: true,
-          slug: true,
-          image: true,
-          parentId: true,
-          isActive: true,
-          sortOrder: true,
-          showInHeader: true,
-          showInFooter: true,
-          featured: true,'''
-          if after not in source:
-              if before not in source:
-                  raise SystemExit('storefront-home category projection target not found')
-              path.write_text(source.replace(before, after, 1))
-          PY
-
       - name: Apply deterministic Phase 6 patches
-        run: node scripts/phase6-apply-source-patches.mjs
+        run: node scripts/phase6-apply-source-patches-v2.mjs
 
-      - name: Remove temporary patch runner
-        run: rm scripts/phase6-apply-source-patches.mjs .github/workflows/phase6-apply-and-verify.yml
+      - name: Remove temporary patch runners
+        run: rm scripts/phase6-apply-source-patches.mjs scripts/phase6-apply-source-patches-v2.mjs .github/workflows/phase6-apply-and-verify.yml
 
       - name: Install dependencies
         run: npm ci
