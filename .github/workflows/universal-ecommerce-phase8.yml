@@ -1,4 +1,4 @@
-name: Universal Ecommerce Phase 7
+name: Universal Ecommerce Phase 8
 
 on:
   pull_request:
@@ -10,10 +10,11 @@ on:
       - "providers/**"
       - "scripts/**"
       - "tests/**"
+      - "docs/universal-ecommerce-phase8.md"
       - "prisma/**"
       - "package.json"
       - "package-lock.json"
-      - ".github/workflows/universal-ecommerce-phase7.yml"
+      - ".github/workflows/universal-ecommerce-phase8.yml"
   push:
     branches:
       - main
@@ -25,23 +26,24 @@ on:
       - "providers/**"
       - "scripts/**"
       - "tests/**"
+      - "docs/universal-ecommerce-phase8.md"
       - "prisma/**"
       - "package.json"
       - "package-lock.json"
-      - ".github/workflows/universal-ecommerce-phase7.yml"
+      - ".github/workflows/universal-ecommerce-phase8.yml"
 
 permissions:
   contents: read
 
 concurrency:
-  group: universal-ecommerce-phase7-${{ github.ref }}
+  group: universal-ecommerce-phase8-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify:
-    name: Phase 1-7 release gate
+    name: Phase 1-8 release gate
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     env:
       NODE_OPTIONS: --max-old-space-size=6144
       DATABASE_URL: postgresql://schema_validation:schema_validation@127.0.0.1:5432/schema_validation
@@ -49,11 +51,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -64,6 +68,9 @@ jobs:
 
       - name: Generate Prisma client
         run: npx prisma generate
+
+      - name: Generate Next route types
+        run: npx next typegen
 
       - name: Universal baseline
         run: npm run test:universal-baseline
@@ -92,8 +99,14 @@ jobs:
       - name: Phase 7 completion contract
         run: npx tsx --test tests/phase7-completion.test.mjs
 
+      - name: Universal Phase 8
+        run: npm run test:universal-phase8
+
       - name: Lint
         run: npm run lint
 
-      - name: TypeScript no-new-errors gate
-        run: node scripts/typecheck-universal.mjs
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Check whitespace
+        run: git diff --check HEAD^ HEAD

@@ -284,7 +284,7 @@ model Writer {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deleted   Boolean   @default(false)
-  products  Product[]
+  bookMetadata BookMetadata[]
 }
 
 model Publisher {
@@ -294,7 +294,7 @@ model Publisher {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deleted   Boolean   @default(false)
-  products  Product[]
+  bookMetadata BookMetadata[]
 }
 
 model Category {
@@ -341,8 +341,6 @@ model Product {
   sku                     String?                           @unique
   categoryId              Int
   brandId                 Int?
-  writerId                Int?
-  publisherId             Int?
   description             String
   shortDesc               String?
   basePrice               Decimal                           @db.Decimal(10, 2)
@@ -385,8 +383,7 @@ model Product {
   brand                   Brand?                            @relation(fields: [brandId], references: [id])
   category                Category                          @relation(fields: [categoryId], references: [id])
   digitalAsset            DigitalAsset?                     @relation("ProductDigitalAsset", fields: [digitalAssetId], references: [id])
-  publisher               Publisher?                        @relation(fields: [publisherId], references: [id])
-  writer                  Writer?                           @relation(fields: [writerId], references: [id])
+  bookMetadata            BookMetadata?
   attributes              ProductAttribute[]
   codes                   ProductCode[]
   variants                ProductVariant[]
@@ -407,8 +404,21 @@ model Product {
   @@index([deleted, available, flashSaleEnabled, flashSaleStartsAt, flashSaleEndsAt])
   @@index([categoryId, deleted, available])
   @@index([brandId, deleted, available])
-  @@index([writerId, deleted, available])
-  @@index([publisherId, deleted, available])
+}
+
+model BookMetadata {
+  id          Int        @id @default(autoincrement())
+  productId   Int        @unique
+  writerId    Int?
+  publisherId Int?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  product     Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  writer      Writer?    @relation(fields: [writerId], references: [id], onDelete: SetNull)
+  publisher   Publisher? @relation(fields: [publisherId], references: [id], onDelete: SetNull)
+
+  @@index([writerId])
+  @@index([publisherId])
 }
 
 model ProductBundleItem {
