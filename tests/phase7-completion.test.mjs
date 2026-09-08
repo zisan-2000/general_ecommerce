@@ -31,13 +31,13 @@ test("storefront settings provider honors currency code, placement and locale", 
   assert.match(provider, /formatCurrency/);
 });
 
-test("Phase 7 CI uses legacy peer resolution and cumulative no-new-errors verification", async () => {
-  const workflow = await read(".github/workflows/universal-ecommerce-phase7.yml");
+test("Phase 7 guarantees remain enforced by the cumulative successor CI", async () => {
+  const workflow = await read(".github/workflows/universal-ecommerce-phase8.yml");
   const typecheck = await read("scripts/typecheck-universal.mjs");
   assert.match(workflow, /npm ci --legacy-peer-deps --ignore-scripts/);
   assert.match(workflow, /test:universal-phase7/);
   assert.match(workflow, /phase7-completion\.test\.mjs/);
-  assert.match(workflow, /typecheck-universal\.mjs/);
+  assert.match(workflow, /npx tsc --noEmit/);
   assert.match(typecheck, /ALLOWED_BASELINE_FILES/);
   assert.match(typecheck, /new or unrecognized diagnostics detected/);
 });
