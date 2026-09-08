@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCart } from "@/components/ecommarce/CartContext";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 type ProductVariant = {
   id?: number | string;
@@ -74,13 +75,11 @@ type Props = {
   onCompareClick?: () => void | Promise<void>;
   compared?: boolean;
   onAddToCart?: () => void | Promise<unknown>;
+  /** @deprecated Storefront currency formatting is controlled by Site Settings. */
   formatPrice?: (value: number) => string;
   className?: string;
   imagePriority?: boolean;
 };
-
-const defaultFormatPrice = (value: number) =>
-  `৳${Math.round(value).toLocaleString("en-US")}`;
 
 const HEX_COLOR_REGEX = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
 const CSS_COLOR_FUNCTION_REGEX = /^(?:rgb|rgba|hsl|hsla)\(/i;
@@ -228,7 +227,6 @@ export default function ProductCardCompact({
   onCompareClick,
   compared = false,
   onAddToCart,
-  formatPrice = defaultFormatPrice,
   addToCartLabel = "Add To Cart",
   primaryAction = "add-to-cart",
   className,
@@ -241,6 +239,7 @@ export default function ProductCardCompact({
   );
   const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
   const { addToCart } = useCart();
+  const { formatCurrency } = useStorefrontSettings();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const imageFrameRef = useRef<HTMLDivElement>(null);
 
@@ -299,10 +298,8 @@ export default function ProductCardCompact({
       const startX = buttonRect ? buttonRect.left + buttonRect.width / 2 : 0;
       const startY = buttonRect ? buttonRect.top + buttonRect.height / 2 : 0;
 
-      // If custom onAddToCart is provided, use it
       if (onAddToCart) {
         await Promise.resolve(onAddToCart());
-        // Dispatch event for animation even when using custom callback
         if (typeof window !== "undefined") {
           window.dispatchEvent(
             new CustomEvent("cart-item-added", {
@@ -323,7 +320,6 @@ export default function ProductCardCompact({
           );
         }
       } else {
-        // Use context's addToCart with animation data
         addToCart(product.id, 1, undefined, {
           startX,
           startY,
@@ -380,7 +376,7 @@ export default function ProductCardCompact({
         <div className="pointer-events-none absolute left-3 top-3 z-20 flex flex-col items-start gap-1.5">
           {showSavingsSticker ? (
             <span className="rounded bg-emerald-700 px-2 py-1 text-[10px] font-bold leading-none text-white shadow-sm sm:text-[11px]">
-              Save: {formatPrice(savingsAmount)}
+              Save: {formatCurrency(savingsAmount)}
             </span>
           ) : null}
           {isBestSeller ? (
@@ -496,11 +492,11 @@ export default function ProductCardCompact({
 
         <div className="mt-auto flex min-h-[36px] flex-wrap items-end justify-center gap-x-2 pt-2 text-center">
           <span className="text-[17px] font-bold leading-none text-rose-600 sm:text-[18px]">
-            {formatPrice(product.price)}
+            {formatCurrency(product.price)}
           </span>
           {showOriginal ? (
             <span className="text-[11px] leading-none text-muted-foreground line-through sm:text-[12px]">
-              {formatPrice(Number(product.originalPrice))}
+              {formatCurrency(Number(product.originalPrice))}
             </span>
           ) : null}
         </div>
