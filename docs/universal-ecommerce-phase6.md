@@ -42,7 +42,7 @@ Deleted categories are marked inactive during backfill.
 5. Open Admin → Management → Categories and verify Active, Header, Footer, Featured and Sort Order controls.
 6. Verify header, footer and homepage categories on desktop and mobile.
 
-The Phase 6 merge gate must pass the cumulative Phase 1–6 regression suite, Prisma validation and TypeScript checking before `main` is updated. The gate also applies deterministic source patches to large existing files before executing verification.
+The Phase 6 merge gate must pass the cumulative Phase 1–6 regression suite, Prisma validation and TypeScript checking before `main` is updated. The gate also applies deterministic source patches to large existing files before executing verification. CI installs from the existing lockfile with legacy peer-dependency resolution because the repository currently carries a pre-existing `next-auth`/`nodemailer` peer-version mismatch; Phase 6 does not change those dependencies.
 
 ## Restore strategy
 
