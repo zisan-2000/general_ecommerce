@@ -42,7 +42,7 @@ Deleted categories are marked inactive during backfill.
 5. Open Admin → Management → Categories and verify Active, Header, Footer, Featured and Sort Order controls.
 6. Verify header, footer and homepage categories on desktop and mobile.
 
-The Phase 6 merge gate must pass the cumulative Phase 1–6 regression suite, Prisma validation and TypeScript checking before `main` is updated.
+The Phase 6 merge gate must pass the cumulative Phase 1–6 regression suite, Prisma validation and TypeScript checking before `main` is updated. The gate also applies deterministic source patches to large existing files before executing verification.
 
 ## Restore strategy
 
