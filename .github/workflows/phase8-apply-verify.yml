@@ -27,7 +27,9 @@ jobs:
           cache: npm
 
       - name: Apply Phase 8 source patch
-        run: node scripts/phase8-apply.mjs
+        run: |
+          sed -i 's/${label}/\\${label}/g' scripts/phase8-apply.mjs
+          node scripts/phase8-apply.mjs
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps --ignore-scripts
