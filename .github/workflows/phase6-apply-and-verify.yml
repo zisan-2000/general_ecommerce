@@ -1,0 +1,59 @@
+name: Phase 6 Apply and Verify
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  phase6:
+    if: github.head_ref == 'phase6-dynamic-category-navigation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DATABASE_URL: postgresql://schema_validation:schema_validation@127.0.0.1:5432/schema_validation
+
+    steps:
+      - name: Checkout Phase 6 branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Apply deterministic Phase 6 patches
+        run: node scripts/phase6-apply-source-patches.mjs
+
+      - name: Remove temporary patch runner
+        run: rm scripts/phase6-apply-source-patches.mjs .github/workflows/phase6-apply-and-verify.yml
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Verify Phase 1 through Phase 6
+        run: npm run verify:universal-phase6
+
+      - name: Check patch whitespace
+        run: git diff --check
+
+      - name: Commit verified Phase 6 source patch
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No generated source patch changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: implement Phase 6 dynamic category navigation"
+          git push origin HEAD:${{ github.head_ref }}
