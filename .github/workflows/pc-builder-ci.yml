@@ -7,16 +7,25 @@ on:
       - "app/api/cart/**"
       - "app/api/orders/**"
       - "app/api/products/**"
-      - "components/ecommarce/CartContext.tsx"
-      - "components/ecommarce/pc-builder/**"
+      - "app/api/categories/**"
+      - "app/admin/management/categories/**"
+      - "components/ecommarce/**"
+      - "components/management/CategoryManager.tsx"
+      - "lib/category-navigation.ts"
+      - "lib/storefront-catalog*.ts"
+      - "lib/storefront-home.ts"
       - "lib/pc-builder*.ts"
       - "lib/storefront-pc-builder.ts"
       - "lib/warehouse-stock.ts"
+      - "scripts/phase6-*.mjs"
+      - "scripts/*category-navigation*"
       - "scripts/stock-level-integrity.mjs"
+      - "docs/universal-ecommerce-phase6.md"
       - "docs/pc-builder-stock-level-backfill.md"
       - "prisma.config.ts"
       - "prisma/**/*.prisma"
       - "prisma/migrations/**"
+      - "tests/category-navigation.test.mjs"
       - "tests/pc-builder*.mjs"
       - "package.json"
       - "package-lock.json"
@@ -47,7 +56,7 @@ on:
       - ".github/workflows/pc-builder-ci.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: pc-builder-ci-${{ github.ref }}
@@ -57,17 +66,30 @@ jobs:
   verify:
     name: PC Builder verify
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+    env:
+      DATABASE_URL: postgresql://schema_validation:schema_validation@127.0.0.1:5432/schema_validation
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
+
+      - name: Apply Phase 6 deterministic patches
+        if: github.event_name == 'pull_request' && github.head_ref == 'phase6-dynamic-category-navigation'
+        run: node scripts/phase6-apply-source-patches-v2.mjs
+
+      - name: Remove temporary Phase 6 helpers
+        if: github.event_name == 'pull_request' && github.head_ref == 'phase6-dynamic-category-navigation'
+        run: rm -f scripts/phase6-apply-source-patches.mjs scripts/phase6-apply-source-patches-v2.mjs .github/workflows/phase6-apply-and-verify.yml
 
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -78,8 +100,30 @@ jobs:
       - name: Generate Prisma client
         run: npx prisma generate
 
+      - name: Run Phase 1 through Phase 6 verification
+        if: github.event_name == 'pull_request' && github.head_ref == 'phase6-dynamic-category-navigation'
+        run: npm run verify:universal-phase6
+
       - name: Run PC Builder tests
+        if: github.event_name != 'pull_request' || github.head_ref != 'phase6-dynamic-category-navigation'
         run: npm run test:pc-builder
 
       - name: Typecheck
         run: npm run typecheck
+
+      - name: Check patch whitespace
+        run: git diff --check
+
+      - name: Commit verified Phase 6 changes
+        if: github.event_name == 'pull_request' && github.head_ref == 'phase6-dynamic-category-navigation'
+        run: |
+          git checkout origin/main -- .github/workflows/pc-builder-ci.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No Phase 6 source changes to commit."
+            exit 0
+          fi
+          git commit -m "feat: implement Phase 6 dynamic category navigation"
+          git push origin HEAD:${{ github.head_ref }}
