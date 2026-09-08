@@ -140,15 +140,20 @@ const readStorefrontHomeData = unstable_cache(
           take: 20,
           select: storefrontHomeProductSelect,
         }),
-        prisma.category.findMany({
-          where: { deleted: false },
-          orderBy: { id: "desc" },
-          select: {
-            id: true,
-            name: true,
-            slug: true,
-            image: true,
-            parentId: true,
+      prisma.category.findMany({
+        where: { deleted: false, isActive: true },
+        orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          image: true,
+          parentId: true,
+          isActive: true,
+          sortOrder: true,
+          showInHeader: true,
+          showInFooter: true,
+          featured: true,
             _count: {
               select: {
                 products: {
@@ -254,6 +259,11 @@ const readStorefrontHomeData = unstable_cache(
         slug: category.slug,
         image: category.image,
         parentId: category.parentId,
+        isActive: category.isActive,
+        sortOrder: category.sortOrder,
+        showInHeader: category.showInHeader,
+        showInFooter: category.showInFooter,
+        featured: category.featured,
         parentName:
           category.parentId === null
             ? null

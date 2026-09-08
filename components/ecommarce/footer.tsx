@@ -5,6 +5,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
 import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
+import {
+  compareCategoryNavigation,
+  getEffectiveCategoryNavigationIds,
+} from "@/lib/category-navigation";
 import SpotlightCard from "../SpotlightCard";
 import {
   Facebook,
@@ -34,7 +38,37 @@ type ApiCategory = {
   name: string;
   slug?: string | null;
   parentId?: number | string | null;
+  isActive?: boolean;
+  sortOrder?: number;
+  showInHeader?: boolean;
+  showInFooter?: boolean;
+  featured?: boolean;
 };
+
+function footerCategoryLinks(input: ApiCategory[]) {
+  const normalized = input.map((category) => ({
+    ...category,
+    id: Number(category.id),
+    parentId:
+      category.parentId === null || category.parentId === undefined
+        ? null
+        : Number(category.parentId),
+    isActive: category.isActive !== false,
+    sortOrder: Number.isInteger(Number(category.sortOrder)) ? Number(category.sortOrder) : 0,
+    showInHeader: category.showInHeader !== false,
+    showInFooter: category.showInFooter !== false,
+    featured: category.featured === true,
+  })).filter((category) => Number.isFinite(category.id));
+  const visibleIds = getEffectiveCategoryNavigationIds(normalized, "footer");
+  return normalized
+    .filter((category) => category.parentId === null && visibleIds.has(category.id))
+    .sort(compareCategoryNavigation)
+    .map((category) => ({
+      href: `/ecommerce/products?category=${encodeURIComponent(String(category.slug ?? category.id))}`,
+      label: String(category.name ?? "").trim(),
+    }))
+    .filter((category) => category.label);
+}
 
 type SiteSettings = {
   logo?: string | null;
@@ -87,15 +121,7 @@ export default function Footer({
   // ✅ categories from API
   const [categories, setCategories] = useState<
     Array<{ href: string; label: string }>
-  >(() =>
-    (categoriesData ?? [])
-      .filter((category) => category.parentId === null)
-      .map((category) => ({
-        href: `/ecommerce/products?category=${encodeURIComponent(String(category.slug ?? category.id))}`,
-        label: String(category.name ?? ""),
-      }))
-      .filter((category) => category.label),
-  );
+  >(() => footerCategoryLinks(categoriesData ?? []));
 
   useEffect(() => {
     let mounted = true;
@@ -111,25 +137,7 @@ export default function Footer({
 
         const list = Array.isArray(data) ? data : [];
 
-        // optional: show only root categories (parentId null)
-        const roots = list.filter(
-          (c) => c.parentId === null || c.parentId === undefined,
-        );
-
-        const mapped = roots
-          .map((c) => {
-            const id = Number(c.id);
-            const label = String(c.name ?? "").trim();
-            if (!label || !Number.isFinite(id)) return null;
-
-            return {
-              href: `/ecommerce/products?category=${encodeURIComponent(String(c.slug ?? id))}`,
-              label,
-            };
-          })
-          .filter(Boolean) as Array<{ href: string; label: string }>;
-
-        setCategories(mapped);
+        setCategories(footerCategoryLinks(list));
       } catch (e) {
         // fail silently in footer
         console.error("Failed to load categories:", e);

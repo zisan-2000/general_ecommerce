@@ -18,6 +18,11 @@ type CategoryDTO = {
   createdAt?: string;
   updatedAt?: string;
   deleted?: boolean;
+  isActive?: boolean;
+  sortOrder?: number;
+  showInHeader?: boolean;
+  showInFooter?: boolean;
+  featured?: boolean;
 };
 
 function cn(...classes: Array<string | false | null | undefined>) {
@@ -141,9 +146,16 @@ export default function FeaturedCategories({
   }, [categoriesData]);
 
   const firstParentCategories = useMemo(() => {
-    return cats
-      .filter((item) => item.parentId === null && !item.deleted)
-      .slice(0, 5);
+    const roots = cats
+      .filter((item) => item.parentId === null && !item.deleted && item.isActive !== false)
+      .sort(
+        (a, b) =>
+          Number(a.sortOrder ?? 0) - Number(b.sortOrder ?? 0) ||
+          a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" }) ||
+          a.id - b.id,
+      );
+    const configured = roots.filter((item) => item.featured === true);
+    return (configured.length > 0 ? configured : roots).slice(0, 5);
   }, [cats]);
 
   const featuredCategory = firstParentCategories[0];

@@ -303,6 +303,11 @@ model Category {
   slug               String              @unique
   image              String?
   parentId           Int?
+  isActive           Boolean             @default(true)
+  sortOrder          Int                 @default(0)
+  showInHeader       Boolean             @default(true)
+  showInFooter       Boolean             @default(true)
+  featured           Boolean             @default(false)
   createdAt          DateTime            @default(now())
   updatedAt          DateTime            @updatedAt
   deleted            Boolean             @default(false)
@@ -312,6 +317,9 @@ model Category {
   categoryAttributes CategoryAttribute[]
 
   @@index([parentId])
+  @@index([isActive, showInHeader, sortOrder])
+  @@index([isActive, showInFooter, sortOrder])
+  @@index([isActive, featured, sortOrder])
 }
 
 model Brand {

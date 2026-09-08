@@ -41,6 +41,10 @@ import { useCart } from "@/components/ecommarce/CartContext";
 import { useWishlist } from "@/components/ecommarce/WishlistContext";
 
 import { useProductCompare } from "@/hooks/use-product-compare";
+import {
+  compareCategoryNavigation,
+  getEffectiveCategoryNavigationIds,
+} from "@/lib/category-navigation";
 
 import {
   DropdownMenu,
@@ -114,30 +118,21 @@ interface CategoryDTO {
   image?: string | null;
 
   parentId: number | null;
+
+  isActive: boolean;
+
+  sortOrder: number;
+
+  showInHeader: boolean;
+
+  showInFooter: boolean;
+
+  featured: boolean;
 }
 
 interface CategoryNode extends CategoryDTO {
   children: CategoryNode[];
 }
-
-const DESKTOP_CATEGORY_ORDER = [
-  "laptop",
-  "desktop-pc",
-  "components",
-  "accessories",
-  "monitor",
-  "networking",
-  "office-equipment",
-  "smart-gadget",
-  "cameras",
-  "television",
-  "power",
-  "security",
-  "gaming",
-  "home-appliance",
-  "software",
-  "servers",
-] as const;
 
 function normalizeCategoryList(list: CategoryDTO[]): CategoryDTO[] {
   return Array.isArray(list)
@@ -149,6 +144,16 @@ function normalizeCategoryList(list: CategoryDTO[]): CategoryDTO[] {
         slug: String(c.slug),
 
         image: c.image ?? null,
+
+        isActive: c.isActive !== false,
+
+        sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
+
+        showInHeader: c.showInHeader !== false,
+
+        showInFooter: c.showInFooter !== false,
+
+        featured: c.featured === true,
 
         parentId: (() => {
           const rawParentId = c.parentId ?? c.parent_id;
@@ -191,44 +196,28 @@ type SiteSettings = {
 };
 
 function buildCategoryTree(list: CategoryDTO[]): CategoryNode[] {
+  const visibleIds = getEffectiveCategoryNavigationIds(list, "header");
+  const visible = list.filter((category) => visibleIds.has(category.id));
   const map = new Map<number, CategoryNode>();
 
-  list.forEach((c) => map.set(c.id, { ...c, children: [] }));
+  visible.forEach((category) =>
+    map.set(category.id, { ...category, children: [] }),
+  );
 
   const roots: CategoryNode[] = [];
-
   map.forEach((node) => {
-    if (
-      node.parentId !== null &&
-      node.parentId !== undefined &&
-      map.has(node.parentId)
-    ) {
+    if (node.parentId !== null && map.has(node.parentId)) {
       map.get(node.parentId)!.children.push(node);
-
       return;
     }
-
     roots.push(node);
   });
 
-  const sortRec = (arr: CategoryNode[]) => {
-    arr.sort((a, b) => a.name.localeCompare(b.name, "bn"));
-
-    arr.forEach((x) => sortRec(x.children));
+  const sortRec = (items: CategoryNode[]) => {
+    items.sort(compareCategoryNavigation);
+    items.forEach((item) => sortRec(item.children));
   };
-
   sortRec(roots);
-
-  roots.sort((a, b) => {
-    const aRank = DESKTOP_CATEGORY_ORDER.indexOf(
-      a.slug as (typeof DESKTOP_CATEGORY_ORDER)[number],
-    );
-    const bRank = DESKTOP_CATEGORY_ORDER.indexOf(
-      b.slug as (typeof DESKTOP_CATEGORY_ORDER)[number],
-    );
-    return (aRank < 0 ? 999 : aRank) - (bRank < 0 ? 999 : bRank);
-  });
-
   return roots;
 }
 
@@ -710,6 +699,16 @@ export default function Header({
               slug: String(c.slug),
 
               image: c.image ?? null,
+
+              isActive: c.isActive !== false,
+
+              sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
+
+              showInHeader: c.showInHeader !== false,
+
+              showInFooter: c.showInFooter !== false,
+
+              featured: c.featured === true,
 
               parentId:
                 c.parentId === null ||
