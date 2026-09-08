@@ -8,7 +8,7 @@ interface Category {
   name: string;
   slug?: string;
   image?: string | null;
-  parentId?: number | null;
+  parentId: number | null;
   parentName?: string | null;
   productCount?: number;
   childrenCount?: number;

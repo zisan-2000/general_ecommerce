@@ -378,9 +378,15 @@ export async function DELETE(
       );
     }
 
-    await prisma.category.update({
-      where: { id },
-      data: { deleted: true, isActive: false },
+    await prisma.$transaction(async (tx) => {
+      await tx.category.update({
+        where: { id },
+        data: { deleted: true },
+      });
+      await tx.category.update({
+        where: { id },
+        data: { isActive: false },
+      });
     });
 
     await logActivity({

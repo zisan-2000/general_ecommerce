@@ -354,14 +354,19 @@ const readCatalogFacets = unstable_cache(
   async () => {
     const [categories, brands, priceRange, siteSettings] = await Promise.all([
       prisma.category.findMany({
-        where: { deleted: false },
-        orderBy: { name: "asc" },
+        where: { deleted: false, isActive: true },
+        orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
         select: {
           id: true,
           name: true,
           slug: true,
           image: true,
           parentId: true,
+          isActive: true,
+          sortOrder: true,
+          showInHeader: true,
+          showInFooter: true,
+          featured: true,
           _count: {
             select: {
               products: { where: { deleted: false, available: true } },
@@ -465,6 +470,11 @@ const readCatalogFacets = unstable_cache(
         slug: category.slug,
         image: category.image,
         parentId: category.parentId,
+        isActive: category.isActive,
+        sortOrder: category.sortOrder,
+        showInHeader: category.showInHeader,
+        showInFooter: category.showInFooter,
+        featured: category.featured,
         depth: category.depth,
         productCount: totalProducts(category.id),
       })),

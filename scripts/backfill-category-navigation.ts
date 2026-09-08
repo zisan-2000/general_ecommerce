@@ -39,7 +39,7 @@ async function main() {
 
   let orderingInitialized = false;
   if (roots.length > 0 && roots.every((category) => category.sortOrder === 0)) {
-    const legacyRank = new Map(
+    const legacyRank = new Map<string, number>(
       LEGACY_TECH_ROOT_ORDER.map((slug, index) => [slug, index]),
     );
     const ordered = [...roots].sort((a, b) => {
