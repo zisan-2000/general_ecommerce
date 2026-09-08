@@ -24,7 +24,7 @@ export const CATEGORY_NAVIGATION_DEFAULTS = {
   isActive: true,
   sortOrder: 0,
   showInHeader: true,
-  showInFooter: false,
+  showInFooter: true,
   featured: false,
 } as const;
 
