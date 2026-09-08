@@ -81,14 +81,38 @@ export function parseCategoryNavigationPatch(
   return { ok: true, value };
 }
 
+export function getEffectivelyActiveCategoryIds(categories: CategoryNavigationRecord[]) {
+  const byId = new Map(categories.map((category) => [category.id, category]));
+  const active = new Set<number>();
+
+  const isEffectivelyActive = (category: CategoryNavigationRecord) => {
+    if (!category.isActive) return false;
+
+    const visited = new Set<number>([category.id]);
+    let parentId = category.parentId;
+    while (parentId !== null) {
+      if (visited.has(parentId)) return false;
+      visited.add(parentId);
+      const parent = byId.get(parentId);
+      if (!parent || !parent.isActive) return false;
+      parentId = parent.parentId;
+    }
+    return true;
+  };
+
+  for (const category of categories) {
+    if (isEffectivelyActive(category)) active.add(category.id);
+  }
+
+  return active;
+}
+
 function isVisibleForPlacement(
   category: CategoryNavigationRecord,
   placement: CategoryNavigationPlacement,
 ) {
-  return (
-    category.isActive &&
-    (placement === "header" ? category.showInHeader : category.showInFooter)
-  );
+  return category.isActive &&
+    (placement === "header" ? category.showInHeader : category.showInFooter);
 }
 
 export function getEffectiveCategoryNavigationIds(
