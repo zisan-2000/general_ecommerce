@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { requireProductManager } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { NextResponse } from "next/server";
-import { buildTypedProductAttributeData } from "@/lib/attribute-schema";
+import { validateSingleCategoryProductAttribute } from "@/lib/category-product-attributes-server";
 
 /* =========================
    GET PRODUCT ATTRIBUTES
@@ -80,15 +80,11 @@ export async function POST(req: Request) {
     const [product, attribute, existing] = await Promise.all([
       prisma.product.findFirst({
         where: { id: productId, deleted: false },
-        select: { id: true },
+        select: { id: true, categoryId: true },
       }),
       prisma.attribute.findUnique({
         where: { id: attributeId },
-        select: {
-          id: true,
-          type: true,
-          values: { select: { id: true, value: true } },
-        },
+        select: { id: true },
       }),
       prisma.productAttribute.findFirst({
         where: { productId, attributeId },
@@ -102,7 +98,15 @@ export async function POST(req: Request) {
         { status: 404 },
       );
     }
-    const storage = buildTypedProductAttributeData(attribute, value);
+    const validation = await validateSingleCategoryProductAttribute({
+      categoryId: product.categoryId,
+      attributeId,
+      value,
+    });
+    if (!validation.ok) {
+      return NextResponse.json({ error: validation.error }, { status: 400 });
+    }
+    const storage = validation.value;
 
     const created = existing
       ? await prisma.productAttribute.update({

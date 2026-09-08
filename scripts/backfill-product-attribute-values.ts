@@ -38,7 +38,7 @@ async function main() {
 
       const isCurrent =
         row.valueText === data.valueText &&
-        row.valueNumber?.toString() === data.valueNumber &&
+        (row.valueNumber === null ? null : row.valueNumber.toString()) === data.valueNumber &&
         row.valueBoolean === data.valueBoolean &&
         row.attributeValueId === data.attributeValueId;
       if (isCurrent) {

@@ -482,7 +482,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   // never hidden behind a collapsed header.
                   <FilterSection
                     key={group.id}
-                    title={group.name}
+                    title={`${group.name}${group.unit ? ` (${group.unit})` : ""}`}
                     badge={selected.length}
                     defaultOpen={selected.length > 0}
                   >
@@ -500,7 +500,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                               defaultChecked={selected.includes(entry.value)}
                               className="h-4 w-4 rounded border-border accent-primary"
                             />
-                            <span className="truncate">{entry.value}</span>
+                            <span className="truncate">
+                              {group.type === "BOOLEAN"
+                                ? entry.value === "true" ? "Yes" : "No"
+                                : entry.value}
+                            </span>
                           </span>
                           <span className="text-xs text-muted-foreground">
                             {entry.productCount}

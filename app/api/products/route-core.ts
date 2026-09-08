@@ -23,7 +23,7 @@ import { storefrontProductSelect } from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
-import { buildProductAttributeStorageRows } from "@/lib/attribute-schema";
+import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 const createVariantSku = (slug: string, index: number) =>
@@ -355,29 +355,21 @@ export async function POST(req: Request) {
       );
     }
     const productAttributes = parsedProductAttributes.value;
-    let productAttributeRows: ReturnType<typeof buildProductAttributeStorageRows> = [];
-    if (productAttributes.length > 0) {
-      const attributeDefinitions = await prisma.attribute.findMany({
-        where: {
-          id: { in: productAttributes.map((item) => item.attributeId) },
+    const categoryAttributeValidation = await validateCategoryProductAttributes({
+      categoryId: Number(body.categoryId),
+      productAttributes,
+      variantOptions,
+    });
+    if (!categoryAttributeValidation.ok) {
+      return NextResponse.json(
+        {
+          error: categoryAttributeValidation.error,
+          code: "CATEGORY_ATTRIBUTE_VALIDATION_FAILED",
         },
-        select: {
-          id: true,
-          type: true,
-          values: { select: { id: true, value: true } },
-        },
-      });
-      if (attributeDefinitions.length !== productAttributes.length) {
-        return NextResponse.json(
-          { error: "One or more product attributes do not exist" },
-          { status: 400 },
-        );
-      }
-      productAttributeRows = buildProductAttributeStorageRows(
-        productAttributes,
-        attributeDefinitions,
+        { status: 400 },
       );
     }
+    const productAttributeRows = categoryAttributeValidation.value;
 
     const variantsInput = Array.isArray(body.variants) ? body.variants : [];
     const orderedOptionNames = variantOptions.map((option) => option.name);

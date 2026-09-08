@@ -1602,6 +1602,7 @@ export default function ProductManager({
                   id: managingProduct.id,
                   name: managingProduct.name,
                   type: managingProduct.type,
+                  categoryId: managingProduct.categoryId,
                 }
               : null
           }

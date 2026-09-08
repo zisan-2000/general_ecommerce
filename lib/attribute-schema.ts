@@ -11,8 +11,19 @@ export type CatalogAttributeType = (typeof ATTRIBUTE_TYPES)[number];
 
 export type AttributeDefinition = {
   id: number;
+  name?: string;
   type: CatalogAttributeType;
+  unit?: string | null;
   values: Array<{ id: number; value: string }>;
+};
+
+export type CategoryAttributePolicy = {
+  attributeId: number;
+  isRequired: boolean;
+  isFilterable: boolean;
+  isVariant: boolean;
+  sortOrder: number;
+  attribute: AttributeDefinition & { name: string };
 };
 
 export type TypedProductAttributeData = {
@@ -36,6 +47,24 @@ const BOOLEAN_VALUES = new Map<string, boolean>([
   ["no", false],
   ["0", false],
 ]);
+
+export function parseMultiSelectValue(rawValue: string) {
+  const value = rawValue.trim();
+  if (!value) return [];
+  if (value.startsWith("[")) {
+    try {
+      const parsed = JSON.parse(value);
+      if (Array.isArray(parsed)) {
+        return Array.from(
+          new Set(parsed.map((item) => String(item).trim()).filter(Boolean)),
+        );
+      }
+    } catch {
+      return [];
+    }
+  }
+  return Array.from(new Set(value.split(",").map((item) => item.trim()).filter(Boolean)));
+}
 
 export function isAttributeType(value: unknown): value is CatalogAttributeType {
   return typeof value === "string" && ATTRIBUTE_TYPES.includes(value as CatalogAttributeType);
@@ -160,4 +189,125 @@ export function buildProductAttributeStorageRows(
       ...buildTypedProductAttributeData(definition, input.value),
     };
   });
+}
+
+export function validateTypedProductAttributeData(
+  definition: AttributeDefinition,
+  rawValue: string,
+): { ok: true; value: TypedProductAttributeData } | { ok: false; error: string } {
+  const label = definition.name || `Attribute ${definition.id}`;
+  const value = rawValue.trim();
+  if (!value || value.length > 500) {
+    return { ok: false, error: `${label} must be between 1 and 500 characters` };
+  }
+
+  if (definition.type === "MULTI_SELECT") {
+    const selected = parseMultiSelectValue(value);
+    if (!selected.length) {
+      return { ok: false, error: `${label} needs at least one selected value` };
+    }
+    const managedByName = new Map(
+      definition.values.map((item) => [item.value.toLowerCase(), item.value]),
+    );
+    const normalized = selected.map((item) => managedByName.get(item.toLowerCase()) ?? item);
+    if (
+      definition.values.length > 0 &&
+      normalized.some((item) => !managedByName.has(item.toLowerCase()))
+    ) {
+      return { ok: false, error: `${label} contains an unsupported selection` };
+    }
+    const canonical = JSON.stringify(normalized);
+    return {
+      ok: true,
+      value: {
+        value: normalized.join(", "),
+        valueText: canonical,
+        valueNumber: null,
+        valueBoolean: null,
+        attributeValueId: null,
+      },
+    };
+  }
+
+  const typed = buildTypedProductAttributeData(definition, value);
+  if (definition.type === "NUMBER" && typed.valueNumber === null) {
+    return { ok: false, error: `${label} must be a valid number with up to 6 decimal places` };
+  }
+  if (definition.type === "BOOLEAN" && typed.valueBoolean === null) {
+    return { ok: false, error: `${label} must be true or false` };
+  }
+  if (
+    (definition.type === "SELECT" || definition.type === "COLOR") &&
+    typed.attributeValueId === null
+  ) {
+    return { ok: false, error: `${label} must use a managed value` };
+  }
+
+  if (definition.type === "BOOLEAN") {
+    typed.value = typed.valueBoolean ? "true" : "false";
+  } else if (definition.type === "SELECT" || definition.type === "COLOR") {
+    typed.value = definition.values.find((item) => item.id === typed.attributeValueId)?.value ?? value;
+  }
+  return { ok: true, value: typed };
+}
+
+export function validateCategoryProductAttributePolicy(input: {
+  productAttributes: LegacyProductAttributeInput[];
+  definitions: AttributeDefinition[];
+  mappings: CategoryAttributePolicy[];
+  variantOptions?: Array<{ name: string; values: string[] }>;
+}) {
+  const definitionsById = new Map(input.definitions.map((item) => [item.id, item]));
+  const mappingById = new Map(input.mappings.map((item) => [item.attributeId, item]));
+  const configured = input.mappings.length > 0;
+  const rows = [] as Array<{ attributeId: number } & TypedProductAttributeData>;
+
+  for (const item of input.productAttributes) {
+    const definition = definitionsById.get(item.attributeId);
+    if (!definition) {
+      return { ok: false as const, error: "One or more product attributes do not exist" };
+    }
+    if (configured && !mappingById.has(item.attributeId)) {
+      return {
+        ok: false as const,
+        error: `${definition.name || `Attribute ${definition.id}`} is not assigned to this category`,
+      };
+    }
+    const validated = configured
+      ? validateTypedProductAttributeData(definition, item.value)
+      : { ok: true as const, value: buildTypedProductAttributeData(definition, item.value) };
+    if (!validated.ok) return validated;
+    rows.push({ attributeId: item.attributeId, ...validated.value });
+  }
+
+  const variantNames = new Set(
+    (input.variantOptions ?? []).map((option) => option.name.trim().toLowerCase()),
+  );
+  if (configured) {
+    for (const option of input.variantOptions ?? []) {
+      const mapping = input.mappings.find(
+        (item) => item.attribute.name.toLowerCase() === option.name.trim().toLowerCase(),
+      );
+      if (!mapping?.isVariant) {
+        return { ok: false as const, error: `${option.name} is not a variant attribute for this category` };
+      }
+      for (const optionValue of option.values) {
+        const validated = validateTypedProductAttributeData(mapping.attribute, optionValue);
+        if (!validated.ok) return validated;
+      }
+    }
+
+    const suppliedIds = new Set(rows.map((row) => row.attributeId));
+    const missing = input.mappings.find(
+      (mapping) =>
+        mapping.isRequired &&
+        !suppliedIds.has(mapping.attributeId) &&
+        !(mapping.isVariant && variantNames.has(mapping.attribute.name.toLowerCase())),
+    );
+    if (missing) {
+      return { ok: false as const, error: `${missing.attribute.name} is required for this category` };
+    }
+  }
+
+  return { ok: true as const, value: rows };
 }

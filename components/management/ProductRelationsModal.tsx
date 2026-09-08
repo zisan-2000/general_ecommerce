@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { parseMultiSelectValue, type CatalogAttributeType } from "@/lib/attribute-schema";
 import {
   Table,
   TableBody,
@@ -30,6 +31,7 @@ interface ProductLite {
   id: number;
   name: string;
   type: ProductType;
+  categoryId: number;
 }
 
 interface Warehouse {
@@ -77,7 +79,14 @@ interface AttributeValue {
 interface Attribute {
   id: number;
   name: string;
+  type: CatalogAttributeType;
+  unit: string | null;
   values: AttributeValue[];
+  categoryAttributes: Array<{
+    categoryId: number;
+    isRequired: boolean;
+    sortOrder: number;
+  }>;
 }
 
 interface ProductAttribute {
@@ -169,6 +178,19 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
     if (!id) return null;
     return attributes.find((a) => a.id === id) || null;
   }, [newAttr.attributeId, attributes]);
+  const availableAttributes = useMemo(() => {
+    if (!product?.categoryId) return attributes;
+    const mapped = attributes
+      .flatMap((attribute) => {
+        const mapping = attribute.categoryAttributes?.find(
+          (item) => item.categoryId === product.categoryId,
+        );
+        return mapping ? [{ attribute, mapping }] : [];
+      })
+      .sort((a, b) => a.mapping.sortOrder - b.mapping.sortOrder)
+      .map((item) => item.attribute);
+    return mapped.length > 0 ? mapped : attributes;
+  }, [attributes, product?.categoryId]);
 
   const loadAll = async () => {
     if (!product?.id) return;
@@ -1030,11 +1052,11 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
                       className="border border-input bg-background text-sm p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-ring"
                       value={newAttr.attributeId}
                       onChange={(e) =>
-                        setNewAttr({ ...newAttr, attributeId: e.target.value })
+                        setNewAttr({ attributeId: e.target.value, value: "" })
                       }
                     >
                       <option value="">Select</option>
-                      {attributes.map((a) => (
+                      {availableAttributes.map((a) => (
                         <option key={a.id} value={a.id}>
                           {a.name}
                         </option>
@@ -1043,22 +1065,53 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
                   </div>
                   <div className="sm:col-span-2 lg:col-span-2">
                     <Label className="text-xs sm:text-sm">Value</Label>
-                    <Input
-                      value={newAttr.value}
-                      onChange={(e) =>
-                        setNewAttr({ ...newAttr, value: e.target.value })
-                      }
-                      list={selectedAttr ? `attr-values-${selectedAttr.id}` : undefined}
-                      placeholder="Type value"
-                      className="text-sm"
-                    />
-                    {selectedAttr?.values?.length ? (
-                      <datalist id={`attr-values-${selectedAttr.id}`}>
-                        {selectedAttr.values.map((v) => (
-                          <option key={v.id} value={v.value} />
+                    {selectedAttr?.type === "SELECT" || selectedAttr?.type === "COLOR" ? (
+                      <select
+                        className="w-full rounded-md border border-input bg-background p-2 text-sm"
+                        value={newAttr.value}
+                        onChange={(event) => setNewAttr({ ...newAttr, value: event.target.value })}
+                      >
+                        <option value="">Select</option>
+                        {selectedAttr.values.map((item) => (
+                          <option key={item.id} value={item.value}>{item.value}</option>
                         ))}
-                      </datalist>
-                    ) : null}
+                      </select>
+                    ) : selectedAttr?.type === "BOOLEAN" ? (
+                      <select
+                        className="w-full rounded-md border border-input bg-background p-2 text-sm"
+                        value={newAttr.value}
+                        onChange={(event) => setNewAttr({ ...newAttr, value: event.target.value })}
+                      >
+                        <option value="">Select</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                      </select>
+                    ) : selectedAttr?.type === "MULTI_SELECT" && selectedAttr.values.length > 0 ? (
+                      <select
+                        multiple
+                        className="min-h-24 w-full rounded-md border border-input bg-background p-2 text-sm"
+                        value={parseMultiSelectValue(newAttr.value)}
+                        onChange={(event) => setNewAttr({
+                          ...newAttr,
+                          value: JSON.stringify(
+                            Array.from(event.currentTarget.selectedOptions, (option) => option.value),
+                          ),
+                        })}
+                      >
+                        {selectedAttr.values.map((item) => (
+                          <option key={item.id} value={item.value}>{item.value}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <Input
+                        type={selectedAttr?.type === "NUMBER" ? "number" : "text"}
+                        step={selectedAttr?.type === "NUMBER" ? "any" : undefined}
+                        value={newAttr.value}
+                        onChange={(e) => setNewAttr({ ...newAttr, value: e.target.value })}
+                        placeholder={selectedAttr?.type === "MULTI_SELECT" ? "Comma-separated values" : "Type value"}
+                        className="text-sm"
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="flex justify-end">

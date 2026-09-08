@@ -38,7 +38,7 @@ async function main() {
 
     const matches =
       row.valueText === expected.valueText &&
-      row.valueNumber?.toString() === expected.valueNumber &&
+      (row.valueNumber === null ? null : row.valueNumber.toString()) === expected.valueNumber &&
       row.valueBoolean === expected.valueBoolean &&
       row.attributeValueId === expected.attributeValueId;
     return matches

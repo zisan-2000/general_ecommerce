@@ -224,7 +224,14 @@ export default function AttributesManagerModal({ open, onClose }: Props) {
         body: JSON.stringify({ attributes: mappings }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Mapping update failed");
+      if (!res.ok) {
+        const firstInvalidProduct = Array.isArray(data?.products) ? data.products[0] : null;
+        throw new Error(
+          firstInvalidProduct
+            ? `${data.error}: ${firstInvalidProduct.name} — ${firstInvalidProduct.error}`
+            : data?.error || "Mapping update failed",
+        );
+      }
       toast.success("Category attribute mapping saved");
       await load();
     } catch (err: any) {

@@ -2,7 +2,10 @@ import { prisma } from "@/lib/prisma";
 import { requireProductManager } from "@/lib/product-management-access";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { NextResponse } from "next/server";
-import { buildTypedProductAttributeData } from "@/lib/attribute-schema";
+import {
+  canDeleteCategoryProductAttribute,
+  validateSingleCategoryProductAttribute,
+} from "@/lib/category-product-attributes-server";
 
 /* =========================
    UPDATE PRODUCT ATTRIBUTE
@@ -34,22 +37,26 @@ export async function PUT(
       where: { id },
       select: {
         id: true,
-        attribute: {
-          select: {
-            id: true,
-            type: true,
-            values: { select: { id: true, value: true } },
-          },
-        },
+        attributeId: true,
+        product: { select: { categoryId: true } },
       },
     });
     if (!existing) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
+    const validation = await validateSingleCategoryProductAttribute({
+      categoryId: existing.product.categoryId,
+      attributeId: existing.attributeId,
+      value,
+    });
+    if (!validation.ok) {
+      return NextResponse.json({ error: validation.error }, { status: 400 });
+    }
+
     const updated = await prisma.productAttribute.update({
       where: { id },
-      data: buildTypedProductAttributeData(existing.attribute, value),
+      data: validation.value,
       include: { attribute: true },
     });
 
@@ -84,10 +91,22 @@ export async function DELETE(
 
     const existing = await prisma.productAttribute.findUnique({
       where: { id },
-      select: { id: true },
+      select: {
+        id: true,
+        attributeId: true,
+        product: { select: { categoryId: true } },
+      },
     });
     if (!existing) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
+    const deletion = await canDeleteCategoryProductAttribute({
+      categoryId: existing.product.categoryId,
+      attributeId: existing.attributeId,
+    });
+    if (!deletion.ok) {
+      return NextResponse.json({ error: deletion.error }, { status: 409 });
     }
 
     await prisma.productAttribute.delete({ where: { id } });

@@ -16,9 +16,9 @@ Phase 4 adds the data foundation for category-specific product specifications wi
 
 1. Back up the database and apply `20260908_add_typed_category_attributes` in the normal deployment pipeline.
 2. Configure each attribute's type and optional unit in Product Management.
-3. Save category mappings through `PUT /api/categories/:id/attributes`.
-4. Run `npm run backfill:product-attributes`.
-5. Run `npm run verify:product-attributes-db`; resolve any listed legacy values before Phase 5 cutover.
+3. Run `npm run backfill:product-attributes`.
+4. Run `npm run verify:product-attributes-db` and resolve every listed legacy value.
+5. Save category mappings through `PUT /api/categories/:id/attributes`; Phase 5 treats this as the strict-policy cutover for that category.
 
 The migration has no data update or destructive statement. The backfill skips rows whose typed value already matches the legacy value and repairs stale typed fields, so it can safely be rerun after a definition change.
 

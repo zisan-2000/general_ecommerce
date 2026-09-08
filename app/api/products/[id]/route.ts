@@ -10,6 +10,7 @@ import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
 import { gateProductType } from "@/lib/store-feature-gates-server";
 import { isFeatureEnabled } from "@/lib/store-features-server";
+import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 
 export { DELETE, GET, PUT } from "./route-core";
 import { PATCH as corePatch } from "./route-core";
@@ -57,6 +58,9 @@ export async function PATCH(
       attributes: {
         include: { attribute: true },
       },
+      variantOptions: {
+        include: { values: true },
+      },
     },
   });
   if (!existing) {
@@ -84,6 +88,29 @@ export async function PATCH(
       },
       { status: 409 },
     );
+  }
+
+  if (parsed.value.available && !existing.available) {
+    const categoryAttributes = await validateCategoryProductAttributes({
+      categoryId: existing.categoryId,
+      productAttributes: existing.attributes.map((item) => ({
+        attributeId: item.attributeId,
+        value: item.value,
+      })),
+      variantOptions: existing.variantOptions.map((option) => ({
+        name: option.name,
+        values: option.values.map((item) => item.value),
+      })),
+    });
+    if (!categoryAttributes.ok) {
+      return NextResponse.json(
+        {
+          error: `Cannot activate this product: ${categoryAttributes.error}`,
+          code: "CATEGORY_ATTRIBUTE_VALIDATION_FAILED",
+        },
+        { status: 409 },
+      );
+    }
   }
 
   if (

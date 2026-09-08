@@ -108,6 +108,9 @@ test("all current product-attribute mutations use compatibility typed writes", a
     read("app/api/product-attributes/[id]/route.ts"),
   ]);
   for (const source of sources) {
-    assert.match(source, /build(?:ProductAttributeStorageRows|TypedProductAttributeData)/);
+    assert.match(
+      source,
+      /(?:build(?:ProductAttributeStorageRows|TypedProductAttributeData)|validate(?:Category|SingleCategory)ProductAttribute)/,
+    );
   }
 });

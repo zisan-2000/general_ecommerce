@@ -6,6 +6,11 @@ import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-ser
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getRankedSearchProductIds } from "@/lib/search/server";
 import { parseSearchIntent } from "@/lib/search/core";
+import {
+  parseMultiSelectValue,
+  validateTypedProductAttributeData,
+  type CatalogAttributeType,
+} from "@/lib/attribute-schema";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -513,57 +518,206 @@ const readCatalogAttributeFacets = unstable_cache(
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
-    const rows = await prisma.productAttribute.findMany({
-      where: {
-        product: {
-          deleted: false,
-          available: true,
-          ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+    const visibleProductWhere = {
+      deleted: false,
+      available: true,
+      ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+      ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
+    } satisfies Prisma.ProductWhereInput;
+    const [rows, variantMappings, variantOptions] = await Promise.all([
+      prisma.productAttribute.findMany({
+        where: { product: visibleProductWhere },
+        select: {
+          value: true,
+          valueText: true,
+          valueNumber: true,
+          valueBoolean: true,
+          attributeValueId: true,
+          attributeId: true,
+          product: { select: { id: true, categoryId: true } },
+          attributeValue: { select: { value: true } },
+          attribute: {
+            select: {
+              name: true,
+              type: true,
+              unit: true,
+              categoryAttributes: {
+                where: {
+                  isFilterable: true,
+                  ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
+                },
+                select: { categoryId: true, sortOrder: true, isVariant: true },
+              },
+            },
+          },
+        },
+      }),
+      prisma.categoryAttribute.findMany({
+        where: {
+          isFilterable: true,
+          isVariant: true,
           ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
         },
-      },
-      select: {
-        value: true,
-        attributeId: true,
-        attribute: { select: { name: true } },
-      },
-    });
+        select: {
+          categoryId: true,
+          sortOrder: true,
+          attribute: {
+            select: {
+              id: true,
+              name: true,
+              type: true,
+              unit: true,
+              values: { select: { id: true, value: true } },
+            },
+          },
+        },
+      }),
+      prisma.productVariantOption.findMany({
+        where: { product: visibleProductWhere },
+        select: {
+          name: true,
+          product: { select: { id: true, categoryId: true } },
+          values: { select: { value: true } },
+        },
+      }),
+    ]);
 
     const groups = new Map<
       number,
-      { id: number; name: string; values: Map<string, number> }
+      {
+        id: number;
+        name: string;
+        type: CatalogAttributeType;
+        unit: string | null;
+        sortOrder: number;
+        isVariant: boolean;
+        values: Map<string, { productIds: Set<number>; attributeValueId: number | null }>;
+      }
     >();
+    const addFacetValue = (input: {
+      attributeId: number;
+      name: string;
+      type: CatalogAttributeType;
+      unit: string | null;
+      sortOrder: number;
+      isVariant: boolean;
+      productId: number;
+      value: string;
+      attributeValueId: number | null;
+    }) => {
+      if (!input.value) return;
+      const group = groups.get(input.attributeId) ?? {
+        id: input.attributeId,
+        name: input.name,
+        type: input.type,
+        unit: input.unit,
+        sortOrder: input.sortOrder,
+        isVariant: input.isVariant,
+        values: new Map<string, { productIds: Set<number>; attributeValueId: number | null }>(),
+      };
+      group.sortOrder = Math.min(group.sortOrder, input.sortOrder);
+      group.isVariant ||= input.isVariant;
+      const previous = group.values.get(input.value);
+      const productIds = previous?.productIds ?? new Set<number>();
+      productIds.add(input.productId);
+      group.values.set(input.value, {
+        productIds,
+        attributeValueId: input.attributeValueId ?? previous?.attributeValueId ?? null,
+      });
+      groups.set(input.attributeId, group);
+    };
 
     for (const row of rows) {
-      const value = row.value.trim();
-      if (!value) continue;
-      const group = groups.get(row.attributeId) ?? {
-        id: row.attributeId,
-        name: row.attribute.name,
-        values: new Map<string, number>(),
-      };
-      group.values.set(value, (group.values.get(value) ?? 0) + 1);
-      groups.set(row.attributeId, group);
+      const mapping = row.attribute.categoryAttributes.find(
+        (item) => item.categoryId === row.product.categoryId,
+      );
+      if (!mapping) continue;
+      const typedValues = row.attribute.type === "MULTI_SELECT"
+        ? parseMultiSelectValue(row.valueText ?? "")
+        : row.attribute.type === "NUMBER" && row.valueNumber !== null
+          ? [row.valueNumber.toString()]
+          : row.attribute.type === "BOOLEAN" && row.valueBoolean !== null
+            ? [row.valueBoolean ? "true" : "false"]
+            : (row.attribute.type === "SELECT" || row.attribute.type === "COLOR") && row.attributeValue
+              ? [row.attributeValue.value]
+              : row.attribute.type === "TEXT" && row.valueText
+                ? [row.valueText.trim()]
+                : [];
+      for (const value of typedValues) {
+        addFacetValue({
+          attributeId: row.attributeId,
+          name: row.attribute.name,
+          type: row.attribute.type,
+          unit: row.attribute.unit,
+          sortOrder: mapping.sortOrder,
+          isVariant: mapping.isVariant,
+          productId: row.product.id,
+          value,
+          attributeValueId: row.attributeValueId,
+        });
+      }
+    }
+
+    const variantMappingByCategoryAndName = new Map(
+      variantMappings.map((mapping) => [
+        `${mapping.categoryId}:${mapping.attribute.name.toLowerCase()}`,
+        mapping,
+      ]),
+    );
+    for (const option of variantOptions) {
+      const mapping = variantMappingByCategoryAndName.get(
+        `${option.product.categoryId}:${option.name.trim().toLowerCase()}`,
+      );
+      if (!mapping) continue;
+      for (const optionValue of option.values) {
+        const validated = validateTypedProductAttributeData(
+          mapping.attribute,
+          optionValue.value,
+        );
+        if (!validated.ok) continue;
+        const values = mapping.attribute.type === "MULTI_SELECT"
+          ? parseMultiSelectValue(validated.value.value)
+          : [validated.value.value];
+        for (const value of values) {
+          addFacetValue({
+            attributeId: mapping.attribute.id,
+            name: mapping.attribute.name,
+            type: mapping.attribute.type,
+            unit: mapping.attribute.unit,
+            sortOrder: mapping.sortOrder,
+            isVariant: true,
+            productId: option.product.id,
+            value,
+            attributeValueId: validated.value.attributeValueId,
+          });
+        }
+      }
     }
 
     return Array.from(groups.values())
       .map((group) => ({
         id: group.id,
         name: group.name,
+        type: group.type,
+        unit: group.unit,
+        sortOrder: group.sortOrder,
+        isVariant: group.isVariant,
         values: Array.from(group.values.entries())
-          .map(([value, productCount]) => ({ value, productCount }))
-          .sort(
-            (a, b) =>
-              b.productCount - a.productCount ||
-              a.value.localeCompare(b.value, undefined, { numeric: true }),
-          )
+          .map(([value, metadata]) => ({
+            value,
+            productCount: metadata.productIds.size,
+            attributeValueId: metadata.attributeValueId,
+          }))
+          .sort((a, b) => group.type === "NUMBER"
+            ? Number(a.value) - Number(b.value)
+            : b.productCount - a.productCount ||
+              a.value.localeCompare(b.value, undefined, { numeric: true }))
           .slice(0, CATALOG_MAX_FACET_VALUES_PER_GROUP),
       }))
-      // A single-value attribute cannot narrow anything, so it is only noise.
       .filter((group) => group.values.length > 1)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name));
   },
-  ["storefront-catalog-attribute-facets-v1"],
+  ["storefront-catalog-attribute-facets-v2"],
   {
     revalidate: 300,
     tags: ["storefront-catalog", "products", "categories"],
@@ -662,13 +816,56 @@ const readCatalog = unstable_cache(
     // Each selected attribute narrows the result set (AND), while the values
     // picked inside one attribute widen it (OR) - the usual spec-filter shape.
     for (const [attributeId, values] of Object.entries(filters.attributes)) {
-      andFilters.push({
+      const facet = attributeFacets.find((item) => String(item.id) === attributeId);
+      if (!facet) continue;
+      const typedValueFilter: Prisma.ProductAttributeWhereInput = facet.type === "NUMBER"
+        ? { valueNumber: { in: values } }
+        : facet.type === "BOOLEAN"
+          ? { OR: values.map((value) => ({ valueBoolean: value === "true" })) }
+          : facet.type === "SELECT" || facet.type === "COLOR"
+            ? {
+                attributeValueId: {
+                  in: facet.values
+                    .filter((entry) => values.includes(entry.value))
+                    .flatMap((entry) => entry.attributeValueId ?? []),
+                },
+              }
+            : facet.type === "MULTI_SELECT"
+              ? { OR: values.map((value) => ({ valueText: { contains: JSON.stringify(value) } })) }
+              : { valueText: { in: values } };
+      const productAttributeFilter: Prisma.ProductWhereInput = {
         attributes: {
           some: {
             attributeId: Number(attributeId),
-            value: { in: values },
+            ...typedValueFilter,
           },
         },
+      };
+      if (!facet.isVariant) {
+        andFilters.push(productAttributeFilter);
+        continue;
+      }
+      const variantValues = facet.type === "BOOLEAN"
+        ? values.flatMap((value) => value === "true" ? ["true", "yes", "1"] : ["false", "no", "0"])
+        : values;
+      andFilters.push({
+        OR: [
+          productAttributeFilter,
+          {
+            variantOptions: {
+              some: {
+                name: { equals: facet.name, mode: "insensitive" },
+                values: {
+                  some: {
+                    OR: variantValues.map((value) => ({
+                      value: { equals: value, mode: "insensitive" },
+                    })),
+                  },
+                },
+              },
+            },
+          },
+        ],
       });
     }
     if (filters.inStock) {
@@ -775,7 +972,7 @@ const readCatalog = unstable_cache(
       },
     };
   },
-  ["storefront-catalog-results-v3"],
+  ["storefront-catalog-results-v4"],
   { revalidate: 120, tags: ["storefront-catalog", "products", "categories"] },
 );
 

@@ -24,7 +24,7 @@ import {
   parseProductAvailabilityPatch,
 } from "@/lib/product-availability";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
-import { buildProductAttributeStorageRows } from "@/lib/attribute-schema";
+import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import {
   gateProductType,
   getDisabledStorefrontProductTypes,
@@ -386,33 +386,36 @@ export async function PUT(
       );
     }
     const nextAttributes = parsedNextAttributes?.value ?? null;
-    let nextAttributeRows: ReturnType<typeof buildProductAttributeStorageRows> | null =
-      nextAttributes === null ? null : [];
-    if (nextAttributes && nextAttributes.length > 0) {
-      const attributeDefinitions = await prisma.attribute.findMany({
-        where: { id: { in: nextAttributes.map((item) => item.attributeId) } },
-        select: {
-          id: true,
-          type: true,
-          values: { select: { id: true, value: true } },
-        },
-      });
-      if (attributeDefinitions.length !== nextAttributes.length) {
-        return NextResponse.json(
-          { error: "One or more product attributes do not exist" },
-          { status: 400 },
-        );
-      }
-      nextAttributeRows = buildProductAttributeStorageRows(
-        nextAttributes,
-        attributeDefinitions,
-      );
-    }
 
     const hasVariantOptionsPayload = body.variantOptions !== undefined;
     const nextVariantOptions = hasVariantOptionsPayload
       ? normalizeVariantOptions(body.variantOptions)
       : null;
+    const effectiveAttributes = nextAttributes ?? existing.attributes.map((item) => ({
+      attributeId: item.attributeId,
+      value: item.value,
+    }));
+    const effectiveVariantOptions = nextVariantOptions ?? existing.variantOptions.map((option) => ({
+      name: option.name,
+      values: option.values.map((item) => item.value),
+    }));
+    const categoryAttributeValidation = await validateCategoryProductAttributes({
+      categoryId: body.categoryId ? Number(body.categoryId) : existing.categoryId,
+      productAttributes: effectiveAttributes,
+      variantOptions: effectiveVariantOptions,
+    });
+    if (!categoryAttributeValidation.ok) {
+      return NextResponse.json(
+        {
+          error: categoryAttributeValidation.error,
+          code: "CATEGORY_ATTRIBUTE_VALIDATION_FAILED",
+        },
+        { status: 400 },
+      );
+    }
+    const nextAttributeRows = nextAttributes === null
+      ? null
+      : categoryAttributeValidation.value;
     const variantsInput = Array.isArray(body.variants) ? body.variants : null;
     const hasVariantsPayload = body.variants !== undefined;
     const orderedOptionNames = (nextVariantOptions ?? []).map((option) => option.name);
