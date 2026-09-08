@@ -33,6 +33,7 @@ import {
 import type { PcBuilderCheckoutBuild } from "@/lib/pc-builder-checkout";
 import { pcBuildSelectionId } from "@/lib/pc-builder-grouping";
 import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import {
   clearPartnerAttributionCookieOptions,
   parsePartnerAttributionCookie,
@@ -471,8 +472,13 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
     const productIds = Array.from(
       new Set(normalizedItems.map((i) => i.productId)),
     );
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const products = await prisma.product.findMany({
-      where: { id: { in: productIds }, deleted: false },
+      where: {
+        id: { in: productIds },
+        deleted: false,
+        categoryId: { in: activeCategoryIds },
+      },
       include: {
         VatClass: true,
         variants: {

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { rateLimitRequest } from "@/lib/request-security";
 import { gateStoreFeature, getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "public, max-age=0, must-revalidate" };
 
@@ -30,15 +31,20 @@ export async function GET(request: NextRequest) {
     : null;
 
   try {
-    const disabledTypes = await getDisabledStorefrontProductTypes();
+    const [disabledTypes, activeCategoryIds] = await Promise.all([
+      getDisabledStorefrontProductTypes(),
+      getEffectiveStorefrontCategoryIds(),
+    ]);
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        categoryId: categoryId
+          ? (activeCategoryIds.includes(categoryId) ? categoryId : -1)
+          : { in: activeCategoryIds },
         ...(disabledTypes.length
           ? { type: { notIn: disabledTypes } }
           : {}),
-        ...(categoryId ? { categoryId } : {}),
         ...(query
           ? {
               OR: [

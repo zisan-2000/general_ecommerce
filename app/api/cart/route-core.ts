@@ -7,6 +7,10 @@ import { prisma } from '@/lib/prisma';
 import { applyFlashSalePricingToProduct } from '@/lib/flash-sale';
 import { computeWarehouseAvailableStock } from '@/lib/warehouse-stock';
 import { evaluateCartReminderNotifications } from '@/lib/cart-reminder-notifications';
+import {
+  getEffectiveStorefrontCategoryIds,
+  isCategoryEffectivelyActive,
+} from '@/lib/category-navigation-server';
 
 async function findStandardCartItem(
   userId: string,
@@ -44,10 +48,15 @@ export async function GET() {
 
     await evaluateCartReminderNotifications({ userId });
 
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const items = await prisma.cartItem.findMany({
       where: {
         userId,
-        product: { available: true, deleted: false },
+        product: {
+          available: true,
+          deleted: false,
+          categoryId: { in: activeCategoryIds },
+        },
       },
       include: {
         product: {
@@ -158,7 +167,12 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    if (!product || product.deleted || !product.available) {
+    if (
+      !product ||
+      product.deleted ||
+      !product.available ||
+      !(await isCategoryEffectivelyActive(product.categoryId))
+    ) {
       return NextResponse.json(
         { error: 'Product not available' },
         { status: 404 }

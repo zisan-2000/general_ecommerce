@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { publicJson } from "@/lib/public-cache";
 import { getAccessContext } from "@/lib/rbac";
 import { rateLimitRequest } from "@/lib/request-security";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 export async function GET(request: Request) {
   try {
@@ -13,8 +14,16 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: "A valid productId is required" }, { status: 400 });
     }
 
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const questions = await prisma.productQuestion.findMany({
-      where: { productId, product: { available: true, deleted: false } },
+      where: {
+        productId,
+        product: {
+          available: true,
+          deleted: false,
+          categoryId: { in: activeCategoryIds },
+        },
+      },
       take: 50,
       orderBy: { createdAt: "desc" },
       select: {
@@ -63,8 +72,14 @@ export async function POST(request: Request) {
       );
     }
 
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const product = await prisma.product.findFirst({
-      where: { id: productId, available: true, deleted: false },
+      where: {
+        id: productId,
+        available: true,
+        deleted: false,
+        categoryId: { in: activeCategoryIds },
+      },
       select: { id: true },
     });
     if (!product) return NextResponse.json({ error: "Product not found" }, { status: 404 });

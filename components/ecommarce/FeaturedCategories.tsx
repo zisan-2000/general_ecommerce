@@ -154,12 +154,13 @@ export default function FeaturedCategories({
           a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" }) ||
           a.id - b.id,
       );
-    const configured = roots.filter((item) => item.featured === true);
-    return (configured.length > 0 ? configured : roots).slice(0, 5);
+    return roots.filter((item) => item.featured === true).slice(0, 5);
   }, [cats]);
 
   const featuredCategory = firstParentCategories[0];
   const regularCategories = firstParentCategories.slice(1, 5);
+
+  if (!loading && !error && firstParentCategories.length === 0) return null;
 
   return (
     <section className="w-full bg-background text-foreground">

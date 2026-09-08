@@ -3,14 +3,19 @@ import { prisma } from "@/lib/prisma";
 import { publicJson } from "@/lib/public-cache";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 export async function GET() {
   try {
-    const disabledTypes = await getDisabledStorefrontProductTypes();
+    const [disabledTypes, activeCategoryIds] = await Promise.all([
+      getDisabledStorefrontProductTypes(),
+      getEffectiveStorefrontCategoryIds(),
+    ]);
     const top = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        categoryId: { in: activeCategoryIds },
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         soldCount: {
           gt: 0,

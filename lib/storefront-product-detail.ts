@@ -5,6 +5,7 @@ import { storefrontProductSelect } from "@/lib/storefront-product";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 type RawProduct = Prisma.ProductGetPayload<{
   select: typeof storefrontProductSelect;
@@ -66,11 +67,13 @@ const readProductDetail = unstable_cache(
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const product = await prisma.product.findFirst({
       where: {
         ...where,
         deleted: false,
         available: true,
+        categoryId: { in: activeCategoryIds },
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
       },
       select: storefrontProductSelect,

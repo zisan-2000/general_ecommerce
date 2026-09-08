@@ -21,6 +21,7 @@ import {
 } from "@/lib/pc-builder-catalog";
 import { prisma } from "@/lib/prisma";
 import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 export type PcBuilderCatalogResult = {
   catalog: PcBuilderCatalog;
@@ -129,7 +130,11 @@ function projectProduct(
   };
 }
 
-function searchWhere(slot: PcBuilderSlotKey, query: string): Prisma.ProductWhereInput {
+function searchWhere(
+  slot: PcBuilderSlotKey,
+  query: string,
+  activeCategoryIds: number[],
+): Prisma.ProductWhereInput {
   const slotDefinition = PC_BUILDER_SLOTS.find((item) => item.key === slot);
   if (!slotDefinition) return { id: -1 };
 
@@ -138,6 +143,7 @@ function searchWhere(slot: PcBuilderSlotKey, query: string): Prisma.ProductWhere
     deleted: false,
     available: true,
     type: "PHYSICAL",
+    categoryId: { in: activeCategoryIds },
     category: { slug: slotDefinition.categorySlug, deleted: false },
     variants: { some: { active: true } },
     ...(normalizedQuery
@@ -205,7 +211,8 @@ export async function searchPcBuilderCatalogPage({
   pageSize?: number;
 }): Promise<PcBuilderCatalogPageResponse> {
   const normalizedQuery = normalizePcBuilderCatalogQuery(query);
-  const baseWhere = searchWhere(slot, normalizedQuery);
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+  const baseWhere = searchWhere(slot, normalizedQuery, activeCategoryIds);
   const rows = await prisma.product.findMany({
     where: cursor ? { AND: [baseWhere, cursorWhere(cursor)] } : baseWhere,
     orderBy: [
@@ -264,6 +271,7 @@ export async function validatePcBuilderSelectionLive(
     return parsed ? [{ slot: slot.key, ...parsed }] : [];
   });
   const productIds = [...new Set(requested.map((item) => item.productId))];
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const rows = productIds.length
     ? await prisma.product.findMany({
         where: {
@@ -271,6 +279,7 @@ export async function validatePcBuilderSelectionLive(
           deleted: false,
           available: true,
           type: "PHYSICAL",
+          categoryId: { in: activeCategoryIds },
           category: { deleted: false },
         },
         select: pcBuilderProductSelect,
@@ -325,6 +334,7 @@ export async function resolvePcBuilderExtraItems(
     }),
   );
   const productIds = [...new Set(requested.map((item) => item.productId))];
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const rows = productIds.length
     ? await prisma.product.findMany({
         where: {
@@ -332,6 +342,7 @@ export async function resolvePcBuilderExtraItems(
           deleted: false,
           available: true,
           type: "PHYSICAL",
+          categoryId: { in: activeCategoryIds },
           category: { deleted: false },
         },
         select: pcBuilderProductSelect,

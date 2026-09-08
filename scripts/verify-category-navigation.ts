@@ -1,26 +1,44 @@
 import { prisma } from "../lib/prisma";
+import { CATEGORY_SORT_ORDER_MAX } from "../lib/category-navigation";
 
 async function main() {
-  const categories = await prisma.category.findMany({
-    orderBy: [{ sortOrder: "asc" }, { id: "asc" }],
-    select: {
-      id: true,
-      name: true,
-      parentId: true,
-      deleted: true,
-      isActive: true,
-      sortOrder: true,
-      showInHeader: true,
-      showInFooter: true,
-      featured: true,
-    },
-  });
+  const [categories, footerColumns] = await Promise.all([
+    prisma.category.findMany({
+      orderBy: [{ sortOrder: "asc" }, { id: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        parentId: true,
+        deleted: true,
+        isActive: true,
+        sortOrder: true,
+        showInHeader: true,
+        showInFooter: true,
+        featured: true,
+      },
+    }),
+    prisma.$queryRaw<Array<{ column_default: string | null }>>`
+      SELECT column_default
+      FROM information_schema.columns
+      WHERE table_schema = current_schema()
+        AND table_name = 'Category'
+        AND column_name = 'showInFooter'
+    `,
+  ]);
 
   const failures: string[] = [];
+  const footerDefault = footerColumns[0]?.column_default ?? null;
+  if (!footerDefault || !footerDefault.toLowerCase().includes("false")) {
+    failures.push("Category.showInFooter database default must be false");
+  }
   const byId = new Map(categories.map((category) => [category.id, category]));
 
   for (const category of categories) {
-    if (!Number.isInteger(category.sortOrder) || category.sortOrder < 0) {
+    if (
+      !Number.isInteger(category.sortOrder) ||
+      category.sortOrder < 0 ||
+      category.sortOrder > CATEGORY_SORT_ORDER_MAX
+    ) {
       failures.push(`${category.id}:${category.name} has invalid sortOrder`);
     }
     if (category.deleted && category.isActive) {
@@ -48,6 +66,9 @@ async function main() {
   const headerRoots = activeRoots.filter((category) => category.showInHeader);
   const footerRoots = activeRoots.filter((category) => category.showInFooter);
   const featuredRoots = activeRoots.filter((category) => category.featured);
+  if (activeRoots.length > 0 && featuredRoots.length === 0) {
+    failures.push("No active root category is configured for homepage featuring");
+  }
 
   const result = {
     categoryCount: categories.length,
@@ -55,6 +76,7 @@ async function main() {
     headerRootCount: headerRoots.length,
     footerRootCount: footerRoots.length,
     featuredRootCount: featuredRoots.length,
+    newCategoryFooterDefault: footerDefault,
     failures,
   };
 

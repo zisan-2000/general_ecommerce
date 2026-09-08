@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -107,10 +108,17 @@ const readStorefrontHomeData = unstable_cache(
     const typeFilter = disabledTypes.length
       ? { type: { notIn: disabledTypes } }
       : {};
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+    const activeCategoryFilter = { categoryId: { in: activeCategoryIds } };
     const [products, discountedProducts, topSelling, categories, banners, settings] =
       await Promise.all([
         prisma.product.findMany({
-          where: { deleted: false, available: true, ...typeFilter },
+          where: {
+            deleted: false,
+            available: true,
+            ...typeFilter,
+            ...activeCategoryFilter,
+          },
           orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
           take: 160,
           select: storefrontHomeProductSelect,
@@ -120,6 +128,7 @@ const readStorefrontHomeData = unstable_cache(
             deleted: false,
             available: true,
             ...typeFilter,
+            ...activeCategoryFilter,
             flashSaleEnabled: true,
             flashSalePrice: { not: null },
             flashSaleStartsAt: { lte: now },
@@ -135,13 +144,14 @@ const readStorefrontHomeData = unstable_cache(
             available: true,
             soldCount: { gt: 0 },
             ...typeFilter,
+            ...activeCategoryFilter,
           },
           orderBy: [{ soldCount: "desc" }, { updatedAt: "desc" }],
           take: 20,
           select: storefrontHomeProductSelect,
         }),
       prisma.category.findMany({
-        where: { deleted: false, isActive: true },
+        where: { id: { in: activeCategoryIds }, deleted: false },
         orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
         select: {
           id: true,

@@ -12,6 +12,10 @@ import {
   gateProductType,
   getDisabledStorefrontProductTypes,
 } from "@/lib/store-feature-gates-server";
+import {
+  getEffectiveStorefrontCategoryIds,
+  isCategoryEffectivelyActive,
+} from "@/lib/category-navigation-server";
 
 // GET /api/wishlist -> current user's wishlist items + product details
 export async function GET(request: NextRequest) {
@@ -22,7 +26,10 @@ export async function GET(request: NextRequest) {
     }
 
     const userId = (session.user as any).id as string;
-    const disabledTypes = await getDisabledStorefrontProductTypes();
+    const [disabledTypes, activeCategoryIds] = await Promise.all([
+      getDisabledStorefrontProductTypes(),
+      getEffectiveStorefrontCategoryIds(),
+    ]);
 
     const wishlist = await prisma.wishlist.findMany({
       where: {
@@ -30,6 +37,7 @@ export async function GET(request: NextRequest) {
         product: {
           available: true,
           deleted: false,
+          categoryId: { in: activeCategoryIds },
           ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         },
       },
@@ -95,7 +103,7 @@ export async function POST(request: NextRequest) {
       where: { id: productId, available: true, deleted: false },
     });
 
-    if (!product) {
+    if (!product || !(await isCategoryEffectivelyActive(product.categoryId))) {
       return NextResponse.json(
         { error: "Product is not available" },
         { status: 404 }

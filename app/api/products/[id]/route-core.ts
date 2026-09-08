@@ -29,6 +29,10 @@ import {
   gateProductType,
   getDisabledStorefrontProductTypes,
 } from "@/lib/store-feature-gates-server";
+import {
+  getEffectiveStorefrontCategoryIds,
+  isCategoryEffectivelyActive,
+} from "@/lib/category-navigation-server";
 
 const productInclude = {
   category: true,
@@ -192,11 +196,15 @@ export async function GET(
       deleted: false,
       ...(storefront ? { available: true } : {}),
     };
-    const disabledTypes = storefront
-      ? await getDisabledStorefrontProductTypes()
-      : [];
+    const [disabledTypes, activeCategoryIds] = storefront
+      ? await Promise.all([
+          getDisabledStorefrontProductTypes(),
+          getEffectiveStorefrontCategoryIds(),
+        ])
+      : [[], []];
     const storefrontWhere = {
       ...where,
+      ...(storefront ? { categoryId: { in: activeCategoryIds } } : {}),
       ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
     };
     const product: any = storefront
@@ -399,8 +407,15 @@ export async function PUT(
       name: option.name,
       values: option.values.map((item) => item.value),
     }));
+    const nextCategoryId = body.categoryId ? Number(body.categoryId) : existing.categoryId;
+    if (existing.available && !(await isCategoryEffectivelyActive(nextCategoryId))) {
+      return NextResponse.json(
+        { error: "An active product requires an active category hierarchy" },
+        { status: 409 },
+      );
+    }
     const categoryAttributeValidation = await validateCategoryProductAttributes({
-      categoryId: body.categoryId ? Number(body.categoryId) : existing.categoryId,
+      categoryId: nextCategoryId,
       productAttributes: effectiveAttributes,
       variantOptions: effectiveVariantOptions,
     });
@@ -906,7 +921,11 @@ export async function PATCH(
       );
     }
 
-    if (parsed.value.available && existing.category.deleted) {
+    if (
+      parsed.value.available &&
+      (existing.category.deleted ||
+        !(await isCategoryEffectivelyActive(existing.categoryId)))
+    ) {
       return NextResponse.json(
         {
           error:

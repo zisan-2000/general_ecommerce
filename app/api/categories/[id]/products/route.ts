@@ -1,33 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
-
-async function getDescendantCategoryIds(rootId: number) {
-  const allIds = new Set<number>([rootId]);
-  let queue: number[] = [rootId];
-
-  while (queue.length > 0) {
-    const parents = queue;
-    queue = [];
-
-    const children = await prisma.category.findMany({
-      where: {
-        deleted: false,
-        parentId: { in: parents },
-      },
-      select: { id: true },
-    });
-
-    for (const child of children) {
-      if (!allIds.has(child.id)) {
-        allIds.add(child.id);
-        queue.push(child.id);
-      }
-    }
-  }
-
-  return Array.from(allIds);
-}
+import {
+  getCategoryDescendantIds,
+  getEffectivelyActiveCategoryIds,
+} from "@/lib/category-navigation";
 
 export async function GET(
   req: Request,
@@ -39,18 +16,24 @@ export async function GET(
     const numericId = Number(id);
     const isNumeric = !Number.isNaN(numericId) && String(numericId) === id;
 
-    const category = await prisma.category.findFirst({
-      where: isNumeric
-        ? { deleted: false, id: numericId }
-        : { deleted: false, slug: id },
-      select: { id: true, name: true, slug: true },
+    const categories = await prisma.category.findMany({
+      where: { deleted: false },
+      select: { id: true, name: true, slug: true, parentId: true, isActive: true },
     });
+    const category = categories.find((item) =>
+      isNumeric ? item.id === numericId : item.slug === id,
+    );
+    const activeCategoryIds = getEffectivelyActiveCategoryIds(categories);
 
-    if (!category) {
+    if (!category || !activeCategoryIds.has(category.id)) {
       return NextResponse.json({ error: "Category not found" }, { status: 404 });
     }
 
-    const categoryIds = await getDescendantCategoryIds(category.id);
+    const categoryIds = getCategoryDescendantIds(
+      categories,
+      category.id,
+      activeCategoryIds,
+    );
     const disabledTypes = await getDisabledStorefrontProductTypes();
 
     const products = await prisma.product.findMany({

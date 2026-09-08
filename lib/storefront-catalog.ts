@@ -11,6 +11,7 @@ import {
   validateTypedProductAttributeData,
   type CatalogAttributeType,
 } from "@/lib/attribute-schema";
+import { getEffectivelyActiveCategoryIds } from "@/lib/category-navigation";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -352,28 +353,30 @@ function serializeCatalogProduct(product: RawCatalogProduct) {
 
 const readCatalogFacets = unstable_cache(
   async () => {
-    const [categories, brands, priceRange, siteSettings] = await Promise.all([
-      prisma.category.findMany({
-        where: { deleted: false, isActive: true },
-        orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
-        select: {
-          id: true,
-          name: true,
-          slug: true,
-          image: true,
-          parentId: true,
-          isActive: true,
-          sortOrder: true,
-          showInHeader: true,
-          showInFooter: true,
-          featured: true,
-          _count: {
-            select: {
-              products: { where: { deleted: false, available: true } },
-            },
+    const categories = await prisma.category.findMany({
+      where: { deleted: false },
+      orderBy: [{ sortOrder: "asc" }, { name: "asc" }, { id: "asc" }],
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        image: true,
+        parentId: true,
+        isActive: true,
+        sortOrder: true,
+        showInHeader: true,
+        showInFooter: true,
+        featured: true,
+        _count: {
+          select: {
+            products: { where: { deleted: false, available: true } },
           },
         },
-      }),
+      },
+    });
+    const effectiveCategoryIds = getEffectivelyActiveCategoryIds(categories);
+    const activeCategoryIds = Array.from(effectiveCategoryIds);
+    const [brands, priceRange, siteSettings] = await Promise.all([
       prisma.brand.findMany({
         where: { deleted: false },
         orderBy: { name: "asc" },
@@ -384,13 +387,23 @@ const readCatalogFacets = unstable_cache(
           logo: true,
           _count: {
             select: {
-              products: { where: { deleted: false, available: true } },
+              products: {
+                where: {
+                  deleted: false,
+                  available: true,
+                  categoryId: { in: activeCategoryIds },
+                },
+              },
             },
           },
         },
       }),
       prisma.product.aggregate({
-        where: { deleted: false, available: true },
+        where: {
+          deleted: false,
+          available: true,
+          categoryId: { in: activeCategoryIds },
+        },
         _min: { basePrice: true },
         _max: { basePrice: true },
       }),
@@ -413,11 +426,14 @@ const readCatalogFacets = unstable_cache(
       }),
     ]);
 
+    const storefrontCategories = categories.filter((category) =>
+      effectiveCategoryIds.has(category.id),
+    );
     const childrenByParent = new Map<number, number[]>();
     const directCounts = new Map(
-      categories.map((category) => [category.id, category._count.products]),
+      storefrontCategories.map((category) => [category.id, category._count.products]),
     );
-    for (const category of categories) {
+    for (const category of storefrontCategories) {
       if (category.parentId === null) continue;
       const children = childrenByParent.get(category.parentId) ?? [];
       children.push(category.id);
@@ -440,7 +456,7 @@ const readCatalogFacets = unstable_cache(
     };
 
     const categoryById = new Map(
-      categories.map((category) => [category.id, category]),
+      storefrontCategories.map((category) => [category.id, category]),
     );
     const orderedCategories: Array<
       (typeof categories)[number] & { depth: number }
@@ -456,12 +472,12 @@ const readCatalogFacets = unstable_cache(
         appendCategory(childId, depth + 1);
       }
     };
-    for (const category of categories) {
+    for (const category of storefrontCategories) {
       if (category.parentId === null || !categoryById.has(category.parentId)) {
         appendCategory(category.id, 0);
       }
     }
-    for (const category of categories) appendCategory(category.id, 0);
+    for (const category of storefrontCategories) appendCategory(category.id, 0);
 
     return {
       categories: orderedCategories.map((category) => ({
@@ -799,11 +815,13 @@ const readCatalog = unstable_cache(
             String(category.id) === requestedFilters.category,
         )
       : null;
+    const activeCategoryIds = facets.categories.map((category) => category.id);
     const categoryIds = scopedCategory
       ? descendantCategoryIds(facets.categories, scopedCategory.slug)
       : [];
+    const facetCategoryIds = scopedCategory ? categoryIds : activeCategoryIds;
     const attributeFacets = await readCatalogAttributeFacets(
-      JSON.stringify(categoryIds),
+      JSON.stringify(facetCategoryIds),
       serializedDisabledTypes,
     );
     const filters = resolveCatalogFilters(
@@ -909,11 +927,13 @@ const readCatalog = unstable_cache(
     const where: Prisma.ProductWhereInput = {
       deleted: false,
       available: true,
+      categoryId: {
+        in: filters.category
+          ? (categoryIds.length ? categoryIds : [-1])
+          : activeCategoryIds,
+      },
       ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
       ...(andFilters.length ? { AND: andFilters } : {}),
-      ...(filters.category
-        ? { categoryId: { in: categoryIds.length ? categoryIds : [-1] } }
-        : {}),
       ...(filters.brands.length
         ? { brand: { slug: { in: filters.brands } } }
         : {}),

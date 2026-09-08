@@ -13,6 +13,11 @@ export type CategoryNavigationRecord = {
   featured: boolean;
 };
 
+export type CategoryActivationRecord = Pick<
+  CategoryNavigationRecord,
+  "id" | "parentId" | "isActive"
+>;
+
 export type CategoryNavigationPatch = Partial<
   Pick<
     CategoryNavigationRecord,
@@ -24,7 +29,7 @@ export const CATEGORY_NAVIGATION_DEFAULTS = {
   isActive: true,
   sortOrder: 0,
   showInHeader: true,
-  showInFooter: true,
+  showInFooter: false,
   featured: false,
 } as const;
 
@@ -81,11 +86,13 @@ export function parseCategoryNavigationPatch(
   return { ok: true, value };
 }
 
-export function getEffectivelyActiveCategoryIds(categories: CategoryNavigationRecord[]) {
+export function getEffectivelyActiveCategoryIds(
+  categories: readonly CategoryActivationRecord[],
+) {
   const byId = new Map(categories.map((category) => [category.id, category]));
   const active = new Set<number>();
 
-  const isEffectivelyActive = (category: CategoryNavigationRecord) => {
+  const isEffectivelyActive = (category: CategoryActivationRecord) => {
     if (!category.isActive) return false;
 
     const visited = new Set<number>([category.id]);
@@ -105,6 +112,36 @@ export function getEffectivelyActiveCategoryIds(categories: CategoryNavigationRe
   }
 
   return active;
+}
+
+export function getCategoryDescendantIds(
+  categories: readonly Pick<CategoryNavigationRecord, "id" | "parentId">[],
+  rootId: number,
+  allowedIds?: ReadonlySet<number>,
+) {
+  if (allowedIds && !allowedIds.has(rootId)) return [];
+
+  const childrenByParent = new Map<number, number[]>();
+  for (const category of categories) {
+    if (category.parentId === null) continue;
+    const children = childrenByParent.get(category.parentId) ?? [];
+    children.push(category.id);
+    childrenByParent.set(category.parentId, children);
+  }
+
+  const descendants: number[] = [];
+  const pending = [rootId];
+  const visited = new Set<number>();
+  while (pending.length > 0) {
+    const id = pending.pop();
+    if (id === undefined || visited.has(id)) continue;
+    visited.add(id);
+    if (!allowedIds || allowedIds.has(id)) descendants.push(id);
+    for (const childId of childrenByParent.get(id) ?? []) {
+      if (!allowedIds || allowedIds.has(childId)) pending.push(childId);
+    }
+  }
+  return descendants;
 }
 
 function isVisibleForPlacement(

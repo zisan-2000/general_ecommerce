@@ -1,6 +1,7 @@
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 type PriceClient = Prisma.TransactionClient | typeof prisma;
 
@@ -37,8 +38,14 @@ export async function getCurrentPriceSnapshot({
   variantId?: number | null;
   db?: PriceClient;
 }): Promise<PriceSnapshot | null> {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const product = await db.product.findFirst({
-    where: { id: productId, deleted: false, available: true },
+    where: {
+      id: productId,
+      deleted: false,
+      available: true,
+      categoryId: { in: activeCategoryIds },
+    },
     select: {
       id: true,
       name: true,
@@ -147,10 +154,15 @@ export async function createWishlistPriceDropAlertIfMissing({
 }
 
 export async function ensureWishlistPriceDropAlertsForUser(userId: string) {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const wishlist = await prisma.wishlist.findMany({
     where: {
       userId,
-      product: { deleted: false, available: true },
+      product: {
+        deleted: false,
+        available: true,
+        categoryId: { in: activeCategoryIds },
+      },
     },
     select: { productId: true },
     orderBy: { id: "asc" },
@@ -175,12 +187,17 @@ export async function evaluatePriceDropAlertsForProduct(
   productId: number,
   userId?: string,
 ) {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const alerts = await prisma.priceDropAlert.findMany({
     where: {
       productId,
       ...(userId ? { userId } : {}),
       active: true,
-      product: { deleted: false, available: true },
+      product: {
+        deleted: false,
+        available: true,
+        categoryId: { in: activeCategoryIds },
+      },
     },
     orderBy: { id: "asc" },
   });
@@ -261,11 +278,16 @@ export async function evaluatePriceDropAlertsForProduct(
 }
 
 export async function evaluatePriceDropAlertsForUser(userId: string) {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const alerts = await prisma.priceDropAlert.findMany({
     where: {
       userId,
       active: true,
-      product: { deleted: false, available: true },
+      product: {
+        deleted: false,
+        available: true,
+        categoryId: { in: activeCategoryIds },
+      },
     },
     select: { productId: true },
     distinct: ["productId"],
@@ -284,10 +306,15 @@ export async function evaluatePriceDropAlertsForUser(userId: string) {
 }
 
 export async function evaluateAllPriceDropAlerts() {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const productIds = await prisma.priceDropAlert.findMany({
     where: {
       active: true,
-      product: { deleted: false, available: true },
+      product: {
+        deleted: false,
+        available: true,
+        categoryId: { in: activeCategoryIds },
+      },
     },
     distinct: ["productId"],
     select: { productId: true },

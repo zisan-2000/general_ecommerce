@@ -12,6 +12,7 @@ import {
 } from "@/lib/search/core";
 import { searchTypesenseProducts, typesenseSearchEnabled } from "@/lib/search/typesense";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 type RankedProductRow = {
   id: number;
@@ -148,6 +149,7 @@ async function rankedProductCandidates(
   expandedTerms: string[],
   boostProductIds: number[],
   limit: number,
+  activeCategoryIds: number[],
 ) {
   const normalized = query.toLocaleLowerCase("en-US");
   const compact = compactModelToken(query);
@@ -197,6 +199,7 @@ async function rankedProductCandidates(
     LEFT JOIN "Brand" b ON b."id" = p."brandId" AND b."deleted" = false
     WHERE p."deleted" = false
       AND p."available" = true
+      AND p."categoryId" IN (${Prisma.join(activeCategoryIds)})
       AND (
         p."searchVector" @@ websearch_to_tsquery('simple', ${query})
         OR similarity(lower(p."name"), ${normalized}) >= 0.16
@@ -207,11 +210,16 @@ async function rankedProductCandidates(
   `);
 }
 
-async function fallbackProductCandidates(query: string, limit: number) {
+async function fallbackProductCandidates(
+  query: string,
+  limit: number,
+  activeCategoryIds: number[],
+) {
   const products = await prisma.product.findMany({
     where: {
       deleted: false,
       available: true,
+      categoryId: { in: activeCategoryIds },
       OR: [
         { name: { contains: query, mode: "insensitive" } },
         { sku: { contains: query, mode: "insensitive" } },
@@ -238,7 +246,9 @@ async function searchProductCandidates(
   expandedTerms: string[],
   boostProductIds: number[],
   limit: number,
+  activeCategoryIds: number[],
 ) {
+  if (activeCategoryIds.length === 0) return [];
   if (typesenseSearchEnabled()) {
     try {
       const external = await searchTypesenseProducts(query, Math.max(limit * 8, 48));
@@ -248,10 +258,16 @@ async function searchProductCandidates(
     }
   }
   try {
-    return await rankedProductCandidates(query, expandedTerms, boostProductIds, limit);
+    return await rankedProductCandidates(
+      query,
+      expandedTerms,
+      boostProductIds,
+      limit,
+      activeCategoryIds,
+    );
   } catch (error) {
     console.error("PostgreSQL relevance search failed; using safe fallback", error);
-    return fallbackProductCandidates(query, limit);
+    return fallbackProductCandidates(query, limit, activeCategoryIds);
   }
 }
 
@@ -259,6 +275,7 @@ export async function getRankedSearchProductIds(rawQuery: unknown, maxCandidates
   const initialIntent = parseSearchIntent(rawQuery);
   if (initialIntent.searchText.length < 2) return [];
   const config = await loadSearchConfiguration(initialIntent.normalizedQuery);
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const intent = parseSearchIntent(rawQuery, config.synonymGroups);
   const boundedMax = Math.max(48, Math.min(18_000, Math.floor(maxCandidates)));
   const ranked = await searchProductCandidates(
@@ -266,6 +283,7 @@ export async function getRankedSearchProductIds(rawQuery: unknown, maxCandidates
     intent.expandedTerms,
     config.boostProductIds,
     Math.ceil(boundedMax / 8),
+    activeCategoryIds,
   );
   const ids = ranked.slice(0, boundedMax).map((row) => row.id);
   const pinned = config.pinProductIds.filter((id) => ids.includes(id));
@@ -337,8 +355,11 @@ export async function getSearchSuggestions(
     };
   }
 
-  const config = await loadSearchConfiguration(initialIntent.normalizedQuery);
-  const disabledTypes = await getDisabledStorefrontProductTypes();
+  const [config, disabledTypes, activeCategoryIds] = await Promise.all([
+    loadSearchConfiguration(initialIntent.normalizedQuery),
+    getDisabledStorefrontProductTypes(),
+    getEffectiveStorefrontCategoryIds(),
+  ]);
   const productTypeFilter = disabledTypes.length
     ? { type: { notIn: disabledTypes } }
     : {};
@@ -348,6 +369,7 @@ export async function getSearchSuggestions(
     intent.expandedTerms,
     config.boostProductIds,
     limit,
+    activeCategoryIds,
   );
 
   const candidateIds = ranked.map((row) => row.id);
@@ -358,6 +380,7 @@ export async function getSearchSuggestions(
             id: { in: candidateIds },
             deleted: false,
             available: true,
+            categoryId: { in: activeCategoryIds },
             ...productTypeFilter,
           },
           select: {
@@ -388,7 +411,12 @@ export async function getSearchSuggestions(
         deleted: false,
         name: { contains: intent.searchText, mode: "insensitive" },
         products: {
-          some: { deleted: false, available: true, ...productTypeFilter },
+          some: {
+            deleted: false,
+            available: true,
+            categoryId: { in: activeCategoryIds },
+            ...productTypeFilter,
+          },
         },
       },
       select: { id: true, name: true, slug: true },
@@ -398,6 +426,7 @@ export async function getSearchSuggestions(
     prisma.category.findMany({
       where: {
         deleted: false,
+        id: { in: activeCategoryIds },
         name: { contains: intent.searchText, mode: "insensitive" },
         products: {
           some: { deleted: false, available: true, ...productTypeFilter },

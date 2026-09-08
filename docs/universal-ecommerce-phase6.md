@@ -20,14 +20,15 @@ Category configuration fields:
 2. A descendant is effectively inactive when any ancestor is inactive.
 3. Header visibility requires the category and every ancestor to have `showInHeader = true`.
 4. Footer visibility requires the category and every ancestor to have `showInFooter = true`.
-5. Homepage category cards prefer active root categories marked `featured`, ordered by `sortOrder`.
-6. The admin API rejects self-parenting and descendant cycles.
-7. An active category cannot be moved under an inactive parent.
-8. Product/catalog core behavior is not rewritten.
+5. Homepage category cards include only active root categories marked `featured`, ordered by `sortOrder`.
+6. Products whose category or any category ancestor is inactive are excluded from storefront discovery, search, wishlist/cart reads, new cart additions and checkout.
+7. The admin API rejects self-parenting and descendant cycles.
+8. An active category cannot be moved under an effectively inactive parent.
+9. Historical orders remain readable; category activation only gates current discovery and new purchases.
 
 ## Compatibility
 
-The migration is additive and defaults existing categories to active/header/footer-visible. The idempotent backfill initializes root ordering only when all roots are still at the default sort order, preserving the previous technology-store order for the existing installation without retaining that list in runtime navigation code.
+The original additive migration preserves existing categories as active/header/footer-visible. The hardening migration changes only the database default for newly created categories so footer placement is opt-in. The idempotent backfill initializes root ordering only when all roots are still at the default sort order, preserving the previous technology-store order for the existing installation without retaining that list in runtime navigation code.
 
 If no root category has been explicitly featured, the backfill marks the same legacy homepage root selection (up to five categories, based on the previous id-descending behavior) as featured.
 
@@ -35,7 +36,7 @@ Deleted categories are marked inactive during backfill.
 
 ## Deployment
 
-1. Deploy the additive migration `20260908_add_category_navigation_config`.
+1. Deploy `20260908_add_category_navigation_config` and `20260908_phase6_navigation_hardening`.
 2. Run `npm run backfill:category-navigation`.
 3. Run `npm run verify:category-navigation-db`.
 4. Run `npm run verify:universal-phase6`.
@@ -55,6 +56,7 @@ No legacy column is dropped. To restore the former visible behavior, keep catego
 - Header contains no `DESKTOP_CATEGORY_ORDER` or vertical-specific category list.
 - Header/footer hierarchy is database-driven and ancestor-safe.
 - Homepage featured categories are configuration-driven.
+- Inactive category hierarchies cannot leak products through catalog, search, cart or checkout.
 - Category mutations invalidate catalog, category and homepage caches.
 - Backfill and DB verification are available.
 - Phase 1–6 release gate passes.

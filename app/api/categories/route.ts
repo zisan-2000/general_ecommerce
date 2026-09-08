@@ -14,6 +14,7 @@ import {
   getEffectivelyActiveCategoryIds,
   parseCategoryNavigationPatch,
 } from "@/lib/category-navigation";
+import { getEffectiveStorefrontCategoryIdSet } from "@/lib/category-navigation-server";
 
 function toCategoryLogSnapshot(category: {
   name: string;
@@ -189,7 +190,11 @@ export async function POST(req: Request) {
       if (!parent) {
         return NextResponse.json({ error: "Parent category not found" }, { status: 404 });
       }
-      if ((navigation.value.isActive ?? true) && !parent.isActive) {
+      const activeCategoryIds = await getEffectiveStorefrontCategoryIdSet();
+      if (
+        (navigation.value.isActive ?? true) &&
+        (!parent.isActive || !activeCategoryIds.has(parent.id))
+      ) {
         return NextResponse.json(
           { error: "An active category cannot be placed under an inactive parent" },
           { status: 409 },

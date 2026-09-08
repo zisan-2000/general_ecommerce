@@ -51,7 +51,7 @@ const emptyForm = (): CategoryForm => ({
   isActive: true,
   sortOrder: 0,
   showInHeader: true,
-  showInFooter: true,
+  showInFooter: false,
   featured: false,
 });
 

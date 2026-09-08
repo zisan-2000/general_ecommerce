@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 type EvaluateCartReminderOptions = {
   userId?: string;
@@ -17,12 +18,14 @@ export async function evaluateCartReminderNotifications({
   userId,
   now = new Date(),
 }: EvaluateCartReminderOptions = {}) {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
   const cartItems = await prisma.cartItem.findMany({
     where: {
       ...(userId ? { userId } : {}),
       product: {
         deleted: false,
         available: true,
+        categoryId: { in: activeCategoryIds },
         cartReminderMinutes: { not: null },
       },
     },

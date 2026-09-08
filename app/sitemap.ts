@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getSiteUrl } from "@/lib/seo";
 import { getStoreFeatureRegistry } from "@/lib/store-features-server";
 import { disabledProductTypes } from "@/lib/store-features";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
@@ -36,11 +37,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   try {
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const [products, blogs, brands, categories] = await Promise.all([
       prisma.product.findMany({
         where: {
           deleted: false,
           available: true,
+          categoryId: { in: activeCategoryIds },
           ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         },
         select: { id: true, updatedAt: true },
@@ -56,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         orderBy: { updatedAt: "desc" },
       }),
       prisma.category.findMany({
-        where: { deleted: false },
+        where: { id: { in: activeCategoryIds }, deleted: false },
         select: { slug: true, updatedAt: true },
         orderBy: { updatedAt: "desc" },
       }),

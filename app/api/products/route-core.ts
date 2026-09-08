@@ -25,6 +25,10 @@ import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
 import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import {
+  getEffectiveStorefrontCategoryIds,
+  isCategoryEffectivelyActive,
+} from "@/lib/category-navigation-server";
 
 const createVariantSku = (slug: string, index: number) =>
   `${slug.substring(0, 20)}-V${index + 1}-${Math.random()
@@ -168,7 +172,11 @@ export async function GET(req: Request) {
       ...(storefront ? { available: true } : {}),
     };
     if (storefront) {
-      const disabledTypes = await getDisabledStorefrontProductTypes();
+      const [disabledTypes, activeCategoryIds] = await Promise.all([
+        getDisabledStorefrontProductTypes(),
+        getEffectiveStorefrontCategoryIds(),
+      ]);
+      whereClause.categoryId = { in: activeCategoryIds };
       if (disabledTypes.length) whereClause.type = { notIn: disabledTypes };
     }
 
@@ -355,8 +363,15 @@ export async function POST(req: Request) {
       );
     }
     const productAttributes = parsedProductAttributes.value;
+    const categoryId = Number(body.categoryId);
+    if ((body.available ?? true) && !(await isCategoryEffectivelyActive(categoryId))) {
+      return NextResponse.json(
+        { error: "An active product requires an active category hierarchy" },
+        { status: 409 },
+      );
+    }
     const categoryAttributeValidation = await validateCategoryProductAttributes({
-      categoryId: Number(body.categoryId),
+      categoryId,
       productAttributes,
       variantOptions,
     });
