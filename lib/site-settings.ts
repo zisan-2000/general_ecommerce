@@ -51,9 +51,9 @@ export type SiteSettingsInput = {
 };
 
 type SiteSettingsRecord = {
-  [Key in keyof SiteSettingsInput]?: SiteSettingsInput[Key] | null;
+  [Key in keyof SiteSettingsInput]?: unknown;
 } & {
-  siteTitle?: string | null;
+  siteTitle?: unknown;
 };
 
 export type ResolvedSiteSettings = Omit<
