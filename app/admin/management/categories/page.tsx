@@ -12,17 +12,30 @@ interface Category {
   parentName?: string | null;
   productCount?: number;
   childrenCount?: number;
+  isActive: boolean;
+  sortOrder: number;
+  showInHeader: boolean;
+  showInFooter: boolean;
+  featured: boolean;
   createdAt: string;
   updatedAt: string;
 }
 
-interface CategoryCreatePayload {
+interface CategoryNavigationPayload {
+  isActive?: boolean;
+  sortOrder?: number;
+  showInHeader?: boolean;
+  showInFooter?: boolean;
+  featured?: boolean;
+}
+
+interface CategoryCreatePayload extends CategoryNavigationPayload {
   name: string;
   parentId?: number | null;
   image?: string | null;
 }
 
-interface CategoryUpdatePayload {
+interface CategoryUpdatePayload extends CategoryNavigationPayload {
   name?: string;
   parentId?: number | null;
   image?: string | null;
@@ -31,10 +44,6 @@ interface CategoryUpdatePayload {
 const CategoriesPage = memo(function CategoriesPage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
-
-  /* =========================
-     FETCH
-  ========================= */
 
   const fetchCategories = useCallback(async () => {
     try {
@@ -58,12 +67,8 @@ const CategoriesPage = memo(function CategoriesPage() {
   }, []);
 
   useEffect(() => {
-    fetchCategories();
+    void fetchCategories();
   }, [fetchCategories]);
-
-  /* =========================
-     CREATE
-  ========================= */
 
   const handleCreate = async (payload: CategoryCreatePayload) => {
     const res = await fetch("/api/categories", {
@@ -80,17 +85,10 @@ const CategoriesPage = memo(function CategoriesPage() {
       throw new Error(message);
     }
 
-    await fetchCategories(); // refresh full tree
+    await fetchCategories();
   };
 
-  /* =========================
-     UPDATE
-  ========================= */
-
-  const handleUpdate = async (
-    id: number,
-    payload: CategoryUpdatePayload
-  ) => {
+  const handleUpdate = async (id: number, payload: CategoryUpdatePayload) => {
     const res = await fetch(`/api/categories/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -105,17 +103,11 @@ const CategoriesPage = memo(function CategoriesPage() {
       throw new Error(message);
     }
 
-    await fetchCategories(); // refresh full tree
+    await fetchCategories();
   };
 
-  /* =========================
-     DELETE
-  ========================= */
-
   const handleDelete = async (id: number) => {
-    const res = await fetch(`/api/categories/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(`/api/categories/${id}`, { method: "DELETE" });
 
     if (!res.ok) {
       const data = await res.json().catch(() => null);
@@ -125,7 +117,7 @@ const CategoriesPage = memo(function CategoriesPage() {
       throw new Error(message);
     }
 
-    await fetchCategories(); // refresh full tree
+    await fetchCategories();
   };
 
   return (
