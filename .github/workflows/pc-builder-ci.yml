@@ -101,6 +101,9 @@ jobs:
       - name: Generate Prisma client
         run: npx prisma generate
 
+      - name: Generate Next.js route types
+        run: npx next typegen
+
       - name: Run Phase 1 through Phase 6 verification
         if: github.event_name == 'pull_request' && github.head_ref == 'phase6-dynamic-category-navigation'
         run: npm run verify:universal-phase6
