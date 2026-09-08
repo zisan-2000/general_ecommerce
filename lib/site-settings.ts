@@ -50,12 +50,28 @@ export type SiteSettingsInput = {
   youtubeLink: string | null;
 };
 
-type SiteSettingsRecord = Partial<SiteSettingsInput> & {
+type SiteSettingsRecord = {
+  [Key in keyof SiteSettingsInput]?: SiteSettingsInput[Key] | null;
+} & {
   siteTitle?: string | null;
 };
 
-export type ResolvedSiteSettings = SiteSettingsInput & {
+export type ResolvedSiteSettings = Omit<
+  SiteSettingsInput,
+  | "storeName"
+  | "storeTagline"
+  | "defaultSeoTitle"
+  | "defaultSeoDescription"
+  | "favicon"
+  | "logo"
+> & {
+  storeName: string;
   siteTitle: string;
+  storeTagline: string;
+  defaultSeoTitle: string;
+  defaultSeoDescription: string;
+  favicon: string;
+  logo: string;
   siteDescription: string;
   ogImage: string;
 };
