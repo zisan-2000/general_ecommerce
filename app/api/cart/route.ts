@@ -16,6 +16,7 @@ import {
 import { pcBuildSelectionId } from "@/lib/pc-builder-grouping";
 import { replayNextRequest } from "@/lib/replay-next-request";
 import { validatePcBuilderSelectionLive } from "@/lib/storefront-pc-builder";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
 import {
   DELETE as coreDELETE,
@@ -108,6 +109,7 @@ async function findBuildCartRow(
 }
 
 export async function GET() {
+  if (!(await isFeatureEnabled("PC_BUILDER"))) return coreGET();
   const response = await coreGET();
   if (!response.ok) return response;
 
@@ -180,6 +182,9 @@ export async function POST(request: NextRequest) {
     request.cookies.get(PC_BUILDER_CHECKOUT_COOKIE)?.value,
   );
   if (!state) return corePOST(requestForCore);
+  if (!(await isFeatureEnabled("PC_BUILDER"))) {
+    return corePOST(requestForCore);
+  }
 
   const matches = findPcBuilderBuildMatches(state, selectionId);
   if (matches.length === 0) return corePOST(requestForCore);

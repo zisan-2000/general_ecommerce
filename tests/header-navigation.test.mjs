@@ -23,9 +23,12 @@ test("header shortcuts describe their real destinations", async () => {
 
 test("desktop and mobile render the same shortcut contract", async () => {
   const header = await read("components/ecommarce/header.tsx");
-  const renderCount = header.match(/HEADER_SHOP_ACTIONS\.map/g)?.length ?? 0;
+  const renderCount = header.match(/visibleShopActions\.map/g)?.length ?? 0;
 
   assert.equal(renderCount, 2);
+  assert.match(header, /HEADER_SHOP_ACTIONS\.filter/);
+  assert.match(header, /featureVisibility\.compare/);
+  assert.match(header, /featureVisibility\.pcBuilder/);
   assert.match(header, /aria-labelledby="mobile-shop-shortcuts-heading"/);
   assert.match(header, /onClick=\{\(\) => setMobileMenuOpen\(false\)\}/);
   assert.doesNotMatch(

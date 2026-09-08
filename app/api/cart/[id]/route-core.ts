@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { computeWarehouseAvailableStock } from '@/lib/warehouse-stock';
+import { gateProductType } from '@/lib/store-feature-gates-server';
 
 // UPDATE quantity - Logged in user only
 // Body: { quantity: number }
@@ -60,6 +61,9 @@ export async function PATCH(
       });
       return NextResponse.json({ message: 'Cart item removed' });
     }
+
+    const typeGate = await gateProductType(cartItem.product.type);
+    if (typeGate) return typeGate;
 
     if (cartItem.product.type === 'PHYSICAL') {
       const available = cartItem.variant

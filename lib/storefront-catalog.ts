@@ -2,6 +2,8 @@ import { unstable_cache } from "next/cache.js";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getRankedSearchProductIds } from "@/lib/search/server";
 import { parseSearchIntent } from "@/lib/search/core";
 
@@ -506,13 +508,17 @@ const readCatalogFacets = unstable_cache(
  * are counted over products that are actually visible in the catalog.
  */
 const readCatalogAttributeFacets = unstable_cache(
-  async (serializedCategoryIds: string) => {
+  async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
     const categoryIds = JSON.parse(serializedCategoryIds) as number[];
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
     const rows = await prisma.productAttribute.findMany({
       where: {
         product: {
           deleted: false,
           available: true,
+          ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
           ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
         },
       },
@@ -604,9 +610,24 @@ function catalogOrderBy(
 }
 
 const readCatalog = unstable_cache(
-  async (serializedFilters: string) => {
+  async (serializedFilters: string, serializedDisabledTypes: string) => {
     const requestedFilters = JSON.parse(serializedFilters) as CatalogFilters;
-    const facets = await readCatalogFacets();
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
+    const rawFacets = await readCatalogFacets();
+    const facets = {
+      ...rawFacets,
+      productTypes: rawFacets.productTypes.filter(
+        (type) => !disabledTypes.includes(type as FeatureControlledProductType),
+      ),
+    };
+    if (
+      requestedFilters.type &&
+      disabledTypes.includes(requestedFilters.type as FeatureControlledProductType)
+    ) {
+      requestedFilters.type = "";
+    }
     const scopedCategory = requestedFilters.category
       ? facets.categories.find(
           (category) =>
@@ -619,6 +640,7 @@ const readCatalog = unstable_cache(
       : [];
     const attributeFacets = await readCatalogAttributeFacets(
       JSON.stringify(categoryIds),
+      serializedDisabledTypes,
     );
     const filters = resolveCatalogFilters(
       requestedFilters,
@@ -680,6 +702,7 @@ const readCatalog = unstable_cache(
     const where: Prisma.ProductWhereInput = {
       deleted: false,
       available: true,
+      ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
       ...(andFilters.length ? { AND: andFilters } : {}),
       ...(filters.category
         ? { categoryId: { in: categoryIds.length ? categoryIds : [-1] } }
@@ -766,7 +789,8 @@ export type StorefrontCatalogFacets = Awaited<
 >;
 
 export async function getStorefrontCatalog(filters: CatalogFilters) {
-  return readCatalog(JSON.stringify(filters));
+  const disabledTypes = await getDisabledStorefrontProductTypes();
+  return readCatalog(JSON.stringify(filters), JSON.stringify(disabledTypes));
 }
 
 export async function getStorefrontCatalogFacets() {

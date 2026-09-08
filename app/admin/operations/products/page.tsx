@@ -67,7 +67,20 @@ interface ProductsPageCache {
   brands: Brand[];
   vatClasses: VatClass[];
   digitalAssets: DigitalAsset[];
+  features: ProductModuleFeatures;
 }
+
+type ProductModuleFeatures = {
+  DIGITAL_PRODUCTS: boolean;
+  SERVICE_PRODUCTS: boolean;
+  BUNDLES: boolean;
+};
+
+const DEFAULT_PRODUCT_MODULE_FEATURES: ProductModuleFeatures = {
+  DIGITAL_PRODUCTS: true,
+  SERVICE_PRODUCTS: true,
+  BUNDLES: true,
+};
 
 let productsPageCache: ProductsPageCache | null = null;
 
@@ -110,6 +123,9 @@ export default function ProductsPage() {
   const [digitalAssets, setDigitalAssets] = useState<DigitalAsset[]>(
     () => productsPageCache?.digitalAssets ?? [],
   );
+  const [features, setFeatures] = useState<ProductModuleFeatures>(
+    () => productsPageCache?.features ?? DEFAULT_PRODUCT_MODULE_FEATURES,
+  );
   const [loading, setLoading] = useState(() => !productsPageCache);
 
   const loadAll = useCallback(async () => {
@@ -119,18 +135,34 @@ export default function ProductsPage() {
       setBrands(productsPageCache.brands);
       setVatClasses(productsPageCache.vatClasses);
       setDigitalAssets(productsPageCache.digitalAssets);
+      setFeatures(productsPageCache.features);
       setLoading(false);
       return;
     }
 
     setLoading(true);
     try {
+      const featureResponse = await fetch("/api/store-features", {
+        cache: "no-store",
+      });
+      const featurePayload = featureResponse.ok
+        ? await featureResponse.json()
+        : null;
+      const nextFeatures: ProductModuleFeatures = {
+        DIGITAL_PRODUCTS:
+          featurePayload?.features?.DIGITAL_PRODUCTS ?? true,
+        SERVICE_PRODUCTS:
+          featurePayload?.features?.SERVICE_PRODUCTS ?? true,
+        BUNDLES: featurePayload?.features?.BUNDLES ?? true,
+      };
       const [p, c, b, vat, da] = await Promise.all([
         fetchJsonArray<Product>("/api/products", "products"),
         fetchJsonArray<Category>("/api/categories", "categories"),
         fetchJsonArray<Brand>("/api/brands", "brands"),
         fetchJsonArray<VatClass>("/api/vat-classes", "VAT classes"),
-        fetchJsonArray<DigitalAsset>("/api/digital-assets", "digital assets"),
+        nextFeatures.DIGITAL_PRODUCTS
+          ? fetchJsonArray<DigitalAsset>("/api/digital-assets", "digital assets")
+          : Promise.resolve([]),
       ]);
 
       productsPageCache = {
@@ -139,6 +171,7 @@ export default function ProductsPage() {
         brands: b,
         vatClasses: vat,
         digitalAssets: da,
+        features: nextFeatures,
       };
 
       setProducts(p);
@@ -146,6 +179,7 @@ export default function ProductsPage() {
       setBrands(b);
       setVatClasses(vat);
       setDigitalAssets(da);
+      setFeatures(nextFeatures);
     } catch (error) {
       console.error("Error loading products:", error);
       setProducts([]);
@@ -318,6 +352,7 @@ export default function ProductsPage() {
         brands={memoizedBrands}
         vatClasses={memoizedVatClasses}
         digitalAssets={memoizedDigitalAssets}
+        features={features}
         loading={loading}
         onCreate={createProduct}
         onUpdate={updateProduct}

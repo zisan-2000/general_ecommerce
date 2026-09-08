@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cpu } from "lucide-react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import PcBuilderClient from "@/components/ecommarce/pc-builder/PcBuilderClient";
 import PcBuilderSavedBuildControls from "@/components/ecommarce/pc-builder/PcBuilderSavedBuildControls";
 import {
@@ -22,6 +22,7 @@ import {
   resolvePcBuilderExtraItems,
   validatePcBuilderSelectionLive,
 } from "@/lib/storefront-pc-builder";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export const metadata: Metadata = {
   title: "PC Builder — Build a Compatible Custom PC",
@@ -58,6 +59,7 @@ export default async function PcBuilderPage({
 }: {
   searchParams: Promise<{ build?: string; shared?: string }>;
 }) {
+  if (!(await isFeatureEnabled("PC_BUILDER"))) notFound();
   const params = await searchParams;
 
   if (params.shared) {

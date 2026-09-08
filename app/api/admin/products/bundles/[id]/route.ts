@@ -14,11 +14,14 @@ import {
   normalizeBundleStockQuantity,
   syncBundleDefaultVariant,
 } from '@/lib/bundle-inventory';
+import { gateStoreFeature } from '@/lib/store-feature-gates-server';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const { id } = await params;
     const bundleId = parseInt(id);
@@ -132,6 +135,8 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const { id } = await params;
     const bundleId = parseInt(id);
@@ -406,6 +411,8 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const { id } = await params;
     const bundleId = parseInt(id);

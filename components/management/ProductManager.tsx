@@ -84,6 +84,11 @@ export default function ProductManager({
   brands,
   vatClasses,
   digitalAssets,
+  features = {
+    DIGITAL_PRODUCTS: true,
+    SERVICE_PRODUCTS: true,
+    BUNDLES: true,
+  },
 }: any) {
   const router = useRouter();
   const [search, setSearch] = useState("");
@@ -1048,24 +1053,28 @@ export default function ProductManager({
                   >
                     Attributes
                   </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => setDigitalAssetsOpen(true)}
-                    className="w-full"
-                  >
-                    Digital Assets
-                  </Button>
+                  {features.DIGITAL_PRODUCTS ? (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => setDigitalAssetsOpen(true)}
+                      className="w-full"
+                    >
+                      Digital Assets
+                    </Button>
+                  ) : null}
                   <Button onClick={openAdd} className="w-full">
                     <Plus className="h-4 w-4 mr-1" /> New Product
                   </Button>
-                  <Button
-                    variant="outline"
-                    onClick={() => router.push("/admin/operations/products/bundles")}
-                    className="w-full border-primary/20 text-primary hover:bg-primary/10"
-                  >
-                    <Package className="h-4 w-4 mr-1" /> Bundles
-                  </Button>
+                  {features.BUNDLES ? (
+                    <Button
+                      variant="outline"
+                      onClick={() => router.push("/admin/operations/products/bundles")}
+                      className="w-full border-primary/20 text-primary hover:bg-primary/10"
+                    >
+                      <Package className="h-4 w-4 mr-1" /> Bundles
+                    </Button>
+                  ) : null}
                 </div>
 
                 {hasActiveFilters && (
@@ -1112,9 +1121,9 @@ export default function ProductManager({
               >
                 <option value="">All Types</option>
                 <option value="PHYSICAL">Physical</option>
-                <option value="DIGITAL">Digital</option>
-                <option value="SERVICE">Service</option>
-                <option value="BUNDLE">Bundle</option>
+                {features.DIGITAL_PRODUCTS ? <option value="DIGITAL">Digital</option> : null}
+                {features.SERVICE_PRODUCTS ? <option value="SERVICE">Service</option> : null}
+                {features.BUNDLES ? <option value="BUNDLE">Bundle</option> : null}
               </select>
 
               <select
@@ -1270,6 +1279,14 @@ export default function ProductManager({
         <div className="grid grid-cols-1 gap-4 px-4 pb-6 sm:grid-cols-2 sm:gap-6 sm:px-6 xl:grid-cols-3 2xl:grid-cols-4">
           {paginatedProducts.map((p: any) => {
             const flashSaleStatus = getFlashSaleStatus(p);
+            const moduleEnabled =
+              p.type === "DIGITAL"
+                ? features.DIGITAL_PRODUCTS
+                : p.type === "SERVICE"
+                  ? features.SERVICE_PRODUCTS
+                  : p.type === "BUNDLE"
+                    ? features.BUNDLES
+                    : true;
 
             return (
               <SpotlightCard
@@ -1418,7 +1435,8 @@ export default function ProductManager({
 
                 {/* Actions fixed bottom */}
                 <div className="mt-auto border-t border-border/50 pt-3">
-                  <div className="grid grid-cols-2 gap-2">
+                  {moduleEnabled ? (
+                    <div className="grid grid-cols-2 gap-2">
                     <Button
                       onClick={() => openEdit(p)}
                       variant="default"
@@ -1476,7 +1494,12 @@ export default function ProductManager({
                     >
                       <Trash2 className="h-3.5 w-3.5" />
                     </Button>
-                  </div>
+                    </div>
+                  ) : (
+                    <p className="rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
+                      This module is disabled. Existing product data remains read-only.
+                    </p>
+                  )}
                 </div>
               </CardContent>
               </SpotlightCard>
@@ -1562,6 +1585,7 @@ export default function ProductManager({
           brands={brands}
           vatClasses={vatClasses}
           digitalAssets={digitalAssets}
+          features={features}
         />
       )}
 

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import CompareWorkspace from "@/components/ecommarce/compare/CompareWorkspace";
 import { normalizeCompareProductIds } from "@/lib/product-compare";
 import { getStorefrontProductDetail } from "@/lib/storefront-product-detail";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export const metadata: Metadata = {
   title: "Compare products",
@@ -14,6 +16,7 @@ type ComparePageProps = {
 };
 
 export default async function ComparePage({ searchParams }: ComparePageProps) {
+  if (!(await isFeatureEnabled("COMPARE"))) notFound();
   const params = await searchParams;
   const rawIds = Array.isArray(params.ids) ? params.ids.join(",") : params.ids || "";
   const ids = normalizeCompareProductIds(rawIds.split(","));

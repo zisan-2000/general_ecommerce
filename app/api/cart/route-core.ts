@@ -1,5 +1,6 @@
 // app/api/cart/route.ts
 import { NextRequest, NextResponse } from 'next/server';
+import { gateProductType } from '@/lib/store-feature-gates-server';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
@@ -163,6 +164,9 @@ export async function POST(request: NextRequest) {
         { status: 404 }
       );
     }
+
+    const typeGate = await gateProductType(product.type);
+    if (typeGate) return typeGate;
 
     // Handle bundle stock validation
     if (product.type === 'BUNDLE') {

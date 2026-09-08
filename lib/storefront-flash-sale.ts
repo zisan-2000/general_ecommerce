@@ -6,14 +6,20 @@ import {
   serializeStorefrontHomeProduct,
   storefrontHomeProductSelect,
 } from "@/lib/storefront-home";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import type { FeatureControlledProductType } from "@/lib/store-features";
 
 const readActiveFlashSales = unstable_cache(
-  async () => {
+  async (serializedDisabledTypes: string) => {
     const now = new Date();
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         flashSaleEnabled: true,
         flashSalePrice: { not: null },
         flashSaleStartsAt: { lte: now },
@@ -32,5 +38,6 @@ const readActiveFlashSales = unstable_cache(
 );
 
 export async function getActiveFlashSaleProducts() {
-  return readActiveFlashSales();
+  const disabledTypes = await getDisabledStorefrontProductTypes();
+  return readActiveFlashSales(JSON.stringify(disabledTypes));
 }

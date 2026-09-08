@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 /* =========================
    UPDATE DIGITAL ASSET
@@ -8,6 +9,8 @@ export async function PUT(
   req: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
+  const featureGate = await gateStoreFeature("DIGITAL_PRODUCTS", 403);
+  if (featureGate) return featureGate;
   try {
     const { id: idParam } = await params;
     const id = Number(idParam);
@@ -90,6 +93,8 @@ export async function DELETE(
   _req: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
+  const featureGate = await gateStoreFeature("DIGITAL_PRODUCTS", 403);
+  if (featureGate) return featureGate;
   try {
     const { id: idParam } = await params;
     const id = Number(idParam);

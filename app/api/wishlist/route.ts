@@ -8,6 +8,10 @@ import {
   createWishlistPriceDropAlertIfMissing,
   evaluatePriceDropAlertsForProduct,
 } from "@/lib/price-drop-alerts";
+import {
+  gateProductType,
+  getDisabledStorefrontProductTypes,
+} from "@/lib/store-feature-gates-server";
 
 // GET /api/wishlist -> current user's wishlist items + product details
 export async function GET(request: NextRequest) {
@@ -18,11 +22,16 @@ export async function GET(request: NextRequest) {
     }
 
     const userId = (session.user as any).id as string;
+    const disabledTypes = await getDisabledStorefrontProductTypes();
 
     const wishlist = await prisma.wishlist.findMany({
       where: {
         userId,
-        product: { available: true, deleted: false },
+        product: {
+          available: true,
+          deleted: false,
+          ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        },
       },
       include: {
         product: {
@@ -92,6 +101,9 @@ export async function POST(request: NextRequest) {
         { status: 404 }
       );
     }
+
+    const typeGate = await gateProductType(product.type);
+    if (typeGate) return typeGate;
 
     // already wishlist-e আছে কিনা (unique constraint আছে, তাই try/catch দিয়েও করা যেত)
     const existing = await prisma.wishlist.findUnique({

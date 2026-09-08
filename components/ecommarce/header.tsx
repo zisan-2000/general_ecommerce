@@ -535,9 +535,11 @@ function MobileCategoryTree({
 export default function Header({
   siteSettingsData,
   categoriesData,
+  featureVisibility = { compare: true, pcBuilder: true },
 }: {
   siteSettingsData?: SiteSettings;
   categoriesData?: CategoryDTO[];
+  featureVisibility?: { compare: boolean; pcBuilder: boolean };
 }) {
   const router = useRouter();
 
@@ -550,6 +552,16 @@ export default function Header({
   const { wishlistCount } = useWishlist();
 
   const { count: compareCount, href: compareHref } = useProductCompare();
+
+  const visibleShopActions = useMemo(
+    () =>
+      HEADER_SHOP_ACTIONS.filter((action) => {
+        if (action.id === "compare") return featureVisibility.compare;
+        if (action.id === "pc-builder") return featureVisibility.pcBuilder;
+        return true;
+      }),
+    [featureVisibility.compare, featureVisibility.pcBuilder],
+  );
 
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -1060,7 +1072,7 @@ export default function Header({
           </div>
 
           <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-            {HEADER_SHOP_ACTIONS.map((action) => {
+            {visibleShopActions.map((action) => {
               const ActionIcon = action.icon;
               const actionHref =
                 action.id === "compare" ? compareHref : action.href;
@@ -1630,7 +1642,7 @@ export default function Header({
                 </h2>
 
                 <div className="grid grid-cols-3 gap-2">
-                  {HEADER_SHOP_ACTIONS.map((action) => {
+                  {visibleShopActions.map((action) => {
                     const ActionIcon = action.icon;
                     const actionHref =
                       action.id === "compare" ? compareHref : action.href;

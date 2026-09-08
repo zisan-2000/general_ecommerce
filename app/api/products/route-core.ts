@@ -23,6 +23,7 @@ import { storefrontProductSelect } from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 const createVariantSku = (slug: string, index: number) =>
   `${slug.substring(0, 20)}-V${index + 1}-${Math.random()
@@ -165,6 +166,10 @@ export async function GET(req: Request) {
       deleted: false,
       ...(storefront ? { available: true } : {}),
     };
+    if (storefront) {
+      const disabledTypes = await getDisabledStorefrontProductTypes();
+      if (disabledTypes.length) whereClause.type = { notIn: disabledTypes };
+    }
 
     // Filter by brand if brandId or brandSlug is provided
     if (brandId) {

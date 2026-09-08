@@ -6,6 +6,7 @@ import {
   getOwnedPcBuilderSavedBuild,
 } from "@/lib/pc-builder-saved-build-store";
 import { isPcBuilderSavedBuildId } from "@/lib/pc-builder-saved-build";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "private, no-store" } as const;
 
@@ -17,6 +18,8 @@ async function currentUserId() {
 }
 
 export async function GET(_request: Request, context: RouteContext) {
+  const featureGate = await gateStoreFeature("PC_BUILDER");
+  if (featureGate) return featureGate;
   const userId = await currentUserId();
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: NO_STORE_HEADERS });
@@ -32,6 +35,8 @@ export async function GET(_request: Request, context: RouteContext) {
 }
 
 export async function DELETE(_request: Request, context: RouteContext) {
+  const featureGate = await gateStoreFeature("PC_BUILDER", 403);
+  if (featureGate) return featureGate;
   const userId = await currentUserId();
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: NO_STORE_HEADERS });

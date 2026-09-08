@@ -2,6 +2,8 @@ import { unstable_cache } from "next/cache";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import type { FeatureControlledProductType } from "@/lib/store-features";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -97,12 +99,18 @@ export function serializeStorefrontHomeProduct(
 }
 
 const readStorefrontHomeData = unstable_cache(
-  async () => {
+  async (serializedDisabledTypes: string) => {
     const now = new Date();
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
+    const typeFilter = disabledTypes.length
+      ? { type: { notIn: disabledTypes } }
+      : {};
     const [products, discountedProducts, topSelling, categories, banners, settings] =
       await Promise.all([
         prisma.product.findMany({
-          where: { deleted: false, available: true },
+          where: { deleted: false, available: true, ...typeFilter },
           orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
           take: 160,
           select: storefrontHomeProductSelect,
@@ -111,6 +119,7 @@ const readStorefrontHomeData = unstable_cache(
           where: {
             deleted: false,
             available: true,
+            ...typeFilter,
             flashSaleEnabled: true,
             flashSalePrice: { not: null },
             flashSaleStartsAt: { lte: now },
@@ -121,7 +130,12 @@ const readStorefrontHomeData = unstable_cache(
           select: storefrontHomeProductSelect,
         }),
         prisma.product.findMany({
-          where: { deleted: false, available: true, soldCount: { gt: 0 } },
+          where: {
+            deleted: false,
+            available: true,
+            soldCount: { gt: 0 },
+            ...typeFilter,
+          },
           orderBy: [{ soldCount: "desc" }, { updatedAt: "desc" }],
           take: 20,
           select: storefrontHomeProductSelect,
@@ -138,7 +152,7 @@ const readStorefrontHomeData = unstable_cache(
             _count: {
               select: {
                 products: {
-                  where: { deleted: false, available: true },
+                  where: { deleted: false, available: true, ...typeFilter },
                 },
               },
             },
@@ -280,7 +294,8 @@ export type StorefrontHomeData = Awaited<
 >;
 
 export async function getStorefrontHomeData() {
-  return readStorefrontHomeData();
+  const disabledTypes = await getDisabledStorefrontProductTypes();
+  return readStorefrontHomeData(JSON.stringify(disabledTypes));
 }
 
 export function emptyStorefrontHomeData(): StorefrontHomeData {

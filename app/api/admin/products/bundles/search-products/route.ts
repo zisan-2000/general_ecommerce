@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { gateStoreFeature } from '@/lib/store-feature-gates-server';
 
 export async function GET(request: NextRequest) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const { searchParams } = new URL(request.url);
     const search = searchParams.get('search') || '';

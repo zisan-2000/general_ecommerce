@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { rateLimitRequest } from "@/lib/request-security";
+import { gateStoreFeature, getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "public, max-age=0, must-revalidate" };
 
 export async function GET(request: NextRequest) {
+  const featureGate = await gateStoreFeature("COMPARE");
+  if (featureGate) return featureGate;
   const rateLimit = await rateLimitRequest(request, {
     scope: "compare-product-search",
     limit: 90,
@@ -27,10 +30,14 @@ export async function GET(request: NextRequest) {
     : null;
 
   try {
+    const disabledTypes = await getDisabledStorefrontProductTypes();
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        ...(disabledTypes.length
+          ? { type: { notIn: disabledTypes } }
+          : {}),
         ...(categoryId ? { categoryId } : {}),
         ...(query
           ? {

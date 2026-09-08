@@ -8,6 +8,8 @@ import {
 import { validatePcBuilderProductForActivation } from "@/lib/pc-builder-publish-validation";
 import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
+import { gateProductType } from "@/lib/store-feature-gates-server";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export { DELETE, GET, PUT } from "./route-core";
 import { PATCH as corePatch } from "./route-core";
@@ -61,6 +63,9 @@ export async function PATCH(
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
 
+  const typeGate = await gateProductType(existing.type);
+  if (typeGate) return typeGate;
+
   if (!isExpectedProductVersion(existing.updatedAt, parsed.value.expectedUpdatedAt)) {
     return NextResponse.json(
       {
@@ -81,7 +86,11 @@ export async function PATCH(
     );
   }
 
-  if (parsed.value.available && !existing.available) {
+  if (
+    parsed.value.available &&
+    !existing.available &&
+    (await isFeatureEnabled("PC_BUILDER"))
+  ) {
     const readiness = validatePcBuilderProductForActivation(existing);
     if (readiness.applies && !readiness.ok) {
       return NextResponse.json(

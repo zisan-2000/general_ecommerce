@@ -58,18 +58,26 @@ function isMissingStoreFeatureTable(error: unknown) {
 }
 
 const readStoreFeatureRows = unstable_cache(
-  () =>
-    prisma.storeFeature.findMany({
+  async () => {
+    const tableRows = await prisma.$queryRaw<Array<{ exists: boolean }>>`
+      SELECT to_regclass('"StoreFeature"') IS NOT NULL AS "exists"
+    `;
+    if (!tableRows[0]?.exists) return null;
+    return prisma.storeFeature.findMany({
       select: { key: true, enabled: true },
       orderBy: { key: "asc" },
-    }),
-  ["store-feature-registry-v1"],
+    });
+  },
+  ["store-feature-registry-v2"],
   { revalidate: 300, tags: [STORE_FEATURE_CACHE_TAG] },
 );
 
 export async function getStoreFeatureRegistry(): Promise<StoreFeatureRegistrySnapshot> {
   try {
     const rows = await readStoreFeatureRows();
+    if (rows === null) {
+      return { features: resolveStoreFeatures([]), storage: "defaults" };
+    }
     return { features: resolveStoreFeatures(rows), storage: "database" };
   } catch (error) {
     // This compatibility read keeps current storefront behavior available during

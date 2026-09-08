@@ -3,6 +3,8 @@ import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { storefrontProductSelect } from "@/lib/storefront-product";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import type { FeatureControlledProductType } from "@/lib/store-features";
 
 type RawProduct = Prisma.ProductGetPayload<{
   select: typeof storefrontProductSelect;
@@ -58,11 +60,19 @@ export function parseStorefrontProductIdentifier(
 }
 
 const readProductDetail = unstable_cache(
-  async (identifier: string) => {
+  async (identifier: string, serializedDisabledTypes: string) => {
     const where = parseStorefrontProductIdentifier(identifier);
     if (!where) return null;
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
     const product = await prisma.product.findFirst({
-      where: { ...where, deleted: false, available: true },
+      where: {
+        ...where,
+        deleted: false,
+        available: true,
+        ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+      },
       select: storefrontProductSelect,
     });
     return product ? serializeProduct(product) : null;
@@ -76,5 +86,6 @@ export type StorefrontProductDetail = NonNullable<
 >;
 
 export async function getStorefrontProductDetail(identifier: string | number) {
-  return readProductDetail(String(identifier));
+  const disabledTypes = await getDisabledStorefrontProductTypes();
+  return readProductDetail(String(identifier), JSON.stringify(disabledTypes));
 }

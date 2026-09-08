@@ -2,13 +2,16 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { publicJson } from "@/lib/public-cache";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 export async function GET() {
   try {
+    const disabledTypes = await getDisabledStorefrontProductTypes();
     const top = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         soldCount: {
           gt: 0,
         },

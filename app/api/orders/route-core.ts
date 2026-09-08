@@ -1,5 +1,6 @@
 // app/api/orders/route.ts
 import { NextRequest, NextResponse } from "next/server";
+import { gateProductType } from "@/lib/store-feature-gates-server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { deductVariantInventory, reserveVariantInventory } from "@/lib/inventory";
@@ -493,6 +494,11 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
         { error: "Some products not found" },
         { status: 400 },
       );
+
+    for (const product of products) {
+      const typeGate = await gateProductType(product.type);
+      if (typeGate) return typeGate;
+    }
 
     let subtotal = 0;
     const orderItemsData = normalizedItems.map((item) => {

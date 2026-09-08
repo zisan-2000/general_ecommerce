@@ -9,11 +9,14 @@ import {
 } from "@/lib/pc-builder-catalog";
 import { rateLimitRequest } from "@/lib/request-security";
 import { searchPcBuilderCatalogPage } from "@/lib/storefront-pc-builder";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "private, no-store" } as const;
 const VALID_SLOTS = new Set<PcBuilderSlotKey>(PC_BUILDER_SLOTS.map((slot) => slot.key));
 
 export async function GET(request: NextRequest) {
+  const featureGate = await gateStoreFeature("PC_BUILDER");
+  if (featureGate) return featureGate;
   try {
     const rateLimit = await rateLimitRequest(request, {
       scope: "pc-builder-catalog-search",

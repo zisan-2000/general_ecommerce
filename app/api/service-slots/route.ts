@@ -1,11 +1,14 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 /* =========================
    GET SERVICE SLOTS
    Required query: ?productId=1
 ========================= */
 export async function GET(req: Request) {
+  const featureGate = await gateStoreFeature("SERVICE_PRODUCTS");
+  if (featureGate) return featureGate;
   try {
     const url = new URL(req.url);
     const productIdParam = url.searchParams.get("productId");
@@ -37,6 +40,8 @@ export async function GET(req: Request) {
    CREATE SERVICE SLOT
 ========================= */
 export async function POST(req: Request) {
+  const featureGate = await gateStoreFeature("SERVICE_PRODUCTS", 403);
+  if (featureGate) return featureGate;
   try {
     const body = await req.json();
     const productId = Number(body.productId);

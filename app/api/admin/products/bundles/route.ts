@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { 
+import {
   calculateBundlePricing, 
   validateBundleConfiguration, 
   mergeDuplicateBundleItems,
@@ -14,8 +14,11 @@ import {
   normalizeBundleStockQuantity,
   syncBundleDefaultVariant,
 } from '@/lib/bundle-inventory';
+import { gateStoreFeature } from '@/lib/store-feature-gates-server';
 
 export async function GET(request: NextRequest) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const { searchParams } = new URL(request.url);
     const page = parseInt(searchParams.get('page') || '1');
@@ -139,6 +142,8 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  if (featureGate) return featureGate;
   try {
     const body = await request.json();
     

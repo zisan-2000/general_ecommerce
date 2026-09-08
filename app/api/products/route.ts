@@ -6,6 +6,8 @@ import { validatePcBuilderProductForActivation } from "@/lib/pc-builder-publish-
 import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
 import { GET as coreGET, POST as corePOST } from "./route-core";
+import { gateProductType } from "@/lib/store-feature-gates-server";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export { coreGET as GET };
 
@@ -34,10 +36,13 @@ export async function POST(request: Request) {
     return corePOST(requestForCore);
   }
 
+  const typeGate = await gateProductType(body.type ?? "PHYSICAL");
+  if (typeGate) return typeGate;
+
   // Product creation defaults to available=true in the existing core route.
   // Draft/inactive creation remains allowed; only an active PC Builder product
   // must prove its required compatibility metadata before it can be created.
-  if (body.available === false) {
+  if (body.available === false || !(await isFeatureEnabled("PC_BUILDER"))) {
     return corePOST(requestForCore);
   }
 

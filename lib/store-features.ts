@@ -10,6 +10,21 @@ export const STORE_FEATURE_KEYS = [
 
 export type StoreFeatureKey = (typeof STORE_FEATURE_KEYS)[number];
 
+export const FEATURE_CONTROLLED_PRODUCT_TYPES = [
+  "DIGITAL",
+  "SERVICE",
+  "BUNDLE",
+] as const;
+
+export type FeatureControlledProductType =
+  (typeof FEATURE_CONTROLLED_PRODUCT_TYPES)[number];
+
+export const PRODUCT_TYPE_FEATURE_KEYS = {
+  DIGITAL: "DIGITAL_PRODUCTS",
+  SERVICE: "SERVICE_PRODUCTS",
+  BUNDLE: "BUNDLES",
+} as const satisfies Record<FeatureControlledProductType, StoreFeatureKey>;
+
 export const CORE_COMMERCE_CAPABILITIES = [
   "PHYSICAL_PRODUCTS",
   "CART",
@@ -129,6 +144,34 @@ export function isStoreFeatureKey(value: unknown): value is StoreFeatureKey {
   return (
     typeof value === "string" &&
     STORE_FEATURE_KEYS.includes(value as StoreFeatureKey)
+  );
+}
+
+export function productTypeFeatureKey(
+  value: unknown,
+): StoreFeatureKey | null {
+  if (
+    typeof value !== "string" ||
+    !FEATURE_CONTROLLED_PRODUCT_TYPES.includes(
+      value as FeatureControlledProductType,
+    )
+  ) {
+    return null;
+  }
+  return PRODUCT_TYPE_FEATURE_KEYS[value as FeatureControlledProductType];
+}
+
+export function isProductTypeEnabled(
+  value: unknown,
+  features: StoreFeatureSnapshot,
+) {
+  const featureKey = productTypeFeatureKey(value);
+  return featureKey === null || features[featureKey].enabled;
+}
+
+export function disabledProductTypes(features: StoreFeatureSnapshot) {
+  return FEATURE_CONTROLLED_PRODUCT_TYPES.filter(
+    (type) => !features[PRODUCT_TYPE_FEATURE_KEYS[type]].enabled,
   );
 }
 

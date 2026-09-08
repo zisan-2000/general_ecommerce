@@ -65,9 +65,11 @@ function simpleOptions(value: unknown) {
 export default function ProductPurchasePanel({
   product,
   details,
+  compareEnabled = true,
 }: {
   product: ProductPurchaseData;
   details: PurchasePanelDetails;
+  compareEnabled?: boolean;
 }) {
   const router = useRouter();
   const { status } = useSession();
@@ -484,19 +486,21 @@ export default function ProductPurchasePanel({
                 productHref={`/ecommerce/products/${product.id}`}
                 compact
               />
-              <button
-                type="button"
-                onClick={toggleCompare}
-                className={`inline-flex h-10 items-center justify-center gap-1.5 rounded border border-border px-3 text-[11px] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                  compare.isCompared(product.id)
-                    ? "bg-primary/10 text-primary"
-                    : "bg-muted text-foreground hover:bg-accent"
-                }`}
-                aria-pressed={compare.isCompared(product.id)}
-              >
-                <GitCompareArrows className="h-4 w-4" aria-hidden="true" />
-                <span className="hidden sm:inline">Compare</span>
-              </button>
+              {compareEnabled ? (
+                <button
+                  type="button"
+                  onClick={toggleCompare}
+                  className={`inline-flex h-10 items-center justify-center gap-1.5 rounded border border-border px-3 text-[11px] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                    compare.isCompared(product.id)
+                      ? "bg-primary/10 text-primary"
+                      : "bg-muted text-foreground hover:bg-accent"
+                  }`}
+                  aria-pressed={compare.isCompared(product.id)}
+                >
+                  <GitCompareArrows className="h-4 w-4" aria-hidden="true" />
+                  <span className="hidden sm:inline">Compare</span>
+                </button>
+              ) : null}
             </div>
 
             <div className="mt-2 flex items-center justify-between gap-3">
@@ -508,7 +512,7 @@ export default function ProductPurchasePanel({
               >
                 Buy now with secure checkout
               </button>
-              {compare.count > 0 ? (
+              {compareEnabled && compare.count > 0 ? (
                 <Link
                   href={compare.href}
                   className="text-[11px] font-semibold text-primary hover:underline"

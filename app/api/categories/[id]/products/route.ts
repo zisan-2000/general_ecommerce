@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 async function getDescendantCategoryIds(rootId: number) {
   const allIds = new Set<number>([rootId]);
@@ -50,11 +51,13 @@ export async function GET(
     }
 
     const categoryIds = await getDescendantCategoryIds(category.id);
+    const disabledTypes = await getDisabledStorefrontProductTypes();
 
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
+        ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         categoryId: { in: categoryIds },
       },
       orderBy: { id: "desc" },

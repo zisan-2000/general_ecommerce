@@ -11,6 +11,7 @@ import {
   type SearchSuggestionResponse,
 } from "@/lib/search/core";
 import { searchTypesenseProducts, typesenseSearchEnabled } from "@/lib/search/typesense";
+import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 
 type RankedProductRow = {
   id: number;
@@ -337,6 +338,10 @@ export async function getSearchSuggestions(
   }
 
   const config = await loadSearchConfiguration(initialIntent.normalizedQuery);
+  const disabledTypes = await getDisabledStorefrontProductTypes();
+  const productTypeFilter = disabledTypes.length
+    ? { type: { notIn: disabledTypes } }
+    : {};
   const intent = parseSearchIntent(rawQuery, config.synonymGroups);
   const ranked = await searchProductCandidates(
     intent.searchText,
@@ -349,7 +354,12 @@ export async function getSearchSuggestions(
   const [products, brands, categories, popularQueries] = await Promise.all([
     candidateIds.length
       ? prisma.product.findMany({
-          where: { id: { in: candidateIds }, deleted: false, available: true },
+          where: {
+            id: { in: candidateIds },
+            deleted: false,
+            available: true,
+            ...productTypeFilter,
+          },
           select: {
             id: true,
             name: true,
@@ -377,7 +387,9 @@ export async function getSearchSuggestions(
       where: {
         deleted: false,
         name: { contains: intent.searchText, mode: "insensitive" },
-        products: { some: { deleted: false, available: true } },
+        products: {
+          some: { deleted: false, available: true, ...productTypeFilter },
+        },
       },
       select: { id: true, name: true, slug: true },
       orderBy: { name: "asc" },
@@ -387,7 +399,9 @@ export async function getSearchSuggestions(
       where: {
         deleted: false,
         name: { contains: intent.searchText, mode: "insensitive" },
-        products: { some: { deleted: false, available: true } },
+        products: {
+          some: { deleted: false, available: true, ...productTypeFilter },
+        },
       },
       select: { id: true, name: true, slug: true },
       orderBy: { name: "asc" },

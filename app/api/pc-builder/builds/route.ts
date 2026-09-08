@@ -7,6 +7,7 @@ import {
   savePcBuilderBuild,
 } from "@/lib/pc-builder-saved-build-store";
 import { rateLimitRequest } from "@/lib/request-security";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "private, no-store" } as const;
 
@@ -16,6 +17,8 @@ async function currentUserId() {
 }
 
 export async function GET() {
+  const featureGate = await gateStoreFeature("PC_BUILDER");
+  if (featureGate) return featureGate;
   const userId = await currentUserId();
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: NO_STORE_HEADERS });
@@ -25,6 +28,8 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  const featureGate = await gateStoreFeature("PC_BUILDER", 403);
+  if (featureGate) return featureGate;
   try {
     const userId = await currentUserId();
     if (!userId) {

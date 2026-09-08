@@ -1,10 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 /* =========================
    GET DIGITAL ASSETS
 ========================= */
 export async function GET() {
+  const featureGate = await gateStoreFeature("DIGITAL_PRODUCTS", 403);
+  if (featureGate) return featureGate;
   try {
     const assets = await prisma.digitalAsset.findMany({
       orderBy: { id: "desc" },
@@ -34,6 +37,8 @@ export async function GET() {
    CREATE DIGITAL ASSET
 ========================= */
 export async function POST(req: Request) {
+  const featureGate = await gateStoreFeature("DIGITAL_PRODUCTS", 403);
+  if (featureGate) return featureGate;
   try {
     const body = await req.json();
 

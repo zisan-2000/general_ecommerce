@@ -16,10 +16,13 @@ import {
 import { createPcBuildId } from "@/lib/pc-builder-grouping";
 import { rateLimitRequest } from "@/lib/request-security";
 import { validatePcBuilderSelectionLive } from "@/lib/storefront-pc-builder";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "private, no-store" } as const;
 
 export async function POST(request: NextRequest) {
+  const featureGate = await gateStoreFeature("PC_BUILDER", 403);
+  if (featureGate) return featureGate;
   try {
     const contentLength = Number(request.headers.get("content-length") ?? 0);
     if (Number.isFinite(contentLength) && contentLength > 4096) {

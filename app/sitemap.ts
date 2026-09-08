@@ -1,17 +1,23 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { getSiteUrl } from "@/lib/seo";
+import { getStoreFeatureRegistry } from "@/lib/store-features-server";
+import { disabledProductTypes } from "@/lib/store-features";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
   const now = new Date();
+  const registry = await getStoreFeatureRegistry();
+  const disabledTypes = disabledProductTypes(registry.features);
   const staticRouteDefinitions = [
     { path: "", changeFrequency: "daily", priority: 1 },
     { path: "/ecommerce/products", changeFrequency: "daily", priority: 0.9 },
     { path: "/ecommerce/categories", changeFrequency: "weekly", priority: 0.8 },
     { path: "/ecommerce/brands", changeFrequency: "weekly", priority: 0.8 },
     { path: "/ecommerce/flash-sale", changeFrequency: "daily", priority: 0.85 },
-    { path: "/ecommerce/pc-builder", changeFrequency: "daily", priority: 0.85 },
+    ...(registry.features.PC_BUILDER.enabled
+      ? [{ path: "/ecommerce/pc-builder", changeFrequency: "daily" as const, priority: 0.85 }]
+      : []),
     { path: "/ecommerce/bestsellers", changeFrequency: "daily", priority: 0.8 },
     { path: "/ecommerce/blogs", changeFrequency: "weekly", priority: 0.7 },
     { path: "/ecommerce/about", changeFrequency: "monthly", priority: 0.5 },
@@ -32,7 +38,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     const [products, blogs, brands, categories] = await Promise.all([
       prisma.product.findMany({
-        where: { deleted: false, available: true },
+        where: {
+          deleted: false,
+          available: true,
+          ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        },
         select: { id: true, updatedAt: true },
         orderBy: { updatedAt: "desc" },
       }),

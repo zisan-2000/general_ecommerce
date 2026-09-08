@@ -24,6 +24,10 @@ import {
   parseProductAvailabilityPatch,
 } from "@/lib/product-availability";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import {
+  gateProductType,
+  getDisabledStorefrontProductTypes,
+} from "@/lib/store-feature-gates-server";
 
 const productInclude = {
   category: true,
@@ -187,9 +191,16 @@ export async function GET(
       deleted: false,
       ...(storefront ? { available: true } : {}),
     };
+    const disabledTypes = storefront
+      ? await getDisabledStorefrontProductTypes()
+      : [];
+    const storefrontWhere = {
+      ...where,
+      ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+    };
     const product: any = storefront
       ? await prisma.product.findFirst({
-          where,
+          where: storefrontWhere,
           select: storefrontProductSelect,
         })
       : await prisma.product.findFirst({
@@ -299,6 +310,8 @@ export async function PUT(
     }
 
     const effectiveType = (body.type ?? existing.type) as ProductType;
+    const typeGate = await gateProductType(effectiveType);
+    if (typeGate) return typeGate;
     const nextLowStockThreshold =
       body.lowStockThreshold !== undefined
         ? normalizeLowStockThreshold(body.lowStockThreshold)
@@ -861,6 +874,9 @@ export async function PATCH(
       );
     }
 
+    const typeGate = await gateProductType(existing.type);
+    if (typeGate) return typeGate;
+
     if (
       !isExpectedProductVersion(
         existing.updatedAt,
@@ -1012,6 +1028,10 @@ export async function DELETE(
         { status: 404 }
       );
     }
+
+
+    const typeGate = await gateProductType(existing.type);
+    if (typeGate) return typeGate;
 
     const deletedProduct = await prisma.product.update({
       where: { id },

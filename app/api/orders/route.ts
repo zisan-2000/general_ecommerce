@@ -9,6 +9,7 @@ import {
 } from "@/lib/pc-builder-order-match";
 import { validatePcBuilderSelectionLive } from "@/lib/storefront-pc-builder";
 import { GET, POST as corePOST } from "./route-core";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export { GET };
 
@@ -57,6 +58,11 @@ export async function POST(request: NextRequest) {
 
   const rawState = request.cookies.get(PC_BUILDER_CHECKOUT_COOKIE)?.value;
   if (!rawState) return corePOST(coreRequest(request, rawBody));
+  if (!(await isFeatureEnabled("PC_BUILDER"))) {
+    return clearPcBuilderCheckoutCookie(
+      await corePOST(coreRequest(request, rawBody)),
+    );
+  }
 
   const state = parsePcBuilderCheckoutCookie(rawState);
   if (!state) {

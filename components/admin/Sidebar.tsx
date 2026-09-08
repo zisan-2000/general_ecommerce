@@ -808,6 +808,11 @@ const menuItems: MenuItem[] = [
         requiredPermissions: ["settings.manage"],
       },
       {
+        name: "Store Features",
+        href: "/admin/settings/features",
+        requiredPermissions: ["settings.manage"],
+      },
+      {
         name: "Gallery Management",
         href: "/admin/settings/gallery",
         requiredPermissions: ["settings.manage", "gallery.manage"],

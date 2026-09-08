@@ -26,10 +26,12 @@ export default function CatalogProductGrid({
   products,
   searchQuery = "",
   resultCount,
+  compareEnabled = true,
 }: {
   products: StorefrontCatalogProduct[];
   searchQuery?: string;
   resultCount?: number;
+  compareEnabled?: boolean;
 }) {
   const { status } = useSession();
   const { addToCart } = useCart();
@@ -109,7 +111,7 @@ export default function CatalogProductGrid({
 
   return (
     <>
-      {compareCount > 0 ? (
+      {compareEnabled && compareCount > 0 ? (
         <div className="mb-4 flex items-center justify-between rounded-xl border bg-card px-4 py-3 text-sm">
           <span><strong>{compareCount}</strong> product(s) selected for comparison</span>
           <Link href={compareHref} className="font-bold text-primary hover:underline">Compare now</Link>
@@ -157,8 +159,10 @@ export default function CatalogProductGrid({
             }}
             wishlisted={isInWishlist(product.id)}
             onWishlistClick={() => toggleWishlist(product)}
-            onCompareClick={() => toggleCompare(product.id)}
-            compared={isCompared(product.id)}
+            onCompareClick={
+              compareEnabled ? () => toggleCompare(product.id) : undefined
+            }
+            compared={compareEnabled && isCompared(product.id)}
             onAddToCart={() => addProductToCart(product)}
             formatPrice={formatBDT}
             imagePriority={index < 2}

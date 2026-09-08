@@ -88,6 +88,10 @@ interface Props {
   brands: Entity[];
   vatClasses?: VatClass[];
   digitalAssets?: DigitalAsset[];
+  features?: {
+    DIGITAL_PRODUCTS: boolean;
+    SERVICE_PRODUCTS: boolean;
+  };
 }
 
 const emptyForm: ProductForm = {
@@ -247,6 +251,7 @@ export default function ProductAddModal({
   brands,
   vatClasses = [],
   digitalAssets = [],
+  features = { DIGITAL_PRODUCTS: true, SERVICE_PRODUCTS: true },
 }: Props) {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<ProductForm>(emptyForm);
@@ -887,8 +892,8 @@ export default function ProductAddModal({
                 <Label>Type</Label>
                 <select className="w-full rounded border border-border bg-background p-2" value={form.type} onChange={(e) => setForm((prev) => ({ ...prev, type: e.target.value as ProductType }))}>
                   <option value="PHYSICAL">PHYSICAL</option>
-                  <option value="DIGITAL">DIGITAL</option>
-                  <option value="SERVICE">SERVICE</option>
+                  {features.DIGITAL_PRODUCTS ? <option value="DIGITAL">DIGITAL</option> : null}
+                  {features.SERVICE_PRODUCTS ? <option value="SERVICE">SERVICE</option> : null}
                 </select>
               </div>
               <div>

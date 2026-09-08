@@ -4,6 +4,8 @@ import test from "node:test";
 import {
   DEFAULT_CORE_COMMERCE_CAPABILITIES,
   DEFAULT_STORE_FEATURES,
+  disabledProductTypes,
+  isProductTypeEnabled,
   parseStoreFeatureUpdate,
   resolveStoreFeatures,
   STORE_FEATURE_KEYS,
@@ -123,4 +125,25 @@ test("feature update input accepts only a known key and boolean state", () => {
     parseStoreFeatureUpdate({ key: "COMPARE", enabled: "false" }).ok,
     false,
   );
+});
+
+test("product types are controlled only by their approved optional modules", () => {
+  const defaults = resolveStoreFeatures([]);
+  assert.equal(isProductTypeEnabled("PHYSICAL", defaults), true);
+  assert.equal(isProductTypeEnabled("DIGITAL", defaults), true);
+
+  const verticalStore = resolveStoreFeatures([
+    { key: "DIGITAL_PRODUCTS", enabled: false },
+    { key: "SERVICE_PRODUCTS", enabled: false },
+    { key: "BUNDLES", enabled: false },
+  ]);
+  assert.deepEqual(disabledProductTypes(verticalStore), [
+    "DIGITAL",
+    "SERVICE",
+    "BUNDLE",
+  ]);
+  assert.equal(isProductTypeEnabled("PHYSICAL", verticalStore), true);
+  assert.equal(isProductTypeEnabled("DIGITAL", verticalStore), false);
+  assert.equal(isProductTypeEnabled("SERVICE", verticalStore), false);
+  assert.equal(isProductTypeEnabled("BUNDLE", verticalStore), false);
 });

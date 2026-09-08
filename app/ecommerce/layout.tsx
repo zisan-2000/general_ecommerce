@@ -4,15 +4,23 @@ import Footer from "@/components/ecommarce/footer";
 import FloatingCartButton from "@/components/ecommarce/FloatingCartButton";
 import CustomerNotificationPoller from "@/components/ecommarce/CustomerNotificationPoller";
 import { getStorefrontCatalogFacets } from "@/lib/storefront-catalog";
+import { getStoreFeatureRegistry } from "@/lib/store-features-server";
 
 const getNavigation = cache(getStorefrontCatalogFacets);
 
 async function StorefrontHeader() {
-  const navigation = await getNavigation();
+  const [navigation, registry] = await Promise.all([
+    getNavigation(),
+    getStoreFeatureRegistry(),
+  ]);
   return (
     <Header
       siteSettingsData={navigation.siteSettings}
       categoriesData={navigation.categories}
+      featureVisibility={{
+        compare: registry.features.COMPARE.enabled,
+        pcBuilder: registry.features.PC_BUILDER.enabled,
+      }}
     />
   );
 }
