@@ -84,7 +84,7 @@ export async function generateMetadata({
   return {
     title: { absolute: `${qualifier} — ${settings.siteTitle}` },
     description:
-      "Browse computers, components, accessories and gadgets with category, brand, price and stock filters.",
+      `Browse ${settings.siteTitle} products with category, brand, price and availability filters.`,
     alternates: {
       canonical: catalogCanonicalUrl(filters),
     },
@@ -263,7 +263,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               Product catalog
             </span>
             <h1 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              Find the right tech for you
+              Find the right product for you
             </h1>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
               Search the complete catalog, compare current prices and narrow the

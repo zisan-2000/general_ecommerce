@@ -18,7 +18,12 @@ import { Providers } from "./providers";
 import SupportChatWidget from "@/components/chat/SupportChatWidget";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ScrollToTopButton from "@/components/ecommarce/ScrollToTopButton";
-import { buildDefaultMetadata, getSiteUrl, getSiteSettingsForSeo } from "@/lib/seo";
+import {
+  buildDefaultMetadata,
+  getSiteUrl,
+  getSiteSettingsForSeo,
+  toAbsoluteUrl,
+} from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,7 +77,8 @@ export default async function RootLayout({
     "@id": `${siteUrl}#website`,
     url: siteUrl,
     name: siteSettings.siteTitle,
-    description: siteSettings.siteDescription,
+    description: siteSettings.defaultSeoDescription,
+    inLanguage: siteSettings.locale,
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteUrl}/ecommerce/products?q={search_term_string}`,
@@ -88,16 +94,17 @@ export default async function RootLayout({
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}${siteSettings.logo}`,
+      url: toAbsoluteUrl(siteSettings.logo),
       width: 512,
       height: 512
     },
-    description: siteSettings.siteDescription,
-    contactPoint: siteSettings.contactEmail ? {
+    description: siteSettings.defaultSeoDescription,
+    contactPoint: siteSettings.contactEmail || siteSettings.contactNumber ? {
       "@type": "ContactPoint",
       telephone: siteSettings.contactNumber,
+      email: siteSettings.contactEmail,
       contactType: "customer service",
-      availableLanguage: ["en", "bn"]
+      availableLanguage: [siteSettings.locale]
     } : undefined,
     address: siteSettings.address ? {
       "@type": "PostalAddress",
@@ -105,12 +112,16 @@ export default async function RootLayout({
       addressCountry: "BD"
     } : undefined,
     sameAs: [
-      // Add social media links when available
-    ].filter(Boolean)
+      siteSettings.facebookLink,
+      siteSettings.instagramLink,
+      siteSettings.twitterLink,
+      siteSettings.tiktokLink,
+      siteSettings.youtubeLink,
+    ].filter((value): value is string => Boolean(value))
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={siteSettings.locale} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${syne.variable} ${lexend.variable} antialiased min-h-screen flex flex-col`}

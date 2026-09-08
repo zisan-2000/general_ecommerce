@@ -36,7 +36,7 @@ const enquiryTypes = [
   {
     icon: Building2,
     title: "Corporate sales",
-    description: "Bulk technology procurement, quotations and business requirements.",
+    description: "Bulk purchasing, quotations and business requirements.",
   },
   {
     icon: Wrench,
@@ -112,7 +112,7 @@ export default function ContactPageClient({
           </p>
           <h1 className="mt-4 text-3xl font-bold sm:text-4xl">How can we help?</h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-            Contact our team about technology products, orders, delivery,
+            Contact our team about products, orders, delivery,
             corporate purchasing or after-sales support.
           </p>
         </div>

@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { absolute: `Shop by Category — ${settings.siteTitle}` },
     description:
-      "Browse computers, components, accessories and gadgets by category.",
+      `Browse ${settings.siteTitle} products by category.`,
     alternates: { canonical: "/ecommerce/categories" },
   };
 }

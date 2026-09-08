@@ -73,6 +73,8 @@ function footerCategoryLinks(input: ApiCategory[]) {
 type SiteSettings = {
   logo?: string | null;
   siteTitle?: string | null;
+  storeName?: string | null;
+  storeTagline?: string | null;
   footerDescription?: string | null;
   contactNumber?: string | null;
   contactEmail?: string | null;
@@ -283,10 +285,13 @@ export default function Footer({
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">
-                    {siteSettings.siteTitle?.trim() || DEFAULT_SITE_TITLE}
+                    {siteSettings.storeName?.trim() ||
+                      siteSettings.siteTitle?.trim() ||
+                      DEFAULT_SITE_TITLE}
                   </h3>
                   <p className="text-xs text-muted-foreground">
-                    Computers, components and gadgets
+                    {siteSettings.storeTagline ||
+                      "Quality products, secure shopping and dependable service"}
                   </p>
                 </div>
               </div>
@@ -294,7 +299,7 @@ export default function Footer({
 
             <p className="text-sm text-muted-foreground leading-relaxed">
               {siteSettings.footerDescription ||
-                "Shop computers, components, accessories and gadgets with verified inventory, secure checkout and nationwide delivery."}
+                "Discover quality products with clear information, secure checkout and dependable delivery."}
             </p>
 
             <div className="space-y-3">

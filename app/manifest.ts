@@ -7,15 +7,15 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
   return {
     name: settings.siteTitle,
     short_name: settings.siteTitle.slice(0, 24),
-    description: settings.siteDescription,
+    description: settings.defaultSeoDescription,
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#0f172a",
-    categories: ["shopping", "technology"],
+    categories: ["shopping"],
     icons: [
       {
-        src: settings.logo,
+        src: settings.favicon,
         sizes: "any",
         purpose: "any",
       },

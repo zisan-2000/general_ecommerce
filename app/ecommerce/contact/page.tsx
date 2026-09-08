@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import ContactPageClient from "./ContactPageClient";
 import { getSiteSettingsForSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description:
-    "Contact our technology sales and support team about products, orders, delivery, corporate sales or service requests.",
-  alternates: { canonical: "/ecommerce/contact" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettingsForSeo();
+  return {
+    title: "Contact Us",
+    description: `Contact ${settings.siteTitle} about products, orders, delivery, business purchases or service requests.`,
+    alternates: { canonical: "/ecommerce/contact" },
+  };
+}
 
 type ContactPageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;

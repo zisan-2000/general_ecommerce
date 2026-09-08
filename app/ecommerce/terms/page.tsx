@@ -13,12 +13,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { getSiteSettingsForSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms and Conditions",
-  description:
-    "Terms governing accounts, technology product orders, pricing, payments, delivery, warranty and use of our online store.",
-  alternates: { canonical: "/ecommerce/terms" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettingsForSeo();
+  return {
+    title: "Terms and Conditions",
+    description: `Terms governing accounts, orders, pricing, payments, delivery and use of ${settings.siteTitle}.`,
+    alternates: { canonical: "/ecommerce/terms" },
+  };
+}
 
 const sections = [
   {
@@ -47,10 +49,10 @@ const sections = [
   },
   {
     icon: Wrench,
-    title: "Warranty and technical products",
+    title: "Warranty and product compatibility",
     paragraphs: [
       "Warranty coverage depends on the product, brand and warranty provider shown on the product page or invoice. Manufacturer or distributor warranty conditions may apply.",
-      "Compatibility information is guidance unless expressly confirmed for a complete build. Customers should verify model, connector, dimensions, power and platform requirements before purchase.",
+      "Compatibility information is guidance unless expressly confirmed. Customers should verify the relevant model, size, material, specification or usage requirements before purchase.",
     ],
   },
   {

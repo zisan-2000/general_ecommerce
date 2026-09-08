@@ -194,7 +194,20 @@ async function ensureSitePresentation(prisma: PrismaClient) {
     await prisma.sitesettings.create({
       data: {
         siteTitle: "TechHub BD Demo",
+        storeName: "TechHub BD Demo",
+        storeTagline: "Computers, components, gadgets and home technology",
         logo: "/logo.svg",
+        favicon: "/logo.svg",
+        defaultOgImage: "/logo.svg",
+        defaultSeoTitle: "TechHub BD Demo",
+        defaultSeoDescription:
+          "Computers, components, gadgets and home technology from a single demo storefront.",
+        defaultSeoKeywords: ["computers", "components", "gadgets", "technology"],
+        currency: "BDT",
+        currencyPosition: "BEFORE",
+        timezone: "Asia/Dhaka",
+        locale: "en-BD",
+        storeType: "TECH",
         footerDescription:
           "Computers, components, gadgets and home technology from a single demo storefront.",
         contactNumber: "+880 1700-000000",

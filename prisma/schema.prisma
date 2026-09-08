@@ -3681,18 +3681,30 @@ model PasswordResetToken {
 }
 
 model sitesettings {
-  id                Int     @id @default(autoincrement())
-  logo              String?
-  siteTitle         String?
-  footerDescription String?
-  contactNumber     String?
-  contactEmail      String?
-  address           String?
-  facebookLink      String?
-  instagramLink     String?
-  twitterLink       String?
-  tiktokLink        String?
-  youtubeLink       String?
+  id                    Int      @id @default(autoincrement())
+  logo                  String?
+  siteTitle             String?
+  storeName             String?
+  storeTagline          String?
+  defaultSeoTitle       String?
+  defaultSeoDescription String?
+  defaultSeoKeywords    String[] @default([])
+  defaultOgImage        String?
+  favicon               String?
+  currency              String?  @db.VarChar(3)
+  currencyPosition      String?  @db.VarChar(8)
+  timezone              String?  @db.VarChar(64)
+  locale                String?  @db.VarChar(35)
+  storeType             String?  @db.VarChar(32)
+  footerDescription     String?
+  contactNumber         String?
+  contactEmail          String?
+  address               String?
+  facebookLink          String?
+  instagramLink         String?
+  twitterLink           String?
+  tiktokLink            String?
+  youtubeLink           String?
 }
 
 model StoreFeature {

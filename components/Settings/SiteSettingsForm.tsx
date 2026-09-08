@@ -12,6 +12,18 @@ type SiteSettings = {
   id?: number;
   logo?: string | null;
   siteTitle?: string | null;
+  storeName?: string | null;
+  storeTagline?: string | null;
+  defaultSeoTitle?: string | null;
+  defaultSeoDescription?: string | null;
+  defaultSeoKeywords?: string[];
+  defaultOgImage?: string | null;
+  favicon?: string | null;
+  currency?: string | null;
+  currencyPosition?: string | null;
+  timezone?: string | null;
+  locale?: string | null;
+  storeType?: string | null;
   footerDescription?: string | null;
   contactNumber?: string | null;
   contactEmail?: string | null;
@@ -26,13 +38,18 @@ type SiteSettings = {
 export default function SiteSettingsForm() {
   const [data, setData] = useState<SiteSettings>({});
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/site")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load site settings");
+        return res.json();
+      })
       .then((res) => {
         setData(res);
-      });
+      })
+      .catch((error) => toast.error(error.message));
   }, []);
 
   const uploadFile = async (file: File, folder: string) => {
@@ -52,15 +69,21 @@ export default function SiteSettingsForm() {
     return data.url as string;
   };
 
-  const handleLogoUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+  const handleAssetUpload = async (
+    field: "logo" | "favicon" | "defaultOgImage",
+    e: ChangeEvent<HTMLInputElement>,
+  ) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     try {
+      setUploading(field);
       const url = await uploadFile(file, "site");
-      setData({ ...data, logo: url });
+      setData((current) => ({ ...current, [field]: url }));
     } catch (err: any) {
-      toast.error(err?.message || "Logo upload failed");
+      toast.error(err?.message || "Image upload failed");
+    } finally {
+      setUploading(null);
     }
   };
 
@@ -75,8 +98,19 @@ export default function SiteSettingsForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          siteTitle: data.siteTitle,
+          storeName: data.storeName || data.siteTitle,
+          storeTagline: data.storeTagline,
           logo: data.logo,
+          favicon: data.favicon,
+          defaultOgImage: data.defaultOgImage,
+          defaultSeoTitle: data.defaultSeoTitle,
+          defaultSeoDescription: data.defaultSeoDescription,
+          defaultSeoKeywords: data.defaultSeoKeywords,
+          currency: data.currency,
+          currencyPosition: data.currencyPosition,
+          timezone: data.timezone,
+          locale: data.locale,
+          storeType: data.storeType,
           footerDescription: data.footerDescription,
           contactNumber: data.contactNumber,
           contactEmail: data.contactEmail,
@@ -108,18 +142,53 @@ export default function SiteSettingsForm() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* ================= HEADER SECTION ================= */}
+          {/* ================= IDENTITY + SEO ================= */}
           <div className="space-y-6 border rounded-lg p-6">
-            <h3 className="text-lg font-semibold">Header Section</h3>
+            <h3 className="text-lg font-semibold">Store Identity & SEO</h3>
 
             <div className="space-y-2">
-              <Label>Site Title</Label>
+              <Label htmlFor="store-name">Store Name</Label>
               <Input
-                value={data.siteTitle || ""}
+                id="store-name"
+                required
+                maxLength={120}
+                value={data.storeName || data.siteTitle || ""}
                 onChange={(e) =>
-                  setData({ ...data, siteTitle: e.target.value })
+                  setData((current) => ({ ...current, storeName: e.target.value }))
                 }
               />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="store-tagline">Store Tagline</Label>
+              <Input
+                id="store-tagline"
+                maxLength={200}
+                value={data.storeTagline || ""}
+                onChange={(e) =>
+                  setData((current) => ({ ...current, storeTagline: e.target.value }))
+                }
+                placeholder="Quality products, secure shopping and dependable service."
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="store-type">Store Type</Label>
+              <select
+                id="store-type"
+                value={data.storeType || "GENERAL"}
+                onChange={(e) =>
+                  setData((current) => ({ ...current, storeType: e.target.value }))
+                }
+                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+              >
+                {['GENERAL', 'TECH', 'FASHION', 'GROCERY', 'BOOK'].map((value) => (
+                  <option key={value} value={value}>{value}</option>
+                ))}
+              </select>
+              <p className="text-xs text-muted-foreground">
+                Informational only. Features remain controlled from Feature Settings.
+              </p>
             </div>
 
             {/* LOGO */}
@@ -141,7 +210,8 @@ export default function SiteSettingsForm() {
                     size="icon"
                     variant="destructive"
                     className="absolute -top-2 -right-2 h-6 w-6 rounded-full"
-                    onClick={() => setData({ ...data, logo: "" })}
+                    aria-label="Remove logo"
+                    onClick={() => setData((current) => ({ ...current, logo: "" }))}
                   >
                     <X className="h-3 w-3" />
                   </Button>
@@ -151,9 +221,103 @@ export default function SiteSettingsForm() {
                   key={data.logo ? "has-logo" : "no-logo"}
                   type="file"
                   accept="image/*"
-                  onChange={handleLogoUpload}
+                  disabled={uploading === "logo"}
+                  onChange={(event) => handleAssetUpload("logo", event)}
                 />
               )}
+            </div>
+
+            {(["favicon", "defaultOgImage"] as const).map((field) => {
+              const label = field === "favicon" ? "Favicon" : "Default Social Share Image";
+              return (
+                <div key={field} className="space-y-2">
+                  <Label>{label}</Label>
+                  {data[field] ? (
+                    <div className="flex items-center gap-3 rounded-md border p-3">
+                      <Image
+                        src={data[field] || ""}
+                        alt={`${label} preview`}
+                        width={field === "favicon" ? 48 : 120}
+                        height={field === "favicon" ? 48 : 63}
+                        className="rounded border object-contain"
+                      />
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => setData((current) => ({ ...current, [field]: "" }))}
+                      >
+                        Remove
+                      </Button>
+                    </div>
+                  ) : (
+                    <Input
+                      type="file"
+                      accept="image/*"
+                      disabled={uploading === field}
+                      onChange={(event) => handleAssetUpload(field, event)}
+                    />
+                  )}
+                </div>
+              );
+            })}
+
+            <div className="space-y-2 border-t pt-5">
+              <Label htmlFor="seo-title">Default SEO Title</Label>
+              <Input
+                id="seo-title"
+                maxLength={160}
+                value={data.defaultSeoTitle || ""}
+                onChange={(e) => setData((current) => ({ ...current, defaultSeoTitle: e.target.value }))}
+                placeholder="Falls back to Store Name"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seo-description">Default SEO Description</Label>
+              <textarea
+                id="seo-description"
+                maxLength={320}
+                value={data.defaultSeoDescription || ""}
+                onChange={(e) => setData((current) => ({ ...current, defaultSeoDescription: e.target.value }))}
+                className="min-h-[100px] w-full rounded-md border bg-background px-3 py-2"
+                rows={4}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seo-keywords">Default SEO Keywords</Label>
+              <Input
+                id="seo-keywords"
+                value={(data.defaultSeoKeywords || []).join(", ")}
+                onChange={(e) => setData((current) => ({
+                  ...current,
+                  defaultSeoKeywords: e.target.value.split(",").map((value) => value.trim()).filter(Boolean),
+                }))}
+                placeholder="product, category, online shopping"
+              />
+            </div>
+
+            <div className="grid gap-4 border-t pt-5 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="currency">Currency</Label>
+                <Input id="currency" required maxLength={3} value={data.currency || "BDT"} onChange={(e) => setData((current) => ({ ...current, currency: e.target.value.toUpperCase() }))} />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="currency-position">Currency Position</Label>
+                <select id="currency-position" value={data.currencyPosition || "BEFORE"} onChange={(e) => setData((current) => ({ ...current, currencyPosition: e.target.value }))} className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">
+                  <option value="BEFORE">Before amount</option>
+                  <option value="AFTER">After amount</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="timezone">Timezone</Label>
+                <Input id="timezone" required value={data.timezone || "Asia/Dhaka"} onChange={(e) => setData((current) => ({ ...current, timezone: e.target.value }))} />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="locale">Locale</Label>
+                <Input id="locale" required value={data.locale || "en-BD"} onChange={(e) => setData((current) => ({ ...current, locale: e.target.value }))} />
+              </div>
             </div>
           </div>
 

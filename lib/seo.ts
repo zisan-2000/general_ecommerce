@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
-import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
+import {
+  resolveSiteSettings,
+  type ResolvedSiteSettings,
+} from "@/lib/site-settings";
 
-type SiteSettingsSeo = {
-  siteTitle: string;
-  siteDescription: string;
-  logo: string;
-  contactEmail: string | null;
-  contactNumber: string | null;
-  address: string | null;
-};
-
-const DEFAULT_SITE_DESCRIPTION =
-  "Shop computers, components, accessories and gadgets with verified inventory, secure checkout and nationwide delivery across Bangladesh.";
-const DEFAULT_SITE_LOGO = "/assets/favicon.png";
+export type SiteSettingsSeo = ResolvedSiteSettings;
 
 export function getSiteUrl() {
   return (
@@ -55,36 +47,49 @@ export function truncateText(text: string, maxLength = 160) {
 
 const loadSiteSettingsForSeo = unstable_cache(async (): Promise<SiteSettingsSeo> => {
   try {
-    const settings = await prisma.sitesettings.findFirst({
-      orderBy: { id: "asc" },
-      select: {
-        siteTitle: true,
-        footerDescription: true,
-        logo: true,
-        contactEmail: true,
-        contactNumber: true,
-        address: true,
-      },
-    });
+    const [settings, rootCategories] = await Promise.all([
+      prisma.sitesettings.findFirst({
+        orderBy: { id: "asc" },
+        select: {
+          siteTitle: true,
+          storeName: true,
+          storeTagline: true,
+          defaultSeoTitle: true,
+          defaultSeoDescription: true,
+          defaultSeoKeywords: true,
+          defaultOgImage: true,
+          favicon: true,
+          currency: true,
+          currencyPosition: true,
+          timezone: true,
+          locale: true,
+          storeType: true,
+          footerDescription: true,
+          logo: true,
+          contactEmail: true,
+          contactNumber: true,
+          address: true,
+          facebookLink: true,
+          instagramLink: true,
+          twitterLink: true,
+          tiktokLink: true,
+          youtubeLink: true,
+        },
+      }),
+      prisma.category.findMany({
+        where: { deleted: false, isActive: true, parentId: null },
+        orderBy: [{ sortOrder: "asc" }, { name: "asc" }],
+        take: 20,
+        select: { name: true },
+      }),
+    ]);
 
-    return {
-      siteTitle: settings?.siteTitle?.trim() || DEFAULT_SITE_TITLE,
-      siteDescription:
-        settings?.footerDescription?.trim() || DEFAULT_SITE_DESCRIPTION,
-      logo: settings?.logo || DEFAULT_SITE_LOGO,
-      contactEmail: settings?.contactEmail || null,
-      contactNumber: settings?.contactNumber || null,
-      address: settings?.address || null,
-    };
+    return resolveSiteSettings(
+      settings,
+      rootCategories.map((category) => category.name),
+    );
   } catch {
-    return {
-      siteTitle: DEFAULT_SITE_TITLE,
-      siteDescription: DEFAULT_SITE_DESCRIPTION,
-      logo: DEFAULT_SITE_LOGO,
-      contactEmail: null,
-      contactNumber: null,
-      address: null,
-    };
+    return resolveSiteSettings();
   }
 }, ["site-settings-seo"], { revalidate: 3600, tags: ["site-settings"] });
 
@@ -95,50 +100,20 @@ export async function getSiteSettingsForSeo(): Promise<SiteSettingsSeo> {
 export async function buildDefaultMetadata(): Promise<Metadata> {
   const siteUrl = getSiteUrl();
   const settings = await getSiteSettingsForSeo();
-  const logoUrl = toAbsoluteUrl(settings.logo);
-
-  // Generate comprehensive keywords based on site settings
-  const baseKeywords = [
-    settings.siteTitle,
-    "ecommerce",
-    "online shopping",
-    "computers",
-    "computer components",
-    "laptops",
-    "gadgets",
-    "technology products",
-    "secure checkout",
-    "Bangladesh ecommerce",
-    "online store",
-    "buy online",
-    "shopping Bangladesh",
-    "e-commerce platform",
-    "digital shopping",
-    "best prices",
-    "fast delivery",
-    "quality products",
-  ];
-
-  // Extract additional keywords from site title and description
-  const additionalKeywords = [
-    ...settings.siteTitle.split(' '),
-    ...settings.siteDescription.split(' ').filter(word => word.length > 3)
-  ].filter(word => word.length > 2);
-
-  const uniqueKeywords = [...new Set([...baseKeywords, ...additionalKeywords])];
+  const ogImageUrl = toAbsoluteUrl(settings.ogImage);
 
   return {
     metadataBase: new URL(siteUrl),
     applicationName: settings.siteTitle,
     title: {
-      default: settings.siteTitle,
+      default: settings.defaultSeoTitle,
       template: `%s | ${settings.siteTitle}`,
     },
-    description: settings.siteDescription,
+    description: settings.defaultSeoDescription,
     alternates: {
       canonical: siteUrl,
     },
-    keywords: uniqueKeywords,
+    keywords: settings.defaultSeoKeywords,
     authors: [{ name: settings.siteTitle }],
     creator: settings.siteTitle,
     publisher: settings.siteTitle,
@@ -146,27 +121,21 @@ export async function buildDefaultMetadata(): Promise<Metadata> {
     classification: "E-commerce",
     referrer: "origin-when-cross-origin",
     icons: {
-      icon: [
-        { url: settings.logo, sizes: "32x32", type: "image/png" },
-        { url: settings.logo, sizes: "16x16", type: "image/png" },
-        { url: settings.logo, sizes: "192x192", type: "image/png" },
-      ],
-      shortcut: settings.logo,
-      apple: [
-        { url: settings.logo, sizes: "180x180", type: "image/png" },
-      ],
+      icon: settings.favicon,
+      shortcut: settings.favicon,
+      apple: settings.favicon,
     },
     manifest: "/manifest.webmanifest",
     openGraph: {
       type: "website",
       url: siteUrl,
       siteName: settings.siteTitle,
-      title: settings.siteTitle,
-      description: settings.siteDescription,
-      locale: "en_US",
+      title: settings.defaultSeoTitle,
+      description: settings.defaultSeoDescription,
+      locale: settings.locale.replace("-", "_"),
       images: [
         {
-          url: logoUrl,
+          url: ogImageUrl,
           alt: settings.siteTitle,
           width: 1200,
           height: 630,
@@ -175,9 +144,9 @@ export async function buildDefaultMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: settings.siteTitle,
-      description: settings.siteDescription,
-      images: [logoUrl],
+      title: settings.defaultSeoTitle,
+      description: settings.defaultSeoDescription,
+      images: [ogImageUrl],
     },
     robots: {
       index: true,
@@ -221,5 +190,12 @@ export async function getOrganizationJsonLd() {
     email: settings.contactEmail || undefined,
     telephone: settings.contactNumber || undefined,
     address: settings.address || undefined,
+    sameAs: [
+      settings.facebookLink,
+      settings.instagramLink,
+      settings.twitterLink,
+      settings.tiktokLink,
+      settings.youtubeLink,
+    ].filter((value): value is string => Boolean(value)),
   };
 }

@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Shipping Policy",
   description:
-    "How technology products are packed, dispatched, tracked and delivered across Bangladesh.",
+    "How products are packed, dispatched, tracked and delivered.",
   alternates: { canonical: "/ecommerce/shipping" },
 };
 
@@ -30,7 +30,7 @@ const steps = [
     icon: Box,
     title: "Protective packing",
     description:
-      "Technology products are packed according to their size and fragility, with serial and package checks where applicable.",
+      "Products are packed according to their size, type and fragility, with package checks where applicable.",
   },
   {
     icon: Truck,
@@ -65,8 +65,8 @@ export default function ShippingPolicyPage() {
           </div>
           <h1 className="mt-5 text-3xl font-bold sm:text-4xl">Shipping Policy</h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-            Clear packing, dispatch and delivery guidance for computers,
-            components, accessories and other technology products.
+            Clear packing, dispatch and delivery guidance for every eligible
+            product in our catalog.
           </p>
         </div>
       </section>

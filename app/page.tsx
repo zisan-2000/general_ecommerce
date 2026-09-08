@@ -12,9 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettingsForSeo();
 
   return {
-    title: { absolute: `${settings.siteTitle} — Computers, Components & Gadgets` },
-    description:
-      "Shop computers, components, accessories and gadgets with nationwide delivery across Bangladesh.",
+    title: { absolute: settings.defaultSeoTitle },
+    description: settings.defaultSeoDescription,
+    keywords: settings.defaultSeoKeywords,
     alternates: { canonical: "/" },
   };
 }

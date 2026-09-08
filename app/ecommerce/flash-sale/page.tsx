@@ -5,7 +5,7 @@ import { getActiveFlashSaleProducts } from "@/lib/storefront-flash-sale";
 
 export const metadata = {
   title: "Flash Sale",
-  description: "Limited-time technology deals at special prices.",
+  description: "Limited-time product offers at special prices.",
 };
 
 export default async function FlashSalePage() {

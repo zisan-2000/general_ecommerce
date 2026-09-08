@@ -9,24 +9,18 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettingsForSeo();
   return {
-    title: "Technology Guides and Updates",
+    title: "Guides and Updates",
     description:
-      "Read practical guides, product explainers, buying advice and technology updates from " +
+      "Read practical guides, product explainers, buying advice and store updates from " +
       settings.siteTitle +
       ".",
-    keywords: [
-      "technology guides",
-      "computer buying guide",
-      "PC components",
-      "gadget tips",
-      "technology Bangladesh",
-    ],
+    keywords: [...settings.defaultSeoKeywords, "buying guides", "product advice"],
     alternates: { canonical: "/ecommerce/blogs" },
     openGraph: {
       type: "website",
-      title: `Technology Guides and Updates | ${settings.siteTitle}`,
+      title: `Guides and Updates | ${settings.siteTitle}`,
       description:
-        "Practical buying advice, product explainers and technology updates.",
+        "Practical buying advice, product explainers and store updates.",
       url: "/ecommerce/blogs",
       siteName: settings.siteTitle,
       images: [{ url: toAbsoluteUrl(settings.logo), alt: settings.siteTitle }],
@@ -44,11 +38,11 @@ export default async function BlogsPage() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${siteUrl}/ecommerce/blogs#blog`,
-    name: `${settings.siteTitle} Technology Blog`,
+    name: `${settings.siteTitle} Blog`,
     description:
-      "Technology guides, product explainers, buying advice and store updates.",
+      "Product guides, explainers, buying advice and store updates.",
     url: `${siteUrl}/ecommerce/blogs`,
-    inLanguage: ["en-BD", "bn-BD"],
+    inLanguage: [settings.locale],
     publisher: {
       "@type": "Organization",
       name: settings.siteTitle,
@@ -68,7 +62,7 @@ export default async function BlogsPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Technology blog",
+        name: "Store blog",
         item: `${siteUrl}/ecommerce/blogs`,
       },
     ],
@@ -89,10 +83,10 @@ export default async function BlogsPage() {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
             Learn and compare
           </p>
-          <h1 className="mt-3 text-3xl font-bold">Technology guides and updates</h1>
+          <h1 className="mt-3 text-3xl font-bold">Guides and updates</h1>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
-            Practical buying advice, product explainers and useful technology
-            updates for informed purchase decisions.
+            Practical buying advice, product explainers and useful store updates
+            for informed purchase decisions.
           </p>
         </div>
       </section>

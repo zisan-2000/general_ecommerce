@@ -25,6 +25,7 @@ import { useSession, signOut } from "@/lib/auth-client";
 import { getDashboardRoute } from "@/lib/dashboard-route";
 
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
+import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
 
 import SearchSuggestionPanel from "@/components/ecommarce/search/SearchSuggestionPanel";
 
@@ -175,6 +176,8 @@ type SiteSettings = {
   logo?: string | null;
 
   siteTitle?: string | null;
+
+  storeName?: string | null;
 
   footerDescription?: string | null;
 
@@ -1018,7 +1021,9 @@ export default function Header({
 
             <div className="hidden leading-none sm:block">
               <div className="max-w-[190px] truncate text-lg font-semibold tracking-tight text-white">
-                {siteSettings.siteTitle || "AanBee"}
+                {siteSettings.storeName ||
+                  siteSettings.siteTitle ||
+                  DEFAULT_SITE_TITLE}
               </div>
             </div>
           </Link>
@@ -1578,7 +1583,9 @@ export default function Header({
 
                   <div className="min-w-0">
                     <div className="max-w-[190px] truncate text-xl text-primary font-lexend">
-                      {siteSettings.siteTitle || "AanBee"}
+                      {siteSettings.storeName ||
+                        siteSettings.siteTitle ||
+                        DEFAULT_SITE_TITLE}
                     </div>
 
                     <div className="truncate text-xs text-muted-foreground">

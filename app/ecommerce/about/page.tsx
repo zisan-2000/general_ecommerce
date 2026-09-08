@@ -3,9 +3,9 @@ import Link from "next/link";
 import {
   BadgeCheck,
   Boxes,
-  Cpu,
   Headphones,
   PackageCheck,
+  ShoppingBag,
   ShieldCheck,
   Truck,
   Wrench,
@@ -13,19 +13,21 @@ import {
 import { Button } from "@/components/ui/button";
 import { getSiteSettingsForSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Learn how our technology store makes computers, components and gadgets easier to compare, buy and support across Bangladesh.",
-  alternates: { canonical: "/ecommerce/about" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettingsForSeo();
+  return {
+    title: "About Us",
+    description: `Learn how ${settings.siteTitle} makes product discovery, ordering and support straightforward.`,
+    alternates: { canonical: "/ecommerce/about" },
+  };
+}
 
 const capabilities = [
   {
-    icon: Cpu,
-    title: "Technology-first catalog",
+    icon: ShoppingBag,
+    title: "Customer-first catalog",
     description:
-      "Computers, components, accessories and gadgets are organized around the specifications buyers actually compare.",
+      "Products are organized around the categories, options and information buyers actually need.",
   },
   {
     icon: BadgeCheck,
@@ -71,12 +73,11 @@ export default async function AboutPage() {
               About {settings.siteTitle}
             </p>
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-              Technology shopping built around clarity, availability and support
+              Shopping built around clarity, availability and support
             </h1>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-              We help customers discover and compare computers, components,
-              accessories and gadgets with reliable product information, secure
-              checkout and nationwide delivery.
+              {settings.storeTagline} We connect reliable product information,
+              secure checkout and dependable fulfilment in one storefront.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="secondary">
@@ -95,7 +96,7 @@ export default async function AboutPage() {
           <div className="grid grid-cols-2 gap-3 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-4 backdrop-blur-sm">
             {[
               { icon: PackageCheck, label: "Genuine products" },
-              { icon: Wrench, label: "Technical guidance" },
+              { icon: Wrench, label: "Product guidance" },
               { icon: Truck, label: "Delivery coverage" },
               { icon: ShieldCheck, label: "Secure checkout" },
             ].map((feature) => (
@@ -117,7 +118,7 @@ export default async function AboutPage() {
             What we stand for
           </p>
           <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-            A dependable technology retail experience
+            A dependable retail experience
           </h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
             Our storefront and operations are designed to keep product discovery,

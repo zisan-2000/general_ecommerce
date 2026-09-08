@@ -54,7 +54,7 @@ function FAQPageContent() {
           id: "general-1",
           question: "What can I buy from this store?",
           answer:
-            "We focus on computers, components, accessories, monitors, networking equipment, office technology, cameras, gadgets and related technology products.",
+            "Our available range is organized by the live categories shown in the storefront. Browse categories or search the catalog to see what is currently offered.",
         },
         {
           id: "general-2",

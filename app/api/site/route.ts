@@ -8,11 +8,27 @@ import { getAccessContext } from "@/lib/rbac";
 import { NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 import { isStorefrontRequest, privateJson, publicJson } from "@/lib/public-cache";
+import {
+  parseSiteSettingsInput,
+  SITE_SETTINGS_DEFAULTS,
+} from "@/lib/site-settings";
 
 function toSiteSettingsLogSnapshot(settings: {
   id: number;
   logo: string | null;
   siteTitle: string | null;
+  storeName: string | null;
+  storeTagline: string | null;
+  defaultSeoTitle: string | null;
+  defaultSeoDescription: string | null;
+  defaultSeoKeywords: string[];
+  defaultOgImage: string | null;
+  favicon: string | null;
+  currency: string | null;
+  currencyPosition: string | null;
+  timezone: string | null;
+  locale: string | null;
+  storeType: string | null;
   footerDescription: string | null;
   contactNumber: string | null;
   contactEmail: string | null;
@@ -27,6 +43,18 @@ function toSiteSettingsLogSnapshot(settings: {
     id: settings.id,
     logo: settings.logo,
     siteTitle: settings.siteTitle,
+    storeName: settings.storeName,
+    storeTagline: settings.storeTagline,
+    defaultSeoTitle: settings.defaultSeoTitle,
+    defaultSeoDescription: settings.defaultSeoDescription,
+    defaultSeoKeywords: settings.defaultSeoKeywords,
+    defaultOgImage: settings.defaultOgImage,
+    favicon: settings.favicon,
+    currency: settings.currency,
+    currencyPosition: settings.currencyPosition,
+    timezone: settings.timezone,
+    locale: settings.locale,
+    storeType: settings.storeType,
     footerDescription: settings.footerDescription,
     contactNumber: settings.contactNumber,
     contactEmail: settings.contactEmail,
@@ -52,7 +80,19 @@ export async function GET(req: Request) {
       const created = await prisma.sitesettings.create({
         data: {
           logo: null,
-          siteTitle: null,
+          siteTitle: SITE_SETTINGS_DEFAULTS.storeName,
+          storeName: SITE_SETTINGS_DEFAULTS.storeName,
+          storeTagline: SITE_SETTINGS_DEFAULTS.storeTagline,
+          defaultSeoTitle: SITE_SETTINGS_DEFAULTS.storeName,
+          defaultSeoDescription: SITE_SETTINGS_DEFAULTS.defaultSeoDescription,
+          defaultSeoKeywords: [],
+          defaultOgImage: null,
+          favicon: null,
+          currency: SITE_SETTINGS_DEFAULTS.currency,
+          currencyPosition: SITE_SETTINGS_DEFAULTS.currencyPosition,
+          timezone: SITE_SETTINGS_DEFAULTS.timezone,
+          locale: SITE_SETTINGS_DEFAULTS.locale,
+          storeType: SITE_SETTINGS_DEFAULTS.storeType,
           footerDescription: null,
           contactNumber: null,
           contactEmail: null,
@@ -98,20 +138,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    const body = await req.json();
-    const {
-      logo,
-      siteTitle,
-      footerDescription,
-      contactNumber,
-      contactEmail,
-      address,
-      facebookLink,
-      instagramLink,
-      twitterLink,
-      tiktokLink,
-      youtubeLink,
-    } = body;
+    const parsed = parseSiteSettingsInput(await req.json());
+    if (!parsed.ok) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 });
+    }
+    const settingsData = {
+      ...parsed.value,
+      // Compatibility window: legacy readers continue to receive the current name.
+      siteTitle: parsed.value.storeName,
+    };
 
     const existingSettings = await prisma.sitesettings.findFirst({
       orderBy: { id: "asc" },
@@ -120,17 +155,7 @@ export async function POST(req: Request) {
     if (!existingSettings) {
       const created = await prisma.sitesettings.create({
         data: {
-          logo: logo ?? null,
-          siteTitle: siteTitle ?? null,
-          footerDescription: footerDescription ?? null,
-          contactNumber: contactNumber ?? null,
-          contactEmail: contactEmail ?? null,
-          address: address ?? null,
-          facebookLink: facebookLink ?? null,
-          instagramLink: instagramLink ?? null,
-          twitterLink: twitterLink ?? null,
-          tiktokLink: tiktokLink ?? null,
-          youtubeLink: youtubeLink ?? null,
+          ...settingsData,
         },
       });
 
@@ -152,19 +177,7 @@ export async function POST(req: Request) {
 
     const updated = await prisma.sitesettings.update({
       where: { id: existingSettings.id },
-      data: {
-        logo: logo ?? null,
-        siteTitle: siteTitle ?? null,
-        footerDescription: footerDescription ?? null,
-        contactNumber: contactNumber ?? null,
-        contactEmail: contactEmail ?? null,
-        address: address ?? null,
-        facebookLink: facebookLink ?? null,
-        instagramLink: instagramLink ?? null,
-        twitterLink: twitterLink ?? null,
-        tiktokLink: tiktokLink ?? null,
-        youtubeLink: youtubeLink ?? null,
-      },
+      data: settingsData,
     });
 
     await logActivity({
@@ -219,7 +232,19 @@ export async function DELETE(req: Request) {
       where: { id: settings.id },
       data: {
         logo: null,
-        siteTitle: null,
+        siteTitle: SITE_SETTINGS_DEFAULTS.storeName,
+        storeName: SITE_SETTINGS_DEFAULTS.storeName,
+        storeTagline: SITE_SETTINGS_DEFAULTS.storeTagline,
+        defaultSeoTitle: SITE_SETTINGS_DEFAULTS.storeName,
+        defaultSeoDescription: SITE_SETTINGS_DEFAULTS.defaultSeoDescription,
+        defaultSeoKeywords: [],
+        defaultOgImage: null,
+        favicon: null,
+        currency: SITE_SETTINGS_DEFAULTS.currency,
+        currencyPosition: SITE_SETTINGS_DEFAULTS.currencyPosition,
+        timezone: SITE_SETTINGS_DEFAULTS.timezone,
+        locale: SITE_SETTINGS_DEFAULTS.locale,
+        storeType: SITE_SETTINGS_DEFAULTS.storeType,
         footerDescription: null,
         contactNumber: null,
         contactEmail: null,
