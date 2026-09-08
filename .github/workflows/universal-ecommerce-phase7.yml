@@ -1,0 +1,99 @@
+name: Universal Ecommerce Phase 7
+
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/ecommarce/**"
+      - "components/Settings/**"
+      - "lib/**"
+      - "providers/**"
+      - "scripts/**"
+      - "tests/**"
+      - "prisma/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/universal-ecommerce-phase7.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "app/**"
+      - "components/ecommarce/**"
+      - "components/Settings/**"
+      - "lib/**"
+      - "providers/**"
+      - "scripts/**"
+      - "tests/**"
+      - "prisma/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/universal-ecommerce-phase7.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: universal-ecommerce-phase7-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Phase 1-7 release gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+      DATABASE_URL: postgresql://schema_validation:schema_validation@127.0.0.1:5432/schema_validation
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps --ignore-scripts
+
+      - name: Validate Prisma schema
+        run: npx prisma validate
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Universal baseline
+        run: npm run test:universal-baseline
+
+      - name: Product and inventory regression suite
+        run: npm run test:products && npm run test:order-idempotency
+
+      - name: Universal Phase 2
+        run: npm run test:universal-phase2
+
+      - name: Universal Phase 3
+        run: npm run test:universal-phase3
+
+      - name: Universal Phase 4
+        run: npm run test:universal-phase4
+
+      - name: Universal Phase 5
+        run: npm run test:universal-phase5
+
+      - name: Universal Phase 6
+        run: npm run test:universal-phase6
+
+      - name: Universal Phase 7
+        run: npm run test:universal-phase7
+
+      - name: Phase 7 completion contract
+        run: npx tsx --test tests/phase7-completion.test.mjs
+
+      - name: Lint
+        run: npm run lint
+
+      - name: TypeScript no-new-errors gate
+        run: node scripts/typecheck-universal.mjs
