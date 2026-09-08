@@ -65,6 +65,34 @@ if (headerSource.includes(legacyDesktopCategoryOrder)) {
   console.log("removed DESKTOP_CATEGORY_ORDER from header");
 }
 
+const categoryItemPath = "app/api/categories/[id]/route.ts";
+let categoryItemSource = fs.readFileSync(categoryItemPath, "utf8");
+const combinedDeleteUpdate = `    await prisma.category.update({
+      where: { id },
+      data: { deleted: true, isActive: false },
+    });`;
+const compatibleDeleteUpdate = `    await prisma.$transaction(async (tx) => {
+      await tx.category.update({
+        where: { id },
+        data: { deleted: true },
+      });
+      await tx.category.update({
+        where: { id },
+        data: { isActive: false },
+      });
+    });`;
+if (!categoryItemSource.includes(compatibleDeleteUpdate)) {
+  if (!categoryItemSource.includes(combinedDeleteUpdate)) {
+    throw new Error("Category soft-delete compatibility target was not found");
+  }
+  categoryItemSource = categoryItemSource.replace(
+    combinedDeleteUpdate,
+    compatibleDeleteUpdate,
+  );
+  fs.writeFileSync(categoryItemPath, categoryItemSource);
+  console.log("preserved Phase 1 category soft-delete contract");
+}
+
 await import("./phase6-apply-source-patches.mjs");
 
 const finalHeader = fs.readFileSync(headerPath, "utf8");
@@ -73,6 +101,14 @@ if (finalHeader.includes("DESKTOP_CATEGORY_ORDER")) {
 }
 if (!finalHeader.includes("getEffectiveCategoryNavigationIds")) {
   throw new Error("Header is not using the Phase 6 category navigation resolver");
+}
+
+const finalCategoryItem = fs.readFileSync(categoryItemPath, "utf8");
+if (!/data:\s*\{\s*deleted:\s*true\s*\}/.test(finalCategoryItem)) {
+  throw new Error("Phase 1 category soft-delete contract was not preserved");
+}
+if (!/data:\s*\{\s*isActive:\s*false\s*\}/.test(finalCategoryItem)) {
+  throw new Error("Phase 6 category deactivation was not preserved");
 }
 
 const schema = fs.readFileSync("prisma/schema.prisma", "utf8");
