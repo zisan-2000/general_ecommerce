@@ -1,7 +1,11 @@
 name: Phase 8 Apply Commit
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - phase8-book-module-decoupling
+    paths:
+      - ".github/workflows/phase8-apply-commit.yml"
 
 permissions:
   contents: write
