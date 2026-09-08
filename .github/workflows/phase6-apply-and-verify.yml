@@ -29,10 +29,10 @@ jobs:
           cache: npm
 
       - name: Apply deterministic Phase 6 patches
-        run: node scripts/phase6-apply-source-patches.mjs
+        run: node scripts/phase6-apply-source-patches-v2.mjs
 
-      - name: Remove temporary patch runner
-        run: rm scripts/phase6-apply-source-patches.mjs .github/workflows/phase6-apply-and-verify.yml
+      - name: Remove temporary patch runners
+        run: rm scripts/phase6-apply-source-patches.mjs scripts/phase6-apply-source-patches-v2.mjs .github/workflows/phase6-apply-and-verify.yml
 
       - name: Install dependencies
         run: npm ci
