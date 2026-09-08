@@ -63,6 +63,14 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildDefaultMetadata();
 }
 
+function countryCodeFromLocale(locale: string) {
+  try {
+    return new Intl.Locale(locale).region;
+  } catch {
+    return undefined;
+  }
+}
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -70,7 +78,8 @@ export default async function RootLayout({
 }>) {
   const siteUrl = getSiteUrl();
   const siteSettings = await getSiteSettingsForSeo();
-  
+  const addressCountry = countryCodeFromLocale(siteSettings.locale);
+
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -82,8 +91,8 @@ export default async function RootLayout({
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteUrl}/ecommerce/products?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+      "query-input": "required name=search_term_string",
+    },
   };
 
   const organizationJsonLd = {
@@ -96,28 +105,33 @@ export default async function RootLayout({
       "@type": "ImageObject",
       url: toAbsoluteUrl(siteSettings.logo),
       width: 512,
-      height: 512
+      height: 512,
     },
     description: siteSettings.defaultSeoDescription,
-    contactPoint: siteSettings.contactEmail || siteSettings.contactNumber ? {
-      "@type": "ContactPoint",
-      telephone: siteSettings.contactNumber,
-      email: siteSettings.contactEmail,
-      contactType: "customer service",
-      availableLanguage: [siteSettings.locale]
-    } : undefined,
-    address: siteSettings.address ? {
-      "@type": "PostalAddress",
-      streetAddress: siteSettings.address,
-      addressCountry: "BD"
-    } : undefined,
+    contactPoint:
+      siteSettings.contactEmail || siteSettings.contactNumber
+        ? {
+            "@type": "ContactPoint",
+            telephone: siteSettings.contactNumber,
+            email: siteSettings.contactEmail,
+            contactType: "customer service",
+            availableLanguage: [siteSettings.locale],
+          }
+        : undefined,
+    address: siteSettings.address
+      ? {
+          "@type": "PostalAddress",
+          streetAddress: siteSettings.address,
+          addressCountry,
+        }
+      : undefined,
     sameAs: [
       siteSettings.facebookLink,
       siteSettings.instagramLink,
       siteSettings.twitterLink,
       siteSettings.tiktokLink,
       siteSettings.youtubeLink,
-    ].filter((value): value is string => Boolean(value))
+    ].filter((value): value is string => Boolean(value)),
   };
 
   return (
@@ -139,7 +153,13 @@ export default async function RootLayout({
           }}
         />
         <ThemeProvider>
-          <Providers>
+          <Providers
+            storefrontSettings={{
+              currency: siteSettings.currency,
+              currencyPosition: siteSettings.currencyPosition,
+              locale: siteSettings.locale,
+            }}
+          >
             <AnalyticsTracker />
             <TreeProvider>
               <CartProvider>
