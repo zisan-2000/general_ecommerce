@@ -42,6 +42,8 @@ Deleted categories are marked inactive during backfill.
 5. Open Admin → Management → Categories and verify Active, Header, Footer, Featured and Sort Order controls.
 6. Verify header, footer and homepage categories on desktop and mobile.
 
+The Phase 6 merge gate must pass the cumulative Phase 1–6 regression suite, Prisma validation and TypeScript checking before `main` is updated.
+
 ## Restore strategy
 
 No legacy column is dropped. To restore the former visible behavior, keep categories active and header/footer-visible, and set the desired root `sortOrder` values through Admin. Do not roll back by dropping Phase 6 columns after application code has started reading them.
