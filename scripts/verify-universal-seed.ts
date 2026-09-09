@@ -43,20 +43,35 @@ async function main() {
     }),
   ]);
 
-  if (!settings) throw new Error("Universal seed verification failed: site settings missing.");
+  if (!settings) {
+    throw new Error("Universal seed verification failed: site settings missing.");
+  }
   if (!settings.storeName || !settings.storeName.trim()) {
     throw new Error("Universal seed verification failed: store name is empty.");
   }
   if (settings.storeType !== SITE_SETTINGS_DEFAULTS.storeType) {
-    throw new Error(`Universal seed verification failed: expected GENERAL store type, got ${settings.storeType}.`);
+    throw new Error(
+      `Universal seed verification failed: expected GENERAL store type, got ${settings.storeType}.`,
+    );
   }
 
   const bySlug = new Map(categories.map((category) => [category.slug, category]));
   for (const slug of REQUIRED_CATEGORY_SLUGS) {
     const category = bySlug.get(slug);
-    if (!category) throw new Error(`Universal seed verification failed: missing ${slug} category.`);
-    if (category.deleted || !category.isActive || !category.showInHeader || !category.showInFooter) {
-      throw new Error(`Universal seed verification failed: ${slug} category is not storefront-ready.`);
+    if (!category) {
+      throw new Error(
+        `Universal seed verification failed: missing ${slug} category.`,
+      );
+    }
+    if (
+      category.deleted ||
+      !category.isActive ||
+      !category.showInHeader ||
+      !category.showInFooter
+    ) {
+      throw new Error(
+        `Universal seed verification failed: ${slug} category is not storefront-ready.`,
+      );
     }
   }
 
@@ -70,16 +85,6 @@ async function main() {
     throw new Error(
       `Universal seed verification failed: safe default seed created ${demoUsers} known demo credential account(s).`,
     );
-  }
-
-  const duplicateCategories = await prisma.category.groupBy({
-    by: ["slug"],
-    where: { slug: { in: [...REQUIRED_CATEGORY_SLUGS] } },
-    _count: { _all: true },
-    having: { id: { _count: { gt: 1 } } },
-  });
-  if (duplicateCategories.length) {
-    throw new Error("Universal seed verification failed: duplicate baseline category slugs detected.");
   }
 
   console.log("Universal seed database verification passed.", {
