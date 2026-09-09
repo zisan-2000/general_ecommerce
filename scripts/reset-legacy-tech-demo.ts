@@ -1,4 +1,3 @@
-import nextEnv from "@next/env";
 import { PrismaClient } from "../generated/prisma";
 import { SITE_SETTINGS_DEFAULTS } from "../lib/site-settings";
 import { seedUniversalStorefront } from "../prisma/seed-data/universal";
@@ -10,9 +9,6 @@ import {
   LEGACY_TECH_CATEGORY_SLUGS,
   printLegacyTechDemoAudit,
 } from "./legacy-tech-demo-state";
-
-const { loadEnvConfig } = nextEnv;
-loadEnvConfig(process.cwd());
 
 const prisma = new PrismaClient();
 
