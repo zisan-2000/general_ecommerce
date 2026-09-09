@@ -146,7 +146,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
     settings,
     identityLooksLikeDemo,
     fingerprintScore,
-    looksLikeLegacyTechDemo: fingerprintScore >= 4,
+    looksLikeLegacyTechDemo: identityLooksLikeDemo && fingerprintScore >= 5,
     categories,
     storefrontVisibleCategories,
     categoryIds,
