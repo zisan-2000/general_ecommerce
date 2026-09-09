@@ -13,14 +13,21 @@ const UNIVERSAL_CATEGORIES = [
   { name: "Services", slug: "services", sortOrder: 50, featured: true },
 ] as const;
 
-type ExistingStoreIdentity = {
+type ExistingStoreSettings = {
   storeName: string | null;
   siteTitle: string | null;
+  currency: string | null;
+  currencyPosition: string | null;
+  timezone: string | null;
+  locale: string | null;
+  storeType: string | null;
 };
 
-export function getUniversalIdentityBackfill(
-  settings: ExistingStoreIdentity,
-): { storeName?: string; siteTitle?: string } {
+function blank(value: string | null | undefined) {
+  return !value || !value.trim();
+}
+
+export function getUniversalSettingsBackfill(settings: ExistingStoreSettings) {
   const storeName = settings.storeName?.trim() ?? "";
   const siteTitle = settings.siteTitle?.trim() ?? "";
   const resolvedName = storeName || siteTitle || SITE_SETTINGS_DEFAULTS.storeName;
@@ -28,6 +35,19 @@ export function getUniversalIdentityBackfill(
   return {
     ...(storeName ? {} : { storeName: resolvedName }),
     ...(siteTitle ? {} : { siteTitle: resolvedName }),
+    ...(blank(settings.currency)
+      ? { currency: SITE_SETTINGS_DEFAULTS.currency }
+      : {}),
+    ...(blank(settings.currencyPosition)
+      ? { currencyPosition: SITE_SETTINGS_DEFAULTS.currencyPosition }
+      : {}),
+    ...(blank(settings.timezone)
+      ? { timezone: SITE_SETTINGS_DEFAULTS.timezone }
+      : {}),
+    ...(blank(settings.locale) ? { locale: SITE_SETTINGS_DEFAULTS.locale } : {}),
+    ...(blank(settings.storeType)
+      ? { storeType: SITE_SETTINGS_DEFAULTS.storeType }
+      : {}),
   };
 }
 
@@ -38,6 +58,11 @@ export async function seedUniversalStorefront(prisma: PrismaClient) {
       id: true,
       storeName: true,
       siteTitle: true,
+      currency: true,
+      currencyPosition: true,
+      timezone: true,
+      locale: true,
+      storeType: true,
     },
   });
 
@@ -63,11 +88,11 @@ export async function seedUniversalStorefront(prisma: PrismaClient) {
       },
     });
   } else {
-    const identityBackfill = getUniversalIdentityBackfill(existingSettings);
-    if (Object.keys(identityBackfill).length > 0) {
+    const settingsBackfill = getUniversalSettingsBackfill(existingSettings);
+    if (Object.keys(settingsBackfill).length > 0) {
       await prisma.sitesettings.update({
         where: { id: existingSettings.id },
-        data: identityBackfill,
+        data: settingsBackfill,
       });
       settingsBackfilled = true;
     }
