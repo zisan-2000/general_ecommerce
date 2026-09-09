@@ -93,7 +93,11 @@
     "test:universal-phase8": "tsx --test tests/book-module-decoupling.test.mjs",
     "backfill:book-metadata": "tsx scripts/backfill-book-metadata.ts",
     "verify:book-metadata-db": "tsx scripts/verify-book-metadata.ts",
-    "verify:universal-phase8": "npx prisma generate && npx next typegen && npm run verify:universal-phase7 && npm run test:universal-phase8"
+    "verify:universal-phase8": "npx prisma generate && npx next typegen && npm run verify:universal-phase7 && npm run test:universal-phase8",
+    "audit:legacy-tech-demo": "tsx scripts/audit-legacy-tech-demo.ts",
+    "reset:legacy-tech-demo": "tsx scripts/reset-legacy-tech-demo.ts",
+    "verify:legacy-tech-demo-reset": "tsx scripts/verify-legacy-tech-demo-reset.ts",
+    "test:legacy-tech-demo-cleanup": "tsx --test tests/legacy-tech-demo-cleanup.test.mjs"
   },
   "dependencies": {
     "@better-fetch/fetch": "^1.1.12",
@@ -183,7 +187,7 @@
     "tesseract.js": "^7.0.0",
     "three": "^0.175.0",
     "usehooks-ts": "^3.1.0",
-    "yup": "^1.6.1",
+    "yup": "^1.6.6",
     "zod": "^4.4.2"
   },
   "devDependencies": {
