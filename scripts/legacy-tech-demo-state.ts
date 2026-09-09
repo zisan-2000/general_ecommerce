@@ -66,7 +66,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
     totalProducts,
     availableProducts,
     activeBanners,
-    visibleBrands,
+    matchingBrands,
     featuredReviews,
     pcBuilder,
   ] = await Promise.all([
@@ -140,7 +140,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
         ? 1
         : 0) +
     (availableProducts >= 5 ? 2 : availableProducts ? 1 : 0) +
-    (visibleBrands.length >= 3 ? 1 : 0);
+    (matchingBrands.length >= 3 ? 1 : 0);
 
   return {
     settings,
@@ -153,7 +153,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
     totalProducts,
     availableProducts,
     activeBanners,
-    visibleBrands,
+    matchingBrands,
     featuredReviews,
     pcBuilderEnabled: pcBuilder?.enabled ?? null,
   };
@@ -171,7 +171,7 @@ export function printLegacyTechDemoAudit(state: LegacyTechDemoState) {
     techProducts: state.totalProducts,
     availableTechProducts: state.availableProducts,
     activeTechDemoBanners: state.activeBanners.length,
-    visibleTechDemoBrands: state.visibleBrands.length,
+    matchingLegacyBrands: state.matchingBrands.length,
     featuredTechReviews: state.featuredReviews,
     pcBuilderEnabled: state.pcBuilderEnabled,
   });
@@ -190,10 +190,10 @@ export function printLegacyTechDemoAudit(state: LegacyTechDemoState) {
     );
   }
 
-  if (state.visibleBrands.length) {
+  if (state.matchingBrands.length) {
     console.log(
-      "Visible legacy tech brands:",
-      state.visibleBrands.map((brand) => brand.slug).join(", "),
+      "Legacy demo brand fingerprints (preserved for safe reuse):",
+      state.matchingBrands.map((brand) => brand.slug).join(", "),
     );
   }
 }
@@ -216,9 +216,6 @@ export function assertLegacyTechDemoReset(state: LegacyTechDemoState) {
   }
   if (state.activeBanners.length) {
     failures.push(`${state.activeBanners.length} legacy tech demo banners are still active`);
-  }
-  if (state.visibleBrands.length) {
-    failures.push(`${state.visibleBrands.length} legacy tech demo brands are still visible`);
   }
   if (state.featuredReviews) {
     failures.push(`${state.featuredReviews} legacy tech reviews are still featured`);
