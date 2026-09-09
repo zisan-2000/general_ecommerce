@@ -6,7 +6,7 @@ import {
   isDemoSeedProfile,
   parseSeedProfile,
 } from "../lib/seed-profile.ts";
-import { getUniversalIdentityBackfill } from "../prisma/seed-data/universal.ts";
+import { getUniversalSettingsBackfill } from "../prisma/seed-data/universal.ts";
 
 const read = (file) => fs.readFileSync(file, "utf8");
 
@@ -55,22 +55,59 @@ test("universal storefront seed is vertical-neutral and preserves existing admin
   assert.doesNotMatch(universalSeed, /admin@example\.com|Demo123|admin123/);
 });
 
-test("existing blank identity is repaired without overwriting configured values", () => {
-  assert.deepEqual(getUniversalIdentityBackfill({ storeName: null, siteTitle: null }), {
-    storeName: "Online Store",
-    siteTitle: "Online Store",
-  });
+test("missing legacy runtime settings are repaired without overwriting configured values", () => {
   assert.deepEqual(
-    getUniversalIdentityBackfill({ storeName: "", siteTitle: "Legacy Shop" }),
-    { storeName: "Legacy Shop" },
+    getUniversalSettingsBackfill({
+      storeName: null,
+      siteTitle: null,
+      currency: null,
+      currencyPosition: null,
+      timezone: null,
+      locale: null,
+      storeType: null,
+    }),
+    {
+      storeName: "Online Store",
+      siteTitle: "Online Store",
+      currency: "BDT",
+      currencyPosition: "BEFORE",
+      timezone: "Asia/Dhaka",
+      locale: "en-BD",
+      storeType: "GENERAL",
+    },
   );
+
   assert.deepEqual(
-    getUniversalIdentityBackfill({ storeName: "My Store", siteTitle: "" }),
-    { siteTitle: "My Store" },
-  );
-  assert.deepEqual(
-    getUniversalIdentityBackfill({ storeName: "My Store", siteTitle: "My Store" }),
+    getUniversalSettingsBackfill({
+      storeName: "Legacy Shop",
+      siteTitle: "Legacy Shop",
+      currency: "USD",
+      currencyPosition: "AFTER",
+      timezone: "America/New_York",
+      locale: "en-US",
+      storeType: "FASHION",
+    }),
     {},
+  );
+
+  assert.deepEqual(
+    getUniversalSettingsBackfill({
+      storeName: "",
+      siteTitle: "Legacy Shop",
+      currency: "",
+      currencyPosition: "",
+      timezone: "",
+      locale: "",
+      storeType: "",
+    }),
+    {
+      storeName: "Legacy Shop",
+      currency: "BDT",
+      currencyPosition: "BEFORE",
+      timezone: "Asia/Dhaka",
+      locale: "en-BD",
+      storeType: "GENERAL",
+    },
   );
 });
 
@@ -88,6 +125,8 @@ test("Phase 9 includes live database verification and a cumulative Phase 1-9 rel
   assert.match(workflow, /prisma db push --force-reset/);
   assert.match(workflow, /prisma db seed/);
   assert.match(workflow, /Seed universal baseline again/);
+  assert.match(workflow, /Repair simulated legacy settings/);
+  assert.match(workflow, /Verify repaired legacy settings/);
   assert.match(workflow, /verify-universal-seed\.ts/);
   assert.match(workflow, /test:universal-phase8/);
   assert.match(workflow, /universal-ecommerce-phase9\.test\.mjs/);
