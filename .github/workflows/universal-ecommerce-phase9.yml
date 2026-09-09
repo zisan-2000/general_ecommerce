@@ -138,6 +138,9 @@ jobs:
       - name: Universal Phase 9
         run: npx tsx --test tests/universal-ecommerce-phase9.test.mjs
 
+      - name: Legacy TechHub cleanup contract
+        run: npm run test:legacy-tech-demo-cleanup
+
       - name: Lint
         run: npm run lint
 
