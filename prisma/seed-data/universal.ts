@@ -1,4 +1,4 @@
-import type { PrismaClient } from "../../generated/prisma";
+import type { Prisma, PrismaClient } from "../../generated/prisma";
 import {
   DEFAULT_STORE_FEATURES,
   STORE_FEATURE_KEYS,
@@ -22,6 +22,8 @@ type ExistingStoreSettings = {
   locale: string | null;
   storeType: string | null;
 };
+
+type UniversalSeedClient = PrismaClient | Prisma.TransactionClient;
 
 function blank(value: string | null | undefined) {
   return !value || !value.trim();
@@ -51,7 +53,7 @@ export function getUniversalSettingsBackfill(settings: ExistingStoreSettings) {
   };
 }
 
-export async function seedUniversalStorefront(prisma: PrismaClient) {
+export async function seedUniversalStorefront(prisma: UniversalSeedClient) {
   const existingSettings = await prisma.sitesettings.findFirst({
     orderBy: { id: "asc" },
     select: {
