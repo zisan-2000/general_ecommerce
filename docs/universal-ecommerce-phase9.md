@@ -13,10 +13,11 @@ Make the repository safe to initialize for any single-store ecommerce vertical w
 It only ensures:
 
 - neutral `GENERAL` site settings when no site settings row exists;
+- missing required runtime settings on an existing legacy row (`storeName`/`siteTitle`, currency, currency position, timezone, locale and store type), without overwriting non-empty configured values;
 - five neutral root categories;
 - missing Store Feature Registry rows using the existing defaults.
 
-The universal seed is idempotent and non-destructive. It does not create admin/customer accounts, does not overwrite existing site settings, does not archive unrelated products/categories/brands, and does not enable BOOKS/AUTHORS beyond the configured registry defaults.
+The universal seed is idempotent and non-destructive. It does not create admin/customer accounts, does not replace non-empty administrator-configured site settings, does not archive unrelated products/categories/brands, and does not enable BOOKS/AUTHORS beyond the configured registry defaults. Existing supported store types such as `TECH`, `FASHION`, `GROCERY` and `BOOK` are preserved; only missing/blank legacy values are repaired.
 
 ### Explicit demo seed
 
@@ -47,11 +48,11 @@ Database contract after the universal seed:
 npx tsx scripts/verify-universal-seed.ts
 ```
 
-The database verifier checks neutral site identity, required active/navigation-ready categories, complete Store Feature Registry coverage, and absence of the known demo credential accounts.
+The database verifier checks usable/supported site runtime settings, required active/navigation-ready categories, complete Store Feature Registry coverage, and absence of the known demo credential accounts.
 
 ## CI acceptance environment
 
-The Phase 9 workflow provisions an isolated PostgreSQL service, pushes the current Prisma schema into that disposable database, runs the universal seed twice, verifies database invariants after the second run, and then executes the cumulative Phase 1–9 release suite.
+The Phase 9 workflow provisions an isolated PostgreSQL service, pushes the current Prisma schema into that disposable database, runs the universal seed twice, verifies database invariants after the second run, then deliberately nulls the legacy-compatible runtime settings and proves that another universal-seed run repairs them before executing the cumulative Phase 1–9 release suite.
 
 The clean CI database is intentionally disposable. `prisma db push --force-reset` is used only there and must not be copied into production deployment procedures.
 
@@ -64,7 +65,7 @@ For a new production database:
 3. Run `npx tsx scripts/verify-universal-seed.ts`.
 4. Configure store identity, category navigation, features, products and optional modules through the admin surfaces.
 
-For an existing production database, the universal seed preserves an existing site-settings row and upserts only the neutral baseline category slugs. Review the five reserved slugs before running it if those slugs already have business-specific meanings.
+For an existing production database, the universal seed preserves non-empty administrator settings, repairs only missing required runtime settings, and upserts only the neutral baseline category slugs. Review the five reserved slugs before running it if those slugs already have business-specific meanings.
 
 ## Rollback
 
@@ -76,10 +77,11 @@ Demo seed rollback is different: because the legacy demo can archive unrelated s
 
 - Default Prisma seed is universal and non-destructive.
 - No known demo credentials are created by the default seed.
-- Existing store identity is preserved.
+- Existing non-empty store identity and localization settings are preserved.
+- Missing legacy runtime settings are repaired with safe defaults.
 - Store feature defaults are inserted without overwriting administrator choices.
 - Neutral categories are deterministic and idempotent.
 - Technology/full demo behavior is explicit and guarded.
-- Live PostgreSQL acceptance runs the universal seed twice.
-- Database invariants are verified after the second seed.
+- Live PostgreSQL acceptance runs the universal seed twice and verifies simulated legacy-null repair.
+- Database invariants are verified after each acceptance scenario.
 - Phase 1–9 cumulative tests, Prisma validation/generation, Next route type generation, lint, strict TypeScript and whitespace checks pass before merge.
