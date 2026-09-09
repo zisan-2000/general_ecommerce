@@ -6,7 +6,7 @@ nextEnv.loadEnvConfig(process.cwd());
 export default {
   schema: "prisma/schema.prisma",
   migrations: {
-    path: "prisma/migrations",
+    path: "prisma/migrations-release",
     seed: "tsx prisma/seed-universal.ts",
   },
   experimental: {

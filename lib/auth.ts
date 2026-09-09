@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.email.toLowerCase().trim() },
         });
 
-        if (!user?.passwordHash) return null;
+        if (!user?.passwordHash || user.banned) return null;
 
         const ok = await bcrypt.compare(credentials.password, user.passwordHash);
         if (!ok) return null;
@@ -103,10 +103,20 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.role = user.role ?? "user";
+        token.blocked = false;
+      } else if (token.id) {
+        const currentUser = await db.user.findUnique({
+          where: { id: token.id },
+          select: { banned: true },
+        });
+        token.blocked = !currentUser || currentUser.banned === true;
       }
       return token;
     },
     async session({ session, token }) {
+      if (token.blocked) {
+        return { expires: session.expires } as typeof session;
+      }
       if (session.user) {
         session.user.id = token.id;
         session.user.role = token.role;

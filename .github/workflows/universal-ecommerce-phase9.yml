@@ -84,8 +84,8 @@ jobs:
       - name: Generate Next route types
         run: npx next typegen
 
-      - name: Prepare disposable Phase 9 database
-        run: npx prisma db push --force-reset --skip-generate
+      - name: Apply release migrations to a clean database
+        run: npx prisma migrate deploy
 
       - name: Seed universal baseline
         run: npx prisma db seed
@@ -103,6 +103,44 @@ jobs:
         run: npx prisma db seed
 
       - name: Verify repaired legacy settings
+        run: npx tsx scripts/verify-universal-seed.ts
+
+      - name: Verify technology preset
+        env:
+          STORE_PRESET: tech
+          ALLOW_STORE_PRESET_APPLY: "true"
+        run: npm run seed:preset && npm run verify:store-preset
+
+      - name: Verify fashion preset
+        env:
+          STORE_PRESET: fashion
+          ALLOW_STORE_PRESET_APPLY: "true"
+        run: npm run seed:preset && npm run verify:store-preset
+
+      - name: Verify grocery preset
+        env:
+          STORE_PRESET: grocery
+          ALLOW_STORE_PRESET_APPLY: "true"
+        run: npm run seed:preset && npm run verify:store-preset
+
+      - name: Verify book preset
+        env:
+          STORE_PRESET: book
+          ALLOW_STORE_PRESET_APPLY: "true"
+        run: npm run seed:preset && npm run verify:store-preset
+
+      - name: Prepare unsafe demo credential fixture
+        env:
+          NODE_ENV: test
+          ALLOW_PHASE9_DEMO_FIXTURE: "true"
+        run: npx tsx scripts/prepare-phase9-demo-credential-fixture.ts
+
+      - name: Disable known demo credentials
+        env:
+          ALLOW_DEMO_CREDENTIAL_DISABLE: "true"
+        run: npm run disable:known-demo-credentials
+
+      - name: Verify credential repair
         run: npx tsx scripts/verify-universal-seed.ts
 
       - name: Universal baseline
@@ -136,10 +174,7 @@ jobs:
         run: npm run test:universal-phase8
 
       - name: Universal Phase 9
-        run: npx tsx --test tests/universal-ecommerce-phase9.test.mjs
-
-      - name: Legacy TechHub cleanup contract
-        run: npm run test:legacy-tech-demo-cleanup
+        run: npm run test:universal-phase9
 
       - name: Lint
         run: npm run lint

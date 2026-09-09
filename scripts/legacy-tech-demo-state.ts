@@ -4,6 +4,7 @@ import {
   STOREFRONT_BRANDS,
   STOREFRONT_CATEGORIES,
 } from "../prisma/seed-data/storefront/constants";
+import { unsafeKnownDemoAccountWhere } from "../lib/demo-credential-safety";
 
 export const LEGACY_TECH_CATEGORY_SLUGS = Array.from(
   new Set(STOREFRONT_CATEGORIES.map((category) => category.slug)),
@@ -69,6 +70,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
     matchingBrands,
     featuredReviews,
     pcBuilder,
+    unsafeDemoAccounts,
   ] = await Promise.all([
     categoryIds.length
       ? db.product.count({
@@ -115,6 +117,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
       where: { key: "PC_BUILDER" },
       select: { enabled: true },
     }),
+    db.user.count({ where: unsafeKnownDemoAccountWhere }),
   ]);
 
   const storefrontVisibleCategories = categories.filter(
@@ -156,6 +159,7 @@ export async function collectLegacyTechDemoState(db: DbClient) {
     matchingBrands,
     featuredReviews,
     pcBuilderEnabled: pcBuilder?.enabled ?? null,
+    unsafeDemoAccounts,
   };
 }
 
@@ -174,6 +178,7 @@ export function printLegacyTechDemoAudit(state: LegacyTechDemoState) {
     matchingLegacyBrands: state.matchingBrands.length,
     featuredTechReviews: state.featuredReviews,
     pcBuilderEnabled: state.pcBuilderEnabled,
+    unsafeDemoAccounts: state.unsafeDemoAccounts,
   });
 
   if (state.storefrontVisibleCategories.length) {
@@ -222,6 +227,9 @@ export function assertLegacyTechDemoReset(state: LegacyTechDemoState) {
   }
   if (state.pcBuilderEnabled !== false) {
     failures.push("PC Builder is not explicitly disabled");
+  }
+  if (state.unsafeDemoAccounts) {
+    failures.push(`${state.unsafeDemoAccounts} unsafe known demo credential accounts remain`);
   }
 
   if (failures.length) {

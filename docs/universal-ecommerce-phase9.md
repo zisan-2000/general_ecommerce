@@ -14,10 +14,26 @@ It only ensures:
 
 - neutral `GENERAL` site settings when no site settings row exists;
 - missing required runtime settings on an existing legacy row (`storeName`/`siteTitle`, currency, currency position, timezone, locale and store type), without overwriting non-empty configured values;
-- five neutral root categories;
+- five neutral root categories when their slugs do not already exist;
 - missing Store Feature Registry rows using the existing defaults.
 
-The universal seed is idempotent and non-destructive. It does not create admin/customer accounts, does not replace non-empty administrator-configured site settings, does not archive unrelated products/categories/brands, and does not enable BOOKS/AUTHORS beyond the configured registry defaults. Existing supported store types such as `TECH`, `FASHION`, `GROCERY` and `BOOK` are preserved; only missing/blank legacy values are repaired.
+The universal seed is idempotent and non-destructive. It does not create admin/customer accounts, does not replace non-empty administrator-configured site settings or existing category configuration, does not archive unrelated products/categories/brands, and does not enable BOOKS/AUTHORS beyond the configured registry defaults. Existing supported store types such as `TECH`, `FASHION`, `GROCERY` and `BOOK` are preserved; only missing/blank legacy values are repaired.
+
+## Explicit vertical presets
+
+Four configuration-only presets are available. They configure informational store
+type, feature flags, navigation categories and typed category-attribute mappings;
+they do not create products, users or known credentials.
+
+```powershell
+$env:STORE_PRESET="tech" # tech | fashion | grocery | book
+$env:ALLOW_STORE_PRESET_APPLY="true"
+npm run seed:preset
+npm run verify:store-preset
+```
+
+Preset application is intentionally explicit because it replaces configuration
+owned by the four presets. Historical products and orders are never deleted.
 
 ### Explicit demo seed
 
@@ -48,24 +64,57 @@ Database contract after the universal seed:
 npx tsx scripts/verify-universal-seed.ts
 ```
 
-The database verifier checks usable/supported site runtime settings, required active/navigation-ready categories, complete Store Feature Registry coverage, and absence of the known demo credential accounts.
+Full cumulative release gate:
+
+```bash
+npm run verify:universal-phase9
+```
+
+On Windows, stop any local Next.js development server before running the full gate.
+`prisma generate` replaces the native query-engine binary, which a running server
+may keep locked.
+
+The database verifier checks usable/supported site runtime settings, required active/navigation-ready categories, complete Store Feature Registry coverage, and absence of active known demo credentials. Historical demo user rows may remain only when their password is removed and the account is banned.
+
+For an existing legacy database, disable known credentials after taking a backup:
+
+```powershell
+$env:ALLOW_DEMO_CREDENTIAL_DISABLE="true"
+npm run disable:known-demo-credentials
+npx tsx scripts/verify-universal-seed.ts
+```
 
 ## CI acceptance environment
 
-The Phase 9 workflow provisions an isolated PostgreSQL service, pushes the current Prisma schema into that disposable database, runs the universal seed twice, verifies database invariants after the second run, then deliberately nulls the legacy-compatible runtime settings and proves that another universal-seed run repairs them before executing the cumulative Phase 1–9 release suite.
+The Phase 9 workflow provisions an isolated PostgreSQL service, applies the active
+squashed migration through `prisma migrate deploy`, runs the universal seed twice,
+proves legacy-null repair, applies and verifies all four vertical presets, tests
+known-demo-credential neutralization, then executes the cumulative Phase 1–9 suite.
 
-The clean CI database is intentionally disposable. `prisma db push --force-reset` is used only there and must not be copied into production deployment procedures.
+The legacy incremental migration SQL remains in `prisma/migrations` for audit.
+`prisma/migrations-release` is the active installation history.
 
 ## Production initialization
 
 For a new production database:
 
-1. Apply the repository's approved migration/baseline process.
+1. Run `npx prisma migrate deploy`.
 2. Run `npx prisma db seed` only if neutral baseline settings/categories are desired.
 3. Run `npx tsx scripts/verify-universal-seed.ts`.
 4. Configure store identity, category navigation, features, products and optional modules through the admin surfaces.
 
-For an existing production database, the universal seed preserves non-empty administrator settings, repairs only missing required runtime settings, and upserts only the neutral baseline category slugs. Review the five reserved slugs before running it if those slugs already have business-specific meanings.
+For an existing database created before the Phase 9 squashed history, first take a
+backup and run the one-time reconciliation below. It validates core tables before
+marking the baseline as applied; it does not execute baseline DDL.
+
+```powershell
+$env:ALLOW_PHASE9_BASELINE_RESOLVE="true"
+npm run resolve:phase9-baseline
+npx prisma migrate status
+```
+
+The universal seed then preserves non-empty administrator settings and existing
+category configuration while repairing only missing runtime settings.
 
 ## Rollback
 
@@ -81,7 +130,11 @@ Demo seed rollback is different: because the legacy demo can archive unrelated s
 - Missing legacy runtime settings are repaired with safe defaults.
 - Store feature defaults are inserted without overwriting administrator choices.
 - Neutral categories are deterministic and idempotent.
+- Existing category configuration is not overwritten by the safe default seed.
+- Tech, fashion, grocery and book presets are separate, guarded operations.
 - Technology/full demo behavior is explicit and guarded.
+- Known demo users are banned and have credential hashes removed without deleting history.
+- A clean database installs through `prisma migrate deploy`, including external PC Builder tables.
 - Live PostgreSQL acceptance runs the universal seed twice and verifies simulated legacy-null repair.
 - Database invariants are verified after each acceptance scenario.
 - Phase 1–9 cumulative tests, Prisma validation/generation, Next route type generation, lint, strict TypeScript and whitespace checks pass before merge.

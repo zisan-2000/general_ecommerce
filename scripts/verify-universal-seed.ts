@@ -4,6 +4,7 @@ import {
   CURRENCY_POSITIONS,
   STORE_TYPES,
 } from "../lib/site-settings";
+import { unsafeKnownDemoAccountWhere } from "../lib/demo-credential-safety";
 
 const prisma = new PrismaClient();
 const REQUIRED_CATEGORY_SLUGS = [
@@ -38,20 +39,7 @@ async function main() {
     prisma.storeFeature.count({
       where: { key: { in: [...STORE_FEATURE_KEYS] } },
     }),
-    prisma.user.count({
-      where: {
-        email: {
-          in: [
-            "admin@example.com",
-            "customer.one@storefront.demo",
-            "customer.two@storefront.demo",
-            "yousuf@z.shoes.com",
-            "mahin@z.shoes.com",
-            "salehin@z.shoes.com",
-          ],
-        },
-      },
-    }),
+    prisma.user.count({ where: unsafeKnownDemoAccountWhere }),
   ]);
 
   if (!settings) {
@@ -97,10 +85,11 @@ async function main() {
       );
     }
     if (
-      category.deleted ||
-      !category.isActive ||
-      !category.showInHeader ||
-      !category.showInFooter
+      storeType === "GENERAL" &&
+      (category.deleted ||
+        !category.isActive ||
+        !category.showInHeader ||
+        !category.showInFooter)
     ) {
       throw new Error(
         `Universal seed verification failed: ${slug} category is not storefront-ready.`,
@@ -116,7 +105,7 @@ async function main() {
 
   if (demoUsers !== 0) {
     throw new Error(
-      `Universal seed verification failed: safe default seed created ${demoUsers} known demo credential account(s).`,
+      `Universal seed verification failed: ${demoUsers} unsafe known demo credential account(s) remain.`,
     );
   }
 

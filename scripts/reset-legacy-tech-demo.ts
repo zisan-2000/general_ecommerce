@@ -9,6 +9,7 @@ import {
   LEGACY_TECH_CATEGORY_SLUGS,
   printLegacyTechDemoAudit,
 } from "./legacy-tech-demo-state";
+import { disableKnownDemoCredentials } from "../lib/demo-credential-safety";
 
 const prisma = new PrismaClient();
 
@@ -116,6 +117,8 @@ async function main() {
       update: { enabled: false },
       create: { key: "PC_BUILDER", enabled: false },
     });
+
+    await disableKnownDemoCredentials(tx);
 
     await seedUniversalStorefront(tx);
   });

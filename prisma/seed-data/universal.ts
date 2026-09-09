@@ -5,7 +5,7 @@ import {
 } from "../../lib/store-features";
 import { SITE_SETTINGS_DEFAULTS } from "../../lib/site-settings";
 
-const UNIVERSAL_CATEGORIES = [
+export const UNIVERSAL_CATEGORIES = [
   { name: "General", slug: "general", sortOrder: 10, featured: true },
   { name: "Home & Living", slug: "home-living", sortOrder: 20, featured: true },
   { name: "Fashion", slug: "fashion", sortOrder: 30, featured: true },
@@ -100,30 +100,16 @@ export async function seedUniversalStorefront(prisma: UniversalSeedClient) {
     }
   }
 
-  for (const category of UNIVERSAL_CATEGORIES) {
-    await prisma.category.upsert({
-      where: { slug: category.slug },
-      update: {
-        name: category.name,
-        deleted: false,
-        isActive: true,
-        showInHeader: true,
-        showInFooter: true,
-        featured: category.featured,
-        sortOrder: category.sortOrder,
-      },
-      create: {
-        name: category.name,
-        slug: category.slug,
-        deleted: false,
-        isActive: true,
-        showInHeader: true,
-        showInFooter: true,
-        featured: category.featured,
-        sortOrder: category.sortOrder,
-      },
-    });
-  }
+  const categoryResult = await prisma.category.createMany({
+    data: UNIVERSAL_CATEGORIES.map((category) => ({
+      ...category,
+      deleted: false,
+      isActive: true,
+      showInHeader: true,
+      showInFooter: true,
+    })),
+    skipDuplicates: true,
+  });
 
   await prisma.storeFeature.createMany({
     data: STORE_FEATURE_KEYS.map((key) => ({
@@ -134,7 +120,8 @@ export async function seedUniversalStorefront(prisma: UniversalSeedClient) {
   });
 
   return {
-    categoriesEnsured: UNIVERSAL_CATEGORIES.length,
+    categoriesCreated: categoryResult.count,
+    categoriesAvailable: UNIVERSAL_CATEGORIES.length,
     settingsCreated: !existingSettings,
     settingsBackfilled,
     featureDefaultsEnsured: STORE_FEATURE_KEYS.length,

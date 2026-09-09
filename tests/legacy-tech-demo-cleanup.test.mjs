@@ -49,6 +49,7 @@ test("reset is explicitly guarded and preserves historical rows", () => {
   assert.match(source, /enabled:\s*false/);
   assert.match(source, /SITE_SETTINGS_DEFAULTS/);
   assert.match(source, /seedUniversalStorefront/);
+  assert.match(source, /disableKnownDemoCredentials/);
 });
 
 test("reset verification rejects remaining tech storefront state", () => {
@@ -59,5 +60,6 @@ test("reset verification rejects remaining tech storefront state", () => {
   assert.match(state, /legacy tech products are still available/);
   assert.match(state, /legacy tech demo banners are still active/);
   assert.match(state, /PC Builder is not explicitly disabled/);
+  assert.match(state, /unsafe known demo credential accounts remain/);
   assert.match(verifier, /assertLegacyTechDemoReset/);
 });
