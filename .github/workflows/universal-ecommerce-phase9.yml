@@ -1,0 +1,139 @@
+name: Universal Ecommerce Phase 9
+
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "providers/**"
+      - "scripts/**"
+      - "tests/**"
+      - "docs/universal-ecommerce-phase9.md"
+      - "prisma/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/universal-ecommerce-phase9.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "providers/**"
+      - "scripts/**"
+      - "tests/**"
+      - "docs/universal-ecommerce-phase9.md"
+      - "prisma/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/universal-ecommerce-phase9.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: universal-ecommerce-phase9-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Phase 1-9 release gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+      DATABASE_URL: postgresql://phase9:phase9@127.0.0.1:5432/phase9
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: phase9
+          POSTGRES_PASSWORD: phase9
+          POSTGRES_DB: phase9
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U phase9 -d phase9"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps --ignore-scripts
+
+      - name: Validate Prisma schema
+        run: npx prisma validate
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Generate Next route types
+        run: npx next typegen
+
+      - name: Prepare disposable Phase 9 database
+        run: npx prisma db push --force-reset --skip-generate
+
+      - name: Seed universal baseline
+        run: npx prisma db seed
+
+      - name: Seed universal baseline again
+        run: npx prisma db seed
+
+      - name: Verify universal seed database invariants
+        run: npx tsx scripts/verify-universal-seed.ts
+
+      - name: Universal baseline
+        run: npm run test:universal-baseline
+
+      - name: Product and inventory regression suite
+        run: npm run test:products && npm run test:order-idempotency
+
+      - name: Universal Phase 2
+        run: npm run test:universal-phase2
+
+      - name: Universal Phase 3
+        run: npm run test:universal-phase3
+
+      - name: Universal Phase 4
+        run: npm run test:universal-phase4
+
+      - name: Universal Phase 5
+        run: npm run test:universal-phase5
+
+      - name: Universal Phase 6
+        run: npm run test:universal-phase6
+
+      - name: Universal Phase 7
+        run: npm run test:universal-phase7
+
+      - name: Phase 7 completion contract
+        run: npx tsx --test tests/phase7-completion.test.mjs
+
+      - name: Universal Phase 8
+        run: npm run test:universal-phase8
+
+      - name: Universal Phase 9
+        run: npx tsx --test tests/universal-ecommerce-phase9.test.mjs
+
+      - name: Lint
+        run: npm run lint
+
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Check whitespace
+        run: git diff --check HEAD^ HEAD
