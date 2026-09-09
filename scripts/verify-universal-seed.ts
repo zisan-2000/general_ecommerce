@@ -1,6 +1,9 @@
 import { PrismaClient } from "../generated/prisma";
 import { STORE_FEATURE_KEYS } from "../lib/store-features";
-import { SITE_SETTINGS_DEFAULTS } from "../lib/site-settings";
+import {
+  CURRENCY_POSITIONS,
+  STORE_TYPES,
+} from "../lib/site-settings";
 
 const prisma = new PrismaClient();
 const REQUIRED_CATEGORY_SLUGS = [
@@ -10,6 +13,14 @@ const REQUIRED_CATEGORY_SLUGS = [
   "books-media",
   "services",
 ] as const;
+
+function requireText(value: string | null | undefined, label: string) {
+  const normalized = value?.trim() ?? "";
+  if (!normalized) {
+    throw new Error(`Universal seed verification failed: ${label} is empty.`);
+  }
+  return normalized;
+}
 
 async function main() {
   const [settings, categories, featureCount, demoUsers] = await Promise.all([
@@ -46,12 +57,34 @@ async function main() {
   if (!settings) {
     throw new Error("Universal seed verification failed: site settings missing.");
   }
-  if (!settings.storeName || !settings.storeName.trim()) {
-    throw new Error("Universal seed verification failed: store name is empty.");
-  }
-  if (settings.storeType !== SITE_SETTINGS_DEFAULTS.storeType) {
+
+  const storeName = requireText(settings.storeName, "store name");
+  const storeType = requireText(settings.storeType, "store type").toUpperCase();
+  const currency = requireText(settings.currency, "currency").toUpperCase();
+  const currencyPosition = requireText(
+    settings.currencyPosition,
+    "currency position",
+  ).toUpperCase();
+  const timezone = requireText(settings.timezone, "timezone");
+  const locale = requireText(settings.locale, "locale");
+
+  if (!STORE_TYPES.includes(storeType as (typeof STORE_TYPES)[number])) {
     throw new Error(
-      `Universal seed verification failed: expected GENERAL store type, got ${settings.storeType}.`,
+      `Universal seed verification failed: unsupported store type ${settings.storeType}.`,
+    );
+  }
+  if (!/^[A-Z]{3}$/.test(currency)) {
+    throw new Error(
+      `Universal seed verification failed: invalid currency ${settings.currency}.`,
+    );
+  }
+  if (
+    !CURRENCY_POSITIONS.includes(
+      currencyPosition as (typeof CURRENCY_POSITIONS)[number],
+    )
+  ) {
+    throw new Error(
+      `Universal seed verification failed: invalid currency position ${settings.currencyPosition}.`,
     );
   }
 
@@ -88,8 +121,12 @@ async function main() {
   }
 
   console.log("Universal seed database verification passed.", {
-    storeName: settings.storeName,
-    storeType: settings.storeType,
+    storeName,
+    storeType,
+    currency,
+    currencyPosition,
+    timezone,
+    locale,
     categories: REQUIRED_CATEGORY_SLUGS.length,
     featureRows: featureCount,
     demoCredentialAccounts: demoUsers,
