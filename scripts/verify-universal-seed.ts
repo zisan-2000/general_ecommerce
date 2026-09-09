@@ -25,7 +25,7 @@ async function main() {
       },
     }),
     prisma.storeFeature.count({
-      where: { key: { in: STORE_FEATURE_KEYS } },
+      where: { key: { in: [...STORE_FEATURE_KEYS] } },
     }),
     prisma.user.count({
       where: {
