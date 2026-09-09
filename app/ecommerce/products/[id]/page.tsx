@@ -126,6 +126,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
     { label: "Product ID", value: String(product.id) },
     { label: "Category", value: product.category.name },
     ...(product.brand ? [{ label: "Brand", value: product.brand.name }] : []),
+    ...(product.bookMetadata?.writer
+      ? [{ label: "Writer", value: product.bookMetadata.writer.name }]
+      : []),
+    ...(product.bookMetadata?.publisher
+      ? [{ label: "Publisher", value: product.bookMetadata.publisher.name }]
+      : []),
     { label: "Type", value: product.type },
     ...(product.weight ? [{ label: "Weight", value: String(product.weight) }] : []),
     ...(dimensions ? [{ label: "Dimensions", value: dimensions }] : []),

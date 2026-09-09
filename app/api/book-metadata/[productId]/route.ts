@@ -1,10 +1,17 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
+import { revalidatePath } from "next/cache";
 import { authOptions } from "@/lib/auth";
+import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { getAccessContext } from "@/lib/rbac";
 import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 import { hasBookMetadata, parseBookMetadataInput } from "@/lib/book-metadata";
+import {
+  readBookMetadataCompat,
+  writeBookMetadataCompat,
+} from "@/lib/book-metadata-server";
+import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 
 const PRIVATE_NO_STORE = { "Cache-Control": "private, no-store" } as const;
 
@@ -29,9 +36,19 @@ async function requireProductManager() {
   return { access };
 }
 
+function revalidateBookSurfaces(productId: number) {
+  revalidateStorefrontCatalog();
+  revalidatePath("/ecommerce/books");
+  revalidatePath("/ecommerce/authors", "layout");
+  revalidatePath("/ecommerce/publishers", "layout");
+  revalidatePath(`/ecommerce/products/${productId}`);
+}
+
 export async function GET(_request: Request, context: Context) {
   const gate = await gateStoreFeature("BOOKS", 404);
   if (gate) return gate;
+  const auth = await requireProductManager();
+  if ("response" in auth) return auth.response;
 
   const { productId: rawId } = await context.params;
   const productId = parseProductId(rawId);
@@ -39,13 +56,7 @@ export async function GET(_request: Request, context: Context) {
     return NextResponse.json({ error: "Invalid product id" }, { status: 400 });
   }
 
-  const metadata = await prisma.bookMetadata.findUnique({
-    where: { productId },
-    include: {
-      writer: { select: { id: true, name: true, image: true } },
-      publisher: { select: { id: true, name: true, image: true } },
-    },
-  });
+  const metadata = await readBookMetadataCompat(productId);
   if (!metadata) {
     return NextResponse.json({ error: "Book metadata not found" }, { status: 404 });
   }
@@ -65,50 +76,54 @@ export async function PUT(request: Request, context: Context) {
     return NextResponse.json({ error: "Invalid product id" }, { status: 400 });
   }
 
-  const parsed = parseBookMetadataInput(await request.json());
+  const parsed = parseBookMetadataInput(await request.json().catch(() => null));
   if (!parsed.ok) {
     return NextResponse.json({ error: parsed.error }, { status: 400 });
   }
 
-  const product = await prisma.product.findFirst({
-    where: { id: productId, deleted: false },
-    select: { id: true },
-  });
-  if (!product) {
+  const { writerId, publisherId } = parsed.value;
+  const before = await readBookMetadataCompat(productId);
+  if (!before) {
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
-
-  const { writerId, publisherId } = parsed.value;
-  const [writer, publisher] = await Promise.all([
-    writerId
-      ? prisma.writer.findFirst({ where: { id: writerId, deleted: false }, select: { id: true } })
-      : Promise.resolve(null),
-    publisherId
-      ? prisma.publisher.findFirst({ where: { id: publisherId, deleted: false }, select: { id: true } })
-      : Promise.resolve(null),
-  ]);
-  if (writerId && !writer) {
-    return NextResponse.json({ error: "Writer not found" }, { status: 400 });
+  let result;
+  try {
+    result = await prisma.$transaction(async (tx) => {
+      const [writer, publisher] = await Promise.all([
+        writerId
+          ? tx.writer.findFirst({ where: { id: writerId, deleted: false }, select: { id: true } })
+          : null,
+        publisherId
+          ? tx.publisher.findFirst({ where: { id: publisherId, deleted: false }, select: { id: true } })
+          : null,
+      ]);
+      if (writerId && !writer) throw new Error("BOOK_WRITER_NOT_FOUND");
+      if (publisherId && !publisher) throw new Error("BOOK_PUBLISHER_NOT_FOUND");
+      return writeBookMetadataCompat(tx, productId, parsed.value);
+    });
+  } catch (error) {
+    if (error instanceof Error && error.message === "BOOK_WRITER_NOT_FOUND") {
+      return NextResponse.json({ error: "Writer not found" }, { status: 400 });
+    }
+    if (error instanceof Error && error.message === "BOOK_PUBLISHER_NOT_FOUND") {
+      return NextResponse.json({ error: "Publisher not found" }, { status: 400 });
+    }
+    throw error;
   }
-  if (publisherId && !publisher) {
-    return NextResponse.json({ error: "Publisher not found" }, { status: 400 });
-  }
-
-  if (!hasBookMetadata(parsed.value)) {
-    await prisma.bookMetadata.deleteMany({ where: { productId } });
-    return NextResponse.json({ productId, writerId: null, publisherId: null }, { headers: PRIVATE_NO_STORE });
-  }
-
-  const metadata = await prisma.bookMetadata.upsert({
-    where: { productId },
-    create: { productId, writerId, publisherId },
-    update: { writerId, publisherId },
-    include: {
-      writer: { select: { id: true, name: true, image: true } },
-      publisher: { select: { id: true, name: true, image: true } },
-    },
+  revalidateBookSurfaces(productId);
+  await logActivity({
+    action: hasBookMetadata(parsed.value) ? "update" : "delete",
+    entity: "book_metadata",
+    entityId: productId,
+    before,
+    after: result ?? { productId, writerId: null, publisherId: null },
+    access: auth.access,
+    request,
   });
-  return NextResponse.json(metadata, { headers: PRIVATE_NO_STORE });
+  return NextResponse.json(
+    result ?? { productId, writerId: null, publisherId: null },
+    { headers: PRIVATE_NO_STORE },
+  );
 }
 
 export async function DELETE(_request: Request, context: Context) {
@@ -123,6 +138,20 @@ export async function DELETE(_request: Request, context: Context) {
     return NextResponse.json({ error: "Invalid product id" }, { status: 400 });
   }
 
-  await prisma.bookMetadata.deleteMany({ where: { productId } });
+  const before = await readBookMetadataCompat(productId);
+  if (!before) return NextResponse.json({ error: "Product not found" }, { status: 404 });
+  await prisma.$transaction((tx) =>
+    writeBookMetadataCompat(tx, productId, { writerId: null, publisherId: null }),
+  );
+  revalidateBookSurfaces(productId);
+  await logActivity({
+    action: "delete",
+    entity: "book_metadata",
+    entityId: productId,
+    before,
+    after: { productId, writerId: null, publisherId: null },
+    access: auth.access,
+    request: _request,
+  });
   return NextResponse.json({ success: true }, { headers: PRIVATE_NO_STORE });
 }

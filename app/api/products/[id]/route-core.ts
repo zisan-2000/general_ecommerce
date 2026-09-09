@@ -29,6 +29,7 @@ import {
   gateProductType,
   getDisabledStorefrontProductTypes,
 } from "@/lib/store-feature-gates-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import {
   getEffectiveStorefrontCategoryIds,
   isCategoryEffectivelyActive,
@@ -196,16 +197,18 @@ export async function GET(
       deleted: false,
       ...(storefront ? { available: true } : {}),
     };
-    const [disabledTypes, activeCategoryIds] = storefront
+    const [disabledTypes, activeCategoryIds, bookVisibility] = storefront
       ? await Promise.all([
           getDisabledStorefrontProductTypes(),
           getEffectiveStorefrontCategoryIds(),
+          getBookProductVisibilityWhere(),
         ])
-      : [[], []];
+      : [[], [], {}];
     const storefrontWhere = {
       ...where,
       ...(storefront ? { categoryId: { in: activeCategoryIds } } : {}),
       ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+      ...bookVisibility,
     };
     const product: any = storefront
       ? await prisma.product.findFirst({

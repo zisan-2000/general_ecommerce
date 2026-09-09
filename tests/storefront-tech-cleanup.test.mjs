@@ -29,21 +29,28 @@ test("public storefront content no longer contains bookstore branding", async ()
   }
 });
 
-test("primary sitemap contains tech routes and excludes bookstore entities", async () => {
+test("primary sitemap keeps book entities behind their storefront feature gates", async () => {
   const sitemap = await read("app/sitemap.ts");
 
   assert.match(sitemap, /\/ecommerce\/products/);
   assert.match(sitemap, /\/ecommerce\/brands/);
   assert.match(sitemap, /\/ecommerce\/flash-sale/);
-  assert.doesNotMatch(sitemap, /\/ecommerce\/authors/);
-  assert.doesNotMatch(sitemap, /\/ecommerce\/publishers/);
+  assert.match(sitemap, /registry\.features\.BOOKS\.enabled/);
+  assert.match(sitemap, /registry\.features\.AUTHORS\.enabled/);
+  assert.match(sitemap, /\/ecommerce\/books/);
+  assert.match(sitemap, /\/ecommerce\/authors/);
+  assert.match(sitemap, /\/ecommerce\/publishers/);
+  assert.match(sitemap, /getStorefrontBooks/);
+  assert.match(sitemap, /getBookProductVisibilityWhere/);
   assert.doesNotMatch(sitemap, /book-fair|sitemap-books/);
   assert.doesNotMatch(sitemap, /prisma\.(writer|publisher)/);
 });
 
-test("legacy public URLs preserve SEO with permanent redirects", async () => {
-  const [index, authors, publishers, legacySitemap, config] = await Promise.all([
+test("book routes are feature-gated while legacy product URLs preserve SEO", async () => {
+  const [index, books, bookDetail, authors, publishers, legacySitemap, config] = await Promise.all([
     read("app/ecommerce/page.tsx"),
+    read("app/ecommerce/books/page.tsx"),
+    read("app/ecommerce/books/[identifier]/page.tsx"),
     read("app/ecommerce/authors/page.tsx"),
     read("app/ecommerce/publishers/page.tsx"),
     read("app/ecommerce/sitemap-books.xml/route.ts"),
@@ -51,8 +58,12 @@ test("legacy public URLs preserve SEO with permanent redirects", async () => {
   ]);
 
   assert.match(index, /permanentRedirect\("\/"\)/);
-  assert.match(authors, /permanentRedirect\("\/ecommerce\/brands"\)/);
-  assert.match(publishers, /permanentRedirect\("\/ecommerce\/brands"\)/);
+  assert.match(books, /isFeatureEnabled\("BOOKS"\)/);
+  assert.match(bookDetail, /isFeatureEnabled\("BOOKS"\)/);
+  assert.match(bookDetail, /getStorefrontBooks/);
+  assert.match(bookDetail, /permanentRedirect\(`\/ecommerce\/products\/\$\{product\.id\}`\)/);
+  assert.match(authors, /isFeatureEnabled\("AUTHORS"\)/);
+  assert.match(publishers, /isFeatureEnabled\("BOOKS"\)/);
   assert.match(legacySitemap, /\/sitemap\.xml/);
   assert.match(legacySitemap, /308/);
   assert.match(config, /source: "\/ecommerce\/books\/:identifier"/);

@@ -91,8 +91,9 @@
     "cron:sla:trigger": "node scripts/cron/trigger-sla-eval.mjs",
     "postinstall": "prisma generate && copyfiles node_modules/pdfjs-dist/build/pdf.worker.min.js public",
     "test:universal-phase8": "tsx --test tests/book-module-decoupling.test.mjs",
+    "backfill:book-metadata": "tsx scripts/backfill-book-metadata.ts",
     "verify:book-metadata-db": "tsx scripts/verify-book-metadata.ts",
-    "verify:universal-phase8": "npx next typegen && npm run verify:universal-phase7 && npm run test:universal-phase8"
+    "verify:universal-phase8": "npx prisma generate && npx next typegen && npm run verify:universal-phase7 && npm run test:universal-phase8"
   },
   "dependencies": {
     "@better-fetch/fetch": "^1.1.12",

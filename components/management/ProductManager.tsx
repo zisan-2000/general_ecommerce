@@ -88,6 +88,7 @@ export default function ProductManager({
     DIGITAL_PRODUCTS: true,
     SERVICE_PRODUCTS: true,
     BUNDLES: true,
+    BOOKS: false,
   },
 }: any) {
   const router = useRouter();
@@ -1606,6 +1607,7 @@ export default function ProductManager({
                 }
               : null
           }
+          booksEnabled={features.BOOKS === true}
         />
       )}
 

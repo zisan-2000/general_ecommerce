@@ -75,6 +75,9 @@ import {
   BadgePercent,
   GitCompareArrows,
   Monitor,
+  BookOpen,
+  UsersRound,
+  Building2,
 } from "lucide-react";
 
 const CATEGORIES_API = "/api/categories?view=storefront";
@@ -99,6 +102,27 @@ const HEADER_SHOP_ACTIONS = [
     href: "/ecommerce/compare",
     description: "Compare selected products",
     icon: GitCompareArrows,
+  },
+  {
+    id: "books",
+    label: "Books",
+    href: "/ecommerce/books",
+    description: "Browse the book collection",
+    icon: BookOpen,
+  },
+  {
+    id: "authors",
+    label: "Authors",
+    href: "/ecommerce/authors",
+    description: "Browse books by author",
+    icon: UsersRound,
+  },
+  {
+    id: "publishers",
+    label: "Publishers",
+    href: "/ecommerce/publishers",
+    description: "Browse books by publisher",
+    icon: Building2,
   },
   {
     id: "pc-builder",
@@ -527,11 +551,11 @@ function MobileCategoryTree({
 export default function Header({
   siteSettingsData,
   categoriesData,
-  featureVisibility = { compare: true, pcBuilder: true },
+  featureVisibility = { compare: true, pcBuilder: true, books: false, authors: false },
 }: {
   siteSettingsData?: SiteSettings;
   categoriesData?: CategoryDTO[];
-  featureVisibility?: { compare: boolean; pcBuilder: boolean };
+  featureVisibility?: { compare: boolean; pcBuilder: boolean; books: boolean; authors: boolean };
 }) {
   const router = useRouter();
 
@@ -550,9 +574,12 @@ export default function Header({
       HEADER_SHOP_ACTIONS.filter((action) => {
         if (action.id === "compare") return featureVisibility.compare;
         if (action.id === "pc-builder") return featureVisibility.pcBuilder;
+        if (action.id === "books") return featureVisibility.books;
+        if (action.id === "authors") return featureVisibility.authors;
+        if (action.id === "publishers") return featureVisibility.books;
         return true;
       }),
-    [featureVisibility.compare, featureVisibility.pcBuilder],
+    [featureVisibility.authors, featureVisibility.books, featureVisibility.compare, featureVisibility.pcBuilder],
   );
 
   const [hasMounted, setHasMounted] = useState(false);

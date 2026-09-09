@@ -41,3 +41,14 @@ export function parseBookMetadataInput(value: unknown):
 export function hasBookMetadata(input: BookMetadataInput) {
   return input.writerId !== null || input.publisherId !== null;
 }
+
+export function resolveCompatibleBookMetadata(input: {
+  legacy: BookMetadataInput;
+  metadata: BookMetadataInput | null;
+}): BookMetadataInput {
+  if (!input.metadata) return input.legacy;
+  return {
+    writerId: input.metadata.writerId ?? input.legacy.writerId,
+    publisherId: input.metadata.publisherId ?? input.legacy.publisherId,
+  };
+}

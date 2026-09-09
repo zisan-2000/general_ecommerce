@@ -8,18 +8,22 @@ import {
 } from "@/lib/storefront-home";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
+import type { Prisma } from "@/generated/prisma";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 const readActiveFlashSales = unstable_cache(
-  async (serializedDisabledTypes: string) => {
+  async (serializedDisabledTypes: string, serializedBookVisibility: string) => {
     const now = new Date();
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
+    const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        ...bookVisibility,
         flashSaleEnabled: true,
         flashSalePrice: { not: null },
         flashSaleStartsAt: { lte: now },
@@ -38,6 +42,9 @@ const readActiveFlashSales = unstable_cache(
 );
 
 export async function getActiveFlashSaleProducts() {
-  const disabledTypes = await getDisabledStorefrontProductTypes();
-  return readActiveFlashSales(JSON.stringify(disabledTypes));
+  const [disabledTypes, bookVisibility] = await Promise.all([
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  return readActiveFlashSales(JSON.stringify(disabledTypes), JSON.stringify(bookVisibility));
 }

@@ -278,23 +278,25 @@ model UserRole {
 }
 
 model Writer {
-  id        Int       @id @default(autoincrement())
-  name      String    @unique
-  image     String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deleted   Boolean   @default(false)
-  bookMetadata BookMetadata[]
+  id             Int            @id @default(autoincrement())
+  name           String         @unique
+  image          String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  deleted        Boolean        @default(false)
+  bookMetadata   BookMetadata[]
+  legacyProducts Product[]      @relation("LegacyProductWriter")
 }
 
 model Publisher {
-  id        Int       @id @default(autoincrement())
-  name      String    @unique
-  image     String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deleted   Boolean   @default(false)
-  bookMetadata BookMetadata[]
+  id             Int            @id @default(autoincrement())
+  name           String         @unique
+  image          String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  deleted        Boolean        @default(false)
+  bookMetadata   BookMetadata[]
+  legacyProducts Product[]      @relation("LegacyProductPublisher")
 }
 
 model Category {
@@ -341,6 +343,10 @@ model Product {
   sku                     String?                           @unique
   categoryId              Int
   brandId                 Int?
+  // Phase 8 compatibility columns. BookMetadata is authoritative; these stay
+  // dual-written until a later, separately verified removal release.
+  writerId                Int?
+  publisherId             Int?
   description             String
   shortDesc               String?
   basePrice               Decimal                           @db.Decimal(10, 2)
@@ -382,6 +388,8 @@ model Product {
   VatClass                VatClass?                         @relation(fields: [VatClassId], references: [id])
   brand                   Brand?                            @relation(fields: [brandId], references: [id])
   category                Category                          @relation(fields: [categoryId], references: [id])
+  writer                  Writer?                           @relation("LegacyProductWriter", fields: [writerId], references: [id], onDelete: SetNull)
+  publisher               Publisher?                        @relation("LegacyProductPublisher", fields: [publisherId], references: [id], onDelete: SetNull)
   digitalAsset            DigitalAsset?                     @relation("ProductDigitalAsset", fields: [digitalAssetId], references: [id])
   bookMetadata            BookMetadata?
   attributes              ProductAttribute[]
@@ -404,6 +412,8 @@ model Product {
   @@index([deleted, available, flashSaleEnabled, flashSaleStartsAt, flashSaleEndsAt])
   @@index([categoryId, deleted, available])
   @@index([brandId, deleted, available])
+  @@index([writerId, deleted, available])
+  @@index([publisherId, deleted, available])
 }
 
 model BookMetadata {

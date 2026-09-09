@@ -6,6 +6,7 @@ import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 type RawProduct = Prisma.ProductGetPayload<{
   select: typeof storefrontProductSelect;
@@ -61,12 +62,13 @@ export function parseStorefrontProductIdentifier(
 }
 
 const readProductDetail = unstable_cache(
-  async (identifier: string, serializedDisabledTypes: string) => {
+  async (identifier: string, serializedDisabledTypes: string, serializedBookVisibility: string) => {
     const where = parseStorefrontProductIdentifier(identifier);
     if (!where) return null;
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
+    const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
     const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const product = await prisma.product.findFirst({
       where: {
@@ -75,6 +77,7 @@ const readProductDetail = unstable_cache(
         available: true,
         categoryId: { in: activeCategoryIds },
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        ...bookVisibility,
       },
       select: storefrontProductSelect,
     });
@@ -89,6 +92,13 @@ export type StorefrontProductDetail = NonNullable<
 >;
 
 export async function getStorefrontProductDetail(identifier: string | number) {
-  const disabledTypes = await getDisabledStorefrontProductTypes();
-  return readProductDetail(String(identifier), JSON.stringify(disabledTypes));
+  const [disabledTypes, bookVisibility] = await Promise.all([
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  return readProductDetail(
+    String(identifier),
+    JSON.stringify(disabledTypes),
+    JSON.stringify(bookVisibility),
+  );
 }

@@ -4,12 +4,14 @@ import { publicJson } from "@/lib/public-cache";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 export async function GET() {
   try {
-    const [disabledTypes, activeCategoryIds] = await Promise.all([
+    const [disabledTypes, activeCategoryIds, bookVisibility] = await Promise.all([
       getDisabledStorefrontProductTypes(),
       getEffectiveStorefrontCategoryIds(),
+      getBookProductVisibilityWhere(),
     ]);
     const top = await prisma.product.findMany({
       where: {
@@ -17,6 +19,7 @@ export async function GET() {
         available: true,
         categoryId: { in: activeCategoryIds },
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        ...bookVisibility,
         soldCount: {
           gt: 0,
         },

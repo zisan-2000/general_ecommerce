@@ -39,7 +39,7 @@ const ACTIVITY_ENTITY_RULES: ActivityEntityRule[] = [
     permissions: ["users.read", "users.manage"],
   },
   {
-    match: ["product", "product_variant", "brand", "category", "publisher", "writer"],
+    match: ["product", "product_variant", "book_metadata", "brand", "category", "publisher", "writer"],
     permissions: ["products.manage"],
   },
   {

@@ -11,6 +11,7 @@ import {
   getEffectiveStorefrontCategoryIds,
   isCategoryEffectivelyActive,
 } from '@/lib/category-navigation-server';
+import { getBookProductVisibilityWhere } from '@/lib/book-product-visibility-server';
 
 async function findStandardCartItem(
   userId: string,
@@ -136,8 +137,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const product = await prisma.product.findUnique({
-      where: { id: productId },
+    const bookVisibility = await getBookProductVisibilityWhere();
+    const product = await prisma.product.findFirst({
+      where: { id: productId, ...bookVisibility },
       include: {
         variants: {
           include: {

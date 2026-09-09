@@ -1,6 +1,7 @@
 // app/api/orders/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { gateProductType } from "@/lib/store-feature-gates-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { deductVariantInventory, reserveVariantInventory } from "@/lib/inventory";
@@ -472,12 +473,16 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
     const productIds = Array.from(
       new Set(normalizedItems.map((i) => i.productId)),
     );
-    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+    const [activeCategoryIds, bookVisibility] = await Promise.all([
+      getEffectiveStorefrontCategoryIds(),
+      getBookProductVisibilityWhere(),
+    ]);
     const products = await prisma.product.findMany({
       where: {
         id: { in: productIds },
         deleted: false,
         categoryId: { in: activeCategoryIds },
+        ...bookVisibility,
       },
       include: {
         VatClass: true,

@@ -36,6 +36,7 @@ type MenuItem = {
   icon?: LucideIcon;
   requiredPermissions?: string[];
   requiredGlobalPermissions?: string[];
+  requiredFeature?: string;
   subSections?: Array<{
     label: string;
     items: Array<{
@@ -44,6 +45,7 @@ type MenuItem = {
       icon?: LucideIcon;
       requiredPermissions?: string[];
       requiredGlobalPermissions?: string[];
+      requiredFeature?: string;
     }>;
   }>;
   items?: Array<{
@@ -52,12 +54,14 @@ type MenuItem = {
     icon?: LucideIcon;
     requiredPermissions?: string[];
     requiredGlobalPermissions?: string[];
+    requiredFeature?: string;
   }>;
   subItems?: Array<{
     name: string;
     href: string;
     requiredPermissions?: string[];
     requiredGlobalPermissions?: string[];
+    requiredFeature?: string;
   }>;
 };
 
@@ -808,6 +812,18 @@ const menuItems: MenuItem[] = [
         requiredPermissions: ["settings.manage"],
       },
       {
+        name: "Writers",
+        href: "/admin/management/writers",
+        requiredPermissions: ["products.manage"],
+        requiredFeature: "BOOKS",
+      },
+      {
+        name: "Publishers",
+        href: "/admin/management/publishers",
+        requiredPermissions: ["products.manage"],
+        requiredFeature: "BOOKS",
+      },
+      {
         name: "Store Features",
         href: "/admin/settings/features",
         requiredPermissions: ["settings.manage"],
@@ -1111,6 +1127,7 @@ export default function Sidebar({
   const pathname = usePathname();
   const { data: session } = useSession();
   const [siteSettings, setSiteSettings] = useState<any>(null);
+  const [enabledFeatures, setEnabledFeatures] = useState<Set<string>>(() => new Set());
   const permissionKeys = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
     : [];
@@ -1153,6 +1170,33 @@ export default function Sidebar({
     fetchSiteSettings();
   }, []);
 
+  useEffect(() => {
+    let active = true;
+    void fetch("/api/store-features", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((payload) => {
+        if (!active) return;
+        setEnabledFeatures(
+          new Set(
+            Object.entries(payload?.features ?? {})
+              .filter(([, enabled]) => enabled === true)
+              .map(([key]) => key),
+          ),
+        );
+      })
+      .catch(() => {
+        if (active) setEnabledFeatures(new Set());
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const hasRequiredFeature = useCallback(
+    (required?: string) => !required || enabledFeatures.has(required),
+    [enabledFeatures],
+  );
+
   const hasPermission = useCallback(
     (required?: string[]) => {
       if (!required || required.length === 0) return true;
@@ -1182,7 +1226,8 @@ export default function Sidebar({
               return false;
             return (
               hasPermission(item.requiredPermissions) &&
-              hasGlobalPermission(item.requiredGlobalPermissions)
+              hasGlobalPermission(item.requiredGlobalPermissions) &&
+              hasRequiredFeature(item.requiredFeature)
             );
           });
           if (visibleItems.length === 0) return null;
@@ -1194,7 +1239,8 @@ export default function Sidebar({
               items: subSection.items.filter(
                 (subItem) =>
                   hasPermission(subItem.requiredPermissions) &&
-                  hasGlobalPermission(subItem.requiredGlobalPermissions),
+                  hasGlobalPermission(subItem.requiredGlobalPermissions) &&
+                  hasRequiredFeature(subItem.requiredFeature),
               ),
             }))
             .filter((subSection) => subSection.items.length > 0);
@@ -1210,7 +1256,8 @@ export default function Sidebar({
           const visibleSubItems = section.subItems.filter(
             (subItem) =>
               hasPermission(subItem.requiredPermissions) &&
-              hasGlobalPermission(subItem.requiredGlobalPermissions),
+              hasGlobalPermission(subItem.requiredGlobalPermissions) &&
+              hasRequiredFeature(subItem.requiredFeature),
           );
           if (visibleSubItems.length === 0) {
             return null;
@@ -1224,6 +1271,7 @@ export default function Sidebar({
           if (
             !hasPermission(section.requiredPermissions) ||
             !hasGlobalPermission(section.requiredGlobalPermissions)
+            || !hasRequiredFeature(section.requiredFeature)
           ) {
             return null;
           }
@@ -1234,6 +1282,7 @@ export default function Sidebar({
   }, [
     hasGlobalPermission,
     hasPermission,
+    hasRequiredFeature,
     isWarehouseScopedOnly,
     warehouseIds.length,
   ]);

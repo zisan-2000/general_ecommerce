@@ -1,5 +1,8 @@
-import { permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
+import BookPartyManager from "@/components/management/BookPartyManager";
+import { isFeatureEnabled } from "@/lib/store-features-server";
 
-export default function LegacyPublishersAdminPage() {
-  permanentRedirect("/admin/operations/products");
+export default async function PublishersAdminPage() {
+  if (!(await isFeatureEnabled("BOOKS"))) notFound();
+  return <BookPartyManager kind="publishers" />;
 }

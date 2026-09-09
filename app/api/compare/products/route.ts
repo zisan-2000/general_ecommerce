@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { rateLimitRequest } from "@/lib/request-security";
 import { gateStoreFeature, getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 const NO_STORE_HEADERS = { "Cache-Control": "public, max-age=0, must-revalidate" };
 
@@ -31,9 +32,10 @@ export async function GET(request: NextRequest) {
     : null;
 
   try {
-    const [disabledTypes, activeCategoryIds] = await Promise.all([
+    const [disabledTypes, activeCategoryIds, bookVisibility] = await Promise.all([
       getDisabledStorefrontProductTypes(),
       getEffectiveStorefrontCategoryIds(),
+      getBookProductVisibilityWhere(),
     ]);
     const products = await prisma.product.findMany({
       where: {
@@ -45,6 +47,7 @@ export async function GET(request: NextRequest) {
         ...(disabledTypes.length
           ? { type: { notIn: disabledTypes } }
           : {}),
+        ...bookVisibility,
         ...(query
           ? {
               OR: [

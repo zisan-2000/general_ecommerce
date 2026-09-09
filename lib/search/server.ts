@@ -12,6 +12,7 @@ import {
 } from "@/lib/search/core";
 import { searchTypesenseProducts, typesenseSearchEnabled } from "@/lib/search/typesense";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 
 type RankedProductRow = {
@@ -355,10 +356,11 @@ export async function getSearchSuggestions(
     };
   }
 
-  const [config, disabledTypes, activeCategoryIds] = await Promise.all([
+  const [config, disabledTypes, activeCategoryIds, bookVisibility] = await Promise.all([
     loadSearchConfiguration(initialIntent.normalizedQuery),
     getDisabledStorefrontProductTypes(),
     getEffectiveStorefrontCategoryIds(),
+    getBookProductVisibilityWhere(),
   ]);
   const productTypeFilter = disabledTypes.length
     ? { type: { notIn: disabledTypes } }
@@ -382,6 +384,7 @@ export async function getSearchSuggestions(
             available: true,
             categoryId: { in: activeCategoryIds },
             ...productTypeFilter,
+            ...bookVisibility,
           },
           select: {
             id: true,

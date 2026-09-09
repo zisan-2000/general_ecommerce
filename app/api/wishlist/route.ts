@@ -16,6 +16,7 @@ import {
   getEffectiveStorefrontCategoryIds,
   isCategoryEffectivelyActive,
 } from "@/lib/category-navigation-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 // GET /api/wishlist -> current user's wishlist items + product details
 export async function GET(request: NextRequest) {
@@ -26,9 +27,10 @@ export async function GET(request: NextRequest) {
     }
 
     const userId = (session.user as any).id as string;
-    const [disabledTypes, activeCategoryIds] = await Promise.all([
+    const [disabledTypes, activeCategoryIds, bookVisibility] = await Promise.all([
       getDisabledStorefrontProductTypes(),
       getEffectiveStorefrontCategoryIds(),
+      getBookProductVisibilityWhere(),
     ]);
 
     const wishlist = await prisma.wishlist.findMany({
@@ -39,6 +41,7 @@ export async function GET(request: NextRequest) {
           deleted: false,
           categoryId: { in: activeCategoryIds },
           ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+          ...bookVisibility,
         },
       },
       include: {
@@ -99,8 +102,14 @@ export async function POST(request: NextRequest) {
     }
 
     // পণ্য আসলেই আছে কিনা চেক করা (optional but good)
+    const bookVisibility = await getBookProductVisibilityWhere();
     const product = await prisma.product.findFirst({
-      where: { id: productId, available: true, deleted: false },
+      where: {
+        id: productId,
+        available: true,
+        deleted: false,
+        ...bookVisibility,
+      },
     });
 
     if (!product || !(await isCategoryEffectivelyActive(product.categoryId))) {

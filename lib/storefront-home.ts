@@ -5,6 +5,7 @@ import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -100,7 +101,7 @@ export function serializeStorefrontHomeProduct(
 }
 
 const readStorefrontHomeData = unstable_cache(
-  async (serializedDisabledTypes: string) => {
+  async (serializedDisabledTypes: string, serializedBookVisibility: string) => {
     const now = new Date();
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
@@ -108,6 +109,7 @@ const readStorefrontHomeData = unstable_cache(
     const typeFilter = disabledTypes.length
       ? { type: { notIn: disabledTypes } }
       : {};
+    const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
     const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
     const activeCategoryFilter = { categoryId: { in: activeCategoryIds } };
     const [products, discountedProducts, topSelling, categories, banners, settings] =
@@ -118,6 +120,7 @@ const readStorefrontHomeData = unstable_cache(
             available: true,
             ...typeFilter,
             ...activeCategoryFilter,
+            ...bookVisibility,
           },
           orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
           take: 160,
@@ -129,6 +132,7 @@ const readStorefrontHomeData = unstable_cache(
             available: true,
             ...typeFilter,
             ...activeCategoryFilter,
+            ...bookVisibility,
             flashSaleEnabled: true,
             flashSalePrice: { not: null },
             flashSaleStartsAt: { lte: now },
@@ -145,6 +149,7 @@ const readStorefrontHomeData = unstable_cache(
             soldCount: { gt: 0 },
             ...typeFilter,
             ...activeCategoryFilter,
+            ...bookVisibility,
           },
           orderBy: [{ soldCount: "desc" }, { updatedAt: "desc" }],
           take: 20,
@@ -338,8 +343,11 @@ export type StorefrontHomeData = Awaited<
 >;
 
 export async function getStorefrontHomeData() {
-  const disabledTypes = await getDisabledStorefrontProductTypes();
-  return readStorefrontHomeData(JSON.stringify(disabledTypes));
+  const [disabledTypes, bookVisibility] = await Promise.all([
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  return readStorefrontHomeData(JSON.stringify(disabledTypes), JSON.stringify(bookVisibility));
 }
 
 export function emptyStorefrontHomeData(): StorefrontHomeData {

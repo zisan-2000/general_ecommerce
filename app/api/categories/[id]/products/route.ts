@@ -5,6 +5,7 @@ import {
   getCategoryDescendantIds,
   getEffectivelyActiveCategoryIds,
 } from "@/lib/category-navigation";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 export async function GET(
   req: Request,
@@ -34,13 +35,17 @@ export async function GET(
       category.id,
       activeCategoryIds,
     );
-    const disabledTypes = await getDisabledStorefrontProductTypes();
+    const [disabledTypes, bookVisibility] = await Promise.all([
+      getDisabledStorefrontProductTypes(),
+      getBookProductVisibilityWhere(),
+    ]);
 
     const products = await prisma.product.findMany({
       where: {
         deleted: false,
         available: true,
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+        ...bookVisibility,
         categoryId: { in: categoryIds },
       },
       orderBy: { id: "desc" },

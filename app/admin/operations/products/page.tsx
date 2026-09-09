@@ -74,12 +74,14 @@ type ProductModuleFeatures = {
   DIGITAL_PRODUCTS: boolean;
   SERVICE_PRODUCTS: boolean;
   BUNDLES: boolean;
+  BOOKS: boolean;
 };
 
 const DEFAULT_PRODUCT_MODULE_FEATURES: ProductModuleFeatures = {
   DIGITAL_PRODUCTS: true,
   SERVICE_PRODUCTS: true,
   BUNDLES: true,
+  BOOKS: false,
 };
 
 let productsPageCache: ProductsPageCache | null = null;
@@ -154,6 +156,7 @@ export default function ProductsPage() {
         SERVICE_PRODUCTS:
           featurePayload?.features?.SERVICE_PRODUCTS ?? true,
         BUNDLES: featurePayload?.features?.BUNDLES ?? true,
+        BOOKS: featurePayload?.features?.BOOKS ?? false,
       };
       const [p, c, b, vat, da] = await Promise.all([
         fetchJsonArray<Product>("/api/products", "products"),

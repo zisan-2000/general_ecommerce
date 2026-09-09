@@ -127,9 +127,12 @@ interface Props {
   open: boolean;
   onClose: () => void;
   product: ProductLite | null;
+  booksEnabled?: boolean;
 }
 
-export default function ProductRelationsModal({ open, onClose, product }: Props) {
+type BookPartyOption = { id: number; name: string };
+
+export default function ProductRelationsModal({ open, onClose, product, booksEnabled = false }: Props) {
   const [loading, setLoading] = useState(false);
   const [variants, setVariants] = useState<Variant[]>([]);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
@@ -138,6 +141,10 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
   const [serviceSlots, setServiceSlots] = useState<ServiceSlot[]>([]);
   const [logs, setLogs] = useState<InventoryLog[]>([]);
   const [digitalAssets, setDigitalAssets] = useState<DigitalAsset[]>([]);
+  const [writers, setWriters] = useState<BookPartyOption[]>([]);
+  const [publishers, setPublishers] = useState<BookPartyOption[]>([]);
+  const [bookMetadata, setBookMetadata] = useState({ writerId: "", publisherId: "" });
+  const [bookSaving, setBookSaving] = useState(false);
 
   const [selectedVariantId, setSelectedVariantId] = useState<number | null>(null);
 
@@ -264,6 +271,56 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
     });
     void loadAll();
   }, [open, product?.id]);
+
+  useEffect(() => {
+    if (!open || !product?.id || !booksEnabled) return;
+    let active = true;
+    void Promise.all([
+      fetch(`/api/book-metadata/${product.id}`, { cache: "no-store" }),
+      fetch("/api/writers", { cache: "no-store" }),
+      fetch("/api/publishers", { cache: "no-store" }),
+    ]).then(async ([metadataResponse, writersResponse, publishersResponse]) => {
+      const [metadataPayload, writersPayload, publishersPayload] = await Promise.all([
+        metadataResponse.status === 404 ? null : metadataResponse.json(),
+        writersResponse.json(),
+        publishersResponse.json(),
+      ]);
+      if (!active) return;
+      setBookMetadata({
+        writerId: metadataPayload?.writerId ? String(metadataPayload.writerId) : "",
+        publisherId: metadataPayload?.publisherId ? String(metadataPayload.publisherId) : "",
+      });
+      setWriters(Array.isArray(writersPayload) ? writersPayload : []);
+      setPublishers(Array.isArray(publishersPayload) ? publishersPayload : []);
+    }).catch(() => {
+      if (active) toast.error("Failed to load book metadata");
+    });
+    return () => {
+      active = false;
+    };
+  }, [booksEnabled, open, product?.id]);
+
+  const saveBookMetadata = async () => {
+    if (!product) return;
+    setBookSaving(true);
+    try {
+      const response = await fetch(`/api/book-metadata/${product.id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          writerId: bookMetadata.writerId || null,
+          publisherId: bookMetadata.publisherId || null,
+        }),
+      });
+      const payload = await response.json().catch(() => null);
+      if (!response.ok) throw new Error(payload?.error || "Failed to save book metadata");
+      toast.success("Book metadata saved");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Failed to save book metadata");
+    } finally {
+      setBookSaving(false);
+    }
+  };
 
   useEffect(() => {
     if (!selectedVariant) return;
@@ -595,7 +652,7 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
   if (!product) return null;
 
   return (
-    <Dialog open={open} onOpenChange={(v) => v && onClose()}>
+    <Dialog open={open} onOpenChange={(nextOpen) => !nextOpen && onClose()}>
       <DialogContent className="max-w-7xl w-full max-h-[90vh] overflow-hidden flex flex-col" showCloseButton={false}>
         <DialogHeader className="flex-shrink-0">
           <DialogTitle className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -629,6 +686,7 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
             {product.type === "SERVICE" && (
               <TabsTrigger value="service" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Service Slots</TabsTrigger>
             )}
+            {booksEnabled ? <TabsTrigger value="book" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Book Metadata</TabsTrigger> : null}
             <TabsTrigger value="logs" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Inventory Logs</TabsTrigger>
           </TabsList>
 
@@ -1445,6 +1503,36 @@ export default function ProductRelationsModal({ open, onClose, product }: Props)
               </div>
             </TabsContent>
           )}
+
+          {booksEnabled ? (
+            <TabsContent value="book" className="flex-1 overflow-y-auto">
+              <div className="mx-auto max-w-2xl space-y-5 rounded-lg border bg-card p-4 sm:p-6">
+                <div>
+                  <h3 className="font-semibold">Book-specific relations</h3>
+                  <p className="text-sm text-muted-foreground">BookMetadata is authoritative and legacy fields are updated automatically during the compatibility window.</p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="book-writer">Writer</Label>
+                    <select id="book-writer" className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={bookMetadata.writerId} onChange={(event) => setBookMetadata((current) => ({ ...current, writerId: event.target.value }))}>
+                      <option value="">No writer</option>
+                      {writers.map((writer) => <option key={writer.id} value={writer.id}>{writer.name}</option>)}
+                    </select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="book-publisher">Publisher</Label>
+                    <select id="book-publisher" className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={bookMetadata.publisherId} onChange={(event) => setBookMetadata((current) => ({ ...current, publisherId: event.target.value }))}>
+                      <option value="">No publisher</option>
+                      {publishers.map((publisher) => <option key={publisher.id} value={publisher.id}>{publisher.name}</option>)}
+                    </select>
+                  </div>
+                </div>
+                <Button type="button" onClick={() => void saveBookMetadata()} disabled={bookSaving}>
+                  {bookSaving ? "Saving…" : "Save Book Metadata"}
+                </Button>
+              </div>
+            </TabsContent>
+          ) : null}
 
           <TabsContent value="logs" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
             {logs.length === 0 ? (

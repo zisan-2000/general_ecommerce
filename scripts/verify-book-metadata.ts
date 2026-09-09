@@ -10,8 +10,10 @@ async function main() {
   `;
   const columns = new Set(productColumns.map((row) => row.column_name));
   for (const legacy of ["writerId", "publisherId"]) {
-    if (columns.has(legacy)) {
-      throw new Error(`Phase 8 verification failed: Product.${legacy} still exists.`);
+    if (!columns.has(legacy)) {
+      throw new Error(
+        `Phase 8 compatibility verification failed: Product.${legacy} is missing before the later removal release.`,
+      );
     }
   }
 
@@ -24,7 +26,17 @@ async function main() {
     throw new Error("Phase 8 verification failed: BookMetadata table is missing.");
   }
 
-  const [orphans, invalidWriters, invalidPublishers, duplicateProducts] = await Promise.all([
+  const [
+    orphans,
+    invalidWriters,
+    invalidPublishers,
+    duplicateProducts,
+    missingMetadata,
+    mismatchedRepresentations,
+    emptyMetadata,
+    legacyRows,
+    metadataRows,
+  ] = await Promise.all([
     prisma.$queryRaw<Array<{ count: bigint }>>`
       SELECT COUNT(*)::bigint AS count
       FROM "BookMetadata" bm
@@ -52,6 +64,35 @@ async function main() {
         HAVING COUNT(*) > 1
       ) duplicates
     `,
+    prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint AS count
+      FROM "Product" p
+      LEFT JOIN "BookMetadata" bm ON bm."productId" = p."id"
+      WHERE (p."writerId" IS NOT NULL OR p."publisherId" IS NOT NULL)
+        AND bm."id" IS NULL
+    `,
+    prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint AS count
+      FROM "Product" p
+      INNER JOIN "BookMetadata" bm ON bm."productId" = p."id"
+      WHERE p."writerId" IS DISTINCT FROM bm."writerId"
+         OR p."publisherId" IS DISTINCT FROM bm."publisherId"
+    `,
+    prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint AS count
+      FROM "BookMetadata"
+      WHERE "writerId" IS NULL AND "publisherId" IS NULL
+    `,
+    prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint AS count
+      FROM "Product"
+      WHERE "writerId" IS NOT NULL OR "publisherId" IS NOT NULL
+    `,
+    prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint AS count
+      FROM "BookMetadata"
+      WHERE "writerId" IS NOT NULL OR "publisherId" IS NOT NULL
+    `,
   ]);
 
   const checks = {
@@ -59,14 +100,20 @@ async function main() {
     invalidWriters: Number(invalidWriters[0]?.count ?? 0),
     invalidPublishers: Number(invalidPublishers[0]?.count ?? 0),
     duplicateProducts: Number(duplicateProducts[0]?.count ?? 0),
+    missingMetadata: Number(missingMetadata[0]?.count ?? 0),
+    mismatchedRepresentations: Number(mismatchedRepresentations[0]?.count ?? 0),
+    emptyMetadata: Number(emptyMetadata[0]?.count ?? 0),
   };
   const failures = Object.entries(checks).filter(([, count]) => count !== 0);
   if (failures.length) {
     throw new Error(`Phase 8 verification failed: ${JSON.stringify(checks)}`);
   }
 
-  const total = await prisma.bookMetadata.count();
-  console.log("Phase 8 book metadata verification passed.", { rows: total, ...checks });
+  console.log("Phase 8 book metadata verification passed.", {
+    legacyRows: Number(legacyRows[0]?.count ?? 0),
+    metadataRows: Number(metadataRows[0]?.count ?? 0),
+    ...checks,
+  });
 }
 
 main()

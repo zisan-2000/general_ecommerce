@@ -4,13 +4,13 @@ on:
   pull_request:
     paths:
       - "app/**"
-      - "components/ecommarce/**"
-      - "components/Settings/**"
+      - "components/**"
       - "lib/**"
       - "providers/**"
       - "scripts/**"
       - "tests/**"
       - "docs/universal-ecommerce-phase8.md"
+      - "docs/universal-ecommerce/**"
       - "prisma/**"
       - "package.json"
       - "package-lock.json"
@@ -20,13 +20,13 @@ on:
       - main
     paths:
       - "app/**"
-      - "components/ecommarce/**"
-      - "components/Settings/**"
+      - "components/**"
       - "lib/**"
       - "providers/**"
       - "scripts/**"
       - "tests/**"
       - "docs/universal-ecommerce-phase8.md"
+      - "docs/universal-ecommerce/**"
       - "prisma/**"
       - "package.json"
       - "package-lock.json"
@@ -47,6 +47,20 @@ jobs:
     env:
       NODE_OPTIONS: --max-old-space-size=6144
       DATABASE_URL: postgresql://schema_validation:schema_validation@127.0.0.1:5432/schema_validation
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: schema_validation
+          POSTGRES_PASSWORD: schema_validation
+          POSTGRES_DB: schema_validation
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U schema_validation -d schema_validation"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
 
     steps:
       - name: Checkout
@@ -68,6 +82,20 @@ jobs:
 
       - name: Generate Prisma client
         run: npx prisma generate
+
+      - name: Prepare pre-Phase-8 database fixture
+        run: npx prisma db execute --url "$DATABASE_URL" --file tests/fixtures/phase8-legacy-schema.sql
+
+      - name: Apply Phase 8 migrations
+        run: |
+          npx prisma db execute --url "$DATABASE_URL" --file prisma/migrations/20260908190000_decouple_book_metadata/migration.sql
+          npx prisma db execute --url "$DATABASE_URL" --file prisma/migrations/20260908200000_restore_book_compatibility/migration.sql
+
+      - name: Backfill book metadata compatibility representations
+        run: npm run backfill:book-metadata
+
+      - name: Verify book metadata database integrity
+        run: npm run verify:book-metadata-db
 
       - name: Generate Next route types
         run: npx next typegen

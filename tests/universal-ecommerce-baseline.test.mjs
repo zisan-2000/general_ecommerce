@@ -188,7 +188,7 @@ test("physical, digital, service and bundle purchase rules are explicit", () => 
   );
 });
 
-test("book data is preserved while legacy public routes remain dormant", async () => {
+test("book data is preserved while successor routes enforce feature gates", async () => {
   const [schema, books, book, authors] = await Promise.all([
     read("prisma/schema.prisma"),
     read("app/ecommerce/books/page.tsx"),
@@ -198,11 +198,13 @@ test("book data is preserved while legacy public routes remain dormant", async (
 
   assert.match(schema, /model Writer\s*\{/);
   assert.match(schema, /model Publisher\s*\{/);
-  assert.match(schema, /writerId\s+Int\?/);
-  assert.match(schema, /publisherId\s+Int\?/);
-  assert.match(books, /permanentRedirect\("\/ecommerce\/products"\)/);
+  const productModel = schema.match(/model Product \{[\s\S]*?\r?\n\}/)?.[0] ?? "";
+  assert.match(productModel, /writerId\s+Int\?/);
+  assert.match(productModel, /publisherId\s+Int\?/);
+  assert.match(books, /isFeatureEnabled\("BOOKS"\)/);
+  assert.match(books, /getStorefrontBooks/);
   assert.match(book, /permanentRedirect\(`\/ecommerce\/products\/\$\{product\.id\}`\)/);
-  assert.match(authors, /permanentRedirect\("\/ecommerce\/brands"\)/);
+  assert.match(authors, /isFeatureEnabled\("AUTHORS"\)/);
 });
 
 test("the Phase 1 release command keeps every required regression suite wired", async () => {
@@ -238,4 +240,3 @@ test("the Phase 1 release command keeps every required regression suite wired", 
     );
   }
 });
-

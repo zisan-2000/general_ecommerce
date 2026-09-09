@@ -12,6 +12,7 @@ import {
   type CatalogAttributeType,
 } from "@/lib/attribute-schema";
 import { getEffectivelyActiveCategoryIds } from "@/lib/category-navigation";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -58,9 +59,10 @@ export type CatalogFilters = {
   attributes: Record<string, string[]>;
 };
 
-const catalogProductSelect = {
+export const catalogProductSelect = {
   id: true,
   name: true,
+  slug: true,
   type: true,
   basePrice: true,
   originalPrice: true,
@@ -73,6 +75,7 @@ const catalogProductSelect = {
   soldCount: true,
   ratingAvg: true,
   ratingCount: true,
+  updatedAt: true,
   bundleStockLimit: true,
   attributes: {
     orderBy: { id: "asc" as const },
@@ -302,7 +305,7 @@ export function catalogProductStock(product: RawCatalogProduct) {
   );
 }
 
-function serializeCatalogProduct(product: RawCatalogProduct) {
+export function serializeCatalogProduct(product: RawCatalogProduct) {
   const flashSale = resolveFlashSalePricing(product);
   const price = flashSale.salePrice;
   const originalPrice = flashSale.active
@@ -318,6 +321,7 @@ function serializeCatalogProduct(product: RawCatalogProduct) {
   return {
     id: product.id,
     name: product.name,
+    slug: product.slug,
     type: product.type,
     price,
     originalPrice,
@@ -331,6 +335,7 @@ function serializeCatalogProduct(product: RawCatalogProduct) {
     soldCount: product.soldCount,
     ratingAvg: product.ratingAvg,
     ratingCount: product.ratingCount,
+    updatedAt: product.updatedAt.toISOString(),
     stock: catalogProductStock(product),
     discountPct,
     flashSale,
@@ -814,11 +819,12 @@ function catalogOrderBy(
 }
 
 const readCatalog = unstable_cache(
-  async (serializedFilters: string, serializedDisabledTypes: string) => {
+  async (serializedFilters: string, serializedDisabledTypes: string, serializedBookVisibility: string) => {
     const requestedFilters = JSON.parse(serializedFilters) as CatalogFilters;
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
+    const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
     const rawFacets = await readCatalogFacets();
     const facets = {
       ...rawFacets,
@@ -957,6 +963,7 @@ const readCatalog = unstable_cache(
           : activeCategoryIds,
       },
       ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+      ...bookVisibility,
       ...(andFilters.length ? { AND: andFilters } : {}),
       ...(filters.brands.length
         ? { brand: { slug: { in: filters.brands } } }
@@ -1040,8 +1047,15 @@ export type StorefrontCatalogFacets = Awaited<
 >;
 
 export async function getStorefrontCatalog(filters: CatalogFilters) {
-  const disabledTypes = await getDisabledStorefrontProductTypes();
-  return readCatalog(JSON.stringify(filters), JSON.stringify(disabledTypes));
+  const [disabledTypes, bookVisibility] = await Promise.all([
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  return readCatalog(
+    JSON.stringify(filters),
+    JSON.stringify(disabledTypes),
+    JSON.stringify(bookVisibility),
+  );
 }
 
 export async function getStorefrontCatalogFacets() {

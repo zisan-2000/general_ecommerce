@@ -25,6 +25,7 @@ import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
 import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
+import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import {
   getEffectiveStorefrontCategoryIds,
   isCategoryEffectivelyActive,
@@ -172,12 +173,14 @@ export async function GET(req: Request) {
       ...(storefront ? { available: true } : {}),
     };
     if (storefront) {
-      const [disabledTypes, activeCategoryIds] = await Promise.all([
+      const [disabledTypes, activeCategoryIds, bookVisibility] = await Promise.all([
         getDisabledStorefrontProductTypes(),
         getEffectiveStorefrontCategoryIds(),
+        getBookProductVisibilityWhere(),
       ]);
       whereClause.categoryId = { in: activeCategoryIds };
       if (disabledTypes.length) whereClause.type = { notIn: disabledTypes };
+      whereClause = { ...whereClause, ...bookVisibility };
     }
 
     // Filter by brand if brandId or brandSlug is provided

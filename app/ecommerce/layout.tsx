@@ -20,6 +20,8 @@ async function StorefrontHeader() {
       featureVisibility={{
         compare: registry.features.COMPARE.enabled,
         pcBuilder: registry.features.PC_BUILDER.enabled,
+        books: registry.features.BOOKS.enabled,
+        authors: registry.features.AUTHORS.enabled,
       }}
     />
   );

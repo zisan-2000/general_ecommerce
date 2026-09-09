@@ -43,6 +43,18 @@ export const storefrontProductSelect = {
   brand: {
     select: { id: true, name: true, slug: true, logo: true },
   },
+  bookMetadata: {
+    select: {
+      writer: {
+        where: { deleted: false },
+        select: { id: true, name: true },
+      },
+      publisher: {
+        where: { deleted: false },
+        select: { id: true, name: true },
+      },
+    },
+  },
   variantOptions: {
     orderBy: { position: "asc" as const },
     select: {
