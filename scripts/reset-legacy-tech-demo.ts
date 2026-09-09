@@ -7,7 +7,6 @@ import {
   collectLegacyTechDemoState,
   LEGACY_TECH_BANNER_IMAGES,
   LEGACY_TECH_BANNER_TITLES,
-  LEGACY_TECH_BRAND_SLUGS,
   LEGACY_TECH_CATEGORY_SLUGS,
   printLegacyTechDemoAudit,
 } from "./legacy-tech-demo-state";
@@ -88,15 +87,6 @@ async function main() {
       data: { isActive: false },
     });
 
-    await tx.brand.updateMany({
-      where: {
-        slug: { in: LEGACY_TECH_BRAND_SLUGS },
-        deleted: false,
-        products: { none: { deleted: false } },
-      },
-      data: { deleted: true },
-    });
-
     const settings = await tx.sitesettings.findFirst({
       orderBy: { id: "asc" },
       select: { id: true },
@@ -131,7 +121,7 @@ async function main() {
       create: { key: "PC_BUILDER", enabled: false },
     });
 
-    await seedUniversalStorefront(tx as never);
+    await seedUniversalStorefront(tx);
   });
 
   const after = await collectLegacyTechDemoState(prisma);
