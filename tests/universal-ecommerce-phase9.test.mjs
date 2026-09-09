@@ -6,6 +6,7 @@ import {
   isDemoSeedProfile,
   parseSeedProfile,
 } from "../lib/seed-profile.ts";
+import { getUniversalIdentityBackfill } from "../prisma/seed-data/universal.ts";
 
 const read = (file) => fs.readFileSync(file, "utf8");
 
@@ -52,6 +53,25 @@ test("universal storefront seed is vertical-neutral and preserves existing admin
   assert.doesNotMatch(universalSeed, /TechHub|technology storefront|enforceTechOnlyStorefront/i);
   assert.doesNotMatch(universalSeed, /updateMany\([\s\S]*deleted:\s*true/);
   assert.doesNotMatch(universalSeed, /admin@example\.com|Demo123|admin123/);
+});
+
+test("existing blank identity is repaired without overwriting configured values", () => {
+  assert.deepEqual(getUniversalIdentityBackfill({ storeName: null, siteTitle: null }), {
+    storeName: "Online Store",
+    siteTitle: "Online Store",
+  });
+  assert.deepEqual(
+    getUniversalIdentityBackfill({ storeName: "", siteTitle: "Legacy Shop" }),
+    { storeName: "Legacy Shop" },
+  );
+  assert.deepEqual(
+    getUniversalIdentityBackfill({ storeName: "My Store", siteTitle: "" }),
+    { siteTitle: "My Store" },
+  );
+  assert.deepEqual(
+    getUniversalIdentityBackfill({ storeName: "My Store", siteTitle: "My Store" }),
+    {},
+  );
 });
 
 test("legacy full demo remains available but is no longer an implicit production seed", () => {

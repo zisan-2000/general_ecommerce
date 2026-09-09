@@ -13,11 +13,35 @@ const UNIVERSAL_CATEGORIES = [
   { name: "Services", slug: "services", sortOrder: 50, featured: true },
 ] as const;
 
+type ExistingStoreIdentity = {
+  storeName: string | null;
+  siteTitle: string | null;
+};
+
+export function getUniversalIdentityBackfill(
+  settings: ExistingStoreIdentity,
+): { storeName?: string; siteTitle?: string } {
+  const storeName = settings.storeName?.trim() ?? "";
+  const siteTitle = settings.siteTitle?.trim() ?? "";
+  const resolvedName = storeName || siteTitle || SITE_SETTINGS_DEFAULTS.storeName;
+
+  return {
+    ...(storeName ? {} : { storeName: resolvedName }),
+    ...(siteTitle ? {} : { siteTitle: resolvedName }),
+  };
+}
+
 export async function seedUniversalStorefront(prisma: PrismaClient) {
   const existingSettings = await prisma.sitesettings.findFirst({
     orderBy: { id: "asc" },
-    select: { id: true },
+    select: {
+      id: true,
+      storeName: true,
+      siteTitle: true,
+    },
   });
+
+  let settingsBackfilled = false;
 
   if (!existingSettings) {
     await prisma.sitesettings.create({
@@ -38,6 +62,15 @@ export async function seedUniversalStorefront(prisma: PrismaClient) {
         footerDescription: SITE_SETTINGS_DEFAULTS.defaultSeoDescription,
       },
     });
+  } else {
+    const identityBackfill = getUniversalIdentityBackfill(existingSettings);
+    if (Object.keys(identityBackfill).length > 0) {
+      await prisma.sitesettings.update({
+        where: { id: existingSettings.id },
+        data: identityBackfill,
+      });
+      settingsBackfilled = true;
+    }
   }
 
   for (const category of UNIVERSAL_CATEGORIES) {
@@ -76,6 +109,7 @@ export async function seedUniversalStorefront(prisma: PrismaClient) {
   return {
     categoriesEnsured: UNIVERSAL_CATEGORIES.length,
     settingsCreated: !existingSettings,
+    settingsBackfilled,
     featureDefaultsEnsured: STORE_FEATURE_KEYS.length,
   };
 }
