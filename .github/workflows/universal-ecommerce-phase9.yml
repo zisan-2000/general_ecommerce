@@ -96,6 +96,15 @@ jobs:
       - name: Verify universal seed database invariants
         run: npx tsx scripts/verify-universal-seed.ts
 
+      - name: Simulate legacy nullable settings
+        run: npx tsx scripts/prepare-phase9-legacy-settings-fixture.ts
+
+      - name: Repair simulated legacy settings
+        run: npx prisma db seed
+
+      - name: Verify repaired legacy settings
+        run: npx tsx scripts/verify-universal-seed.ts
+
       - name: Universal baseline
         run: npm run test:universal-baseline
 
