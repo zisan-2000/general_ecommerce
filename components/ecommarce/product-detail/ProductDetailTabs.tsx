@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
+import DOMPurify from "dompurify";
 import ProductReviews from "@/components/ecommarce/ProductReviews";
 
 type ProductAttribute = {
@@ -27,6 +28,51 @@ const tabs = [
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
+
+const subscribeToHydration = () => () => {};
+
+function ProductDescription({ content }: { content: string }) {
+  const isHydrated = useSyncExternalStore(
+    subscribeToHydration,
+    () => true,
+    () => false,
+  );
+
+  if (!content.trim()) {
+    return (
+      <p className="mt-4 text-[13px] leading-7 text-muted-foreground sm:text-[14px]">
+        Product description will be available soon.
+      </p>
+    );
+  }
+
+  if (!isHydrated) {
+    return <div className="mt-4 min-h-7" aria-hidden="true" />;
+  }
+
+  const hasHtmlMarkup = /<[a-z][\s\S]*>/i.test(content);
+  let contentToSanitize = content;
+
+  // Older products can contain plain text. Convert only their line breaks while
+  // keeping rich text from the admin editor intact.
+  if (!hasHtmlMarkup) {
+    const textContainer = document.createElement("div");
+    textContainer.textContent = content;
+    contentToSanitize = textContainer.innerHTML.replace(/\r?\n/g, "<br>");
+  }
+
+  const sanitizedContent = DOMPurify.sanitize(contentToSanitize, {
+    USE_PROFILES: { html: true },
+    ADD_ATTR: ["target"],
+  });
+
+  return (
+    <div
+      className="product-rich-description mt-4 text-[13px] leading-7 text-muted-foreground sm:text-[14px]"
+      dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+    />
+  );
+}
 
 export default function ProductDetailTabs({
   productId,
@@ -147,9 +193,7 @@ export default function ProductDetailTabs({
             <h2 className="text-[16px] font-bold uppercase tracking-wide text-foreground">
               Description
             </h2>
-            <p className="mt-4 whitespace-pre-line text-[13px] leading-7 text-muted-foreground sm:text-[14px]">
-              {description || "Product description will be available soon."}
-            </p>
+            <ProductDescription content={description} />
           </div>
         ) : null}
 

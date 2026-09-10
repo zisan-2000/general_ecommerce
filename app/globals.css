@@ -1029,3 +1029,123 @@ body {
 .animate-pulse-glow {
   animation: pulse-glow 1.2s ease-in-out infinite;
 }
+
+/* Product descriptions are authored as rich text in the admin TinyMCE editor. */
+.product-rich-description {
+  overflow-wrap: anywhere;
+}
+
+.product-rich-description > :first-child {
+  margin-top: 0;
+}
+
+.product-rich-description > :last-child {
+  margin-bottom: 0;
+}
+
+.product-rich-description p,
+.product-rich-description ul,
+.product-rich-description ol,
+.product-rich-description blockquote,
+.product-rich-description pre,
+.product-rich-description table,
+.product-rich-description figure {
+  margin-block: 0.75rem;
+}
+
+.product-rich-description h1,
+.product-rich-description h2,
+.product-rich-description h3,
+.product-rich-description h4,
+.product-rich-description h5,
+.product-rich-description h6 {
+  margin-block: 1.25rem 0.5rem;
+  color: hsl(var(--foreground));
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.product-rich-description h1 { font-size: 1.75rem; }
+.product-rich-description h2 { font-size: 1.5rem; }
+.product-rich-description h3 { font-size: 1.25rem; }
+.product-rich-description h4 { font-size: 1.125rem; }
+.product-rich-description h5 { font-size: 1rem; }
+.product-rich-description h6 { font-size: 0.875rem; }
+
+.product-rich-description ul,
+.product-rich-description ol {
+  padding-inline-start: 1.5rem;
+}
+
+.product-rich-description ul { list-style: disc; }
+.product-rich-description ol { list-style: decimal; }
+.product-rich-description li { margin-block: 0.25rem; }
+.product-rich-description li > ul { list-style: circle; }
+.product-rich-description li > ol { list-style: lower-alpha; }
+
+.product-rich-description a {
+  color: hsl(var(--primary));
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.product-rich-description blockquote {
+  border-inline-start: 4px solid hsl(var(--border));
+  padding-inline-start: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.product-rich-description img,
+.product-rich-description video,
+.product-rich-description iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-rich-description img {
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.product-rich-description table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.product-rich-description th,
+.product-rich-description td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+}
+
+.product-rich-description th {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-weight: 700;
+}
+
+.product-rich-description pre,
+.product-rich-description code {
+  border-radius: calc(var(--radius) - 2px);
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.product-rich-description pre {
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+  white-space: pre;
+}
+
+.product-rich-description code {
+  padding: 0.125rem 0.3rem;
+}
+
+.product-rich-description pre code {
+  padding: 0;
+}

@@ -108,7 +108,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const relatedProducts = [...recommendations.values()].slice(0, 8);
   const hasRelatedProducts = relatedProducts.length > 0;
-  const description = stripHtml(product.description);
+  const plainTextDescription = stripHtml(product.description);
   const dimensions =
     product.dimensions && typeof product.dimensions === "object"
       ? Object.entries(product.dimensions as Record<string, unknown>)
@@ -139,7 +139,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     image: [product.image, ...product.gallery]
       .filter(Boolean)
       .map((image) => toAbsoluteUrl(image)),
-    description: truncateText(description, 500),
+    description: truncateText(plainTextDescription, 500),
     sku: product.sku ?? String(product.id),
     brand: product.brand
       ? { "@type": "Brand", name: product.brand.name }
@@ -216,7 +216,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             <ProductDetailTabs
               productId={product.id}
-              description={description || stripHtml(product.shortDesc ?? "")}
+              description={product.description || product.shortDesc || ""}
               attributes={product.attributes}
               specificationGroups={product.specificationGroups}
               information={productInformation}
