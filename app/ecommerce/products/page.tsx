@@ -16,7 +16,6 @@ import {
   type CatalogSort,
 } from "@/lib/storefront-catalog";
 import { getSiteSettingsForSeo, getSiteUrl } from "@/lib/seo";
-import { isFeatureEnabled } from "@/lib/store-features-server";
 
 type ProductsPageProps = {
   searchParams: Promise<CatalogSearchParams>;
@@ -103,10 +102,9 @@ function paginationPages(page: number, totalPages: number) {
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
   const parsedFilters = parseCatalogFilters(await searchParams);
-  const [data, settings, compareEnabled] = await Promise.all([
+  const [data, settings] = await Promise.all([
     getStorefrontCatalog(parsedFilters),
     getSiteSettingsForSeo(),
-    isFeatureEnabled("COMPARE"),
   ]);
   const { filters, products, facets, pagination } = data;
   if (catalogUrl(parsedFilters) !== catalogUrl(filters)) {
@@ -615,7 +613,6 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 products={products}
                 searchQuery={filters.q}
                 resultCount={pagination.total}
-                compareEnabled={compareEnabled}
               />
             ) : (
               <div className="rounded-3xl border border-dashed bg-muted/20 px-6 py-16 text-center">

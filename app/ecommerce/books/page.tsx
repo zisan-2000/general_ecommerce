@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 
 export default async function BooksPage() {
   if (!(await isFeatureEnabled("BOOKS"))) notFound();
-  const [books, compareEnabled] = await Promise.all([
-    getStorefrontBooks(),
-    isFeatureEnabled("COMPARE"),
-  ]);
+  const books = await getStorefrontBooks();
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="container px-3 py-8 sm:px-6">
@@ -24,7 +21,7 @@ export default async function BooksPage() {
           <p className="mt-3 text-muted-foreground">Explore books connected to the store’s configured writers and publishers.</p>
         </div>
         {books.length ? (
-          <CatalogProductGrid products={books.map((book) => book.product)} compareEnabled={compareEnabled} />
+          <CatalogProductGrid products={books.map((book) => book.product)} />
         ) : (
           <div className="rounded-xl border border-dashed p-10 text-center text-muted-foreground">No books are available yet.</div>
         )}

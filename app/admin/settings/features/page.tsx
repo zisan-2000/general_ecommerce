@@ -5,6 +5,7 @@ import { AlertTriangle, RefreshCw, SlidersHorizontal } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import type { ResolvedStoreFeature, StoreFeatureKey } from "@/lib/store-features";
+import { STOREFRONT_FEATURES_CHANGED_EVENT } from "@/providers/storefront-features-provider";
 
 type FeatureResponse = {
   storage?: "database" | "defaults";
@@ -60,6 +61,7 @@ export default function StoreFeaturesPage() {
         }
         setFeatures(payload.features ?? []);
         setStorage("database");
+        window.dispatchEvent(new Event(STOREFRONT_FEATURES_CHANGED_EVENT));
         toast.success(`${feature.label} ${feature.configuredEnabled ? "disabled" : "enabled"}.`);
       } catch (updateError) {
         toast.error(updateError instanceof Error ? updateError.message : "Feature was not updated.");

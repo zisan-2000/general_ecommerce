@@ -7,7 +7,7 @@ export default async function PublisherPage({ params }: { params: Promise<{ id: 
   if (!(await isFeatureEnabled("BOOKS"))) notFound();
   const id = Number((await params).id);
   if (!Number.isSafeInteger(id) || id < 1) notFound();
-  const [books, compareEnabled] = await Promise.all([getStorefrontBooks(), isFeatureEnabled("COMPARE")]);
+  const books = await getStorefrontBooks();
   const published = books.filter((book) => book.publisher?.id === id);
   const publisher = published[0]?.publisher;
   if (!publisher) notFound();
@@ -16,7 +16,7 @@ export default async function PublisherPage({ params }: { params: Promise<{ id: 
       <div className="container px-3 py-8 sm:px-6">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">Publisher</p>
         <h1 className="mb-8 mt-2 text-3xl font-bold sm:text-4xl">{publisher.name}</h1>
-        <CatalogProductGrid products={published.map((book) => book.product)} compareEnabled={compareEnabled} />
+        <CatalogProductGrid products={published.map((book) => book.product)} />
       </div>
     </main>
   );

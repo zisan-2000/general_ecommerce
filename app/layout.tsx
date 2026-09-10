@@ -24,6 +24,11 @@ import {
   getSiteSettingsForSeo,
   toAbsoluteUrl,
 } from "@/lib/seo";
+import { getStoreFeatureRegistry } from "@/lib/store-features-server";
+import {
+  STORE_FEATURE_KEYS,
+  type StoreFeatureKey,
+} from "@/lib/store-features";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,7 +82,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const siteUrl = getSiteUrl();
-  const siteSettings = await getSiteSettingsForSeo();
+  const [siteSettings, registry] = await Promise.all([
+    getSiteSettingsForSeo(),
+    getStoreFeatureRegistry(),
+  ]);
+  const storefrontFeatures = Object.fromEntries(
+    STORE_FEATURE_KEYS.map((key) => [key, registry.features[key].enabled]),
+  ) as Record<StoreFeatureKey, boolean>;
   const addressCountry = countryCodeFromLocale(siteSettings.locale);
 
   const websiteJsonLd = {
@@ -154,6 +165,7 @@ export default async function RootLayout({
         />
         <ThemeProvider>
           <Providers
+            storefrontFeatures={storefrontFeatures}
             storefrontSettings={{
               currency: siteSettings.currency,
               currencyPosition: siteSettings.currencyPosition,

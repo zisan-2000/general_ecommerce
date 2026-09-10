@@ -42,6 +42,7 @@ import { useCart } from "@/components/ecommarce/CartContext";
 import { useWishlist } from "@/components/ecommarce/WishlistContext";
 
 import { useProductCompare } from "@/hooks/use-product-compare";
+import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
 import {
   compareCategoryNavigation,
   getEffectiveCategoryNavigationIds,
@@ -551,11 +552,9 @@ function MobileCategoryTree({
 export default function Header({
   siteSettingsData,
   categoriesData,
-  featureVisibility = { compare: true, pcBuilder: true, books: false, authors: false },
 }: {
   siteSettingsData?: SiteSettings;
   categoriesData?: CategoryDTO[];
-  featureVisibility?: { compare: boolean; pcBuilder: boolean; books: boolean; authors: boolean };
 }) {
   const router = useRouter();
 
@@ -568,18 +567,19 @@ export default function Header({
   const { wishlistCount } = useWishlist();
 
   const { count: compareCount, href: compareHref } = useProductCompare();
+  const features = useStorefrontFeatures();
 
   const visibleShopActions = useMemo(
     () =>
       HEADER_SHOP_ACTIONS.filter((action) => {
-        if (action.id === "compare") return featureVisibility.compare;
-        if (action.id === "pc-builder") return featureVisibility.pcBuilder;
-        if (action.id === "books") return featureVisibility.books;
-        if (action.id === "authors") return featureVisibility.authors;
-        if (action.id === "publishers") return featureVisibility.books;
+        if (action.id === "compare") return features.COMPARE;
+        if (action.id === "pc-builder") return features.PC_BUILDER;
+        if (action.id === "books") return features.BOOKS;
+        if (action.id === "authors") return features.AUTHORS;
+        if (action.id === "publishers") return features.BOOKS;
         return true;
       }),
-    [featureVisibility.authors, featureVisibility.books, featureVisibility.compare, featureVisibility.pcBuilder],
+    [features.AUTHORS, features.BOOKS, features.COMPARE, features.PC_BUILDER],
   );
 
   const [hasMounted, setHasMounted] = useState(false);

@@ -8,6 +8,7 @@ import { useCart } from "@/components/ecommarce/CartContext";
 import { useWishlist } from "@/components/ecommarce/WishlistContext";
 import { useSession } from "@/lib/auth-client";
 import { useProductCompare } from "@/hooks/use-product-compare";
+import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
 import type { StorefrontCatalogProduct } from "@/lib/storefront-catalog";
 import { sendSearchEvent } from "@/lib/search/client-analytics";
 import {
@@ -26,13 +27,12 @@ export default function CatalogProductGrid({
   products,
   searchQuery = "",
   resultCount,
-  compareEnabled = true,
 }: {
   products: StorefrontCatalogProduct[];
   searchQuery?: string;
   resultCount?: number;
-  compareEnabled?: boolean;
 }) {
+  const { COMPARE: compareEnabled } = useStorefrontFeatures();
   const { status } = useSession();
   const { addToCart } = useCart();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();

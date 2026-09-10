@@ -106,10 +106,11 @@ export async function setStoreFeatureEnabled(
   enabled: boolean,
 ): Promise<StoreFeatureUpdateResult> {
   const result = await prisma.$transaction(async (tx) => {
-    await tx.$queryRawUnsafe(
-      "SELECT pg_advisory_xact_lock(hashtext($1))",
-      "store-feature-registry",
-    );
+    await tx.$queryRaw<Array<{ lock: string }>>`
+      SELECT pg_advisory_xact_lock(
+        hashtext(${"store-feature-registry"})
+      )::text AS "lock"
+    `;
 
     const rows = await tx.storeFeature.findMany({
       select: { key: true, enabled: true },

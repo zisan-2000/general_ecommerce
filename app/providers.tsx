@@ -5,13 +5,19 @@ import {
   StorefrontSettingsProvider,
   type StorefrontCurrencySettings,
 } from "@/providers/storefront-settings-provider";
+import {
+  StorefrontFeaturesProvider,
+  type StorefrontFeatureFlags,
+} from "@/providers/storefront-features-provider";
 
 export function Providers({
   children,
   storefrontSettings,
+  storefrontFeatures,
 }: {
   children: React.ReactNode;
   storefrontSettings?: Partial<StorefrontCurrencySettings>;
+  storefrontFeatures: StorefrontFeatureFlags;
 }) {
   return (
     <SessionProvider
@@ -19,9 +25,11 @@ export function Providers({
       refetchOnWindowFocus={false}
       refetchWhenOffline={false}
     >
-      <StorefrontSettingsProvider settings={storefrontSettings}>
-        {children}
-      </StorefrontSettingsProvider>
+      <StorefrontFeaturesProvider initialFeatures={storefrontFeatures}>
+        <StorefrontSettingsProvider settings={storefrontSettings}>
+          {children}
+        </StorefrontSettingsProvider>
+      </StorefrontFeaturesProvider>
     </SessionProvider>
   );
 }

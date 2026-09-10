@@ -23,6 +23,7 @@ import { useWishlist } from "@/components/ecommarce/WishlistContext";
 import ProductConversionTools from "@/components/ecommarce/product-detail/ProductConversionTools";
 import PriceDropAlertButton from "@/components/ecommarce/PriceDropAlertButton";
 import { useProductCompare } from "@/hooks/use-product-compare";
+import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
 import { useSession } from "@/lib/auth-client";
 import {
   getDefaultPurchaseVariant,
@@ -65,12 +66,11 @@ function simpleOptions(value: unknown) {
 export default function ProductPurchasePanel({
   product,
   details,
-  compareEnabled = true,
 }: {
   product: ProductPurchaseData;
   details: PurchasePanelDetails;
-  compareEnabled?: boolean;
 }) {
+  const { COMPARE: compareEnabled } = useStorefrontFeatures();
   const router = useRouter();
   const { status } = useSession();
   const { addToCart } = useCart();

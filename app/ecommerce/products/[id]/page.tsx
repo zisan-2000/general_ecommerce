@@ -24,7 +24,6 @@ import {
   toAbsoluteUrl,
   truncateText,
 } from "@/lib/seo";
-import { isFeatureEnabled } from "@/lib/store-features-server";
 
 type ProductPageProps = { params: Promise<{ id: string }> };
 const getProduct = cache(getStorefrontProductDetail);
@@ -65,10 +64,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { id: rawId } = await params;
-  const [product, compareEnabled] = await Promise.all([
-    getProduct(rawId),
-    isFeatureEnabled("COMPARE"),
-  ]);
+  const product = await getProduct(rawId);
   if (!product) notFound();
 
   const categoryData = await getStorefrontCatalog(
@@ -209,7 +205,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <main className="min-w-0 space-y-4">
             <ProductPurchasePanel
               product={purchaseProduct}
-              compareEnabled={compareEnabled}
               details={{
                 brandName: product.brand?.name,
                 categoryName: product.category.name,
@@ -241,7 +236,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
             <CatalogProductGrid
               products={relatedProducts}
-              compareEnabled={compareEnabled}
             />
           </section>
         ) : null}
