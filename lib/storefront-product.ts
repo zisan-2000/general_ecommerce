@@ -89,6 +89,18 @@ export const storefrontProductSelect = {
       attribute: { select: { id: true, name: true } },
     },
   },
+  specificationGroups: {
+    orderBy: { position: "asc" as const },
+    select: {
+      id: true,
+      name: true,
+      position: true,
+      items: {
+        orderBy: { position: "asc" as const },
+        select: { id: true, label: true, value: true, position: true },
+      },
+    },
+  },
   bundleItems: {
     orderBy: { sortOrder: "asc" as const },
     select: {

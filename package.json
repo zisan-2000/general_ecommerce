@@ -108,6 +108,7 @@
     "verify:phase9-manual-test": "tsx scripts/verify-phase9-manual-test.ts",
     "cleanup:phase9-manual-test": "tsx scripts/cleanup-phase9-manual-test.ts",
     "test:universal-phase9": "tsx --test tests/universal-ecommerce-phase9.test.mjs tests/legacy-tech-demo-cleanup.test.mjs",
+    "test:specifications": "tsx --test tests/product-specifications.test.mjs",
     "verify:universal-phase9": "npm run verify:universal-phase8 && npm run test:universal-phase9"
   },
   "dependencies": {

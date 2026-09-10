@@ -23,6 +23,7 @@ import { storefrontProductSelect } from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import { parseSpecificationGroupsInput } from "@/lib/product-specifications";
 import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
@@ -113,6 +114,12 @@ const productInclude = {
   attributes: {
     include: {
       attribute: true,
+    },
+  },
+  specificationGroups: {
+    orderBy: { position: "asc" },
+    include: {
+      items: { orderBy: { position: "asc" } },
     },
   },
 } as const;
@@ -366,6 +373,16 @@ export async function POST(req: Request) {
       );
     }
     const productAttributes = parsedProductAttributes.value;
+    const parsedSpecificationGroups = parseSpecificationGroupsInput(
+      body.specificationGroups ?? [],
+    );
+    if (!parsedSpecificationGroups.ok) {
+      return NextResponse.json(
+        { error: parsedSpecificationGroups.error },
+        { status: 400 },
+      );
+    }
+    const specificationGroups = parsedSpecificationGroups.value;
     const categoryId = Number(body.categoryId);
     if ((body.available ?? true) && !(await isCategoryEffectivelyActive(categoryId))) {
       return NextResponse.json(
@@ -524,6 +541,24 @@ export async function POST(req: Request) {
             productId: created.id,
             ...item,
           })),
+        });
+      }
+
+      for (let groupIndex = 0; groupIndex < specificationGroups.length; groupIndex += 1) {
+        const group = specificationGroups[groupIndex];
+        await tx.productSpecificationGroup.create({
+          data: {
+            productId: created.id,
+            name: group.name,
+            position: groupIndex,
+            items: {
+              create: group.items.map((item, itemIndex) => ({
+                label: item.label,
+                value: item.value,
+                position: itemIndex,
+              })),
+            },
+          },
         });
       }
 

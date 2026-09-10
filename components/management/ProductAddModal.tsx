@@ -17,6 +17,11 @@ import {
   validateCategoryProductAttributePolicy,
   type CatalogAttributeType,
 } from "@/lib/attribute-schema";
+import {
+  parseSpecificationGroupsInput,
+  type SpecificationGroupInput,
+} from "@/lib/product-specifications";
+import ProductSpecificationBuilder from "./ProductSpecificationBuilder";
 import TinymceEditor from "../tinymceEditor";
 
 type ProductType = "PHYSICAL" | "DIGITAL" | "SERVICE";
@@ -279,6 +284,8 @@ export default function ProductAddModal({
   const [productAttributeValues, setProductAttributeValues] = useState<
     Record<number, string | string[]>
   >({});
+  const [specificationsEnabled, setSpecificationsEnabled] = useState(false);
+  const [specificationGroups, setSpecificationGroups] = useState<SpecificationGroupInput[]>([]);
   const [variantOptions, setVariantOptions] = useState<VariantOptionForm[]>([]);
   const [variantRows, setVariantRows] = useState<VariantRowForm[]>([]);
   const [colorVariantImages, setColorVariantImages] = useState<Record<string, string>>({});
@@ -344,6 +351,8 @@ export default function ProductAddModal({
       setVariantRows([]);
       setColorVariantImages({});
       setProductAttributeValues({});
+      setSpecificationsEnabled(false);
+      setSpecificationGroups([]);
       return;
     }
 
@@ -474,6 +483,19 @@ export default function ProductAddModal({
         }),
       ),
     );
+    const editingSpecificationGroups = Array.isArray(editing.specificationGroups)
+      ? editing.specificationGroups.map((group: any) => ({
+          name: String(group?.name ?? ""),
+          items: Array.isArray(group?.items)
+            ? group.items.map((item: any) => ({
+                label: String(item?.label ?? ""),
+                value: String(item?.value ?? ""),
+              }))
+            : [],
+        }))
+      : [];
+    setSpecificationGroups(editingSpecificationGroups);
+    setSpecificationsEnabled(editingSpecificationGroups.length > 0);
   }, [attributes, editing]);
 
   useEffect(() => {
@@ -835,6 +857,13 @@ export default function ProductAddModal({
       toast.error(attributeValidation.error);
       return;
     }
+    const specificationValidation = parseSpecificationGroupsInput(
+      specificationsEnabled ? specificationGroups : [],
+    );
+    if (!specificationValidation.ok) {
+      toast.error(specificationValidation.error);
+      return;
+    }
 
     const stock =
       form.type === "PHYSICAL"
@@ -905,6 +934,7 @@ export default function ProductAddModal({
         videoUrl: form.videoUrl || null,
         variantOptions: hasVariants ? normalizedVariantOptions : [],
         productAttributes,
+        specificationGroups: specificationValidation.value,
       };
 
       if (!editing) payload.available = form.available;
@@ -1128,10 +1158,17 @@ export default function ProductAddModal({
             )}
           </section>
 
+          <ProductSpecificationBuilder
+            enabled={specificationsEnabled}
+            groups={specificationGroups}
+            onEnabledChange={setSpecificationsEnabled}
+            onChange={setSpecificationGroups}
+          />
+
           <section className="space-y-4 rounded-xl border p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-semibold">Step 3: Variant Setup</h3>
+                <h3 className="font-semibold">Step 4: Variant Setup</h3>
                 <p className="text-sm text-muted-foreground">
                   Define option groups like Size and Color. The system generates sellable combinations automatically.
                 </p>

@@ -393,6 +393,7 @@ model Product {
   digitalAsset            DigitalAsset?                     @relation("ProductDigitalAsset", fields: [digitalAssetId], references: [id])
   bookMetadata            BookMetadata?
   attributes              ProductAttribute[]
+  specificationGroups     ProductSpecificationGroup[]
   codes                   ProductCode[]
   variants                ProductVariant[]
   variantOptions          ProductVariantOption[]
@@ -642,6 +643,32 @@ model ProductAttribute {
   @@index([attributeId, valueNumber])
   @@index([attributeId, valueBoolean])
   @@index([attributeValueId])
+}
+
+model ProductSpecificationGroup {
+  id        Int                        @id @default(autoincrement())
+  productId Int
+  name      String
+  position  Int                        @default(0)
+  createdAt DateTime                   @default(now())
+  updatedAt DateTime                   @updatedAt
+  product   Product                    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  items     ProductSpecificationItem[]
+
+  @@index([productId, position])
+}
+
+model ProductSpecificationItem {
+  id        Int                       @id @default(autoincrement())
+  groupId   Int
+  label     String
+  value     String
+  position  Int                       @default(0)
+  createdAt DateTime                  @default(now())
+  updatedAt DateTime                  @updatedAt
+  group     ProductSpecificationGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  @@index([groupId, position])
 }
 
 model VatClass {

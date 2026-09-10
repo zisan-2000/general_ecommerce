@@ -14,6 +14,12 @@ type ProductInformation = Array<{
   value: string;
 }>;
 
+type ProductSpecificationGroup = Array<{
+  id: number;
+  name: string;
+  items: Array<{ id: number; label: string; value: string }>;
+}>;
+
 const tabs = [
   { id: "specifications", label: "Specification" },
   { id: "description", label: "Description" },
@@ -26,12 +32,14 @@ export default function ProductDetailTabs({
   productId,
   description,
   attributes,
+  specificationGroups,
   information,
   reviewCount,
 }: {
   productId: number;
   description: string;
   attributes: ProductAttribute[];
+  specificationGroups: ProductSpecificationGroup;
   information: ProductInformation;
   reviewCount: number;
 }) {
@@ -111,6 +119,21 @@ export default function ProductDetailTabs({
                   </dd>
                 </div>
               ))}
+              {specificationGroups.flatMap((group) =>
+                group.items.filter((item) => item.value.trim()).map((item, index) => (
+                  <div key={item.id} className="border-t border-border first:border-t-0">
+                    {index === 0 ? (
+                      <div className="border-b border-border bg-muted/60 px-3 py-2 text-xs font-bold uppercase tracking-wide text-foreground sm:px-4">
+                        {group.name}
+                      </div>
+                    ) : null}
+                    <div className="grid grid-cols-[minmax(110px,0.65fr)_minmax(0,1.35fr)]">
+                      <dt className="bg-muted px-3 py-3 font-medium text-muted-foreground sm:px-4">{item.label}</dt>
+                      <dd className="px-3 py-3 font-semibold text-foreground sm:px-4">{item.value}</dd>
+                    </div>
+                  </div>
+                )),
+              )}
             </dl>
           </div>
         ) : null}

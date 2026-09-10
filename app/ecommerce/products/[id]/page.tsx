@@ -218,6 +218,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               productId={product.id}
               description={description || stripHtml(product.shortDesc ?? "")}
               attributes={product.attributes}
+              specificationGroups={product.specificationGroups}
               information={productInformation}
               reviewCount={product.ratingCount}
             />

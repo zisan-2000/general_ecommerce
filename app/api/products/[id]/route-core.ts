@@ -24,6 +24,7 @@ import {
   parseProductAvailabilityPatch,
 } from "@/lib/product-availability";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
+import { parseSpecificationGroupsInput } from "@/lib/product-specifications";
 import { validateCategoryProductAttributes } from "@/lib/category-product-attributes-server";
 import {
   gateProductType,
@@ -70,6 +71,12 @@ const productInclude = {
   attributes: {
     include: {
       attribute: true,
+    },
+  },
+  specificationGroups: {
+    orderBy: { position: "asc" },
+    include: {
+      items: { orderBy: { position: "asc" } },
     },
   },
 } as const;
@@ -397,6 +404,17 @@ export async function PUT(
       );
     }
     const nextAttributes = parsedNextAttributes?.value ?? null;
+    const parsedNextSpecificationGroups =
+      body.specificationGroups === undefined
+        ? null
+        : parseSpecificationGroupsInput(body.specificationGroups);
+    if (parsedNextSpecificationGroups && !parsedNextSpecificationGroups.ok) {
+      return NextResponse.json(
+        { error: parsedNextSpecificationGroups.error },
+        { status: 400 },
+      );
+    }
+    const nextSpecificationGroups = parsedNextSpecificationGroups?.value ?? null;
 
     const hasVariantOptionsPayload = body.variantOptions !== undefined;
     const nextVariantOptions = hasVariantOptionsPayload
@@ -574,6 +592,27 @@ export async function PUT(
               productId: id,
               ...item,
             })),
+          });
+        }
+      }
+
+      if (nextSpecificationGroups !== null) {
+        await tx.productSpecificationGroup.deleteMany({ where: { productId: id } });
+        for (let groupIndex = 0; groupIndex < nextSpecificationGroups.length; groupIndex += 1) {
+          const group = nextSpecificationGroups[groupIndex];
+          await tx.productSpecificationGroup.create({
+            data: {
+              productId: id,
+              name: group.name,
+              position: groupIndex,
+              items: {
+                create: group.items.map((item, itemIndex) => ({
+                  label: item.label,
+                  value: item.value,
+                  position: itemIndex,
+                })),
+              },
+            },
           });
         }
       }
