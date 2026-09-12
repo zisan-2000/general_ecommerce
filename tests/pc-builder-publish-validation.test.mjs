@@ -68,6 +68,17 @@ test("processor activation passes when all required builder specs are valid", ()
   assert.deepEqual(result.issues, []);
 });
 
+test("memory activation accepts DDR type from variant setup", () => {
+  const candidate = product("desktop-ram");
+  candidate.variantOptions = [{ name: "Type", values: ["DDR5"] }];
+
+  const result = validatePcBuilderProductForActivation(candidate);
+
+  assert.equal(result.applies, true);
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.issues, []);
+});
+
 test("placeholder compatibility values remain invalid at activation time", () => {
   const result = validatePcBuilderProductForActivation(
     product("motherboard", {

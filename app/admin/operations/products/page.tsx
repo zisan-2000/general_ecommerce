@@ -14,6 +14,8 @@ interface Product {
   currency?: string;
   type?: "PHYSICAL" | "DIGITAL" | "SERVICE";
   sku?: string | null;
+  model?: string | null;
+  warranty?: string | null;
   weight?: number | null;
   dimensions?: any;
   VatClassId?: number | null;

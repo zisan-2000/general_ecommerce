@@ -349,6 +349,8 @@ model Product {
   publisherId             Int?
   description             String
   shortDesc               String?
+  model                    String?
+  warranty                 String?
   basePrice               Decimal                           @db.Decimal(10, 2)
   originalPrice           Decimal?                          @db.Decimal(10, 2)
   flashSaleEnabled        Boolean                           @default(false)
