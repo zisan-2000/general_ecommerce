@@ -22,6 +22,7 @@ import {
 import { prisma } from "@/lib/prisma";
 import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
+import { mergePcBuilderVariantAttributes } from "@/lib/pc-builder-variant-attributes";
 
 export type PcBuilderCatalogResult = {
   catalog: PcBuilderCatalog;
@@ -120,8 +121,12 @@ function projectProduct(
     currency: /^[A-Z]{3}$/.test(row.currency) ? row.currency : "BDT",
     brand: row.brand?.name ?? null,
     categorySlug: row.category.slug,
-    attributes: Object.fromEntries(
-      row.attributes.map((item) => [item.attribute.name, item.value]),
+    attributes: mergePcBuilderVariantAttributes(
+      row.category.slug,
+      Object.fromEntries(
+        row.attributes.map((item) => [item.attribute.name, item.value]),
+      ),
+      variant.options,
     ),
     variantId: variant.id,
     variantSku: variant.sku,

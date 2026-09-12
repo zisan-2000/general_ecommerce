@@ -83,6 +83,12 @@ export async function POST(request: Request) {
       value: item.value,
       attribute: { name: nameById.get(item.attributeId) ?? "" },
     })),
+    variantOptions: Array.isArray(body.variantOptions)
+      ? body.variantOptions.map((option: any) => ({
+          name: String(option?.name ?? ""),
+          values: Array.isArray(option?.values) ? option.values : [],
+        }))
+      : [],
   });
 
   if (readiness.applies && !readiness.ok) {

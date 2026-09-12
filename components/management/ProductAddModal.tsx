@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   getVariantMediaMeta,
+  normalizeVariantOptions,
   normalizeVariantMediaMeta,
 } from "@/lib/product-variants";
 import {
@@ -241,12 +242,7 @@ function buildVariantSummary(
 }
 
 function buildCombinations(optionForms: VariantOptionForm[]) {
-  const options = optionForms
-    .map((option) => ({
-      name: clean(option.name),
-      values: option.values.map(clean).filter(Boolean),
-    }))
-    .filter((option) => option.name && option.values.length > 0);
+  const options = normalizeVariantOptions(optionForms);
 
   if (options.length === 0) return [];
 
@@ -366,29 +362,41 @@ export default function ProductAddModal({
     childrenByParent.forEach((list) =>
       list.sort((a, b) => a.name.localeCompare(b.name)),
     );
-    const ordered: { id: number; label: string }[] = [];
-    const visit = (parentId: number | null, level: number) => {
+    const ordered: { id: number; label: string; name: string }[] = [];
+    const visited = new Set<number>();
+    const visit = (parentId: number | null, ancestors: string[]) => {
       const children = childrenByParent.get(parentId) ?? [];
       children.forEach((child) => {
+        if (visited.has(child.id)) return;
+        visited.add(child.id);
         ordered.push({
           id: child.id,
-          label: `${"— ".repeat(level)}${child.name}`,
+          name: child.name,
+          label:
+            ancestors.length > 0
+              ? `${child.name} — ${[...ancestors].reverse().join(" / ")}`
+              : child.name,
         });
-        visit(child.id, level + 1);
+        visit(child.id, [...ancestors, child.name]);
       });
     };
-    visit(null, 0);
-    return ordered;
+    visit(null, []);
+
+    // Keep orphaned categories selectable if their parent is unavailable.
+    categories.forEach((category) => {
+      if (!visited.has(category.id)) {
+        ordered.push({ id: category.id, name: category.name, label: category.name });
+      }
+    });
+
+    return ordered.sort(
+      (left, right) =>
+        left.name.localeCompare(right.name) || left.label.localeCompare(right.label),
+    );
   }, [categories]);
 
   const normalizedVariantOptions = useMemo(
-    () =>
-      variantOptions
-        .map((option) => ({
-          name: clean(option.name),
-          values: option.values.map(clean).filter(Boolean),
-        }))
-        .filter((option) => option.name && option.values.length > 0),
+    () => normalizeVariantOptions(variantOptions),
     [variantOptions],
   );
   const optionNames = useMemo(
@@ -902,12 +910,39 @@ export default function ProductAddModal({
   const applyVariantOptionSelection = (index: number, selection: string) => {
     setVariantOptionSearches((previous) => ({ ...previous, [index]: "" }));
     if (selection.startsWith("preset:")) {
+      const selectedName = selection.slice("preset:".length);
+      const duplicate = variantOptions.some(
+        (option, optionIndex) =>
+          optionIndex !== index &&
+          clean(option.name).toLocaleLowerCase() ===
+            selectedName.toLocaleLowerCase(),
+      );
+      if (duplicate) {
+        toast.error(`${selectedName} is already added as a variant option`);
+        return;
+      }
       updateVariantOption(index, {
         attributeId: "",
-        name: selection.slice("preset:".length),
+        name: selectedName,
         values: [],
         valueInput: "",
       });
+      return;
+    }
+
+    const selectedAttribute = attributes.find(
+      (attribute) => String(attribute.id) === selection,
+    );
+    const duplicate = selectedAttribute
+      ? variantOptions.some(
+          (option, optionIndex) =>
+            optionIndex !== index &&
+            clean(option.name).toLocaleLowerCase() ===
+              selectedAttribute.name.toLocaleLowerCase(),
+        )
+      : false;
+    if (duplicate && selectedAttribute) {
+      toast.error(`${selectedAttribute.name} is already added as a variant option`);
       return;
     }
 

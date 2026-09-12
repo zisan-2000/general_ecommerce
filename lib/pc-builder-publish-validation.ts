@@ -5,6 +5,7 @@ import {
   type PcBuilderProduct,
   type PcBuilderSlotKey,
 } from "./pc-builder";
+import { mergePcBuilderVariantAttributes } from "./pc-builder-variant-attributes";
 
 type ProductAttributeRow = {
   value: string;
@@ -20,6 +21,10 @@ export type PcBuilderPublishProduct = {
     slug: string;
   } | null;
   attributes: readonly ProductAttributeRow[];
+  variantOptions?: readonly {
+    name: string;
+    values: readonly (string | { value: string })[];
+  }[];
 };
 
 export type PcBuilderActivationValidation = {
@@ -54,6 +59,18 @@ function toPcBuilderProduct(
   product: PcBuilderPublishProduct,
   slot: PcBuilderSlotKey,
 ): PcBuilderProduct {
+  const variantOptionValues = Object.fromEntries(
+    (product.variantOptions ?? []).flatMap((option) => {
+      const name = String(option.name ?? "").trim();
+      const values = (option.values ?? [])
+        .map((value) =>
+          typeof value === "string" ? value.trim() : String(value?.value ?? "").trim(),
+        )
+        .filter(Boolean);
+      return name && values.length > 0 ? [[name, values.join(", ")] as const] : [];
+    }),
+  );
+
   return {
     selectionId: `${product.id}-1`,
     id: product.id,
@@ -69,7 +86,11 @@ function toPcBuilderProduct(
       PC_BUILDER_SLOTS.find((candidate) => candidate.key === slot)?.categorySlug ??
       product.category?.slug ??
       "",
-    attributes: toAttributeRecord(product.attributes),
+    attributes: mergePcBuilderVariantAttributes(
+      product.category?.slug,
+      toAttributeRecord(product.attributes),
+      variantOptionValues,
+    ),
     variantId: 1,
     variantSku: "publish-validation",
     variantLabel: null,
