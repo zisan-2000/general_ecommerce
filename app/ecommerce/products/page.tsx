@@ -130,6 +130,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     filters.inStock,
     filters.featured,
     ...Object.values(filters.attributes).map((values) => values.length > 0),
+    ...Object.values(filters.variants).map((values) => values.length > 0),
   ].filter(Boolean).length;
   const activeFilterLinks: Array<{ key: string; label: string; href: string }> = [];
   if (filters.q) {
@@ -187,6 +188,24 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         key: `attr-${group.id}-${value}`,
         label: `${group.name}: ${value}`,
         href: catalogUrl(filters, { attributes: nextAttributes, page: 1 }),
+      });
+    }
+  }
+  for (const group of facets.variantOptions) {
+    for (const value of filters.variants[group.name] ?? []) {
+      const rest = (filters.variants[group.name] ?? []).filter(
+        (item) => item !== value,
+      );
+      const nextVariants = { ...filters.variants };
+      if (rest.length) {
+        nextVariants[group.name] = rest;
+      } else {
+        delete nextVariants[group.name];
+      }
+      activeFilterLinks.push({
+        key: `variant-${group.name}-${value}`,
+        label: `${group.name}: ${value}`,
+        href: catalogUrl(filters, { variants: nextVariants, page: 1 }),
       });
     }
   }
@@ -248,6 +267,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             inStock: filters.inStock,
             featured: filters.featured,
             attributes: filters.attributes,
+            variants: filters.variants,
             sort: filters.sort,
             page: filters.page,
           }}
@@ -503,6 +523,41 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                                 ? entry.value === "true" ? "Yes" : "No"
                                 : entry.value}
                             </span>
+                          </span>
+                          <span className="text-xs text-muted-foreground">
+                            {entry.productCount}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </FilterSection>
+                );
+              })}
+
+              {facets.variantOptions.map((group) => {
+                const selected = filters.variants[group.name] ?? [];
+                return (
+                  <FilterSection
+                    key={`variant-${group.name}`}
+                    title={group.name}
+                    badge={selected.length}
+                    defaultOpen={selected.length > 0}
+                  >
+                    <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
+                      {group.values.map((entry) => (
+                        <label
+                          key={entry.value}
+                          className="flex cursor-pointer items-center justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-muted"
+                        >
+                          <span className="flex min-w-0 items-center gap-2">
+                            <input
+                              type="checkbox"
+                              name={`variant_${group.name}`}
+                              value={entry.value}
+                              defaultChecked={selected.includes(entry.value)}
+                              className="h-4 w-4 rounded border-border accent-primary"
+                            />
+                            <span className="truncate">{entry.value}</span>
                           </span>
                           <span className="text-xs text-muted-foreground">
                             {entry.productCount}

@@ -25,6 +25,7 @@ const CATALOG_MAX_ATTRIBUTE_GROUPS = 12;
 const CATALOG_MAX_ATTRIBUTE_VALUES = 24;
 const CATALOG_MAX_FACET_VALUES_PER_GROUP = 40;
 const CATALOG_ATTRIBUTE_PREFIX = "attr_";
+const CATALOG_VARIANT_PREFIX = "variant_";
 const PRODUCT_TYPES = ["PHYSICAL", "DIGITAL", "SERVICE", "BUNDLE"] as const;
 const SORT_OPTIONS = [
   "relevance",
@@ -57,6 +58,8 @@ export type CatalogFilters = {
   // Dynamic spec filters keyed by attribute id: { "68": ["Core i5-1334U"] }.
   // Values within one attribute are OR-ed, separate attributes are AND-ed.
   attributes: Record<string, string[]>;
+  // Dynamic sellable-variant filters keyed by option name.
+  variants: Record<string, string[]>;
 };
 
 export const catalogProductSelect = {
@@ -213,6 +216,29 @@ function parseAttributeFilters(searchParams: CatalogSearchParams) {
   );
 }
 
+function parseVariantFilters(searchParams: CatalogSearchParams) {
+  const parsed: Record<string, string[]> = {};
+  for (const [key, rawValue] of Object.entries(searchParams)) {
+    if (!key.startsWith(CATALOG_VARIANT_PREFIX)) continue;
+    const optionName = key.slice(CATALOG_VARIANT_PREFIX.length).trim().slice(0, 80);
+    if (!optionName) continue;
+    const values = Array.from(
+      new Set(
+        (Array.isArray(rawValue) ? rawValue : rawValue ? [rawValue] : [])
+          .map((value) => String(value).trim().slice(0, 160))
+          .filter(Boolean),
+      ),
+    ).slice(0, CATALOG_MAX_ATTRIBUTE_VALUES);
+    if (values.length) parsed[optionName] = values;
+  }
+
+  return Object.fromEntries(
+    Object.entries(parsed)
+      .sort(([left], [right]) => left.localeCompare(right))
+      .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS),
+  );
+}
+
 export function parseCatalogFilters(
   searchParams: CatalogSearchParams,
 ): CatalogFilters {
@@ -267,6 +293,7 @@ export function parseCatalogFilters(
     page: boundedInteger(firstValue(searchParams.page), 1, CATALOG_MAX_PAGE),
     perPage,
     attributes: parseAttributeFilters(searchParams),
+    variants: parseVariantFilters(searchParams),
   };
 }
 
@@ -779,6 +806,67 @@ const readCatalogAttributeFacets = unstable_cache(
   },
 );
 
+/** Build filter groups directly from active variant JSON, without requiring
+ * an Attributes Manager mapping. This keeps the catalog in sync with every
+ * option created in Variant Setup. */
+const readCatalogVariantFacets = unstable_cache(
+  async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
+    const categoryIds = JSON.parse(serializedCategoryIds) as number[];
+    const disabledTypes = JSON.parse(
+      serializedDisabledTypes,
+    ) as FeatureControlledProductType[];
+    const rows = await prisma.productVariant.findMany({
+      where: {
+        active: true,
+        product: {
+          deleted: false,
+          available: true,
+          ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+          ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
+        },
+      },
+      select: { productId: true, options: true },
+    });
+    const groups = new Map<
+      string,
+      { name: string; values: Map<string, Set<number>> }
+    >();
+
+    for (const row of rows) {
+      if (!row.options || typeof row.options !== "object" || Array.isArray(row.options)) continue;
+      for (const [rawName, rawValue] of Object.entries(row.options)) {
+        const name = rawName.trim();
+        const value = typeof rawValue === "string" ? rawValue.trim() : "";
+        if (!name || name === "__meta" || !value) continue;
+        const key = name.toLocaleLowerCase();
+        const group = groups.get(key) ?? { name, values: new Map<string, Set<number>>() };
+        const productIds = group.values.get(value) ?? new Set<number>();
+        productIds.add(row.productId);
+        group.values.set(value, productIds);
+        groups.set(key, group);
+      }
+    }
+
+    return Array.from(groups.values())
+      .map((group) => ({
+        name: group.name,
+        values: Array.from(group.values.entries())
+          .map(([value, productIds]) => ({ value, productCount: productIds.size }))
+          .sort(
+            (left, right) =>
+              right.productCount - left.productCount ||
+              left.value.localeCompare(right.value, undefined, { numeric: true }),
+          )
+          .slice(0, CATALOG_MAX_FACET_VALUES_PER_GROUP),
+      }))
+      .filter((group) => group.values.length > 0)
+      .sort((left, right) => left.name.localeCompare(right.name))
+      .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
+  },
+  ["storefront-catalog-variant-facets-v1"],
+  { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
+);
+
 function descendantCategoryIds(
   categories: Awaited<ReturnType<typeof readCatalogFacets>>["categories"],
   slug: string,
@@ -850,14 +938,27 @@ const readCatalog = unstable_cache(
       ? descendantCategoryIds(facets.categories, scopedCategory.slug)
       : [];
     const facetCategoryIds = scopedCategory ? categoryIds : activeCategoryIds;
-    const attributeFacets = await readCatalogAttributeFacets(
-      JSON.stringify(facetCategoryIds),
-      serializedDisabledTypes,
+    const [attributeFacets, variantFacets] = await Promise.all([
+      readCatalogAttributeFacets(
+        JSON.stringify(facetCategoryIds),
+        serializedDisabledTypes,
+      ),
+      readCatalogVariantFacets(
+        JSON.stringify(facetCategoryIds),
+        serializedDisabledTypes,
+      ),
+    ]);
+    const attributeFacetNames = new Set(
+      attributeFacets.map((facet) => facet.name.toLocaleLowerCase()),
+    );
+    const catalogVariantFacets = variantFacets.filter(
+      (facet) => !attributeFacetNames.has(facet.name.toLocaleLowerCase()),
     );
     const filters = resolveCatalogFilters(
       requestedFilters,
       facets,
       attributeFacets,
+      catalogVariantFacets,
     );
     const andFilters: Prisma.ProductWhereInput[] = [];
     for (const term of catalogSearchTerms(filters.q)) {
@@ -924,6 +1025,28 @@ const readCatalog = unstable_cache(
             },
           },
         ],
+      });
+    }
+    const selectedVariantFacets = Object.entries(filters.variants).flatMap(
+      ([name, values]) => {
+        const facet = catalogVariantFacets.find(
+          (item) => item.name.toLocaleLowerCase() === name.toLocaleLowerCase(),
+        );
+        return facet ? [{ facet, values }] : [];
+      },
+    );
+    if (selectedVariantFacets.length > 0) {
+      andFilters.push({
+        variants: {
+          some: {
+            active: true,
+            AND: selectedVariantFacets.map(({ facet, values }) => ({
+              OR: values.map((value) => ({
+                options: { path: [facet.name], equals: value },
+              })),
+            })),
+          },
+        },
       });
     }
     if (filters.inStock) {
@@ -1023,7 +1146,11 @@ const readCatalog = unstable_cache(
 
     return {
       filters,
-      facets: { ...facets, attributes: attributeFacets },
+      facets: {
+        ...facets,
+        attributes: attributeFacets,
+        variantOptions: catalogVariantFacets,
+      },
       products: products.map(serializeCatalogProduct),
       pagination: {
         page: filters.page,
@@ -1066,6 +1193,10 @@ export function resolveCatalogFilters(
   filters: CatalogFilters,
   facets: StorefrontCatalogFacets,
   attributeFacets: CatalogAttributeFacet[] = [],
+  variantFacets: Array<{
+    name: string;
+    values: Array<{ value: string; productCount: number }>;
+  }> = [],
 ): CatalogFilters {
   const selectedCategory = filters.category
     ? facets.categories.find(
@@ -1090,12 +1221,24 @@ export function resolveCatalogFilters(
     const kept = values.filter((value) => known.has(value));
     if (kept.length) attributes[attributeId] = kept;
   }
+  const variantFacetByName = new Map(
+    variantFacets.map((group) => [group.name.toLocaleLowerCase(), group]),
+  );
+  const variants: Record<string, string[]> = {};
+  for (const [name, values] of Object.entries(filters.variants)) {
+    const facet = variantFacetByName.get(name.toLocaleLowerCase());
+    if (!facet) continue;
+    const knownValues = new Set(facet.values.map((entry) => entry.value));
+    const kept = values.filter((value) => knownValues.has(value));
+    if (kept.length) variants[facet.name] = kept;
+  }
 
   return {
     ...filters,
     category: selectedCategory?.slug ?? "",
     brands: filters.brands.filter((brand) => knownBrands.has(brand)),
     attributes,
+    variants,
   };
 }
 
@@ -1105,6 +1248,7 @@ export function catalogCanonicalUrl(filters: CatalogFilters) {
     q: "",
     brands: keepBrand ? filters.brands : [],
     attributes: {},
+    variants: {},
     type: "",
     minPrice: null,
     maxPrice: null,
@@ -1120,6 +1264,7 @@ export function isIndexableCatalogView(filters: CatalogFilters) {
   return (
     !filters.q &&
     Object.keys(filters.attributes).length === 0 &&
+    Object.keys(filters.variants).length === 0 &&
     filters.brands.length <= 1 &&
     !(filters.category && filters.brands.length > 0) &&
     !filters.type &&
@@ -1148,6 +1293,11 @@ export function catalogUrl(
   for (const [attributeId, values] of Object.entries(next.attributes ?? {})) {
     for (const value of values) {
       params.append(`${CATALOG_ATTRIBUTE_PREFIX}${attributeId}`, value);
+    }
+  }
+  for (const [name, values] of Object.entries(next.variants ?? {})) {
+    for (const value of values) {
+      params.append(`${CATALOG_VARIANT_PREFIX}${name}`, value);
     }
   }
   if (next.inStock) params.set("inStock", "1");
