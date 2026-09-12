@@ -130,6 +130,8 @@ function toProductLogSnapshot(product: any) {
     name: product.name,
     slug: product.slug,
     sku: product.sku ?? null,
+    model: product.model ?? null,
+    warranty: product.warranty ?? null,
     type: product.type,
     category: product.category?.name ?? null,
     brand: product.brand?.name ?? null,
@@ -504,6 +506,14 @@ export async function POST(req: Request) {
 
           description: body.description || "",
           shortDesc: body.shortDesc || null,
+          model:
+            typeof body.model === "string" && body.model.trim()
+              ? body.model.trim()
+              : null,
+          warranty:
+            typeof body.warranty === "string" && body.warranty.trim()
+              ? body.warranty.trim()
+              : null,
 
           basePrice,
           originalPrice: body.originalPrice

@@ -14,6 +14,8 @@ export const storefrontProductSelect = {
   brandId: true,
   description: true,
   shortDesc: true,
+  model: true,
+  warranty: true,
   basePrice: true,
   originalPrice: true,
   flashSaleEnabled: true,
