@@ -155,8 +155,10 @@ export async function acquireOrderIdempotencyLock(
 ) {
   // PostgreSQL advisory locks are database-wide and transaction-scoped. This
   // serializes the same logical checkout across every application instance.
+  // The lock function returns void, which Prisma cannot deserialize, so expose
+  // its otherwise-unused result as a supported scalar type.
   await db.$queryRawUnsafe(
-    'SELECT pg_advisory_xact_lock(hashtextextended($1::text, 0)) AS "locked"',
+    'SELECT pg_advisory_xact_lock(hashtextextended($1::text, 0))::text AS "locked"',
     context.storageKey,
   );
 }
