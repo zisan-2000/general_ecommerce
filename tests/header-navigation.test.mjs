@@ -27,8 +27,8 @@ test("desktop and mobile render the same shortcut contract", async () => {
 
   assert.equal(renderCount, 2);
   assert.match(header, /HEADER_SHOP_ACTIONS\.filter/);
-  assert.match(header, /featureVisibility\.compare/);
-  assert.match(header, /featureVisibility\.pcBuilder/);
+  assert.match(header, /features\.COMPARE/);
+  assert.match(header, /features\.PC_BUILDER/);
   assert.match(header, /aria-labelledby="mobile-shop-shortcuts-heading"/);
   assert.match(header, /onClick=\{\(\) => setMobileMenuOpen\(false\)\}/);
   assert.doesNotMatch(

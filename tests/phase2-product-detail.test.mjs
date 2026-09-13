@@ -130,3 +130,21 @@ test("product questions enforce rate limiting and staff permission checks", asyn
   assert.match(source, /access\.has\("products\.manage"\)/);
   assert.match(source, /question\.length > 500/);
 });
+
+test("product descriptions preserve sanitized admin rich text", async () => {
+  const [pageSource, tabsSource] = await Promise.all([
+    readFile(new URL("../app/ecommerce/products/[id]/page.tsx", import.meta.url), "utf8"),
+    readFile(
+      new URL(
+        "../components/ecommarce/product-detail/ProductDetailTabs.tsx",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  ]);
+
+  assert.match(pageSource, /description=\{product\.description \|\| product\.shortDesc \|\| ""\}/);
+  assert.match(tabsSource, /DOMPurify\.sanitize/);
+  assert.match(tabsSource, /dangerouslySetInnerHTML=\{\{ __html: sanitizedContent \}\}/);
+  assert.doesNotMatch(tabsSource, /\{description \|\| "Product description/);
+});

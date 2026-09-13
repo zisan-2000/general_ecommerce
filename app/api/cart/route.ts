@@ -299,13 +299,31 @@ export async function POST(request: NextRequest) {
         throw new Error("PC_BUILDER_WAREHOUSE_STOCK_UNAVAILABLE");
       }
 
-      const rows = await tx.$queryRawUnsafe<CartItemRow[]>(
-        'INSERT INTO "CartItem" ("userId", "productId", "variantId", "quantity", "lineKey") VALUES ($1, $2, $3, 1, $4) ON CONFLICT ("userId", "productId", "variantId", "lineKey") DO UPDATE SET "quantity" = 1 RETURNING "id", "quantity", "productId", "variantId"',
-        userId,
-        productId,
-        variantId,
-        lineKey,
-      );
+      const rows = await tx.$queryRaw<CartItemRow[]>`
+        INSERT INTO "CartItem" (
+          "userId",
+          "productId",
+          "variantId",
+          "quantity",
+          "lineKey",
+          "createdAt",
+          "updatedAt"
+        )
+        VALUES (
+          ${userId},
+          ${productId},
+          ${variantId},
+          1,
+          ${lineKey},
+          CURRENT_TIMESTAMP,
+          CURRENT_TIMESTAMP
+        )
+        ON CONFLICT ("userId", "productId", "variantId", "lineKey")
+        DO UPDATE SET
+          "quantity" = 1,
+          "updatedAt" = CURRENT_TIMESTAMP
+        RETURNING "id", "quantity", "productId", "variantId"
+      `;
       const row = rows[0];
       if (!row) {
         throw new Error("PC_BUILDER_CART_LINE_INSERT_FAILED");

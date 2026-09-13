@@ -41,6 +41,18 @@ test("hand-written PC Builder tables remain explicitly external", async () => {
   assert.doesNotMatch(config, /public\.CartItem/);
 });
 
+test("release migrations repair PC Builder storage for baselined databases", async () => {
+  const migration = await read(
+    "../prisma/migrations-release/20260913130000_ensure_pc_builder_storage/migration.sql",
+  );
+
+  assert.match(migration, /CREATE TABLE IF NOT EXISTS "PcBuildCartItem"/);
+  assert.match(migration, /CREATE TABLE IF NOT EXISTS "PcBuildOrderItem"/);
+  assert.match(migration, /CREATE TABLE IF NOT EXISTS "PcBuilderSavedBuild"/);
+  assert.match(migration, /ADD COLUMN IF NOT EXISTS "lineKey"/);
+  assert.match(migration, /CREATE EXTENSION IF NOT EXISTS pg_trgm/);
+});
+
 test("external PC Builder table contracts remain migration-owned", async () => {
   const [grouping, saved, sharedVariants] = await Promise.all([
     read("../prisma/migrations/20260820_add_pc_build_grouping/migration.sql"),

@@ -69,8 +69,9 @@ test("historical order reads stay available while only order creation is gated",
 });
 
 test("navigation and product actions consume resolved visibility without querying feature rows", async () => {
-  const [layout, header, grid, purchasePanel, manager, featureSettings] = await Promise.all([
-    read("app/ecommerce/layout.tsx"),
+  const [rootLayout, provider, header, grid, purchasePanel, manager, featureSettings] = await Promise.all([
+    read("app/layout.tsx"),
+    read("providers/storefront-features-provider.tsx"),
     read("components/ecommarce/header.tsx"),
     read("components/ecommarce/catalog/CatalogProductGrid.tsx"),
     read("components/ecommarce/product-detail/ProductPurchasePanel.tsx"),
@@ -78,8 +79,13 @@ test("navigation and product actions consume resolved visibility without queryin
     read("app/admin/settings/features/page.tsx"),
   ]);
 
-  assert.match(layout, /getStoreFeatureRegistry\(\)/);
+  assert.match(rootLayout, /getStoreFeatureRegistry\(\)/);
+  assert.match(provider, /\/api\/store-features/);
+  assert.match(provider, /visibilitychange/);
+  assert.match(provider, /usePathname/);
   assert.match(header, /visibleShopActions/);
+  assert.match(header, /features\.PC_BUILDER/);
+  assert.match(header, /features\.COMPARE/);
   assert.match(grid, /compareEnabled/);
   assert.match(purchasePanel, /compareEnabled/);
   assert.match(manager, /Existing product data remains read-only/);

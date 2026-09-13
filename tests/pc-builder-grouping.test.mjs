@@ -104,6 +104,8 @@ test("Step 7 routes preserve old cores and add durable occurrence-aware grouping
   assert.match(validationRoute, /buildId/);
   assert.match(cartRoute, /PC_BUILDER_DATABASE_UNAVAILABLE/);
   assert.match(cartRoute, /status:\s*503/);
+  assert.match(cartRoute, /"updatedAt"\s*=\s*CURRENT_TIMESTAMP/);
+  assert.match(cartRoute, /tx\.\$queryRaw<CartItemRow\[\]>/);
   assert.match(cartRoute, /replayNextRequest/);
   assert.match(cartItemRoute, /replayNextRequest/);
   assert.doesNotMatch(cartRoute, /new NextRequest\(request\.clone\(\)\)/);

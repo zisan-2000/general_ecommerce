@@ -97,7 +97,11 @@ test("checkout route performs replay lookup before stock validation and rechecks
     /commercialContext:\s*orderIdempotencyCommercialContext\(idempotency\)/,
   );
   assert.match(route, /if \(!transactionResult\.replayed\)/);
-  assert.match(helper, /pg_advisory_xact_lock/);
+  assert.match(
+    helper,
+    /pg_advisory_xact_lock\([\s\S]*?\)::text AS "locked"/,
+    "the void-returning lock function must be cast before Prisma deserializes it",
+  );
   assert.match(helper, /IDEMPOTENCY_KEY_REUSED/);
   assert.match(migration, /Order_checkoutIdempotency_key_idx/);
   assert.match(migration, /checkoutIdempotency,key/);

@@ -66,6 +66,11 @@ test("runtime reads and writes go through the central cached resolver", async ()
   assert.match(server, /export async function isFeatureEnabled/);
   assert.match(server, /export async function setStoreFeatureEnabled/);
   assert.match(server, /pg_advisory_xact_lock/);
+  assert.match(
+    server,
+    /pg_advisory_xact_lock\([\s\S]*?\)::text AS "lock"/,
+  );
+  assert.doesNotMatch(server, /\$queryRawUnsafe/);
   assert.match(server, /validateStoreFeatureTransition/);
   assert.match(server, /revalidateStoreFeatureCache\(\)/);
   assert.match(server, /revalidateTag\(tag, \{ expire: 0 \}\)/);
