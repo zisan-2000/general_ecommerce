@@ -208,6 +208,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               details={{
                 brandName: product.brand?.name,
                 categoryName: product.category.name,
+                shortDescription: product.shortDesc,
                 contactNumber: categoryData.facets.siteSettings.contactNumber,
                 contactEmail: categoryData.facets.siteSettings.contactEmail,
                 attributes: product.attributes,
