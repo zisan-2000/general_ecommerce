@@ -19,16 +19,7 @@ import {
   normalizeVariantOptions,
   normalizeVariantMediaMeta,
 } from "@/lib/product-variants";
-import {
-  parseMultiSelectValue,
-  validateCategoryProductAttributePolicy,
-  type CatalogAttributeType,
-} from "@/lib/attribute-schema";
-import {
-  parseSpecificationGroupsInput,
-  type SpecificationGroupInput,
-} from "@/lib/product-specifications";
-import ProductSpecificationBuilder from "./ProductSpecificationBuilder";
+import { type CatalogAttributeType } from "@/lib/attribute-schema";
 import TinymceEditor from "../tinymceEditor";
 
 type ProductType = "PHYSICAL" | "DIGITAL" | "SERVICE";
@@ -334,13 +325,6 @@ export default function ProductAddModal({
   const [form, setForm] = useState<ProductForm>(emptyForm);
   const [hasVariants, setHasVariants] = useState(false);
   const [attributes, setAttributes] = useState<Attribute[]>([]);
-  const [productAttributeValues, setProductAttributeValues] = useState<
-    Record<number, string | string[]>
-  >({});
-  const [specificationsEnabled, setSpecificationsEnabled] = useState(false);
-  const [specificationGroups, setSpecificationGroups] = useState<
-    SpecificationGroupInput[]
-  >([]);
   const [variantOptions, setVariantOptions] = useState<VariantOptionForm[]>([]);
   const [variantRows, setVariantRows] = useState<VariantRowForm[]>([]);
   const [colorVariantImages, setColorVariantImages] = useState<
@@ -474,9 +458,6 @@ export default function ProductAddModal({
       setVariantOptions([]);
       setVariantRows([]);
       setColorVariantImages({});
-      setProductAttributeValues({});
-      setSpecificationsEnabled(false);
-      setSpecificationGroups([]);
       setVariantOptionSearches({});
       return;
     }
@@ -628,40 +609,6 @@ export default function ProductAddModal({
     setHasVariants(isVariantProduct);
     setVariantOptions(isVariantProduct ? optionFormsWithAttributeIds : []);
     setVariantRows(isVariantProduct ? mappedRows : []);
-    setProductAttributeValues(
-      Object.fromEntries(
-        (Array.isArray(editing.attributes) ? editing.attributes : []).map(
-          (item: any) => {
-            const definition = attributes.find(
-              (attribute) => attribute.id === Number(item.attributeId),
-            );
-            return [
-              Number(item.attributeId),
-              definition?.type === "MULTI_SELECT"
-                ? parseMultiSelectValue(
-                    String(item.valueText ?? item.value ?? ""),
-                  )
-                : String(item.value ?? ""),
-            ];
-          },
-        ),
-      ),
-    );
-    const editingSpecificationGroups = Array.isArray(
-      editing.specificationGroups,
-    )
-      ? editing.specificationGroups.map((group: any) => ({
-          name: String(group?.name ?? ""),
-          items: Array.isArray(group?.items)
-            ? group.items.map((item: any) => ({
-                label: String(item?.label ?? ""),
-                value: String(item?.value ?? ""),
-              }))
-            : [],
-        }))
-      : [];
-    setSpecificationGroups(editingSpecificationGroups);
-    setSpecificationsEnabled(editingSpecificationGroups.length > 0);
   }, [attributes, editing]);
 
   useEffect(() => {
@@ -993,30 +940,6 @@ export default function ProductAddModal({
     );
   };
 
-  const updateProductAttributeValue = (
-    attributeId: number,
-    value: string | string[],
-  ) => {
-    setProductAttributeValues((previous) => ({
-      ...previous,
-      [attributeId]: value,
-    }));
-  };
-
-  const toggleMultiSelectValue = (attributeId: number, value: string) => {
-    setProductAttributeValues((previous) => {
-      const selected = Array.isArray(previous[attributeId])
-        ? previous[attributeId]
-        : [];
-      return {
-        ...previous,
-        [attributeId]: selected.includes(value)
-          ? selected.filter((item) => item !== value)
-          : [...selected, value],
-      };
-    });
-  };
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
@@ -1091,39 +1014,6 @@ export default function ProductAddModal({
       toast.error(
         "Each variant needs a SKU, valid price, valid stock, and valid emergency threshold",
       );
-      return;
-    }
-
-    const attributeDefinitions =
-      categoryAttributeMappings.length > 0
-        ? categoryAttributeMappings.map((mapping) => mapping.attribute)
-        : attributes.filter(
-            (attribute) => productAttributeValues[attribute.id] !== undefined,
-          );
-    const productAttributes = attributeDefinitions.flatMap((attribute) => {
-      const current = productAttributeValues[attribute.id];
-      const value = Array.isArray(current)
-        ? JSON.stringify(current)
-        : String(current ?? "").trim();
-      return value && value !== "[]"
-        ? [{ attributeId: attribute.id, value }]
-        : [];
-    });
-    const attributeValidation = validateCategoryProductAttributePolicy({
-      productAttributes,
-      definitions: attributeDefinitions,
-      mappings: categoryAttributeMappings,
-      variantOptions: hasVariants ? normalizedVariantOptions : [],
-    });
-    if (!attributeValidation.ok) {
-      toast.error(attributeValidation.error);
-      return;
-    }
-    const specificationValidation = parseSpecificationGroupsInput(
-      specificationsEnabled ? specificationGroups : [],
-    );
-    if (!specificationValidation.ok) {
-      toast.error(specificationValidation.error);
       return;
     }
 
@@ -1203,8 +1093,6 @@ export default function ProductAddModal({
         gallery: form.gallery || [],
         videoUrl: form.videoUrl || null,
         variantOptions: hasVariants ? normalizedVariantOptions : [],
-        productAttributes,
-        specificationGroups: specificationValidation.value,
       };
 
       if (!editing) payload.available = form.available;
@@ -1441,161 +1329,11 @@ export default function ProductAddModal({
             </div>
           </section>
 
-          <section className="space-y-4 rounded-xl border p-4">
-            <div>
-              <h3 className="font-semibold">Step 2: Category Specifications</h3>
-              <p className="text-sm text-muted-foreground">
-                Fields are controlled by the selected category. Required values
-                are validated again by the server.
-              </p>
-            </div>
-
-            {!form.categoryId ? (
-              <p className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                Select a category to load its specifications.
-              </p>
-            ) : categoryAttributeMappings.length === 0 ? (
-              <p className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                This category has no attribute mapping yet. Existing legacy
-                specifications will be preserved when editing.
-              </p>
-            ) : (
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                {categoryAttributeMappings.map((mapping) => {
-                  const attribute = mapping.attribute;
-                  const fieldId = `product-attribute-${attribute.id}`;
-                  const currentValue = productAttributeValues[attribute.id];
-                  const selectedValues = Array.isArray(currentValue)
-                    ? currentValue
-                    : [];
-                  return (
-                    <div
-                      key={attribute.id}
-                      className="space-y-2 rounded-lg border p-3"
-                    >
-                      <Label htmlFor={fieldId}>
-                        {attribute.name}
-                        {mapping.isRequired ? " *" : ""}
-                        {attribute.unit ? ` (${attribute.unit})` : ""}
-                      </Label>
-                      <div className="flex flex-wrap gap-2 text-[11px] text-muted-foreground">
-                        <span>{attribute.type.replace("_", " ")}</span>
-                        {mapping.isFilterable ? (
-                          <span>• Filterable</span>
-                        ) : null}
-                        {mapping.isVariant ? (
-                          <span>• Variant-enabled</span>
-                        ) : null}
-                      </div>
-
-                      {attribute.type === "BOOLEAN" ? (
-                        <select
-                          id={fieldId}
-                          className="h-10 w-full rounded-md border bg-background px-3 text-sm"
-                          value={
-                            typeof currentValue === "string" ? currentValue : ""
-                          }
-                          onChange={(event) =>
-                            updateProductAttributeValue(
-                              attribute.id,
-                              event.target.value,
-                            )
-                          }
-                        >
-                          <option value="">Select</option>
-                          <option value="true">Yes</option>
-                          <option value="false">No</option>
-                        </select>
-                      ) : attribute.type === "SELECT" ||
-                        attribute.type === "COLOR" ? (
-                        <select
-                          id={fieldId}
-                          className="h-10 w-full rounded-md border bg-background px-3 text-sm"
-                          value={
-                            typeof currentValue === "string" ? currentValue : ""
-                          }
-                          onChange={(event) =>
-                            updateProductAttributeValue(
-                              attribute.id,
-                              event.target.value,
-                            )
-                          }
-                        >
-                          <option value="">Select</option>
-                          {attribute.values.map((item) => (
-                            <option key={item.id} value={item.value}>
-                              {item.value}
-                            </option>
-                          ))}
-                        </select>
-                      ) : attribute.type === "MULTI_SELECT" &&
-                        attribute.values.length > 0 ? (
-                        <div id={fieldId} className="flex flex-wrap gap-2">
-                          {attribute.values.map((item) => (
-                            <label
-                              key={item.id}
-                              className="flex cursor-pointer items-center gap-2 rounded-md border px-3 py-2 text-sm"
-                            >
-                              <input
-                                type="checkbox"
-                                checked={selectedValues.includes(item.value)}
-                                onChange={() =>
-                                  toggleMultiSelectValue(
-                                    attribute.id,
-                                    item.value,
-                                  )
-                                }
-                              />
-                              {item.value}
-                            </label>
-                          ))}
-                        </div>
-                      ) : (
-                        <Input
-                          id={fieldId}
-                          type={attribute.type === "NUMBER" ? "number" : "text"}
-                          step={attribute.type === "NUMBER" ? "any" : undefined}
-                          placeholder={
-                            attribute.type === "MULTI_SELECT"
-                              ? "Comma-separated values"
-                              : undefined
-                          }
-                          value={
-                            typeof currentValue === "string" ? currentValue : ""
-                          }
-                          onChange={(event) =>
-                            updateProductAttributeValue(
-                              attribute.id,
-                              event.target.value,
-                            )
-                          }
-                        />
-                      )}
-
-                      {mapping.isVariant ? (
-                        <p className="text-xs text-muted-foreground">
-                          For multiple sellable values, also add this field in
-                          Variant Setup.
-                        </p>
-                      ) : null}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </section>
-
-          <ProductSpecificationBuilder
-            enabled={specificationsEnabled}
-            groups={specificationGroups}
-            onEnabledChange={setSpecificationsEnabled}
-            onChange={setSpecificationGroups}
-          />
 
           <section className="space-y-4 rounded-xl border p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-semibold">Step 4: Variant Setup</h3>
+                <h3 className="font-semibold">Step 2: Variant Setup</h3>
                 <p className="text-sm text-muted-foreground">
                   Define option groups like Size and Color. The system generates
                   sellable combinations automatically.
