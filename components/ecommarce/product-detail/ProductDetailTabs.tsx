@@ -15,6 +15,12 @@ type ProductInformation = Array<{
   value: string;
 }>;
 
+type ProductVariantOption = {
+  id: number;
+  name: string;
+  values: Array<{ id: number; value: string }>;
+};
+
 type ProductSpecificationGroup = Array<{
   id: number;
   name: string;
@@ -33,6 +39,7 @@ export default function ProductDetailTabs({
   productId,
   description,
   attributes,
+  variantOptions,
   specificationGroups,
   information,
   reviewCount,
@@ -40,6 +47,7 @@ export default function ProductDetailTabs({
   productId: number;
   description: string;
   attributes: ProductAttribute[];
+  variantOptions: ProductVariantOption[];
   specificationGroups: ProductSpecificationGroup;
   information: ProductInformation;
   reviewCount: number;
@@ -117,6 +125,25 @@ export default function ProductDetailTabs({
                   </dt>
                   <dd className="px-3 py-3 font-semibold text-foreground sm:px-4">
                     {item.value}
+                  </dd>
+                </div>
+              ))}
+              {variantOptions.map((option, index) => (
+                <div
+                  key={option.id}
+                  className={`grid grid-cols-[minmax(110px,0.65fr)_minmax(0,1.35fr)] ${
+                    information.length > 0 ||
+                    attributes.length > 0 ||
+                    index > 0
+                      ? "border-t border-border"
+                      : ""
+                  }`}
+                >
+                  <dt className="bg-muted px-3 py-3 font-medium text-muted-foreground sm:px-4">
+                    {option.name}
+                  </dt>
+                  <dd className="px-3 py-3 font-semibold text-foreground sm:px-4">
+                    {option.values.map((item) => item.value).join(", ")}
                   </dd>
                 </div>
               ))}
