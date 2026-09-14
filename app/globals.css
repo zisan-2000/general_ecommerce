@@ -1149,3 +1149,28 @@ body {
 .product-rich-description pre code {
   padding: 0;
 }
+
+.product-rich-description--compact p,
+.product-rich-description--compact ul,
+.product-rich-description--compact ol,
+.product-rich-description--compact blockquote,
+.product-rich-description--compact pre,
+.product-rich-description--compact table,
+.product-rich-description--compact figure {
+  margin-block: 0.35rem;
+}
+
+.product-rich-description--compact h1,
+.product-rich-description--compact h2,
+.product-rich-description--compact h3,
+.product-rich-description--compact h4,
+.product-rich-description--compact h5,
+.product-rich-description--compact h6 {
+  margin-block: 0.65rem 0.25rem;
+  font-size: 0.875rem;
+}
+
+.product-rich-description--compact ul,
+.product-rich-description--compact ol {
+  padding-inline-start: 1.25rem;
+}

@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { useCart } from "@/components/ecommarce/CartContext";
 import { useWishlist } from "@/components/ecommarce/WishlistContext";
 import ProductConversionTools from "@/components/ecommarce/product-detail/ProductConversionTools";
+import ProductRichText from "@/components/ecommarce/product-detail/ProductRichText";
 import PriceDropAlertButton from "@/components/ecommarce/PriceDropAlertButton";
 import { useProductCompare } from "@/hooks/use-product-compare";
 import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
@@ -45,6 +46,7 @@ const money = (value: number, currency: string) => {
 type PurchasePanelDetails = {
   brandName?: string | null;
   categoryName: string;
+  shortDescription?: string | null;
   contactNumber?: string | null;
   contactEmail?: string | null;
   attributes: Array<{
@@ -326,7 +328,16 @@ export default function ProductPurchasePanel({
               ) : null}
             </div>
 
-            {keySpecifications.length > 0 ? (
+            {details.shortDescription?.trim() ? (
+              <div className="mt-5">
+                <ProductRichText
+                  content={details.shortDescription}
+                  className="product-rich-description--compact mt-2 text-[12px] leading-6 text-foreground sm:text-[13px]"
+                />
+              </div>
+            ) : null}
+
+            {keySpecifications.length > 0 && !details.shortDescription?.trim() ? (
               <ul className="mt-3 space-y-0.5 text-[12px] leading-[1.55] text-muted-foreground sm:text-[12px]">
                 {keySpecifications.map((item) => (
                   <li key={item.id} className="flex items-start gap-2">
