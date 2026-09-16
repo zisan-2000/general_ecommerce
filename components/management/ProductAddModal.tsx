@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { Plus, X, Zap } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -321,6 +322,8 @@ export default function ProductAddModal({
   digitalAssets = [],
   features = { DIGITAL_PRODUCTS: true, SERVICE_PRODUCTS: true },
 }: Props) {
+  const t = useTranslations("AdminProductModal");
+
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<ProductForm>(emptyForm);
   const [hasVariants, setHasVariants] = useState(false);
@@ -366,16 +369,20 @@ export default function ProductAddModal({
     };
     visit(null, []);
 
-    // Keep orphaned categories selectable if their parent is unavailable.
     categories.forEach((category) => {
       if (!visited.has(category.id)) {
-        ordered.push({ id: category.id, name: category.name, label: category.name });
+        ordered.push({
+          id: category.id,
+          name: category.name,
+          label: category.name,
+        });
       }
     });
 
     return ordered.sort(
       (left, right) =>
-        left.name.localeCompare(right.name) || left.label.localeCompare(right.label),
+        left.name.localeCompare(right.name) ||
+        left.label.localeCompare(right.label),
     );
   }, [categories]);
 
@@ -535,7 +542,7 @@ export default function ProductAddModal({
             : `simple-${variant.id ?? index}`,
           optionSummary: isVariantProduct
             ? buildVariantSummary(optionNameOrder, options)
-            : "Default variant",
+            : t("variants.defaultVariant"),
           options,
           colorImage:
             typeof variant?.colorImage === "string" && variant.colorImage.trim()
@@ -609,7 +616,7 @@ export default function ProductAddModal({
     setHasVariants(isVariantProduct);
     setVariantOptions(isVariantProduct ? optionFormsWithAttributeIds : []);
     setVariantRows(isVariantProduct ? mappedRows : []);
-  }, [attributes, editing]);
+  }, [attributes, editing, t]);
 
   useEffect(() => {
     if (!hasVariants || !colorOptionName) return;
@@ -724,7 +731,7 @@ export default function ProductAddModal({
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok || !data?.url)
-      throw new Error(data?.message || "Upload failed");
+      throw new Error(data?.message || t("errors.uploadFailed"));
     return data.url as string;
   };
 
@@ -738,7 +745,7 @@ export default function ProductAddModal({
       const url = await uploadFile(file, "color-variant");
       setColorVariantImages((prev) => ({ ...prev, [value]: url }));
     } catch (err: any) {
-      toast.error(err?.message || "Image upload failed");
+      toast.error(err?.message || t("errors.imageUploadFailed"));
     }
   };
 
@@ -749,7 +756,7 @@ export default function ProductAddModal({
       const url = await uploadFile(file, "products");
       setForm((prev) => ({ ...prev, image: url }));
     } catch (err: any) {
-      toast.error(err?.message || "Image upload failed");
+      toast.error(err?.message || t("errors.imageUploadFailed"));
     }
   };
 
@@ -763,7 +770,7 @@ export default function ProductAddModal({
       );
       setForm((prev) => ({ ...prev, gallery: [...prev.gallery, ...urls] }));
     } catch (err: any) {
-      toast.error(err?.message || "Gallery upload failed");
+      toast.error(err?.message || t("errors.galleryUploadFailed"));
     }
   };
 
@@ -813,7 +820,7 @@ export default function ProductAddModal({
         Array.from(new Set([...(variantRows[index]?.gallery ?? []), ...urls])),
       );
     } catch (err: any) {
-      toast.error(err?.message || "Variant gallery upload failed");
+      toast.error(err?.message || t("errors.variantGalleryUploadFailed"));
     } finally {
       e.target.value = "";
     }
@@ -865,7 +872,7 @@ export default function ProductAddModal({
             selectedName.toLocaleLowerCase(),
       );
       if (duplicate) {
-        toast.error(`${selectedName} is already added as a variant option`);
+        toast.error(t("errors.duplicateOption", { name: selectedName }));
         return;
       }
       updateVariantOption(index, {
@@ -889,7 +896,9 @@ export default function ProductAddModal({
         )
       : false;
     if (duplicate && selectedAttribute) {
-      toast.error(`${selectedAttribute.name} is already added as a variant option`);
+      toast.error(
+        t("errors.duplicateOption", { name: selectedAttribute.name }),
+      );
       return;
     }
 
@@ -944,19 +953,19 @@ export default function ProductAddModal({
     e.preventDefault();
 
     if (!form.name || !form.basePrice || !form.categoryId) {
-      toast.error("Name, Category and Price required");
+      toast.error(t("errors.nameCategoryPriceRequired"));
       return;
     }
 
     const dimensions = buildDimensions(form);
     if (dimensions === undefined) {
-      toast.error("Please enter valid dimensions");
+      toast.error(t("errors.invalidDimensions"));
       return;
     }
 
     const basePrice = Number(form.basePrice);
     if (!Number.isFinite(basePrice) || basePrice < 0) {
-      toast.error("Base price must be 0 or more");
+      toast.error(t("errors.invalidBasePrice"));
       return;
     }
     const baseCostPrice = form.baseCostPrice.trim()
@@ -966,11 +975,11 @@ export default function ProductAddModal({
       baseCostPrice !== null &&
       (!Number.isFinite(baseCostPrice) || baseCostPrice < 0)
     ) {
-      toast.error("Base purchase price must be 0 or more");
+      toast.error(t("errors.invalidBaseCostPrice"));
       return;
     }
     if (hasVariants && !form.sku.trim()) {
-      toast.error("Product SKU is required for variant combinations");
+      toast.error(t("errors.skuRequiredForVariants"));
       return;
     }
 
@@ -1003,17 +1012,15 @@ export default function ProductAddModal({
     );
 
     if (hasVariants && normalizedVariantOptions.length === 0) {
-      toast.error("Add at least one variant option with values");
+      toast.error(t("errors.addVariantOption"));
       return;
     }
     if (hasVariants && normalizedVariants.length === 0) {
-      toast.error("Generated variant combinations are required");
+      toast.error(t("errors.generatedVariantsRequired"));
       return;
     }
     if (hasVariants && invalidVariant) {
-      toast.error(
-        "Each variant needs a SKU, valid price, valid stock, and valid emergency threshold",
-      );
+      toast.error(t("errors.invalidVariant"));
       return;
     }
 
@@ -1027,7 +1034,7 @@ export default function ProductAddModal({
         : undefined;
 
     if (stock !== undefined && (!Number.isFinite(stock) || stock < 0)) {
-      toast.error("Stock must be a number (0 or more)");
+      toast.error(t("errors.invalidStock"));
       return;
     }
 
@@ -1035,7 +1042,7 @@ export default function ProductAddModal({
       ? Number(form.lowStockThreshold)
       : 10;
     if (!Number.isFinite(lowStockThreshold) || lowStockThreshold < 0) {
-      toast.error("Emergency stock threshold must be 0 or more");
+      toast.error(t("errors.invalidLowStockThreshold"));
       return;
     }
     const reminderHours = form.cartReminderHours.trim()
@@ -1051,7 +1058,7 @@ export default function ProductAddModal({
       reminderMinutes < 0 ||
       reminderMinutes > 59
     ) {
-      toast.error("Cart reminder must use valid hours and minutes");
+      toast.error(t("errors.invalidCartReminder"));
       return;
     }
     const cartReminderMinutes =
@@ -1118,7 +1125,7 @@ export default function ProductAddModal({
 
       onClose();
     } catch (err: any) {
-      toast.error(err?.message || "Failed to save product");
+      toast.error(err?.message || t("errors.saveFailed"));
     } finally {
       setLoading(false);
     }
@@ -1128,7 +1135,6 @@ export default function ProductAddModal({
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
       onClick={(e) => {
-        // Close modal when clicking on the backdrop (outside the modal content)
         if (e.target === e.currentTarget) {
           onClose();
         }
@@ -1139,25 +1145,25 @@ export default function ProductAddModal({
           type="button"
           onClick={onClose}
           className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/50 text-muted-foreground transition-all hover:bg-destructive hover:text-destructive-foreground hover:border-destructive focus:outline-none focus:ring-2 focus:ring-destructive focus:ring-offset-2"
-          aria-label="Close modal"
+          aria-label={t("closeModal")}
         >
           <X className="h-4 w-4" />
         </button>
 
         <h2 className="mb-4 text-2xl font-bold">
-          {editing ? "Edit Product" : "Add Product"}
+          {editing ? t("titleEdit") : t("titleAdd")}
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <section className="space-y-4 rounded-xl border p-4">
             <div>
-              <h3 className="font-semibold">Step 1: Basic Product Info</h3>
+              <h3 className="font-semibold">{t("basic.title")}</h3>
               <p className="text-sm text-muted-foreground">
-                Core product details shared by simple and variant products.
+                {t("basic.subtitle")}
               </p>
             </div>
             <div>
-              <Label>Name *</Label>
+              <Label>{t("basic.name")}</Label>
               <Input
                 value={form.name}
                 onChange={(e) =>
@@ -1166,7 +1172,7 @@ export default function ProductAddModal({
               />
             </div>
             <div>
-              <Label>Description</Label>
+              <Label>{t("basic.description")}</Label>
               <TinymceEditor
                 value={form.description}
                 onChange={(content) =>
@@ -1176,7 +1182,7 @@ export default function ProductAddModal({
               />
             </div>
             <div>
-              <Label>Short Description</Label>
+              <Label>{t("basic.shortDescription")}</Label>
               <TinymceEditor
                 value={form.shortDesc}
                 onChange={(content) =>
@@ -1187,7 +1193,7 @@ export default function ProductAddModal({
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>Type</Label>
+                <Label>{t("basic.type")}</Label>
                 <select
                   className="w-full rounded border border-border bg-background p-2"
                   value={form.type}
@@ -1198,17 +1204,17 @@ export default function ProductAddModal({
                     }))
                   }
                 >
-                  <option value="PHYSICAL">PHYSICAL</option>
+                  <option value="PHYSICAL">{t("productTypes.PHYSICAL")}</option>
                   {features.DIGITAL_PRODUCTS ? (
-                    <option value="DIGITAL">DIGITAL</option>
+                    <option value="DIGITAL">{t("productTypes.DIGITAL")}</option>
                   ) : null}
                   {features.SERVICE_PRODUCTS ? (
-                    <option value="SERVICE">SERVICE</option>
+                    <option value="SERVICE">{t("productTypes.SERVICE")}</option>
                   ) : null}
                 </select>
               </div>
               <div>
-                <Label>Product SKU</Label>
+                <Label>{t("basic.productSku")}</Label>
                 <Input
                   value={form.sku}
                   onChange={(e) => handleProductSkuChange(e.target.value)}
@@ -1216,7 +1222,7 @@ export default function ProductAddModal({
               </div>
 
               <div>
-                <Label>Model</Label>
+                <Label>{t("basic.model")}</Label>
                 <Input
                   value={form.model}
                   onChange={(event) =>
@@ -1229,7 +1235,7 @@ export default function ProductAddModal({
               </div>
 
               <div>
-                <Label>Warranty</Label>
+                <Label>{t("basic.warranty")}</Label>
                 <Input
                   value={form.warranty}
                   onChange={(event) =>
@@ -1243,7 +1249,7 @@ export default function ProductAddModal({
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>Base Sell Price *</Label>
+                <Label>{t("basic.baseSellPrice")}</Label>
                 <Input
                   type="number"
                   value={form.basePrice}
@@ -1251,7 +1257,7 @@ export default function ProductAddModal({
                 />
               </div>
               <div>
-                <Label>Base Purchase Price</Label>
+                <Label>{t("basic.basePurchasePrice")}</Label>
                 <Input
                   type="number"
                   value={form.baseCostPrice}
@@ -1266,7 +1272,7 @@ export default function ProductAddModal({
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>Original Price</Label>
+                <Label>{t("basic.originalPrice")}</Label>
                 <Input
                   type="number"
                   value={form.originalPrice}
@@ -1279,7 +1285,7 @@ export default function ProductAddModal({
                 />
               </div>
               <div>
-                <Label>Currency</Label>
+                <Label>{t("basic.currency")}</Label>
                 <Input
                   value={form.currency}
                   onChange={(e) =>
@@ -1293,7 +1299,7 @@ export default function ProductAddModal({
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>Category *</Label>
+                <Label>{t("basic.category")}</Label>
                 <select
                   className="w-full rounded border border-border bg-background p-2"
                   value={form.categoryId}
@@ -1301,7 +1307,7 @@ export default function ProductAddModal({
                     setForm((prev) => ({ ...prev, categoryId: e.target.value }))
                   }
                 >
-                  <option value="">Select</option>
+                  <option value="">{t("basic.select")}</option>
                   {categoryOptions.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.label}
@@ -1310,7 +1316,7 @@ export default function ProductAddModal({
                 </select>
               </div>
               <div>
-                <Label>Brand</Label>
+                <Label>{t("basic.brand")}</Label>
                 <select
                   className="w-full rounded border border-border bg-background p-2"
                   value={form.brandId}
@@ -1318,7 +1324,7 @@ export default function ProductAddModal({
                     setForm((prev) => ({ ...prev, brandId: e.target.value }))
                   }
                 >
-                  <option value="">Select</option>
+                  <option value="">{t("basic.select")}</option>
                   {brands.map((brand) => (
                     <option key={brand.id} value={brand.id}>
                       {brand.name}
@@ -1329,14 +1335,12 @@ export default function ProductAddModal({
             </div>
           </section>
 
-
           <section className="space-y-4 rounded-xl border p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-semibold">Step 2: Variant Setup</h3>
+                <h3 className="font-semibold">{t("variants.title")}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Define option groups like Size and Color. The system generates
-                  sellable combinations automatically.
+                  {t("variants.subtitle")}
                 </p>
               </div>
               <label className="flex items-center gap-2 text-sm font-medium">
@@ -1345,20 +1349,19 @@ export default function ProductAddModal({
                   checked={hasVariants}
                   onChange={(e) => setHasVariants(e.target.checked)}
                 />
-                Enable Variants
+                {t("variants.enable")}
               </label>
             </div>
 
             {!hasVariants ? (
               <div className="rounded-lg border border-dashed p-4">
                 <p className="text-sm text-muted-foreground">
-                  This product will be stored as a simple product with one
-                  default variant.
+                  {t("variants.simpleProductNotice")}
                 </p>
                 {form.type === "PHYSICAL" && (
                   <div className="mt-4 grid max-w-2xl grid-cols-1 gap-4 md:grid-cols-2">
                     <div>
-                      <Label>Simple Product Stock</Label>
+                      <Label>{t("variants.simpleStock")}</Label>
                       <Input
                         type="number"
                         value={form.stockQty}
@@ -1371,7 +1374,7 @@ export default function ProductAddModal({
                       />
                     </div>
                     <div>
-                      <Label>Emergency Stock Threshold</Label>
+                      <Label>{t("variants.emergencyStock")}</Label>
                       <Input
                         type="number"
                         min="0"
@@ -1396,11 +1399,13 @@ export default function ProductAddModal({
                   >
                     <div className="grid grid-cols-1 gap-3 md:grid-cols-[1fr_1.2fr_auto]">
                       <div>
-                        <Label>Option</Label>
+                        <Label>{t("variants.option")}</Label>
                         <Input
                           className="mb-2"
-                          placeholder="Search options..."
-                          aria-label={`Search variant option ${index + 1}`}
+                          placeholder={t("variants.searchOptions")}
+                          aria-label={t("variants.searchOptionAria", {
+                            index: index + 1,
+                          })}
                           value={variantOptionSearches[index] ?? ""}
                           onChange={(event) =>
                             setVariantOptionSearches((previous) => ({
@@ -1423,7 +1428,9 @@ export default function ProductAddModal({
                             applyVariantOptionSelection(index, e.target.value)
                           }
                         >
-                          <option value="">Select managed attribute</option>
+                          <option value="">
+                            {t("variants.selectManagedAttribute")}
+                          </option>
                           {selectableVariantOptions
                             .filter((item) =>
                               item.label
@@ -1443,7 +1450,7 @@ export default function ProductAddModal({
                         {!option.attributeId && (
                           <Input
                             className="mt-2"
-                            placeholder="Custom option name"
+                            placeholder={t("variants.customOptionName")}
                             value={option.name}
                             onChange={(e) =>
                               updateVariantOption(index, {
@@ -1454,7 +1461,7 @@ export default function ProductAddModal({
                         )}
                       </div>
                       <div>
-                        <Label>Add Option Value</Label>
+                        <Label>{t("variants.addOptionValue")}</Label>
                         <div className="flex gap-2">
                           <Input
                             placeholder="M"
@@ -1476,13 +1483,12 @@ export default function ProductAddModal({
                             variant="outline"
                             onClick={() => addOptionValue(index)}
                           >
-                            Add
+                            {t("variants.add")}
                           </Button>
                         </div>
                         {option.attributeId && (
                           <p className="mt-2 text-xs text-muted-foreground">
-                            Loaded from Attributes Manager. You can still remove
-                            unused values below.
+                            {t("variants.attributeLoaded")}
                           </p>
                         )}
                       </div>
@@ -1499,14 +1505,14 @@ export default function ProductAddModal({
                             )
                           }
                         >
-                          Remove
+                          {t("variants.remove")}
                         </Button>
                       </div>
                     </div>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {option.values.length === 0 ? (
                         <p className="text-sm text-muted-foreground">
-                          No values added yet.
+                          {t("variants.noValues")}
                         </p>
                       ) : (
                         option.values.map((value) => (
@@ -1528,7 +1534,7 @@ export default function ProductAddModal({
                                   </span>
                                 )}
                                 <label className="cursor-pointer rounded-full border px-2 py-0.5 text-xs text-muted-foreground hover:bg-muted">
-                                  Upload
+                                  {t("variants.upload")}
                                   <input
                                     type="file"
                                     accept="image/*"
@@ -1571,7 +1577,7 @@ export default function ProductAddModal({
                         return (
                           <div className="mt-3">
                             <p className="mb-2 text-xs text-muted-foreground">
-                              Managed values available
+                              {t("variants.managedValuesAvailable")}
                             </p>
                             <div className="flex flex-wrap gap-2">
                               {missingValues.map((value) => (
@@ -1603,27 +1609,28 @@ export default function ProductAddModal({
                   }
                 >
                   <Plus className="mr-1 h-4 w-4" />
-                  Add Variant Option
+                  {t("variants.addVariantOption")}
                 </Button>
 
                 <div className="rounded-lg border p-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <h4 className="font-medium">
-                        Generated Variant Combinations
+                        {t("variants.combinationsTitle")}
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        Each row maps to one product variant. Stock is synced
-                        into warehouse stock, not stored independently.
+                        {t("variants.combinationsSubtitle")}
                       </p>
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      {variantRows.length} combinations
+                      {t("variants.combinationsCount", {
+                        count: variantRows.length,
+                      })}
                     </div>
                   </div>
                   {variantRows.length === 0 ? (
                     <p className="mt-4 text-sm text-muted-foreground">
-                      Add option names and values to generate combinations.
+                      {t("variants.noCombinations")}
                     </p>
                   ) : (
                     <div className="mt-4 overflow-x-auto">
@@ -1631,24 +1638,30 @@ export default function ProductAddModal({
                         <thead>
                           <tr className="border-b text-left">
                             <th className="px-2 py-2 font-medium">
-                              Combination
-                            </th>
-                            <th className="px-2 py-2 font-medium">SKU</th>
-                            <th className="px-2 py-2 font-medium">
-                              Sell Price
+                              {t("variants.table.combination")}
                             </th>
                             <th className="px-2 py-2 font-medium">
-                              Purchase Price
+                              {t("variants.table.sku")}
+                            </th>
+                            <th className="px-2 py-2 font-medium">
+                              {t("variants.table.sellPrice")}
+                            </th>
+                            <th className="px-2 py-2 font-medium">
+                              {t("variants.table.purchasePrice")}
                             </th>
                             {form.type === "PHYSICAL" && (
-                              <th className="px-2 py-2 font-medium">Stock</th>
+                              <th className="px-2 py-2 font-medium">
+                                {t("variants.table.stock")}
+                              </th>
                             )}
                             {form.type === "PHYSICAL" && (
                               <th className="px-2 py-2 font-medium">
-                                Emergency Stock
+                                {t("variants.table.emergencyStock")}
                               </th>
                             )}
-                            <th className="px-2 py-2 font-medium">Status</th>
+                            <th className="px-2 py-2 font-medium">
+                              {t("variants.table.status")}
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -1674,7 +1687,7 @@ export default function ProductAddModal({
                                     {row.optionSummary}
                                   </div>
                                   <div className="text-xs text-muted-foreground">
-                                    Warehouse stock target: default warehouse
+                                    {t("variants.warehouseTarget")}
                                   </div>
                                   <div className="mt-3 space-y-2">
                                     {isFirstGalleryRowForColor ? (
@@ -1705,7 +1718,7 @@ export default function ProductAddModal({
                                           </div>
                                         ))}
                                         <label className="inline-flex h-16 cursor-pointer items-center justify-center rounded border border-dashed border-border px-3 text-xs font-medium text-muted-foreground transition hover:border-primary hover:text-foreground">
-                                          Upload Gallery
+                                          {t("variants.uploadGallery")}
                                           <input
                                             type="file"
                                             multiple
@@ -1722,15 +1735,15 @@ export default function ProductAddModal({
                                       </div>
                                     ) : (
                                       <p className="text-xs text-muted-foreground">
-                                        Uses the same gallery as Color:{" "}
-                                        {rowColorValue}.
+                                        {t("variants.sameGalleryAsColor", {
+                                          color: rowColorValue,
+                                        })}
                                       </p>
                                     )}
                                     {isFirstGalleryRowForColor &&
                                       row.gallery.length === 0 && (
                                         <p className="text-xs text-muted-foreground">
-                                          One gallery will be used for all sizes
-                                          in this color.
+                                          {t("variants.gallerySharedNotice")}
                                         </p>
                                       )}
                                   </div>
@@ -1738,7 +1751,7 @@ export default function ProductAddModal({
                                 <td className="px-2 py-3">
                                   <Input
                                     value={row.sku}
-                                    placeholder="Product SKU"
+                                    placeholder={t("variants.table.sku")}
                                     disabled
                                   />
                                 </td>
@@ -1746,7 +1759,10 @@ export default function ProductAddModal({
                                   <Input
                                     type="number"
                                     value={row.price}
-                                    placeholder={form.basePrice || "Base price"}
+                                    placeholder={
+                                      form.basePrice ||
+                                      t("variants.basePricePlaceholder")
+                                    }
                                     onChange={(e) =>
                                       updateVariantRow(index, {
                                         price: e.target.value,
@@ -1759,7 +1775,8 @@ export default function ProductAddModal({
                                     type="number"
                                     value={row.costPrice}
                                     placeholder={
-                                      form.baseCostPrice || "Purchase price"
+                                      form.baseCostPrice ||
+                                      t("variants.purchasePricePlaceholder")
                                     }
                                     onChange={(e) =>
                                       updateVariantRow(index, {
@@ -1806,7 +1823,7 @@ export default function ProductAddModal({
                                         })
                                       }
                                     />
-                                    Active
+                                    {t("variants.active")}
                                   </label>
                                 </td>
                               </tr>
@@ -1818,7 +1835,9 @@ export default function ProductAddModal({
                   )}
                   {form.type === "PHYSICAL" && variantRows.length > 0 && (
                     <p className="mt-3 text-sm text-muted-foreground">
-                      Total variant stock: {totalVariantStock}
+                      {t("variants.totalVariantStock", {
+                        count: totalVariantStock,
+                      })}
                     </p>
                   )}
                 </div>
@@ -1827,10 +1846,10 @@ export default function ProductAddModal({
           </section>
 
           <section className="space-y-4 rounded-xl border p-4">
-            <h3 className="font-semibold">Additional Details</h3>
+            <h3 className="font-semibold">{t("additional.title")}</h3>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>Weight</Label>
+                <Label>{t("additional.weight")}</Label>
                 <Input
                   type="number"
                   value={form.weight}
@@ -1841,12 +1860,12 @@ export default function ProductAddModal({
               </div>
             </div>
             <div>
-              <Label>Dimensions</Label>
+              <Label>{t("additional.dimensions")}</Label>
               <div className="grid grid-cols-2 gap-4">
                 <Input
                   type="number"
                   value={form.dimLength}
-                  placeholder="Length"
+                  placeholder={t("additional.length")}
                   onChange={(e) =>
                     setForm((prev) => ({ ...prev, dimLength: e.target.value }))
                   }
@@ -1854,7 +1873,7 @@ export default function ProductAddModal({
                 <Input
                   type="number"
                   value={form.dimWidth}
-                  placeholder="Width"
+                  placeholder={t("additional.width")}
                   onChange={(e) =>
                     setForm((prev) => ({ ...prev, dimWidth: e.target.value }))
                   }
@@ -1862,7 +1881,7 @@ export default function ProductAddModal({
                 <Input
                   type="number"
                   value={form.dimHeight}
-                  placeholder="Height"
+                  placeholder={t("additional.height")}
                   onChange={(e) =>
                     setForm((prev) => ({ ...prev, dimHeight: e.target.value }))
                   }
@@ -1883,7 +1902,7 @@ export default function ProductAddModal({
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <Label>VAT Class</Label>
+                <Label>{t("additional.vatClass")}</Label>
                 <select
                   className="w-full rounded border border-border bg-background p-2"
                   value={form.VatClassId}
@@ -1891,7 +1910,7 @@ export default function ProductAddModal({
                     setForm((prev) => ({ ...prev, VatClassId: e.target.value }))
                   }
                 >
-                  <option value="">Select</option>
+                  <option value="">{t("basic.select")}</option>
                   {vatClasses.map((item) => (
                     <option key={item.id} value={item.id}>
                       {item.name} ({item.code})
@@ -1900,7 +1919,7 @@ export default function ProductAddModal({
                 </select>
               </div>
               <div>
-                <Label>Video URL</Label>
+                <Label>{t("additional.videoUrl")}</Label>
                 <Input
                   value={form.videoUrl}
                   onChange={(e) =>
@@ -1920,7 +1939,7 @@ export default function ProductAddModal({
                   }))
                 }
               >
-                <option value="">Select Digital Asset</option>
+                <option value="">{t("additional.selectDigitalAsset")}</option>
                 {digitalAssets.map((asset) => (
                   <option key={asset.id} value={asset.id}>
                     {asset.title}
@@ -1933,7 +1952,7 @@ export default function ProductAddModal({
                 <Input
                   type="number"
                   value={form.serviceDurationMinutes}
-                  placeholder="Service Duration (minutes)"
+                  placeholder={t("additional.serviceDuration")}
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
@@ -1943,7 +1962,7 @@ export default function ProductAddModal({
                 />
                 <Input
                   value={form.serviceLocation}
-                  placeholder="Service Location"
+                  placeholder={t("additional.serviceLocation")}
                   onChange={(e) =>
                     setForm((prev) => ({
                       ...prev,
@@ -1954,7 +1973,7 @@ export default function ProductAddModal({
                 <div className="md:col-span-2">
                   <Input
                     value={form.serviceOnlineLink}
-                    placeholder="Service Online Link"
+                    placeholder={t("additional.serviceOnlineLink")}
                     onChange={(e) =>
                       setForm((prev) => ({
                         ...prev,
@@ -1968,11 +1987,14 @@ export default function ProductAddModal({
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {editing ? (
                 <div className="rounded-lg border bg-muted/40 px-3 py-2 text-sm">
-                  <span className="font-medium">Status: </span>
-                  <span>{form.available ? "Available" : "Unavailable"}</span>
+                  <span className="font-medium">{t("additional.status")} </span>
+                  <span>
+                    {form.available
+                      ? t("additional.available")
+                      : t("additional.unavailable")}
+                  </span>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    Use the product card&apos;s Activate/Deactivate action to
-                    change availability.
+                    {t("additional.statusHint")}
                   </p>
                 </div>
               ) : (
@@ -1987,7 +2009,7 @@ export default function ProductAddModal({
                       }))
                     }
                   />
-                  <Label>Available</Label>
+                  <Label>{t("additional.availableLabel")}</Label>
                 </label>
               )}
               <label className="flex items-center gap-2">
@@ -1998,18 +2020,17 @@ export default function ProductAddModal({
                     setForm((prev) => ({ ...prev, featured: e.target.checked }))
                   }
                 />
-                <Label>Featured</Label>
+                <Label>{t("additional.featuredLabel")}</Label>
               </label>
             </div>
             <div className="rounded-xl border bg-muted/30 p-4">
-              <h4 className="font-medium">Cart reminder notification</h4>
+              <h4 className="font-medium">{t("cartReminder.title")}</h4>
               <p className="mt-1 text-sm text-muted-foreground">
-                Notify a user if this product stays in their cart without
-                checkout. Leave both fields empty or 0 to disable.
+                {t("cartReminder.description")}
               </p>
               <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
-                  <Label>After hours</Label>
+                  <Label>{t("cartReminder.afterHours")}</Label>
                   <Input
                     type="number"
                     min="0"
@@ -2023,7 +2044,7 @@ export default function ProductAddModal({
                   />
                 </div>
                 <div>
-                  <Label>After minutes</Label>
+                  <Label>{t("cartReminder.afterMinutes")}</Label>
                   <Input
                     type="number"
                     min="0"
@@ -2042,14 +2063,14 @@ export default function ProductAddModal({
           </section>
 
           <section className="space-y-4 rounded-xl border p-4">
-            <h3 className="font-semibold">Media</h3>
+            <h3 className="font-semibold">{t("media.title")}</h3>
             <div>
-              <Label>Main Image</Label>
+              <Label>{t("media.mainImage")}</Label>
               {form.image ? (
                 <div className="relative w-32">
                   <Image
                     src={form.image}
-                    alt="preview"
+                    alt={t("media.preview")}
                     width={120}
                     height={120}
                     className="rounded border border-border"
@@ -2073,13 +2094,13 @@ export default function ProductAddModal({
               )}
             </div>
             <div>
-              <Label>Gallery</Label>
+              <Label>{t("media.gallery")}</Label>
               <div className="mb-3 flex flex-wrap gap-3">
                 {form.gallery.map((img, index) => (
                   <div key={index} className="relative">
                     <Image
                       src={img}
-                      alt="gallery"
+                      alt={t("media.galleryAlt")}
                       width={100}
                       height={100}
                       className="rounded border border-border"
@@ -2107,7 +2128,7 @@ export default function ProductAddModal({
 
           <div className="flex justify-end gap-3">
             <Button variant="outline" type="button" onClick={onClose}>
-              Cancel
+              {t("actions.cancel")}
             </Button>
             <Button
               type="submit"
@@ -2115,7 +2136,7 @@ export default function ProductAddModal({
               className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <Zap className="mr-1 h-4 w-4" />
-              {editing ? "Update Product" : "Add Product"}
+              {editing ? t("actions.update") : t("actions.add")}
             </Button>
           </div>
         </form>

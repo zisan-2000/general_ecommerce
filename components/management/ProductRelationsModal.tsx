@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import { Edit3, Plus, Printer, RefreshCw, Trash2, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { parseMultiSelectValue, type CatalogAttributeType } from "@/lib/attribute-schema";
+import {
+  parseMultiSelectValue,
+  type CatalogAttributeType,
+} from "@/lib/attribute-schema";
 import {
   Table,
   TableBody,
@@ -132,21 +136,35 @@ interface Props {
 
 type BookPartyOption = { id: number; name: string };
 
-export default function ProductRelationsModal({ open, onClose, product, booksEnabled = false }: Props) {
+export default function ProductRelationsModal({
+  open,
+  onClose,
+  product,
+  booksEnabled = false,
+}: Props) {
+  const t = useTranslations("AdminProductRelations");
+
   const [loading, setLoading] = useState(false);
   const [variants, setVariants] = useState<Variant[]>([]);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
   const [attributes, setAttributes] = useState<Attribute[]>([]);
-  const [productAttributes, setProductAttributes] = useState<ProductAttribute[]>([]);
+  const [productAttributes, setProductAttributes] = useState<
+    ProductAttribute[]
+  >([]);
   const [serviceSlots, setServiceSlots] = useState<ServiceSlot[]>([]);
   const [logs, setLogs] = useState<InventoryLog[]>([]);
   const [digitalAssets, setDigitalAssets] = useState<DigitalAsset[]>([]);
   const [writers, setWriters] = useState<BookPartyOption[]>([]);
   const [publishers, setPublishers] = useState<BookPartyOption[]>([]);
-  const [bookMetadata, setBookMetadata] = useState({ writerId: "", publisherId: "" });
+  const [bookMetadata, setBookMetadata] = useState({
+    writerId: "",
+    publisherId: "",
+  });
   const [bookSaving, setBookSaving] = useState(false);
 
-  const [selectedVariantId, setSelectedVariantId] = useState<number | null>(null);
+  const [selectedVariantId, setSelectedVariantId] = useState<number | null>(
+    null,
+  );
 
   const [variantFormOpen, setVariantFormOpen] = useState(false);
   const [editingVariant, setEditingVariant] = useState<Variant | null>(null);
@@ -204,14 +222,22 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
     try {
       setLoading(true);
       const [vRes, wRes, aRes, paRes, lRes, daRes, ssRes] = await Promise.all([
-        fetch(`/api/product-variants?productId=${product.id}`, { cache: "no-store" }),
+        fetch(`/api/product-variants?productId=${product.id}`, {
+          cache: "no-store",
+        }),
         fetch(`/api/warehouses`, { cache: "no-store" }),
         fetch(`/api/attributes`, { cache: "no-store" }),
-        fetch(`/api/product-attributes?productId=${product.id}`, { cache: "no-store" }),
-        fetch(`/api/inventory-logs?productId=${product.id}`, { cache: "no-store" }),
+        fetch(`/api/product-attributes?productId=${product.id}`, {
+          cache: "no-store",
+        }),
+        fetch(`/api/inventory-logs?productId=${product.id}`, {
+          cache: "no-store",
+        }),
         fetch(`/api/digital-assets`, { cache: "no-store" }),
         product.type === "SERVICE"
-          ? fetch(`/api/service-slots?productId=${product.id}`, { cache: "no-store" })
+          ? fetch(`/api/service-slots?productId=${product.id}`, {
+              cache: "no-store",
+            })
           : Promise.resolve(null as any),
       ]);
 
@@ -236,7 +262,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
       const firstVariantId = (v || [])[0]?.id;
       setSelectedVariantId((prev) => prev ?? firstVariantId ?? null);
     } catch {
-      toast.error("Failed to load product relations");
+      toast.error(t("errors.loadRelations"));
     } finally {
       setLoading(false);
     }
@@ -270,6 +296,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
       notes: "",
     });
     void loadAll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, product?.id]);
 
   useEffect(() => {
@@ -279,25 +306,35 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
       fetch(`/api/book-metadata/${product.id}`, { cache: "no-store" }),
       fetch("/api/writers", { cache: "no-store" }),
       fetch("/api/publishers", { cache: "no-store" }),
-    ]).then(async ([metadataResponse, writersResponse, publishersResponse]) => {
-      const [metadataPayload, writersPayload, publishersPayload] = await Promise.all([
-        metadataResponse.status === 404 ? null : metadataResponse.json(),
-        writersResponse.json(),
-        publishersResponse.json(),
-      ]);
-      if (!active) return;
-      setBookMetadata({
-        writerId: metadataPayload?.writerId ? String(metadataPayload.writerId) : "",
-        publisherId: metadataPayload?.publisherId ? String(metadataPayload.publisherId) : "",
+    ])
+      .then(async ([metadataResponse, writersResponse, publishersResponse]) => {
+        const [metadataPayload, writersPayload, publishersPayload] =
+          await Promise.all([
+            metadataResponse.status === 404 ? null : metadataResponse.json(),
+            writersResponse.json(),
+            publishersResponse.json(),
+          ]);
+        if (!active) return;
+        setBookMetadata({
+          writerId: metadataPayload?.writerId
+            ? String(metadataPayload.writerId)
+            : "",
+          publisherId: metadataPayload?.publisherId
+            ? String(metadataPayload.publisherId)
+            : "",
+        });
+        setWriters(Array.isArray(writersPayload) ? writersPayload : []);
+        setPublishers(
+          Array.isArray(publishersPayload) ? publishersPayload : [],
+        );
+      })
+      .catch(() => {
+        if (active) toast.error(t("errors.loadBookMetadata"));
       });
-      setWriters(Array.isArray(writersPayload) ? writersPayload : []);
-      setPublishers(Array.isArray(publishersPayload) ? publishersPayload : []);
-    }).catch(() => {
-      if (active) toast.error("Failed to load book metadata");
-    });
     return () => {
       active = false;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [booksEnabled, open, product?.id]);
 
   const saveBookMetadata = async () => {
@@ -313,10 +350,15 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         }),
       });
       const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || "Failed to save book metadata");
-      toast.success("Book metadata saved");
+      if (!response.ok)
+        throw new Error(payload?.error || t("errors.saveBookMetadataFailed"));
+      toast.success(t("bookMetadata.saved"));
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to save book metadata");
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : t("errors.saveBookMetadataFailed"),
+      );
     } finally {
       setBookSaving(false);
     }
@@ -326,7 +368,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
     if (!selectedVariant) return;
     const next: Record<number, string> = {};
     for (const w of warehouses) {
-      const level = selectedVariant.stockLevels?.find((sl) => sl.warehouseId === w.id);
+      const level = selectedVariant.stockLevels?.find(
+        (sl) => sl.warehouseId === w.id,
+      );
       next[w.id] = level ? String(level.quantity) : "0";
     }
     setStockDraft(next);
@@ -381,7 +425,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
 
   const toggleVariantSelection = (variantId: number, checked: boolean) => {
     setSelectedVariantIds((prev) =>
-      checked ? Array.from(new Set([...prev, variantId])) : prev.filter((id) => id !== variantId),
+      checked
+        ? Array.from(new Set([...prev, variantId]))
+        : prev.filter((id) => id !== variantId),
     );
   };
 
@@ -391,7 +437,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
 
   const printStickers = (variantIds: number[]) => {
     if (variantIds.length === 0) {
-      toast.error("Select at least one variant");
+      toast.error(t("errors.selectAtLeastOneVariant"));
       return;
     }
 
@@ -417,15 +463,15 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
     const stock = Number(variantForm.stock);
 
     if (!sku) {
-      toast.error("SKU is required");
+      toast.error(t("errors.skuRequired"));
       return;
     }
     if (!Number.isFinite(price) || price < 0) {
-      toast.error("Price is required");
+      toast.error(t("errors.priceRequired"));
       return;
     }
     if (!Number.isFinite(stock) || stock < 0) {
-      toast.error("Stock must be 0 or more");
+      toast.error(t("errors.invalidStock"));
       return;
     }
 
@@ -460,27 +506,31 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Save failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.saveFailed"));
 
-      toast.success(editingVariant ? "Variant updated" : "Variant created");
+      toast.success(
+        editingVariant ? t("variants.updated") : t("variants.created"),
+      );
       setVariantFormOpen(false);
       setEditingVariant(null);
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Save failed");
+      toast.error(err?.message || t("errors.saveFailed"));
     }
   };
 
   const deleteVariant = async (variantId: number) => {
-    if (!confirm("Delete this variant?")) return;
+    if (!confirm(t("confirm.deleteVariant"))) return;
     try {
-      const res = await fetch(`/api/product-variants/${variantId}`, { method: "DELETE" });
+      const res = await fetch(`/api/product-variants/${variantId}`, {
+        method: "DELETE",
+      });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
-      toast.success("Variant deleted");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
+      toast.success(t("variants.deleted"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
@@ -500,11 +550,11 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Regenerate failed");
-      toast.success("Variant codes regenerated");
+      if (!res.ok) throw new Error(data?.error || t("errors.regenerateFailed"));
+      toast.success(t("variants.codesRegenerated"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Regenerate failed");
+      toast.error(err?.message || t("errors.regenerateFailed"));
     }
   };
 
@@ -513,11 +563,11 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
     const attributeId = Number(newAttr.attributeId);
     const value = newAttr.value.trim();
     if (!attributeId) {
-      toast.error("Select an attribute");
+      toast.error(t("errors.selectAttribute"));
       return;
     }
     if (!value) {
-      toast.error("Value is required");
+      toast.error(t("errors.valueRequired"));
       return;
     }
 
@@ -528,26 +578,28 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         body: JSON.stringify({ productId: product.id, attributeId, value }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Add failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.addFailed"));
 
-      toast.success("Attribute added");
+      toast.success(t("attributes.added"));
       setNewAttr({ attributeId: "", value: "" });
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Add failed");
+      toast.error(err?.message || t("errors.addFailed"));
     }
   };
 
   const deleteProductAttribute = async (id: number) => {
-    if (!confirm("Remove this product attribute?")) return;
+    if (!confirm(t("confirm.removeAttribute"))) return;
     try {
-      const res = await fetch(`/api/product-attributes/${id}`, { method: "DELETE" });
+      const res = await fetch(`/api/product-attributes/${id}`, {
+        method: "DELETE",
+      });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
-      toast.success("Removed");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
+      toast.success(t("attributes.removed"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
@@ -555,7 +607,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
     if (!selectedVariant) return;
     const qty = Number(stockDraft[warehouseId]);
     if (!Number.isFinite(qty) || qty < 0) {
-      toast.error("Quantity must be 0 or more");
+      toast.error(t("errors.invalidQuantity"));
       return;
     }
 
@@ -570,38 +622,40 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Save failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.saveFailed"));
 
-      toast.success("Saved");
+      toast.success(t("common.saved"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Save failed");
+      toast.error(err?.message || t("errors.saveFailed"));
     }
   };
 
   const deleteStockLevel = async (stockLevelId: number) => {
-    if (!confirm("Delete this warehouse stock entry?")) return;
+    if (!confirm(t("confirm.deleteStockLevel"))) return;
     try {
-      const res = await fetch(`/api/stock-levels/${stockLevelId}`, { method: "DELETE" });
+      const res = await fetch(`/api/stock-levels/${stockLevelId}`, {
+        method: "DELETE",
+      });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
-      toast.success("Deleted");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
+      toast.success(t("common.deleted"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
   const addServiceSlot = async () => {
     if (!product) return;
     if (!slotForm.startsAt || !slotForm.endsAt) {
-      toast.error("Start and End are required");
+      toast.error(t("errors.startEndRequired"));
       return;
     }
 
     const capacity = Number(slotForm.capacity || "1");
     if (!Number.isFinite(capacity) || capacity < 1) {
-      toast.error("Capacity must be 1 or more");
+      toast.error(t("errors.invalidCapacity"));
       return;
     }
 
@@ -620,8 +674,8 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Create failed");
-      toast.success("Service slot created");
+      if (!res.ok) throw new Error(data?.error || t("errors.createFailed"));
+      toast.success(t("serviceSlots.created"));
       setSlotForm({
         startsAt: "",
         endsAt: "",
@@ -632,20 +686,20 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
       });
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Create failed");
+      toast.error(err?.message || t("errors.createFailed"));
     }
   };
 
   const deleteServiceSlot = async (id: number) => {
-    if (!confirm("Delete this service slot?")) return;
+    if (!confirm(t("confirm.deleteServiceSlot"))) return;
     try {
       const res = await fetch(`/api/service-slots/${id}`, { method: "DELETE" });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
-      toast.success("Deleted");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
+      toast.success(t("common.deleted"));
       await loadAll();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
@@ -653,11 +707,14 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
 
   return (
     <Dialog open={open} onOpenChange={(nextOpen) => !nextOpen && onClose()}>
-      <DialogContent className="max-w-7xl w-full max-h-[90vh] overflow-hidden flex flex-col" showCloseButton={false}>
+      <DialogContent
+        className="max-w-7xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+        showCloseButton={false}
+      >
         <DialogHeader className="flex-shrink-0">
           <DialogTitle className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <span className="truncate text-lg sm:text-xl">
-              Manage: {product.name} ({product.type})
+              {t("title", { name: product.name, type: product.type })}
             </span>
             <div className="flex gap-2 flex-shrink-0">
               <Button
@@ -668,58 +725,109 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                 className="flex-shrink-0"
               >
                 <RefreshCw className="h-4 w-4 mr-1" />
-                <span className="hidden sm:inline">Refresh</span>
+                <span className="hidden sm:inline">{t("actions.refresh")}</span>
                 <span className="sm:hidden">↻</span>
               </Button>
-              <Button size="icon" variant="ghost" onClick={onClose} className="flex-shrink-0">
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={onClose}
+                className="flex-shrink-0"
+              >
                 <X className="h-4 w-4" />
               </Button>
             </div>
           </DialogTitle>
         </DialogHeader>
 
-        <Tabs defaultValue="variants" className="w-full flex-1 overflow-hidden flex flex-col">
+        <Tabs
+          defaultValue="variants"
+          className="w-full flex-1 overflow-hidden flex flex-col"
+        >
           <TabsList className="justify-start h-auto p-1 flex flex-wrap gap-1 bg-muted/50">
-            <TabsTrigger value="variants" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Variants</TabsTrigger>
-            <TabsTrigger value="attributes" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Attributes</TabsTrigger>
-            <TabsTrigger value="inventory" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Inventory</TabsTrigger>
+            <TabsTrigger
+              value="variants"
+              className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+            >
+              {t("tabs.variants")}
+            </TabsTrigger>
+            <TabsTrigger
+              value="attributes"
+              className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+            >
+              {t("tabs.attributes")}
+            </TabsTrigger>
+            <TabsTrigger
+              value="inventory"
+              className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+            >
+              {t("tabs.inventory")}
+            </TabsTrigger>
             {product.type === "SERVICE" && (
-              <TabsTrigger value="service" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Service Slots</TabsTrigger>
+              <TabsTrigger
+                value="service"
+                className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+              >
+                {t("tabs.serviceSlots")}
+              </TabsTrigger>
             )}
-            {booksEnabled ? <TabsTrigger value="book" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Book Metadata</TabsTrigger> : null}
-            <TabsTrigger value="logs" className="text-xs sm:text-sm px-2 sm:px-3 py-2">Inventory Logs</TabsTrigger>
+            {booksEnabled ? (
+              <TabsTrigger
+                value="book"
+                className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+              >
+                {t("tabs.bookMetadata")}
+              </TabsTrigger>
+            ) : null}
+            <TabsTrigger
+              value="logs"
+              className="text-xs sm:text-sm px-2 sm:px-3 py-2"
+            >
+              {t("tabs.inventoryLogs")}
+            </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="variants" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
-              <div className="flex-1 overflow-y-auto space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p className="text-sm text-muted-foreground">
-                    Variants (SKU, price, stock, options)
-                  </p>
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => printStickers(selectedVariantIds)}
-                      disabled={selectedVariantIds.length === 0}
-                      className="w-full sm:w-auto"
-                    >
-                      <Printer className="h-4 w-4 mr-1" />
-                      <span className="hidden sm:inline">Print Selected</span>
-                      <span className="sm:hidden">Print</span>
-                    </Button>
-                    <Button onClick={openAddVariant} size="sm" className="w-full sm:w-auto">
-                      <Plus className="h-4 w-4 mr-1" />
-                      Add Variant
-                    </Button>
-                  </div>
+          <TabsContent
+            value="variants"
+            className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col"
+          >
+            <div className="flex-1 overflow-y-auto space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <p className="text-sm text-muted-foreground">
+                  {t("variants.header")}
+                </p>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => printStickers(selectedVariantIds)}
+                    disabled={selectedVariantIds.length === 0}
+                    className="w-full sm:w-auto"
+                  >
+                    <Printer className="h-4 w-4 mr-1" />
+                    <span className="hidden sm:inline">
+                      {t("variants.printSelected")}
+                    </span>
+                    <span className="sm:hidden">{t("variants.print")}</span>
+                  </Button>
+                  <Button
+                    onClick={openAddVariant}
+                    size="sm"
+                    className="w-full sm:w-auto"
+                  >
+                    <Plus className="h-4 w-4 mr-1" />
+                    {t("variants.addVariant")}
+                  </Button>
                 </div>
+              </div>
 
               {variantFormOpen && (
                 <div className="border rounded-lg p-3 sm:p-4 space-y-3 bg-card">
                   <div className="flex items-center justify-between">
                     <p className="font-semibold text-sm sm:text-base">
-                      {editingVariant ? "Edit Variant" : "New Variant"}
+                      {editingVariant
+                        ? t("variantForm.editTitle")
+                        : t("variantForm.newTitle")}
                     </p>
                     <Button
                       size="icon"
@@ -736,17 +844,24 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div className="sm:col-span-2 lg:col-span-2">
-                      <Label className="text-xs sm:text-sm">SKU *</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.sku")}
+                      </Label>
                       <Input
                         value={variantForm.sku}
                         onChange={(e) =>
-                          setVariantForm({ ...variantForm, sku: e.target.value })
+                          setVariantForm({
+                            ...variantForm,
+                            sku: e.target.value,
+                          })
                         }
                         className="text-sm"
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Price *</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.price")}
+                      </Label>
                       <Input
                         type="number"
                         value={variantForm.price}
@@ -760,7 +875,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Currency</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.currency")}
+                      </Label>
                       <Input
                         value={variantForm.currency}
                         onChange={(e) =>
@@ -777,7 +894,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                   {product.type === "PHYSICAL" ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                       <div>
-                        <Label className="text-xs sm:text-sm">Stock</Label>
+                        <Label className="text-xs sm:text-sm">
+                          {t("variantForm.stock")}
+                        </Label>
                         <Input
                           type="number"
                           value={variantForm.stock}
@@ -791,18 +910,22 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                         />
                       </div>
                       <div className="sm:col-span-2 lg:col-span-3 text-xs text-muted-foreground flex items-end">
-                        <span className="block">Tip: for multiple warehouses, manage stock from the Inventory tab.</span>
+                        <span className="block">
+                          {t("variantForm.stockTip")}
+                        </span>
                       </div>
                     </div>
                   ) : (
                     <p className="text-xs text-muted-foreground">
-                      Stock is not used for {product.type} products.
+                      {t("variantForm.stockNotUsed", { type: product.type })}
                     </p>
                   )}
 
                   {product.type === "DIGITAL" && (
                     <div>
-                      <Label className="text-xs sm:text-sm">Digital Asset (optional)</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.digitalAsset")}
+                      </Label>
                       <select
                         className="border border-input bg-background text-sm p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-ring"
                         value={variantForm.digitalAssetId}
@@ -813,7 +936,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                           })
                         }
                       >
-                        <option value="">Select</option>
+                        <option value="">{t("common.select")}</option>
                         {digitalAssets.map((a) => (
                           <option key={a.id} value={a.id}>
                             {a.title}
@@ -825,7 +948,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div>
-                      <Label className="text-xs sm:text-sm">Option 1 Name</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.option1Name")}
+                      </Label>
                       <Input
                         value={variantForm.option1Name}
                         onChange={(e) =>
@@ -834,12 +959,14 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             option1Name: e.target.value,
                           })
                         }
-                        placeholder="e.g. Color"
+                        placeholder={t("variantForm.option1NamePlaceholder")}
                         className="text-sm"
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Option 1 Value</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.option1Value")}
+                      </Label>
                       <Input
                         value={variantForm.option1Value}
                         onChange={(e) =>
@@ -848,12 +975,14 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             option1Value: e.target.value,
                           })
                         }
-                        placeholder="e.g. Red"
+                        placeholder={t("variantForm.option1ValuePlaceholder")}
                         className="text-sm"
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Option 2 Name</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.option2Name")}
+                      </Label>
                       <Input
                         value={variantForm.option2Name}
                         onChange={(e) =>
@@ -862,12 +991,14 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             option2Name: e.target.value,
                           })
                         }
-                        placeholder="e.g. Size"
+                        placeholder={t("variantForm.option2NamePlaceholder")}
                         className="text-sm"
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Option 2 Value</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("variantForm.option2Value")}
+                      </Label>
                       <Input
                         value={variantForm.option2Value}
                         onChange={(e) =>
@@ -876,7 +1007,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             option2Value: e.target.value,
                           })
                         }
-                        placeholder="e.g. XL"
+                        placeholder={t("variantForm.option2ValuePlaceholder")}
                         className="text-sm"
                       />
                     </div>
@@ -892,17 +1023,25 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       }}
                       className="w-full sm:w-auto"
                     >
-                      Cancel
+                      {t("actions.cancel")}
                     </Button>
-                    <Button onClick={saveVariant} disabled={loading} className="w-full sm:w-auto">
-                      {editingVariant ? "Update" : "Create"}
+                    <Button
+                      onClick={saveVariant}
+                      disabled={loading}
+                      className="w-full sm:w-auto"
+                    >
+                      {editingVariant
+                        ? t("actions.update")
+                        : t("actions.create")}
                     </Button>
                   </div>
                 </div>
               )}
 
               {variants.length === 0 ? (
-                <p className="text-sm text-muted-foreground">No variants found</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("variants.empty")}
+                </p>
               ) : (
                 <div className="border rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
@@ -911,17 +1050,36 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                         <TableRow>
                           <TableHead className="w-10">
                             <Checkbox
-                              checked={variants.length > 0 && selectedVariantIds.length === variants.length}
-                              onCheckedChange={(checked) => toggleSelectAllVariants(Boolean(checked))}
-                              aria-label="Select all variants"
+                              checked={
+                                variants.length > 0 &&
+                                selectedVariantIds.length === variants.length
+                              }
+                              onCheckedChange={(checked) =>
+                                toggleSelectAllVariants(Boolean(checked))
+                              }
+                              aria-label={t("variants.selectAll")}
                             />
                           </TableHead>
-                          <TableHead className="min-w-[100px]">SKU</TableHead>
-                          <TableHead className="min-w-[200px] hidden lg:table-cell">Codes</TableHead>
-                          <TableHead className="min-w-[80px]">Price</TableHead>
-                          {product.type === "PHYSICAL" && <TableHead className="min-w-[60px]">Stock</TableHead>}
-                          <TableHead className="min-w-[120px] hidden sm:table-cell">Options</TableHead>
-                          <TableHead className="text-right min-w-[200px]">Action</TableHead>
+                          <TableHead className="min-w-[100px]">
+                            {t("variants.table.sku")}
+                          </TableHead>
+                          <TableHead className="min-w-[200px] hidden lg:table-cell">
+                            {t("variants.table.codes")}
+                          </TableHead>
+                          <TableHead className="min-w-[80px]">
+                            {t("variants.table.price")}
+                          </TableHead>
+                          {product.type === "PHYSICAL" && (
+                            <TableHead className="min-w-[60px]">
+                              {t("variants.table.stock")}
+                            </TableHead>
+                          )}
+                          <TableHead className="min-w-[120px] hidden sm:table-cell">
+                            {t("variants.table.options")}
+                          </TableHead>
+                          <TableHead className="text-right min-w-[200px]">
+                            {t("variants.table.action")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -933,33 +1091,50 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                 onCheckedChange={(checked) =>
                                   toggleVariantSelection(v.id, Boolean(checked))
                                 }
-                                aria-label={`Select variant ${v.sku}`}
+                                aria-label={t("variants.selectVariantAria", {
+                                  sku: v.sku,
+                                })}
                               />
                             </TableCell>
-                            <TableCell className="font-medium">{v.sku}</TableCell>
+                            <TableCell className="font-medium">
+                              {v.sku}
+                            </TableCell>
                             <TableCell className="min-w-[240px] hidden lg:table-cell">
                               {(() => {
-                                const barcodeCode = getPrimaryCode(v, "BARCODE");
+                                const barcodeCode = getPrimaryCode(
+                                  v,
+                                  "BARCODE",
+                                );
                                 const qrCode = getPrimaryCode(v, "QRCODE");
 
                                 return (
                                   <div className="space-y-3 text-xs">
                                     <div className="space-y-1">
                                       <div>
-                                        <span className="font-medium">Barcode:</span>{" "}
+                                        <span className="font-medium">
+                                          {t("variants.barcode")}
+                                        </span>{" "}
                                         {barcodeCode?.value || "-"}
                                       </div>
                                       {barcodeCode ? (
                                         <>
                                           <img
-                                            src={buildCodeImageUrl(barcodeCode, "svg")}
-                                            alt={`Barcode for ${v.sku}`}
+                                            src={buildCodeImageUrl(
+                                              barcodeCode,
+                                              "svg",
+                                            )}
+                                            alt={t("variants.barcodeAlt", {
+                                              sku: v.sku,
+                                            })}
                                             className="h-16 w-full max-w-[220px] rounded border bg-white object-contain p-1"
                                             loading="lazy"
                                           />
                                           <div className="flex flex-wrap gap-2">
                                             <a
-                                              href={buildCodeImageUrl(barcodeCode, "svg")}
+                                              href={buildCodeImageUrl(
+                                                barcodeCode,
+                                                "svg",
+                                              )}
                                               target="_blank"
                                               rel="noreferrer"
                                               className="text-primary underline underline-offset-2"
@@ -967,7 +1142,10 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                               SVG
                                             </a>
                                             <a
-                                              href={buildCodeImageUrl(barcodeCode, "png")}
+                                              href={buildCodeImageUrl(
+                                                barcodeCode,
+                                                "png",
+                                              )}
                                               target="_blank"
                                               rel="noreferrer"
                                               className="text-primary underline underline-offset-2"
@@ -975,10 +1153,14 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                               PNG
                                             </a>
                                             <a
-                                              href={buildCodeImageUrl(barcodeCode, "png", true)}
+                                              href={buildCodeImageUrl(
+                                                barcodeCode,
+                                                "png",
+                                                true,
+                                              )}
                                               className="text-primary underline underline-offset-2"
                                             >
-                                              Download
+                                              {t("variants.download")}
                                             </a>
                                           </div>
                                         </>
@@ -986,20 +1168,30 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                     </div>
                                     <div className="space-y-1">
                                       <div className="truncate">
-                                        <span className="font-medium">QR:</span>{" "}
+                                        <span className="font-medium">
+                                          {t("variants.qr")}
+                                        </span>{" "}
                                         {qrCode?.value || "-"}
                                       </div>
                                       {qrCode ? (
                                         <>
                                           <img
-                                            src={buildCodeImageUrl(qrCode, "svg")}
-                                            alt={`QR code for ${v.sku}`}
+                                            src={buildCodeImageUrl(
+                                              qrCode,
+                                              "svg",
+                                            )}
+                                            alt={t("variants.qrAlt", {
+                                              sku: v.sku,
+                                            })}
                                             className="h-28 w-28 rounded border bg-white p-1"
                                             loading="lazy"
                                           />
                                           <div className="flex flex-wrap gap-2">
                                             <a
-                                              href={buildCodeImageUrl(qrCode, "svg")}
+                                              href={buildCodeImageUrl(
+                                                qrCode,
+                                                "svg",
+                                              )}
                                               target="_blank"
                                               rel="noreferrer"
                                               className="text-primary underline underline-offset-2"
@@ -1007,18 +1199,25 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                               SVG
                                             </a>
                                             <a
-                                              href={buildCodeImageUrl(qrCode, "png")}
+                                              href={buildCodeImageUrl(
+                                                qrCode,
+                                                "png",
+                                              )}
                                               target="_blank"
                                               rel="noreferrer"
                                               className="text-primary underline underline-offset-2"
-                                                    >
+                                            >
                                               PNG
                                             </a>
                                             <a
-                                              href={buildCodeImageUrl(qrCode, "png", true)}
+                                              href={buildCodeImageUrl(
+                                                qrCode,
+                                                "png",
+                                                true,
+                                              )}
                                               className="text-primary underline underline-offset-2"
                                             >
-                                              Download
+                                              {t("variants.download")}
                                             </a>
                                           </div>
                                         </>
@@ -1030,11 +1229,15 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             </TableCell>
                             <TableCell>
                               <div className="text-sm">
-                                <div>{v.currency} {String(v.price)}</div>
+                                <div>
+                                  {v.currency} {String(v.price)}
+                                </div>
                                 <div className="lg:hidden text-xs text-muted-foreground mt-1">
                                   {v.options && typeof v.options === "object"
                                     ? Object.entries(v.options)
-                                        .map(([k, val]) => `${k}: ${String(val)}`)
+                                        .map(
+                                          ([k, val]) => `${k}: ${String(val)}`,
+                                        )
                                         .join(", ")
                                     : "-"}
                                 </div>
@@ -1059,7 +1262,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                   className="w-full sm:w-auto"
                                 >
                                   <Printer className="h-3 w-3 sm:mr-1" />
-                                  <span className="hidden sm:inline">Sticker</span>
+                                  <span className="hidden sm:inline">
+                                    {t("variants.sticker")}
+                                  </span>
                                 </Button>
                                 <Button
                                   size="sm"
@@ -1068,7 +1273,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                   className="w-full sm:w-auto"
                                 >
                                   <RefreshCw className="h-3 w-3 sm:mr-1" />
-                                  <span className="hidden sm:inline">Regenerate</span>
+                                  <span className="hidden sm:inline">
+                                    {t("variants.regenerate")}
+                                  </span>
                                 </Button>
                                 <Button
                                   size="sm"
@@ -1077,7 +1284,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                   className="w-full sm:w-auto"
                                 >
                                   <Edit3 className="h-3 w-3 sm:mr-1" />
-                                  <span className="hidden sm:inline">Edit</span>
+                                  <span className="hidden sm:inline">
+                                    {t("actions.edit")}
+                                  </span>
                                 </Button>
                                 <Button
                                   size="sm"
@@ -1099,13 +1308,20 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
             </div>
           </TabsContent>
 
-          <TabsContent value="attributes" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
+          <TabsContent
+            value="attributes"
+            className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col"
+          >
             <div className="flex-1 overflow-y-auto space-y-4">
               <div className="border rounded-lg p-3 sm:p-4 space-y-3 bg-card">
-                <p className="font-semibold text-sm sm:text-base">Add Product Attribute</p>
+                <p className="font-semibold text-sm sm:text-base">
+                  {t("attributes.addTitle")}
+                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   <div>
-                    <Label className="text-xs sm:text-sm">Attribute</Label>
+                    <Label className="text-xs sm:text-sm">
+                      {t("attributes.attribute")}
+                    </Label>
                     <select
                       className="border border-input bg-background text-sm p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-ring"
                       value={newAttr.attributeId}
@@ -1113,7 +1329,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                         setNewAttr({ attributeId: e.target.value, value: "" })
                       }
                     >
-                      <option value="">Select</option>
+                      <option value="">{t("common.select")}</option>
                       {availableAttributes.map((a) => (
                         <option key={a.id} value={a.id}>
                           {a.name}
@@ -1122,67 +1338,97 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                     </select>
                   </div>
                   <div className="sm:col-span-2 lg:col-span-2">
-                    <Label className="text-xs sm:text-sm">Value</Label>
-                    {selectedAttr?.type === "SELECT" || selectedAttr?.type === "COLOR" ? (
+                    <Label className="text-xs sm:text-sm">
+                      {t("attributes.value")}
+                    </Label>
+                    {selectedAttr?.type === "SELECT" ||
+                    selectedAttr?.type === "COLOR" ? (
                       <select
                         className="w-full rounded-md border border-input bg-background p-2 text-sm"
                         value={newAttr.value}
-                        onChange={(event) => setNewAttr({ ...newAttr, value: event.target.value })}
+                        onChange={(event) =>
+                          setNewAttr({ ...newAttr, value: event.target.value })
+                        }
                       >
-                        <option value="">Select</option>
+                        <option value="">{t("common.select")}</option>
                         {selectedAttr.values.map((item) => (
-                          <option key={item.id} value={item.value}>{item.value}</option>
+                          <option key={item.id} value={item.value}>
+                            {item.value}
+                          </option>
                         ))}
                       </select>
                     ) : selectedAttr?.type === "BOOLEAN" ? (
                       <select
                         className="w-full rounded-md border border-input bg-background p-2 text-sm"
                         value={newAttr.value}
-                        onChange={(event) => setNewAttr({ ...newAttr, value: event.target.value })}
+                        onChange={(event) =>
+                          setNewAttr({ ...newAttr, value: event.target.value })
+                        }
                       >
-                        <option value="">Select</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
+                        <option value="">{t("common.select")}</option>
+                        <option value="true">{t("common.yes")}</option>
+                        <option value="false">{t("common.no")}</option>
                       </select>
-                    ) : selectedAttr?.type === "MULTI_SELECT" && selectedAttr.values.length > 0 ? (
+                    ) : selectedAttr?.type === "MULTI_SELECT" &&
+                      selectedAttr.values.length > 0 ? (
                       <select
                         multiple
                         className="min-h-24 w-full rounded-md border border-input bg-background p-2 text-sm"
                         value={parseMultiSelectValue(newAttr.value)}
-                        onChange={(event) => setNewAttr({
-                          ...newAttr,
-                          value: JSON.stringify(
-                            Array.from(event.currentTarget.selectedOptions, (option) => option.value),
-                          ),
-                        })}
+                        onChange={(event) =>
+                          setNewAttr({
+                            ...newAttr,
+                            value: JSON.stringify(
+                              Array.from(
+                                event.currentTarget.selectedOptions,
+                                (option) => option.value,
+                              ),
+                            ),
+                          })
+                        }
                       >
                         {selectedAttr.values.map((item) => (
-                          <option key={item.id} value={item.value}>{item.value}</option>
+                          <option key={item.id} value={item.value}>
+                            {item.value}
+                          </option>
                         ))}
                       </select>
                     ) : (
                       <Input
-                        type={selectedAttr?.type === "NUMBER" ? "number" : "text"}
-                        step={selectedAttr?.type === "NUMBER" ? "any" : undefined}
+                        type={
+                          selectedAttr?.type === "NUMBER" ? "number" : "text"
+                        }
+                        step={
+                          selectedAttr?.type === "NUMBER" ? "any" : undefined
+                        }
                         value={newAttr.value}
-                        onChange={(e) => setNewAttr({ ...newAttr, value: e.target.value })}
-                        placeholder={selectedAttr?.type === "MULTI_SELECT" ? "Comma-separated values" : "Type value"}
+                        onChange={(e) =>
+                          setNewAttr({ ...newAttr, value: e.target.value })
+                        }
+                        placeholder={
+                          selectedAttr?.type === "MULTI_SELECT"
+                            ? t("attributes.commaSeparated")
+                            : t("attributes.typeValue")
+                        }
                         className="text-sm"
                       />
                     )}
                   </div>
                 </div>
                 <div className="flex justify-end">
-                  <Button onClick={addProductAttribute} className="w-full sm:w-auto">
+                  <Button
+                    onClick={addProductAttribute}
+                    className="w-full sm:w-auto"
+                  >
                     <Plus className="h-4 w-4 mr-1" />
-                    Add
+                    {t("actions.add")}
                   </Button>
                 </div>
               </div>
 
               {productAttributes.length === 0 ? (
                 <p className="text-sm text-muted-foreground">
-                  No product attributes yet
+                  {t("attributes.empty")}
                 </p>
               ) : (
                 <div className="border rounded-lg overflow-hidden">
@@ -1190,9 +1436,15 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="min-w-[120px]">Attribute</TableHead>
-                          <TableHead className="min-w-[200px]">Value</TableHead>
-                          <TableHead className="text-right min-w-[80px]">Action</TableHead>
+                          <TableHead className="min-w-[120px]">
+                            {t("attributes.table.attribute")}
+                          </TableHead>
+                          <TableHead className="min-w-[200px]">
+                            {t("attributes.table.value")}
+                          </TableHead>
+                          <TableHead className="text-right min-w-[80px]">
+                            {t("attributes.table.action")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -1201,7 +1453,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             <TableCell className="font-medium">
                               {pa.attribute?.name || pa.attributeId}
                             </TableCell>
-                            <TableCell className="break-all">{pa.value}</TableCell>
+                            <TableCell className="break-all">
+                              {pa.value}
+                            </TableCell>
                             <TableCell className="text-right">
                               <Button
                                 size="sm"
@@ -1222,18 +1476,23 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
             </div>
           </TabsContent>
 
-          <TabsContent value="inventory" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
+          <TabsContent
+            value="inventory"
+            className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col"
+          >
             {product.type !== "PHYSICAL" ? (
               <div className="flex items-center justify-center h-32">
                 <p className="text-sm text-muted-foreground">
-                  Inventory is only available for PHYSICAL products.
+                  {t("inventory.physicalOnly")}
                 </p>
               </div>
             ) : (
               <div className="flex-1 overflow-y-auto space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                   <div className="w-full sm:w-auto">
-                    <Label className="text-xs sm:text-sm">Variant</Label>
+                    <Label className="text-xs sm:text-sm">
+                      {t("inventory.variant")}
+                    </Label>
                     <select
                       className="border border-input bg-background text-sm p-2 rounded-md w-full sm:w-48 focus:outline-none focus:ring-2 focus:ring-ring"
                       value={selectedVariantId ?? ""}
@@ -1243,7 +1502,7 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                         )
                       }
                     >
-                      <option value="">Select</option>
+                      <option value="">{t("common.select")}</option>
                       {variants.map((v) => (
                         <option key={v.id} value={v.id}>
                           {v.sku}
@@ -1253,8 +1512,10 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                   </div>
                   {selectedVariant && (
                     <p className="text-sm text-muted-foreground pt-6">
-                      Total stock:{" "}
-                      <span className="font-medium">{selectedVariant.stock}</span>
+                      {t("inventory.totalStock")}{" "}
+                      <span className="font-medium">
+                        {selectedVariant.stock}
+                      </span>
                     </p>
                   )}
                 </div>
@@ -1262,13 +1523,13 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                 {!selectedVariant ? (
                   <div className="flex items-center justify-center h-32">
                     <p className="text-sm text-muted-foreground">
-                      Select a variant to manage stock levels.
+                      {t("inventory.selectVariantHint")}
                     </p>
                   </div>
                 ) : warehouses.length === 0 ? (
                   <div className="flex items-center justify-center h-32">
                     <p className="text-sm text-muted-foreground">
-                      No warehouses yet. Create one from the Warehouses button on the products page.
+                      {t("inventory.noWarehouses")}
                     </p>
                   </div>
                 ) : (
@@ -1277,11 +1538,21 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead className="min-w-[150px]">Warehouse</TableHead>
-                            <TableHead className="min-w-[100px]">Quantity</TableHead>
-                            <TableHead className="min-w-[80px]">Reserved</TableHead>
-                            <TableHead className="min-w-[80px]">Available</TableHead>
-                            <TableHead className="text-right min-w-[120px]">Action</TableHead>
+                            <TableHead className="min-w-[150px]">
+                              {t("inventory.table.warehouse")}
+                            </TableHead>
+                            <TableHead className="min-w-[100px]">
+                              {t("inventory.table.quantity")}
+                            </TableHead>
+                            <TableHead className="min-w-[80px]">
+                              {t("inventory.table.reserved")}
+                            </TableHead>
+                            <TableHead className="min-w-[80px]">
+                              {t("inventory.table.available")}
+                            </TableHead>
+                            <TableHead className="text-right min-w-[120px]">
+                              {t("inventory.table.action")}
+                            </TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -1299,10 +1570,12 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                 <TableCell className="font-medium">
                                   <div className="flex flex-col">
                                     <span>{w.name}</span>
-                                    <span className="text-xs text-muted-foreground">({w.code})</span>
+                                    <span className="text-xs text-muted-foreground">
+                                      ({w.code})
+                                    </span>
                                     {w.isDefault && (
                                       <span className="mt-1 text-xs px-2 py-0.5 rounded-full border inline-block w-fit">
-                                        Default
+                                        {t("inventory.defaultBadge")}
                                       </span>
                                     )}
                                   </div>
@@ -1331,14 +1604,16 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                                       disabled={loading}
                                       className="w-full sm:w-auto"
                                     >
-                                      Save
+                                      {t("actions.save")}
                                     </Button>
                                     {level && (
                                       <Button
                                         size="sm"
                                         variant="outline"
                                         className="text-destructive w-full sm:w-auto"
-                                        onClick={() => deleteStockLevel(level.id)}
+                                        onClick={() =>
+                                          deleteStockLevel(level.id)
+                                        }
                                         disabled={loading}
                                       >
                                         <Trash2 className="h-3 w-3" />
@@ -1359,13 +1634,20 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
           </TabsContent>
 
           {product.type === "SERVICE" && (
-            <TabsContent value="service" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
+            <TabsContent
+              value="service"
+              className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col"
+            >
               <div className="flex-1 overflow-y-auto space-y-4">
                 <div className="border rounded-lg p-3 sm:p-4 space-y-3 bg-card">
-                  <p className="font-semibold text-sm sm:text-base">Add Service Slot</p>
+                  <p className="font-semibold text-sm sm:text-base">
+                    {t("serviceSlots.addTitle")}
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <Label className="text-xs sm:text-sm">Start *</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("serviceSlots.start")}
+                      </Label>
                       <Input
                         type="datetime-local"
                         value={slotForm.startsAt}
@@ -1376,7 +1658,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">End *</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("serviceSlots.end")}
+                      </Label>
                       <Input
                         type="datetime-local"
                         value={slotForm.endsAt}
@@ -1389,7 +1673,9 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div>
-                      <Label className="text-xs sm:text-sm">Capacity</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("serviceSlots.capacity")}
+                      </Label>
                       <Input
                         type="number"
                         value={slotForm.capacity}
@@ -1400,50 +1686,59 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Timezone</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("serviceSlots.timezone")}
+                      </Label>
                       <Input
                         value={slotForm.timezone}
                         onChange={(e) =>
                           setSlotForm({ ...slotForm, timezone: e.target.value })
                         }
-                        placeholder="Optional"
+                        placeholder={t("common.optional")}
                         className="text-sm"
                       />
                     </div>
                     <div>
-                      <Label className="text-xs sm:text-sm">Location</Label>
+                      <Label className="text-xs sm:text-sm">
+                        {t("serviceSlots.location")}
+                      </Label>
                       <Input
                         value={slotForm.location}
                         onChange={(e) =>
                           setSlotForm({ ...slotForm, location: e.target.value })
                         }
-                        placeholder="Optional"
+                        placeholder={t("common.optional")}
                         className="text-sm"
                       />
                     </div>
                   </div>
                   <div>
-                    <Label className="text-xs sm:text-sm">Notes</Label>
+                    <Label className="text-xs sm:text-sm">
+                      {t("serviceSlots.notes")}
+                    </Label>
                     <Input
                       value={slotForm.notes}
                       onChange={(e) =>
                         setSlotForm({ ...slotForm, notes: e.target.value })
                       }
-                      placeholder="Optional"
+                      placeholder={t("common.optional")}
                       className="text-sm"
                     />
                   </div>
                   <div className="flex justify-end">
-                    <Button onClick={addServiceSlot} className="w-full sm:w-auto">
+                    <Button
+                      onClick={addServiceSlot}
+                      className="w-full sm:w-auto"
+                    >
                       <Plus className="h-4 w-4 mr-1" />
-                      Add Slot
+                      {t("serviceSlots.addSlot")}
                     </Button>
                   </div>
                 </div>
 
                 {serviceSlots.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
-                    No service slots yet
+                    {t("serviceSlots.empty")}
                   </p>
                 ) : (
                   <div className="border rounded-lg overflow-hidden">
@@ -1451,11 +1746,21 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead className="min-w-[140px]">Start</TableHead>
-                            <TableHead className="min-w-[140px]">End</TableHead>
-                            <TableHead className="min-w-[80px]">Capacity</TableHead>
-                            <TableHead className="min-w-[80px]">Booked</TableHead>
-                            <TableHead className="text-right min-w-[80px]">Action</TableHead>
+                            <TableHead className="min-w-[140px]">
+                              {t("serviceSlots.table.start")}
+                            </TableHead>
+                            <TableHead className="min-w-[140px]">
+                              {t("serviceSlots.table.end")}
+                            </TableHead>
+                            <TableHead className="min-w-[80px]">
+                              {t("serviceSlots.table.capacity")}
+                            </TableHead>
+                            <TableHead className="min-w-[80px]">
+                              {t("serviceSlots.table.booked")}
+                            </TableHead>
+                            <TableHead className="text-right min-w-[80px]">
+                              {t("serviceSlots.table.action")}
+                            </TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -1463,22 +1768,34 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                             <TableRow key={s.id}>
                               <TableCell className="text-xs sm:text-sm">
                                 <div className="hidden sm:block">
-                                  {String(s.startsAt).replace("T", " ").slice(0, 16)}
+                                  {String(s.startsAt)
+                                    .replace("T", " ")
+                                    .slice(0, 16)}
                                 </div>
                                 <div className="sm:hidden">
-                                  {String(s.startsAt).replace("T", " ").slice(0, 10)}
+                                  {String(s.startsAt)
+                                    .replace("T", " ")
+                                    .slice(0, 10)}
                                   <br />
-                                  {String(s.startsAt).replace("T", " ").slice(11, 16)}
+                                  {String(s.startsAt)
+                                    .replace("T", " ")
+                                    .slice(11, 16)}
                                 </div>
                               </TableCell>
                               <TableCell className="text-xs sm:text-sm">
                                 <div className="hidden sm:block">
-                                  {String(s.endsAt).replace("T", " ").slice(0, 16)}
+                                  {String(s.endsAt)
+                                    .replace("T", " ")
+                                    .slice(0, 16)}
                                 </div>
                                 <div className="sm:hidden">
-                                  {String(s.endsAt).replace("T", " ").slice(0, 10)}
+                                  {String(s.endsAt)
+                                    .replace("T", " ")
+                                    .slice(0, 10)}
                                   <br />
-                                  {String(s.endsAt).replace("T", " ").slice(11, 16)}
+                                  {String(s.endsAt)
+                                    .replace("T", " ")
+                                    .slice(11, 16)}
                                 </div>
                               </TableCell>
                               <TableCell>{s.capacity}</TableCell>
@@ -1508,36 +1825,81 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
             <TabsContent value="book" className="flex-1 overflow-y-auto">
               <div className="mx-auto max-w-2xl space-y-5 rounded-lg border bg-card p-4 sm:p-6">
                 <div>
-                  <h3 className="font-semibold">Book-specific relations</h3>
-                  <p className="text-sm text-muted-foreground">BookMetadata is authoritative and legacy fields are updated automatically during the compatibility window.</p>
+                  <h3 className="font-semibold">{t("bookMetadata.title")}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {t("bookMetadata.description")}
+                  </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="book-writer">Writer</Label>
-                    <select id="book-writer" className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={bookMetadata.writerId} onChange={(event) => setBookMetadata((current) => ({ ...current, writerId: event.target.value }))}>
-                      <option value="">No writer</option>
-                      {writers.map((writer) => <option key={writer.id} value={writer.id}>{writer.name}</option>)}
+                    <Label htmlFor="book-writer">
+                      {t("bookMetadata.writer")}
+                    </Label>
+                    <select
+                      id="book-writer"
+                      className="h-10 w-full rounded-md border bg-background px-3 text-sm"
+                      value={bookMetadata.writerId}
+                      onChange={(event) =>
+                        setBookMetadata((current) => ({
+                          ...current,
+                          writerId: event.target.value,
+                        }))
+                      }
+                    >
+                      <option value="">{t("bookMetadata.noWriter")}</option>
+                      {writers.map((writer) => (
+                        <option key={writer.id} value={writer.id}>
+                          {writer.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="book-publisher">Publisher</Label>
-                    <select id="book-publisher" className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={bookMetadata.publisherId} onChange={(event) => setBookMetadata((current) => ({ ...current, publisherId: event.target.value }))}>
-                      <option value="">No publisher</option>
-                      {publishers.map((publisher) => <option key={publisher.id} value={publisher.id}>{publisher.name}</option>)}
+                    <Label htmlFor="book-publisher">
+                      {t("bookMetadata.publisher")}
+                    </Label>
+                    <select
+                      id="book-publisher"
+                      className="h-10 w-full rounded-md border bg-background px-3 text-sm"
+                      value={bookMetadata.publisherId}
+                      onChange={(event) =>
+                        setBookMetadata((current) => ({
+                          ...current,
+                          publisherId: event.target.value,
+                        }))
+                      }
+                    >
+                      <option value="">{t("bookMetadata.noPublisher")}</option>
+                      {publishers.map((publisher) => (
+                        <option key={publisher.id} value={publisher.id}>
+                          {publisher.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
-                <Button type="button" onClick={() => void saveBookMetadata()} disabled={bookSaving}>
-                  {bookSaving ? "Saving…" : "Save Book Metadata"}
+                <Button
+                  type="button"
+                  onClick={() => void saveBookMetadata()}
+                  disabled={bookSaving}
+                >
+                  {bookSaving
+                    ? t("bookMetadata.saving")
+                    : t("bookMetadata.save")}
                 </Button>
               </div>
             </TabsContent>
           ) : null}
 
-          <TabsContent value="logs" className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col">
+          <TabsContent
+            value="logs"
+            className="flex-1 overflow-hidden data-[state=active]:flex data-[state=active]:flex-col"
+          >
             {logs.length === 0 ? (
               <div className="flex items-center justify-center h-32">
-                <p className="text-sm text-muted-foreground">No inventory logs</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("logs.empty")}
+                </p>
               </div>
             ) : (
               <div className="flex-1 overflow-y-auto">
@@ -1546,11 +1908,21 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="min-w-[140px]">Date</TableHead>
-                          <TableHead className="min-w-[80px]">Change</TableHead>
-                          <TableHead className="min-w-[100px]">Variant</TableHead>
-                          <TableHead className="min-w-[100px]">Warehouse</TableHead>
-                          <TableHead className="min-w-[200px]">Reason</TableHead>
+                          <TableHead className="min-w-[140px]">
+                            {t("logs.table.date")}
+                          </TableHead>
+                          <TableHead className="min-w-[80px]">
+                            {t("logs.table.change")}
+                          </TableHead>
+                          <TableHead className="min-w-[100px]">
+                            {t("logs.table.variant")}
+                          </TableHead>
+                          <TableHead className="min-w-[100px]">
+                            {t("logs.table.warehouse")}
+                          </TableHead>
+                          <TableHead className="min-w-[200px]">
+                            {t("logs.table.reason")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -1558,17 +1930,29 @@ export default function ProductRelationsModal({ open, onClose, product, booksEna
                           <TableRow key={l.id}>
                             <TableCell className="whitespace-nowrap text-xs sm:text-sm">
                               <div className="hidden sm:block">
-                                {String(l.createdAt).replace("T", " ").slice(0, 19)}
+                                {String(l.createdAt)
+                                  .replace("T", " ")
+                                  .slice(0, 19)}
                               </div>
                               <div className="sm:hidden">
-                                {String(l.createdAt).replace("T", " ").slice(0, 10)}
+                                {String(l.createdAt)
+                                  .replace("T", " ")
+                                  .slice(0, 10)}
                                 <br />
-                                {String(l.createdAt).replace("T", " ").slice(11, 19)}
+                                {String(l.createdAt)
+                                  .replace("T", " ")
+                                  .slice(11, 19)}
                               </div>
                             </TableCell>
-                            <TableCell className="text-xs sm:text-sm">{l.change}</TableCell>
-                            <TableCell className="text-xs sm:text-sm">{l.variant?.sku || "-"}</TableCell>
-                            <TableCell className="text-xs sm:text-sm">{l.warehouse?.code || "-"}</TableCell>
+                            <TableCell className="text-xs sm:text-sm">
+                              {l.change}
+                            </TableCell>
+                            <TableCell className="text-xs sm:text-sm">
+                              {l.variant?.sku || "-"}
+                            </TableCell>
+                            <TableCell className="text-xs sm:text-sm">
+                              {l.warehouse?.code || "-"}
+                            </TableCell>
                             <TableCell className="max-w-[200px] sm:max-w-[420px] truncate text-xs sm:text-sm">
                               {l.reason}
                             </TableCell>

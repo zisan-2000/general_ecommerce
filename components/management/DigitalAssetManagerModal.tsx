@@ -2,10 +2,16 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import { Plus, Trash2, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -21,13 +27,18 @@ interface Props {
 }
 
 export default function DigitalAssetManagerModal({ open, onClose }: Props) {
+  const t = useTranslations("AdminDigitalAssets");
+
   const [loading, setLoading] = useState(false);
   const [assets, setAssets] = useState<DigitalAsset[]>([]);
   const [title, setTitle] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [uploading, setUploading] = useState(false);
 
-  const sorted = useMemo(() => [...assets].sort((a, b) => b.id - a.id), [assets]);
+  const sorted = useMemo(
+    () => [...assets].sort((a, b) => b.id - a.id),
+    [assets],
+  );
 
   const load = async () => {
     try {
@@ -36,7 +47,7 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
       const data = await res.json();
       setAssets(data || []);
     } catch {
-      toast.error("Failed to load digital assets");
+      toast.error(t("errors.loadFailed"));
     } finally {
       setLoading(false);
     }
@@ -45,6 +56,7 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
   useEffect(() => {
     if (!open) return;
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const uploadFile = async (file: File) => {
@@ -57,7 +69,7 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok || !data?.url) {
-      throw new Error(data?.message || "Upload failed");
+      throw new Error(data?.message || t("errors.uploadFailed"));
     }
     return data.url as string;
   };
@@ -70,19 +82,19 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
       if (!title.trim()) {
         setTitle(file.name);
       }
-      toast.success("Uploaded");
+      toast.success(t("upload.uploaded"));
     } catch (err: any) {
-      toast.error(err?.message || "Upload failed");
+      toast.error(err?.message || t("errors.uploadFailed"));
     } finally {
       setUploading(false);
     }
   };
 
   const createAsset = async () => {
-    const t = title.trim();
-    const u = fileUrl.trim();
-    if (!t || !u) {
-      toast.error("Title and file URL are required");
+    const trimmedTitle = title.trim();
+    const trimmedUrl = fileUrl.trim();
+    if (!trimmedTitle || !trimmedUrl) {
+      toast.error(t("errors.titleAndUrlRequired"));
       return;
     }
 
@@ -90,31 +102,33 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
       const res = await fetch("/api/digital-assets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title: t, fileUrl: u }),
+        body: JSON.stringify({ title: trimmedTitle, fileUrl: trimmedUrl }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Create failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.createFailed"));
 
-      toast.success("Digital asset created");
+      toast.success(t("create.created"));
       setTitle("");
       setFileUrl("");
       await load();
     } catch (err: any) {
-      toast.error(err?.message || "Create failed");
+      toast.error(err?.message || t("errors.createFailed"));
     }
   };
 
   const deleteAsset = async (id: number) => {
-    if (!confirm("Delete this digital asset?")) return;
+    if (!confirm(t("confirm.deleteAsset"))) return;
     try {
-      const res = await fetch(`/api/digital-assets/${id}`, { method: "DELETE" });
+      const res = await fetch(`/api/digital-assets/${id}`, {
+        method: "DELETE",
+      });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
 
-      toast.success("Deleted");
+      toast.success(t("common.deleted"));
       await load();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
@@ -123,7 +137,7 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
       <DialogContent className="max-w-4xl">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
-            Digital Assets
+            {t("title")}
             <Button size="icon" variant="ghost" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
@@ -132,10 +146,10 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
 
         <div className="space-y-6">
           <div className="border rounded-lg p-4 space-y-3">
-            <p className="font-semibold">Add Digital Asset</p>
+            <p className="font-semibold">{t("create.title")}</p>
             <div className="grid md:grid-cols-2 gap-3">
               <div>
-                <Label>Title</Label>
+                <Label>{t("create.assetTitle")}</Label>
                 <Input
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -143,12 +157,12 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
                 />
               </div>
               <div>
-                <Label>File URL</Label>
+                <Label>{t("create.fileUrl")}</Label>
                 <Input
                   value={fileUrl}
                   onChange={(e) => setFileUrl(e.target.value)}
                   disabled={loading || uploading}
-                  placeholder="/api/upload/digital-assets/..."
+                  placeholder={t("create.fileUrlPlaceholder")}
                 />
               </div>
             </div>
@@ -163,15 +177,17 @@ export default function DigitalAssetManagerModal({ open, onClose }: Props) {
               />
               <Button onClick={createAsset} disabled={loading || uploading}>
                 <Plus className="h-4 w-4 mr-1" />
-                Create
+                {t("actions.create")}
               </Button>
             </div>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading...</p>
+            <p className="text-sm text-muted-foreground">
+              {t("common.loading")}
+            </p>
           ) : sorted.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No digital assets yet</p>
+            <p className="text-sm text-muted-foreground">{t("empty.assets")}</p>
           ) : (
             <div className="grid md:grid-cols-2 gap-4">
               {sorted.map((a) => (

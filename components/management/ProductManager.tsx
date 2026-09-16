@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { getInventoryStatus } from "@/lib/stock-status";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -92,6 +93,8 @@ export default function ProductManager({
   },
 }: any) {
   const router = useRouter();
+  const t = useTranslations("AdminProductManager");
+
   const [search, setSearch] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
   const [productTypeFilter, setProductTypeFilter] = useState("");
@@ -292,7 +295,10 @@ export default function ProductManager({
     warehouses,
   ]);
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PRODUCTS_PER_PAGE));
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filtered.length / PRODUCTS_PER_PAGE),
+  );
   const paginationPages = useMemo(() => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -310,7 +316,8 @@ export default function ProductManager({
     const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
     return filtered.slice(start, start + PRODUCTS_PER_PAGE);
   }, [currentPage, filtered]);
-  const pageStart = filtered.length === 0 ? 0 : (currentPage - 1) * PRODUCTS_PER_PAGE + 1;
+  const pageStart =
+    filtered.length === 0 ? 0 : (currentPage - 1) * PRODUCTS_PER_PAGE + 1;
   const pageEnd = Math.min(currentPage * PRODUCTS_PER_PAGE, filtered.length);
 
   useEffect(() => {
@@ -356,7 +363,7 @@ export default function ProductManager({
         );
         const payload = await response.json().catch(() => ({}));
         if (!response.ok) {
-          throw new Error(payload?.error || "Failed to load warehouse data");
+          throw new Error(payload?.error || t("errors.loadWarehouse"));
         }
 
         setWarehouses(payload.warehouses || []);
@@ -370,6 +377,7 @@ export default function ProductManager({
         setRefreshing(false);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [warehouseId],
   );
 
@@ -378,10 +386,10 @@ export default function ProductManager({
   }, [fetchWarehouseData]);
 
   const selectedWarehouseLabel = useMemo(() => {
-    if (!warehouses.length) return "All warehouses";
+    if (!warehouses.length) return t("warehouse.allWarehouses");
 
     if (!warehouseId) {
-      return "All warehouses";
+      return t("warehouse.allWarehouses");
     }
 
     const selected = warehouses.find(
@@ -391,37 +399,39 @@ export default function ProductManager({
       return `${selected.name} (${selected.code})`;
     }
 
-    return "All warehouses";
-  }, [warehouses, warehouseId]);
+    return t("warehouse.allWarehouses");
+  }, [warehouses, warehouseId, t]);
 
   const warehouseStatsCards = useMemo(
     () => [
       {
-        title: "Total Products",
+        title: t("stats.totalProducts"),
         value: String(warehouseStats?.totalProducts ?? 0),
-        note: "In selected warehouse",
+        note: t("stats.inSelectedWarehouse"),
         icon: Package,
       },
       {
-        title: "Total Stock",
+        title: t("stats.totalStock"),
         value: String(warehouseStats?.totalStock ?? 0),
-        note: `${warehouseStats?.reservedUnits ?? 0} reserved units`,
+        note: t("stats.reservedUnits", {
+          count: warehouseStats?.reservedUnits ?? 0,
+        }),
         icon: Boxes,
       },
       {
-        title: "Low Stock Items",
+        title: t("stats.lowStockItems"),
         value: String(warehouseStats?.lowStockItems ?? 0),
-        note: "Below threshold",
+        note: t("stats.belowThreshold"),
         icon: AlertTriangle,
       },
       {
-        title: "Out of Stock",
+        title: t("stats.outOfStock"),
         value: String(warehouseStats?.outOfStockItems ?? 0),
-        note: "Need restocking",
+        note: t("stats.needRestocking"),
         icon: AlertTriangle,
       },
     ],
-    [warehouseStats],
+    [warehouseStats, t],
   );
 
   const openAdd = () => {
@@ -451,7 +461,10 @@ export default function ProductManager({
     const endsAt = product.flashSaleEndsAt
       ? new Date(product.flashSaleEndsAt)
       : new Date(Date.now() + 24 * 60 * 60 * 1000);
-    const durationMs = Math.max(60 * 60 * 1000, endsAt.getTime() - startsAt.getTime());
+    const durationMs = Math.max(
+      60 * 60 * 1000,
+      endsAt.getTime() - startsAt.getTime(),
+    );
     const durationDays = Math.floor(durationMs / (24 * 60 * 60 * 1000));
     const durationHours = Math.max(
       0,
@@ -499,9 +512,9 @@ export default function ProductManager({
     try {
       setIsDeleting(true);
       await onDelete(deletingProduct.id);
-      toast.success("Product deleted successfully");
+      toast.success(t("toasts.deleteSuccess"));
     } catch (error) {
-      toast.error("Failed to delete product");
+      toast.error(t("toasts.deleteFailed"));
     } finally {
       setIsDeleting(false);
       closeDeleteModal();
@@ -521,13 +534,15 @@ export default function ProductManager({
         action.nextAvailable,
         availabilityProduct.updatedAt,
       );
-      toast.success(`Product ${action.pastTense} successfully`);
+      toast.success(
+        t("toasts.availabilityChanged", {
+          action: action.pastTense,
+        }),
+      );
       closeAvailabilityModal();
     } catch (error) {
       toast.error(
-        error instanceof Error
-          ? error.message
-          : "Failed to update product availability",
+        error instanceof Error ? error.message : t("toasts.availabilityFailed"),
       );
     } finally {
       setIsChangingAvailability(false);
@@ -544,12 +559,20 @@ export default function ProductManager({
     const durationMs = (days * 24 + hours) * 60 * 60 * 1000;
     const basePrice = Number(flashSaleProduct.basePrice ?? 0);
 
-    if (!Number.isFinite(salePrice) || salePrice <= 0 || salePrice >= basePrice) {
-      setFlashSaleError("Sale price must be greater than 0 and lower than regular price.");
+    if (
+      !Number.isFinite(salePrice) ||
+      salePrice <= 0 ||
+      salePrice >= basePrice
+    ) {
+      setFlashSaleError(t("flashSale.errors.invalidPrice"));
       return;
     }
-    if (!Number.isInteger(days) || !Number.isInteger(hours) || durationMs <= 0) {
-      setFlashSaleError("Duration must be at least 1 hour.");
+    if (
+      !Number.isInteger(days) ||
+      !Number.isInteger(hours) ||
+      durationMs <= 0
+    ) {
+      setFlashSaleError(t("flashSale.errors.invalidDuration"));
       return;
     }
 
@@ -559,29 +582,34 @@ export default function ProductManager({
     try {
       setFlashSaleSaving(true);
       setFlashSaleError("");
-      const response = await fetch(`/api/admin/flash-sales/${flashSaleProduct.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          enabled: flashSaleForm.enabled,
-          salePrice,
-          startsAt: startsAt.toISOString(),
-          endsAt: endsAt.toISOString(),
-          sortOrder: Number(flashSaleForm.sortOrder) || 0,
-          expectedUpdatedAt: flashSaleProduct.updatedAt,
-        }),
-      });
+      const response = await fetch(
+        `/api/admin/flash-sales/${flashSaleProduct.id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            enabled: flashSaleForm.enabled,
+            salePrice,
+            startsAt: startsAt.toISOString(),
+            endsAt: endsAt.toISOString(),
+            sortOrder: Number(flashSaleForm.sortOrder) || 0,
+            expectedUpdatedAt: flashSaleProduct.updatedAt,
+          }),
+        },
+      );
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to save flash sale.");
+        throw new Error(payload?.error || t("flashSale.errors.saveFailed"));
       }
 
       onFlashSaleChange?.(flashSaleProduct.id, payload);
-      toast.success("Flash sale saved successfully");
+      toast.success(t("flashSale.toasts.saved"));
       closeFlashSaleModal();
     } catch (error) {
       setFlashSaleError(
-        error instanceof Error ? error.message : "Failed to save flash sale.",
+        error instanceof Error
+          ? error.message
+          : t("flashSale.errors.saveFailed"),
       );
     } finally {
       setFlashSaleSaving(false);
@@ -593,22 +621,29 @@ export default function ProductManager({
     try {
       setFlashSaleSaving(true);
       setFlashSaleError("");
-      const response = await fetch(`/api/admin/flash-sales/${flashSaleProduct.id}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ expectedUpdatedAt: flashSaleProduct.updatedAt }),
-      });
+      const response = await fetch(
+        `/api/admin/flash-sales/${flashSaleProduct.id}`,
+        {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            expectedUpdatedAt: flashSaleProduct.updatedAt,
+          }),
+        },
+      );
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to remove flash sale.");
+        throw new Error(payload?.error || t("flashSale.errors.removeFailed"));
       }
 
       onFlashSaleChange?.(flashSaleProduct.id, payload);
-      toast.success("Flash sale removed");
+      toast.success(t("flashSale.toasts.removed"));
       closeFlashSaleModal();
     } catch (error) {
       setFlashSaleError(
-        error instanceof Error ? error.message : "Failed to remove flash sale.",
+        error instanceof Error
+          ? error.message
+          : t("flashSale.errors.removeFailed"),
       );
     } finally {
       setFlashSaleSaving(false);
@@ -676,22 +711,26 @@ export default function ProductManager({
   const getStatusLabel = (
     status: "IN_STOCK" | "LOW_STOCK" | "OUT_OF_STOCK",
   ) => {
-    if (status === "OUT_OF_STOCK") return "Out of Stock";
-    if (status === "LOW_STOCK") return "Low Stock";
-    return "In Stock";
+    if (status === "OUT_OF_STOCK") return t("stockStatus.outOfStock");
+    if (status === "LOW_STOCK") return t("stockStatus.lowStock");
+    return t("stockStatus.inStock");
   };
 
   const getFlashSaleStatus = (product: any) => {
-    if (!product.flashSaleEnabled || !product.flashSaleStartsAt || !product.flashSaleEndsAt) {
+    if (
+      !product.flashSaleEnabled ||
+      !product.flashSaleStartsAt ||
+      !product.flashSaleEndsAt
+    ) {
       return null;
     }
     const startsAt = new Date(product.flashSaleStartsAt).getTime();
     const endsAt = new Date(product.flashSaleEndsAt).getTime();
     const now = Date.now();
     if (Number.isNaN(startsAt) || Number.isNaN(endsAt)) return null;
-    if (startsAt > now) return "Scheduled";
-    if (endsAt <= now) return "Expired";
-    return "Live";
+    if (startsAt > now) return t("flashSale.status.scheduled");
+    if (endsAt <= now) return t("flashSale.status.expired");
+    return t("flashSale.status.live");
   };
 
   const filterSelectClass =
@@ -703,19 +742,23 @@ export default function ProductManager({
       <AlertDialog open={deleteModalOpen} onOpenChange={setDeleteModalOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Delete Product?</AlertDialogTitle>
+            <AlertDialogTitle>{t("deleteDialog.title")}</AlertDialogTitle>
             <AlertDialogDescription>
-              This will permanently delete "{deletingProduct?.name}".
+              {t("deleteDialog.description", {
+                name: deletingProduct?.name ?? "",
+              })}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
+            <AlertDialogCancel disabled={isDeleting}>
+              {t("actions.cancel")}
+            </AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDelete}
               disabled={isDeleting}
               className="bg-destructive hover:bg-destructive/90 text-destructive-foreground"
             >
-              {isDeleting ? "Deleting..." : "Delete"}
+              {isDeleting ? t("actions.deleting") : t("actions.delete")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -734,18 +777,22 @@ export default function ProductManager({
           <AlertDialogHeader>
             <AlertDialogTitle>
               {availabilityProduct?.available
-                ? "Deactivate Product?"
-                : "Activate Product?"}
+                ? t("availabilityDialog.deactivateTitle")
+                : t("availabilityDialog.activateTitle")}
             </AlertDialogTitle>
             <AlertDialogDescription>
               {availabilityProduct?.available
-                ? `“${availabilityProduct?.name}” will be removed from storefront listings, search and product details. New cart and order requests will be blocked. Inventory and historical orders will be preserved.`
-                : `“${availabilityProduct?.name}” will become visible on the storefront and can be purchased when its product type and stock rules allow it.`}
+                ? t("availabilityDialog.deactivateDescription", {
+                    name: availabilityProduct?.name ?? "",
+                  })
+                : t("availabilityDialog.activateDescription", {
+                    name: availabilityProduct?.name ?? "",
+                  })}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={isChangingAvailability}>
-              Cancel
+              {t("actions.cancel")}
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={(event) => {
@@ -760,10 +807,10 @@ export default function ProductManager({
               }
             >
               {isChangingAvailability
-                ? "Saving..."
+                ? t("actions.saving")
                 : availabilityProduct?.available
-                  ? "Deactivate"
-                  : "Activate"}
+                  ? t("actions.deactivate")
+                  : t("actions.activate")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -776,7 +823,9 @@ export default function ProductManager({
               <div>
                 <div className="flex items-center gap-2">
                   <Flame className="h-5 w-5 fill-orange-500 text-orange-500" />
-                  <h2 className="text-lg font-semibold">Configure Flash Sale</h2>
+                  <h2 className="text-lg font-semibold">
+                    {t("flashSale.title")}
+                  </h2>
                 </div>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {flashSaleProduct.name}
@@ -789,21 +838,33 @@ export default function ProductManager({
                 disabled={flashSaleSaving}
                 onClick={closeFlashSaleModal}
               >
-                Close
+                {t("flashSale.close")}
               </Button>
             </div>
 
             <form onSubmit={handleFlashSaleSave} className="space-y-4">
               <div className="rounded-xl border border-border bg-muted/40 p-3 text-sm">
                 <div className="flex justify-between gap-3">
-                  <span className="text-muted-foreground">Regular price</span>
-                  <strong>৳{Number(flashSaleProduct.basePrice ?? 0).toLocaleString("en-US")}</strong>
+                  <span className="text-muted-foreground">
+                    {t("flashSale.regularPrice")}
+                  </span>
+                  <strong>
+                    ৳
+                    {Number(flashSaleProduct.basePrice ?? 0).toLocaleString(
+                      "en-US",
+                    )}
+                  </strong>
                 </div>
                 {flashSaleProduct.flashSalePrice ? (
                   <div className="mt-1 flex justify-between gap-3">
-                    <span className="text-muted-foreground">Current flash price</span>
+                    <span className="text-muted-foreground">
+                      {t("flashSale.currentFlashPrice")}
+                    </span>
                     <strong className="text-rose-600">
-                      ৳{Number(flashSaleProduct.flashSalePrice).toLocaleString("en-US")}
+                      ৳
+                      {Number(flashSaleProduct.flashSalePrice).toLocaleString(
+                        "en-US",
+                      )}
                     </strong>
                   </div>
                 ) : null}
@@ -811,7 +872,9 @@ export default function ProductManager({
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="flash-sale-price">Sale price</Label>
+                  <Label htmlFor="flash-sale-price">
+                    {t("flashSale.salePrice")}
+                  </Label>
                   <Input
                     id="flash-sale-price"
                     type="number"
@@ -828,7 +891,9 @@ export default function ProductManager({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="flash-sale-order">Display order</Label>
+                  <Label htmlFor="flash-sale-order">
+                    {t("flashSale.displayOrder")}
+                  </Label>
                   <Input
                     id="flash-sale-order"
                     type="number"
@@ -844,7 +909,9 @@ export default function ProductManager({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="flash-sale-days">Duration days</Label>
+                  <Label htmlFor="flash-sale-days">
+                    {t("flashSale.durationDays")}
+                  </Label>
                   <Input
                     id="flash-sale-days"
                     type="number"
@@ -859,7 +926,9 @@ export default function ProductManager({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="flash-sale-hours">Duration hours</Label>
+                  <Label htmlFor="flash-sale-hours">
+                    {t("flashSale.durationHours")}
+                  </Label>
                   <Input
                     id="flash-sale-hours"
                     type="number"
@@ -889,9 +958,11 @@ export default function ProductManager({
                   className="mt-0.5 h-4 w-4 accent-orange-600"
                 />
                 <span>
-                  <span className="block font-semibold">Enable flash sale</span>
+                  <span className="block font-semibold">
+                    {t("flashSale.enable")}
+                  </span>
                   <span className="text-muted-foreground">
-                    The deal starts immediately and ends after the selected duration.
+                    {t("flashSale.enableDescription")}
                   </span>
                 </span>
               </label>
@@ -910,7 +981,7 @@ export default function ProductManager({
                   onClick={handleFlashSaleRemove}
                   className="text-destructive hover:bg-destructive/10 hover:text-destructive"
                 >
-                  Remove flash sale
+                  {t("flashSale.remove")}
                 </Button>
                 <div className="flex gap-2">
                   <Button
@@ -919,20 +990,22 @@ export default function ProductManager({
                     disabled={flashSaleSaving}
                     onClick={closeFlashSaleModal}
                   >
-                    Cancel
+                    {t("actions.cancel")}
                   </Button>
                   <Button
                     type="submit"
                     disabled={flashSaleSaving || !flashSaleProduct.available}
                     className="bg-orange-600 text-white hover:bg-orange-700"
                   >
-                    {flashSaleSaving ? "Saving..." : "Save flash sale"}
+                    {flashSaleSaving
+                      ? t("actions.saving")
+                      : t("flashSale.save")}
                   </Button>
                 </div>
               </div>
               {!flashSaleProduct.available ? (
                 <p className="text-right text-sm text-destructive">
-                  Activate this product before enabling a flash sale.
+                  {t("flashSale.activateFirst")}
                 </p>
               ) : null}
             </form>
@@ -940,17 +1013,16 @@ export default function ProductManager({
         </div>
       ) : null}
 
-      {/* WAREHOUSE CONTROLS */}
       {/* Page Header */}
       <div className="mb-4 border-b bg-card">
         <div className="px-4 py-6 sm:px-6 sm:py-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h1 className="text-2xl font-bold text-foreground sm:text-3xl">
-                Product Management
+                {t("header.title")}
               </h1>
               <p className="mt-2 text-muted-foreground">
-                Manage all products with warehouse-specific insights
+                {t("header.subtitle")}
               </p>
             </div>
             <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -970,7 +1042,9 @@ export default function ProductManager({
                     align="end"
                     className="w-[280px] rounded-2xl"
                   >
-                    <DropdownMenuLabel>Warehouse scope</DropdownMenuLabel>
+                    <DropdownMenuLabel>
+                      {t("warehouse.scope")}
+                    </DropdownMenuLabel>
                     <DropdownMenuRadioGroup
                       value={warehouseId || "all"}
                       onValueChange={(value) => {
@@ -980,7 +1054,7 @@ export default function ProductManager({
                       }}
                     >
                       <DropdownMenuRadioItem value="all">
-                        All warehouses
+                        {t("warehouse.allWarehouses")}
                       </DropdownMenuRadioItem>
                       <DropdownMenuSeparator />
                       {warehouses.map((warehouse) => (
@@ -989,7 +1063,9 @@ export default function ProductManager({
                           value={String(warehouse.id)}
                         >
                           {warehouse.name} ({warehouse.code})
-                          {warehouse.isDefault ? " - Default" : ""}
+                          {warehouse.isDefault
+                            ? t("warehouse.defaultSuffix")
+                            : ""}
                         </DropdownMenuRadioItem>
                       ))}
                     </DropdownMenuRadioGroup>
@@ -1004,7 +1080,7 @@ export default function ProductManager({
                   <RefreshCw
                     className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
                   />
-                  Refresh
+                  {t("actions.refresh")}
                 </button>
               </div>
             </div>
@@ -1038,12 +1114,11 @@ export default function ProductManager({
       {/* SEARCH + ADD + FILTERS */}
       <Card className="mx-4 mb-6 border bg-card shadow-sm sm:mx-6">
         <CardContent className="space-y-6 p-4 sm:p-6">
-          {/* Header with Stats and Actions */}
-
-          {/* Filters Section */}
           <div className="space-y-4">
             <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-              <h2 className="text-lg font-semibold text-foreground">Filters</h2>
+              <h2 className="text-lg font-semibold text-foreground">
+                {t("filters.title")}
+              </h2>
               <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-end">
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   <Button
@@ -1052,7 +1127,7 @@ export default function ProductManager({
                     onClick={() => setAttributesOpen(true)}
                     className="w-full"
                   >
-                    Attributes
+                    {t("filters.attributes")}
                   </Button>
                   {features.DIGITAL_PRODUCTS ? (
                     <Button
@@ -1061,19 +1136,22 @@ export default function ProductManager({
                       onClick={() => setDigitalAssetsOpen(true)}
                       className="w-full"
                     >
-                      Digital Assets
+                      {t("filters.digitalAssets")}
                     </Button>
                   ) : null}
                   <Button onClick={openAdd} className="w-full">
-                    <Plus className="h-4 w-4 mr-1" /> New Product
+                    <Plus className="h-4 w-4 mr-1" /> {t("filters.newProduct")}
                   </Button>
                   {features.BUNDLES ? (
                     <Button
                       variant="outline"
-                      onClick={() => router.push("/admin/operations/products/bundles")}
+                      onClick={() =>
+                        router.push("/admin/operations/products/bundles")
+                      }
                       className="w-full border-primary/20 text-primary hover:bg-primary/10"
                     >
-                      <Package className="h-4 w-4 mr-1" /> Bundles
+                      <Package className="h-4 w-4 mr-1" />{" "}
+                      {t("filters.bundles")}
                     </Button>
                   ) : null}
                 </div>
@@ -1085,7 +1163,7 @@ export default function ProductManager({
                     onClick={clearFilters}
                     className="w-full xl:w-auto"
                   >
-                    Clear All Filters
+                    {t("filters.clearAll")}
                   </Button>
                 )}
               </div>
@@ -1096,7 +1174,7 @@ export default function ProductManager({
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   className="h-11 pl-10"
-                  placeholder="Search products..."
+                  placeholder={t("filters.searchPlaceholder")}
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -1107,7 +1185,7 @@ export default function ProductManager({
                 onChange={(e) => setCategoryFilter(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="">All Categories</option>
+                <option value="">{t("filters.allCategories")}</option>
                 {(categories || []).map((category: any) => (
                   <option key={category.id} value={String(category.id)}>
                     {category.name}
@@ -1120,11 +1198,17 @@ export default function ProductManager({
                 onChange={(e) => setProductTypeFilter(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="">All Types</option>
-                <option value="PHYSICAL">Physical</option>
-                {features.DIGITAL_PRODUCTS ? <option value="DIGITAL">Digital</option> : null}
-                {features.SERVICE_PRODUCTS ? <option value="SERVICE">Service</option> : null}
-                {features.BUNDLES ? <option value="BUNDLE">Bundle</option> : null}
+                <option value="">{t("filters.allTypes")}</option>
+                <option value="PHYSICAL">{t("productTypes.physical")}</option>
+                {features.DIGITAL_PRODUCTS ? (
+                  <option value="DIGITAL">{t("productTypes.digital")}</option>
+                ) : null}
+                {features.SERVICE_PRODUCTS ? (
+                  <option value="SERVICE">{t("productTypes.service")}</option>
+                ) : null}
+                {features.BUNDLES ? (
+                  <option value="BUNDLE">{t("productTypes.bundle")}</option>
+                ) : null}
               </select>
 
               <select
@@ -1132,9 +1216,9 @@ export default function ProductManager({
                 onChange={(e) => setAvailabilityFilter(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="">All Availability</option>
-                <option value="available">Available</option>
-                <option value="unavailable">Unavailable</option>
+                <option value="">{t("filters.allAvailability")}</option>
+                <option value="available">{t("filters.available")}</option>
+                <option value="unavailable">{t("filters.unavailable")}</option>
               </select>
 
               <select
@@ -1142,9 +1226,9 @@ export default function ProductManager({
                 onChange={(e) => setFeaturedFilter(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="">All Visibility</option>
-                <option value="featured">Featured</option>
-                <option value="regular">Regular</option>
+                <option value="">{t("filters.allVisibility")}</option>
+                <option value="featured">{t("filters.featured")}</option>
+                <option value="regular">{t("filters.regular")}</option>
               </select>
 
               <select
@@ -1152,11 +1236,15 @@ export default function ProductManager({
                 onChange={(e) => setStockFilter(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="">All Stock States</option>
-                <option value="in-stock">In Stock</option>
-                <option value="low-stock">Low Stock</option>
-                <option value="out-of-stock">Out of Stock</option>
-                <option value="non-physical">Non-Physical</option>
+                <option value="">{t("filters.allStockStates")}</option>
+                <option value="in-stock">{t("stockStatus.inStock")}</option>
+                <option value="low-stock">{t("stockStatus.lowStock")}</option>
+                <option value="out-of-stock">
+                  {t("stockStatus.outOfStock")}
+                </option>
+                <option value="non-physical">
+                  {t("stockStatus.nonPhysical")}
+                </option>
               </select>
 
               <select
@@ -1164,61 +1252,65 @@ export default function ProductManager({
                 onChange={(e) => setSortBy(e.target.value)}
                 className={filterSelectClass}
               >
-                <option value="name-asc">Name (A-Z)</option>
-                <option value="name-desc">Name (Z-A)</option>
-                <option value="category-asc">Category (A-Z)</option>
-                <option value="category-desc">Category (Z-A)</option>
-                <option value="price-asc">Price (Low to High)</option>
-                <option value="price-desc">Price (High to Low)</option>
-                <option value="stock-asc">Stock (Low to High)</option>
-                <option value="stock-desc">Stock (High to Low)</option>
+                <option value="name-asc">{t("sort.nameAsc")}</option>
+                <option value="name-desc">{t("sort.nameDesc")}</option>
+                <option value="category-asc">{t("sort.categoryAsc")}</option>
+                <option value="category-desc">{t("sort.categoryDesc")}</option>
+                <option value="price-asc">{t("sort.priceAsc")}</option>
+                <option value="price-desc">{t("sort.priceDesc")}</option>
+                <option value="stock-asc">{t("sort.stockAsc")}</option>
+                <option value="stock-desc">{t("sort.stockDesc")}</option>
               </select>
             </div>
 
-            {/* Active Filters Tags */}
             {hasActiveFilters && (
               <div className="flex flex-wrap gap-2 border-t border-border/50 pt-3">
                 <span className="text-sm text-muted-foreground">
-                  Active filters:
+                  {t("filters.activeFilters")}
                 </span>
                 {search && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
-                    Search: {search}
+                    {t("filters.searchTag", { value: search })}
                     <button onClick={() => setSearch("")}>×</button>
                   </span>
                 )}
                 {categoryFilter && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
-                    Category:{" "}
-                    {categories?.find(
-                      (category: any) => String(category.id) === categoryFilter,
-                    )?.name || categoryFilter}
+                    {t("filters.categoryTag", {
+                      value:
+                        categories?.find(
+                          (category: any) =>
+                            String(category.id) === categoryFilter,
+                        )?.name || categoryFilter,
+                    })}
                     <button onClick={() => setCategoryFilter("")}>×</button>
                   </span>
                 )}
                 {productTypeFilter && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
-                    Type: {productTypeFilter}
+                    {t("filters.typeTag", { value: productTypeFilter })}
                     <button onClick={() => setProductTypeFilter("")}>×</button>
                   </span>
                 )}
                 {availabilityFilter && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
                     {availabilityFilter === "available"
-                      ? "Available"
-                      : "Unavailable"}
+                      ? t("filters.available")
+                      : t("filters.unavailable")}
                     <button onClick={() => setAvailabilityFilter("")}>×</button>
                   </span>
                 )}
                 {featuredFilter && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
-                    {featuredFilter === "featured" ? "Featured" : "Regular"}
+                    {featuredFilter === "featured"
+                      ? t("filters.featured")
+                      : t("filters.regular")}
                     <button onClick={() => setFeaturedFilter("")}>×</button>
                   </span>
                 )}
                 {stockFilter && (
                   <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary">
-                    Stock: {stockFilter}
+                    {t("filters.stockTag", { value: stockFilter })}
                     <button onClick={() => setStockFilter("")}>×</button>
                   </span>
                 )}
@@ -1231,7 +1323,11 @@ export default function ProductManager({
       {!loading && filtered.length > 0 && (
         <div className="mb-4 flex flex-col gap-3 px-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            Showing {pageStart}-{pageEnd} of {filtered.length} products
+            {t("pagination.showing", {
+              start: pageStart,
+              end: pageEnd,
+              total: filtered.length,
+            })}
           </p>
         </div>
       )}
@@ -1244,17 +1340,13 @@ export default function ProductManager({
               key={`skeleton-${index}`}
               className="bg-card shadow-sm rounded-2xl overflow-hidden border"
             >
-              {/* Image Skeleton */}
               <div className="relative h-48 bg-muted sm:h-56">
                 <div className="absolute inset-0 bg-gradient-to-r from-muted via-muted/50 to-muted animate-pulse" />
               </div>
 
-              {/* Content Skeleton */}
               <CardContent className="p-5">
-                {/* Title Skeleton */}
                 <div className="h-6 bg-muted rounded animate-pulse mb-2" />
 
-                {/* Product Info Skeletons */}
                 <div className="space-y-2 mb-3">
                   <div className="h-4 bg-muted rounded w-3/4 animate-pulse" />
                   <div className="h-4 bg-muted rounded w-2/3 animate-pulse" />
@@ -1264,10 +1356,8 @@ export default function ProductManager({
                   <div className="h-4 bg-muted rounded w-1/4 animate-pulse" />
                 </div>
 
-                {/* Price Skeleton */}
                 <div className="h-6 bg-muted rounded w-1/3 animate-pulse mb-4" />
 
-                {/* Buttons Skeleton */}
                 <div className="flex gap-2">
                   <div className="h-9 bg-muted rounded flex-1 animate-pulse" />
                   <div className="h-9 bg-muted rounded flex-1 animate-pulse" />
@@ -1294,215 +1384,230 @@ export default function ProductManager({
                 key={p.id}
                 className="flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-200 hover:border-border hover:shadow-md"
               >
-              {/* Image */}
-              <div className="relative h-44 overflow-hidden bg-muted sm:h-48">
-                {p.image ? (
-                  <Image
-                    src={p.image}
-                    alt={p.name}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center">
-                    <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
-                  </div>
-                )}
-
-                {/* Top-left badges */}
-                <div className="absolute top-3 left-3 flex gap-1.5">
-                  <span
-                    className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${
-                      p.available
-                        ? "border-primary/20 bg-primary text-primary-foreground"
-                        : "border-destructive/20 bg-destructive text-destructive-foreground"
-                    }`}
-                  >
-                    {p.available ? "Available" : "Unavailable"}
-                  </span>
-                  {p.featured && (
-                    <span className="rounded-full border border-accent/20 bg-accent px-2 py-0.5 text-[11px] font-medium text-accent-foreground">
-                      Featured
-                    </span>
+                <div className="relative h-44 overflow-hidden bg-muted sm:h-48">
+                  {p.image ? (
+                    <Image
+                      src={p.image}
+                      alt={p.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center">
+                      <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
+                    </div>
                   )}
-                  {flashSaleStatus ? (
+
+                  <div className="absolute top-3 left-3 flex gap-1.5">
                     <span
                       className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${
-                        flashSaleStatus === "Live"
-                          ? "border-orange-200 bg-orange-500 text-white"
-                          : flashSaleStatus === "Scheduled"
-                            ? "border-blue-200 bg-blue-600 text-white"
-                            : "border-muted bg-muted text-muted-foreground"
+                        p.available
+                          ? "border-primary/20 bg-primary text-primary-foreground"
+                          : "border-destructive/20 bg-destructive text-destructive-foreground"
                       }`}
                     >
-                      Flash {flashSaleStatus}
+                      {p.available
+                        ? t("card.available")
+                        : t("card.unavailable")}
                     </span>
-                  ) : null}
-                </div>
-
-                {/* Top-right type badge */}
-                <div className="absolute top-3 right-3">
-                  <span className="rounded-full border border-border/60 bg-destructive px-2 py-0.5 text-[11px] text-destructive-foreground">
-                    {p.type || "-"}
-                  </span>
-                </div>
-              </div>
-
-              <CardContent className="flex flex-1 flex-col p-4">
-                {/* Top content */}
-                <div>
-                  {/* Name + Price */}
-                  <div className="mb-1 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                    <h3 className="line-clamp-2 min-h-[40px] font-medium text-[15px] leading-snug">
-                      {p.name}
-                    </h3>
-                    <span className="whitespace-nowrap font-medium text-[15px]">
-                      ৳{p.basePrice}
-                    </span>
-                  </div>
-
-                  <p className="mb-3 text-[11px] text-muted-foreground">
-                    SKU: {p.sku || "-"}
-                  </p>
-
-                  {/* Meta grid */}
-                  <div className="mb-3 grid grid-cols-2 gap-1.5">
-                    {[
-                      { label: "Category", value: p.category?.name || "-" },
-                      { label: "Brand", value: p.brand?.name || "-" },
-                      ...(p.type === "PHYSICAL"
-                        ? [
-                            {
-                              label: "Stock",
-                              value: `${getProductInventorySummary(p).totalStock} units`,
-                            },
-                            {
-                              label: "Threshold",
-                              value: `${p.lowStockThreshold ?? 10} units`,
-                            },
-                          ]
-                        : [
-                            { label: "Type", value: p.type || "-" },
-                            {
-                              label: "Status",
-                              value: p.available ? "Available" : "Unavailable",
-                            },
-                          ]),
-                    ].map(({ label, value }) => (
-                      <div
-                        key={label}
-                        className="rounded-lg bg-muted/60 px-2.5 py-2"
+                    {p.featured && (
+                      <span className="rounded-full border border-accent/20 bg-accent px-2 py-0.5 text-[11px] font-medium text-accent-foreground">
+                        {t("card.featured")}
+                      </span>
+                    )}
+                    {flashSaleStatus ? (
+                      <span
+                        className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${
+                          flashSaleStatus === t("flashSale.status.live")
+                            ? "border-orange-200 bg-orange-500 text-white"
+                            : flashSaleStatus ===
+                                t("flashSale.status.scheduled")
+                              ? "border-blue-200 bg-blue-600 text-white"
+                              : "border-muted bg-muted text-muted-foreground"
+                        }`}
                       >
-                        <p className="mb-0.5 text-[10px] text-muted-foreground">
-                          {label}
-                        </p>
-                        <p className="break-words text-[12px] font-medium sm:truncate">
-                          {value}
-                        </p>
-                      </div>
-                    ))}
+                        {t("card.flashPrefix", { status: flashSaleStatus })}
+                      </span>
+                    ) : null}
                   </div>
 
-                  {/* Inventory status badges */}
-                  <div className="min-h-[28px]">
-                    {p.type === "PHYSICAL" && (
-                      <div className="mb-3 flex flex-wrap gap-1.5">
-                        <span
-                          className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${getStatusBadgeClasses(
-                            getProductInventorySummary(p).status,
-                          )}`}
+                  <div className="absolute top-3 right-3">
+                    <span className="rounded-full border border-border/60 bg-destructive px-2 py-0.5 text-[11px] text-destructive-foreground">
+                      {p.type || "-"}
+                    </span>
+                  </div>
+                </div>
+
+                <CardContent className="flex flex-1 flex-col p-4">
+                  <div>
+                    <div className="mb-1 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <h3 className="line-clamp-2 min-h-[40px] font-medium text-[15px] leading-snug">
+                        {p.name}
+                      </h3>
+                      <span className="whitespace-nowrap font-medium text-[15px]">
+                        ৳{p.basePrice}
+                      </span>
+                    </div>
+
+                    <p className="mb-3 text-[11px] text-muted-foreground">
+                      {t("card.skuLabel", { sku: p.sku || "-" })}
+                    </p>
+
+                    <div className="mb-3 grid grid-cols-2 gap-1.5">
+                      {[
+                        {
+                          label: t("card.category"),
+                          value: p.category?.name || "-",
+                        },
+                        { label: t("card.brand"), value: p.brand?.name || "-" },
+                        ...(p.type === "PHYSICAL"
+                          ? [
+                              {
+                                label: t("card.stock"),
+                                value: t("card.stockUnits", {
+                                  count:
+                                    getProductInventorySummary(p).totalStock,
+                                }),
+                              },
+                              {
+                                label: t("card.threshold"),
+                                value: t("card.stockUnits", {
+                                  count: p.lowStockThreshold ?? 10,
+                                }),
+                              },
+                            ]
+                          : [
+                              { label: t("card.type"), value: p.type || "-" },
+                              {
+                                label: t("card.status"),
+                                value: p.available
+                                  ? t("card.available")
+                                  : t("card.unavailable"),
+                              },
+                            ]),
+                      ].map(({ label, value }) => (
+                        <div
+                          key={label}
+                          className="rounded-lg bg-muted/60 px-2.5 py-2"
                         >
-                          {getStatusLabel(getProductInventorySummary(p).status)}
-                        </span>
+                          <p className="mb-0.5 text-[10px] text-muted-foreground">
+                            {label}
+                          </p>
+                          <p className="break-words text-[12px] font-medium sm:truncate">
+                            {value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
 
-                        {getProductInventorySummary(p).lowCount > 0 && (
-                          <span className="rounded-full border border-accent/20 bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent-foreground">
-                            {getProductInventorySummary(p).lowCount} low variant
-                            {getProductInventorySummary(p).lowCount > 1
-                              ? "s"
-                              : ""}
+                    <div className="min-h-[28px]">
+                      {p.type === "PHYSICAL" && (
+                        <div className="mb-3 flex flex-wrap gap-1.5">
+                          <span
+                            className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${getStatusBadgeClasses(
+                              getProductInventorySummary(p).status,
+                            )}`}
+                          >
+                            {getStatusLabel(
+                              getProductInventorySummary(p).status,
+                            )}
                           </span>
-                        )}
 
-                        {getProductInventorySummary(p).outCount > 0 && (
-                          <span className="rounded-full border border-destructive/20 bg-destructive/10 px-2 py-0.5 text-[11px] font-medium text-destructive">
-                            {getProductInventorySummary(p).outCount} out
-                          </span>
-                        )}
+                          {getProductInventorySummary(p).lowCount > 0 && (
+                            <span className="rounded-full border border-accent/20 bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent-foreground">
+                              {t("card.lowVariants", {
+                                count: getProductInventorySummary(p).lowCount,
+                              })}
+                            </span>
+                          )}
+
+                          {getProductInventorySummary(p).outCount > 0 && (
+                            <span className="rounded-full border border-destructive/20 bg-destructive/10 px-2 py-0.5 text-[11px] font-medium text-destructive">
+                              {t("card.outCount", {
+                                count: getProductInventorySummary(p).outCount,
+                              })}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mt-auto border-t border-border/50 pt-3">
+                    {moduleEnabled ? (
+                      <div className="grid grid-cols-2 gap-2">
+                        <Button
+                          onClick={() => openEdit(p)}
+                          variant="default"
+                          size="sm"
+                          className="w-full text-xs"
+                        >
+                          <Edit3 className="mr-1 h-3 w-3" />
+                          {t("actions.edit")}
+                        </Button>
+
+                        <Button
+                          onClick={() => openManage(p)}
+                          variant="default"
+                          size="sm"
+                          className="w-full text-xs"
+                        >
+                          {t("actions.manage")}
+                        </Button>
+
+                        <Button
+                          onClick={() => openAvailabilityModal(p)}
+                          variant="outline"
+                          size="sm"
+                          aria-label={t("card.availabilityAria", {
+                            action: p.available
+                              ? t("actions.deactivate")
+                              : t("actions.activate"),
+                            name: p.name,
+                          })}
+                          className={`w-full text-xs ${
+                            p.available
+                              ? "border-destructive/30 text-destructive hover:bg-destructive/10 hover:text-destructive"
+                              : "border-primary/30 text-primary hover:bg-primary/10 hover:text-primary"
+                          }`}
+                        >
+                          {p.available ? (
+                            <PowerOff className="mr-1 h-3.5 w-3.5" />
+                          ) : (
+                            <Power className="mr-1 h-3.5 w-3.5" />
+                          )}
+                          {p.available
+                            ? t("actions.deactivate")
+                            : t("actions.activate")}
+                        </Button>
+
+                        <Button
+                          onClick={() => openFlashSaleModal(p)}
+                          variant="outline"
+                          size="sm"
+                          className="w-full border-orange-300 text-orange-700 hover:bg-orange-50 hover:text-orange-800"
+                        >
+                          <Flame className="mr-1 h-3.5 w-3.5" />
+                          {t("actions.flashSale")}
+                        </Button>
+
+                        <Button
+                          onClick={() => openDeleteModal(p)}
+                          variant="destructive"
+                          size="sm"
+                          aria-label={t("card.deleteAria", { name: p.name })}
+                          className="h-9 w-full text-destructive hover:bg-destructive/10 hover:text-destructive"
+                        >
+                          <Trash2 className="h-3.5 w-3.5" />
+                        </Button>
                       </div>
+                    ) : (
+                      <p className="rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
+                        {t("card.moduleDisabled")}
+                      </p>
                     )}
                   </div>
-                </div>
-
-                {/* Actions fixed bottom */}
-                <div className="mt-auto border-t border-border/50 pt-3">
-                  {moduleEnabled ? (
-                    <div className="grid grid-cols-2 gap-2">
-                    <Button
-                      onClick={() => openEdit(p)}
-                      variant="default"
-                      size="sm"
-                      className="w-full text-xs"
-                    >
-                      <Edit3 className="mr-1 h-3 w-3" />
-                      Edit
-                    </Button>
-
-                    <Button
-                      onClick={() => openManage(p)}
-                      variant="default"
-                      size="sm"
-                      className="w-full text-xs"
-                    >
-                      Manage
-                    </Button>
-
-                    <Button
-                      onClick={() => openAvailabilityModal(p)}
-                      variant="outline"
-                      size="sm"
-                      aria-label={`${p.available ? "Deactivate" : "Activate"} ${p.name}`}
-                      className={`w-full text-xs ${
-                        p.available
-                          ? "border-destructive/30 text-destructive hover:bg-destructive/10 hover:text-destructive"
-                          : "border-primary/30 text-primary hover:bg-primary/10 hover:text-primary"
-                      }`}
-                    >
-                      {p.available ? (
-                        <PowerOff className="mr-1 h-3.5 w-3.5" />
-                      ) : (
-                        <Power className="mr-1 h-3.5 w-3.5" />
-                      )}
-                      {p.available ? "Deactivate" : "Activate"}
-                    </Button>
-
-                    <Button
-                      onClick={() => openFlashSaleModal(p)}
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-orange-300 text-orange-700 hover:bg-orange-50 hover:text-orange-800"
-                    >
-                      <Flame className="mr-1 h-3.5 w-3.5" />
-                      Flash Sale
-                    </Button>
-
-                    <Button
-                      onClick={() => openDeleteModal(p)}
-                      variant="destructive"
-                      size="sm"
-                      aria-label={`Delete ${p.name}`}
-                      className="h-9 w-full text-destructive hover:bg-destructive/10 hover:text-destructive"
-                    >
-                      <Trash2 className="h-3.5 w-3.5" />
-                    </Button>
-                    </div>
-                  ) : (
-                    <p className="rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
-                      This module is disabled. Existing product data remains read-only.
-                    </p>
-                  )}
-                </div>
-              </CardContent>
+                </CardContent>
               </SpotlightCard>
             );
           })}
@@ -1512,7 +1617,10 @@ export default function ProductManager({
       {!loading && filtered.length > 0 && totalPages > 1 && (
         <div className="mb-6 flex flex-col gap-3 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p className="text-sm text-muted-foreground">
-            Page {currentPage} of {totalPages}
+            {t("pagination.pageOf", {
+              current: currentPage,
+              total: totalPages,
+            })}
           </p>
           <div className="flex flex-wrap items-center gap-2">
             <Button
@@ -1521,7 +1629,7 @@ export default function ProductManager({
               size="sm"
               onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
               disabled={currentPage === 1}
-              aria-label="Previous page"
+              aria-label={t("pagination.previous")}
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -1541,9 +1649,11 @@ export default function ProductManager({
               type="button"
               variant="outline"
               size="sm"
-              onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+              onClick={() =>
+                setCurrentPage((page) => Math.min(totalPages, page + 1))
+              }
               disabled={currentPage === totalPages}
-              aria-label="Next page"
+              aria-label={t("pagination.next")}
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -1555,23 +1665,25 @@ export default function ProductManager({
         <Card className="mx-4 mb-6 border bg-card p-6 text-center shadow-sm sm:mx-6 sm:p-10">
           <h3 className="text-xl font-bold mb-2">
             {warehouseId
-              ? `No products found in ${selectedWarehouseLabel}`
-              : "No products found"}
+              ? t("empty.titleWithWarehouse", {
+                  warehouse: selectedWarehouseLabel,
+                })
+              : t("empty.title")}
           </h3>
           <p className="text-sm text-muted-foreground mb-4">
             {warehouseId || hasActiveFilters
-              ? "Try adjusting your filters or selecting a different warehouse."
-              : "Try adjusting your search or add your first product."}
+              ? t("empty.descriptionFiltered")
+              : t("empty.description")}
           </p>
           {hasActiveFilters && (
             <div className="mb-4">
               <Button variant="outline" onClick={clearFilters}>
-                Clear Filters
+                {t("empty.clearFilters")}
               </Button>
             </div>
           )}
           <Button onClick={openAdd}>
-            <Plus className="h-4 w-4 mr-1" /> Add Product
+            <Plus className="h-4 w-4 mr-1" /> {t("empty.addProduct")}
           </Button>
         </Card>
       )}

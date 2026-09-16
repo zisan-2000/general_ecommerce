@@ -862,5 +862,565 @@
         "previousPage": "আগের পৃষ্ঠা",
         "nextPage": "পরের পৃষ্ঠা",
         "lastPage": "শেষ পৃষ্ঠা"
+    },
+    "AdminProductModal": {
+        "closeModal": "মডাল বন্ধ করুন",
+        "titleAdd": "পণ্য যোগ করুন",
+        "titleEdit": "পণ্য সম্পাদনা করুন",
+        "basic": {
+            "title": "ধাপ ১: পণ্যের মৌলিক তথ্য",
+            "subtitle": "সাধারণ ও ভ্যারিয়েন্ট পণ্যের জন্য সাধারণ মূল তথ্য।",
+            "name": "নাম *",
+            "description": "বিবরণ",
+            "shortDescription": "সংক্ষিপ্ত বিবরণ",
+            "type": "ধরন",
+            "productSku": "পণ্যের SKU",
+            "model": "মডেল",
+            "warranty": "ওয়ারেন্টি",
+            "baseSellPrice": "বেস বিক্রয় মূল্য *",
+            "basePurchasePrice": "বেস ক্রয় মূল্য",
+            "originalPrice": "আসল মূল্য",
+            "currency": "মুদ্রা",
+            "category": "ক্যাটাগরি *",
+            "brand": "ব্র্যান্ড",
+            "select": "নির্বাচন করুন"
+        },
+        "productTypes": {
+            "PHYSICAL": "ফিজিক্যাল",
+            "DIGITAL": "ডিজিটাল",
+            "SERVICE": "সেবা"
+        },
+        "variants": {
+            "title": "ধাপ ২: ভ্যারিয়েন্ট সেটআপ",
+            "subtitle": "সাইজ ও রঙের মতো অপশন গ্রুপ নির্ধারণ করুন। সিস্টেম স্বয়ংক্রিয়ভাবে বিক্রয়যোগ্য কম্বিনেশন তৈরি করবে।",
+            "enable": "ভ্যারিয়েন্ট চালু করুন",
+            "simpleProductNotice": "এই পণ্যটি একটি ডিফল্ট ভ্যারিয়েন্ট সহ সাধারণ পণ্য হিসেবে সংরক্ষিত হবে।",
+            "simpleStock": "সাধারণ পণ্যের স্টক",
+            "emergencyStock": "ইমার্জেন্সি স্টক থ্রেশহোল্ড",
+            "option": "অপশন",
+            "searchOptions": "অপশন খুঁজুন...",
+            "searchOptionAria": "ভ্যারিয়েন্ট অপশন {index} খুঁজুন",
+            "selectManagedAttribute": "পরিচালিত অ্যাট্রিবিউট নির্বাচন করুন",
+            "customOptionName": "কাস্টম অপশনের নাম",
+            "addOptionValue": "অপশন মান যোগ করুন",
+            "add": "যোগ করুন",
+            "remove": "মুছুন",
+            "attributeLoaded": "অ্যাট্রিবিউট ম্যানেজার থেকে লোড করা হয়েছে। আপনি এখনও নিচে অব্যবহৃত মান মুছে ফেলতে পারেন।",
+            "noValues": "এখনও কোনো মান যোগ করা হয়নি।",
+            "upload": "আপলোড",
+            "managedValuesAvailable": "উপলব্ধ পরিচালিত মান",
+            "addVariantOption": "ভ্যারিয়েন্ট অপশন যোগ করুন",
+            "combinationsTitle": "তৈরি হওয়া ভ্যারিয়েন্ট কম্বিনেশন",
+            "combinationsSubtitle": "প্রতিটি সারি একটি পণ্য ভ্যারিয়েন্টের সাথে মিলে যায়। স্টক ওয়্যারহাউস স্টকে সিঙ্ক হয়, আলাদাভাবে সংরক্ষিত হয় না।",
+            "combinationsCount": "{count}টি কম্বিনেশন",
+            "noCombinations": "কম্বিনেশন তৈরি করতে অপশনের নাম ও মান যোগ করুন।",
+            "defaultVariant": "ডিফল্ট ভ্যারিয়েন্ট",
+            "warehouseTarget": "ওয়্যারহাউস স্টক লক্ষ্য: ডিফল্ট ওয়্যারহাউস",
+            "uploadGallery": "গ্যালারি আপলোড করুন",
+            "sameGalleryAsColor": "রঙ: {color}-এর মতো একই গ্যালারি ব্যবহার করে।",
+            "gallerySharedNotice": "এই রঙের সব সাইজের জন্য একটি গ্যালারি ব্যবহৃত হবে।",
+            "basePricePlaceholder": "বেস মূল্য",
+            "purchasePricePlaceholder": "ক্রয় মূল্য",
+            "active": "সক্রিয়",
+            "totalVariantStock": "মোট ভ্যারিয়েন্ট স্টক: {count}",
+            "table": {
+                "combination": "কম্বিনেশন",
+                "sku": "SKU",
+                "sellPrice": "বিক্রয় মূল্য",
+                "purchasePrice": "ক্রয় মূল্য",
+                "stock": "স্টক",
+                "emergencyStock": "ইমার্জেন্সি স্টক",
+                "status": "অবস্থা"
+            }
+        },
+        "additional": {
+            "title": "অতিরিক্ত তথ্য",
+            "weight": "ওজন",
+            "dimensions": "মাত্রা",
+            "length": "দৈর্ঘ্য",
+            "width": "প্রস্থ",
+            "height": "উচ্চতা",
+            "vatClass": "ভ্যাট ক্লাস",
+            "videoUrl": "ভিডিও URL",
+            "selectDigitalAsset": "ডিজিটাল অ্যাসেট নির্বাচন করুন",
+            "serviceDuration": "সেবার সময়কাল (মিনিট)",
+            "serviceLocation": "সেবার স্থান",
+            "serviceOnlineLink": "সেবার অনলাইন লিংক",
+            "status": "অবস্থা:",
+            "available": "উপলব্ধ",
+            "unavailable": "অনুপলব্ধ",
+            "statusHint": "উপলব্ধতা পরিবর্তন করতে পণ্য কার্ডের সক্রিয়/নিষ্ক্রিয় ক্রিয়া ব্যবহার করুন।",
+            "availableLabel": "উপলব্ধ",
+            "featuredLabel": "ফিচার্ড"
+        },
+        "cartReminder": {
+            "title": "কার্ট রিমাইন্ডার নোটিফিকেশন",
+            "description": "চেকআউট না করে এই পণ্যটি কার্টে থাকলে ব্যবহারকারীকে জানান। নিষ্ক্রিয় করতে দুটি ঘর খালি বা ০ রাখুন।",
+            "afterHours": "কত ঘণ্টা পরে",
+            "afterMinutes": "কত মিনিট পরে"
+        },
+        "media": {
+            "title": "মিডিয়া",
+            "mainImage": "প্রধান ছবি",
+            "preview": "প্রিভিউ",
+            "gallery": "গ্যালারি",
+            "galleryAlt": "গ্যালারি"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "add": "পণ্য যোগ করুন",
+            "update": "পণ্য আপডেট করুন"
+        },
+        "errors": {
+            "uploadFailed": "আপলোড ব্যর্থ হয়েছে",
+            "imageUploadFailed": "ছবি আপলোড ব্যর্থ হয়েছে",
+            "galleryUploadFailed": "গ্যালারি আপলোড ব্যর্থ হয়েছে",
+            "variantGalleryUploadFailed": "ভ্যারিয়েন্ট গ্যালারি আপলোড ব্যর্থ হয়েছে",
+            "duplicateOption": "{name} ইতিমধ্যে একটি ভ্যারিয়েন্ট অপশন হিসেবে যোগ করা হয়েছে",
+            "nameCategoryPriceRequired": "নাম, ক্যাটাগরি ও মূল্য আবশ্যক",
+            "invalidDimensions": "অনুগ্রহ করে সঠিক মাত্রা লিখুন",
+            "invalidBasePrice": "বেস মূল্য ০ বা তার বেশি হতে হবে",
+            "invalidBaseCostPrice": "বেস ক্রয় মূল্য ০ বা তার বেশি হতে হবে",
+            "skuRequiredForVariants": "ভ্যারিয়েন্ট কম্বিনেশনের জন্য পণ্যের SKU আবশ্যক",
+            "addVariantOption": "মানসহ অন্তত একটি ভ্যারিয়েন্ট অপশন যোগ করুন",
+            "generatedVariantsRequired": "তৈরি হওয়া ভ্যারিয়েন্ট কম্বিনেশন আবশ্যক",
+            "invalidVariant": "প্রতিটি ভ্যারিয়েন্টে একটি SKU, সঠিক মূল্য, সঠিক স্টক ও সঠিক ইমার্জেন্সি থ্রেশহোল্ড থাকতে হবে",
+            "invalidStock": "স্টক একটি সংখ্যা হতে হবে (০ বা তার বেশি)",
+            "invalidLowStockThreshold": "ইমার্জেন্সি স্টক থ্রেশহোল্ড ০ বা তার বেশি হতে হবে",
+            "invalidCartReminder": "কার্ট রিমাইন্ডারে সঠিক ঘণ্টা ও মিনিট ব্যবহার করুন",
+            "saveFailed": "পণ্য সংরক্ষণ করা যায়নি"
+        }
+    },
+    "AdminProductRelations": {
+        "title": "পরিচালনা: {name} ({type})",
+        "tabs": {
+            "variants": "ভ্যারিয়েন্ট",
+            "attributes": "অ্যাট্রিবিউট",
+            "inventory": "মজুদ",
+            "serviceSlots": "সেবার স্লট",
+            "bookMetadata": "বইয়ের মেটাডেটা",
+            "inventoryLogs": "মজুদ লগ"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "cancel": "বাতিল করুন",
+            "create": "তৈরি করুন",
+            "update": "আপডেট করুন",
+            "edit": "সম্পাদনা",
+            "add": "যোগ করুন",
+            "save": "সংরক্ষণ"
+        },
+        "common": {
+            "select": "নির্বাচন করুন",
+            "yes": "হ্যাঁ",
+            "no": "না",
+            "optional": "ঐচ্ছিক",
+            "saved": "সংরক্ষিত হয়েছে",
+            "deleted": "মুছে ফেলা হয়েছে"
+        },
+        "variants": {
+            "header": "ভ্যারিয়েন্ট (SKU, মূল্য, স্টক, অপশন)",
+            "printSelected": "নির্বাচিত প্রিন্ট করুন",
+            "print": "প্রিন্ট",
+            "addVariant": "ভ্যারিয়েন্ট যোগ করুন",
+            "empty": "কোনো ভ্যারিয়েন্ট পাওয়া যায়নি",
+            "selectAll": "সব ভ্যারিয়েন্ট নির্বাচন করুন",
+            "selectVariantAria": "ভ্যারিয়েন্ট {sku} নির্বাচন করুন",
+            "barcode": "বারকোড:",
+            "qr": "QR:",
+            "barcodeAlt": "{sku}-এর বারকোড",
+            "qrAlt": "{sku}-এর QR কোড",
+            "download": "ডাউনলোড",
+            "sticker": "স্টিকার",
+            "regenerate": "পুনরায় তৈরি",
+            "updated": "ভ্যারিয়েন্ট আপডেট হয়েছে",
+            "created": "ভ্যারিয়েন্ট তৈরি হয়েছে",
+            "deleted": "ভ্যারিয়েন্ট মোছা হয়েছে",
+            "codesRegenerated": "ভ্যারিয়েন্ট কোড পুনরায় তৈরি হয়েছে",
+            "table": {
+                "sku": "SKU",
+                "codes": "কোড",
+                "price": "মূল্য",
+                "stock": "স্টক",
+                "options": "অপশন",
+                "action": "কার্যক্রম"
+            }
+        },
+        "variantForm": {
+            "newTitle": "নতুন ভ্যারিয়েন্ট",
+            "editTitle": "ভ্যারিয়েন্ট সম্পাদনা",
+            "sku": "SKU *",
+            "price": "মূল্য *",
+            "currency": "মুদ্রা",
+            "stock": "স্টক",
+            "stockTip": "টিপ: একাধিক ওয়্যারহাউসের জন্য মজুদ ট্যাব থেকে স্টক পরিচালনা করুন।",
+            "stockNotUsed": "{type} পণ্যের জন্য স্টক ব্যবহার করা হয় না।",
+            "digitalAsset": "ডিজিটাল অ্যাসেট (ঐচ্ছিক)",
+            "option1Name": "অপশন ১-এর নাম",
+            "option1Value": "অপশন ১-এর মান",
+            "option2Name": "অপশন ২-এর নাম",
+            "option2Value": "অপশন ২-এর মান",
+            "option1NamePlaceholder": "যেমন রঙ",
+            "option1ValuePlaceholder": "যেমন লাল",
+            "option2NamePlaceholder": "যেমন সাইজ",
+            "option2ValuePlaceholder": "যেমন XL"
+        },
+        "attributes": {
+            "addTitle": "পণ্যের অ্যাট্রিবিউট যোগ করুন",
+            "attribute": "অ্যাট্রিবিউট",
+            "value": "মান",
+            "commaSeparated": "কমা দিয়ে আলাদা করা মান",
+            "typeValue": "মান লিখুন",
+            "empty": "এখনও কোনো পণ্য অ্যাট্রিবিউট নেই",
+            "added": "অ্যাট্রিবিউট যোগ করা হয়েছে",
+            "removed": "মুছে ফেলা হয়েছে",
+            "table": {
+                "attribute": "অ্যাট্রিবিউট",
+                "value": "মান",
+                "action": "কার্যক্রম"
+            }
+        },
+        "inventory": {
+            "physicalOnly": "মজুদ শুধুমাত্র ফিজিক্যাল পণ্যের জন্য উপলব্ধ।",
+            "variant": "ভ্যারিয়েন্ট",
+            "totalStock": "মোট স্টক:",
+            "selectVariantHint": "স্টক লেভেল পরিচালনা করতে একটি ভ্যারিয়েন্ট নির্বাচন করুন।",
+            "noWarehouses": "এখনও কোনো ওয়্যারহাউস নেই। পণ্য পেজের ওয়্যারহাউস বাটন থেকে একটি তৈরি করুন।",
+            "defaultBadge": "ডিফল্ট",
+            "table": {
+                "warehouse": "ওয়্যারহাউস",
+                "quantity": "পরিমাণ",
+                "reserved": "সংরক্ষিত",
+                "available": "উপলব্ধ",
+                "action": "কার্যক্রম"
+            }
+        },
+        "serviceSlots": {
+            "addTitle": "সেবার স্লট যোগ করুন",
+            "start": "শুরু *",
+            "end": "শেষ *",
+            "capacity": "ধারণক্ষমতা",
+            "timezone": "টাইমজোন",
+            "location": "স্থান",
+            "notes": "নোট",
+            "addSlot": "স্লট যোগ করুন",
+            "empty": "এখনও কোনো সেবার স্লট নেই",
+            "created": "সেবার স্লট তৈরি হয়েছে",
+            "table": {
+                "start": "শুরু",
+                "end": "শেষ",
+                "capacity": "ধারণক্ষমতা",
+                "booked": "বুক করা",
+                "action": "কার্যক্রম"
+            }
+        },
+        "bookMetadata": {
+            "title": "বই-সম্পর্কিত সম্পর্ক",
+            "description": "BookMetadata কর্তৃত্বপূর্ণ এবং সামঞ্জস্য উইন্ডো চলাকালীন পুরোনো ক্ষেত্রগুলি স্বয়ংক্রিয়ভাবে আপডেট হয়।",
+            "writer": "লেখক",
+            "publisher": "প্রকাশক",
+            "noWriter": "কোনো লেখক নেই",
+            "noPublisher": "কোনো প্রকাশক নেই",
+            "save": "বইয়ের মেটাডেটা সংরক্ষণ করুন",
+            "saving": "সংরক্ষণ হচ্ছে…",
+            "saved": "বইয়ের মেটাডেটা সংরক্ষিত হয়েছে"
+        },
+        "logs": {
+            "empty": "কোনো মজুদ লগ নেই",
+            "table": {
+                "date": "তারিখ",
+                "change": "পরিবর্তন",
+                "variant": "ভ্যারিয়েন্ট",
+                "warehouse": "ওয়্যারহাউস",
+                "reason": "কারণ"
+            }
+        },
+        "confirm": {
+            "deleteVariant": "এই ভ্যারিয়েন্টটি মুছবেন?",
+            "removeAttribute": "এই পণ্য অ্যাট্রিবিউটটি মুছবেন?",
+            "deleteStockLevel": "এই ওয়্যারহাউস স্টক এন্ট্রিটি মুছবেন?",
+            "deleteServiceSlot": "এই সেবার স্লটটি মুছবেন?"
+        },
+        "errors": {
+            "loadRelations": "পণ্যের সম্পর্ক লোড করা যায়নি",
+            "loadBookMetadata": "বইয়ের মেটাডেটা লোড করা যায়নি",
+            "saveBookMetadataFailed": "বইয়ের মেটাডেটা সংরক্ষণ করা যায়নি",
+            "selectAtLeastOneVariant": "অন্তত একটি ভ্যারিয়েন্ট নির্বাচন করুন",
+            "skuRequired": "SKU আবশ্যক",
+            "priceRequired": "মূল্য আবশ্যক",
+            "invalidStock": "স্টক ০ বা তার বেশি হতে হবে",
+            "saveFailed": "সংরক্ষণ ব্যর্থ হয়েছে",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে",
+            "regenerateFailed": "পুনরায় তৈরি ব্যর্থ হয়েছে",
+            "selectAttribute": "একটি অ্যাট্রিবিউট নির্বাচন করুন",
+            "valueRequired": "মান আবশ্যক",
+            "addFailed": "যোগ করা ব্যর্থ হয়েছে",
+            "invalidQuantity": "পরিমাণ ০ বা তার বেশি হতে হবে",
+            "startEndRequired": "শুরু ও শেষ আবশ্যক",
+            "invalidCapacity": "ধারণক্ষমতা ১ বা তার বেশি হতে হবে",
+            "createFailed": "তৈরি করা ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminAttributesManager": {
+        "title": "অ্যাট্রিবিউট",
+        "attributeMeta": "{type} · {count}টি ক্যাটাগরি",
+        "common": {
+            "loading": "লোড হচ্ছে..."
+        },
+        "actions": {
+            "add": "যোগ করুন",
+            "save": "সংরক্ষণ",
+            "saving": "সংরক্ষণ হচ্ছে..."
+        },
+        "create": {
+            "name": "নাম",
+            "namePlaceholder": "যেমন স্ক্রিন সাইজ",
+            "type": "ধরন",
+            "unit": "একক",
+            "unitPlaceholder": "GB, kg..."
+        },
+        "mapping": {
+            "categoryLabel": "ক্যাটাগরি ম্যাপিং",
+            "selectCategory": "একটি ক্যাটাগরি নির্বাচন করুন",
+            "saveMapping": "ম্যাপিং সংরক্ষণ করুন",
+            "saved": "ক্যাটাগরি অ্যাট্রিবিউট ম্যাপিং সংরক্ষিত হয়েছে",
+            "table": {
+                "attribute": "অ্যাট্রিবিউট",
+                "use": "ব্যবহার",
+                "required": "আবশ্যক",
+                "filter": "ফিল্টার",
+                "variant": "ভ্যারিয়েন্ট",
+                "order": "ক্রম"
+            }
+        },
+        "definition": {
+            "nameAria": "{name}-এর নাম",
+            "typeAria": "{name}-এর ধরন",
+            "unitAria": "{name}-এর একক",
+            "unitPlaceholder": "ঐচ্ছিক একক"
+        },
+        "values": {
+            "addPlaceholder": "মান যোগ করুন (যেমন লাল)",
+            "empty": "কোনো মান নেই",
+            "clickToDelete": "মুছতে ক্লিক করুন",
+            "added": "মান যোগ করা হয়েছে",
+            "deleted": "মান মোছা হয়েছে"
+        },
+        "attributes": {
+            "created": "অ্যাট্রিবিউট তৈরি হয়েছে",
+            "definitionUpdated": "অ্যাট্রিবিউট ডেফিনিশন আপডেট হয়েছে",
+            "deleted": "অ্যাট্রিবিউট মোছা হয়েছে"
+        },
+        "empty": {
+            "attributes": "এখনও কোনো অ্যাট্রিবিউট নেই"
+        },
+        "confirm": {
+            "deleteValue": "এই মানটি মুছবেন?",
+            "deleteAttribute": "এই অ্যাট্রিবিউটটি মুছবেন?"
+        },
+        "errors": {
+            "loadSettings": "অ্যাট্রিবিউট সেটিংস লোড করা যায়নি",
+            "loadAttributes": "অ্যাট্রিবিউট লোড করা যায়নি",
+            "attributeNameRequired": "অ্যাট্রিবিউটের নাম আবশ্যক",
+            "valueRequired": "মান আবশ্যক",
+            "createFailed": "তৈরি করা ব্যর্থ হয়েছে",
+            "updateFailed": "আপডেট ব্যর্থ হয়েছে",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে",
+            "mappingFailed": "ম্যাপিং আপডেট ব্যর্থ হয়েছে",
+            "mappingWithProduct": "{error}: {name} — {productError}"
+        }
+    },
+    "AdminDigitalAssets": {
+        "title": "ডিজিটাল অ্যাসেট",
+        "common": {
+            "loading": "লোড হচ্ছে...",
+            "deleted": "মুছে ফেলা হয়েছে"
+        },
+        "actions": {
+            "create": "তৈরি করুন"
+        },
+        "create": {
+            "title": "ডিজিটাল অ্যাসেট যোগ করুন",
+            "assetTitle": "শিরোনাম",
+            "fileUrl": "ফাইলের URL",
+            "fileUrlPlaceholder": "/api/upload/digital-assets/...",
+            "created": "ডিজিটাল অ্যাসেট তৈরি হয়েছে"
+        },
+        "upload": {
+            "uploaded": "আপলোড সম্পন্ন হয়েছে"
+        },
+        "empty": {
+            "assets": "এখনও কোনো ডিজিটাল অ্যাসেট নেই"
+        },
+        "confirm": {
+            "deleteAsset": "এই ডিজিটাল অ্যাসেটটি মুছবেন?"
+        },
+        "errors": {
+            "loadFailed": "ডিজিটাল অ্যাসেট লোড করা যায়নি",
+            "uploadFailed": "আপলোড ব্যর্থ হয়েছে",
+            "titleAndUrlRequired": "শিরোনাম ও ফাইলের URL আবশ্যক",
+            "createFailed": "তৈরি করা ব্যর্থ হয়েছে",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminProductManager": {
+        "header": {
+            "title": "পণ্য ব্যবস্থাপনা",
+            "subtitle": "ওয়্যারহাউস-নির্দিষ্ট তথ্যসহ সব পণ্য পরিচালনা করুন"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "delete": "মুছুন",
+            "deleting": "মুছে ফেলা হচ্ছে...",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "activate": "সক্রিয় করুন",
+            "deactivate": "নিষ্ক্রিয় করুন",
+            "edit": "সম্পাদনা",
+            "manage": "পরিচালনা",
+            "flashSale": "ফ্ল্যাশ সেল",
+            "refresh": "রিফ্রেশ"
+        },
+        "warehouse": {
+            "allWarehouses": "সব ওয়্যারহাউস",
+            "scope": "ওয়্যারহাউস পরিধি",
+            "defaultSuffix": " - ডিফল্ট"
+        },
+        "stats": {
+            "totalProducts": "মোট পণ্য",
+            "inSelectedWarehouse": "নির্বাচিত ওয়্যারহাউসে",
+            "totalStock": "মোট স্টক",
+            "reservedUnits": "{count}টি সংরক্ষিত ইউনিট",
+            "lowStockItems": "কম মজুদ আইটেম",
+            "belowThreshold": "থ্রেশহোল্ডের নিচে",
+            "outOfStock": "স্টক শেষ",
+            "needRestocking": "পুনরায় মজুদ প্রয়োজন"
+        },
+        "filters": {
+            "title": "ফিল্টার",
+            "attributes": "অ্যাট্রিবিউট",
+            "digitalAssets": "ডিজিটাল অ্যাসেট",
+            "newProduct": "নতুন পণ্য",
+            "bundles": "বান্ডল",
+            "clearAll": "সব ফিল্টার মুছুন",
+            "searchPlaceholder": "পণ্য খুঁজুন...",
+            "allCategories": "সব ক্যাটাগরি",
+            "allTypes": "সব ধরন",
+            "allAvailability": "সব উপলব্ধতা",
+            "available": "উপলব্ধ",
+            "unavailable": "অনুপলব্ধ",
+            "allVisibility": "সব দৃশ্যমানতা",
+            "featured": "ফিচার্ড",
+            "regular": "নিয়মিত",
+            "allStockStates": "সব স্টক অবস্থা",
+            "activeFilters": "সক্রিয় ফিল্টার:",
+            "searchTag": "অনুসন্ধান: {value}",
+            "categoryTag": "ক্যাটাগরি: {value}",
+            "typeTag": "ধরন: {value}",
+            "stockTag": "স্টক: {value}"
+        },
+        "productTypes": {
+            "physical": "ফিজিক্যাল",
+            "digital": "ডিজিটাল",
+            "service": "সেবা",
+            "bundle": "বান্ডল"
+        },
+        "sort": {
+            "nameAsc": "নাম (A-Z)",
+            "nameDesc": "নাম (Z-A)",
+            "categoryAsc": "ক্যাটাগরি (A-Z)",
+            "categoryDesc": "ক্যাটাগরি (Z-A)",
+            "priceAsc": "মূল্য (কম থেকে বেশি)",
+            "priceDesc": "মূল্য (বেশি থেকে কম)",
+            "stockAsc": "স্টক (কম থেকে বেশি)",
+            "stockDesc": "স্টক (বেশি থেকে কম)"
+        },
+        "stockStatus": {
+            "inStock": "স্টকে আছে",
+            "lowStock": "কম মজুদ",
+            "outOfStock": "স্টক শেষ",
+            "nonPhysical": "অ-ফিজিক্যাল"
+        },
+        "deleteDialog": {
+            "title": "পণ্য মুছবেন?",
+            "description": "এটি স্থায়ীভাবে \"{name}\" মুছে ফেলবে।"
+        },
+        "availabilityDialog": {
+            "activateTitle": "পণ্য সক্রিয় করবেন?",
+            "deactivateTitle": "পণ্য নিষ্ক্রিয় করবেন?",
+            "activateDescription": "\"{name}\" স্টোরফ্রন্টে দৃশ্যমান হবে এবং পণ্যের ধরন ও স্টক নিয়ম অনুমোদিত হলে ক্রয় করা যাবে।",
+            "deactivateDescription": "\"{name}\" স্টোরফ্রন্ট তালিকা, অনুসন্ধান ও পণ্যের বিস্তারিত থেকে সরিয়ে নেওয়া হবে। নতুন কার্ট ও অর্ডার অনুরোধ ব্লক করা হবে। মজুদ ও পূর্বের অর্ডার সংরক্ষিত থাকবে।"
+        },
+        "flashSale": {
+            "title": "ফ্ল্যাশ সেল কনফিগার করুন",
+            "close": "বন্ধ করুন",
+            "regularPrice": "নিয়মিত মূল্য",
+            "currentFlashPrice": "বর্তমান ফ্ল্যাশ মূল্য",
+            "salePrice": "বিক্রয় মূল্য",
+            "displayOrder": "প্রদর্শন ক্রম",
+            "durationDays": "সময়কাল (দিন)",
+            "durationHours": "সময়কাল (ঘণ্টা)",
+            "enable": "ফ্ল্যাশ সেল চালু করুন",
+            "enableDescription": "ডিল এখনই শুরু হবে এবং নির্বাচিত সময় শেষ হলে শেষ হবে।",
+            "remove": "ফ্ল্যাশ সেল সরান",
+            "save": "ফ্ল্যাশ সেল সংরক্ষণ করুন",
+            "activateFirst": "ফ্ল্যাশ সেল চালু করার আগে এই পণ্যটি সক্রিয় করুন।",
+            "status": {
+                "live": "চলছে",
+                "scheduled": "নির্ধারিত",
+                "expired": "মেয়াদোত্তীর্ণ"
+            },
+            "errors": {
+                "invalidPrice": "বিক্রয় মূল্য ০-এর বেশি এবং নিয়মিত মূল্যের চেয়ে কম হতে হবে।",
+                "invalidDuration": "সময়কাল অন্তত ১ ঘণ্টা হতে হবে।",
+                "saveFailed": "ফ্ল্যাশ সেল সংরক্ষণ করা যায়নি।",
+                "removeFailed": "ফ্ল্যাশ সেল সরানো যায়নি।"
+            },
+            "toasts": {
+                "saved": "ফ্ল্যাশ সেল সফলভাবে সংরক্ষিত হয়েছে",
+                "removed": "ফ্ল্যাশ সেল সরানো হয়েছে"
+            }
+        },
+        "card": {
+            "available": "উপলব্ধ",
+            "unavailable": "অনুপলব্ধ",
+            "featured": "ফিচার্ড",
+            "flashPrefix": "ফ্ল্যাশ {status}",
+            "skuLabel": "SKU: {sku}",
+            "category": "ক্যাটাগরি",
+            "brand": "ব্র্যান্ড",
+            "stock": "স্টক",
+            "stockUnits": "{count}টি ইউনিট",
+            "threshold": "থ্রেশহোল্ড",
+            "type": "ধরন",
+            "status": "অবস্থা",
+            "lowVariants": "{count}টি কম মজুদ ভ্যারিয়েন্ট",
+            "outCount": "{count}টি স্টক শেষ",
+            "availabilityAria": "{name}-কে {action} করুন",
+            "deleteAria": "{name} মুছুন",
+            "moduleDisabled": "এই মডিউলটি নিষ্ক্রিয়। বিদ্যমান পণ্য ডেটা শুধুমাত্র পঠনযোগ্য।"
+        },
+        "pagination": {
+            "showing": "{total}টির মধ্যে {start}-{end}টি পণ্য দেখানো হচ্ছে",
+            "pageOf": "পৃষ্ঠা {current} / {total}",
+            "previous": "আগের পৃষ্ঠা",
+            "next": "পরের পৃষ্ঠা"
+        },
+        "empty": {
+            "title": "কোনো পণ্য পাওয়া যায়নি",
+            "titleWithWarehouse": "{warehouse}-এ কোনো পণ্য পাওয়া যায়নি",
+            "description": "আপনার অনুসন্ধান সামঞ্জস্য করুন বা আপনার প্রথম পণ্য যোগ করুন।",
+            "descriptionFiltered": "আপনার ফিল্টার সামঞ্জস্য করুন বা ভিন্ন ওয়্যারহাউস নির্বাচন করুন।",
+            "clearFilters": "ফিল্টার মুছুন",
+            "addProduct": "পণ্য যোগ করুন"
+        },
+        "toasts": {
+            "deleteSuccess": "পণ্য সফলভাবে মোছা হয়েছে",
+            "deleteFailed": "পণ্য মোছা যায়নি",
+            "availabilityChanged": "পণ্য সফলভাবে {action}",
+            "availabilityFailed": "পণ্যের উপলব্ধতা আপডেট করা যায়নি"
+        },
+        "errors": {
+            "loadWarehouse": "ওয়্যারহাউস ডেটা লোড করা যায়নি"
+        }
     }
 }
