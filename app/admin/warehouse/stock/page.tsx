@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, memo } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
   AlertTriangle,
@@ -84,6 +85,8 @@ interface AttributeValue {
 }
 
 const StockManagementPage = memo(function StockManagementPage() {
+  const t = useTranslations("AdminStockManagement");
+
   const detailRequestIdRef = useRef(0);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<Record<number, boolean>>({});
@@ -254,10 +257,11 @@ const StockManagementPage = memo(function StockManagementPage() {
       setWarehouses(Array.isArray(wData) ? wData : []);
       setAttributes(Array.isArray(aData) ? aData : []);
     } catch (err) {
-      toast.error("Failed to load stock management data");
+      toast.error(t("errors.loadStockData"));
     } finally {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadProductDetails = useCallback(async (productId: number) => {
@@ -285,9 +289,7 @@ const StockManagementPage = memo(function StockManagementPage() {
           .join(",");
         const fallbackRes = await fetch(
           `/api/inventory-logs?variantIds=${variantIds}`,
-          {
-            cache: "no-store",
-          },
+          { cache: "no-store" },
         );
         const fallbackData = await fallbackRes.json().catch(() => []);
         nextLogs = Array.isArray(fallbackData) ? fallbackData : [];
@@ -305,10 +307,11 @@ const StockManagementPage = memo(function StockManagementPage() {
           : firstVariantId,
       );
     } catch (err) {
-      toast.error("Failed to load variant/stock details");
+      toast.error(t("errors.loadDetails"));
     } finally {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -345,9 +348,7 @@ const StockManagementPage = memo(function StockManagementPage() {
       try {
         const res = await fetch(
           `/api/attributes/${selectedAttributeId}/values`,
-          {
-            cache: "no-store",
-          },
+          { cache: "no-store" },
         );
         const data = await res.json();
         setAttributeValues(Array.isArray(data) ? data : []);
@@ -426,7 +427,7 @@ const StockManagementPage = memo(function StockManagementPage() {
 
     const quantity = Number(stockDraft[warehouseId] ?? "0");
     if (!Number.isFinite(quantity) || quantity < 0) {
-      toast.error("Quantity must be 0 or more");
+      toast.error(t("errors.quantityInvalid"));
       return;
     }
 
@@ -443,12 +444,12 @@ const StockManagementPage = memo(function StockManagementPage() {
       });
 
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Save failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.saveFailed"));
 
-      toast.success("Stock saved");
+      toast.success(t("success.stockSaved"));
       await loadProductDetails(selectedProductId);
     } catch (err: any) {
-      toast.error(err?.message || "Failed to save stock");
+      toast.error(err?.message || t("errors.saveStockFailed"));
     } finally {
       setSaving((prev) => ({ ...prev, [warehouseId]: false }));
     }
@@ -459,7 +460,7 @@ const StockManagementPage = memo(function StockManagementPage() {
 
     const lowStockThreshold = Number(productThresholdDraft);
     if (!Number.isFinite(lowStockThreshold) || lowStockThreshold < 0) {
-      toast.error("Threshold must be 0 or more");
+      toast.error(t("errors.thresholdInvalid"));
       return;
     }
 
@@ -472,12 +473,12 @@ const StockManagementPage = memo(function StockManagementPage() {
       });
 
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Save failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.saveFailed"));
 
-      toast.success("Product threshold saved");
+      toast.success(t("success.productThresholdSaved"));
       await refreshAll();
     } catch (err: any) {
-      toast.error(err?.message || "Failed to save product threshold");
+      toast.error(err?.message || t("errors.saveProductThresholdFailed"));
     } finally {
       setLoading(false);
     }
@@ -488,7 +489,7 @@ const StockManagementPage = memo(function StockManagementPage() {
 
     const lowStockThreshold = Number(variantThresholdDraft);
     if (!Number.isFinite(lowStockThreshold) || lowStockThreshold < 0) {
-      toast.error("Threshold must be 0 or more");
+      toast.error(t("errors.thresholdInvalid"));
       return;
     }
 
@@ -501,12 +502,12 @@ const StockManagementPage = memo(function StockManagementPage() {
       });
 
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Save failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.saveFailed"));
 
-      toast.success("Variant threshold saved");
+      toast.success(t("success.variantThresholdSaved"));
       await loadProductDetails(selectedProductId);
     } catch (err: any) {
-      toast.error(err?.message || "Failed to save variant threshold");
+      toast.error(err?.message || t("errors.saveVariantThresholdFailed"));
     } finally {
       setSavingVariantThreshold(false);
     }
@@ -514,19 +515,19 @@ const StockManagementPage = memo(function StockManagementPage() {
 
   const clearStockLevel = async (stockLevelId: number) => {
     if (!selectedProductId) return;
-    if (!confirm("Delete this warehouse stock entry?")) return;
+    if (!confirm(t("confirm.deleteStockLevel"))) return;
 
     try {
       const res = await fetch(`/api/stock-levels/${stockLevelId}`, {
         method: "DELETE",
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
 
-      toast.success("Stock entry deleted");
+      toast.success(t("success.stockDeleted"));
       await loadProductDetails(selectedProductId);
     } catch (err: any) {
-      toast.error(err?.message || "Failed to delete stock entry");
+      toast.error(err?.message || t("errors.deleteStockFailed"));
     }
   };
 
@@ -534,19 +535,17 @@ const StockManagementPage = memo(function StockManagementPage() {
     <div className="p-6 space-y-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Stock Management</h1>
-          <p className="text-sm text-muted-foreground">
-            Manage stock by product variant and warehouse.
-          </p>
+          <h1 className="text-2xl font-bold">{t("title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("subtitle")}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => setWarehouseModalOpen(true)}>
             <WarehouseIcon className="h-4 w-4 mr-1" />
-            Warehouses
+            {t("actions.warehouses")}
           </Button>
           <Button variant="outline" onClick={refreshAll} disabled={loading}>
             <RefreshCw className="h-4 w-4 mr-1" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
@@ -554,16 +553,16 @@ const StockManagementPage = memo(function StockManagementPage() {
       <Card>
         <CardContent className="p-4 grid grid-cols-3 gap-4">
           <div className="col-span-2">
-            <Label>Search Physical Products</Label>
+            <Label>{t("filters.searchLabel")}</Label>
             <Input
-              placeholder="Search by name/category..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
 
           <div>
-            <Label>Product</Label>
+            <Label>{t("filters.productLabel")}</Label>
             <select
               className="w-full border rounded-md px-3 py-2 bg-background"
               value={selectedProductId ?? ""}
@@ -577,7 +576,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                 setSelectedVariantId(null);
               }}
             >
-              <option value="">Select product</option>
+              <option value="">{t("filters.selectProduct")}</option>
               {physicalProducts.map((product) => (
                 <option key={product.id} value={product.id}>
                   {product.name}
@@ -591,7 +590,9 @@ const StockManagementPage = memo(function StockManagementPage() {
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <Card className="stock-summary-card-physical-products">
           <CardContent className="p-4">
-            <p className="text-sm text-muted-foreground">Physical Products</p>
+            <p className="text-sm text-muted-foreground">
+              {t("stats.physicalProducts")}
+            </p>
             <p className="text-2xl font-semibold">
               {loading ? (
                 <span className="inline-block h-8 w-16 bg-muted animate-pulse rounded" />
@@ -603,7 +604,9 @@ const StockManagementPage = memo(function StockManagementPage() {
         </Card>
         <Card className="stock-summary-card-variants">
           <CardContent className="p-4">
-            <p className="text-sm text-muted-foreground">Variants</p>
+            <p className="text-sm text-muted-foreground">
+              {t("stats.variants")}
+            </p>
             <p className="text-2xl font-semibold">
               {loading ? (
                 <span className="inline-block h-8 w-16 bg-muted animate-pulse rounded" />
@@ -615,7 +618,9 @@ const StockManagementPage = memo(function StockManagementPage() {
         </Card>
         <Card className="stock-summary-card-total-stock">
           <CardContent className="p-4">
-            <p className="text-sm text-muted-foreground">Total Variant Stock</p>
+            <p className="text-sm text-muted-foreground">
+              {t("stats.totalVariantStock")}
+            </p>
             <p className="text-2xl font-semibold">
               {loading ? (
                 <span className="inline-block h-8 w-16 bg-muted animate-pulse rounded" />
@@ -627,7 +632,9 @@ const StockManagementPage = memo(function StockManagementPage() {
         </Card>
         <Card className="stock-summary-card-low-stock">
           <CardContent className="p-4">
-            <p className="text-sm text-muted-foreground">Low Stock Variants</p>
+            <p className="text-sm text-muted-foreground">
+              {t("stats.lowStockVariants")}
+            </p>
             <p className="text-2xl font-semibold">
               {loading ? (
                 <span className="inline-block h-8 w-16 bg-muted animate-pulse rounded" />
@@ -640,7 +647,7 @@ const StockManagementPage = memo(function StockManagementPage() {
         <Card className="stock-summary-card-out-of-stock col-span-2 md:col-span-1">
           <CardContent className="p-4">
             <p className="text-sm text-muted-foreground">
-              Out of Stock Variants
+              {t("stats.outOfStockVariants")}
             </p>
             <p className="text-2xl font-semibold">
               {loading ? (
@@ -658,10 +665,10 @@ const StockManagementPage = memo(function StockManagementPage() {
           <CardContent className="p-4 space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold">Warehouse Stock Levels</p>
+                <p className="font-semibold">{t("warehouseStock.title")}</p>
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-center justify-between">
-                <Label>Attribute</Label>
+                <Label>{t("warehouseStock.attributeLabel")}</Label>
                 <select
                   className="w-full border rounded-md px-3 py-2 bg-background mb-2"
                   value={selectedAttributeId}
@@ -670,7 +677,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                     setSelectedAttributeValue("");
                   }}
                 >
-                  <option value="">All attributes</option>
+                  <option value="">{t("warehouseStock.allAttributes")}</option>
                   {attributes.map((attribute) => (
                     <option key={attribute.id} value={attribute.id}>
                       {attribute.name}
@@ -678,25 +685,27 @@ const StockManagementPage = memo(function StockManagementPage() {
                   ))}
                 </select>
 
-                <Label>Attribute Value</Label>
+                <Label>{t("warehouseStock.attributeValueLabel")}</Label>
                 <select
                   className="w-full border rounded-md px-3 py-2 bg-background mb-2"
                   value={selectedAttributeValue}
                   onChange={(e) => setSelectedAttributeValue(e.target.value)}
                   disabled={!selectedAttributeId}
                 >
-                  <option value="">All values</option>
+                  <option value="">{t("warehouseStock.allValues")}</option>
                   {attributeValueOptions.map((value) => (
                     <option key={value} value={value}>
                       {value}
                       {selectedAttributeName
-                        ? ` (${attributeValueProductCounts.get(value) || 0} products)`
+                        ? t("warehouseStock.valueProductCount", {
+                            count: attributeValueProductCounts.get(value) || 0,
+                          })
                         : ""}
                     </option>
                   ))}
                 </select>
 
-                <Label>Variant</Label>
+                <Label>{t("warehouseStock.variantLabel")}</Label>
                 <select
                   className="w-full border rounded-md px-3 py-2 bg-background"
                   value={selectedVariantId ?? ""}
@@ -706,7 +715,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                     )
                   }
                 >
-                  <option value="">Select variant</option>
+                  <option value="">{t("warehouseStock.selectVariant")}</option>
                   {filteredVariants.map((variant) => (
                     <option key={variant.id} value={variant.id}>
                       {variant.sku} ({variant.currency} {String(variant.price)})
@@ -718,11 +727,16 @@ const StockManagementPage = memo(function StockManagementPage() {
                 </select>
                 {selectedAttributeName && selectedAttributeValue && (
                   <p className="text-xs text-muted-foreground mt-2">
-                    {selectedAttributeValueProductCount} physical products have{" "}
-                    {selectedAttributeName}: {selectedAttributeValue}
-                    {selectedProduct
-                      ? ` (including "${selectedProduct.name}" if matched).`
-                      : "."}
+                    {t("warehouseStock.productCountInfo", {
+                      count: selectedAttributeValueProductCount,
+                      name: selectedAttributeName,
+                      value: selectedAttributeValue,
+                      productSuffix: selectedProduct
+                        ? t("warehouseStock.productIncluded", {
+                            name: selectedProduct.name,
+                          })
+                        : "",
+                    })}
                   </p>
                 )}
               </div>
@@ -730,12 +744,14 @@ const StockManagementPage = memo(function StockManagementPage() {
 
             {!selectedVariant ? (
               <p className="text-sm text-muted-foreground">
-                Select a product and variant to manage stock levels.
+                {t("warehouseStock.selectHint")}
               </p>
             ) : (
               <div className="grid gap-4 grid-cols-2">
                 <div className="rounded-lg border p-4">
-                  <p className="font-medium">Product Threshold</p>
+                  <p className="font-medium">
+                    {t("thresholds.productThreshold")}
+                  </p>
                   <div className="mt-3 flex gap-2">
                     <Input
                       type="number"
@@ -748,12 +764,14 @@ const StockManagementPage = memo(function StockManagementPage() {
                       onClick={saveProductThreshold}
                       disabled={loading || !selectedProduct}
                     >
-                      Save
+                      {t("actions.save")}
                     </Button>
                   </div>
                 </div>
                 <div className="rounded-lg border p-4">
-                  <p className="font-medium">Variant Threshold</p>
+                  <p className="font-medium">
+                    {t("thresholds.variantThreshold")}
+                  </p>
                   <div className="mt-3 flex gap-2">
                     <Input
                       type="number"
@@ -766,7 +784,9 @@ const StockManagementPage = memo(function StockManagementPage() {
                       onClick={saveVariantThreshold}
                       disabled={loading || savingVariantThreshold}
                     >
-                      {savingVariantThreshold ? "Saving..." : "Save"}
+                      {savingVariantThreshold
+                        ? t("actions.saving")
+                        : t("actions.save")}
                     </Button>
                   </div>
                 </div>
@@ -777,11 +797,21 @@ const StockManagementPage = memo(function StockManagementPage() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Warehouse</TableHead>
-                      <TableHead>Quantity</TableHead>
-                      <TableHead>Reserved</TableHead>
-                      <TableHead>Available</TableHead>
-                      <TableHead className="text-right">Action</TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.warehouse")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.quantity")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.reserved")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.available")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("warehouseStock.table.action")}
+                      </TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -812,18 +842,28 @@ const StockManagementPage = memo(function StockManagementPage() {
               </div>
             ) : sortedWarehouses.length === 0 ? (
               <p className="text-sm text-muted-foreground">
-                No warehouses found. Create one from the Warehouses button.
+                {t("warehouseStock.noWarehouses")}
               </p>
             ) : (
               <div className="border rounded-lg overflow-hidden">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Warehouse</TableHead>
-                      <TableHead>Quantity</TableHead>
-                      <TableHead>Reserved</TableHead>
-                      <TableHead>Available</TableHead>
-                      <TableHead className="text-right">Action</TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.warehouse")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.quantity")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.reserved")}
+                      </TableHead>
+                      <TableHead>
+                        {t("warehouseStock.table.available")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("warehouseStock.table.action")}
+                      </TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -844,7 +884,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                             </div>
                             {warehouse.isDefault && (
                               <div className="text-xs text-muted-foreground">
-                                Default
+                                {t("warehouseStock.defaultBadge")}
                               </div>
                             )}
                           </TableCell>
@@ -871,7 +911,9 @@ const StockManagementPage = memo(function StockManagementPage() {
                                 onClick={() => saveStockLevel(warehouse.id)}
                                 disabled={!!saving[warehouse.id] || loading}
                               >
-                                {saving[warehouse.id] ? "Saving..." : "Save"}
+                                {saving[warehouse.id]
+                                  ? t("actions.saving")
+                                  : t("actions.save")}
                               </Button>
                               {level && (
                                 <Button
@@ -881,7 +923,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                                   onClick={() => clearStockLevel(level.id)}
                                   disabled={loading}
                                 >
-                                  Clear
+                                  {t("actions.clear")}
                                 </Button>
                               )}
                             </div>
@@ -898,7 +940,7 @@ const StockManagementPage = memo(function StockManagementPage() {
 
         <Card>
           <CardContent className="p-4 space-y-3">
-            <p className="font-semibold">Variant Stock Summary</p>
+            <p className="font-semibold">{t("variantSummary.title")}</p>
             {loading ? (
               <div className="space-y-2">
                 {[...Array(5)].map((_, index) => (
@@ -911,7 +953,7 @@ const StockManagementPage = memo(function StockManagementPage() {
               </div>
             ) : filteredVariants.length === 0 ? (
               <p className="text-sm text-muted-foreground">
-                No variants found.
+                {t("variantSummary.empty")}
               </p>
             ) : (
               <div className="space-y-2">
@@ -940,21 +982,25 @@ const StockManagementPage = memo(function StockManagementPage() {
                         </p>
                       )}
                       <p className="text-xs text-muted-foreground">
-                        Stock: {variant.stock}
+                        {t("variantSummary.stockLabel", {
+                          count: variant.stock,
+                        })}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        Emergency stock: {variant.lowStockThreshold}
+                        {t("variantSummary.emergencyStockLabel", {
+                          count: variant.lowStockThreshold,
+                        })}
                       </p>
                       {isLow && (
                         <p className="text-xs text-amber-500 dark:text-amber-400 flex items-center gap-1 mt-1">
                           <AlertTriangle className="h-3 w-3" />
-                          Low stock
+                          {t("variantSummary.lowStock")}
                         </p>
                       )}
                       {isOut && (
                         <p className="text-xs text-destructive flex items-center gap-1 mt-1">
                           <AlertTriangle className="h-3 w-3" />
-                          Out of stock
+                          {t("variantSummary.outOfStock")}
                         </p>
                       )}
                     </button>
@@ -968,17 +1014,17 @@ const StockManagementPage = memo(function StockManagementPage() {
 
       <Card>
         <CardContent className="p-4 space-y-3">
-          <p className="font-semibold">Inventory Logs</p>
+          <p className="font-semibold">{t("logs.title")}</p>
           {loading ? (
             <div className="border rounded-lg overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Change</TableHead>
-                    <TableHead>Variant</TableHead>
-                    <TableHead>Warehouse</TableHead>
-                    <TableHead>Reason</TableHead>
+                    <TableHead>{t("logs.table.date")}</TableHead>
+                    <TableHead>{t("logs.table.change")}</TableHead>
+                    <TableHead>{t("logs.table.variant")}</TableHead>
+                    <TableHead>{t("logs.table.warehouse")}</TableHead>
+                    <TableHead>{t("logs.table.reason")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -1007,31 +1053,30 @@ const StockManagementPage = memo(function StockManagementPage() {
           ) : visibleLogs.length === 0 ? (
             <p className="text-sm text-muted-foreground">
               {selectedVariantId
-                ? "No inventory logs found for the selected variant."
-                : "No inventory logs found for the selected product."}
+                ? t("logs.emptyVariant")
+                : t("logs.emptyProduct")}
             </p>
           ) : (
             <div className="border rounded-lg overflow-hidden">
-              {/* Horizontal scroll wrapper */}
               <div className="overflow-x-auto">
                 <div className="min-w-[640px] md:min-w-0">
                   <Table>
                     <TableHeader>
                       <TableRow>
                         <TableHead className="whitespace-nowrap">
-                          Date
+                          {t("logs.table.date")}
                         </TableHead>
                         <TableHead className="whitespace-nowrap">
-                          Change
+                          {t("logs.table.change")}
                         </TableHead>
                         <TableHead className="whitespace-nowrap">
-                          Variant
+                          {t("logs.table.variant")}
                         </TableHead>
                         <TableHead className="whitespace-nowrap">
-                          Warehouse
+                          {t("logs.table.warehouse")}
                         </TableHead>
                         <TableHead className="whitespace-nowrap">
-                          Reason
+                          {t("logs.table.reason")}
                         </TableHead>
                       </TableRow>
                     </TableHeader>

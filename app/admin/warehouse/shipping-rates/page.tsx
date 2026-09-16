@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { Plus, X } from "lucide-react";
 import { ALLOWED_SHIPPING_AREAS } from "@/lib/shipping-areas";
 import ShippingRatesSkeleton from "@/components/ui/ShippingRatesSkeleton";
@@ -31,6 +32,8 @@ type WeightSlabInput = {
   cost: string;
 };
 
+type CountryOption = { name: string; iso2: string };
+
 const defaultForm: RateForm = {
   country: "BD",
   area: ALLOWED_SHIPPING_AREAS[0],
@@ -39,8 +42,6 @@ const defaultForm: RateForm = {
   isActive: true,
   priority: "1000",
 };
-
-type CountryOption = { name: string; iso2: string };
 
 function parseWeightSlabs(raw: unknown): WeightSlabInput[] {
   if (!Array.isArray(raw)) return [];
@@ -58,12 +59,16 @@ function parseWeightSlabs(raw: unknown): WeightSlabInput[] {
             ? ""
             : String(slab.maxWeight),
         cost:
-          slab.cost === undefined || slab.cost === null ? "" : String(slab.cost),
+          slab.cost === undefined || slab.cost === null
+            ? ""
+            : String(slab.cost),
       };
     });
 }
 
 export default function ShippingRatesPage() {
+  const t = useTranslations("AdminShippingRates");
+
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [form, setForm] = useState<RateForm>(defaultForm);
   const [weightSlabs, setWeightSlabs] = useState<WeightSlabInput[]>([]);
@@ -81,14 +86,16 @@ export default function ShippingRatesPage() {
     setError(null);
 
     try {
-      const ratesRes = await fetch("/api/admin/shipping-rates", { cache: "no-store" });
+      const ratesRes = await fetch("/api/admin/shipping-rates", {
+        cache: "no-store",
+      });
       const ratesData = await ratesRes.json();
       if (!ratesRes.ok) {
-        throw new Error(ratesData?.error || "Failed to load rates");
+        throw new Error(ratesData?.error || t("errors.loadRates"));
       }
       setRates(Array.isArray(ratesData) ? ratesData : []);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load shipping rates");
+      setError(e instanceof Error ? e.message : t("errors.loadRates"));
     } finally {
       setLoading(false);
     }
@@ -96,6 +103,7 @@ export default function ShippingRatesPage() {
 
   useEffect(() => {
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadCountries = async () => {
@@ -103,16 +111,15 @@ export default function ShippingRatesPage() {
     try {
       const res = await fetch("/api/geo/countries", { cache: "no-store" });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Failed to load countries");
+      if (!res.ok) throw new Error(data?.error || t("errors.loadCountries"));
       setCountries(Array.isArray(data) ? data : []);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load countries");
+      setError(e instanceof Error ? e.message : t("errors.loadCountries"));
     } finally {
       setLoadingCountries(false);
     }
   };
 
-  // Memoize country options to prevent unnecessary re-renders
   const countryOptions = useMemo(() => {
     return countries.map((c) => (
       <option key={c.iso2} value={c.iso2}>
@@ -121,7 +128,6 @@ export default function ShippingRatesPage() {
     ));
   }, [countries]);
 
-  // Memoize shipping rate items to prevent unnecessary re-renders
   const shippingRateItems = useMemo(() => {
     return rates.map((r) => (
       <div
@@ -133,17 +139,19 @@ export default function ShippingRatesPage() {
             #{r.id} {r.country} {">"} {r.area}
           </p>
           <p className="text-muted-foreground">
-            Base: {Number(r.baseCost)} | Free Over:{" "}
+            {t("list.base")}: {Number(r.baseCost)} | {t("list.freeOver")}:{" "}
             {r.freeMinOrder === null || r.freeMinOrder === undefined
-              ? "Not set"
+              ? t("list.notSet")
               : Number(r.freeMinOrder)}{" "}
-            | Priority: {r.priority}
+            | {t("list.priority")}: {r.priority}
           </p>
           <p className="text-muted-foreground">
-            Weight Slabs: {Array.isArray(r.weightSlabs) ? r.weightSlabs.length : 0}
+            {t("list.weightSlabs")}:{" "}
+            {Array.isArray(r.weightSlabs) ? r.weightSlabs.length : 0}
           </p>
           <p className="text-muted-foreground">
-            Status: {r.isActive ? "Active" : "Inactive"}
+            {t("list.status")}:{" "}
+            {r.isActive ? t("list.active") : t("list.inactive")}
           </p>
         </div>
         <div className="flex gap-2">
@@ -151,21 +159,23 @@ export default function ShippingRatesPage() {
             className="btn-primary px-3 py-1 rounded text-sm"
             onClick={() => beginEdit(r)}
           >
-            Edit
+            {t("actions.edit")}
           </button>
           <button
             className="btn-danger px-3 py-1 rounded text-sm"
             onClick={() => removeRate(r)}
           >
-            Delete
+            {t("actions.delete")}
           </button>
         </div>
       </div>
     ));
-  }, [rates]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rates, t]);
 
   useEffect(() => {
     loadCountries();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const beginEdit = (rate: ShippingRate) => {
@@ -205,20 +215,23 @@ export default function ShippingRatesPage() {
         .filter((slab) => slab.minWeight || slab.maxWeight || slab.cost)
         .map((slab) => {
           if (!slab.minWeight || !slab.cost) {
-            throw new Error("Each weight slab needs Min Weight and Cost");
+            throw new Error(t("errors.slabMinCostRequired"));
           }
           const minWeight = Number(slab.minWeight);
           const maxWeight = slab.maxWeight ? Number(slab.maxWeight) : null;
           const cost = Number(slab.cost);
 
           if (!Number.isFinite(minWeight) || minWeight < 0) {
-            throw new Error("Min Weight must be a non-negative number");
+            throw new Error(t("errors.slabMinWeightInvalid"));
           }
-          if (maxWeight !== null && (!Number.isFinite(maxWeight) || maxWeight <= minWeight)) {
-            throw new Error("Max Weight must be greater than Min Weight");
+          if (
+            maxWeight !== null &&
+            (!Number.isFinite(maxWeight) || maxWeight <= minWeight)
+          ) {
+            throw new Error(t("errors.slabMaxWeightInvalid"));
           }
           if (!Number.isFinite(cost) || cost < 0) {
-            throw new Error("Cost must be a non-negative number");
+            throw new Error(t("errors.slabCostInvalid"));
           }
 
           return { minWeight, maxWeight, cost };
@@ -230,17 +243,24 @@ export default function ShippingRatesPage() {
       }
 
       if (weightSlabsPayload === null && Number(form.baseCost) <= 0) {
-        throw new Error("Set Base Cost or add at least one Weight Slab");
+        throw new Error(t("errors.baseOrSlabRequired"));
       }
 
       if (!Number.isFinite(Number(form.priority))) {
-        throw new Error("Priority must be a number");
+        throw new Error(t("errors.priorityInvalid"));
       }
-      if (!Number.isFinite(Number(form.baseCost)) || Number(form.baseCost) < 0) {
-        throw new Error("Base Cost must be a non-negative number");
+      if (
+        !Number.isFinite(Number(form.baseCost)) ||
+        Number(form.baseCost) < 0
+      ) {
+        throw new Error(t("errors.baseCostInvalid"));
       }
-      if (form.freeMinOrder && (!Number.isFinite(Number(form.freeMinOrder)) || Number(form.freeMinOrder) < 0)) {
-        throw new Error("Free Shipping Min Order must be a non-negative number");
+      if (
+        form.freeMinOrder &&
+        (!Number.isFinite(Number(form.freeMinOrder)) ||
+          Number(form.freeMinOrder) < 0)
+      ) {
+        throw new Error(t("errors.freeMinOrderInvalid"));
       }
 
       const payload = {
@@ -254,10 +274,10 @@ export default function ShippingRatesPage() {
       };
 
       if (!payload.country) {
-        throw new Error("Country is required");
+        throw new Error(t("errors.countryRequired"));
       }
       if (!payload.area) {
-        throw new Error("Area is required");
+        throw new Error(t("errors.areaRequired"));
       }
 
       const url = editing
@@ -272,20 +292,25 @@ export default function ShippingRatesPage() {
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Failed to save shipping rate");
+      if (!res.ok) {
+        throw new Error(data?.error || t("errors.saveFailed"));
+      }
 
-      setSuccess(editing ? "Shipping rate updated" : "Shipping rate created");
+      setSuccess(editing ? t("success.updated") : t("success.created"));
       resetForm();
       await loadData();
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to save shipping rate");
+      setError(e instanceof Error ? e.message : t("errors.saveFailed"));
     } finally {
       setSubmitting(false);
     }
   };
 
   const addWeightSlabRow = () => {
-    setWeightSlabs((prev) => [...prev, { minWeight: "", maxWeight: "", cost: "" }]);
+    setWeightSlabs((prev) => [
+      ...prev,
+      { minWeight: "", maxWeight: "", cost: "" },
+    ]);
   };
 
   const updateWeightSlabRow = (
@@ -303,7 +328,7 @@ export default function ShippingRatesPage() {
   };
 
   const removeRate = async (rate: ShippingRate) => {
-    if (!confirm(`Delete shipping rate #${rate.id}?`)) return;
+    if (!confirm(t("confirm.deleteRate", { id: rate.id }))) return;
 
     setError(null);
     setSuccess(null);
@@ -312,35 +337,34 @@ export default function ShippingRatesPage() {
     });
     const data = await res.json();
     if (!res.ok) {
-      setError(data?.error || "Failed to delete shipping rate");
+      setError(data?.error || t("errors.deleteFailed"));
       return;
     }
 
     if (editing?.id === rate.id) resetForm();
-    setSuccess("Shipping rate deleted");
+    setSuccess(t("success.deleted"));
     await loadData();
   };
 
   return (
     <div className="p-4 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Shipping Rates</h1>
+        <h1 className="text-2xl font-bold">{t("title")}</h1>
         <button
           onClick={() => setShowModal(true)}
           className="btn-primary px-4 py-2 rounded inline-flex items-center gap-2"
         >
           <Plus className="h-4 w-4" />
-          Add Shipping Rate
+          {t("actions.addRate")}
         </button>
       </div>
-      {/* Shipping Rate Modal */}
+
       {showModal && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="card-theme border rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-            {/* Modal Header */}
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">
-                {editing ? "Edit Shipping Rate" : "Add Shipping Rate"}
+                {editing ? t("modal.titleEdit") : t("modal.titleAdd")}
               </h2>
               <button
                 type="button"
@@ -354,27 +378,35 @@ export default function ShippingRatesPage() {
             <form onSubmit={onSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <label className="text-sm">
-                  Country
+                  {t("fields.country")}
                   <select
                     className="input-theme border p-2 rounded w-full mt-1"
                     value={form.country}
                     onChange={(e) =>
-                      setForm((f) => ({ ...f, country: e.target.value, area: "" }))
+                      setForm((f) => ({
+                        ...f,
+                        country: e.target.value,
+                        area: "",
+                      }))
                     }
                     required
                   >
                     <option value="">
-                      {loadingCountries ? "Loading countries..." : "Select country"}
+                      {loadingCountries
+                        ? t("placeholders.loadingCountries")
+                        : t("placeholders.selectCountry")}
                     </option>
                     {countryOptions}
                   </select>
                 </label>
                 <label className="text-sm">
-                  Area
+                  {t("fields.area")}
                   <select
                     className="input-theme border p-2 rounded w-full mt-1"
                     value={form.area}
-                    onChange={(e) => setForm((f) => ({ ...f, area: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, area: e.target.value }))
+                    }
                     required
                   >
                     {ALLOWED_SHIPPING_AREAS.map((areaOption) => (
@@ -388,56 +420,64 @@ export default function ShippingRatesPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <label className="text-sm">
-                  Base Cost
+                  {t("fields.baseCost")}
                   <input
                     type="number"
                     min="0"
                     step="0.01"
                     className="input-theme border p-2 rounded w-full mt-1"
-                    placeholder="60"
+                    placeholder={t("placeholders.baseCost")}
                     value={form.baseCost}
-                    onChange={(e) => setForm((f) => ({ ...f, baseCost: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, baseCost: e.target.value }))
+                    }
                     required
                   />
                 </label>
                 <label className="text-sm">
-                  Free Shipping Min Order (Optional)
+                  {t("fields.freeMinOrder")}
                   <input
                     type="number"
                     min="0"
                     step="0.01"
                     className="input-theme border p-2 rounded w-full mt-1"
-                    placeholder="1000"
+                    placeholder={t("placeholders.freeMinOrder")}
                     value={form.freeMinOrder}
-                    onChange={(e) => setForm((f) => ({ ...f, freeMinOrder: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, freeMinOrder: e.target.value }))
+                    }
                   />
                 </label>
                 <label className="text-sm">
-                  Priority (Lower = Stronger)
+                  {t("fields.priority")}
                   <input
                     type="number"
                     className="input-theme border p-2 rounded w-full mt-1"
-                    placeholder="1000"
+                    placeholder={t("placeholders.priority")}
                     value={form.priority}
-                    onChange={(e) => setForm((f) => ({ ...f, priority: e.target.value }))}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, priority: e.target.value }))
+                    }
                   />
                 </label>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium">Weight Based Charges (Optional)</label>
+                  <label className="text-sm font-medium">
+                    {t("weightSlabs.title")}
+                  </label>
                   <button
                     type="button"
                     className="btn-secondary px-3 py-1 rounded text-sm"
                     onClick={addWeightSlabRow}
                   >
-                    Add Weight Slab
+                    {t("weightSlabs.addSlab")}
                   </button>
                 </div>
                 {weightSlabs.length === 0 ? (
                   <p className="text-xs text-muted-foreground">
-                    No slabs added. System will use Base Cost.
+                    {t("weightSlabs.emptyHint")}
                   </p>
                 ) : (
                   <div className="space-y-2">
@@ -447,29 +487,41 @@ export default function ShippingRatesPage() {
                         className="grid grid-cols-1 md:grid-cols-4 gap-2 border rounded p-2"
                       >
                         <label className="text-xs">
-                          Min Weight (grams)
+                          {t("weightSlabs.minWeight")}
                           <input
                             type="number"
                             min="0"
                             className="input-theme border p-2 rounded w-full mt-1"
                             placeholder="0"
                             value={slab.minWeight}
-                            onChange={(e) => updateWeightSlabRow(index, "minWeight", e.target.value)}
+                            onChange={(e) =>
+                              updateWeightSlabRow(
+                                index,
+                                "minWeight",
+                                e.target.value,
+                              )
+                            }
                           />
                         </label>
                         <label className="text-xs">
-                          Max Weight (grams, Optional)
+                          {t("weightSlabs.maxWeight")}
                           <input
                             type="number"
                             min="0"
                             className="input-theme border p-2 rounded w-full mt-1"
                             placeholder="1000"
                             value={slab.maxWeight}
-                            onChange={(e) => updateWeightSlabRow(index, "maxWeight", e.target.value)}
+                            onChange={(e) =>
+                              updateWeightSlabRow(
+                                index,
+                                "maxWeight",
+                                e.target.value,
+                              )
+                            }
                           />
                         </label>
                         <label className="text-xs">
-                          Charge
+                          {t("weightSlabs.charge")}
                           <input
                             type="number"
                             min="0"
@@ -477,7 +529,9 @@ export default function ShippingRatesPage() {
                             className="input-theme border p-2 rounded w-full mt-1"
                             placeholder="60"
                             value={slab.cost}
-                            onChange={(e) => updateWeightSlabRow(index, "cost", e.target.value)}
+                            onChange={(e) =>
+                              updateWeightSlabRow(index, "cost", e.target.value)
+                            }
                           />
                         </label>
                         <div className="flex items-end">
@@ -486,7 +540,7 @@ export default function ShippingRatesPage() {
                             className="btn-danger px-3 py-2 rounded text-sm w-full"
                             onClick={() => removeWeightSlabRow(index)}
                           >
-                            Remove
+                            {t("actions.remove")}
                           </button>
                         </div>
                       </div>
@@ -499,9 +553,11 @@ export default function ShippingRatesPage() {
                 <input
                   type="checkbox"
                   checked={form.isActive}
-                  onChange={(e) => setForm((f) => ({ ...f, isActive: e.target.checked }))}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, isActive: e.target.checked }))
+                  }
                 />
-                Active
+                {t("fields.active")}
               </label>
 
               {error && <p className="text-sm text-red-600">{error}</p>}
@@ -513,14 +569,18 @@ export default function ShippingRatesPage() {
                   className="btn-secondary px-4 py-2 rounded"
                   onClick={resetForm}
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </button>
                 <button
                   type="submit"
                   className="btn-primary px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={submitting}
                 >
-                  {submitting ? "Saving..." : editing ? "Update Rate" : "Create Rate"}
+                  {submitting
+                    ? t("actions.saving")
+                    : editing
+                      ? t("actions.update")
+                      : t("actions.create")}
                 </button>
               </div>
             </form>
@@ -532,7 +592,7 @@ export default function ShippingRatesPage() {
         {loading ? (
           <ShippingRatesSkeleton />
         ) : rates.length === 0 ? (
-          <p className="text-sm text-muted-foreground">No shipping rates found.</p>
+          <p className="text-sm text-muted-foreground">{t("empty.noRates")}</p>
         ) : (
           shippingRateItems
         )}

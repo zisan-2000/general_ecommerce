@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
   CalendarRange,
@@ -264,6 +265,8 @@ function SectionHeader({
 }
 
 export default function AdminPayrollPage() {
+  const t = useTranslations("AdminPayroll");
+
   const [data, setData] = useState<PayrollPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -290,11 +293,11 @@ export default function AdminPayrollPage() {
       setError(null);
       const res = await fetch("/api/payroll", { cache: "no-store" });
       const payload = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(payload?.error || "Failed to load payroll");
+      if (!res.ok) throw new Error(payload?.error || t("errors.loadFailed"));
       setData(payload);
     } catch (e) {
       const errorMessage =
-        e instanceof Error ? e.message : "Failed to load payroll";
+        e instanceof Error ? e.message : t("errors.loadFailed");
       setError(errorMessage);
       toast.error(errorMessage);
     } finally {
@@ -304,6 +307,7 @@ export default function AdminPayrollPage() {
 
   useEffect(() => {
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedProfile = useMemo(
@@ -460,12 +464,12 @@ export default function AdminPayrollPage() {
       });
       const response = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(response?.error || "Failed to save payroll profile");
+        throw new Error(response?.error || t("errors.profileSaveFailed"));
       }
 
       const successMessage = editingProfileId
-        ? "Payroll profile updated successfully"
-        : "Payroll profile created successfully";
+        ? t("success.profileUpdated")
+        : t("success.profileCreated");
       toast.success(successMessage);
       setSuccess(successMessage);
       setEditingProfileId(null);
@@ -474,7 +478,7 @@ export default function AdminPayrollPage() {
       await loadData();
     } catch (e) {
       const errorMessage =
-        e instanceof Error ? e.message : "Failed to save payroll profile";
+        e instanceof Error ? e.message : t("errors.profileSaveFailed");
       setError(errorMessage);
       toast.error(errorMessage);
     } finally {
@@ -506,12 +510,12 @@ export default function AdminPayrollPage() {
       });
       const response = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(response?.error || "Failed to save payroll period");
+        throw new Error(response?.error || t("errors.periodSaveFailed"));
       }
 
       const successMessage = editingPeriodId
-        ? "Payroll period updated successfully"
-        : "Payroll period created successfully";
+        ? t("success.periodUpdated")
+        : t("success.periodCreated");
       toast.success(successMessage);
       setSuccess(successMessage);
       setEditingPeriodId(null);
@@ -520,7 +524,7 @@ export default function AdminPayrollPage() {
       await loadData();
     } catch (e) {
       const errorMessage =
-        e instanceof Error ? e.message : "Failed to save payroll period";
+        e instanceof Error ? e.message : t("errors.periodSaveFailed");
       setError(errorMessage);
       toast.error(errorMessage);
     } finally {
@@ -554,12 +558,12 @@ export default function AdminPayrollPage() {
       });
       const response = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(response?.error || "Failed to save payroll entry");
+        throw new Error(response?.error || t("errors.entrySaveFailed"));
       }
 
       const successMessage = editingEntryId
-        ? "Payroll entry updated successfully"
-        : "Payroll entry created successfully";
+        ? t("success.entryUpdated")
+        : t("success.entryCreated");
       toast.success(successMessage);
       setSuccess(successMessage);
       setEditingEntryId(null);
@@ -569,7 +573,7 @@ export default function AdminPayrollPage() {
       await loadData();
     } catch (e) {
       const errorMessage =
-        e instanceof Error ? e.message : "Failed to save payroll entry";
+        e instanceof Error ? e.message : t("errors.entrySaveFailed");
       setError(errorMessage);
       toast.error(errorMessage);
     } finally {
@@ -579,27 +583,29 @@ export default function AdminPayrollPage() {
 
   const summaryCards = [
     {
-      label: "Active profiles",
+      label: t("summary.activeProfiles"),
       value: String(data?.summary.activeProfiles || 0),
-      hint: `${data?.profiles.length || 0} total employees`,
+      hint: t("summary.totalEmployees", { count: data?.profiles.length || 0 }),
       icon: Users,
     },
     {
-      label: "Open periods",
+      label: t("summary.openPeriods"),
       value: String(data?.summary.openPeriods || 0),
-      hint: `${data?.periods.length || 0} total payroll windows`,
+      hint: t("summary.totalWindows", { count: data?.periods.length || 0 }),
       icon: CalendarRange,
     },
     {
-      label: "Pending payroll",
+      label: t("summary.pendingPayroll"),
       value: formatMoney(data?.summary.pendingAmount),
-      hint: `${data?.summary.pendingCount || 0} entries awaiting payout`,
+      hint: t("summary.pendingEntries", {
+        count: data?.summary.pendingCount || 0,
+      }),
       icon: Wallet,
     },
     {
-      label: "Paid payroll",
+      label: t("summary.paidPayroll"),
       value: formatMoney(data?.summary.paidAmount),
-      hint: `${data?.summary.paidCount || 0} entries already paid`,
+      hint: t("summary.paidEntries", { count: data?.summary.paidCount || 0 }),
       icon: CircleDollarSign,
     },
   ];
@@ -616,11 +622,10 @@ export default function AdminPayrollPage() {
             <div className="space-y-3">
               <div>
                 <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                  Payroll Management
+                  {t("header.title")}
                 </h1>
                 <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                  Manage payroll profiles, payroll periods, and monthly salary
-                  entries from one workspace.
+                  {t("header.description")}
                 </p>
               </div>
             </div>
@@ -635,7 +640,7 @@ export default function AdminPayrollPage() {
                 <RefreshCw
                   className={cn("h-4 w-4", loading && "animate-spin")}
                 />
-                Refresh
+                {t("actions.refresh")}
               </Button>
             </div>
           </div>
@@ -682,21 +687,21 @@ export default function AdminPayrollPage() {
                   value="profiles"
                   className="rounded-xl px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                 >
-                  Payroll Profile
+                  {t("tabs.profiles")}
                 </TabsTrigger>
 
                 <TabsTrigger
                   value="periods"
                   className="rounded-xl px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                 >
-                  Payroll Period
+                  {t("tabs.periods")}
                 </TabsTrigger>
 
                 <TabsTrigger
                   value="entries"
                   className="rounded-xl px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                 >
-                  Payroll Entry
+                  {t("tabs.entries")}
                 </TabsTrigger>
               </TabsList>
 
@@ -706,7 +711,9 @@ export default function AdminPayrollPage() {
                   <input
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    placeholder={`Search ${activeTab}`}
+                    placeholder={t("searchPlaceholder", {
+                      tab: t(`tabs.${activeTab}`),
+                    })}
                     className="h-11 w-full min-w-0 rounded-full border border-border bg-background pl-11 pr-4 text-sm outline-none transition focus:border-primary md:w-72"
                   />
                 </div>
@@ -717,10 +724,10 @@ export default function AdminPayrollPage() {
                 >
                   <Plus className="h-4 w-4" />
                   {activeTab === "profiles"
-                    ? "New profile"
+                    ? t("actions.newProfile")
                     : activeTab === "periods"
-                      ? "New period"
-                      : "New entry"}
+                      ? t("actions.newPeriod")
+                      : t("actions.newEntry")}
                 </Button>
               </div>
             </div>
@@ -728,18 +735,18 @@ export default function AdminPayrollPage() {
             <TabsContent value="profiles" className="m-0 p-4 md:p-6">
               <div className="space-y-5">
                 <SectionHeader
-                  title="Payroll Profiles"
-                  description="Base salary, employee identity, and payout method for each staff member."
+                  title={t("profiles.title")}
+                  description={t("profiles.description")}
                 />
 
                 <div className="overflow-hidden rounded-[24px] border border-border/60">
                   <div className="hidden grid-cols-[1.6fr_1.3fr_1fr_1fr_1fr_auto] gap-4 border-b border-border/60 bg-muted px-5 py-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground lg:grid">
-                    <div>Employee</div>
-                    <div>Contact</div>
-                    <div>Warehouse</div>
-                    <div>Payment</div>
-                    <div>Salary</div>
-                    <div>Actions</div>
+                    <div>{t("profiles.table.employee")}</div>
+                    <div>{t("profiles.table.contact")}</div>
+                    <div>{t("profiles.table.warehouse")}</div>
+                    <div>{t("profiles.table.payment")}</div>
+                    <div>{t("profiles.table.salary")}</div>
+                    <div>{t("profiles.table.actions")}</div>
                   </div>
 
                   {filteredProfiles.length ? (
@@ -753,7 +760,8 @@ export default function AdminPayrollPage() {
                             {profile.user.name || profile.user.email}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {profile.employeeCode || "No employee code"}
+                            {profile.employeeCode ||
+                              t("profiles.noEmployeeCode")}
                           </p>
                         </div>
                         <div>
@@ -761,15 +769,17 @@ export default function AdminPayrollPage() {
                             {profile.user.email}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {profile.user.phone || "No phone"}
+                            {profile.user.phone || t("profiles.noPhone")}
                           </p>
                         </div>
                         <div>
                           <p className="text-sm text-foreground">
-                            {profile.warehouse?.name || "No warehouse"}
+                            {profile.warehouse?.name ||
+                              t("profiles.noWarehouse")}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {profile.warehouse?.code || "Unassigned"}
+                            {profile.warehouse?.code ||
+                              t("profiles.unassigned")}
                           </p>
                         </div>
                         <div>
@@ -781,10 +791,11 @@ export default function AdminPayrollPage() {
                               ),
                             )}
                           >
-                            {profile.paymentType}
+                            {t(`paymentTypes.${profile.paymentType}`)}
                           </span>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {profile.paymentMethod || "No payment method"}
+                            {profile.paymentMethod ||
+                              t("profiles.noPaymentMethod")}
                           </p>
                         </div>
                         <div>
@@ -792,7 +803,9 @@ export default function AdminPayrollPage() {
                             {formatMoney(profile.baseSalary)}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {profile._count?.entries || 0} entries
+                            {t("profiles.entriesCount", {
+                              count: profile._count?.entries || 0,
+                            })}
                           </p>
                         </div>
                         <div className="flex justify-start lg:justify-end">
@@ -824,14 +837,14 @@ export default function AdminPayrollPage() {
                             }}
                             className="rounded-full"
                           >
-                            Edit
+                            {t("actions.edit")}
                           </Button>
                         </div>
                       </div>
                     ))
                   ) : (
                     <div className="px-5 py-14 text-center text-sm text-muted-foreground">
-                      No payroll profile found.
+                      {t("profiles.empty")}
                     </div>
                   )}
                 </div>
@@ -841,17 +854,17 @@ export default function AdminPayrollPage() {
             <TabsContent value="periods" className="m-0 p-4 md:p-6">
               <div className="space-y-5">
                 <SectionHeader
-                  title="Payroll Periods"
-                  description="Manage the payroll windows that salary entries belong to."
+                  title={t("periods.title")}
+                  description={t("periods.description")}
                 />
 
                 <div className="overflow-hidden rounded-[24px] border border-border/60">
                   <div className="hidden grid-cols-[1.8fr_1.2fr_1fr_1fr_auto] gap-4 border-b border-border/60 bg-muted px-5 py-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground lg:grid">
-                    <div>Period</div>
-                    <div>Timeline</div>
-                    <div>Status</div>
-                    <div>Entries</div>
-                    <div>Actions</div>
+                    <div>{t("periods.table.period")}</div>
+                    <div>{t("periods.table.timeline")}</div>
+                    <div>{t("periods.table.status")}</div>
+                    <div>{t("periods.table.entries")}</div>
+                    <div>{t("periods.table.actions")}</div>
                   </div>
 
                   {filteredPeriods.length ? (
@@ -865,7 +878,7 @@ export default function AdminPayrollPage() {
                             {period.name}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {period.notes || "No notes"}
+                            {period.notes || t("periods.noNotes")}
                           </p>
                         </div>
                         <div>
@@ -873,7 +886,9 @@ export default function AdminPayrollPage() {
                             {formatDate(period.startDate)}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            to {formatDate(period.endDate)}
+                            {t("periods.toDate", {
+                              date: formatDate(period.endDate),
+                            })}
                           </p>
                         </div>
                         <div>
@@ -883,7 +898,7 @@ export default function AdminPayrollPage() {
                               getBadgeClass(period.status),
                             )}
                           >
-                            {period.status}
+                            {t(`periodStatus.${period.status}`)}
                           </span>
                         </div>
                         <div className="text-sm text-foreground">
@@ -907,14 +922,14 @@ export default function AdminPayrollPage() {
                             }}
                             className="rounded-full"
                           >
-                            Edit
+                            {t("actions.edit")}
                           </Button>
                         </div>
                       </div>
                     ))
                   ) : (
                     <div className="px-5 py-14 text-center text-sm text-muted-foreground">
-                      No payroll period found.
+                      {t("periods.empty")}
                     </div>
                   )}
                 </div>
@@ -924,19 +939,19 @@ export default function AdminPayrollPage() {
             <TabsContent value="entries" className="m-0 p-4 md:p-6">
               <div className="space-y-5">
                 <SectionHeader
-                  title="Payroll Entries"
-                  description="Track gross-to-net salary records and payment status per payroll cycle."
+                  title={t("entries.title")}
+                  description={t("entries.description")}
                 />
 
                 <div className="overflow-hidden rounded-[24px] border border-border/60">
                   <div className="hidden grid-cols-[1.4fr_1.2fr_1fr_1fr_1fr_1fr_auto] gap-4 border-b border-border/60 bg-muted px-5 py-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground xl:grid">
-                    <div>Employee</div>
-                    <div>Period</div>
-                    <div>Warehouse</div>
-                    <div>Breakdown</div>
-                    <div>Net</div>
-                    <div>Status</div>
-                    <div>Actions</div>
+                    <div>{t("entries.table.employee")}</div>
+                    <div>{t("entries.table.period")}</div>
+                    <div>{t("entries.table.warehouse")}</div>
+                    <div>{t("entries.table.breakdown")}</div>
+                    <div>{t("entries.table.net")}</div>
+                    <div>{t("entries.table.status")}</div>
+                    <div>{t("entries.table.actions")}</div>
                   </div>
 
                   {filteredEntries.length ? (
@@ -959,25 +974,31 @@ export default function AdminPayrollPage() {
                             {entry.payrollPeriod.name}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            Paid at {formatDate(entry.paidAt)}
+                            {t("entries.paidAt", {
+                              date: formatDate(entry.paidAt),
+                            })}
                           </p>
                         </div>
                         <div>
                           <p className="text-sm text-foreground">
-                            {entry.warehouse?.name || "No warehouse"}
+                            {entry.warehouse?.name || t("entries.noWarehouse")}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {entry.warehouse?.code || "Unassigned"}
+                            {entry.warehouse?.code || t("entries.unassigned")}
                           </p>
                         </div>
                         <div>
                           <p className="text-sm text-foreground">
-                            Basic {formatMoney(entry.basicAmount)}
+                            {t("entries.basic", {
+                              amount: formatMoney(entry.basicAmount),
+                            })}
                           </p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            OT {formatMoney(entry.overtimeAmount)} · Bonus{" "}
-                            {formatMoney(entry.bonusAmount)} · Deduction{" "}
-                            {formatMoney(entry.deductionAmount)}
+                            {t("entries.breakdown", {
+                              ot: formatMoney(entry.overtimeAmount),
+                              bonus: formatMoney(entry.bonusAmount),
+                              deduction: formatMoney(entry.deductionAmount),
+                            })}
                           </p>
                         </div>
                         <div>
@@ -992,7 +1013,7 @@ export default function AdminPayrollPage() {
                               getBadgeClass(entry.paymentStatus),
                             )}
                           >
-                            {entry.paymentStatus}
+                            {t(`paymentStatus.${entry.paymentStatus}`)}
                           </span>
                         </div>
                         <div className="flex justify-start xl:justify-end">
@@ -1032,14 +1053,14 @@ export default function AdminPayrollPage() {
                             }}
                             className="rounded-full"
                           >
-                            Edit
+                            {t("actions.edit")}
                           </Button>
                         </div>
                       </div>
                     ))
                   ) : (
                     <div className="px-5 py-14 text-center text-sm text-muted-foreground">
-                      No payroll entry found.
+                      {t("entries.empty")}
                     </div>
                   )}
                 </div>
@@ -1048,6 +1069,7 @@ export default function AdminPayrollPage() {
           </Tabs>
         </section>
 
+        {/* ============ PROFILE MODAL ============ */}
         <Dialog
           open={isProfileModalOpen}
           onOpenChange={(open) => {
@@ -1063,19 +1085,18 @@ export default function AdminPayrollPage() {
               <DialogHeader className="border-b border-border/60 px-6 py-5">
                 <DialogTitle>
                   {editingProfileId
-                    ? "Edit payroll profile"
-                    : "New payroll profile"}
+                    ? t("profileModal.titleEdit")
+                    : t("profileModal.titleNew")}
                 </DialogTitle>
                 <DialogDescription>
-                  Configure salary details and payout preferences for a staff
-                  member.
+                  {t("profileModal.description")}
                 </DialogDescription>
               </DialogHeader>
 
               <div className="grid gap-4 px-6 py-5 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    User
+                    {t("profileModal.fields.user")}
                   </label>
                   <select
                     value={profileForm.userId}
@@ -1085,7 +1106,7 @@ export default function AdminPayrollPage() {
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   >
-                    <option value="">Select user</option>
+                    <option value="">{t("profileModal.selectUser")}</option>
                     {data?.users.map((user) => (
                       <option key={user.id} value={user.id}>
                         {user.name || user.email} ({user.email})
@@ -1096,7 +1117,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Employee code
+                    {t("profileModal.fields.employeeCode")}
                   </label>
                   <input
                     value={profileForm.employeeCode}
@@ -1106,14 +1127,14 @@ export default function AdminPayrollPage() {
                         employeeCode: e.target.value,
                       }))
                     }
-                    placeholder="EMP-1001"
+                    placeholder={t("profileModal.placeholders.employeeCode")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Warehouse
+                    {t("profileModal.fields.warehouse")}
                   </label>
                   <select
                     value={profileForm.warehouseId}
@@ -1125,7 +1146,7 @@ export default function AdminPayrollPage() {
                     }
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   >
-                    <option value="">No warehouse</option>
+                    <option value="">{t("profileModal.noWarehouse")}</option>
                     {data?.warehouses.map((warehouse) => (
                       <option key={warehouse.id} value={warehouse.id}>
                         {warehouse.name} ({warehouse.code})
@@ -1136,7 +1157,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Payment type
+                    {t("profileModal.fields.paymentType")}
                   </label>
                   <select
                     value={profileForm.paymentType}
@@ -1148,14 +1169,14 @@ export default function AdminPayrollPage() {
                     }
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   >
-                    <option value="MONTHLY">MONTHLY</option>
-                    <option value="WEEKLY">WEEKLY</option>
-                    <option value="DAILY">DAILY</option>
+                    <option value="MONTHLY">{t("paymentTypes.MONTHLY")}</option>
+                    <option value="WEEKLY">{t("paymentTypes.WEEKLY")}</option>
+                    <option value="DAILY">{t("paymentTypes.DAILY")}</option>
                   </select>
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Base salary
+                    {t("profileModal.fields.baseSalary")}
                   </label>
                   <input
                     value={profileForm.baseSalary}
@@ -1165,7 +1186,7 @@ export default function AdminPayrollPage() {
                         baseSalary: e.target.value,
                       }))
                     }
-                    placeholder="50000"
+                    placeholder={t("profileModal.placeholders.baseSalary")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   />
@@ -1173,7 +1194,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Payment method
+                    {t("profileModal.fields.paymentMethod")}
                   </label>
                   <input
                     value={profileForm.paymentMethod}
@@ -1183,14 +1204,14 @@ export default function AdminPayrollPage() {
                         paymentMethod: e.target.value,
                       }))
                     }
-                    placeholder="BANK / CASH / MFS"
+                    placeholder={t("profileModal.placeholders.paymentMethod")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Joining date
+                    {t("profileModal.fields.joiningDate")}
                   </label>
                   <input
                     type="date"
@@ -1207,7 +1228,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Bank name
+                    {t("profileModal.fields.bankName")}
                   </label>
                   <input
                     value={profileForm.bankName}
@@ -1217,14 +1238,14 @@ export default function AdminPayrollPage() {
                         bankName: e.target.value,
                       }))
                     }
-                    placeholder="DBBL"
+                    placeholder={t("profileModal.placeholders.bankName")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Bank account no
+                    {t("profileModal.fields.bankAccountNo")}
                   </label>
                   <input
                     value={profileForm.bankAccountNo}
@@ -1234,14 +1255,14 @@ export default function AdminPayrollPage() {
                         bankAccountNo: e.target.value,
                       }))
                     }
-                    placeholder="1234567890"
+                    placeholder={t("profileModal.placeholders.bankAccountNo")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Account holder
+                    {t("profileModal.fields.accountHolder")}
                   </label>
                   <input
                     value={profileForm.accountHolder}
@@ -1251,14 +1272,14 @@ export default function AdminPayrollPage() {
                         accountHolder: e.target.value,
                       }))
                     }
-                    placeholder="Account holder"
+                    placeholder={t("profileModal.placeholders.accountHolder")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Mobile banking no
+                    {t("profileModal.fields.mobileBankingNo")}
                   </label>
                   <input
                     value={profileForm.mobileBankingNo}
@@ -1268,21 +1289,21 @@ export default function AdminPayrollPage() {
                         mobileBankingNo: e.target.value,
                       }))
                     }
-                    placeholder="01XXXXXXXXX"
+                    placeholder={t("profileModal.placeholders.mobileBankingNo")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   />
                 </div>
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Notes
+                    {t("profileModal.fields.notes")}
                   </label>
                   <textarea
                     value={profileForm.notes}
                     onChange={(e) =>
                       setProfileForm((f) => ({ ...f, notes: e.target.value }))
                     }
-                    placeholder="Additional profile note"
+                    placeholder={t("profileModal.placeholders.notes")}
                     className="min-h-28 w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm"
                   />
                 </div>
@@ -1298,7 +1319,7 @@ export default function AdminPayrollPage() {
                       }))
                     }
                   />
-                  Profile active
+                  {t("profileModal.fields.isActive")}
                 </label>
               </div>
 
@@ -1309,7 +1330,7 @@ export default function AdminPayrollPage() {
                   onClick={resetProfileModal}
                   className="rounded-full"
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
                 <Button
                   type="submit"
@@ -1317,16 +1338,17 @@ export default function AdminPayrollPage() {
                   className="rounded-full"
                 >
                   {submitting === "profile"
-                    ? "Saving..."
+                    ? t("actions.saving")
                     : editingProfileId
-                      ? "Update profile"
-                      : "Create profile"}
+                      ? t("actions.updateProfile")
+                      : t("actions.createProfile")}
                 </Button>
               </DialogFooter>
             </form>
           </DialogContent>
         </Dialog>
 
+        {/* ============ PERIOD MODAL ============ */}
         <Dialog
           open={isPeriodModalOpen}
           onOpenChange={(open) => {
@@ -1342,26 +1364,25 @@ export default function AdminPayrollPage() {
               <DialogHeader className="border-b border-border/60 px-6 py-5">
                 <DialogTitle>
                   {editingPeriodId
-                    ? "Edit payroll period"
-                    : "New payroll period"}
+                    ? t("periodModal.titleEdit")
+                    : t("periodModal.titleNew")}
                 </DialogTitle>
                 <DialogDescription>
-                  Define the payroll window and lifecycle status for salary
-                  processing.
+                  {t("periodModal.description")}
                 </DialogDescription>
               </DialogHeader>
 
               <div className="grid gap-4 px-6 py-5 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Period name
+                    {t("periodModal.fields.name")}
                   </label>
                   <input
                     value={periodForm.name}
                     onChange={(e) =>
                       setPeriodForm((f) => ({ ...f, name: e.target.value }))
                     }
-                    placeholder="March 2026 Payroll"
+                    placeholder={t("periodModal.placeholders.name")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   />
@@ -1369,7 +1390,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Start date
+                    {t("periodModal.fields.startDate")}
                   </label>
                   <input
                     type="date"
@@ -1387,7 +1408,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    End date
+                    {t("periodModal.fields.endDate")}
                   </label>
                   <input
                     type="date"
@@ -1405,7 +1426,7 @@ export default function AdminPayrollPage() {
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Status
+                    {t("periodModal.fields.status")}
                   </label>
                   <select
                     value={periodForm.status}
@@ -1414,22 +1435,24 @@ export default function AdminPayrollPage() {
                     }
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   >
-                    <option value="OPEN">OPEN</option>
-                    <option value="PROCESSING">PROCESSING</option>
-                    <option value="CLOSED">CLOSED</option>
+                    <option value="OPEN">{t("periodStatus.OPEN")}</option>
+                    <option value="PROCESSING">
+                      {t("periodStatus.PROCESSING")}
+                    </option>
+                    <option value="CLOSED">{t("periodStatus.CLOSED")}</option>
                   </select>
                 </div>
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Notes
+                    {t("periodModal.fields.notes")}
                   </label>
                   <textarea
                     value={periodForm.notes}
                     onChange={(e) =>
                       setPeriodForm((f) => ({ ...f, notes: e.target.value }))
                     }
-                    placeholder="Optional payroll period notes"
+                    placeholder={t("periodModal.placeholders.notes")}
                     className="min-h-28 w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm"
                   />
                 </div>
@@ -1442,7 +1465,7 @@ export default function AdminPayrollPage() {
                   onClick={resetPeriodModal}
                   className="rounded-full"
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
                 <Button
                   type="submit"
@@ -1450,15 +1473,17 @@ export default function AdminPayrollPage() {
                   className="rounded-full"
                 >
                   {submitting === "period"
-                    ? "Saving..."
+                    ? t("actions.saving")
                     : editingPeriodId
-                      ? "Update period"
-                      : "Create period"}
+                      ? t("actions.updatePeriod")
+                      : t("actions.createPeriod")}
                 </Button>
               </DialogFooter>
             </form>
           </DialogContent>
         </Dialog>
+
+        {/* ============ ENTRY MODAL ============ */}
         <Dialog
           open={isEntryModalOpen}
           onOpenChange={(open) => {
@@ -1473,18 +1498,19 @@ export default function AdminPayrollPage() {
             <form onSubmit={submitEntry} className="space-y-0">
               <DialogHeader className="border-b border-border/60 px-6 py-5">
                 <DialogTitle>
-                  {editingEntryId ? "Edit payroll entry" : "New payroll entry"}
+                  {editingEntryId
+                    ? t("entryModal.titleEdit")
+                    : t("entryModal.titleNew")}
                 </DialogTitle>
                 <DialogDescription>
-                  Record salary, overtime, bonus, deduction, and net payout
-                  details.
+                  {t("entryModal.description")}
                 </DialogDescription>
               </DialogHeader>
 
               <div className="grid gap-4 px-6 py-5 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Payroll profile
+                    {t("entryModal.fields.payrollProfile")}
                   </label>
                   <select
                     value={entryForm.payrollProfileId}
@@ -1497,7 +1523,9 @@ export default function AdminPayrollPage() {
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   >
-                    <option value="">Select payroll profile</option>
+                    <option value="">
+                      {t("entryModal.selectPayrollProfile")}
+                    </option>
                     {data?.profiles.map((profile) => (
                       <option key={profile.id} value={profile.id}>
                         {profile.user.name || profile.user.email} ·{" "}
@@ -1509,7 +1537,7 @@ export default function AdminPayrollPage() {
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Payroll period
+                    {t("entryModal.fields.payrollPeriod")}
                   </label>
                   <select
                     value={entryForm.payrollPeriodId}
@@ -1522,10 +1550,12 @@ export default function AdminPayrollPage() {
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   >
-                    <option value="">Select payroll period</option>
+                    <option value="">
+                      {t("entryModal.selectPayrollPeriod")}
+                    </option>
                     {data?.periods.map((period) => (
                       <option key={period.id} value={period.id}>
-                        {period.name} ({period.status})
+                        {period.name} ({t(`periodStatus.${period.status}`)})
                       </option>
                     ))}
                   </select>
@@ -1533,7 +1563,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Warehouse
+                    {t("entryModal.fields.warehouse")}
                   </label>
                   <select
                     value={entryForm.warehouseId}
@@ -1545,7 +1575,7 @@ export default function AdminPayrollPage() {
                     }
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   >
-                    <option value="">No warehouse</option>
+                    <option value="">{t("entryModal.noWarehouse")}</option>
                     {data?.warehouses.map((warehouse) => (
                       <option key={warehouse.id} value={warehouse.id}>
                         {warehouse.name} ({warehouse.code})
@@ -1556,7 +1586,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Payment status
+                    {t("entryModal.fields.paymentStatus")}
                   </label>
                   <select
                     value={entryForm.paymentStatus}
@@ -1568,15 +1598,19 @@ export default function AdminPayrollPage() {
                     }
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                   >
-                    <option value="PENDING">PENDING</option>
-                    <option value="PAID">PAID</option>
-                    <option value="PROCESSING">PROCESSING</option>
+                    <option value="PENDING">
+                      {t("paymentStatus.PENDING")}
+                    </option>
+                    <option value="PAID">{t("paymentStatus.PAID")}</option>
+                    <option value="PROCESSING">
+                      {t("paymentStatus.PROCESSING")}
+                    </option>
                   </select>
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Basic amount
+                    {t("entryModal.fields.basicAmount")}
                   </label>
                   <input
                     value={entryForm.basicAmount}
@@ -1586,7 +1620,7 @@ export default function AdminPayrollPage() {
                         basicAmount: e.target.value,
                       }))
                     }
-                    placeholder="50000"
+                    placeholder={t("entryModal.placeholders.basicAmount")}
                     className="h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     required
                   />
@@ -1594,7 +1628,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Overtime amount
+                    {t("entryModal.fields.overtimeAmount")}
                   </label>
                   <input
                     value={entryForm.overtimeAmount}
@@ -1611,7 +1645,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Bonus amount
+                    {t("entryModal.fields.bonusAmount")}
                   </label>
                   <input
                     value={entryForm.bonusAmount}
@@ -1628,7 +1662,7 @@ export default function AdminPayrollPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Deduction amount
+                    {t("entryModal.fields.deductionAmount")}
                   </label>
                   <input
                     value={entryForm.deductionAmount}
@@ -1648,16 +1682,18 @@ export default function AdminPayrollPage() {
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <p className="text-sm font-medium text-foreground">
-                          Net amount
+                          {t("entryModal.netAmount.title")}
                         </p>
                         <p className="mt-1 text-xs text-muted-foreground">
-                          Auto-calculated from basic + overtime + bonus -
-                          deduction.
+                          {t("entryModal.netAmount.description")}
                         </p>
                       </div>
                       <div className="rounded-full bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-                        Auto preview{" "}
-                        {formatMoney(calculateNetAmountValue(entryForm))}
+                        {t("entryModal.netAmount.autoPreview", {
+                          amount: formatMoney(
+                            calculateNetAmountValue(entryForm),
+                          ),
+                        })}
                       </div>
                     </div>
 
@@ -1668,7 +1704,7 @@ export default function AdminPayrollPage() {
                         setIsNetAmountManual(nextValue.trim() !== "");
                         setEntryForm((f) => ({ ...f, netAmount: nextValue }));
                       }}
-                      placeholder="Net amount (optional auto-calc)"
+                      placeholder={t("entryModal.placeholders.netAmount")}
                       className="mt-4 h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm"
                     />
                   </div>
@@ -1676,7 +1712,7 @@ export default function AdminPayrollPage() {
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Paid date
+                    {t("entryModal.fields.paidAt")}
                   </label>
                   <input
                     type="date"
@@ -1690,14 +1726,14 @@ export default function AdminPayrollPage() {
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-foreground">
-                    Notes
+                    {t("entryModal.fields.notes")}
                   </label>
                   <textarea
                     value={entryForm.note}
                     onChange={(e) =>
                       setEntryForm((f) => ({ ...f, note: e.target.value }))
                     }
-                    placeholder="Optional payroll entry note"
+                    placeholder={t("entryModal.placeholders.notes")}
                     className="min-h-28 w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm"
                   />
                 </div>
@@ -1710,7 +1746,7 @@ export default function AdminPayrollPage() {
                   onClick={resetEntryModal}
                   className="rounded-full"
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
                 <Button
                   type="submit"
@@ -1718,10 +1754,10 @@ export default function AdminPayrollPage() {
                   className="rounded-full"
                 >
                   {submitting === "entry"
-                    ? "Saving..."
+                    ? t("actions.saving")
                     : editingEntryId
-                      ? "Update entry"
-                      : "Create entry"}
+                      ? t("actions.updateEntry")
+                      : t("actions.createEntry")}
                 </Button>
               </DialogFooter>
             </form>

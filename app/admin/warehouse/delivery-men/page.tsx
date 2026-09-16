@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import {
   Table,
   TableBody,
@@ -163,6 +164,8 @@ interface PaginationData {
 }
 
 export default function DeliveryMenList() {
+  const t = useTranslations("AdminDeliveryMenList");
+
   const { data: session } = useSession();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<"list" | "enlist">("list");
@@ -208,11 +211,11 @@ export default function DeliveryMenList() {
         setDeliveryMen(data.data.deliveryMen);
         setPagination(data.data.pagination);
       } else {
-        toast.error(data.message || "Failed to fetch delivery men");
+        toast.error(data.message || t("errors.fetchFailed"));
       }
     } catch (error) {
       console.error("Error fetching delivery men:", error);
-      toast.error("Failed to fetch delivery men");
+      toast.error(t("errors.fetchFailed"));
     } finally {
       setLoading(false);
     }
@@ -232,9 +235,7 @@ export default function DeliveryMenList() {
       }
 
       const data = await response.json();
-      console.log("Warehouses API response:", data); // Debug log
 
-      // Handle different response formats
       let warehousesData = [];
       if (Array.isArray(data)) {
         warehousesData = data;
@@ -247,24 +248,23 @@ export default function DeliveryMenList() {
         return;
       }
 
-      // Map to the expected format
       const formattedWarehouses = warehousesData.map((warehouse: any) => ({
         id: warehouse.id,
         name: warehouse.name,
         code: warehouse.code,
       }));
 
-      console.log("Formatted warehouses:", formattedWarehouses); // Debug log
       setWarehouses(formattedWarehouses);
     } catch (error) {
       console.error("Error fetching warehouses:", error);
-      toast.error("Failed to fetch warehouses");
+      toast.error(t("errors.fetchWarehousesFailed"));
     }
   };
 
   useEffect(() => {
     fetchDeliveryMen();
     fetchWarehouses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     pagination.page,
     pagination.limit,
@@ -281,11 +281,11 @@ export default function DeliveryMenList() {
         label: string;
       }
     > = {
-      PENDING: { variant: "outline", label: "Pending" },
-      ACTIVE: { variant: "default", label: "Active" },
-      SUSPENDED: { variant: "destructive", label: "Suspended" },
-      REJECTED: { variant: "destructive", label: "Rejected" },
-      RESIGNED: { variant: "secondary", label: "Resigned" },
+      PENDING: { variant: "outline", label: t("status.PENDING") },
+      ACTIVE: { variant: "default", label: t("status.ACTIVE") },
+      SUSPENDED: { variant: "destructive", label: t("status.SUSPENDED") },
+      REJECTED: { variant: "destructive", label: t("status.REJECTED") },
+      RESIGNED: { variant: "secondary", label: t("status.RESIGNED") },
     };
 
     const config = variants[status] || { variant: "outline", label: status };
@@ -300,11 +300,20 @@ export default function DeliveryMenList() {
         label: string;
       }
     > = {
-      DRAFT: { variant: "outline", label: "Draft" },
-      SUBMITTED: { variant: "default", label: "Submitted" },
-      UNDER_REVIEW: { variant: "secondary", label: "Under Review" },
-      APPROVED: { variant: "default", label: "Approved" },
-      REJECTED: { variant: "destructive", label: "Rejected" },
+      DRAFT: { variant: "outline", label: t("applicationStatus.DRAFT") },
+      SUBMITTED: {
+        variant: "default",
+        label: t("applicationStatus.SUBMITTED"),
+      },
+      UNDER_REVIEW: {
+        variant: "secondary",
+        label: t("applicationStatus.UNDER_REVIEW"),
+      },
+      APPROVED: { variant: "default", label: t("applicationStatus.APPROVED") },
+      REJECTED: {
+        variant: "destructive",
+        label: t("applicationStatus.REJECTED"),
+      },
     };
 
     const config = variants[status] || { variant: "outline", label: status };
@@ -312,7 +321,7 @@ export default function DeliveryMenList() {
   };
 
   const formatDate = (dateString: string | null) => {
-    if (!dateString) return "N/A";
+    if (!dateString) return t("common.na");
     return new Date(dateString).toLocaleDateString();
   };
 
@@ -321,7 +330,6 @@ export default function DeliveryMenList() {
   };
 
   const handleEdit = (deliveryMan: DeliveryMan) => {
-    // Open modal for editing instead of navigating to separate page
     handleViewDetails(deliveryMan);
   };
 
@@ -331,11 +339,11 @@ export default function DeliveryMenList() {
 
       if (!response.ok) {
         if (response.status === 404) {
-          toast.error("Delivery man not found");
+          toast.error(t("errors.notFound"));
         } else {
-          toast.error("Failed to fetch delivery man details");
+          toast.error(t("errors.fetchDetailsFailed"));
         }
-        return; // Don't open modal if delivery man not found
+        return;
       }
 
       const data = await response.json();
@@ -344,11 +352,11 @@ export default function DeliveryMenList() {
         setSelectedDeliveryMan(data.data);
         setIsModalOpen(true);
       } else {
-        toast.error(data.message || "Failed to fetch delivery man details");
+        toast.error(data.message || t("errors.fetchDetailsFailed"));
       }
     } catch (error) {
       console.error("Error fetching delivery man details:", error);
-      toast.error("Failed to fetch delivery man details");
+      toast.error(t("errors.fetchDetailsFailed"));
     }
   };
 
@@ -365,28 +373,21 @@ export default function DeliveryMenList() {
 
     try {
       setStatusUpdating(true);
-      const response = await fetch(
-        `/api/delivery-men/${deliveryMan.id}`,
-        {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            status: newStatus,
-          }),
-        },
-      );
+      const response = await fetch(`/api/delivery-men/${deliveryMan.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      });
 
       if (!response.ok) {
         if (response.status === 404) {
-          toast.error("Delivery man not found");
+          toast.error(t("errors.notFound"));
           if (selectedDeliveryMan?.id === deliveryMan.id) {
             setIsModalOpen(false);
             setSelectedDeliveryMan(null);
           }
         } else {
-          toast.error("Failed to update status");
+          toast.error(t("errors.updateStatusFailed"));
         }
         return;
       }
@@ -394,29 +395,25 @@ export default function DeliveryMenList() {
       const data = await response.json();
 
       if (data.success) {
-        toast.success(`Status updated to ${newStatus} successfully`);
+        toast.success(t("success.statusUpdated", { status: newStatus }));
 
-        // Update selected delivery man in modal
         setSelectedDeliveryMan((prev) =>
           prev && prev.id === deliveryMan.id
             ? { ...prev, status: newStatus }
             : prev,
         );
 
-        // Update delivery man in list
         setDeliveryMen((prev) =>
           prev.map((dm) =>
-            dm.id === deliveryMan.id
-              ? { ...dm, status: newStatus }
-              : dm,
+            dm.id === deliveryMan.id ? { ...dm, status: newStatus } : dm,
           ),
         );
       } else {
-        toast.error(data.message || "Failed to update status");
+        toast.error(data.message || t("errors.updateStatusFailed"));
       }
     } catch (error) {
       console.error("Error updating status:", error);
-      toast.error("Failed to update status");
+      toast.error(t("errors.updateStatusFailed"));
     } finally {
       setStatusUpdating(false);
     }
@@ -432,23 +429,19 @@ export default function DeliveryMenList() {
       setStatusUpdating(true);
       const response = await fetch(`/api/delivery-men/${deliveryMan.id}`, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          applicationStatus: newApplicationStatus,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ applicationStatus: newApplicationStatus }),
       });
 
       if (!response.ok) {
         if (response.status === 404) {
-          toast.error("Delivery man not found");
+          toast.error(t("errors.notFound"));
           if (selectedDeliveryMan?.id === deliveryMan.id) {
             setIsModalOpen(false);
             setSelectedDeliveryMan(null);
           }
         } else {
-          toast.error("Failed to update application status");
+          toast.error(t("errors.updateApplicationStatusFailed"));
         }
         return;
       }
@@ -457,7 +450,9 @@ export default function DeliveryMenList() {
 
       if (data.success) {
         toast.success(
-          `Application status updated to ${newApplicationStatus.replace("_", " ")}`,
+          t("success.applicationStatusUpdated", {
+            status: t(`applicationStatus.${newApplicationStatus}`),
+          }),
         );
 
         setSelectedDeliveryMan((prev) =>
@@ -474,11 +469,11 @@ export default function DeliveryMenList() {
           ),
         );
       } else {
-        toast.error(data.message || "Failed to update application status");
+        toast.error(data.message || t("errors.updateApplicationStatusFailed"));
       }
     } catch (error) {
       console.error("Error updating application status:", error);
-      toast.error("Failed to update application status");
+      toast.error(t("errors.updateApplicationStatusFailed"));
     } finally {
       setStatusUpdating(false);
     }
@@ -498,26 +493,20 @@ export default function DeliveryMenList() {
         `/api/delivery-men/${selectedDeliveryMan.id}`,
         {
           method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            [field]: tempValue,
-          }),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ [field]: tempValue }),
         },
       );
 
       const data = await response.json();
 
       if (data.success) {
-        toast.success(`${field} updated successfully`);
+        toast.success(t("success.fieldUpdated", { field }));
 
-        // Update selected delivery man in modal
         setSelectedDeliveryMan((prev) =>
           prev ? { ...prev, [field]: tempValue } : null,
         );
 
-        // Update delivery man in list
         setDeliveryMen((prev) =>
           prev.map((dm) =>
             dm.id === selectedDeliveryMan.id
@@ -526,11 +515,11 @@ export default function DeliveryMenList() {
           ),
         );
       } else {
-        toast.error(data.message || "Failed to update field");
+        toast.error(data.message || t("errors.updateFieldFailed"));
       }
     } catch (error) {
       console.error("Error updating field:", error);
-      toast.error("Failed to update field");
+      toast.error(t("errors.updateFieldFailed"));
     } finally {
       setStatusUpdating(false);
       setEditingField(null);
@@ -549,10 +538,10 @@ export default function DeliveryMenList() {
       <div className="flex flex-col lg:flex-row items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-            Delivery Men Management
+            {t("header.title")}
           </h1>
           <p className="text-muted-foreground mt-1 text-sm md:text-base">
-            Manage delivery personnel and enlist new team members
+            {t("header.subtitle")}
           </p>
         </div>
       </div>
@@ -570,7 +559,7 @@ export default function DeliveryMenList() {
           >
             <div className="flex items-center gap-2">
               <Users className="h-4 w-4" />
-              Delivery Men List
+              {t("tabs.list")}
             </div>
           </button>
           <button
@@ -583,7 +572,7 @@ export default function DeliveryMenList() {
           >
             <div className="flex items-center gap-2">
               <UserPlus className="h-4 w-4" />
-              Onboard New Delivery Man
+              {t("tabs.enlist")}
             </div>
           </button>
         </nav>
@@ -595,7 +584,7 @@ export default function DeliveryMenList() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <User className="h-5 w-5" />
-              Delivery Men List
+              {t("list.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -604,7 +593,7 @@ export default function DeliveryMenList() {
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
-                    placeholder="Search by name, phone, email, or employee code..."
+                    placeholder={t("list.searchPlaceholder")}
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     className="pl-10"
@@ -614,15 +603,23 @@ export default function DeliveryMenList() {
               <Select value={statusFilter} onValueChange={setStatusFilter}>
                 <SelectTrigger className="w-full sm:w-[180px]">
                   <Filter className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Filter by status" />
+                  <SelectValue
+                    placeholder={t("list.statusFilterPlaceholder")}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Status</SelectItem>
-                  <SelectItem value="PENDING">Pending</SelectItem>
-                  <SelectItem value="ACTIVE">Active</SelectItem>
-                  <SelectItem value="SUSPENDED">Suspended</SelectItem>
-                  <SelectItem value="REJECTED">Rejected</SelectItem>
-                  <SelectItem value="RESIGNED">Resigned</SelectItem>
+                  <SelectItem value="all">{t("list.allStatus")}</SelectItem>
+                  <SelectItem value="PENDING">{t("status.PENDING")}</SelectItem>
+                  <SelectItem value="ACTIVE">{t("status.ACTIVE")}</SelectItem>
+                  <SelectItem value="SUSPENDED">
+                    {t("status.SUSPENDED")}
+                  </SelectItem>
+                  <SelectItem value="REJECTED">
+                    {t("status.REJECTED")}
+                  </SelectItem>
+                  <SelectItem value="RESIGNED">
+                    {t("status.RESIGNED")}
+                  </SelectItem>
                 </SelectContent>
               </Select>
               <Select
@@ -631,10 +628,12 @@ export default function DeliveryMenList() {
               >
                 <SelectTrigger className="w-[180px]">
                   <Building className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Filter by warehouse" />
+                  <SelectValue
+                    placeholder={t("list.warehouseFilterPlaceholder")}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Warehouses</SelectItem>
+                  <SelectItem value="all">{t("list.allWarehouses")}</SelectItem>
                   {warehouses.map((warehouse) => (
                     <SelectItem
                       key={warehouse.id}
@@ -657,14 +656,16 @@ export default function DeliveryMenList() {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Delivery Man</TableHead>
-                        <TableHead>Contact Info</TableHead>
-                        <TableHead>Warehouse</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead>Application</TableHead>
-                        <TableHead>Joined Date</TableHead>
-                        <TableHead>Documents</TableHead>
-                        <TableHead className="text-right">Actions</TableHead>
+                        <TableHead>{t("table.deliveryMan")}</TableHead>
+                        <TableHead>{t("table.contactInfo")}</TableHead>
+                        <TableHead>{t("table.warehouse")}</TableHead>
+                        <TableHead>{t("table.status")}</TableHead>
+                        <TableHead>{t("table.application")}</TableHead>
+                        <TableHead>{t("table.joinedDate")}</TableHead>
+                        <TableHead>{t("table.documents")}</TableHead>
+                        <TableHead className="text-right">
+                          {t("table.actions")}
+                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -674,14 +675,14 @@ export default function DeliveryMenList() {
                             <div className="flex flex-col items-center gap-2">
                               <User className="h-12 w-12 text-muted-foreground" />
                               <p className="text-muted-foreground">
-                                No delivery men found
+                                {t("list.empty")}
                               </p>
                               <Button
                                 variant="outline"
                                 onClick={() => setActiveTab("enlist")}
                                 className="mt-2"
                               >
-                                Enlist First Delivery Man
+                                {t("list.enlistFirst")}
                               </Button>
                             </div>
                           </TableCell>
@@ -704,7 +705,9 @@ export default function DeliveryMenList() {
                                 </div>
                                 {deliveryMan.employeeCode && (
                                   <div className="text-sm text-muted-foreground">
-                                    Code: {deliveryMan.employeeCode}
+                                    {t("list.codeLabel", {
+                                      code: deliveryMan.employeeCode,
+                                    })}
                                   </div>
                                 )}
                               </div>
@@ -726,7 +729,7 @@ export default function DeliveryMenList() {
                             <TableCell>
                               <div className="flex items-center gap-1">
                                 <Building className="h-3 w-3" />
-                                {deliveryMan.warehouse?.name || "N/A"}
+                                {deliveryMan.warehouse?.name || t("common.na")}
                               </div>
                             </TableCell>
                             <TableCell>
@@ -756,7 +759,9 @@ export default function DeliveryMenList() {
                                 <span>{deliveryMan._count.documents}</span>
                                 <span className="text-muted-foreground">/</span>
                                 <span>
-                                  {deliveryMan._count.references} Refs
+                                  {t("list.referencesCount", {
+                                    count: deliveryMan._count.references,
+                                  })}
                                 </span>
                               </button>
                             </TableCell>
@@ -766,7 +771,9 @@ export default function DeliveryMenList() {
                                   <Button
                                     variant="ghost"
                                     size="icon"
-                                    aria-label={`Open actions for ${deliveryMan.fullName}`}
+                                    aria-label={t("list.openActionsAria", {
+                                      name: deliveryMan.fullName,
+                                    })}
                                     onClick={(event) => event.stopPropagation()}
                                   >
                                     <MoreHorizontal className="h-4 w-4" />
@@ -777,12 +784,16 @@ export default function DeliveryMenList() {
                                   className="w-56"
                                   onClick={(event) => event.stopPropagation()}
                                 >
-                                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                                  <DropdownMenuLabel>
+                                    {t("menu.actions")}
+                                  </DropdownMenuLabel>
                                   <DropdownMenuItem
-                                    onSelect={() => handleViewDetails(deliveryMan)}
+                                    onSelect={() =>
+                                      handleViewDetails(deliveryMan)
+                                    }
                                   >
                                     <Eye className="h-4 w-4" />
-                                    View status & documents
+                                    {t("menu.viewStatusDocs")}
                                   </DropdownMenuItem>
                                   <DropdownMenuItem
                                     onSelect={() =>
@@ -792,10 +803,12 @@ export default function DeliveryMenList() {
                                     }
                                   >
                                     <Edit className="h-4 w-4" />
-                                    Edit profile
+                                    {t("menu.editProfile")}
                                   </DropdownMenuItem>
                                   <DropdownMenuSeparator />
-                                  <DropdownMenuLabel>Change status</DropdownMenuLabel>
+                                  <DropdownMenuLabel>
+                                    {t("menu.changeStatus")}
+                                  </DropdownMenuLabel>
                                   {[
                                     "PENDING",
                                     "ACTIVE",
@@ -816,12 +829,12 @@ export default function DeliveryMenList() {
                                         )
                                       }
                                     >
-                                      {status.replace("_", " ")}
+                                      {t(`status.${status}`)}
                                     </DropdownMenuItem>
                                   ))}
                                   <DropdownMenuSeparator />
                                   <DropdownMenuLabel>
-                                    Application status
+                                    {t("menu.applicationStatus")}
                                   </DropdownMenuLabel>
                                   <DropdownMenuItem
                                     disabled={
@@ -837,7 +850,7 @@ export default function DeliveryMenList() {
                                     }
                                   >
                                     <Clock className="h-4 w-4" />
-                                    Mark under review
+                                    {t("menu.markUnderReview")}
                                   </DropdownMenuItem>
                                   <DropdownMenuItem
                                     disabled={
@@ -853,7 +866,7 @@ export default function DeliveryMenList() {
                                     }
                                   >
                                     <CheckCircle className="h-4 w-4" />
-                                    Approve application
+                                    {t("menu.approveApplication")}
                                   </DropdownMenuItem>
                                 </DropdownMenuContent>
                               </DropdownMenu>
@@ -869,12 +882,14 @@ export default function DeliveryMenList() {
                 {pagination.pages > 1 && (
                   <div className="flex items-center justify-between mt-4">
                     <div className="text-sm text-muted-foreground">
-                      Showing {(pagination.page - 1) * pagination.limit + 1} to{" "}
-                      {Math.min(
-                        pagination.page * pagination.limit,
-                        pagination.total,
-                      )}{" "}
-                      of {pagination.total} results
+                      {t("pagination.showing", {
+                        start: (pagination.page - 1) * pagination.limit + 1,
+                        end: Math.min(
+                          pagination.page * pagination.limit,
+                          pagination.total,
+                        ),
+                        total: pagination.total,
+                      })}
                     </div>
                     <div className="flex items-center gap-2">
                       <Button
@@ -884,10 +899,13 @@ export default function DeliveryMenList() {
                         disabled={pagination.page === 1}
                       >
                         <ChevronLeft className="h-4 w-4" />
-                        Previous
+                        {t("pagination.previous")}
                       </Button>
                       <span className="text-sm">
-                        Page {pagination.page} of {pagination.pages}
+                        {t("pagination.pageOf", {
+                          page: pagination.page,
+                          pages: pagination.pages,
+                        })}
                       </span>
                       <Button
                         variant="outline"
@@ -895,7 +913,7 @@ export default function DeliveryMenList() {
                         onClick={() => handlePageChange(pagination.page + 1)}
                         disabled={pagination.page === pagination.pages}
                       >
-                        Next
+                        {t("pagination.next")}
                         <ChevronRight className="h-4 w-4" />
                       </Button>
                     </div>
@@ -912,7 +930,7 @@ export default function DeliveryMenList() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <UserPlus className="h-5 w-5" />
-              Onboard New Delivery Man
+              {t("enlist.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -927,7 +945,7 @@ export default function DeliveryMenList() {
           <DialogHeader>
             <div className="flex items-center justify-between">
               <DialogTitle className="text-xl font-bold">
-                Delivery Man Details
+                {t("modal.title")}
               </DialogTitle>
             </div>
           </DialogHeader>
@@ -945,7 +963,8 @@ export default function DeliveryMenList() {
                       {selectedDeliveryMan.fullName}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {selectedDeliveryMan.employeeCode || "No Employee Code"}
+                      {selectedDeliveryMan.employeeCode ||
+                        t("modal.noEmployeeCode")}
                     </p>
                   </div>
                 </div>
@@ -959,11 +978,21 @@ export default function DeliveryMenList() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="PENDING">Pending</SelectItem>
-                      <SelectItem value="ACTIVE">Active</SelectItem>
-                      <SelectItem value="SUSPENDED">Suspended</SelectItem>
-                      <SelectItem value="REJECTED">Rejected</SelectItem>
-                      <SelectItem value="RESIGNED">Resigned</SelectItem>
+                      <SelectItem value="PENDING">
+                        {t("status.PENDING")}
+                      </SelectItem>
+                      <SelectItem value="ACTIVE">
+                        {t("status.ACTIVE")}
+                      </SelectItem>
+                      <SelectItem value="SUSPENDED">
+                        {t("status.SUSPENDED")}
+                      </SelectItem>
+                      <SelectItem value="REJECTED">
+                        {t("status.REJECTED")}
+                      </SelectItem>
+                      <SelectItem value="RESIGNED">
+                        {t("status.RESIGNED")}
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   {getStatusBadge(selectedDeliveryMan.status)}
@@ -975,39 +1004,43 @@ export default function DeliveryMenList() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-base">
-                      Basic Information
+                      {t("modal.basicInfo")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>
-                        <span className="font-medium">Phone:</span>
+                        <span className="font-medium">{t("modal.phone")}:</span>
                         <p className="text-muted-foreground">
                           {selectedDeliveryMan.phone}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Email:</span>
+                        <span className="font-medium">{t("modal.email")}:</span>
                         <p className="text-muted-foreground">
-                          {selectedDeliveryMan.email || "N/A"}
+                          {selectedDeliveryMan.email || t("common.na")}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Date of Birth:</span>
+                        <span className="font-medium">
+                          {t("modal.dateOfBirth")}:
+                        </span>
                         <p className="text-muted-foreground">
                           {formatDate(selectedDeliveryMan.dateOfBirth)}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Gender:</span>
+                        <span className="font-medium">
+                          {t("modal.gender")}:
+                        </span>
                         <p className="text-muted-foreground">
-                          {selectedDeliveryMan.gender || "N/A"}
+                          {selectedDeliveryMan.gender || t("common.na")}
                         </p>
                       </div>
                     </div>
                     <div>
                       <span className="font-medium text-sm">
-                        Present Address:
+                        {t("modal.presentAddress")}:
                       </span>
                       <p className="text-sm text-muted-foreground">
                         {selectedDeliveryMan.presentAddress}
@@ -1015,7 +1048,7 @@ export default function DeliveryMenList() {
                     </div>
                     <div>
                       <span className="font-medium text-sm">
-                        Permanent Address:
+                        {t("modal.permanentAddress")}:
                       </span>
                       <p className="text-sm text-muted-foreground">
                         {selectedDeliveryMan.permanentAddress}
@@ -1028,13 +1061,15 @@ export default function DeliveryMenList() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-base">
-                      Status & Warehouse
+                      {t("modal.statusWarehouse")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>
-                        <span className="font-medium">Warehouse:</span>
+                        <span className="font-medium">
+                          {t("modal.warehouse")}:
+                        </span>
                         {editingField === "warehouseId" ? (
                           <div className="mt-1 space-y-2">
                             <Select
@@ -1043,7 +1078,9 @@ export default function DeliveryMenList() {
                               disabled={statusUpdating}
                             >
                               <SelectTrigger className="w-full">
-                                <SelectValue placeholder="Select warehouse" />
+                                <SelectValue
+                                  placeholder={t("modal.selectWarehouse")}
+                                />
                               </SelectTrigger>
                               <SelectContent>
                                 {warehouses.map((warehouse) => (
@@ -1062,21 +1099,22 @@ export default function DeliveryMenList() {
                                 onClick={() => handleFieldSave("warehouseId")}
                                 disabled={statusUpdating}
                               >
-                                Save
+                                {t("actions.save")}
                               </Button>
                               <Button
                                 size="sm"
                                 variant="outline"
                                 onClick={handleFieldCancel}
                               >
-                                Cancel
+                                {t("actions.cancel")}
                               </Button>
                             </div>
                           </div>
                         ) : (
                           <div className="flex items-center justify-between mt-1">
                             <p className="text-muted-foreground">
-                              {selectedDeliveryMan.warehouse?.name || "N/A"}
+                              {selectedDeliveryMan.warehouse?.name ||
+                                t("common.na")}
                               {selectedDeliveryMan.warehouse?.code &&
                                 ` (${selectedDeliveryMan.warehouse.code})`}
                             </p>
@@ -1097,7 +1135,9 @@ export default function DeliveryMenList() {
                         )}
                       </div>
                       <div>
-                        <span className="font-medium">Application Status:</span>
+                        <span className="font-medium">
+                          {t("modal.applicationStatus")}:
+                        </span>
                         <div className="mt-1 flex flex-wrap items-center gap-2">
                           {getApplicationStatusBadge(
                             selectedDeliveryMan.applicationStatus,
@@ -1120,7 +1160,7 @@ export default function DeliveryMenList() {
                             className="h-8 gap-1"
                           >
                             <Clock className="h-3.5 w-3.5" />
-                            Under Review
+                            {t("modal.underReview")}
                           </Button>
                           <Button
                             type="button"
@@ -1139,38 +1179,49 @@ export default function DeliveryMenList() {
                             className="h-8 gap-1"
                           >
                             <CheckCircle className="h-3.5 w-3.5" />
-                            Approve
+                            {t("modal.approve")}
                           </Button>
                         </div>
                       </div>
                       <div>
-                        <span className="font-medium">Identity Type:</span>
+                        <span className="font-medium">
+                          {t("modal.identityType")}:
+                        </span>
                         <p className="text-muted-foreground mt-1">
                           {selectedDeliveryMan.identityType}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Identity Number:</span>
+                        <span className="font-medium">
+                          {t("modal.identityNumber")}:
+                        </span>
                         <p className="text-muted-foreground mt-1">
                           {selectedDeliveryMan.identityNumber}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Joining Date:</span>
+                        <span className="font-medium">
+                          {t("modal.joiningDate")}:
+                        </span>
                         <p className="text-muted-foreground mt-1">
                           {formatDate(selectedDeliveryMan.joiningDate)}
                         </p>
                       </div>
                       <div>
-                        <span className="font-medium">Emergency Contact:</span>
+                        <span className="font-medium">
+                          {t("modal.emergencyContact")}:
+                        </span>
                         <p className="text-muted-foreground mt-1">
-                          {selectedDeliveryMan.emergencyContactName || "N/A"}
+                          {selectedDeliveryMan.emergencyContactName ||
+                            t("common.na")}
                         </p>
                       </div>
                     </div>
                     {selectedDeliveryMan.note && (
                       <div>
-                        <span className="font-medium text-sm">Notes:</span>
+                        <span className="font-medium text-sm">
+                          {t("modal.notes")}:
+                        </span>
                         <p className="text-sm text-muted-foreground p-2 bg-muted rounded">
                           {selectedDeliveryMan.note}
                         </p>
@@ -1185,7 +1236,9 @@ export default function DeliveryMenList() {
                 <CardHeader>
                   <CardTitle className="text-base flex items-center gap-2">
                     <FileText className="h-4 w-4" />
-                    Documents ({selectedDeliveryMan?._count?.documents || 0})
+                    {t("modal.documentsTitle", {
+                      count: selectedDeliveryMan?._count?.documents || 0,
+                    })}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -1206,7 +1259,7 @@ export default function DeliveryMenList() {
                                 {document.type}
                               </p>
                               <p className="text-xs text-muted-foreground">
-                                {document.fileName || "Unknown file"}
+                                {document.fileName || t("modal.unknownFile")}
                                 {document.fileSize &&
                                   ` • ${(document.fileSize / 1024).toFixed(1)} KB`}
                               </p>
@@ -1220,7 +1273,7 @@ export default function DeliveryMenList() {
                               className="text-primary hover:underline text-sm flex items-center gap-1"
                             >
                               <Eye className="h-3 w-3" />
-                              View
+                              {t("actions.view")}
                             </a>
                             {document.mimeType?.startsWith("image/") && (
                               <div className="w-8 h-8 rounded border overflow-hidden">
@@ -1237,7 +1290,7 @@ export default function DeliveryMenList() {
                     ) : (
                       <div className="text-center py-8 text-muted-foreground">
                         <FileText className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                        <p>No documents uploaded</p>
+                        <p>{t("modal.noDocuments")}</p>
                       </div>
                     )}
                   </div>
@@ -1249,7 +1302,9 @@ export default function DeliveryMenList() {
                 <CardHeader>
                   <CardTitle className="text-base flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    References ({selectedDeliveryMan?._count?.references || 0})
+                    {t("modal.referencesTitle", {
+                      count: selectedDeliveryMan?._count?.references || 0,
+                    })}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -1264,30 +1319,38 @@ export default function DeliveryMenList() {
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-medium">{reference.name}</h4>
                             <Badge variant="outline">
-                              {reference.relation || "No Relation"}
+                              {reference.relation || t("modal.noRelation")}
                             </Badge>
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                             <div>
-                              <span className="font-medium">Phone:</span>
+                              <span className="font-medium">
+                                {t("modal.phone")}:
+                              </span>
                               <p className="text-muted-foreground">
                                 {reference.phone}
                               </p>
                             </div>
                             <div>
-                              <span className="font-medium">Occupation:</span>
+                              <span className="font-medium">
+                                {t("modal.occupation")}:
+                              </span>
                               <p className="text-muted-foreground">
-                                {reference.occupation || "N/A"}
+                                {reference.occupation || t("common.na")}
                               </p>
                             </div>
                             <div>
-                              <span className="font-medium">Address:</span>
+                              <span className="font-medium">
+                                {t("modal.address")}:
+                              </span>
                               <p className="text-muted-foreground">
-                                {reference.address || "N/A"}
+                                {reference.address || t("common.na")}
                               </p>
                             </div>
                             <div>
-                              <span className="font-medium">Identity:</span>
+                              <span className="font-medium">
+                                {t("modal.identity")}:
+                              </span>
                               <p className="text-muted-foreground">
                                 {reference.identityType} -{" "}
                                 {reference.identityNumber}
@@ -1299,7 +1362,7 @@ export default function DeliveryMenList() {
                     ) : (
                       <div className="text-center py-8 text-muted-foreground">
                         <User className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                        <p>No references added</p>
+                        <p>{t("modal.noReferences")}</p>
                       </div>
                     )}
                   </div>
@@ -1315,7 +1378,7 @@ export default function DeliveryMenList() {
                     setSelectedDeliveryMan(null);
                   }}
                 >
-                  Close
+                  {t("actions.close")}
                 </Button>
               </div>
             </div>

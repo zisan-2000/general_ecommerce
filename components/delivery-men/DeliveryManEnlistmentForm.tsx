@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import Tesseract from "tesseract.js";
 import { initialFormData, steps } from "./constants";
 import {
@@ -81,7 +82,7 @@ async function uploadDeliveryManDocuments(params: {
   async function pushFile(
     type: string,
     file?: File | null,
-    extra?: Partial<UploadedDocument>
+    extra?: Partial<UploadedDocument>,
   ) {
     if (!file) return;
 
@@ -111,7 +112,6 @@ async function uploadDeliveryManDocuments(params: {
   await pushFile("BANK_CHEQUE", params.bankChequeFile);
   await pushFile("BOND", params.bondDocumentFile);
   await pushFile("CONTRACT_PAPER", params.contractPaperFile);
-  
 
   if (params.references?.length) {
     for (let i = 0; i < params.references.length; i++) {
@@ -131,8 +131,11 @@ async function uploadDeliveryManDocuments(params: {
 }
 
 export default function DeliveryManEnlistmentForm() {
+  const t = useTranslations("AdminDeliveryManEnlistmentForm");
+
   const [currentStep, setCurrentStep] = useState(0);
-  const [formData, setFormData] = useState<DeliveryManFormData>(initialFormData);
+  const [formData, setFormData] =
+    useState<DeliveryManFormData>(initialFormData);
   const [errors, setErrors] = useState<ErrorState>({});
   const [isReadingDoc, setIsReadingDoc] = useState(false);
   const [ocrMessage, setOcrMessage] = useState("");
@@ -147,7 +150,7 @@ export default function DeliveryManEnlistmentForm() {
 
   const progress = useMemo(
     () => ((currentStep + 1) / steps.length) * 100,
-    [currentStep]
+    [currentStep],
   );
 
   useEffect(() => {
@@ -167,20 +170,22 @@ export default function DeliveryManEnlistmentForm() {
         try {
           data = JSON.parse(text);
         } catch {
-          throw new Error("/api/warehouses did not return valid JSON");
+          throw new Error(t("errors.warehousesInvalidJson"));
         }
 
         if (!res.ok) {
-          throw new Error(data.message || data.error || "Failed to load warehouses");
+          throw new Error(
+            data.message || data.error || t("errors.warehousesLoadFailed"),
+          );
         }
 
         const list = Array.isArray(data)
           ? data
           : Array.isArray(data.data)
-          ? data.data
-          : Array.isArray(data.warehouses)
-          ? data.warehouses
-          : [];
+            ? data.data
+            : Array.isArray(data.warehouses)
+              ? data.warehouses
+              : [];
 
         const normalized: WarehouseOption[] = list
           .map((item: any) => ({
@@ -194,7 +199,9 @@ export default function DeliveryManEnlistmentForm() {
       } catch (error) {
         console.error("WAREHOUSE LOAD ERROR:", error);
         setWarehouseLoadError(
-          error instanceof Error ? error.message : "Failed to load warehouses"
+          error instanceof Error
+            ? error.message
+            : t("errors.warehousesLoadFailed"),
         );
       } finally {
         setIsLoadingWarehouses(false);
@@ -202,6 +209,7 @@ export default function DeliveryManEnlistmentForm() {
     };
 
     loadWarehouses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedWarehouseLabel = useMemo(() => {
@@ -212,7 +220,7 @@ export default function DeliveryManEnlistmentForm() {
 
   const updateField = <K extends keyof DeliveryManFormData>(
     key: K,
-    value: DeliveryManFormData[K]
+    value: DeliveryManFormData[K],
   ) => {
     setFormData((prev) => ({ ...prev, [key]: value }));
     setErrors((prev) => ({ ...prev, [key as string]: "" }));
@@ -221,7 +229,7 @@ export default function DeliveryManEnlistmentForm() {
   const updateReference = <K extends keyof ReferencePerson>(
     index: number,
     key: K,
-    value: ReferencePerson[K]
+    value: ReferencePerson[K],
   ) => {
     setFormData((prev) => {
       const next = [...prev.references];
@@ -264,7 +272,7 @@ export default function DeliveryManEnlistmentForm() {
 
   const handleFileChange = (
     event: ChangeEvent<HTMLInputElement>,
-    field: keyof DeliveryManFormData
+    field: keyof DeliveryManFormData,
   ) => {
     const file = event.target.files?.[0] ?? null;
     updateField(field, file as DeliveryManFormData[keyof DeliveryManFormData]);
@@ -273,10 +281,14 @@ export default function DeliveryManEnlistmentForm() {
   const handleReferenceFileChange = (
     event: ChangeEvent<HTMLInputElement>,
     index: number,
-    field: keyof ReferencePerson
+    field: keyof ReferencePerson,
   ) => {
     const file = event.target.files?.[0] ?? null;
-    updateReference(index, field, file as ReferencePerson[keyof ReferencePerson]);
+    updateReference(
+      index,
+      field,
+      file as ReferencePerson[keyof ReferencePerson],
+    );
   };
 
   const applyDetectedValues = (parsed: ParsedDocumentData) => {
@@ -286,8 +298,8 @@ export default function DeliveryManEnlistmentForm() {
         parsed.documentType === "PASSPORT"
           ? "PASSPORT"
           : parsed.documentType === "NID"
-          ? "NID"
-          : prev.identityType,
+            ? "NID"
+            : prev.identityType,
       fullName: parsed.fullName || prev.fullName,
       identityNumber: parsed.identityNumber || prev.identityNumber,
       dateOfBirth: parsed.dateOfBirth || prev.dateOfBirth,
@@ -297,7 +309,7 @@ export default function DeliveryManEnlistmentForm() {
 
   const runClientOcr = async (file: File) => {
     setIsReadingDoc(true);
-    setOcrMessage("Reading document...");
+    setOcrMessage(t("ocr.reading"));
     setParsedDoc(null);
     setRawExtractedText("");
 
@@ -308,7 +320,7 @@ export default function DeliveryManEnlistmentForm() {
             setOcrMessage(
               `${m.status}${
                 m.progress ? ` (${Math.round(m.progress * 100)}%)` : ""
-              }`
+              }`,
             );
           }
         },
@@ -320,19 +332,17 @@ export default function DeliveryManEnlistmentForm() {
       setRawExtractedText(text);
       setParsedDoc(parsed);
       applyDetectedValues(parsed);
-      setOcrMessage(
-        "Document read complete. Please verify the detected values."
-      );
+      setOcrMessage(t("ocr.complete"));
     } catch (error) {
       console.error(error);
-      setOcrMessage("Could not read the document. Please fill the fields manually.");
+      setOcrMessage(t("ocr.failed"));
     } finally {
       setIsReadingDoc(false);
     }
   };
 
   const handleOcrDocumentUpload = async (
-    event: ChangeEvent<HTMLInputElement>
+    event: ChangeEvent<HTMLInputElement>,
   ) => {
     const file = event.target.files?.[0] ?? null;
     if (!file) return;
@@ -344,103 +354,125 @@ export default function DeliveryManEnlistmentForm() {
     const nextErrors: ErrorState = {};
 
     if (currentStep === 1) {
-      if (!formData.fullName.trim()) nextErrors.fullName = "Full name is required";
+      if (!formData.fullName.trim())
+        nextErrors.fullName = t("validation.fullNameRequired");
       if (!formData.mobileNumber.trim())
-        nextErrors.mobileNumber = "Mobile number is required";
+        nextErrors.mobileNumber = t("validation.mobileRequired");
       if (!formData.password.trim())
-        nextErrors.password = "Password is required";
+        nextErrors.password = t("validation.passwordRequired");
       if (!formData.dateOfBirth)
-        nextErrors.dateOfBirth = "Date of birth is required";
-      if (!formData.gender) nextErrors.gender = "Gender is required";
+        nextErrors.dateOfBirth = t("validation.dateOfBirthRequired");
+      if (!formData.gender) nextErrors.gender = t("validation.genderRequired");
       if (!formData.presentAddress.trim())
-        nextErrors.presentAddress = "Present address is required";
+        nextErrors.presentAddress = t("validation.presentAddressRequired");
       if (!formData.permanentAddress.trim())
-        nextErrors.permanentAddress = "Permanent address is required";
+        nextErrors.permanentAddress = t("validation.permanentAddressRequired");
       if (!formData.emergencyContactName.trim())
-        nextErrors.emergencyContactName = "Emergency contact name is required";
+        nextErrors.emergencyContactName = t("validation.emergencyNameRequired");
       if (!formData.emergencyContactNumber.trim())
-        nextErrors.emergencyContactNumber =
-          "Emergency contact number is required";
+        nextErrors.emergencyContactNumber = t(
+          "validation.emergencyNumberRequired",
+        );
       if (!formData.emergencyContactRelation.trim())
-        nextErrors.emergencyContactRelation =
-          "Emergency contact relation is required";
+        nextErrors.emergencyContactRelation = t(
+          "validation.emergencyRelationRequired",
+        );
     }
 
     if (currentStep === 2) {
       if (!formData.identityNumber.trim())
-        nextErrors.identityNumber = "Identity number is required";
+        nextErrors.identityNumber = t("validation.identityNumberRequired");
       if (!formData.identityFrontFile)
-        nextErrors.identityFrontFile = "Identity document is required";
-      if (formData.identityType === "PASSPORT" && !formData.passportExpiryDate) {
-        nextErrors.passportExpiryDate = "Passport expiry date is required";
+        nextErrors.identityFrontFile = t("validation.identityFrontRequired");
+      if (
+        formData.identityType === "PASSPORT" &&
+        !formData.passportExpiryDate
+      ) {
+        nextErrors.passportExpiryDate = t("validation.passportExpiryRequired");
       }
     }
 
     if (currentStep === 3) {
       if (!formData.fatherName.trim())
-        nextErrors.fatherName = "Father's name is required";
+        nextErrors.fatherName = t("validation.fatherNameRequired");
       if (!formData.fatherIdentityNumber.trim())
-        nextErrors.fatherIdentityNumber =
-          "Father's identity number is required";
+        nextErrors.fatherIdentityNumber = t(
+          "validation.fatherIdentityNumberRequired",
+        );
       if (!formData.fatherIdentityFrontFile)
-        nextErrors.fatherIdentityFrontFile =
-          "Father's identity copy is required";
+        nextErrors.fatherIdentityFrontFile = t(
+          "validation.fatherIdentityFrontRequired",
+        );
       if (!formData.motherName.trim())
-        nextErrors.motherName = "Mother's name is required";
+        nextErrors.motherName = t("validation.motherNameRequired");
       if (!formData.motherIdentityNumber.trim())
-        nextErrors.motherIdentityNumber =
-          "Mother's identity number is required";
+        nextErrors.motherIdentityNumber = t(
+          "validation.motherIdentityNumberRequired",
+        );
       if (!formData.motherIdentityFrontFile)
-        nextErrors.motherIdentityFrontFile =
-          "Mother's identity copy is required";
+        nextErrors.motherIdentityFrontFile = t(
+          "validation.motherIdentityFrontRequired",
+        );
     }
 
     if (currentStep === 4) {
       formData.references.forEach((ref, index) => {
         if (!ref.name.trim())
-          nextErrors[`references.${index}.name`] = "Name is required";
+          nextErrors[`references.${index}.name`] = t(
+            "validation.referenceNameRequired",
+          );
         if (!ref.phone.trim())
-          nextErrors[`references.${index}.phone`] = "Phone is required";
+          nextErrors[`references.${index}.phone`] = t(
+            "validation.referencePhoneRequired",
+          );
         if (!ref.relation.trim())
-          nextErrors[`references.${index}.relation`] = "Relation is required";
+          nextErrors[`references.${index}.relation`] = t(
+            "validation.referenceRelationRequired",
+          );
         if (!ref.address.trim())
-          nextErrors[`references.${index}.address`] = "Address is required";
+          nextErrors[`references.${index}.address`] = t(
+            "validation.referenceAddressRequired",
+          );
         if (!ref.identityNumber.trim())
-          nextErrors[`references.${index}.identityNumber`] =
-            "Identity number is required";
+          nextErrors[`references.${index}.identityNumber`] = t(
+            "validation.referenceIdentityRequired",
+          );
         if (!ref.identityFrontFile)
-          nextErrors[`references.${index}.identityFrontFile`] =
-            "Identity file is required";
+          nextErrors[`references.${index}.identityFrontFile`] = t(
+            "validation.referenceIdentityFrontRequired",
+          );
       });
     }
 
     if (currentStep === 5) {
-      if (!formData.bankName.trim()) nextErrors.bankName = "Bank name is required";
+      if (!formData.bankName.trim())
+        nextErrors.bankName = t("validation.bankNameRequired");
       if (!formData.bankChequeFile)
-        nextErrors.bankChequeFile = "Bank cheque is required";
+        nextErrors.bankChequeFile = t("validation.bankChequeRequired");
       if (!formData.bondDocumentFile)
-        nextErrors.bondDocumentFile = "Bond document is required";
+        nextErrors.bondDocumentFile = t("validation.bondDocumentRequired");
       if (!formData.contractPaperFile)
-        nextErrors.contractPaperFile = "Contract paper is required";
+        nextErrors.contractPaperFile = t("validation.contractPaperRequired");
     }
 
     if (currentStep === 6) {
-      if (!formData.warehouse) nextErrors.warehouse = "Warehouse is required";
+      if (!formData.warehouse)
+        nextErrors.warehouse = t("validation.warehouseRequired");
       if (!formData.joiningDate)
-        nextErrors.joiningDate = "Joining date is required";
+        nextErrors.joiningDate = t("validation.joiningDateRequired");
       if (!formData.employmentType)
-        nextErrors.employmentType = "Employment type is required";
+        nextErrors.employmentType = t("validation.employmentTypeRequired");
     }
 
     if (currentStep === 7) {
       if (!formData.declarationAccurate)
-        nextErrors.declarationAccurate = "Required";
+        nextErrors.declarationAccurate = t("validation.required");
       if (!formData.declarationVerification)
-        nextErrors.declarationVerification = "Required";
+        nextErrors.declarationVerification = t("validation.required");
       if (!formData.declarationPolicy)
-        nextErrors.declarationPolicy = "Required";
+        nextErrors.declarationPolicy = t("validation.required");
       if (!formData.declarationDate)
-        nextErrors.declarationDate = "Declaration date is required";
+        nextErrors.declarationDate = t("validation.declarationDateRequired");
     }
 
     setErrors(nextErrors);
@@ -459,20 +491,20 @@ export default function DeliveryManEnlistmentForm() {
   const saveDraft = () => {
     localStorage.setItem(
       "delivery-man-enlistment-draft",
-      JSON.stringify(formData)
+      JSON.stringify(formData),
     );
-    alert("Draft saved in browser.");
+    alert(t("draft.saved"));
   };
 
   const loadDraft = () => {
     const raw = localStorage.getItem("delivery-man-enlistment-draft");
-    if (!raw) return alert("No draft found.");
+    if (!raw) return alert(t("draft.notFound"));
     try {
       const parsed = JSON.parse(raw) as DeliveryManFormData;
       setFormData({ ...initialFormData, ...parsed });
-      alert("Draft loaded.");
+      alert(t("draft.loaded"));
     } catch {
-      alert("Draft could not be loaded.");
+      alert(t("draft.loadFailed"));
     }
   };
 
@@ -484,7 +516,7 @@ export default function DeliveryManEnlistmentForm() {
 
       const selectedWarehouseId = Number(formData.warehouse);
       if (!selectedWarehouseId) {
-        throw new Error("Please select a valid warehouse");
+        throw new Error(t("errors.invalidWarehouse"));
       }
 
       const uploadedDocuments = await uploadDeliveryManDocuments({
@@ -580,18 +612,18 @@ export default function DeliveryManEnlistmentForm() {
       try {
         data = JSON.parse(text);
       } catch {
-        throw new Error("Save API did not return valid JSON");
+        throw new Error(t("errors.saveInvalidJson"));
       }
 
       if (!res.ok || !data.success) {
-        throw new Error(data.message || "Failed to save delivery man data");
+        throw new Error(data.message || t("errors.saveFailed"));
       }
 
       console.log("Saved successfully:", data);
       setSubmitted(true);
     } catch (error) {
       console.error("SUBMIT ERROR:", error);
-      alert(error instanceof Error ? error.message : "Something went wrong");
+      alert(error instanceof Error ? error.message : t("errors.generic"));
     } finally {
       setIsSubmitting(false);
     }
@@ -604,9 +636,9 @@ export default function DeliveryManEnlistmentForm() {
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground">
             ✓
           </div>
-          <h2 className="rubik-bold text-2xl">Application Submitted</h2>
+          <h2 className="rubik-bold text-2xl">{t("success.title")}</h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Delivery man enlistment data has been uploaded and saved successfully.
+            {t("success.description")}
           </p>
         </div>
       </div>
@@ -618,7 +650,7 @@ export default function DeliveryManEnlistmentForm() {
       <aside className="rounded-3xl border border-border bg-card p-5 text-card-foreground shadow-sm">
         <div className="mb-5">
           <div className="mb-2 flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">Progress</span>
+            <span className="text-muted-foreground">{t("progress.label")}</span>
             <span className="rubik-semibold">{Math.round(progress)}%</span>
           </div>
           <div className="h-2 rounded-full bg-muted">
@@ -640,8 +672,8 @@ export default function DeliveryManEnlistmentForm() {
                   active
                     ? "border-primary bg-accent text-accent-foreground"
                     : done
-                    ? "border-border bg-muted"
-                    : "border-border bg-card"
+                      ? "border-border bg-muted"
+                      : "border-border bg-card"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -650,63 +682,48 @@ export default function DeliveryManEnlistmentForm() {
                       active
                         ? "bg-primary text-primary-foreground"
                         : done
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-background text-foreground border border-border"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-background text-foreground border border-border"
                     }`}
                   >
                     {done ? "✓" : index + 1}
                   </div>
-                  <span className="rubik-medium text-sm">{step}</span>
+                  <span className="rubik-medium text-sm">
+                    {t(`steps.${index}`)}
+                  </span>
                 </div>
               </div>
             );
           })}
         </div>
-
-        {/* <div className="mt-5 space-y-2">
-          <button
-            type="button"
-            onClick={saveDraft}
-            className="btn-outline w-full rounded-xl px-4 py-3 text-sm font-medium"
-          >
-            Save Draft
-          </button>
-          <button
-            type="button"
-            onClick={loadDraft}
-            className="btn-outline w-full rounded-xl px-4 py-3 text-sm font-medium"
-          >
-            Load Draft
-          </button>
-        </div> */}
       </aside>
 
       <section className="rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm sm:p-8">
         {currentStep === 0 && (
           <Section
-            title="Document OCR Auto Fill"
-            description="Upload the applicant's NID or Passport front copy. The form will try to auto-detect visible text and fill matching fields."
+            title={t("step0.title")}
+            description={t("step0.description")}
           >
             <div className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
               <div className="rounded-2xl border border-border bg-background p-5">
                 <FileUpload
-                  label="Upload NID / Passport Front Copy"
+                  label={t("step0.uploadLabel")}
                   file={formData.identityFrontFile}
                   accept=".jpg,.jpeg,.png,.webp"
                   onChange={handleOcrDocumentUpload}
                 />
                 <div className="mt-4 rounded-2xl border border-border bg-muted p-4">
-                  <p className="text-sm rubik-medium">OCR Status</p>
+                  <p className="text-sm rubik-medium">{t("step0.ocrStatus")}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {isReadingDoc
                       ? ocrMessage
-                      : ocrMessage || "No document processed yet."}
+                      : ocrMessage || t("step0.noDocumentProcessed")}
                   </p>
                 </div>
                 {rawExtractedText ? (
                   <div className="mt-4">
                     <label className="mb-2 block text-sm font-medium">
-                      Extracted Text Preview
+                      {t("step0.extractedTextPreview")}
                     </label>
                     <textarea
                       readOnly
@@ -719,26 +736,28 @@ export default function DeliveryManEnlistmentForm() {
               </div>
 
               <div className="rounded-2xl border border-border bg-background p-5">
-                <h3 className="rubik-semibold text-lg">Detected Information</h3>
+                <h3 className="rubik-semibold text-lg">
+                  {t("step0.detectedInfo")}
+                </h3>
                 <div className="mt-4 space-y-3">
                   <InfoRow
-                    label="Document Type"
+                    label={t("step0.documentType")}
                     value={parsedDoc?.documentType || "—"}
                   />
                   <InfoRow
-                    label="Full Name"
+                    label={t("step0.fullName")}
                     value={parsedDoc?.fullName || "—"}
                   />
                   <InfoRow
-                    label="Identity Number"
+                    label={t("step0.identityNumber")}
                     value={parsedDoc?.identityNumber || "—"}
                   />
                   <InfoRow
-                    label="Date of Birth"
+                    label={t("step0.dateOfBirth")}
                     value={parsedDoc?.dateOfBirth || "—"}
                   />
                   <InfoRow
-                    label="Passport Expiry"
+                    label={t("step0.passportExpiry")}
                     value={parsedDoc?.passportExpiryDate || "—"}
                   />
                 </div>
@@ -749,13 +768,12 @@ export default function DeliveryManEnlistmentForm() {
                     onClick={() => applyDetectedValues(parsedDoc)}
                     className="btn-primary mt-5 w-full rounded-xl px-4 py-3 text-sm font-medium"
                   >
-                    Use Detected Information
+                    {t("step0.useDetected")}
                   </button>
                 ) : null}
 
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Detected values are approximate. Please review everything before
-                  submit.
+                  {t("step0.disclaimer")}
                 </p>
               </div>
             </div>
@@ -764,64 +782,64 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 1 && (
           <Section
-            title="Personal Information"
-            description="Basic information and emergency contact."
+            title={t("step1.title")}
+            description={t("step1.description")}
           >
             <div className="grid gap-5 md:grid-cols-2">
               <Input
-                label="Full Name *"
+                label={t("step1.fullName")}
                 value={formData.fullName}
                 onChange={(v) => updateField("fullName", v)}
                 error={errors.fullName}
               />
               <Input
-                label="Mobile Number *"
+                label={t("step1.mobileNumber")}
                 value={formData.mobileNumber}
                 onChange={(v) => updateField("mobileNumber", v)}
                 error={errors.mobileNumber}
               />
               <Input
-                label="Email Address"
+                label={t("step1.email")}
                 type="email"
                 value={formData.email}
                 onChange={(v) => updateField("email", v)}
               />
               <Input
-                label="Password *"
+                label={t("step1.password")}
                 type="password"
                 value={formData.password}
                 onChange={(v) => updateField("password", v)}
                 error={errors.password}
-                placeholder="Create a password for delivery man account"
+                placeholder={t("step1.passwordPlaceholder")}
               />
               <Input
-                label="Date of Birth *"
+                label={t("step1.dateOfBirth")}
                 type="date"
                 value={formData.dateOfBirth}
                 onChange={(v) => updateField("dateOfBirth", v)}
                 error={errors.dateOfBirth}
               />
               <Select
-                label="Gender *"
+                label={t("step1.gender")}
                 value={formData.gender}
                 onChange={(v) =>
                   updateField("gender", v as DeliveryManFormData["gender"])
                 }
                 error={errors.gender}
                 options={[
-                  { label: "Select gender", value: "" },
-                  { label: "Male", value: "MALE" },
-                  { label: "Female", value: "FEMALE" },
-                  { label: "Other", value: "OTHER" },
+                  { label: t("step1.selectGender"), value: "" },
+                  { label: t("step1.male"), value: "MALE" },
+                  { label: t("step1.female"), value: "FEMALE" },
+                  { label: t("step1.other"), value: "OTHER" },
                 ]}
               />
               <Input
-                label="Blood Group"
+                label={t("step1.bloodGroup")}
                 value={formData.bloodGroup}
                 onChange={(v) => updateField("bloodGroup", v)}
               />
               <Input
-                label="Marital Status"
+                label={t("step1.maritalStatus")}
                 value={formData.maritalStatus}
                 onChange={(v) => updateField("maritalStatus", v)}
               />
@@ -829,7 +847,7 @@ export default function DeliveryManEnlistmentForm() {
 
             <div className="mt-5">
               <FileUpload
-                label="Profile Photo"
+                label={t("step1.profilePhoto")}
                 file={formData.profilePhoto}
                 accept=".jpg,.jpeg,.png,.webp"
                 onChange={(e) => handleFileChange(e, "profilePhoto")}
@@ -838,13 +856,13 @@ export default function DeliveryManEnlistmentForm() {
 
             <div className="mt-5 grid gap-5 md:grid-cols-2">
               <Textarea
-                label="Present Address *"
+                label={t("step1.presentAddress")}
                 value={formData.presentAddress}
                 onChange={(v) => updateField("presentAddress", v)}
                 error={errors.presentAddress}
               />
               <Textarea
-                label="Permanent Address *"
+                label={t("step1.permanentAddress")}
                 value={formData.permanentAddress}
                 onChange={(v) => updateField("permanentAddress", v)}
                 error={errors.permanentAddress}
@@ -853,19 +871,19 @@ export default function DeliveryManEnlistmentForm() {
 
             <div className="mt-5 grid gap-5 md:grid-cols-3">
               <Input
-                label="Emergency Contact Name *"
+                label={t("step1.emergencyContactName")}
                 value={formData.emergencyContactName}
                 onChange={(v) => updateField("emergencyContactName", v)}
                 error={errors.emergencyContactName}
               />
               <Input
-                label="Emergency Contact Number *"
+                label={t("step1.emergencyContactNumber")}
                 value={formData.emergencyContactNumber}
                 onChange={(v) => updateField("emergencyContactNumber", v)}
                 error={errors.emergencyContactNumber}
               />
               <Input
-                label="Emergency Contact Relation *"
+                label={t("step1.emergencyContactRelation")}
                 value={formData.emergencyContactRelation}
                 onChange={(v) => updateField("emergencyContactRelation", v)}
                 error={errors.emergencyContactRelation}
@@ -876,23 +894,26 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 2 && (
           <Section
-            title="Identity Verification"
-            description="Applicant identity information and uploads."
+            title={t("step2.title")}
+            description={t("step2.description")}
           >
             <div className="grid gap-5 md:grid-cols-2">
               <Select
-                label="Identity Type *"
+                label={t("step2.identityType")}
                 value={formData.identityType}
                 onChange={(v) =>
-                  updateField("identityType", v as DeliveryManFormData["identityType"])
+                  updateField(
+                    "identityType",
+                    v as DeliveryManFormData["identityType"],
+                  )
                 }
                 options={[
-                  { label: "NID", value: "NID" },
-                  { label: "Passport", value: "PASSPORT" },
+                  { label: t("step2.nid"), value: "NID" },
+                  { label: t("step2.passport"), value: "PASSPORT" },
                 ]}
               />
               <Input
-                label="Identity Number *"
+                label={t("step2.identityNumber")}
                 value={formData.identityNumber}
                 onChange={(v) => updateField("identityNumber", v)}
                 error={errors.identityNumber}
@@ -900,14 +921,14 @@ export default function DeliveryManEnlistmentForm() {
             </div>
             <div className="mt-5 grid gap-5 md:grid-cols-2">
               <FileUpload
-                label="Identity Front Copy *"
+                label={t("step2.identityFront")}
                 file={formData.identityFrontFile}
                 accept=".jpg,.jpeg,.png,.webp,.pdf"
                 onChange={(e) => handleFileChange(e, "identityFrontFile")}
                 error={errors.identityFrontFile}
               />
               <FileUpload
-                label="Identity Back Copy"
+                label={t("step2.identityBack")}
                 file={formData.identityBackFile}
                 accept=".jpg,.jpeg,.png,.webp,.pdf"
                 onChange={(e) => handleFileChange(e, "identityBackFile")}
@@ -916,7 +937,7 @@ export default function DeliveryManEnlistmentForm() {
             {formData.identityType === "PASSPORT" ? (
               <div className="mt-5 max-w-md">
                 <Input
-                  label="Passport Expiry Date *"
+                  label={t("step2.passportExpiry")}
                   type="date"
                   value={formData.passportExpiryDate}
                   onChange={(v) => updateField("passportExpiryDate", v)}
@@ -929,45 +950,45 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 3 && (
           <Section
-            title="Family Information"
-            description="Father and mother identity data."
+            title={t("step3.title")}
+            description={t("step3.description")}
           >
             <div className="grid gap-6 xl:grid-cols-2">
-              <Card title="Father Information">
+              <Card title={t("step3.fatherTitle")}>
                 <div className="grid gap-4">
                   <Input
-                    label="Father's Name *"
+                    label={t("step3.fatherName")}
                     value={formData.fatherName}
                     onChange={(v) => updateField("fatherName", v)}
                     error={errors.fatherName}
                   />
                   <Input
-                    label="Father's Mobile Number"
+                    label={t("step3.fatherMobile")}
                     value={formData.fatherMobileNumber}
                     onChange={(v) => updateField("fatherMobileNumber", v)}
                   />
                   <Select
-                    label="Father's Identity Type"
+                    label={t("step3.fatherIdentityType")}
                     value={formData.fatherIdentityType}
                     onChange={(v) =>
                       updateField(
                         "fatherIdentityType",
-                        v as DeliveryManFormData["fatherIdentityType"]
+                        v as DeliveryManFormData["fatherIdentityType"],
                       )
                     }
                     options={[
-                      { label: "NID", value: "NID" },
-                      { label: "Passport", value: "PASSPORT" },
+                      { label: t("step3.nid"), value: "NID" },
+                      { label: t("step3.passport"), value: "PASSPORT" },
                     ]}
                   />
                   <Input
-                    label="Father's Identity Number *"
+                    label={t("step3.fatherIdentityNumber")}
                     value={formData.fatherIdentityNumber}
                     onChange={(v) => updateField("fatherIdentityNumber", v)}
                     error={errors.fatherIdentityNumber}
                   />
                   <FileUpload
-                    label="Father's Identity Front Copy *"
+                    label={t("step3.fatherIdentityFront")}
                     file={formData.fatherIdentityFrontFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) =>
@@ -976,7 +997,7 @@ export default function DeliveryManEnlistmentForm() {
                     error={errors.fatherIdentityFrontFile}
                   />
                   <FileUpload
-                    label="Father's Identity Back Copy"
+                    label={t("step3.fatherIdentityBack")}
                     file={formData.fatherIdentityBackFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) =>
@@ -986,41 +1007,41 @@ export default function DeliveryManEnlistmentForm() {
                 </div>
               </Card>
 
-              <Card title="Mother Information">
+              <Card title={t("step3.motherTitle")}>
                 <div className="grid gap-4">
                   <Input
-                    label="Mother's Name *"
+                    label={t("step3.motherName")}
                     value={formData.motherName}
                     onChange={(v) => updateField("motherName", v)}
                     error={errors.motherName}
                   />
                   <Input
-                    label="Mother's Mobile Number"
+                    label={t("step3.motherMobile")}
                     value={formData.motherMobileNumber}
                     onChange={(v) => updateField("motherMobileNumber", v)}
                   />
                   <Select
-                    label="Mother's Identity Type"
+                    label={t("step3.motherIdentityType")}
                     value={formData.motherIdentityType}
                     onChange={(v) =>
                       updateField(
                         "motherIdentityType",
-                        v as DeliveryManFormData["motherIdentityType"]
+                        v as DeliveryManFormData["motherIdentityType"],
                       )
                     }
                     options={[
-                      { label: "NID", value: "NID" },
-                      { label: "Passport", value: "PASSPORT" },
+                      { label: t("step3.nid"), value: "NID" },
+                      { label: t("step3.passport"), value: "PASSPORT" },
                     ]}
                   />
                   <Input
-                    label="Mother's Identity Number *"
+                    label={t("step3.motherIdentityNumber")}
                     value={formData.motherIdentityNumber}
                     onChange={(v) => updateField("motherIdentityNumber", v)}
                     error={errors.motherIdentityNumber}
                   />
                   <FileUpload
-                    label="Mother's Identity Front Copy *"
+                    label={t("step3.motherIdentityFront")}
                     file={formData.motherIdentityFrontFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) =>
@@ -1029,7 +1050,7 @@ export default function DeliveryManEnlistmentForm() {
                     error={errors.motherIdentityFrontFile}
                   />
                   <FileUpload
-                    label="Mother's Identity Back Copy"
+                    label={t("step3.motherIdentityBack")}
                     file={formData.motherIdentityBackFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) =>
@@ -1044,15 +1065,15 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 4 && (
           <Section
-            title="Reference Details"
-            description="Minimum 2 references required."
+            title={t("step4.title")}
+            description={t("step4.description")}
             action={
               <button
                 type="button"
                 onClick={addReference}
                 className="btn-outline rounded-xl px-4 py-2 text-sm font-medium"
               >
-                + Add Reference
+                {t("step4.addReference")}
               </button>
             }
           >
@@ -1060,7 +1081,7 @@ export default function DeliveryManEnlistmentForm() {
               {formData.references.map((reference, index) => (
                 <Card
                   key={index}
-                  title={`Reference ${index + 1}`}
+                  title={t("step4.referenceTitle", { index: index + 1 })}
                   right={
                     formData.references.length > 2 ? (
                       <button
@@ -1068,59 +1089,59 @@ export default function DeliveryManEnlistmentForm() {
                         onClick={() => removeReference(index)}
                         className="text-sm font-medium text-destructive"
                       >
-                        Remove
+                        {t("step4.remove")}
                       </button>
                     ) : null
                   }
                 >
                   <div className="grid gap-5 md:grid-cols-2">
                     <Input
-                      label="Full Name *"
+                      label={t("step4.fullName")}
                       value={reference.name}
                       onChange={(v) => updateReference(index, "name", v)}
                       error={errors[`references.${index}.name`]}
                     />
                     <Input
-                      label="Mobile Number *"
+                      label={t("step4.mobileNumber")}
                       value={reference.phone}
                       onChange={(v) => updateReference(index, "phone", v)}
                       error={errors[`references.${index}.phone`]}
                     />
                     <Input
-                      label="Relation *"
+                      label={t("step4.relation")}
                       value={reference.relation}
                       onChange={(v) => updateReference(index, "relation", v)}
                       error={errors[`references.${index}.relation`]}
                     />
                     <Input
-                      label="Occupation"
+                      label={t("step4.occupation")}
                       value={reference.occupation}
                       onChange={(v) => updateReference(index, "occupation", v)}
                     />
                     <Textarea
-                      label="Address *"
+                      label={t("step4.address")}
                       value={reference.address}
                       onChange={(v) => updateReference(index, "address", v)}
                       error={errors[`references.${index}.address`]}
                     />
                     <div className="grid gap-5">
                       <Select
-                        label="Identity Type *"
+                        label={t("step4.identityType")}
                         value={reference.identityType}
                         onChange={(v) =>
                           updateReference(
                             index,
                             "identityType",
-                            v as ReferencePerson["identityType"]
+                            v as ReferencePerson["identityType"],
                           )
                         }
                         options={[
-                          { label: "NID", value: "NID" },
-                          { label: "Passport", value: "PASSPORT" },
+                          { label: t("step4.nid"), value: "NID" },
+                          { label: t("step4.passport"), value: "PASSPORT" },
                         ]}
                       />
                       <Input
-                        label="Identity Number *"
+                        label={t("step4.identityNumber")}
                         value={reference.identityNumber}
                         onChange={(v) =>
                           updateReference(index, "identityNumber", v)
@@ -1131,7 +1152,7 @@ export default function DeliveryManEnlistmentForm() {
                   </div>
                   <div className="mt-5 grid gap-5 md:grid-cols-2">
                     <FileUpload
-                      label="Identity Front Copy *"
+                      label={t("step4.identityFront")}
                       file={reference.identityFrontFile}
                       accept=".jpg,.jpeg,.png,.webp,.pdf"
                       onChange={(e) =>
@@ -1140,7 +1161,7 @@ export default function DeliveryManEnlistmentForm() {
                       error={errors[`references.${index}.identityFrontFile`]}
                     />
                     <FileUpload
-                      label="Identity Back Copy"
+                      label={t("step4.identityBack")}
                       file={reference.identityBackFile}
                       accept=".jpg,.jpeg,.png,.webp,.pdf"
                       onChange={(e) =>
@@ -1156,35 +1177,35 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 5 && (
           <Section
-            title="Bank & Legal Documents"
-            description="Cheque, bond and contract paper."
+            title={t("step5.title")}
+            description={t("step5.description")}
           >
             <div className="grid gap-6 xl:grid-cols-2">
-              <Card title="Bank Information">
+              <Card title={t("step5.bankTitle")}>
                 <div className="grid gap-4">
                   <Input
-                    label="Bank Name *"
+                    label={t("step5.bankName")}
                     value={formData.bankName}
                     onChange={(v) => updateField("bankName", v)}
                     error={errors.bankName}
                   />
                   <Input
-                    label="Account Holder Name"
+                    label={t("step5.accountHolderName")}
                     value={formData.accountHolderName}
                     onChange={(v) => updateField("accountHolderName", v)}
                   />
                   <Input
-                    label="Account Number"
+                    label={t("step5.accountNumber")}
                     value={formData.accountNumber}
                     onChange={(v) => updateField("accountNumber", v)}
                   />
                   <Input
-                    label="Cheque Number"
+                    label={t("step5.chequeNumber")}
                     value={formData.chequeNumber}
                     onChange={(v) => updateField("chequeNumber", v)}
                   />
                   <FileUpload
-                    label="Bank Cheque Upload *"
+                    label={t("step5.bankCheque")}
                     file={formData.bankChequeFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) => handleFileChange(e, "bankChequeFile")}
@@ -1192,27 +1213,27 @@ export default function DeliveryManEnlistmentForm() {
                   />
                 </div>
               </Card>
-              <Card title="Bond Information">
+              <Card title={t("step5.bondTitle")}>
                 <div className="grid gap-4">
                   <Input
-                    label="Bond Amount"
+                    label={t("step5.bondAmount")}
                     value={formData.bondAmount}
                     onChange={(v) => updateField("bondAmount", v)}
                   />
                   <Input
-                    label="Bond Signed Date"
+                    label={t("step5.bondSignedDate")}
                     type="date"
                     value={formData.bondSignedDate}
                     onChange={(v) => updateField("bondSignedDate", v)}
                   />
                   <Input
-                    label="Bond Expiry Date"
+                    label={t("step5.bondExpiryDate")}
                     type="date"
                     value={formData.bondExpiryDate}
                     onChange={(v) => updateField("bondExpiryDate", v)}
                   />
                   <FileUpload
-                    label="Bond Document Upload *"
+                    label={t("step5.bondDocument")}
                     file={formData.bondDocumentFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) => handleFileChange(e, "bondDocumentFile")}
@@ -1222,35 +1243,35 @@ export default function DeliveryManEnlistmentForm() {
               </Card>
             </div>
             <div className="mt-6">
-              <Card title="Contract / Contact Paper">
+              <Card title={t("step5.contractTitle")}>
                 <div className="grid gap-5 md:grid-cols-2">
                   <Input
-                    label="Contract Signed Date"
+                    label={t("step5.contractSignedDate")}
                     type="date"
                     value={formData.contractSignedDate}
                     onChange={(v) => updateField("contractSignedDate", v)}
                   />
                   <Input
-                    label="Contract Start Date"
+                    label={t("step5.contractStartDate")}
                     type="date"
                     value={formData.contractStartDate}
                     onChange={(v) => updateField("contractStartDate", v)}
                   />
                   <Input
-                    label="Contract End Date"
+                    label={t("step5.contractEndDate")}
                     type="date"
                     value={formData.contractEndDate}
                     onChange={(v) => updateField("contractEndDate", v)}
                   />
                   <Input
-                    label="Contract Status"
+                    label={t("step5.contractStatus")}
                     value={formData.contractStatus}
                     onChange={(v) => updateField("contractStatus", v)}
                   />
                 </div>
                 <div className="mt-5 max-w-xl">
                   <FileUpload
-                    label="Contract Paper Upload *"
+                    label={t("step5.contractPaper")}
                     file={formData.contractPaperFile}
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
                     onChange={(e) => handleFileChange(e, "contractPaperFile")}
@@ -1264,20 +1285,20 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 6 && (
           <Section
-            title="Warehouse Assignment"
-            description="Joining and assignment information."
+            title={t("step6.title")}
+            description={t("step6.description")}
           >
             <div className="grid gap-5 md:grid-cols-2">
               <Select
-                label="Warehouse *"
+                label={t("step6.warehouse")}
                 value={formData.warehouse}
                 onChange={(v) => updateField("warehouse", v)}
                 error={errors.warehouse}
                 options={[
                   {
                     label: isLoadingWarehouses
-                      ? "Loading warehouses..."
-                      : "Select warehouse",
+                      ? t("step6.loadingWarehouses")
+                      : t("step6.selectWarehouse"),
                     value: "",
                   },
                   ...warehouses.map((w) => ({
@@ -1287,53 +1308,55 @@ export default function DeliveryManEnlistmentForm() {
                 ]}
               />
               <Input
-                label="Employee / Rider Code"
+                label={t("step6.employeeCode")}
                 value={formData.employeeCode}
                 onChange={(v) => updateField("employeeCode", v)}
               />
               <Input
-                label="Joining Date *"
+                label={t("step6.joiningDate")}
                 type="date"
                 value={formData.joiningDate}
                 onChange={(v) => updateField("joiningDate", v)}
                 error={errors.joiningDate}
               />
               <Select
-                label="Employment Type *"
+                label={t("step6.employmentType")}
                 value={formData.employmentType}
                 onChange={(v) =>
                   updateField(
                     "employmentType",
-                    v as DeliveryManFormData["employmentType"]
+                    v as DeliveryManFormData["employmentType"],
                   )
                 }
                 error={errors.employmentType}
                 options={[
-                  { label: "Select employment type", value: "" },
-                  { label: "Full-time", value: "FULL_TIME" },
-                  { label: "Part-time", value: "PART_TIME" },
-                  { label: "Contractual", value: "CONTRACTUAL" },
+                  { label: t("step6.selectEmploymentType"), value: "" },
+                  { label: t("step6.fullTime"), value: "FULL_TIME" },
+                  { label: t("step6.partTime"), value: "PART_TIME" },
+                  { label: t("step6.contractual"), value: "CONTRACTUAL" },
                 ]}
               />
               <Input
-                label="Delivery Zone / Area"
+                label={t("step6.deliveryZone")}
                 value={formData.deliveryZone}
                 onChange={(v) => updateField("deliveryZone", v)}
               />
               <Input
-                label="Assigned By"
+                label={t("step6.assignedBy")}
                 value={formData.assignedBy}
                 onChange={(v) => updateField("assignedBy", v)}
               />
             </div>
 
             {warehouseLoadError ? (
-              <p className="mt-3 text-sm text-destructive">{warehouseLoadError}</p>
+              <p className="mt-3 text-sm text-destructive">
+                {warehouseLoadError}
+              </p>
             ) : null}
 
             <div className="mt-5">
               <Textarea
-                label="Notes"
+                label={t("step6.notes")}
                 value={formData.notes}
                 onChange={(v) => updateField("notes", v)}
               />
@@ -1343,46 +1366,56 @@ export default function DeliveryManEnlistmentForm() {
 
         {currentStep === 7 && (
           <Section
-            title="Review & Submit"
-            description="Review all information and confirm declarations."
+            title={t("step7.title")}
+            description={t("step7.description")}
           >
             <div className="rounded-2xl border border-border bg-background p-5">
-              <h3 className="rubik-semibold text-lg">Application Summary</h3>
+              <h3 className="rubik-semibold text-lg">
+                {t("step7.summaryTitle")}
+              </h3>
               <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <InfoRow label="Full Name" value={formData.fullName || "—"} />
                 <InfoRow
-                  label="Mobile Number"
+                  label={t("step7.fullName")}
+                  value={formData.fullName || "—"}
+                />
+                <InfoRow
+                  label={t("step7.mobileNumber")}
                   value={formData.mobileNumber || "—"}
                 />
                 <InfoRow
-                  label="Identity Type"
+                  label={t("step7.identityType")}
                   value={formData.identityType || "—"}
                 />
                 <InfoRow
-                  label="Identity Number"
+                  label={t("step7.identityNumber")}
                   value={formData.identityNumber || "—"}
                 />
                 <InfoRow
-                  label="Date of Birth"
+                  label={t("step7.dateOfBirth")}
                   value={formData.dateOfBirth || "—"}
                 />
-                <InfoRow label="Warehouse" value={selectedWarehouseLabel} />
                 <InfoRow
-                  label="Joining Date"
+                  label={t("step7.warehouse")}
+                  value={selectedWarehouseLabel}
+                />
+                <InfoRow
+                  label={t("step7.joiningDate")}
                   value={formData.joiningDate || "—"}
                 />
                 <InfoRow
-                  label="Employment Type"
+                  label={t("step7.employmentType")}
                   value={formData.employmentType || "—"}
                 />
               </div>
             </div>
 
             <div className="mt-6 rounded-2xl border border-border bg-background p-5">
-              <h3 className="rubik-semibold text-lg">Declaration</h3>
+              <h3 className="rubik-semibold text-lg">
+                {t("step7.declarationTitle")}
+              </h3>
               <div className="mt-4 space-y-3">
                 <Checkbox
-                  label="I confirm that all information is accurate. *"
+                  label={t("step7.declarationAccurate")}
                   checked={formData.declarationAccurate}
                   onChange={(checked) =>
                     updateField("declarationAccurate", checked)
@@ -1390,7 +1423,7 @@ export default function DeliveryManEnlistmentForm() {
                   error={errors.declarationAccurate}
                 />
                 <Checkbox
-                  label="I authorize identity and reference verification. *"
+                  label={t("step7.declarationVerification")}
                   checked={formData.declarationVerification}
                   onChange={(checked) =>
                     updateField("declarationVerification", checked)
@@ -1398,7 +1431,7 @@ export default function DeliveryManEnlistmentForm() {
                   error={errors.declarationVerification}
                 />
                 <Checkbox
-                  label="I accept the company policy. *"
+                  label={t("step7.declarationPolicy")}
                   checked={formData.declarationPolicy}
                   onChange={(checked) =>
                     updateField("declarationPolicy", checked)
@@ -1408,7 +1441,7 @@ export default function DeliveryManEnlistmentForm() {
               </div>
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <Input
-                  label="Declaration Date *"
+                  label={t("step7.declarationDate")}
                   type="date"
                   value={formData.declarationDate}
                   onChange={(v) => updateField("declarationDate", v)}
@@ -1426,7 +1459,7 @@ export default function DeliveryManEnlistmentForm() {
             disabled={currentStep === 0 || isSubmitting}
             className="btn-outline rounded-xl px-5 py-3 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Previous
+            {t("navigation.previous")}
           </button>
           {currentStep < steps.length - 1 ? (
             <button
@@ -1435,7 +1468,7 @@ export default function DeliveryManEnlistmentForm() {
               disabled={isSubmitting}
               className="btn-primary rounded-xl px-5 py-3 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Next Step
+              {t("navigation.nextStep")}
             </button>
           ) : (
             <button
@@ -1444,7 +1477,9 @@ export default function DeliveryManEnlistmentForm() {
               disabled={isSubmitting}
               className="btn-primary rounded-xl px-5 py-3 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isSubmitting ? "Submitting..." : "Submit Application"}
+              {isSubmitting
+                ? t("navigation.submitting")
+                : t("navigation.submitApplication")}
             </button>
           )}
         </div>
@@ -1617,10 +1652,11 @@ function FileUpload({
   accept?: string;
   error?: string;
 }) {
+  const t = useTranslations("AdminDeliveryManEnlistmentForm");
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    if (file && file.type.startsWith('image/')) {
+    if (file && file.type.startsWith("image/")) {
       const url = URL.createObjectURL(file);
       setPreviewUrl(url);
       return () => URL.revokeObjectURL(url);
@@ -1643,7 +1679,7 @@ function FileUpload({
           <div className="mb-3 w-full">
             <img
               src={previewUrl}
-              alt="Preview"
+              alt={t("fileUpload.previewAlt")}
               className="h-full w-full object-cover rounded-lg border border-border"
             />
           </div>
@@ -1653,10 +1689,10 @@ function FileUpload({
           </div>
         )}
         <span className="text-sm rubik-medium">
-          {file ? file.name : "Click to upload file"}
+          {file ? file.name : t("fileUpload.clickToUpload")}
         </span>
         <span className="mt-1 text-xs text-muted-foreground">
-          JPG, PNG, WEBP, PDF
+          {t("fileUpload.supportedFormats")}
         </span>
         <input
           type="file"

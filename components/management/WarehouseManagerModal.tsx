@@ -1,11 +1,17 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Plus, Trash2, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -22,6 +28,8 @@ interface Props {
 }
 
 export default function WarehouseManagerModal({ open, onClose }: Props) {
+  const t = useTranslations("AdminWarehouseManager");
+
   const [loading, setLoading] = useState(false);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
   const [form, setForm] = useState({ name: "", code: "", isDefault: false });
@@ -39,7 +47,7 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
       const data = await res.json();
       setWarehouses(data || []);
     } catch (err) {
-      toast.error("Failed to load warehouses");
+      toast.error(t("errors.loadFailed"));
     } finally {
       setLoading(false);
     }
@@ -48,13 +56,14 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
   useEffect(() => {
     if (!open) return;
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const createWarehouse = async () => {
     const name = form.name.trim();
     const code = form.code.trim();
     if (!name || !code) {
-      toast.error("Name and Code are required");
+      toast.error(t("errors.nameCodeRequired"));
       return;
     }
 
@@ -65,28 +74,28 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
         body: JSON.stringify({ ...form, name, code }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Create failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.createFailed"));
 
-      toast.success("Warehouse created");
+      toast.success(t("success.created"));
       setForm({ name: "", code: "", isDefault: false });
       await load();
     } catch (err: any) {
-      toast.error(err?.message || "Create failed");
+      toast.error(err?.message || t("errors.createFailed"));
     }
   };
 
   const deleteWarehouse = async (id: number) => {
-    if (!confirm("Delete this warehouse?")) return;
+    if (!confirm(t("confirm.deleteWarehouse"))) return;
 
     try {
       const res = await fetch(`/api/warehouses/${id}`, { method: "DELETE" });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Delete failed");
+      if (!res.ok) throw new Error(data?.error || t("errors.deleteFailed"));
 
-      toast.success("Warehouse deleted");
+      toast.success(t("success.deleted"));
       await load();
     } catch (err: any) {
-      toast.error(err?.message || "Delete failed");
+      toast.error(err?.message || t("errors.deleteFailed"));
     }
   };
 
@@ -95,7 +104,7 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
       <DialogContent className="max-w-3xl">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
-            Warehouses
+            {t("title")}
             <Button size="icon" variant="ghost" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
@@ -104,10 +113,10 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
 
         <div className="space-y-6">
           <div className="border rounded-lg p-4">
-            <p className="font-semibold mb-3">Add Warehouse</p>
+            <p className="font-semibold mb-3">{t("addTitle")}</p>
             <div className="grid md:grid-cols-3 gap-3">
               <div>
-                <Label>Name</Label>
+                <Label>{t("fields.name")}</Label>
                 <Input
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -115,7 +124,7 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
                 />
               </div>
               <div>
-                <Label>Code</Label>
+                <Label>{t("fields.code")}</Label>
                 <Input
                   value={form.code}
                   onChange={(e) => setForm({ ...form, code: e.target.value })}
@@ -132,20 +141,24 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
                     }
                     disabled={loading}
                   />
-                  Default
+                  {t("fields.default")}
                 </label>
                 <Button onClick={createWarehouse} disabled={loading}>
                   <Plus className="h-4 w-4 mr-1" />
-                  Add
+                  {t("actions.add")}
                 </Button>
               </div>
             </div>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading...</p>
+            <p className="text-sm text-muted-foreground">
+              {t("common.loading")}
+            </p>
           ) : sorted.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No warehouses yet</p>
+            <p className="text-sm text-muted-foreground">
+              {t("empty.noWarehouses")}
+            </p>
           ) : (
             <div className="grid md:grid-cols-2 gap-4">
               {sorted.map((w) => (
@@ -156,12 +169,12 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
                         {w.name}{" "}
                         {w.isDefault && (
                           <span className="text-xs ml-2 px-2 py-0.5 rounded-full border">
-                            Default
+                            {t("defaultBadge")}
                           </span>
                         )}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        Code: {w.code}
+                        {t("codeLabel", { code: w.code })}
                       </p>
                     </div>
                     <Button

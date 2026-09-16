@@ -2548,5 +2548,750 @@
             "loadShipments": "লজিস্টিকস শিপমেন্ট লোড করা যায়নি",
             "updateShipment": "শিপমেন্ট আপডেট করা যায়নি"
         }
+    },
+    "AdminStockManagement": {
+        "title": "মজুদ ব্যবস্থাপনা",
+        "subtitle": "পণ্য ভ্যারিয়েন্ট ও ওয়্যারহাউস অনুযায়ী মজুদ পরিচালনা করুন।",
+        "actions": {
+            "warehouses": "ওয়্যারহাউস",
+            "refresh": "রিফ্রেশ",
+            "save": "সংরক্ষণ",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "clear": "মুছুন"
+        },
+        "filters": {
+            "searchLabel": "ফিজিক্যাল পণ্য খুঁজুন",
+            "searchPlaceholder": "নাম/ক্যাটাগরি দিয়ে খুঁজুন...",
+            "productLabel": "পণ্য",
+            "selectProduct": "পণ্য নির্বাচন করুন"
+        },
+        "stats": {
+            "physicalProducts": "ফিজিক্যাল পণ্য",
+            "variants": "ভ্যারিয়েন্ট",
+            "totalVariantStock": "মোট ভ্যারিয়েন্ট স্টক",
+            "lowStockVariants": "কম মজুদ ভ্যারিয়েন্ট",
+            "outOfStockVariants": "স্টক শেষ ভ্যারিয়েন্ট"
+        },
+        "warehouseStock": {
+            "title": "ওয়্যারহাউস স্টক লেভেল",
+            "attributeLabel": "অ্যাট্রিবিউট",
+            "allAttributes": "সব অ্যাট্রিবিউট",
+            "attributeValueLabel": "অ্যাট্রিবিউট মান",
+            "allValues": "সব মান",
+            "valueProductCount": " ({count}টি পণ্য)",
+            "variantLabel": "ভ্যারিয়েন্ট",
+            "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
+            "productCountInfo": "{count}টি ফিজিক্যাল পণ্যে {name}: {value} আছে{productSuffix}।",
+            "productIncluded": " (\"{name}\" মিলে গেলে সহ)",
+            "selectHint": "স্টক লেভেল পরিচালনা করতে একটি পণ্য ও ভ্যারিয়েন্ট নির্বাচন করুন।",
+            "noWarehouses": "কোনো ওয়্যারহাউস পাওয়া যায়নি। ওয়্যারহাউস বাটন থেকে একটি তৈরি করুন।",
+            "defaultBadge": "ডিফল্ট",
+            "table": {
+                "warehouse": "ওয়্যারহাউস",
+                "quantity": "পরিমাণ",
+                "reserved": "সংরক্ষিত",
+                "available": "উপলব্ধ",
+                "action": "কার্যক্রম"
+            }
+        },
+        "thresholds": {
+            "productThreshold": "পণ্যের থ্রেশহোল্ড",
+            "variantThreshold": "ভ্যারিয়েন্টের থ্রেশহোল্ড"
+        },
+        "variantSummary": {
+            "title": "ভ্যারিয়েন্ট স্টক সারসংক্ষেপ",
+            "empty": "কোনো ভ্যারিয়েন্ট পাওয়া যায়নি।",
+            "stockLabel": "স্টক: {count}",
+            "emergencyStockLabel": "ইমার্জেন্সি স্টক: {count}",
+            "lowStock": "কম মজুদ",
+            "outOfStock": "স্টক শেষ"
+        },
+        "logs": {
+            "title": "ইনভেন্টরি লগ",
+            "emptyVariant": "নির্বাচিত ভ্যারিয়েন্টের জন্য কোনো ইনভেন্টরি লগ পাওয়া যায়নি।",
+            "emptyProduct": "নির্বাচিত পণ্যের জন্য কোনো ইনভেন্টরি লগ পাওয়া যায়নি।",
+            "table": {
+                "date": "তারিখ",
+                "change": "পরিবর্তন",
+                "variant": "ভ্যারিয়েন্ট",
+                "warehouse": "ওয়্যারহাউস",
+                "reason": "কারণ"
+            }
+        },
+        "success": {
+            "stockSaved": "স্টক সংরক্ষিত হয়েছে",
+            "stockDeleted": "স্টক এন্ট্রি মোছা হয়েছে",
+            "productThresholdSaved": "পণ্যের থ্রেশহোল্ড সংরক্ষিত হয়েছে",
+            "variantThresholdSaved": "ভ্যারিয়েন্টের থ্রেশহোল্ড সংরক্ষিত হয়েছে"
+        },
+        "confirm": {
+            "deleteStockLevel": "এই ওয়্যারহাউস স্টক এন্ট্রিটি মুছবেন?"
+        },
+        "errors": {
+            "loadStockData": "মজুদ ব্যবস্থাপনার ডেটা লোড করা যায়নি",
+            "loadDetails": "ভ্যারিয়েন্ট/স্টক বিবরণ লোড করা যায়নি",
+            "quantityInvalid": "পরিমাণ ০ বা তার বেশি হতে হবে",
+            "thresholdInvalid": "থ্রেশহোল্ড ০ বা তার বেশি হতে হবে",
+            "saveFailed": "সংরক্ষণ ব্যর্থ হয়েছে",
+            "saveStockFailed": "স্টক সংরক্ষণ করা যায়নি",
+            "saveProductThresholdFailed": "পণ্যের থ্রেশহোল্ড সংরক্ষণ করা যায়নি",
+            "saveVariantThresholdFailed": "ভ্যারিয়েন্টের থ্রেশহোল্ড সংরক্ষণ করা যায়নি",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে",
+            "deleteStockFailed": "স্টক এন্ট্রি মোছা যায়নি"
+        }
+    },
+    "AdminWarehouseManager": {
+        "title": "ওয়্যারহাউস",
+        "addTitle": "ওয়্যারহাউস যোগ করুন",
+        "defaultBadge": "ডিফল্ট",
+        "codeLabel": "কোড: {code}",
+        "fields": {
+            "name": "নাম",
+            "code": "কোড",
+            "default": "ডিফল্ট"
+        },
+        "actions": {
+            "add": "যোগ করুন"
+        },
+        "common": {
+            "loading": "লোড হচ্ছে..."
+        },
+        "empty": {
+            "noWarehouses": "এখনও কোনো ওয়্যারহাউস নেই"
+        },
+        "success": {
+            "created": "ওয়্যারহাউস তৈরি হয়েছে",
+            "deleted": "ওয়্যারহাউস মোছা হয়েছে"
+        },
+        "confirm": {
+            "deleteWarehouse": "এই ওয়্যারহাউসটি মুছবেন?"
+        },
+        "errors": {
+            "loadFailed": "ওয়্যারহাউস লোড করা যায়নি",
+            "nameCodeRequired": "নাম ও কোড আবশ্যক",
+            "createFailed": "তৈরি করা ব্যর্থ হয়েছে",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminShippingRates": {
+        "title": "শিপিং রেট",
+        "actions": {
+            "addRate": "শিপিং রেট যোগ করুন",
+            "edit": "সম্পাদনা",
+            "delete": "মুছুন",
+            "remove": "মুছুন",
+            "cancel": "বাতিল করুন",
+            "create": "রেট তৈরি করুন",
+            "update": "রেট আপডেট করুন",
+            "saving": "সংরক্ষণ হচ্ছে..."
+        },
+        "modal": {
+            "titleAdd": "শিপিং রেট যোগ করুন",
+            "titleEdit": "শিপিং রেট সম্পাদনা করুন"
+        },
+        "fields": {
+            "country": "দেশ",
+            "area": "এলাকা",
+            "baseCost": "বেস খরচ",
+            "freeMinOrder": "ফ্রি শিপিং ন্যূনতম অর্ডার (ঐচ্ছিক)",
+            "priority": "প্রায়োরিটি (কম = শক্তিশালী)",
+            "active": "সক্রিয়"
+        },
+        "placeholders": {
+            "loadingCountries": "দেশ লোড হচ্ছে...",
+            "selectCountry": "দেশ নির্বাচন করুন",
+            "baseCost": "60",
+            "freeMinOrder": "1000",
+            "priority": "1000"
+        },
+        "weightSlabs": {
+            "title": "ওজনভিত্তিক চার্জ (ঐচ্ছিক)",
+            "addSlab": "ওজন স্ল্যাব যোগ করুন",
+            "emptyHint": "কোনো স্ল্যাব যোগ করা হয়নি। সিস্টেম বেস খরচ ব্যবহার করবে।",
+            "minWeight": "সর্বনিম্ন ওজন (গ্রাম)",
+            "maxWeight": "সর্বোচ্চ ওজন (গ্রাম, ঐচ্ছিক)",
+            "charge": "চার্জ"
+        },
+        "list": {
+            "base": "বেস",
+            "freeOver": "ফ্রি উপরে",
+            "notSet": "নির্ধারিত নয়",
+            "priority": "প্রায়োরিটি",
+            "weightSlabs": "ওজন স্ল্যাব",
+            "status": "স্ট্যাটাস",
+            "active": "সক্রিয়",
+            "inactive": "নিষ্ক্রিয়"
+        },
+        "empty": {
+            "noRates": "কোনো শিপিং রেট পাওয়া যায়নি।"
+        },
+        "success": {
+            "created": "শিপিং রেট তৈরি হয়েছে",
+            "updated": "শিপিং রেট আপডেট হয়েছে",
+            "deleted": "শিপিং রেট মোছা হয়েছে"
+        },
+        "confirm": {
+            "deleteRate": "শিপিং রেট #{id} মুছবেন?"
+        },
+        "errors": {
+            "loadRates": "রেট লোড করা যায়নি",
+            "loadCountries": "দেশ লোড করা যায়নি",
+            "saveFailed": "শিপিং রেট সংরক্ষণ করা যায়নি",
+            "deleteFailed": "শিপিং রেট মোছা যায়নি",
+            "slabMinCostRequired": "প্রতিটি ওজন স্ল্যাবে সর্বনিম্ন ওজন ও চার্জ আবশ্যক",
+            "slabMinWeightInvalid": "সর্বনিম্ন ওজন একটি অ-ঋণাত্মক সংখ্যা হতে হবে",
+            "slabMaxWeightInvalid": "সর্বোচ্চ ওজন সর্বনিম্ন ওজনের চেয়ে বড় হতে হবে",
+            "slabCostInvalid": "চার্জ একটি অ-ঋণাত্মক সংখ্যা হতে হবে",
+            "baseOrSlabRequired": "বেস খরচ সেট করুন বা অন্তত একটি ওজন স্ল্যাব যোগ করুন",
+            "priorityInvalid": "প্রায়োরিটি একটি সংখ্যা হতে হবে",
+            "baseCostInvalid": "বেস খরচ একটি অ-ঋণাত্মক সংখ্যা হতে হবে",
+            "freeMinOrderInvalid": "ফ্রি শিপিং ন্যূনতম অর্ডার একটি অ-ঋণাত্মক সংখ্যা হতে হবে",
+            "countryRequired": "দেশ আবশ্যক",
+            "areaRequired": "এলাকা আবশ্যক"
+        }
+    },
+    "AdminDeliveryMenList": {
+        "header": {
+            "title": "ডেলিভারিম্যান ব্যবস্থাপনা",
+            "subtitle": "ডেলিভারি কর্মী পরিচালনা করুন এবং নতুন দল সদস্য নিয়োগ করুন"
+        },
+        "tabs": {
+            "list": "ডেলিভারিম্যানের তালিকা",
+            "enlist": "নতুন ডেলিভারিম্যান অনবোর্ড"
+        },
+        "list": {
+            "title": "ডেলিভারিম্যানের তালিকা",
+            "searchPlaceholder": "নাম, ফোন, ইমেইল বা কর্মী কোড দিয়ে খুঁজুন...",
+            "statusFilterPlaceholder": "স্ট্যাটাস দিয়ে ফিল্টার করুন",
+            "allStatus": "সব স্ট্যাটাস",
+            "warehouseFilterPlaceholder": "ওয়্যারহাউস দিয়ে ফিল্টার করুন",
+            "allWarehouses": "সব ওয়্যারহাউস",
+            "empty": "কোনো ডেলিভারিম্যান পাওয়া যায়নি",
+            "enlistFirst": "প্রথম ডেলিভারিম্যান নিয়োগ করুন",
+            "codeLabel": "কোড: {code}",
+            "referencesCount": "{count}টি রেফারেন্স",
+            "openActionsAria": "{name}-এর জন্য কার্যক্রম খুলুন"
+        },
+        "table": {
+            "deliveryMan": "ডেলিভারিম্যান",
+            "contactInfo": "যোগাযোগ তথ্য",
+            "warehouse": "ওয়্যারহাউস",
+            "status": "স্ট্যাটাস",
+            "application": "আবেদন",
+            "joinedDate": "যোগদানের তারিখ",
+            "documents": "নথি",
+            "actions": "কার্যক্রম"
+        },
+        "status": {
+            "PENDING": "অপেক্ষমাণ",
+            "ACTIVE": "সক্রিয়",
+            "SUSPENDED": "স্থগিত",
+            "REJECTED": "প্রত্যাখ্যাত",
+            "RESIGNED": "পদত্যাগী"
+        },
+        "applicationStatus": {
+            "DRAFT": "খসড়া",
+            "SUBMITTED": "জমা দেওয়া হয়েছে",
+            "UNDER_REVIEW": "পর্যালোচনাধীন",
+            "APPROVED": "অনুমোদিত",
+            "REJECTED": "প্রত্যাখ্যাত"
+        },
+        "menu": {
+            "actions": "কার্যক্রম",
+            "viewStatusDocs": "স্ট্যাটাস ও নথি দেখুন",
+            "editProfile": "প্রোফাইল সম্পাদনা",
+            "changeStatus": "স্ট্যাটাস পরিবর্তন করুন",
+            "applicationStatus": "আবেদন স্ট্যাটাস",
+            "markUnderReview": "পর্যালোচনাধীন হিসেবে চিহ্নিত করুন",
+            "approveApplication": "আবেদন অনুমোদন করুন"
+        },
+        "enlist": {
+            "title": "নতুন ডেলিভারিম্যান অনবোর্ড"
+        },
+        "modal": {
+            "title": "ডেলিভারিম্যানের বিবরণ",
+            "noEmployeeCode": "কোনো কর্মী কোড নেই",
+            "basicInfo": "মৌলিক তথ্য",
+            "phone": "ফোন",
+            "email": "ইমেইল",
+            "dateOfBirth": "জন্ম তারিখ",
+            "gender": "লিঙ্গ",
+            "presentAddress": "বর্তমান ঠিকানা",
+            "permanentAddress": "স্থায়ী ঠিকানা",
+            "statusWarehouse": "স্ট্যাটাস ও ওয়্যারহাউস",
+            "warehouse": "ওয়্যারহাউস",
+            "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+            "applicationStatus": "আবেদন স্ট্যাটাস",
+            "underReview": "পর্যালোচনাধীন",
+            "approve": "অনুমোদন",
+            "identityType": "পরিচয়ের ধরন",
+            "identityNumber": "পরিচয় নম্বর",
+            "joiningDate": "যোগদানের তারিখ",
+            "emergencyContact": "জরুরি যোগাযোগ",
+            "notes": "নোট",
+            "documentsTitle": "নথি ({count})",
+            "referencesTitle": "রেফারেন্স ({count})",
+            "noDocuments": "কোনো নথি আপলোড করা হয়নি",
+            "noReferences": "কোনো রেফারেন্স যোগ করা হয়নি",
+            "unknownFile": "অজানা ফাইল",
+            "noRelation": "কোনো সম্পর্ক নেই",
+            "occupation": "পেশা",
+            "address": "ঠিকানা",
+            "identity": "পরিচয়"
+        },
+        "pagination": {
+            "showing": "{total}টির মধ্যে {start} থেকে {end}টি দেখানো হচ্ছে",
+            "previous": "আগের",
+            "next": "পরের",
+            "pageOf": "পৃষ্ঠা {page} / {pages}"
+        },
+        "actions": {
+            "save": "সংরক্ষণ",
+            "cancel": "বাতিল করুন",
+            "close": "বন্ধ করুন",
+            "view": "দেখুন"
+        },
+        "common": {
+            "na": "প্রযোজ্য নয়"
+        },
+        "success": {
+            "statusUpdated": "স্ট্যাটাস সফলভাবে {status} এ আপডেট হয়েছে",
+            "applicationStatusUpdated": "আবেদন স্ট্যাটাস {status} এ আপডেট হয়েছে",
+            "fieldUpdated": "{field} সফলভাবে আপডেট হয়েছে"
+        },
+        "errors": {
+            "fetchFailed": "ডেলিভারিম্যান আনতে ব্যর্থ",
+            "fetchWarehousesFailed": "ওয়্যারহাউস আনতে ব্যর্থ",
+            "fetchDetailsFailed": "ডেলিভারিম্যানের বিবরণ আনতে ব্যর্থ",
+            "notFound": "ডেলিভারিম্যান পাওয়া যায়নি",
+            "updateStatusFailed": "স্ট্যাটাস আপডেট করতে ব্যর্থ",
+            "updateApplicationStatusFailed": "আবেদন স্ট্যাটাস আপডেট করতে ব্যর্থ",
+            "updateFieldFailed": "ফিল্ড আপডেট করতে ব্যর্থ"
+        }
+    },
+    "AdminDeliveryManEnlistmentForm": {
+        "steps": {
+            "0": "নথি OCR",
+            "1": "ব্যক্তিগত তথ্য",
+            "2": "পরিচয় যাচাই",
+            "3": "পরিবারের তথ্য",
+            "4": "রেফারেন্স",
+            "5": "ব্যাংক ও আইনি নথি",
+            "6": "ওয়্যারহাউস অ্যাসাইনমেন্ট",
+            "7": "পর্যালোচনা ও জমা"
+        },
+        "progress": {
+            "label": "অগ্রগতি"
+        },
+        "navigation": {
+            "previous": "আগের",
+            "nextStep": "পরবর্তী ধাপ",
+            "submitApplication": "আবেদন জমা দিন",
+            "submitting": "জমা দেওয়া হচ্ছে..."
+        },
+        "step0": {
+            "title": "নথি OCR স্বয়ংক্রিয় পূরণ",
+            "description": "আবেদনকারীর NID বা পাসপোর্টের সামনের কপি আপলোড করুন। ফর্ম স্বয়ংক্রিয়ভাবে দৃশ্যমান টেক্সট সনাক্ত করে মিলে যাওয়া ক্ষেত্রগুলি পূরণ করার চেষ্টা করবে।",
+            "uploadLabel": "NID / পাসপোর্টের সামনের কপি আপলোড করুন",
+            "ocrStatus": "OCR স্ট্যাটাস",
+            "noDocumentProcessed": "এখনও কোনো নথি প্রক্রিয়া করা হয়নি।",
+            "extractedTextPreview": "নিষ্কাশিত টেক্সট প্রিভিউ",
+            "detectedInfo": "সনাক্ত করা তথ্য",
+            "documentType": "নথির ধরন",
+            "fullName": "পুরো নাম",
+            "identityNumber": "পরিচয় নম্বর",
+            "dateOfBirth": "জন্ম তারিখ",
+            "passportExpiry": "পাসপোর্টের মেয়াদ শেষ",
+            "useDetected": "সনাক্ত করা তথ্য ব্যবহার করুন",
+            "disclaimer": "সনাক্ত করা মান আনুমানিক। জমা দেওয়ার আগে সবকিছু পর্যালোচনা করুন।"
+        },
+        "step1": {
+            "title": "ব্যক্তিগত তথ্য",
+            "description": "মৌলিক তথ্য এবং জরুরি যোগাযোগ।",
+            "fullName": "পুরো নাম *",
+            "mobileNumber": "মোবাইল নম্বর *",
+            "email": "ইমেইল ঠিকানা",
+            "password": "পাসওয়ার্ড *",
+            "passwordPlaceholder": "ডেলিভারিম্যান অ্যাকাউন্টের জন্য একটি পাসওয়ার্ড তৈরি করুন",
+            "dateOfBirth": "জন্ম তারিখ *",
+            "gender": "লিঙ্গ *",
+            "selectGender": "লিঙ্গ নির্বাচন করুন",
+            "male": "পুরুষ",
+            "female": "মহিলা",
+            "other": "অন্যান্য",
+            "bloodGroup": "রক্তের গ্রুপ",
+            "maritalStatus": "বৈবাহিক অবস্থা",
+            "profilePhoto": "প্রোফাইল ছবি",
+            "presentAddress": "বর্তমান ঠিকানা *",
+            "permanentAddress": "স্থায়ী ঠিকানা *",
+            "emergencyContactName": "জরুরি যোগাযোগের নাম *",
+            "emergencyContactNumber": "জরুরি যোগাযোগের নম্বর *",
+            "emergencyContactRelation": "জরুরি যোগাযোগের সম্পর্ক *"
+        },
+        "step2": {
+            "title": "পরিচয় যাচাই",
+            "description": "আবেদনকারীর পরিচয় তথ্য ও আপলোড।",
+            "identityType": "পরিচয়ের ধরন *",
+            "nid": "NID",
+            "passport": "পাসপোর্ট",
+            "identityNumber": "পরিচয় নম্বর *",
+            "identityFront": "পরিচয়ের সামনের কপি *",
+            "identityBack": "পরিচয়ের পিছনের কপি",
+            "passportExpiry": "পাসপোর্টের মেয়াদ শেষের তারিখ *"
+        },
+        "step3": {
+            "title": "পরিবারের তথ্য",
+            "description": "বাবা ও মায়ের পরিচয় তথ্য।",
+            "fatherTitle": "বাবার তথ্য",
+            "motherTitle": "মায়ের তথ্য",
+            "fatherName": "বাবার নাম *",
+            "fatherMobile": "বাবার মোবাইল নম্বর",
+            "fatherIdentityType": "বাবার পরিচয়ের ধরন",
+            "fatherIdentityNumber": "বাবার পরিচয় নম্বর *",
+            "fatherIdentityFront": "বাবার পরিচয়ের সামনের কপি *",
+            "fatherIdentityBack": "বাবার পরিচয়ের পিছনের কপি",
+            "motherName": "মায়ের নাম *",
+            "motherMobile": "মায়ের মোবাইল নম্বর",
+            "motherIdentityType": "মায়ের পরিচয়ের ধরন",
+            "motherIdentityNumber": "মায়ের পরিচয় নম্বর *",
+            "motherIdentityFront": "মায়ের পরিচয়ের সামনের কপি *",
+            "motherIdentityBack": "মায়ের পরিচয়ের পিছনের কপি",
+            "nid": "NID",
+            "passport": "পাসপোর্ট"
+        },
+        "step4": {
+            "title": "রেফারেন্স বিবরণ",
+            "description": "অন্তত ২টি রেফারেন্স আবশ্যক।",
+            "addReference": "+ রেফারেন্স যোগ করুন",
+            "referenceTitle": "রেফারেন্স {index}",
+            "remove": "মুছুন",
+            "fullName": "পুরো নাম *",
+            "mobileNumber": "মোবাইল নম্বর *",
+            "relation": "সম্পর্ক *",
+            "occupation": "পেশা",
+            "address": "ঠিকানা *",
+            "identityType": "পরিচয়ের ধরন *",
+            "identityNumber": "পরিচয় নম্বর *",
+            "identityFront": "পরিচয়ের সামনের কপি *",
+            "identityBack": "পরিচয়ের পিছনের কপি",
+            "nid": "NID",
+            "passport": "পাসপোর্ট"
+        },
+        "step5": {
+            "title": "ব্যাংক ও আইনি নথি",
+            "description": "চেক, বন্ড ও চুক্তিপত্র।",
+            "bankTitle": "ব্যাংক তথ্য",
+            "bankName": "ব্যাংকের নাম *",
+            "accountHolderName": "অ্যাকাউন্ট হোল্ডারের নাম",
+            "accountNumber": "অ্যাকাউন্ট নম্বর",
+            "chequeNumber": "চেক নম্বর",
+            "bankCheque": "ব্যাংক চেক আপলোড *",
+            "bondTitle": "বন্ড তথ্য",
+            "bondAmount": "বন্ডের পরিমাণ",
+            "bondSignedDate": "বন্ড স্বাক্ষরের তারিখ",
+            "bondExpiryDate": "বন্ডের মেয়াদ শেষের তারিখ",
+            "bondDocument": "বন্ড নথি আপলোড *",
+            "contractTitle": "চুক্তি / কনটাক্ট পেপার",
+            "contractSignedDate": "চুক্তি স্বাক্ষরের তারিখ",
+            "contractStartDate": "চুক্তি শুরুর তারিখ",
+            "contractEndDate": "চুক্তি শেষের তারিখ",
+            "contractStatus": "চুক্তির স্ট্যাটাস",
+            "contractPaper": "চুক্তিপত্র আপলোড *"
+        },
+        "step6": {
+            "title": "ওয়্যারহাউস অ্যাসাইনমেন্ট",
+            "description": "যোগদান ও অ্যাসাইনমেন্ট তথ্য।",
+            "warehouse": "ওয়্যারহাউস *",
+            "loadingWarehouses": "ওয়্যারহাউস লোড হচ্ছে...",
+            "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+            "employeeCode": "কর্মী / রাইডার কোড",
+            "joiningDate": "যোগদানের তারিখ *",
+            "employmentType": "কর্মসংস্থানের ধরন *",
+            "selectEmploymentType": "কর্মসংস্থানের ধরন নির্বাচন করুন",
+            "fullTime": "পূর্ণকালীন",
+            "partTime": "খণ্ডকালীন",
+            "contractual": "চুক্তিভিত্তিক",
+            "deliveryZone": "ডেলিভারি জোন / এলাকা",
+            "assignedBy": "অ্যাসাইন করেছেন",
+            "notes": "নোট"
+        },
+        "step7": {
+            "title": "পর্যালোচনা ও জমা",
+            "description": "সব তথ্য পর্যালোচনা করুন এবং ঘোষণা নিশ্চিত করুন।",
+            "summaryTitle": "আবেদনের সারসংক্ষেপ",
+            "declarationTitle": "ঘোষণা",
+            "fullName": "পুরো নাম",
+            "mobileNumber": "মোবাইল নম্বর",
+            "identityType": "পরিচয়ের ধরন",
+            "identityNumber": "পরিচয় নম্বর",
+            "dateOfBirth": "জন্ম তারিখ",
+            "warehouse": "ওয়্যারহাউস",
+            "joiningDate": "যোগদানের তারিখ",
+            "employmentType": "কর্মসংস্থানের ধরন",
+            "declarationAccurate": "আমি নিশ্চিত করছি যে সমস্ত তথ্য সঠিক। *",
+            "declarationVerification": "আমি পরিচয় ও রেফারেন্স যাচাইয়ের অনুমতি দিচ্ছি। *",
+            "declarationPolicy": "আমি কোম্পানির নীতিমালা মেনে নিচ্ছি। *",
+            "declarationDate": "ঘোষণার তারিখ *"
+        },
+        "success": {
+            "title": "আবেদন জমা দেওয়া হয়েছে",
+            "description": "ডেলিভারিম্যান নিয়োগের তথ্য সফলভাবে আপলোড ও সংরক্ষণ করা হয়েছে।"
+        },
+        "ocr": {
+            "reading": "নথি পড়া হচ্ছে...",
+            "complete": "নথি পড়া সম্পন্ন। অনুগ্রহ করে সনাক্ত করা মান যাচাই করুন।",
+            "failed": "নথি পড়া যায়নি। অনুগ্রহ করে ক্ষেত্রগুলি ম্যানুয়ালি পূরণ করুন।"
+        },
+        "fileUpload": {
+            "previewAlt": "প্রিভিউ",
+            "clickToUpload": "ফাইল আপলোড করতে ক্লিক করুন",
+            "supportedFormats": "JPG, PNG, WEBP, PDF"
+        },
+        "draft": {
+            "saved": "খসড়া ব্রাউজারে সংরক্ষিত হয়েছে।",
+            "notFound": "কোনো খসড়া পাওয়া যায়নি।",
+            "loaded": "খসড়া লোড হয়েছে।",
+            "loadFailed": "খসড়া লোড করা যায়নি।"
+        },
+        "validation": {
+            "required": "আবশ্যক",
+            "fullNameRequired": "পুরো নাম আবশ্যক",
+            "mobileRequired": "মোবাইল নম্বর আবশ্যক",
+            "passwordRequired": "পাসওয়ার্ড আবশ্যক",
+            "dateOfBirthRequired": "জন্ম তারিখ আবশ্যক",
+            "genderRequired": "লিঙ্গ আবশ্যক",
+            "presentAddressRequired": "বর্তমান ঠিকানা আবশ্যক",
+            "permanentAddressRequired": "স্থায়ী ঠিকানা আবশ্যক",
+            "emergencyNameRequired": "জরুরি যোগাযোগের নাম আবশ্যক",
+            "emergencyNumberRequired": "জরুরি যোগাযোগের নম্বর আবশ্যক",
+            "emergencyRelationRequired": "জরুরি যোগাযোগের সম্পর্ক আবশ্যক",
+            "identityNumberRequired": "পরিচয় নম্বর আবশ্যক",
+            "identityFrontRequired": "পরিচয় নথি আবশ্যক",
+            "passportExpiryRequired": "পাসপোর্টের মেয়াদ শেষের তারিখ আবশ্যক",
+            "fatherNameRequired": "বাবার নাম আবশ্যক",
+            "fatherIdentityNumberRequired": "বাবার পরিচয় নম্বর আবশ্যক",
+            "fatherIdentityFrontRequired": "বাবার পরিচয়ের কপি আবশ্যক",
+            "motherNameRequired": "মায়ের নাম আবশ্যক",
+            "motherIdentityNumberRequired": "মায়ের পরিচয় নম্বর আবশ্যক",
+            "motherIdentityFrontRequired": "মায়ের পরিচয়ের কপি আবশ্যক",
+            "referenceNameRequired": "নাম আবশ্যক",
+            "referencePhoneRequired": "ফোন আবশ্যক",
+            "referenceRelationRequired": "সম্পর্ক আবশ্যক",
+            "referenceAddressRequired": "ঠিকানা আবশ্যক",
+            "referenceIdentityRequired": "পরিচয় নম্বর আবশ্যক",
+            "referenceIdentityFrontRequired": "পরিচয় ফাইল আবশ্যক",
+            "bankNameRequired": "ব্যাংকের নাম আবশ্যক",
+            "bankChequeRequired": "ব্যাংক চেক আবশ্যক",
+            "bondDocumentRequired": "বন্ড নথি আবশ্যক",
+            "contractPaperRequired": "চুক্তিপত্র আবশ্যক",
+            "warehouseRequired": "ওয়্যারহাউস আবশ্যক",
+            "joiningDateRequired": "যোগদানের তারিখ আবশ্যক",
+            "employmentTypeRequired": "কর্মসংস্থানের ধরন আবশ্যক",
+            "declarationDateRequired": "ঘোষণার তারিখ আবশ্যক"
+        },
+        "errors": {
+            "warehousesInvalidJson": "/api/warehouses বৈধ JSON ফেরত দেয়নি",
+            "warehousesLoadFailed": "ওয়্যারহাউস লোড করা যায়নি",
+            "invalidWarehouse": "অনুগ্রহ করে একটি বৈধ ওয়্যারহাউস নির্বাচন করুন",
+            "saveInvalidJson": "সেভ API বৈধ JSON ফেরত দেয়নি",
+            "saveFailed": "ডেলিভারিম্যান ডেটা সংরক্ষণ করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
+        }
+    },
+    "AdminPayroll": {
+        "header": {
+            "title": "পেরোল ব্যবস্থাপনা",
+            "description": "একই ওয়ার্কস্পেস থেকে পেরোল প্রোফাইল, পেরোল পিরিয়ড ও মাসিক বেতন এন্ট্রি পরিচালনা করুন।"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "edit": "সম্পাদনা",
+            "cancel": "বাতিল করুন",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "newProfile": "নতুন প্রোফাইল",
+            "newPeriod": "নতুন পিরিয়ড",
+            "newEntry": "নতুন এন্ট্রি",
+            "createProfile": "প্রোফাইল তৈরি করুন",
+            "updateProfile": "প্রোফাইল আপডেট করুন",
+            "createPeriod": "পিরিয়ড তৈরি করুন",
+            "updatePeriod": "পিরিয়ড আপডেট করুন",
+            "createEntry": "এন্ট্রি তৈরি করুন",
+            "updateEntry": "এন্ট্রি আপডেট করুন"
+        },
+        "tabs": {
+            "profiles": "পেরোল প্রোফাইল",
+            "periods": "পেরোল পিরিয়ড",
+            "entries": "পেরোল এন্ট্রি"
+        },
+        "searchPlaceholder": "{tab} খুঁজুন",
+        "summary": {
+            "activeProfiles": "সক্রিয় প্রোফাইল",
+            "openPeriods": "চলমান পিরিয়ড",
+            "pendingPayroll": "অপেক্ষমাণ বেতন",
+            "paidPayroll": "পরিশোধিত বেতন",
+            "totalEmployees": "{count} জন মোট কর্মী",
+            "totalWindows": "{count}টি মোট পেরোল উইন্ডো",
+            "pendingEntries": "{count}টি এন্ট্রি পরিশোধের অপেক্ষায়",
+            "paidEntries": "{count}টি এন্ট্রি ইতিমধ্যেই পরিশোধিত"
+        },
+        "paymentTypes": {
+            "MONTHLY": "মাসিক",
+            "WEEKLY": "সাপ্তাহিক",
+            "DAILY": "দৈনিক"
+        },
+        "paymentStatus": {
+            "PENDING": "অপেক্ষমাণ",
+            "PAID": "পরিশোধিত",
+            "PROCESSING": "প্রক্রিয়াধীন"
+        },
+        "periodStatus": {
+            "OPEN": "চলমান",
+            "PROCESSING": "প্রক্রিয়াধীন",
+            "CLOSED": "সম্পন্ন"
+        },
+        "profiles": {
+            "title": "পেরোল প্রোফাইল",
+            "description": "প্রতিটি কর্মীর বেস বেতন, কর্মী পরিচয় এবং পেআউট পদ্ধতি।",
+            "empty": "কোনো পেরোল প্রোফাইল পাওয়া যায়নি।",
+            "noEmployeeCode": "কোনো কর্মী কোড নেই",
+            "noPhone": "কোনো ফোন নেই",
+            "noWarehouse": "কোনো ওয়্যারহাউস নেই",
+            "noPaymentMethod": "কোনো পেমেন্ট পদ্ধতি নেই",
+            "unassigned": "অ্যাসাইন করা হয়নি",
+            "entriesCount": "{count}টি এন্ট্রি",
+            "table": {
+                "employee": "কর্মী",
+                "contact": "যোগাযোগ",
+                "warehouse": "ওয়্যারহাউস",
+                "payment": "পেমেন্ট",
+                "salary": "বেতন",
+                "actions": "কার্যক্রম"
+            }
+        },
+        "periods": {
+            "title": "পেরোল পিরিয়ড",
+            "description": "যে পেরোল উইন্ডোগুলোতে বেতন এন্ট্রি অন্তর্ভুক্ত সেগুলো পরিচালনা করুন।",
+            "empty": "কোনো পেরোল পিরিয়ড পাওয়া যায়নি।",
+            "noNotes": "কোনো নোট নেই",
+            "toDate": "{date} পর্যন্ত",
+            "table": {
+                "period": "পিরিয়ড",
+                "timeline": "সময়রেখা",
+                "status": "স্ট্যাটাস",
+                "entries": "এন্ট্রি",
+                "actions": "কার্যক্রম"
+            }
+        },
+        "entries": {
+            "title": "পেরোল এন্ট্রি",
+            "description": "প্রতিটি পেরোল চক্রে গ্রস-থেকে-নেট বেতন রেকর্ড এবং পেমেন্ট স্ট্যাটাস ট্র্যাক করুন।",
+            "empty": "কোনো পেরোল এন্ট্রি পাওয়া যায়নি।",
+            "noWarehouse": "কোনো ওয়্যারহাউস নেই",
+            "unassigned": "অ্যাসাইন করা হয়নি",
+            "paidAt": "{date} তারিখে পরিশোধিত",
+            "basic": "বেসিক {amount}",
+            "breakdown": "OT {ot} · বোনাস {bonus} · কর্তন {deduction}",
+            "table": {
+                "employee": "কর্মী",
+                "period": "পিরিয়ড",
+                "warehouse": "ওয়্যারহাউস",
+                "breakdown": "বিস্তারিত",
+                "net": "নিট",
+                "status": "স্ট্যাটাস",
+                "actions": "কার্যক্রম"
+            }
+        },
+        "profileModal": {
+            "titleNew": "নতুন পেরোল প্রোফাইল",
+            "titleEdit": "পেরোল প্রোফাইল সম্পাদনা",
+            "description": "একজন কর্মীর জন্য বেতন বিবরণ ও পেআউট পছন্দ কনফিগার করুন।",
+            "selectUser": "ব্যবহারকারী নির্বাচন করুন",
+            "noWarehouse": "কোনো ওয়্যারহাউস নেই",
+            "fields": {
+                "user": "ব্যবহারকারী",
+                "employeeCode": "কর্মী কোড",
+                "warehouse": "ওয়্যারহাউস",
+                "paymentType": "পেমেন্টের ধরন",
+                "baseSalary": "বেস বেতন",
+                "paymentMethod": "পেমেন্ট পদ্ধতি",
+                "joiningDate": "যোগদানের তারিখ",
+                "bankName": "ব্যাংকের নাম",
+                "bankAccountNo": "ব্যাংক অ্যাকাউন্ট নম্বর",
+                "accountHolder": "অ্যাকাউন্ট হোল্ডার",
+                "mobileBankingNo": "মোবাইল ব্যাংকিং নম্বর",
+                "notes": "নোট",
+                "isActive": "প্রোফাইল সক্রিয়"
+            },
+            "placeholders": {
+                "employeeCode": "EMP-1001",
+                "baseSalary": "50000",
+                "paymentMethod": "BANK / CASH / MFS",
+                "bankName": "DBBL",
+                "bankAccountNo": "1234567890",
+                "accountHolder": "অ্যাকাউন্ট হোল্ডার",
+                "mobileBankingNo": "01XXXXXXXXX",
+                "notes": "অতিরিক্ত প্রোফাইল নোট"
+            }
+        },
+        "periodModal": {
+            "titleNew": "নতুন পেরোল পিরিয়ড",
+            "titleEdit": "পেরোল পিরিয়ড সম্পাদনা",
+            "description": "বেতন প্রক্রিয়াকরণের জন্য পেরোল উইন্ডো এবং লাইফসাইকেল স্ট্যাটাস নির্ধারণ করুন।",
+            "fields": {
+                "name": "পিরিয়ডের নাম",
+                "startDate": "শুরুর তারিখ",
+                "endDate": "শেষের তারিখ",
+                "status": "স্ট্যাটাস",
+                "notes": "নোট"
+            },
+            "placeholders": {
+                "name": "মার্চ ২০২৬ পেরোল",
+                "notes": "ঐচ্ছিক পেরোল পিরিয়ড নোট"
+            }
+        },
+        "entryModal": {
+            "titleNew": "নতুন পেরোল এন্ট্রি",
+            "titleEdit": "পেরোল এন্ট্রি সম্পাদনা",
+            "description": "বেতন, ওভারটাইম, বোনাস, কর্তন এবং নেট পেআউটের বিবরণ রেকর্ড করুন।",
+            "selectPayrollProfile": "পেরোল প্রোফাইল নির্বাচন করুন",
+            "selectPayrollPeriod": "পেরোল পিরিয়ড নির্বাচন করুন",
+            "noWarehouse": "কোনো ওয়্যারহাউস নেই",
+            "fields": {
+                "payrollProfile": "পেরোল প্রোফাইল",
+                "payrollPeriod": "পেরোল পিরিয়ড",
+                "warehouse": "ওয়্যারহাউস",
+                "paymentStatus": "পেমেন্ট স্ট্যাটাস",
+                "basicAmount": "বেসিক পরিমাণ",
+                "overtimeAmount": "ওভারটাইম পরিমাণ",
+                "bonusAmount": "বোনাস পরিমাণ",
+                "deductionAmount": "কর্তনের পরিমাণ",
+                "paidAt": "পরিশোধের তারিখ",
+                "notes": "নোট"
+            },
+            "netAmount": {
+                "title": "নেট পরিমাণ",
+                "description": "বেসিক + ওভারটাইম + বোনাস − কর্তন থেকে স্বয়ংক্রিয়ভাবে গণনা করা হয়।",
+                "autoPreview": "স্বয়ংক্রিয় প্রিভিউ {amount}"
+            },
+            "placeholders": {
+                "basicAmount": "50000",
+                "netAmount": "নেট পরিমাণ (ঐচ্ছিক স্বয়ংক্রিয় হিসাব)",
+                "notes": "ঐচ্ছিক পেরোল এন্ট্রি নোট"
+            }
+        },
+        "success": {
+            "profileCreated": "পেরোল প্রোফাইল সফলভাবে তৈরি হয়েছে",
+            "profileUpdated": "পেরোল প্রোফাইল সফলভাবে আপডেট হয়েছে",
+            "periodCreated": "পেরোল পিরিয়ড সফলভাবে তৈরি হয়েছে",
+            "periodUpdated": "পেরোল পিরিয়ড সফলভাবে আপডেট হয়েছে",
+            "entryCreated": "পেরোল এন্ট্রি সফলভাবে তৈরি হয়েছে",
+            "entryUpdated": "পেরোল এন্ট্রি সফলভাবে আপডেট হয়েছে"
+        },
+        "errors": {
+            "loadFailed": "পেরোল লোড করা যায়নি",
+            "profileSaveFailed": "পেরোল প্রোফাইল সংরক্ষণ করা যায়নি",
+            "periodSaveFailed": "পেরোল পিরিয়ড সংরক্ষণ করা যায়নি",
+            "entrySaveFailed": "পেরোল এন্ট্রি সংরক্ষণ করা যায়নি"
+        }
     }
 }

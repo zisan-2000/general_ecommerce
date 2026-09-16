@@ -2548,5 +2548,750 @@
       "loadShipments": "Failed to load logistics shipments",
       "updateShipment": "Failed to update shipment"
     }
+  },
+  "AdminStockManagement": {
+    "title": "Stock Management",
+    "subtitle": "Manage stock by product variant and warehouse.",
+    "actions": {
+      "warehouses": "Warehouses",
+      "refresh": "Refresh",
+      "save": "Save",
+      "saving": "Saving...",
+      "clear": "Clear"
+    },
+    "filters": {
+      "searchLabel": "Search Physical Products",
+      "searchPlaceholder": "Search by name/category...",
+      "productLabel": "Product",
+      "selectProduct": "Select product"
+    },
+    "stats": {
+      "physicalProducts": "Physical Products",
+      "variants": "Variants",
+      "totalVariantStock": "Total Variant Stock",
+      "lowStockVariants": "Low Stock Variants",
+      "outOfStockVariants": "Out of Stock Variants"
+    },
+    "warehouseStock": {
+      "title": "Warehouse Stock Levels",
+      "attributeLabel": "Attribute",
+      "allAttributes": "All attributes",
+      "attributeValueLabel": "Attribute Value",
+      "allValues": "All values",
+      "valueProductCount": " ({count} products)",
+      "variantLabel": "Variant",
+      "selectVariant": "Select variant",
+      "productCountInfo": "{count} physical products have {name}: {value}{productSuffix}.",
+      "productIncluded": " (including \"{name}\" if matched)",
+      "selectHint": "Select a product and variant to manage stock levels.",
+      "noWarehouses": "No warehouses found. Create one from the Warehouses button.",
+      "defaultBadge": "Default",
+      "table": {
+        "warehouse": "Warehouse",
+        "quantity": "Quantity",
+        "reserved": "Reserved",
+        "available": "Available",
+        "action": "Action"
+      }
+    },
+    "thresholds": {
+      "productThreshold": "Product Threshold",
+      "variantThreshold": "Variant Threshold"
+    },
+    "variantSummary": {
+      "title": "Variant Stock Summary",
+      "empty": "No variants found.",
+      "stockLabel": "Stock: {count}",
+      "emergencyStockLabel": "Emergency stock: {count}",
+      "lowStock": "Low stock",
+      "outOfStock": "Out of stock"
+    },
+    "logs": {
+      "title": "Inventory Logs",
+      "emptyVariant": "No inventory logs found for the selected variant.",
+      "emptyProduct": "No inventory logs found for the selected product.",
+      "table": {
+        "date": "Date",
+        "change": "Change",
+        "variant": "Variant",
+        "warehouse": "Warehouse",
+        "reason": "Reason"
+      }
+    },
+    "success": {
+      "stockSaved": "Stock saved",
+      "stockDeleted": "Stock entry deleted",
+      "productThresholdSaved": "Product threshold saved",
+      "variantThresholdSaved": "Variant threshold saved"
+    },
+    "confirm": {
+      "deleteStockLevel": "Delete this warehouse stock entry?"
+    },
+    "errors": {
+      "loadStockData": "Failed to load stock management data",
+      "loadDetails": "Failed to load variant/stock details",
+      "quantityInvalid": "Quantity must be 0 or more",
+      "thresholdInvalid": "Threshold must be 0 or more",
+      "saveFailed": "Save failed",
+      "saveStockFailed": "Failed to save stock",
+      "saveProductThresholdFailed": "Failed to save product threshold",
+      "saveVariantThresholdFailed": "Failed to save variant threshold",
+      "deleteFailed": "Delete failed",
+      "deleteStockFailed": "Failed to delete stock entry"
+    }
+  },
+  "AdminWarehouseManager": {
+    "title": "Warehouses",
+    "addTitle": "Add Warehouse",
+    "defaultBadge": "Default",
+    "codeLabel": "Code: {code}",
+    "fields": {
+      "name": "Name",
+      "code": "Code",
+      "default": "Default"
+    },
+    "actions": {
+      "add": "Add"
+    },
+    "common": {
+      "loading": "Loading..."
+    },
+    "empty": {
+      "noWarehouses": "No warehouses yet"
+    },
+    "success": {
+      "created": "Warehouse created",
+      "deleted": "Warehouse deleted"
+    },
+    "confirm": {
+      "deleteWarehouse": "Delete this warehouse?"
+    },
+    "errors": {
+      "loadFailed": "Failed to load warehouses",
+      "nameCodeRequired": "Name and Code are required",
+      "createFailed": "Create failed",
+      "deleteFailed": "Delete failed"
+    }
+  },
+  "AdminShippingRates": {
+    "title": "Shipping Rates",
+    "actions": {
+      "addRate": "Add Shipping Rate",
+      "edit": "Edit",
+      "delete": "Delete",
+      "remove": "Remove",
+      "cancel": "Cancel",
+      "create": "Create Rate",
+      "update": "Update Rate",
+      "saving": "Saving..."
+    },
+    "modal": {
+      "titleAdd": "Add Shipping Rate",
+      "titleEdit": "Edit Shipping Rate"
+    },
+    "fields": {
+      "country": "Country",
+      "area": "Area",
+      "baseCost": "Base Cost",
+      "freeMinOrder": "Free Shipping Min Order (Optional)",
+      "priority": "Priority (Lower = Stronger)",
+      "active": "Active"
+    },
+    "placeholders": {
+      "loadingCountries": "Loading countries...",
+      "selectCountry": "Select country",
+      "baseCost": "60",
+      "freeMinOrder": "1000",
+      "priority": "1000"
+    },
+    "weightSlabs": {
+      "title": "Weight Based Charges (Optional)",
+      "addSlab": "Add Weight Slab",
+      "emptyHint": "No slabs added. System will use Base Cost.",
+      "minWeight": "Min Weight (grams)",
+      "maxWeight": "Max Weight (grams, Optional)",
+      "charge": "Charge"
+    },
+    "list": {
+      "base": "Base",
+      "freeOver": "Free Over",
+      "notSet": "Not set",
+      "priority": "Priority",
+      "weightSlabs": "Weight Slabs",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "empty": {
+      "noRates": "No shipping rates found."
+    },
+    "success": {
+      "created": "Shipping rate created",
+      "updated": "Shipping rate updated",
+      "deleted": "Shipping rate deleted"
+    },
+    "confirm": {
+      "deleteRate": "Delete shipping rate #{id}?"
+    },
+    "errors": {
+      "loadRates": "Failed to load rates",
+      "loadCountries": "Failed to load countries",
+      "saveFailed": "Failed to save shipping rate",
+      "deleteFailed": "Failed to delete shipping rate",
+      "slabMinCostRequired": "Each weight slab needs Min Weight and Cost",
+      "slabMinWeightInvalid": "Min Weight must be a non-negative number",
+      "slabMaxWeightInvalid": "Max Weight must be greater than Min Weight",
+      "slabCostInvalid": "Cost must be a non-negative number",
+      "baseOrSlabRequired": "Set Base Cost or add at least one Weight Slab",
+      "priorityInvalid": "Priority must be a number",
+      "baseCostInvalid": "Base Cost must be a non-negative number",
+      "freeMinOrderInvalid": "Free Shipping Min Order must be a non-negative number",
+      "countryRequired": "Country is required",
+      "areaRequired": "Area is required"
+    }
+  },
+  "AdminDeliveryMenList": {
+    "header": {
+      "title": "Delivery Men Management",
+      "subtitle": "Manage delivery personnel and enlist new team members"
+    },
+    "tabs": {
+      "list": "Delivery Men List",
+      "enlist": "Onboard New Delivery Man"
+    },
+    "list": {
+      "title": "Delivery Men List",
+      "searchPlaceholder": "Search by name, phone, email, or employee code...",
+      "statusFilterPlaceholder": "Filter by status",
+      "allStatus": "All Status",
+      "warehouseFilterPlaceholder": "Filter by warehouse",
+      "allWarehouses": "All Warehouses",
+      "empty": "No delivery men found",
+      "enlistFirst": "Enlist First Delivery Man",
+      "codeLabel": "Code: {code}",
+      "referencesCount": "{count} Refs",
+      "openActionsAria": "Open actions for {name}"
+    },
+    "table": {
+      "deliveryMan": "Delivery Man",
+      "contactInfo": "Contact Info",
+      "warehouse": "Warehouse",
+      "status": "Status",
+      "application": "Application",
+      "joinedDate": "Joined Date",
+      "documents": "Documents",
+      "actions": "Actions"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "ACTIVE": "Active",
+      "SUSPENDED": "Suspended",
+      "REJECTED": "Rejected",
+      "RESIGNED": "Resigned"
+    },
+    "applicationStatus": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "UNDER_REVIEW": "Under Review",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    },
+    "menu": {
+      "actions": "Actions",
+      "viewStatusDocs": "View status & documents",
+      "editProfile": "Edit profile",
+      "changeStatus": "Change status",
+      "applicationStatus": "Application status",
+      "markUnderReview": "Mark under review",
+      "approveApplication": "Approve application"
+    },
+    "enlist": {
+      "title": "Onboard New Delivery Man"
+    },
+    "modal": {
+      "title": "Delivery Man Details",
+      "noEmployeeCode": "No Employee Code",
+      "basicInfo": "Basic Information",
+      "phone": "Phone",
+      "email": "Email",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "presentAddress": "Present Address",
+      "permanentAddress": "Permanent Address",
+      "statusWarehouse": "Status & Warehouse",
+      "warehouse": "Warehouse",
+      "selectWarehouse": "Select warehouse",
+      "applicationStatus": "Application Status",
+      "underReview": "Under Review",
+      "approve": "Approve",
+      "identityType": "Identity Type",
+      "identityNumber": "Identity Number",
+      "joiningDate": "Joining Date",
+      "emergencyContact": "Emergency Contact",
+      "notes": "Notes",
+      "documentsTitle": "Documents ({count})",
+      "referencesTitle": "References ({count})",
+      "noDocuments": "No documents uploaded",
+      "noReferences": "No references added",
+      "unknownFile": "Unknown file",
+      "noRelation": "No Relation",
+      "occupation": "Occupation",
+      "address": "Address",
+      "identity": "Identity"
+    },
+    "pagination": {
+      "showing": "Showing {start} to {end} of {total} results",
+      "previous": "Previous",
+      "next": "Next",
+      "pageOf": "Page {page} of {pages}"
+    },
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "view": "View"
+    },
+    "common": {
+      "na": "N/A"
+    },
+    "success": {
+      "statusUpdated": "Status updated to {status} successfully",
+      "applicationStatusUpdated": "Application status updated to {status}",
+      "fieldUpdated": "{field} updated successfully"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch delivery men",
+      "fetchWarehousesFailed": "Failed to fetch warehouses",
+      "fetchDetailsFailed": "Failed to fetch delivery man details",
+      "notFound": "Delivery man not found",
+      "updateStatusFailed": "Failed to update status",
+      "updateApplicationStatusFailed": "Failed to update application status",
+      "updateFieldFailed": "Failed to update field"
+    }
+  },
+  "AdminDeliveryManEnlistmentForm": {
+    "steps": {
+      "0": "Document OCR",
+      "1": "Personal Information",
+      "2": "Identity Verification",
+      "3": "Family Information",
+      "4": "References",
+      "5": "Bank & Legal Documents",
+      "6": "Warehouse Assignment",
+      "7": "Review & Submit"
+    },
+    "progress": {
+      "label": "Progress"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "nextStep": "Next Step",
+      "submitApplication": "Submit Application",
+      "submitting": "Submitting..."
+    },
+    "step0": {
+      "title": "Document OCR Auto Fill",
+      "description": "Upload the applicant's NID or Passport front copy. The form will try to auto-detect visible text and fill matching fields.",
+      "uploadLabel": "Upload NID / Passport Front Copy",
+      "ocrStatus": "OCR Status",
+      "noDocumentProcessed": "No document processed yet.",
+      "extractedTextPreview": "Extracted Text Preview",
+      "detectedInfo": "Detected Information",
+      "documentType": "Document Type",
+      "fullName": "Full Name",
+      "identityNumber": "Identity Number",
+      "dateOfBirth": "Date of Birth",
+      "passportExpiry": "Passport Expiry",
+      "useDetected": "Use Detected Information",
+      "disclaimer": "Detected values are approximate. Please review everything before submit."
+    },
+    "step1": {
+      "title": "Personal Information",
+      "description": "Basic information and emergency contact.",
+      "fullName": "Full Name *",
+      "mobileNumber": "Mobile Number *",
+      "email": "Email Address",
+      "password": "Password *",
+      "passwordPlaceholder": "Create a password for delivery man account",
+      "dateOfBirth": "Date of Birth *",
+      "gender": "Gender *",
+      "selectGender": "Select gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "bloodGroup": "Blood Group",
+      "maritalStatus": "Marital Status",
+      "profilePhoto": "Profile Photo",
+      "presentAddress": "Present Address *",
+      "permanentAddress": "Permanent Address *",
+      "emergencyContactName": "Emergency Contact Name *",
+      "emergencyContactNumber": "Emergency Contact Number *",
+      "emergencyContactRelation": "Emergency Contact Relation *"
+    },
+    "step2": {
+      "title": "Identity Verification",
+      "description": "Applicant identity information and uploads.",
+      "identityType": "Identity Type *",
+      "nid": "NID",
+      "passport": "Passport",
+      "identityNumber": "Identity Number *",
+      "identityFront": "Identity Front Copy *",
+      "identityBack": "Identity Back Copy",
+      "passportExpiry": "Passport Expiry Date *"
+    },
+    "step3": {
+      "title": "Family Information",
+      "description": "Father and mother identity data.",
+      "fatherTitle": "Father Information",
+      "motherTitle": "Mother Information",
+      "fatherName": "Father's Name *",
+      "fatherMobile": "Father's Mobile Number",
+      "fatherIdentityType": "Father's Identity Type",
+      "fatherIdentityNumber": "Father's Identity Number *",
+      "fatherIdentityFront": "Father's Identity Front Copy *",
+      "fatherIdentityBack": "Father's Identity Back Copy",
+      "motherName": "Mother's Name *",
+      "motherMobile": "Mother's Mobile Number",
+      "motherIdentityType": "Mother's Identity Type",
+      "motherIdentityNumber": "Mother's Identity Number *",
+      "motherIdentityFront": "Mother's Identity Front Copy *",
+      "motherIdentityBack": "Mother's Identity Back Copy",
+      "nid": "NID",
+      "passport": "Passport"
+    },
+    "step4": {
+      "title": "Reference Details",
+      "description": "Minimum 2 references required.",
+      "addReference": "+ Add Reference",
+      "referenceTitle": "Reference {index}",
+      "remove": "Remove",
+      "fullName": "Full Name *",
+      "mobileNumber": "Mobile Number *",
+      "relation": "Relation *",
+      "occupation": "Occupation",
+      "address": "Address *",
+      "identityType": "Identity Type *",
+      "identityNumber": "Identity Number *",
+      "identityFront": "Identity Front Copy *",
+      "identityBack": "Identity Back Copy",
+      "nid": "NID",
+      "passport": "Passport"
+    },
+    "step5": {
+      "title": "Bank & Legal Documents",
+      "description": "Cheque, bond and contract paper.",
+      "bankTitle": "Bank Information",
+      "bankName": "Bank Name *",
+      "accountHolderName": "Account Holder Name",
+      "accountNumber": "Account Number",
+      "chequeNumber": "Cheque Number",
+      "bankCheque": "Bank Cheque Upload *",
+      "bondTitle": "Bond Information",
+      "bondAmount": "Bond Amount",
+      "bondSignedDate": "Bond Signed Date",
+      "bondExpiryDate": "Bond Expiry Date",
+      "bondDocument": "Bond Document Upload *",
+      "contractTitle": "Contract / Contact Paper",
+      "contractSignedDate": "Contract Signed Date",
+      "contractStartDate": "Contract Start Date",
+      "contractEndDate": "Contract End Date",
+      "contractStatus": "Contract Status",
+      "contractPaper": "Contract Paper Upload *"
+    },
+    "step6": {
+      "title": "Warehouse Assignment",
+      "description": "Joining and assignment information.",
+      "warehouse": "Warehouse *",
+      "loadingWarehouses": "Loading warehouses...",
+      "selectWarehouse": "Select warehouse",
+      "employeeCode": "Employee / Rider Code",
+      "joiningDate": "Joining Date *",
+      "employmentType": "Employment Type *",
+      "selectEmploymentType": "Select employment type",
+      "fullTime": "Full-time",
+      "partTime": "Part-time",
+      "contractual": "Contractual",
+      "deliveryZone": "Delivery Zone / Area",
+      "assignedBy": "Assigned By",
+      "notes": "Notes"
+    },
+    "step7": {
+      "title": "Review & Submit",
+      "description": "Review all information and confirm declarations.",
+      "summaryTitle": "Application Summary",
+      "declarationTitle": "Declaration",
+      "fullName": "Full Name",
+      "mobileNumber": "Mobile Number",
+      "identityType": "Identity Type",
+      "identityNumber": "Identity Number",
+      "dateOfBirth": "Date of Birth",
+      "warehouse": "Warehouse",
+      "joiningDate": "Joining Date",
+      "employmentType": "Employment Type",
+      "declarationAccurate": "I confirm that all information is accurate. *",
+      "declarationVerification": "I authorize identity and reference verification. *",
+      "declarationPolicy": "I accept the company policy. *",
+      "declarationDate": "Declaration Date *"
+    },
+    "success": {
+      "title": "Application Submitted",
+      "description": "Delivery man enlistment data has been uploaded and saved successfully."
+    },
+    "ocr": {
+      "reading": "Reading document...",
+      "complete": "Document read complete. Please verify the detected values.",
+      "failed": "Could not read the document. Please fill the fields manually."
+    },
+    "fileUpload": {
+      "previewAlt": "Preview",
+      "clickToUpload": "Click to upload file",
+      "supportedFormats": "JPG, PNG, WEBP, PDF"
+    },
+    "draft": {
+      "saved": "Draft saved in browser.",
+      "notFound": "No draft found.",
+      "loaded": "Draft loaded.",
+      "loadFailed": "Draft could not be loaded."
+    },
+    "validation": {
+      "required": "Required",
+      "fullNameRequired": "Full name is required",
+      "mobileRequired": "Mobile number is required",
+      "passwordRequired": "Password is required",
+      "dateOfBirthRequired": "Date of birth is required",
+      "genderRequired": "Gender is required",
+      "presentAddressRequired": "Present address is required",
+      "permanentAddressRequired": "Permanent address is required",
+      "emergencyNameRequired": "Emergency contact name is required",
+      "emergencyNumberRequired": "Emergency contact number is required",
+      "emergencyRelationRequired": "Emergency contact relation is required",
+      "identityNumberRequired": "Identity number is required",
+      "identityFrontRequired": "Identity document is required",
+      "passportExpiryRequired": "Passport expiry date is required",
+      "fatherNameRequired": "Father's name is required",
+      "fatherIdentityNumberRequired": "Father's identity number is required",
+      "fatherIdentityFrontRequired": "Father's identity copy is required",
+      "motherNameRequired": "Mother's name is required",
+      "motherIdentityNumberRequired": "Mother's identity number is required",
+      "motherIdentityFrontRequired": "Mother's identity copy is required",
+      "referenceNameRequired": "Name is required",
+      "referencePhoneRequired": "Phone is required",
+      "referenceRelationRequired": "Relation is required",
+      "referenceAddressRequired": "Address is required",
+      "referenceIdentityRequired": "Identity number is required",
+      "referenceIdentityFrontRequired": "Identity file is required",
+      "bankNameRequired": "Bank name is required",
+      "bankChequeRequired": "Bank cheque is required",
+      "bondDocumentRequired": "Bond document is required",
+      "contractPaperRequired": "Contract paper is required",
+      "warehouseRequired": "Warehouse is required",
+      "joiningDateRequired": "Joining date is required",
+      "employmentTypeRequired": "Employment type is required",
+      "declarationDateRequired": "Declaration date is required"
+    },
+    "errors": {
+      "warehousesInvalidJson": "/api/warehouses did not return valid JSON",
+      "warehousesLoadFailed": "Failed to load warehouses",
+      "invalidWarehouse": "Please select a valid warehouse",
+      "saveInvalidJson": "Save API did not return valid JSON",
+      "saveFailed": "Failed to save delivery man data",
+      "generic": "Something went wrong"
+    }
+  },
+  "AdminPayroll": {
+    "header": {
+      "title": "Payroll Management",
+      "description": "Manage payroll profiles, payroll periods, and monthly salary entries from one workspace."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "newProfile": "New profile",
+      "newPeriod": "New period",
+      "newEntry": "New entry",
+      "createProfile": "Create profile",
+      "updateProfile": "Update profile",
+      "createPeriod": "Create period",
+      "updatePeriod": "Update period",
+      "createEntry": "Create entry",
+      "updateEntry": "Update entry"
+    },
+    "tabs": {
+      "profiles": "Payroll Profile",
+      "periods": "Payroll Period",
+      "entries": "Payroll Entry"
+    },
+    "searchPlaceholder": "Search {tab}",
+    "summary": {
+      "activeProfiles": "Active profiles",
+      "openPeriods": "Open periods",
+      "pendingPayroll": "Pending payroll",
+      "paidPayroll": "Paid payroll",
+      "totalEmployees": "{count} total employees",
+      "totalWindows": "{count} total payroll windows",
+      "pendingEntries": "{count} entries awaiting payout",
+      "paidEntries": "{count} entries already paid"
+    },
+    "paymentTypes": {
+      "MONTHLY": "MONTHLY",
+      "WEEKLY": "WEEKLY",
+      "DAILY": "DAILY"
+    },
+    "paymentStatus": {
+      "PENDING": "PENDING",
+      "PAID": "PAID",
+      "PROCESSING": "PROCESSING"
+    },
+    "periodStatus": {
+      "OPEN": "OPEN",
+      "PROCESSING": "PROCESSING",
+      "CLOSED": "CLOSED"
+    },
+    "profiles": {
+      "title": "Payroll Profiles",
+      "description": "Base salary, employee identity, and payout method for each staff member.",
+      "empty": "No payroll profile found.",
+      "noEmployeeCode": "No employee code",
+      "noPhone": "No phone",
+      "noWarehouse": "No warehouse",
+      "noPaymentMethod": "No payment method",
+      "unassigned": "Unassigned",
+      "entriesCount": "{count} entries",
+      "table": {
+        "employee": "Employee",
+        "contact": "Contact",
+        "warehouse": "Warehouse",
+        "payment": "Payment",
+        "salary": "Salary",
+        "actions": "Actions"
+      }
+    },
+    "periods": {
+      "title": "Payroll Periods",
+      "description": "Manage the payroll windows that salary entries belong to.",
+      "empty": "No payroll period found.",
+      "noNotes": "No notes",
+      "toDate": "to {date}",
+      "table": {
+        "period": "Period",
+        "timeline": "Timeline",
+        "status": "Status",
+        "entries": "Entries",
+        "actions": "Actions"
+      }
+    },
+    "entries": {
+      "title": "Payroll Entries",
+      "description": "Track gross-to-net salary records and payment status per payroll cycle.",
+      "empty": "No payroll entry found.",
+      "noWarehouse": "No warehouse",
+      "unassigned": "Unassigned",
+      "paidAt": "Paid at {date}",
+      "basic": "Basic {amount}",
+      "breakdown": "OT {ot} · Bonus {bonus} · Deduction {deduction}",
+      "table": {
+        "employee": "Employee",
+        "period": "Period",
+        "warehouse": "Warehouse",
+        "breakdown": "Breakdown",
+        "net": "Net",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "profileModal": {
+      "titleNew": "New payroll profile",
+      "titleEdit": "Edit payroll profile",
+      "description": "Configure salary details and payout preferences for a staff member.",
+      "selectUser": "Select user",
+      "noWarehouse": "No warehouse",
+      "fields": {
+        "user": "User",
+        "employeeCode": "Employee code",
+        "warehouse": "Warehouse",
+        "paymentType": "Payment type",
+        "baseSalary": "Base salary",
+        "paymentMethod": "Payment method",
+        "joiningDate": "Joining date",
+        "bankName": "Bank name",
+        "bankAccountNo": "Bank account no",
+        "accountHolder": "Account holder",
+        "mobileBankingNo": "Mobile banking no",
+        "notes": "Notes",
+        "isActive": "Profile active"
+      },
+      "placeholders": {
+        "employeeCode": "EMP-1001",
+        "baseSalary": "50000",
+        "paymentMethod": "BANK / CASH / MFS",
+        "bankName": "DBBL",
+        "bankAccountNo": "1234567890",
+        "accountHolder": "Account holder",
+        "mobileBankingNo": "01XXXXXXXXX",
+        "notes": "Additional profile note"
+      }
+    },
+    "periodModal": {
+      "titleNew": "New payroll period",
+      "titleEdit": "Edit payroll period",
+      "description": "Define the payroll window and lifecycle status for salary processing.",
+      "fields": {
+        "name": "Period name",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "status": "Status",
+        "notes": "Notes"
+      },
+      "placeholders": {
+        "name": "March 2026 Payroll",
+        "notes": "Optional payroll period notes"
+      }
+    },
+    "entryModal": {
+      "titleNew": "New payroll entry",
+      "titleEdit": "Edit payroll entry",
+      "description": "Record salary, overtime, bonus, deduction, and net payout details.",
+      "selectPayrollProfile": "Select payroll profile",
+      "selectPayrollPeriod": "Select payroll period",
+      "noWarehouse": "No warehouse",
+      "fields": {
+        "payrollProfile": "Payroll profile",
+        "payrollPeriod": "Payroll period",
+        "warehouse": "Warehouse",
+        "paymentStatus": "Payment status",
+        "basicAmount": "Basic amount",
+        "overtimeAmount": "Overtime amount",
+        "bonusAmount": "Bonus amount",
+        "deductionAmount": "Deduction amount",
+        "paidAt": "Paid date",
+        "notes": "Notes"
+      },
+      "netAmount": {
+        "title": "Net amount",
+        "description": "Auto-calculated from basic + overtime + bonus - deduction.",
+        "autoPreview": "Auto preview {amount}"
+      },
+      "placeholders": {
+        "basicAmount": "50000",
+        "netAmount": "Net amount (optional auto-calc)",
+        "notes": "Optional payroll entry note"
+      }
+    },
+    "success": {
+      "profileCreated": "Payroll profile created successfully",
+      "profileUpdated": "Payroll profile updated successfully",
+      "periodCreated": "Payroll period created successfully",
+      "periodUpdated": "Payroll period updated successfully",
+      "entryCreated": "Payroll entry created successfully",
+      "entryUpdated": "Payroll entry updated successfully"
+    },
+    "errors": {
+      "loadFailed": "Failed to load payroll",
+      "profileSaveFailed": "Failed to save payroll profile",
+      "periodSaveFailed": "Failed to save payroll period",
+      "entrySaveFailed": "Failed to save payroll entry"
+    }
   }
 }
