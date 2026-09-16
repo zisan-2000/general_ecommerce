@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { AssignmentStatusBadge } from "@/components/delivery/AssignmentStatusBadge";
 import type { DeliveryAssignmentLogEntry } from "@/components/delivery/types";
 
@@ -19,10 +20,12 @@ export function StatusTimeline({
   logs: DeliveryAssignmentLogEntry[];
   compact?: boolean;
 }) {
+  const t = useTranslations("AdminStatusTimeline");
+
   if (!logs.length) {
     return (
       <div className="rounded-2xl border border-dashed border-border bg-background px-4 py-5 text-sm text-muted-foreground">
-        No delivery history recorded yet.
+        {t("empty")}
       </div>
     );
   }
@@ -37,21 +40,29 @@ export function StatusTimeline({
           }`}
         >
           {index < logs.length - 1 ? (
-            <span className="absolute left-5 top-11 h-6 w-px bg-border" aria-hidden="true" />
+            <span
+              className="absolute left-5 top-11 h-6 w-px bg-border"
+              aria-hidden="true"
+            />
           ) : null}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
             <div className="space-y-2">
               <div className="flex flex-wrap items-center gap-2">
                 <AssignmentStatusBadge status={log.toStatus} />
                 <span className="text-xs text-muted-foreground">
-                  {log.actor?.name || "System"}
+                  {log.actor?.name || t("system")}
                 </span>
               </div>
               {log.note ? (
                 <p className="text-sm text-foreground">{log.note}</p>
               ) : (
                 <p className="text-sm text-muted-foreground">
-                  Status changed from {log.fromStatus || "none"} to {log.toStatus}.
+                  {t("statusChanged", {
+                    from: log.fromStatus
+                      ? t(`statuses.${log.fromStatus}`)
+                      : t("none"),
+                    to: t(`statuses.${log.toStatus}`),
+                  })}
                 </p>
               )}
             </div>

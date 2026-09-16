@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 
 type WarehouseOption = {
   id: number;
@@ -51,6 +52,8 @@ export default function ShipmentCreateForm({
   onCreated,
   onClose,
 }: ShipmentCreateFormProps) {
+  const t = useTranslations("AdminShipmentCreateForm");
+
   const [couriers, setCouriers] = useState<CourierOption[]>([]);
   const [loadingCouriers, setLoadingCouriers] = useState(true);
   const [orders, setOrders] = useState<OrderOption[]>([]);
@@ -71,11 +74,11 @@ export default function ShipmentCreateForm({
       try {
         setLoadingCouriers(true);
         const res = await fetch("/api/couriers", { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to load couriers");
+        if (!res.ok) throw new Error(t("errors.loadCouriers"));
         const data = (await res.json()) as CourierOption[];
         setCouriers(data);
       } catch (e) {
-        setError(e instanceof Error ? e.message : "Failed to load couriers");
+        setError(e instanceof Error ? e.message : t("errors.loadCouriers"));
       } finally {
         setLoadingCouriers(false);
       }
@@ -85,14 +88,14 @@ export default function ShipmentCreateForm({
       try {
         setLoadingOrders(true);
         const res = await fetch("/api/orders?hasShipment=false&limit=200");
-        if (!res.ok) throw new Error("Failed to load orders");
+        if (!res.ok) throw new Error(t("errors.loadOrders"));
         const data = (await res.json()) as { orders: OrderOption[] };
         const eligible = (data.orders || []).filter((order) =>
           ["PENDING", "CONFIRMED", "PROCESSING"].includes(order.status),
         );
         setOrders(eligible);
       } catch (e) {
-        setError(e instanceof Error ? e.message : "Failed to load orders");
+        setError(e instanceof Error ? e.message : t("errors.loadOrders"));
       } finally {
         setLoadingOrders(false);
       }
@@ -102,11 +105,11 @@ export default function ShipmentCreateForm({
       try {
         setLoadingWarehouses(true);
         const res = await fetch("/api/warehouses");
-        if (!res.ok) throw new Error("Failed to load warehouses");
+        if (!res.ok) throw new Error(t("errors.loadWarehouses"));
         const data = (await res.json()) as WarehouseOption[];
         setWarehouses(data);
       } catch (e) {
-        setError(e instanceof Error ? e.message : "Failed to load warehouses");
+        setError(e instanceof Error ? e.message : t("errors.loadWarehouses"));
       } finally {
         setLoadingWarehouses(false);
       }
@@ -115,6 +118,7 @@ export default function ShipmentCreateForm({
     loadCouriers();
     loadOrders();
     loadWarehouses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedCourier = useMemo(
@@ -130,7 +134,7 @@ export default function ShipmentCreateForm({
 
     try {
       if (!orderId || !courierId) {
-        throw new Error("Order ID and courier are required");
+        throw new Error(t("errors.orderAndCourierRequired"));
       }
 
       const payload = {
@@ -148,7 +152,7 @@ export default function ShipmentCreateForm({
 
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(data?.error || "Failed to create shipment");
+        throw new Error(data?.error || t("errors.createFailed"));
       }
 
       setResult(data as ShipmentResponse);
@@ -156,7 +160,7 @@ export default function ShipmentCreateForm({
         await onCreated();
       }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Something went wrong");
+      setError(e instanceof Error ? e.message : t("errors.generic"));
     } finally {
       setSubmitting(false);
     }
@@ -166,20 +170,19 @@ export default function ShipmentCreateForm({
     <div className="mx-auto w-full max-w-3xl rounded-2xl border border-border bg-card p-6">
       <div className="flex items-center justify-between">
         <div>
-        <h2 className="text-xl font-semibold text-foreground">Create Shipment</h2>
-      <p className="mt-1 text-sm text-muted-foreground">
-        Select courier dynamically and create shipment for an existing order.
-      </p>
-      </div>
+          <h2 className="text-xl font-semibold text-foreground">
+            {t("title")}
+          </h2>
+          <p className="mt-1 text-sm text-muted-foreground">{t("subtitle")}</p>
+        </div>
 
-
-      <button
-        type="button"
-        onClick={onClose}
-        className="rounded-md border border-border px-3 py-1 text-sm hover:bg-muted"
-      >
-        Close
-      </button>
+        <button
+          type="button"
+          onClick={onClose}
+          className="rounded-md border border-border px-3 py-1 text-sm hover:bg-muted"
+        >
+          {t("actions.close")}
+        </button>
       </div>
 
       <form
@@ -187,7 +190,7 @@ export default function ShipmentCreateForm({
         className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
       >
         <label className="flex flex-col gap-2 text-sm">
-          <span className="text-muted-foreground">Order</span>
+          <span className="text-muted-foreground">{t("fields.order")}</span>
           <select
             value={orderId}
             onChange={(e) => setOrderId(e.target.value)}
@@ -196,7 +199,9 @@ export default function ShipmentCreateForm({
             disabled={loadingOrders}
           >
             <option value="">
-              {loadingOrders ? "Loading orders..." : "Select an order"}
+              {loadingOrders
+                ? t("placeholders.loadingOrders")
+                : t("placeholders.selectOrder")}
             </option>
             {orders.map((order) => (
               <option key={order.id} value={order.id}>
@@ -207,7 +212,7 @@ export default function ShipmentCreateForm({
         </label>
 
         <label className="flex flex-col gap-2 text-sm">
-          <span className="text-muted-foreground">Courier</span>
+          <span className="text-muted-foreground">{t("fields.courier")}</span>
           <select
             value={courierId}
             onChange={(e) => setCourierId(e.target.value)}
@@ -216,7 +221,9 @@ export default function ShipmentCreateForm({
             disabled={loadingCouriers}
           >
             <option value="">
-              {loadingCouriers ? "Loading couriers..." : "Select a courier"}
+              {loadingCouriers
+                ? t("placeholders.loadingCouriers")
+                : t("placeholders.selectCourier")}
             </option>
             {couriers.map((courier) => (
               <option key={courier.id} value={courier.id}>
@@ -227,7 +234,9 @@ export default function ShipmentCreateForm({
         </label>
 
         <label className="flex flex-col gap-2 text-sm">
-          <span className="text-muted-foreground">Warehouse (optional)</span>
+          <span className="text-muted-foreground">
+            {t("fields.warehouseOptional")}
+          </span>
           <select
             value={warehouseId}
             onChange={(e) => setWarehouseId(e.target.value)}
@@ -236,8 +245,8 @@ export default function ShipmentCreateForm({
           >
             <option value="">
               {loadingWarehouses
-                ? "Loading warehouses..."
-                : "Select a warehouse"}
+                ? t("placeholders.loadingWarehouses")
+                : t("placeholders.selectWarehouse")}
             </option>
             {warehouses.map((warehouse) => (
               <option key={warehouse.id} value={warehouse.id}>
@@ -248,23 +257,29 @@ export default function ShipmentCreateForm({
         </label>
 
         <label className="flex flex-col gap-2 text-sm md:col-span-2">
-          <span className="text-muted-foreground">Courier Note (optional)</span>
+          <span className="text-muted-foreground">
+            {t("fields.courierNoteOptional")}
+          </span>
           <textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
             className="min-h-[90px] rounded-md border border-border bg-background px-3 py-2"
-            placeholder="Delivery note for courier"
+            placeholder={t("placeholders.courierNote")}
           />
         </label>
 
         {selectedCourier && (
           <div className="rounded-md border border-border bg-muted/30 p-3 text-xs text-muted-foreground md:col-span-2">
             <p>
-              <span className="font-medium text-foreground">Provider:</span>{" "}
+              <span className="font-medium text-foreground">
+                {t("selectedCourier.provider")}
+              </span>{" "}
               {selectedCourier.name} ({selectedCourier.type})
             </p>
             <p>
-              <span className="font-medium text-foreground">Endpoint:</span>{" "}
+              <span className="font-medium text-foreground">
+                {t("selectedCourier.endpoint")}
+              </span>{" "}
               {selectedCourier.baseUrl}
             </p>
           </div>
@@ -278,9 +293,13 @@ export default function ShipmentCreateForm({
 
         {result && (
           <div className="rounded-md border border-emerald-600/30 bg-emerald-600/10 p-3 text-sm text-emerald-700 dark:text-emerald-300 md:col-span-2">
-            <p>Shipment created. ID: {result.id}</p>
-            <p>Status: {result.status}</p>
-            <p>Tracking: {result.trackingNumber || "N/A"}</p>
+            <p>{t("success.created", { id: result.id })}</p>
+            <p>{t("success.status", { status: result.status })}</p>
+            <p>
+              {t("success.tracking", {
+                tracking: result.trackingNumber || t("success.notAvailable"),
+              })}
+            </p>
             {result.trackingUrl && (
               <a
                 href={result.trackingUrl}
@@ -288,7 +307,7 @@ export default function ShipmentCreateForm({
                 rel="noreferrer"
                 className="underline"
               >
-                Open tracking URL
+                {t("success.openTrackingUrl")}
               </a>
             )}
           </div>
@@ -299,7 +318,7 @@ export default function ShipmentCreateForm({
           disabled={submitting}
           className="h-10 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground disabled:opacity-60 md:col-span-2"
         >
-          {submitting ? "Creating..." : "Create Shipment"}
+          {submitting ? t("actions.creating") : t("actions.create")}
         </button>
       </form>
     </div>

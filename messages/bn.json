@@ -1812,30 +1812,176 @@
         }
     },
     "AdminAssignDeliveryManModal": {
-        "title": "Assign Delivery Man",
-        "description": "Assign one or more shipments to an active delivery man. The assignment will appear in the driver dashboard immediately.",
-        "selectedShipments": "Selected Shipments",
-        "shipmentLabel": "Shipment #{id}",
-        "orderLabel": "Order #{id}",
-        "warehouseLabel": "Warehouse #{id}",
-        "warehouseNotSet": "Warehouse not set",
-        "deliveryManLabel": "Delivery man",
-        "selectDeliveryMan": "Select delivery man",
-        "noteLabel": "Assignment note",
-        "notePlaceholder": "Optional dispatch or assignment note",
+        "title": "ডেলিভারিম্যান নিয়োগ করুন",
+        "description": "এক বা একাধিক শিপমেন্ট একজন সক্রিয় ডেলিভারিম্যানকে নিয়োগ করুন। নিয়োগটি সাথে সাথে ড্রাইভার ড্যাশবোর্ডে দেখা যাবে।",
+        "selectedShipments": "নির্বাচিত শিপমেন্ট",
+        "shipmentLabel": "শিপমেন্ট #{id}",
+        "orderLabel": "অর্ডার #{id}",
+        "warehouseLabel": "ওয়্যারহাউস #{id}",
+        "warehouseNotSet": "ওয়্যারহাউস নির্ধারিত নয়",
+        "deliveryManLabel": "ডেলিভারিম্যান",
+        "selectDeliveryMan": "ডেলিভারিম্যান নির্বাচন করুন",
+        "noteLabel": "নিয়োগের নোট",
+        "notePlaceholder": "ঐচ্ছিক ডিসপ্যাচ বা নিয়োগের নোট",
         "actions": {
-            "cancel": "Cancel",
-            "assign": "Assign Delivery Man",
-            "assigning": "Assigning..."
+            "cancel": "বাতিল করুন",
+            "assign": "ডেলিভারিম্যান নিয়োগ করুন",
+            "assigning": "নিয়োগ করা হচ্ছে..."
         },
         "success": {
-            "singleAssigned": "Delivery assigned successfully",
-            "multipleAssigned": "Deliveries assigned successfully"
+            "singleAssigned": "ডেলিভারি সফলভাবে নিয়োগ করা হয়েছে",
+            "multipleAssigned": "ডেলিভারিগুলো সফলভাবে নিয়োগ করা হয়েছে"
         },
         "errors": {
-            "selectDeliveryMan": "Please select a delivery man.",
-            "selectShipment": "Please select at least one shipment.",
-            "assignFailed": "Failed to assign delivery man"
+            "selectDeliveryMan": "অনুগ্রহ করে একজন ডেলিভারিম্যান নির্বাচন করুন।",
+            "selectShipment": "অনুগ্রহ করে অন্তত একটি শিপমেন্ট নির্বাচন করুন।",
+            "assignFailed": "ডেলিভারিম্যান নিয়োগ করা যায়নি"
+        }
+    },
+    "AdminShipmentsPage": {
+        "hero": {
+            "badge": "শিপমেন্ট কার্যক্রম",
+            "title": "শিপমেন্ট কার্যক্রম",
+            "description": "শিপমেন্ট তৈরি করুন, ডেলিভারিম্যান নিয়োগ করুন, পিকআপ প্রমাণ ট্র্যাক করুন এবং একটি ওয়ার্কফ্লো থেকেই কার্যক্রমের অবস্থা পর্যবেক্ষণ করুন।"
+        },
+        "actions": {
+            "assignSelected": "নির্বাচিত নিয়োগ ({count})",
+            "createShipment": "শিপমেন্ট তৈরি করুন",
+            "selectVisible": "দৃশ্যমান নির্বাচন করুন",
+            "unselectVisible": "দৃশ্যমান অনির্বাচন করুন",
+            "refresh": "রিফ্রেশ",
+            "reassign": "পুনঃনিয়োগ",
+            "assignDeliveryMan": "ডেলিভারিম্যান নিয়োগ করুন",
+            "openOrders": "অর্ডার খুলুন",
+            "openTracking": "ট্র্যাকিং খুলুন",
+            "updating": "আপডেট হচ্ছে...",
+            "markStatus": "{status} হিসেবে চিহ্নিত করুন"
+        },
+        "stats": {
+            "totalShipments": "মোট শিপমেন্ট",
+            "pendingAssigned": "অপেক্ষমাণ / নিযুক্ত",
+            "inTransit": "পরিবহনে",
+            "delivered": "ডেলিভারি হয়েছে"
+        },
+        "filters": {
+            "searchPlaceholder": "শিপমেন্ট, অর্ডার, কুরিয়ার, ট্র্যাকিং বা ক্রেতা দিয়ে খুঁজুন..."
+        },
+        "status": {
+            "ALL": "সব"
+        },
+        "shipmentStatus": {
+            "PENDING": "অপেক্ষমাণ",
+            "ASSIGNED": "নিযুক্ত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "empty": {
+            "title": "কোনো শিপমেন্ট পাওয়া যায়নি।",
+            "description": "ফিল্টার সামঞ্জস্য করুন বা নিয়োগ প্রবাহ শুরু করতে একটি নতুন শিপমেন্ট তৈরি করুন।",
+            "noAssignment": "এখনও কোনো ডেলিভারিম্যান নিয়োগ করা হয়নি।",
+            "noShipmentActions": "কোনো ম্যানুয়াল শিপমেন্ট কার্যক্রম উপলব্ধ নেই।"
+        },
+        "card": {
+            "shipmentTitle": "শিপমেন্ট #{id}",
+            "metaLine": "অর্ডার #{orderId} • {customer} • {date}",
+            "unknownCustomer": "অজানা ক্রেতা",
+            "noPhone": "ফোন নেই"
+        },
+        "sections": {
+            "orderAndCourier": "অর্ডার ও কুরিয়ার",
+            "deliveryAssignment": "ডেলিভারি নিয়োগ",
+            "shipmentActions": "শিপমেন্ট কার্যক্রম",
+            "recentHistory": "সাম্প্রতিক ডেলিভারি ইতিহাস"
+        },
+        "labels": {
+            "courier": "কুরিয়ার",
+            "tracking": "ট্র্যাকিং",
+            "orderStatus": "অর্ডার স্ট্যাটাস",
+            "notAvailable": "উপলব্ধ নয়",
+            "pickupProof": "পিকআপ প্রমাণ",
+            "pickupSubmitted": "{date} তারিখে জমা দেওয়া হয়েছে",
+            "pickupPending": "অপেক্ষমাণ",
+            "rejected": "প্রত্যাখ্যাত: {reason}"
+        },
+        "pagination": {
+            "perPage": "প্রতি পৃষ্ঠায় {count}টি",
+            "showing": "{total}টির মধ্যে {start} থেকে {end}টি শিপমেন্ট দেখানো হচ্ছে",
+            "previous": "আগের",
+            "next": "পরের",
+            "lastPage": "শেষ পৃষ্ঠা"
+        },
+        "notices": {
+            "statusUpdated": "শিপমেন্ট #{id} {status} হিসেবে চিহ্নিত হয়েছে।",
+            "created": "শিপমেন্ট সফলভাবে তৈরি হয়েছে।"
+        },
+        "errors": {
+            "loadFailed": "শিপমেন্ট লোড করা যায়নি",
+            "loadDeliveryMenFailed": "ডেলিভারিম্যান লোড করা যায়নি",
+            "updateFailed": "শিপমেন্ট স্ট্যাটাস আপডেট করা যায়নি"
+        }
+    },
+    "AdminStatusTimeline": {
+        "empty": "এখনও কোনো ডেলিভারি ইতিহাস রেকর্ড করা হয়নি।",
+        "system": "সিস্টেম",
+        "none": "কোনোটি নয়",
+        "statusChanged": "স্ট্যাটাস {from} থেকে {to}-এ পরিবর্তিত হয়েছে।",
+        "statuses": {
+            "ASSIGNED": "নিযুক্ত",
+            "ACCEPTED": "গৃহীত",
+            "REJECTED": "প্রত্যাখ্যাত",
+            "PICKUP_CONFIRMED": "পিকআপ নিশ্চিত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত"
+        }
+    },
+    "AdminShipmentCreateForm": {
+        "title": "শিপমেন্ট তৈরি করুন",
+        "subtitle": "গতিশীলভাবে কুরিয়ার নির্বাচন করুন এবং বিদ্যমান অর্ডারের জন্য শিপমেন্ট তৈরি করুন।",
+        "fields": {
+            "order": "অর্ডার",
+            "courier": "কুরিয়ার",
+            "warehouseOptional": "ওয়্যারহাউস (ঐচ্ছিক)",
+            "courierNoteOptional": "কুরিয়ার নোট (ঐচ্ছিক)"
+        },
+        "placeholders": {
+            "loadingOrders": "অর্ডার লোড হচ্ছে...",
+            "loadingCouriers": "কুরিয়ার লোড হচ্ছে...",
+            "loadingWarehouses": "ওয়্যারহাউস লোড হচ্ছে...",
+            "selectOrder": "একটি অর্ডার নির্বাচন করুন",
+            "selectCourier": "একটি কুরিয়ার নির্বাচন করুন",
+            "selectWarehouse": "একটি ওয়্যারহাউস নির্বাচন করুন",
+            "courierNote": "কুরিয়ারের জন্য ডেলিভারি নোট"
+        },
+        "selectedCourier": {
+            "provider": "প্রোভাইডার:",
+            "endpoint": "এন্ডপয়েন্ট:"
+        },
+        "actions": {
+            "close": "বন্ধ করুন",
+            "create": "শিপমেন্ট তৈরি করুন",
+            "creating": "তৈরি হচ্ছে..."
+        },
+        "success": {
+            "created": "শিপমেন্ট তৈরি হয়েছে। আইডি: {id}",
+            "status": "স্ট্যাটাস: {status}",
+            "tracking": "ট্র্যাকিং: {tracking}",
+            "notAvailable": "প্রযোজ্য নয়",
+            "openTrackingUrl": "ট্র্যাকিং URL খুলুন"
+        },
+        "errors": {
+            "loadCouriers": "কুরিয়ার লোড করা যায়নি",
+            "loadOrders": "অর্ডার লোড করা যায়নি",
+            "loadWarehouses": "ওয়্যারহাউস লোড করা যায়নি",
+            "orderAndCourierRequired": "অর্ডার আইডি ও কুরিয়ার আবশ্যক",
+            "createFailed": "শিপমেন্ট তৈরি করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
         }
     }
 }

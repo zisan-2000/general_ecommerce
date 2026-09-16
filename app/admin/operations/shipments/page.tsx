@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronRight } from "lucide-react";
 import ShipmentCreateForm from "@/components/admin/shipments/ShipmentCreateForm";
 import {
@@ -104,16 +105,18 @@ function shipmentStatusPill(status: ShipmentStatusType) {
           ? "border-sky-200 bg-sky-50 text-sky-700"
           : "border-amber-200 bg-amber-50 text-amber-700";
 
-  return (
+  return (status: ShipmentStatusType, label: string) => (
     <span
       className={`inline-flex rounded-full border px-3 py-1 text-xs font-medium ${className}`}
     >
-      {status.replace(/_/g, " ")}
+      {label}
     </span>
   );
 }
 
 export default function AdminShipmentsPage() {
+  const t = useTranslations("AdminShipmentsPage");
+
   const [filter, setFilter] = useState<"ALL" | ShipmentStatusType>(
     lastShipmentsQueryState.filter,
   );
@@ -142,6 +145,9 @@ export default function AdminShipmentsPage() {
   const [totalItems, setTotalItems] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
+  const statusLabel = (status: ShipmentStatusType) =>
+    t(`shipmentStatus.${status}`);
+
   const toggleShipmentExpansion = (shipmentId: number) => {
     setExpandedShipments((prev) => {
       const newSet = new Set(prev);
@@ -167,12 +173,10 @@ export default function AdminShipmentsPage() {
         const query = filter === "ALL" ? "" : `&status=${filter}`;
         const res = await fetch(
           `/api/shipments?page=${page}&limit=${itemsPerPage}${query}`,
-          {
-            cache: "no-store",
-          },
+          { cache: "no-store" },
         );
         const data = await res.json().catch(() => ({}));
-        if (!res.ok) throw new Error(data?.error || "Failed to load shipments");
+        if (!res.ok) throw new Error(data?.error || t("errors.loadFailed"));
         const nextShipments = Array.isArray(data?.shipments)
           ? data.shipments
           : [];
@@ -189,13 +193,13 @@ export default function AdminShipmentsPage() {
         setError(
           loadError instanceof Error
             ? loadError.message
-            : "Failed to load shipments",
+            : t("errors.loadFailed"),
         );
       } finally {
         setLoading(false);
       }
     },
-    [filter, currentPage, itemsPerPage],
+    [filter, currentPage, itemsPerPage, t],
   );
 
   const handlePageChange = (page: number) => {
@@ -204,21 +208,15 @@ export default function AdminShipmentsPage() {
   };
 
   const handlePreviousPage = () => {
-    if (currentPage > 1) {
-      handlePageChange(currentPage - 1);
-    }
+    if (currentPage > 1) handlePageChange(currentPage - 1);
   };
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      handlePageChange(currentPage + 1);
-    }
+    if (currentPage < totalPages) handlePageChange(currentPage + 1);
   };
 
   const handleLastPage = () => {
-    if (currentPage < totalPages) {
-      handlePageChange(totalPages);
-    }
+    if (currentPage < totalPages) handlePageChange(totalPages);
   };
 
   const handleItemsPerPageChange = (newItemsPerPage: number) => {
@@ -241,13 +239,11 @@ export default function AdminShipmentsPage() {
       setLoadingDeliveryMen(true);
       const response = await fetch(
         "/api/delivery-men?status=ACTIVE&limit=200",
-        {
-          cache: "no-store",
-        },
+        { cache: "no-store" },
       );
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.success) {
-        throw new Error(payload.message || "Failed to load delivery men");
+        throw new Error(payload.message || t("errors.loadDeliveryMenFailed"));
       }
 
       const nextDeliveryMen = Array.isArray(payload.data?.deliveryMen)
@@ -273,12 +269,12 @@ export default function AdminShipmentsPage() {
       setError(
         loadError instanceof Error
           ? loadError.message
-          : "Failed to load delivery men",
+          : t("errors.loadDeliveryMenFailed"),
       );
     } finally {
       setLoadingDeliveryMen(false);
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     void loadShipments();
@@ -351,18 +347,19 @@ export default function AdminShipmentsPage() {
 
       const response = await fetch(`/api/shipments/${shipmentId}`, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: nextStatus }),
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to update shipment status");
+        throw new Error(payload?.error || t("errors.updateFailed"));
       }
 
       setNotice(
-        `Shipment #${shipmentId} marked as ${nextStatus.replace(/_/g, " ").toLowerCase()}.`,
+        t("notices.statusUpdated", {
+          id: shipmentId,
+          status: statusLabel(nextStatus).toLowerCase(),
+        }),
       );
       shipmentsCache.clear();
       await loadShipments(true);
@@ -370,7 +367,7 @@ export default function AdminShipmentsPage() {
       setError(
         updateError instanceof Error
           ? updateError.message
-          : "Failed to update shipment status",
+          : t("errors.updateFailed"),
       );
     } finally {
       setUpdatingId(null);
@@ -393,7 +390,6 @@ export default function AdminShipmentsPage() {
             !filteredShipments.some((shipment) => shipment.id === shipmentId),
         );
       }
-
       const nextIds = new Set(current);
       filteredShipments.forEach((shipment) => nextIds.add(shipment.id));
       return [...nextIds];
@@ -407,14 +403,13 @@ export default function AdminShipmentsPage() {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-                Shipment Operations
+                {t("hero.badge")}
               </p>
               <h1 className="mt-2 text-3xl font-semibold text-foreground">
-                Shipment Operations
+                {t("hero.title")}
               </h1>
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                Create shipments, assign delivery men, track pickup proof, and
-                monitor the operational status from a single workflow.
+                {t("hero.description")}
               </p>
             </div>
 
@@ -425,7 +420,9 @@ export default function AdminShipmentsPage() {
                   onClick={() => setAssignModalOpen(true)}
                   className="btn-outline rounded-xl px-4 py-3 text-sm font-medium"
                 >
-                  Assign Selected ({selectedShipmentIds.length})
+                  {t("actions.assignSelected", {
+                    count: selectedShipmentIds.length,
+                  })}
                 </button>
               ) : null}
               <button
@@ -433,7 +430,7 @@ export default function AdminShipmentsPage() {
                 onClick={() => setCreateModalOpen(true)}
                 className="btn-primary rounded-xl px-4 py-3 text-sm font-medium"
               >
-                Create Shipment
+                {t("actions.createShipment")}
               </button>
             </div>
           </div>
@@ -452,13 +449,22 @@ export default function AdminShipmentsPage() {
         </section>
 
         <section className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-          <SummaryCard label="Total Shipments" value={shipmentStats.total} />
           <SummaryCard
-            label="Pending / Assigned"
+            label={t("stats.totalShipments")}
+            value={shipmentStats.total}
+          />
+          <SummaryCard
+            label={t("stats.pendingAssigned")}
             value={shipmentStats.pending}
           />
-          <SummaryCard label="In Transit" value={shipmentStats.inTransit} />
-          <SummaryCard label="Delivered" value={shipmentStats.delivered} />
+          <SummaryCard
+            label={t("stats.inTransit")}
+            value={shipmentStats.inTransit}
+          />
+          <SummaryCard
+            label={t("stats.delivered")}
+            value={shipmentStats.delivered}
+          />
         </section>
 
         <section className="rounded-3xl border border-border bg-card p-5 shadow-sm">
@@ -469,12 +475,14 @@ export default function AdminShipmentsPage() {
                 onClick={toggleSelectAllVisible}
                 className="btn-outline rounded-xl px-4 py-2 text-sm font-medium"
               >
-                {allVisibleSelected ? "Unselect Visible" : "Select Visible"}
+                {allVisibleSelected
+                  ? t("actions.unselectVisible")
+                  : t("actions.selectVisible")}
               </button>
               <input
                 value={search}
                 onChange={(event) => handleSearchChange(event.target.value)}
-                placeholder="Search by shipment, order, courier, tracking, or customer..."
+                placeholder={t("filters.searchPlaceholder")}
                 className="input-theme min-w-[280px] rounded-xl border border-border bg-background px-4 py-3 text-sm"
               />
               <select
@@ -488,7 +496,9 @@ export default function AdminShipmentsPage() {
               >
                 {STATUS_OPTIONS.map((status) => (
                   <option key={status} value={status}>
-                    {status}
+                    {status === "ALL"
+                      ? t("status.ALL")
+                      : statusLabel(status as ShipmentStatusType)}
                   </option>
                 ))}
               </select>
@@ -502,12 +512,11 @@ export default function AdminShipmentsPage() {
                 }
                 className="input-theme rounded-xl border border-border bg-background px-3 py-3 text-sm"
               >
-                <option value={5}>5 per page</option>
-                <option value={10}>10 per page</option>
-                <option value={20}>20 per page</option>
-                <option value={50}>50 per page</option>
-                <option value={100}>100 per page</option>
-                <option value={200}>200 per page</option>
+                {[5, 10, 20, 50, 100, 200].map((n) => (
+                  <option key={n} value={n}>
+                    {t("pagination.perPage", { count: n })}
+                  </option>
+                ))}
               </select>
 
               <button
@@ -518,7 +527,7 @@ export default function AdminShipmentsPage() {
                 }}
                 className="btn-outline rounded-xl px-4 py-3 text-sm font-medium"
               >
-                Refresh
+                {t("actions.refresh")}
               </button>
             </div>
           </div>
@@ -529,11 +538,10 @@ export default function AdminShipmentsPage() {
         ) : filteredShipments.length === 0 ? (
           <div className="rounded-3xl border border-dashed border-border bg-card px-6 py-16 text-center">
             <p className="text-lg font-medium text-foreground">
-              No shipments found.
+              {t("empty.title")}
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Adjust the filters or create a new shipment to begin assignment
-              flow.
+              {t("empty.description")}
             </p>
           </div>
         ) : (
@@ -566,14 +574,20 @@ export default function AdminShipmentsPage() {
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-2">
                           <h2 className="text-xl font-semibold text-foreground">
-                            Shipment #{shipment.id}
+                            {t("card.shipmentTitle", { id: shipment.id })}
                           </h2>
-                          {shipmentStatusPill(shipment.status)}
+                          {shipmentStatusPill(shipment.status)(
+                            shipment.status,
+                            statusLabel(shipment.status),
+                          )}
                         </div>
                         <p className="mt-1 text-sm text-muted-foreground">
-                          Order #{shipment.orderId} •{" "}
-                          {shipment.order?.name || "Unknown customer"} •{" "}
-                          {formatDateTime(shipment.createdAt)}
+                          {t("card.metaLine", {
+                            orderId: shipment.orderId,
+                            customer:
+                              shipment.order?.name || t("card.unknownCustomer"),
+                            date: formatDateTime(shipment.createdAt),
+                          })}
                         </p>
                       </div>
                     </div>
@@ -589,15 +603,15 @@ export default function AdminShipmentsPage() {
                           className="btn-outline rounded-xl px-4 py-2 text-sm font-medium"
                         >
                           {currentAssignment
-                            ? "Reassign"
-                            : "Assign Delivery Man"}
+                            ? t("actions.reassign")
+                            : t("actions.assignDeliveryMan")}
                         </button>
                         <a
                           href="/admin/operations/orders"
                           className="btn-outline rounded-xl px-4 py-2 text-sm font-medium"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          Open Orders
+                          {t("actions.openOrders")}
                         </a>
                       </div>
                       <ChevronRight
@@ -614,31 +628,35 @@ export default function AdminShipmentsPage() {
                         <div className="grid gap-4 xl:grid-cols-[0.95fr_0.95fr_1.1fr]">
                           <section className="rounded-2xl border border-border bg-background p-4">
                             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                              Order & Courier
+                              {t("sections.orderAndCourier")}
                             </h3>
                             <div className="mt-4 space-y-2 text-sm">
                               <p className="font-medium text-foreground">
-                                {shipment.order?.name || "Unknown customer"}
+                                {shipment.order?.name ||
+                                  t("card.unknownCustomer")}
                               </p>
                               <p className="text-muted-foreground">
-                                {shipment.order?.phone_number || "No phone"}
+                                {shipment.order?.phone_number ||
+                                  t("card.noPhone")}
                               </p>
                               <p className="text-muted-foreground">
-                                Courier: {shipment.courier || "-"}
+                                {t("labels.courier")}: {shipment.courier || "-"}
                               </p>
                               <p className="text-muted-foreground">
-                                Tracking:{" "}
-                                {shipment.trackingNumber || "Not available"}
+                                {t("labels.tracking")}:{" "}
+                                {shipment.trackingNumber ||
+                                  t("labels.notAvailable")}
                               </p>
                               <p className="text-muted-foreground">
-                                Order status: {shipment.order?.status || "-"}
+                                {t("labels.orderStatus")}:{" "}
+                                {shipment.order?.status || "-"}
                               </p>
                             </div>
                           </section>
 
                           <section className="rounded-2xl border border-border bg-background p-4">
                             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                              Delivery Assignment
+                              {t("sections.deliveryAssignment")}
                             </h3>
                             {currentAssignment ? (
                               <div className="mt-4 space-y-3">
@@ -664,24 +682,27 @@ export default function AdminShipmentsPage() {
                                   </p>
                                 </div>
                                 <p className="text-sm text-muted-foreground">
-                                  Pickup proof:{" "}
+                                  {t("labels.pickupProof")}:{" "}
                                   {currentAssignment.pickupProof?.confirmedAt
-                                    ? `Submitted ${formatDateTime(
-                                        currentAssignment.pickupProof
-                                          .confirmedAt,
-                                      )}`
-                                    : "Pending"}
+                                    ? t("labels.pickupSubmitted", {
+                                        date: formatDateTime(
+                                          currentAssignment.pickupProof
+                                            .confirmedAt,
+                                        ),
+                                      })
+                                    : t("labels.pickupPending")}
                                 </p>
                                 {currentAssignment.rejectionReason ? (
                                   <p className="rounded-2xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
-                                    Rejected:{" "}
-                                    {currentAssignment.rejectionReason}
+                                    {t("labels.rejected", {
+                                      reason: currentAssignment.rejectionReason,
+                                    })}
                                   </p>
                                 ) : null}
                               </div>
                             ) : (
                               <div className="mt-4 rounded-2xl border border-dashed border-border px-4 py-6 text-sm text-muted-foreground">
-                                No delivery man assigned yet.
+                                {t("empty.noAssignment")}
                               </div>
                             )}
                           </section>
@@ -689,7 +710,7 @@ export default function AdminShipmentsPage() {
                           <section className="rounded-2xl border border-border bg-background p-4">
                             <div className="flex items-center justify-between gap-3">
                               <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                                Shipment Actions
+                                {t("sections.shipmentActions")}
                               </h3>
                               {shipment.trackingUrl ? (
                                 <a
@@ -698,7 +719,7 @@ export default function AdminShipmentsPage() {
                                   rel="noreferrer"
                                   className="text-xs font-medium text-primary underline"
                                 >
-                                  Open Tracking
+                                  {t("actions.openTracking")}
                                 </a>
                               ) : null}
                             </div>
@@ -718,13 +739,15 @@ export default function AdminShipmentsPage() {
                                     className="btn-outline rounded-full px-3 py-2 text-xs font-medium disabled:opacity-60"
                                   >
                                     {updatingId === shipment.id
-                                      ? "Updating..."
-                                      : `Mark ${nextStatus.replace(/_/g, " ")}`}
+                                      ? t("actions.updating")
+                                      : t("actions.markStatus", {
+                                          status: statusLabel(nextStatus),
+                                        })}
                                   </button>
                                 ))
                               ) : (
                                 <span className="text-sm text-muted-foreground">
-                                  No manual shipment actions available.
+                                  {t("empty.noShipmentActions")}
                                 </span>
                               )}
                             </div>
@@ -735,7 +758,7 @@ export default function AdminShipmentsPage() {
                       {currentAssignment?.logs?.length ? (
                         <section className="mt-5 space-y-3">
                           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                            Recent Delivery History
+                            {t("sections.recentHistory")}
                           </h3>
                           <StatusTimeline
                             logs={currentAssignment.logs}
@@ -751,13 +774,14 @@ export default function AdminShipmentsPage() {
           </div>
         )}
 
-        {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
             <div className="text-sm text-muted-foreground">
-              Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-              {Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems}{" "}
-              shipments
+              {t("pagination.showing", {
+                start: (currentPage - 1) * itemsPerPage + 1,
+                end: Math.min(currentPage * itemsPerPage, totalItems),
+                total: totalItems,
+              })}
             </div>
             <div className="flex items-center gap-2">
               <button
@@ -765,15 +789,13 @@ export default function AdminShipmentsPage() {
                 disabled={currentPage === 1}
                 className="btn-outline rounded-xl px-3 py-2 text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Previous
+                {t("pagination.previous")}
               </button>
 
               <div className="flex items-center gap-1">
                 {(() => {
                   const pages = [];
-
                   if (totalPages <= 5) {
-                    // Show all pages if 5 or fewer
                     for (let i = 1; i <= totalPages; i++) {
                       pages.push(
                         <button
@@ -790,9 +812,6 @@ export default function AdminShipmentsPage() {
                       );
                     }
                   } else {
-                    // Complex pagination for more than 5 pages
-
-                    // Always show page 1
                     pages.push(
                       <button
                         key={1}
@@ -808,7 +827,6 @@ export default function AdminShipmentsPage() {
                     );
 
                     if (currentPage <= 3) {
-                      // Near start: 1 2 3 4 ... 20
                       for (let i = 2; i <= 4; i++) {
                         pages.push(
                           <button
@@ -833,7 +851,6 @@ export default function AdminShipmentsPage() {
                         </span>,
                       );
                     } else if (currentPage >= totalPages - 2) {
-                      // Near end: 1 ... 17 18 19 20
                       pages.push(
                         <span
                           key="ellipsis-start"
@@ -858,7 +875,6 @@ export default function AdminShipmentsPage() {
                         );
                       }
                     } else {
-                      // Middle: 1 ... 9 10 11 ... 20
                       pages.push(
                         <span
                           key="ellipsis-start"
@@ -892,7 +908,6 @@ export default function AdminShipmentsPage() {
                       );
                     }
 
-                    // Always show last page
                     pages.push(
                       <button
                         key={totalPages}
@@ -907,7 +922,6 @@ export default function AdminShipmentsPage() {
                       </button>,
                     );
                   }
-
                   return pages;
                 })()}
               </div>
@@ -917,7 +931,7 @@ export default function AdminShipmentsPage() {
                 disabled={currentPage === totalPages}
                 className="btn-outline rounded-xl px-3 py-2 text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Next
+                {t("pagination.next")}
               </button>
 
               <button
@@ -925,7 +939,7 @@ export default function AdminShipmentsPage() {
                 disabled={currentPage === totalPages}
                 className="btn-outline rounded-xl px-3 py-2 text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Last Page
+                {t("pagination.lastPage")}
               </button>
             </div>
           </div>
@@ -940,7 +954,7 @@ export default function AdminShipmentsPage() {
                 shipmentsCache.clear();
                 await loadShipments(true);
                 setCreateModalOpen(false);
-                setNotice("Shipment created successfully.");
+                setNotice(t("notices.created"));
               }}
               onClose={() => setCreateModalOpen(false)}
             />
