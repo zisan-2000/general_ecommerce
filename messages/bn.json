@@ -1452,5 +1452,390 @@
             "previous": "আগের",
             "next": "পরের"
         }
+    },
+    "AdminOrderManagement": {
+        "header": {
+            "title": "অর্ডার ব্যবস্থাপনা",
+            "subtitle": "সব লাইব্রেরি অর্ডার দেখুন, স্ট্যাটাস আপডেট করুন এবং শিপমেন্ট ট্র্যাক করুন"
+        },
+        "common": {
+            "ok": "ঠিক আছে",
+            "currencyFormat": "{currency} {amount}"
+        },
+        "actions": {
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "saveAll": "সব অর্ডার ও শিপমেন্ট আপডেট সংরক্ষণ করুন"
+        },
+        "stats": {
+            "totalOrders": "মোট অর্ডার",
+            "pageTotalAmount": "পৃষ্ঠার মোট পরিমাণ"
+        },
+        "filters": {
+            "searchPlaceholder": "অর্ডার আইডি, নাম বা মোবাইল দিয়ে খুঁজুন..."
+        },
+        "status": {
+            "all": "সব স্ট্যাটাস",
+            "PENDING": "অপেক্ষমাণ",
+            "CONFIRMED": "নিশ্চিত",
+            "PROCESSING": "প্রক্রিয়াধীন",
+            "SHIPPED": "পাঠানো হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "paymentStatus": {
+            "PAID": "পরিশোধিত",
+            "UNPAID": "অপরিশোধিত",
+            "REFUNDED": "রিফান্ড"
+        },
+        "shipmentStatus": {
+            "PENDING": "অপেক্ষমাণ",
+            "ASSIGNED": "নিযুক্ত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "warehouse": {
+            "defaultSuffix": " - ডিফল্ট",
+            "noStockSuffix": " - স্টক নেই",
+            "availableSuffix": " - উপলব্ধ {count}",
+            "insufficientSuffix": " - অপর্যাপ্ত স্টক ({available}/{required})"
+        },
+        "empty": {
+            "noOrders": "কোনো অর্ডার পাওয়া যায়নি।"
+        },
+        "card": {
+            "orderTitle": "অর্ডার #{id} • {name}",
+            "guestCustomer": "অতিথি ক্রেতা",
+            "noProductDetails": "কোনো পণ্যের বিবরণ নেই",
+            "noImage": "কোনো ছবি নেই",
+            "moreItems": "+{count}টি আরও আইটেম",
+            "createdOn": "তৈরি হয়েছে",
+            "payment": "পেমেন্ট",
+            "items": "আইটেম",
+            "grandTotal": "সর্বমোট",
+            "viewAssign": "দেখুন / ডেলিভারি নিয়োগ করুন"
+        },
+        "pagination": {
+            "previous": "আগের",
+            "next": "পরের",
+            "pageOf": "পৃষ্ঠা {page} / {pages}"
+        },
+        "detail": {
+            "title": "অর্ডারের বিবরণ",
+            "orderIdLabel": "অর্ডার আইডি: {id}",
+            "close": "বন্ধ করুন ✕",
+            "customerInfo": "ক্রেতার তথ্য",
+            "noName": "নাম নেই",
+            "mobile": "মোবাইল: {value}",
+            "altMobile": "বিকল্প মোবাইল: {value}",
+            "email": "ইমেইল: {value}",
+            "paymentMethod": "পেমেন্ট পদ্ধতি:",
+            "currency": "মুদ্রা:",
+            "orderDate": "অর্ডারের তারিখ:",
+            "deliveryAddress": "ডেলিভারি ঠিকানা",
+            "area": "এলাকা: {value}",
+            "district": "জেলা: {value}",
+            "country": "দেশ: {value}",
+            "paymentScreenshot": "পেমেন্ট স্ক্রিনশট",
+            "paymentScreenshotAlt": "পেমেন্ট স্ক্রিনশট",
+            "screenshotHint": "ক্রেতা পেমেন্টের পরে এই স্ক্রিনশট আপলোড করেছেন।",
+            "viewScreenshot": "স্ক্রিনশট দেখুন",
+            "orderItemsTitle": "অর্ডারের আইটেম",
+            "itemAlt": "অর্ডার আইটেম",
+            "noImage": "কোনো ছবি নেই",
+            "productNameNotAvailable": "পণ্যের নাম পাওয়া যাচ্ছে না",
+            "variantLabel": "ভ্যারিয়েন্ট: {value}",
+            "qtyPrice": "পরিমাণ: {qty} x {price}",
+            "subtotal": "সাবটোটাল",
+            "discount": "ছাড়",
+            "vat": "ভ্যাট",
+            "shipping": "শিপিং",
+            "grandTotal": "সর্বমোট",
+            "orderStatusTitle": "অর্ডার স্ট্যাটাস",
+            "orderStatusLabel": "অর্ডার স্ট্যাটাস",
+            "paymentStatusLabel": "পেমেন্ট স্ট্যাটাস",
+            "transactionIdLabel": "ট্রানজেকশন আইডি",
+            "transactionIdPlaceholder": "বিকাশ/নগদ txn id...",
+            "adminOnlyNote": "* শুধুমাত্র অ্যাডমিন এই অপশনগুলো সফলভাবে আপডেট করতে পারেন।",
+            "shipmentStatusTitle": "শিপমেন্ট স্ট্যাটাস",
+            "currentStatus": "বর্তমান: {status}",
+            "noShipmentHint": "এই অর্ডারের জন্য এখনও কোনো শিপমেন্ট তৈরি হয়নি। নতুন শিপমেন্ট তৈরি করতে নিচের ফর্ম পূরণ করুন।",
+            "warehouseLabel": "ওয়্যারহাউস",
+            "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+            "warehouseStockHint": "শুধুমাত্র পর্যাপ্ত স্টক আছে এমন ওয়্যারহাউস নির্বাচনযোগ্য।",
+            "courierLabel": "কুরিয়ার",
+            "selectCourier": "কুরিয়ার নির্বাচন করুন",
+            "courierPlaceholder": "কুরিয়ারের নাম...",
+            "trackingNumberLabel": "ট্র্যাকিং নম্বর",
+            "trackingPlaceholder": "ট্র্যাকিং নম্বর...",
+            "shipmentStatusLabel": "শিপমেন্ট স্ট্যাটাস",
+            "expectedDate": "প্রত্যাশিত তারিখ",
+            "deliveredDate": "ডেলিভারির তারিখ",
+            "createdAt": "তৈরি হয়েছে",
+            "courierStatus": "কুরিয়ার স্ট্যাটাস:",
+            "lastSynced": "সর্বশেষ সিঙ্ক:",
+            "externalId": "এক্সটার্নাল আইডি:",
+            "trackingUrl": "ট্র্যাকিং URL:",
+            "open": "খুলুন",
+            "deliveryManAssignmentTitle": "ডেলিভারিম্যান নিয়োগ",
+            "deliveryManAssignmentHint": "অর্ডার ব্যবস্থাপনা থেকে সরাসরি এই শিপমেন্টটি একজন সক্রিয় ডেলিভারিম্যানকে নিয়োগ বা পুনঃনিয়োগ করুন।",
+            "assignDeliveryMan": "ডেলিভারিম্যান নিয়োগ করুন",
+            "reassignDeliveryMan": "ডেলিভারিম্যান পুনঃনিয়োগ করুন",
+            "createShipmentFirst": "প্রথমে একটি শিপমেন্ট তৈরি ও সংরক্ষণ করুন। শিপমেন্ট থাকলে এখান থেকে ডেলিভারিম্যান নিয়োগ করতে পারবেন।",
+            "assignedAt": "নিয়োগের সময়",
+            "pickupProof": "পিকআপ প্রমাণ",
+            "confirmedOn": "নিশ্চিত হয়েছে {date} তারিখে",
+            "viewPickupImage": "পিকআপ ছবি দেখুন",
+            "assignmentNote": "নিয়োগের নোট",
+            "rejectionReason": "প্রত্যাখ্যানের কারণ",
+            "recentAssignmentLogs": "সাম্প্রতিক নিয়োগের লগ",
+            "logBy": "{name} কর্তৃক",
+            "noAssignmentHistory": "এখনও কোনো নিয়োগের ইতিহাস নেই।",
+            "noDeliveryManAssigned": "এই শিপমেন্টের জন্য এখনও কোনো ডেলিভারিম্যান নিয়োগ করা হয়নি।",
+            "deliveryProofFlow": "ডেলিভারি প্রমাণের প্রবাহ",
+            "deliveryProofHint": "শিপমেন্ট OUT_FOR_DELIVERY-তে পৌঁছালে ক্রেতা PIN + চেকলিস্ট + ঐচ্ছিক ছবি দিয়ে নিশ্চিত করতে পারবেন।",
+            "deliveryPin": "ডেলিভারি PIN",
+            "pinWillGenerate": "OFD-তে জেনারেট হবে",
+            "confirmationLink": "নিশ্চিতকরণ লিংক",
+            "linkWillAppear": "শিপমেন্ট ডেলিভারির জন্য বের হলে লিংক স্বয়ংক্রিয়ভাবে দেখা যাবে।",
+            "customerProofStatus": "ক্রেতার প্রমাণ স্ট্যাটাস",
+            "proofChecks": "চেক: গ্রহণ / সঠিক আইটেম / ভালো অবস্থা",
+            "viewProofPhoto": "প্রমাণ ছবি দেখুন",
+            "noCustomerProof": "এখনও কোনো ক্রেতার ডেলিভারি প্রমাণ জমা হয়নি।",
+            "shipmentAdminNote": "* শুধুমাত্র অ্যাডমিন শিপমেন্ট তৈরি/আপডেট করতে পারেন; অন্য ব্যবহারকারীরা API থেকে Forbidden পাবেন।"
+        },
+        "successModal": {
+            "title": "আপডেট সফল",
+            "defaultMessage": "তথ্য সফলভাবে আপডেট হয়েছে।"
+        },
+        "errorModal": {
+            "title": "ত্রুটি",
+            "defaultMessage": "একটি ত্রুটি ঘটেছে।"
+        },
+        "toasts": {
+            "saveSuccess": "অর্ডার ও শিপমেন্ট তথ্য সফলভাবে আপডেট হয়েছে ✅"
+        },
+        "errors": {
+            "genericError": "কিছু একটা সমস্যা হয়েছে",
+            "loadOrdersFailed": "অর্ডার লোড করা যায়নি",
+            "orderUpdateFailed": "অর্ডার আপডেট ব্যর্থ হয়েছে",
+            "warehouseStockInsufficient": "নির্বাচিত ওয়্যারহাউসে এই অর্ডারের জন্য পর্যাপ্ত স্টক নেই",
+            "shipmentUpdateFailed": "শিপমেন্ট আপডেট ব্যর্থ হয়েছে",
+            "selectCourierFirst": "শিপমেন্ট তৈরি করার আগে একটি কুরিয়ার নির্বাচন করুন",
+            "shipmentCreateFailed": "শিপমেন্ট তৈরি ব্যর্থ হয়েছে",
+            "saveFailed": "তথ্য আপডেটে সমস্যা হয়েছে",
+            "assignedButRefreshFailed": "সফলভাবে নিয়োগ হয়েছে, কিন্তু রিফ্রেশ ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminOrderManagement": {
+        "header": {
+            "title": "অর্ডার ব্যবস্থাপনা",
+            "subtitle": "সব লাইব্রেরি অর্ডার দেখুন, স্ট্যাটাস আপডেট করুন এবং শিপমেন্ট ট্র্যাক করুন"
+        },
+        "common": {
+            "ok": "ঠিক আছে",
+            "currencyFormat": "{currency} {amount}"
+        },
+        "actions": {
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "saveAll": "সব অর্ডার ও শিপমেন্ট আপডেট সংরক্ষণ করুন"
+        },
+        "stats": {
+            "totalOrders": "মোট অর্ডার",
+            "pageTotalAmount": "পৃষ্ঠার মোট পরিমাণ"
+        },
+        "filters": {
+            "searchPlaceholder": "অর্ডার আইডি, নাম বা মোবাইল দিয়ে খুঁজুন..."
+        },
+        "status": {
+            "all": "সব স্ট্যাটাস",
+            "PENDING": "অপেক্ষমাণ",
+            "CONFIRMED": "নিশ্চিত",
+            "PROCESSING": "প্রক্রিয়াধীন",
+            "SHIPPED": "পাঠানো হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "paymentStatus": {
+            "PAID": "পরিশোধিত",
+            "UNPAID": "অপরিশোধিত",
+            "REFUNDED": "রিফান্ড"
+        },
+        "shipmentStatus": {
+            "PENDING": "অপেক্ষমাণ",
+            "ASSIGNED": "নিযুক্ত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "warehouse": {
+            "defaultSuffix": " - ডিফল্ট",
+            "noStockSuffix": " - স্টক নেই",
+            "availableSuffix": " - উপলব্ধ {count}",
+            "insufficientSuffix": " - অপর্যাপ্ত স্টক ({available}/{required})"
+        },
+        "empty": {
+            "noOrders": "কোনো অর্ডার পাওয়া যায়নি।"
+        },
+        "card": {
+            "orderTitle": "অর্ডার #{id} • {name}",
+            "guestCustomer": "অতিথি ক্রেতা",
+            "noProductDetails": "কোনো পণ্যের বিবরণ নেই",
+            "noImage": "কোনো ছবি নেই",
+            "moreItems": "+{count}টি আরও আইটেম",
+            "createdOn": "তৈরি হয়েছে",
+            "payment": "পেমেন্ট",
+            "items": "আইটেম",
+            "grandTotal": "সর্বমোট",
+            "viewAssign": "দেখুন / ডেলিভারি নিয়োগ করুন"
+        },
+        "pagination": {
+            "previous": "আগের",
+            "next": "পরের",
+            "pageOf": "পৃষ্ঠা {page} / {pages}"
+        },
+        "detail": {
+            "title": "অর্ডারের বিবরণ",
+            "orderIdLabel": "অর্ডার আইডি: {id}",
+            "close": "বন্ধ করুন ✕",
+            "customerInfo": "ক্রেতার তথ্য",
+            "noName": "নাম নেই",
+            "mobile": "মোবাইল: {value}",
+            "altMobile": "বিকল্প মোবাইল: {value}",
+            "email": "ইমেইল: {value}",
+            "paymentMethod": "পেমেন্ট পদ্ধতি:",
+            "currency": "মুদ্রা:",
+            "orderDate": "অর্ডারের তারিখ:",
+            "deliveryAddress": "ডেলিভারি ঠিকানা",
+            "area": "এলাকা: {value}",
+            "district": "জেলা: {value}",
+            "country": "দেশ: {value}",
+            "paymentScreenshot": "পেমেন্ট স্ক্রিনশট",
+            "paymentScreenshotAlt": "পেমেন্ট স্ক্রিনশট",
+            "screenshotHint": "ক্রেতা পেমেন্টের পরে এই স্ক্রিনশট আপলোড করেছেন।",
+            "viewScreenshot": "স্ক্রিনশট দেখুন",
+            "orderItemsTitle": "অর্ডারের আইটেম",
+            "itemAlt": "অর্ডার আইটেম",
+            "noImage": "কোনো ছবি নেই",
+            "productNameNotAvailable": "পণ্যের নাম পাওয়া যাচ্ছে না",
+            "variantLabel": "ভ্যারিয়েন্ট: {value}",
+            "qtyPrice": "পরিমাণ: {qty} x {price}",
+            "subtotal": "সাবটোটাল",
+            "discount": "ছাড়",
+            "vat": "ভ্যাট",
+            "shipping": "শিপিং",
+            "grandTotal": "সর্বমোট",
+            "orderStatusTitle": "অর্ডার স্ট্যাটাস",
+            "orderStatusLabel": "অর্ডার স্ট্যাটাস",
+            "paymentStatusLabel": "পেমেন্ট স্ট্যাটাস",
+            "transactionIdLabel": "ট্রানজেকশন আইডি",
+            "transactionIdPlaceholder": "বিকাশ/নগদ txn id...",
+            "adminOnlyNote": "* শুধুমাত্র অ্যাডমিন এই অপশনগুলো সফলভাবে আপডেট করতে পারেন।",
+            "shipmentStatusTitle": "শিপমেন্ট স্ট্যাটাস",
+            "currentStatus": "বর্তমান: {status}",
+            "noShipmentHint": "এই অর্ডারের জন্য এখনও কোনো শিপমেন্ট তৈরি হয়নি। নতুন শিপমেন্ট তৈরি করতে নিচের ফর্ম পূরণ করুন।",
+            "warehouseLabel": "ওয়্যারহাউস",
+            "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+            "warehouseStockHint": "শুধুমাত্র পর্যাপ্ত স্টক আছে এমন ওয়্যারহাউস নির্বাচনযোগ্য।",
+            "courierLabel": "কুরিয়ার",
+            "selectCourier": "কুরিয়ার নির্বাচন করুন",
+            "courierPlaceholder": "কুরিয়ারের নাম...",
+            "trackingNumberLabel": "ট্র্যাকিং নম্বর",
+            "trackingPlaceholder": "ট্র্যাকিং নম্বর...",
+            "shipmentStatusLabel": "শিপমেন্ট স্ট্যাটাস",
+            "expectedDate": "প্রত্যাশিত তারিখ",
+            "deliveredDate": "ডেলিভারির তারিখ",
+            "createdAt": "তৈরি হয়েছে",
+            "courierStatus": "কুরিয়ার স্ট্যাটাস:",
+            "lastSynced": "সর্বশেষ সিঙ্ক:",
+            "externalId": "এক্সটার্নাল আইডি:",
+            "trackingUrl": "ট্র্যাকিং URL:",
+            "open": "খুলুন",
+            "deliveryManAssignmentTitle": "ডেলিভারিম্যান নিয়োগ",
+            "deliveryManAssignmentHint": "অর্ডার ব্যবস্থাপনা থেকে সরাসরি এই শিপমেন্টটি একজন সক্রিয় ডেলিভারিম্যানকে নিয়োগ বা পুনঃনিয়োগ করুন।",
+            "assignDeliveryMan": "ডেলিভারিম্যান নিয়োগ করুন",
+            "reassignDeliveryMan": "ডেলিভারিম্যান পুনঃনিয়োগ করুন",
+            "createShipmentFirst": "প্রথমে একটি শিপমেন্ট তৈরি ও সংরক্ষণ করুন। শিপমেন্ট থাকলে এখান থেকে ডেলিভারিম্যান নিয়োগ করতে পারবেন।",
+            "assignedAt": "নিয়োগের সময়",
+            "pickupProof": "পিকআপ প্রমাণ",
+            "confirmedOn": "নিশ্চিত হয়েছে {date} তারিখে",
+            "viewPickupImage": "পিকআপ ছবি দেখুন",
+            "assignmentNote": "নিয়োগের নোট",
+            "rejectionReason": "প্রত্যাখ্যানের কারণ",
+            "recentAssignmentLogs": "সাম্প্রতিক নিয়োগের লগ",
+            "logBy": "{name} কর্তৃক",
+            "noAssignmentHistory": "এখনও কোনো নিয়োগের ইতিহাস নেই।",
+            "noDeliveryManAssigned": "এই শিপমেন্টের জন্য এখনও কোনো ডেলিভারিম্যান নিয়োগ করা হয়নি।",
+            "deliveryProofFlow": "ডেলিভারি প্রমাণের প্রবাহ",
+            "deliveryProofHint": "শিপমেন্ট OUT_FOR_DELIVERY-তে পৌঁছালে ক্রেতা PIN + চেকলিস্ট + ঐচ্ছিক ছবি দিয়ে নিশ্চিত করতে পারবেন।",
+            "deliveryPin": "ডেলিভারি PIN",
+            "pinWillGenerate": "OFD-তে জেনারেট হবে",
+            "confirmationLink": "নিশ্চিতকরণ লিংক",
+            "linkWillAppear": "শিপমেন্ট ডেলিভারির জন্য বের হলে লিংক স্বয়ংক্রিয়ভাবে দেখা যাবে।",
+            "customerProofStatus": "ক্রেতার প্রমাণ স্ট্যাটাস",
+            "proofChecks": "চেক: গ্রহণ / সঠিক আইটেম / ভালো অবস্থা",
+            "viewProofPhoto": "প্রমাণ ছবি দেখুন",
+            "noCustomerProof": "এখনও কোনো ক্রেতার ডেলিভারি প্রমাণ জমা হয়নি।",
+            "shipmentAdminNote": "* শুধুমাত্র অ্যাডমিন শিপমেন্ট তৈরি/আপডেট করতে পারেন; অন্য ব্যবহারকারীরা API থেকে Forbidden পাবেন।"
+        },
+        "successModal": {
+            "title": "আপডেট সফল",
+            "defaultMessage": "তথ্য সফলভাবে আপডেট হয়েছে।"
+        },
+        "errorModal": {
+            "title": "ত্রুটি",
+            "defaultMessage": "একটি ত্রুটি ঘটেছে।"
+        },
+        "toasts": {
+            "saveSuccess": "অর্ডার ও শিপমেন্ট তথ্য সফলভাবে আপডেট হয়েছে ✅"
+        },
+        "errors": {
+            "genericError": "কিছু একটা সমস্যা হয়েছে",
+            "loadOrdersFailed": "অর্ডার লোড করা যায়নি",
+            "orderUpdateFailed": "অর্ডার আপডেট ব্যর্থ হয়েছে",
+            "warehouseStockInsufficient": "নির্বাচিত ওয়্যারহাউসে এই অর্ডারের জন্য পর্যাপ্ত স্টক নেই",
+            "shipmentUpdateFailed": "শিপমেন্ট আপডেট ব্যর্থ হয়েছে",
+            "selectCourierFirst": "শিপমেন্ট তৈরি করার আগে একটি কুরিয়ার নির্বাচন করুন",
+            "shipmentCreateFailed": "শিপমেন্ট তৈরি ব্যর্থ হয়েছে",
+            "saveFailed": "তথ্য আপডেটে সমস্যা হয়েছে",
+            "assignedButRefreshFailed": "সফলভাবে নিয়োগ হয়েছে, কিন্তু রিফ্রেশ ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminAssignDeliveryManModal": {
+        "title": "Assign Delivery Man",
+        "description": "Assign one or more shipments to an active delivery man. The assignment will appear in the driver dashboard immediately.",
+        "selectedShipments": "Selected Shipments",
+        "shipmentLabel": "Shipment #{id}",
+        "orderLabel": "Order #{id}",
+        "warehouseLabel": "Warehouse #{id}",
+        "warehouseNotSet": "Warehouse not set",
+        "deliveryManLabel": "Delivery man",
+        "selectDeliveryMan": "Select delivery man",
+        "noteLabel": "Assignment note",
+        "notePlaceholder": "Optional dispatch or assignment note",
+        "actions": {
+            "cancel": "Cancel",
+            "assign": "Assign Delivery Man",
+            "assigning": "Assigning..."
+        },
+        "success": {
+            "singleAssigned": "Delivery assigned successfully",
+            "multipleAssigned": "Deliveries assigned successfully"
+        },
+        "errors": {
+            "selectDeliveryMan": "Please select a delivery man.",
+            "selectShipment": "Please select at least one shipment.",
+            "assignFailed": "Failed to assign delivery man"
+        }
     }
 }
