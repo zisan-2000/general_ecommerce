@@ -1983,5 +1983,148 @@
             "createFailed": "শিপমেন্ট তৈরি করা যায়নি",
             "generic": "কিছু একটা সমস্যা হয়েছে"
         }
+    },
+    "AdminDeliveryDashboard": {
+        "hero": {
+            "badge": "ডেলিভারি কার্যক্রম",
+            "title": "ডেলিভারি ড্যাশবোর্ড",
+            "description": "নতুন নিযুক্ত ডেলিভারি পর্যালোচনা করুন, ওয়্যারহাউস পিকআপ নিশ্চিত করুন এবং মোবাইল-বান্ধব অপারেশনাল ওয়ার্কস্পেস থেকে শিপমেন্ট স্ট্যাটাস হালনাগাদ রাখুন।"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "refreshing": "রিফ্রেশ হচ্ছে..."
+        },
+        "summary": {
+            "assigned": "নিযুক্ত",
+            "accepted": "গৃহীত",
+            "rejected": "প্রত্যাখ্যাত",
+            "pickedFromWarehouse": "ওয়্যারহাউস থেকে পিকআপ",
+            "inTransit": "পরিবহনে",
+            "delivered": "ডেলিভারি হয়েছে"
+        },
+        "tabs": {
+            "newlyAssigned": "নতুন নিযুক্ত",
+            "accepted": "গৃহীত ডেলিভারি",
+            "rejected": "প্রত্যাখ্যাত ডেলিভারি",
+            "pickedUp": "পিকআপ হয়েছে",
+            "inTransit": "পরিবহনে",
+            "delivered": "ডেলিভারি হয়েছে",
+            "exceptions": "ব্যতিক্রম"
+        },
+        "empty": {
+            "title": "{tab}-এ কোনো ডেলিভারি নেই",
+            "description": "নতুন নিয়োগ ও স্ট্যাটাস আপডেট স্বয়ংক্রিয়ভাবে এখানে দেখা যাবে।"
+        },
+        "errors": {
+            "loadFailed": "ডেলিভারি ড্যাশবোর্ড লোড করা যায়নি"
+        }
+    },
+    "AdminDeliveryAssignmentCard": {
+        "notUpdated": "আপডেট হয়নি",
+        "orderLabel": "অর্ডার #{id}",
+        "shipmentLabel": "শিপমেন্ট #{id}",
+        "assignedAt": "নিযুক্ত {date}",
+        "pickupProofAlt": "পিকআপ প্রমাণ",
+        "rejectionReason": "প্রত্যাখ্যানের কারণ: {reason}",
+        "acceptToUnlock": "সম্পূর্ণ ক্রেতা, ঠিকানা ও পণ্যের বিবরণ দেখতে এই ডেলিভারিটি গ্রহণ করুন।",
+        "info": {
+            "customerPhone": "ক্রেতার ফোন",
+            "shipmentStatus": "শিপমেন্ট স্ট্যাটাস",
+            "pickupProof": "পিকআপ প্রমাণ",
+            "pickupConfirmed": "{date} তারিখে নিশ্চিত",
+            "pickupPending": "অপেক্ষমাণ",
+            "tracking": "ট্র্যাকিং",
+            "notAssigned": "নিযুক্ত নয়"
+        },
+        "sections": {
+            "deliveryDetails": "ডেলিভারির বিবরণ",
+            "warehouse": "ওয়্যারহাউস",
+            "productList": "পণ্যের তালিকা",
+            "statusHistory": "স্ট্যাটাস ইতিহাস"
+        },
+        "labels": {
+            "alternatePhone": "বিকল্প ফোন",
+            "orderStatus": "অর্ডার স্ট্যাটাস",
+            "shipmentStatus": "শিপমেন্ট স্ট্যাটাস",
+            "sku": "SKU",
+            "qty": "পরিমাণ",
+            "na": "প্রযোজ্য নয়",
+            "noLocationNote": "অতিরিক্ত অবস্থান নোট নেই",
+            "itemCount": "{count}টি আইটেম",
+            "eventCount": "{count}টি ইভেন্ট"
+        },
+        "actions": {
+            "accept": "গ্রহণ করুন",
+            "accepting": "গ্রহণ করা হচ্ছে...",
+            "reject": "প্রত্যাখ্যান",
+            "collectFromWarehouse": "ওয়্যারহাউস থেকে পণ্য সংগ্রহ করুন",
+            "updating": "আপডেট হচ্ছে...",
+            "markStatus": "{status} হিসেবে চিহ্নিত করুন"
+        },
+        "statuses": {
+            "ASSIGNED": "নিযুক্ত",
+            "ACCEPTED": "গৃহীত",
+            "REJECTED": "প্রত্যাখ্যাত",
+            "PICKUP_CONFIRMED": "পিকআপ নিশ্চিত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত"
+        },
+        "errors": {
+            "acceptFailed": "ডেলিভারি গ্রহণ করা যায়নি",
+            "locationDenied": "ডেলিভারি ডেলিভারি হিসেবে চিহ্নিত করতে অবস্থান অ্যাক্সেস আবশ্যক। অনুগ্রহ করে আপনার ব্রাউজার সেটিংসে অবস্থান অ্যাক্সেস চালু করুন।",
+            "statusUpdateFailed": "ডেলিভারি {status} হিসেবে চিহ্নিত করা যায়নি"
+        }
+    },
+    "AdminRejectAssignmentModal": {
+        "title": "ডেলিভারি প্রত্যাখ্যান করুন",
+        "description": "প্রত্যাখ্যানের কারণ আবশ্যক এবং এটি অ্যাডমিন ও ওয়্যারহাউস ব্যবহারকারীদের কাছে দৃশ্যমান হবে।",
+        "reasonPlaceholder": "আপনি কেন এই ডেলিভারিটি প্রত্যাখ্যান করছেন?",
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "reject": "ডেলিভারি প্রত্যাখ্যান করুন",
+            "submitting": "জমা দেওয়া হচ্ছে..."
+        },
+        "success": {
+            "rejected": "ডেলিভারি সফলভাবে প্রত্যাখ্যাত হয়েছে"
+        },
+        "errors": {
+            "reasonRequired": "প্রত্যাখ্যানের কারণ আবশ্যক।",
+            "rejectFailed": "ডেলিভারি প্রত্যাখ্যান করা যায়নি"
+        }
+    },
+    "AdminPickupConfirmationModal": {
+        "title": "ওয়্যারহাউস থেকে পণ্য সংগ্রহ করুন",
+        "description": "এগিয়ে যাওয়ার আগে ওয়্যারহাউস হ্যান্ডওভার নিশ্চিত করুন এবং একটি পিকআপ প্রমাণ ছবি আপলোড করুন।",
+        "checkboxes": {
+            "productReceived": "পণ্য গ্রহণ করা হয়েছে",
+            "packagingOk": "প্যাকেজিং ঠিক আছে",
+            "productInGoodCondition": "পণ্য ভালো অবস্থায় আছে"
+        },
+        "fields": {
+            "pickupNote": "পিকআপ নোট",
+            "proofImage": "পিকআপ প্রমাণ ছবি"
+        },
+        "placeholders": {
+            "pickupNote": "প্যাকেজিং, হ্যান্ডওভার বা অবস্থা সম্পর্কিত নোট যোগ করুন",
+            "captureOrUpload": "ছবি তুলুন বা আপলোড করুন",
+            "mobileCameraSupported": "মোবাইল ক্যামেরা সমর্থিত"
+        },
+        "previewAlt": "পিকআপ প্রমাণ প্রিভিউ",
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "confirm": "পিকআপ নিশ্চিত করুন",
+            "submitting": "জমা দেওয়া হচ্ছে..."
+        },
+        "success": {
+            "confirmed": "সফলভাবে পিকআপ নিশ্চিত করা হয়েছে"
+        },
+        "errors": {
+            "productReceivedRequired": "অনুগ্রহ করে নিশ্চিত করুন যে পণ্যটি গ্রহণ করা হয়েছে।",
+            "proofImageRequired": "অনুগ্রহ করে একটি প্রমাণ ছবি তুলুন বা আপলোড করুন।",
+            "confirmFailed": "পিকআপ নিশ্চিত করা যায়নি"
+        }
     }
 }

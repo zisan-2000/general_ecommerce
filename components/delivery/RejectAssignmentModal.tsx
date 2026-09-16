@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Dialog,
   DialogContent,
@@ -23,13 +24,15 @@ export function RejectAssignmentModal({
   onOpenChange: (open: boolean) => void;
   onSuccess: (message: string) => Promise<void> | void;
 }) {
+  const t = useTranslations("AdminRejectAssignmentModal");
+
   const [reason, setReason] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
   async function handleSubmit() {
     if (!reason.trim()) {
-      setError("Rejection reason is required.");
+      setError(t("errors.reasonRequired"));
       return;
     }
 
@@ -37,29 +40,32 @@ export function RejectAssignmentModal({
       setSubmitting(true);
       setError("");
 
-      const response = await fetch(`/api/delivery-assignments/${assignmentId}/reject`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `/api/delivery-assignments/${assignmentId}/reject`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            rejectionReason: reason.trim(),
+          }),
         },
-        body: JSON.stringify({
-          rejectionReason: reason.trim(),
-        }),
-      });
+      );
 
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.success) {
-        throw new Error(payload.message || "Failed to reject delivery");
+        throw new Error(payload.message || t("errors.rejectFailed"));
       }
 
       setReason("");
       onOpenChange(false);
-      await onSuccess(payload.message || "Delivery rejected successfully");
+      await onSuccess(payload.message || t("success.rejected"));
     } catch (submitError) {
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Failed to reject delivery",
+          : t("errors.rejectFailed"),
       );
     } finally {
       setSubmitting(false);
@@ -70,10 +76,8 @@ export function RejectAssignmentModal({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-lg border-border bg-card">
         <DialogHeader>
-          <DialogTitle>Reject Delivery</DialogTitle>
-          <DialogDescription>
-            Rejection reason is required and will be visible to admin and warehouse users.
-          </DialogDescription>
+          <DialogTitle>{t("title")}</DialogTitle>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
 
         <div className="space-y-3">
@@ -81,7 +85,7 @@ export function RejectAssignmentModal({
             value={reason}
             onChange={(event) => setReason(event.target.value)}
             rows={5}
-            placeholder="Why are you rejecting this delivery?"
+            placeholder={t("reasonPlaceholder")}
             className="input-theme border-border bg-background"
           />
           {error ? (
@@ -98,10 +102,10 @@ export function RejectAssignmentModal({
             onClick={() => onOpenChange(false)}
             disabled={submitting}
           >
-            Cancel
+            {t("actions.cancel")}
           </Button>
           <Button type="button" onClick={handleSubmit} disabled={submitting}>
-            {submitting ? "Submitting..." : "Reject Delivery"}
+            {submitting ? t("actions.submitting") : t("actions.reject")}
           </Button>
         </DialogFooter>
       </DialogContent>

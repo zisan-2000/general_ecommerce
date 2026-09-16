@@ -91,69 +91,1861 @@
     }
   },
   "AdminDashboard": {
-    "overview": "Complete overview of your e-commerce performance",
-    "ranges": { "today": "Today", "week": "Week", "month": "Month", "year": "Year" },
-    "rangeTitles": { "today": "Today's Performance", "week": "Weekly Performance", "month": "Monthly Performance", "year": "Annual Performance" },
-    "actions": { "refresh": "Refresh", "retry": "Retry" },
-    "empty": { "title": "Dashboard Unavailable", "description": "Unable to load metrics. Please try again." },
+    "overview": "A complete picture of your e-commerce operations",
+    "ranges": {
+      "today": "Today",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year"
+    },
+    "rangeTitles": {
+      "today": "Today's Activity",
+      "week": "Weekly Activity",
+      "month": "Monthly Activity",
+      "year": "Yearly Activity"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "retry": "Try Again"
+    },
+    "empty": {
+      "title": "Dashboard Unavailable",
+      "description": "Data could not be loaded. Please try again."
+    },
     "kpis": {
-      "netRevenue": "Net Revenue", "totalOrders": "Total Orders", "pendingOrders": "Pending Orders",
-      "operationalQueue": "Operational queue", "paidOrders": "Paid Orders", "clearedPayments": "Cleared payments",
-      "activeProducts": "Active Products", "variants": "{count} variants", "conversionRate": "Conversion Rate",
-      "visitorsToOrders": "Visitors to orders"
+      "netRevenue": "Net Revenue",
+      "totalOrders": "Total Orders",
+      "pendingOrders": "Pending Orders",
+      "operationalQueue": "Operational Queue",
+      "paidOrders": "Paid Orders",
+      "clearedPayments": "Cleared Payments",
+      "activeProducts": "Active Products",
+      "variants": "{count} variants",
+      "conversionRate": "Conversion Rate",
+      "visitorsToOrders": "Visitors to Orders"
     },
-    "chartTypes": { "revenue": "Revenue", "orders": "Orders", "refunds": "Refunds" },
-    "performance": { "title": "Performance Trends", "subtitle": "Revenue, orders, and refunds over time" },
-    "metrics": { "totalRevenue": "Total Revenue", "avgOrderValue": "Avg Order Value", "successRate": "Success Rate" },
+    "chartTypes": {
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "refunds": "Refunds"
+    },
+    "performance": {
+      "title": "Performance Trend",
+      "subtitle": "Revenue, orders and refunds over time"
+    },
+    "metrics": {
+      "totalRevenue": "Total Revenue",
+      "avgOrderValue": "Average Order Value",
+      "successRate": "Success Rate"
+    },
     "distribution": {
-      "title": "Distribution Analysis", "subtitle": "Payment methods and inventory breakdown with clear segment totals",
-      "paymentMethods": "Payment Methods", "paymentSubtitle": "Order payment split in the selected range",
-      "inventoryStatus": "Inventory Status", "inventorySubtitle": "Current stock health across all tracked variants"
+      "title": "Distribution Analysis",
+      "subtitle": "Complete breakdown of payment methods and inventory",
+      "paymentMethods": "Payment Methods",
+      "paymentSubtitle": "Breakdown of order payments in the selected period",
+      "inventoryStatus": "Inventory Status",
+      "inventorySubtitle": "Current stock situation across all variants"
     },
-    "inventory": { "inStock": "In Stock", "lowStock": "Low Stock", "outOfStock": "Out of Stock" },
-    "weekly": { "title": "Weekly Performance", "subtitle": "Revenue vs orders in the selected range", "revenueBdt": "Revenue (BDT)" },
-    "topProducts": { "title": "Top Products", "subtitle": "Best selling items by revenue" },
+    "inventory": {
+      "inStock": "In Stock",
+      "lowStock": "Low Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "weekly": {
+      "title": "Weekly Performance",
+      "subtitle": "Revenue and orders comparison in the selected period",
+      "revenueBdt": "Revenue (BDT)"
+    },
+    "topProducts": {
+      "title": "Top Products",
+      "subtitle": "Best-selling products by revenue"
+    },
     "orders": {
-      "title": "Order Pipeline", "subtitle": "Real-time order status breakdown", "pending": "Pending",
-      "processing": "Processing", "shipped": "Shipped", "delivered": "Delivered", "cancelled": "Cancelled",
-      "unpaid": "Unpaid", "live": "Live", "recent": "Recent Orders", "guest": "Guest", "empty": "No recent orders"
+      "title": "Order Pipeline",
+      "subtitle": "Snapshot of current order statuses",
+      "pending": "Pending",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "unpaid": "Unpaid",
+      "live": "Live",
+      "recent": "Recent Orders",
+      "guest": "Guest",
+      "empty": "No recent orders"
     },
-    "warehouse": { "title": "Warehouse Distribution", "subtitle": "Stock by location", "units": "Units", "totalVariants": "Total Variants", "reservedUnits": "Reserved Units" },
+    "warehouse": {
+      "title": "Warehouse Distribution",
+      "subtitle": "Stock by location",
+      "units": "Units",
+      "totalVariants": "Total Variants",
+      "reservedUnits": "Reserved Units"
+    },
     "quickActions": {
-      "title": "Quick Actions", "subtitle": "Common administrative tasks",
-      "addProduct": "Add Product", "addProductDescription": "Create new products and variants",
-      "viewOrders": "View Orders", "viewOrdersDescription": "Manage fulfillment and shipping",
-      "checkStock": "Check Stock", "checkStockDescription": "Monitor inventory levels",
-      "createCoupon": "Create Coupon", "createCouponDescription": "Launch promotions",
-      "supportInbox": "Support Inbox", "supportInboxDescription": "Handle customer queries"
+      "title": "Quick Actions",
+      "subtitle": "Common administrative tasks",
+      "addProduct": "Add Product",
+      "addProductDescription": "Create new products and variants",
+      "viewOrders": "View Orders",
+      "viewOrdersDescription": "Manage order fulfillment and shipping",
+      "checkStock": "Check Stock",
+      "checkStockDescription": "Monitor inventory levels",
+      "createCoupon": "Create Coupon",
+      "createCouponDescription": "Launch promotional campaigns",
+      "supportInbox": "Support Inbox",
+      "supportInboxDescription": "Answer customer questions"
     },
     "customers": {
-      "title": "Customer Intelligence", "subtitle": "Audience behavior and loyalty metrics", "totalUsers": "Total Users",
-      "activeBuyers": "Active Buyers", "repeatRate": "Repeat Rate", "avgRating": "Avg Rating", "topCustomers": "Top Customers"
+      "title": "Customer Analytics",
+      "subtitle": "Measure customer behavior and loyalty",
+      "totalUsers": "Total Users",
+      "activeBuyers": "Active Buyers",
+      "repeatRate": "Repeat Rate",
+      "avgRating": "Average Rating",
+      "topCustomers": "Top Customers"
     },
     "marketing": {
-      "title": "Marketing Performance", "subtitle": "Traffic sources and campaign metrics", "liveUsers": "Live Users",
-      "totalVisitors": "Total Visitors", "pageviews": "Pageviews", "trafficVisitors": "Traffic Visitors",
-      "visitorTrend": "Visitor Trend", "visitors": "Visitors", "pageViews": "Page Views", "averageSlice": "Average Slice",
-      "noVisitorData": "No visitor analytics data available for the selected period."
+      "title": "Marketing Performance",
+      "subtitle": "Measure traffic sources and campaigns",
+      "liveUsers": "Live Users",
+      "totalVisitors": "Total Visitors",
+      "pageviews": "Page Views",
+      "trafficVisitors": "Traffic Visitors",
+      "visitorTrend": "Visitor Trend",
+      "visitors": "Visitors",
+      "pageViews": "Page Views",
+      "averageSlice": "Average Slice",
+      "noVisitorData": "No visitor analytics available for the selected period."
     },
     "support": {
-      "title": "Support Queue", "subtitle": "Customer service metrics", "openChats": "Open Chats",
-      "refundRequests": "Refund Requests", "noConversations": "No active conversations"
+      "title": "Support Queue",
+      "subtitle": "Customer service metrics",
+      "openChats": "Open Chats",
+      "refundRequests": "Refund Requests",
+      "noConversations": "No active conversations"
     },
-    "alerts": { "title": "Inventory Alerts", "subtitle": "Items requiring attention", "healthy": "All stock levels healthy" },
-    "activity": { "title": "System Activity", "subtitle": "Recent platform events", "empty": "No recent activity" },
-    "common": { "noData": "No data" }
+    "alerts": {
+      "title": "Stock Alerts",
+      "subtitle": "Products that need attention",
+      "healthy": "All products are well-stocked"
+    },
+    "activity": {
+      "title": "System Activity",
+      "subtitle": "Recent platform events",
+      "empty": "No recent activity"
+    },
+    "common": {
+      "noData": "No data"
+    }
   },
   "AdminHeader": {
-    "admin": "Admin", "user": "User", "toggleMenu": "Toggle menu", "changeLanguage": "Change language",
-    "selectTheme": "Select theme", "themes": { "light": "Light", "dark": "Dark" },
-    "notifications": {
-      "title": "Admin Notifications", "loading": "Loading...",
-      "unread": "{count, plural, =0 {No unread notifications} =1 {# unread notification} other {# unread notifications}}",
-      "empty": "No admin notifications.", "viewAll": "View all", "noScm": "No SCM notifications.",
-      "investors": "Investors", "noInvestors": "No investor notifications."
+    "admin": "Admin",
+    "user": "User",
+    "toggleMenu": "Toggle menu",
+    "changeLanguage": "Change language",
+    "selectTheme": "Select theme",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark"
     },
-    "viewSite": "View Site", "viewProfile": "View Profile", "profile": "Profile", "me": "Me", "logout": "Logout"
+    "notifications": {
+      "title": "Admin Notifications",
+      "loading": "Loading...",
+      "unread": "{count, plural, =0 {No unread notifications} =1 {# unread notification} other {# unread notifications}}",
+      "empty": "No admin notifications.",
+      "viewAll": "View All",
+      "noScm": "No SCM notifications.",
+      "investors": "Investors",
+      "noInvestors": "No investor notifications."
+    },
+    "viewSite": "View Site",
+    "viewProfile": "View Profile",
+    "profile": "Profile",
+    "me": "Me",
+    "logout": "Logout"
+  },
+  "AdminSidebar": {
+    "Overview": "Overview",
+    "Dashboard": "Dashboard",
+    "Analytics": "Analytics",
+    "Reports": "Reports",
+    "Operations": "Operations",
+    "Users": "Users",
+    "Products": "Products",
+    "Reviews": "Reviews",
+    "Orders": "Orders",
+    "Shipments": "Shipments",
+    "Delivery": "Delivery",
+    "Warehouse": "Warehouse",
+    "Warehouse Dashboard": "Warehouse Dashboard",
+    "Logistics": "Logistics",
+    "Stock Management": "Stock Management",
+    "Shipping Rates": "Shipping Rates",
+    "Deliveryman": "Deliveryman",
+    "Payroll": "Payroll",
+    "SCM": "SCM",
+    "Workspace": "Workspace",
+    "SCM Home": "SCM Home",
+    "My Tasks": "My Tasks",
+    "Notifications": "Notifications",
+    "Exceptions": "Exceptions",
+    "Procurement": "Procurement",
+    "Purchase Requisitions": "Purchase Requisitions",
+    "RFQs": "RFQs",
+    "Comparative Statements": "Comparative Statements",
+    "Purchase Orders": "Purchase Orders",
+    "Landed Costs": "Landed Costs",
+    "Goods Receipts": "Goods Receipts",
+    "Material Requests": "Material Requests",
+    "Material Releases": "Material Releases",
+    "Release Report": "Release Report",
+    "Warehouse Transfers": "Warehouse Transfers",
+    "Replenishment": "Replenishment",
+    "Reorder Alerts": "Reorder Alerts",
+    "Warehouse Locations": "Warehouse Locations",
+    "Stock Reports": "Stock Reports",
+    "Stock Cards": "Stock Cards",
+    "Physical Verifications": "Physical Verifications",
+    "Asset Lifecycle": "Asset Lifecycle",
+    "Supplier": "Supplier",
+    "Suppliers": "Suppliers",
+    "Supplier Portal Access": "Supplier Portal Access",
+    "Vendor Approvals": "Vendor Approvals",
+    "Vendor Feedback": "Vendor Feedback",
+    "Supplier Intelligence": "Supplier Intelligence",
+    "SLA Policies": "SLA Policies",
+    "Supplier Returns": "Supplier Returns",
+    "Finance": "Finance",
+    "Payment Requests": "Payment Requests",
+    "Payment Reports": "Payment Reports",
+    "Supplier Invoices": "Supplier Invoices",
+    "Supplier Ledger": "Supplier Ledger",
+    "3-Way Match": "3-Way Match",
+    "Governance": "Governance",
+    "SCM Dashboard": "SCM Dashboard",
+    "Business Network": "Business Network",
+    "Business Home": "Business Home",
+    "Organizations": "Organizations",
+    "Business Accounts": "Business Accounts",
+    "Business Orders": "Business Orders",
+    "Corporate Sales": "Corporate Sales",
+    "Sales RFQs": "Sales RFQs",
+    "Quotations": "Quotations",
+    "Customer POs": "Customer POs",
+    "Corporate Credit": "Corporate Credit",
+    "Pricing": "Pricing",
+    "Pricing Tiers": "Pricing Tiers",
+    "Contract Prices": "Contract Prices",
+    "Partners": "Partners",
+    "Partner Profiles": "Partner Profiles",
+    "Agreements": "Agreements",
+    "Registered Leads": "Registered Leads",
+    "Commission Plans": "Commission Plans",
+    "Commission Ledger": "Commission Ledger",
+    "Settlements": "Settlements",
+    "Payout Accounts": "Payout Accounts",
+    "Risk Review": "Risk Review",
+    "Dispute Evidence": "Dispute Evidence",
+    "Audit Log": "Audit Log",
+    "Business Reports": "Business Reports",
+    "Investors": "Investors",
+    "Investor Home": "Investor Home",
+    "Investor Registry": "Investor Registry",
+    "Capital Ledger": "Capital Ledger",
+    "Allocations": "Allocations",
+    "Profit Runs": "Profit Runs",
+    "Retained Profit": "Retained Profit",
+    "Payouts": "Payouts",
+    "Withdrawals": "Withdrawals",
+    "Documents": "Documents",
+    "Statements": "Statements",
+    "Statement Schedules": "Statement Schedules",
+    "Profile Requests": "Profile Requests",
+    "Activity Log": "Activity Log",
+    "Portal Access": "Portal Access",
+    "Management": "Management",
+    "Couriers": "Couriers",
+    "VAT Management": "VAT Management",
+    "Blogs Management": "Blogs Management",
+    "Categories": "Categories",
+    "Brands": "Brands",
+    "Flash Sales": "Flash Sales",
+    "Search Management": "Search Management",
+    "Newsletter": "Newsletter",
+    "Coupons": "Coupons",
+    "Communication": "Communication",
+    "Chats": "Chats",
+    "Settings": "Settings",
+    "General Settings": "General Settings",
+    "Writers": "Writers",
+    "Publishers": "Publishers",
+    "Store Features": "Store Features",
+    "Gallery Management": "Gallery Management",
+    "RBAC": "Role-Based Access Control"
+  },
+  "AdminAnalytics": {
+    "title": "Analytics Dashboard",
+    "subtitle": "Traffic, sources, geography, and devices analysis",
+    "common": {
+      "unknown": "Unknown",
+      "visitors": "Visitors",
+      "timeValue": "Time: {value}"
+    },
+    "duration": {
+      "seconds": "{count} seconds",
+      "minutesSeconds": "{minutes} minutes {seconds} seconds",
+      "hoursMinutes": "{hours} hours {minutes} minutes"
+    },
+    "tabs": {
+      "traffic": "Traffic",
+      "sources": "Sources",
+      "geo": "Geography",
+      "devices": "Devices"
+    },
+    "deviceTabs": {
+      "deviceType": "Device Type",
+      "browser": "Browser",
+      "os": "Operating System"
+    },
+    "ranges": {
+      "today": "Today",
+      "last24Hours": "Last 24 hours",
+      "last7Days": "Last 7 days",
+      "last30Days": "Last 30 days",
+      "custom": "Custom",
+      "to": "to",
+      "hourly": "Hourly",
+      "daily": "Daily",
+      "hourlyHint": "Displayed hourly for 24-hour ranges"
+    },
+    "kpis": {
+      "liveUsers": "Live Users",
+      "totalVisitors": "Total Visitors",
+      "pageViews": "Page Views",
+      "totalActiveTime": "Total Active Time",
+      "avgActiveTime": "Average Active Time"
+    },
+    "traffic": {
+      "visitorsOverTime": "Visitors Over Time",
+      "uniqueVisitorsTrend": "Unique visitors trend",
+      "pageViewsOverTime": "Page Views Over Time",
+      "pageViewsTrend": "Page views trend",
+      "peakVisitors": "Peak visitors: {count}",
+      "totalPageViews": "Total page views: {count}"
+    },
+    "pages": {
+      "title": "Top Pages",
+      "sortedByViews": "Sorted by views",
+      "path": "Path",
+      "views": "Views",
+      "avgActiveTime": "Avg. Active Time",
+      "engagement": "Engagement",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "sources": {
+      "title": "Traffic Sources",
+      "subtitle": "Where visitors are coming from",
+      "visits": "Visits"
+    },
+    "geo": {
+      "title": "Geographic Location",
+      "notConfigured": "Geographic location analytics is not configured",
+      "configurationHint": "Please configure a geo location provider to enable this feature.",
+      "topCountries": "Top Countries",
+      "topCities": "Top Cities"
+    },
+    "empty": {
+      "analytics": "No analytics data available for the selected period.",
+      "pages": "No page data available for the selected period.",
+      "sources": "No source data available for the selected period."
+    },
+    "errors": {
+      "load": "Could not load analytics data.",
+      "loadWithStatus": "Could not load analytics (status: {status}).",
+      "invalidDateRange": "Invalid date range. Please select a different date."
+    }
+  },
+  "AdminReports": {
+    "hero": {
+      "badge": "Commerce Insights",
+      "title": "Executive Dashboard Overview",
+      "description": "Get a clear, real-time view of your business performance at a glance. Monitor key metrics from sales and profitability to VAT, inventory, and delivery — all in one streamlined dashboard designed for smarter decisions."
+    },
+    "quickRanges": {
+      "last7": "Last 7 days",
+      "last30": "Last 30 days",
+      "last90": "Last 90 days"
+    },
+    "filters": {
+      "from": "From",
+      "to": "To"
+    },
+    "actions": {
+      "applyFilters": "Apply Filters",
+      "exportCsv": "Export CSV",
+      "exportSection": "Export {section}"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "sales": "Sales",
+      "profit": "Profit",
+      "vat": "VAT",
+      "inventory": "Inventory",
+      "delivery": "Delivery"
+    },
+    "metrics": {
+      "netSales": "Net Sales",
+      "netProfit": "Net Profit",
+      "collectedVat": "Collected VAT",
+      "lowStock": "Low Stock",
+      "proofPending": "Proof Pending",
+      "refundImpact": "{amount} refund impact",
+      "netMargin": "{pct}% net margin",
+      "taxedOrders": "{count} taxed orders",
+      "outOfStock": "{count} out of stock",
+      "proofConfirmed": "{count} confirmed proofs",
+      "orders": "Orders",
+      "deliveredHint": "{count} delivered",
+      "avgOrderValue": "Avg. Order Value",
+      "refunds": "Refunds",
+      "completedRefundsHint": "{count} completed refunds",
+      "warehouseUnits": "Warehouse Units",
+      "reservedHint": "{count} reserved",
+      "courierDelivered": "Courier Delivered",
+      "inTransitHint": "{count} still in transit",
+      "vat": "VAT",
+      "exclusiveVatHint": "{amount} tax added on top",
+      "proofPendingHint": "{count} pending proof"
+    },
+    "alerts": {
+      "refundPressure": "Refund pressure",
+      "refundPressureText": "{count} completed refunds in this range.",
+      "stockPressure": "Stock pressure",
+      "stockPressureText": "{count} variants need replenishment.",
+      "proofGaps": "Proof gaps",
+      "proofGapsText": "{count} shipments still need customer proof."
+    },
+    "overview": {
+      "salesPulse": {
+        "title": "Sales Pulse",
+        "description": "Gross vs net sales across the selected window.",
+        "value": "{gross} gross / {net} net"
+      },
+      "taxSnapshot": {
+        "title": "Tax Snapshot",
+        "description": "VAT captured from saved order-time tax snapshots.",
+        "value": "{vat} VAT"
+      },
+      "deliveryConfidence": {
+        "title": "Delivery Confidence",
+        "description": "Courier completion and customer proof capture posture.",
+        "value": "{delivered} delivered / {pending} pending proof"
+      },
+      "inventoryHealth": {
+        "title": "Inventory Health",
+        "description": "Tracked units and replenishment pressure.",
+        "value": "{units} units / {low} low stock"
+      },
+      "snapshot": {
+        "title": "Executive Snapshot",
+        "range": "{from} to {to}"
+      },
+      "topProducts": {
+        "title": "Top Products",
+        "description": "Highest revenue products in the selected range."
+      },
+      "deliveryExceptions": {
+        "title": "Delivery Exceptions",
+        "description": "Current courier exceptions needing follow-up."
+      }
+    },
+    "priorityAlerts": {
+      "title": "Priority Alerts",
+      "description": "Fastest issues to review first.",
+      "empty": "No major report alerts in this range."
+    },
+    "sales": {
+      "title": "Sales Report",
+      "description": "Revenue and order flow from {from} to {to}.",
+      "grossRevenue": "Gross Revenue",
+      "netSales": "Net Sales",
+      "subtotal": "Subtotal",
+      "paidOrders": "Paid Orders",
+      "avgOrderHint": "{amount} average order",
+      "refundsHint": "{amount} refunds",
+      "shippingHint": "{amount} shipping collected",
+      "unpaidHint": "{amount} unpaid value",
+      "dailyRevenue": {
+        "title": "Daily Revenue",
+        "description": "Daily order volume, revenue and VAT."
+      },
+      "topSelling": {
+        "title": "Top Selling Products",
+        "description": "Highest revenue products in the selected range."
+      }
+    },
+    "profit": {
+      "title": "Profit Report",
+      "description": "Estimated gross and net margin using stored purchase-cost snapshots.",
+      "grossSales": "Gross Sales",
+      "estimatedCost": "Estimated Cost",
+      "netProfit": "Net Profit",
+      "refundImpact": "Refund Impact",
+      "refundedUnitsHint": "{count} refunded units",
+      "topVariants": {
+        "title": "Top Profitable Variants",
+        "description": "Variants with the highest estimated gross profit contribution."
+      }
+    },
+    "vat": {
+      "title": "VAT Report",
+      "description": "Collected VAT grouped by tax class and shipping destination.",
+      "totalVat": "Total VAT",
+      "inclusiveVat": "Inclusive VAT",
+      "exclusiveVat": "Exclusive VAT",
+      "taxedOrders": "Taxed Orders",
+      "byCountry": {
+        "title": "VAT by Country",
+        "description": "Collected VAT based on order destination."
+      },
+      "byClass": {
+        "title": "VAT by Class",
+        "description": "Tax class performance from saved order tax snapshots."
+      }
+    },
+    "inventory": {
+      "title": "Inventory Report",
+      "description": "Current stock snapshot plus movement activity inside the selected range.",
+      "trackedVariants": "Tracked Variants",
+      "unitsOnHand": "Units On Hand",
+      "lowStock": "Low Stock",
+      "movement": "Movement",
+      "movementValue": "{in} in / {out} out",
+      "warehouseStock": {
+        "title": "Warehouse Stock",
+        "description": "Current quantity and reserved units by warehouse."
+      },
+      "lowStockAlerts": {
+        "title": "Low Stock Alerts",
+        "description": "Variants that need replenishment attention."
+      },
+      "movementReasons": {
+        "title": "Movement Reasons",
+        "description": "Net stock movement grouped by logged reason."
+      },
+      "recentLogs": {
+        "title": "Recent Inventory Logs",
+        "description": "Latest stock change events captured in the selected range."
+      }
+    },
+    "delivery": {
+      "title": "Delivery Report",
+      "description": "Shipment outcomes and customer delivery proof coverage.",
+      "shipments": "Shipments",
+      "delivered": "Delivered",
+      "outForDeliveryHint": "{count} out for delivery",
+      "proofConfirmed": "Proof Confirmed",
+      "returnsCancelled": "Returns / Cancelled",
+      "returnsCancelledValue": "{returned} / {cancelled}",
+      "courierPerformance": {
+        "title": "Courier Performance",
+        "description": "Shipment count, delivered count and proof coverage by courier."
+      },
+      "exceptions": {
+        "title": "Delivery Exceptions",
+        "description": "Returned, cancelled or proof-missing shipment records."
+      }
+    },
+    "table": {
+      "product": "Product",
+      "qty": "Qty",
+      "revenue": "Revenue",
+      "date": "Date",
+      "orders": "Orders",
+      "vat": "VAT",
+      "variant": "Variant",
+      "cost": "Cost",
+      "profit": "Profit",
+      "country": "Country",
+      "class": "Class",
+      "rate": "Rate",
+      "inclusive": "Inclusive",
+      "warehouse": "Warehouse",
+      "quantity": "Quantity",
+      "reserved": "Reserved",
+      "stock": "Stock",
+      "status": "Status",
+      "reason": "Reason",
+      "events": "Events",
+      "netChange": "Net Change",
+      "when": "When",
+      "item": "Item",
+      "change": "Change",
+      "shipment": "Shipment",
+      "courier": "Courier",
+      "customer": "Customer",
+      "shipments": "Shipments",
+      "delivered": "Delivered",
+      "proofs": "Proofs",
+      "orderNumber": "Order #{id}"
+    },
+    "empty": {
+      "report": "No report data available.",
+      "topProducts": "No product sales found.",
+      "deliveryExceptions": "No delivery exceptions in this range.",
+      "sales": "No sales data in this range.",
+      "profit": "No profit rows available in this range.",
+      "vatCountry": "No VAT data found for the selected range.",
+      "vatClass": "No tax class snapshot rows found.",
+      "warehouseStock": "No warehouse stock records found.",
+      "lowStock": "No low-stock alerts right now.",
+      "movementReasons": "No inventory movements logged in this range.",
+      "recentLogs": "No inventory log rows found in this range.",
+      "courier": "No shipment activity found in this range."
+    },
+    "errors": {
+      "load": "Failed to load reports.",
+      "loadWithStatus": "Failed to load reports ({status})."
+    },
+    "common": {
+      "yes": "Yes",
+      "no": "No",
+      "na": "N/A"
+    }
+  },
+  "AdminUsers": {
+    "title": "Users",
+    "subtitle": "Manage and monitor all user accounts",
+    "actions": {
+      "addUser": "Add User",
+      "refreshTitle": "Refresh data"
+    },
+    "stats": {
+      "totalUsers": "Total Users",
+      "activeUsers": "Active Users",
+      "adminAccounts": "Admin Accounts"
+    },
+    "list": {
+      "title": "User List",
+      "subtitle": "Manage and monitor all registered users",
+      "totalUsers": "{count} total users",
+      "pageOf": "Page {page} / {totalPages}",
+      "perPage": "{count} per page"
+    },
+    "empty": {
+      "title": "No users found",
+      "filtered": "No users match your filters. Try adjusting your search criteria.",
+      "noUsers": "No users have been created yet. Start by adding your first user.",
+      "clearFilters": "Clear Filters"
+    },
+    "roles": {
+      "user": "User",
+      "admin": "Admin",
+      "moderator": "Moderator"
+    },
+    "create": {
+      "title": "Create New User",
+      "subtitle": "Add a new user account with basic details",
+      "email": "Email",
+      "emailPlaceholder": "user@example.com",
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "phone": "Phone",
+      "phonePlaceholder": "+880 17xx xxxxxx",
+      "role": "Role",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 6 characters",
+      "addresses": "Addresses",
+      "mainAddressPlaceholder": "Main address",
+      "additionalAddressPlaceholder": "Additional address {index}",
+      "remove": "Remove",
+      "addAnother": "+ Add Another Address",
+      "loadingRoles": "Loading roles...",
+      "systemSuffix": "(System)",
+      "cancel": "Cancel",
+      "submit": "Create User",
+      "creating": "Creating...",
+      "errors": {
+        "emailPasswordRequired": "Email and password are required",
+        "addressRequired": "Please provide at least one address",
+        "failed": "Failed to create user",
+        "generic": "Error creating user"
+      }
+    },
+    "errors": {
+      "loadRoles": "Failed to load roles",
+      "loadUsers": "Failed to load user data"
+    }
+  },
+  "AdminUsersTable": {
+    "columns": {
+      "user": "User",
+      "role": "Role",
+      "activities": "Activities",
+      "status": "Status",
+      "joined": "Joined",
+      "actions": "Actions"
+    },
+    "noName": "No Name",
+    "roles": {
+      "user": "User"
+    },
+    "status": {
+      "temporarilyBanned": "Temporarily Banned",
+      "permanentlyBanned": "Permanently Banned",
+      "verified": "Verified",
+      "unverified": "Unverified"
+    },
+    "activities": {
+      "orders": "Orders",
+      "reviews": "Reviews"
+    },
+    "actions": {
+      "view": "View",
+      "ban": "Ban",
+      "unban": "Unban",
+      "delete": "Delete"
+    },
+    "empty": {
+      "title": "No users found",
+      "description": "No users match your search criteria. Please try different filters."
+    },
+    "alerts": {
+      "banReasonRequired": "Please write a reason for banning the user",
+      "banFailed": "Failed to ban user",
+      "banError": "Error occurred while banning user",
+      "unbanFailed": "Failed to lift user ban",
+      "unbanError": "Error occurred while lifting user ban",
+      "deleteConfirm": "Are you sure you want to delete user {email}?",
+      "deleteFailed": "Failed to delete user",
+      "deleteError": "Error occurred while deleting user"
+    },
+    "banModal": {
+      "title": "Ban User",
+      "reason": "Ban Reason",
+      "reasonPlaceholder": "Write reason for banning user...",
+      "duration": "Ban Duration",
+      "durations": {
+        "1day": "1 day",
+        "7days": "7 days",
+        "30days": "30 days",
+        "90days": "90 days",
+        "1year": "1 year",
+        "permanent": "Permanent Ban"
+      },
+      "warningTitle": "Warning",
+      "warningText": "Banned users cannot log in to the system or place new orders. Existing orders will not be affected.",
+      "cancel": "Cancel",
+      "submit": "Ban User",
+      "closeModal": "Close modal"
+    }
+  },
+  "AdminUserFilters": {
+    "searchPlaceholder": "Search by email or name...",
+    "allRoles": "All Roles",
+    "systemSuffix": "(System)",
+    "fallbackRoles": {
+      "user": "User",
+      "admin": "Admin",
+      "moderator": "Moderator",
+      "manager": "Manager"
+    },
+    "resetFilters": "Reset Filters",
+    "activeFilters": "Active Filters:",
+    "clearAll": "Clear All"
+  },
+  "AdminPagination": {
+    "pageInfo": "Page {current} of {total} — Total {total} pages",
+    "firstPage": "First Page",
+    "previousPage": "Previous Page",
+    "nextPage": "Next Page",
+    "lastPage": "Last Page"
+  },
+  "AdminProductModal": {
+    "closeModal": "Close modal",
+    "titleAdd": "Add Product",
+    "titleEdit": "Edit Product",
+    "basic": {
+      "title": "Step 1: Basic Product Info",
+      "subtitle": "Core product details shared by simple and variant products.",
+      "name": "Name *",
+      "description": "Description",
+      "shortDescription": "Short Description",
+      "type": "Type",
+      "productSku": "Product SKU",
+      "model": "Model",
+      "warranty": "Warranty",
+      "baseSellPrice": "Base Sell Price *",
+      "basePurchasePrice": "Base Purchase Price",
+      "originalPrice": "Original Price",
+      "currency": "Currency",
+      "category": "Category *",
+      "brand": "Brand",
+      "select": "Select"
+    },
+    "productTypes": {
+      "PHYSICAL": "PHYSICAL",
+      "DIGITAL": "DIGITAL",
+      "SERVICE": "SERVICE"
+    },
+    "variants": {
+      "title": "Step 2: Variant Setup",
+      "subtitle": "Define option groups like Size and Color. The system generates sellable combinations automatically.",
+      "enable": "Enable Variants",
+      "simpleProductNotice": "This product will be stored as a simple product with one default variant.",
+      "simpleStock": "Simple Product Stock",
+      "emergencyStock": "Emergency Stock Threshold",
+      "option": "Option",
+      "searchOptions": "Search options...",
+      "searchOptionAria": "Search variant option {index}",
+      "selectManagedAttribute": "Select managed attribute",
+      "customOptionName": "Custom option name",
+      "addOptionValue": "Add Option Value",
+      "add": "Add",
+      "remove": "Remove",
+      "attributeLoaded": "Loaded from Attributes Manager. You can still remove unused values below.",
+      "noValues": "No values added yet.",
+      "upload": "Upload",
+      "managedValuesAvailable": "Managed values available",
+      "addVariantOption": "Add Variant Option",
+      "combinationsTitle": "Generated Variant Combinations",
+      "combinationsSubtitle": "Each row maps to one product variant. Stock is synced into warehouse stock, not stored independently.",
+      "combinationsCount": "{count} combinations",
+      "noCombinations": "Add option names and values to generate combinations.",
+      "defaultVariant": "Default variant",
+      "warehouseTarget": "Warehouse stock target: default warehouse",
+      "uploadGallery": "Upload Gallery",
+      "sameGalleryAsColor": "Uses the same gallery as Color: {color}.",
+      "gallerySharedNotice": "One gallery will be used for all sizes in this color.",
+      "basePricePlaceholder": "Base price",
+      "purchasePricePlaceholder": "Purchase price",
+      "active": "Active",
+      "totalVariantStock": "Total variant stock: {count}",
+      "table": {
+        "combination": "Combination",
+        "sku": "SKU",
+        "sellPrice": "Sell Price",
+        "purchasePrice": "Purchase Price",
+        "stock": "Stock",
+        "emergencyStock": "Emergency Stock",
+        "status": "Status"
+      }
+    },
+    "additional": {
+      "title": "Additional Details",
+      "weight": "Weight",
+      "dimensions": "Dimensions",
+      "length": "Length",
+      "width": "Width",
+      "height": "Height",
+      "vatClass": "VAT Class",
+      "videoUrl": "Video URL",
+      "selectDigitalAsset": "Select Digital Asset",
+      "serviceDuration": "Service Duration (minutes)",
+      "serviceLocation": "Service Location",
+      "serviceOnlineLink": "Service Online Link",
+      "status": "Status:",
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "statusHint": "Use the product card's Activate/Deactivate action to change availability.",
+      "availableLabel": "Available",
+      "featuredLabel": "Featured"
+    },
+    "cartReminder": {
+      "title": "Cart reminder notification",
+      "description": "Notify a user if this product stays in their cart without checkout. Leave both fields empty or 0 to disable.",
+      "afterHours": "After hours",
+      "afterMinutes": "After minutes"
+    },
+    "media": {
+      "title": "Media",
+      "mainImage": "Main Image",
+      "preview": "preview",
+      "gallery": "Gallery",
+      "galleryAlt": "gallery"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "add": "Add Product",
+      "update": "Update Product"
+    },
+    "errors": {
+      "uploadFailed": "Upload failed",
+      "imageUploadFailed": "Image upload failed",
+      "galleryUploadFailed": "Gallery upload failed",
+      "variantGalleryUploadFailed": "Variant gallery upload failed",
+      "duplicateOption": "{name} is already added as a variant option",
+      "nameCategoryPriceRequired": "Name, Category and Price required",
+      "invalidDimensions": "Please enter valid dimensions",
+      "invalidBasePrice": "Base price must be 0 or more",
+      "invalidBaseCostPrice": "Base purchase price must be 0 or more",
+      "skuRequiredForVariants": "Product SKU is required for variant combinations",
+      "addVariantOption": "Add at least one variant option with values",
+      "generatedVariantsRequired": "Generated variant combinations are required",
+      "invalidVariant": "Each variant needs a SKU, valid price, valid stock, and valid emergency threshold",
+      "invalidStock": "Stock must be a number (0 or more)",
+      "invalidLowStockThreshold": "Emergency stock threshold must be 0 or more",
+      "invalidCartReminder": "Cart reminder must use valid hours and minutes",
+      "saveFailed": "Failed to save product"
+    }
+  },
+  "AdminProductRelations": {
+    "title": "Manage: {name} ({type})",
+    "tabs": {
+      "variants": "Variants",
+      "attributes": "Attributes",
+      "inventory": "Inventory",
+      "serviceSlots": "Service Slots",
+      "bookMetadata": "Book Metadata",
+      "inventoryLogs": "Inventory Logs"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update",
+      "edit": "Edit",
+      "add": "Add",
+      "save": "Save"
+    },
+    "common": {
+      "select": "Select",
+      "yes": "Yes",
+      "no": "No",
+      "optional": "Optional",
+      "saved": "Saved",
+      "deleted": "Deleted"
+    },
+    "variants": {
+      "header": "Variants (SKU, price, stock, options)",
+      "printSelected": "Print Selected",
+      "print": "Print",
+      "addVariant": "Add Variant",
+      "empty": "No variants found",
+      "selectAll": "Select all variants",
+      "selectVariantAria": "Select variant {sku}",
+      "barcode": "Barcode:",
+      "qr": "QR:",
+      "barcodeAlt": "Barcode for {sku}",
+      "qrAlt": "QR code for {sku}",
+      "download": "Download",
+      "sticker": "Sticker",
+      "regenerate": "Regenerate",
+      "updated": "Variant updated",
+      "created": "Variant created",
+      "deleted": "Variant deleted",
+      "codesRegenerated": "Variant codes regenerated",
+      "table": {
+        "sku": "SKU",
+        "codes": "Codes",
+        "price": "Price",
+        "stock": "Stock",
+        "options": "Options",
+        "action": "Action"
+      }
+    },
+    "variantForm": {
+      "newTitle": "New Variant",
+      "editTitle": "Edit Variant",
+      "sku": "SKU *",
+      "price": "Price *",
+      "currency": "Currency",
+      "stock": "Stock",
+      "stockTip": "Tip: for multiple warehouses, manage stock from the Inventory tab.",
+      "stockNotUsed": "Stock is not used for {type} products.",
+      "digitalAsset": "Digital Asset (optional)",
+      "option1Name": "Option 1 Name",
+      "option1Value": "Option 1 Value",
+      "option2Name": "Option 2 Name",
+      "option2Value": "Option 2 Value",
+      "option1NamePlaceholder": "e.g. Color",
+      "option1ValuePlaceholder": "e.g. Red",
+      "option2NamePlaceholder": "e.g. Size",
+      "option2ValuePlaceholder": "e.g. XL"
+    },
+    "attributes": {
+      "addTitle": "Add Product Attribute",
+      "attribute": "Attribute",
+      "value": "Value",
+      "commaSeparated": "Comma-separated values",
+      "typeValue": "Type value",
+      "empty": "No product attributes yet",
+      "added": "Attribute added",
+      "removed": "Removed",
+      "table": {
+        "attribute": "Attribute",
+        "value": "Value",
+        "action": "Action"
+      }
+    },
+    "inventory": {
+      "physicalOnly": "Inventory is only available for PHYSICAL products.",
+      "variant": "Variant",
+      "totalStock": "Total stock:",
+      "selectVariantHint": "Select a variant to manage stock levels.",
+      "noWarehouses": "No warehouses yet. Create one from the Warehouses button on the products page.",
+      "defaultBadge": "Default",
+      "table": {
+        "warehouse": "Warehouse",
+        "quantity": "Quantity",
+        "reserved": "Reserved",
+        "available": "Available",
+        "action": "Action"
+      }
+    },
+    "serviceSlots": {
+      "addTitle": "Add Service Slot",
+      "start": "Start *",
+      "end": "End *",
+      "capacity": "Capacity",
+      "timezone": "Timezone",
+      "location": "Location",
+      "notes": "Notes",
+      "addSlot": "Add Slot",
+      "empty": "No service slots yet",
+      "created": "Service slot created",
+      "table": {
+        "start": "Start",
+        "end": "End",
+        "capacity": "Capacity",
+        "booked": "Booked",
+        "action": "Action"
+      }
+    },
+    "bookMetadata": {
+      "title": "Book-specific relations",
+      "description": "BookMetadata is authoritative and legacy fields are updated automatically during the compatibility window.",
+      "writer": "Writer",
+      "publisher": "Publisher",
+      "noWriter": "No writer",
+      "noPublisher": "No publisher",
+      "save": "Save Book Metadata",
+      "saving": "Saving…",
+      "saved": "Book metadata saved"
+    },
+    "logs": {
+      "empty": "No inventory logs",
+      "table": {
+        "date": "Date",
+        "change": "Change",
+        "variant": "Variant",
+        "warehouse": "Warehouse",
+        "reason": "Reason"
+      }
+    },
+    "confirm": {
+      "deleteVariant": "Delete this variant?",
+      "removeAttribute": "Remove this product attribute?",
+      "deleteStockLevel": "Delete this warehouse stock entry?",
+      "deleteServiceSlot": "Delete this service slot?"
+    },
+    "errors": {
+      "loadRelations": "Failed to load product relations",
+      "loadBookMetadata": "Failed to load book metadata",
+      "saveBookMetadataFailed": "Failed to save book metadata",
+      "selectAtLeastOneVariant": "Select at least one variant",
+      "skuRequired": "SKU is required",
+      "priceRequired": "Price is required",
+      "invalidStock": "Stock must be 0 or more",
+      "saveFailed": "Save failed",
+      "deleteFailed": "Delete failed",
+      "regenerateFailed": "Regenerate failed",
+      "selectAttribute": "Select an attribute",
+      "valueRequired": "Value is required",
+      "addFailed": "Add failed",
+      "invalidQuantity": "Quantity must be 0 or more",
+      "startEndRequired": "Start and End are required",
+      "invalidCapacity": "Capacity must be 1 or more",
+      "createFailed": "Create failed"
+    }
+  },
+  "AdminAttributesManager": {
+    "title": "Attributes",
+    "attributeMeta": "{type} · {count} categories",
+    "common": {
+      "loading": "Loading..."
+    },
+    "actions": {
+      "add": "Add",
+      "save": "Save",
+      "saving": "Saving..."
+    },
+    "create": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Screen size",
+      "type": "Type",
+      "unit": "Unit",
+      "unitPlaceholder": "GB, kg..."
+    },
+    "mapping": {
+      "categoryLabel": "Category mapping",
+      "selectCategory": "Select a category",
+      "saveMapping": "Save mapping",
+      "saved": "Category attribute mapping saved",
+      "table": {
+        "attribute": "Attribute",
+        "use": "Use",
+        "required": "Required",
+        "filter": "Filter",
+        "variant": "Variant",
+        "order": "Order"
+      }
+    },
+    "definition": {
+      "nameAria": "{name} name",
+      "typeAria": "{name} type",
+      "unitAria": "{name} unit",
+      "unitPlaceholder": "Optional unit"
+    },
+    "values": {
+      "addPlaceholder": "Add value (e.g. Red)",
+      "empty": "No values",
+      "clickToDelete": "Click to delete",
+      "added": "Value added",
+      "deleted": "Value deleted"
+    },
+    "attributes": {
+      "created": "Attribute created",
+      "definitionUpdated": "Attribute definition updated",
+      "deleted": "Attribute deleted"
+    },
+    "empty": {
+      "attributes": "No attributes yet"
+    },
+    "confirm": {
+      "deleteValue": "Delete this value?",
+      "deleteAttribute": "Delete this attribute?"
+    },
+    "errors": {
+      "loadSettings": "Failed to load attribute settings",
+      "loadAttributes": "Failed to load attributes",
+      "attributeNameRequired": "Attribute name is required",
+      "valueRequired": "Value is required",
+      "createFailed": "Create failed",
+      "updateFailed": "Update failed",
+      "deleteFailed": "Delete failed",
+      "mappingFailed": "Mapping update failed",
+      "mappingWithProduct": "{error}: {name} — {productError}"
+    }
+  },
+  "AdminDigitalAssets": {
+    "title": "Digital Assets",
+    "common": {
+      "loading": "Loading...",
+      "deleted": "Deleted"
+    },
+    "actions": {
+      "create": "Create"
+    },
+    "create": {
+      "title": "Add Digital Asset",
+      "assetTitle": "Title",
+      "fileUrl": "File URL",
+      "fileUrlPlaceholder": "/api/upload/digital-assets/...",
+      "created": "Digital asset created"
+    },
+    "upload": {
+      "uploaded": "Uploaded"
+    },
+    "empty": {
+      "assets": "No digital assets yet"
+    },
+    "confirm": {
+      "deleteAsset": "Delete this digital asset?"
+    },
+    "errors": {
+      "loadFailed": "Failed to load digital assets",
+      "uploadFailed": "Upload failed",
+      "titleAndUrlRequired": "Title and file URL are required",
+      "createFailed": "Create failed",
+      "deleteFailed": "Delete failed"
+    }
+  },
+  "AdminProductManager": {
+    "header": {
+      "title": "Product Management",
+      "subtitle": "Manage all products with warehouse-specific insights"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting...",
+      "saving": "Saving...",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "edit": "Edit",
+      "manage": "Manage",
+      "flashSale": "Flash Sale",
+      "refresh": "Refresh"
+    },
+    "warehouse": {
+      "allWarehouses": "All warehouses",
+      "scope": "Warehouse scope",
+      "defaultSuffix": " - Default"
+    },
+    "stats": {
+      "totalProducts": "Total Products",
+      "inSelectedWarehouse": "In selected warehouse",
+      "totalStock": "Total Stock",
+      "reservedUnits": "{count} reserved units",
+      "lowStockItems": "Low Stock Items",
+      "belowThreshold": "Below threshold",
+      "outOfStock": "Out of Stock",
+      "needRestocking": "Need restocking"
+    },
+    "filters": {
+      "title": "Filters",
+      "attributes": "Attributes",
+      "digitalAssets": "Digital Assets",
+      "newProduct": "New Product",
+      "bundles": "Bundles",
+      "clearAll": "Clear All Filters",
+      "searchPlaceholder": "Search products...",
+      "allCategories": "All Categories",
+      "allTypes": "All Types",
+      "allAvailability": "All Availability",
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "allVisibility": "All Visibility",
+      "featured": "Featured",
+      "regular": "Regular",
+      "allStockStates": "All Stock States",
+      "activeFilters": "Active filters:",
+      "searchTag": "Search: {value}",
+      "categoryTag": "Category: {value}",
+      "typeTag": "Type: {value}",
+      "stockTag": "Stock: {value}"
+    },
+    "productTypes": {
+      "physical": "Physical",
+      "digital": "Digital",
+      "service": "Service",
+      "bundle": "Bundle"
+    },
+    "sort": {
+      "nameAsc": "Name (A-Z)",
+      "nameDesc": "Name (Z-A)",
+      "categoryAsc": "Category (A-Z)",
+      "categoryDesc": "Category (Z-A)",
+      "priceAsc": "Price (Low to High)",
+      "priceDesc": "Price (High to Low)",
+      "stockAsc": "Stock (Low to High)",
+      "stockDesc": "Stock (High to Low)"
+    },
+    "stockStatus": {
+      "inStock": "In Stock",
+      "lowStock": "Low Stock",
+      "outOfStock": "Out of Stock",
+      "nonPhysical": "Non-Physical"
+    },
+    "deleteDialog": {
+      "title": "Delete Product?",
+      "description": "This will permanently delete \"{name}\"."
+    },
+    "availabilityDialog": {
+      "activateTitle": "Activate Product?",
+      "deactivateTitle": "Deactivate Product?",
+      "activateDescription": "\"{name}\" will become visible on the storefront and can be purchased when its product type and stock rules allow it.",
+      "deactivateDescription": "\"{name}\" will be removed from storefront listings, search and product details. New cart and order requests will be blocked. Inventory and historical orders will be preserved."
+    },
+    "flashSale": {
+      "title": "Configure Flash Sale",
+      "close": "Close",
+      "regularPrice": "Regular price",
+      "currentFlashPrice": "Current flash price",
+      "salePrice": "Sale price",
+      "displayOrder": "Display order",
+      "durationDays": "Duration days",
+      "durationHours": "Duration hours",
+      "enable": "Enable flash sale",
+      "enableDescription": "The deal starts immediately and ends after the selected duration.",
+      "remove": "Remove flash sale",
+      "save": "Save flash sale",
+      "activateFirst": "Activate this product before enabling a flash sale.",
+      "status": {
+        "live": "Live",
+        "scheduled": "Scheduled",
+        "expired": "Expired"
+      },
+      "errors": {
+        "invalidPrice": "Sale price must be greater than 0 and lower than regular price.",
+        "invalidDuration": "Duration must be at least 1 hour.",
+        "saveFailed": "Failed to save flash sale.",
+        "removeFailed": "Failed to remove flash sale."
+      },
+      "toasts": {
+        "saved": "Flash sale saved successfully",
+        "removed": "Flash sale removed"
+      }
+    },
+    "card": {
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "featured": "Featured",
+      "flashPrefix": "Flash {status}",
+      "skuLabel": "SKU: {sku}",
+      "category": "Category",
+      "brand": "Brand",
+      "stock": "Stock",
+      "stockUnits": "{count} units",
+      "threshold": "Threshold",
+      "type": "Type",
+      "status": "Status",
+      "lowVariants": "{count} low variant(s)",
+      "outCount": "{count} out",
+      "availabilityAria": "{action} {name}",
+      "deleteAria": "Delete {name}",
+      "moduleDisabled": "This module is disabled. Existing product data remains read-only."
+    },
+    "pagination": {
+      "showing": "Showing {start}-{end} of {total} products",
+      "pageOf": "Page {current} of {total}",
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "empty": {
+      "title": "No products found",
+      "titleWithWarehouse": "No products found in {warehouse}",
+      "description": "Try adjusting your search or add your first product.",
+      "descriptionFiltered": "Try adjusting your filters or selecting a different warehouse.",
+      "clearFilters": "Clear Filters",
+      "addProduct": "Add Product"
+    },
+    "toasts": {
+      "deleteSuccess": "Product deleted successfully",
+      "deleteFailed": "Failed to delete product",
+      "availabilityChanged": "Product {action} successfully",
+      "availabilityFailed": "Failed to update product availability"
+    },
+    "errors": {
+      "loadWarehouse": "Failed to load warehouse data"
+    }
+  },
+  "AdminReviewPage": {
+    "loadingTitle": "Review Management",
+    "hero": {
+      "badge": "Review Curation",
+      "title": "Manage featured customer reviews",
+      "description": "Reviews marked as featured from this page can be shown on the home page. Use this panel to highlight the strongest customer feedback before publishing it more prominently."
+    },
+    "stats": {
+      "placement": "Placement",
+      "marquee": "Marquee",
+      "featuredNow": "Featured now",
+      "avgRating": "Avg. rating"
+    },
+    "card": {
+      "featured": "Featured",
+      "standard": "Standard",
+      "ratingOutOf": "{rating} / 5",
+      "noComment": "No written comment provided for this review.",
+      "visibleForHome": "Visible for home page placement",
+      "canBePromoted": "Can be promoted to home page"
+    },
+    "actions": {
+      "remove": "Remove",
+      "feature": "Feature"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "AdminOrderManagement": {
+    "header": {
+      "title": "Order Management",
+      "subtitle": "View all library orders, update status and track shipments"
+    },
+    "common": {
+      "ok": "OK",
+      "currencyFormat": "{currency} {amount}"
+    },
+    "actions": {
+      "saving": "Saving...",
+      "saveAll": "Save All Order and Shipment Updates"
+    },
+    "stats": {
+      "totalOrders": "Total Orders",
+      "pageTotalAmount": "Page Total Amount"
+    },
+    "filters": {
+      "searchPlaceholder": "Search by order ID, name or mobile..."
+    },
+    "status": {
+      "all": "All Status",
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "PROCESSING": "Processing",
+      "SHIPPED": "Shipped",
+      "DELIVERED": "Delivered",
+      "FAILED": "Failed",
+      "RETURNED": "Returned",
+      "CANCELLED": "Cancelled"
+    },
+    "paymentStatus": {
+      "PAID": "Paid",
+      "UNPAID": "Unpaid",
+      "REFUNDED": "Refunded"
+    },
+    "shipmentStatus": {
+      "PENDING": "Pending",
+      "ASSIGNED": "Assigned",
+      "IN_TRANSIT": "In Transit",
+      "OUT_FOR_DELIVERY": "Out for Delivery",
+      "DELIVERED": "Delivered",
+      "FAILED": "Failed",
+      "RETURNED": "Returned",
+      "CANCELLED": "Cancelled"
+    },
+    "warehouse": {
+      "defaultSuffix": " - Default",
+      "noStockSuffix": " - No stock",
+      "availableSuffix": " - Available {count}",
+      "insufficientSuffix": " - Insufficient stock ({available}/{required})"
+    },
+    "empty": {
+      "noOrders": "No orders found."
+    },
+    "card": {
+      "orderTitle": "Order #{id} • {name}",
+      "guestCustomer": "Guest Customer",
+      "noProductDetails": "No product details",
+      "noImage": "No Image",
+      "moreItems": "+{count} more item(s)",
+      "createdOn": "Created on",
+      "payment": "Payment",
+      "items": "Items",
+      "grandTotal": "Grand Total",
+      "viewAssign": "View / Assign Delivery"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "pageOf": "Page {page} / {pages}"
+    },
+    "detail": {
+      "title": "Order Details",
+      "orderIdLabel": "Order ID: {id}",
+      "close": "Close ✕",
+      "customerInfo": "Customer Information",
+      "noName": "No Name",
+      "mobile": "Mobile: {value}",
+      "altMobile": "Alt Mobile: {value}",
+      "email": "Email: {value}",
+      "paymentMethod": "Payment Method:",
+      "currency": "Currency:",
+      "orderDate": "Order Date:",
+      "deliveryAddress": "Delivery Address",
+      "area": "Area: {value}",
+      "district": "District: {value}",
+      "country": "Country: {value}",
+      "paymentScreenshot": "Payment Screenshot",
+      "paymentScreenshotAlt": "Payment screenshot",
+      "screenshotHint": "Customer uploaded this screenshot after payment.",
+      "viewScreenshot": "View Screenshot",
+      "orderItemsTitle": "Order items",
+      "itemAlt": "Order item",
+      "noImage": "No Image",
+      "productNameNotAvailable": "Product Name Not Available",
+      "variantLabel": "Variant: {value}",
+      "qtyPrice": "Qty: {qty} x {price}",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "vat": "VAT",
+      "shipping": "Shipping",
+      "grandTotal": "Grand Total",
+      "orderStatusTitle": "Order Status",
+      "orderStatusLabel": "Order Status",
+      "paymentStatusLabel": "Payment Status",
+      "transactionIdLabel": "Transaction ID",
+      "transactionIdPlaceholder": "Bkash/Nagad txn id...",
+      "adminOnlyNote": "* Only admin can successfully update these options.",
+      "shipmentStatusTitle": "Shipment Status",
+      "currentStatus": "Current: {status}",
+      "noShipmentHint": "No shipment created for this order yet. Fill the form below to create a new shipment.",
+      "warehouseLabel": "Warehouse",
+      "selectWarehouse": "Select Warehouse",
+      "warehouseStockHint": "Only warehouses with enough stock are selectable.",
+      "courierLabel": "Courier",
+      "selectCourier": "Select Courier",
+      "courierPlaceholder": "Courier name...",
+      "trackingNumberLabel": "Tracking Number",
+      "trackingPlaceholder": "tracking no...",
+      "shipmentStatusLabel": "Shipment Status",
+      "expectedDate": "Expected Date",
+      "deliveredDate": "Delivered Date",
+      "createdAt": "Created At",
+      "courierStatus": "Courier Status:",
+      "lastSynced": "Last Synced:",
+      "externalId": "External ID:",
+      "trackingUrl": "Tracking URL:",
+      "open": "Open",
+      "deliveryManAssignmentTitle": "Delivery Man Assignment",
+      "deliveryManAssignmentHint": "Assign or reassign this shipment to an active delivery man directly from order management.",
+      "assignDeliveryMan": "Assign Delivery Man",
+      "reassignDeliveryMan": "Reassign Delivery Man",
+      "createShipmentFirst": "Create and save a shipment first. Once a shipment exists, you can assign a delivery man from here.",
+      "assignedAt": "Assigned at",
+      "pickupProof": "Pickup proof",
+      "confirmedOn": "Confirmed on {date}",
+      "viewPickupImage": "View pickup image",
+      "assignmentNote": "Assignment note",
+      "rejectionReason": "Rejection reason",
+      "recentAssignmentLogs": "Recent Assignment Logs",
+      "logBy": "By {name}",
+      "noAssignmentHistory": "No assignment history recorded yet.",
+      "noDeliveryManAssigned": "No delivery man assigned yet for this shipment.",
+      "deliveryProofFlow": "Delivery Proof Flow",
+      "deliveryProofHint": "When shipment reaches OUT_FOR_DELIVERY, customer can confirm with PIN + checklist + optional photo.",
+      "deliveryPin": "Delivery PIN",
+      "pinWillGenerate": "Will generate on OFD",
+      "confirmationLink": "Confirmation Link",
+      "linkWillAppear": "Link will appear automatically when shipment is out for delivery.",
+      "customerProofStatus": "Customer Proof Status",
+      "proofChecks": "Checks: received / correct items / good condition",
+      "viewProofPhoto": "View proof photo",
+      "noCustomerProof": "No customer delivery proof submitted yet.",
+      "shipmentAdminNote": "* Only admin can create/update shipment; other users will get Forbidden from API."
+    },
+    "successModal": {
+      "title": "Update Successful",
+      "defaultMessage": "Information updated successfully."
+    },
+    "errorModal": {
+      "title": "Error",
+      "defaultMessage": "An error occurred."
+    },
+    "toasts": {
+      "saveSuccess": "Order and shipment information updated successfully ✅"
+    },
+    "errors": {
+      "genericError": "Something went wrong",
+      "loadOrdersFailed": "Failed to load orders",
+      "orderUpdateFailed": "Order update failed",
+      "warehouseStockInsufficient": "Selected warehouse does not have enough stock for this order",
+      "shipmentUpdateFailed": "Shipment update failed",
+      "selectCourierFirst": "Please select a courier before creating shipment",
+      "shipmentCreateFailed": "Shipment create failed",
+      "saveFailed": "Problem updating information",
+      "assignedButRefreshFailed": "Assigned successfully, but refresh failed"
+    }
+  },
+  "AdminAssignDeliveryManModal": {
+    "title": "Assign Delivery Man",
+    "description": "Assign one or more shipments to an active delivery man. The assignment will appear in the driver dashboard immediately.",
+    "selectedShipments": "Selected Shipments",
+    "shipmentLabel": "Shipment #{id}",
+    "orderLabel": "Order #{id}",
+    "warehouseLabel": "Warehouse #{id}",
+    "warehouseNotSet": "Warehouse not set",
+    "deliveryManLabel": "Delivery man",
+    "selectDeliveryMan": "Select delivery man",
+    "noteLabel": "Assignment note",
+    "notePlaceholder": "Optional dispatch or assignment note",
+    "actions": {
+      "cancel": "Cancel",
+      "assign": "Assign Delivery Man",
+      "assigning": "Assigning..."
+    },
+    "success": {
+      "singleAssigned": "Delivery assigned successfully",
+      "multipleAssigned": "Deliveries assigned successfully"
+    },
+    "errors": {
+      "selectDeliveryMan": "Please select a delivery man.",
+      "selectShipment": "Please select at least one shipment.",
+      "assignFailed": "Failed to assign delivery man"
+    }
+  },
+  "AdminShipmentsPage": {
+    "hero": {
+      "badge": "Shipment Operations",
+      "title": "Shipment Operations",
+      "description": "Create shipments, assign delivery men, track pickup proof, and monitor the operational status from a single workflow."
+    },
+    "actions": {
+      "assignSelected": "Assign Selected ({count})",
+      "createShipment": "Create Shipment",
+      "selectVisible": "Select Visible",
+      "unselectVisible": "Unselect Visible",
+      "refresh": "Refresh",
+      "reassign": "Reassign",
+      "assignDeliveryMan": "Assign Delivery Man",
+      "openOrders": "Open Orders",
+      "openTracking": "Open Tracking",
+      "updating": "Updating...",
+      "markStatus": "Mark {status}"
+    },
+    "stats": {
+      "totalShipments": "Total Shipments",
+      "pendingAssigned": "Pending / Assigned",
+      "inTransit": "In Transit",
+      "delivered": "Delivered"
+    },
+    "filters": {
+      "searchPlaceholder": "Search by shipment, order, courier, tracking, or customer..."
+    },
+    "status": {
+      "ALL": "ALL"
+    },
+    "shipmentStatus": {
+      "PENDING": "PENDING",
+      "ASSIGNED": "ASSIGNED",
+      "IN_TRANSIT": "IN TRANSIT",
+      "OUT_FOR_DELIVERY": "OUT FOR DELIVERY",
+      "DELIVERED": "DELIVERED",
+      "FAILED": "FAILED",
+      "RETURNED": "RETURNED",
+      "CANCELLED": "CANCELLED"
+    },
+    "empty": {
+      "title": "No shipments found.",
+      "description": "Adjust the filters or create a new shipment to begin assignment flow.",
+      "noAssignment": "No delivery man assigned yet.",
+      "noShipmentActions": "No manual shipment actions available."
+    },
+    "card": {
+      "shipmentTitle": "Shipment #{id}",
+      "metaLine": "Order #{orderId} • {customer} • {date}",
+      "unknownCustomer": "Unknown customer",
+      "noPhone": "No phone"
+    },
+    "sections": {
+      "orderAndCourier": "Order & Courier",
+      "deliveryAssignment": "Delivery Assignment",
+      "shipmentActions": "Shipment Actions",
+      "recentHistory": "Recent Delivery History"
+    },
+    "labels": {
+      "courier": "Courier",
+      "tracking": "Tracking",
+      "orderStatus": "Order status",
+      "notAvailable": "Not available",
+      "pickupProof": "Pickup proof",
+      "pickupSubmitted": "Submitted {date}",
+      "pickupPending": "Pending",
+      "rejected": "Rejected: {reason}"
+    },
+    "pagination": {
+      "perPage": "{count} per page",
+      "showing": "Showing {start} to {end} of {total} shipments",
+      "previous": "Previous",
+      "next": "Next",
+      "lastPage": "Last Page"
+    },
+    "notices": {
+      "statusUpdated": "Shipment #{id} marked as {status}.",
+      "created": "Shipment created successfully."
+    },
+    "errors": {
+      "loadFailed": "Failed to load shipments",
+      "loadDeliveryMenFailed": "Failed to load delivery men",
+      "updateFailed": "Failed to update shipment status"
+    }
+  },
+  "AdminStatusTimeline": {
+    "empty": "No delivery history recorded yet.",
+    "system": "System",
+    "none": "none",
+    "statusChanged": "Status changed from {from} to {to}.",
+    "statuses": {
+      "ASSIGNED": "Assigned",
+      "ACCEPTED": "Accepted",
+      "REJECTED": "Rejected",
+      "PICKUP_CONFIRMED": "Picked Up",
+      "IN_TRANSIT": "In Transit",
+      "OUT_FOR_DELIVERY": "Out for Delivery",
+      "DELIVERED": "Delivered",
+      "FAILED": "Failed",
+      "RETURNED": "Returned"
+    }
+  },
+  "AdminShipmentCreateForm": {
+    "title": "Create Shipment",
+    "subtitle": "Select courier dynamically and create shipment for an existing order.",
+    "fields": {
+      "order": "Order",
+      "courier": "Courier",
+      "warehouseOptional": "Warehouse (optional)",
+      "courierNoteOptional": "Courier Note (optional)"
+    },
+    "placeholders": {
+      "loadingOrders": "Loading orders...",
+      "loadingCouriers": "Loading couriers...",
+      "loadingWarehouses": "Loading warehouses...",
+      "selectOrder": "Select an order",
+      "selectCourier": "Select a courier",
+      "selectWarehouse": "Select a warehouse",
+      "courierNote": "Delivery note for courier"
+    },
+    "selectedCourier": {
+      "provider": "Provider:",
+      "endpoint": "Endpoint:"
+    },
+    "actions": {
+      "close": "Close",
+      "create": "Create Shipment",
+      "creating": "Creating..."
+    },
+    "success": {
+      "created": "Shipment created. ID: {id}",
+      "status": "Status: {status}",
+      "tracking": "Tracking: {tracking}",
+      "notAvailable": "N/A",
+      "openTrackingUrl": "Open tracking URL"
+    },
+    "errors": {
+      "loadCouriers": "Failed to load couriers",
+      "loadOrders": "Failed to load orders",
+      "loadWarehouses": "Failed to load warehouses",
+      "orderAndCourierRequired": "Order ID and courier are required",
+      "createFailed": "Failed to create shipment",
+      "generic": "Something went wrong"
+    }
+  },
+  "AdminDeliveryDashboard": {
+    "hero": {
+      "badge": "Delivery Operations",
+      "title": "Delivery Dashboard",
+      "description": "Review newly assigned deliveries, confirm warehouse pickup, and keep shipment status up to date from a mobile-friendly operational workspace."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "refreshing": "Refreshing..."
+    },
+    "summary": {
+      "assigned": "Assigned",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "pickedFromWarehouse": "Picked From Warehouse",
+      "inTransit": "In Transit",
+      "delivered": "Delivered"
+    },
+    "tabs": {
+      "newlyAssigned": "Newly Assigned",
+      "accepted": "Accepted Deliveries",
+      "rejected": "Rejected Deliveries",
+      "pickedUp": "Picked Up",
+      "inTransit": "In Transit",
+      "delivered": "Delivered",
+      "exceptions": "Exceptions"
+    },
+    "empty": {
+      "title": "No deliveries in {tab}",
+      "description": "New assignment and status updates will appear here automatically."
+    },
+    "errors": {
+      "loadFailed": "Failed to load delivery dashboard"
+    }
+  },
+  "AdminDeliveryAssignmentCard": {
+    "notUpdated": "Not updated",
+    "orderLabel": "Order #{id}",
+    "shipmentLabel": "Shipment #{id}",
+    "assignedAt": "Assigned {date}",
+    "pickupProofAlt": "Pickup proof",
+    "rejectionReason": "Rejection reason: {reason}",
+    "acceptToUnlock": "Accept this delivery to unlock full customer, address, and product details.",
+    "info": {
+      "customerPhone": "Customer Phone",
+      "shipmentStatus": "Shipment Status",
+      "pickupProof": "Pickup Proof",
+      "pickupConfirmed": "Confirmed {date}",
+      "pickupPending": "Pending",
+      "tracking": "Tracking",
+      "notAssigned": "Not assigned"
+    },
+    "sections": {
+      "deliveryDetails": "Delivery Details",
+      "warehouse": "Warehouse",
+      "productList": "Product List",
+      "statusHistory": "Status History"
+    },
+    "labels": {
+      "alternatePhone": "Alternate phone",
+      "orderStatus": "Order status",
+      "shipmentStatus": "Shipment status",
+      "sku": "SKU",
+      "qty": "Qty",
+      "na": "N/A",
+      "noLocationNote": "No extra location note",
+      "itemCount": "{count} item(s)",
+      "eventCount": "{count} event(s)"
+    },
+    "actions": {
+      "accept": "Accept",
+      "accepting": "Accepting...",
+      "reject": "Reject",
+      "collectFromWarehouse": "Collect Product From Warehouse",
+      "updating": "Updating...",
+      "markStatus": "Mark {status}"
+    },
+    "statuses": {
+      "ASSIGNED": "Assigned",
+      "ACCEPTED": "Accepted",
+      "REJECTED": "Rejected",
+      "PICKUP_CONFIRMED": "Picked Up",
+      "IN_TRANSIT": "In Transit",
+      "OUT_FOR_DELIVERY": "Out for Delivery",
+      "DELIVERED": "Delivered",
+      "FAILED": "Failed",
+      "RETURNED": "Returned"
+    },
+    "errors": {
+      "acceptFailed": "Failed to accept delivery",
+      "locationDenied": "Location access is required to mark delivery as delivered. Please enable location access in your browser settings.",
+      "statusUpdateFailed": "Failed to mark delivery as {status}"
+    }
+  },
+  "AdminRejectAssignmentModal": {
+    "title": "Reject Delivery",
+    "description": "Rejection reason is required and will be visible to admin and warehouse users.",
+    "reasonPlaceholder": "Why are you rejecting this delivery?",
+    "actions": {
+      "cancel": "Cancel",
+      "reject": "Reject Delivery",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "rejected": "Delivery rejected successfully"
+    },
+    "errors": {
+      "reasonRequired": "Rejection reason is required.",
+      "rejectFailed": "Failed to reject delivery"
+    }
+  },
+  "AdminPickupConfirmationModal": {
+    "title": "Collect Product From Warehouse",
+    "description": "Confirm warehouse handover and upload a pickup proof image before moving forward.",
+    "checkboxes": {
+      "productReceived": "Product received",
+      "packagingOk": "Packaging OK",
+      "productInGoodCondition": "Product in good condition"
+    },
+    "fields": {
+      "pickupNote": "Pickup note",
+      "proofImage": "Pickup proof image"
+    },
+    "placeholders": {
+      "pickupNote": "Add any packaging, handover, or condition note",
+      "captureOrUpload": "Capture or upload image",
+      "mobileCameraSupported": "Mobile camera is supported"
+    },
+    "previewAlt": "Pickup proof preview",
+    "actions": {
+      "cancel": "Cancel",
+      "confirm": "Confirm Pickup",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "confirmed": "Successfully confirmed pickup"
+    },
+    "errors": {
+      "productReceivedRequired": "Please confirm that the product was received.",
+      "proofImageRequired": "Please capture or upload a proof image.",
+      "confirmFailed": "Failed to confirm pickup"
+    }
   }
 }

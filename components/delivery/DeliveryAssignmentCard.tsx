@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { AssignmentStatusBadge } from "@/components/delivery/AssignmentStatusBadge";
 import { PickupConfirmationModal } from "@/components/delivery/PickupConfirmationModal";
@@ -25,32 +26,6 @@ const STATUS_ACTIONS: Partial<
   OUT_FOR_DELIVERY: ["DELIVERED", "FAILED", "RETURNED"],
 };
 
-function formatDateTime(value?: string | null) {
-  if (!value) return "Not updated";
-  return new Date(value).toLocaleString("en-US", {
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
-function formatCurrency(value: string | number, currency = "BDT") {
-  const amount = Number(value);
-  if (!Number.isFinite(amount)) {
-    return String(value);
-  }
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency,
-    maximumFractionDigits: 2,
-  }).format(amount);
-}
-
-function formatStatusLabel(status: DeliveryAssignmentStatusValue) {
-  return status.replace(/_/g, " ").toLowerCase();
-}
-
 export function DeliveryAssignmentCard({
   assignment,
   onChanged,
@@ -58,6 +33,8 @@ export function DeliveryAssignmentCard({
   assignment: DeliveryAssignmentData;
   onChanged: (message: string) => Promise<void> | void;
 }) {
+  const t = useTranslations("AdminDeliveryAssignmentCard");
+
   const [loadingAction, setLoadingAction] = useState<string | null>(null);
   const [error, setError] = useState("");
   const [pickupOpen, setPickupOpen] = useState(false);
@@ -65,6 +42,32 @@ export function DeliveryAssignmentCard({
 
   const canViewDetails = assignment.status !== "ASSIGNED";
   const nextStatusActions = STATUS_ACTIONS[assignment.status] ?? [];
+
+  function formatDateTime(value?: string | null) {
+    if (!value) return t("notUpdated");
+    return new Date(value).toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
+  function formatCurrency(value: string | number, currency = "BDT") {
+    const amount = Number(value);
+    if (!Number.isFinite(amount)) {
+      return String(value);
+    }
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency,
+      maximumFractionDigits: 2,
+    }).format(amount);
+  }
+
+  function formatStatusLabel(status: DeliveryAssignmentStatusValue) {
+    return t(`statuses.${status}`);
+  }
 
   async function runAction(
     url: string,
@@ -77,9 +80,7 @@ export function DeliveryAssignmentCard({
 
       const response = await fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: body ? JSON.stringify(body) : undefined,
       });
 
@@ -91,9 +92,7 @@ export function DeliveryAssignmentCard({
       await onChanged(payload.message || fallbackMessage);
     } catch (actionError) {
       setError(
-        actionError instanceof Error
-          ? actionError.message
-          : fallbackMessage,
+        actionError instanceof Error ? actionError.message : fallbackMessage,
       );
     } finally {
       setLoadingAction(null);
@@ -109,26 +108,29 @@ export function DeliveryAssignmentCard({
       setLoadingAction(url);
       setError("");
 
-      // Only request location for "Mark delivered" action
-      if (body && typeof body === "object" && "status" in body && body.status === "DELIVERED") {
+      if (
+        body &&
+        typeof body === "object" &&
+        "status" in body &&
+        body.status === "DELIVERED"
+      ) {
         let position: GeolocationPosition;
 
-        // Check if we already have permission
-        const permission = await navigator.permissions.query({ name: "geolocation" });
-        
+        const permission = await navigator.permissions.query({
+          name: "geolocation",
+        });
+
         if (permission.state === "granted") {
-          // Already have permission, get position without prompt
           position = await new Promise((resolve, reject) => {
             navigator.geolocation.getCurrentPosition(resolve, reject, {
               enableHighAccuracy: true,
               timeout: 10000,
-              maximumAge: 300000, // 5 minutes cache
+              maximumAge: 300000,
             });
           });
         } else if (permission.state === "denied") {
-          throw new Error("Location access is required to mark delivery as delivered. Please enable location access in your browser settings.");
+          throw new Error(t("errors.locationDenied"));
         } else {
-          // Permission not determined, will prompt user
           position = await new Promise((resolve, reject) => {
             navigator.geolocation.getCurrentPosition(resolve, reject, {
               enableHighAccuracy: true,
@@ -138,7 +140,6 @@ export function DeliveryAssignmentCard({
           });
         }
 
-        // Add location to request body
         body = {
           ...body,
           deliveredLocation: {
@@ -151,9 +152,7 @@ export function DeliveryAssignmentCard({
 
       const response = await fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: body ? JSON.stringify(body) : undefined,
       });
 
@@ -165,9 +164,7 @@ export function DeliveryAssignmentCard({
       await onChanged(payload.message || fallbackMessage);
     } catch (actionError) {
       setError(
-        actionError instanceof Error
-          ? actionError.message
-          : fallbackMessage,
+        actionError instanceof Error ? actionError.message : fallbackMessage,
       );
     } finally {
       setLoadingAction(null);
@@ -181,51 +178,57 @@ export function DeliveryAssignmentCard({
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-                Order #{assignment.order.id}
+                {t("orderLabel", { id: assignment.order.id })}
               </span>
               <span className="text-xs text-muted-foreground">
-                Shipment #{assignment.shipment.id}
+                {t("shipmentLabel", { id: assignment.shipment.id })}
               </span>
             </div>
             <h2 className="text-xl font-semibold text-foreground">
               {assignment.order.name}
             </h2>
             <p className="text-sm text-muted-foreground">
-              {assignment.warehouse.name} ({assignment.warehouse.code}) · {assignment.shipment.courier}
+              {assignment.warehouse.name} ({assignment.warehouse.code}) ·{" "}
+              {assignment.shipment.courier}
             </p>
           </div>
 
           <div className="flex flex-col items-start gap-2 lg:items-end">
             <AssignmentStatusBadge status={assignment.status} />
             <p className="text-xs text-muted-foreground">
-              Assigned {formatDateTime(assignment.assignedAt)}
+              {t("assignedAt", { date: formatDateTime(assignment.assignedAt) })}
             </p>
           </div>
         </div>
 
         <div className="mt-4 grid gap-4 grid-cols-2 xl:grid-cols-4">
-          <InfoBlock label="Customer Phone" value={assignment.order.phone_number} />
           <InfoBlock
-            label="Shipment Status"
+            label={t("info.customerPhone")}
+            value={assignment.order.phone_number}
+          />
+          <InfoBlock
+            label={t("info.shipmentStatus")}
             value={assignment.shipment.status}
           />
           <InfoBlock
-            label="Pickup Proof"
+            label={t("info.pickupProof")}
             value={
               assignment.pickupProof
-                ? `Confirmed ${formatDateTime(assignment.pickupProof.confirmedAt)}`
-                : "Pending"
+                ? t("info.pickupConfirmed", {
+                    date: formatDateTime(assignment.pickupProof.confirmedAt),
+                  })
+                : t("info.pickupPending")
             }
           />
           <InfoBlock
-            label="Tracking"
-            value={assignment.shipment.trackingNumber || "Not assigned"}
+            label={t("info.tracking")}
+            value={assignment.shipment.trackingNumber || t("info.notAssigned")}
           />
         </div>
 
         {assignment.rejectionReason ? (
           <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-            Rejection reason: {assignment.rejectionReason}
+            {t("rejectionReason", { reason: assignment.rejectionReason })}
           </div>
         ) : null}
 
@@ -233,7 +236,7 @@ export function DeliveryAssignmentCard({
           <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-background">
             <img
               src={assignment.pickupProof.imageUrl}
-              alt="Pickup proof"
+              alt={t("pickupProofAlt")}
               className="h-52 w-full object-cover"
             />
           </div>
@@ -244,18 +247,23 @@ export function DeliveryAssignmentCard({
             <section className="grid gap-4 lg:grid-cols-[1fr_0.9fr]">
               <div className="rounded-2xl border border-border bg-background p-4">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                  Delivery Details
+                  {t("sections.deliveryDetails")}
                 </h3>
                 <div className="mt-4 space-y-3 text-sm">
-                  <p className="text-foreground">{assignment.order.address_details}</p>
-                  <p className="text-muted-foreground">
-                    {assignment.order.area}, {assignment.order.district}, {assignment.order.country}
+                  <p className="text-foreground">
+                    {assignment.order.address_details}
                   </p>
                   <p className="text-muted-foreground">
-                    Alternate phone: {assignment.order.alt_phone_number || "N/A"}
+                    {assignment.order.area}, {assignment.order.district},{" "}
+                    {assignment.order.country}
                   </p>
                   <p className="text-muted-foreground">
-                    Order status: {assignment.order.status} · Shipment status: {assignment.shipment.status}
+                    {t("labels.alternatePhone")}:{" "}
+                    {assignment.order.alt_phone_number || t("labels.na")}
+                  </p>
+                  <p className="text-muted-foreground">
+                    {t("labels.orderStatus")}: {assignment.order.status} ·{" "}
+                    {t("labels.shipmentStatus")}: {assignment.shipment.status}
                   </p>
                   <p className="font-medium text-foreground">
                     {formatCurrency(
@@ -268,15 +276,19 @@ export function DeliveryAssignmentCard({
 
               <div className="rounded-2xl border border-border bg-background p-4">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                  Warehouse
+                  {t("sections.warehouse")}
                 </h3>
                 <div className="mt-4 space-y-2 text-sm">
-                  <p className="font-medium text-foreground">{assignment.warehouse.name}</p>
-                  <p className="text-muted-foreground">
-                    {assignment.warehouse.district || "N/A"} · {assignment.warehouse.area || "N/A"}
+                  <p className="font-medium text-foreground">
+                    {assignment.warehouse.name}
                   </p>
                   <p className="text-muted-foreground">
-                    {assignment.warehouse.locationNote || "No extra location note"}
+                    {assignment.warehouse.district || t("labels.na")} ·{" "}
+                    {assignment.warehouse.area || t("labels.na")}
+                  </p>
+                  <p className="text-muted-foreground">
+                    {assignment.warehouse.locationNote ||
+                      t("labels.noLocationNote")}
                   </p>
                 </div>
               </div>
@@ -285,10 +297,12 @@ export function DeliveryAssignmentCard({
             <section className="rounded-2xl border border-border bg-background p-4">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                  Product List
+                  {t("sections.productList")}
                 </h3>
                 <span className="text-xs text-muted-foreground">
-                  {assignment.order.orderItems.length} item(s)
+                  {t("labels.itemCount", {
+                    count: assignment.order.orderItems.length,
+                  })}
                 </span>
               </div>
 
@@ -303,11 +317,13 @@ export function DeliveryAssignmentCard({
                         {item.product.name}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        SKU: {item.variant?.sku || "N/A"}
+                        {t("labels.sku")}: {item.variant?.sku || t("labels.na")}
                       </p>
                     </div>
                     <div className="text-right text-sm">
-                      <p className="font-medium text-foreground">Qty {item.quantity}</p>
+                      <p className="font-medium text-foreground">
+                        {t("labels.qty")} {item.quantity}
+                      </p>
                       <p className="text-muted-foreground">
                         {formatCurrency(item.price, item.currency)}
                       </p>
@@ -319,7 +335,7 @@ export function DeliveryAssignmentCard({
           </div>
         ) : (
           <div className="mt-4 rounded-2xl border border-dashed border-border bg-background px-4 py-4 text-sm text-muted-foreground">
-            Accept this delivery to unlock full customer, address, and product details.
+            {t("acceptToUnlock")}
           </div>
         )}
 
@@ -339,12 +355,14 @@ export function DeliveryAssignmentCard({
                     runAction(
                       `/api/delivery-assignments/${assignment.id}/accept`,
                       undefined,
-                      "Failed to accept delivery",
+                      t("errors.acceptFailed"),
                     )
                   }
                   disabled={loadingAction !== null}
                 >
-                  {loadingAction?.includes("/accept") ? "Accepting..." : "Accept"}
+                  {loadingAction?.includes("/accept")
+                    ? t("actions.accepting")
+                    : t("actions.accept")}
                 </Button>
                 <Button
                   type="button"
@@ -352,7 +370,7 @@ export function DeliveryAssignmentCard({
                   onClick={() => setRejectOpen(true)}
                   disabled={loadingAction !== null}
                 >
-                  Reject
+                  {t("actions.reject")}
                 </Button>
               </>
             ) : null}
@@ -363,7 +381,7 @@ export function DeliveryAssignmentCard({
                 onClick={() => setPickupOpen(true)}
                 disabled={loadingAction !== null}
               >
-                Collect Product From Warehouse
+                {t("actions.collectFromWarehouse")}
               </Button>
             ) : null}
 
@@ -375,17 +393,19 @@ export function DeliveryAssignmentCard({
                 onClick={() =>
                   runActionWithLocation(
                     `/api/delivery-assignments/${assignment.id}/status`,
-                    {
-                      status: nextStatus,
-                    },
-                    `Failed to mark delivery as ${formatStatusLabel(nextStatus)}`,
+                    { status: nextStatus },
+                    t("errors.statusUpdateFailed", {
+                      status: formatStatusLabel(nextStatus),
+                    }),
                   )
                 }
                 disabled={loadingAction !== null}
               >
                 {loadingAction?.includes("/status")
-                  ? "Updating..."
-                  : `Mark ${formatStatusLabel(nextStatus)}`}
+                  ? t("actions.updating")
+                  : t("actions.markStatus", {
+                      status: formatStatusLabel(nextStatus),
+                    })}
               </Button>
             ))}
           </div>
@@ -394,10 +414,10 @@ export function DeliveryAssignmentCard({
         <section className="mt-6 space-y-3">
           <div className="flex items-center justify-between gap-3">
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Status History
+              {t("sections.statusHistory")}
             </h3>
             <span className="text-xs text-muted-foreground">
-              {assignment.logs.length} event(s)
+              {t("labels.eventCount", { count: assignment.logs.length })}
             </span>
           </div>
           <StatusTimeline logs={assignment.logs} />
@@ -421,13 +441,7 @@ export function DeliveryAssignmentCard({
   );
 }
 
-function InfoBlock({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
+function InfoBlock({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border border-border bg-background p-4">
       <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">

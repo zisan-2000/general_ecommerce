@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DeliveryAssignmentCard } from "@/components/delivery/DeliveryAssignmentCard";
 import { DeliveryDashboardSkeleton } from "@/components/ui/DeliveryDashboardSkeleton";
@@ -19,35 +20,39 @@ type TabKey =
   | "delivered"
   | "exceptions";
 
-const TAB_DEFINITIONS: Array<{
-  key: TabKey;
-  label: string;
-  statuses: DeliveryAssignmentStatusValue[];
-}> = [
-  { key: "newlyAssigned", label: "Newly Assigned", statuses: ["ASSIGNED"] },
-  { key: "accepted", label: "Accepted Deliveries", statuses: ["ACCEPTED"] },
-  { key: "rejected", label: "Rejected Deliveries", statuses: ["REJECTED"] },
-  { key: "pickedUp", label: "Picked Up", statuses: ["PICKUP_CONFIRMED"] },
-  {
-    key: "inTransit",
-    label: "In Transit",
-    statuses: ["IN_TRANSIT", "OUT_FOR_DELIVERY"],
-  },
-  { key: "delivered", label: "Delivered", statuses: ["DELIVERED"] },
-  { key: "exceptions", label: "Exceptions", statuses: ["FAILED", "RETURNED"] },
+const TAB_KEYS: TabKey[] = [
+  "newlyAssigned",
+  "accepted",
+  "rejected",
+  "pickedUp",
+  "inTransit",
+  "delivered",
+  "exceptions",
 ];
 
+const TAB_STATUSES: Record<TabKey, DeliveryAssignmentStatusValue[]> = {
+  newlyAssigned: ["ASSIGNED"],
+  accepted: ["ACCEPTED"],
+  rejected: ["REJECTED"],
+  pickedUp: ["PICKUP_CONFIRMED"],
+  inTransit: ["IN_TRANSIT", "OUT_FOR_DELIVERY"],
+  delivered: ["DELIVERED"],
+  exceptions: ["FAILED", "RETURNED"],
+};
+
 const SUMMARY_CARD_STYLES: Record<string, string> = {
-  Assigned: "delivery-summary-card delivery-summary-card-assigned",
-  Accepted: "delivery-summary-card delivery-summary-card-accepted",
-  Rejected: "delivery-summary-card delivery-summary-card-rejected",
-  "Picked From Warehouse":
+  assigned: "delivery-summary-card delivery-summary-card-assigned",
+  accepted: "delivery-summary-card delivery-summary-card-accepted",
+  rejected: "delivery-summary-card delivery-summary-card-rejected",
+  pickedFromWarehouse:
     "delivery-summary-card delivery-summary-card-picked-from-warehouse",
-  "In Transit": "delivery-summary-card delivery-summary-card-in-transit",
-  Delivered: "delivery-summary-card delivery-summary-card-delivered",
+  inTransit: "delivery-summary-card delivery-summary-card-in-transit",
+  delivered: "delivery-summary-card delivery-summary-card-delivered",
 };
 
 export function DeliveryDashboardClient() {
+  const t = useTranslations("AdminDeliveryDashboard");
+
   const [assignments, setAssignments] = useState<DeliveryAssignmentData[]>([]);
   const [summary, setSummary] = useState({
     assigned: 0,
@@ -72,22 +77,23 @@ export function DeliveryDashboardClient() {
       }
       setError("");
 
-      const response = await fetch("/api/delivery-assignments?currentOnly=true&limit=200", {
-        cache: "no-store",
-      });
-      const payload = (await response.json().catch(() => ({}))) as Partial<DeliveryAssignmentsApiResponse>;
+      const response = await fetch(
+        "/api/delivery-assignments?currentOnly=true&limit=200",
+        { cache: "no-store" },
+      );
+      const payload = (await response
+        .json()
+        .catch(() => ({}))) as Partial<DeliveryAssignmentsApiResponse>;
 
       if (!response.ok || !payload.success || !payload.data) {
-        throw new Error(payload.message || "Failed to load delivery dashboard");
+        throw new Error(payload.message || t("errors.loadFailed"));
       }
 
       setAssignments(payload.data.assignments || []);
       setSummary(payload.data.summary || summary);
     } catch (loadError) {
       setError(
-        loadError instanceof Error
-          ? loadError.message
-          : "Failed to load delivery dashboard",
+        loadError instanceof Error ? loadError.message : t("errors.loadFailed"),
       );
     } finally {
       setLoading(false);
@@ -97,13 +103,14 @@ export function DeliveryDashboardClient() {
 
   useEffect(() => {
     void loadAssignments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const groupedAssignments = useMemo(() => {
-    return TAB_DEFINITIONS.reduce<Record<TabKey, DeliveryAssignmentData[]>>(
-      (accumulator, definition) => {
-        accumulator[definition.key] = assignments.filter((assignment) =>
-          definition.statuses.includes(assignment.status),
+    return TAB_KEYS.reduce<Record<TabKey, DeliveryAssignmentData[]>>(
+      (accumulator, key) => {
+        accumulator[key] = assignments.filter((assignment) =>
+          TAB_STATUSES[key].includes(assignment.status),
         );
         return accumulator;
       },
@@ -120,13 +127,13 @@ export function DeliveryDashboardClient() {
   }, [assignments]);
 
   const summaryCards = [
-    { label: "Assigned", value: summary.assigned },
-    { label: "Accepted", value: summary.accepted },
-    { label: "Rejected", value: summary.rejected },
-    { label: "Picked From Warehouse", value: summary.pickedFromWarehouse },
-    { label: "In Transit", value: summary.inTransit },
-    { label: "Delivered", value: summary.delivered },
-  ];
+    { key: "assigned", value: summary.assigned },
+    { key: "accepted", value: summary.accepted },
+    { key: "rejected", value: summary.rejected },
+    { key: "pickedFromWarehouse", value: summary.pickedFromWarehouse },
+    { key: "inTransit", value: summary.inTransit },
+    { key: "delivered", value: summary.delivered },
+  ] as const;
 
   if (loading) {
     return <DeliveryDashboardSkeleton />;
@@ -139,14 +146,13 @@ export function DeliveryDashboardClient() {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-                Delivery Operations
+                {t("hero.badge")}
               </p>
               <h1 className="mt-2 text-3xl font-semibold text-foreground">
-                Delivery Dashboard
+                {t("hero.title")}
               </h1>
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                Review newly assigned deliveries, confirm warehouse pickup, and keep shipment
-                status up to date from a mobile-friendly operational workspace.
+                {t("hero.description")}
               </p>
             </div>
 
@@ -155,7 +161,7 @@ export function DeliveryDashboardClient() {
               onClick={() => void loadAssignments(true)}
               className="btn-outline rounded-xl px-4 py-3 text-sm font-medium"
             >
-              {refreshing ? "Refreshing..." : "Refresh"}
+              {refreshing ? t("actions.refreshing") : t("actions.refresh")}
             </button>
           </div>
 
@@ -175,37 +181,42 @@ export function DeliveryDashboardClient() {
         <section className="grid gap-4 grid-cols-3 xl:grid-cols-6">
           {summaryCards.map((card) => (
             <article
-              key={card.label}
+              key={card.key}
               className={`rounded-3xl border border-border p-5 shadow-sm ${
-                SUMMARY_CARD_STYLES[card.label] ?? "delivery-summary-card"
+                SUMMARY_CARD_STYLES[card.key] ?? "delivery-summary-card"
               }`}
             >
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {card.label}
+                {t(`summary.${card.key}`)}
               </p>
-              <p className="mt-3 text-3xl font-semibold text-foreground">{card.value}</p>
+              <p className="mt-3 text-3xl font-semibold text-foreground">
+                {card.value}
+              </p>
             </article>
           ))}
         </section>
 
         <section className="rounded-3xl border border-border bg-card p-4 shadow-sm sm:p-6">
-          <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as TabKey)}>
+          <Tabs
+            value={activeTab}
+            onValueChange={(value) => setActiveTab(value as TabKey)}
+          >
             <TabsList className="w-full justify-start overflow-x-auto rounded-2xl bg-background p-2 scrollbar-hide">
-              {TAB_DEFINITIONS.map((tab) => (
-                <TabsTrigger key={tab.key} value={tab.key} className="rounded-xl">
-                  {tab.label}
+              {TAB_KEYS.map((key) => (
+                <TabsTrigger key={key} value={key} className="rounded-xl">
+                  {t(`tabs.${key}`)}
                   <span className="ml-2 rounded-full bg-card px-2 py-0.5 text-xs text-muted-foreground">
-                    {groupedAssignments[tab.key].length}
+                    {groupedAssignments[key].length}
                   </span>
                 </TabsTrigger>
               ))}
             </TabsList>
 
-            {TAB_DEFINITIONS.map((tab) => (
-              <TabsContent key={tab.key} value={tab.key} className="mt-6">
-                {groupedAssignments[tab.key].length ? (
+            {TAB_KEYS.map((key) => (
+              <TabsContent key={key} value={key} className="mt-6">
+                {groupedAssignments[key].length ? (
                   <div className="space-y-5">
-                    {groupedAssignments[tab.key].map((assignment) => (
+                    {groupedAssignments[key].map((assignment) => (
                       <DeliveryAssignmentCard
                         key={assignment.id}
                         assignment={assignment}
@@ -219,10 +230,12 @@ export function DeliveryDashboardClient() {
                 ) : (
                   <div className="rounded-3xl border border-dashed border-border bg-background px-6 py-14 text-center">
                     <p className="text-lg font-medium text-foreground">
-                      No deliveries in {tab.label.toLowerCase()}
+                      {t("empty.title", {
+                        tab: t(`tabs.${key}`).toLowerCase(),
+                      })}
                     </p>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      New assignment and status updates will appear here automatically.
+                      {t("empty.description")}
                     </p>
                   </div>
                 )}

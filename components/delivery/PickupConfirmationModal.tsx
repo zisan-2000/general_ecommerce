@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Dialog,
   DialogContent,
@@ -24,6 +25,8 @@ export function PickupConfirmationModal({
   onOpenChange: (open: boolean) => void;
   onSuccess: (message: string) => Promise<void> | void;
 }) {
+  const t = useTranslations("AdminPickupConfirmationModal");
+
   const [productReceived, setProductReceived] = useState(false);
   const [packagingOk, setPackagingOk] = useState(false);
   const [productInGoodCondition, setProductInGoodCondition] = useState(false);
@@ -59,12 +62,12 @@ export function PickupConfirmationModal({
 
   async function handleSubmit() {
     if (!productReceived) {
-      setError("Please confirm that the product was received.");
+      setError(t("errors.productReceivedRequired"));
       return;
     }
 
     if (!selectedFile) {
-      setError("Please capture or upload a proof image.");
+      setError(t("errors.proofImageRequired"));
       return;
     }
 
@@ -73,35 +76,36 @@ export function PickupConfirmationModal({
       setError("");
 
       const imageUrl = await uploadFile(selectedFile);
-      const response = await fetch(`/api/delivery-assignments/${assignmentId}/pickup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `/api/delivery-assignments/${assignmentId}/pickup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            productReceived,
+            packagingOk,
+            productInGoodCondition,
+            note: note.trim() || null,
+            imageUrl,
+          }),
         },
-        body: JSON.stringify({
-          productReceived,
-          packagingOk,
-          productInGoodCondition,
-          note: note.trim() || null,
-          imageUrl,
-        }),
-      });
+      );
 
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.success) {
-        throw new Error(payload.message || "Failed to confirm pickup");
+        throw new Error(payload.message || t("errors.confirmFailed"));
       }
 
       resetForm();
       onOpenChange(false);
-      await onSuccess(
-        payload.message || "Successfully product received from warehouse",
-      );
+      await onSuccess(payload.message || t("success.confirmed"));
     } catch (submitError) {
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Failed to confirm pickup",
+          : t("errors.confirmFailed"),
       );
     } finally {
       setSubmitting(false);
@@ -120,10 +124,8 @@ export function PickupConfirmationModal({
     >
       <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto border-border bg-card">
         <DialogHeader>
-          <DialogTitle>Collect Product From Warehouse</DialogTitle>
-          <DialogDescription>
-            Confirm warehouse handover and upload a pickup proof image before moving forward.
-          </DialogDescription>
+          <DialogTitle>{t("title")}</DialogTitle>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
 
         <div className="space-y-5">
@@ -135,7 +137,7 @@ export function PickupConfirmationModal({
                 onChange={(event) => setProductReceived(event.target.checked)}
                 className="mt-1 h-4 w-4 rounded border-border"
               />
-              <span>Product received</span>
+              <span>{t("checkboxes.productReceived")}</span>
             </label>
             <label className="flex items-start gap-3 text-sm text-foreground">
               <input
@@ -144,7 +146,7 @@ export function PickupConfirmationModal({
                 onChange={(event) => setPackagingOk(event.target.checked)}
                 className="mt-1 h-4 w-4 rounded border-border"
               />
-              <span>Packaging OK</span>
+              <span>{t("checkboxes.packagingOk")}</span>
             </label>
             <label className="flex items-start gap-3 text-sm text-foreground">
               <input
@@ -155,31 +157,35 @@ export function PickupConfirmationModal({
                 }
                 className="mt-1 h-4 w-4 rounded border-border"
               />
-              <span>Product in good condition</span>
+              <span>{t("checkboxes.productInGoodCondition")}</span>
             </label>
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-foreground">Pickup note</label>
+            <label className="text-sm font-medium text-foreground">
+              {t("fields.pickupNote")}
+            </label>
             <Textarea
               value={note}
               onChange={(event) => setNote(event.target.value)}
               rows={4}
-              placeholder="Add any packaging, handover, or condition note"
+              placeholder={t("placeholders.pickupNote")}
               className="input-theme border-border bg-background"
             />
           </div>
 
           <div className="space-y-3">
             <label className="text-sm font-medium text-foreground">
-              Pickup proof image
+              {t("fields.proofImage")}
             </label>
             <label className="flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-background px-4 py-8 text-center hover:bg-muted/50">
               <span className="text-sm font-medium text-foreground">
-                {selectedFile ? selectedFile.name : "Capture or upload image"}
+                {selectedFile
+                  ? selectedFile.name
+                  : t("placeholders.captureOrUpload")}
               </span>
               <span className="mt-1 text-xs text-muted-foreground">
-                Mobile camera is supported
+                {t("placeholders.mobileCameraSupported")}
               </span>
               <input
                 type="file"
@@ -196,7 +202,7 @@ export function PickupConfirmationModal({
               <div className="overflow-hidden rounded-2xl border border-border bg-background">
                 <img
                   src={previewUrl}
-                  alt="Pickup proof preview"
+                  alt={t("previewAlt")}
                   className="h-64 w-full object-cover"
                 />
               </div>
@@ -217,10 +223,10 @@ export function PickupConfirmationModal({
             onClick={() => onOpenChange(false)}
             disabled={submitting}
           >
-            Cancel
+            {t("actions.cancel")}
           </Button>
           <Button type="button" onClick={handleSubmit} disabled={submitting}>
-            {submitting ? "Submitting..." : "Confirm Pickup"}
+            {submitting ? t("actions.submitting") : t("actions.confirm")}
           </Button>
         </DialogFooter>
       </DialogContent>
