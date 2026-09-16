@@ -4,6 +4,7 @@
 
 import { useEffect, useMemo, useState, useCallback } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   AssignDeliveryManModal,
   type DeliveryManAssignmentOption,
@@ -244,6 +245,7 @@ const getOrderListCacheKey = (query: Omit<OrderListQueryState, "search">) =>
   });
 
 const OrderManagement = () => {
+  const t = useTranslations("AdminOrderManagement");
   const initialCacheKey = getOrderListCacheKey({
     page: lastOrderListQueryState.page,
     statusFilter: lastOrderListQueryState.statusFilter,
@@ -535,9 +537,11 @@ const OrderManagement = () => {
         : "";
     if (productImage) return productImage;
 
-    return item.product?.gallery?.find(
-      (image) => typeof image === "string" && image.trim(),
-    ) ?? "";
+    return (
+      item.product?.gallery?.find(
+        (image) => typeof image === "string" && image.trim(),
+      ) ?? ""
+    );
   }, []);
 
   const applyShipmentState = useCallback((nextShipment: Shipment | null) => {
@@ -1007,10 +1011,10 @@ const OrderManagement = () => {
         {/* Heading */}
         <div className="mb-4">
           <h1 className="text-2xl font-semibold text-foreground sm:text-3xl">
-            Order Management
+            {t("header.title")}
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            View all library orders, update status and track shipments
+            {t("header.subtitle")}
           </p>
         </div>
 
@@ -1019,7 +1023,9 @@ const OrderManagement = () => {
           {/* Total Orders */}
           <div className="flex w-full items-center justify-between rounded-2xl border border-border bg-card px-4 py-4 shadow-sm sm:px-6">
             <div>
-              <p className="text-xs text-muted-foreground">Total Orders</p>
+              <p className="text-xs text-muted-foreground">
+                {t("stats.totalOrders")}
+              </p>
               <p className="mt-1 text-2xl font-semibold text-foreground">
                 {totalOrders}
               </p>
@@ -1060,7 +1066,9 @@ const OrderManagement = () => {
           {/* Total Amount (This Page) */}
           <div className="flex w-full items-center justify-between rounded-2xl border border-border bg-card px-4 py-4 shadow-sm sm:px-6">
             <div>
-              <p className="text-xs text-muted-foreground">Page Total Amount</p>
+              <p className="text-xs text-muted-foreground">
+                {t("stats.pageTotalAmount")}
+              </p>
               <p className="mt-1 text-2xl font-semibold text-foreground">
                 {formatMoney(pageTotalAmount, "BDT")}
               </p>
@@ -1103,7 +1111,7 @@ const OrderManagement = () => {
                   setSearch(e.target.value);
                   setPage(1);
                 }}
-                placeholder="Search by order ID, name or mobile..."
+                placeholder={t("filters.searchPlaceholder")}
                 className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
               />
             </div>
@@ -1120,31 +1128,46 @@ const OrderManagement = () => {
                 className="bg-background text-foreground hover:bg-primary/20"
                 value="ALL"
               >
-                All Status
+                {t("status.all")}
               </option>
               <option className="bg-background text-foreground" value="PENDING">
-                Pending
+                {t("status.PENDING")}
               </option>
-              <option className="bg-background text-foreground" value="CONFIRMED">
-                Confirmed
+              <option
+                className="bg-background text-foreground"
+                value="CONFIRMED"
+              >
+                {t("status.CONFIRMED")}
               </option>
-              <option className="bg-background text-foreground" value="PROCESSING">
-                Processing
+              <option
+                className="bg-background text-foreground"
+                value="PROCESSING"
+              >
+                {t("status.PROCESSING")}
               </option>
               <option className="bg-background text-foreground" value="SHIPPED">
-                Shipped
+                {t("status.SHIPPED")}
               </option>
-              <option className="bg-background text-foreground" value="DELIVERED">
-                Delivered
+              <option
+                className="bg-background text-foreground"
+                value="DELIVERED"
+              >
+                {t("status.DELIVERED")}
               </option>
               <option className="bg-background text-foreground" value="FAILED">
-                Failed
+                {t("status.FAILED")}
               </option>
-              <option className="bg-background text-foreground" value="RETURNED">
-                Returned
+              <option
+                className="bg-background text-foreground"
+                value="RETURNED"
+              >
+                {t("status.RETURNED")}
               </option>
-              <option className="bg-background text-foreground" value="CANCELLED">
-                Cancelled
+              <option
+                className="bg-background text-foreground"
+                value="CANCELLED"
+              >
+                {t("status.CANCELLED")}
               </option>
             </select>
           </div>
@@ -1185,11 +1208,9 @@ const OrderManagement = () => {
                   key={i}
                   className="overflow-hidden rounded-2xl bg-card shadow-sm border-border"
                 >
-                  {/* Header Gradient */}
                   <div className="h-24 bg-gradient-to-r from-muted to-muted/50 animate-pulse"></div>
 
                   <div className="-mt-10 px-5 pb-5">
-                    {/* Avatar Circle */}
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-muted shadow-md animate-pulse"></div>
 
                     <div className="mt-3 space-y-2">
@@ -1199,7 +1220,6 @@ const OrderManagement = () => {
                       <div className="h-3 bg-muted rounded w-1/2 animate-pulse"></div>
                     </div>
 
-                    {/* Totals */}
                     <div className="mt-3 rounded-xl bg-muted/30 px-3 py-2">
                       <div className="space-y-1">
                         <div className="flex items-center justify-between">
@@ -1213,13 +1233,11 @@ const OrderManagement = () => {
                       </div>
                     </div>
 
-                    {/* Status Badges */}
                     <div className="mt-3 flex flex-wrap items-center gap-2">
                       <div className="h-6 bg-muted rounded-full w-20 animate-pulse"></div>
                       <div className="h-6 bg-muted rounded-full w-16 animate-pulse"></div>
                     </div>
 
-                    {/* Action Button */}
                     <div className="mt-4">
                       <div className="h-8 bg-muted rounded-full w-full animate-pulse"></div>
                     </div>
@@ -1240,7 +1258,7 @@ const OrderManagement = () => {
           <>
             {filteredOrders.length === 0 ? (
               <div className="mt-8 text-center text-sm text-muted-foreground">
-                No orders found.
+                {t("empty.noOrders")}
               </div>
             ) : (
               <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -1252,121 +1270,133 @@ const OrderManagement = () => {
                     ? firstItemVariantLabel
                       ? `${firstItem.product.name} - ${firstItemVariantLabel}`
                       : firstItem.product.name
-                    : "No product details";
+                    : t("card.noProductDetails");
 
                   return (
-                  <div
-                    key={order.id}
-                    className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
-                  >
-                    <div className="border-b border-border bg-muted/20 px-4 py-3">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <p className="truncate text-sm font-semibold text-foreground">
-                            Order #{order.id} • {order.name || "Guest Customer"}
+                    <div
+                      key={order.id}
+                      className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+                    >
+                      <div className="border-b border-border bg-muted/20 px-4 py-3">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0">
+                            <p className="truncate text-sm font-semibold text-foreground">
+                              {t("card.orderTitle", {
+                                id: order.id,
+                                name: order.name || t("card.guestCustomer"),
+                              })}
+                            </p>
+                            <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
+                              {order.address_details}, {order.area},{" "}
+                              {order.district}, {order.country}
+                            </p>
+                          </div>
+                          <span
+                            className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-semibold ${statusBadgeClass(
+                              order.status,
+                            )}`}
+                          >
+                            {t(`status.${order.status}`).toLowerCase()}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-3 px-4 py-3 text-[11px] sm:grid-cols-3">
+                        <div>
+                          <p className="text-muted-foreground">
+                            {t("card.createdOn")}
                           </p>
-                          <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
-                            {order.address_details}, {order.area},{" "}
-                            {order.district}, {order.country}
+                          <p className="mt-1 font-semibold text-foreground">
+                            {formatDate(order.createdAt)}
                           </p>
                         </div>
+                        <div>
+                          <p className="text-muted-foreground">
+                            {t("card.payment")}
+                          </p>
+                          <p className="mt-1 font-semibold text-foreground">
+                            {order.payment_method}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-muted-foreground">
+                            {t("card.items")}
+                          </p>
+                          <p className="mt-1 font-semibold text-foreground">
+                            {order.orderItems?.reduce(
+                              (sum, item) => sum + Number(item.quantity || 0),
+                              0,
+                            ) || 0}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="px-4 pb-3">
+                        <div className="flex items-center gap-3 rounded-xl border border-border bg-background/60 p-2">
+                          <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-muted">
+                            {firstItemImage ? (
+                              <Image
+                                src={firstItemImage}
+                                alt={firstItemTitle}
+                                fill
+                                className="object-cover"
+                                sizes="56px"
+                              />
+                            ) : (
+                              <span className="text-[10px] text-muted-foreground">
+                                {t("card.noImage")}
+                              </span>
+                            )}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="truncate text-xs font-semibold text-foreground">
+                              {firstItemTitle}
+                            </p>
+                            {(order.orderItems?.length ?? 0) > 1 && (
+                              <p className="mt-1 text-[11px] text-muted-foreground">
+                                {t("card.moreItems", {
+                                  count: (order.orderItems?.length ?? 1) - 1,
+                                })}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-3 border-t border-border px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
                         <span
-                          className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-semibold ${statusBadgeClass(
-                            order.status,
+                          className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold ${paymentBadgeClass(
+                            order.paymentStatus,
                           )}`}
                         >
-                          {order.status.toLowerCase()}
+                          {t(
+                            `paymentStatus.${order.paymentStatus}`,
+                          ).toLowerCase()}
                         </span>
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 gap-3 px-4 py-3 text-[11px] sm:grid-cols-3">
-                      <div>
-                        <p className="text-muted-foreground">Created on</p>
-                        <p className="mt-1 font-semibold text-foreground">
-                          {formatDate(order.createdAt)}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground">Payment</p>
-                        <p className="mt-1 font-semibold text-foreground">
-                          {order.payment_method}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-muted-foreground">Items</p>
-                        <p className="mt-1 font-semibold text-foreground">
-                          {order.orderItems?.reduce(
-                            (sum, item) => sum + Number(item.quantity || 0),
-                            0,
-                          ) || 0}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="px-4 pb-3">
-                      <div className="flex items-center gap-3 rounded-xl border border-border bg-background/60 p-2">
-                        <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-muted">
-                          {firstItemImage ? (
-                            <Image
-                              src={firstItemImage}
-                              alt={firstItemTitle}
-                              fill
-                              className="object-cover"
-                              sizes="56px"
-                            />
-                          ) : (
-                            <span className="text-[10px] text-muted-foreground">
-                              No Image
-                            </span>
-                          )}
-                        </div>
-                        <div className="min-w-0">
-                          <p className="truncate text-xs font-semibold text-foreground">
-                            {firstItemTitle}
+                        <div className="text-left sm:text-right">
+                          <p className="text-xs text-muted-foreground">
+                            {t("card.grandTotal")}
                           </p>
-                          {(order.orderItems?.length ?? 0) > 1 && (
-                            <p className="mt-1 text-[11px] text-muted-foreground">
-                              +{(order.orderItems?.length ?? 1) - 1} more item
-                              {(order.orderItems?.length ?? 0) > 2 ? "s" : ""}
-                            </p>
-                          )}
+                          <p className="text-xl font-semibold text-foreground">
+                            {formatMoney(
+                              Number(order.grand_total ?? 0),
+                              order.currency || "BDT",
+                            )}
+                          </p>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="flex flex-col gap-3 border-t border-border px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-                      <span
-                        className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold ${paymentBadgeClass(
-                          order.paymentStatus,
-                        )}`}
-                      >
-                        {order.paymentStatus.toLowerCase()}
-                      </span>
-
-                      <div className="text-left sm:text-right">
-                        <p className="text-xs text-muted-foreground">
-                          Grand Total
-                        </p>
-                        <p className="text-xl font-semibold text-foreground">
-                          {formatMoney(
-                            Number(order.grand_total ?? 0),
-                            order.currency || "BDT",
-                          )}
-                        </p>
+                      <div className="px-4 pb-4">
+                        <button
+                          type="button"
+                          className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
+                          onClick={() => openDetails(order.id)}
+                        >
+                          {t("card.viewAssign")}
+                        </button>
                       </div>
                     </div>
-
-                    <div className="px-4 pb-4">
-                      <button
-                        type="button"
-                        className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
-                        onClick={() => openDetails(order.id)}
-                      >
-                        View / Assign Delivery
-                      </button>
-                    </div>
-                  </div>
                   );
                 })}
               </div>
@@ -1380,10 +1410,10 @@ const OrderManagement = () => {
                   disabled={page === 1}
                   className="rounded-full bg-card px-4 py-2 text-foreground shadow-sm border-border disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  Previous
+                  {t("pagination.previous")}
                 </button>
                 <span className="text-center text-muted-foreground">
-                  Page {page} / {pagination.pages}
+                  {t("pagination.pageOf", { page, pages: pagination.pages })}
                 </span>
                 <button
                   onClick={() =>
@@ -1394,7 +1424,7 @@ const OrderManagement = () => {
                   disabled={page === pagination.pages}
                   className="rounded-full bg-card px-4 py-2 text-foreground shadow-sm border-border disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  Next
+                  {t("pagination.next")}
                 </button>
               </div>
             )}
@@ -1410,11 +1440,11 @@ const OrderManagement = () => {
             <div className="flex flex-col gap-3 border-b border-border px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
               <div className="min-w-0">
                 <h2 className="text-lg font-semibold text-foreground">
-                  Order Details
+                  {t("detail.title")}
                 </h2>
                 {orderDetail && (
                   <p className="text-xs text-muted-foreground">
-                    Order ID: {orderDetail.id} •{" "}
+                    {t("detail.orderIdLabel", { id: orderDetail.id })} •{" "}
                     {formatDate(
                       orderDetail.order_date || orderDetail.createdAt,
                     )}
@@ -1425,7 +1455,7 @@ const OrderManagement = () => {
                 onClick={handleCloseDetail}
                 className="w-full rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground hover:bg-muted/80 sm:w-auto"
               >
-                Close ✕
+                {t("detail.close")}
               </button>
             </div>
 
@@ -1433,7 +1463,6 @@ const OrderManagement = () => {
             <div className="max-h-[78vh] overflow-y-auto px-4 py-4 sm:max-h-[70vh] sm:px-6">
               {detailLoading && (
                 <div className="space-y-5 text-sm animate-pulse">
-                  {/* Customer + Address Skeleton */}
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="rounded-2xl bg-muted/30 p-4">
                       <div className="mb-2 h-3 w-24 rounded bg-gray-200"></div>
@@ -1454,7 +1483,6 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
-                  {/* Payment Screenshot Skeleton */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-3 h-3 w-32 rounded bg-gray-200"></div>
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
@@ -1468,7 +1496,6 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
-                  {/* Order Items Skeleton */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-3 h-3 w-24 rounded bg-gray-200"></div>
                     <div className="space-y-2">
@@ -1509,7 +1536,6 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
-                  {/* Order Status Skeleton */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-3 h-3 w-24 rounded bg-gray-200"></div>
                     <div className="grid gap-3 md:grid-cols-3">
@@ -1529,7 +1555,6 @@ const OrderManagement = () => {
                     <div className="mt-1 h-3 w-48 rounded bg-gray-200"></div>
                   </div>
 
-                  {/* Shipment Status Skeleton */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-2 flex items-center justify-between">
                       <div className="h-3 w-28 rounded bg-gray-200"></div>
@@ -1571,7 +1596,6 @@ const OrderManagement = () => {
                     <div className="mt-3 h-3 w-56 rounded bg-gray-200"></div>
                   </div>
 
-                  {/* Save Button Skeleton */}
                   <div className="pt-2 pb-4">
                     <div className="h-8 w-full rounded-full bg-gray-200"></div>
                   </div>
@@ -1590,38 +1614,42 @@ const OrderManagement = () => {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="rounded-2xl bg-muted/30 p-4">
                       <h3 className="mb-2 text-xs font-semibold text-muted-foreground">
-                        Customer Information
+                        {t("detail.customerInfo")}
                       </h3>
                       <p className="text-sm font-semibold text-foreground">
-                        {orderDetail.name || "No Name"}
+                        {orderDetail.name || t("detail.noName")}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Mobile: {orderDetail.phone_number || "-"}
+                        {t("detail.mobile", {
+                          value: orderDetail.phone_number || "-",
+                        })}
                       </p>
                       {orderDetail.alt_phone_number && (
                         <p className="mt-1 text-xs text-muted-foreground">
-                          Alt Mobile: {orderDetail.alt_phone_number}
+                          {t("detail.altMobile", {
+                            value: orderDetail.alt_phone_number,
+                          })}
                         </p>
                       )}
                       {orderDetail.email && (
                         <p className="mt-1 text-xs text-muted-foreground">
-                          Email: {orderDetail.email}
+                          {t("detail.email", { value: orderDetail.email })}
                         </p>
                       )}
                       <p className="mt-2 text-xs text-muted-foreground">
-                        Payment Method:{" "}
+                        {t("detail.paymentMethod")}{" "}
                         <span className="font-medium">
                           {orderDetail.payment_method}
                         </span>
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Currency:{" "}
+                        {t("detail.currency")}{" "}
                         <span className="font-medium">
                           {orderDetail.currency || "BDT"}
                         </span>
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Order Date:{" "}
+                        {t("detail.orderDate")}{" "}
                         <span className="font-medium">
                           {formatDate(
                             orderDetail.order_date || orderDetail.createdAt,
@@ -1632,45 +1660,41 @@ const OrderManagement = () => {
 
                     <div className="rounded-2xl bg-muted/30 p-4">
                       <h3 className="mb-2 text-xs font-semibold text-muted-foreground">
-                        Delivery Address
+                        {t("detail.deliveryAddress")}
                       </h3>
                       <p className="text-xs text-foreground">
                         {orderDetail.address_details}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Area: {orderDetail.area}
+                        {t("detail.area", { value: orderDetail.area })}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        District: {orderDetail.district}
+                        {t("detail.district", { value: orderDetail.district })}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Country: {orderDetail.country}
+                        {t("detail.country", { value: orderDetail.country })}
                       </p>
                     </div>
                   </div>
 
-                  {/* 1.5 Payment Screenshot (only show from DB URL) */}
+                  {/* 1.5 Payment Screenshot */}
                   {orderDetail.image && (
                     <div className="rounded-2xl bg-muted/30 p-4">
                       <h3 className="mb-3 text-xs font-semibold text-muted-foreground">
-                        Payment Screenshot
+                        {t("detail.paymentScreenshot")}
                       </h3>
 
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                        {/* Preview Card */}
                         <div className="w-full max-w-xs overflow-hidden rounded-xl border border-border bg-card shadow-sm">
                           <img
                             src={orderDetail.image}
-                            alt="Payment screenshot"
+                            alt={t("detail.paymentScreenshotAlt")}
                             className="h-full w-full max-h-72 object-contain bg-muted"
                           />
                         </div>
 
-                        {/* Right side: text + link */}
                         <div className="space-y-3 text-xs text-muted-foreground">
-                          <p>
-                            Customer uploaded this screenshot after payment.
-                          </p>
+                          <p>{t("detail.screenshotHint")}</p>
 
                           <a
                             href={orderDetail.image}
@@ -1678,7 +1702,7 @@ const OrderManagement = () => {
                             rel="noreferrer"
                             className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[11px] font-medium text-primary-foreground hover:bg-primary/90"
                           >
-                            View Screenshot
+                            {t("detail.viewScreenshot")}
                             <svg
                               className="ml-1 h-3 w-3"
                               viewBox="0 0 24 24"
@@ -1711,7 +1735,7 @@ const OrderManagement = () => {
                   {/* 2. Items */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <h3 className="mb-3 text-xs font-semibold text-muted-foreground">
-                      Order items
+                      {t("detail.orderItemsTitle")}
                     </h3>
                     <div className="space-y-2">
                       {orderDetail.orderItems?.map((item) => {
@@ -1728,25 +1752,29 @@ const OrderManagement = () => {
                                 {itemImage ? (
                                   <Image
                                     src={itemImage}
-                                    alt={item.product?.name || "Order item"}
+                                    alt={
+                                      item.product?.name || t("detail.itemAlt")
+                                    }
                                     fill
                                     className="object-cover"
                                     sizes="48px"
                                   />
                                 ) : (
                                   <span className="text-[9px] text-muted-foreground">
-                                    No Image
+                                    {t("detail.noImage")}
                                   </span>
                                 )}
                               </div>
                               <div className="min-w-0">
                                 <p className="truncate font-semibold text-foreground">
                                   {item.product?.name ||
-                                    "Product Name Not Available"}
+                                    t("detail.productNameNotAvailable")}
                                 </p>
                                 {variantLabel && (
                                   <p className="mt-0.5 text-[11px] text-muted-foreground">
-                                    Variant: {variantLabel}
+                                    {t("detail.variantLabel", {
+                                      value: variantLabel,
+                                    })}
                                   </p>
                                 )}
                                 {item.bundleComponents && item.bundleComponents.length > 0 && (
@@ -1763,11 +1791,13 @@ const OrderManagement = () => {
                                   </ul>
                                 )}
                                 <p className="mt-0.5 text-[11px] text-muted-foreground">
-                                  Qty: {item.quantity} x{" "}
-                                  {formatMoney(
-                                    Number(item.price),
-                                    orderDetail.currency || "BDT",
-                                  )}
+                                  {t("detail.qtyPrice", {
+                                    qty: item.quantity,
+                                    price: formatMoney(
+                                      Number(item.price),
+                                      orderDetail.currency || "BDT",
+                                    ),
+                                  })}
                                 </p>
                               </div>
                             </div>
@@ -1783,7 +1813,7 @@ const OrderManagement = () => {
                     </div>
                     <div className="mt-3 border-t border-border pt-2 text-xs text-foreground">
                       <div className="flex justify-between">
-                        <span>Subtotal</span>
+                        <span>{t("detail.subtotal")}</span>
                         <span>
                           {formatMoney(
                             Number(orderDetail.total),
@@ -1792,7 +1822,7 @@ const OrderManagement = () => {
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Discount</span>
+                        <span>{t("detail.discount")}</span>
                         <span>
                           {formatMoney(
                             Number(orderDetail.discount_total || 0),
@@ -1801,7 +1831,7 @@ const OrderManagement = () => {
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span>VAT</span>
+                        <span>{t("detail.vat")}</span>
                         <span>
                           {formatMoney(
                             Number(orderDetail.Vat_total || 0),
@@ -1810,7 +1840,7 @@ const OrderManagement = () => {
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Shipping</span>
+                        <span>{t("detail.shipping")}</span>
                         <span>
                           {formatMoney(
                             Number(orderDetail.shipping_cost),
@@ -1819,7 +1849,7 @@ const OrderManagement = () => {
                         </span>
                       </div>
                       <div className="mt-1 flex justify-between font-semibold">
-                        <span>Grand Total</span>
+                        <span>{t("detail.grandTotal")}</span>
                         <span>
                           {formatMoney(
                             Number(orderDetail.grand_total),
@@ -1830,14 +1860,16 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
-                  {/* 3. Order meta (status, payment, transaction) */}
+                  {/* 3. Order meta */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <h3 className="mb-3 text-xs font-semibold text-muted-foreground">
-                      Order Status
+                      {t("detail.orderStatusTitle")}
                     </h3>
                     <div className="grid gap-3 md:grid-cols-3">
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Order Status</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.orderStatusLabel")}
+                        </p>
                         <select
                           value={editOrderStatus}
                           onChange={(e) =>
@@ -1847,18 +1879,30 @@ const OrderManagement = () => {
                           }
                           className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                         >
-                          <option value="PENDING">PENDING</option>
-                          <option value="CONFIRMED">CONFIRMED</option>
-                          <option value="PROCESSING">PROCESSING</option>
-                          <option value="SHIPPED">SHIPPED</option>
-                          <option value="DELIVERED">DELIVERED</option>
-                          <option value="FAILED">FAILED</option>
-                          <option value="RETURNED">RETURNED</option>
-                          <option value="CANCELLED">CANCELLED</option>
+                          <option value="PENDING">{t("status.PENDING")}</option>
+                          <option value="CONFIRMED">
+                            {t("status.CONFIRMED")}
+                          </option>
+                          <option value="PROCESSING">
+                            {t("status.PROCESSING")}
+                          </option>
+                          <option value="SHIPPED">{t("status.SHIPPED")}</option>
+                          <option value="DELIVERED">
+                            {t("status.DELIVERED")}
+                          </option>
+                          <option value="FAILED">{t("status.FAILED")}</option>
+                          <option value="RETURNED">
+                            {t("status.RETURNED")}
+                          </option>
+                          <option value="CANCELLED">
+                            {t("status.CANCELLED")}
+                          </option>
                         </select>
                       </div>
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Payment Status</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.paymentStatusLabel")}
+                        </p>
                         <select
                           value={editPaymentStatus}
                           onChange={(e) =>
@@ -1868,23 +1912,31 @@ const OrderManagement = () => {
                           }
                           className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                         >
-                          <option value="PAID">PAID</option>
-                          <option value="UNPAID">UNPAID</option>
-                          <option value="REFUNDED">REFUNDED</option>
+                          <option value="PAID">
+                            {t("paymentStatus.PAID")}
+                          </option>
+                          <option value="UNPAID">
+                            {t("paymentStatus.UNPAID")}
+                          </option>
+                          <option value="REFUNDED">
+                            {t("paymentStatus.REFUNDED")}
+                          </option>
                         </select>
                       </div>
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Transaction ID</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.transactionIdLabel")}
+                        </p>
                         <input
                           value={editTransactionId}
                           onChange={(e) => setEditTransactionId(e.target.value)}
-                          placeholder="Bkash/Nagad txn id..."
+                          placeholder={t("detail.transactionIdPlaceholder")}
                           className="w-full rounded-xl border border-border bg-card px-3 py-2 text-xs outline-none"
                         />
                       </div>
                     </div>
                     <p className="mt-1 text-[10px] text-muted-foreground">
-                      * Only admin can successfully update these options.
+                      {t("detail.adminOnlyNote")}
                     </p>
                   </div>
 
@@ -1892,7 +1944,7 @@ const OrderManagement = () => {
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <h3 className="text-xs font-semibold text-muted-foreground">
-                        Shipment Status
+                        {t("detail.shipmentStatusTitle")}
                       </h3>
                       {shipment && (
                         <span
@@ -1900,27 +1952,32 @@ const OrderManagement = () => {
                             shipment.status,
                           )}`}
                         >
-                          Current: {shipment.status}
+                          {t("detail.currentStatus", {
+                            status: shipment.status,
+                          })}
                         </span>
                       )}
                     </div>
 
                     {!shipment && (
                       <p className="mb-3 text-[11px] text-muted-foreground">
-                        No shipment created for this order yet. Fill the form
-                        below to create a new shipment.
+                        {t("detail.noShipmentHint")}
                       </p>
                     )}
 
                     <div className="grid gap-3 md:grid-cols-4">
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Warehouse</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.warehouseLabel")}
+                        </p>
                         <select
                           value={editWarehouseId}
                           onChange={(e) => setEditWarehouseId(e.target.value)}
                           className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                         >
-                          <option value="">Select Warehouse</option>
+                          <option value="">
+                            {t("detail.selectWarehouse")}
+                          </option>
                           {warehouses.map((warehouse) => {
                             const selectable = isWarehouseSelectable(
                               warehouse.id,
@@ -1939,13 +1996,15 @@ const OrderManagement = () => {
                         </select>
                         {warehouseStock?.requiresStock ? (
                           <p className="text-[10px] text-muted-foreground">
-                            Only warehouses with enough stock are selectable.
+                            {t("detail.warehouseStockHint")}
                           </p>
                         ) : null}
                       </div>
 
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Courier</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.courierLabel")}
+                        </p>
                         {couriers.length > 0 ? (
                           <select
                             value={editCourierId}
@@ -1959,7 +2018,9 @@ const OrderManagement = () => {
                             }}
                             className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                           >
-                            <option value="">Select Courier</option>
+                            <option value="">
+                              {t("detail.selectCourier")}
+                            </option>
                             {couriers
                               .filter((c) => c.isActive)
                               .map((courier) => (
@@ -1972,25 +2033,29 @@ const OrderManagement = () => {
                           <input
                             value={editCourier}
                             onChange={(e) => setEditCourier(e.target.value)}
-                            placeholder="Courier name..."
+                            placeholder={t("detail.courierPlaceholder")}
                             className="w-full rounded-xl border border-border bg-card px-3 py-2 text-xs outline-none"
                           />
                         )}
                       </div>
 
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Tracking Number</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.trackingNumberLabel")}
+                        </p>
                         <input
                           value={editTrackingNumber}
                           onChange={(e) =>
                             setEditTrackingNumber(e.target.value)
                           }
-                          placeholder="tracking no..."
+                          placeholder={t("detail.trackingPlaceholder")}
                           className="w-full rounded-xl border border-border bg-card px-3 py-2 text-xs outline-none"
                         />
                       </div>
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Shipment Status</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.shipmentStatusLabel")}
+                        </p>
                         <select
                           value={editShipmentStatus}
                           onChange={(e) =>
@@ -2000,23 +2065,39 @@ const OrderManagement = () => {
                           }
                           className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                         >
-                          <option value="PENDING">PENDING</option>
-                          <option value="ASSIGNED">ASSIGNED</option>
-                          <option value="IN_TRANSIT">IN_TRANSIT</option>
-                          <option value="OUT_FOR_DELIVERY">
-                            OUT_FOR_DELIVERY
+                          <option value="PENDING">
+                            {t("shipmentStatus.PENDING")}
                           </option>
-                          <option value="DELIVERED">DELIVERED</option>
-                          <option value="FAILED">FAILED</option>
-                          <option value="RETURNED">RETURNED</option>
-                          <option value="CANCELLED">CANCELLED</option>
+                          <option value="ASSIGNED">
+                            {t("shipmentStatus.ASSIGNED")}
+                          </option>
+                          <option value="IN_TRANSIT">
+                            {t("shipmentStatus.IN_TRANSIT")}
+                          </option>
+                          <option value="OUT_FOR_DELIVERY">
+                            {t("shipmentStatus.OUT_FOR_DELIVERY")}
+                          </option>
+                          <option value="DELIVERED">
+                            {t("shipmentStatus.DELIVERED")}
+                          </option>
+                          <option value="FAILED">
+                            {t("shipmentStatus.FAILED")}
+                          </option>
+                          <option value="RETURNED">
+                            {t("shipmentStatus.RETURNED")}
+                          </option>
+                          <option value="CANCELLED">
+                            {t("shipmentStatus.CANCELLED")}
+                          </option>
                         </select>
                       </div>
                     </div>
 
                     <div className="mt-3 grid gap-3 md:grid-cols-3">
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Expected Date</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.expectedDate")}
+                        </p>
                         <input
                           type="date"
                           value={editExpectedDate}
@@ -2025,7 +2106,9 @@ const OrderManagement = () => {
                         />
                       </div>
                       <div className="space-y-1 text-xs">
-                        <p className="text-muted-foreground">Delivered Date</p>
+                        <p className="text-muted-foreground">
+                          {t("detail.deliveredDate")}
+                        </p>
                         <input
                           type="date"
                           value={editDeliveredDate}
@@ -2035,7 +2118,7 @@ const OrderManagement = () => {
                       </div>
                       {shipment && (
                         <div className="space-y-1 text-xs text-muted-foreground">
-                          <p>Created At</p>
+                          <p>{t("detail.createdAt")}</p>
                           <p className="rounded-xl bg-card px-3 py-2 text-[11px]">
                             {formatDate(shipment.createdAt || "")}
                           </p>
@@ -2046,17 +2129,18 @@ const OrderManagement = () => {
                     {shipment && (
                       <div className="mt-3 grid gap-3 md:grid-cols-2 text-xs text-muted-foreground">
                         <div className="rounded-xl bg-card px-3 py-2">
-                          Courier Status: {shipment.courierStatus || "-"}
+                          {t("detail.courierStatus")}{" "}
+                          {shipment.courierStatus || "-"}
                         </div>
                         <div className="rounded-xl bg-card px-3 py-2">
-                          Last Synced:{" "}
+                          {t("detail.lastSynced")}{" "}
                           {formatDate(shipment.lastSyncedAt || "") || "-"}
                         </div>
                         <div className="rounded-xl bg-card px-3 py-2">
-                          External ID: {shipment.externalId || "-"}
+                          {t("detail.externalId")} {shipment.externalId || "-"}
                         </div>
                         <div className="rounded-xl bg-card px-3 py-2">
-                          Tracking URL:{" "}
+                          {t("detail.trackingUrl")}{" "}
                           {shipment.trackingUrl ? (
                             <a
                               href={shipment.trackingUrl}
@@ -2064,7 +2148,7 @@ const OrderManagement = () => {
                               rel="noreferrer"
                               className="text-primary underline"
                             >
-                              Open
+                              {t("detail.open")}
                             </a>
                           ) : (
                             "-"
@@ -2077,11 +2161,10 @@ const OrderManagement = () => {
                       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                         <div>
                           <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                            Delivery Man Assignment
+                            {t("detail.deliveryManAssignmentTitle")}
                           </h4>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            Assign or reassign this shipment to an active
-                            delivery man directly from order management.
+                            {t("detail.deliveryManAssignmentHint")}
                           </p>
                         </div>
                         <button
@@ -2091,15 +2174,14 @@ const OrderManagement = () => {
                           className="btn-primary rounded-full px-4 py-2 text-xs font-medium disabled:cursor-not-allowed disabled:opacity-60"
                         >
                           {currentAssignment
-                            ? "Reassign Delivery Man"
-                            : "Assign Delivery Man"}
+                            ? t("detail.reassignDeliveryMan")
+                            : t("detail.assignDeliveryMan")}
                         </button>
                       </div>
 
                       {!shipment ? (
                         <div className="mt-4 rounded-xl border border-dashed border-border bg-background px-4 py-4 text-xs text-muted-foreground">
-                          Create and save a shipment first. Once a shipment
-                          exists, you can assign a delivery man from here.
+                          {t("detail.createShipmentFirst")}
                         </div>
                       ) : currentAssignment ? (
                         <div className="mt-4 grid gap-4 lg:grid-cols-[1.2fr,0.8fr]">
@@ -2124,7 +2206,7 @@ const OrderManagement = () => {
                             <div className="mt-4 grid gap-3 md:grid-cols-2">
                               <div className="rounded-xl border border-border bg-card px-3 py-3 text-xs text-muted-foreground">
                                 <p className="font-medium text-foreground">
-                                  Assigned at
+                                  {t("detail.assignedAt")}
                                 </p>
                                 <p className="mt-1">
                                   {formatDateTime(currentAssignment.assignedAt)}
@@ -2132,7 +2214,7 @@ const OrderManagement = () => {
                               </div>
                               <div className="rounded-xl border border-border bg-card px-3 py-3 text-xs text-muted-foreground">
                                 <p className="font-medium text-foreground">
-                                  Pickup proof
+                                  {t("detail.pickupProof")}
                                 </p>
                                 <p className="mt-1">
                                   {currentAssignment.pickupProof
@@ -2141,10 +2223,12 @@ const OrderManagement = () => {
                                 </p>
                                 {currentAssignment.pickupProof?.confirmedAt ? (
                                   <p className="mt-1">
-                                    Confirmed on{" "}
-                                    {formatDateTime(
-                                      currentAssignment.pickupProof.confirmedAt,
-                                    )}
+                                    {t("detail.confirmedOn", {
+                                      date: formatDateTime(
+                                        currentAssignment.pickupProof
+                                          .confirmedAt,
+                                      ),
+                                    })}
                                   </p>
                                 ) : null}
                                 {currentAssignment.pickupProof?.imageUrl ? (
@@ -2156,7 +2240,7 @@ const OrderManagement = () => {
                                     rel="noreferrer"
                                     className="mt-2 inline-flex text-primary underline"
                                   >
-                                    View pickup image
+                                    {t("detail.viewPickupImage")}
                                   </a>
                                 ) : null}
                               </div>
@@ -2165,7 +2249,7 @@ const OrderManagement = () => {
                             {currentAssignment.note ? (
                               <div className="mt-3 rounded-xl border border-border bg-card px-3 py-3 text-xs text-muted-foreground">
                                 <p className="font-medium text-foreground">
-                                  Assignment note
+                                  {t("detail.assignmentNote")}
                                 </p>
                                 <p className="mt-1">{currentAssignment.note}</p>
                               </div>
@@ -2173,7 +2257,9 @@ const OrderManagement = () => {
 
                             {currentAssignment.rejectionReason ? (
                               <div className="mt-3 rounded-xl border border-destructive/20 bg-destructive/10 px-3 py-3 text-xs text-destructive">
-                                <p className="font-medium">Rejection reason</p>
+                                <p className="font-medium">
+                                  {t("detail.rejectionReason")}
+                                </p>
                                 <p className="mt-1">
                                   {currentAssignment.rejectionReason}
                                 </p>
@@ -2183,7 +2269,7 @@ const OrderManagement = () => {
 
                           <div className="rounded-xl border border-border bg-background p-4">
                             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                              Recent Assignment Logs
+                              {t("detail.recentAssignmentLogs")}
                             </p>
                             {currentAssignment.logs.length > 0 ? (
                               <div className="mt-3 space-y-3">
@@ -2206,7 +2292,9 @@ const OrderManagement = () => {
                                     </div>
                                     {log.actor?.name ? (
                                       <p className="mt-1">
-                                        By {log.actor.name}
+                                        {t("detail.logBy", {
+                                          name: log.actor.name,
+                                        })}
                                       </p>
                                     ) : null}
                                     {log.note ? (
@@ -2219,14 +2307,14 @@ const OrderManagement = () => {
                               </div>
                             ) : (
                               <p className="mt-3 text-xs text-muted-foreground">
-                                No assignment history recorded yet.
+                                {t("detail.noAssignmentHistory")}
                               </p>
                             )}
                           </div>
                         </div>
                       ) : (
                         <div className="mt-4 rounded-xl border border-dashed border-border bg-background px-4 py-4 text-xs text-muted-foreground">
-                          No delivery man assigned yet for this shipment.
+                          {t("detail.noDeliveryManAssigned")}
                         </div>
                       )}
                     </div>
@@ -2236,21 +2324,19 @@ const OrderManagement = () => {
                         <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                           <div>
                             <h4 className="delivery-proof-header text-xs font-semibold uppercase tracking-[0.18em]">
-                              Delivery Proof Flow
+                              {t("detail.deliveryProofFlow")}
                             </h4>
                             <p className="mt-1 text-xs text-muted-foreground">
-                              When shipment reaches{" "}
-                              <strong>OUT_FOR_DELIVERY</strong>, customer can
-                              confirm with PIN + checklist + optional photo.
+                              {t("detail.deliveryProofHint")}
                             </p>
                           </div>
                           <div className="delivery-pin-container rounded-xl border border-border px-3 py-2 text-right shadow-sm">
                             <p className="delivery-pin-label text-[10px] uppercase tracking-[0.18em]">
-                              Delivery PIN
+                              {t("detail.deliveryPin")}
                             </p>
                             <p className="delivery-pin-value mt-1 font-mono text-sm font-semibold">
                               {shipment.deliveryConfirmationPin ||
-                                "Will generate on OFD"}
+                                t("detail.pinWillGenerate")}
                             </p>
                           </div>
                         </div>
@@ -2258,7 +2344,7 @@ const OrderManagement = () => {
                         <div className="mt-3 grid gap-3 md:grid-cols-2">
                           <div className="delivery-link-container rounded-xl border border-border px-3 py-3 shadow-sm">
                             <p className="delivery-link-label text-[10px] uppercase tracking-[0.18em]">
-                              Confirmation Link
+                              {t("detail.confirmationLink")}
                             </p>
                             {shipment.deliveryConfirmationUrl ? (
                               <a
@@ -2271,28 +2357,25 @@ const OrderManagement = () => {
                               </a>
                             ) : (
                               <p className="delivery-status-value mt-1 text-xs">
-                                Link will appear automatically when shipment is
-                                out for delivery.
+                                {t("detail.linkWillAppear")}
                               </p>
                             )}
                           </div>
 
                           <div className="delivery-status-container rounded-xl border border-border px-3 py-3 shadow-sm">
                             <p className="delivery-status-label text-[10px] uppercase tracking-[0.18em]">
-                              Customer Proof Status
+                              {t("detail.customerProofStatus")}
                             </p>
                             {shipment.deliveryProof ? (
                               <div className="delivery-status-value mt-1 space-y-1 text-xs">
                                 <p className="font-medium">
-                                  Confirmed on{" "}
-                                  {formatDate(
-                                    shipment.deliveryProof.confirmedAt,
-                                  )}
+                                  {t("detail.confirmedOn", {
+                                    date: formatDate(
+                                      shipment.deliveryProof.confirmedAt,
+                                    ),
+                                  })}
                                 </p>
-                                <p>
-                                  Checks: received / correct items / good
-                                  condition
-                                </p>
+                                <p>{t("detail.proofChecks")}</p>
                                 {shipment.deliveryProof.photoUrl ? (
                                   <a
                                     href={shipment.deliveryProof.photoUrl}
@@ -2300,7 +2383,7 @@ const OrderManagement = () => {
                                     rel="noreferrer"
                                     className="inline-flex text-xs font-medium text-primary underline"
                                   >
-                                    View proof photo
+                                    {t("detail.viewProofPhoto")}
                                   </a>
                                 ) : null}
                                 {shipment.deliveryProof.note ? (
@@ -2311,7 +2394,7 @@ const OrderManagement = () => {
                               </div>
                             ) : (
                               <p className="mt-1 text-xs text-muted-foreground">
-                                No customer delivery proof submitted yet.
+                                {t("detail.noCustomerProof")}
                               </p>
                             )}
                           </div>
@@ -2320,8 +2403,7 @@ const OrderManagement = () => {
                     )}
 
                     <p className="mt-1 text-[10px] text-muted-foreground">
-                      * Only admin can create/update shipment; other users will
-                      get Forbidden from API.
+                      {t("detail.shipmentAdminNote")}
                     </p>
                   </div>
 
@@ -2333,9 +2415,7 @@ const OrderManagement = () => {
                       disabled={saving}
                       className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
                     >
-                      {saving
-                        ? "Saving..."
-                        : "Save All Order and Shipment Updates"}
+                      {saving ? t("actions.saving") : t("actions.saveAll")}
                     </button>
                   </div>
                 </div>
@@ -2345,7 +2425,6 @@ const OrderManagement = () => {
         </div>
       )}
 
-      {/* ✅ Success Modal */}
       <AssignDeliveryManModal
         open={assignModalOpen}
         onOpenChange={setAssignModalOpen}
@@ -2375,10 +2454,10 @@ const OrderManagement = () => {
               </div>
               <div>
                 <p className="text-sm font-semibold text-foreground">
-                  Update Successful
+                  {t("successModal.title")}
                 </p>
                 <p className="mt-0.5 text-xs text-muted-foreground">
-                  {successMessage || "Information updated successfully."}
+                  {successMessage || t("successModal.defaultMessage")}
                 </p>
               </div>
             </div>
@@ -2387,14 +2466,13 @@ const OrderManagement = () => {
                 onClick={() => setSuccessOpen(false)}
                 className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90"
               >
-                OK
+                {t("common.ok")}
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* ❌ Error Modal */}
       {errorOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
           <div className="w-full max-w-xs rounded-2xl bg-card px-5 py-4 shadow-xl border-border">
@@ -2415,9 +2493,11 @@ const OrderManagement = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-semibold text-foreground">Error</p>
+                <p className="text-sm font-semibold text-foreground">
+                  {t("errorModal.title")}
+                </p>
                 <p className="mt-0.5 text-xs text-muted-foreground">
-                  {errorMessage || "An error occurred."}
+                  {errorMessage || t("errorModal.defaultMessage")}
                 </p>
               </div>
             </div>
@@ -2426,7 +2506,7 @@ const OrderManagement = () => {
                 onClick={() => setErrorOpen(false)}
                 className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90"
               >
-                OK
+                {t("common.ok")}
               </button>
             </div>
           </div>
