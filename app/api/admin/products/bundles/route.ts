@@ -1,364 +1,203 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import {
-  calculateBundlePricing, 
-  validateBundleConfiguration, 
-  mergeDuplicateBundleItems,
-  type BundleItem,
-  type DiscountType 
-} from '@/lib/bundle';
-import { revalidateStorefrontCatalog } from '@/lib/storefront-catalog-cache';
-import {
-  calculateBundleBuildCapacity,
-  normalizeBundleSku,
-  normalizeBundleStockQuantity,
-  syncBundleDefaultVariant,
-} from '@/lib/bundle-inventory';
-import { gateStoreFeature } from '@/lib/store-feature-gates-server';
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { gateStoreFeature } from "@/lib/store-feature-gates-server";
+import { requireProductManager } from "@/lib/product-management-access";
+import { normalizeBundleSku, normalizeBundleStockQuantity } from "@/lib/bundle-inventory";
+import { calculateBundleBasePrice, prepareBundleGroups } from "@/lib/configurable-bundle-admin";
+
+function legacyItemsToGroups(items: any[]) {
+  return (Array.isArray(items) ? items : []).map((item, index) => ({
+    name: String(item?.product?.name || `Item ${index + 1}`),
+    selectionType: "FIXED",
+    required: true,
+    minSelect: 1,
+    maxSelect: 1,
+    defaultQuantity: Number(item?.quantity || 1),
+    minQuantity: Number(item?.quantity || 1),
+    maxQuantity: Number(item?.quantity || 1),
+    allowQuantityChange: false,
+    options: [{
+      productId: Number(item?.product?.id),
+      variantId: item?.variant?.id ? Number(item.variant.id) : null,
+      isDefault: true,
+      priceAdjustment: 0,
+    }],
+  }));
+}
+
+const bundleAdminInclude = {
+  bundleItems: {
+    include: {
+      product: { select: { id: true, name: true, basePrice: true, image: true, available: true } },
+    },
+    orderBy: { sortOrder: "asc" as const },
+  },
+  bundleGroups: {
+    orderBy: { sortOrder: "asc" as const },
+    include: {
+      options: {
+        orderBy: { sortOrder: "asc" as const },
+        include: {
+          product: { select: { id: true, name: true, basePrice: true, image: true, available: true } },
+          variant: { select: { id: true, sku: true, price: true, options: true, active: true } },
+        },
+      },
+    },
+  },
+  category: { select: { id: true, name: true } },
+  brand: { select: { id: true, name: true } },
+} as const;
+
+function withBundleStats(bundle: any) {
+  const defaultOptions = bundle.bundleGroups.flatMap((group: any) =>
+    group.options
+      .filter((option: any) => option.isDefault)
+      .map((option: any) => ({ option, quantity: group.defaultQuantity })),
+  );
+  const regularTotal = defaultOptions.reduce(
+    (total: number, row: any) =>
+      total + Number(row.option.variant?.price ?? row.option.product.basePrice) * row.quantity,
+    0,
+  );
+  const discountAmount = Math.max(0, regularTotal - Number(bundle.basePrice));
+  const discountPercentage = regularTotal > 0 ? (discountAmount / regularTotal) * 100 : 0;
+  return {
+    ...bundle,
+    _stats: {
+      itemCount: bundle.bundleGroups.length,
+      choiceCount: bundle.bundleGroups.reduce((total: number, group: any) => total + group.options.length, 0),
+      regularTotal,
+      discountedPrice: Number(bundle.basePrice),
+      discountAmount,
+      discountPercentage: Math.round(discountPercentage * 100) / 100,
+      savings: discountAmount > 0 ? `${Math.round(discountPercentage * 100) / 100}%` : "No discount",
+    },
+  };
+}
 
 export async function GET(request: NextRequest) {
-  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  const auth = await requireProductManager();
+  if (auth) return auth;
+  const featureGate = await gateStoreFeature("BUNDLES", 403);
   if (featureGate) return featureGate;
   try {
     const { searchParams } = new URL(request.url);
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '10');
-    const search = searchParams.get('search') || '';
-    const status = searchParams.get('status'); // active, inactive, all
-
-    const skip = (page - 1) * limit;
-
-    // Build where clause
-    const where: any = {
-      type: 'BUNDLE',
-      deleted: false,
-    };
-
+    const page = Math.max(1, Number(searchParams.get("page") || 1));
+    const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") || 10)));
+    const search = searchParams.get("search")?.trim() || "";
+    const status = searchParams.get("status");
+    const where: any = { type: "BUNDLE", deleted: false };
     if (search) {
-      where.OR = [
-        { name: { contains: search, mode: 'insensitive' } },
-        { slug: { contains: search, mode: 'insensitive' } },
-        { description: { contains: search, mode: 'insensitive' } },
-      ];
+      where.OR = ["name", "slug", "description"].map((field) => ({
+        [field]: { contains: search, mode: "insensitive" },
+      }));
     }
-
-    if (status === 'active') {
-      where.available = true;
-    } else if (status === 'inactive') {
-      where.available = false;
-    }
-
-    // Get bundles with their items
-    const [bundles, totalCount] = await Promise.all([
+    if (status === "active") where.available = true;
+    if (status === "inactive") where.available = false;
+    const [bundles, total] = await Promise.all([
       prisma.product.findMany({
         where,
-        skip,
+        skip: (page - 1) * limit,
         take: limit,
-        include: {
-          bundleItems: {
-            include: {
-              product: {
-                select: {
-                  id: true,
-                  name: true,
-                  basePrice: true,
-                  image: true,
-                  available: true,
-                }
-              }
-            },
-            orderBy: { sortOrder: 'asc' }
-          },
-          category: {
-            select: { id: true, name: true }
-          },
-          brand: {
-            select: { id: true, name: true }
-          },
-          variants: {
-            include: {
-              stockLevels: {
-                include: {
-                  warehouse: {
-                    select: {
-                      id: true,
-                      name: true,
-                      code: true,
-                      isDefault: true
-                    }
-                  }
-                },
-                orderBy: { warehouseId: 'asc' }
-              }
-            },
-            where: { active: true },
-            orderBy: { isDefault: 'desc' }
-          }
-        },
-        orderBy: { createdAt: 'desc' }
+        include: bundleAdminInclude,
+        orderBy: { createdAt: "desc" },
       }),
-      prisma.product.count({ where })
+      prisma.product.count({ where }),
     ]);
-
-    // Calculate bundle statistics
-    const bundlesWithStats = bundles.map(bundle => {
-      const itemCount = bundle.bundleItems.length;
-      const regularTotal = bundle.bundleItems.reduce((total, item) => {
-        return total + (Number(item.product.basePrice) * item.quantity);
-      }, 0);
-      
-      const discountAmount = regularTotal - Number(bundle.basePrice);
-      const discountPercentage = regularTotal > 0 ? (discountAmount / regularTotal) * 100 : 0;
-
-      return {
-        ...bundle,
-        _stats: {
-          itemCount,
-          regularTotal,
-          discountedPrice: Number(bundle.basePrice),
-          discountAmount,
-          discountPercentage: Math.round(discountPercentage * 100) / 100,
-          savings: discountAmount > 0 ? `${Math.round(discountPercentage * 100) / 100}%` : 'No discount'
-        }
-      };
-    });
-
     return NextResponse.json({
-      bundles: bundlesWithStats,
-      pagination: {
-        page,
-        limit,
-        total: totalCount,
-        pages: Math.ceil(totalCount / limit)
-      }
+      bundles: bundles.map(withBundleStats),
+      pagination: { page, limit, total, pages: Math.ceil(total / limit) },
     });
   } catch (error) {
-    console.error('Error fetching bundles:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch bundles' },
-      { status: 500 }
-    );
+    console.error("Error fetching bundles:", error);
+    return NextResponse.json({ error: "Failed to fetch bundles" }, { status: 500 });
   }
 }
 
 export async function POST(request: NextRequest) {
-  const featureGate = await gateStoreFeature('BUNDLES', 403);
+  const auth = await requireProductManager();
+  if (auth) return auth;
+  const featureGate = await gateStoreFeature("BUNDLES", 403);
   if (featureGate) return featureGate;
   try {
     const body = await request.json();
-    
-    const {
-      name,
-      description,
-      shortDesc,
-      sku,
-      categoryId,
-      brandId,
-      brandIds,
-      image,
-      gallery,
-      discountType,
-      discountValue,
-      manualPrice,
-      items,
-      bundleStockLimit,
-      available = true,
-      featured = false,
-      currency = 'USD',
-      warehouseId,
-      vatClassId
-    } = body;
-
-    // Validate required fields
-    if (!name || !description || !categoryId || !items || items.length < 2) {
-      return NextResponse.json(
-        { error: 'Missing required fields. Bundle must have at least 2 items.' },
-        { status: 400 }
-      );
+    const name = String(body.name || "").trim();
+    const description = String(body.description || "").trim();
+    const categoryId = Number(body.categoryId);
+    const warehouseId = Number(body.warehouseId);
+    if (!name || !description || !Number.isInteger(categoryId) || categoryId <= 0) {
+      return NextResponse.json({ error: "Name, description and category are required" }, { status: 400 });
     }
-
-    const parsedWarehouseId = Number(warehouseId);
-    if (!Number.isInteger(parsedWarehouseId) || parsedWarehouseId <= 0) {
-      return NextResponse.json(
-        { error: 'Please select a valid warehouse' },
-        { status: 400 }
-      );
+    if (!Number.isInteger(warehouseId) || warehouseId <= 0) {
+      return NextResponse.json({ error: "Please select a valid warehouse" }, { status: 400 });
     }
-
-    // Validate discount type
-    if (!['PERCENTAGE', 'FIXED', 'MANUAL'].includes(discountType)) {
-      return NextResponse.json(
-        { error: 'Invalid discount type' },
-        { status: 400 }
-      );
+    const requestedLimit = normalizeBundleStockQuantity(body.bundleStockLimit);
+    if (requestedLimit === undefined) {
+      return NextResponse.json({ error: "Bundle stock limit must be a whole number of zero or more" }, { status: 400 });
     }
-
-    // Convert items to BundleItem format
-    const bundleItems: BundleItem[] = items.map((item: any) => ({
-      product: item.product,
-      variant: item.variant,
-      quantity: item.quantity
-    }));
-
-    // Merge duplicate items
-    const mergedItems = mergeDuplicateBundleItems(bundleItems);
-
-    // Validate bundle configuration
-    const validation = validateBundleConfiguration(
-      mergedItems,
-      discountType as DiscountType,
-      discountValue,
-      manualPrice
-    );
-
-    if (!validation.isValid) {
-      return NextResponse.json(
-        { error: 'Invalid bundle configuration', details: validation.errors },
-        { status: 400 }
-      );
-    }
-
-    // Calculate pricing
-    const pricing = calculateBundlePricing({
-      items: mergedItems,
-      discountType: discountType as DiscountType,
-      discountValue,
-      manualPrice
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+    const sku = normalizeBundleSku(body.sku, slug);
+    const duplicate = await prisma.product.findFirst({
+      where: { OR: [{ slug }, { sku }] },
+      select: { slug: true, sku: true },
     });
-
-    // Generate slug from name
-    const slug = name
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)/g, '');
-    const bundleSku = normalizeBundleSku(sku, slug);
-    const requestedStockQuantity = normalizeBundleStockQuantity(bundleStockLimit);
-
-    if (requestedStockQuantity === undefined) {
+    if (duplicate) {
       return NextResponse.json(
-        { error: 'Bundle stock must be a whole number greater than or equal to 0' },
-        { status: 400 }
+        { error: duplicate.slug === slug ? "A product with this name already exists" : "A product with this SKU already exists" },
+        { status: 409 },
       );
     }
-
-    // Check if slug already exists
-    const existingProduct = await prisma.product.findUnique({
-      where: { slug }
-    });
-
-    if (existingProduct) {
-      return NextResponse.json(
-        { error: 'A product with this name already exists' },
-        { status: 409 }
-      );
-    }
-
-    const existingSku = await prisma.product.findFirst({
-      where: {
-        sku: bundleSku,
-      },
-      select: { id: true },
-    });
-
-    if (existingSku) {
-      return NextResponse.json(
-        { error: 'A product with this SKU already exists' },
-        { status: 409 }
-      );
-    }
-
-    // Create bundle product and items in a transaction
-    const result = await prisma.$transaction(async (tx) => {
-      const maxBuildCapacity = await calculateBundleBuildCapacity({
-        tx,
-        items: mergedItems,
-        warehouseId: parsedWarehouseId,
+    const rawGroups = Array.isArray(body.groups) ? body.groups : legacyItemsToGroups(body.items);
+    const bundle = await prisma.$transaction(async (tx) => {
+      const prepared = await prepareBundleGroups(tx, rawGroups);
+      const basePrice = calculateBundleBasePrice({
+        regularTotal: prepared.defaultRegularTotal,
+        discountType: body.discountType,
+        discountValue: body.discountValue,
+        manualPrice: body.manualPrice,
       });
-      const bundleStockQuantity =
-        requestedStockQuantity !== null
-          ? requestedStockQuantity
-          : maxBuildCapacity;
-
-      if (bundleStockQuantity > maxBuildCapacity) {
-        throw new Error(
-          `Bundle stock cannot exceed available build capacity (${maxBuildCapacity})`
-        );
-      }
-
-      // Create the bundle product
-      const bundle = await tx.product.create({
+      const created = await tx.product.create({
         data: {
           name,
           slug,
           description,
-          shortDesc,
-          type: 'BUNDLE',
-          sku: bundleSku,
+          shortDesc: String(body.shortDesc || "").trim() || null,
+          type: "BUNDLE",
+          sku,
           categoryId,
-          brandId: brandId || null,
-          basePrice: pricing.discountedPrice,
-          originalPrice: pricing.regularTotal,
-          currency,
-          image,
-          gallery: gallery || [],
-          bundleStockLimit: bundleStockQuantity,
-          available,
-          featured,
-          VatClassId: vatClassId || null, // Use provided VAT class or null
-        }
+          brandId: body.brandId ? Number(body.brandId) : null,
+          basePrice,
+          originalPrice: prepared.defaultRegularTotal,
+          currency: String(body.currency || "BDT").slice(0, 3).toUpperCase(),
+          image: body.image || null,
+          gallery: Array.isArray(body.gallery) ? body.gallery : [],
+          bundleStockLimit: requestedLimit,
+          available: body.available !== false,
+          featured: Boolean(body.featured),
+          VatClassId: body.vatClassId ? Number(body.vatClassId) : null,
+          bundleGroups: {
+            create: prepared.groups.map((group) => ({
+              ...group,
+              options: { create: group.options },
+            })),
+          },
+        },
       });
-
-      await syncBundleDefaultVariant({
-        tx,
-        productId: bundle.id,
-        sku: bundleSku,
-        price: pricing.discountedPrice,
-        currency,
-        stockQuantity: bundleStockQuantity,
-        warehouseId: parsedWarehouseId,
-        reason: 'Admin bundle initial stock',
-      });
-
-      // Create bundle items
-      const bundleItemsData = mergedItems.map((item, index) => ({
-        bundleId: bundle.id,
-        productId: item.product.id,
-        quantity: item.quantity,
-        sortOrder: index,
-        // Store warehouse info in metadata or as a separate field if needed
-        // For now, we'll handle warehouse validation at creation time
-      }));
-
-      await tx.productBundleItem.createMany({
-        data: bundleItemsData
-      });
-
-      return bundle;
+      if (prepared.legacyDefaultItems.length > 0) {
+        await tx.productBundleItem.createMany({
+          data: prepared.legacyDefaultItems.map((item) => ({ ...item, bundleId: created.id })),
+        });
+      }
+      return created;
     });
-
     revalidateStorefrontCatalog();
-
-    return NextResponse.json({
-      success: true,
-      bundle: result,
-      pricing
-    }, { status: 201 });
-
+    return NextResponse.json({ success: true, bundle }, { status: 201 });
   } catch (error) {
-    console.error('Error creating bundle:', error);
-    if (
-      error instanceof Error &&
-      error.message.startsWith('Bundle stock cannot exceed')
-    ) {
-      return NextResponse.json(
-        { error: error.message },
-        { status: 400 }
-      );
-    }
+    console.error("Error creating configurable bundle:", error);
     return NextResponse.json(
-      { error: 'Failed to create bundle' },
-      { status: 500 }
+      { error: error instanceof Error ? error.message : "Failed to create bundle" },
+      { status: 400 },
     );
   }
 }
-

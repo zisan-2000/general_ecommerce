@@ -407,6 +407,9 @@ model Product {
   customerNotifications   CustomerNotification[]
   bundleItems             ProductBundleItem[]               @relation("BundleProducts")
   includedInBundles       ProductBundleItem[]               @relation("IncludedProducts")
+  bundleGroups            BundleGroup[]                     @relation("BundleGroups")
+  bundleGroupOptions      BundleGroupOption[]                @relation("BundleOptionProducts")
+  orderBundleComponents   OrderBundleComponent[]             @relation("OrderBundleComponentProducts")
 
   @@index([deleted, available, createdAt])
   @@index([deleted, available, soldCount])
@@ -451,6 +454,50 @@ model ProductBundleItem {
   @@index([productId])
 }
 
+model BundleGroup {
+  id                  Int                 @id @default(autoincrement())
+  bundleId            Int
+  name                String
+  selectionType       BundleSelectionType @default(FIXED)
+  required            Boolean             @default(true)
+  minSelect           Int                 @default(1)
+  maxSelect           Int                 @default(1)
+  defaultQuantity     Int                 @default(1)
+  minQuantity         Int                 @default(1)
+  maxQuantity         Int                 @default(1)
+  allowQuantityChange Boolean             @default(false)
+  sortOrder           Int                 @default(0)
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  bundle  Product             @relation("BundleGroups", fields: [bundleId], references: [id], onDelete: Cascade)
+  options BundleGroupOption[]
+
+  @@unique([bundleId, sortOrder])
+  @@index([bundleId])
+}
+
+model BundleGroupOption {
+  id              Int      @id @default(autoincrement())
+  groupId         Int
+  productId       Int
+  variantId       Int?
+  isDefault       Boolean  @default(false)
+  priceAdjustment Decimal  @default(0) @db.Decimal(10, 2)
+  sortOrder       Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  group   BundleGroup    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  product Product        @relation("BundleOptionProducts", fields: [productId], references: [id], onDelete: Restrict)
+  variant ProductVariant? @relation("BundleOptionVariants", fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@unique([groupId, sortOrder])
+  @@index([groupId])
+  @@index([productId])
+  @@index([variantId])
+}
+
 model ProductVariant {
   id                           Int                               @id @default(autoincrement())
   productId                    Int
@@ -468,6 +515,8 @@ model ProductVariant {
   lowStockThreshold            Int                               @default(10)
   costPrice                    Decimal?                          @db.Decimal(10, 2)
   cartItems                    CartItem[]
+  bundleGroupOptions           BundleGroupOption[]              @relation("BundleOptionVariants")
+  orderBundleComponents        OrderBundleComponent[]           @relation("OrderBundleComponentVariants")
   dailySnapshots               InventoryDailySnapshot[]
   inventoryLogs                InventoryLog[]
   warehouseDailySnapshots      InventoryWarehouseDailySnapshot[]
@@ -785,6 +834,7 @@ model OrderItem {
   priceSource              BusinessPriceSource?
   publicUnitPriceSnapshot  Decimal?             @db.Decimal(14, 2)
   businessDiscountSnapshot Decimal?             @db.Decimal(14, 2)
+  bundleConfiguration      Json?
   digitalDeliveries        DigitalDelivery[]
   order                    Order                @relation(fields: [orderId], references: [id])
   product                  Product              @relation(fields: [productId], references: [id])
@@ -793,6 +843,31 @@ model OrderItem {
   serviceBooking           ServiceBooking?      @relation("OrderItemServiceBooking")
   shipmentItems            ShipmentItem[]
   commissionEntries        CommissionEntry[]
+  bundleComponents         OrderBundleComponent[]
+}
+
+model OrderBundleComponent {
+  id                      Int      @id @default(autoincrement())
+  orderItemId             Int
+  bundleGroupId           Int?
+  bundleOptionId          Int?
+  groupName               String
+  productId               Int
+  variantId               Int?
+  productName             String
+  variantLabel            String?
+  quantityPerBundle       Int      @default(1)
+  unitPriceSnapshot       Decimal  @db.Decimal(14, 2)
+  priceAdjustmentSnapshot Decimal  @default(0) @db.Decimal(14, 2)
+  createdAt               DateTime @default(now())
+
+  orderItem OrderItem       @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  product   Product         @relation("OrderBundleComponentProducts", fields: [productId], references: [id], onDelete: Restrict)
+  variant   ProductVariant? @relation("OrderBundleComponentVariants", fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@index([orderItemId])
+  @@index([productId])
+  @@index([variantId])
 }
 
 model ServiceSlot {
@@ -864,6 +939,7 @@ model CartItem {
   quantity       Int             @default(1)
   variantId      Int?
   lineKey        String          @default("standard") @db.VarChar(80)
+  bundleConfiguration Json?
   createdAt      DateTime        @default(now())
   updatedAt      DateTime        @updatedAt
   lastReminderAt DateTime?
@@ -4189,6 +4265,13 @@ enum ProductType {
   DIGITAL
   SERVICE
   BUNDLE
+}
+
+enum BundleSelectionType {
+  FIXED
+  PRODUCT_SELECT
+  VARIANT_SELECT
+  OPTIONAL
 }
 
 enum AttributeType {

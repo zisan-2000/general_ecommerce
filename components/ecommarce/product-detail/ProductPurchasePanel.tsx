@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -31,6 +31,9 @@ import {
   type ProductPurchaseData,
   type ProductPurchaseVariant,
 } from "@/lib/product-purchase";
+import BundleConfigurator, {
+  type BundleConfigurationPreview,
+} from "@/components/ecommarce/product-detail/BundleConfigurator";
 
 const money = (value: number, currency: string) => {
   if (currency.toUpperCase() === "BDT") {
@@ -83,6 +86,7 @@ export default function ProductPurchasePanel({
     defaultVariant?.id ?? null,
   );
   const [quantity, setQuantity] = useState(1);
+  const [bundlePreview, setBundlePreview] = useState<BundleConfigurationPreview | null>(null);
   const [activeImage, setActiveImage] = useState<string | null>(
     defaultVariant?.colorImage ?? product.image ?? product.gallery[0] ?? null,
   );
@@ -102,10 +106,12 @@ export default function ProductPurchasePanel({
       ),
     [product.gallery, product.image, product.variants, selectedVariant],
   );
-  const price = selectedVariant?.price ?? product.basePrice;
+  const price = product.type === "BUNDLE" && bundlePreview
+    ? bundlePreview.finalPrice
+    : selectedVariant?.price ?? product.basePrice;
   const stock =
     product.type === "BUNDLE"
-      ? product.bundleStockLimit ?? 0
+      ? bundlePreview?.availableQuantity ?? 0
       : product.type === "DIGITAL" || product.type === "SERVICE"
         ? 99
         : selectedVariant
@@ -130,6 +136,10 @@ export default function ProductPurchasePanel({
   const telephoneHref = details.contactNumber
     ? `tel:${details.contactNumber.replace(/[^\d+]/g, "")}`
     : null;
+  const handleBundleChange = useCallback((preview: BundleConfigurationPreview) => {
+    setBundlePreview(preview);
+    setQuantity((current) => Math.min(current, Math.max(1, preview.availableQuantity)));
+  }, []);
 
   const selectVariant = (variant: ProductPurchaseVariant) => {
     setSelectedVariantId(variant.id);
@@ -144,7 +154,7 @@ export default function ProductPurchasePanel({
         id: product.id,
         name: product.name,
         type: product.type,
-        price: product.basePrice,
+        price,
         image: activeImage ?? product.image,
         variants: product.variants.map((variant) => ({
           id: variant.id,
@@ -153,6 +163,9 @@ export default function ProductPurchasePanel({
           options: simpleOptions(variant.options),
         })),
       },
+      bundleSelections: product.type === "BUNDLE" ? bundlePreview?.selections : undefined,
+      bundleSummary: product.type === "BUNDLE" ? bundlePreview?.summary : undefined,
+      bundlePrice: product.type === "BUNDLE" ? price : undefined,
     });
 
   const addProduct = async () => {
@@ -446,6 +459,16 @@ export default function ProductPurchasePanel({
               </div>
             </div>
 
+            {product.type === "BUNDLE" ? (
+              <BundleConfigurator
+                groups={product.bundleGroups}
+                currency={product.currency}
+                basePrice={product.basePrice}
+                stockLimit={product.bundleStockLimit}
+                onChange={handleBundleChange}
+              />
+            ) : null}
+
             <div className="mt-3 flex flex-wrap gap-2">
               <div className="flex h-10 items-center overflow-hidden rounded border border-border">
                 <button
@@ -473,7 +496,7 @@ export default function ProductPurchasePanel({
               <button
                 type="button"
                 onClick={addProduct}
-                disabled={stock <= 0}
+                disabled={stock <= 0 || (product.type === "BUNDLE" && !bundlePreview?.valid)}
                 className="inline-flex h-10 min-w-[180px] flex-1 items-center justify-center gap-2 rounded bg-primary px-5 text-[12px] font-bold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground"
               >
                 <ShoppingCart className="h-4 w-4" aria-hidden="true" />
@@ -518,7 +541,7 @@ export default function ProductPurchasePanel({
               <button
                 type="button"
                 onClick={buyNow}
-                disabled={stock <= 0}
+                disabled={stock <= 0 || (product.type === "BUNDLE" && !bundlePreview?.valid)}
                 className="text-[11px] font-semibold text-primary hover:underline disabled:text-muted-foreground"
               >
                 Buy now with secure checkout

@@ -222,7 +222,7 @@ export default function CheckoutPage() {
           productId: item.productId,
           variantId: item.variantId ?? item.variant?.id ?? null,
           name: item.product?.name ?? "Unknown product",
-          price: Number(item.variant?.price ?? item.product?.basePrice ?? item.product?.variants?.[0]?.price ?? 0),
+          price: Number(item.bundleConfiguration?.finalPrice ?? item.variant?.price ?? item.product?.basePrice ?? item.product?.variants?.[0]?.price ?? 0),
           image: item.product?.image ?? "/placeholder.svg",
           quantity: Number(item.quantity ?? 1),
           variantLabel:
@@ -232,6 +232,13 @@ export default function CheckoutPage() {
                   .join(", ")
               : item.variant?.sku ?? null,
           product: item.product, // Include full product data for VAT calculation
+          bundleSelections: Array.isArray(item.bundleConfiguration?.selections)
+            ? item.bundleConfiguration.selections
+            : null,
+          bundleSummary: Array.isArray(item.bundleConfiguration?.summary)
+            ? item.bundleConfiguration.summary.map(String)
+            : null,
+          bundleConfigurationKey: item.lineKey?.startsWith("bundle:") ? item.lineKey : null,
         }));
 
         setServerCartItems(mapped);
@@ -262,12 +269,12 @@ export default function CheckoutPage() {
 
           const existingKeys = new Set(
             existingItems.map(
-              (item: any) => `${item.productId}:${item.variantId ?? ""}`,
+              (item: any) => `${item.productId}:${item.variantId ?? ""}:${item.lineKey ?? "standard"}`,
             ),
           );
 
           const itemsToSync = cartItems.filter(
-            (item) => !existingKeys.has(`${item.productId}:${item.variantId ?? ""}`),
+            (item) => !existingKeys.has(`${item.productId}:${item.variantId ?? ""}:${item.bundleConfigurationKey ?? "standard"}`),
           );
 
           const failed: Array<string | number> = [];
@@ -280,6 +287,7 @@ export default function CheckoutPage() {
                 productId: item.productId,
                 variantId: item.variantId ?? null,
                 quantity: item.quantity,
+                bundleSelections: item.bundleSelections ?? undefined,
               }),
             });
 
@@ -531,6 +539,7 @@ export default function CheckoutPage() {
               productId: item.productId ?? item.id,
               variantId: item.variantId ?? null,
               quantity: item.quantity,
+              bundleSelections: item.bundleSelections ?? undefined,
             })),
           }),
         });
@@ -768,6 +777,7 @@ export default function CheckoutPage() {
       productId: item.productId ?? item.id,
       variantId: item.variantId ?? null,
       quantity: item.quantity,
+      bundleSelections: item.bundleSelections ?? undefined,
     }));
 
     const payload = {
@@ -1295,6 +1305,11 @@ export default function CheckoutPage() {
                       <p className="text-foreground font-semibold text-sm mt-1">
                         ৳{(Number(item.price) * Number(item.quantity)).toFixed(2)}
                       </p>
+                      {item.bundleSummary?.length ? (
+                        <ul className="mt-1 space-y-0.5 text-[11px] text-muted-foreground">
+                          {item.bundleSummary.map((line: string) => <li key={line}>• {line}</li>)}
+                        </ul>
+                      ) : null}
                     </div>
                   </div>
                 ))}

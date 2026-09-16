@@ -7,6 +7,7 @@ type NormalizedCheckoutItem = {
   productId: number;
   variantId: number | null;
   quantity: number;
+  bundleSelections?: Array<{ groupId: number; optionId: number | null; quantity?: number; omitted?: boolean }>;
 };
 
 type BuildOrderIdempotencyInput = {
@@ -64,12 +65,23 @@ function normalizeItems(items: NormalizedCheckoutItem[]) {
       productId: Number(item.productId),
       variantId: item.variantId === null ? null : Number(item.variantId),
       quantity: Number(item.quantity),
+      bundleSelections: Array.isArray(item.bundleSelections)
+        ? item.bundleSelections
+            .map((selection) => ({
+              groupId: Number(selection.groupId),
+              optionId: selection.optionId === null ? null : Number(selection.optionId),
+              quantity: Number(selection.quantity ?? 1),
+              omitted: selection.omitted === true,
+            }))
+            .sort((left, right) => left.groupId - right.groupId || (left.optionId ?? -1) - (right.optionId ?? -1))
+        : [],
     }))
     .sort(
       (a, b) =>
         a.productId - b.productId ||
         (a.variantId ?? -1) - (b.variantId ?? -1) ||
-        a.quantity - b.quantity,
+        a.quantity - b.quantity ||
+        JSON.stringify(a.bundleSelections).localeCompare(JSON.stringify(b.bundleSelections)),
     );
 }
 

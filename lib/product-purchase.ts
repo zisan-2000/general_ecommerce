@@ -22,6 +22,36 @@ export type ProductPurchaseData = {
   ratingAvg: number;
   ratingCount: number;
   bundleStockLimit: number | null;
+  bundleGroups: Array<{
+    id: number;
+    name: string;
+    selectionType: "FIXED" | "PRODUCT_SELECT" | "VARIANT_SELECT" | "OPTIONAL";
+    required: boolean;
+    minSelect: number;
+    maxSelect: number;
+    defaultQuantity: number;
+    minQuantity: number;
+    maxQuantity: number;
+    allowQuantityChange: boolean;
+    sortOrder: number;
+    options: Array<{
+      id: number;
+      productId: number;
+      variantId: number | null;
+      isDefault: boolean;
+      priceAdjustment: number;
+      sortOrder: number;
+      product: {
+        id: number;
+        name: string;
+        image: string | null;
+        type: string;
+        available: boolean;
+        basePrice: number;
+      };
+      variant: ProductPurchaseVariant | null;
+    }>;
+  }>;
   variants: ProductPurchaseVariant[];
 };
 
@@ -41,9 +71,28 @@ export function getDefaultPurchaseVariant(variants: ProductPurchaseVariant[]) {
 }
 
 export function getProductAvailableStock(
-  product: Pick<ProductPurchaseData, "type" | "bundleStockLimit" | "variants">,
+  product: Pick<ProductPurchaseData, "type" | "bundleStockLimit" | "bundleGroups" | "variants">,
 ) {
-  if (product.type === "BUNDLE") return product.bundleStockLimit ?? 0;
+  if (product.type === "BUNDLE") {
+    const demand = new Map<number, { stock: number; quantity: number }>();
+    for (const group of product.bundleGroups) {
+      for (const option of group.options.filter((candidate) => candidate.isDefault)) {
+        if (option.product.type !== "PHYSICAL" || !option.variant) continue;
+        const current = demand.get(option.variant.id) ?? {
+          stock: Math.max(0, option.variant.stock),
+          quantity: 0,
+        };
+        current.quantity += group.defaultQuantity;
+        demand.set(option.variant.id, current);
+      }
+    }
+    const componentCapacity = demand.size
+      ? Math.min(...Array.from(demand.values()).map((item) => Math.floor(item.stock / item.quantity)))
+      : 0;
+    return product.bundleStockLimit === null
+      ? componentCapacity
+      : Math.min(componentCapacity, product.bundleStockLimit);
+  }
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 99;
   return product.variants
     .filter((variant) => variant.active)
@@ -64,6 +113,21 @@ export function toProductPurchaseData(product: ProductPurchaseData): ProductPurc
     ratingAvg: product.ratingAvg,
     ratingCount: product.ratingCount,
     bundleStockLimit: product.bundleStockLimit,
+    bundleGroups: product.bundleGroups.map((group) => ({
+      ...group,
+      options: group.options.map((option) => ({
+        ...option,
+        priceAdjustment: Number(option.priceAdjustment),
+        product: { ...option.product, basePrice: Number(option.product.basePrice) },
+        variant: option.variant
+          ? {
+              ...option.variant,
+              price: Number(option.variant.price),
+              stock: Number(option.variant.stock),
+            }
+          : null,
+      })),
+    })),
     variants: product.variants.map((variant) => ({
       id: variant.id,
       sku: variant.sku,

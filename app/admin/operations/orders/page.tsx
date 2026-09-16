@@ -67,6 +67,13 @@ interface OrderItem {
     colorImage?: string | null;
     options?: Record<string, unknown> | null;
   } | null;
+  bundleComponents?: Array<{
+    id: number;
+    groupName: string;
+    productName: string;
+    variantLabel?: string | null;
+    quantityPerBundle: number;
+  }>;
 }
 
 interface Order {
@@ -1769,6 +1776,19 @@ const OrderManagement = () => {
                                       value: variantLabel,
                                     })}
                                   </p>
+                                )}
+                                {item.bundleComponents && item.bundleComponents.length > 0 && (
+                                  <ul className="mt-1 space-y-0.5 text-[11px] text-muted-foreground">
+                                    {item.bundleComponents.map((component) => (
+                                      <li key={component.id}>
+                                        {component.groupName}: {component.productName}
+                                        {component.variantLabel ? ` (${component.variantLabel})` : ""}
+                                        {component.quantityPerBundle > 1
+                                          ? ` × ${component.quantityPerBundle}`
+                                          : ""}
+                                      </li>
+                                    ))}
+                                  </ul>
                                 )}
                                 <p className="mt-0.5 text-[11px] text-muted-foreground">
                                   {t("detail.qtyPrice", {

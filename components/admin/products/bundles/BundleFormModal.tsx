@@ -25,11 +25,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import ProductPicker from "./ProductPicker";
+import ConfigurableBundleGroupBuilder, {
+  type BundleBuilderGroup,
+} from "./ConfigurableBundleGroupBuilder";
 import {
   calculateBundlePricing,
   mergeDuplicateBundleItems,
-  validateBundleConfiguration,
   type DiscountType,
 } from "@/lib/bundle";
 
@@ -88,6 +89,7 @@ export default function BundleFormModal({
   const [discountValue, setDiscountValue] = useState("15");
   const [manualPrice, setManualPrice] = useState("");
   const [selectedItems, setSelectedItems] = useState<BundleSelectedItem[]>([]);
+  const [groups, setGroups] = useState<BundleBuilderGroup[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
@@ -99,6 +101,7 @@ export default function BundleFormModal({
     setDiscountValue("15");
     setManualPrice("");
     setSelectedItems([]);
+    setGroups([]);
   };
 
   const formatCurrency = (amount: number, currency = "BDT") =>
@@ -211,22 +214,43 @@ export default function BundleFormModal({
               : "",
           });
 
+          const loadedGroups: BundleBuilderGroup[] = (bundleData.bundleGroups || []).map(
+            (group: any, groupIndex: number) => ({
+              key: `saved-group-${group.id || groupIndex}`,
+              name: group.name || "",
+              selectionType: group.selectionType || "FIXED",
+              required: Boolean(group.required),
+              minSelect: Number(group.minSelect ?? 1),
+              maxSelect: Number(group.maxSelect ?? 1),
+              defaultQuantity: Number(group.defaultQuantity ?? 1),
+              minQuantity: Number(group.minQuantity ?? 1),
+              maxQuantity: Number(group.maxQuantity ?? 1),
+              allowQuantityChange: Boolean(group.allowQuantityChange),
+              options: (group.options || []).map((option: any) => ({
+                productId: option.productId,
+                variantId: option.variantId ?? option.variant?.id ?? null,
+                isDefault: Boolean(option.isDefault),
+                priceAdjustment: Number(option.priceAdjustment ?? 0),
+                product: {
+                  ...option.product,
+                  defaultPrice: Number(option.variant?.price ?? option.product.basePrice),
+                  stock: Number(option.variant?.stock ?? option.product.variants?.[0]?.stock ?? 0),
+                },
+                variant: option.variant ?? null,
+              })),
+            }),
+          );
+          setGroups(loadedGroups);
           setSelectedItems(
-            (bundleData.bundleItems || []).map((item: any) => ({
-              product: {
-                ...item.product,
-                defaultPrice: item.product.basePrice,
-                stock: item.product.variants?.[0]?.stock || 0,
-                variants: item.product.variants || [],
-              },
-              variant:
-                item.product.variants?.find(
-                  (variant: any) => variant.isDefault,
-                ) ||
-                item.product.variants?.[0] ||
-                null,
-              quantity: Number(item.quantity) || 1,
-            })),
+            loadedGroups.flatMap((group) =>
+              group.options
+                .filter((option) => option.isDefault && option.product)
+                .map((option) => ({
+                  product: option.product,
+                  variant: option.variant,
+                  quantity: group.defaultQuantity,
+                })),
+            ),
           );
 
           const regularTotal = Number(bundleData._stats?.regularTotal || 0);
@@ -266,7 +290,7 @@ export default function BundleFormModal({
 
   const pricing = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
-    if (validItems.length < 2) return null;
+    if (validItems.length < 1) return null;
 
     try {
       return calculateBundlePricing({
@@ -285,24 +309,18 @@ export default function BundleFormModal({
   }, [selectedItems, discountType, discountValue, manualPrice]);
 
   const validation = useMemo(() => {
-    const validItems = selectedItems.filter((item) => item?.product?.id);
-    if (validItems.length < 2) {
-      return { isValid: false, errors: ["At least 2 items required"] };
+    const errors: string[] = [];
+    if (groups.length < 2) errors.push("At least two groups are required");
+    for (const [index, group] of groups.entries()) {
+      if (!group.name.trim()) errors.push(`Group ${index + 1} requires a name`);
+      if (group.options.length === 0) errors.push(`Group ${index + 1} requires a choice`);
+      const defaultCount = group.options.filter((option) => option.isDefault).length;
+      if (defaultCount < group.minSelect || defaultCount > group.maxSelect) {
+        errors.push(`Group ${index + 1} defaults must satisfy selection limits`);
+      }
     }
-
-    try {
-      return validateBundleConfiguration(
-        mergeDuplicateBundleItems(validItems),
-        discountType,
-        parseFloat(discountValue) || 0,
-        discountType === "MANUAL" && manualPrice
-          ? parseFloat(manualPrice)
-          : undefined,
-      );
-    } catch {
-      return { isValid: false, errors: ["Invalid bundle configuration"] };
-    }
-  }, [selectedItems, discountType, discountValue, manualPrice]);
+    return { isValid: errors.length === 0, errors };
+  }, [groups]);
 
   const bundleStockMetrics = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
@@ -397,6 +415,21 @@ export default function BundleFormModal({
     return Number(itemStock) <= 0;
   });
 
+  const handleGroupsChange = (nextGroups: BundleBuilderGroup[]) => {
+    setGroups(nextGroups);
+    setSelectedItems(
+      nextGroups.flatMap((group) =>
+        group.options
+          .filter((option) => option.isDefault && option.product)
+          .map((option) => ({
+            product: option.product,
+            variant: option.variant,
+            quantity: group.defaultQuantity,
+          })),
+      ),
+    );
+  };
+
   const handleImageUpload = async (file: File) => {
     setUploading(true);
     try {
@@ -453,17 +486,12 @@ export default function BundleFormModal({
       return;
     }
 
-    if (
-      formData.bundleStockLimit &&
-      Number(formData.bundleStockLimit) > bundleStockMetrics.maxBundlesFromStock
-    ) {
-      toast.error(
-        `Bundle stock limit cannot exceed available build capacity (${bundleStockMetrics.maxBundlesFromStock})`,
-      );
+    if (groups.length < 2 || groups.some((group) => !group.name.trim() || group.options.length === 0)) {
+      toast.error("Add at least two complete selection groups");
       return;
     }
 
-    if (!validation.isValid || !pricing || validItems.length < 2) {
+    if (!validation.isValid || !pricing || validItems.length < 1) {
       toast.error("Please fix the bundle configuration");
       return;
     }
@@ -503,6 +531,23 @@ export default function BundleFormModal({
           product: item.product,
           variant: item.variant || null,
           quantity: Number(item.quantity) || 1,
+        })),
+        groups: groups.map((group) => ({
+          name: group.name,
+          selectionType: group.selectionType,
+          required: group.required,
+          minSelect: group.minSelect,
+          maxSelect: group.maxSelect,
+          defaultQuantity: group.defaultQuantity,
+          minQuantity: group.minQuantity,
+          maxQuantity: group.maxQuantity,
+          allowQuantityChange: group.allowQuantityChange,
+          options: group.options.map((option) => ({
+            productId: option.productId,
+            variantId: option.variantId,
+            isDefault: option.isDefault,
+            priceAdjustment: option.priceAdjustment,
+          })),
         })),
       };
 
@@ -547,8 +592,8 @@ export default function BundleFormModal({
           <DialogTitle>{isEdit ? "Edit Bundle" : "Create Bundle"}</DialogTitle>
           <DialogDescription>
             {isEdit
-              ? "Update bundle information and pricing."
-              : "Create a product bundle with special pricing."}
+              ? "Update customer choices, component inventory and pricing."
+              : "Create a configurable bundle with fixed, selectable or optional groups."}
           </DialogDescription>
         </DialogHeader>
 
@@ -850,26 +895,13 @@ export default function BundleFormModal({
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Package className="h-5 w-5" />
-                      Bundle Products
+                      Configurable Bundle Groups
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ProductPicker
-                      selectedItems={selectedItems}
-                      onItemsChange={(items: BundleSelectedItem[]) =>
-                        setSelectedItems(
-                          ((items || []) as BundleSelectedItem[])
-                            .filter((item) => item?.product?.id)
-                            .map((item) => ({
-                              ...item,
-                              quantity: Number(item.quantity) || 1,
-                            })),
-                        )
-                      }
-                      excludeBundleId={isEdit ? bundleId : undefined}
-                      categoryIds={formData.selectedCategoryIds}
-                      categories={categories}
-                      warehouseId={formData.warehouseId}
+                    <ConfigurableBundleGroupBuilder
+                      groups={groups}
+                      onChange={handleGroupsChange}
                     />
 
                     {selectedItems.length > 0 && (

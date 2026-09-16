@@ -28,13 +28,14 @@ interface CartItem {
   price: number;
   quantity: number;
   image: string;
+  bundleSummary: string[];
 }
 
 function mergeIdenticalOrderItems(items: CartItem[]) {
   const merged = new Map<string, CartItem>();
 
   for (const item of items) {
-    const key = `${item.productId}:${item.variantId ?? "default"}:${item.price}`;
+    const key = `${item.productId}:${item.variantId ?? "default"}:${item.price}:${JSON.stringify(item.bundleSummary)}`;
     const current = merged.get(key);
     if (current) {
       current.quantity += item.quantity;
@@ -477,6 +478,11 @@ export default function OrderDetailsPage() {
             price: Number(oi.price ?? 0),
             quantity: Math.max(1, Number(oi.quantity ?? 1)),
             image: imageFromProducts || fallbackImage,
+            bundleSummary: Array.isArray(oi.bundleConfiguration?.summary)
+              ? oi.bundleConfiguration.summary.filter(
+                  (entry: unknown): entry is string => typeof entry === "string",
+                )
+              : [],
           };
         });
 
@@ -1072,6 +1078,13 @@ export default function OrderDetailsPage() {
                             </span>
                           </span>
                         </div>
+                        {item.bundleSummary.length > 0 && (
+                          <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
+                            {item.bundleSummary.map((entry) => (
+                              <li key={entry}>• {entry}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
 
                       <p className="text-[12px] text-muted-foreground mt-2">
