@@ -285,6 +285,14 @@ export async function POST(request: NextRequest) {
               product: {
                 select: { name: true },
               },
+              bundleComponents: {
+                select: {
+                  productName: true,
+                  variantLabel: true,
+                  quantityPerBundle: true,
+                },
+                orderBy: { id: "asc" },
+              },
             },
           },
         },
@@ -397,7 +405,15 @@ export async function POST(request: NextRequest) {
           country: order.country,
         },
         items: order.orderItems.map((item) => ({
-          name: item.product?.name || `Item-${item.id}`,
+          name:
+            item.bundleComponents.length > 0
+              ? `${item.product?.name || `Item-${item.id}`} [${item.bundleComponents
+                  .map(
+                    (component) =>
+                      `${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} ×${component.quantityPerBundle}`,
+                  )
+                  .join(", ")}]`
+              : item.product?.name || `Item-${item.id}`,
           quantity: item.quantity,
           unitPrice: Number(item.price),
         })),

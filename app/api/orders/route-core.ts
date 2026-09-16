@@ -36,6 +36,10 @@ import { pcBuildSelectionId } from "@/lib/pc-builder-grouping";
 import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import {
+  configurableBundleInclude,
+  resolveBundleConfiguration,
+} from "@/lib/configurable-bundle";
+import {
   clearPartnerAttributionCookieOptions,
   parsePartnerAttributionCookie,
   PARTNER_ATTRIBUTION_COOKIE,
@@ -60,6 +64,7 @@ function orderResponseInclude(userId?: string) {
       include: {
         product: { select: orderProductSelect },
         variant: { select: orderVariantSelect },
+        bundleComponents: true,
       },
     },
     user: userId ? { select: orderUserSelect } : false,
@@ -271,6 +276,7 @@ export async function GET(request: NextRequest) {
             include: {
               product: { select: orderProductSelect },
               variant: { select: orderVariantSelect },
+              bundleComponents: true,
             },
           },
           user: { select: orderUserSelect },
@@ -375,6 +381,7 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
           ? Number(item.variantId)
           : null,
       quantity: Number(item.quantity),
+      bundleSelections: Array.isArray(item.bundleSelections) ? item.bundleSelections : [],
     }));
     const idempotency = buildOrderIdempotencyContext({
       clientKey: request.headers.get("idempotency-key"),
@@ -498,6 +505,7 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
           },
           orderBy: [{ isDefault: "desc" }, { id: "asc" }],
         },
+        ...configurableBundleInclude,
       },
     });
     if (products.length !== productIds.length)
@@ -513,26 +521,71 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
 
     let subtotal = 0;
     const orderItemsData = normalizedItems.map((item) => {
-      const product = products.find((p: any) => p.id === item.productId);
+      const product = products.find((candidate: any) => candidate.id === item.productId);
       if (!product) throw new Error(`Product not found: ${item.productId}`);
-      if (product.deleted || !product.available)
+      if (product.deleted || !product.available) {
         throw new Error(`Product not available: ${product.name}`);
+      }
+
+      if (product.type === "BUNDLE") {
+        const configuration = resolveBundleConfiguration({
+          bundle: product,
+          selections: item.bundleSelections,
+          strictWarehouseStock: true,
+        });
+        if (item.quantity > configuration.availableQuantity) {
+          throw new Error(
+            `Insufficient stock for ${product.name}. Available: ${configuration.availableQuantity}`,
+          );
+        }
+        const inventoryDemands = configuration.components.flatMap((component) => {
+          if (component.variantId === null) return [];
+          const group = product.bundleGroups.find((candidate: any) => candidate.id === component.groupId);
+          const option = group?.options.find((candidate: any) => candidate.id === component.optionId);
+          if (!option || option.product.type !== "PHYSICAL") return [];
+          const variant = option.variant ??
+            option.product.variants.find((candidate: any) => candidate.isDefault) ??
+            option.product.variants[0] ?? null;
+          if (!variant) throw new Error(`Inventory not configured for: ${component.productName}`);
+          return [{
+            quantity: component.quantity * item.quantity,
+            product: option.product,
+            variant,
+          }];
+        });
+        const bundleConfiguration = {
+          ...configuration,
+          summary: configuration.components.map(
+            (component) => `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
+          ),
+        };
+        subtotal += configuration.finalPrice * item.quantity;
+        return {
+          productId: product.id,
+          variantId: null,
+          quantity: item.quantity,
+          price: configuration.finalPrice,
+          currency: String(product.currency || "BDT"),
+          vatClassId: product.VatClass?.id ?? null,
+          vatClassName: product.VatClass?.name ?? null,
+          vatClassCode: product.VatClass?.code ?? null,
+          product,
+          variant: null,
+          bundleConfiguration,
+          bundleComponents: configuration.components,
+          inventoryDemands,
+        };
+      }
+
       const targetVariant =
         item.variantId !== null
-          ? product.variants.find((variant) => variant.id === item.variantId) ??
-            null
-          : product.variants.find((variant) => variant.isDefault) ??
-            product.variants[0] ??
-            null;
-      if (!targetVariant)
-        throw new Error(`Inventory not configured for: ${product.name}`);
-      if (!targetVariant.active)
-        throw new Error(`Variant inactive for: ${product.name}`);
-      if (
-        item.variantId !== null &&
-        targetVariant.productId !== product.id
-      )
+          ? product.variants.find((variant: any) => variant.id === item.variantId) ?? null
+          : product.variants.find((variant: any) => variant.isDefault) ?? product.variants[0] ?? null;
+      if (!targetVariant) throw new Error(`Inventory not configured for: ${product.name}`);
+      if (!targetVariant.active) throw new Error(`Variant inactive for: ${product.name}`);
+      if (item.variantId !== null && targetVariant.productId !== product.id) {
         throw new Error(`Variant mismatch for: ${product.name}`);
+      }
       const priceNumber = resolveFlashSalePricing(
         product,
         targetVariant.price ?? product.basePrice,
@@ -543,17 +596,21 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
         variantId: targetVariant.id,
         quantity: item.quantity,
         price: priceNumber,
-        currency: String(
-          targetVariant.currency || product.currency || "BDT",
-        ),
+        currency: String(targetVariant.currency || product.currency || "BDT"),
         vatClassId: product.VatClass?.id ?? null,
         vatClassName: product.VatClass?.name ?? null,
         vatClassCode: product.VatClass?.code ?? null,
         product,
         variant: targetVariant,
+        bundleConfiguration: null,
+        bundleComponents: [],
+        inventoryDemands: product.type === "PHYSICAL"
+          ? [{ quantity: item.quantity, product, variant: targetVariant }]
+          : [],
       };
     });
-    assertWarehouseDemandAvailable(orderItemsData);
+    const inventoryDemands = orderItemsData.flatMap((item) => item.inventoryDemands);
+    assertWarehouseDemandAvailable(inventoryDemands);
 
     const shippingQuote = await calculateShippingQuote({
       country: String(country),
@@ -608,7 +665,7 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
           (subtotal + shipping_cost + tax_charge_total - discount_total) * 100,
         ) / 100,
       );
-      const o = await tx.order.create({
+      const orderRecord = await tx.order.create({
         data: {
           userId: userId ?? null,
           name,
@@ -632,57 +689,71 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
           image: isManualPayment ? (image ?? null) : null,
           couponId: couponResult?.coupon.id ?? null,
           commercialContext: orderIdempotencyCommercialContext(idempotency),
-          orderItems: {
-            create: orderItemsData.map((item, index) => ({
-              productId: item.productId,
-              variantId: item.variantId,
-              quantity: item.quantity,
-              price: item.price,
-              costPriceSnapshot:
-                item.variant?.costPrice !== null &&
-                item.variant?.costPrice !== undefined
-                  ? Number(item.variant.costPrice)
-                  : null,
-              currency: item.currency,
-              VatAmount: taxQuote.items[index]?.VatAmount ?? 0,
-            })),
-          },
-        },
-        include: {
-          orderItems: {
-            include: {
-              product: { select: orderProductSelect },
-              variant: { select: orderVariantSelect },
-            },
-          },
-          user: userId ? { select: orderUserSelect } : false,
-          coupon: Boolean(couponResult),
         },
       });
 
-      for (const item of orderItemsData)
-        if (item.product.type === "PHYSICAL") {
-          if (isSSLCOMMERZ)
-            await reserveVariantInventory({
-              tx,
-              productId: item.product.id,
-              productVariantId: item.variant.id,
-              orderId: o.id,
-              userId: userId ?? null,
-              quantity: item.quantity,
-              reason: `Order #${o.id} SSLCommerz reservation`,
-              expiresAt: new Date(Date.now() + 45 * 60 * 1000),
-            });
-          else
-            await deductVariantInventory({
-              tx,
-              orderId: o.id,
-              productId: item.product.id,
-              productVariantId: item.variant.id,
-              quantity: item.quantity,
-              reason: `Order #${o.id} checkout deduction`,
-            });
-        }
+      for (const [index, item] of orderItemsData.entries()) {
+        await tx.orderItem.create({
+          data: {
+            orderId: orderRecord.id,
+            productId: item.productId,
+            variantId: item.variantId,
+            quantity: item.quantity,
+            price: item.price,
+            costPriceSnapshot:
+              item.variant?.costPrice !== null && item.variant?.costPrice !== undefined
+                ? Number(item.variant.costPrice)
+                : null,
+            currency: item.currency,
+            VatAmount: taxQuote.items[index]?.VatAmount ?? 0,
+            bundleConfiguration: item.bundleConfiguration,
+            bundleComponents: item.bundleComponents.length
+              ? {
+                  create: item.bundleComponents.map((component) => ({
+                    bundleGroupId: component.groupId,
+                    bundleOptionId: component.optionId,
+                    groupName: component.groupName,
+                    productId: component.productId,
+                    variantId: component.variantId,
+                    productName: component.productName,
+                    variantLabel: component.variantLabel,
+                    quantityPerBundle: component.quantity,
+                    unitPriceSnapshot: component.unitPrice,
+                    priceAdjustmentSnapshot: component.priceAdjustment,
+                  })),
+                }
+              : undefined,
+          },
+        });
+      }
+
+      const o = await tx.order.findUniqueOrThrow({
+        where: { id: orderRecord.id },
+        include: orderResponseInclude(userId),
+      });
+
+      for (const item of inventoryDemands) {
+        if (isSSLCOMMERZ)
+          await reserveVariantInventory({
+            tx,
+            productId: item.product.id,
+            productVariantId: item.variant.id,
+            orderId: o.id,
+            userId: userId ?? null,
+            quantity: item.quantity,
+            reason: `Order #${o.id} SSLCommerz reservation`,
+            expiresAt: new Date(Date.now() + 45 * 60 * 1000),
+          });
+        else
+          await deductVariantInventory({
+            tx,
+            orderId: o.id,
+            productId: item.product.id,
+            productVariantId: item.variant.id,
+            quantity: item.quantity,
+            reason: `Order #${o.id} checkout deduction`,
+          });
+      }
 
       if (options.pcBuilderBuilds?.length) {
         await persistPcBuilderOrderGrouping(tx, o, options.pcBuilderBuilds);
@@ -769,7 +840,12 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
     }
     if (
       typeof error?.message === "string" &&
-      (error.message.startsWith("Product") ||
+       (error.message.startsWith("Product") ||
+        error.message.startsWith("Bundle") ||
+        error.message.includes("choice") ||
+        error.message.includes("quantity must") ||
+        error.message.includes("is fixed") ||
+        error.message.startsWith("Warehouse") ||
         error.message.startsWith("Insufficient stock") ||
         error.message.startsWith("Inventory") ||
         error.message.startsWith("Variant") ||

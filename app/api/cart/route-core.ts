@@ -12,6 +12,10 @@ import {
   isCategoryEffectivelyActive,
 } from '@/lib/category-navigation-server';
 import { getBookProductVisibilityWhere } from '@/lib/book-product-visibility-server';
+import {
+  configurableBundleInclude,
+  resolveBundleConfiguration,
+} from '@/lib/configurable-bundle';
 
 async function findStandardCartItem(
   userId: string,
@@ -28,6 +32,20 @@ async function findStandardCartItem(
   return id
     ? prisma.cartItem.findUnique({ where: { id } })
     : null;
+}
+
+async function findConfiguredBundleCartItem(
+  userId: string,
+  productId: number,
+  lineKey: string,
+) {
+  const rows = await prisma.$queryRawUnsafe<Array<{ id: number }>>(
+    'SELECT "id" FROM "CartItem" WHERE "userId" = $1 AND "productId" = $2 AND "variantId" IS NULL AND "lineKey" = $3 LIMIT 1',
+    userId,
+    productId,
+    lineKey,
+  );
+  return rows[0]?.id ? prisma.cartItem.findUnique({ where: { id: rows[0].id } }) : null;
 }
 
 function warehouseStockOrUnavailable(variant: {
@@ -166,6 +184,7 @@ export async function POST(request: NextRequest) {
           },
           orderBy: { sortOrder: 'asc' },
         },
+        ...configurableBundleInclude,
       },
     });
 
@@ -184,164 +203,66 @@ export async function POST(request: NextRequest) {
     const typeGate = await gateProductType(product.type);
     if (typeGate) return typeGate;
 
-    // Handle bundle stock validation
     if (product.type === 'BUNDLE') {
-      if (product.bundleItems.length === 0) {
+      const configuration = resolveBundleConfiguration({
+        bundle: product,
+        selections: body.bundleSelections,
+        strictWarehouseStock: true,
+      });
+      const lineKey = `bundle:${configuration.configurationKey}`;
+      const existing = await findConfiguredBundleCartItem(userId, productId, lineKey);
+      const nextQuantity = (existing?.quantity ?? 0) + quantity;
+      if (nextQuantity > configuration.availableQuantity) {
         return NextResponse.json(
-          { error: 'Bundle has no items configured' },
-          { status: 400 }
+          { error: `Requested bundle quantity exceeds available stock. Available: ${configuration.availableQuantity}` },
+          { status: 400 },
         );
       }
-
-      const bundleVariant =
-        product.variants.find((variant) => variant.isDefault) ??
-        product.variants[0] ??
-        null;
-
-      let derivedBundleStock = Number.POSITIVE_INFINITY;
-
-      for (const bundleItem of product.bundleItems) {
-        const childProduct = bundleItem.product;
-        const childVariant = childProduct.variants.find(v => v.isDefault) || childProduct.variants[0];
-
-        if (!childVariant) {
-          return NextResponse.json(
-            { error: `Bundle item "${childProduct.name}" has no inventory configured` },
-            { status: 400 }
-          );
-        }
-
-        const availableStock = warehouseStockOrUnavailable(childVariant);
-        if (availableStock === null) {
-          return NextResponse.json(
-            { error: `Bundle item "${childProduct.name}" has no warehouse inventory configured` },
-            { status: 400 }
-          );
-        }
-
-        const requiredQuantity = bundleItem.quantity * quantity;
-        const maxBundlesForItem = Math.floor(availableStock / bundleItem.quantity);
-        derivedBundleStock = Math.min(derivedBundleStock, maxBundlesForItem);
-
-        if (availableStock < requiredQuantity) {
-          return NextResponse.json(
-            { error: `Insufficient stock for bundle item "${childProduct.name}". Required: ${requiredQuantity}, Available: ${availableStock}` },
-            { status: 400 }
-          );
-        }
-      }
-
-      const bundleStockLimit =
-        product.bundleStockLimit !== null && product.bundleStockLimit !== undefined
-          ? Number(product.bundleStockLimit)
-          : null;
-      const effectiveBundleStock =
-        bundleStockLimit !== null
-          ? Math.min(derivedBundleStock, bundleStockLimit)
-          : derivedBundleStock;
-
-      if (quantity > effectiveBundleStock) {
-        return NextResponse.json(
-          {
-            error: `Requested bundle quantity exceeds available bundle stock. Available: ${effectiveBundleStock}`,
+      const bundleConfiguration = {
+        ...configuration,
+        summary: configuration.components.map(
+          (component) => `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
+        ),
+      };
+      const incrementConfiguredLine = async (id: number) => {
+        const updated = await prisma.cartItem.updateMany({
+          where: {
+            id,
+            quantity: { lte: configuration.availableQuantity - quantity },
           },
-          { status: 400 }
-        );
-      }
-
-      const existing = await findStandardCartItem(
-        userId,
-        productId,
-        bundleVariant?.id ?? null,
-      );
-      const legacyNullVariantItem =
-        bundleVariant
-          ? await findStandardCartItem(userId, productId, null)
-          : null;
-
-      let cartItem;
-
-      if (existing || legacyNullVariantItem) {
-        const targetCartItem = existing ?? legacyNullVariantItem!;
-        const nextQuantity =
-          targetCartItem.quantity +
-          quantity +
-          (existing && legacyNullVariantItem ? legacyNullVariantItem.quantity : 0);
-
-        let updatedDerivedBundleStock = Number.POSITIVE_INFINITY;
-        for (const bundleItem of product.bundleItems) {
-          const childProduct = bundleItem.product;
-          const childVariant = childProduct.variants.find(v => v.isDefault) || childProduct.variants[0];
-          if (!childVariant) {
-            return NextResponse.json(
-              { error: `Bundle item "${childProduct.name}" has no inventory configured` },
-              { status: 400 }
-            );
-          }
-
-          const availableStock = warehouseStockOrUnavailable(childVariant);
-          if (availableStock === null) {
-            return NextResponse.json(
-              { error: `Bundle item "${childProduct.name}" has no warehouse inventory configured` },
-              { status: 400 }
-            );
-          }
-
-          const requiredQuantity = bundleItem.quantity * nextQuantity;
-          const maxBundlesForItem = Math.floor(availableStock / bundleItem.quantity);
-          updatedDerivedBundleStock = Math.min(updatedDerivedBundleStock, maxBundlesForItem);
-
-          if (availableStock < requiredQuantity) {
-            return NextResponse.json(
-              { error: `Insufficient stock for bundle item "${childProduct.name}". Required: ${requiredQuantity}, Available: ${availableStock}` },
-              { status: 400 }
-            );
-          }
-        }
-
-        const updatedBundleStockLimit =
-          product.bundleStockLimit !== null && product.bundleStockLimit !== undefined
-            ? Number(product.bundleStockLimit)
-            : null;
-        const updatedEffectiveBundleStock =
-          updatedBundleStockLimit !== null
-            ? Math.min(updatedDerivedBundleStock, updatedBundleStockLimit)
-            : updatedDerivedBundleStock;
-
-        if (nextQuantity > updatedEffectiveBundleStock) {
-          return NextResponse.json(
-            {
-              error: `Requested bundle quantity exceeds available bundle stock. Available: ${updatedEffectiveBundleStock}`,
-            },
-            { status: 400 }
-          );
-        }
-
-        cartItem = await prisma.cartItem.update({
-          where: { id: targetCartItem.id },
           data: {
-            variantId: bundleVariant?.id ?? null,
-            quantity: nextQuantity,
+            quantity: { increment: quantity },
+            bundleConfiguration,
             lastReminderAt: null,
           },
         });
-
-        if (existing && legacyNullVariantItem) {
-          await prisma.cartItem.delete({
-            where: { id: legacyNullVariantItem.id },
-          });
+        if (updated.count !== 1) {
+          throw new Error(`Requested bundle quantity exceeds available stock. Available: ${configuration.availableQuantity}`);
         }
+        return prisma.cartItem.findUniqueOrThrow({ where: { id } });
+      };
+      let cartItem;
+      if (existing) {
+        cartItem = await incrementConfiguredLine(existing.id);
       } else {
-        cartItem = await prisma.cartItem.create({
-          data: {
-            userId,
-            productId,
-            variantId: bundleVariant?.id ?? null,
-            quantity,
-          },
-        });
+        try {
+          cartItem = await prisma.cartItem.create({
+            data: {
+              userId,
+              productId,
+              variantId: null,
+              lineKey,
+              quantity,
+              bundleConfiguration,
+            },
+          });
+        } catch (error) {
+          if (!(error && typeof error === "object" && "code" in error && error.code === "P2002")) throw error;
+          const raced = await findConfiguredBundleCartItem(userId, productId, lineKey);
+          if (!raced) throw error;
+          cartItem = await incrementConfiguredLine(raced.id);
+        }
       }
-
       return NextResponse.json(cartItem, { status: 201 });
     }
 
@@ -425,6 +346,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(cartItem, { status: 201 });
   } catch (error) {
     console.error('Error adding to cart:', error);
+    if (
+      error instanceof Error &&
+      /(bundle|stock|quantity|choice|inventory|warehouse|fixed|available)/i.test(error.message)
+    ) {
+      return NextResponse.json({ error: error.message }, { status: 400 });
+    }
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

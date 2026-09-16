@@ -37,6 +37,9 @@ export interface CartItem {
   variantLabel?: string | null;
   pcBuildId?: string | null;
   pcBuildSlot?: string | null;
+  bundleSelections?: Array<{ groupId: number; optionId: number | null; quantity: number; omitted?: boolean }> | null;
+  bundleSummary?: string[] | null;
+  bundleConfigurationKey?: string | null;
 }
 
 type CartAnimationRect = {
@@ -53,6 +56,9 @@ type CartAnimationOptions = {
   imageRect?: CartAnimationRect;
   product?: ProductApiItem;
   pcBuilder?: boolean;
+  bundleSelections?: Array<{ groupId: number; optionId: number | null; quantity: number; omitted?: boolean }>;
+  bundleSummary?: string[];
+  bundlePrice?: number;
 };
 
 interface CartContextType {
@@ -140,6 +146,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
             image: x.image || "/placeholder.svg",
             pcBuildId: x.pcBuildId ?? null,
             pcBuildSlot: x.pcBuildSlot ?? null,
+            bundleSelections: Array.isArray(x.bundleSelections) ? x.bundleSelections : null,
+            bundleSummary: Array.isArray(x.bundleSummary) ? x.bundleSummary : null,
+            bundleConfigurationKey: x.bundleConfigurationKey ?? null,
           }))
       : [];
     setCartItems(safe);
@@ -345,6 +354,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
           window.location.pathname.includes("/pc-builder"));
       let pcBuildId: string | null = null;
       let pcBuildSlot: string | null = null;
+      let persistedBundleKey: string | null = null;
+      let persistedBundleSummary = options?.bundleSummary ?? null;
+      let persistedBundlePrice = options?.bundlePrice;
 
       if (fromPcBuilder) {
         try {
@@ -381,6 +393,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               productId: product.id,
               variantId: variant?.id ?? null,
               quantity: add,
+              bundleSelections: options?.bundleSelections,
             }),
           });
           if (!response.ok && response.status !== 401) {
@@ -389,6 +402,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
               "Failed to persist cart row:",
               data?.error || response.status,
             );
+            return false;
+          }
+          if (response.ok) {
+            const data = await response.json().catch(() => null);
+            persistedBundleKey = typeof data?.lineKey === "string" ? data.lineKey : null;
+            const config = data?.bundleConfiguration;
+            if (config && typeof config === "object") {
+              persistedBundlePrice = Number(config.finalPrice ?? persistedBundlePrice ?? product.price);
+              persistedBundleSummary = Array.isArray(config.summary)
+                ? config.summary.map(String)
+                : persistedBundleSummary;
+            }
           }
         } catch (error) {
           console.error("Failed to sync cart row:", error);
@@ -423,11 +448,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
           ];
         }
 
+        const fallbackBundleKey = options?.bundleSelections
+          ? `bundle:${JSON.stringify([...options.bundleSelections].sort((a, b) => a.groupId - b.groupId || (a.optionId ?? -1) - (b.optionId ?? -1)))}`
+          : null;
+        const bundleConfigurationKey = persistedBundleKey ?? fallbackBundleKey;
         const idx = prevItems.findIndex(
           (item) =>
             !item.pcBuildId &&
             norm(item.productId) === pid &&
-            normVariant(item.variantId) === cartVariantKey
+            normVariant(item.variantId) === cartVariantKey &&
+            (product.type !== "BUNDLE" || item.bundleConfigurationKey === bundleConfigurationKey)
         );
 
         if (idx !== -1) {
@@ -442,11 +472,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
             productId: product.id,
             variantId: variant?.id ?? null,
             name: product.name,
-            price: Number(variant?.price ?? product.price),
+              price: Number(persistedBundlePrice ?? variant?.price ?? product.price),
             quantity: add,
             image: product.image || "/placeholder.svg",
-            variantLabel,
-          },
+              variantLabel,
+              bundleSelections: options?.bundleSelections ?? null,
+              bundleSummary: persistedBundleSummary,
+              bundleConfigurationKey,
+            },
         ];
       });
 

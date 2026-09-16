@@ -20,6 +20,8 @@
     "test:search": "tsx --test tests/search.test.mjs",
     "test:order-inventory": "node --import tsx --test tests/order-inventory-lifecycle.test.mjs tests/order-warehouse-stock.test.mjs",
     "test:order-idempotency": "node --import tsx --test tests/order-idempotency.test.mjs",
+    "test:configurable-bundles": "node --import tsx --test tests/configurable-bundles.test.mjs",
+    "verify:configurable-bundles-db": "tsx scripts/verify-configurable-bundles.ts",
     "test:universal-baseline": "tsx --test tests/universal-ecommerce-baseline.test.mjs",
     "test:universal-phase2": "tsx --test tests/store-features.test.mjs tests/store-features-schema.test.mjs",
     "test:universal-phase3": "tsx --test tests/store-features.test.mjs tests/store-features-schema.test.mjs tests/store-feature-gating.test.mjs",

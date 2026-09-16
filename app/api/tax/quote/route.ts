@@ -2,34 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { calculateTaxForItems } from "@/lib/tax";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import {
+  configurableBundleInclude,
+  resolveBundleConfiguration,
+} from "@/lib/configurable-bundle";
 
 type QuoteRequestItem = {
   productId: number;
   variantId: number | null;
   quantity: number;
-};
-
-type ProductTaxLookup = {
-  id: number;
-  basePrice: unknown;
-  currency: string;
-  flashSaleEnabled: boolean;
-  flashSalePrice: unknown | null;
-  flashSaleStartsAt: Date | null;
-  flashSaleEndsAt: Date | null;
-  VatClass: {
-    id: number;
-    name: string;
-    code: string;
-  } | null;
-  variants: Array<{
-    id: number;
-    productId: number;
-    price: unknown;
-    currency: string;
-    isDefault: boolean;
-    active: boolean;
-  }>;
+  bundleSelections?: unknown;
 };
 
 export async function POST(request: NextRequest) {
@@ -54,6 +36,7 @@ export async function POST(request: NextRequest) {
             ? Number(item.variantId)
             : null,
         quantity: Number(item?.quantity || 0),
+        bundleSelections: item?.bundleSelections,
       }))
       .filter(
         (item: QuoteRequestItem) =>
@@ -86,18 +69,37 @@ export async function POST(request: NextRequest) {
             active: true,
           },
         },
+        ...configurableBundleInclude,
       },
-    })) as ProductTaxLookup[];
+    })) as any[];
 
     const quoteItems = normalizedItems
       .map((item) => {
         const product = products.find((entry) => entry.id === item.productId);
         if (!product) return null;
 
+        if (product.type === "BUNDLE") {
+          const configuration = resolveBundleConfiguration({
+            bundle: product,
+            selections: item.bundleSelections,
+            strictWarehouseStock: true,
+          });
+          return {
+            productId: product.id,
+            variantId: null,
+            quantity: item.quantity,
+            unitPrice: configuration.finalPrice,
+            currency: String(product.currency || "BDT"),
+            vatClassId: product.VatClass?.id ?? null,
+            vatClassName: product.VatClass?.name ?? null,
+            vatClassCode: product.VatClass?.code ?? null,
+          };
+        }
+
         const variant =
           item.variantId !== null
-            ? product.variants.find((entry) => entry.id === item.variantId) ?? null
-            : product.variants.find((entry) => entry.isDefault) ??
+            ? product.variants.find((entry: any) => entry.id === item.variantId) ?? null
+            : product.variants.find((entry: any) => entry.isDefault) ??
               product.variants[0] ??
               null;
 

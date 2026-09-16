@@ -85,6 +85,7 @@ export async function GET(
           include: {
             product: { select: orderProductSelect },
             variant: { select: orderVariantSelect },
+            bundleComponents: true,
           },
         },
         refunds: {

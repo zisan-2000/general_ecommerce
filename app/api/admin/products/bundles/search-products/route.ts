@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { gateStoreFeature } from '@/lib/store-feature-gates-server';
+import { requireProductManager } from '@/lib/product-management-access';
 
 export async function GET(request: NextRequest) {
+  const auth = await requireProductManager();
+  if (auth) return auth;
   const featureGate = await gateStoreFeature('BUNDLES', 403);
   if (featureGate) return featureGate;
   try {

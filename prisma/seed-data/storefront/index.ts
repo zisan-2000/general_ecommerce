@@ -624,6 +624,70 @@ export async function seedStorefrontDemo(
     });
   }
 
+  // Keep the demo bundle compatible with the configurable/composite checkout.
+  // These are fixed groups; admins can later convert any group to selectable.
+  for (const child of bundleChildren) {
+    const childProduct = await prisma.product.findUniqueOrThrow({
+      where: { id: child.productId },
+      select: {
+        name: true,
+        variants: {
+          where: { active: true },
+          orderBy: [{ isDefault: "desc" }, { id: "asc" }],
+          take: 1,
+          select: { id: true },
+        },
+      },
+    });
+    const group = await prisma.bundleGroup.upsert({
+      where: {
+        bundleId_sortOrder: { bundleId: bundle.id, sortOrder: child.sortOrder },
+      },
+      update: {
+        name: childProduct.name,
+        selectionType: "FIXED",
+        required: true,
+        minSelect: 1,
+        maxSelect: 1,
+        defaultQuantity: child.quantity,
+        minQuantity: child.quantity,
+        maxQuantity: child.quantity,
+        allowQuantityChange: false,
+      },
+      create: {
+        bundleId: bundle.id,
+        name: childProduct.name,
+        selectionType: "FIXED",
+        required: true,
+        minSelect: 1,
+        maxSelect: 1,
+        defaultQuantity: child.quantity,
+        minQuantity: child.quantity,
+        maxQuantity: child.quantity,
+        allowQuantityChange: false,
+        sortOrder: child.sortOrder,
+      },
+      select: { id: true },
+    });
+    await prisma.bundleGroupOption.upsert({
+      where: { groupId_sortOrder: { groupId: group.id, sortOrder: 0 } },
+      update: {
+        productId: child.productId,
+        variantId: childProduct.variants[0]?.id ?? null,
+        isDefault: true,
+        priceAdjustment: 0,
+      },
+      create: {
+        groupId: group.id,
+        productId: child.productId,
+        variantId: childProduct.variants[0]?.id ?? null,
+        isDefault: true,
+        priceAdjustment: 0,
+        sortOrder: 0,
+      },
+    });
+  }
+
   let reviewCount = 0;
   let questionCount = 0;
   for (const [productIndex, item] of STOREFRONT_PRODUCTS.entries()) {

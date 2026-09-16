@@ -35,10 +35,12 @@ interface LocalCartItem {
   pcBuildId?: string | null;
   pcBuildSlot?: string | null;
   quantityItemId?: number | string | null;
+  bundleSummary?: string[] | null;
+  bundleConfigurationKey?: string | null;
 }
 
-function cartSelectionKey(item: Pick<LocalCartItem, "productId" | "variantId">) {
-  return `${item.productId}:${item.variantId ?? "default"}`;
+function cartSelectionKey(item: Pick<LocalCartItem, "productId" | "variantId" | "bundleConfigurationKey">) {
+  return `${item.productId}:${item.variantId ?? "default"}:${item.bundleConfigurationKey ?? "standard"}`;
 }
 
 function combinePcBuildCompanionQuantities(items: LocalCartItem[]) {
@@ -239,6 +241,8 @@ export default function CartPage() {
       variantLabel: i.variantLabel ?? null,
       pcBuildId: i.pcBuildId ?? null,
       pcBuildSlot: i.pcBuildSlot ?? null,
+      bundleSummary: i.bundleSummary ?? null,
+      bundleConfigurationKey: i.bundleConfigurationKey ?? null,
     }));
   }, [serverCartItems]);
 
@@ -277,7 +281,7 @@ export default function CartPage() {
         productId: item.productId,
         variantId: item.variantId ?? item.variant?.id ?? null,
         name: item.product?.name ?? "Unknown Product",
-        price: Number(item.variant?.price ?? item.product?.basePrice ?? 0),
+        price: Number(item.bundleConfiguration?.finalPrice ?? item.variant?.price ?? item.product?.basePrice ?? 0),
         image: item.product?.image ?? "/placeholder.svg",
         quantity: Number(item.quantity ?? 1),
         variantLabel:
@@ -288,6 +292,10 @@ export default function CartPage() {
             : item.variant?.sku ?? null,
         pcBuildId: item.pcBuildId ?? null,
         pcBuildSlot: item.pcBuildSlot ?? null,
+        bundleSummary: Array.isArray(item.bundleConfiguration?.summary)
+          ? item.bundleConfiguration.summary.map(String)
+          : null,
+        bundleConfigurationKey: item.lineKey?.startsWith("bundle:") ? item.lineKey : null,
       }));
 
       setServerCartItems(mapped);
@@ -812,6 +820,13 @@ export default function CartPage() {
                           <div className="mt-1 text-sm text-muted-foreground">
                             Unit Price: ৳{item.price.toLocaleString()}
                           </div>
+                          {item.bundleSummary?.length ? (
+                            <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
+                              {item.bundleSummary.map((line) => (
+                                <li key={line}>• {line}</li>
+                              ))}
+                            </ul>
+                          ) : null}
 
                           {/* ✅ Mobile: Qty + price inline row */}
                           <div className="mt-4 flex flex-col sm:hidden gap-3">

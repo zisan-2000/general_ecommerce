@@ -5,6 +5,10 @@ import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { computeWarehouseAvailableStock } from '@/lib/warehouse-stock';
 import { gateProductType } from '@/lib/store-feature-gates-server';
+import {
+  configurableBundleInclude,
+  resolveBundleConfiguration,
+} from '@/lib/configurable-bundle';
 
 // UPDATE quantity - Logged in user only
 // Body: { quantity: number }
@@ -44,7 +48,11 @@ export async function PATCH(
             },
           },
         },
-        product: true,
+        product: {
+          include: {
+            ...configurableBundleInclude,
+          },
+        },
       },
     });
 
@@ -79,6 +87,21 @@ export async function PATCH(
         return NextResponse.json(
           { error: 'Requested quantity exceeds available stock' },
           { status: 400 }
+        );
+      }
+    }
+
+    if (cartItem.product.type === 'BUNDLE') {
+      const stored = cartItem.bundleConfiguration as { selections?: unknown } | null;
+      const configuration = resolveBundleConfiguration({
+        bundle: cartItem.product,
+        selections: stored?.selections,
+        strictWarehouseStock: true,
+      });
+      if (quantity > configuration.availableQuantity) {
+        return NextResponse.json(
+          { error: `Requested bundle quantity exceeds available stock. Available: ${configuration.availableQuantity}` },
+          { status: 400 },
         );
       }
     }

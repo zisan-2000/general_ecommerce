@@ -70,6 +70,23 @@ interface Bundle {
       }>;
     };
   }>;
+  bundleGroups: Array<{
+    id: number;
+    name: string;
+    selectionType: string;
+    required: boolean;
+    minSelect: number;
+    maxSelect: number;
+    defaultQuantity: number;
+    allowQuantityChange: boolean;
+    options: Array<{
+      id: number;
+      isDefault: boolean;
+      priceAdjustment: number;
+      product: { id: number; name: string; image?: string; available: boolean };
+      variant?: { id: number; sku: string; price: number } | null;
+    }>;
+  }>;
   _stats: {
     itemCount: number;
     regularTotal: number;
@@ -253,77 +270,41 @@ export default function BundleDetailPage({
             </CardContent>
           </Card>
 
-          {/* Bundle Items */}
+          {/* Configurable selection groups */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Package className="h-5 w-5" />
-                Included Products ({bundle._stats.itemCount})
+                Selection Groups ({bundle._stats.itemCount})
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {bundle.bundleItems.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className="flex items-center gap-4 p-4 bg-muted/30 rounded-lg"
-                  >
-                    <div className="flex-shrink-0">
-                      <span className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-medium">
-                        {index + 1}
-                      </span>
+                {bundle.bundleGroups.map((group, index) => (
+                  <div key={group.id} className="rounded-lg bg-muted/30 p-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{index + 1}</span>
+                      <h4 className="font-semibold">{group.name}</h4>
+                      <Badge variant="outline">{group.selectionType.replace("_", " ")}</Badge>
+                      <Badge variant={group.required ? "default" : "secondary"}>{group.required ? "Required" : "Optional"}</Badge>
+                      <span className="text-xs text-muted-foreground">Choose {group.minSelect}–{group.maxSelect} · Qty {group.defaultQuantity}</span>
                     </div>
-
-                    <div className="w-16 h-16 bg-muted rounded-md flex items-center justify-center overflow-hidden flex-shrink-0">
-                      {item.product.image ? (
-                        <Image
-                          src={item.product.image}
-                          alt={item.product.name}
-                          width={64}
-                          height={64}
-                          className="object-cover"
-                        />
-                      ) : (
-                        <Package className="h-6 w-6 text-muted-foreground" />
-                      )}
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-medium">{item.product.name}</h4>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span>Quantity: {item.quantity}</span>
-                        <span>
-                          Unit Price:{" "}
-                          {formatCurrency(
-                            item.product.basePrice,
-                            bundle.currency,
-                          )}
-                        </span>
-                        <span>
-                          Total:{" "}
-                          {formatCurrency(
-                            item.product.basePrice * item.quantity,
-                            bundle.currency,
-                          )}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="text-right">
-                      <div className="font-medium">
-                        {formatCurrency(
-                          item.product.basePrice * item.quantity,
-                          bundle.currency,
-                        )}
-                      </div>
-                      <Badge
-                        variant={
-                          item.product.available ? "default" : "secondary"
-                        }
-                        className="text-xs"
-                      >
-                        {item.product.available ? "Available" : "Unavailable"}
-                      </Badge>
+                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                      {group.options.map((option) => (
+                        <div key={option.id} className="flex items-center gap-3 rounded border bg-background p-2">
+                          <div className="relative h-10 w-10 overflow-hidden rounded bg-muted">
+                            {option.product.image ? <Image src={option.product.image} alt="" fill sizes="40px" className="object-contain" /> : <Package className="m-2 h-6 w-6 text-muted-foreground" />}
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="truncate text-sm font-medium">{option.product.name}</p>
+                            <p className="truncate text-xs text-muted-foreground">{option.variant?.sku || "Default variant"}</p>
+                          </div>
+                          <div className="text-right text-xs">
+                            {option.isDefault ? <Badge variant="secondary">Default</Badge> : null}
+                            <p className="mt-1 font-medium">{Number(option.priceAdjustment) === 0 ? "Included" : `${Number(option.priceAdjustment) > 0 ? "+" : ""}${formatCurrency(Number(option.priceAdjustment), bundle.currency)}`}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}

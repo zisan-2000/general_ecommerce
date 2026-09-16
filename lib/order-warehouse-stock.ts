@@ -7,7 +7,9 @@ type OrderWarehouseStockClient = Pick<
   | "stockLevel"
   | "inventoryReservation"
   | "inventoryLog"
->;
+> & {
+  orderBundleComponent?: Prisma.TransactionClient["orderBundleComponent"];
+};
 
 type WarehouseDemand = {
   requiredUnits: number;
@@ -143,7 +145,18 @@ export async function getOrderWarehouseStockAvailability(
   client: OrderWarehouseStockClient,
   orderId: number,
 ): Promise<OrderWarehouseStockAvailability> {
-  const [items, warehouses] = await Promise.all([
+  const bundleComponentsPromise = client.orderBundleComponent
+    ? client.orderBundleComponent.findMany({
+        where: { orderItem: { orderId } },
+        select: {
+          variantId: true,
+          quantityPerBundle: true,
+          orderItem: { select: { quantity: true } },
+          product: { select: { type: true } },
+        },
+      })
+    : Promise.resolve([]);
+  const [items, bundleComponents, warehouses] = await Promise.all([
     client.orderItem.findMany({
       where: {
         orderId,
@@ -151,6 +164,7 @@ export async function getOrderWarehouseStockAvailability(
       },
       select: { variantId: true, quantity: true },
     }),
+    bundleComponentsPromise,
     client.warehouse.findMany({
       select: { id: true },
       orderBy: [{ isDefault: "desc" }, { id: "asc" }],
@@ -173,6 +187,22 @@ export async function getOrderWarehouseStockAvailability(
     demand.byVariant.set(
       item.variantId,
       (demand.byVariant.get(item.variantId) ?? 0) + quantity,
+    );
+  }
+  for (const component of bundleComponents) {
+    if (component.product.type !== "PHYSICAL") continue;
+    const quantity = Math.max(
+      0,
+      Number(component.quantityPerBundle) * Number(component.orderItem.quantity),
+    );
+    demand.requiredUnits += quantity;
+    if (component.variantId === null) {
+      demand.hasUntrackedUnits ||= quantity > 0;
+      continue;
+    }
+    demand.byVariant.set(
+      component.variantId,
+      (demand.byVariant.get(component.variantId) ?? 0) + quantity,
     );
   }
 

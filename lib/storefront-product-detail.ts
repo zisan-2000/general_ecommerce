@@ -33,6 +33,20 @@ function serializeProduct(product: RawProduct) {
       ...variant,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
     })),
+    bundleGroups: product.bundleGroups.map((group) => ({
+      ...group,
+      options: group.options.map((option) => ({
+        ...option,
+        priceAdjustment: Number(option.priceAdjustment),
+        product: {
+          ...option.product,
+          basePrice: Number(option.product.basePrice),
+        },
+        variant: option.variant
+          ? { ...option.variant, price: Number(option.variant.price) }
+          : null,
+      })),
+    })),
   };
 }
 
