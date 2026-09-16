@@ -34,6 +34,7 @@ import {
   FaOpera,
   FaInternetExplorer,
 } from "react-icons/fa";
+import { useFormatter, useTranslations } from "next-intl";
 
 interface Blog {
   id: number;
@@ -77,8 +78,6 @@ type AnalyticsSummary = {
 function addDays(d: Date, n: number) {
   return new Date(d.getTime() + n * 24 * 60 * 60 * 1000);
 }
-
-const numberFormatter = new Intl.NumberFormat();
 
 // ✅ idle callback helper
 const runIdle = (cb: () => void) => {
@@ -156,6 +155,27 @@ const PIE_COLORS = [
 ];
 
 const AnalyticsDashboard: React.FC = () => {
+  const t = useTranslations("AdminAnalytics");
+  const formatter = useFormatter();
+  const formatNumber = (value: number) => formatter.number(value || 0);
+  const formatDuration = (seconds: number) => {
+    if (!seconds || seconds <= 0) return t("duration.seconds", { count: 0 });
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    if (minutes <= 0) return t("duration.seconds", { count: remainingSeconds });
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+    if (hours <= 0) {
+      return t("duration.minutesSeconds", {
+        minutes,
+        seconds: remainingSeconds,
+      });
+    }
+    return t("duration.hoursMinutes", {
+      hours,
+      minutes: remainingMinutes,
+    });
+  };
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [isLoadingBlogs, setIsLoadingBlogs] = useState<boolean>(true);
   const [errorBlogs, setErrorBlogs] = useState<string | null>(null);
@@ -177,16 +197,16 @@ const AnalyticsDashboard: React.FC = () => {
   const [deviceTab, setDeviceTab] = useState<DeviceTabKey>("deviceType");
 
   const tabOptions: Array<{ key: TabKey; label: string }> = [
-    { key: "traffic", label: "Traffic" },
-    { key: "sources", label: "Sources" },
-    { key: "geo", label: "Geo" },
-    { key: "devices", label: "Devices" },
+    { key: "traffic", label: t("tabs.traffic") },
+    { key: "sources", label: t("tabs.sources") },
+    { key: "geo", label: t("tabs.geo") },
+    { key: "devices", label: t("tabs.devices") },
   ];
 
   const deviceTabOptions: Array<{ key: DeviceTabKey; label: string }> = [
-    { key: "deviceType", label: "Device Type" },
-    { key: "browser", label: "Browser" },
-    { key: "os", label: "Operating System" },
+    { key: "deviceType", label: t("deviceTabs.deviceType") },
+    { key: "browser", label: t("deviceTabs.browser") },
+    { key: "os", label: t("deviceTabs.os") },
   ];
 
   const BrowserLogo: React.FC<{ name?: string }> = ({ name }) => {
@@ -249,7 +269,7 @@ const AnalyticsDashboard: React.FC = () => {
         const { from, to, bucket: resolvedBucket } = resolveRange();
         if (to <= from) {
           setAnalyticsError(
-            "Invalid date range. End date must be after start date."
+            t("errors.invalidDateRange")
           );
           setAnalyticsLoading(false);
           return;
@@ -268,7 +288,7 @@ const AnalyticsDashboard: React.FC = () => {
           }
         );
         if (!res.ok) {
-          let message = `Failed to load analytics (${res.status})`;
+          let message = t("errors.loadWithStatus", { status: res.status });
           try {
             const body = await res.clone().json();
             if (typeof body?.error === "string" && body.error.trim()) {
@@ -291,7 +311,7 @@ const AnalyticsDashboard: React.FC = () => {
         if (isAbortError(e)) return;
         console.error(e);
         setAnalyticsError(
-          e instanceof Error ? e.message : "Failed to load analytics."
+          e instanceof Error ? e.message : t("errors.load")
         );
       } finally {
         setAnalyticsLoading(false);
@@ -300,7 +320,7 @@ const AnalyticsDashboard: React.FC = () => {
 
     loadAnalytics();
     return () => controller.abort();
-  }, [resolveRange, startTransition]);
+  }, [resolveRange, startTransition, t]);
 
   // ✅ devices data memo
   const deviceTypeRows = useMemo(
@@ -325,10 +345,10 @@ const AnalyticsDashboard: React.FC = () => {
   const deviceTypePie = useMemo(
     () =>
       deviceTypeRows.map((r) => ({
-        name: r.name || "Unknown",
+        name: r.name || t("common.unknown"),
         value: r.count || 0,
       })),
-    [deviceTypeRows]
+    [deviceTypeRows, t]
   );
 
   return (
@@ -338,10 +358,10 @@ const AnalyticsDashboard: React.FC = () => {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold text-foreground">
-              Website Analytics
+              {t("title")}
             </h2>
             <p className="text-sm text-muted-foreground">
-              Visitors, page views, active time, sources, geo & devices
+              {t("subtitle")}
             </p>
           </div>
 
@@ -351,11 +371,11 @@ const AnalyticsDashboard: React.FC = () => {
               onChange={(e) => setRangePreset(e.target.value as RangePreset)}
               className="text-sm border border-border rounded-lg px-3 py-2 bg-card"
             >
-              <option value="today">Today</option>
-              <option value="24h">Last 24h</option>
-              <option value="7d">Last 7 days</option>
-              <option value="30d">Last 30d</option>
-              <option value="custom">Custom</option>
+              <option value="today">{t("ranges.today")}</option>
+              <option value="24h">{t("ranges.last24Hours")}</option>
+              <option value="7d">{t("ranges.last7Days")}</option>
+              <option value="30d">{t("ranges.last30Days")}</option>
+              <option value="custom">{t("ranges.custom")}</option>
             </select>
 
             {rangePreset === "custom" && (
@@ -366,7 +386,7 @@ const AnalyticsDashboard: React.FC = () => {
                   onChange={(e) => setCustomFrom(e.target.value)}
                   className="text-sm border border-gray-300 rounded-lg px-3 py-2"
                 />
-                <span className="text-muted-foreground text-sm">to</span>
+                <span className="text-muted-foreground text-sm">{t("ranges.to")}</span>
                 <input
                   type="date"
                   value={customTo}
@@ -381,10 +401,10 @@ const AnalyticsDashboard: React.FC = () => {
               onChange={(e) => setBucket(e.target.value as AnalyticsBucket)}
               className="text-sm border border-border rounded-lg px-3 py-2 bg-card"
               disabled={rangePreset === "24h"}
-              title={rangePreset === "24h" ? "24h uses hourly buckets" : ""}
+              title={rangePreset === "24h" ? t("ranges.hourlyHint") : ""}
             >
-              <option value="hour">Hourly</option>
-              <option value="day">Daily</option>
+              <option value="hour">{t("ranges.hourly")}</option>
+              <option value="day">{t("ranges.daily")}</option>
             </select>
           </div>
         </div>
@@ -392,55 +412,55 @@ const AnalyticsDashboard: React.FC = () => {
         {/* KPI Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 mt-5">
           <StatCard
-            title="Live Users"
+            title={t("kpis.liveUsers")}
             value={
               analyticsLoading
                 ? "…"
-                : numberFormatter.format(analytics?.kpis.liveUsers ?? 0)
+                : formatNumber(analytics?.kpis.liveUsers ?? 0)
             }
             icon={<FaGlobeAmericas className="text-xl text-white" />}
             color="bg-analytics-primary"
             loading={analyticsLoading || isPending}
           />
           <StatCard
-            title="Total Visitors"
+            title={t("kpis.totalVisitors")}
             value={
               analyticsLoading
                 ? "…"
-                : numberFormatter.format(analytics?.kpis.visitors ?? 0)
+                : formatNumber(analytics?.kpis.visitors ?? 0)
             }
             icon={<FaEye className="text-xl text-white" />}
             color="bg-analytics-chart-1"
             loading={analyticsLoading || isPending}
           />
           <StatCard
-            title="Page Views"
+            title={t("kpis.pageViews")}
             value={
               analyticsLoading
                 ? "…"
-                : numberFormatter.format(analytics?.kpis.pageViews ?? 0)
+                : formatNumber(analytics?.kpis.pageViews ?? 0)
             }
             icon={<FaRegChartBar className="text-xl text-white" />}
             color="bg-analytics-chart-2"
             loading={analyticsLoading || isPending}
           />
           <StatCard
-            title="Total Active Time"
+            title={t("kpis.totalActiveTime")}
             value={
               analyticsLoading
                 ? "…"
-                : fmtSec(analytics?.kpis.activeTimeSec ?? 0)
+                : formatDuration(analytics?.kpis.activeTimeSec ?? 0)
             }
             icon={<FaFileAlt className="text-xl text-white" />}
             color="bg-analytics-chart-3"
             loading={analyticsLoading || isPending}
           />
           <StatCard
-            title="Avg Active Time"
+            title={t("kpis.avgActiveTime")}
             value={
               analyticsLoading
                 ? "…"
-                : fmtSec(analytics?.kpis.avgActiveTimeSec ?? 0)
+                : formatDuration(analytics?.kpis.avgActiveTimeSec ?? 0)
             }
             icon={<FaGlobeAmericas className="text-xl text-white" />}
             color="bg-analytics-chart-4"
@@ -474,7 +494,7 @@ const AnalyticsDashboard: React.FC = () => {
           {analyticsLoading ? (
             <SkeletonBox className="h-[320px] w-full" />
           ) : !analytics ? (
-            <div className="text-muted-foreground text-sm">No analytics data</div>
+            <div className="text-muted-foreground text-sm">{t("empty.analytics")}</div>
           ) : tab === "traffic" ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Visitors Chart */}
@@ -482,10 +502,10 @@ const AnalyticsDashboard: React.FC = () => {
                 <div className="flex justify-between items-center mb-4">
                   <div>
                     <h3 className="text-base font-semibold text-foreground">
-                      Visitors Over Time
+                      {t("traffic.visitorsOverTime")}
                     </h3>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Unique visitors trend
+                      {t("traffic.uniqueVisitorsTrend")}
                     </p>
                   </div>
                   <div className="w-10 h-10 rounded-full bg-analytics-primary/20 flex items-center justify-center">
@@ -547,8 +567,8 @@ const AnalyticsDashboard: React.FC = () => {
                           boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                           fontSize: "12px",
                         }}
-                        formatter={(value) => [value, "Visitors"]}
-                        labelFormatter={(label) => `Time: ${label}`}
+                        formatter={(value) => [value, t("common.visitors")]}
+                        labelFormatter={(label) => t("common.timeValue", { value: label })}
                       />
                       <Area
                         type="monotone"
@@ -567,9 +587,9 @@ const AnalyticsDashboard: React.FC = () => {
                   <div className="flex items-center gap-2 mt-4 pt-3 border-t border-border">
                     <div className="w-3 h-3 rounded-full bg-analytics-chart-1"></div>
                     <span className="text-xs text-muted-foreground">
-                      Peak:{" "}
-                      {Math.max(...analytics.series.map((s) => s.visitors))}{" "}
-                      visitors
+                      {t("traffic.peakVisitors", {
+                        count: Math.max(...analytics.series.map((s) => s.visitors)),
+                      })}
                     </span>
                   </div>
                 )}
@@ -580,10 +600,10 @@ const AnalyticsDashboard: React.FC = () => {
                 <div className="flex justify-between items-center mb-4">
                   <div>
                     <h3 className="text-base font-semibold text-foreground">
-                      Page Views Over Time
+                      {t("traffic.pageViewsOverTime")}
                     </h3>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Total page views trend
+                      {t("traffic.pageViewsTrend")}
                     </p>
                   </div>
                   <div className="w-10 h-10 rounded-full bg-analytics-chart-2/20 flex items-center justify-center">
@@ -645,8 +665,8 @@ const AnalyticsDashboard: React.FC = () => {
                           boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                           fontSize: "12px",
                         }}
-                        formatter={(value) => [value, "Page Views"]}
-                        labelFormatter={(label) => `Time: ${label}`}
+                        formatter={(value) => [value, t("kpis.pageViews")]}
+                        labelFormatter={(label) => t("common.timeValue", { value: label })}
                       />
                       <Bar
                         dataKey="pageViews"
@@ -661,12 +681,12 @@ const AnalyticsDashboard: React.FC = () => {
                   <div className="flex items-center gap-2 mt-4 pt-3 border-t border-border">
                     <div className="w-3 h-3 rounded-full bg-analytics-chart-2"></div>
                     <span className="text-xs text-muted-foreground">
-                      Total:{" "}
-                      {analytics.series.reduce(
-                        (acc, s) => acc + s.pageViews,
-                        0
-                      )}{" "}
-                      page views
+                      {t("traffic.totalPageViews", {
+                        count: analytics.series.reduce(
+                          (acc, s) => acc + s.pageViews,
+                          0
+                        ),
+                      })}
                     </span>
                   </div>
                 )}
@@ -677,10 +697,10 @@ const AnalyticsDashboard: React.FC = () => {
                 <div className="p-4 border-b border-border bg-gradient-to-r from-muted to-card">
                   <div className="flex justify-between items-center">
                     <h3 className="text-base font-semibold text-foreground">
-                      Top Performing Pages
+                      {t("pages.title")}
                     </h3>
                     <span className="text-xs text-muted-foreground">
-                      Sorted by views
+                      {t("pages.sortedByViews")}
                     </span>
                   </div>
                 </div>
@@ -689,16 +709,16 @@ const AnalyticsDashboard: React.FC = () => {
                     <thead className="bg-muted/50 text-xs uppercase text-muted-foreground">
                       <tr>
                         <th className="px-6 py-4 text-left font-medium">
-                          Path
+                          {t("pages.path")}
                         </th>
                         <th className="px-6 py-4 text-left font-medium">
-                          Views
+                          {t("pages.views")}
                         </th>
                         <th className="px-6 py-4 text-left font-medium">
-                          Avg Active Time
+                          {t("pages.avgActiveTime")}
                         </th>
                         <th className="px-6 py-4 text-left font-medium">
-                          Engagement
+                          {t("pages.engagement")}
                         </th>
                       </tr>
                     </thead>
@@ -722,7 +742,7 @@ const AnalyticsDashboard: React.FC = () => {
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-2">
                                 <span className="font-semibold text-foreground">
-                                  {numberFormatter.format(p.views)}
+                                  {formatNumber(p.views)}
                                 </span>
                                 <div className="w-24 bg-muted rounded-full h-2">
                                   <div
@@ -743,7 +763,7 @@ const AnalyticsDashboard: React.FC = () => {
                               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-analytics-accent/20 text-analytics-accent rounded-full">
                                 <div className="w-2 h-2 rounded-full bg-analytics-accent animate-pulse"></div>
                                 <span className="text-sm font-medium">
-                                  {fmtSec(p.avgActiveTimeSec)}
+                                  {formatDuration(p.avgActiveTimeSec)}
                                 </span>
                               </div>
                             </td>
@@ -760,10 +780,10 @@ const AnalyticsDashboard: React.FC = () => {
                                 ></div>
                                 <span className="text-sm text-muted-foreground">
                                   {p.avgActiveTimeSec > 120
-                                    ? "High"
+                                    ? t("pages.high")
                                     : p.avgActiveTimeSec > 60
-                                    ? "Medium"
-                                    : "Low"}
+                                    ? t("pages.medium")
+                                    : t("pages.low")}
                                 </span>
                               </div>
                             </td>
@@ -779,7 +799,7 @@ const AnalyticsDashboard: React.FC = () => {
                               <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
                                 <FaFileAlt className="text-muted-foreground" />
                               </div>
-                              <p>No page data available</p>
+                              <p>{t("empty.pages")}</p>
                             </div>
                           </td>
                         </tr>
@@ -794,10 +814,10 @@ const AnalyticsDashboard: React.FC = () => {
               <div className="flex justify-between items-center mb-4">
                 <div>
                   <h3 className="text-base font-semibold text-foreground">
-                    Traffic Sources
+                    {t("sources.title")}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Where your visitors are coming from
+                    {t("sources.subtitle")}
                   </p>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-analytics-chart-3/20 flex items-center justify-center">
@@ -860,7 +880,7 @@ const AnalyticsDashboard: React.FC = () => {
                           boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                           fontSize: "12px",
                         }}
-                        formatter={(value) => [value, "Visits"]}
+                        formatter={(value) => [value, t("sources.visits")]}
                       />
                       <Bar
                         dataKey="count"
@@ -877,7 +897,7 @@ const AnalyticsDashboard: React.FC = () => {
                       <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-3">
                         <FaGlobeAmericas className="text-muted-foreground text-xl" />
                       </div>
-                      <p>No source data available</p>
+                      <p>{t("empty.sources")}</p>
                     </div>
                   </div>
                 )}
@@ -888,7 +908,7 @@ const AnalyticsDashboard: React.FC = () => {
               <div className="bg-gradient-to-br from-card to-muted rounded-2xl p-5 border border-border shadow-sm">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-base font-semibold text-foreground">
-                    Geographic Distribution
+                    {t("geo.title")}
                   </h3>
                   <div className="w-10 h-10 rounded-full bg-analytics-primary/20 flex items-center justify-center">
                     <FaGlobeAmericas className="text-analytics-primary text-sm" />
@@ -900,11 +920,10 @@ const AnalyticsDashboard: React.FC = () => {
                       <FaGlobeAmericas className="text-muted-foreground text-xl" />
                     </div>
                     <p className="text-foreground mb-2">
-                      Geo analytics not configured
+                      {t("geo.notConfigured")}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Enable server-side IP → country/city mapping to see
-                      geographic data
+                      {t("geo.configurationHint")}
                     </p>
                   </div>
                 ) : (
@@ -914,7 +933,7 @@ const AnalyticsDashboard: React.FC = () => {
                       <div className="p-4 border-b border-border bg-gradient-to-r from-muted/70 to-card">
                         <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
                           <div className="w-2 h-2 rounded-full bg-analytics-chart-4"></div>
-                          Top Countries
+                          {t("geo.topCountries")}
                         </h4>
                       </div>
                       <div className="p-2">
@@ -933,7 +952,7 @@ const AnalyticsDashboard: React.FC = () => {
                             </div>
                             <div className="flex items-center gap-3">
                               <span className="text-sm font-semibold text-foreground">
-                                {numberFormatter.format(c.count)}
+                                {formatNumber(c.count)}
                               </span>
                               <div className="w-32 bg-muted rounded-full h-2">
                                 <div
@@ -960,7 +979,7 @@ const AnalyticsDashboard: React.FC = () => {
                       <div className="p-4 border-b border-border bg-gradient-to-r from-analytics-chart-2/20 to-card">
                         <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
                           <div className="w-2 h-2 rounded-full bg-analytics-chart-2"></div>
-                          Top Cities
+                          {t("geo.topCities")}
                         </h4>
                       </div>
                       <div className="p-2">
@@ -979,7 +998,7 @@ const AnalyticsDashboard: React.FC = () => {
                             </div>
                             <div className="flex items-center gap-3">
                               <span className="text-sm font-semibold text-foreground">
-                                {numberFormatter.format(c.count)}
+                                {formatNumber(c.count)}
                               </span>
                               <div className="w-32 bg-muted rounded-full h-2">
                                 <div
