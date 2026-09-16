@@ -1,7 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Home, MessageSquareQuote, Sparkles, SquareDashed, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
+import {
+  Home,
+  MessageSquareQuote,
+  Sparkles,
+  SquareDashed,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReviewSkeleton from "@/components/ui/ReviewSkeleton";
 
@@ -21,6 +28,8 @@ interface Review {
 }
 
 export default function ReviewPage() {
+  const t = useTranslations("AdminReviewPage");
+
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +80,7 @@ export default function ReviewPage() {
   if (loading) {
     return (
       <div className="p-6">
-        <h1 className="mb-6 text-2xl font-bold">Review Management</h1>
+        <h1 className="mb-6 text-2xl font-bold">{t("loadingTitle")}</h1>
         <ReviewSkeleton />
       </div>
     );
@@ -84,32 +93,30 @@ export default function ReviewPage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               <MessageSquareQuote className="h-3.5 w-3.5" />
-              Review Curation
+              {t("hero.badge")}
             </div>
             <h1 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">
-              Manage featured customer reviews
+              {t("hero.title")}
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
-              Reviews marked as featured from this page can be shown on the home
-              page. Use this panel to highlight the strongest customer feedback
-              before publishing it more prominently.
+              {t("hero.description")}
             </p>
           </div>
 
           <div className="grid gap-3 grid-cols-3">
             <div className="rounded-2xl border border-border bg-background/80 p-4">
               <div className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                Placement
+                {t("stats.placement")}
               </div>
               <div className="mt-2 flex items-center gap-2 text-lg font-semibold text-foreground">
                 <SquareDashed className="h-4 w-4 text-primary" />
-                Marquee
+                {t("stats.marquee")}
               </div>
             </div>
 
             <div className="rounded-2xl border border-border bg-background/80 p-4">
               <div className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                Featured now
+                {t("stats.featuredNow")}
               </div>
               <div className="mt-2 text-2xl font-bold text-foreground">
                 {featuredCount}
@@ -118,7 +125,7 @@ export default function ReviewPage() {
 
             <div className="rounded-2xl border border-border bg-background/80 p-4">
               <div className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                Avg. rating
+                {t("stats.avgRating")}
               </div>
               <div className="mt-2 flex items-center gap-2 text-2xl font-bold text-foreground">
                 <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
@@ -147,7 +154,7 @@ export default function ReviewPage() {
                       : "bg-muted text-muted-foreground"
                   }`}
                 >
-                  {review.feature ? "Featured" : "Standard"}
+                  {review.feature ? t("card.featured") : t("card.standard")}
                 </span>
               </div>
 
@@ -163,13 +170,12 @@ export default function ReviewPage() {
                   />
                 ))}
                 <span className="ml-2 text-sm font-medium text-foreground">
-                  {review.rating.toFixed(1)} / 5
+                  {t("card.ratingOutOf", { rating: review.rating.toFixed(1) })}
                 </span>
               </div>
 
               <p className="mt-4 min-h-[72px] text-sm leading-6 text-muted-foreground">
-                {review.comment?.trim() ||
-                  "No written comment provided for this review."}
+                {review.comment?.trim() || t("card.noComment")}
               </p>
 
               <div className="mt-4 rounded-xl bg-muted/50 px-3 py-2 text-xs text-muted-foreground">
@@ -184,8 +190,8 @@ export default function ReviewPage() {
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Sparkles className="h-4 w-4 text-primary" />
                 {review.feature
-                  ? "Visible for home page placement"
-                  : "Can be promoted to home page"}
+                  ? t("card.visibleForHome")
+                  : t("card.canBePromoted")}
               </div>
 
               <Button
@@ -193,7 +199,7 @@ export default function ReviewPage() {
                 variant={review.feature ? "destructive" : "default"}
                 onClick={() => toggleFeature(review.id, review.feature)}
               >
-                {review.feature ? "Remove" : "Feature"}
+                {review.feature ? t("actions.remove") : t("actions.feature")}
               </Button>
             </div>
           </div>
@@ -208,7 +214,7 @@ export default function ReviewPage() {
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
           >
-            Previous
+            {t("pagination.previous")}
           </Button>
 
           <div className="flex items-center gap-1">
@@ -236,7 +242,7 @@ export default function ReviewPage() {
             }
             disabled={currentPage === totalPages}
           >
-            Next
+            {t("pagination.next")}
           </Button>
         </div>
       )}
