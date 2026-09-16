@@ -29,6 +29,9 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useMemo, useCallback } from "react";
+import { useMessages } from "next-intl";
+
+type TranslateLabel = (label: string) => string;
 
 type MenuItem = {
   name: string;
@@ -851,12 +854,14 @@ interface MenuItemProps {
   item: MenuItem;
   pathname: string;
   compactSubSections?: boolean;
+  translateLabel: TranslateLabel;
 }
 
 const MenuItem = ({
   item,
   pathname,
   compactSubSections = false,
+  translateLabel,
 }: MenuItemProps) => {
   const flattenedSubItems = item.subSections
     ? item.subSections.flatMap((section) => section.items)
@@ -910,7 +915,7 @@ const MenuItem = ({
                   )}
                 />
               )}
-              <span className="text-sm font-medium">{item.name}</span>
+              <span className="text-sm font-medium">{translateLabel(item.name)}</span>
             </div>
             {isOpen ? (
               <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
@@ -938,7 +943,7 @@ const MenuItem = ({
                               className="group rounded-md border border-border/60 bg-muted/20"
                             >
                               <summary className="cursor-pointer list-none px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/70">
-                                {section.label}
+                                {translateLabel(section.label)}
                               </summary>
                               <div className="space-y-0.5 pb-1">
                                 {section.items.map((subItem) => {
@@ -962,7 +967,7 @@ const MenuItem = ({
                                             : "bg-muted-foreground/40",
                                         )}
                                       />
-                                      {subItem.name}
+                                      {translateLabel(subItem.name)}
                                       {isSubItemActive && (
                                         <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary" />
                                       )}
@@ -974,7 +979,7 @@ const MenuItem = ({
                           ) : (
                             <>
                               <div className="px-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/60">
-                                {section.label}
+                                {translateLabel(section.label)}
                               </div>
                               {section.items.map((subItem) => {
                                 const isSubItemActive = pathname === subItem.href;
@@ -997,7 +1002,7 @@ const MenuItem = ({
                                           : "bg-muted-foreground/40",
                                       )}
                                     />
-                                    {subItem.name}
+                                    {translateLabel(subItem.name)}
                                     {isSubItemActive && (
                                       <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary" />
                                     )}
@@ -1028,7 +1033,7 @@ const MenuItem = ({
                               isSubItemActive ? "bg-primary" : "bg-muted-foreground/40",
                             )}
                           />
-                          {subItem.name}
+                          {translateLabel(subItem.name)}
                           {isSubItemActive && (
                             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary" />
                           )}
@@ -1059,7 +1064,7 @@ const MenuItem = ({
               )}
             />
           )}
-          <span className="text-sm font-medium">{item.name}</span>
+          <span className="text-sm font-medium">{translateLabel(item.name)}</span>
         </Link>
       )}
     </div>
@@ -1072,11 +1077,13 @@ const SidebarContent = ({
   items,
   isWarehouseScopedOnly = false,
   compactSubSections = false,
+  translateLabel,
 }: {
   pathname: string;
   items: MenuItem[];
   isWarehouseScopedOnly?: boolean;
   compactSubSections?: boolean;
+  translateLabel: TranslateLabel;
 }) => (
   <nav className="py-6 space-y-2 overflow-y-auto scrollbar-hide-on-idle">
     {items.map((section) => {
@@ -1091,7 +1098,7 @@ const SidebarContent = ({
           <div key={section.name}>
             <div className="px-4 pb-2">
               <h3 className="text-[10px] font-semibold tracking-widest text-muted-foreground/60 uppercase">
-                {section.name}
+                {translateLabel(section.name)}
               </h3>
             </div>
             <div className="space-y-0.5">
@@ -1101,6 +1108,7 @@ const SidebarContent = ({
                   item={item}
                   pathname={pathname}
                   compactSubSections={compactSubSections}
+                  translateLabel={translateLabel}
                 />
               ))}
             </div>
@@ -1110,7 +1118,11 @@ const SidebarContent = ({
         // Single menu item (collapsible or regular)
         return (
           <div key={`${section.name}:${section.href ?? "group"}`}>
-            <MenuItem item={section} pathname={pathname} />
+            <MenuItem
+              item={section}
+              pathname={pathname}
+              translateLabel={translateLabel}
+            />
           </div>
         );
       }
@@ -1125,6 +1137,7 @@ export default function Sidebar({
   onClose?: () => void;
 }) {
   const pathname = usePathname();
+  const messages = useMessages();
   const { data: session } = useSession();
   const [siteSettings, setSiteSettings] = useState<any>(null);
   const [enabledFeatures, setEnabledFeatures] = useState<Set<string>>(() => new Set());
@@ -1293,6 +1306,13 @@ export default function Sidebar({
   const siteTitle = siteSettings?.siteTitle?.trim() || DEFAULT_SITE_TITLE;
   const headerTitle = userRoleLabel || siteTitle;
   const adminSubtitle = siteTitle ? `${siteTitle}` : "Admin Panel";
+  const sidebarMessages = (
+    messages as unknown as Record<string, Record<string, string> | undefined>
+  ).AdminSidebar;
+  const translateLabel = useCallback(
+    (label: string) => sidebarMessages?.[label] ?? label,
+    [sidebarMessages],
+  );
 
   if (isMobile) {
     return (
@@ -1313,6 +1333,7 @@ export default function Sidebar({
             pathname={pathname}
             items={visibleMenuItems}
             compactSubSections
+            translateLabel={translateLabel}
           />
         </div>
       </div>
@@ -1352,6 +1373,7 @@ export default function Sidebar({
           pathname={pathname}
           items={visibleMenuItems}
           isWarehouseScopedOnly={isWarehouseScopedOnly}
+          translateLabel={translateLabel}
         />
       </div>
       {/* Version */}

@@ -89,5 +89,106 @@
             "seeAll": "সব দেখুন",
             "featuredDeal": "ফিচার্ড ডিল"
         }
+    },
+    "AdminDashboard": {
+        "overview": "আপনার ই-কমার্স কার্যক্রমের পূর্ণাঙ্গ চিত্র",
+        "ranges": { "today": "আজ", "week": "সপ্তাহ", "month": "মাস", "year": "বছর" },
+        "rangeTitles": { "today": "আজকের কার্যক্রম", "week": "সাপ্তাহিক কার্যক্রম", "month": "মাসিক কার্যক্রম", "year": "বার্ষিক কার্যক্রম" },
+        "actions": { "refresh": "রিফ্রেশ", "retry": "আবার চেষ্টা করুন" },
+        "empty": { "title": "ড্যাশবোর্ড পাওয়া যাচ্ছে না", "description": "তথ্য লোড করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।" },
+        "kpis": {
+            "netRevenue": "নিট আয়", "totalOrders": "মোট অর্ডার", "pendingOrders": "অপেক্ষমাণ অর্ডার",
+            "operationalQueue": "কার্যক্রমের অপেক্ষমাণ তালিকা", "paidOrders": "পরিশোধিত অর্ডার", "clearedPayments": "সম্পন্ন পেমেন্ট",
+            "activeProducts": "সক্রিয় পণ্য", "variants": "{count}টি ভ্যারিয়েন্ট", "conversionRate": "রূপান্তরের হার",
+            "visitorsToOrders": "ভিজিটর থেকে অর্ডার"
+        },
+        "chartTypes": { "revenue": "আয়", "orders": "অর্ডার", "refunds": "রিফান্ড" },
+        "performance": { "title": "কার্যক্রমের প্রবণতা", "subtitle": "সময়ের সঙ্গে আয়, অর্ডার ও রিফান্ডের চিত্র" },
+        "metrics": { "totalRevenue": "মোট আয়", "avgOrderValue": "গড় অর্ডার মূল্য", "successRate": "সাফল্যের হার" },
+        "distribution": {
+            "title": "বণ্টন বিশ্লেষণ", "subtitle": "পেমেন্ট পদ্ধতি ও মজুদের বিভাগভিত্তিক পূর্ণাঙ্গ হিসাব",
+            "paymentMethods": "পেমেন্ট পদ্ধতি", "paymentSubtitle": "নির্বাচিত সময়ের অর্ডার পেমেন্টের বিভাজন",
+            "inventoryStatus": "মজুদের অবস্থা", "inventorySubtitle": "সব ভ্যারিয়েন্টের বর্তমান মজুদ পরিস্থিতি"
+        },
+        "inventory": { "inStock": "মজুদ আছে", "lowStock": "মজুদ কম", "outOfStock": "মজুদ শেষ" },
+        "weekly": { "title": "সাপ্তাহিক কার্যক্রম", "subtitle": "নির্বাচিত সময়ে আয় ও অর্ডারের তুলনা", "revenueBdt": "আয় (টাকা)" },
+        "topProducts": { "title": "শীর্ষ পণ্য", "subtitle": "আয়ের ভিত্তিতে সর্বাধিক বিক্রিত পণ্য" },
+        "orders": {
+            "title": "অর্ডারের ধাপ", "subtitle": "অর্ডারের বর্তমান অবস্থার তাৎক্ষণিক বিবরণ", "pending": "অপেক্ষমাণ",
+            "processing": "প্রক্রিয়াধীন", "shipped": "পাঠানো হয়েছে", "delivered": "ডেলিভারি হয়েছে", "cancelled": "বাতিল",
+            "unpaid": "অপরিশোধিত", "live": "সক্রিয়", "recent": "সাম্প্রতিক অর্ডার", "guest": "অতিথি", "empty": "সাম্প্রতিক কোনো অর্ডার নেই"
+        },
+        "warehouse": { "title": "ওয়্যারহাউস বণ্টন", "subtitle": "অবস্থানভিত্তিক মজুদ", "units": "ইউনিট", "totalVariants": "মোট ভ্যারিয়েন্ট", "reservedUnits": "সংরক্ষিত ইউনিট" },
+        "quickActions": {
+            "title": "দ্রুত কার্যক্রম", "subtitle": "সাধারণ প্রশাসনিক কাজ",
+            "addProduct": "পণ্য যোগ করুন", "addProductDescription": "নতুন পণ্য ও ভ্যারিয়েন্ট তৈরি করুন",
+            "viewOrders": "অর্ডার দেখুন", "viewOrdersDescription": "অর্ডার পূরণ ও শিপিং পরিচালনা করুন",
+            "checkStock": "মজুদ দেখুন", "checkStockDescription": "মজুদের পরিমাণ পর্যবেক্ষণ করুন",
+            "createCoupon": "কুপন তৈরি করুন", "createCouponDescription": "প্রচারাভিযান চালু করুন",
+            "supportInbox": "সাপোর্ট ইনবক্স", "supportInboxDescription": "ক্রেতার প্রশ্নের উত্তর দিন"
+        },
+        "customers": {
+            "title": "ক্রেতা বিশ্লেষণ", "subtitle": "ক্রেতার আচরণ ও আনুগত্যের পরিমাপ", "totalUsers": "মোট ব্যবহারকারী",
+            "activeBuyers": "সক্রিয় ক্রেতা", "repeatRate": "পুনরায় কেনার হার", "avgRating": "গড় রেটিং", "topCustomers": "শীর্ষ ক্রেতা"
+        },
+        "marketing": {
+            "title": "মার্কেটিং কার্যক্রম", "subtitle": "ট্রাফিকের উৎস ও ক্যাম্পেইনের পরিমাপ", "liveUsers": "বর্তমান ব্যবহারকারী",
+            "totalVisitors": "মোট ভিজিটর", "pageviews": "পেজ ভিউ", "trafficVisitors": "ট্রাফিক ভিজিটর",
+            "visitorTrend": "ভিজিটরের প্রবণতা", "visitors": "ভিজিটর", "pageViews": "পেজ ভিউ", "averageSlice": "গড় অংশ",
+            "noVisitorData": "নির্বাচিত সময়ের জন্য কোনো ভিজিটর বিশ্লেষণ পাওয়া যায়নি।"
+        },
+        "support": {
+            "title": "সাপোর্টের অপেক্ষমাণ তালিকা", "subtitle": "গ্রাহকসেবার পরিমাপ", "openChats": "চলমান চ্যাট",
+            "refundRequests": "রিফান্ডের আবেদন", "noConversations": "কোনো সক্রিয় কথোপকথন নেই"
+        },
+        "alerts": { "title": "মজুদ সতর্কতা", "subtitle": "যেসব পণ্যে নজর দেওয়া প্রয়োজন", "healthy": "সব পণ্যের মজুদ পর্যাপ্ত" },
+        "activity": { "title": "সিস্টেম কার্যক্রম", "subtitle": "সাম্প্রতিক প্ল্যাটফর্ম ইভেন্ট", "empty": "সাম্প্রতিক কোনো কার্যক্রম নেই" },
+        "common": { "noData": "কোনো তথ্য নেই" }
+    },
+    "AdminHeader": {
+        "admin": "অ্যাডমিন", "user": "ব্যবহারকারী", "toggleMenu": "মেনু খুলুন বা বন্ধ করুন", "changeLanguage": "ভাষা পরিবর্তন করুন",
+        "selectTheme": "থিম নির্বাচন করুন", "themes": { "light": "লাইট", "dark": "ডার্ক" },
+        "notifications": {
+            "title": "অ্যাডমিন নোটিফিকেশন", "loading": "লোড হচ্ছে...",
+            "unread": "{count, plural, =0 {কোনো অপঠিত নোটিফিকেশন নেই} =1 {#টি অপঠিত নোটিফিকেশন} other {#টি অপঠিত নোটিফিকেশন}}",
+            "empty": "কোনো অ্যাডমিন নোটিফিকেশন নেই।", "viewAll": "সব দেখুন", "noScm": "কোনো SCM নোটিফিকেশন নেই।",
+            "investors": "বিনিয়োগকারী", "noInvestors": "বিনিয়োগকারীর কোনো নোটিফিকেশন নেই।"
+        },
+        "viewSite": "সাইট দেখুন", "viewProfile": "প্রোফাইল দেখুন", "profile": "প্রোফাইল", "me": "আমি", "logout": "লগআউট"
+    },
+    "AdminSidebar": {
+        "Overview": "সারসংক্ষেপ", "Dashboard": "ড্যাশবোর্ড", "Analytics": "অ্যানালিটিক্স", "Reports": "রিপোর্ট",
+        "Operations": "কার্যক্রম", "Users": "ব্যবহারকারী", "Products": "পণ্য", "Reviews": "রিভিউ", "Orders": "অর্ডার",
+        "Shipments": "শিপমেন্ট", "Delivery": "ডেলিভারি", "Warehouse": "ওয়্যারহাউস", "Warehouse Dashboard": "ওয়্যারহাউস ড্যাশবোর্ড",
+        "Logistics": "লজিস্টিকস", "Stock Management": "মজুদ ব্যবস্থাপনা", "Shipping Rates": "শিপিং রেট", "Deliveryman": "ডেলিভারিম্যান", "Payroll": "বেতন ব্যবস্থাপনা",
+        "SCM": "সাপ্লাই চেইন", "Workspace": "কর্মক্ষেত্র", "SCM Home": "সাপ্লাই চেইন হোম", "My Tasks": "আমার কাজ",
+        "Notifications": "নোটিফিকেশন", "Exceptions": "ব্যতিক্রম", "Procurement": "ক্রয় ব্যবস্থাপনা", "Purchase Requisitions": "ক্রয় চাহিদাপত্র",
+        "RFQs": "দরপত্র অনুরোধ", "Comparative Statements": "তুলনামূলক বিবরণী", "Purchase Orders": "ক্রয় আদেশ", "Landed Costs": "অবতরণ খরচ",
+        "Goods Receipts": "পণ্য গ্রহণ", "Material Requests": "উপকরণ অনুরোধ", "Material Releases": "উপকরণ ছাড়", "Release Report": "ছাড়পত্র রিপোর্ট",
+        "Warehouse Transfers": "ওয়্যারহাউস স্থানান্তর", "Replenishment": "পুনরায় মজুদ", "Reorder Alerts": "পুনঃঅর্ডার সতর্কতা",
+        "Warehouse Locations": "ওয়্যারহাউস অবস্থান", "Stock Reports": "মজুদ রিপোর্ট", "Stock Cards": "স্টক কার্ড",
+        "Physical Verifications": "ভৌত যাচাই", "Asset Lifecycle": "সম্পদের জীবনচক্র", "Supplier": "সরবরাহকারী",
+        "Suppliers": "সরবরাহকারীরা", "Supplier Portal Access": "সরবরাহকারী পোর্টাল অ্যাক্সেস", "Vendor Approvals": "ভেন্ডর অনুমোদন",
+        "Vendor Feedback": "ভেন্ডর মতামত", "Supplier Intelligence": "সরবরাহকারী বিশ্লেষণ", "SLA Policies": "SLA নীতিমালা",
+        "Supplier Returns": "সরবরাহকারী রিটার্ন", "Finance": "অর্থ বিভাগ", "Payment Requests": "পেমেন্ট অনুরোধ",
+        "Payment Reports": "পেমেন্ট রিপোর্ট", "Supplier Invoices": "সরবরাহকারীর ইনভয়েস", "Supplier Ledger": "সরবরাহকারী খতিয়ান",
+        "3-Way Match": "তিনমুখী মিল", "Governance": "সুশাসন", "SCM Dashboard": "সাপ্লাই চেইন ড্যাশবোর্ড",
+        "Business Network": "ব্যবসায়িক নেটওয়ার্ক", "Business Home": "ব্যবসা হোম", "Organizations": "প্রতিষ্ঠান",
+        "Business Accounts": "ব্যবসায়িক অ্যাকাউন্ট", "Business Orders": "ব্যবসায়িক অর্ডার", "Corporate Sales": "করপোরেট বিক্রয়",
+        "Sales RFQs": "বিক্রয় দরপত্র অনুরোধ", "Quotations": "মূল্য প্রস্তাব", "Customer POs": "ক্রেতার ক্রয় আদেশ",
+        "Corporate Credit": "করপোরেট ঋণ", "Pricing": "মূল্য নির্ধারণ", "Pricing Tiers": "মূল্য স্তর", "Contract Prices": "চুক্তিমূল্য",
+        "Partners": "অংশীদার", "Partner Profiles": "অংশীদার প্রোফাইল", "Agreements": "চুক্তি", "Registered Leads": "নিবন্ধিত লিড",
+        "Commission Plans": "কমিশন পরিকল্পনা", "Commission Ledger": "কমিশন খতিয়ান", "Settlements": "নিষ্পত্তি",
+        "Payout Accounts": "পেআউট অ্যাকাউন্ট", "Risk Review": "ঝুঁকি পর্যালোচনা", "Dispute Evidence": "বিরোধের প্রমাণ",
+        "Audit Log": "অডিট লগ", "Business Reports": "ব্যবসায়িক রিপোর্ট", "Investors": "বিনিয়োগকারী",
+        "Investor Home": "বিনিয়োগকারী হোম", "Investor Registry": "বিনিয়োগকারী নিবন্ধন", "Capital Ledger": "মূলধন খতিয়ান",
+        "Allocations": "বরাদ্দ", "Profit Runs": "মুনাফা বণ্টন", "Retained Profit": "সংরক্ষিত মুনাফা", "Payouts": "অর্থ প্রদান",
+        "Withdrawals": "উত্তোলন", "Documents": "নথি", "Statements": "বিবরণী", "Statement Schedules": "বিবরণীর সময়সূচি",
+        "Profile Requests": "প্রোফাইল অনুরোধ", "Activity Log": "কার্যক্রমের লগ", "Portal Access": "পোর্টাল অ্যাক্সেস",
+        "Management": "ব্যবস্থাপনা", "Couriers": "কুরিয়ার", "VAT Management": "ভ্যাট ব্যবস্থাপনা", "Blogs Management": "ব্লগ ব্যবস্থাপনা",
+        "Categories": "ক্যাটাগরি", "Brands": "ব্র্যান্ড", "Flash Sales": "ফ্ল্যাশ সেল", "Search Management": "সার্চ ব্যবস্থাপনা",
+        "Newsletter": "নিউজলেটার", "Coupons": "কুপন", "Communication": "যোগাযোগ", "Chats": "চ্যাট", "Settings": "সেটিংস",
+        "General Settings": "সাধারণ সেটিংস", "Writers": "লেখক", "Publishers": "প্রকাশক", "Store Features": "স্টোর ফিচার",
+        "Gallery Management": "গ্যালারি ব্যবস্থাপনা", "RBAC": "ভূমিকাভিত্তিক অনুমতি"
     }
 }

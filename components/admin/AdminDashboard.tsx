@@ -63,6 +63,7 @@ import {
   ComposedChart,
 } from "recharts";
 import { StatCard } from "@/components/StatCard";
+import { useFormatter, useTranslations } from "next-intl";
 
 export type TimeRange = "today" | "week" | "month" | "year";
 
@@ -278,18 +279,11 @@ interface AdminDashboardProps {
 }
 
 const rangeOptions = [
-  { value: "today", label: "Today" },
-  { value: "week", label: "Week" },
-  { value: "month", label: "Month" },
-  { value: "year", label: "Year" },
+  { value: "today", labelKey: "ranges.today" },
+  { value: "week", labelKey: "ranges.week" },
+  { value: "month", labelKey: "ranges.month" },
+  { value: "year", labelKey: "ranges.year" },
 ] as const;
-
-const rangeTitleMap: Record<TimeRange, string> = {
-  today: "Today's Performance",
-  week: "Weekly Performance",
-  month: "Monthly Performance",
-  year: "Annual Performance",
-};
 
 type Tone = "default" | "good" | "warn" | "danger";
 
@@ -313,26 +307,6 @@ const PIE_COLORS = [
   CHART_COLORS.danger,
   CHART_COLORS.purple,
 ];
-
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-BD", {
-    style: "currency",
-    currency: "BDT",
-    currencyDisplay: "code",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount || 0);
-}
-
-function formatNumber(amount: number): string {
-  return new Intl.NumberFormat("en-US").format(amount || 0);
-}
-
-function formatCompactNumber(amount: number): string {
-  if (amount >= 1000000) return (amount / 1000000).toFixed(1) + "M";
-  if (amount >= 1000) return (amount / 1000).toFixed(1) + "K";
-  return amount.toString();
-}
 
 function SectionShell({
   title,
@@ -485,22 +459,24 @@ function LoadingDashboard() {
 }
 
 function EmptyDashboard({ onRefresh }: { onRefresh: () => void }) {
+  const t = useTranslations("AdminDashboard");
+
   return (
     <div className="flex min-h-[70vh] items-center justify-center p-6">
       <div className="w-full max-w-lg rounded-2xl border border-border bg-card p-8 text-center shadow-lg">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-muted/30">
           <ShieldAlert className="h-6 w-6 text-destructive" />
         </div>
-        <h2 className="mt-5 text-xl font-semibold">Dashboard Unavailable</h2>
+        <h2 className="mt-5 text-xl font-semibold">{t("empty.title")}</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Unable to load metrics. Please try again.
+          {t("empty.description")}
         </p>
         <button
           onClick={onRefresh}
           className="mt-6 inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium transition hover:bg-muted"
         >
           <RefreshCw className="h-4 w-4" />
-          Retry
+          {t("actions.retry")}
         </button>
       </div>
     </div>
@@ -545,6 +521,22 @@ function AdminDashboard({
   onTimeRangeChange,
   onRefresh,
 }: AdminDashboardProps) {
+  const t = useTranslations("AdminDashboard");
+  const formatter = useFormatter();
+  const formatCurrency = (amount: number) =>
+    formatter.number(amount || 0, {
+      style: "currency",
+      currency: "BDT",
+      currencyDisplay: "code",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+  const formatNumber = (amount: number) => formatter.number(amount || 0);
+  const formatCompactNumber = (amount: number) =>
+    formatter.number(amount || 0, {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    });
   const [primaryChart, setPrimaryChart] = useState<
     "revenue" | "orders" | "refunds"
   >("revenue");
@@ -555,24 +547,24 @@ function AdminDashboard({
   // Prepare chart data
   const revenueData = dashboard.revenueSeries.map((item) => ({
     name: item.label,
-    Revenue: item.value,
+    value: item.value,
   }));
 
   const ordersData = dashboard.ordersSeries.map((item) => ({
     name: item.label,
-    Orders: item.value,
+    value: item.value,
   }));
 
   const refundData = dashboard.refundSeries.map((item) => ({
     name: item.label,
-    Refunds: item.value,
+    value: item.value,
   }));
 
   const combinedChartData = revenueData.map((item, idx) => ({
     name: item.name,
-    Revenue: item.Revenue,
-    Orders: ordersData[idx]?.Orders || 0,
-    Refunds: refundData[idx]?.Refunds || 0,
+    revenue: item.value,
+    orders: ordersData[idx]?.value || 0,
+    refunds: refundData[idx]?.value || 0,
   }));
 
   const paymentPieData = dashboard.paymentBreakdown.map((item) => ({
@@ -588,17 +580,17 @@ function AdminDashboard({
 
   const inventoryPieData = [
     {
-      name: "In Stock",
+      name: t("inventory.inStock"),
       value: dashboard.inStockVariants,
       color: CHART_COLORS.success,
     },
     {
-      name: "Low Stock",
+      name: t("inventory.lowStock"),
       value: dashboard.lowStockVariants,
       color: CHART_COLORS.warning,
     },
     {
-      name: "Out of Stock",
+      name: t("inventory.outOfStock"),
       value: dashboard.outOfStockVariants,
       color: CHART_COLORS.danger,
     },
@@ -620,7 +612,7 @@ function AdminDashboard({
 
   const visitorTrendData = dashboard.visitorSeries.map((item) => ({
     name: item.label,
-    Visitors: item.value,
+    visitors: item.value,
   }));
 
   return (
@@ -630,10 +622,10 @@ function AdminDashboard({
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              {rangeTitleMap[timeRange]}
+              {t(`rangeTitles.${timeRange}`)}
             </h1>
             <p className="text-sm text-muted-foreground mt-1">
-              Complete overview of your e-commerce performance
+              {t("overview")}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -648,7 +640,7 @@ function AdminDashboard({
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
-                  {range.label}
+                  {t(range.labelKey)}
                 </button>
               ))}
             </div>
@@ -660,7 +652,7 @@ function AdminDashboard({
               <RefreshCw
                 className={`h-4 w-4 ${loading ? "animate-spin" : ""}`}
               />
-              <span className="hidden sm:inline">Refresh</span>
+              <span className="hidden sm:inline">{t("actions.refresh")}</span>
             </button>
           </div>
         </div>
@@ -668,7 +660,7 @@ function AdminDashboard({
         {/* KPI Cards */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
           <StatCard
-            label="Net Revenue"
+            label={t("kpis.netRevenue")}
             value={formatCurrency(stats.totalRevenue)}
             icon={CircleDollarSign}
             trend={stats.revenueGrowth}
@@ -677,7 +669,7 @@ function AdminDashboard({
           />
 
           <StatCard
-            label="Total Orders"
+            label={t("kpis.totalOrders")}
             value={formatNumber(stats.totalOrders)}
             icon={ShoppingCart}
             trend={stats.orderGrowth}
@@ -685,37 +677,37 @@ function AdminDashboard({
           />
 
           <StatCard
-            label="Pending Orders"
+            label={t("kpis.pendingOrders")}
             value={formatNumber(stats.pendingOrders)}
             icon={ReceiptText}
             compareLabel={dashboard.compareLabel}
-            hint="Operational queue"
+            hint={t("kpis.operationalQueue")}
             tone={stats.pendingOrders > 0 ? "warn" : "good"}
           />
 
           <StatCard
-            label="Paid Orders"
+            label={t("kpis.paidOrders")}
             value={formatNumber(dashboard.paidOrders)}
             icon={CreditCard}
             compareLabel={dashboard.compareLabel}
-            hint="Cleared payments"
+            hint={t("kpis.clearedPayments")}
             tone="good"
           />
 
           <StatCard
-            label="Active Products"
+            label={t("kpis.activeProducts")}
             value={formatNumber(dashboard.activeProducts)}
             icon={Store}
             compareLabel={dashboard.compareLabel}
-            hint={`${dashboard.totalVariants} variants`}
+            hint={t("kpis.variants", { count: dashboard.totalVariants })}
           />
 
           <StatCard
-            label="Conversion Rate"
+            label={t("kpis.conversionRate")}
             value={`${stats.conversionRate.toFixed(1)}%`}
             icon={Target}
             compareLabel={dashboard.compareLabel}
-            hint="Visitors to orders"
+            hint={t("kpis.visitorsToOrders")}
           />
         </div>
 
@@ -723,11 +715,11 @@ function AdminDashboard({
         <div className="grid gap-4 xl:grid-cols-2">
           {/* Revenue/Orders Trend Chart */}
           <SectionShell
-            title="Performance Trends"
-            subtitle="Revenue, orders, and refunds over time"
+            title={t("performance.title")}
+            subtitle={t("performance.subtitle")}
             action={
               <div className="inline-flex flex-wrap rounded-lg border border-border bg-background p-0.5">
-                {["revenue", "orders", "refunds"].map((type) => (
+                {(["revenue", "orders", "refunds"] as const).map((type) => (
                   <button
                     key={type}
                     onClick={() => setPrimaryChart(type as any)}
@@ -737,7 +729,7 @@ function AdminDashboard({
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
-                    {type}
+                    {t(`chartTypes.${type}`)}
                   </button>
                 ))}
               </div>
@@ -795,11 +787,12 @@ function AdminDashboard({
                     type="monotone"
                     dataKey={
                       primaryChart === "revenue"
-                        ? "Revenue"
+                        ? "value"
                         : primaryChart === "orders"
-                          ? "Orders"
-                          : "Refunds"
+                          ? "value"
+                          : "value"
                     }
+                    name={t(`chartTypes.${primaryChart}`)}
                     stroke={CHART_COLORS.primary}
                     fill="url(#colorValue)"
                     strokeWidth={2}
@@ -809,19 +802,19 @@ function AdminDashboard({
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Total Revenue</p>
+                <p className="text-xs text-muted-foreground">{t("metrics.totalRevenue")}</p>
                 <p className="text-lg font-bold text-foreground">
                   {formatCurrency(stats.totalRevenue)}
                 </p>
               </div>
               <div className="rounded-xl bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Avg Order Value</p>
+                <p className="text-xs text-muted-foreground">{t("metrics.avgOrderValue")}</p>
                 <p className="text-lg font-bold text-foreground">
                   {formatCurrency(stats.averageOrderValue)}
                 </p>
               </div>
               <div className="rounded-xl bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Success Rate</p>
+                <p className="text-xs text-muted-foreground">{t("metrics.successRate")}</p>
                 <p className="text-lg font-bold text-foreground">
                   {stats.successRate.toFixed(1)}%
                 </p>
@@ -831,17 +824,17 @@ function AdminDashboard({
 
           {/* Payment & Inventory Distribution */}
           <SectionShell
-            title="Distribution Analysis"
-            subtitle="Payment methods and inventory breakdown with clear segment totals"
+            title={t("distribution.title")}
+            subtitle={t("distribution.subtitle")}
           >
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-border/60 bg-muted/15 p-4">
                 <div className="mb-3">
                   <h3 className="text-base font-semibold text-foreground">
-                    Payment Methods
+                    {t("distribution.paymentMethods")}
                   </h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Order payment split in the selected range
+                    {t("distribution.paymentSubtitle")}
                   </p>
                 </div>
                 <div className="h-[180px] sm:h-[220px]">
@@ -909,10 +902,10 @@ function AdminDashboard({
               <div className="rounded-2xl border border-border/60 bg-muted/15 p-4">
                 <div className="mb-3">
                   <h3 className="text-base font-semibold text-foreground">
-                    Inventory Status
+                    {t("distribution.inventoryStatus")}
                   </h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Current stock health across all tracked variants
+                    {t("distribution.inventorySubtitle")}
                   </p>
                 </div>
                 <div className="h-[180px] sm:h-[220px]">
@@ -984,8 +977,8 @@ function AdminDashboard({
         {/* Weekly Comparison Bar Chart */}
         <div className="grid gap-4 xl:grid-cols-2">
           <SectionShell
-            title="Weekly Performance"
-            subtitle="Revenue vs orders in the selected range"
+            title={t("weekly.title")}
+            subtitle={t("weekly.subtitle")}
           >
             <div className="h-[220px] sm:h-[260px] lg:h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -1007,7 +1000,7 @@ function AdminDashboard({
                   />
                   <Tooltip
                     formatter={(value: number | string, name: string) => [
-                      name === "Revenue"
+                      name === t("weekly.revenueBdt")
                         ? formatCurrency(Number(value || 0))
                         : formatNumber(Number(value || 0)),
                       name,
@@ -1016,17 +1009,17 @@ function AdminDashboard({
                   <Legend />
                   <Bar
                     yAxisId="left"
-                    dataKey="Revenue"
+                    dataKey="revenue"
                     fill={CHART_COLORS.primary}
-                    name="Revenue (BDT)"
+                    name={t("weekly.revenueBdt")}
                     radius={[4, 4, 0, 0]}
                   />
                   <Line
                     yAxisId="right"
                     type="monotone"
-                    dataKey="Orders"
+                    dataKey="orders"
                     stroke={CHART_COLORS.success}
-                    name="Orders"
+                    name={t("chartTypes.orders")}
                     strokeWidth={2}
                     dot={{ r: 4 }}
                   />
@@ -1037,8 +1030,8 @@ function AdminDashboard({
 
           {/* Top Products Horizontal Bar */}
           <SectionShell
-            title="Top Products"
-            subtitle="Best selling items by revenue"
+            title={t("topProducts.title")}
+            subtitle={t("topProducts.subtitle")}
           >
             <div className="h-[240px] sm:h-[280px] lg:h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -1068,7 +1061,7 @@ function AdminDashboard({
                   <Bar
                     dataKey="revenue"
                     fill={CHART_COLORS.purple}
-                    name="Revenue"
+                    name={t("chartTypes.revenue")}
                     radius={[0, 4, 4, 0]}
                   />
                 </BarChart>
@@ -1080,31 +1073,31 @@ function AdminDashboard({
         {/* Order Pipeline & Quick Actions */}
         <div className="grid gap-4 lg:grid-cols-3">
           <SectionShell
-            title="Order Pipeline"
-            subtitle="Real-time order status breakdown"
+            title={t("orders.title")}
+            subtitle={t("orders.subtitle")}
           >
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-3">
                 {[
                   {
-                    label: "Pending",
+                    label: t("orders.pending"),
                     value: stats.pendingOrders,
                     tone: "warn" as Tone,
                   },
-                  { label: "Processing", value: dashboard.processingOrders },
-                  { label: "Shipped", value: dashboard.shippedOrders },
+                  { label: t("orders.processing"), value: dashboard.processingOrders },
+                  { label: t("orders.shipped"), value: dashboard.shippedOrders },
                   {
-                    label: "Delivered",
+                    label: t("orders.delivered"),
                     value: dashboard.deliveredOrders,
                     tone: "good" as Tone,
                   },
                   {
-                    label: "Cancelled",
+                    label: t("orders.cancelled"),
                     value: dashboard.cancelledOrders,
                     tone: "danger" as Tone,
                   },
                   {
-                    label: "Unpaid",
+                    label: t("orders.unpaid"),
                     value: dashboard.unpaidOrders,
                     tone: "warn" as Tone,
                   },
@@ -1118,7 +1111,7 @@ function AdminDashboard({
                         {item.label}
                       </span>
                       {item.tone && (
-                        <StatusPill label="Live" tone={item.tone} />
+                        <StatusPill label={t("orders.live")} tone={item.tone} />
                       )}
                     </div>
                     <p className="mt-1 text-xl font-semibold">
@@ -1128,12 +1121,12 @@ function AdminDashboard({
                 ))}
               </div>
               <div className="rounded-xl border border-border bg-muted/20 p-4">
-                <h3 className="mb-2 text-sm font-semibold">Recent Orders</h3>
+                <h3 className="mb-2 text-sm font-semibold">{t("orders.recent")}</h3>
                 <InsightList
                   items={stats.recentOrders.slice(0, 4).map((order) => ({
                     id: order.id,
                     title: `#${order.id}`,
-                    subtitle: order.user?.name || "Guest",
+                    subtitle: order.user?.name || t("orders.guest"),
                     status: order.status,
                     tone:
                       order.status === "DELIVERED"
@@ -1143,15 +1136,15 @@ function AdminDashboard({
                           : "default",
                     value: formatCurrency(order.grandTotal),
                   }))}
-                  emptyLabel="No recent orders"
+                  emptyLabel={t("orders.empty")}
                 />
               </div>
             </div>
           </SectionShell>
 
           <SectionShell
-            title="Warehouse Distribution"
-            subtitle="Stock by location"
+            title={t("warehouse.title")}
+            subtitle={t("warehouse.subtitle")}
           >
             <div className="h-[220px] sm:h-[260px] lg:h-[280px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -1172,7 +1165,7 @@ function AdminDashboard({
                   <Bar
                     dataKey="value"
                     fill={CHART_COLORS.cyan}
-                    name="Units"
+                    name={t("warehouse.units")}
                     radius={[0, 4, 4, 0]}
                   />
                 </BarChart>
@@ -1180,13 +1173,13 @@ function AdminDashboard({
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
               <div className="rounded-xl bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Total Variants</p>
+                <p className="text-xs text-muted-foreground">{t("warehouse.totalVariants")}</p>
                 <p className="text-lg font-bold">
                   {formatNumber(dashboard.totalVariants)}
                 </p>
               </div>
               <div className="rounded-xl bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Reserved Units</p>
+                <p className="text-xs text-muted-foreground">{t("warehouse.reservedUnits")}</p>
                 <p className="text-lg font-bold">
                   {formatNumber(dashboard.reservedUnits)}
                 </p>
@@ -1195,39 +1188,39 @@ function AdminDashboard({
           </SectionShell>
 
           <SectionShell
-            title="Quick Actions"
-            subtitle="Common administrative tasks"
+            title={t("quickActions.title")}
+            subtitle={t("quickActions.subtitle")}
           >
             <div className="space-y-3">
               {[
                 {
                   href: "/admin/operations/products",
-                  label: "Add Product",
-                  description: "Create new products and variants",
+                  label: t("quickActions.addProduct"),
+                  description: t("quickActions.addProductDescription"),
                   icon: Package,
                 },
                 {
                   href: "/admin/operations/orders",
-                  label: "View Orders",
-                  description: "Manage fulfillment and shipping",
+                  label: t("quickActions.viewOrders"),
+                  description: t("quickActions.viewOrdersDescription"),
                   icon: ShoppingCart,
                 },
                 {
                   href: "/admin/warehouse/stock",
-                  label: "Check Stock",
-                  description: "Monitor inventory levels",
+                  label: t("quickActions.checkStock"),
+                  description: t("quickActions.checkStockDescription"),
                   icon: PackageSearch,
                 },
                 {
                   href: "/admin/management/coupons",
-                  label: "Create Coupon",
-                  description: "Launch promotions",
+                  label: t("quickActions.createCoupon"),
+                  description: t("quickActions.createCouponDescription"),
                   icon: Percent,
                 },
                 {
                   href: "/admin/chat",
-                  label: "Support Inbox",
-                  description: "Handle customer queries",
+                  label: t("quickActions.supportInbox"),
+                  description: t("quickActions.supportInboxDescription"),
                   icon: MessageSquareMore,
                 },
               ].map((action) => (
@@ -1240,24 +1233,24 @@ function AdminDashboard({
         {/* Customer & Marketing Insights */}
         <div className="grid gap-4 lg:grid-cols-2">
           <SectionShell
-            title="Customer Intelligence"
-            subtitle="Audience behavior and loyalty metrics"
+            title={t("customers.title")}
+            subtitle={t("customers.subtitle")}
           >
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
               {[
-                { label: "Total Users", value: stats.totalUsers, icon: Users },
+                { label: t("customers.totalUsers"), value: stats.totalUsers, icon: Users },
                 {
-                  label: "Active Buyers",
+                  label: t("customers.activeBuyers"),
                   value: dashboard.activeBuyers,
                   icon: UserRound,
                 },
                 {
-                  label: "Repeat Rate",
+                  label: t("customers.repeatRate"),
                   value: `${((dashboard.repeatCustomers / stats.totalUsers) * 100).toFixed(1)}%`,
                   icon: CheckCircle2,
                 },
                 {
-                  label: "Avg Rating",
+                  label: t("customers.avgRating"),
                   value: dashboard.reviewAverage.toFixed(1),
                   icon: Star,
                   suffix: "★",
@@ -1279,33 +1272,33 @@ function AdminDashboard({
               ))}
             </div>
             <div className="mt-4 rounded-xl border border-border bg-muted/20 p-4">
-              <h3 className="mb-2 text-sm font-semibold">Top Customers</h3>
+              <h3 className="mb-2 text-sm font-semibold">{t("customers.topCustomers")}</h3>
               <InsightList
                 items={dashboard.topCustomers.slice(0, 5)}
-                emptyLabel="No data"
+                emptyLabel={t("common.noData")}
               />
             </div>
           </SectionShell>
 
           <SectionShell
-            title="Marketing Performance"
-            subtitle="Traffic sources and campaign metrics"
+            title={t("marketing.title")}
+            subtitle={t("marketing.subtitle")}
           >
             <div className="grid grid-cols-3 gap-3">
               <div className="rounded-xl border border-border bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Live Users</p>
+                <p className="text-xs text-muted-foreground">{t("marketing.liveUsers")}</p>
                 <p className="text-xl font-bold">
                   {formatNumber(dashboard.liveUsers)}
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Total Visitors</p>
+                <p className="text-xs text-muted-foreground">{t("marketing.totalVisitors")}</p>
                 <p className="text-xl font-bold">
                   {formatNumber(dashboard.sessions)}
                 </p>
               </div>
               <div className="rounded-xl border border-border bg-muted/30 p-3 text-center">
-                <p className="text-xs text-muted-foreground">Pageviews</p>
+                <p className="text-xs text-muted-foreground">{t("marketing.pageviews")}</p>
                 <p className="text-xl font-bold">
                   {formatNumber(dashboard.pageViews)}
                 </p>
@@ -1315,15 +1308,15 @@ function AdminDashboard({
               <div className="mb-3 flex items-center justify-between gap-3">
                 <div>
                   <h3 className="text-sm font-semibold text-foreground">
-                    Traffic Visitors
+                    {t("marketing.trafficVisitors")}
                   </h3>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    Visitor Trend
+                    {t("marketing.visitorTrend")}
                   </p>
                 </div>
                 <div className="text-right">
                   <p className="text-xs text-muted-foreground">
-                    Total Visitors
+                    {t("marketing.totalVisitors")}
                   </p>
                   <p className="text-lg font-bold text-foreground">
                     {formatNumber(dashboard.sessions)}
@@ -1372,12 +1365,13 @@ function AdminDashboard({
                         <Tooltip
                           formatter={(value: number | string) => [
                             formatNumber(Number(value || 0)),
-                            "Visitors",
+                            t("marketing.visitors"),
                           ]}
                         />
                         <Area
                           type="monotone"
-                          dataKey="Visitors"
+                          dataKey="visitors"
+                          name={t("marketing.visitors")}
                           stroke={CHART_COLORS.teal}
                           fill="url(#visitorTrendFill)"
                           strokeWidth={2.5}
@@ -1388,7 +1382,7 @@ function AdminDashboard({
                   <div className="grid grid-cols-2 gap-3">
                     <div className="rounded-xl border border-border bg-background/70 p-3">
                       <p className="text-xs text-muted-foreground">
-                        Page Views
+                        {t("marketing.pageViews")}
                       </p>
                       <p className="mt-1 text-lg font-semibold text-foreground">
                         {formatNumber(dashboard.pageViews)}
@@ -1396,7 +1390,7 @@ function AdminDashboard({
                     </div>
                     <div className="rounded-xl border border-border bg-background/70 p-3">
                       <p className="text-xs text-muted-foreground">
-                        Average Slice
+                        {t("marketing.averageSlice")}
                       </p>
                       <p className="mt-1 text-lg font-semibold text-foreground">
                         {formatNumber(
@@ -1411,7 +1405,7 @@ function AdminDashboard({
                 </div>
               ) : (
                 <div className="rounded-xl border border-dashed border-border bg-background/60 p-4 text-sm text-muted-foreground">
-                  No visitor analytics data available for the selected period.
+                  {t("marketing.noVisitorData")}
                 </div>
               )}
             </div>
@@ -1421,8 +1415,8 @@ function AdminDashboard({
         {/* Support & Activity */}
         <div className="grid gap-4 lg:grid-cols-3">
           <SectionShell
-            title="Support Queue"
-            subtitle="Customer service metrics"
+            title={t("support.title")}
+            subtitle={t("support.subtitle")}
           >
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
               <div className="rounded-xl border border-border bg-muted/30 p-4 text-center">
@@ -1430,41 +1424,41 @@ function AdminDashboard({
                 <p className="mt-2 text-2xl font-bold">
                   {formatNumber(dashboard.openChats)}
                 </p>
-                <p className="text-xs text-muted-foreground">Open Chats</p>
+                <p className="text-xs text-muted-foreground">{t("support.openChats")}</p>
               </div>
               <div className="rounded-xl border border-border bg-muted/30 p-4 text-center">
                 <WalletCards className="mx-auto h-5 w-5 text-muted-foreground" />
                 <p className="mt-2 text-2xl font-bold">
                   {formatNumber(dashboard.refundRequests)}
                 </p>
-                <p className="text-xs text-muted-foreground">Refund Requests</p>
+                <p className="text-xs text-muted-foreground">{t("support.refundRequests")}</p>
               </div>
             </div>
             <div className="mt-4">
               <InsightList
                 items={dashboard.recentConversations.slice(0, 4)}
-                emptyLabel="No active conversations"
+                emptyLabel={t("support.noConversations")}
               />
             </div>
           </SectionShell>
 
           <SectionShell
-            title="Inventory Alerts"
-            subtitle="Items requiring attention"
+            title={t("alerts.title")}
+            subtitle={t("alerts.subtitle")}
           >
             <InsightList
               items={dashboard.lowStockAlerts.slice(0, 6)}
-              emptyLabel="All stock levels healthy"
+              emptyLabel={t("alerts.healthy")}
             />
           </SectionShell>
 
           <SectionShell
-            title="System Activity"
-            subtitle="Recent platform events"
+            title={t("activity.title")}
+            subtitle={t("activity.subtitle")}
           >
             <InsightList
               items={dashboard.latestActivity.slice(0, 6)}
-              emptyLabel="No recent activity"
+              emptyLabel={t("activity.empty")}
             />
           </SectionShell>
         </div>

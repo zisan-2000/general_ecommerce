@@ -9,4 +9,6 @@ export async function loadMessages(locale: AppLocale) {
   return messageLoaders[locale]();
 }
 
-export type AppMessages = Awaited<ReturnType<typeof loadMessages>>;
+export type AppMessages = Awaited<
+  ReturnType<(typeof messageLoaders)["en"]>
+>;

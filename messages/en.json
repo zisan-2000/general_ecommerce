@@ -89,5 +89,71 @@
       "seeAll": "See All",
       "featuredDeal": "Featured Deal"
     }
+  },
+  "AdminDashboard": {
+    "overview": "Complete overview of your e-commerce performance",
+    "ranges": { "today": "Today", "week": "Week", "month": "Month", "year": "Year" },
+    "rangeTitles": { "today": "Today's Performance", "week": "Weekly Performance", "month": "Monthly Performance", "year": "Annual Performance" },
+    "actions": { "refresh": "Refresh", "retry": "Retry" },
+    "empty": { "title": "Dashboard Unavailable", "description": "Unable to load metrics. Please try again." },
+    "kpis": {
+      "netRevenue": "Net Revenue", "totalOrders": "Total Orders", "pendingOrders": "Pending Orders",
+      "operationalQueue": "Operational queue", "paidOrders": "Paid Orders", "clearedPayments": "Cleared payments",
+      "activeProducts": "Active Products", "variants": "{count} variants", "conversionRate": "Conversion Rate",
+      "visitorsToOrders": "Visitors to orders"
+    },
+    "chartTypes": { "revenue": "Revenue", "orders": "Orders", "refunds": "Refunds" },
+    "performance": { "title": "Performance Trends", "subtitle": "Revenue, orders, and refunds over time" },
+    "metrics": { "totalRevenue": "Total Revenue", "avgOrderValue": "Avg Order Value", "successRate": "Success Rate" },
+    "distribution": {
+      "title": "Distribution Analysis", "subtitle": "Payment methods and inventory breakdown with clear segment totals",
+      "paymentMethods": "Payment Methods", "paymentSubtitle": "Order payment split in the selected range",
+      "inventoryStatus": "Inventory Status", "inventorySubtitle": "Current stock health across all tracked variants"
+    },
+    "inventory": { "inStock": "In Stock", "lowStock": "Low Stock", "outOfStock": "Out of Stock" },
+    "weekly": { "title": "Weekly Performance", "subtitle": "Revenue vs orders in the selected range", "revenueBdt": "Revenue (BDT)" },
+    "topProducts": { "title": "Top Products", "subtitle": "Best selling items by revenue" },
+    "orders": {
+      "title": "Order Pipeline", "subtitle": "Real-time order status breakdown", "pending": "Pending",
+      "processing": "Processing", "shipped": "Shipped", "delivered": "Delivered", "cancelled": "Cancelled",
+      "unpaid": "Unpaid", "live": "Live", "recent": "Recent Orders", "guest": "Guest", "empty": "No recent orders"
+    },
+    "warehouse": { "title": "Warehouse Distribution", "subtitle": "Stock by location", "units": "Units", "totalVariants": "Total Variants", "reservedUnits": "Reserved Units" },
+    "quickActions": {
+      "title": "Quick Actions", "subtitle": "Common administrative tasks",
+      "addProduct": "Add Product", "addProductDescription": "Create new products and variants",
+      "viewOrders": "View Orders", "viewOrdersDescription": "Manage fulfillment and shipping",
+      "checkStock": "Check Stock", "checkStockDescription": "Monitor inventory levels",
+      "createCoupon": "Create Coupon", "createCouponDescription": "Launch promotions",
+      "supportInbox": "Support Inbox", "supportInboxDescription": "Handle customer queries"
+    },
+    "customers": {
+      "title": "Customer Intelligence", "subtitle": "Audience behavior and loyalty metrics", "totalUsers": "Total Users",
+      "activeBuyers": "Active Buyers", "repeatRate": "Repeat Rate", "avgRating": "Avg Rating", "topCustomers": "Top Customers"
+    },
+    "marketing": {
+      "title": "Marketing Performance", "subtitle": "Traffic sources and campaign metrics", "liveUsers": "Live Users",
+      "totalVisitors": "Total Visitors", "pageviews": "Pageviews", "trafficVisitors": "Traffic Visitors",
+      "visitorTrend": "Visitor Trend", "visitors": "Visitors", "pageViews": "Page Views", "averageSlice": "Average Slice",
+      "noVisitorData": "No visitor analytics data available for the selected period."
+    },
+    "support": {
+      "title": "Support Queue", "subtitle": "Customer service metrics", "openChats": "Open Chats",
+      "refundRequests": "Refund Requests", "noConversations": "No active conversations"
+    },
+    "alerts": { "title": "Inventory Alerts", "subtitle": "Items requiring attention", "healthy": "All stock levels healthy" },
+    "activity": { "title": "System Activity", "subtitle": "Recent platform events", "empty": "No recent activity" },
+    "common": { "noData": "No data" }
+  },
+  "AdminHeader": {
+    "admin": "Admin", "user": "User", "toggleMenu": "Toggle menu", "changeLanguage": "Change language",
+    "selectTheme": "Select theme", "themes": { "light": "Light", "dark": "Dark" },
+    "notifications": {
+      "title": "Admin Notifications", "loading": "Loading...",
+      "unread": "{count, plural, =0 {No unread notifications} =1 {# unread notification} other {# unread notifications}}",
+      "empty": "No admin notifications.", "viewAll": "View all", "noScm": "No SCM notifications.",
+      "investors": "Investors", "noInvestors": "No investor notifications."
+    },
+    "viewSite": "View Site", "viewProfile": "View Profile", "profile": "Profile", "me": "Me", "logout": "Logout"
   }
 }

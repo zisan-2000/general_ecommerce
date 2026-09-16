@@ -11,6 +11,7 @@ import {
   Sun,
   Check,
   Bell,
+  Globe2,
 } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import Link from "next/link";
@@ -25,10 +26,21 @@ import {
 import { isDarkLikeTheme } from "@/lib/theme";
 import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import {
+  localeCookieName,
+  type AppLocale,
+} from "@/i18n/config";
 
 const THEME_OPTIONS = [
   { value: "light", label: "Light" },
   { value: "dark", label: "Dark" },
+] as const;
+
+const LANGUAGE_OPTIONS = [
+  { value: "en", label: "English", shortLabel: "EN" },
+  { value: "bn", label: "বাংলা", shortLabel: "BN" },
 ] as const;
 
 type ScmNotificationPreview = {
@@ -60,6 +72,9 @@ type InvestorNotificationsResponse = {
 };
 
 export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
+  const router = useRouter();
+  const locale = useLocale();
+  const t = useTranslations("AdminHeader");
   const { data: session } = useSession();
   const { theme, resolvedTheme, setTheme } = useTheme();
   const [isPending, setIsPending] = useState(false);
@@ -213,16 +228,24 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     }
   };
 
+  const handleLanguageChange = (nextLocale: AppLocale) => {
+    if (nextLocale === locale) return;
+
+    document.cookie = `${localeCookieName}=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
+    document.documentElement.lang = nextLocale;
+    router.refresh();
+  };
+
   const activeTheme =
     theme === "dark" || resolvedTheme === "dark" ? "dark" : "light";
   const darkLikeActiveTheme = isDarkLikeTheme(activeTheme);
 
-  const userName = (session?.user as any)?.name || "User";
+  const userName = (session?.user as any)?.name || t("user");
   const userRole =
     Array.isArray((session?.user as any)?.roleNames) &&
     ((session?.user as any).roleNames as string[]).length > 0
       ? ((session?.user as any).roleNames as string[]).join(", ")
-      : (session?.user as any)?.role || "admin";
+      : (session?.user as any)?.role || t("admin");
 
   const scmUnreadNotificationCount = scmNotifications?.unreadCount ?? 0;
   const investorUnreadNotificationCount = investorNotifications?.unreadCount ?? 0;
@@ -258,7 +281,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
       <button
         className="lg:hidden bg-muted hover:bg-primary/80 transition-all duration-300 hover:scale-105"
         onClick={onMenuClick}
-        aria-label="Toggle Menu"
+        aria-label={t("toggleMenu")}
       >
         <Menu className="w-5 h-5 text-foreground" />
       </button>
@@ -270,22 +293,55 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
             {loadingSite ? (
               <div className="h-5 w-24 bg-gray-200 rounded animate-pulse"></div>
             ) : siteSettings?.siteTitle ? (
-              siteSettings.siteTitle + " Admin"
+              `${siteSettings.siteTitle} ${t("admin")}`
             ) : (
-              `${DEFAULT_SITE_TITLE} Admin`
+              `${DEFAULT_SITE_TITLE} ${t("admin")}`
             )}
           </h1>
           <h1 className="text-lg font-bold text-foreground sm:hidden">
             {loadingSite ? (
               <div className="h-5 w-16 bg-gray-200 rounded animate-pulse"></div>
             ) : (
-              siteSettings?.siteTitle?.split(" ")[0] || "Admin"
+              siteSettings?.siteTitle?.split(" ")[0] || t("admin")
             )}
           </h1>
         </div>
       </div>
 
       <div className="flex items-center space-x-3">
+        {/* Language selector */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="gap-1.5 rounded-full bg-muted px-2.5 text-foreground hover:bg-primary/80"
+              title={t("changeLanguage")}
+              aria-label={t("changeLanguage")}
+            >
+              <Globe2 className="h-5 w-5" aria-hidden="true" />
+              <span className="hidden text-xs font-semibold sm:inline">
+                {LANGUAGE_OPTIONS.find((option) => option.value === locale)
+                  ?.shortLabel ?? locale.toUpperCase()}
+              </span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {LANGUAGE_OPTIONS.map((option) => (
+              <DropdownMenuItem
+                key={option.value}
+                onClick={() => handleLanguageChange(option.value)}
+                className="flex items-center justify-between gap-4"
+              >
+                <span>{option.label}</span>
+                {locale === option.value ? (
+                  <Check className="h-4 w-4" aria-hidden="true" />
+                ) : null}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
         {/* Theme Toggle */}
         {mounted && (
           <DropdownMenu>
@@ -294,7 +350,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 variant="ghost"
                 size="icon"
                 className="rounded-full bg-primary hover:bg-primary/80 text-foreground"
-                title="Select theme"
+                title={t("selectTheme")}
               >
                 {darkLikeActiveTheme ? (
                   <Sun className="h-5 w-5" />
@@ -310,7 +366,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                   onClick={() => setTheme(option.value)}
                   className="flex items-center hover:bg-primary/80 justify-between"
                 >
-                  <span>{option.label}</span>
+                  <span>{t(`themes.${option.value}`)}</span>
                   {activeTheme === option.value ? (
                     <Check className="h-4 w-4" />
                   ) : null}
@@ -327,7 +383,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 variant="ghost"
                 size="icon"
                 className="relative rounded-full bg-muted hover:bg-primary/80 text-foreground"
-                title="Admin notifications"
+                title={t("notifications.title")}
               >
                 <Bell className="h-5 w-5" />
                 {unreadNotificationCount > 0 ? (
@@ -340,11 +396,11 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
             <DropdownMenuContent align="end" className="w-80">
               <div className="flex items-center justify-between px-2 py-1.5">
                 <div>
-                  <p className="text-sm font-semibold">Admin Notifications</p>
+                  <p className="text-sm font-semibold">{t("notifications.title")}</p>
                   <p className="text-xs text-muted-foreground">
                     {loadingNotifications
-                      ? "Loading..."
-                      : `${unreadNotificationCount} unread`}
+                      ? t("notifications.loading")
+                      : t("notifications.unread", { count: unreadNotificationCount })}
                   </p>
                 </div>
               </div>
@@ -352,7 +408,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 {!canViewScmNotifications &&
                 !canViewInvestorNotifications ? (
                   <div className="px-2 py-3 text-sm text-muted-foreground">
-                    No admin notifications.
+                    {t("notifications.empty")}
                   </div>
                 ) : (
                   <>
@@ -366,12 +422,12 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                             href="/admin/scm/notifications"
                             className="text-xs font-medium text-primary hover:underline"
                           >
-                            View all
+                            {t("notifications.viewAll")}
                           </Link>
                         </div>
                         {(!scmNotifications || scmNotifications.rows.length === 0) ? (
                           <div className="px-2 py-2 text-sm text-muted-foreground">
-                            No SCM notifications.
+                            {t("notifications.noScm")}
                           </div>
                         ) : (
                           <>
@@ -420,19 +476,19 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                       <div className="pt-2">
                         <div className="flex items-center justify-between px-2 pb-1 pt-1">
                           <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                            Investors
+                            {t("notifications.investors")}
                           </div>
                           <Link
                             href="/admin/investors/notifications"
                             className="text-xs font-medium text-primary hover:underline"
                           >
-                            View all
+                            {t("notifications.viewAll")}
                           </Link>
                         </div>
                         {(!investorNotifications ||
                           investorNotifications.rows.length === 0) ? (
                           <div className="px-2 py-2 text-sm text-muted-foreground">
-                            No investor notifications.
+                            {t("notifications.noInvestors")}
                           </div>
                         ) : (
                           <>
@@ -494,7 +550,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
         <Link
           href="/"
           className="text-sm font-medium transition-all duration-300 hover:scale-105"
-          title="View Live Site"
+          title={t("viewSite")}
         >
           <Button
             variant="ghost"
@@ -502,7 +558,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
             className="hidden sm:flex bg-muted hover:bg-primary/80 text-foreground border-border hover:border-border rounded-full px-4"
           >
             <Home className="w-4 h-4 mr-2" />
-            View Site
+            {t("viewSite")}
           </Button>
           <Button
             variant="ghost"
@@ -523,14 +579,14 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           </p>
         </div>
 
-        <Link href="/admin/profile" title="View Profile">
+        <Link href="/admin/profile" title={t("viewProfile")}>
           <Avatar className="h-9 w-9 border-2 border-border cursor-pointer hover:opacity-80 transition-all duration-300 hover:scale-105 hover:border-primary">
             <AvatarImage
               src={(session?.user as any)?.image ?? undefined}
-              alt={session?.user?.name ?? "Profile"}
+              alt={session?.user?.name ?? t("profile")}
             />
             <AvatarFallback className="bg-primary text-primary-foreground font-bold text-sm">
-              {(session?.user?.name || "Me")
+              {(session?.user?.name || t("me"))
                 .split(" ")
                 .map((n) => n[0])
                 .join("")
@@ -551,7 +607,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           ) : (
             <>
               <LogOut className="w-4 h-4 mr-2" />
-              Logout
+              {t("logout")}
             </>
           )}
         </Button>
@@ -561,7 +617,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           variant="ghost"
           size="icon"
           className="sm:hidden bg-muted hover:bg-primary/80 text-foreground rounded-full"
-          title="Logout"
+          title={t("logout")}
         >
           {isPending ? (
             <div className="animate-spin rounded-full h-4 w-4"></div>
