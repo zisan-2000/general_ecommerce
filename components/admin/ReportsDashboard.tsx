@@ -9,6 +9,7 @@ import {
   TrendingUp,
   Truck,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -161,10 +162,10 @@ type ExportSection = "sales" | "profit" | "vat" | "inventory" | "delivery";
 type ReportTab = "overview" | ExportSection;
 
 const QUICK_RANGES = [
-  { label: "Last 7 days", days: 6 },
-  { label: "Last 30 days", days: 29 },
-  { label: "Last 90 days", days: 89 },
-];
+  { key: "last7", days: 6 },
+  { key: "last30", days: 29 },
+  { key: "last90", days: 89 },
+] as const;
 
 function fmtDate(value: Date) {
   return value.toISOString().slice(0, 10);
@@ -222,10 +223,12 @@ function Header({
   title,
   description,
   onExport,
+  exportLabel,
 }: {
   title: string;
   description: string;
   onExport: () => void;
+  exportLabel: string;
 }) {
   return (
     <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -235,7 +238,7 @@ function Header({
       </div>
       <Button variant="outline" size="sm" onClick={onExport}>
         <Download className="h-4 w-4" />
-        Export CSV
+        {exportLabel}
       </Button>
     </div>
   );
@@ -278,6 +281,8 @@ function GridTable({
 }
 
 export default function ReportsDashboard() {
+  const t = useTranslations("AdminReports");
+
   const initialFrom = useMemo(() => {
     const d = new Date();
     d.setDate(d.getDate() - 29);
@@ -302,11 +307,11 @@ export default function ReportsDashboard() {
       if (!res.ok)
         throw new Error(
           (await res.json().catch(() => ({})))?.error ||
-            `Failed to load reports (${res.status})`,
+            t("errors.loadWithStatus", { status: res.status }),
         );
       setData(await res.json());
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load reports.");
+      setError(e instanceof Error ? e.message : t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -314,6 +319,7 @@ export default function ReportsDashboard() {
 
   useEffect(() => {
     void load(from, to);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const apply = () =>
@@ -342,34 +348,44 @@ export default function ReportsDashboard() {
       data
         ? [
             {
-              label: "Net Sales",
+              label: t("metrics.netSales"),
               value: fmtMoney(data.sales.summary.netSales),
-              hint: `${fmtMoney(data.sales.summary.refundTotal)} refund impact`,
+              hint: t("metrics.refundImpact", {
+                amount: fmtMoney(data.sales.summary.refundTotal),
+              }),
             },
             {
-              label: "Net Profit",
+              label: t("metrics.netProfit"),
               value: fmtMoney(data.profit.summary.netProfit),
-              hint: `${data.profit.summary.netMarginPct.toFixed(2)}% net margin`,
+              hint: t("metrics.netMargin", {
+                pct: data.profit.summary.netMarginPct.toFixed(2),
+              }),
               tone: "good" as const,
             },
             {
-              label: "Collected VAT",
+              label: t("metrics.collectedVat"),
               value: fmtMoney(data.vat.summary.totalVatCollected),
-              hint: `${fmtNum(data.vat.summary.taxedOrders)} taxed orders`,
+              hint: t("metrics.taxedOrders", {
+                count: fmtNum(data.vat.summary.taxedOrders),
+              }),
             },
             {
-              label: "Low Stock",
+              label: t("metrics.lowStock"),
               value: fmtNum(data.inventory.summary.lowStockCount),
-              hint: `${fmtNum(data.inventory.summary.outOfStockCount)} out of stock`,
+              hint: t("metrics.outOfStock", {
+                count: fmtNum(data.inventory.summary.outOfStockCount),
+              }),
               tone:
                 data.inventory.summary.lowStockCount > 0
                   ? ("warn" as const)
                   : ("good" as const),
             },
             {
-              label: "Proof Pending",
+              label: t("metrics.proofPending"),
               value: fmtNum(data.delivery.summary.proofPending),
-              hint: `${fmtNum(data.delivery.summary.proofConfirmed)} confirmed proofs`,
+              hint: t("metrics.proofConfirmed", {
+                count: fmtNum(data.delivery.summary.proofConfirmed),
+              }),
               tone:
                 data.delivery.summary.proofPending > 0
                   ? ("warn" as const)
@@ -377,7 +393,7 @@ export default function ReportsDashboard() {
             },
           ]
         : [],
-    [data],
+    [data, t],
   );
 
   const alerts = useMemo(
@@ -385,23 +401,29 @@ export default function ReportsDashboard() {
       data
         ? [
             {
-              title: "Refund pressure",
-              text: `${fmtNum(data.profit.summary.completedRefunds)} completed refunds in this range.`,
+              title: t("alerts.refundPressure"),
+              text: t("alerts.refundPressureText", {
+                count: fmtNum(data.profit.summary.completedRefunds),
+              }),
               active: data.profit.summary.completedRefunds > 0,
             },
             {
-              title: "Stock pressure",
-              text: `${fmtNum(data.inventory.summary.lowStockCount)} variants need replenishment.`,
+              title: t("alerts.stockPressure"),
+              text: t("alerts.stockPressureText", {
+                count: fmtNum(data.inventory.summary.lowStockCount),
+              }),
               active: data.inventory.summary.lowStockCount > 0,
             },
             {
-              title: "Proof gaps",
-              text: `${fmtNum(data.delivery.summary.proofPending)} shipments still need customer proof.`,
+              title: t("alerts.proofGaps"),
+              text: t("alerts.proofGapsText", {
+                count: fmtNum(data.delivery.summary.proofPending),
+              }),
               active: data.delivery.summary.proofPending > 0,
             },
           ].filter((x) => x.active)
         : [],
-    [data],
+    [data, t],
   );
 
   return (
@@ -411,19 +433,16 @@ export default function ReportsDashboard() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl space-y-3">
               <div className="inline-flex rounded-full border border-border/70 bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
-                Commerce Insights
+                {t("hero.badge")}
               </div>
 
               <div>
                 <h1 className="text-3xl font-semibold tracking-tight">
-                  Executive Dashboard Overview
+                  {t("hero.title")}
                 </h1>
 
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Get a clear, real-time view of your business performance at a
-                  glance. Monitor key metrics from sales and profitability to
-                  VAT, inventory, and delivery — all in one streamlined
-                  dashboard designed for smarter decisions.
+                  {t("hero.description")}
                 </p>
               </div>
             </div>
@@ -431,12 +450,12 @@ export default function ReportsDashboard() {
           <div className="grid gap-2 grid-cols-3">
             {QUICK_RANGES.map((item) => (
               <Button
-                key={item.label}
+                key={item.key}
                 className="btn-outline"
                 size="sm"
                 onClick={() => quick(item.days)}
               >
-                {item.label}
+                {t(`quickRanges.${item.key}`)}
               </Button>
             ))}
           </div>
@@ -448,7 +467,7 @@ export default function ReportsDashboard() {
           <div className="grid grid-cols-2 gap-4 sm:flex-row sm:items-end">
             <div className="space-y-2">
               <label className="text-sm font-medium" htmlFor="reports-from">
-                From
+                {t("filters.from")}
               </label>
               <Input
                 id="reports-from"
@@ -459,7 +478,7 @@ export default function ReportsDashboard() {
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium" htmlFor="reports-to">
-                To
+                {t("filters.to")}
               </label>
               <Input
                 id="reports-to"
@@ -473,7 +492,7 @@ export default function ReportsDashboard() {
             {tab !== "overview" ? (
               <Button variant="outline" onClick={() => exportTab(tab)}>
                 <Download className="h-4 w-4" />
-                Export {tab}
+                {t("actions.exportSection", { section: t(`tabs.${tab}`) })}
               </Button>
             ) : null}
             <Button onClick={apply} disabled={loading || pending}>
@@ -482,7 +501,7 @@ export default function ReportsDashboard() {
               ) : (
                 <RefreshCw className="h-4 w-4" />
               )}
-              Apply filters
+              {t("actions.applyFilters")}
             </Button>
           </div>
         </div>
@@ -515,42 +534,24 @@ export default function ReportsDashboard() {
           className="space-y-6"
         >
           <TabsList className="w-full justify-start overflow-x-auto rounded-[20px] border border-border/60 bg-card/85 p-1.5">
-            <TabsTrigger
-              value="overview"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary/80 hover:data-[state=active]:text-primary-foreground/80  hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              Overview
-            </TabsTrigger>
-            <TabsTrigger
-              value="sales"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              Sales
-            </TabsTrigger>
-            <TabsTrigger
-              value="profit"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              Profit
-            </TabsTrigger>
-            <TabsTrigger
-              value="vat"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              VAT
-            </TabsTrigger>
-            <TabsTrigger
-              value="inventory"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              Inventory
-            </TabsTrigger>
-            <TabsTrigger
-              value="delivery"
-              className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
-            >
-              Delivery
-            </TabsTrigger>
+            {(
+              [
+                "overview",
+                "sales",
+                "profit",
+                "vat",
+                "inventory",
+                "delivery",
+              ] as ReportTab[]
+            ).map((key) => (
+              <TabsTrigger
+                key={key}
+                value={key}
+                className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
+              >
+                {t(`tabs.${key}`)}
+              </TabsTrigger>
+            ))}
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
@@ -561,13 +562,17 @@ export default function ReportsDashboard() {
                     <TrendingUp className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium">Sales Pulse</div>
+                    <div className="text-sm font-medium">
+                      {t("overview.salesPulse.title")}
+                    </div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      Gross vs net sales across the selected window.
+                      {t("overview.salesPulse.description")}
                     </div>
                     <div className="mt-3 text-lg font-semibold">
-                      {fmtMoney(data.sales.summary.grandTotal)} gross /{" "}
-                      {fmtMoney(data.sales.summary.netSales)} net
+                      {t("overview.salesPulse.value", {
+                        gross: fmtMoney(data.sales.summary.grandTotal),
+                        net: fmtMoney(data.sales.summary.netSales),
+                      })}
                     </div>
                   </div>
                 </CardContent>
@@ -578,12 +583,16 @@ export default function ReportsDashboard() {
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium">Tax Snapshot</div>
+                    <div className="text-sm font-medium">
+                      {t("overview.taxSnapshot.title")}
+                    </div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      VAT captured from saved order-time tax snapshots.
+                      {t("overview.taxSnapshot.description")}
                     </div>
                     <div className="mt-3 text-lg font-semibold">
-                      {fmtMoney(data.vat.summary.totalVatCollected)} VAT
+                      {t("overview.taxSnapshot.value", {
+                        vat: fmtMoney(data.vat.summary.totalVatCollected),
+                      })}
                     </div>
                   </div>
                 </CardContent>
@@ -595,14 +604,16 @@ export default function ReportsDashboard() {
                   </div>
                   <div>
                     <div className="text-sm font-medium">
-                      Delivery Confidence
+                      {t("overview.deliveryConfidence.title")}
                     </div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      Courier completion and customer proof capture posture.
+                      {t("overview.deliveryConfidence.description")}
                     </div>
                     <div className="mt-3 text-lg font-semibold">
-                      {fmtNum(data.delivery.summary.delivered)} delivered /{" "}
-                      {fmtNum(data.delivery.summary.proofPending)} pending proof
+                      {t("overview.deliveryConfidence.value", {
+                        delivered: fmtNum(data.delivery.summary.delivered),
+                        pending: fmtNum(data.delivery.summary.proofPending),
+                      })}
                     </div>
                   </div>
                 </CardContent>
@@ -613,13 +624,17 @@ export default function ReportsDashboard() {
                     <AlertTriangle className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium">Inventory Health</div>
+                    <div className="text-sm font-medium">
+                      {t("overview.inventoryHealth.title")}
+                    </div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      Tracked units and replenishment pressure.
+                      {t("overview.inventoryHealth.description")}
                     </div>
                     <div className="mt-3 text-lg font-semibold">
-                      {fmtNum(data.inventory.summary.totalUnits)} units /{" "}
-                      {fmtNum(data.inventory.summary.lowStockCount)} low stock
+                      {t("overview.inventoryHealth.value", {
+                        units: fmtNum(data.inventory.summary.totalUnits),
+                        low: fmtNum(data.inventory.summary.lowStockCount),
+                      })}
                     </div>
                   </div>
                 </CardContent>
@@ -629,48 +644,61 @@ export default function ReportsDashboard() {
             <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>Executive Snapshot</CardTitle>
+                  <CardTitle>{t("overview.snapshot.title")}</CardTitle>
                   <CardDescription>
-                    {data.filters.from} to {data.filters.to}
+                    {t("overview.snapshot.range", {
+                      from: data.filters.from,
+                      to: data.filters.to,
+                    })}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-4 grid-cols-2 xl:grid-cols-3">
                   <Metric
-                    label="Orders"
+                    label={t("metrics.orders")}
                     value={fmtNum(data.sales.summary.totalOrders)}
-                    hint={`${fmtNum(data.sales.summary.deliveredOrders)} delivered`}
+                    hint={t("metrics.deliveredHint", {
+                      count: fmtNum(data.sales.summary.deliveredOrders),
+                    })}
                   />
                   <Metric
-                    label="Avg Order Value"
+                    label={t("metrics.avgOrderValue")}
                     value={fmtMoney(data.sales.summary.averageOrderValue)}
                   />
                   <Metric
-                    label="Refunds"
+                    label={t("metrics.refunds")}
                     value={fmtMoney(data.sales.summary.refundTotal)}
-                    hint={`${fmtNum(data.profit.summary.completedRefunds)} completed refunds`}
+                    hint={t("metrics.completedRefundsHint", {
+                      count: fmtNum(data.profit.summary.completedRefunds),
+                    })}
                   />
                   <Metric
-                    label="Warehouse Units"
+                    label={t("metrics.warehouseUnits")}
                     value={fmtNum(data.inventory.summary.totalUnits)}
-                    hint={`${fmtNum(data.inventory.summary.reservedUnits)} reserved`}
+                    hint={t("metrics.reservedHint", {
+                      count: fmtNum(data.inventory.summary.reservedUnits),
+                    })}
                   />
                   <Metric
-                    label="Courier Delivered"
+                    label={t("metrics.courierDelivered")}
                     value={fmtNum(data.delivery.summary.delivered)}
-                    hint={`${fmtNum(data.delivery.summary.inTransit)} still in transit`}
+                    hint={t("metrics.inTransitHint", {
+                      count: fmtNum(data.delivery.summary.inTransit),
+                    })}
                   />
                   <Metric
-                    label="VAT"
+                    label={t("metrics.vat")}
                     value={fmtMoney(data.vat.summary.totalVatCollected)}
-                    hint={`${fmtMoney(data.vat.summary.exclusiveVatTotal)} tax added on top`}
+                    hint={t("metrics.exclusiveVatHint", {
+                      amount: fmtMoney(data.vat.summary.exclusiveVatTotal),
+                    })}
                   />
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Priority Alerts</CardTitle>
+                  <CardTitle>{t("priorityAlerts.title")}</CardTitle>
                   <CardDescription>
-                    Fastest issues to review first.
+                    {t("priorityAlerts.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -688,7 +716,7 @@ export default function ReportsDashboard() {
                     ))
                   ) : (
                     <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-sm text-emerald-700">
-                      No major report alerts in this range.
+                      {t("priorityAlerts.empty")}
                     </div>
                   )}
                 </CardContent>
@@ -698,16 +726,20 @@ export default function ReportsDashboard() {
             <div className="grid gap-4 xl:grid-cols-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>Top Products</CardTitle>
+                  <CardTitle>{t("overview.topProducts.title")}</CardTitle>
                   <CardDescription>
-                    Highest revenue products in the selected range.
+                    {t("overview.topProducts.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Product", "Qty", "Revenue"],
+                    headers: [
+                      t("table.product"),
+                      t("table.qty"),
+                      t("table.revenue"),
+                    ],
                     cols: 3,
-                    empty: "No product sales found.",
+                    empty: t("empty.topProducts"),
                     rows: data.sales.topProducts.slice(0, 5).map((row) => (
                       <TableRow key={row.productId}>
                         <TableCell>{row.name}</TableCell>
@@ -724,16 +756,22 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Delivery Exceptions</CardTitle>
+                  <CardTitle>
+                    {t("overview.deliveryExceptions.title")}
+                  </CardTitle>
                   <CardDescription>
-                    Current courier exceptions needing follow-up.
+                    {t("overview.deliveryExceptions.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Shipment", "Courier", "Status"],
+                    headers: [
+                      t("table.shipment"),
+                      t("table.courier"),
+                      t("table.status"),
+                    ],
                     cols: 3,
-                    empty: "No delivery exceptions in this range.",
+                    empty: t("empty.deliveryExceptions"),
                     rows: data.delivery.exceptions.slice(0, 5).map((row) => (
                       <TableRow key={row.shipmentId}>
                         <TableCell>#{row.shipmentId}</TableCell>
@@ -751,45 +789,62 @@ export default function ReportsDashboard() {
 
           <TabsContent value="sales" className="space-y-6">
             <Header
-              title="Sales Report"
-              description={`Revenue and order flow from ${data.filters.from} to ${data.filters.to}.`}
+              title={t("sales.title")}
+              description={t("sales.description", {
+                from: data.filters.from,
+                to: data.filters.to,
+              })}
               onExport={() => exportTab("sales")}
+              exportLabel={t("actions.exportCsv")}
             />
             <div className="grid gap-4 lg:grid-cols-4">
               <Metric
-                label="Gross Revenue"
+                label={t("sales.grossRevenue")}
                 value={fmtMoney(data.sales.summary.grandTotal)}
-                hint={`${fmtMoney(data.sales.summary.averageOrderValue)} average order`}
+                hint={t("sales.avgOrderHint", {
+                  amount: fmtMoney(data.sales.summary.averageOrderValue),
+                })}
               />
               <Metric
-                label="Net Sales"
+                label={t("sales.netSales")}
                 value={fmtMoney(data.sales.summary.netSales)}
-                hint={`${fmtMoney(data.sales.summary.refundTotal)} refunds`}
+                hint={t("sales.refundsHint", {
+                  amount: fmtMoney(data.sales.summary.refundTotal),
+                })}
               />
               <Metric
-                label="Subtotal"
+                label={t("sales.subtotal")}
                 value={fmtMoney(data.sales.summary.subtotal)}
-                hint={`${fmtMoney(data.sales.summary.shippingTotal)} shipping collected`}
+                hint={t("sales.shippingHint", {
+                  amount: fmtMoney(data.sales.summary.shippingTotal),
+                })}
               />
               <Metric
-                label="Paid Orders"
+                label={t("sales.paidOrders")}
                 value={fmtNum(data.sales.summary.paidOrders)}
-                hint={`${fmtMoney(data.sales.summary.unpaidTotal)} unpaid value`}
+                hint={t("sales.unpaidHint", {
+                  amount: fmtMoney(data.sales.summary.unpaidTotal),
+                })}
               />
             </div>
             <div className="grid gap-4 xl:grid-cols-[1.05fr_1fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>Daily Revenue</CardTitle>
+                  <CardTitle>{t("sales.dailyRevenue.title")}</CardTitle>
                   <CardDescription>
-                    Daily order volume, revenue and VAT.
+                    {t("sales.dailyRevenue.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Date", "Orders", "Revenue", "VAT"],
+                    headers: [
+                      t("table.date"),
+                      t("table.orders"),
+                      t("table.revenue"),
+                      t("table.vat"),
+                    ],
                     cols: 4,
-                    empty: "No sales data in this range.",
+                    empty: t("empty.sales"),
                     rows: data.sales.daily.map((row) => (
                       <TableRow key={row.date}>
                         <TableCell>{row.date}</TableCell>
@@ -809,16 +864,20 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Top Selling Products</CardTitle>
+                  <CardTitle>{t("sales.topSelling.title")}</CardTitle>
                   <CardDescription>
-                    Highest revenue products in the selected range.
+                    {t("sales.topSelling.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Product", "Qty", "Revenue"],
+                    headers: [
+                      t("table.product"),
+                      t("table.qty"),
+                      t("table.revenue"),
+                    ],
                     cols: 3,
-                    empty: "No product sales found.",
+                    empty: t("empty.topProducts"),
                     rows: data.sales.topProducts.map((row) => (
                       <TableRow key={row.productId}>
                         <TableCell>{row.name}</TableCell>
@@ -838,29 +897,34 @@ export default function ReportsDashboard() {
 
           <TabsContent value="profit" className="space-y-6">
             <Header
-              title="Profit Report"
-              description="Estimated gross and net margin using stored purchase-cost snapshots."
+              title={t("profit.title")}
+              description={t("profit.description")}
               onExport={() => exportTab("profit")}
+              exportLabel={t("actions.exportCsv")}
             />
             <div className="grid gap-4 lg:grid-cols-4">
               <Metric
-                label="Gross Sales"
+                label={t("profit.grossSales")}
                 value={fmtMoney(data.profit.summary.grossSales)}
               />
               <Metric
-                label="Estimated Cost"
+                label={t("profit.estimatedCost")}
                 value={fmtMoney(data.profit.summary.estimatedCost)}
               />
               <Metric
-                label="Net Profit"
+                label={t("profit.netProfit")}
                 value={fmtMoney(data.profit.summary.netProfit)}
-                hint={`${data.profit.summary.netMarginPct.toFixed(2)}% net margin`}
+                hint={t("metrics.netMargin", {
+                  pct: data.profit.summary.netMarginPct.toFixed(2),
+                })}
                 tone="good"
               />
               <Metric
-                label="Refund Impact"
+                label={t("profit.refundImpact")}
                 value={fmtNum(data.profit.summary.completedRefunds)}
-                hint={`${fmtNum(data.profit.summary.refundedUnits)} refunded units`}
+                hint={t("profit.refundedUnitsHint", {
+                  count: fmtNum(data.profit.summary.refundedUnits),
+                })}
                 tone={
                   data.profit.summary.completedRefunds > 0 ? "warn" : "default"
                 }
@@ -868,23 +932,23 @@ export default function ReportsDashboard() {
             </div>
             <Card>
               <CardHeader>
-                <CardTitle>Top Profitable Variants</CardTitle>
+                <CardTitle>{t("profit.topVariants.title")}</CardTitle>
                 <CardDescription>
-                  Variants with the highest estimated gross profit contribution.
+                  {t("profit.topVariants.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 {GridTable({
                   headers: [
-                    "Variant",
-                    "Product",
-                    "Qty",
-                    "Revenue",
-                    "Cost",
-                    "Profit",
+                    t("table.variant"),
+                    t("table.product"),
+                    t("table.qty"),
+                    t("table.revenue"),
+                    t("table.cost"),
+                    t("table.profit"),
                   ],
                   cols: 6,
-                  empty: "No profit rows available in this range.",
+                  empty: t("empty.profit"),
                   rows: data.profit.topVariants.map((row) => (
                     <TableRow key={row.variantId}>
                       <TableCell>
@@ -917,41 +981,46 @@ export default function ReportsDashboard() {
 
           <TabsContent value="vat" className="space-y-6">
             <Header
-              title="VAT Report"
-              description="Collected VAT grouped by tax class and shipping destination."
+              title={t("vat.title")}
+              description={t("vat.description")}
               onExport={() => exportTab("vat")}
+              exportLabel={t("actions.exportCsv")}
             />
             <div className="grid gap-4 lg:grid-cols-4">
               <Metric
-                label="Total VAT"
+                label={t("vat.totalVat")}
                 value={fmtMoney(data.vat.summary.totalVatCollected)}
               />
               <Metric
-                label="Inclusive VAT"
+                label={t("vat.inclusiveVat")}
                 value={fmtMoney(data.vat.summary.inclusiveVatTotal)}
               />
               <Metric
-                label="Exclusive VAT"
+                label={t("vat.exclusiveVat")}
                 value={fmtMoney(data.vat.summary.exclusiveVatTotal)}
               />
               <Metric
-                label="Taxed Orders"
+                label={t("vat.taxedOrders")}
                 value={fmtNum(data.vat.summary.taxedOrders)}
               />
             </div>
             <div className="grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>VAT by Country</CardTitle>
+                  <CardTitle>{t("vat.byCountry.title")}</CardTitle>
                   <CardDescription>
-                    Collected VAT based on order destination.
+                    {t("vat.byCountry.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Country", "Orders", "VAT"],
+                    headers: [
+                      t("table.country"),
+                      t("table.orders"),
+                      t("table.vat"),
+                    ],
                     cols: 3,
-                    empty: "No VAT data found for the selected range.",
+                    empty: t("empty.vatCountry"),
                     rows: data.vat.byCountry.map((row) => (
                       <TableRow key={row.country}>
                         <TableCell>{row.country}</TableCell>
@@ -968,16 +1037,21 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>VAT by Class</CardTitle>
+                  <CardTitle>{t("vat.byClass.title")}</CardTitle>
                   <CardDescription>
-                    Tax class performance from saved order tax snapshots.
+                    {t("vat.byClass.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Class", "Rate", "Inclusive", "VAT"],
+                    headers: [
+                      t("table.class"),
+                      t("table.rate"),
+                      t("table.inclusive"),
+                      t("table.vat"),
+                    ],
                     cols: 4,
-                    empty: "No tax class snapshot rows found.",
+                    empty: t("empty.vatClass"),
                     rows: data.vat.byClass.map((row) => (
                       <TableRow
                         key={`${row.classCode}-${row.rate}-${row.inclusive ? "i" : "e"}`}
@@ -992,7 +1066,7 @@ export default function ReportsDashboard() {
                           {row.rate.toFixed(2)}%
                         </TableCell>
                         <TableCell className="text-right">
-                          {row.inclusive ? "Yes" : "No"}
+                          {row.inclusive ? t("common.yes") : t("common.no")}
                         </TableCell>
                         <TableCell className="text-right">
                           {fmtMoney(row.vatAmount)}
@@ -1007,46 +1081,58 @@ export default function ReportsDashboard() {
 
           <TabsContent value="inventory" className="space-y-6">
             <Header
-              title="Inventory Report"
-              description="Current stock snapshot plus movement activity inside the selected range."
+              title={t("inventory.title")}
+              description={t("inventory.description")}
               onExport={() => exportTab("inventory")}
+              exportLabel={t("actions.exportCsv")}
             />
             <div className="grid gap-4 lg:grid-cols-4">
               <Metric
-                label="Tracked Variants"
+                label={t("inventory.trackedVariants")}
                 value={fmtNum(data.inventory.summary.totalVariants)}
               />
               <Metric
-                label="Units On Hand"
+                label={t("inventory.unitsOnHand")}
                 value={fmtNum(data.inventory.summary.totalUnits)}
-                hint={`${fmtNum(data.inventory.summary.reservedUnits)} reserved`}
+                hint={t("metrics.reservedHint", {
+                  count: fmtNum(data.inventory.summary.reservedUnits),
+                })}
               />
               <Metric
-                label="Low Stock"
+                label={t("inventory.lowStock")}
                 value={fmtNum(data.inventory.summary.lowStockCount)}
-                hint={`${fmtNum(data.inventory.summary.outOfStockCount)} out of stock`}
+                hint={t("metrics.outOfStock", {
+                  count: fmtNum(data.inventory.summary.outOfStockCount),
+                })}
                 tone={
                   data.inventory.summary.lowStockCount > 0 ? "warn" : "default"
                 }
               />
               <Metric
-                label="Movement"
-                value={`${fmtNum(data.inventory.summary.movementIn)} in / ${fmtNum(data.inventory.summary.movementOut)} out`}
+                label={t("inventory.movement")}
+                value={t("inventory.movementValue", {
+                  in: fmtNum(data.inventory.summary.movementIn),
+                  out: fmtNum(data.inventory.summary.movementOut),
+                })}
               />
             </div>
             <div className="grid gap-4 xl:grid-cols-[1fr_1fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>Warehouse Stock</CardTitle>
+                  <CardTitle>{t("inventory.warehouseStock.title")}</CardTitle>
                   <CardDescription>
-                    Current quantity and reserved units by warehouse.
+                    {t("inventory.warehouseStock.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Warehouse", "Quantity", "Reserved"],
+                    headers: [
+                      t("table.warehouse"),
+                      t("table.quantity"),
+                      t("table.reserved"),
+                    ],
                     cols: 3,
-                    empty: "No warehouse stock records found.",
+                    empty: t("empty.warehouseStock"),
                     rows: data.inventory.warehouses.map((row) => (
                       <TableRow key={row.warehouseId}>
                         <TableCell>
@@ -1068,16 +1154,21 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Low Stock Alerts</CardTitle>
+                  <CardTitle>{t("inventory.lowStockAlerts.title")}</CardTitle>
                   <CardDescription>
-                    Variants that need replenishment attention.
+                    {t("inventory.lowStockAlerts.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Variant", "Product", "Stock", "Status"],
+                    headers: [
+                      t("table.variant"),
+                      t("table.product"),
+                      t("table.stock"),
+                      t("table.status"),
+                    ],
                     cols: 4,
-                    empty: "No low-stock alerts right now.",
+                    empty: t("empty.lowStock"),
                     rows: data.inventory.lowStock.map((row) => (
                       <TableRow key={row.variantId}>
                         <TableCell>{row.sku}</TableCell>
@@ -1097,16 +1188,20 @@ export default function ReportsDashboard() {
             <div className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>Movement Reasons</CardTitle>
+                  <CardTitle>{t("inventory.movementReasons.title")}</CardTitle>
                   <CardDescription>
-                    Net stock movement grouped by logged reason.
+                    {t("inventory.movementReasons.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Reason", "Events", "Net Change"],
+                    headers: [
+                      t("table.reason"),
+                      t("table.events"),
+                      t("table.netChange"),
+                    ],
                     cols: 3,
-                    empty: "No inventory movements logged in this range.",
+                    empty: t("empty.movementReasons"),
                     rows: data.inventory.movementReasons
                       .slice(0, 10)
                       .map((row) => (
@@ -1125,16 +1220,21 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Recent Inventory Logs</CardTitle>
+                  <CardTitle>{t("inventory.recentLogs.title")}</CardTitle>
                   <CardDescription>
-                    Latest stock change events captured in the selected range.
+                    {t("inventory.recentLogs.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["When", "Item", "Warehouse", "Change"],
+                    headers: [
+                      t("table.when"),
+                      t("table.item"),
+                      t("table.warehouse"),
+                      t("table.change"),
+                    ],
                     cols: 4,
-                    empty: "No inventory log rows found in this range.",
+                    empty: t("empty.recentLogs"),
                     rows: data.inventory.recentLogs.slice(0, 10).map((row) => (
                       <TableRow key={row.id}>
                         <TableCell>
@@ -1148,7 +1248,9 @@ export default function ReportsDashboard() {
                             </div>
                           ) : null}
                         </TableCell>
-                        <TableCell>{row.warehouseName || "N/A"}</TableCell>
+                        <TableCell>
+                          {row.warehouseName || t("common.na")}
+                        </TableCell>
                         <TableCell className="text-right">
                           {fmtNum(row.change)}
                         </TableCell>
@@ -1162,45 +1264,59 @@ export default function ReportsDashboard() {
 
           <TabsContent value="delivery" className="space-y-6">
             <Header
-              title="Delivery Report"
-              description="Shipment outcomes and customer delivery proof coverage."
+              title={t("delivery.title")}
+              description={t("delivery.description")}
               onExport={() => exportTab("delivery")}
+              exportLabel={t("actions.exportCsv")}
             />
             <div className="grid gap-4 lg:grid-cols-4">
               <Metric
-                label="Shipments"
+                label={t("delivery.shipments")}
                 value={fmtNum(data.delivery.summary.totalShipments)}
               />
               <Metric
-                label="Delivered"
+                label={t("delivery.delivered")}
                 value={fmtNum(data.delivery.summary.delivered)}
-                hint={`${fmtNum(data.delivery.summary.outForDelivery)} out for delivery`}
+                hint={t("delivery.outForDeliveryHint", {
+                  count: fmtNum(data.delivery.summary.outForDelivery),
+                })}
               />
               <Metric
-                label="Proof Confirmed"
+                label={t("delivery.proofConfirmed")}
                 value={fmtNum(data.delivery.summary.proofConfirmed)}
-                hint={`${fmtNum(data.delivery.summary.proofPending)} pending proof`}
+                hint={t("metrics.proofPendingHint", {
+                  count: fmtNum(data.delivery.summary.proofPending),
+                })}
                 tone={data.delivery.summary.proofPending > 0 ? "warn" : "good"}
               />
               <Metric
-                label="Returns / Cancelled"
-                value={`${fmtNum(data.delivery.summary.returned)} / ${fmtNum(data.delivery.summary.cancelled)}`}
+                label={t("delivery.returnsCancelled")}
+                value={t("delivery.returnsCancelledValue", {
+                  returned: fmtNum(data.delivery.summary.returned),
+                  cancelled: fmtNum(data.delivery.summary.cancelled),
+                })}
               />
             </div>
             <div className="grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle>Courier Performance</CardTitle>
+                  <CardTitle>
+                    {t("delivery.courierPerformance.title")}
+                  </CardTitle>
                   <CardDescription>
-                    Shipment count, delivered count and proof coverage by
-                    courier.
+                    {t("delivery.courierPerformance.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Courier", "Shipments", "Delivered", "Proofs"],
+                    headers: [
+                      t("table.courier"),
+                      t("table.shipments"),
+                      t("table.delivered"),
+                      t("table.proofs"),
+                    ],
                     cols: 4,
-                    empty: "No shipment activity found in this range.",
+                    empty: t("empty.courier"),
                     rows: data.delivery.byCourier.map((row) => (
                       <TableRow key={row.courier}>
                         <TableCell>{row.courier}</TableCell>
@@ -1220,22 +1336,27 @@ export default function ReportsDashboard() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Delivery Exceptions</CardTitle>
+                  <CardTitle>{t("delivery.exceptions.title")}</CardTitle>
                   <CardDescription>
-                    Returned, cancelled or proof-missing shipment records.
+                    {t("delivery.exceptions.description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {GridTable({
-                    headers: ["Shipment", "Customer", "Courier", "Status"],
+                    headers: [
+                      t("table.shipment"),
+                      t("table.customer"),
+                      t("table.courier"),
+                      t("table.status"),
+                    ],
                     cols: 4,
-                    empty: "No delivery exceptions in the selected range.",
+                    empty: t("empty.deliveryExceptions"),
                     rows: data.delivery.exceptions.map((row) => (
                       <TableRow key={row.shipmentId}>
                         <TableCell>
                           <div className="font-medium">#{row.shipmentId}</div>
                           <div className="text-xs text-muted-foreground">
-                            Order #{row.orderId}
+                            {t("table.orderNumber", { id: row.orderId })}
                           </div>
                         </TableCell>
                         <TableCell>
@@ -1264,7 +1385,7 @@ export default function ReportsDashboard() {
       ) : !loading ? (
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            No report data available.
+            {t("empty.report")}
           </CardContent>
         </Card>
       ) : null}

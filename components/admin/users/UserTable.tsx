@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   Eye,
   Ban,
@@ -46,12 +47,13 @@ export default function UserTable({
   onUserUpdate,
   onUserDelete,
 }: UserTableProps) {
+  const t = useTranslations("AdminUsersTable");
   const [banReason, setBanReason] = useState("");
-  const [banDuration, setBanDuration] = useState("7"); // days
+  const [banDuration, setBanDuration] = useState("7");
 
   const handleBanUser = async (userId: string, email: string) => {
     if (!banReason) {
-      alert("Please write a reason for banning the user");
+      alert(t("alerts.banReasonRequired"));
       return;
     }
 
@@ -81,11 +83,11 @@ export default function UserTable({
         });
         setBanReason("");
       } else {
-        alert("Failed to ban user");
+        alert(t("alerts.banFailed"));
       }
     } catch (error) {
       console.error("Error banning user:", error);
-      alert("Error occurred while banning user");
+      alert(t("alerts.banError"));
     }
   };
 
@@ -110,20 +112,16 @@ export default function UserTable({
           banExpires: null,
         });
       } else {
-        alert("Failed to lift user ban");
+        alert(t("alerts.unbanFailed"));
       }
     } catch (error) {
       console.error("Error unbanning user:", error);
-      alert("Error occurred while lifting user ban");
+      alert(t("alerts.unbanError"));
     }
   };
 
   const handleDeleteUser = async (userId: string, email: string) => {
-    if (
-      !confirm(
-        `Are you sure you want to delete user ${email}?`
-      )
-    ) {
+    if (!confirm(t("alerts.deleteConfirm", { email }))) {
       return;
     }
 
@@ -136,11 +134,11 @@ export default function UserTable({
         onUserDelete(userId);
       } else {
         const error = await response.json();
-        alert(error.error || "Failed to delete user");
+        alert(error.error || t("alerts.deleteFailed"));
       }
     } catch (error) {
       console.error("Error deleting user:", error);
-      alert("Error occurred while deleting user");
+      alert(t("alerts.deleteError"));
     }
   };
 
@@ -153,7 +151,7 @@ export default function UserTable({
   };
 
   const isBanExpired = (banExpires: number | null) => {
-    if (!banExpires) return false; // permanent ban
+    if (!banExpires) return false;
     return Date.now() > banExpires * 1000;
   };
 
@@ -169,11 +167,13 @@ export default function UserTable({
 
   const getStatusText = (user: User) => {
     if (user.banned && !isBanExpired(user.banExpires)) {
-      return user.banExpires ? "Temporarily Banned" : "Permanently Banned";
+      return user.banExpires
+        ? t("status.temporarilyBanned")
+        : t("status.permanentlyBanned");
     } else if (user.emailVerified) {
-      return "Verified";
+      return t("status.verified");
     } else {
-      return "Unverified";
+      return t("status.unverified");
     }
   };
 
@@ -185,7 +185,7 @@ export default function UserTable({
   };
 
   const formatRoleLabel = (role: string) => {
-    if (!role) return "User";
+    if (!role) return t("roles.user");
     return role
       .split("_")
       .filter(Boolean)
@@ -200,22 +200,22 @@ export default function UserTable({
           <thead>
             <tr className="bg-muted shadow-sm">
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                User
+                {t("columns.user")}
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                Role
+                {t("columns.role")}
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                Activities
+                {t("columns.activities")}
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                Status
+                {t("columns.status")}
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                Joined
+                {t("columns.joined")}
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-foreground uppercase tracking-wider border-b border-border">
-                Actions
+                {t("columns.actions")}
               </th>
             </tr>
           </thead>
@@ -225,7 +225,6 @@ export default function UserTable({
                 key={user.id}
                 className="hover:bg-muted hover:bg-opacity-50 transition-all duration-300 group"
               >
-                {/* User Info */}
                 <td className="px-6 py-4">
                   <div className="flex items-start space-x-3">
                     <div className="flex-shrink-0">
@@ -236,7 +235,7 @@ export default function UserTable({
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center space-x-2">
                         <p className="text-sm font-semibold text-foreground truncate">
-                          {user.name || "No Name"}
+                          {user.name || t("noName")}
                         </p>
                         {user.role?.toLowerCase?.().includes("admin") && (
                           <Shield className="h-3 w-3 text-purple-600" />
@@ -256,7 +255,6 @@ export default function UserTable({
                   </div>
                 </td>
 
-                {/* Role */}
                 <td className="px-6 py-4">
                   <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getRoleColor(user.role)}`}
@@ -265,7 +263,6 @@ export default function UserTable({
                   </span>
                 </td>
 
-                {/* Activities */}
                 <td className="px-6 py-4">
                   <div className="flex items-center space-x-4 text-sm">
                     <div className="flex items-center space-x-1 text-foreground">
@@ -273,19 +270,22 @@ export default function UserTable({
                       <span className="font-semibold">
                         {user._count.orders}
                       </span>
-                      <span className="text-xs text-muted-foreground">Orders</span>
+                      <span className="text-xs text-muted-foreground">
+                        {t("activities.orders")}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-1 text-muted-foreground">
                       <Star className="h-4 w-4" />
                       <span className="font-semibold">
                         {user._count.reviews}
                       </span>
-                      <span className="text-xs text-muted-foreground">Reviews</span>
+                      <span className="text-xs text-muted-foreground">
+                        {t("activities.reviews")}
+                      </span>
                     </div>
                   </div>
                 </td>
 
-                {/* Status */}
                 <td className="px-6 py-4">
                   <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(user)}`}
@@ -294,7 +294,6 @@ export default function UserTable({
                   </span>
                 </td>
 
-                {/* Join Date */}
                 <td className="px-6 py-4">
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                     <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -302,23 +301,21 @@ export default function UserTable({
                   </div>
                 </td>
 
-                {/* Actions */}
                 <td className="px-6 py-4">
                   <div className="flex items-center space-x-2">
-                    {/* View Button */}
                     <Link
                       href={`/admin/operations/users/${user.id}`}
                       className="inline-flex items-center px-3 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 group/action shadow-sm"
+                      title={t("actions.view")}
                     >
                       <Eye className="h-4 w-4" />
                     </Link>
 
-                    {/* Ban/Unban Button */}
                     {user.banned && !isBanExpired(user.banExpires) ? (
                       <button
                         onClick={() => handleUnbanUser(user.id)}
                         className="inline-flex items-center px-3 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all duration-300 group/action shadow-sm"
-                        title="Unban"
+                        title={t("actions.unban")}
                       >
                         <ShieldOff className="h-4 w-4" />
                       </button>
@@ -326,7 +323,7 @@ export default function UserTable({
                       <button
                         onClick={() => {
                           const modal = document.getElementById(
-                            "ban-modal"
+                            "ban-modal",
                           ) as HTMLDialogElement;
                           if (modal) {
                             modal.showModal();
@@ -335,17 +332,16 @@ export default function UserTable({
                           }
                         }}
                         className="inline-flex items-center px-3 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 transition-all duration-300 group/action shadow-sm"
-                        title="Ban"
+                        title={t("actions.ban")}
                       >
                         <Ban className="h-4 w-4" />
                       </button>
                     )}
 
-                    {/* Delete Button */}
                     <button
                       onClick={() => handleDeleteUser(user.id, user.email)}
                       className="inline-flex items-center px-3 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition-all duration-300 group/action shadow-sm"
-                      title="Delete"
+                      title={t("actions.delete")}
                     >
                       <Trash2 className="h-4 w-4" />
                     </button>
@@ -357,125 +353,113 @@ export default function UserTable({
         </table>
       </div>
 
-      {/* Empty State */}
       {users.length === 0 && (
         <div className="text-center py-12 bg-background">
           <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center mb-4">
             <UserIcon className="h-8 w-8 text-muted-foreground" />
           </div>
           <h3 className="text-lg font-semibold text-foreground mb-2">
-            No users found
+            {t("empty.title")}
           </h3>
           <p className="text-muted-foreground max-w-md mx-auto">
-            No users match your search criteria. Please try different filters.
+            {t("empty.description")}
           </p>
         </div>
       )}
 
-      {/* Ban Modal - Redesigned based on Screenshot & Fixes */}
       <dialog
         id="ban-modal"
         className="modal modal-bottom sm:modal-middle rounded-xl"
       >
         <div className="modal-box p-6 bg-card border-border">
-          {/* Close Button at Top Right (✕) */}
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors">
               ✕
             </button>
           </form>
 
-          {/* Modal Header */}
           <h3 className="text-xl font-bold text-foreground mb-6 flex items-center border-b border-border pb-3">
-            {/* Ban icon (h-6 w-6) - Adjusted size for header */}
             <Ban className="h-6 w-6 mr-3 text-destructive" />
-            Ban User
+            {t("banModal.title")}
           </h3>
 
           <div className="py-4 space-y-5">
-            {/* Ban Reason Field */}
             <div>
               <label className="label">
                 <span className="label-text text-foreground font-semibold">
-                  Ban Reason
+                  {t("banModal.reason")}
                 </span>
               </label>
               <textarea
-                placeholder="Write reason for banning user..."
+                placeholder={t("banModal.reasonPlaceholder")}
                 className="textarea textarea-bordered w-full border-border bg-muted text-foreground focus:border-destructive focus:ring-1 focus:ring-destructive transition-shadow p-2 rounded-lg"
                 rows={3}
               />
             </div>
 
-            {/* Ban Duration Field */}
             <div>
               <label className="label">
                 <span className="label-text text-foreground font-semibold">
-                  Ban Duration
+                  {t("banModal.duration")}
                 </span>
               </label>
               <select className="select select-bordered w-full border-border bg-muted text-foreground focus:border-destructive focus:ring-1 focus:ring-destructive transition-shadow p-2 rounded-lg">
-                <option value="1">1 day</option>
-                <option value="7">7 days</option>
-                <option value="30">30 days</option>
-                <option value="90">90 days</option>
-                <option value="365">1 year</option>
-                <option value="permanent">Permanent Ban</option>
+                <option value="1">{t("banModal.durations.1day")}</option>
+                <option value="7">{t("banModal.durations.7days")}</option>
+                <option value="30">{t("banModal.durations.30days")}</option>
+                <option value="90">{t("banModal.durations.90days")}</option>
+                <option value="365">{t("banModal.durations.1year")}</option>
+                <option value="permanent">
+                  {t("banModal.durations.permanent")}
+                </option>
               </select>
             </div>
 
-            {/* Warning Block - Adjusted to match screenshot style (simpler box) */}
             <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-3 mt-4">
               <div className="flex items-start space-x-3">
-                {/* Warning Icon (h-5 w-5) */}
                 <Ban className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm font-medium text-destructive">Warning</p>
+                  <p className="text-sm font-medium text-destructive">
+                    {t("banModal.warningTitle")}
+                  </p>
                   <p className="text-xs text-destructive/80 mt-1">
-                    Banned users cannot log in to the system or place new orders.
-                    Existing orders will not be affected.
+                    {t("banModal.warningText")}
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Modal Actions (Buttons) - FIXING THE BUTTON LAYOUT ISSUE */}
           <div className="modal-action flex items-center justify-end border-t border-border pt-4 gap-2 mt-6">
-            {/* Cancel Button */}
             <button
               className="btn btn-ghost bg-secondary hover:bg-secondary/80 p-2 rounded-xl text-secondary-foreground hover:text-secondary-foreground transition-colors"
               onClick={() => {
                 const modal = document.getElementById(
-                  "ban-modal"
+                  "ban-modal",
                 ) as HTMLDialogElement;
                 modal.close();
               }}
             >
-              Cancel
+              {t("banModal.cancel")}
             </button>
 
-            {/* Ban Button - Fixed: Using flex for alignment and ensuring proper button classes */}
             <button
               className="btn flex items-center p-2 rounded-xl bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive hover:border-destructive/90 transition-colors"
-              // Add your Ban logic here
               onClick={() => {
                 const modal = document.getElementById(
-                  "ban-modal"
+                  "ban-modal",
                 ) as HTMLDialogElement;
                 modal.close();
               }}
             >
               <Ban className="h-4 w-4 mr-2" />
-              Ban User
+              {t("banModal.submit")}
             </button>
           </div>
         </div>
 
-        {/* Backdrop - Removed the visible "close" text */}
         <form method="dialog" className="modal-backdrop">
-          {/* This button should be invisible and is only needed to close the modal on backdrop click */}
-          <button aria-label="Close modal"></button>
+          <button aria-label={t("banModal.closeModal")}></button>
         </form>
       </dialog>
     </div>

@@ -92,103 +92,775 @@
     },
     "AdminDashboard": {
         "overview": "আপনার ই-কমার্স কার্যক্রমের পূর্ণাঙ্গ চিত্র",
-        "ranges": { "today": "আজ", "week": "সপ্তাহ", "month": "মাস", "year": "বছর" },
-        "rangeTitles": { "today": "আজকের কার্যক্রম", "week": "সাপ্তাহিক কার্যক্রম", "month": "মাসিক কার্যক্রম", "year": "বার্ষিক কার্যক্রম" },
-        "actions": { "refresh": "রিফ্রেশ", "retry": "আবার চেষ্টা করুন" },
-        "empty": { "title": "ড্যাশবোর্ড পাওয়া যাচ্ছে না", "description": "তথ্য লোড করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।" },
+        "ranges": {
+            "today": "আজ",
+            "week": "সপ্তাহ",
+            "month": "মাস",
+            "year": "বছর"
+        },
+        "rangeTitles": {
+            "today": "আজকের কার্যক্রম",
+            "week": "সাপ্তাহিক কার্যক্রম",
+            "month": "মাসিক কার্যক্রম",
+            "year": "বার্ষিক কার্যক্রম"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "retry": "আবার চেষ্টা করুন"
+        },
+        "empty": {
+            "title": "ড্যাশবোর্ড পাওয়া যাচ্ছে না",
+            "description": "তথ্য লোড করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।"
+        },
         "kpis": {
-            "netRevenue": "নিট আয়", "totalOrders": "মোট অর্ডার", "pendingOrders": "অপেক্ষমাণ অর্ডার",
-            "operationalQueue": "কার্যক্রমের অপেক্ষমাণ তালিকা", "paidOrders": "পরিশোধিত অর্ডার", "clearedPayments": "সম্পন্ন পেমেন্ট",
-            "activeProducts": "সক্রিয় পণ্য", "variants": "{count}টি ভ্যারিয়েন্ট", "conversionRate": "রূপান্তরের হার",
+            "netRevenue": "নিট আয়",
+            "totalOrders": "মোট অর্ডার",
+            "pendingOrders": "অপেক্ষমাণ অর্ডার",
+            "operationalQueue": "কার্যক্রমের অপেক্ষমাণ তালিকা",
+            "paidOrders": "পরিশোধিত অর্ডার",
+            "clearedPayments": "সম্পন্ন পেমেন্ট",
+            "activeProducts": "সক্রিয় পণ্য",
+            "variants": "{count}টি ভ্যারিয়েন্ট",
+            "conversionRate": "রূপান্তরের হার",
             "visitorsToOrders": "ভিজিটর থেকে অর্ডার"
         },
-        "chartTypes": { "revenue": "আয়", "orders": "অর্ডার", "refunds": "রিফান্ড" },
-        "performance": { "title": "কার্যক্রমের প্রবণতা", "subtitle": "সময়ের সঙ্গে আয়, অর্ডার ও রিফান্ডের চিত্র" },
-        "metrics": { "totalRevenue": "মোট আয়", "avgOrderValue": "গড় অর্ডার মূল্য", "successRate": "সাফল্যের হার" },
+        "chartTypes": {
+            "revenue": "আয়",
+            "orders": "অর্ডার",
+            "refunds": "রিফান্ড"
+        },
+        "performance": {
+            "title": "কার্যক্রমের প্রবণতা",
+            "subtitle": "সময়ের সঙ্গে আয়, অর্ডার ও রিফান্ডের চিত্র"
+        },
+        "metrics": {
+            "totalRevenue": "মোট আয়",
+            "avgOrderValue": "গড় অর্ডার মূল্য",
+            "successRate": "সাফল্যের হার"
+        },
         "distribution": {
-            "title": "বণ্টন বিশ্লেষণ", "subtitle": "পেমেন্ট পদ্ধতি ও মজুদের বিভাগভিত্তিক পূর্ণাঙ্গ হিসাব",
-            "paymentMethods": "পেমেন্ট পদ্ধতি", "paymentSubtitle": "নির্বাচিত সময়ের অর্ডার পেমেন্টের বিভাজন",
-            "inventoryStatus": "মজুদের অবস্থা", "inventorySubtitle": "সব ভ্যারিয়েন্টের বর্তমান মজুদ পরিস্থিতি"
+            "title": "বণ্টন বিশ্লেষণ",
+            "subtitle": "পেমেন্ট পদ্ধতি ও মজুদের বিভাগভিত্তিক পূর্ণাঙ্গ হিসাব",
+            "paymentMethods": "পেমেন্ট পদ্ধতি",
+            "paymentSubtitle": "নির্বাচিত সময়ের অর্ডার পেমেন্টের বিভাজন",
+            "inventoryStatus": "মজুদের অবস্থা",
+            "inventorySubtitle": "সব ভ্যারিয়েন্টের বর্তমান মজুদ পরিস্থিতি"
         },
-        "inventory": { "inStock": "মজুদ আছে", "lowStock": "মজুদ কম", "outOfStock": "মজুদ শেষ" },
-        "weekly": { "title": "সাপ্তাহিক কার্যক্রম", "subtitle": "নির্বাচিত সময়ে আয় ও অর্ডারের তুলনা", "revenueBdt": "আয় (টাকা)" },
-        "topProducts": { "title": "শীর্ষ পণ্য", "subtitle": "আয়ের ভিত্তিতে সর্বাধিক বিক্রিত পণ্য" },
+        "inventory": {
+            "inStock": "মজুদ আছে",
+            "lowStock": "মজুদ কম",
+            "outOfStock": "মজুদ শেষ"
+        },
+        "weekly": {
+            "title": "সাপ্তাহিক কার্যক্রম",
+            "subtitle": "নির্বাচিত সময়ে আয় ও অর্ডারের তুলনা",
+            "revenueBdt": "আয় (টাকা)"
+        },
+        "topProducts": {
+            "title": "শীর্ষ পণ্য",
+            "subtitle": "আয়ের ভিত্তিতে সর্বাধিক বিক্রিত পণ্য"
+        },
         "orders": {
-            "title": "অর্ডারের ধাপ", "subtitle": "অর্ডারের বর্তমান অবস্থার তাৎক্ষণিক বিবরণ", "pending": "অপেক্ষমাণ",
-            "processing": "প্রক্রিয়াধীন", "shipped": "পাঠানো হয়েছে", "delivered": "ডেলিভারি হয়েছে", "cancelled": "বাতিল",
-            "unpaid": "অপরিশোধিত", "live": "সক্রিয়", "recent": "সাম্প্রতিক অর্ডার", "guest": "অতিথি", "empty": "সাম্প্রতিক কোনো অর্ডার নেই"
+            "title": "অর্ডারের ধাপ",
+            "subtitle": "অর্ডারের বর্তমান অবস্থার তাৎক্ষণিক বিবরণ",
+            "pending": "অপেক্ষমাণ",
+            "processing": "প্রক্রিয়াধীন",
+            "shipped": "পাঠানো হয়েছে",
+            "delivered": "ডেলিভারি হয়েছে",
+            "cancelled": "বাতিল",
+            "unpaid": "অপরিশোধিত",
+            "live": "সক্রিয়",
+            "recent": "সাম্প্রতিক অর্ডার",
+            "guest": "অতিথি",
+            "empty": "সাম্প্রতিক কোনো অর্ডার নেই"
         },
-        "warehouse": { "title": "ওয়্যারহাউস বণ্টন", "subtitle": "অবস্থানভিত্তিক মজুদ", "units": "ইউনিট", "totalVariants": "মোট ভ্যারিয়েন্ট", "reservedUnits": "সংরক্ষিত ইউনিট" },
+        "warehouse": {
+            "title": "ওয়্যারহাউস বণ্টন",
+            "subtitle": "অবস্থানভিত্তিক মজুদ",
+            "units": "ইউনিট",
+            "totalVariants": "মোট ভ্যারিয়েন্ট",
+            "reservedUnits": "সংরক্ষিত ইউনিট"
+        },
         "quickActions": {
-            "title": "দ্রুত কার্যক্রম", "subtitle": "সাধারণ প্রশাসনিক কাজ",
-            "addProduct": "পণ্য যোগ করুন", "addProductDescription": "নতুন পণ্য ও ভ্যারিয়েন্ট তৈরি করুন",
-            "viewOrders": "অর্ডার দেখুন", "viewOrdersDescription": "অর্ডার পূরণ ও শিপিং পরিচালনা করুন",
-            "checkStock": "মজুদ দেখুন", "checkStockDescription": "মজুদের পরিমাণ পর্যবেক্ষণ করুন",
-            "createCoupon": "কুপন তৈরি করুন", "createCouponDescription": "প্রচারাভিযান চালু করুন",
-            "supportInbox": "সাপোর্ট ইনবক্স", "supportInboxDescription": "ক্রেতার প্রশ্নের উত্তর দিন"
+            "title": "দ্রুত কার্যক্রম",
+            "subtitle": "সাধারণ প্রশাসনিক কাজ",
+            "addProduct": "পণ্য যোগ করুন",
+            "addProductDescription": "নতুন পণ্য ও ভ্যারিয়েন্ট তৈরি করুন",
+            "viewOrders": "অর্ডার দেখুন",
+            "viewOrdersDescription": "অর্ডার পূরণ ও শিপিং পরিচালনা করুন",
+            "checkStock": "মজুদ দেখুন",
+            "checkStockDescription": "মজুদের পরিমাণ পর্যবেক্ষণ করুন",
+            "createCoupon": "কুপন তৈরি করুন",
+            "createCouponDescription": "প্রচারাভিযান চালু করুন",
+            "supportInbox": "সাপোর্ট ইনবক্স",
+            "supportInboxDescription": "ক্রেতার প্রশ্নের উত্তর দিন"
         },
         "customers": {
-            "title": "ক্রেতা বিশ্লেষণ", "subtitle": "ক্রেতার আচরণ ও আনুগত্যের পরিমাপ", "totalUsers": "মোট ব্যবহারকারী",
-            "activeBuyers": "সক্রিয় ক্রেতা", "repeatRate": "পুনরায় কেনার হার", "avgRating": "গড় রেটিং", "topCustomers": "শীর্ষ ক্রেতা"
+            "title": "ক্রেতা বিশ্লেষণ",
+            "subtitle": "ক্রেতার আচরণ ও আনুগত্যের পরিমাপ",
+            "totalUsers": "মোট ব্যবহারকারী",
+            "activeBuyers": "সক্রিয় ক্রেতা",
+            "repeatRate": "পুনরায় কেনার হার",
+            "avgRating": "গড় রেটিং",
+            "topCustomers": "শীর্ষ ক্রেতা"
         },
         "marketing": {
-            "title": "মার্কেটিং কার্যক্রম", "subtitle": "ট্রাফিকের উৎস ও ক্যাম্পেইনের পরিমাপ", "liveUsers": "বর্তমান ব্যবহারকারী",
-            "totalVisitors": "মোট ভিজিটর", "pageviews": "পেজ ভিউ", "trafficVisitors": "ট্রাফিক ভিজিটর",
-            "visitorTrend": "ভিজিটরের প্রবণতা", "visitors": "ভিজিটর", "pageViews": "পেজ ভিউ", "averageSlice": "গড় অংশ",
+            "title": "মার্কেটিং কার্যক্রম",
+            "subtitle": "ট্রাফিকের উৎস ও ক্যাম্পেইনের পরিমাপ",
+            "liveUsers": "বর্তমান ব্যবহারকারী",
+            "totalVisitors": "মোট ভিজিটর",
+            "pageviews": "পেজ ভিউ",
+            "trafficVisitors": "ট্রাফিক ভিজিটর",
+            "visitorTrend": "ভিজিটরের প্রবণতা",
+            "visitors": "ভিজিটর",
+            "pageViews": "পেজ ভিউ",
+            "averageSlice": "গড় অংশ",
             "noVisitorData": "নির্বাচিত সময়ের জন্য কোনো ভিজিটর বিশ্লেষণ পাওয়া যায়নি।"
         },
         "support": {
-            "title": "সাপোর্টের অপেক্ষমাণ তালিকা", "subtitle": "গ্রাহকসেবার পরিমাপ", "openChats": "চলমান চ্যাট",
-            "refundRequests": "রিফান্ডের আবেদন", "noConversations": "কোনো সক্রিয় কথোপকথন নেই"
+            "title": "সাপোর্টের অপেক্ষমাণ তালিকা",
+            "subtitle": "গ্রাহকসেবার পরিমাপ",
+            "openChats": "চলমান চ্যাট",
+            "refundRequests": "রিফান্ডের আবেদন",
+            "noConversations": "কোনো সক্রিয় কথোপকথন নেই"
         },
-        "alerts": { "title": "মজুদ সতর্কতা", "subtitle": "যেসব পণ্যে নজর দেওয়া প্রয়োজন", "healthy": "সব পণ্যের মজুদ পর্যাপ্ত" },
-        "activity": { "title": "সিস্টেম কার্যক্রম", "subtitle": "সাম্প্রতিক প্ল্যাটফর্ম ইভেন্ট", "empty": "সাম্প্রতিক কোনো কার্যক্রম নেই" },
-        "common": { "noData": "কোনো তথ্য নেই" }
+        "alerts": {
+            "title": "মজুদ সতর্কতা",
+            "subtitle": "যেসব পণ্যে নজর দেওয়া প্রয়োজন",
+            "healthy": "সব পণ্যের মজুদ পর্যাপ্ত"
+        },
+        "activity": {
+            "title": "সিস্টেম কার্যক্রম",
+            "subtitle": "সাম্প্রতিক প্ল্যাটফর্ম ইভেন্ট",
+            "empty": "সাম্প্রতিক কোনো কার্যক্রম নেই"
+        },
+        "common": {
+            "noData": "কোনো তথ্য নেই"
+        }
     },
     "AdminHeader": {
-        "admin": "অ্যাডমিন", "user": "ব্যবহারকারী", "toggleMenu": "মেনু খুলুন বা বন্ধ করুন", "changeLanguage": "ভাষা পরিবর্তন করুন",
-        "selectTheme": "থিম নির্বাচন করুন", "themes": { "light": "লাইট", "dark": "ডার্ক" },
-        "notifications": {
-            "title": "অ্যাডমিন নোটিফিকেশন", "loading": "লোড হচ্ছে...",
-            "unread": "{count, plural, =0 {কোনো অপঠিত নোটিফিকেশন নেই} =1 {#টি অপঠিত নোটিফিকেশন} other {#টি অপঠিত নোটিফিকেশন}}",
-            "empty": "কোনো অ্যাডমিন নোটিফিকেশন নেই।", "viewAll": "সব দেখুন", "noScm": "কোনো SCM নোটিফিকেশন নেই।",
-            "investors": "বিনিয়োগকারী", "noInvestors": "বিনিয়োগকারীর কোনো নোটিফিকেশন নেই।"
+        "admin": "অ্যাডমিন",
+        "user": "ব্যবহারকারী",
+        "toggleMenu": "মেনু খুলুন বা বন্ধ করুন",
+        "changeLanguage": "ভাষা পরিবর্তন করুন",
+        "selectTheme": "থিম নির্বাচন করুন",
+        "themes": {
+            "light": "লাইট",
+            "dark": "ডার্ক"
         },
-        "viewSite": "সাইট দেখুন", "viewProfile": "প্রোফাইল দেখুন", "profile": "প্রোফাইল", "me": "আমি", "logout": "লগআউট"
+        "notifications": {
+            "title": "অ্যাডমিন নোটিফিকেশন",
+            "loading": "লোড হচ্ছে...",
+            "unread": "{count, plural, =0 {কোনো অপঠিত নোটিফিকেশন নেই} =1 {#টি অপঠিত নোটিফিকেশন} other {#টি অপঠিত নোটিফিকেশন}}",
+            "empty": "কোনো অ্যাডমিন নোটিফিকেশন নেই।",
+            "viewAll": "সব দেখুন",
+            "noScm": "কোনো SCM নোটিফিকেশন নেই।",
+            "investors": "বিনিয়োগকারী",
+            "noInvestors": "বিনিয়োগকারীর কোনো নোটিফিকেশন নেই।"
+        },
+        "viewSite": "সাইট দেখুন",
+        "viewProfile": "প্রোফাইল দেখুন",
+        "profile": "প্রোফাইল",
+        "me": "আমি",
+        "logout": "লগআউট"
     },
     "AdminSidebar": {
-        "Overview": "সারসংক্ষেপ", "Dashboard": "ড্যাশবোর্ড", "Analytics": "অ্যানালিটিক্স", "Reports": "রিপোর্ট",
-        "Operations": "কার্যক্রম", "Users": "ব্যবহারকারী", "Products": "পণ্য", "Reviews": "রিভিউ", "Orders": "অর্ডার",
-        "Shipments": "শিপমেন্ট", "Delivery": "ডেলিভারি", "Warehouse": "ওয়্যারহাউস", "Warehouse Dashboard": "ওয়্যারহাউস ড্যাশবোর্ড",
-        "Logistics": "লজিস্টিকস", "Stock Management": "মজুদ ব্যবস্থাপনা", "Shipping Rates": "শিপিং রেট", "Deliveryman": "ডেলিভারিম্যান", "Payroll": "বেতন ব্যবস্থাপনা",
-        "SCM": "সাপ্লাই চেইন", "Workspace": "কর্মক্ষেত্র", "SCM Home": "সাপ্লাই চেইন হোম", "My Tasks": "আমার কাজ",
-        "Notifications": "নোটিফিকেশন", "Exceptions": "ব্যতিক্রম", "Procurement": "ক্রয় ব্যবস্থাপনা", "Purchase Requisitions": "ক্রয় চাহিদাপত্র",
-        "RFQs": "দরপত্র অনুরোধ", "Comparative Statements": "তুলনামূলক বিবরণী", "Purchase Orders": "ক্রয় আদেশ", "Landed Costs": "অবতরণ খরচ",
-        "Goods Receipts": "পণ্য গ্রহণ", "Material Requests": "উপকরণ অনুরোধ", "Material Releases": "উপকরণ ছাড়", "Release Report": "ছাড়পত্র রিপোর্ট",
-        "Warehouse Transfers": "ওয়্যারহাউস স্থানান্তর", "Replenishment": "পুনরায় মজুদ", "Reorder Alerts": "পুনঃঅর্ডার সতর্কতা",
-        "Warehouse Locations": "ওয়্যারহাউস অবস্থান", "Stock Reports": "মজুদ রিপোর্ট", "Stock Cards": "স্টক কার্ড",
-        "Physical Verifications": "ভৌত যাচাই", "Asset Lifecycle": "সম্পদের জীবনচক্র", "Supplier": "সরবরাহকারী",
-        "Suppliers": "সরবরাহকারীরা", "Supplier Portal Access": "সরবরাহকারী পোর্টাল অ্যাক্সেস", "Vendor Approvals": "ভেন্ডর অনুমোদন",
-        "Vendor Feedback": "ভেন্ডর মতামত", "Supplier Intelligence": "সরবরাহকারী বিশ্লেষণ", "SLA Policies": "SLA নীতিমালা",
-        "Supplier Returns": "সরবরাহকারী রিটার্ন", "Finance": "অর্থ বিভাগ", "Payment Requests": "পেমেন্ট অনুরোধ",
-        "Payment Reports": "পেমেন্ট রিপোর্ট", "Supplier Invoices": "সরবরাহকারীর ইনভয়েস", "Supplier Ledger": "সরবরাহকারী খতিয়ান",
-        "3-Way Match": "তিনমুখী মিল", "Governance": "সুশাসন", "SCM Dashboard": "সাপ্লাই চেইন ড্যাশবোর্ড",
-        "Business Network": "ব্যবসায়িক নেটওয়ার্ক", "Business Home": "ব্যবসা হোম", "Organizations": "প্রতিষ্ঠান",
-        "Business Accounts": "ব্যবসায়িক অ্যাকাউন্ট", "Business Orders": "ব্যবসায়িক অর্ডার", "Corporate Sales": "করপোরেট বিক্রয়",
-        "Sales RFQs": "বিক্রয় দরপত্র অনুরোধ", "Quotations": "মূল্য প্রস্তাব", "Customer POs": "ক্রেতার ক্রয় আদেশ",
-        "Corporate Credit": "করপোরেট ঋণ", "Pricing": "মূল্য নির্ধারণ", "Pricing Tiers": "মূল্য স্তর", "Contract Prices": "চুক্তিমূল্য",
-        "Partners": "অংশীদার", "Partner Profiles": "অংশীদার প্রোফাইল", "Agreements": "চুক্তি", "Registered Leads": "নিবন্ধিত লিড",
-        "Commission Plans": "কমিশন পরিকল্পনা", "Commission Ledger": "কমিশন খতিয়ান", "Settlements": "নিষ্পত্তি",
-        "Payout Accounts": "পেআউট অ্যাকাউন্ট", "Risk Review": "ঝুঁকি পর্যালোচনা", "Dispute Evidence": "বিরোধের প্রমাণ",
-        "Audit Log": "অডিট লগ", "Business Reports": "ব্যবসায়িক রিপোর্ট", "Investors": "বিনিয়োগকারী",
-        "Investor Home": "বিনিয়োগকারী হোম", "Investor Registry": "বিনিয়োগকারী নিবন্ধন", "Capital Ledger": "মূলধন খতিয়ান",
-        "Allocations": "বরাদ্দ", "Profit Runs": "মুনাফা বণ্টন", "Retained Profit": "সংরক্ষিত মুনাফা", "Payouts": "অর্থ প্রদান",
-        "Withdrawals": "উত্তোলন", "Documents": "নথি", "Statements": "বিবরণী", "Statement Schedules": "বিবরণীর সময়সূচি",
-        "Profile Requests": "প্রোফাইল অনুরোধ", "Activity Log": "কার্যক্রমের লগ", "Portal Access": "পোর্টাল অ্যাক্সেস",
-        "Management": "ব্যবস্থাপনা", "Couriers": "কুরিয়ার", "VAT Management": "ভ্যাট ব্যবস্থাপনা", "Blogs Management": "ব্লগ ব্যবস্থাপনা",
-        "Categories": "ক্যাটাগরি", "Brands": "ব্র্যান্ড", "Flash Sales": "ফ্ল্যাশ সেল", "Search Management": "সার্চ ব্যবস্থাপনা",
-        "Newsletter": "নিউজলেটার", "Coupons": "কুপন", "Communication": "যোগাযোগ", "Chats": "চ্যাট", "Settings": "সেটিংস",
-        "General Settings": "সাধারণ সেটিংস", "Writers": "লেখক", "Publishers": "প্রকাশক", "Store Features": "স্টোর ফিচার",
-        "Gallery Management": "গ্যালারি ব্যবস্থাপনা", "RBAC": "ভূমিকাভিত্তিক অনুমতি"
+        "Overview": "সারসংক্ষেপ",
+        "Dashboard": "ড্যাশবোর্ড",
+        "Analytics": "অ্যানালিটিক্স",
+        "Reports": "রিপোর্ট",
+        "Operations": "কার্যক্রম",
+        "Users": "ব্যবহারকারী",
+        "Products": "পণ্য",
+        "Reviews": "রিভিউ",
+        "Orders": "অর্ডার",
+        "Shipments": "শিপমেন্ট",
+        "Delivery": "ডেলিভারি",
+        "Warehouse": "ওয়্যারহাউস",
+        "Warehouse Dashboard": "ওয়্যারহাউস ড্যাশবোর্ড",
+        "Logistics": "লজিস্টিকস",
+        "Stock Management": "মজুদ ব্যবস্থাপনা",
+        "Shipping Rates": "শিপিং রেট",
+        "Deliveryman": "ডেলিভারিম্যান",
+        "Payroll": "বেতন ব্যবস্থাপনা",
+        "SCM": "সাপ্লাই চেইন",
+        "Workspace": "কর্মক্ষেত্র",
+        "SCM Home": "সাপ্লাই চেইন হোম",
+        "My Tasks": "আমার কাজ",
+        "Notifications": "নোটিফিকেশন",
+        "Exceptions": "ব্যতিক্রম",
+        "Procurement": "ক্রয় ব্যবস্থাপনা",
+        "Purchase Requisitions": "ক্রয় চাহিদাপত্র",
+        "RFQs": "দরপত্র অনুরোধ",
+        "Comparative Statements": "তুলনামূলক বিবরণী",
+        "Purchase Orders": "ক্রয় আদেশ",
+        "Landed Costs": "অবতরণ খরচ",
+        "Goods Receipts": "পণ্য গ্রহণ",
+        "Material Requests": "উপকরণ অনুরোধ",
+        "Material Releases": "উপকরণ ছাড়",
+        "Release Report": "ছাড়পত্র রিপোর্ট",
+        "Warehouse Transfers": "ওয়্যারহাউস স্থানান্তর",
+        "Replenishment": "পুনরায় মজুদ",
+        "Reorder Alerts": "পুনঃঅর্ডার সতর্কতা",
+        "Warehouse Locations": "ওয়্যারহাউস অবস্থান",
+        "Stock Reports": "মজুদ রিপোর্ট",
+        "Stock Cards": "স্টক কার্ড",
+        "Physical Verifications": "ভৌত যাচাই",
+        "Asset Lifecycle": "সম্পদের জীবনচক্র",
+        "Supplier": "সরবরাহকারী",
+        "Suppliers": "সরবরাহকারীরা",
+        "Supplier Portal Access": "সরবরাহকারী পোর্টাল অ্যাক্সেস",
+        "Vendor Approvals": "ভেন্ডর অনুমোদন",
+        "Vendor Feedback": "ভেন্ডর মতামত",
+        "Supplier Intelligence": "সরবরাহকারী বিশ্লেষণ",
+        "SLA Policies": "SLA নীতিমালা",
+        "Supplier Returns": "সরবরাহকারী রিটার্ন",
+        "Finance": "অর্থ বিভাগ",
+        "Payment Requests": "পেমেন্ট অনুরোধ",
+        "Payment Reports": "পেমেন্ট রিপোর্ট",
+        "Supplier Invoices": "সরবরাহকারীর ইনভয়েস",
+        "Supplier Ledger": "সরবরাহকারী খতিয়ান",
+        "3-Way Match": "তিনমুখী মিল",
+        "Governance": "সুশাসন",
+        "SCM Dashboard": "সাপ্লাই চেইন ড্যাশবোর্ড",
+        "Business Network": "ব্যবসায়িক নেটওয়ার্ক",
+        "Business Home": "ব্যবসা হোম",
+        "Organizations": "প্রতিষ্ঠান",
+        "Business Accounts": "ব্যবসায়িক অ্যাকাউন্ট",
+        "Business Orders": "ব্যবসায়িক অর্ডার",
+        "Corporate Sales": "করপোরেট বিক্রয়",
+        "Sales RFQs": "বিক্রয় দরপত্র অনুরোধ",
+        "Quotations": "মূল্য প্রস্তাব",
+        "Customer POs": "ক্রেতার ক্রয় আদেশ",
+        "Corporate Credit": "করপোরেট ঋণ",
+        "Pricing": "মূল্য নির্ধারণ",
+        "Pricing Tiers": "মূল্য স্তর",
+        "Contract Prices": "চুক্তিমূল্য",
+        "Partners": "অংশীদার",
+        "Partner Profiles": "অংশীদার প্রোফাইল",
+        "Agreements": "চুক্তি",
+        "Registered Leads": "নিবন্ধিত লিড",
+        "Commission Plans": "কমিশন পরিকল্পনা",
+        "Commission Ledger": "কমিশন খতিয়ান",
+        "Settlements": "নিষ্পত্তি",
+        "Payout Accounts": "পেআউট অ্যাকাউন্ট",
+        "Risk Review": "ঝুঁকি পর্যালোচনা",
+        "Dispute Evidence": "বিরোধের প্রমাণ",
+        "Audit Log": "অডিট লগ",
+        "Business Reports": "ব্যবসায়িক রিপোর্ট",
+        "Investors": "বিনিয়োগকারী",
+        "Investor Home": "বিনিয়োগকারী হোম",
+        "Investor Registry": "বিনিয়োগকারী নিবন্ধন",
+        "Capital Ledger": "মূলধন খতিয়ান",
+        "Allocations": "বরাদ্দ",
+        "Profit Runs": "মুনাফা বণ্টন",
+        "Retained Profit": "সংরক্ষিত মুনাফা",
+        "Payouts": "অর্থ প্রদান",
+        "Withdrawals": "উত্তোলন",
+        "Documents": "নথি",
+        "Statements": "বিবরণী",
+        "Statement Schedules": "বিবরণীর সময়সূচি",
+        "Profile Requests": "প্রোফাইল অনুরোধ",
+        "Activity Log": "কার্যক্রমের লগ",
+        "Portal Access": "পোর্টাল অ্যাক্সেস",
+        "Management": "ব্যবস্থাপনা",
+        "Couriers": "কুরিয়ার",
+        "VAT Management": "ভ্যাট ব্যবস্থাপনা",
+        "Blogs Management": "ব্লগ ব্যবস্থাপনা",
+        "Categories": "ক্যাটাগরি",
+        "Brands": "ব্র্যান্ড",
+        "Flash Sales": "ফ্ল্যাশ সেল",
+        "Search Management": "সার্চ ব্যবস্থাপনা",
+        "Newsletter": "নিউজলেটার",
+        "Coupons": "কুপন",
+        "Communication": "যোগাযোগ",
+        "Chats": "চ্যাট",
+        "Settings": "সেটিংস",
+        "General Settings": "সাধারণ সেটিংস",
+        "Writers": "লেখক",
+        "Publishers": "প্রকাশক",
+        "Store Features": "স্টোর ফিচার",
+        "Gallery Management": "গ্যালারি ব্যবস্থাপনা",
+        "RBAC": "ভূমিকাভিত্তিক অনুমতি"
+    },
+    "AdminAnalytics": {
+        "title": "অ্যানালিটিক্স ড্যাশবোর্ড",
+        "subtitle": "ট্রাফিক, উৎস, অবস্থান ও ডিভাইসের বিশ্লেষণ",
+        "common": {
+            "unknown": "অজানা",
+            "visitors": "ভিজিটর",
+            "timeValue": "সময়: {value}"
+        },
+        "duration": {
+            "seconds": "{count} সেকেন্ড",
+            "minutesSeconds": "{minutes} মিনিট {seconds} সেকেন্ড",
+            "hoursMinutes": "{hours} ঘণ্টা {minutes} মিনিট"
+        },
+        "tabs": {
+            "traffic": "ট্রাফিক",
+            "sources": "উৎস",
+            "geo": "অবস্থান",
+            "devices": "ডিভাইস"
+        },
+        "deviceTabs": {
+            "deviceType": "ডিভাইসের ধরন",
+            "browser": "ব্রাউজার",
+            "os": "অপারেটিং সিস্টেম"
+        },
+        "ranges": {
+            "today": "আজ",
+            "last24Hours": "গত ২৪ ঘণ্টা",
+            "last7Days": "গত ৭ দিন",
+            "last30Days": "গত ৩০ দিন",
+            "custom": "কাস্টম",
+            "to": "থেকে",
+            "hourly": "প্রতি ঘণ্টায়",
+            "daily": "প্রতিদিন",
+            "hourlyHint": "২৪ ঘণ্টার রেঞ্জের জন্য প্রতি ঘণ্টায় দেখানো হয়"
+        },
+        "kpis": {
+            "liveUsers": "বর্তমান ব্যবহারকারী",
+            "totalVisitors": "মোট ভিজিটর",
+            "pageViews": "পেজ ভিউ",
+            "totalActiveTime": "মোট সক্রিয় সময়",
+            "avgActiveTime": "গড় সক্রিয় সময়"
+        },
+        "traffic": {
+            "visitorsOverTime": "সময়ের সঙ্গে ভিজিটর",
+            "uniqueVisitorsTrend": "অনন্য ভিজিটরের প্রবণতা",
+            "pageViewsOverTime": "সময়ের সঙ্গে পেজ ভিউ",
+            "pageViewsTrend": "পেজ ভিউয়ের প্রবণতা",
+            "peakVisitors": "সর্বোচ্চ ভিজিটর: {count}",
+            "totalPageViews": "মোট পেজ ভিউ: {count}"
+        },
+        "pages": {
+            "title": "শীর্ষ পেজ",
+            "sortedByViews": "ভিউ অনুযায়ী সাজানো",
+            "path": "পাথ",
+            "views": "ভিউ",
+            "avgActiveTime": "গড় সক্রিয় সময়",
+            "engagement": "এনগেজমেন্ট",
+            "high": "উচ্চ",
+            "medium": "মধ্যম",
+            "low": "নিম্ন"
+        },
+        "sources": {
+            "title": "ট্রাফিকের উৎস",
+            "subtitle": "ভিজিটর কোথা থেকে আসছে",
+            "visits": "ভিজিট"
+        },
+        "geo": {
+            "title": "ভৌগোলিক অবস্থান",
+            "notConfigured": "ভৌগোলিক অবস্থান বিশ্লেষণ কনফিগার করা হয়নি",
+            "configurationHint": "এই বৈশিষ্ট্যটি চালু করতে অনুগ্রহ করে জিও লোকেশন প্রদানকারী কনফিগার করুন।",
+            "topCountries": "শীর্ষ দেশ",
+            "topCities": "শীর্ষ শহর"
+        },
+        "empty": {
+            "analytics": "নির্বাচিত সময়ের জন্য কোনো অ্যানালিটিক্স ডেটা পাওয়া যায়নি।",
+            "pages": "নির্বাচিত সময়ের জন্য কোনো পেজ ডেটা পাওয়া যায়নি।",
+            "sources": "নির্বাচিত সময়ের জন্য কোনো উৎস ডেটা পাওয়া যায়নি।"
+        },
+        "errors": {
+            "load": "অ্যানালিটিক্স ডেটা লোড করা যায়নি।",
+            "loadWithStatus": "অ্যানালিটিক্স লোড করা যায়নি (স্ট্যাটাস: {status})।",
+            "invalidDateRange": "অবৈধ তারিখের পরিসর। অনুগ্রহ করে ভিন্ন তারিখ নির্বাচন করুন।"
+        }
+    },
+    "AdminReports": {
+        "hero": {
+            "badge": "কমার্স ইনসাইট",
+            "title": "এক্সিকিউটিভ ড্যাশবোর্ড সারসংক্ষেপ",
+            "description": "এক নজরে আপনার ব্যবসার পারফরম্যান্সের পরিষ্কার, রিয়েল-টাইম চিত্র পান। বিক্রয় ও মুনাফা থেকে শুরু করে ভ্যাট, মজুদ ও ডেলিভারি — সব গুরুত্বপূর্ণ মেট্রিক একই ড্যাশবোর্ডে পর্যবেক্ষণ করুন, যা স্মার্ট সিদ্ধান্তের জন্য তৈরি।"
+        },
+        "quickRanges": {
+            "last7": "গত ৭ দিন",
+            "last30": "গত ৩০ দিন",
+            "last90": "গত ৯০ দিন"
+        },
+        "filters": {
+            "from": "থেকে",
+            "to": "পর্যন্ত"
+        },
+        "actions": {
+            "applyFilters": "ফিল্টার প্রয়োগ করুন",
+            "exportCsv": "CSV এক্সপোর্ট",
+            "exportSection": "{section} এক্সপোর্ট"
+        },
+        "tabs": {
+            "overview": "সারসংক্ষেপ",
+            "sales": "বিক্রয়",
+            "profit": "মুনাফা",
+            "vat": "ভ্যাট",
+            "inventory": "মজুদ",
+            "delivery": "ডেলিভারি"
+        },
+        "metrics": {
+            "netSales": "নিট বিক্রয়",
+            "netProfit": "নিট মুনাফা",
+            "collectedVat": "সংগৃহীত ভ্যাট",
+            "lowStock": "কম মজুদ",
+            "proofPending": "প্রমাণ অপেক্ষমাণ",
+            "refundImpact": "{amount} রিফান্ড প্রভাব",
+            "netMargin": "{pct}% নিট মার্জিন",
+            "taxedOrders": "{count}টি করযুক্ত অর্ডার",
+            "outOfStock": "{count}টি স্টক শেষ",
+            "proofConfirmed": "{count}টি নিশ্চিত প্রমাণ",
+            "orders": "অর্ডার",
+            "deliveredHint": "{count}টি ডেলিভারি হয়েছে",
+            "avgOrderValue": "গড় অর্ডার মূল্য",
+            "refunds": "রিফান্ড",
+            "completedRefundsHint": "{count}টি সম্পন্ন রিফান্ড",
+            "warehouseUnits": "ওয়্যারহাউস ইউনিট",
+            "reservedHint": "{count}টি সংরক্ষিত",
+            "courierDelivered": "কুরিয়ার ডেলিভারি",
+            "inTransitHint": "{count}টি এখনও পথে",
+            "vat": "ভ্যাট",
+            "exclusiveVatHint": "{amount} অতিরিক্ত কর",
+            "proofPendingHint": "{count}টি প্রমাণ অপেক্ষমাণ"
+        },
+        "alerts": {
+            "refundPressure": "রিফান্ড চাপ",
+            "refundPressureText": "এই সময়ে {count}টি সম্পন্ন রিফান্ড হয়েছে।",
+            "stockPressure": "মজুদ চাপ",
+            "stockPressureText": "{count}টি ভ্যারিয়েন্টে পুনরায় মজুদ প্রয়োজন।",
+            "proofGaps": "প্রমাণের ঘাটতি",
+            "proofGapsText": "{count}টি শিপমেন্টে এখনও ক্রেতার প্রমাণ প্রয়োজন।"
+        },
+        "overview": {
+            "salesPulse": {
+                "title": "বিক্রয় স্পন্দন",
+                "description": "নির্বাচিত সময়ে গ্রস ও নিট বিক্রয়।",
+                "value": "{gross} গ্রস / {net} নিট"
+            },
+            "taxSnapshot": {
+                "title": "কর স্ন্যাপশট",
+                "description": "সংরক্ষিত অর্ডার-সময়ের ট্যাক্স স্ন্যাপশট থেকে সংগৃহীত ভ্যাট।",
+                "value": "{vat} ভ্যাট"
+            },
+            "deliveryConfidence": {
+                "title": "ডেলিভারি আস্থা",
+                "description": "কুরিয়ার সম্পন্নতা ও ক্রেতার প্রমাণ সংগ্রহের অবস্থা।",
+                "value": "{delivered} ডেলিভারি / {pending} প্রমাণ অপেক্ষমাণ"
+            },
+            "inventoryHealth": {
+                "title": "মজুদের অবস্থা",
+                "description": "ট্র্যাক করা ইউনিট ও পুনরায় মজুদের চাপ।",
+                "value": "{units} ইউনিট / {low} কম মজুদ"
+            },
+            "snapshot": {
+                "title": "এক্সিকিউটিভ স্ন্যাপশট",
+                "range": "{from} থেকে {to}"
+            },
+            "topProducts": {
+                "title": "শীর্ষ পণ্য",
+                "description": "নির্বাচিত সময়ে সর্বাধিক আয়ের পণ্য।"
+            },
+            "deliveryExceptions": {
+                "title": "ডেলিভারি ব্যতিক্রম",
+                "description": "বর্তমানে ফলো-আপ প্রয়োজন এমন কুরিয়ার ব্যতিক্রম।"
+            }
+        },
+        "priorityAlerts": {
+            "title": "অগ্রাধিকার সতর্কতা",
+            "description": "দ্রুততম যেসব সমস্যা আগে পর্যালোচনা করা উচিত।",
+            "empty": "এই সময়ে বড় কোনো রিপোর্ট সতর্কতা নেই।"
+        },
+        "sales": {
+            "title": "বিক্রয় রিপোর্ট",
+            "description": "{from} থেকে {to} পর্যন্ত আয় ও অর্ডার প্রবাহ।",
+            "grossRevenue": "গ্রস আয়",
+            "netSales": "নিট বিক্রয়",
+            "subtotal": "সাবটোটাল",
+            "paidOrders": "পরিশোধিত অর্ডার",
+            "avgOrderHint": "{amount} গড় অর্ডার",
+            "refundsHint": "{amount} রিফান্ড",
+            "shippingHint": "{amount} শিপিং সংগৃহীত",
+            "unpaidHint": "{amount} অপরিশোধিত মূল্য",
+            "dailyRevenue": {
+                "title": "দৈনিক আয়",
+                "description": "দৈনিক অর্ডার সংখ্যা, আয় ও ভ্যাট।"
+            },
+            "topSelling": {
+                "title": "সর্বাধিক বিক্রিত পণ্য",
+                "description": "নির্বাচিত সময়ে সর্বাধিক আয়ের পণ্য।"
+            }
+        },
+        "profit": {
+            "title": "মুনাফা রিপোর্ট",
+            "description": "সংরক্ষিত ক্রয়-মূল্যের স্ন্যাপশট ব্যবহার করে আনুমানিক গ্রস ও নিট মার্জিন।",
+            "grossSales": "গ্রস বিক্রয়",
+            "estimatedCost": "আনুমানিক খরচ",
+            "netProfit": "নিট মুনাফা",
+            "refundImpact": "রিফান্ড প্রভাব",
+            "refundedUnitsHint": "{count}টি রিফান্ডকৃত ইউনিট",
+            "topVariants": {
+                "title": "সর্বাধিক লাভজনক ভ্যারিয়েন্ট",
+                "description": "সর্বাধিক আনুমানিক গ্রস মুনাফা অবদানকারী ভ্যারিয়েন্ট।"
+            }
+        },
+        "vat": {
+            "title": "ভ্যাট রিপোর্ট",
+            "description": "ট্যাক্স ক্লাস ও শিপিং গন্তব্য অনুযায়ী সংগৃহীত ভ্যাট।",
+            "totalVat": "মোট ভ্যাট",
+            "inclusiveVat": "অন্তর্ভুক্ত ভ্যাট",
+            "exclusiveVat": "অতিরিক্ত ভ্যাট",
+            "taxedOrders": "করযুক্ত অর্ডার",
+            "byCountry": {
+                "title": "দেশ অনুযায়ী ভ্যাট",
+                "description": "অর্ডারের গন্তব্য অনুযায়ী সংগৃহীত ভ্যাট।"
+            },
+            "byClass": {
+                "title": "ক্লাস অনুযায়ী ভ্যাট",
+                "description": "সংরক্ষিত অর্ডার ট্যাক্স স্ন্যাপশট থেকে ট্যাক্স ক্লাসের পারফরম্যান্স।"
+            }
+        },
+        "inventory": {
+            "title": "মজুদ রিপোর্ট",
+            "description": "বর্তমান স্টক স্ন্যাপশট এবং নির্বাচিত সময়ের মুভমেন্ট কার্যক্রম।",
+            "trackedVariants": "ট্র্যাক করা ভ্যারিয়েন্ট",
+            "unitsOnHand": "হাতে থাকা ইউনিট",
+            "lowStock": "কম মজুদ",
+            "movement": "মুভমেন্ট",
+            "movementValue": "{in} ইন / {out} আউট",
+            "warehouseStock": {
+                "title": "ওয়্যারহাউস স্টক",
+                "description": "ওয়্যারহাউস অনুযায়ী বর্তমান পরিমাণ ও সংরক্ষিত ইউনিট।"
+            },
+            "lowStockAlerts": {
+                "title": "কম মজুদ সতর্কতা",
+                "description": "যেসব ভ্যারিয়েন্টে পুনরায় মজুদের প্রয়োজন।"
+            },
+            "movementReasons": {
+                "title": "মুভমেন্টের কারণ",
+                "description": "লগ করা কারণ অনুযায়ী নিট স্টক মুভমেন্ট।"
+            },
+            "recentLogs": {
+                "title": "সাম্প্রতিক মজুদ লগ",
+                "description": "নির্বাচিত সময়ে রেকর্ড করা সর্বশেষ স্টক পরিবর্তনের ইভেন্ট।"
+            }
+        },
+        "delivery": {
+            "title": "ডেলিভারি রিপোর্ট",
+            "description": "শিপমেন্টের ফলাফল ও ক্রেতার ডেলিভারি প্রমাণের কভারেজ।",
+            "shipments": "শিপমেন্ট",
+            "delivered": "ডেলিভারি হয়েছে",
+            "outForDeliveryHint": "{count}টি ডেলিভারির জন্য বেরিয়েছে",
+            "proofConfirmed": "প্রমাণ নিশ্চিত",
+            "returnsCancelled": "রিটার্ন / বাতিল",
+            "returnsCancelledValue": "{returned} / {cancelled}",
+            "courierPerformance": {
+                "title": "কুরিয়ার পারফরম্যান্স",
+                "description": "কুরিয়ার অনুযায়ী শিপমেন্ট সংখ্যা, ডেলিভারি ও প্রমাণ কভারেজ।"
+            },
+            "exceptions": {
+                "title": "ডেলিভারি ব্যতিক্রম",
+                "description": "রিটার্ন, বাতিল বা প্রমাণ অনুপস্থিত শিপমেন্ট রেকর্ড।"
+            }
+        },
+        "table": {
+            "product": "পণ্য",
+            "qty": "পরিমাণ",
+            "revenue": "আয়",
+            "date": "তারিখ",
+            "orders": "অর্ডার",
+            "vat": "ভ্যাট",
+            "variant": "ভ্যারিয়েন্ট",
+            "cost": "খরচ",
+            "profit": "মুনাফা",
+            "country": "দেশ",
+            "class": "ক্লাস",
+            "rate": "হার",
+            "inclusive": "অন্তর্ভুক্ত",
+            "warehouse": "ওয়্যারহাউস",
+            "quantity": "পরিমাণ",
+            "reserved": "সংরক্ষিত",
+            "stock": "স্টক",
+            "status": "অবস্থা",
+            "reason": "কারণ",
+            "events": "ইভেন্ট",
+            "netChange": "নিট পরিবর্তন",
+            "when": "কখন",
+            "item": "আইটেম",
+            "change": "পরিবর্তন",
+            "shipment": "শিপমেন্ট",
+            "courier": "কুরিয়ার",
+            "customer": "ক্রেতা",
+            "shipments": "শিপমেন্ট",
+            "delivered": "ডেলিভারি",
+            "proofs": "প্রমাণ",
+            "orderNumber": "অর্ডার #{id}"
+        },
+        "empty": {
+            "report": "কোনো রিপোর্ট ডেটা পাওয়া যায়নি।",
+            "topProducts": "কোনো পণ্য বিক্রয় পাওয়া যায়নি।",
+            "deliveryExceptions": "এই সময়ে কোনো ডেলিভারি ব্যতিক্রম নেই।",
+            "sales": "এই সময়ে কোনো বিক্রয় ডেটা নেই।",
+            "profit": "এই সময়ে কোনো মুনাফার সারি নেই।",
+            "vatCountry": "নির্বাচিত সময়ের জন্য কোনো ভ্যাট ডেটা পাওয়া যায়নি।",
+            "vatClass": "কোনো ট্যাক্স ক্লাস স্ন্যাপশট সারি পাওয়া যায়নি।",
+            "warehouseStock": "কোনো ওয়্যারহাউস স্টক রেকর্ড পাওয়া যায়নি।",
+            "lowStock": "এই মুহূর্তে কোনো কম মজুদ সতর্কতা নেই।",
+            "movementReasons": "এই সময়ে কোনো মজুদ মুভমেন্ট লগ হয়নি।",
+            "recentLogs": "এই সময়ে কোনো মজুদ লগ সারি পাওয়া যায়নি।",
+            "courier": "এই সময়ে কোনো শিপমেন্ট কার্যক্রম পাওয়া যায়নি।"
+        },
+        "errors": {
+            "load": "রিপোর্ট লোড করা যায়নি।",
+            "loadWithStatus": "রিপোর্ট লোড করা যায়নি ({status})।"
+        },
+        "common": {
+            "yes": "হ্যাঁ",
+            "no": "না",
+            "na": "প্রযোজ্য নয়"
+        }
+    },
+    "AdminUsers": {
+        "title": "ব্যবহারকারী",
+        "subtitle": "সব ব্যবহারকারীর অ্যাকাউন্ট পরিচালনা ও পর্যবেক্ষণ করুন",
+        "actions": {
+            "addUser": "ব্যবহারকারী যোগ করুন",
+            "refreshTitle": "ডেটা রিফ্রেশ করুন"
+        },
+        "stats": {
+            "totalUsers": "মোট ব্যবহারকারী",
+            "activeUsers": "সক্রিয় ব্যবহারকারী",
+            "adminAccounts": "অ্যাডমিন অ্যাকাউন্ট"
+        },
+        "list": {
+            "title": "ব্যবহারকারীর তালিকা",
+            "subtitle": "সব নিবন্ধিত ব্যবহারকারী পরিচালনা ও পর্যবেক্ষণ করুন",
+            "totalUsers": "{count} জন মোট ব্যবহারকারী",
+            "pageOf": "পৃষ্ঠা {page} / {totalPages}",
+            "perPage": "প্রতি পৃষ্ঠায় {count}টি"
+        },
+        "empty": {
+            "title": "কোনো ব্যবহারকারী পাওয়া যায়নি",
+            "filtered": "আপনার ফিল্টারের সাথে কোনো ব্যবহারকারী মেলেনি। অনুগ্রহ করে অন্য ফিল্টার চেষ্টা করুন।",
+            "noUsers": "এখনও কোনো ব্যবহারকারী তৈরি হয়নি। প্রথম ব্যবহারকারী যোগ করে শুরু করুন।",
+            "clearFilters": "ফিল্টার মুছুন"
+        },
+        "roles": {
+            "user": "ব্যবহারকারী",
+            "admin": "অ্যাডমিন",
+            "moderator": "মডারেটর"
+        },
+        "create": {
+            "title": "নতুন ব্যবহারকারী তৈরি করুন",
+            "subtitle": "মৌলিক তথ্য দিয়ে একটি নতুন ব্যবহারকারী অ্যাকাউন্ট যোগ করুন",
+            "email": "ইমেইল",
+            "emailPlaceholder": "user@example.com",
+            "name": "নাম",
+            "namePlaceholder": "জন ডো",
+            "phone": "ফোন",
+            "phonePlaceholder": "+৮৮০ ১৭xx xxxxxx",
+            "role": "ভূমিকা",
+            "password": "পাসওয়ার্ড",
+            "passwordPlaceholder": "সর্বনিম্ন ৬ অক্ষর",
+            "addresses": "ঠিকানা",
+            "mainAddressPlaceholder": "প্রধান ঠিকানা",
+            "additionalAddressPlaceholder": "অতিরিক্ত ঠিকানা {index}",
+            "remove": "মুছুন",
+            "addAnother": "+ আরেকটি ঠিকানা যোগ করুন",
+            "loadingRoles": "ভূমিকা লোড হচ্ছে...",
+            "systemSuffix": "(সিস্টেম)",
+            "cancel": "বাতিল করুন",
+            "submit": "ব্যবহারকারী তৈরি করুন",
+            "creating": "তৈরি হচ্ছে...",
+            "errors": {
+                "emailPasswordRequired": "ইমেইল ও পাসওয়ার্ড আবশ্যক",
+                "addressRequired": "অনুগ্রহ করে অন্তত একটি ঠিকানা দিন",
+                "failed": "ব্যবহারকারী তৈরি করা যায়নি",
+                "generic": "ব্যবহারকারী তৈরি করতে সমস্যা হয়েছে"
+            }
+        },
+        "errors": {
+            "loadRoles": "ভূমিকা লোড করা যায়নি",
+            "loadUsers": "ব্যবহারকারীর ডেটা লোড করা যায়নি"
+        }
+    },
+    "AdminUsersTable": {
+        "columns": {
+            "user": "ব্যবহারকারী",
+            "role": "ভূমিকা",
+            "activities": "কার্যক্রম",
+            "status": "অবস্থা",
+            "joined": "যোগদান",
+            "actions": "কার্যক্রম"
+        },
+        "noName": "নাম নেই",
+        "roles": {
+            "user": "ব্যবহারকারী"
+        },
+        "status": {
+            "temporarilyBanned": "সাময়িকভাবে নিষিদ্ধ",
+            "permanentlyBanned": "স্থায়ীভাবে নিষিদ্ধ",
+            "verified": "যাচাইকৃত",
+            "unverified": "অযাচাইকৃত"
+        },
+        "activities": {
+            "orders": "অর্ডার",
+            "reviews": "রিভিউ"
+        },
+        "actions": {
+            "view": "দেখুন",
+            "ban": "নিষিদ্ধ করুন",
+            "unban": "নিষেধাজ্ঞা প্রত্যাহার করুন",
+            "delete": "মুছুন"
+        },
+        "empty": {
+            "title": "কোনো ব্যবহারকারী পাওয়া যায়নি",
+            "description": "আপনার অনুসন্ধানের সাথে কোনো ব্যবহারকারী মেলেনি। অনুগ্রহ করে অন্য ফিল্টার চেষ্টা করুন।"
+        },
+        "alerts": {
+            "banReasonRequired": "অনুগ্রহ করে ব্যবহারকারী নিষিদ্ধ করার কারণ লিখুন",
+            "banFailed": "ব্যবহারকারী নিষিদ্ধ করা যায়নি",
+            "banError": "ব্যবহারকারী নিষিদ্ধ করার সময় সমস্যা হয়েছে",
+            "unbanFailed": "ব্যবহারকারীর নিষেধাজ্ঞা প্রত্যাহার করা যায়নি",
+            "unbanError": "নিষেধাজ্ঞা প্রত্যাহারের সময় সমস্যা হয়েছে",
+            "deleteConfirm": "আপনি কি নিশ্চিতভাবে {email} ব্যবহারকারীকে মুছতে চান?",
+            "deleteFailed": "ব্যবহারকারী মোছা যায়নি",
+            "deleteError": "ব্যবহারকারী মোছার সময় সমস্যা হয়েছে"
+        },
+        "banModal": {
+            "title": "ব্যবহারকারী নিষিদ্ধ করুন",
+            "reason": "নিষিদ্ধ করার কারণ",
+            "reasonPlaceholder": "ব্যবহারকারী নিষিদ্ধ করার কারণ লিখুন...",
+            "duration": "নিষেধাজ্ঞার সময়কাল",
+            "durations": {
+                "1day": "১ দিন",
+                "7days": "৭ দিন",
+                "30days": "৩০ দিন",
+                "90days": "৯০ দিন",
+                "1year": "১ বছর",
+                "permanent": "স্থায়ী নিষেধাজ্ঞা"
+            },
+            "warningTitle": "সতর্কতা",
+            "warningText": "নিষিদ্ধ ব্যবহারকারীরা সিস্টেমে লগইন করতে বা নতুন অর্ডার করতে পারবেন না। বিদ্যমান অর্ডার প্রভাবিত হবে না।",
+            "cancel": "বাতিল করুন",
+            "submit": "ব্যবহারকারী নিষিদ্ধ করুন",
+            "closeModal": "মডাল বন্ধ করুন"
+        }
+    },
+    "AdminUserFilters": {
+        "searchPlaceholder": "ইমেইল বা নাম দিয়ে খুঁজুন...",
+        "allRoles": "সব ভূমিকা",
+        "systemSuffix": "(সিস্টেম)",
+        "fallbackRoles": {
+            "user": "ব্যবহারকারী",
+            "admin": "অ্যাডমিন",
+            "moderator": "মডারেটর",
+            "manager": "ম্যানেজার"
+        },
+        "resetFilters": "ফিল্টার রিসেট করুন",
+        "activeFilters": "সক্রিয় ফিল্টার:",
+        "clearAll": "সব মুছুন"
+    },
+    "AdminPagination": {
+        "pageInfo": "পৃষ্ঠা {current} / {total} — মোট {total} পৃষ্ঠা",
+        "firstPage": "প্রথম পৃষ্ঠা",
+        "previousPage": "আগের পৃষ্ঠা",
+        "nextPage": "পরের পৃষ্ঠা",
+        "lastPage": "শেষ পৃষ্ঠা"
     }
 }
