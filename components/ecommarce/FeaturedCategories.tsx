@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowUpRight, LayoutGrid } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
 
 type CategoryDTO = {
@@ -92,12 +93,14 @@ function CategoryBackgroundImage({
 }
 
 export default function FeaturedCategories({
-  title = "Shop by Category",
+  title,
   categoriesData,
 }: {
   title?: string;
   categoriesData?: CategoryDTO[];
 }) {
+  const t = useTranslations("Landing.Categories");
+  const resolvedTitle = title ?? t("title");
   const [loading, setLoading] = useState(!categoriesData);
   const [cats, setCats] = useState<CategoryDTO[]>(() => categoriesData ?? []);
   const [error, setError] = useState<string | null>(null);
@@ -132,7 +135,7 @@ export default function FeaturedCategories({
         setCats(Array.isArray(list) ? list : []);
       } catch (e: any) {
         if (!mounted) return;
-        setError(e?.message || "Something went wrong");
+        setError(e?.message || t("loadError"));
       } finally {
         if (mounted) setLoading(false);
       }
@@ -143,7 +146,7 @@ export default function FeaturedCategories({
     return () => {
       mounted = false;
     };
-  }, [categoriesData]);
+  }, [categoriesData, t]);
 
   const firstParentCategories = useMemo(() => {
     const roots = cats
@@ -166,20 +169,20 @@ export default function FeaturedCategories({
     <section className="w-full bg-background text-foreground">
       <div className="px-4 py-4 sm:px-6 sm:py-10 lg:px-8">
         <span className="mb-2 inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-primary">
-          Categories
+          {t("eyebrow")}
         </span>
 
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex w-full flex-shrink-0 items-center justify-between gap-4">
             <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-              {title}
+              {resolvedTitle}
             </h2>
 
             <Link
               href="/ecommerce/categories"
               className="inline-flex flex-shrink-0 items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-bold text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
             >
-              See All
+              {t("seeAll")}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>

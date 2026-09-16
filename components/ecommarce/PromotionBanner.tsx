@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface Banner {
   id: number;
@@ -140,15 +141,17 @@ export default function PromotionBanner({ banners }: PromotionBannerProps) {
 }
 
 function SectionHeader() {
+  const t = useTranslations("Landing.Promotions");
+
   return (
     <div className="mb-3 flex items-center justify-between gap-3 sm:mb-6 sm:gap-4">
       <div>
         <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
-          Our Featured Offers
+          {t("title")}
         </h2>
 
         <p className="mt-0.5 text-xs text-muted-foreground sm:mt-1 sm:text-sm">
-          Handpicked deals curated for smarter shopping.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -156,7 +159,7 @@ function SectionHeader() {
         href="/ecommerce/products"
         className="shrink-0 text-xs font-semibold text-primary underline-offset-4 transition hover:underline sm:text-sm"
       >
-        See All
+        {t("seeAll")}
       </Link>
     </div>
   );
@@ -171,6 +174,8 @@ function PromoCard({
   className?: string;
   mobileCompact?: boolean;
 }) {
+  const t = useTranslations("Landing.Promotions");
+
   return (
     <Link
       href={banner.buttonLink || "/ecommerce/products"}
@@ -194,7 +199,7 @@ function PromoCard({
           <div className="relative z-10 flex h-full flex-col justify-between p-5 md:p-6">
             <div className="flex items-start justify-between gap-3">
               <span className="inline-flex w-fit rounded-full border border-white/20 bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
-                Featured Deal
+                {t("featuredDeal")}
               </span>
 
               {banner.subtitle && (

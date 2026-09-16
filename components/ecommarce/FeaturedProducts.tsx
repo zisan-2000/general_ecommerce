@@ -31,6 +31,7 @@ import ProductCardCompact from "./ProductCard";
 import GradientBorder from "@/components/ui/GradientBorder";
 import SliderNavButton from "./SliderNavButton";
 import { FaRobot } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 type CategoryDTO = {
   id: number | string;
@@ -111,8 +112,8 @@ function calcDiscountPercent(base: number, original: number | null) {
 }
 
 export default function FeaturedProducts({
-  title = "Featured Products",
-  subtitle = "Check & Get Your Desired Product!",
+  title,
+  subtitle,
   limit = 20,
   productsData,
   categoriesData,
@@ -127,6 +128,10 @@ export default function FeaturedProducts({
   reviewsData?: any[];
   isAuthenticated?: boolean;
 }) {
+  const t = useTranslations("Landing.ProductSections.featured");
+  const common = useTranslations("Common");
+  const resolvedTitle = title ?? t("title");
+  const resolvedSubtitle = subtitle ?? t("subtitle");
   const hasPreloadedData =
     productsData !== undefined &&
     categoriesData !== undefined &&
@@ -462,10 +467,10 @@ export default function FeaturedProducts({
         <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
           <div>
             <h2 className="text-lg font-bold text-foreground sm:text-xl">
-              {title}
+              {resolvedTitle}
             </h2>
             <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
-              {subtitle}
+              {resolvedSubtitle}
             </p>
           </div>
 
@@ -479,7 +484,7 @@ export default function FeaturedProducts({
                   : "border-border bg-card text-muted-foreground hover:bg-muted"
               }`}
             >
-              ALL
+              {common("all")}
             </button>
 
             <div className="relative flex-1 min-w-0">
@@ -523,7 +528,7 @@ export default function FeaturedProducts({
 
               {/* Mobile: hidden, Tablet/Desktop: visible */}
               <span className="hidden sm:inline text-xs sm:text-sm font-medium text-primary-foreground">
-                Ask AI
+                {common("askAi")}
               </span>
             </button>
           </div>
@@ -625,7 +630,7 @@ export default function FeaturedProducts({
 
         {!loading && visible.length === 0 ? (
           <div className="mt-6 text-center text-sm text-muted-foreground">
-            No featured products found.
+            {t("empty")}
           </div>
         ) : null}
       </div>
@@ -634,10 +639,10 @@ export default function FeaturedProducts({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-foreground">
-              Please login first
+              {common("wishlistLoginTitle")}
             </DialogTitle>
             <DialogDescription>
-              You need to be logged in to use the wishlist.
+              {common("wishlistLoginDescription")}
             </DialogDescription>
           </DialogHeader>
 
@@ -647,14 +652,14 @@ export default function FeaturedProducts({
               onClick={() => setLoginModalOpen(false)}
               className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-accent"
             >
-              Cancel
+              {common("cancel")}
             </button>
             <Link
               href="/signin"
               onClick={() => setLoginModalOpen(false)}
               className="btn-primary inline-flex h-10 items-center justify-center rounded-lg px-4 font-semibold transition"
             >
-              Login
+              {common("login")}
             </Link>
           </DialogFooter>
         </DialogContent>

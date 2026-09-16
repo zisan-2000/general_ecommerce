@@ -1,9 +1,9 @@
 import { BadgePercent, Truck, ShieldCheck, RotateCcw } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const FEATURES = [
   {
-    title: "Mega Discounts",
-    subtitle: "When sign up",
+    key: "discounts",
     Icon: BadgePercent,
     tint: "bg-emerald-500/10",
     iconTint: "text-emerald-600",
@@ -11,8 +11,7 @@ const FEATURES = [
     darkTint: "dark:bg-emerald-500/15",
   },
   {
-    title: "Free Delivery",
-    subtitle: "24/7 amazing services",
+    key: "delivery",
     Icon: Truck,
     tint: "bg-amber-500/10",
     iconTint: "text-amber-600",
@@ -20,8 +19,7 @@ const FEATURES = [
     darkTint: "dark:bg-amber-500/15",
   },
   {
-    title: "Secured Payment",
-    subtitle: "We accept all credit cards",
+    key: "payment",
     Icon: ShieldCheck,
     tint: "bg-violet-500/10",
     iconTint: "text-violet-600",
@@ -29,25 +27,26 @@ const FEATURES = [
     darkTint: "dark:bg-violet-500/15",
   },
   {
-    title: "Easy Returns",
-    subtitle: "30-days free return policy",
+    key: "returns",
     Icon: RotateCcw,
     tint: "bg-rose-500/10",
     iconTint: "text-rose-600",
     darkIconTint: "dark:text-rose-400",
     darkTint: "dark:bg-rose-500/15",
   },
-];
+] as const;
 
 export default function FeatureStrip() {
+  const t = useTranslations("Landing.Features");
+
   return (
     <section className="w-full bg-background">
       <div className="w-full px-4 sm:px-6 lg:px-8 sm:py-8">
         {/* 2x2 Grid for mobile, 4x1 for desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {FEATURES.map(({ title, subtitle, Icon, tint, iconTint, darkIconTint, darkTint }) => (
+          {FEATURES.map(({ key, Icon, tint, iconTint, darkIconTint, darkTint }) => (
             <div
-              key={title}
+              key={key}
               className={`
                 group relative overflow-hidden rounded-xl border border-border 
                 bg-gradient-to-br from-background to-muted/30
@@ -70,10 +69,10 @@ export default function FeatureStrip() {
                 {/* Text Content */}
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-foreground text-sm sm:text-base truncate">
-                    {title}
+                    {t(`${key}.title`)}
                   </p>
                   <p className="text-xs sm:text-sm text-muted-foreground truncate">
-                    {subtitle}
+                    {t(`${key}.subtitle`)}
                   </p>
                 </div>
               </div>

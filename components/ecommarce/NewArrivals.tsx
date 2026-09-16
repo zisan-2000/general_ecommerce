@@ -10,6 +10,7 @@ import {
   type WheelEvent,
 } from "react";
 import { FaRobot } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import { useWishlist } from "@/components/ecommarce/WishlistContext";
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
 import {
@@ -111,8 +112,8 @@ function calcDiscountPercent(base: number, original: number | null) {
 }
 
 export default function NewArrivals({
-  title = "New Arrivals",
-  subtitle = "Check Our Latest Products",
+  title,
+  subtitle,
   limit = 20,
   productsData,
   categoriesData,
@@ -127,6 +128,10 @@ export default function NewArrivals({
   reviewsData?: any[];
   isAuthenticated?: boolean;
 }) {
+  const t = useTranslations("Landing.ProductSections.newArrivals");
+  const common = useTranslations("Common");
+  const resolvedTitle = title ?? t("title");
+  const resolvedSubtitle = subtitle ?? t("subtitle");
   const hasPreloadedData =
     productsData !== undefined &&
     categoriesData !== undefined &&
@@ -478,10 +483,10 @@ export default function NewArrivals({
         <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
           <div>
             <h2 className="text-lg font-bold text-foreground sm:text-xl">
-              {title}
+              {resolvedTitle}
             </h2>
             <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
-              {subtitle}
+              {resolvedSubtitle}
             </p>
           </div>
           <div className="flex w-full min-w-0 items-center gap-2 xl:w-auto xl:max-w-[min(62vw,920px)]">
@@ -494,7 +499,7 @@ export default function NewArrivals({
                   : "border-border bg-card text-muted-foreground hover:bg-muted"
               }`}
             >
-              All
+              {common("all")}
             </button>
 
             <div className="relative flex-1 min-w-0">
@@ -537,7 +542,7 @@ export default function NewArrivals({
 
               {/* Mobile: hidden, Tablet/Desktop: visible */}
               <span className="hidden sm:inline text-xs sm:text-sm font-medium text-primary-foreground">
-                Ask AI
+                {common("askAi")}
               </span>
             </button>
           </div>
@@ -642,10 +647,10 @@ export default function NewArrivals({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-foreground">
-              Please login first
+              {common("wishlistLoginTitle")}
             </DialogTitle>
             <DialogDescription>
-              You need to be logged in to use the wishlist.
+              {common("wishlistLoginDescription")}
             </DialogDescription>
           </DialogHeader>
 
@@ -655,14 +660,14 @@ export default function NewArrivals({
               onClick={() => setLoginModalOpen(false)}
               className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-accent"
             >
-              Cancel
+              {common("cancel")}
             </button>
             <Link
               href="/signin"
               onClick={() => setLoginModalOpen(false)}
               className="btn-primary inline-flex h-10 items-center justify-center rounded-lg px-4 font-semibold transition"
             >
-              Login
+              {common("login")}
             </Link>
           </DialogFooter>
         </DialogContent>

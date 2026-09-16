@@ -1,6 +1,7 @@
 "use client";
 
 import { useSession } from "@/lib/auth-client";
+import { useTranslations } from "next-intl";
 import type { StorefrontHomeData } from "@/lib/storefront-home";
 import Header from "@/components/ecommarce/header";
 import Hero from "@/components/ecommarce/hero";
@@ -24,6 +25,7 @@ export default function StorefrontHome({
   data: StorefrontHomeData;
   loadError?: boolean;
 }) {
+  const t = useTranslations("Landing.Home");
   const { status } = useSession();
   const isAuthenticated = status === "authenticated";
   const heroBanners = data.banners.map((banner) => ({
@@ -41,7 +43,7 @@ export default function StorefrontHome({
       <main className="container mx-auto">
         {loadError ? (
           <div className="mx-3 mt-4 rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive sm:mx-6">
-            Some storefront data is temporarily unavailable. Please refresh shortly.
+            {t("dataLoadError")}
           </div>
         ) : null}
 

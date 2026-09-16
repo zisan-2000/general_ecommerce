@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Flame, Zap } from "lucide-react";
 import type { StorefrontHomeData } from "@/lib/storefront-home";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export type FlashSaleProduct = StorefrontHomeData["flashSaleProducts"][number];
 
@@ -25,6 +26,7 @@ function remainingTime(endsAt: string) {
 }
 
 export function FlashSaleCountdown({ endsAt }: { endsAt: string }) {
+  const t = useTranslations("Landing.FlashSale");
   const [remaining, setRemaining] = useState<ReturnType<typeof remainingTime> | null>(null);
 
   useEffect(() => {
@@ -35,12 +37,12 @@ export function FlashSaleCountdown({ endsAt }: { endsAt: string }) {
   }, [endsAt]);
 
   if (remaining?.expired) {
-    return <div className="rounded-lg border border-border bg-muted py-2 text-center text-xs font-bold uppercase tracking-wider text-muted-foreground">Deal ended</div>;
+    return <div className="rounded-lg border border-border bg-muted py-2 text-center text-xs font-bold uppercase tracking-wider text-muted-foreground">{t("dealEnded")}</div>;
   }
 
-  const values = [[remaining?.days, "Days"], [remaining?.hours, "Hrs"], [remaining?.minutes, "Min"], [remaining?.seconds, "Sec"]] as const;
+  const values = [[remaining?.days, t("days")], [remaining?.hours, t("hours")], [remaining?.minutes, t("minutes")], [remaining?.seconds, t("seconds")]] as const;
   return (
-    <div className="grid grid-cols-4 overflow-hidden rounded-lg border border-cyan-300 bg-gradient-to-r from-cyan-100 via-sky-50 to-teal-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_2px_8px_rgba(8,145,178,0.12)]" aria-label="Time remaining in this deal" role="timer">
+    <div className="grid grid-cols-4 overflow-hidden rounded-lg border border-cyan-300 bg-gradient-to-r from-cyan-100 via-sky-50 to-teal-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_2px_8px_rgba(8,145,178,0.12)]" aria-label={t("timeRemaining")} role="timer">
       {values.map(([value, label], index) => (
         <div key={label} className={cn("flex min-w-0 flex-col items-center py-1.5", index > 0 && "border-l border-cyan-300/80")}>
           <span className="text-sm font-black tabular-nums text-foreground">{value === undefined || value === null ? "--" : String(value).padStart(2, "0")}</span>
@@ -52,6 +54,7 @@ export function FlashSaleCountdown({ endsAt }: { endsAt: string }) {
 }
 
 export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
+  const t = useTranslations("Landing.FlashSale");
   const sale = product.flashSale;
   if (!sale?.active || !sale.endsAt) return null;
 
@@ -59,12 +62,12 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
   return (
     <article className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-card via-card to-muted/40 shadow-[0_8px_20px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
-        <span className="absolute left-3 top-3 z-10 rounded-md bg-emerald-700 px-2.5 py-1 text-xs font-extrabold text-white shadow-sm">Save: {formatPrice(sale.savings)}</span>
-        <Link href={`/ecommerce/products/${product.id}`} className="relative block h-full w-full" aria-label={`View ${product.name}`}>
+        <span className="absolute left-3 top-3 z-10 rounded-md bg-emerald-700 px-2.5 py-1 text-xs font-extrabold text-white shadow-sm">{t("save", { amount: formatPrice(sale.savings) })}</span>
+        <Link href={`/ecommerce/products/${product.id}`} className="relative block h-full w-full" aria-label={t("viewProduct", { name: product.name })}>
           {product.image ? (
             <Image src={product.image} alt={product.name} fill sizes="(max-width: 640px) 72vw, (max-width: 1024px) 38vw, 260px" className="object-cover transition-all duration-500 ease-out group-hover:scale-110" />
           ) : (
-            <div className="flex h-full items-center justify-center text-sm text-muted-foreground">No image</div>
+            <div className="flex h-full items-center justify-center text-sm text-muted-foreground">{t("noImage")}</div>
           )}
         </Link>
       </div>
@@ -79,9 +82,9 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
         <div className="mt-auto space-y-3">
           <FlashSaleCountdown endsAt={sale.endsAt} />
           <Link href={`/ecommerce/products/${product.id}`} className="flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-sm font-extrabold text-white shadow-sm transition hover:from-orange-600 hover:to-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
-            <Zap className="h-4 w-4 fill-current" aria-hidden="true" /> View Deal
+            <Zap className="h-4 w-4 fill-current" aria-hidden="true" /> {t("viewDeal")}
           </Link>
-          <p className="sr-only">{stock} units currently in stock</p>
+          <p className="sr-only">{t("stock", { count: stock })}</p>
         </div>
       </div>
     </article>
@@ -89,6 +92,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
 }
 
 export default function FlashSale({ productsData }: { productsData: FlashSaleProduct[]; isAuthenticated?: boolean }) {
+  const t = useTranslations("Landing.FlashSale");
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const products = useMemo(() => productsData.filter((product) => product.flashSale?.active).slice(0, 20), [productsData]);
   const scroll = (direction: "left" | "right") => {
@@ -105,14 +109,14 @@ export default function FlashSale({ productsData }: { productsData: FlashSalePro
           <div>
             <div className="mb-1 flex items-center gap-2">
               <Flame className="h-7 w-7 fill-orange-500 text-orange-500" aria-hidden="true" />
-              <h2 id="flash-sale-title" className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">Flash Sale</h2>
+              <h2 id="flash-sale-title" className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">{t("title")}</h2>
             </div>
-            <p className="text-base text-muted-foreground">Limited time deals. Grab yours before the clock runs out.</p>
+            <p className="text-base text-muted-foreground">{t("subtitle")}</p>
           </div>
           <div className="flex items-center gap-2">
-            <button type="button" onClick={() => scroll("left")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label="Previous flash sale products"><ChevronLeft className="h-5 w-5" /></button>
-            <button type="button" onClick={() => scroll("right")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label="Next flash sale products"><ChevronRight className="h-5 w-5" /></button>
-            <Link href="/ecommerce/flash-sale" className="ml-1 inline-flex h-11 items-center gap-1 rounded-full border border-border bg-card px-5 text-sm font-bold transition hover:border-orange-500 hover:text-orange-600">View All <ChevronRight className="h-4 w-4" /></Link>
+            <button type="button" onClick={() => scroll("left")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label={t("previous")}><ChevronLeft className="h-5 w-5" /></button>
+            <button type="button" onClick={() => scroll("right")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label={t("next")}><ChevronRight className="h-5 w-5" /></button>
+            <Link href="/ecommerce/flash-sale" className="ml-1 inline-flex h-11 items-center gap-1 rounded-full border border-border bg-card px-5 text-sm font-bold transition hover:border-orange-500 hover:text-orange-600">{t("viewAll")} <ChevronRight className="h-4 w-4" /></Link>
           </div>
         </div>
         <div ref={scrollerRef} className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

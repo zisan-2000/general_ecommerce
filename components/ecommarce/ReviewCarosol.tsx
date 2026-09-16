@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 type ReviewUser = { name: string; image?: string | null };
 type ReviewProduct = { name: string };
@@ -70,6 +71,7 @@ function ReviewCard({
   review: FeaturedReview;
   colorIdx: number;
 }) {
+  const t = useTranslations("Landing.Reviews");
   const color = AVATAR_COLORS[colorIdx % AVATAR_COLORS.length];
   const truncated =
     review.comment.length > 100
@@ -108,7 +110,7 @@ function ReviewCard({
           <p className="text-xs font-medium text-foreground leading-none mb-0.5">
             {review.user.name}
           </p>
-          <p className="text-[10px] text-muted-foreground">Verified buyer</p>
+          <p className="text-[10px] text-muted-foreground">{t("verifiedBuyer")}</p>
         </div>
       </div>
     </div>
@@ -116,6 +118,7 @@ function ReviewCard({
 }
 
 export default function ReviewCarousel() {
+  const t = useTranslations("Landing.Reviews");
   const [reviews, setReviews] = useState<FeaturedReview[]>([]);
   const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -140,10 +143,10 @@ export default function ReviewCarousel() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
-            What customers say
+            {t("eyebrow")}
           </p>
           <h2 className="text-2xl font-semibold text-foreground">
-            Trusted by our buyers
+            {t("title")}
           </h2>
         </div>
 

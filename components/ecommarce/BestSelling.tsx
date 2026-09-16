@@ -23,6 +23,7 @@ import ProductCardCompact from "./ProductCard";
 import GradientBorder from "@/components/ui/GradientBorder";
 import SliderNavButton from "./SliderNavButton";
 import { FaRobot } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 type ApiVariant = {
   stock?: number | string | null;
@@ -99,8 +100,8 @@ function calcDiscountPercent(base: number, original: number | null) {
 }
 
 export default function BestSelling({
-  title = "Best Selling",
-  subtitle = "Top selling products right now",
+  title,
+  subtitle,
   limit = 20,
   topSellingData,
   reviewsData,
@@ -113,6 +114,10 @@ export default function BestSelling({
   reviewsData?: any[];
   isAuthenticated?: boolean;
 }) {
+  const t = useTranslations("Landing.ProductSections.bestSelling");
+  const common = useTranslations("Common");
+  const resolvedTitle = title ?? t("title");
+  const resolvedSubtitle = subtitle ?? t("subtitle");
   const hasPreloadedData =
     topSellingData !== undefined && reviewsData !== undefined;
   const [loading, setLoading] = useState(!hasPreloadedData);
@@ -295,10 +300,10 @@ export default function BestSelling({
         <div className="flex gap-3 justify-between">
           <div>
             <h2 className="text-lg font-bold text-foreground sm:text-xl">
-              {title}
+              {resolvedTitle}
             </h2>
             <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
-              {subtitle}
+              {resolvedSubtitle}
             </p>
           </div>
 
@@ -315,7 +320,7 @@ export default function BestSelling({
               </div>
 
               <span className="text-sm font-medium text-primary-foreground transition-colors group-hover:text-primary-foreground">
-                Ask AI
+                {common("askAi")}
               </span>
             </button>
           </div>
@@ -419,7 +424,7 @@ export default function BestSelling({
 
         {!loading && visible.length === 0 ? (
           <div className="mt-6 text-center text-sm text-muted-foreground">
-            No best selling products found.
+            {t("empty")}
           </div>
         ) : null}
       </div>
@@ -428,10 +433,10 @@ export default function BestSelling({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-foreground">
-              Please login first
+              {common("wishlistLoginTitle")}
             </DialogTitle>
             <DialogDescription>
-              You need to be logged in to use the wishlist.
+              {common("wishlistLoginDescription")}
             </DialogDescription>
           </DialogHeader>
 
@@ -441,14 +446,14 @@ export default function BestSelling({
               onClick={() => setLoginModalOpen(false)}
               className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-accent"
             >
-              Cancel
+              {common("cancel")}
             </button>
             <Link
               href="/signin"
               onClick={() => setLoginModalOpen(false)}
               className="btn-primary inline-flex h-10 items-center justify-center rounded-lg px-4 font-semibold transition"
             >
-              Login
+              {common("login")}
             </Link>
           </DialogFooter>
         </DialogContent>

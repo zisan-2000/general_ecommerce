@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Brand = {
   id: number;
@@ -17,14 +18,17 @@ type Brand = {
 };
 
 export default function BrandSlider({
-  title = "Our Brands",
-  subtitle = "Shop from your favorite brands",
+  title,
+  subtitle,
   limit = 20,
 }: {
   title?: string;
   subtitle?: string;
   limit?: number;
 }) {
+  const t = useTranslations("Landing.Brands");
+  const resolvedTitle = title ?? t("title");
+  const resolvedSubtitle = subtitle ?? t("subtitle");
   const [loading, setLoading] = useState(true);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -50,7 +54,7 @@ export default function BrandSlider({
         setBrands(Array.isArray(brandsData) ? brandsData : []);
       } catch (e: any) {
         if (!mounted) return;
-        setError(e?.message || "Failed to load brands");
+        setError(e?.message || t("loadError"));
       } finally {
         if (mounted) setLoading(false);
       }
@@ -60,7 +64,7 @@ export default function BrandSlider({
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [t]);
 
   const visible = useMemo(
     () =>
@@ -122,10 +126,10 @@ export default function BrandSlider({
         <div className="mb-4 flex items-end justify-between gap-4">
           <div>
             <h2 className="text-[20px] font-bold tracking-tight text-foreground sm:text-[22px]">
-              {title}
+              {resolvedTitle}
             </h2>
             <p className="mt-1 text-[12px] text-muted-foreground sm:text-[13px]">
-              {subtitle}
+              {resolvedSubtitle}
             </p>
           </div>
 
@@ -135,7 +139,7 @@ export default function BrandSlider({
               onClick={() => scrollByCards("left")}
               disabled={!canScrollLeft}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:border-primary/35 hover:bg-muted disabled:cursor-not-allowed disabled:opacity-35"
-              aria-label="Previous brands"
+              aria-label={t("previous")}
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -144,7 +148,7 @@ export default function BrandSlider({
               onClick={() => scrollByCards("right")}
               disabled={!canScrollRight}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:border-primary/35 hover:bg-muted disabled:cursor-not-allowed disabled:opacity-35"
-              aria-label="Next brands"
+              aria-label={t("next")}
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -152,7 +156,7 @@ export default function BrandSlider({
               href="/ecommerce/brands"
               className="hidden h-9 items-center gap-1 rounded-full border border-border bg-card px-4 text-[11px] font-semibold text-foreground shadow-sm transition hover:border-primary hover:text-primary sm:inline-flex"
             >
-              View all <ArrowRight className="h-3.5 w-3.5" />
+              {t("viewAll")} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>

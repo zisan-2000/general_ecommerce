@@ -1,5 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Rubik } from "next/font/google";
 import { Syne } from "next/font/google";
@@ -82,9 +84,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const siteUrl = getSiteUrl();
-  const [siteSettings, registry] = await Promise.all([
+  const [siteSettings, registry, locale] = await Promise.all([
     getSiteSettingsForSeo(),
     getStoreFeatureRegistry(),
+    getLocale(),
   ]);
   const storefrontFeatures = Object.fromEntries(
     STORE_FEATURE_KEYS.map((key) => [key, registry.features[key].enabled]),
@@ -98,7 +101,7 @@ export default async function RootLayout({
     url: siteUrl,
     name: siteSettings.siteTitle,
     description: siteSettings.defaultSeoDescription,
-    inLanguage: siteSettings.locale,
+    inLanguage: locale,
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteUrl}/ecommerce/products?q={search_term_string}`,
@@ -126,7 +129,7 @@ export default async function RootLayout({
             telephone: siteSettings.contactNumber,
             email: siteSettings.contactEmail,
             contactType: "customer service",
-            availableLanguage: [siteSettings.locale],
+            availableLanguage: [locale],
           }
         : undefined,
     address: siteSettings.address
@@ -146,7 +149,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={siteSettings.locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${syne.variable} ${lexend.variable} antialiased min-h-screen flex flex-col`}
@@ -163,8 +166,9 @@ export default async function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <ThemeProvider>
-          <Providers
+        <NextIntlClientProvider locale={locale}>
+          <ThemeProvider>
+            <Providers
             storefrontFeatures={storefrontFeatures}
             storefrontSettings={{
               currency: siteSettings.currency,
@@ -182,9 +186,10 @@ export default async function RootLayout({
                 </WishlistProvider>
               </CartProvider>
             </TreeProvider>
-          </Providers>
-          <Toaster position="bottom-right" richColors />
-        </ThemeProvider>
+            </Providers>
+            <Toaster position="bottom-right" richColors />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

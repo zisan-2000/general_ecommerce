@@ -1,0 +1,93 @@
+{
+  "Common": {
+    "all": "All",
+    "askAi": "Ask AI",
+    "cancel": "Cancel",
+    "login": "Login",
+    "wishlistLoginTitle": "Please login first",
+    "wishlistLoginDescription": "You need to be logged in to use the wishlist.",
+    "genericError": "Something went wrong"
+  },
+  "Landing": {
+    "Home": {
+      "dataLoadError": "Some storefront data is temporarily unavailable. Please refresh shortly."
+    },
+    "Features": {
+      "discounts": {
+        "title": "Mega Discounts",
+        "subtitle": "When you sign up"
+      },
+      "delivery": {
+        "title": "Free Delivery",
+        "subtitle": "24/7 amazing service"
+      },
+      "payment": {
+        "title": "Secure Payment",
+        "subtitle": "We accept all credit cards"
+      },
+      "returns": {
+        "title": "Easy Returns",
+        "subtitle": "30-day free return policy"
+      }
+    },
+    "FlashSale": {
+      "title": "Flash Sale",
+      "subtitle": "Limited-time deals. Grab yours before the clock runs out.",
+      "dealEnded": "Deal ended",
+      "timeRemaining": "Time remaining in this deal",
+      "days": "Days",
+      "hours": "Hrs",
+      "minutes": "Min",
+      "seconds": "Sec",
+      "save": "Save: {amount}",
+      "viewProduct": "View {name}",
+      "noImage": "No image",
+      "viewDeal": "View Deal",
+      "stock": "{count, plural, =0 {No units currently in stock} =1 {# unit currently in stock} other {# units currently in stock}}",
+      "previous": "Previous flash sale products",
+      "next": "Next flash sale products",
+      "viewAll": "View All"
+    },
+    "ProductSections": {
+      "featured": {
+        "title": "Featured Products",
+        "subtitle": "Find the products you want",
+        "empty": "No featured products found."
+      },
+      "newArrivals": {
+        "title": "New Arrivals",
+        "subtitle": "Explore our latest products"
+      },
+      "bestSelling": {
+        "title": "Best Selling",
+        "subtitle": "Top-selling products right now",
+        "empty": "No best-selling products found."
+      }
+    },
+    "Reviews": {
+      "eyebrow": "What customers say",
+      "title": "Trusted by our buyers",
+      "verifiedBuyer": "Verified buyer"
+    },
+    "Categories": {
+      "eyebrow": "Categories",
+      "title": "Shop by Category",
+      "seeAll": "See All",
+      "loadError": "Could not load categories. Please try again."
+    },
+    "Brands": {
+      "title": "Our Brands",
+      "subtitle": "Shop from your favorite brands",
+      "loadError": "Could not load brands. Please try again.",
+      "previous": "Previous brands",
+      "next": "Next brands",
+      "viewAll": "View all"
+    },
+    "Promotions": {
+      "title": "Our Featured Offers",
+      "subtitle": "Handpicked deals curated for smarter shopping.",
+      "seeAll": "See All",
+      "featuredDeal": "Featured Deal"
+    }
+  }
+}

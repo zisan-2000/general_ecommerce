@@ -18,6 +18,13 @@ import { useRouter } from "next/navigation";
 
 import { useTheme } from "next-themes";
 
+import { useLocale } from "next-intl";
+
+import {
+  localeCookieName,
+  type AppLocale,
+} from "@/i18n/config";
+
 import { isDarkLikeTheme } from "@/lib/theme";
 
 import { useSession, signOut } from "@/lib/auth-client";
@@ -79,6 +86,7 @@ import {
   BookOpen,
   UsersRound,
   Building2,
+  Globe2,
 } from "lucide-react";
 
 const CATEGORIES_API = "/api/categories?view=storefront";
@@ -87,6 +95,11 @@ const THEME_OPTIONS = [
   { value: "light", label: "Light" },
 
   { value: "dark", label: "Dark" },
+] as const;
+
+const LANGUAGE_OPTIONS = [
+  { value: "en", label: "English", shortLabel: "EN" },
+  { value: "bn", label: "বাংলা", shortLabel: "BN" },
 ] as const;
 
 const HEADER_SHOP_ACTIONS = [
@@ -562,6 +575,8 @@ export default function Header({
 
   const { theme, resolvedTheme, setTheme } = useTheme();
 
+  const locale = useLocale();
+
   const { cartItems } = useCart();
 
   const { wishlistCount } = useWishlist();
@@ -693,6 +708,14 @@ export default function Header({
     THEME_OPTIONS[0];
 
   const darkLikeActiveTheme = isDarkLikeTheme(activeTheme);
+
+  const handleLanguageChange = (nextLocale: AppLocale) => {
+    if (nextLocale === locale) return;
+
+    document.cookie = `${localeCookieName}=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
+    document.documentElement.lang = nextLocale;
+    router.refresh();
+  };
 
   useEffect(() => {
     const total =
@@ -1130,6 +1153,38 @@ export default function Header({
                 </Link>
               );
             })}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className={`${headerIconClass} gap-1 sm:w-auto sm:px-2.5`}
+                  title="Change language"
+                  aria-label="Change language"
+                >
+                  <Globe2 className="h-[18px] w-[18px]" aria-hidden="true" />
+                  <span className="hidden text-xs font-semibold sm:inline">
+                    {LANGUAGE_OPTIONS.find((option) => option.value === locale)
+                      ?.shortLabel ?? locale.toUpperCase()}
+                  </span>
+                </button>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end">
+                {LANGUAGE_OPTIONS.map((option) => (
+                  <DropdownMenuItem
+                    key={option.value}
+                    onClick={() => handleLanguageChange(option.value)}
+                    className="flex items-center justify-between gap-4"
+                  >
+                    <span>{option.label}</span>
+                    {locale === option.value ? (
+                      <Check className="h-4 w-4" aria-hidden="true" />
+                    ) : null}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {hasMounted && (
               <DropdownMenu>
