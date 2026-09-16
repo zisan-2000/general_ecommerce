@@ -1947,5 +1947,606 @@
       "proofImageRequired": "Please capture or upload a proof image.",
       "confirmFailed": "Failed to confirm pickup"
     }
+  },
+  "AdminWarehouseDashboard": {
+    "hero": {
+      "badge": "Warehouse Operations",
+      "title": "Warehouse Dashboard",
+      "description": "Monitor assigned warehouse activity, shipment queue, and stock health from a single scoped workspace."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "addWarehouse": "Add Warehouse"
+    },
+    "warehouse": {
+      "allAssigned": "All assigned warehouses",
+      "multipleSelected": "{count} warehouses selected",
+      "assigned": "Assigned warehouses",
+      "scope": "Warehouse scope",
+      "defaultSuffix": " - Default"
+    },
+    "summary": {
+      "warehouseScope": "Warehouse Scope",
+      "unitsOnHand": "Units On Hand",
+      "reservedUnits": "{count} reserved units",
+      "pendingShipments": "Pending Shipments",
+      "stillPending": "{count} still pending",
+      "lowStockAlerts": "Low Stock Alerts",
+      "deliveredToday": "{count} delivered today"
+    },
+    "card": {
+      "defaultWarehouse": "Default warehouse",
+      "operationalWarehouse": "Operational warehouse",
+      "available": "{count} available",
+      "deliveredToday": "{count} delivered today",
+      "units": "Units",
+      "reserved": "Reserved",
+      "lowStock": "Low Stock",
+      "shipments": "Shipments",
+      "pendingCount": "{count} pending",
+      "pressureIndicator": "Pressure indicator"
+    },
+    "labels": {
+      "noSku": "No SKU",
+      "warehouseId": "Warehouse #{id}",
+      "leftCount": "{count} left",
+      "threshold": "Threshold: {count} units",
+      "unknownCustomer": "Unknown customer"
+    },
+    "shipments": {
+      "shipmentTitle": "Shipment #{shipmentId} for Order #{orderId}",
+      "orderLabel": "Order",
+      "trackingLabel": "Tracking"
+    },
+    "coverage": {
+      "title": "Warehouse Coverage & Management",
+      "subtitle": "Monitor warehouse coverage map, assigned warehouses, and manage warehouse configuration from one section.",
+      "tabs": {
+        "coverage": "Warehouse Coverage",
+        "management": "Warehouse Management"
+      },
+      "cards": {
+        "coverageTitle": "Warehouse Coverage",
+        "coverageSubtitle": "Assigned warehouses with current stock and shipment pressure.",
+        "noWarehouses": "No assigned warehouses found for this dashboard.",
+        "mapTitle": "Warehouse Coverage Map",
+        "mapSubtitle": "Visual map of assigned warehouse locations and coverage."
+      },
+      "map": {
+        "found": "{count} warehouse(s) found with location data",
+        "highlighting": " · highlighting selected warehouse",
+        "empty": "No warehouses with location data found. Add GPS coordinates to warehouses to see them on the map.",
+        "emptySelected": "Selected warehouse has no location data. Add GPS coordinates to see it on the map.",
+        "failed": "Map failed to load. Please refresh the page.",
+        "pickerTitle": "Warehouse Coverage Map"
+      },
+      "lowStock": {
+        "title": "Low Stock Watchlist",
+        "subtitle": "Variants at or below their warehouse threshold.",
+        "empty": "No low-stock alerts in the current warehouse scope."
+      },
+      "activity": {
+        "title": "Recent Inventory Activity",
+        "empty": "No recent inventory events found."
+      },
+      "shipments": {
+        "title": "Recent Shipments",
+        "empty": "No shipment activity found for this scope."
+      }
+    },
+    "management": {
+      "title": "Warehouse Management",
+      "subtitle": "Create, update, and maintain warehouse configuration.",
+      "empty": "No warehouses found.",
+      "defaultBadge": "Default",
+      "addressLabel": "Address",
+      "gpsLabel": "GPS",
+      "mapLabelLabel": "Map Label",
+      "deleteConfirm": "Are you sure you want to delete {name}?",
+      "actions": {
+        "details": "Details",
+        "map": "Map",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "errors": {
+      "loadFailed": "Failed to load warehouse dashboard"
+    }
+  },
+  "AdminWarehouseLocationPicker": {
+    "loadingMap": "Loading map...",
+    "emptyMessage": "No valid warehouse coordinates found for the map.",
+    "popup": {
+      "code": "Code: {code}",
+      "coverageRadius": "Coverage Radius: {km} km",
+      "previewTitle": "Warehouse Preview"
+    }
+  },
+  "AdminWarehouseFormModal": {
+    "titleAdd": "Add Warehouse",
+    "titleEdit": "Edit Warehouse",
+    "fields": {
+      "name": "Warehouse Name",
+      "code": "Unique Code",
+      "address": "Address",
+      "defaultWarehouse": "Default Warehouse"
+    },
+    "placeholders": {
+      "name": "Warehouse Name",
+      "code": "Unique Code",
+      "address": "Full Address",
+      "area": "Area",
+      "postCode": "Post Code",
+      "mapLabel": "Short label for map",
+      "latitude": "23.759",
+      "longitude": "90.389",
+      "coverageRadius": "5.0",
+      "locationNote": "Additional location details..."
+    },
+    "location": {
+      "title": "Location Information",
+      "country": "Country",
+      "division": "Division",
+      "district": "District",
+      "area": "Area",
+      "postCode": "Post Code",
+      "mapLabel": "Map Label",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "coverageRadius": "Coverage Radius (km)",
+      "note": "Location Note",
+      "showOnMap": "Show on map",
+      "selectCountry": "Select Country",
+      "selectDivision": "Select Division",
+      "selectDistrict": "Select District",
+      "loadingCountries": "Loading countries...",
+      "loadingDivisions": "Loading divisions...",
+      "loadingDistricts": "Loading districts..."
+    },
+    "mapPreview": {
+      "title": "Map Preview",
+      "description": "Enter latitude and longitude to preview the warehouse on OpenStreetMap.",
+      "emptyMessage": "Enter latitude and longitude to see the warehouse preview here."
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save Warehouse",
+      "update": "Update Warehouse",
+      "creating": "Creating...",
+      "updating": "Updating..."
+    },
+    "success": {
+      "created": "Warehouse created successfully!",
+      "updated": "Warehouse updated successfully!"
+    },
+    "errors": {
+      "nameRequired": "Warehouse name is required",
+      "codeRequired": "Warehouse code is required",
+      "createFailed": "Failed to create warehouse",
+      "updateFailed": "Failed to update warehouse",
+      "generic": "Something went wrong",
+      "loadCountries": "Failed to load countries",
+      "loadDivisions": "Failed to load divisions",
+      "loadDistricts": "Failed to load districts"
+    }
+  },
+  "AdminWarehouseForm": {
+    "titleAdd": "Add Warehouse",
+    "titleEdit": "Edit Warehouse",
+    "fields": {
+      "defaultWarehouse": "Default Warehouse"
+    },
+    "placeholders": {
+      "name": "Warehouse Name",
+      "code": "Unique Code",
+      "address": "Address"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save Warehouse",
+      "update": "Update Warehouse",
+      "creating": "Creating...",
+      "updating": "Updating..."
+    },
+    "success": {
+      "created": "Warehouse created successfully!",
+      "updated": "Warehouse updated successfully!"
+    },
+    "errors": {
+      "nameRequired": "Warehouse name is required",
+      "codeRequired": "Warehouse code is required",
+      "createFailed": "Failed to create warehouse",
+      "updateFailed": "Failed to update warehouse",
+      "generic": "Something went wrong"
+    }
+  },
+  "AdminSiteSettings": {
+    "title": "Site Settings",
+    "identity": {
+      "title": "Store Identity & SEO",
+      "storeName": "Store Name",
+      "storeTagline": "Store Tagline",
+      "storeType": "Store Type",
+      "storeTypeHint": "Informational only. Features remain controlled from Feature Settings."
+    },
+    "storeTypes": {
+      "GENERAL": "GENERAL",
+      "TECH": "TECH",
+      "FASHION": "FASHION",
+      "GROCERY": "GROCERY",
+      "BOOK": "BOOK"
+    },
+    "assets": {
+      "logo": "Logo",
+      "logoPreviewAlt": "Logo preview",
+      "removeLogo": "Remove logo",
+      "favicon": "Favicon",
+      "defaultOgImage": "Default Social Share Image",
+      "previewAlt": "{label} preview"
+    },
+    "seo": {
+      "title": "Default SEO Title",
+      "description": "Default SEO Description",
+      "keywords": "Default SEO Keywords"
+    },
+    "regional": {
+      "currency": "Currency",
+      "currencyPosition": "Currency Position",
+      "currencyPositions": {
+        "BEFORE": "Before amount",
+        "AFTER": "After amount"
+      },
+      "timezone": "Timezone",
+      "locale": "Locale"
+    },
+    "footer": {
+      "title": "Footer Section",
+      "description": "Footer Description",
+      "contactTitle": "Contact Information",
+      "contactNumber": "Contact Number",
+      "contactEmail": "Contact Email",
+      "address": "Address",
+      "socialTitle": "Social Media Links",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "tiktok": "TikTok",
+      "youtube": "YouTube"
+    },
+    "placeholders": {
+      "storeTagline": "Quality products, secure shopping and dependable service.",
+      "seoTitle": "Falls back to Store Name",
+      "seoKeywords": "product, category, online shopping",
+      "facebook": "https://facebook.com/yourpage"
+    },
+    "actions": {
+      "remove": "Remove",
+      "update": "Update Settings",
+      "saving": "Saving..."
+    },
+    "success": {
+      "updated": "Site settings updated successfully"
+    },
+    "errors": {
+      "loadFailed": "Failed to load site settings",
+      "uploadFailed": "Upload failed",
+      "imageUploadFailed": "Image upload failed",
+      "updateFailed": "Failed to update site settings"
+    }
+  },
+  "AdminShipmentTable": {
+    "columns": {
+      "id": "ID",
+      "order": "Order",
+      "courier": "Courier",
+      "tracking": "Tracking",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "statuses": {
+      "PENDING": "PENDING",
+      "IN_TRANSIT": "IN TRANSIT",
+      "OUT_FOR_DELIVERY": "OUT FOR DELIVERY",
+      "DELIVERED": "DELIVERED",
+      "RETURNED": "RETURNED",
+      "CANCELLED": "CANCELLED"
+    },
+    "actions": {
+      "delete": "Delete"
+    }
+  },
+  "AdminShipmentFormModal": {
+    "title": "Create Shipment",
+    "placeholders": {
+      "orderId": "Order ID",
+      "warehouseId": "Warehouse ID",
+      "courier": "Courier",
+      "trackingNumber": "Tracking Number"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+  "AdminCourierFormModal": {
+    "titleAdd": "Add Courier",
+    "titleEdit": "Edit Courier",
+    "fields": {
+      "name": "Courier Name",
+      "type": "Courier Type",
+      "baseUrlOptional": "Base URL (optional)",
+      "apiKeyOptional": "API Key (optional)",
+      "secretKeyOptional": "Secret Key (optional)",
+      "clientIdOptional": "Client ID (optional)"
+    },
+    "placeholders": {
+      "name": "Courier Name",
+      "baseUrl": "Base URL (optional)",
+      "apiKey": "API Key",
+      "secretKey": "Secret Key (optional)",
+      "clientId": "Client ID (optional)"
+    },
+    "courierTypes": {
+      "PATHAO": "Pathao",
+      "REDX": "RedX",
+      "STEADFAST": "Steadfast",
+      "CUSTOM": "Custom"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save Courier",
+      "update": "Update Courier",
+      "creating": "Creating...",
+      "updating": "Updating..."
+    },
+    "success": {
+      "created": "Courier created successfully!",
+      "updated": "Courier updated successfully!"
+    },
+    "errors": {
+      "nameRequired": "Courier name is required",
+      "createFailed": "Failed to create courier",
+      "updateFailed": "Failed to update courier",
+      "generic": "Something went wrong"
+    }
+  },
+  "AdminBannerManager": {
+    "title": "Banner Management",
+    "bannerAlt": "Store banner",
+    "previewAlt": "Banner preview",
+    "labels": {
+      "type": "Type",
+      "position": "Position",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "bannerTypes": {
+      "HERO": "HERO",
+      "BANNER1": "BANNER1",
+      "BANNER2": "BANNER2",
+      "PROMOTION": "PROMOTION",
+      "POPUP": "POPUP"
+    },
+    "fields": {
+      "title": "Title",
+      "image": "Banner Image",
+      "type": "Type",
+      "position": "Position",
+      "active": "Active"
+    },
+    "modal": {
+      "titleNew": "New Banner",
+      "titleEdit": "Edit Banner"
+    },
+    "actions": {
+      "addBanner": "Add Banner",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update"
+    },
+    "success": {
+      "created": "Banner created",
+      "updated": "Banner updated"
+    },
+    "errors": {
+      "titleImageRequired": "Title and Image required",
+      "uploadFailed": "Upload failed",
+      "imageUploadFailed": "Image upload failed",
+      "operationFailed": "Operation failed"
+    }
+  },
+  "AdminLogistics": {
+    "statuses": {
+      "ALL": "All statuses",
+      "PENDING": "Pending",
+      "ASSIGNED": "Assigned",
+      "IN_TRANSIT": "In transit",
+      "OUT_FOR_DELIVERY": "Out for delivery",
+      "DELIVERED": "Delivered",
+      "FAILED": "Failed",
+      "RETURNED": "Returned",
+      "CANCELLED": "Cancelled"
+    },
+    "nextStatus": {
+      "PENDING": "Mark as pending",
+      "ASSIGNED": "Mark as assigned",
+      "IN_TRANSIT": "Mark as in transit",
+      "OUT_FOR_DELIVERY": "Mark as out for delivery",
+      "DELIVERED": "Mark as delivered",
+      "FAILED": "Mark as failed",
+      "RETURNED": "Mark as returned",
+      "CANCELLED": "Cancel shipment"
+    },
+    "months": {
+      "Jan": "Jan",
+      "Feb": "Feb",
+      "Mar": "Mar",
+      "Apr": "Apr",
+      "May": "May",
+      "Jun": "Jun",
+      "Jul": "Jul"
+    },
+    "weekdays": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri"
+    },
+    "hero": {
+      "badge": "Logistics Operations",
+      "badgeSecondary": "Live shipment overview",
+      "title": "Manage Shipment Activity, Delivery Performance, and Dispatch",
+      "description": "Review shipment progress, warehouse activity, delivery costs, and operational exceptions in a clear and structured dashboard.",
+      "activeShipments": "Active shipments",
+      "activeShipmentsHint": "Pending, in transit, and out-for-delivery shipments",
+      "successRate": "Success rate",
+      "successRateHint": "{count} delivered in the current view",
+      "assignedShipments": "Assigned shipments",
+      "assignedShipmentsHint": "Shipments currently assigned to a team member",
+      "attentionRequired": "Attention required",
+      "attentionRequiredHint": "Overdue or unscheduled shipments"
+    },
+    "costOverview": {
+      "title": "Financial summary",
+      "subtitle": "Cost overview",
+      "period": "Weekly",
+      "estimated": "Estimated",
+      "actual": "Actual",
+      "variance": "Variance",
+      "delivered": "Delivered",
+      "teamCapacity": "Team capacity"
+    },
+    "monthlyTrend": {
+      "title": "Monthly order trend",
+      "subtitle": "Estimated shipment demand",
+      "projectedDispatch": "Projected dispatch volume",
+      "shipmentsCount": "{count} shipments"
+    },
+    "performance": {
+      "title": "Delivery performance",
+      "subtitle": "Completion rate overview",
+      "delivered": "Delivered",
+      "deliveredLabel": "Delivered: {count}",
+      "activeLabel": "Active: {count}"
+    },
+    "capacity": {
+      "title": "Capacity overview",
+      "subtitle": "Dispatcher workload distribution",
+      "internalHandlingCost": "Internal handling cost:"
+    },
+    "operations": {
+      "title": "Shipment Operations",
+      "subtitle": "Search shipments, apply filters, and update status",
+      "searchPlaceholder": "Search by shipment, order, customer, courier, or assignee",
+      "loadingWarehouses": "Loading warehouses...",
+      "allWarehouses": "All warehouses",
+      "emptyTitle": "No shipments match the current filters",
+      "emptyHint": "Adjust your filters or add new shipments",
+      "orderLabel": "Order #{id}",
+      "shipmentLabel": "Shipment #{id}",
+      "customerNotAvailable": "Customer not available",
+      "assignedToLabel": "Assigned to:",
+      "notAssigned": "Not assigned",
+      "priorityLabel": "Priority:",
+      "priorityShort": "Priority {value}",
+      "trackButton": "Track",
+      "openTracking": "Open tracking",
+      "warehouseLabel": "Warehouse {id}",
+      "noTrackingNumber": "No tracking number",
+      "noDispatchNotes": "No dispatch notes",
+      "updating": "Updating...",
+      "noFurtherAction": "No further action",
+      "notScheduled": "Not scheduled",
+      "costEst": "Est: {value}",
+      "costActual": "Actual: {value}",
+      "costInternal": "Internal: {value}",
+      "timelineAssigned": "Assigned: {date}",
+      "timelineExpected": "Expected: {date}",
+      "timelineDelivered": "Delivered: {date}",
+      "columns": {
+        "shipment": "Shipment",
+        "management": "Management",
+        "cost": "Cost",
+        "timeline": "Timeline"
+      }
+    },
+    "trackingPanel": {
+      "title": "Shipment Tracking",
+      "warehouseSubtitle": "Warehouse-level shipment visibility",
+      "detailedSubtitle": "Detailed route view for selected shipment",
+      "warehouseActivity": "Warehouse Activity",
+      "showingActive": "Showing {count} active shipments",
+      "selectWarehouseHint": "Select a warehouse to view route progress",
+      "reference": "Tracking Reference",
+      "customerShipment": "Customer shipment",
+      "warehouse": "Warehouse: {name}",
+      "timelineTitle": "Timeline",
+      "timelinePickedUp": "Picked up",
+      "timelineInTransit": "In transit",
+      "timelineDelivered": "Delivered",
+      "timelineNote": "Shipment activity recorded in dispatch timeline",
+      "pending": "Pending",
+      "noShipmentSelected": "No shipment selected",
+      "noShipmentsForWarehouse": "No shipments available for this warehouse",
+      "selectWarehouseToView": "Select a warehouse to view shipment tracking"
+    },
+    "priority": {
+      "title": "Priority dispatch",
+      "subtitle": "Highest-priority shipments in the current view",
+      "activeWorkload": "Active delivery workload",
+      "atRisk": "At risk",
+      "courierPending": "Courier pending",
+      "orderLine": "Order #{id} | {name}",
+      "customerNotAvailable": "Customer not available",
+      "eta": "ETA",
+      "empty": "No priority shipments are available in the current view.",
+      "featuredShipment": "Featured shipment",
+      "priorityLevel": "Priority level",
+      "dispatch": "Dispatch",
+      "trackingNotAssigned": "Tracking number not assigned",
+      "assignmentPending": "Assignment pending"
+    },
+    "summary": {
+      "title": "Operations summary",
+      "subtitle": "Recent shipment activity and costs",
+      "thirdPartyCost": "Third-party delivery cost",
+      "actualSpend": "Actual delivery spend",
+      "shipmentLine": "Shipment #{shipmentId} - Order #{orderId}",
+      "courierAssignee": "{courier} - {assignee}",
+      "empty": "No recent shipment activity was found."
+    },
+    "map": {
+      "noWarehouseLocations": "No warehouse locations are available yet.",
+      "popup": {
+        "code": "Code: {code}",
+        "active": "Active shipments: {count}",
+        "delivered": "Delivered shipments: {count}",
+        "total": "Total shipments: {count}"
+      }
+    },
+    "tracking": {
+      "origin": "Origin warehouse",
+      "destination": "Destination",
+      "deliveryLocation": "Delivery location",
+      "checkpoint": "Checkpoint {index}",
+      "completed": "Completed",
+      "currentPosition": "Current position",
+      "upcoming": "Upcoming",
+      "routeStatus": "Route status: {status}",
+      "currentLocation": "Current location",
+      "shipmentLabel": "Shipment #{id}",
+      "statusLabel": "Status: {status}",
+      "deliveredAt": "Delivered at: {date}",
+      "accuracy": "Accuracy: +/-{value}m"
+    },
+    "errors": {
+      "loadWarehouses": "Failed to load warehouses",
+      "loadShipments": "Failed to load logistics shipments",
+      "updateShipment": "Failed to update shipment"
+    }
   }
 }

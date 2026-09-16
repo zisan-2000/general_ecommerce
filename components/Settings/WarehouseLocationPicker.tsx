@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import type { Map as LeafletMap } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -96,12 +97,16 @@ export default function WarehouseLocationPicker({
   heightClassName = "h-72",
   title,
   description,
-  emptyMessage = "No valid warehouse coordinates found for the map.",
+  emptyMessage,
   coverageRadiusKm = null,
   onError,
   selectedMarkerId: selectedMarkerIdProp = null,
   onMarkerSelect,
 }: WarehouseLocationPickerProps) {
+  const t = useTranslations("AdminWarehouseLocationPicker");
+
+  const resolvedEmptyMessage = emptyMessage ?? t("emptyMessage");
+
   const [isClient, setIsClient] = useState(false);
   const [leaflet, setLeaflet] = useState<any>(null);
   const [mapReady, setMapReady] = useState(false);
@@ -131,7 +136,6 @@ export default function WarehouseLocationPicker({
             "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
         });
         setLeaflet(leafletModule);
-        // Add a small delay to ensure Leaflet is fully initialized
         setTimeout(() => setMapReady(true), 100);
       })
       .catch((error) => {
@@ -140,6 +144,7 @@ export default function WarehouseLocationPicker({
           onError();
         }
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const hasSinglePoint =
@@ -256,7 +261,7 @@ export default function WarehouseLocationPicker({
       <div
         className={`w-full ${heightClassName} flex items-center justify-center rounded-xl border border-border bg-muted/30`}
       >
-        <div className="text-sm text-muted-foreground">Loading map...</div>
+        <div className="text-sm text-muted-foreground">{t("loadingMap")}</div>
       </div>
     );
   }
@@ -272,7 +277,7 @@ export default function WarehouseLocationPicker({
         <div
           className={`w-full ${heightClassName} flex items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-4 text-center text-sm text-muted-foreground`}
         >
-          {emptyMessage}
+          {resolvedEmptyMessage}
         </div>
       </div>
     );
@@ -348,7 +353,9 @@ export default function WarehouseLocationPicker({
                   <div className="font-semibold">
                     {marker.label || marker.name}
                   </div>
-                  {marker.code ? <div>Code: {marker.code}</div> : null}
+                  {marker.code ? (
+                    <div>{t("popup.code", { code: marker.code })}</div>
+                  ) : null}
                   {marker.district || marker.area ? (
                     <div>
                       {[marker.area, marker.district]
@@ -357,7 +364,11 @@ export default function WarehouseLocationPicker({
                     </div>
                   ) : null}
                   {marker.coverageRadiusKm && marker.coverageRadiusKm > 0 ? (
-                    <div>Coverage Radius: {marker.coverageRadiusKm} km</div>
+                    <div>
+                      {t("popup.coverageRadius", {
+                        km: marker.coverageRadiusKm,
+                      })}
+                    </div>
                   ) : null}
                   <div>
                     {marker.latitude.toFixed(6)}, {marker.longitude.toFixed(6)}
@@ -411,7 +422,9 @@ export default function WarehouseLocationPicker({
               <Marker position={[latitude as number, longitude as number]}>
                 <Popup>
                   <div className="space-y-1 text-sm">
-                    <div className="font-semibold">Warehouse Preview</div>
+                    <div className="font-semibold">
+                      {t("popup.previewTitle")}
+                    </div>
                     <div>
                       {(latitude as number).toFixed(6)},{" "}
                       {(longitude as number).toFixed(6)}

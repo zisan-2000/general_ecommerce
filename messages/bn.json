@@ -1947,5 +1947,606 @@
             "proofImageRequired": "অনুগ্রহ করে একটি প্রমাণ ছবি তুলুন বা আপলোড করুন।",
             "confirmFailed": "পিকআপ নিশ্চিত করা যায়নি"
         }
+    },
+    "AdminWarehouseDashboard": {
+        "hero": {
+            "badge": "ওয়্যারহাউস কার্যক্রম",
+            "title": "ওয়্যারহাউস ড্যাশবোর্ড",
+            "description": "একটি স্কোপড ওয়ার্কস্পেস থেকে নির্ধারিত ওয়্যারহাউস কার্যক্রম, শিপমেন্ট কিউ এবং স্টকের অবস্থা পর্যবেক্ষণ করুন।"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "addWarehouse": "ওয়্যারহাউস যোগ করুন"
+        },
+        "warehouse": {
+            "allAssigned": "সব নির্ধারিত ওয়্যারহাউস",
+            "multipleSelected": "{count}টি ওয়্যারহাউস নির্বাচিত",
+            "assigned": "নির্ধারিত ওয়্যারহাউস",
+            "scope": "ওয়্যারহাউস পরিধি",
+            "defaultSuffix": " - ডিফল্ট"
+        },
+        "summary": {
+            "warehouseScope": "ওয়্যারহাউস পরিধি",
+            "unitsOnHand": "হাতে থাকা ইউনিট",
+            "reservedUnits": "{count}টি সংরক্ষিত ইউনিট",
+            "pendingShipments": "অপেক্ষমাণ শিপমেন্ট",
+            "stillPending": "{count}টি এখনও অপেক্ষমাণ",
+            "lowStockAlerts": "কম মজুদ সতর্কতা",
+            "deliveredToday": "আজ {count}টি ডেলিভারি হয়েছে"
+        },
+        "card": {
+            "defaultWarehouse": "ডিফল্ট ওয়্যারহাউস",
+            "operationalWarehouse": "কার্যক্রমিক ওয়্যারহাউস",
+            "available": "{count}টি উপলব্ধ",
+            "deliveredToday": "আজ {count}টি ডেলিভারি",
+            "units": "ইউনিট",
+            "reserved": "সংরক্ষিত",
+            "lowStock": "কম মজুদ",
+            "shipments": "শিপমেন্ট",
+            "pendingCount": "{count}টি অপেক্ষমাণ",
+            "pressureIndicator": "চাপ নির্দেশক"
+        },
+        "labels": {
+            "noSku": "কোনো SKU নেই",
+            "warehouseId": "ওয়্যারহাউস #{id}",
+            "leftCount": "{count}টি বাকি",
+            "threshold": "থ্রেশহোল্ড: {count}টি ইউনিট",
+            "unknownCustomer": "অজানা ক্রেতা"
+        },
+        "shipments": {
+            "shipmentTitle": "শিপমেন্ট #{shipmentId}, অর্ডার #{orderId}-এর জন্য",
+            "orderLabel": "অর্ডার",
+            "trackingLabel": "ট্র্যাকিং"
+        },
+        "coverage": {
+            "title": "ওয়্যারহাউস কভারেজ ও ব্যবস্থাপনা",
+            "subtitle": "একই সেকশন থেকে ওয়্যারহাউস কভারেজ ম্যাপ, নির্ধারিত ওয়্যারহাউস পর্যবেক্ষণ ও কনফিগারেশন পরিচালনা করুন।",
+            "tabs": {
+                "coverage": "ওয়্যারহাউস কভারেজ",
+                "management": "ওয়্যারহাউস ব্যবস্থাপনা"
+            },
+            "cards": {
+                "coverageTitle": "ওয়্যারহাউস কভারেজ",
+                "coverageSubtitle": "বর্তমান স্টক এবং শিপমেন্ট চাপসহ নির্ধারিত ওয়্যারহাউস।",
+                "noWarehouses": "এই ড্যাশবোর্ডের জন্য কোনো নির্ধারিত ওয়্যারহাউস পাওয়া যায়নি।",
+                "mapTitle": "ওয়্যারহাউস কভারেজ ম্যাপ",
+                "mapSubtitle": "নির্ধারিত ওয়্যারহাউস অবস্থান ও কভারেজের ভিজ্যুয়াল ম্যাপ।"
+            },
+            "map": {
+                "found": "অবস্থান ডেটাসহ {count}টি ওয়্যারহাউস পাওয়া গেছে",
+                "highlighting": " · নির্বাচিত ওয়্যারহাউস হাইলাইট করা হচ্ছে",
+                "empty": "অবস্থান ডেটাসহ কোনো ওয়্যারহাউস পাওয়া যায়নি। ম্যাপে দেখতে ওয়্যারহাউসে GPS স্থানাঙ্ক যোগ করুন।",
+                "emptySelected": "নির্বাচিত ওয়্যারহাউসে কোনো অবস্থান ডেটা নেই। ম্যাপে দেখতে GPS স্থানাঙ্ক যোগ করুন।",
+                "failed": "ম্যাপ লোড করা যায়নি। অনুগ্রহ করে পৃষ্ঠাটি রিফ্রেশ করুন।",
+                "pickerTitle": "ওয়্যারহাউস কভারেজ ম্যাপ"
+            },
+            "lowStock": {
+                "title": "কম মজুদ ওয়াচলিস্ট",
+                "subtitle": "ওয়্যারহাউস থ্রেশহোল্ডে বা তার নিচে থাকা ভ্যারিয়েন্ট।",
+                "empty": "বর্তমান ওয়্যারহাউস পরিধিতে কোনো কম-মজুদ সতর্কতা নেই।"
+            },
+            "activity": {
+                "title": "সাম্প্রতিক মজুদ কার্যক্রম",
+                "empty": "কোনো সাম্প্রতিক মজুদ ইভেন্ট পাওয়া যায়নি।"
+            },
+            "shipments": {
+                "title": "সাম্প্রতিক শিপমেন্ট",
+                "empty": "এই পরিধিতে কোনো শিপমেন্ট কার্যক্রম পাওয়া যায়নি।"
+            }
+        },
+        "management": {
+            "title": "ওয়্যারহাউস ব্যবস্থাপনা",
+            "subtitle": "ওয়্যারহাউস কনফিগারেশন তৈরি, আপডেট ও রক্ষণাবেক্ষণ করুন।",
+            "empty": "কোনো ওয়্যারহাউস পাওয়া যায়নি।",
+            "defaultBadge": "ডিফল্ট",
+            "addressLabel": "ঠিকানা",
+            "gpsLabel": "GPS",
+            "mapLabelLabel": "ম্যাপ লেবেল",
+            "deleteConfirm": "আপনি কি নিশ্চিতভাবে {name} মুছতে চান?",
+            "actions": {
+                "details": "বিবরণ",
+                "map": "ম্যাপ",
+                "edit": "সম্পাদনা",
+                "delete": "মুছুন"
+            }
+        },
+        "errors": {
+            "loadFailed": "ওয়্যারহাউস ড্যাশবোর্ড লোড করা যায়নি"
+        }
+    },
+    "AdminWarehouseLocationPicker": {
+        "loadingMap": "ম্যাপ লোড হচ্ছে...",
+        "emptyMessage": "ম্যাপের জন্য কোনো বৈধ ওয়্যারহাউস স্থানাঙ্ক পাওয়া যায়নি।",
+        "popup": {
+            "code": "কোড: {code}",
+            "coverageRadius": "কভারেজ ব্যাসার্ধ: {km} কিমি",
+            "previewTitle": "ওয়্যারহাউস প্রিভিউ"
+        }
+    },
+    "AdminWarehouseFormModal": {
+        "titleAdd": "ওয়্যারহাউস যোগ করুন",
+        "titleEdit": "ওয়্যারহাউস সম্পাদনা করুন",
+        "fields": {
+            "name": "ওয়্যারহাউসের নাম",
+            "code": "অনন্য কোড",
+            "address": "ঠিকানা",
+            "defaultWarehouse": "ডিফল্ট ওয়্যারহাউস"
+        },
+        "placeholders": {
+            "name": "ওয়্যারহাউসের নাম",
+            "code": "অনন্য কোড",
+            "address": "সম্পূর্ণ ঠিকানা",
+            "area": "এলাকা",
+            "postCode": "পোস্ট কোড",
+            "mapLabel": "ম্যাপের সংক্ষিপ্ত লেবেল",
+            "latitude": "23.759",
+            "longitude": "90.389",
+            "coverageRadius": "5.0",
+            "locationNote": "অতিরিক্ত অবস্থানের বিবরণ..."
+        },
+        "location": {
+            "title": "অবস্থানের তথ্য",
+            "country": "দেশ",
+            "division": "বিভাগ",
+            "district": "জেলা",
+            "area": "এলাকা",
+            "postCode": "পোস্ট কোড",
+            "mapLabel": "ম্যাপ লেবেল",
+            "latitude": "অক্ষাংশ",
+            "longitude": "দ্রাঘিমাংশ",
+            "coverageRadius": "কভারেজ ব্যাসার্ধ (কিমি)",
+            "note": "অবস্থানের নোট",
+            "showOnMap": "ম্যাপে দেখান",
+            "selectCountry": "দেশ নির্বাচন করুন",
+            "selectDivision": "বিভাগ নির্বাচন করুন",
+            "selectDistrict": "জেলা নির্বাচন করুন",
+            "loadingCountries": "দেশ লোড হচ্ছে...",
+            "loadingDivisions": "বিভাগ লোড হচ্ছে...",
+            "loadingDistricts": "জেলা লোড হচ্ছে..."
+        },
+        "mapPreview": {
+            "title": "ম্যাপ প্রিভিউ",
+            "description": "OpenStreetMap-এ ওয়্যারহাউসের প্রিভিউ দেখতে অক্ষাংশ ও দ্রাঘিমাংশ লিখুন।",
+            "emptyMessage": "এখানে ওয়্যারহাউসের প্রিভিউ দেখতে অক্ষাংশ ও দ্রাঘিমাংশ লিখুন।"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "save": "ওয়্যারহাউস সংরক্ষণ করুন",
+            "update": "ওয়্যারহাউস আপডেট করুন",
+            "creating": "তৈরি হচ্ছে...",
+            "updating": "আপডেট হচ্ছে..."
+        },
+        "success": {
+            "created": "ওয়্যারহাউস সফলভাবে তৈরি হয়েছে!",
+            "updated": "ওয়্যারহাউস সফলভাবে আপডেট হয়েছে!"
+        },
+        "errors": {
+            "nameRequired": "ওয়্যারহাউসের নাম আবশ্যক",
+            "codeRequired": "ওয়্যারহাউসের কোড আবশ্যক",
+            "createFailed": "ওয়্যারহাউস তৈরি করা যায়নি",
+            "updateFailed": "ওয়্যারহাউস আপডেট করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে",
+            "loadCountries": "দেশ লোড করা যায়নি",
+            "loadDivisions": "বিভাগ লোড করা যায়নি",
+            "loadDistricts": "জেলা লোড করা যায়নি"
+        }
+    },
+    "AdminWarehouseForm": {
+        "titleAdd": "ওয়্যারহাউস যোগ করুন",
+        "titleEdit": "ওয়্যারহাউস সম্পাদনা করুন",
+        "fields": {
+            "defaultWarehouse": "ডিফল্ট ওয়্যারহাউস"
+        },
+        "placeholders": {
+            "name": "ওয়্যারহাউসের নাম",
+            "code": "অনন্য কোড",
+            "address": "ঠিকানা"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "save": "ওয়্যারহাউস সংরক্ষণ করুন",
+            "update": "ওয়্যারহাউস আপডেট করুন",
+            "creating": "তৈরি হচ্ছে...",
+            "updating": "আপডেট হচ্ছে..."
+        },
+        "success": {
+            "created": "ওয়্যারহাউস সফলভাবে তৈরি হয়েছে!",
+            "updated": "ওয়্যারহাউস সফলভাবে আপডেট হয়েছে!"
+        },
+        "errors": {
+            "nameRequired": "ওয়্যারহাউসের নাম আবশ্যক",
+            "codeRequired": "ওয়্যারহাউসের কোড আবশ্যক",
+            "createFailed": "ওয়্যারহাউস তৈরি করা যায়নি",
+            "updateFailed": "ওয়্যারহাউস আপডেট করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
+        }
+    },
+    "AdminSiteSettings": {
+        "title": "সাইট সেটিংস",
+        "identity": {
+            "title": "স্টোর পরিচিতি ও SEO",
+            "storeName": "স্টোরের নাম",
+            "storeTagline": "স্টোরের ট্যাগলাইন",
+            "storeType": "স্টোরের ধরন",
+            "storeTypeHint": "শুধুমাত্র তথ্যমূলক। ফিচারগুলো ফিচার সেটিংস থেকে নিয়ন্ত্রিত হয়।"
+        },
+        "storeTypes": {
+            "GENERAL": "সাধারণ",
+            "TECH": "প্রযুক্তি",
+            "FASHION": "ফ্যাশন",
+            "GROCERY": "মুদি",
+            "BOOK": "বই"
+        },
+        "assets": {
+            "logo": "লোগো",
+            "logoPreviewAlt": "লোগো প্রিভিউ",
+            "removeLogo": "লোগো মুছুন",
+            "favicon": "ফ্যাভিকন",
+            "defaultOgImage": "ডিফল্ট সোশ্যাল শেয়ার ছবি",
+            "previewAlt": "{label} প্রিভিউ"
+        },
+        "seo": {
+            "title": "ডিফল্ট SEO শিরোনাম",
+            "description": "ডিফল্ট SEO বিবরণ",
+            "keywords": "ডিফল্ট SEO কীওয়ার্ড"
+        },
+        "regional": {
+            "currency": "মুদ্রা",
+            "currencyPosition": "মুদ্রার অবস্থান",
+            "currencyPositions": {
+                "BEFORE": "পরিমাণের আগে",
+                "AFTER": "পরিমাণের পরে"
+            },
+            "timezone": "টাইমজোন",
+            "locale": "লোকেল"
+        },
+        "footer": {
+            "title": "ফুটার সেকশন",
+            "description": "ফুটার বিবরণ",
+            "contactTitle": "যোগাযোগের তথ্য",
+            "contactNumber": "যোগাযোগ নম্বর",
+            "contactEmail": "যোগাযোগ ইমেইল",
+            "address": "ঠিকানা",
+            "socialTitle": "সোশ্যাল মিডিয়া লিংক",
+            "facebook": "ফেসবুক",
+            "instagram": "ইনস্টাগ্রাম",
+            "twitter": "টুইটার",
+            "tiktok": "টিকটক",
+            "youtube": "ইউটিউব"
+        },
+        "placeholders": {
+            "storeTagline": "মানসম্মত পণ্য, নিরাপদ শপিং ও নির্ভরযোগ্য সেবা।",
+            "seoTitle": "স্টোরের নামে ফলব্যাক করবে",
+            "seoKeywords": "পণ্য, ক্যাটাগরি, অনলাইন শপিং",
+            "facebook": "https://facebook.com/yourpage"
+        },
+        "actions": {
+            "remove": "মুছুন",
+            "update": "সেটিংস আপডেট করুন",
+            "saving": "সংরক্ষণ হচ্ছে..."
+        },
+        "success": {
+            "updated": "সাইট সেটিংস সফলভাবে আপডেট হয়েছে"
+        },
+        "errors": {
+            "loadFailed": "সাইট সেটিংস লোড করা যায়নি",
+            "uploadFailed": "আপলোড ব্যর্থ হয়েছে",
+            "imageUploadFailed": "ছবি আপলোড ব্যর্থ হয়েছে",
+            "updateFailed": "সাইট সেটিংস আপডেট করা যায়নি"
+        }
+    },
+    "AdminShipmentTable": {
+        "columns": {
+            "id": "আইডি",
+            "order": "অর্ডার",
+            "courier": "কুরিয়ার",
+            "tracking": "ট্র্যাকিং",
+            "status": "স্ট্যাটাস",
+            "actions": "কার্যক্রম"
+        },
+        "statuses": {
+            "PENDING": "অপেক্ষমাণ",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "actions": {
+            "delete": "মুছুন"
+        }
+    },
+    "AdminShipmentFormModal": {
+        "title": "শিপমেন্ট তৈরি করুন",
+        "placeholders": {
+            "orderId": "অর্ডার আইডি",
+            "warehouseId": "ওয়্যারহাউস আইডি",
+            "courier": "কুরিয়ার",
+            "trackingNumber": "ট্র্যাকিং নম্বর"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "save": "সংরক্ষণ"
+        }
+    },
+    "AdminCourierFormModal": {
+        "titleAdd": "কুরিয়ার যোগ করুন",
+        "titleEdit": "কুরিয়ার সম্পাদনা করুন",
+        "fields": {
+            "name": "কুরিয়ারের নাম",
+            "type": "কুরিয়ারের ধরন",
+            "baseUrlOptional": "বেস URL (ঐচ্ছিক)",
+            "apiKeyOptional": "API কী (ঐচ্ছিক)",
+            "secretKeyOptional": "সিক্রেট কী (ঐচ্ছিক)",
+            "clientIdOptional": "ক্লায়েন্ট আইডি (ঐচ্ছিক)"
+        },
+        "placeholders": {
+            "name": "কুরিয়ারের নাম",
+            "baseUrl": "বেস URL (ঐচ্ছিক)",
+            "apiKey": "API কী",
+            "secretKey": "সিক্রেট কী (ঐচ্ছিক)",
+            "clientId": "ক্লায়েন্ট আইডি (ঐচ্ছিক)"
+        },
+        "courierTypes": {
+            "PATHAO": "পাঠাও",
+            "REDX": "রেডএক্স",
+            "STEADFAST": "স্টেডফাস্ট",
+            "CUSTOM": "কাস্টম"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "save": "কুরিয়ার সংরক্ষণ করুন",
+            "update": "কুরিয়ার আপডেট করুন",
+            "creating": "তৈরি হচ্ছে...",
+            "updating": "আপডেট হচ্ছে..."
+        },
+        "success": {
+            "created": "কুরিয়ার সফলভাবে তৈরি হয়েছে!",
+            "updated": "কুরিয়ার সফলভাবে আপডেট হয়েছে!"
+        },
+        "errors": {
+            "nameRequired": "কুরিয়ারের নাম আবশ্যক",
+            "createFailed": "কুরিয়ার তৈরি করা যায়নি",
+            "updateFailed": "কুরিয়ার আপডেট করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
+        }
+    },
+    "AdminBannerManager": {
+        "title": "ব্যানার ব্যবস্থাপনা",
+        "bannerAlt": "স্টোর ব্যানার",
+        "previewAlt": "ব্যানার প্রিভিউ",
+        "labels": {
+            "type": "ধরন",
+            "position": "অবস্থান",
+            "active": "সক্রিয়",
+            "inactive": "নিষ্ক্রিয়"
+        },
+        "bannerTypes": {
+            "HERO": "হিরো",
+            "BANNER1": "ব্যানার ১",
+            "BANNER2": "ব্যানার ২",
+            "PROMOTION": "প্রচার",
+            "POPUP": "পপআপ"
+        },
+        "fields": {
+            "title": "শিরোনাম",
+            "image": "ব্যানার ছবি",
+            "type": "ধরন",
+            "position": "অবস্থান",
+            "active": "সক্রিয়"
+        },
+        "modal": {
+            "titleNew": "নতুন ব্যানার",
+            "titleEdit": "ব্যানার সম্পাদনা"
+        },
+        "actions": {
+            "addBanner": "ব্যানার যোগ করুন",
+            "edit": "সম্পাদনা",
+            "delete": "মুছুন",
+            "cancel": "বাতিল করুন",
+            "create": "তৈরি করুন",
+            "update": "আপডেট করুন"
+        },
+        "success": {
+            "created": "ব্যানার তৈরি হয়েছে",
+            "updated": "ব্যানার আপডেট হয়েছে"
+        },
+        "errors": {
+            "titleImageRequired": "শিরোনাম ও ছবি আবশ্যক",
+            "uploadFailed": "আপলোড ব্যর্থ হয়েছে",
+            "imageUploadFailed": "ছবি আপলোড ব্যর্থ হয়েছে",
+            "operationFailed": "কার্যক্রম ব্যর্থ হয়েছে"
+        }
+    },
+    "AdminLogistics": {
+        "statuses": {
+            "ALL": "সব স্ট্যাটাস",
+            "PENDING": "অপেক্ষমাণ",
+            "ASSIGNED": "নিযুক্ত",
+            "IN_TRANSIT": "পরিবহনে",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে",
+            "DELIVERED": "ডেলিভারি হয়েছে",
+            "FAILED": "ব্যর্থ",
+            "RETURNED": "ফেরত",
+            "CANCELLED": "বাতিল"
+        },
+        "nextStatus": {
+            "PENDING": "অপেক্ষমাণ হিসেবে চিহ্নিত করুন",
+            "ASSIGNED": "নিযুক্ত হিসেবে চিহ্নিত করুন",
+            "IN_TRANSIT": "পরিবহনে হিসেবে চিহ্নিত করুন",
+            "OUT_FOR_DELIVERY": "ডেলিভারির জন্য বের হয়েছে হিসেবে চিহ্নিত করুন",
+            "DELIVERED": "ডেলিভারি হয়েছে হিসেবে চিহ্নিত করুন",
+            "FAILED": "ব্যর্থ হিসেবে চিহ্নিত করুন",
+            "RETURNED": "ফেরত হিসেবে চিহ্নিত করুন",
+            "CANCELLED": "শিপমেন্ট বাতিল করুন"
+        },
+        "months": {
+            "Jan": "জানু",
+            "Feb": "ফেব",
+            "Mar": "মার্চ",
+            "Apr": "এপ্রিল",
+            "May": "মে",
+            "Jun": "জুন",
+            "Jul": "জুলাই"
+        },
+        "weekdays": {
+            "mon": "সোম",
+            "tue": "মঙ্গল",
+            "wed": "বুধ",
+            "thu": "বৃহঃ",
+            "fri": "শুক্র"
+        },
+        "hero": {
+            "badge": "লজিস্টিকস কার্যক্রম",
+            "badgeSecondary": "লাইভ শিপমেন্ট ওভারভিউ",
+            "title": "শিপমেন্ট কার্যক্রম, ডেলিভারি পারফরম্যান্স ও ডিসপ্যাচ পরিচালনা করুন",
+            "description": "স্পষ্ট ও সুগঠিত ড্যাশবোর্ডে শিপমেন্টের অগ্রগতি, ওয়্যারহাউস কার্যক্রম, ডেলিভারি খরচ ও অপারেশনাল ব্যতিক্রম পর্যালোচনা করুন।",
+            "activeShipments": "সক্রিয় শিপমেন্ট",
+            "activeShipmentsHint": "অপেক্ষমাণ, পরিবহনে ও ডেলিভারির জন্য বের হওয়া শিপমেন্ট",
+            "successRate": "সাফল্যের হার",
+            "successRateHint": "বর্তমান ভিউতে {count}টি ডেলিভারি হয়েছে",
+            "assignedShipments": "নিযুক্ত শিপমেন্ট",
+            "assignedShipmentsHint": "বর্তমানে একজন টিম সদস্যের কাছে নিযুক্ত শিপমেন্ট",
+            "attentionRequired": "মনোযোগ প্রয়োজন",
+            "attentionRequiredHint": "মেয়াদোত্তীর্ণ বা সময়সূচিহীন শিপমেন্ট"
+        },
+        "costOverview": {
+            "title": "আর্থিক সারসংক্ষেপ",
+            "subtitle": "খরচের ওভারভিউ",
+            "period": "সাপ্তাহিক",
+            "estimated": "আনুমানিক",
+            "actual": "প্রকৃত",
+            "variance": "পার্থক্য",
+            "delivered": "ডেলিভারি",
+            "teamCapacity": "টিম ক্ষমতা"
+        },
+        "monthlyTrend": {
+            "title": "মাসিক অর্ডার প্রবণতা",
+            "subtitle": "আনুমানিক শিপমেন্ট চাহিদা",
+            "projectedDispatch": "প্রত্যাশিত ডিসপ্যাচ পরিমাণ",
+            "shipmentsCount": "{count}টি শিপমেন্ট"
+        },
+        "performance": {
+            "title": "ডেলিভারি পারফরম্যান্স",
+            "subtitle": "সম্পন্নতার হারের ওভারভিউ",
+            "delivered": "ডেলিভারি",
+            "deliveredLabel": "ডেলিভারি হয়েছে: {count}",
+            "activeLabel": "সক্রিয়: {count}"
+        },
+        "capacity": {
+            "title": "ক্ষমতার ওভারভিউ",
+            "subtitle": "ডিসপ্যাচার কাজের বণ্টন",
+            "internalHandlingCost": "অভ্যন্তরীণ হ্যান্ডলিং খরচ:"
+        },
+        "operations": {
+            "title": "শিপমেন্ট কার্যক্রম",
+            "subtitle": "শিপমেন্ট খুঁজুন, ফিল্টার প্রয়োগ করুন এবং স্ট্যাটাস আপডেট করুন",
+            "searchPlaceholder": "শিপমেন্ট, অর্ডার, ক্রেতা, কুরিয়ার বা অ্যাসাইনি দিয়ে খুঁজুন",
+            "loadingWarehouses": "ওয়্যারহাউস লোড হচ্ছে...",
+            "allWarehouses": "সব ওয়্যারহাউস",
+            "emptyTitle": "বর্তমান ফিল্টারের সাথে কোনো শিপমেন্ট মেলেনি",
+            "emptyHint": "ফিল্টার সামঞ্জস্য করুন বা নতুন শিপমেন্ট যোগ করুন",
+            "orderLabel": "অর্ডার #{id}",
+            "shipmentLabel": "শিপমেন্ট #{id}",
+            "customerNotAvailable": "ক্রেতা উপলব্ধ নয়",
+            "assignedToLabel": "নিযুক্ত:",
+            "notAssigned": "নিযুক্ত নয়",
+            "priorityLabel": "প্রায়োরিটি:",
+            "priorityShort": "প্রায়োরিটি {value}",
+            "trackButton": "ট্র্যাক",
+            "openTracking": "ট্র্যাকিং খুলুন",
+            "warehouseLabel": "ওয়্যারহাউস {id}",
+            "noTrackingNumber": "কোনো ট্র্যাকিং নম্বর নেই",
+            "noDispatchNotes": "কোনো ডিসপ্যাচ নোট নেই",
+            "updating": "আপডেট হচ্ছে...",
+            "noFurtherAction": "আর কোনো পদক্ষেপ নেই",
+            "notScheduled": "সময়সূচিহীন",
+            "costEst": "আনুমানিক: {value}",
+            "costActual": "প্রকৃত: {value}",
+            "costInternal": "অভ্যন্তরীণ: {value}",
+            "timelineAssigned": "নিযুক্ত: {date}",
+            "timelineExpected": "প্রত্যাশিত: {date}",
+            "timelineDelivered": "ডেলিভারি: {date}",
+            "columns": {
+                "shipment": "শিপমেন্ট",
+                "management": "ব্যবস্থাপনা",
+                "cost": "খরচ",
+                "timeline": "টাইমলাইন"
+            }
+        },
+        "trackingPanel": {
+            "title": "শিপমেন্ট ট্র্যাকিং",
+            "warehouseSubtitle": "ওয়্যারহাউস-স্তরের শিপমেন্ট দৃশ্যমানতা",
+            "detailedSubtitle": "নির্বাচিত শিপমেন্টের বিস্তারিত রুট ভিউ",
+            "warehouseActivity": "ওয়্যারহাউস কার্যক্রম",
+            "showingActive": "{count}টি সক্রিয় শিপমেন্ট দেখানো হচ্ছে",
+            "selectWarehouseHint": "রুট অগ্রগতি দেখতে একটি ওয়্যারহাউস নির্বাচন করুন",
+            "reference": "ট্র্যাকিং রেফারেন্স",
+            "customerShipment": "ক্রেতার শিপমেন্ট",
+            "warehouse": "ওয়্যারহাউস: {name}",
+            "timelineTitle": "টাইমলাইন",
+            "timelinePickedUp": "পিকআপ হয়েছে",
+            "timelineInTransit": "পরিবহনে",
+            "timelineDelivered": "ডেলিভারি হয়েছে",
+            "timelineNote": "ডিসপ্যাচ টাইমলাইনে শিপমেন্ট কার্যক্রম রেকর্ড করা হয়েছে",
+            "pending": "অপেক্ষমাণ",
+            "noShipmentSelected": "কোনো শিপমেন্ট নির্বাচিত হয়নি",
+            "noShipmentsForWarehouse": "এই ওয়্যারহাউসের জন্য কোনো শিপমেন্ট নেই",
+            "selectWarehouseToView": "শিপমেন্ট ট্র্যাকিং দেখতে একটি ওয়্যারহাউস নির্বাচন করুন"
+        },
+        "priority": {
+            "title": "প্রায়োরিটি ডিসপ্যাচ",
+            "subtitle": "বর্তমান ভিউতে সর্বোচ্চ-প্রায়োরিটি শিপমেন্ট",
+            "activeWorkload": "সক্রিয় ডেলিভারি কাজের চাপ",
+            "atRisk": "ঝুঁকিতে",
+            "courierPending": "কুরিয়ার অপেক্ষমাণ",
+            "orderLine": "অর্ডার #{id} | {name}",
+            "customerNotAvailable": "ক্রেতা উপলব্ধ নয়",
+            "eta": "ETA",
+            "empty": "বর্তমান ভিউতে কোনো প্রায়োরিটি শিপমেন্ট নেই।",
+            "featuredShipment": "ফিচার্ড শিপমেন্ট",
+            "priorityLevel": "প্রায়োরিটি স্তর",
+            "dispatch": "ডিসপ্যাচ",
+            "trackingNotAssigned": "ট্র্যাকিং নম্বর নিযুক্ত নয়",
+            "assignmentPending": "নিয়োগ অপেক্ষমাণ"
+        },
+        "summary": {
+            "title": "কার্যক্রমের সারসংক্ষেপ",
+            "subtitle": "সাম্প্রতিক শিপমেন্ট কার্যক্রম ও খরচ",
+            "thirdPartyCost": "তৃতীয় পক্ষের ডেলিভারি খরচ",
+            "actualSpend": "প্রকৃত ডেলিভারি ব্যয়",
+            "shipmentLine": "শিপমেন্ট #{shipmentId} - অর্ডার #{orderId}",
+            "courierAssignee": "{courier} - {assignee}",
+            "empty": "কোনো সাম্প্রতিক শিপমেন্ট কার্যক্রম পাওয়া যায়নি।"
+        },
+        "map": {
+            "noWarehouseLocations": "এখনও কোনো ওয়্যারহাউস অবস্থান উপলব্ধ নেই।",
+            "popup": {
+                "code": "কোড: {code}",
+                "active": "সক্রিয় শিপমেন্ট: {count}",
+                "delivered": "ডেলিভারি হয়েছে: {count}",
+                "total": "মোট শিপমেন্ট: {count}"
+            }
+        },
+        "tracking": {
+            "origin": "মূল ওয়্যারহাউস",
+            "destination": "গন্তব্য",
+            "deliveryLocation": "ডেলিভারি স্থান",
+            "checkpoint": "চেকপয়েন্ট {index}",
+            "completed": "সম্পন্ন",
+            "currentPosition": "বর্তমান অবস্থান",
+            "upcoming": "আসন্ন",
+            "routeStatus": "রুট স্ট্যাটাস: {status}",
+            "currentLocation": "বর্তমান অবস্থান",
+            "shipmentLabel": "শিপমেন্ট #{id}",
+            "statusLabel": "স্ট্যাটাস: {status}",
+            "deliveredAt": "ডেলিভারি হয়েছে: {date}",
+            "accuracy": "নির্ভুলতা: ±{value}মি"
+        },
+        "errors": {
+            "loadWarehouses": "ওয়্যারহাউস লোড করা যায়নি",
+            "loadShipments": "লজিস্টিকস শিপমেন্ট লোড করা যায়নি",
+            "updateShipment": "শিপমেন্ট আপডেট করা যায়নি"
+        }
     }
 }

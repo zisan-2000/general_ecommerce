@@ -1,11 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface Props {
   shipments: any[];
   refresh: () => void;
 }
 
 export default function ShipmentTable({ shipments, refresh }: Props) {
+  const t = useTranslations("AdminShipmentTable");
+
   const updateStatus = async (id: number, status: string) => {
     await fetch(`/api/shipments/${id}`, {
       method: "PATCH",
@@ -25,12 +29,12 @@ export default function ShipmentTable({ shipments, refresh }: Props) {
       <table className="w-full text-sm">
         <thead className="bg-muted">
           <tr>
-            <th className="p-3 text-left">ID</th>
-            <th className="p-3 text-left">Order</th>
-            <th className="p-3 text-left">Courier</th>
-            <th className="p-3 text-left">Tracking</th>
-            <th className="p-3 text-left">Status</th>
-            <th className="p-3 text-left">Actions</th>
+            <th className="p-3 text-left">{t("columns.id")}</th>
+            <th className="p-3 text-left">{t("columns.order")}</th>
+            <th className="p-3 text-left">{t("columns.courier")}</th>
+            <th className="p-3 text-left">{t("columns.tracking")}</th>
+            <th className="p-3 text-left">{t("columns.status")}</th>
+            <th className="p-3 text-left">{t("columns.actions")}</th>
           </tr>
         </thead>
         <tbody>
@@ -47,12 +51,16 @@ export default function ShipmentTable({ shipments, refresh }: Props) {
                     onChange={(e) => updateStatus(s.id, e.target.value)}
                     className="input-theme border rounded px-2 py-1"
                   >
-                    <option>PENDING</option>
-                    <option>IN_TRANSIT</option>
-                    <option>OUT_FOR_DELIVERY</option>
-                    <option>DELIVERED</option>
-                    <option>RETURNED</option>
-                    <option>CANCELLED</option>
+                    <option value="PENDING">{t("statuses.PENDING")}</option>
+                    <option value="IN_TRANSIT">
+                      {t("statuses.IN_TRANSIT")}
+                    </option>
+                    <option value="OUT_FOR_DELIVERY">
+                      {t("statuses.OUT_FOR_DELIVERY")}
+                    </option>
+                    <option value="DELIVERED">{t("statuses.DELIVERED")}</option>
+                    <option value="RETURNED">{t("statuses.RETURNED")}</option>
+                    <option value="CANCELLED">{t("statuses.CANCELLED")}</option>
                   </select>
                 </td>
                 <td className="p-3">
@@ -60,7 +68,7 @@ export default function ShipmentTable({ shipments, refresh }: Props) {
                     onClick={() => deleteShipment(s.id)}
                     className="btn-danger px-3 py-1 rounded text-sm"
                   >
-                    Delete
+                    {t("actions.delete")}
                   </button>
                 </td>
               </tr>

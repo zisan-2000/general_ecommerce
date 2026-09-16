@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Courier, type CourierForm } from "@/lib/types/courier";
 
 interface CourierFormModalProps {
@@ -9,7 +10,13 @@ interface CourierFormModalProps {
   editingCourier?: Courier | null;
 }
 
-export default function CourierFormModal({ onClose, refresh, editingCourier }: CourierFormModalProps) {
+export default function CourierFormModal({
+  onClose,
+  refresh,
+  editingCourier,
+}: CourierFormModalProps) {
+  const t = useTranslations("AdminCourierFormModal");
+
   const [form, setForm] = useState<CourierForm>({
     name: "",
     type: "PATHAO",
@@ -22,7 +29,6 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  // Reset form when editingCourier changes
   useEffect(() => {
     if (editingCourier) {
       setForm({
@@ -55,17 +61,18 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
     setError(null);
     setSuccess(null);
 
-    // Validation
     if (!form.name.trim()) {
-      setError("Courier name is required");
+      setError(t("errors.nameRequired"));
       setLoading(false);
       return;
     }
 
     try {
-      const url = isEditing ? `/api/couriers/${editingCourier.id}` : "/api/couriers";
+      const url = isEditing
+        ? `/api/couriers/${editingCourier.id}`
+        : "/api/couriers";
       const method = isEditing ? "PATCH" : "POST";
-      
+
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
@@ -75,19 +82,20 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || `Failed to ${isEditing ? "update" : "create"} courier`);
+        throw new Error(
+          data.error ||
+            t(isEditing ? "errors.updateFailed" : "errors.createFailed"),
+        );
       }
 
-      setSuccess(`Courier ${isEditing ? "updated" : "created"} successfully!`);
+      setSuccess(t(isEditing ? "success.updated" : "success.created"));
       refresh();
-      
-      // Close modal after successful submission
+
       setTimeout(() => {
         onClose();
       }, 1500);
-      
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong");
+      setError(err instanceof Error ? err.message : t("errors.generic"));
     } finally {
       setLoading(false);
     }
@@ -98,23 +106,23 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
       <div className="card-theme p-6 rounded-lg w-[500px] max-w-[90vw] border shadow-lg max-h-[80vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">
-            {isEditing ? "Edit Courier" : "Add Courier"}
+            {isEditing ? t("titleEdit") : t("titleAdd")}
           </h2>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 text-2xl leading-none"
           >
-            x
+            ×
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-2">
-              Courier Name
+              {t("fields.name")}
             </label>
             <input
-              placeholder="Courier Name"
+              placeholder={t("placeholders.name")}
               className="input-theme border p-2 rounded w-full"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -124,26 +132,31 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Courier Type
+              {t("fields.type")}
             </label>
             <select
               className="input-theme border p-2 rounded w-full"
               value={form.type}
-              onChange={(e) => setForm({ ...form, type: e.target.value as CourierForm["type"] })}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  type: e.target.value as CourierForm["type"],
+                })
+              }
             >
-              <option value="PATHAO">Pathao</option>
-              <option value="REDX">RedX</option>
-              <option value="STEADFAST">Steadfast</option>
-              <option value="CUSTOM">Custom</option>
+              <option value="PATHAO">{t("courierTypes.PATHAO")}</option>
+              <option value="REDX">{t("courierTypes.REDX")}</option>
+              <option value="STEADFAST">{t("courierTypes.STEADFAST")}</option>
+              <option value="CUSTOM">{t("courierTypes.CUSTOM")}</option>
             </select>
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Base URL (optional)
+              {t("fields.baseUrlOptional")}
             </label>
             <input
-              placeholder="Base URL (optional)"
+              placeholder={t("placeholders.baseUrl")}
               className="input-theme border p-2 rounded w-full"
               value={form.baseUrl}
               onChange={(e) => setForm({ ...form, baseUrl: e.target.value })}
@@ -152,10 +165,10 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              API Key (optional)
+              {t("fields.apiKeyOptional")}
             </label>
             <input
-              placeholder="API Key"
+              placeholder={t("placeholders.apiKey")}
               className="input-theme border p-2 rounded w-full"
               value={form.apiKey}
               onChange={(e) => setForm({ ...form, apiKey: e.target.value })}
@@ -164,10 +177,10 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Secret Key (optional)
+              {t("fields.secretKeyOptional")}
             </label>
             <input
-              placeholder="Secret Key (optional)"
+              placeholder={t("placeholders.secretKey")}
               className="input-theme border p-2 rounded w-full"
               value={form.secretKey}
               onChange={(e) => setForm({ ...form, secretKey: e.target.value })}
@@ -176,10 +189,10 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Client ID (optional)
+              {t("fields.clientIdOptional")}
             </label>
             <input
-              placeholder="Client ID (optional)"
+              placeholder={t("placeholders.clientId")}
               className="input-theme border p-2 rounded w-full"
               value={form.clientId}
               onChange={(e) => setForm({ ...form, clientId: e.target.value })}
@@ -204,14 +217,16 @@ export default function CourierFormModal({ onClose, refresh, editingCourier }: C
               onClick={onClose}
               className="px-4 py-2 border border-border rounded"
             >
-              Cancel
+              {t("actions.cancel")}
             </button>
-            <button 
+            <button
               type="submit"
               disabled={loading}
               className="btn-primary px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? (isEditing ? "Updating..." : "Creating...") : (isEditing ? "Update Courier" : "Save Courier")}
+              {loading
+                ? t(isEditing ? "actions.updating" : "actions.creating")
+                : t(isEditing ? "actions.update" : "actions.save")}
             </button>
           </div>
         </form>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import WarehouseLocationPicker from "@/components/Settings/WarehouseLocationPicker";
 import { Warehouse, type WarehouseForm } from "@/lib/types/warehouse";
 
@@ -102,13 +103,18 @@ interface WarehouseFormModalProps {
   editingWarehouse?: Warehouse | null;
 }
 
-export default function WarehouseFormModal({ onClose, refresh, editingWarehouse }: WarehouseFormModalProps) {
+export default function WarehouseFormModal({
+  onClose,
+  refresh,
+  editingWarehouse,
+}: WarehouseFormModalProps) {
+  const t = useTranslations("AdminWarehouseFormModal");
+
   const [form, setForm] = useState<WarehouseForm>({
     name: "",
     code: "",
     address: "",
     isDefault: false,
-    // Location fields
     country: "BD",
     division: "",
     district: "",
@@ -124,29 +130,27 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
-  
-  // API data states
+
   const [countries, setCountries] = useState<CountryOption[]>([]);
   const [divisions, setDivisions] = useState<DivisionOption[]>([]);
   const [districts, setDistricts] = useState<DistrictOption[]>([]);
   const [loadingLocations, setLoadingLocations] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
 
-  // Fetch countries on component mount and set Bangladesh as default
   useEffect(() => {
     fetchCountries();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Fetch districts when division changes
   useEffect(() => {
     if (form.division && form.country) {
       fetchDistricts(form.country, form.division, true);
     } else {
       setDistricts([]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.division, form.country]);
 
-  // Reset form when editingWarehouse changes
   useEffect(() => {
     if (editingWarehouse) {
       setForm({
@@ -154,7 +158,6 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         code: editingWarehouse.code,
         address: editingWarehouse.address?.location || "",
         isDefault: editingWarehouse.isDefault,
-        // Location fields
         country: editingWarehouse.country || "BD",
         division: editingWarehouse.division || "",
         district: editingWarehouse.district || "",
@@ -167,8 +170,7 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         locationNote: editingWarehouse.locationNote || "",
         isMapEnabled: editingWarehouse.isMapEnabled ?? true,
       });
-      
-      // Fetch divisions and districts for the existing warehouse location
+
       if (editingWarehouse.country) {
         fetchDivisions(editingWarehouse.country, true);
       }
@@ -178,7 +180,6 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         code: "",
         address: "",
         isDefault: false,
-        // Location fields
         country: "BD",
         division: "",
         district: "",
@@ -191,35 +192,38 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         locationNote: "",
         isMapEnabled: true,
       });
-      // Auto-fetch Bangladesh divisions for new warehouse
       if (countries.length > 0) {
         fetchDivisions("BD", true);
       }
     }
     setError(null);
     setSuccess(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editingWarehouse, countries.length]);
 
-  // API functions
   const fetchCountries = async () => {
     try {
       setLoadingLocations(true);
       setLocationError(null);
-      
+
       const response = await fetch("/api/geo/countries", { cache: "no-store" });
-      if (!response.ok) throw new Error('Failed to fetch countries');
+      if (!response.ok) throw new Error(t("errors.loadCountries"));
       const data = await response.json();
       setCountries(data);
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to load countries';
+      const errorMessage =
+        err instanceof Error ? err.message : t("errors.loadCountries");
       setLocationError(errorMessage);
-      console.error('Error fetching countries:', err);
+      console.error("Error fetching countries:", err);
     } finally {
       setLoadingLocations(false);
     }
   };
 
-  const fetchDivisions = async (countryCode: string, preserveSelection = false) => {
+  const fetchDivisions = async (
+    countryCode: string,
+    preserveSelection = false,
+  ) => {
     try {
       setLoadingLocations(true);
       setLocationError(null);
@@ -228,7 +232,7 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         setDivisions(BANGLADESH_DIVISIONS);
         setDistricts([]);
         if (!preserveSelection) {
-          setForm(prev => ({ ...prev, division: "", district: "" }));
+          setForm((prev) => ({ ...prev, division: "", district: "" }));
         }
         return;
       }
@@ -236,17 +240,18 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
       const response = await fetch(`/api/geo/countries/${countryCode}/states`, {
         cache: "no-store",
       });
-      if (!response.ok) throw new Error('Failed to fetch divisions');
+      if (!response.ok) throw new Error(t("errors.loadDivisions"));
       const data = await response.json();
       setDivisions(data);
       setDistricts([]);
       if (!preserveSelection) {
-        setForm(prev => ({ ...prev, division: '', district: '' }));
+        setForm((prev) => ({ ...prev, division: "", district: "" }));
       }
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to load divisions';
+      const errorMessage =
+        err instanceof Error ? err.message : t("errors.loadDivisions");
       setLocationError(errorMessage);
-      console.error('Error fetching divisions:', err);
+      console.error("Error fetching divisions:", err);
     } finally {
       setLoadingLocations(false);
     }
@@ -262,10 +267,11 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
       setLocationError(null);
 
       if (countryCode === "BD") {
-        const districtList = BANGLADESH_DISTRICTS_BY_DIVISION[divisionCode] || [];
+        const districtList =
+          BANGLADESH_DISTRICTS_BY_DIVISION[divisionCode] || [];
         setDistricts(districtList.map((name) => ({ name })));
         if (!preserveSelection) {
-          setForm(prev => ({ ...prev, district: '' }));
+          setForm((prev) => ({ ...prev, district: "" }));
         }
         return;
       }
@@ -274,16 +280,17 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         `/api/geo/countries/${countryCode}/states/${divisionCode}/cities`,
         { cache: "no-store" },
       );
-      if (!response.ok) throw new Error('Failed to fetch districts');
+      if (!response.ok) throw new Error(t("errors.loadDistricts"));
       const data = await response.json();
       setDistricts(data);
       if (!preserveSelection) {
-        setForm(prev => ({ ...prev, district: '' }));
+        setForm((prev) => ({ ...prev, district: "" }));
       }
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to load districts';
+      const errorMessage =
+        err instanceof Error ? err.message : t("errors.loadDistricts");
       setLocationError(errorMessage);
-      console.error('Error fetching districts:', err);
+      console.error("Error fetching districts:", err);
     } finally {
       setLoadingLocations(false);
     }
@@ -302,22 +309,23 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
     setError(null);
     setSuccess(null);
 
-    // Validation
     if (!form.name.trim()) {
-      setError("Warehouse name is required");
+      setError(t("errors.nameRequired"));
       setLoading(false);
       return;
     }
     if (!form.code.trim()) {
-      setError("Warehouse code is required");
+      setError(t("errors.codeRequired"));
       setLoading(false);
       return;
     }
 
     try {
-      const url = isEditing ? `/api/warehouses/${editingWarehouse.id}` : "/api/warehouses";
+      const url = isEditing
+        ? `/api/warehouses/${editingWarehouse.id}`
+        : "/api/warehouses";
       const method = isEditing ? "PATCH" : "POST";
-      
+
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
@@ -330,19 +338,20 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.error || `Failed to ${isEditing ? "update" : "create"} warehouse`);
+        throw new Error(
+          data?.error ||
+            t(isEditing ? "errors.updateFailed" : "errors.createFailed"),
+        );
       }
 
-      setSuccess(`Warehouse ${isEditing ? "updated" : "created"} successfully!`);
+      setSuccess(t(isEditing ? "success.updated" : "success.created"));
       refresh();
-      
-      // Close modal after successful submission
+
       setTimeout(() => {
         onClose();
       }, 1500);
-      
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong");
+      setError(err instanceof Error ? err.message : t("errors.generic"));
     } finally {
       setLoading(false);
     }
@@ -353,7 +362,7 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
       <div className="card-theme p-6 rounded-lg w-[70vw] border shadow-lg max-h-[80vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">
-            {isEditing ? "Edit Warehouse" : "Add Warehouse"}
+            {isEditing ? t("titleEdit") : t("titleAdd")}
           </h2>
           <button
             onClick={onClose}
@@ -366,10 +375,10 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-2">
-              Warehouse Name
+              {t("fields.name")}
             </label>
             <input
-              placeholder="Warehouse Name"
+              placeholder={t("placeholders.name")}
               className="input-theme border p-2 rounded w-full"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -379,10 +388,10 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Unique Code
+              {t("fields.code")}
             </label>
             <input
-              placeholder="Unique Code"
+              placeholder={t("placeholders.code")}
               className="input-theme border p-2 rounded w-full"
               value={form.code}
               onChange={(e) => setForm({ ...form, code: e.target.value })}
@@ -392,35 +401,34 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Address
+              {t("fields.address")}
             </label>
             <input
-              placeholder="Full Address"
+              placeholder={t("placeholders.address")}
               className="input-theme border p-2 rounded w-full"
               value={form.address}
               onChange={(e) => setForm({ ...form, address: e.target.value })}
             />
           </div>
 
-          {/* Location Fields */}
           <div className="border-t pt-4">
-            <h3 className="text-sm font-medium mb-3">Location Information</h3>
-            
+            <h3 className="text-sm font-medium mb-3">{t("location.title")}</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Country
+                  {t("location.country")}
                 </label>
                 <select
                   className="input-theme border p-2 rounded w-full"
                   value={form.country}
                   onChange={(e) => {
                     const newCountry = e.target.value;
-                    setForm({ 
-                      ...form, 
-                      country: newCountry, 
-                      division: '', 
-                      district: '' 
+                    setForm({
+                      ...form,
+                      country: newCountry,
+                      division: "",
+                      district: "",
                     });
                     if (newCountry) {
                       fetchDivisions(newCountry);
@@ -431,32 +439,34 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
                   }}
                   disabled={loadingLocations}
                 >
-                  <option value="">Select Country</option>
+                  <option value="">{t("location.selectCountry")}</option>
                   {countries.map((country) => (
                     <option key={country.iso2} value={country.iso2}>
                       {country.name}
                     </option>
                   ))}
                 </select>
-                {loadingLocations && form.country === '' && (
-                  <p className="text-xs text-gray-500 mt-1">Loading countries...</p>
+                {loadingLocations && form.country === "" && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("location.loadingCountries")}
+                  </p>
                 )}
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Division
+                  {t("location.division")}
                 </label>
                 <select
                   className="input-theme border p-2 rounded w-full"
                   value={form.division}
                   onChange={(e) => {
                     const newDivision = e.target.value;
-                    setForm({ ...form, division: newDivision, district: '' });
+                    setForm({ ...form, division: newDivision, district: "" });
                   }}
                   disabled={!form.country || loadingLocations}
                 >
-                  <option value="">Select Division</option>
+                  <option value="">{t("location.selectDivision")}</option>
                   {divisions.map((division) => (
                     <option key={division.iso2} value={division.iso2}>
                       {division.name}
@@ -464,21 +474,25 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
                   ))}
                 </select>
                 {loadingLocations && form.country && (
-                  <p className="text-xs text-gray-500 mt-1">Loading divisions...</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("location.loadingDivisions")}
+                  </p>
                 )}
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  District
+                  {t("location.district")}
                 </label>
                 <select
                   className="input-theme border p-2 rounded w-full"
                   value={form.district}
-                  onChange={(e) => setForm({ ...form, district: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, district: e.target.value })
+                  }
                   disabled={!form.division || loadingLocations}
                 >
-                  <option value="">Select District</option>
+                  <option value="">{t("location.selectDistrict")}</option>
                   {districts.map((district, index) => (
                     <option key={district.id || index} value={district.name}>
                       {district.name}
@@ -486,16 +500,18 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
                   ))}
                 </select>
                 {loadingLocations && form.division && (
-                  <p className="text-xs text-gray-500 mt-1">Loading districts...</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("location.loadingDistricts")}
+                  </p>
                 )}
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Area
+                  {t("location.area")}
                 </label>
                 <input
-                  placeholder="Area"
+                  placeholder={t("placeholders.area")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.area}
                   onChange={(e) => setForm({ ...form, area: e.target.value })}
@@ -504,81 +520,93 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Post Code
+                  {t("location.postCode")}
                 </label>
                 <input
-                  placeholder="Post Code"
+                  placeholder={t("placeholders.postCode")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.postCode}
-                  onChange={(e) => setForm({ ...form, postCode: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, postCode: e.target.value })
+                  }
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Map Label
+                  {t("location.mapLabel")}
                 </label>
                 <input
-                  placeholder="Short label for map"
+                  placeholder={t("placeholders.mapLabel")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.mapLabel}
-                  onChange={(e) => setForm({ ...form, mapLabel: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, mapLabel: e.target.value })
+                  }
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Latitude
+                  {t("location.latitude")}
                 </label>
                 <input
                   type="number"
                   step="any"
-                  placeholder="23.759"
+                  placeholder={t("placeholders.latitude")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.latitude}
-                  onChange={(e) => setForm({ ...form, latitude: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, latitude: e.target.value })
+                  }
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Longitude
+                  {t("location.longitude")}
                 </label>
                 <input
                   type="number"
                   step="any"
-                  placeholder="90.389"
+                  placeholder={t("placeholders.longitude")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.longitude}
-                  onChange={(e) => setForm({ ...form, longitude: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, longitude: e.target.value })
+                  }
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Coverage Radius (km)
+                  {t("location.coverageRadius")}
                 </label>
                 <input
                   type="number"
                   step="0.1"
-                  placeholder="5.0"
+                  placeholder={t("placeholders.coverageRadius")}
                   className="input-theme border p-2 rounded w-full"
                   value={form.coverageRadiusKm}
-                  onChange={(e) => setForm({ ...form, coverageRadiusKm: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, coverageRadiusKm: e.target.value })
+                  }
                 />
               </div>
             </div>
 
             <div className="mt-4">
               <label className="block text-sm font-medium mb-2">
-                Location Note
+                {t("location.note")}
               </label>
               <textarea
-                placeholder="Additional location details..."
+                placeholder={t("placeholders.locationNote")}
                 className="input-theme border p-2 rounded w-full"
                 rows={3}
                 value={form.locationNote}
-                onChange={(e) => setForm({ ...form, locationNote: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, locationNote: e.target.value })
+                }
               />
             </div>
 
@@ -587,11 +615,13 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
                 type="checkbox"
                 id="isMapEnabled"
                 checked={form.isMapEnabled}
-                onChange={(e) => setForm({ ...form, isMapEnabled: e.target.checked })}
+                onChange={(e) =>
+                  setForm({ ...form, isMapEnabled: e.target.checked })
+                }
                 className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
               />
               <label htmlFor="isMapEnabled" className="text-sm font-medium">
-                Show on map
+                {t("location.showOnMap")}
               </label>
             </div>
 
@@ -602,11 +632,13 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
                   longitude={hasValidCoordinates ? longitudeNumber : null}
                   readonly
                   coverageRadiusKm={
-                    Number.isFinite(coverageRadiusNumber) ? coverageRadiusNumber : null
+                    Number.isFinite(coverageRadiusNumber)
+                      ? coverageRadiusNumber
+                      : null
                   }
-                  title="Map Preview"
-                  description="Enter latitude and longitude to preview the warehouse on OpenStreetMap."
-                  emptyMessage="Enter latitude and longitude to see the warehouse preview here."
+                  title={t("mapPreview.title")}
+                  description={t("mapPreview.description")}
+                  emptyMessage={t("mapPreview.emptyMessage")}
                   heightClassName="h-80"
                 />
               </div>
@@ -618,11 +650,13 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
               type="checkbox"
               id="isDefault"
               checked={form.isDefault}
-              onChange={(e) => setForm({ ...form, isDefault: e.target.checked })}
+              onChange={(e) =>
+                setForm({ ...form, isDefault: e.target.checked })
+              }
               className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <label htmlFor="isDefault" className="text-sm font-medium">
-              Default Warehouse
+              {t("fields.defaultWarehouse")}
             </label>
           </div>
 
@@ -650,14 +684,16 @@ export default function WarehouseFormModal({ onClose, refresh, editingWarehouse 
               onClick={onClose}
               className="px-4 py-2 border border-border rounded"
             >
-              Cancel
+              {t("actions.cancel")}
             </button>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={loading}
               className="btn-primary px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? (isEditing ? "Updating..." : "Creating...") : (isEditing ? "Update Warehouse" : "Save Warehouse")}
+              {loading
+                ? t(isEditing ? "actions.updating" : "actions.creating")
+                : t(isEditing ? "actions.update" : "actions.save")}
             </button>
           </div>
         </form>

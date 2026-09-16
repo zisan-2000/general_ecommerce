@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 type Warehouse = {
   id: number;
@@ -18,7 +19,13 @@ interface WarehouseFormProps {
   setEditingWarehouse?: (warehouse: Warehouse | null) => void;
 }
 
-export default function WarehouseForm({ refresh, editingWarehouse, setEditingWarehouse }: WarehouseFormProps) {
+export default function WarehouseForm({
+  refresh,
+  editingWarehouse,
+  setEditingWarehouse,
+}: WarehouseFormProps) {
+  const t = useTranslations("AdminWarehouseForm");
+
   const [form, setForm] = useState({
     name: "",
     code: "",
@@ -29,7 +36,6 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  // Reset form when editingWarehouse changes
   useEffect(() => {
     if (editingWarehouse) {
       setForm({
@@ -56,22 +62,23 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
     setLoading(true);
     setError(null);
 
-    // Validation
     if (!form.name.trim()) {
-      setError("Warehouse name is required");
+      setError(t("errors.nameRequired"));
       setLoading(false);
       return;
     }
     if (!form.code.trim()) {
-      setError("Warehouse code is required");
+      setError(t("errors.codeRequired"));
       setLoading(false);
       return;
     }
 
     try {
-      const url = isEditing ? `/api/warehouses/${editingWarehouse.id}` : "/api/warehouses";
+      const url = isEditing
+        ? `/api/warehouses/${editingWarehouse.id}`
+        : "/api/warehouses";
       const method = isEditing ? "PATCH" : "POST";
-      
+
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
@@ -84,12 +91,15 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.error || `Failed to ${isEditing ? "update" : "create"} warehouse`);
+        throw new Error(
+          data?.error ||
+            t(isEditing ? "errors.updateFailed" : "errors.createFailed"),
+        );
       }
 
-      setSuccess(`Warehouse ${isEditing ? "updated" : "created"} successfully!`);
+      setSuccess(t(isEditing ? "success.updated" : "success.created"));
       refresh();
-      
+
       if (isEditing && setEditingWarehouse) {
         setEditingWarehouse(null);
       } else {
@@ -101,7 +111,7 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
         });
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong");
+      setError(err instanceof Error ? err.message : t("errors.generic"));
     } finally {
       setLoading(false);
     }
@@ -112,10 +122,12 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
       onSubmit={handleSubmit}
       className="card-theme border p-4 rounded-lg space-y-3"
     >
-      <h2 className="font-semibold">{isEditing ? "Edit Warehouse" : "Add Warehouse"}</h2>
+      <h2 className="font-semibold">
+        {isEditing ? t("titleEdit") : t("titleAdd")}
+      </h2>
 
       <input
-        placeholder="Warehouse Name"
+        placeholder={t("placeholders.name")}
         className="input-theme border p-2 rounded w-full"
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -123,7 +135,7 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
       />
 
       <input
-        placeholder="Unique Code"
+        placeholder={t("placeholders.code")}
         className="input-theme border p-2 rounded w-full"
         value={form.code}
         onChange={(e) => setForm({ ...form, code: e.target.value })}
@@ -131,7 +143,7 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
       />
 
       <input
-        placeholder="Address"
+        placeholder={t("placeholders.address")}
         className="input-theme border p-2 rounded w-full"
         value={form.address}
         onChange={(e) => setForm({ ...form, address: e.target.value })}
@@ -143,7 +155,7 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
           checked={form.isDefault}
           onChange={(e) => setForm({ ...form, isDefault: e.target.checked })}
         />
-        Default Warehouse
+        {t("fields.defaultWarehouse")}
       </label>
 
       {error && (
@@ -164,15 +176,17 @@ export default function WarehouseForm({ refresh, editingWarehouse, setEditingWar
           onClick={() => setEditingWarehouse && setEditingWarehouse(null)}
           className="btn-secondary px-4 py-2 rounded"
         >
-          Cancel
+          {t("actions.cancel")}
         </button>
       )}
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         disabled={loading}
         className="btn-primary px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? (isEditing ? "Updating..." : "Creating...") : (isEditing ? "Update Warehouse" : "Save Warehouse")}
+        {loading
+          ? t(isEditing ? "actions.updating" : "actions.creating")
+          : t(isEditing ? "actions.update" : "actions.save")}
       </button>
     </form>
   );

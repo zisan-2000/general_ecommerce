@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,11 +10,35 @@ import { toast } from "sonner";
 import { X } from "lucide-react";
 import Image from "next/image";
 
+const BANNER_TYPES = [
+  "HERO",
+  "BANNER1",
+  "BANNER2",
+  "PROMOTION",
+  "POPUP",
+] as const;
+
+type BannerType = (typeof BANNER_TYPES)[number];
+
+const BANNER_TYPE_TRANSLATION_KEYS: Record<
+  BannerType,
+  `bannerTypes.${BannerType}`
+> = {
+  HERO: "bannerTypes.HERO",
+  BANNER1: "bannerTypes.BANNER1",
+  BANNER2: "bannerTypes.BANNER2",
+  PROMOTION: "bannerTypes.PROMOTION",
+  POPUP: "bannerTypes.POPUP",
+};
+
+const isBannerType = (value: string): value is BannerType =>
+  BANNER_TYPES.includes(value as BannerType);
+
 interface Banner {
   id: number;
   title: string;
   image: string;
-  type: string;
+  type: BannerType;
   position: number;
   isActive: boolean;
 }
@@ -31,10 +56,18 @@ export default function BannerManager({
   onUpdate,
   onDelete,
 }: Props) {
+  const t = useTranslations("AdminBannerManager");
+
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Banner | null>(null);
 
-  const [form, setForm] = useState<any>({
+  const [form, setForm] = useState<{
+    title: string;
+    image: string;
+    type: BannerType;
+    position: number;
+    isActive: boolean;
+  }>({
     title: "",
     image: "",
     type: "HERO",
@@ -74,7 +107,8 @@ export default function BannerManager({
     });
 
     const data = await res.json().catch(() => ({}));
-    if (!res.ok || !data?.url) throw new Error(data?.message || "Upload failed");
+    if (!res.ok || !data?.url)
+      throw new Error(data?.message || t("errors.uploadFailed"));
     return data.url as string;
   };
 
@@ -86,38 +120,36 @@ export default function BannerManager({
       const url = await uploadFile(file, "banners");
       setForm({ ...form, image: url });
     } catch (err: any) {
-      toast.error(err?.message || "Image upload failed");
+      toast.error(err?.message || t("errors.imageUploadFailed"));
     }
   };
 
   const handleSubmit = async () => {
     if (!form.title || !form.image) {
-      toast.error("Title and Image required");
+      toast.error(t("errors.titleImageRequired"));
       return;
     }
 
     try {
       if (editing) {
         await onUpdate(editing.id, form);
-        toast.success("Banner updated");
+        toast.success(t("success.updated"));
       } else {
         await onCreate(form);
-        toast.success("Banner created");
+        toast.success(t("success.created"));
       }
       setOpen(false);
       resetForm();
     } catch {
-      toast.error("Operation failed");
+      toast.error(t("errors.operationFailed"));
     }
   };
 
   return (
     <div className="p-8 space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-foreground">
-          Banner Management
-        </h1>
-        <Button onClick={openAdd}>Add Banner</Button>
+        <h1 className="text-2xl font-bold text-foreground">{t("title")}</h1>
+        <Button onClick={openAdd}>{t("actions.addBanner")}</Button>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -128,32 +160,28 @@ export default function BannerManager({
           >
             <Image
               src={banner.image}
-              alt={banner.title || "Store banner"}
+              alt={banner.title || t("bannerAlt")}
               width={640}
               height={320}
               className="h-40 w-full object-cover rounded-md"
             />
 
-            <h3 className="font-semibold text-foreground">
-              {banner.title}
-            </h3>
+            <h3 className="font-semibold text-foreground">{banner.title}</h3>
 
             <p className="text-sm text-muted-foreground">
-              Type: {banner.type}
+              {t("labels.type")}: {t(BANNER_TYPE_TRANSLATION_KEYS[banner.type])}
             </p>
 
             <p className="text-sm text-muted-foreground">
-              Position: {banner.position}
+              {t("labels.position")}: {banner.position}
             </p>
 
             <p
               className={`text-sm ${
-                banner.isActive
-                  ? "text-green-600"
-                  : "text-red-500"
+                banner.isActive ? "text-green-600" : "text-red-500"
               }`}
             >
-              {banner.isActive ? "Active" : "Inactive"}
+              {banner.isActive ? t("labels.active") : t("labels.inactive")}
             </p>
 
             <div className="flex gap-2">
@@ -162,14 +190,14 @@ export default function BannerManager({
                 variant="outline"
                 onClick={() => openEdit(banner)}
               >
-                Edit
+                {t("actions.edit")}
               </Button>
               <Button
                 size="sm"
                 variant="destructive"
                 onClick={() => onDelete(banner.id)}
               >
-                Delete
+                {t("actions.delete")}
               </Button>
             </div>
           </div>
@@ -181,26 +209,24 @@ export default function BannerManager({
         <div className="fixed inset-0 bg-gray-400/40 flex items-center justify-center">
           <div className="bg-card p-6 rounded-xl w-[400px] space-y-4">
             <h2 className="text-lg font-semibold">
-              {editing ? "Edit Banner" : "New Banner"}
+              {editing ? t("modal.titleEdit") : t("modal.titleNew")}
             </h2>
 
             <div>
-              <Label>Title</Label>
+              <Label>{t("fields.title")}</Label>
               <Input
                 value={form.title}
-                onChange={(e) =>
-                  setForm({ ...form, title: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, title: e.target.value })}
               />
             </div>
 
             <div>
-              <Label>Banner Image</Label>
+              <Label>{t("fields.image")}</Label>
               {form.image ? (
                 <div className="relative w-32">
                   <Image
                     src={form.image}
-                    alt="Banner preview"
+                    alt={t("previewAlt")}
                     width={120}
                     height={120}
                     className="rounded border border-border object-cover"
@@ -228,24 +254,26 @@ export default function BannerManager({
             </div>
 
             <div>
-              <Label className="text-foreground">Type</Label>
+              <Label className="text-foreground">{t("fields.type")}</Label>
               <select
                 className="border border-border bg-background text-foreground p-2 rounded w-full"
                 value={form.type}
-                onChange={(e) =>
-                  setForm({ ...form, type: e.target.value })
-                }
+                onChange={(e) => {
+                  if (isBannerType(e.target.value)) {
+                    setForm({ ...form, type: e.target.value });
+                  }
+                }}
               >
-                <option value="HERO">HERO</option>
-                <option value="BANNER1">BANNER1</option>
-                <option value="BANNER2">BANNER2</option>
-                <option value="PROMOTION">PROMOTION</option>
-                <option value="POPUP">POPUP</option>
+                <option value="HERO">{t("bannerTypes.HERO")}</option>
+                <option value="BANNER1">{t("bannerTypes.BANNER1")}</option>
+                <option value="BANNER2">{t("bannerTypes.BANNER2")}</option>
+                <option value="PROMOTION">{t("bannerTypes.PROMOTION")}</option>
+                <option value="POPUP">{t("bannerTypes.POPUP")}</option>
               </select>
             </div>
 
             <div>
-              <Label>Position</Label>
+              <Label>{t("fields.position")}</Label>
               <Input
                 type="number"
                 value={form.position}
@@ -259,21 +287,19 @@ export default function BannerManager({
             </div>
 
             <div className="flex items-center gap-3">
-              <Label>Active</Label>
+              <Label>{t("fields.active")}</Label>
               <Switch
                 checked={form.isActive}
-                onCheckedChange={(val) =>
-                  setForm({ ...form, isActive: val })
-                }
+                onCheckedChange={(val) => setForm({ ...form, isActive: val })}
               />
             </div>
 
             <div className="flex justify-end gap-3 pt-4">
               <Button variant="outline" onClick={() => setOpen(false)}>
-                Cancel
+                {t("actions.cancel")}
               </Button>
               <Button onClick={handleSubmit}>
-                {editing ? "Update" : "Create"}
+                {editing ? t("actions.update") : t("actions.create")}
               </Button>
             </div>
           </div>

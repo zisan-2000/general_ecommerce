@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import ShipmentsSkeleton from "@/components/ui/ShipmentsSkeleton";
 import {
   MapContainer,
@@ -23,9 +24,11 @@ import {
 
 type ShipmentStatusType =
   | "PENDING"
+  | "ASSIGNED"
   | "IN_TRANSIT"
   | "OUT_FOR_DELIVERY"
   | "DELIVERED"
+  | "FAILED"
   | "RETURNED"
   | "CANCELLED";
 
@@ -103,18 +106,22 @@ type Warehouse = {
 const STATUS_OPTIONS: Array<"ALL" | ShipmentStatusType> = [
   "ALL",
   "PENDING",
+  "ASSIGNED",
   "IN_TRANSIT",
   "OUT_FOR_DELIVERY",
   "DELIVERED",
+  "FAILED",
   "RETURNED",
   "CANCELLED",
 ];
 
 const NEXT_STATUS_MAP: Record<ShipmentStatusType, ShipmentStatusType[]> = {
-  PENDING: ["IN_TRANSIT", "CANCELLED"],
-  IN_TRANSIT: ["OUT_FOR_DELIVERY", "RETURNED", "CANCELLED"],
-  OUT_FOR_DELIVERY: ["DELIVERED", "RETURNED", "CANCELLED"],
-  DELIVERED: [],
+  PENDING: ["ASSIGNED", "CANCELLED"],
+  ASSIGNED: ["IN_TRANSIT", "OUT_FOR_DELIVERY", "FAILED", "CANCELLED"],
+  IN_TRANSIT: ["OUT_FOR_DELIVERY", "DELIVERED", "FAILED", "RETURNED", "CANCELLED"],
+  OUT_FOR_DELIVERY: ["DELIVERED", "FAILED", "RETURNED", "CANCELLED"],
+  DELIVERED: ["RETURNED"],
+  FAILED: ["ASSIGNED", "CANCELLED"],
   RETURNED: [],
   CANCELLED: [],
 };
@@ -122,18 +129,22 @@ const NEXT_STATUS_MAP: Record<ShipmentStatusType, ShipmentStatusType[]> = {
 const STATUS_LABELS: Record<"ALL" | ShipmentStatusType, string> = {
   ALL: "All statuses",
   PENDING: "Pending",
+  ASSIGNED: "Assigned",
   IN_TRANSIT: "In transit",
   OUT_FOR_DELIVERY: "Out for delivery",
   DELIVERED: "Delivered",
+  FAILED: "Failed",
   RETURNED: "Returned",
   CANCELLED: "Cancelled",
 };
 
 const NEXT_STATUS_LABELS: Record<ShipmentStatusType, string> = {
   PENDING: "Mark as pending",
+  ASSIGNED: "Mark as assigned",
   IN_TRANSIT: "Mark as in transit",
   OUT_FOR_DELIVERY: "Mark as out for delivery",
   DELIVERED: "Mark as delivered",
+  FAILED: "Mark as failed",
   RETURNED: "Mark as returned",
   CANCELLED: "Cancel shipment",
 };
@@ -604,6 +615,7 @@ function statusPill(status: ShipmentStatusType) {
   );
 }
 
+
 function DashboardCard({
   title,
   subtitle,
@@ -635,6 +647,8 @@ function DashboardCard({
 }
 
 export default function LogisticsPage() {
+  const t = useTranslations("AdminLogistics");
+
   const [filter, setFilter] = useState<"ALL" | ShipmentStatusType>("ALL");
   const [search, setSearch] = useState("");
   const [shipments, setShipments] = useState<ShipmentRow[]>([]);
@@ -650,20 +664,24 @@ export default function LogisticsPage() {
     null,
   );
 
+  const statusLabel = (status: "ALL" | ShipmentStatusType) =>
+    t(`statuses.${status}`);
+  const nextStatusLabel = (status: ShipmentStatusType) =>
+    t(`nextStatus.${status}`);
+
   const loadWarehouses = useCallback(async () => {
     try {
       setWarehousesLoading(true);
-      const res = await fetch("/api/warehouses", {
-        cache: "no-store",
-      });
+      const res = await fetch("/api/warehouses", { cache: "no-store" });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Failed to load warehouses");
+      if (!res.ok) throw new Error(data?.error || t("errors.loadWarehouses"));
       setWarehouses(Array.isArray(data) ? data : []);
     } catch (e) {
       console.error("Failed to load warehouses:", e);
     } finally {
       setWarehousesLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadShipments = useCallback(async () => {
@@ -674,16 +692,14 @@ export default function LogisticsPage() {
         cache: "no-store",
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok)
-        throw new Error(data?.error || "Failed to load logistics shipments");
+      if (!res.ok) throw new Error(data?.error || t("errors.loadShipments"));
       setShipments(Array.isArray(data?.shipments) ? data.shipments : []);
     } catch (e) {
-      setError(
-        e instanceof Error ? e.message : "Failed to load logistics shipments",
-      );
+      setError(e instanceof Error ? e.message : t("errors.loadShipments"));
     } finally {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -695,20 +711,13 @@ export default function LogisticsPage() {
     const term = search.trim().toLowerCase();
 
     return shipments.filter((shipment) => {
-      if (filter !== "ALL" && shipment.status !== filter) {
-        return false;
-      }
-
+      if (filter !== "ALL" && shipment.status !== filter) return false;
       if (
         selectedWarehouse !== "ALL" &&
         shipment.warehouseId !== selectedWarehouse
-      ) {
+      )
         return false;
-      }
-
-      if (!term) {
-        return true;
-      }
+      if (!term) return true;
 
       const searchFields = [
         shipment.id,
@@ -742,56 +751,52 @@ export default function LogisticsPage() {
   useEffect(() => {
     if (
       selectedShipmentId &&
-      !filteredShipments.some((shipment) => shipment.id === selectedShipmentId)
+      !filteredShipments.some((s) => s.id === selectedShipmentId)
     ) {
       setSelectedShipmentId(null);
     }
   }, [filteredShipments, selectedShipmentId]);
 
   const deliveredCount = filteredShipments.filter(
-    (item) => item.status === "DELIVERED",
+    (i) => i.status === "DELIVERED",
   ).length;
   const activeCount = filteredShipments.filter(
-    (item) =>
-      item.status === "IN_TRANSIT" ||
-      item.status === "OUT_FOR_DELIVERY" ||
-      item.status === "PENDING",
+    (i) =>
+      i.status === "IN_TRANSIT" ||
+      i.status === "OUT_FOR_DELIVERY" ||
+      i.status === "PENDING",
   ).length;
-  const atRiskCount = filteredShipments.filter((item) => {
-    if (item.status === "DELIVERED" || item.status === "CANCELLED")
-      return false;
-    if (!item.expectedDate) return item.status === "PENDING";
-    return new Date(item.expectedDate).getTime() < Date.now();
+  const atRiskCount = filteredShipments.filter((i) => {
+    if (i.status === "DELIVERED" || i.status === "CANCELLED") return false;
+    if (!i.expectedDate) return i.status === "PENDING";
+    return new Date(i.expectedDate).getTime() < Date.now();
   }).length;
-  const assignedCount = filteredShipments.filter(
-    (item) => item.assignedTo,
-  ).length;
+  const assignedCount = filteredShipments.filter((i) => i.assignedTo).length;
   const successRate = filteredShipments.length
     ? Math.round((deliveredCount / filteredShipments.length) * 100)
     : 0;
 
   const costSummary = useMemo(() => {
     const estimated = filteredShipments.reduce(
-      (sum, item) => sum + toAmount(item.estimatedCost),
+      (sum, i) => sum + toAmount(i.estimatedCost),
       0,
     );
     const actual = filteredShipments.reduce(
-      (sum, item) => sum + toAmount(item.actualCost),
+      (sum, i) => sum + toAmount(i.actualCost),
       0,
     );
     const thirdParty = filteredShipments.reduce(
-      (sum, item) => sum + toAmount(item.thirdPartyCost),
+      (sum, i) => sum + toAmount(i.thirdPartyCost),
       0,
     );
     const handling = filteredShipments.reduce(
-      (sum, item) =>
+      (sum, i) =>
         sum +
-        toAmount(item.handlingCost) +
-        toAmount(item.packagingCost) +
-        toAmount(item.fuelCost),
+        toAmount(i.handlingCost) +
+        toAmount(i.packagingCost) +
+        toAmount(i.fuelCost),
       0,
     );
-
     return {
       estimated,
       actual,
@@ -802,7 +807,13 @@ export default function LogisticsPage() {
   }, [filteredShipments]);
 
   const capacityRows = useMemo(() => {
-    const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    const weekdays = [
+      t("weekdays.mon"),
+      t("weekdays.tue"),
+      t("weekdays.wed"),
+      t("weekdays.thu"),
+      t("weekdays.fri"),
+    ];
     const total = Math.max(activeCount, 1);
     const base = [0.42, 0.55, 0.78, 0.61, 0.7];
 
@@ -813,7 +824,7 @@ export default function LogisticsPage() {
       );
       return { day, count };
     });
-  }, [activeCount]);
+  }, [activeCount, t]);
 
   const priorityShipments = useMemo(() => {
     return [...filteredShipments]
@@ -836,13 +847,13 @@ export default function LogisticsPage() {
   }, [filteredShipments]);
 
   const selectedShipment = selectedShipmentId
-    ? (filteredShipments.find((item) => item.id === selectedShipmentId) ?? null)
+    ? (filteredShipments.find((i) => i.id === selectedShipmentId) ?? null)
     : null;
 
   const highlightedShipment =
     selectedShipment ||
     priorityShipments[0] ||
-    filteredShipments.find((item) => item.status === "OUT_FOR_DELIVERY") ||
+    filteredShipments.find((i) => i.status === "OUT_FOR_DELIVERY") ||
     filteredShipments[0];
 
   const updateShipmentStatus = async (
@@ -857,82 +868,100 @@ export default function LogisticsPage() {
         body: JSON.stringify({ status: nextStatus }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error || "Failed to update shipment");
+      if (!res.ok) throw new Error(data?.error || t("errors.updateShipment"));
       await loadShipments();
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to update shipment");
+      setError(e instanceof Error ? e.message : t("errors.updateShipment"));
     } finally {
       setUpdatingId(null);
     }
   };
 
+  const statusPill = (status: ShipmentStatusType) => {
+    const cls =
+      status === "DELIVERED"
+        ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-700"
+        : status === "CANCELLED" || status === "RETURNED"
+          ? "border-rose-500/20 bg-rose-500/10 text-rose-700"
+          : status === "OUT_FOR_DELIVERY"
+            ? "border-amber-500/20 bg-amber-500/10 text-amber-700"
+            : "border-cyan-500/20 bg-cyan-500/10 text-cyan-700";
+
+    return (
+      <span
+        className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-semibold ${cls}`}
+      >
+        {statusLabel(status)}
+      </span>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto flex w-full flex-col gap-6 px-4 py-5 md:px-6 md:py-6">
+        {/* ============ HERO ============ */}
         <section className="overflow-hidden rounded-[32px] border border-border/60 bg-card p-5 shadow-sm md:p-7">
           <div className="grid gap-6 xl:grid-cols-[1.4fr,0.9fr]">
             <div>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">
-                  Logistics Operations
+                  {t("hero.badge")}
                 </span>
                 <span className="rounded-full border border-border/70 bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground">
-                  Live shipment overview
+                  {t("hero.badgeSecondary")}
                 </span>
               </div>
 
               <div className="mt-4 max-w-3xl">
                 <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                  Manage Shipment Activity, Delivery Performance, and Dispatch
+                  {t("hero.title")}
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground md:text-base">
-                  Review shipment progress, warehouse activity, delivery costs,
-                  and operational exceptions in a clear and structured
-                  dashboard.
+                  {t("hero.description")}
                 </p>
               </div>
 
               <div className="mt-6 grid gap-3 grid-cols-2 xl:grid-cols-4">
                 <div className="rounded-[24px] bg-primary px-4 py-4 text-primary-foreground shadow-sm">
                   <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/80">
-                    Active shipments
+                    {t("hero.activeShipments")}
                   </p>
                   <p className="mt-3 text-3xl font-semibold">{activeCount}</p>
                   <p className="mt-2 text-sm text-primary-foreground/70">
-                    Pending, in transit, and out-for-delivery shipments
+                    {t("hero.activeShipmentsHint")}
                   </p>
                 </div>
                 <div className="rounded-[24px] border border-border/60 bg-card px-4 py-4">
                   <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                    Success rate
+                    {t("hero.successRate")}
                   </p>
                   <p className="mt-3 text-3xl font-semibold text-foreground">
                     {successRate}%
                   </p>
                   <p className="mt-2 text-sm text-emerald-600">
-                    {deliveredCount} delivered in the current view
+                    {t("hero.successRateHint", { count: deliveredCount })}
                   </p>
                 </div>
                 <div className="rounded-[24px] border border-border/60 bg-card px-4 py-4">
                   <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                    Assigned shipments
+                    {t("hero.assignedShipments")}
                   </p>
                   <p className="mt-3 text-3xl font-semibold text-foreground">
                     {assignedCount}
                   </p>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Shipments currently assigned to a team member
+                    {t("hero.assignedShipmentsHint")}
                   </p>
                 </div>
                 <div className="rounded-[24px] border border-amber-200 bg-amber-50/80 px-4 py-4">
                   <p className="text-xs uppercase tracking-[0.24em] text-amber-700">
-                    Attention required
+                    {t("hero.attentionRequired")}
                   </p>
                   <p className="mt-3 text-3xl font-semibold text-foreground">
                     {atRiskCount}
                   </p>
                   <p className="mt-2 text-sm text-amber-700">
-                    Overdue or unscheduled shipments
+                    {t("hero.attentionRequiredHint")}
                   </p>
                 </div>
               </div>
@@ -942,21 +971,21 @@ export default function LogisticsPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground/70">
-                    Cost overview
+                    {t("costOverview.subtitle")}
                   </p>
                   <h2 className="mt-1 text-xl font-semibold">
-                    Financial summary
+                    {t("costOverview.title")}
                   </h2>
                 </div>
                 <div className="rounded-full border border-border/70 px-3 py-1 text-xs text-muted-foreground/70">
-                  Weekly
+                  {t("costOverview.period")}
                 </div>
               </div>
 
               <div className="mt-6 grid gap-3 grid-cols-3">
                 <div className="rounded-2xl bg-card p-4">
                   <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground/55">
-                    Estimated
+                    {t("costOverview.estimated")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
                     {formatAmount(costSummary.estimated)}
@@ -964,7 +993,7 @@ export default function LogisticsPage() {
                 </div>
                 <div className="rounded-2xl bg-card p-4">
                   <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground/55">
-                    Actual
+                    {t("costOverview.actual")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
                     {formatAmount(costSummary.actual)}
@@ -972,7 +1001,7 @@ export default function LogisticsPage() {
                 </div>
                 <div className="rounded-2xl bg-emerald-500/10 p-4">
                   <p className="text-xs uppercase tracking-[0.22em] text-emerald-700">
-                    Variance
+                    {t("costOverview.variance")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
                     {formatAmount(costSummary.variance)}
@@ -988,7 +1017,7 @@ export default function LogisticsPage() {
                         {successRate}%
                       </p>
                       <p className="mt-1 text-[10px] leading-none uppercase tracking-[0.08em] text-muted-foreground/70">
-                        Delivered
+                        {t("costOverview.delivered")}
                       </p>
                     </div>
                   </div>
@@ -996,7 +1025,7 @@ export default function LogisticsPage() {
 
                 <div className="rounded-[24px] bg-card p-4">
                   <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground/55">
-                    Team capacity
+                    {t("costOverview.teamCapacity")}
                   </p>
                   <div className="mt-3 space-y-3">
                     {capacityRows.map((row) => (
@@ -1025,10 +1054,11 @@ export default function LogisticsPage() {
           </div>
         </section>
 
+        {/* ============ MONTHLY / PERFORMANCE / CAPACITY ============ */}
         <section className="grid gap-6 xl:grid-cols-[1.05fr,1.05fr,0.9fr]">
           <DashboardCard
-            title="Monthly order trend"
-            subtitle="Estimated shipment demand"
+            title={t("monthlyTrend.title")}
+            subtitle={t("monthlyTrend.subtitle")}
           >
             <div className="flex items-end justify-between gap-2">
               {monthlyOrderBars.map((bar) => (
@@ -1043,24 +1073,26 @@ export default function LogisticsPage() {
                     />
                   </div>
                   <span className="text-xs font-medium text-muted-foreground">
-                    {bar.label}
+                    {t(`months.${bar.label}`)}
                   </span>
                 </div>
               ))}
             </div>
             <div className="mt-5 flex items-center justify-between rounded-2xl bg-muted px-4 py-3 text-sm">
               <span className="text-muted-foreground">
-                Projected dispatch volume
+                {t("monthlyTrend.projectedDispatch")}
               </span>
               <span className="font-semibold text-emerald-700">
-                {filteredShipments.length} shipments
+                {t("monthlyTrend.shipmentsCount", {
+                  count: filteredShipments.length,
+                })}
               </span>
             </div>
           </DashboardCard>
 
           <DashboardCard
-            title="Delivery performance"
-            subtitle="Completion rate overview"
+            title={t("performance.title")}
+            subtitle={t("performance.subtitle")}
           >
             <div className="grid gap-5 md:grid-cols-[120px,1fr] md:items-center">
               <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-[10px] border-primary border-r-primary/20 border-t-primary/40">
@@ -1069,7 +1101,7 @@ export default function LogisticsPage() {
                     {successRate}%
                   </p>
                   <p className="text-xs uppercase text-muted-foreground">
-                    Delivered
+                    {t("performance.delivered")}
                   </p>
                 </div>
               </div>
@@ -1086,18 +1118,18 @@ export default function LogisticsPage() {
             <div className="mt-5 flex flex-wrap gap-4 text-sm">
               <span className="inline-flex items-center gap-2 text-muted-foreground">
                 <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-                Delivered: {deliveredCount}
+                {t("performance.deliveredLabel", { count: deliveredCount })}
               </span>
               <span className="inline-flex items-center gap-2 text-muted-foreground">
                 <span className="h-2.5 w-2.5 rounded-full bg-muted" />
-                Active: {activeCount}
+                {t("performance.activeLabel", { count: activeCount })}
               </span>
             </div>
           </DashboardCard>
 
           <DashboardCard
-            title="Capacity overview"
-            subtitle="Dispatcher workload distribution"
+            title={t("capacity.title")}
+            subtitle={t("capacity.subtitle")}
           >
             <div className="space-y-4">
               {capacityRows.map((row, index) => (
@@ -1123,7 +1155,7 @@ export default function LogisticsPage() {
               ))}
             </div>
             <div className="mt-5 rounded-2xl border border-border/60 bg-muted p-4 text-sm text-muted-foreground">
-              Internal handling cost:{" "}
+              {t("capacity.internalHandlingCost")}{" "}
               <span className="font-semibold text-foreground">
                 {formatAmount(costSummary.handling)}
               </span>
@@ -1131,467 +1163,522 @@ export default function LogisticsPage() {
           </DashboardCard>
         </section>
 
-<section className="flex flex-col gap-6 lg:grid lg:grid-cols-2 xl:grid-cols-[1.1fr,1fr]">
-  {/* Left Column - Shipment Operations */}
-  <DashboardCard
-    title="Shipment Operations"
-    subtitle="Search shipments, apply filters, and update status"
-  >
-    <div className="flex flex-col gap-4">
-      {/* Filters Section */}
-      <div className="space-y-3">
-        {/* Search Input */}
-        <div className="relative">
-          <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <input
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search by shipment, order, customer, courier, or assignee"
-            className="h-11 w-full rounded-full border border-border bg-background pl-11 pr-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary sm:h-12 sm:text-base"
-          />
-        </div>
-
-        {/* Filter Row - Responsive Grid */}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
-          <select
-            value={filter}
-            onChange={(event) =>
-              setFilter(event.target.value as "ALL" | ShipmentStatusType)
-            }
-            className="h-11 rounded-full border border-border bg-background px-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary sm:h-12"
+        {/* ============ SHIPMENTS + TRACKING ============ */}
+        <section className="flex flex-col gap-6 lg:grid lg:grid-cols-2 xl:grid-cols-[1.1fr,1fr]">
+          {/* LEFT */}
+          <DashboardCard
+            title={t("operations.title")}
+            subtitle={t("operations.subtitle")}
           >
-            {STATUS_OPTIONS.map((status) => (
-              <option key={status} value={status}>
-                {formatStatusLabel(status)}
-              </option>
-            ))}
-          </select>
+            <div className="flex flex-col gap-4">
+              <div className="space-y-3">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder={t("operations.searchPlaceholder")}
+                    className="h-11 w-full rounded-full border border-border bg-background pl-11 pr-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary sm:h-12 sm:text-base"
+                  />
+                </div>
 
-          <select
-            value={selectedWarehouse}
-            onChange={(event) => {
-              const value = event.target.value;
-              setSelectedWarehouse(value === "ALL" ? "ALL" : Number(value));
-            }}
-            className="h-11 rounded-full border border-border bg-background px-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-50 sm:h-12"
-            disabled={warehousesLoading}
-          >
-            <option value="ALL">
-              {warehousesLoading ? "Loading warehouses..." : "All warehouses"}
-            </option>
-            {warehouses.map((warehouse) => (
-              <option key={warehouse.id} value={warehouse.id}>
-                {warehouse.name} ({warehouse.code})
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* Error Message */}
-      {error && (
-        <div className="flex items-center gap-2 rounded-2xl border border-destructive/20 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-          <AlertCircle className="h-4 w-4 flex-shrink-0" />
-          <p>{error}</p>
-        </div>
-      )}
-
-      {/* Shipments List */}
-      <div className="max-h-[500px] overflow-y-auto overscroll-contain">
-        {loading ? (
-          <ShipmentsSkeleton />
-        ) : !filteredShipments.length ? (
-          <div className="rounded-2xl border border-dashed border-border bg-muted/30 px-4 py-12 text-center">
-            <Package className="mx-auto h-12 w-12 text-muted-foreground/50" />
-            <p className="mt-3 text-base font-medium text-foreground">
-              No shipments match the current filters
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Adjust your filters or add new shipments
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-3">
-            {filteredShipments.map((shipment) => {
-              const nextStatuses = NEXT_STATUS_MAP[shipment.status] || [];
-              const hasDeliveryLocation = hasValidDeliveryLocation(shipment);
-              const deliveryAssignment = getCurrentDeliveryAssignment(shipment);
-              const isSelected = shipment.id === selectedShipmentId;
-
-              return (
-                <article
-                  key={shipment.id}
-                  className={`group cursor-pointer rounded-2xl border bg-card p-4 transition-all duration-200 hover:shadow-md ${
-                    isSelected
-                      ? "border-primary shadow-sm ring-1 ring-primary/20"
-                      : "border-border/60 hover:border-primary/30"
-                  }`}
-                  onClick={() => setSelectedShipmentId(shipment.id)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      event.preventDefault();
-                      setSelectedShipmentId(shipment.id);
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+                  <select
+                    value={filter}
+                    onChange={(e) =>
+                      setFilter(e.target.value as "ALL" | ShipmentStatusType)
                     }
-                  }}
-                  tabIndex={0}
-                  role="button"
-                >
-                  {/* Mobile Layout (Stacked) */}
-                  <div className="block lg:hidden">
-                    {/* Header with Status */}
-                    <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                      <div className="flex flex-wrap items-center gap-2">
-                        {statusPill(shipment.status)}
-                        <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
-                          {shipment.courier}
-                        </span>
-                      </div>
-                      <span className="text-xs text-muted-foreground">
-                        #{shipment.id}
-                      </span>
-                    </div>
+                    className="h-11 rounded-full border border-border bg-background px-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary sm:h-12"
+                  >
+                    {STATUS_OPTIONS.map((status) => (
+                      <option key={status} value={status}>
+                        {statusLabel(status)}
+                      </option>
+                    ))}
+                  </select>
 
-                    {/* Main Info */}
-                    <div className="space-y-2">
-                      <div>
-                        <p className="text-sm font-semibold text-foreground">
-                          Order #{shipment.orderId}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {shipment.order?.name || "Customer not available"}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">
-                          Assigned to:
-                        </span>
-                        <span className="font-medium text-foreground">
-                          {shipment.assignedTo?.name || "Not assigned"}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">Priority:</span>
-                        <span className="font-medium text-foreground">
-                          P{shipment.priority || 0}
-                        </span>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {nextStatuses.slice(0, 2).map((nextStatus) => (
-                          <button
-                            key={nextStatus}
-                            type="button"
-                            disabled={updatingId === shipment.id}
-                            onClick={(event) => {
-                              event.stopPropagation();
-                              updateShipmentStatus(shipment.id, nextStatus);
-                            }}
-                            className="flex-1 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
-                          >
-                            {updatingId === shipment.id
-                              ? "..."
-                              : NEXT_STATUS_LABELS[nextStatus]}
-                          </button>
-                        ))}
-                        {shipment.trackingUrl && (
-                          <a
-                            href={shipment.trackingUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={(event) => event.stopPropagation()}
-                            className="flex-1 rounded-full bg-primary px-3 py-1.5 text-center text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
-                          >
-                            Track
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Desktop Layout (Grid) */}
-                  <div className="hidden lg:block">
-                    <div className="flex flex-col gap-4">
-                      {/* Shipment Details Grid */}
-                      <div className="grid flex-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                            Shipment
-                          </p>
-                          <p className="mt-1.5 text-sm font-semibold text-foreground">
-                            Shipment #{shipment.id}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Order #{shipment.orderId}
-                          </p>
-                          <p className="mt-1 text-sm text-muted-foreground">
-                            {shipment.order?.name || "Customer not available"}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {shipment.trackingNumber || "No tracking number"}
-                          </p>
-                        </div>
-
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                            Management
-                          </p>
-                          <p className="mt-1.5 text-sm font-medium text-foreground">
-                            {shipment.assignedTo?.name || "Not assigned"}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Warehouse {shipment.warehouseId || "-"}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Priority {shipment.priority || 0}
-                          </p>
-                          <p className="mt-1 text-sm text-muted-foreground line-clamp-1">
-                            {shipment.dispatchNote || "No dispatch notes"}
-                          </p>
-                        </div>
-
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                            Cost
-                          </p>
-                          <p className="mt-1.5 text-sm text-muted-foreground">
-                            Est: {formatAmount(toAmount(shipment.estimatedCost))}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Actual: {formatAmount(toAmount(shipment.actualCost))}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Internal:{" "}
-                            {formatAmount(
-                              toAmount(shipment.handlingCost) +
-                                toAmount(shipment.packagingCost) +
-                                toAmount(shipment.fuelCost)
-                            )}
-                          </p>
-                        </div>
-
-                        <div>
-                          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                            Timeline
-                          </p>
-                          <p className="mt-1.5 text-sm text-muted-foreground">
-                            Assigned: {formatShortDate(shipment.assignedAt)}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Expected: {formatShortDate(shipment.expectedDate)}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            Delivered: {formatShortDate(shipment.deliveredAt)}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Actions Panel */}
-                      <div className="min-w-[240px]">
-                        <div className="flex flex-wrap items-center gap-2 xl:justify-end">
-                          {statusPill(shipment.status)}
-                          <span className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
-                            {shipment.courier}
-                            {shipment.courierStatus && ` - ${shipment.courierStatus}`}
-                          </span>
-                        </div>
-
-                        <div className="mt-3 flex flex-wrap gap-2 xl:justify-end">
-                          {nextStatuses.length ? (
-                            nextStatuses.map((nextStatus) => (
-                              <button
-                                key={nextStatus}
-                                type="button"
-                                disabled={updatingId === shipment.id}
-                                onClick={(event) => {
-                                  event.stopPropagation();
-                                  updateShipmentStatus(shipment.id, nextStatus);
-                                }}
-                                className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
-                              >
-                                {updatingId === shipment.id
-                                  ? "Updating..."
-                                  : NEXT_STATUS_LABELS[nextStatus]}
-                              </button>
-                            ))
-                          ) : (
-                            <span className="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground">
-                              No further action
-                            </span>
-                          )}
-
-                          {shipment.trackingUrl && (
-                            <a
-                              href={shipment.trackingUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              onClick={(event) => event.stopPropagation()}
-                              className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
-                            >
-                              Open tracking
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        )}
-      </div>
-    </div>
-  </DashboardCard>
-
-  {/* Right Column - Shipment Tracking */}
-  <DashboardCard
-    title="Shipment Tracking"
-    subtitle={
-      selectedWarehouse === "ALL"
-        ? "Warehouse-level shipment visibility"
-        : "Detailed route view for selected shipment"
-    }
-  >
-    <div className="max-h-[600px] overflow-y-auto overscroll-contain">
-      {selectedWarehouse === "ALL" ? (
-        <div className="space-y-4">
-          <div className="min-h-[300px] rounded-xl bg-muted/30">
-            <MultiShipmentsMap shipments={filteredShipments} />
-          </div>
-          <div className="rounded-lg bg-muted/20 p-4">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-sm font-medium text-foreground">
-                  Warehouse Activity
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Showing {filteredShipments.length} active shipments
-                </p>
+                  <select
+                    value={selectedWarehouse}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setSelectedWarehouse(
+                        value === "ALL" ? "ALL" : Number(value),
+                      );
+                    }}
+                    className="h-11 rounded-full border border-border bg-background px-4 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-50 sm:h-12"
+                    disabled={warehousesLoading}
+                  >
+                    <option value="ALL">
+                      {warehousesLoading
+                        ? t("operations.loadingWarehouses")
+                        : t("operations.allWarehouses")}
+                    </option>
+                    {warehouses.map((warehouse) => (
+                      <option key={warehouse.id} value={warehouse.id}>
+                        {warehouse.name} ({warehouse.code})
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
-              <p className="text-xs text-muted-foreground">
-                Select a warehouse to view route progress
-              </p>
-            </div>
-          </div>
-        </div>
-      ) : highlightedShipment ? (
-        <div className="space-y-5">
-          {/* Map Section */}
-          <div className="min-h-[280px] rounded-xl bg-muted/30">
-            <ShipmentTrackingMap shipment={highlightedShipment} />
-          </div>
 
-          {/* Shipment Info */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div className="space-y-1">
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                Tracking Reference
-              </p>
-              <p className="text-sm font-medium text-foreground">
-                #{highlightedShipment.trackingNumber || highlightedShipment.id}
-              </p>
-              <p className="text-base font-semibold text-foreground">
-                {highlightedShipment.order?.name || "Customer shipment"}
-              </p>
-              {typeof selectedWarehouse === "number" && (
-                <p className="text-sm text-muted-foreground">
-                  Warehouse: {highlightedShipment.warehouse?.name || `ID: ${highlightedShipment.warehouseId}`}
-                </p>
+              {error && (
+                <div className="flex items-center gap-2 rounded-2xl border border-destructive/20 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                  <AlertCircle className="h-4 w-4 flex-shrink-0" />
+                  <p>{error}</p>
+                </div>
               )}
-            </div>
-            <div>{statusPill(highlightedShipment.status)}</div>
-          </div>
 
-          {/* Timeline */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Timeline</h4>
-            <div className="space-y-4">
-              {[
-                {
-                  label: "Picked up",
-                  value: formatDateTime(highlightedShipment.pickedAt),
-                  tone: "bg-amber-500",
-                  icon: Package,
-                },
-                {
-                  label: "In transit",
-                  value: formatDateTime(
-                    highlightedShipment.outForDeliveryAt ||
-                      highlightedShipment.assignedAt
-                  ),
-                  tone: "bg-cyan-500",
-                  icon: Truck,
-                },
-                {
-                  label: "Delivered",
-                  value: formatDateTime(highlightedShipment.deliveredAt),
-                  tone: "bg-emerald-500",
-                  icon: CheckCircle,
-                },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="flex gap-3 rounded-lg border border-border/50 p-3 transition hover:bg-muted/10"
-                >
-                  <div className="flex-shrink-0">
-                    <div className={`h-3 w-3 rounded-full ${item.tone} mt-1`} />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-foreground">
-                      {item.label}
+              <div className="max-h-[500px] overflow-y-auto overscroll-contain">
+                {loading ? (
+                  <ShipmentsSkeleton />
+                ) : !filteredShipments.length ? (
+                  <div className="rounded-2xl border border-dashed border-border bg-muted/30 px-4 py-12 text-center">
+                    <Package className="mx-auto h-12 w-12 text-muted-foreground/50" />
+                    <p className="mt-3 text-base font-medium text-foreground">
+                      {t("operations.emptyTitle")}
                     </p>
-                    <p className="text-xs text-muted-foreground">
-                      {highlightedShipment.dispatchNote ||
-                        "Shipment activity recorded in dispatch timeline"}
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {t("operations.emptyHint")}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 text-right">
-                    <p className="text-xs font-medium text-muted-foreground">
-                      {item.value || "Pending"}
-                    </p>
+                ) : (
+                  <div className="space-y-3">
+                    {filteredShipments.map((shipment) => {
+                      const nextStatuses =
+                        NEXT_STATUS_MAP[shipment.status] || [];
+                      const isSelected = shipment.id === selectedShipmentId;
+
+                      return (
+                        <article
+                          key={shipment.id}
+                          className={`group cursor-pointer rounded-2xl border bg-card p-4 transition-all duration-200 hover:shadow-md ${
+                            isSelected
+                              ? "border-primary shadow-sm ring-1 ring-primary/20"
+                              : "border-border/60 hover:border-primary/30"
+                          }`}
+                          onClick={() => setSelectedShipmentId(shipment.id)}
+                          onKeyDown={(event) => {
+                            if (event.key === "Enter" || event.key === " ") {
+                              event.preventDefault();
+                              setSelectedShipmentId(shipment.id);
+                            }
+                          }}
+                          tabIndex={0}
+                          role="button"
+                        >
+                          {/* Mobile */}
+                          <div className="block lg:hidden">
+                            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                              <div className="flex flex-wrap items-center gap-2">
+                                {statusPill(shipment.status)}
+                                <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+                                  {shipment.courier}
+                                </span>
+                              </div>
+                              <span className="text-xs text-muted-foreground">
+                                #{shipment.id}
+                              </span>
+                            </div>
+
+                            <div className="space-y-2">
+                              <div>
+                                <p className="text-sm font-semibold text-foreground">
+                                  {t("operations.orderLabel", {
+                                    id: shipment.orderId,
+                                  })}
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                  {shipment.order?.name ||
+                                    t("operations.customerNotAvailable")}
+                                </p>
+                              </div>
+
+                              <div className="flex items-center justify-between text-sm">
+                                <span className="text-muted-foreground">
+                                  {t("operations.assignedToLabel")}
+                                </span>
+                                <span className="font-medium text-foreground">
+                                  {shipment.assignedTo?.name ||
+                                    t("operations.notAssigned")}
+                                </span>
+                              </div>
+
+                              <div className="flex items-center justify-between text-sm">
+                                <span className="text-muted-foreground">
+                                  {t("operations.priorityLabel")}
+                                </span>
+                                <span className="font-medium text-foreground">
+                                  P{shipment.priority || 0}
+                                </span>
+                              </div>
+
+                              <div className="mt-3 flex flex-wrap gap-2">
+                                {nextStatuses.slice(0, 2).map((nextStatus) => (
+                                  <button
+                                    key={nextStatus}
+                                    type="button"
+                                    disabled={updatingId === shipment.id}
+                                    onClick={(event) => {
+                                      event.stopPropagation();
+                                      updateShipmentStatus(
+                                        shipment.id,
+                                        nextStatus,
+                                      );
+                                    }}
+                                    className="flex-1 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+                                  >
+                                    {updatingId === shipment.id
+                                      ? "..."
+                                      : nextStatusLabel(nextStatus)}
+                                  </button>
+                                ))}
+                                {shipment.trackingUrl && (
+                                  <a
+                                    href={shipment.trackingUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    onClick={(event) => event.stopPropagation()}
+                                    className="flex-1 rounded-full bg-primary px-3 py-1.5 text-center text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
+                                  >
+                                    {t("operations.trackButton")}
+                                  </a>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Desktop */}
+                          <div className="hidden lg:block">
+                            <div className="flex flex-col gap-4">
+                              <div className="grid flex-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+                                <div>
+                                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                                    {t("operations.columns.shipment")}
+                                  </p>
+                                  <p className="mt-1.5 text-sm font-semibold text-foreground">
+                                    {t("operations.shipmentLabel", {
+                                      id: shipment.id,
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.orderLabel", {
+                                      id: shipment.orderId,
+                                    })}
+                                  </p>
+                                  <p className="mt-1 text-sm text-muted-foreground">
+                                    {shipment.order?.name ||
+                                      t("operations.customerNotAvailable")}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {shipment.trackingNumber ||
+                                      t("operations.noTrackingNumber")}
+                                  </p>
+                                </div>
+
+                                <div>
+                                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                                    {t("operations.columns.management")}
+                                  </p>
+                                  <p className="mt-1.5 text-sm font-medium text-foreground">
+                                    {shipment.assignedTo?.name ||
+                                      t("operations.notAssigned")}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.warehouseLabel", {
+                                      id: shipment.warehouseId || "-",
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.priorityShort", {
+                                      value: shipment.priority || 0,
+                                    })}
+                                  </p>
+                                  <p className="mt-1 text-sm text-muted-foreground line-clamp-1">
+                                    {shipment.dispatchNote ||
+                                      t("operations.noDispatchNotes")}
+                                  </p>
+                                </div>
+
+                                <div>
+                                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                                    {t("operations.columns.cost")}
+                                  </p>
+                                  <p className="mt-1.5 text-sm text-muted-foreground">
+                                    {t("operations.costEst", {
+                                      value: formatAmount(
+                                        toAmount(shipment.estimatedCost),
+                                      ),
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.costActual", {
+                                      value: formatAmount(
+                                        toAmount(shipment.actualCost),
+                                      ),
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.costInternal", {
+                                      value: formatAmount(
+                                        toAmount(shipment.handlingCost) +
+                                          toAmount(shipment.packagingCost) +
+                                          toAmount(shipment.fuelCost),
+                                      ),
+                                    })}
+                                  </p>
+                                </div>
+
+                                <div>
+                                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                                    {t("operations.columns.timeline")}
+                                  </p>
+                                  <p className="mt-1.5 text-sm text-muted-foreground">
+                                    {t("operations.timelineAssigned", {
+                                      date: formatShortDate(
+                                        shipment.assignedAt,
+                                        t("operations.notScheduled"),
+                                      ),
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.timelineExpected", {
+                                      date: formatShortDate(
+                                        shipment.expectedDate,
+                                        t("operations.notScheduled"),
+                                      ),
+                                    })}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    {t("operations.timelineDelivered", {
+                                      date: formatShortDate(
+                                        shipment.deliveredAt,
+                                        t("operations.notScheduled"),
+                                      ),
+                                    })}
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div className="min-w-[240px]">
+                                <div className="flex flex-wrap items-center gap-2 xl:justify-end">
+                                  {statusPill(shipment.status)}
+                                  <span className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                                    {shipment.courier}
+                                    {shipment.courierStatus &&
+                                      ` - ${shipment.courierStatus}`}
+                                  </span>
+                                </div>
+
+                                <div className="mt-3 flex flex-wrap gap-2 xl:justify-end">
+                                  {nextStatuses.length ? (
+                                    nextStatuses.map((nextStatus) => (
+                                      <button
+                                        key={nextStatus}
+                                        type="button"
+                                        disabled={updatingId === shipment.id}
+                                        onClick={(event) => {
+                                          event.stopPropagation();
+                                          updateShipmentStatus(
+                                            shipment.id,
+                                            nextStatus,
+                                          );
+                                        }}
+                                        className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+                                      >
+                                        {updatingId === shipment.id
+                                          ? t("operations.updating")
+                                          : nextStatusLabel(nextStatus)}
+                                      </button>
+                                    ))
+                                  ) : (
+                                    <span className="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground">
+                                      {t("operations.noFurtherAction")}
+                                    </span>
+                                  )}
+
+                                  {shipment.trackingUrl && (
+                                    <a
+                                      href={shipment.trackingUrl}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={(event) =>
+                                        event.stopPropagation()
+                                      }
+                                      className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
+                                    >
+                                      {t("operations.openTracking")}
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            </div>
+          </DashboardCard>
+
+          {/* RIGHT */}
+          <DashboardCard
+            title={t("trackingPanel.title")}
+            subtitle={
+              selectedWarehouse === "ALL"
+                ? t("trackingPanel.warehouseSubtitle")
+                : t("trackingPanel.detailedSubtitle")
+            }
+          >
+            <div className="max-h-[600px] overflow-y-auto overscroll-contain">
+              {selectedWarehouse === "ALL" ? (
+                <div className="space-y-4">
+                  <div className="min-h-[300px] rounded-xl bg-muted/30">
+                    <MultiShipmentsMap shipments={filteredShipments} />
+                  </div>
+                  <div className="rounded-lg bg-muted/20 p-4">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-foreground">
+                          {t("trackingPanel.warehouseActivity")}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {t("trackingPanel.showingActive", {
+                            count: filteredShipments.length,
+                          })}
+                        </p>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {t("trackingPanel.selectWarehouseHint")}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-muted/30 px-4 py-12 text-center">
-          <MapPin className="mx-auto h-12 w-12 text-muted-foreground/50" />
-          <p className="mt-3 text-base font-medium text-foreground">
-            No shipment selected
-          </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {typeof selectedWarehouse === "number"
-              ? "No shipments available for this warehouse"
-              : "Select a warehouse to view shipment tracking"}
-          </p>
-        </div>
-      )}
-    </div>
-  </DashboardCard>
-</section>
+              ) : highlightedShipment ? (
+                <div className="space-y-5">
+                  <div className="min-h-[280px] rounded-xl bg-muted/30">
+                    <ShipmentTrackingMap shipment={highlightedShipment} />
+                  </div>
 
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="space-y-1">
+                      <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                        {t("trackingPanel.reference")}
+                      </p>
+                      <p className="text-sm font-medium text-foreground">
+                        #
+                        {highlightedShipment.trackingNumber ||
+                          highlightedShipment.id}
+                      </p>
+                      <p className="text-base font-semibold text-foreground">
+                        {highlightedShipment.order?.name ||
+                          t("trackingPanel.customerShipment")}
+                      </p>
+                      {typeof selectedWarehouse === "number" && (
+                        <p className="text-sm text-muted-foreground">
+                          {t("trackingPanel.warehouse", {
+                            name:
+                              highlightedShipment.warehouse?.name ||
+                              `ID: ${highlightedShipment.warehouseId}`,
+                          })}
+                        </p>
+                      )}
+                    </div>
+                    <div>{statusPill(highlightedShipment.status)}</div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-semibold text-foreground">
+                      {t("trackingPanel.timelineTitle")}
+                    </h4>
+                    <div className="space-y-4">
+                      {[
+                        {
+                          label: t("trackingPanel.timelinePickedUp"),
+                          value: formatDateTime(highlightedShipment.pickedAt),
+                          tone: "bg-amber-500",
+                        },
+                        {
+                          label: t("trackingPanel.timelineInTransit"),
+                          value: formatDateTime(
+                            highlightedShipment.outForDeliveryAt ||
+                              highlightedShipment.assignedAt,
+                          ),
+                          tone: "bg-cyan-500",
+                        },
+                        {
+                          label: t("trackingPanel.timelineDelivered"),
+                          value: formatDateTime(
+                            highlightedShipment.deliveredAt,
+                          ),
+                          tone: "bg-emerald-500",
+                        },
+                      ].map((item) => (
+                        <div
+                          key={item.label}
+                          className="flex gap-3 rounded-lg border border-border/50 p-3 transition hover:bg-muted/10"
+                        >
+                          <div className="flex-shrink-0">
+                            <div
+                              className={`h-3 w-3 rounded-full ${item.tone} mt-1`}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-foreground">
+                              {item.label}
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              {highlightedShipment.dispatchNote ||
+                                t("trackingPanel.timelineNote")}
+                            </p>
+                          </div>
+                          <div className="flex-shrink-0 text-right">
+                            <p className="text-xs font-medium text-muted-foreground">
+                              {item.value || t("trackingPanel.pending")}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-muted/30 px-4 py-12 text-center">
+                  <MapPin className="mx-auto h-12 w-12 text-muted-foreground/50" />
+                  <p className="mt-3 text-base font-medium text-foreground">
+                    {t("trackingPanel.noShipmentSelected")}
+                  </p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {typeof selectedWarehouse === "number"
+                      ? t("trackingPanel.noShipmentsForWarehouse")
+                      : t("trackingPanel.selectWarehouseToView")}
+                  </p>
+                </div>
+              )}
+            </div>
+          </DashboardCard>
+        </section>
+
+        {/* ============ PRIORITY + SUMMARY ============ */}
         <section className="grid gap-6 xl:grid-cols-[0.92fr,1.08fr]">
           <DashboardCard
-            title="Priority dispatch"
-            subtitle="Highest-priority shipments in the current view"
+            title={t("priority.title")}
+            subtitle={t("priority.subtitle")}
           >
             <div className="grid gap-5 lg:grid-cols-[1fr,240px]">
               <div>
                 <div className="flex flex-wrap items-end justify-between gap-3 rounded-[24px] bg-muted px-5 py-5 text-muted-foreground">
                   <div>
                     <p className="text-sm text-muted-foreground/70">
-                      Active delivery workload
+                      {t("priority.activeWorkload")}
                     </p>
                     <p className="mt-2 text-4xl font-semibold">{activeCount}</p>
                   </div>
                   <div className="text-right text-sm text-muted-foreground">
                     <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground/50">
-                      At risk
+                      {t("priority.atRisk")}
                     </p>
                     <p className="mt-1 text-2xl font-semibold">{atRiskCount}</p>
                   </div>
@@ -1606,19 +1693,26 @@ export default function LogisticsPage() {
                       >
                         <div>
                           <p className="font-semibold text-foreground">
-                            {shipment.courier || "Courier pending"}
+                            {shipment.courier || t("priority.courierPending")}
                           </p>
                           <p className="mt-1 text-sm text-muted-foreground">
-                            Order #{shipment.orderId} |{" "}
-                            {shipment.order?.name || "Customer not available"}
+                            {t("priority.orderLine", {
+                              id: shipment.orderId,
+                              name:
+                                shipment.order?.name ||
+                                t("priority.customerNotAvailable"),
+                            })}
                           </p>
                         </div>
                         <div className="text-right">
                           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-                            ETA
+                            {t("priority.eta")}
                           </p>
                           <p className="mt-1 text-sm font-semibold text-foreground">
-                            {formatShortDate(shipment.expectedDate)}
+                            {formatShortDate(
+                              shipment.expectedDate,
+                              t("operations.notScheduled"),
+                            )}
                           </p>
                         </div>
                         <div>{statusPill(shipment.status)}</div>
@@ -1626,7 +1720,7 @@ export default function LogisticsPage() {
                     ))
                   ) : (
                     <div className="rounded-[22px] border border-border/60 bg-muted px-4 py-10 text-center text-sm text-muted-foreground">
-                      No priority shipments are available in the current view.
+                      {t("priority.empty")}
                     </div>
                   )}
                 </div>
@@ -1637,29 +1731,29 @@ export default function LogisticsPage() {
                 <div className="absolute left-8 top-8 h-20 w-20 rounded-full bg-primary-foreground/10 blur-xl" />
                 <div className="relative">
                   <p className="text-xs uppercase tracking-[0.24em] text-primary-foreground/70">
-                    Featured shipment
+                    {t("priority.featuredShipment")}
                   </p>
                   <div className="mt-6 rounded-[24px] border border-border/60 bg-primary/40 px-4 py-5">
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium text-primary-foreground/80">
-                        Priority level
+                        {t("priority.priorityLevel")}
                       </span>
                       <span className="rounded-full bg-primary/40 px-3 py-1 text-xs border border-border/60">
                         P{highlightedShipment?.priority || 0}
                       </span>
                     </div>
                     <p className="mt-6 text-3xl font-semibold">
-                      {highlightedShipment?.courier || "Dispatch"}
+                      {highlightedShipment?.courier || t("priority.dispatch")}
                     </p>
                     <p className="mt-2 text-sm text-primary-foreground/80">
                       {highlightedShipment?.trackingNumber ||
-                        "Tracking number not assigned"}
+                        t("priority.trackingNotAssigned")}
                     </p>
                     <div className="mt-8 flex items-center gap-2">
                       <span className="h-3 w-3 rounded-full bg-primary-foreground border border-border/60" />
                       <span className="text-sm text-primary-foreground/80">
                         {highlightedShipment?.assignedTo?.name ||
-                          "Assignment pending"}
+                          t("priority.assignmentPending")}
                       </span>
                     </div>
                   </div>
@@ -1669,13 +1763,13 @@ export default function LogisticsPage() {
           </DashboardCard>
 
           <DashboardCard
-            title="Operations summary"
-            subtitle="Recent shipment activity and costs"
+            title={t("summary.title")}
+            subtitle={t("summary.subtitle")}
           >
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="rounded-[22px] bg-muted p-4">
                 <p className="text-sm text-muted-foreground">
-                  Third-party delivery cost
+                  {t("summary.thirdPartyCost")}
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-foreground">
                   {formatAmount(costSummary.thirdParty)}
@@ -1683,7 +1777,7 @@ export default function LogisticsPage() {
               </div>
               <div className="rounded-[22px] bg-card p-4">
                 <p className="text-sm text-muted-foreground">
-                  Actual delivery spend
+                  {t("summary.actualSpend")}
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-foreground">
                   {formatAmount(costSummary.actual)}
@@ -1700,11 +1794,18 @@ export default function LogisticsPage() {
                   >
                     <div>
                       <p className="font-medium text-foreground">
-                        Shipment #{shipment.id} - Order #{shipment.orderId}
+                        {t("summary.shipmentLine", {
+                          shipmentId: shipment.id,
+                          orderId: shipment.orderId,
+                        })}
                       </p>
                       <p className="mt-1 text-sm text-muted-foreground">
-                        {shipment.courier} -{" "}
-                        {shipment.assignedTo?.name || "Not assigned"}
+                        {t("summary.courierAssignee", {
+                          courier: shipment.courier,
+                          assignee:
+                            shipment.assignedTo?.name ||
+                            t("operations.notAssigned"),
+                        })}
                       </p>
                     </div>
                     <div className="text-right">
@@ -1714,6 +1815,7 @@ export default function LogisticsPage() {
                             shipment.outForDeliveryAt ||
                             shipment.pickedAt ||
                             shipment.createdAt,
+                          t("operations.notScheduled"),
                         )}
                       </p>
                       <div className="mt-2">{statusPill(shipment.status)}</div>
@@ -1722,7 +1824,7 @@ export default function LogisticsPage() {
                 ))
               ) : (
                 <div className="rounded-[22px] border border-border/60 bg-muted px-4 py-10 text-center text-sm text-muted-foreground">
-                  No recent shipment activity was found.
+                  {t("summary.empty")}
                 </div>
               )}
             </div>

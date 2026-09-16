@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import {
   AlertTriangle,
   Boxes,
@@ -107,6 +108,8 @@ const formatDateTime = (value: string) =>
 
 export default function WarehouseDashboardPage() {
   const router = useRouter();
+  const t = useTranslations("AdminWarehouseDashboard");
+
   const [warehouseId, setWarehouseId] = useState<string>("");
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -121,35 +124,39 @@ export default function WarehouseDashboardPage() {
     useState<WarehouseType | null>(null);
   const [activeTab, setActiveTab] = useState("overview");
 
-  const fetchDashboard = useCallback(async (showRefresh = false) => {
-    try {
-      if (showRefresh) {
-        setRefreshing(true);
-      } else {
-        setLoading(true);
-      }
-      setError("");
+  const fetchDashboard = useCallback(
+    async (showRefresh = false) => {
+      try {
+        if (showRefresh) {
+          setRefreshing(true);
+        } else {
+          setLoading(true);
+        }
+        setError("");
 
-      const response = await fetch("/api/admin/warehouse-dashboard", {
-        cache: "no-store",
-      });
-      const payload = await response.json().catch(() => ({}));
-      if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load warehouse dashboard");
-      }
+        const response = await fetch("/api/admin/warehouse-dashboard", {
+          cache: "no-store",
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(payload?.error || t("errors.loadFailed"));
+        }
 
-      setData(payload);
-    } catch (fetchError) {
-      setError(
-        fetchError instanceof Error
-          ? fetchError.message
-          : "Failed to load warehouse dashboard",
-      );
-    } finally {
-      setLoading(false);
-      setRefreshing(false);
-    }
-  }, []);
+        setData(payload);
+      } catch (fetchError) {
+        setError(
+          fetchError instanceof Error
+            ? fetchError.message
+            : t("errors.loadFailed"),
+        );
+      } finally {
+        setLoading(false);
+        setRefreshing(false);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
 
   const loadMapData = useCallback(async () => {
     setMapLoading(true);
@@ -193,10 +200,10 @@ export default function WarehouseDashboardPage() {
   }, [fetchDashboard, loadMapData, loadWarehouses]);
 
   const selectedWarehouseLabel = useMemo(() => {
-    if (!data) return "All assigned warehouses";
+    if (!data) return t("warehouse.allAssigned");
 
     if (data.selectedWarehouseIds.length === 0) {
-      return "All assigned warehouses";
+      return t("warehouse.allAssigned");
     }
 
     const selectedWarehouses = data.warehouses.filter((warehouse) =>
@@ -209,40 +216,48 @@ export default function WarehouseDashboardPage() {
     }
 
     if (selectedWarehouses.length > 1) {
-      return `${selectedWarehouses.length} warehouses selected`;
+      return t("warehouse.multipleSelected", {
+        count: selectedWarehouses.length,
+      });
     }
 
-    return "Assigned warehouses";
-  }, [data]);
+    return t("warehouse.assigned");
+  }, [data, t]);
 
   const summaryCards = useMemo(
     () => [
       {
-        title: "Warehouse Scope",
+        title: t("summary.warehouseScope"),
         value: String(data?.summary.totalWarehouses ?? 0),
         note: selectedWarehouseLabel,
         icon: Warehouse,
       },
       {
-        title: "Units On Hand",
+        title: t("summary.unitsOnHand"),
         value: String(data?.summary.totalUnits ?? 0),
-        note: `${data?.summary.reservedUnits ?? 0} reserved units`,
+        note: t("summary.reservedUnits", {
+          count: data?.summary.reservedUnits ?? 0,
+        }),
         icon: Boxes,
       },
       {
-        title: "Pending Shipments",
+        title: t("summary.pendingShipments"),
         value: String(data?.summary.pendingShipments ?? 0),
-        note: `${data?.summary.ordersInQueue ?? 0} still pending`,
+        note: t("summary.stillPending", {
+          count: data?.summary.ordersInQueue ?? 0,
+        }),
         icon: Truck,
       },
       {
-        title: "Low Stock Alerts",
+        title: t("summary.lowStockAlerts"),
         value: String(data?.summary.lowStockItems ?? 0),
-        note: `${data?.summary.deliveredToday ?? 0} delivered today`,
+        note: t("summary.deliveredToday", {
+          count: data?.summary.deliveredToday ?? 0,
+        }),
         icon: AlertTriangle,
       },
     ],
-    [data, selectedWarehouseLabel],
+    [data, selectedWarehouseLabel, t],
   );
 
   const handleWarehouseCardClick = useCallback(
@@ -271,20 +286,24 @@ export default function WarehouseDashboardPage() {
               {card.name} ({card.code})
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              {card.isDefault ? "Default warehouse" : "Operational warehouse"}
+              {card.isDefault
+                ? t("card.defaultWarehouse")
+                : t("card.operationalWarehouse")}
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-muted px-2 py-1 text-[11px] font-medium text-muted-foreground">
-                {Math.max(0, card.totalUnits - card.reservedUnits)} available
+                {t("card.available", {
+                  count: Math.max(0, card.totalUnits - card.reservedUnits),
+                })}
               </span>
               <span className="rounded-full bg-emerald-500/10 px-2 py-1 text-[11px] font-medium text-emerald-700">
-                {card.deliveredToday} delivered today
+                {t("card.deliveredToday", { count: card.deliveredToday })}
               </span>
             </div>
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Units
+              {t("card.units")}
             </p>
             <p className="mt-1 text-base font-semibold text-foreground">
               {card.totalUnits}
@@ -292,7 +311,7 @@ export default function WarehouseDashboardPage() {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Reserved
+              {t("card.reserved")}
             </p>
             <p className="mt-1 text-base font-semibold text-foreground">
               {card.reservedUnits}
@@ -300,7 +319,7 @@ export default function WarehouseDashboardPage() {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Low Stock
+              {t("card.lowStock")}
             </p>
             <p className="mt-1 text-base font-semibold text-foreground">
               {card.lowStockItems}
@@ -308,24 +327,23 @@ export default function WarehouseDashboardPage() {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Shipments
+              {t("card.shipments")}
             </p>
             <p className="mt-1 text-base font-semibold text-foreground">
-              {card.pendingShipments} pending
+              {t("card.pendingCount", { count: card.pendingShipments })}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Pressure indicator
+              {t("card.pressureIndicator")}
             </p>
           </div>
         </button>
       );
     });
-  }, [data?.warehouseCards, handleWarehouseCardClick, warehouseId]);
+  }, [data?.warehouseCards, handleWarehouseCardClick, warehouseId, t]);
 
   const lowStockItems = useMemo(() => {
     if (!data?.lowStock.length) return null;
 
-    // Filter by selected warehouse if one is selected
     const filteredLowStock = warehouseId
       ? data.lowStock.filter((item) => String(item.warehouseId) === warehouseId)
       : data.lowStock;
@@ -339,24 +357,24 @@ export default function WarehouseDashboardPage() {
           <div>
             <p className="font-medium text-foreground">{item.productName}</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              {item.sku || "No SKU"} · Warehouse #{item.warehouseId}
+              {item.sku || t("labels.noSku")} ·{" "}
+              {t("labels.warehouseId", { id: item.warehouseId })}
             </p>
           </div>
           <div className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-700">
-            {item.available} left
+            {t("labels.leftCount", { count: item.available })}
           </div>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          Threshold: {item.threshold} units
+          {t("labels.threshold", { count: item.threshold })}
         </p>
       </div>
     ));
-  }, [data?.lowStock, warehouseId]);
+  }, [data?.lowStock, warehouseId, t]);
 
   const recentShipmentItems = useMemo(() => {
     if (!data?.recentShipments.length) return null;
 
-    // Filter by selected warehouse if one is selected
     const filteredShipments = warehouseId
       ? data.recentShipments.filter(
           (shipment) =>
@@ -370,10 +388,14 @@ export default function WarehouseDashboardPage() {
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="font-medium text-foreground">
-              Shipment #{shipment.id} for Order #{shipment.orderId}
+              {t("shipments.shipmentTitle", {
+                shipmentId: shipment.id,
+                orderId: shipment.orderId,
+              })}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              {shipment.customerName || "Unknown customer"} · {shipment.courier}
+              {shipment.customerName || t("labels.unknownCustomer")} ·{" "}
+              {shipment.courier}
             </p>
           </div>
           <div className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
@@ -381,18 +403,21 @@ export default function WarehouseDashboardPage() {
           </div>
         </div>
         <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
-          <span>Order: {shipment.orderStatus || "-"}</span>
-          <span>Tracking: {shipment.trackingNumber || "-"}</span>
+          <span>
+            {t("shipments.orderLabel")}: {shipment.orderStatus || "-"}
+          </span>
+          <span>
+            {t("shipments.trackingLabel")}: {shipment.trackingNumber || "-"}
+          </span>
           <span>{formatDateTime(shipment.createdAt)}</span>
         </div>
       </div>
     ));
-  }, [data?.recentShipments, warehouseId]);
+  }, [data?.recentShipments, warehouseId, t]);
 
   const recentLogItems = useMemo(() => {
     if (!data?.recentLogs.length) return null;
 
-    // Filter by selected warehouse if one is selected
     let filteredLogs = data.recentLogs;
     if (warehouseId) {
       const selectedWarehouse = data.warehouses.find(
@@ -443,14 +468,13 @@ export default function WarehouseDashboardPage() {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
-                Warehouse Operations
+                {t("hero.badge")}
               </p>
               <h1 className="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
-                Warehouse Dashboard
+                {t("hero.title")}
               </h1>
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                Monitor assigned warehouse activity, shipment queue, and stock
-                health from a single scoped workspace.
+                {t("hero.description")}
               </p>
             </div>
 
@@ -470,7 +494,7 @@ export default function WarehouseDashboardPage() {
                   align="end"
                   className="w-[280px] rounded-2xl"
                 >
-                  <DropdownMenuLabel>Warehouse scope</DropdownMenuLabel>
+                  <DropdownMenuLabel>{t("warehouse.scope")}</DropdownMenuLabel>
                   <DropdownMenuRadioGroup
                     value={warehouseId || "all"}
                     onValueChange={(value) => {
@@ -479,7 +503,7 @@ export default function WarehouseDashboardPage() {
                     }}
                   >
                     <DropdownMenuRadioItem value="all">
-                      All assigned
+                      {t("warehouse.allAssigned")}
                     </DropdownMenuRadioItem>
                     <DropdownMenuSeparator />
                     {data?.warehouses.map((warehouse) => (
@@ -488,7 +512,9 @@ export default function WarehouseDashboardPage() {
                         value={String(warehouse.id)}
                       >
                         {warehouse.name} ({warehouse.code})
-                        {warehouse.isDefault ? " - Default" : ""}
+                        {warehouse.isDefault
+                          ? t("warehouse.defaultSuffix")
+                          : ""}
                       </DropdownMenuRadioItem>
                     ))}
                   </DropdownMenuRadioGroup>
@@ -501,7 +527,7 @@ export default function WarehouseDashboardPage() {
                 onClick={() => setShowAddWarehouseModal(true)}
               >
                 <Plus className="h-4 w-4" />
-                Add Warehouse
+                {t("actions.addWarehouse")}
               </Button>
 
               <button
@@ -512,7 +538,7 @@ export default function WarehouseDashboardPage() {
                 <RefreshCw
                   className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
                 />
-                Refresh
+                {t("actions.refresh")}
               </button>
             </div>
           </div>
@@ -545,20 +571,17 @@ export default function WarehouseDashboardPage() {
           ))}
         </section>
 
-        {/* Warehouse Section with Internal Tabs */}
         <section className="rounded-3xl border bg-card p-5 shadow-sm min-h-[600px]">
           <div className="flex flex-col gap-4 border-b pb-4">
             <div>
               <h2 className="text-xl font-semibold text-foreground">
-                Warehouse Coverage & Management
+                {t("coverage.title")}
               </h2>
               <p className="text-sm text-muted-foreground">
-                Monitor warehouse coverage map, assigned warehouses, and manage
-                warehouse configuration from one section.
+                {t("coverage.subtitle")}
               </p>
             </div>
 
-            {/* Tab Navigation inside section */}
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setActiveTab("overview")}
@@ -569,7 +592,7 @@ export default function WarehouseDashboardPage() {
                 }`}
               >
                 <LayoutDashboard className="h-4 w-4" />
-                Warehouse Coverage
+                {t("coverage.tabs.coverage")}
               </button>
 
               <button
@@ -581,12 +604,11 @@ export default function WarehouseDashboardPage() {
                 }`}
               >
                 <Settings className="h-4 w-4" />
-                Warehouse Management
+                {t("coverage.tabs.management")}
               </button>
             </div>
           </div>
 
-          {/* Tab Content */}
           <div className="mt-6">
             {activeTab === "overview" && (
               <div className="space-y-6">
@@ -594,11 +616,10 @@ export default function WarehouseDashboardPage() {
                   <article className="rounded-3xl border bg-background p-5 shadow-sm">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">
-                        Warehouse Coverage
+                        {t("coverage.cards.coverageTitle")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Assigned warehouses with current stock and shipment
-                        pressure.
+                        {t("coverage.cards.coverageSubtitle")}
                       </p>
                     </div>
 
@@ -607,7 +628,7 @@ export default function WarehouseDashboardPage() {
                         warehouseCardItems
                       ) : (
                         <div className="rounded-2xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">
-                          No assigned warehouses found for this dashboard.
+                          {t("coverage.cards.noWarehouses")}
                         </div>
                       )}
                     </div>
@@ -616,19 +637,19 @@ export default function WarehouseDashboardPage() {
                   <article className="rounded-3xl border bg-background p-5 shadow-sm">
                     <div className="mb-4">
                       <h3 className="text-lg font-semibold text-foreground">
-                        Warehouse Coverage Map
+                        {t("coverage.cards.mapTitle")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Visual map of assigned warehouse locations and coverage.
+                        {t("coverage.cards.mapSubtitle")}
                       </p>
                     </div>
 
                     {!mapLoading && mapData.length > 0 ? (
                       <div className="mb-4 text-sm text-muted-foreground">
-                        {mapData.length} warehouse(s) found with location data
+                        {t("coverage.map.found", { count: mapData.length })}
                         {warehouseId &&
                           warehouseId !== "all" &&
-                          " · highlighting selected warehouse"}
+                          t("coverage.map.highlighting")}
                       </div>
                     ) : null}
 
@@ -644,8 +665,8 @@ export default function WarehouseDashboardPage() {
                         <Map className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                         <p className="text-sm text-muted-foreground">
                           {warehouseId && warehouseId !== "all"
-                            ? "Selected warehouse has no location data. Add GPS coordinates to see it on the map."
-                            : "No warehouses with location data found. Add GPS coordinates to warehouses to see them on the map."}
+                            ? t("coverage.map.emptySelected")
+                            : t("coverage.map.empty")}
                         </p>
                       </div>
                     ) : (
@@ -658,7 +679,7 @@ export default function WarehouseDashboardPage() {
                           <div className="text-center">
                             <Map className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                             <p className="text-sm text-muted-foreground">
-                              Map failed to load. Please refresh the page.
+                              {t("coverage.map.failed")}
                             </p>
                           </div>
                         </div>
@@ -678,7 +699,7 @@ export default function WarehouseDashboardPage() {
                               warehouse.coverageRadiusKm ?? null,
                           }))}
                           selectedMarkerId={selectedMapWarehouseId}
-                          title="Warehouse Coverage Map"
+                          title={t("coverage.map.pickerTitle")}
                           heightClassName="h-96"
                           onMarkerSelect={(id) => {
                             if (id !== null) {
@@ -699,13 +720,13 @@ export default function WarehouseDashboardPage() {
                 </div>
 
                 <div className="grid gap-6 xl:grid-cols-2">
-                  <article className="rounded-3xl border bg-background p-5 shadow-sm  max-h-[500px] overflow-y-auto pr-1">
+                  <article className="rounded-3xl border bg-background p-5 shadow-sm max-h-[500px] overflow-y-auto pr-1">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">
-                        Low Stock Watchlist
+                        {t("coverage.lowStock.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Variants at or below their warehouse threshold.
+                        {t("coverage.lowStock.subtitle")}
                       </p>
                     </div>
 
@@ -714,17 +735,17 @@ export default function WarehouseDashboardPage() {
                         lowStockItems
                       ) : (
                         <div className="rounded-2xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">
-                          No low-stock alerts in the current warehouse scope.
+                          {t("coverage.lowStock.empty")}
                         </div>
                       )}
                     </div>
                   </article>
 
-                  <article className="rounded-3xl border bg-background p-5 shadow-sm  max-h-[500px] overflow-y-auto pr-1">
+                  <article className="rounded-3xl border bg-background p-5 shadow-sm max-h-[500px] overflow-y-auto pr-1">
                     <div className="flex items-center gap-2">
                       <PackageCheck className="h-4 w-4 text-primary" />
                       <h3 className="text-lg font-semibold text-foreground">
-                        Recent Inventory Activity
+                        {t("coverage.activity.title")}
                       </h3>
                     </div>
 
@@ -733,18 +754,18 @@ export default function WarehouseDashboardPage() {
                         recentLogItems
                       ) : (
                         <div className="rounded-2xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">
-                          No recent inventory events found.
+                          {t("coverage.activity.empty")}
                         </div>
                       )}
                     </div>
                   </article>
                 </div>
 
-                <article className="rounded-3xl border bg-background p-5 shadow-sm  max-h-[500px] overflow-y-auto pr-1">
+                <article className="rounded-3xl border bg-background p-5 shadow-sm max-h-[500px] overflow-y-auto pr-1">
                   <div className="flex items-center gap-2">
                     <Truck className="h-4 w-4 text-primary" />
                     <h3 className="text-lg font-semibold text-foreground">
-                      Recent Shipments
+                      {t("coverage.shipments.title")}
                     </h3>
                   </div>
 
@@ -753,7 +774,7 @@ export default function WarehouseDashboardPage() {
                       recentShipmentItems
                     ) : (
                       <div className="rounded-2xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">
-                        No shipment activity found for this scope.
+                        {t("coverage.shipments.empty")}
                       </div>
                     )}
                   </div>
@@ -767,10 +788,10 @@ export default function WarehouseDashboardPage() {
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">
-                        Warehouse Management
+                        {t("management.title")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Create, update, and maintain warehouse configuration.
+                        {t("management.subtitle")}
                       </p>
                     </div>
 
@@ -787,7 +808,7 @@ export default function WarehouseDashboardPage() {
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-                        Refresh
+                        {t("actions.refresh")}
                       </Button>
 
                       <Button
@@ -796,7 +817,7 @@ export default function WarehouseDashboardPage() {
                         onClick={() => setShowAddWarehouseModal(true)}
                       >
                         <Plus className="h-4 w-4" />
-                        Add Warehouse
+                        {t("actions.addWarehouse")}
                       </Button>
                     </div>
                   </div>
@@ -806,7 +827,7 @@ export default function WarehouseDashboardPage() {
                       <WarehouseSkeleton />
                     ) : warehouses.length === 0 ? (
                       <div className="rounded-2xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">
-                        No warehouses found.
+                        {t("management.empty")}
                       </div>
                     ) : (
                       warehouses.map((warehouse) => (
@@ -822,7 +843,7 @@ export default function WarehouseDashboardPage() {
                                 </p>
                                 {warehouse.isDefault ? (
                                   <span className="rounded-full bg-primary/10 px-2 py-1 text-xs font-medium text-primary">
-                                    Default
+                                    {t("management.defaultBadge")}
                                   </span>
                                 ) : null}
                                 <span className="rounded-full bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
@@ -833,7 +854,8 @@ export default function WarehouseDashboardPage() {
                               <div className="mt-2 space-y-1 text-xs text-muted-foreground">
                                 {warehouse.address?.location ? (
                                   <div>
-                                    Address: {warehouse.address.location}
+                                    {t("management.addressLabel")}:{" "}
+                                    {warehouse.address.location}
                                   </div>
                                 ) : null}
                                 {warehouse.division ||
@@ -851,12 +873,16 @@ export default function WarehouseDashboardPage() {
                                 ) : null}
                                 {warehouse.latitude && warehouse.longitude ? (
                                   <div>
-                                    GPS: {warehouse.latitude.toFixed(4)},{" "}
+                                    {t("management.gpsLabel")}:{" "}
+                                    {warehouse.latitude.toFixed(4)},{" "}
                                     {warehouse.longitude.toFixed(4)}
                                   </div>
                                 ) : null}
                                 {warehouse.mapLabel ? (
-                                  <div>Map Label: {warehouse.mapLabel}</div>
+                                  <div>
+                                    {t("management.mapLabelLabel")}:{" "}
+                                    {warehouse.mapLabel}
+                                  </div>
                                 ) : null}
                               </div>
                             </div>
@@ -866,9 +892,13 @@ export default function WarehouseDashboardPage() {
                                 type="button"
                                 variant="outline"
                                 className="rounded-2xl"
-                                onClick={() => router.push(`/admin/warehouse/${warehouse.id}`)}
+                                onClick={() =>
+                                  router.push(
+                                    `/admin/warehouse/${warehouse.id}`,
+                                  )
+                                }
                               >
-                                Details
+                                {t("management.actions.details")}
                               </Button>
 
                               {warehouse.latitude &&
@@ -885,7 +915,7 @@ export default function WarehouseDashboardPage() {
                                     );
                                   }}
                                 >
-                                  Map
+                                  {t("management.actions.map")}
                                 </Button>
                               ) : null}
 
@@ -894,7 +924,7 @@ export default function WarehouseDashboardPage() {
                                 className="rounded-2xl"
                                 onClick={() => setEditingWarehouse(warehouse)}
                               >
-                                Edit
+                                {t("management.actions.edit")}
                               </Button>
 
                               <Button
@@ -904,7 +934,9 @@ export default function WarehouseDashboardPage() {
                                 onClick={async () => {
                                   if (
                                     confirm(
-                                      `Are you sure you want to delete ${warehouse.name}?`,
+                                      t("management.deleteConfirm", {
+                                        name: warehouse.name,
+                                      }),
                                     )
                                   ) {
                                     await fetch(
@@ -919,7 +951,7 @@ export default function WarehouseDashboardPage() {
                                   }
                                 }}
                               >
-                                Delete
+                                {t("management.actions.delete")}
                               </Button>
                             </div>
                           </div>
