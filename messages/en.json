@@ -3573,5 +3573,186 @@
       "adImageUploadFailed": "Ad image upload failed",
       "invalidUploadResponse": "Invalid upload response: url missing"
     }
+  },
+  "AdminCategoryManager": {
+    "header": {
+      "title": "Category Management",
+      "description": "Control hierarchy, visibility, navigation order and homepage category placement without code changes."
+    },
+    "searchPlaceholder": "Search categories...",
+    "empty": "No categories found",
+    "actions": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteShort": "Del",
+      "addRoot": "Add Root Category",
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update",
+      "saving": "Saving..."
+    },
+    "node": {
+      "collapse": "Collapse category",
+      "expand": "Expand category",
+      "order": "Order {value}",
+      "active": "Active",
+      "inactive": "Inactive",
+      "header": "Header",
+      "footer": "Footer",
+      "featured": "Featured",
+      "productsCount": "{count} products"
+    },
+    "modal": {
+      "titleEdit": "Edit Category",
+      "titleAddSub": "Add Subcategory: {name}",
+      "titleNewRoot": "New Root Category",
+      "description": "Navigation changes take effect after save and cache invalidation.",
+      "close": "Close modal"
+    },
+    "form": {
+      "name": "Name",
+      "sortOrder": "Sort Order",
+      "sortOrderHint": "Lower values appear first within the same level.",
+      "parent": "Parent",
+      "parentRoot": "Root",
+      "inactiveSuffix": " (inactive)",
+      "image": "Image",
+      "imagePreviewAlt": "Category preview",
+      "noImage": "No image",
+      "removeImage": "Remove image"
+    },
+    "toggles": {
+      "active": {
+        "label": "Active",
+        "description": "Inactive categories and their descendants are excluded from storefront discovery."
+      },
+      "header": {
+        "label": "Show in Header",
+        "description": "Allow this category in the header tree when every ancestor is also header-visible."
+      },
+      "footer": {
+        "label": "Show in Footer",
+        "description": "Allow this category in footer navigation when every ancestor is also footer-visible."
+      },
+      "featured": {
+        "label": "Featured",
+        "description": "Make this category eligible for the homepage featured-category section."
+      }
+    },
+    "success": {
+      "created": "Category created",
+      "updated": "Category updated",
+      "deleted": "Category deleted"
+    },
+    "confirm": {
+      "delete": "Delete this category?"
+    },
+    "errors": {
+      "nameRequired": "Please enter category name",
+      "sortOrderInvalid": "Sort order must be a non-negative integer",
+      "imageUploadFailed": "Image upload failed",
+      "saveFailed": "Failed to save category",
+      "deleteFailed": "Delete failed"
+    }
+  },
+  "AdminBrandManager": {
+    "header": {
+      "title": "Brand Management"
+    },
+    "actions": {
+      "addBrand": "Add Brand",
+      "saving": "Saving...",
+      "create": "Create",
+      "update": "Update"
+    },
+    "empty": {
+      "title": "No brands Found",
+      "description": "Click the button below to add a new brand"
+    },
+    "card": {
+      "noLogo": "No Logo",
+      "logoAlt": "{name} logo"
+    },
+    "modal": {
+      "titleNew": "New Brand",
+      "titleEdit": "Edit Brand"
+    },
+    "form": {
+      "name": "Name",
+      "logo": "Logo",
+      "noImage": "No image",
+      "logoPreviewAlt": "Brand logo preview",
+      "removeImage": "Remove image"
+    },
+    "success": {
+      "created": "Brand created",
+      "updated": "Brand updated"
+    },
+    "errors": {
+      "nameRequired": "Brand name required",
+      "imageUploadFailed": "Image upload failed",
+      "saveFailed": "Failed to save brand"
+    }
+  },
+  "AdminFlashSaleManager": {
+    "header": {
+      "title": "Flash Sales",
+      "description": "Schedule limited-time prices. Checkout automatically enforces the same live price."
+    },
+    "searchPlaceholder": "Search name or SKU...",
+    "stats": {
+      "live": "Live now on this page",
+      "scheduled": "Scheduled on this page",
+      "expired": "Expired on this page"
+    },
+    "statuses": {
+      "live": "live",
+      "scheduled": "scheduled",
+      "expired": "expired",
+      "not-configured": "not configured"
+    },
+    "inactiveProduct": "Inactive product",
+    "stockLabel": "Stock {count}",
+    "loading": "Loading products…",
+    "empty": "No matching products found.",
+    "actions": {
+      "configure": "Configure",
+      "removeAria": "Remove flash sale from {name}",
+      "cancel": "Cancel",
+      "save": "Save flash sale"
+    },
+    "pagination": {
+      "summary": "{total} products · Page {page} of {pageCount}",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "modal": {
+      "title": "Configure Flash Deal",
+      "regularPrice": "Regular price: {price}",
+      "salePrice": "Sale price",
+      "displayOrder": "Display order",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "enable": "Enable this schedule",
+      "enableDescription": "It becomes visible only between the start and end time.",
+      "inactiveWarning": "Activate this product before enabling a flash sale."
+    },
+    "confirm": {
+      "remove": "Remove the flash sale configuration from \"{name}\"?"
+    },
+    "toasts": {
+      "loadFailedTitle": "Flash sales could not be loaded",
+      "savedTitle": "Flash sale saved",
+      "savedDescription": "{name} is ready for its configured schedule.",
+      "removedTitle": "Flash sale removed",
+      "removeFailedTitle": "Could not remove flash sale"
+    },
+    "errors": {
+      "loadProducts": "Unable to load products",
+      "saveFailed": "Unable to save this flash sale",
+      "removeFailed": "Unable to remove the flash sale",
+      "tryAgain": "Please try again"
+    }
   }
 }

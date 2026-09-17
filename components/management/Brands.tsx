@@ -1,7 +1,7 @@
-//components/management/Brands.tsx
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,6 +16,8 @@ export default function BrandManager({
   onUpdate,
   onDelete,
 }: any) {
+  const t = useTranslations("AdminBrandManager");
+
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<any>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -91,7 +93,9 @@ export default function BrandManager({
           : null;
 
     if (!res.ok || !data?.success || !fileUrl) {
-      throw new Error(data?.error || data?.message || "Image upload failed");
+      throw new Error(
+        data?.error || data?.message || t("errors.imageUploadFailed"),
+      );
     }
 
     return fileUrl;
@@ -103,7 +107,7 @@ export default function BrandManager({
 
   const submit = async () => {
     if (!form.name.trim()) {
-      toast.error("Brand name required");
+      toast.error(t("errors.nameRequired"));
       return;
     }
 
@@ -123,15 +127,15 @@ export default function BrandManager({
 
       if (editing) {
         await onUpdate(editing.id, payload);
-        toast.success("Brand updated");
+        toast.success(t("success.updated"));
       } else {
         await onCreate(payload);
-        toast.success("Brand created");
+        toast.success(t("success.created"));
       }
 
       closeModal();
     } catch (err: any) {
-      toast.error(err?.message || "Failed to save brand");
+      toast.error(err?.message || t("errors.saveFailed"));
     } finally {
       setSubmitting(false);
     }
@@ -144,10 +148,10 @@ export default function BrandManager({
   return (
     <div className="p-8">
       <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold">Brand Management</h1>
+        <h1 className="text-2xl font-bold">{t("header.title")}</h1>
         <Button onClick={openAdd}>
           <Plus size={16} className="mr-2" />
-          Add Brand
+          {t("actions.addBrand")}
         </Button>
       </div>
 
@@ -166,11 +170,11 @@ export default function BrandManager({
         </div>
       ) : brands.length === 0 ? (
         <div className="text-center py-12">
-          <h3 className="text-lg font-medium mb-2">No brands Found</h3>
-          <p className="text-muted-foreground mb-6">Click the button below to add a new brand</p>
+          <h3 className="text-lg font-medium mb-2">{t("empty.title")}</h3>
+          <p className="text-muted-foreground mb-6">{t("empty.description")}</p>
           <Button onClick={openAdd}>
             <Plus size={16} className="mr-2" />
-            Add Brand
+            {t("actions.addBrand")}
           </Button>
         </div>
       ) : (
@@ -179,10 +183,14 @@ export default function BrandManager({
             <SpotlightCard key={b.id}>
               <div className="h-20 flex items-center justify-center bg-muted rounded overflow-hidden">
                 {b.logo ? (
-                  <img src={b.logo} className="h-full object-contain" alt={`${b.name} logo`} />
+                  <img
+                    src={b.logo}
+                    className="h-full object-contain"
+                    alt={t("card.logoAlt", { name: b.name })}
+                  />
                 ) : (
                   <span className="text-xs text-muted-foreground">
-                    No Logo
+                    {t("card.noLogo")}
                   </span>
                 )}
               </div>
@@ -190,7 +198,11 @@ export default function BrandManager({
               <h3 className="mt-3 font-medium">{b.name}</h3>
 
               <div className="flex gap-2 mt-3">
-                <Button size="sm" className="btn-primary" onClick={() => openEdit(b)}>
+                <Button
+                  size="sm"
+                  className="btn-primary"
+                  onClick={() => openEdit(b)}
+                >
                   <Edit3 size={14} />
                 </Button>
                 <Button
@@ -218,7 +230,7 @@ export default function BrandManager({
           >
             <div className="flex justify-between mb-4">
               <h2 className="text-xl font-bold">
-                {editing ? "Edit Brand" : "New Brand"}
+                {editing ? t("modal.titleEdit") : t("modal.titleNew")}
               </h2>
               <Button size="icon" variant="ghost" onClick={closeModal}>
                 <X size={18} />
@@ -227,28 +239,26 @@ export default function BrandManager({
 
             <div className="space-y-4">
               <div>
-                <Label>Name</Label>
+                <Label>{t("form.name")}</Label>
                 <Input
                   value={form.name}
-                  onChange={(e) =>
-                    setForm({ ...form, name: e.target.value })
-                  }
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </div>
 
               <div>
-                <Label>Logo</Label>
+                <Label>{t("form.logo")}</Label>
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 border rounded overflow-hidden bg-muted flex items-center justify-center">
                     {imagePreviewUrl ? (
                       <img
                         src={imagePreviewUrl}
                         className="h-full w-full object-cover"
-                        alt="Brand logo preview"
+                        alt={t("form.logoPreviewAlt")}
                       />
                     ) : (
                       <span className="text-[10px] text-muted-foreground">
-                        No image
+                        {t("form.noImage")}
                       </span>
                     )}
                   </div>
@@ -286,21 +296,17 @@ export default function BrandManager({
                       setForm({ ...form, logo: null });
                     }}
                   >
-                    Remove image
+                    {t("form.removeImage")}
                   </Button>
                 )}
               </div>
 
-              <Button
-                onClick={submit}
-                disabled={submitting}
-                className="w-full"
-              >
+              <Button onClick={submit} disabled={submitting} className="w-full">
                 {submitting
-                  ? "Saving..."
+                  ? t("actions.saving")
                   : editing
-                  ? "Update"
-                  : "Create"}
+                    ? t("actions.update")
+                    : t("actions.create")}
               </Button>
             </div>
           </div>
