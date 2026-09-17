@@ -4035,6 +4035,75 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminRbacSettings": {
+    "header": {
+      "title": "RBAC Settings",
+      "description": "Create roles, map permissions, and assign roles to users."
+    },
+    "common": {
+      "loading": "Loading..."
+    },
+    "roles": {
+      "title": "Roles",
+      "total": "{count} total roles",
+      "searchPlaceholder": "Search roles by name or key",
+      "empty": "No roles match your search.",
+      "users": "{count, plural, =1 {# user} other {# users}}",
+      "system": "System",
+      "immutable": "Immutable",
+      "immutableHint": "This is an immutable role. You can view but cannot modify or delete it."
+    },
+    "editor": {
+      "createTitle": "Create New Role",
+      "editTitle": "Editing: {role}",
+      "createHint": "Step 1: add role key and label. Step 2: choose permissions. Step 3: click Create.",
+      "editHint": "Edit label, description, and permissions to update this role."
+    },
+    "fields": {
+      "roleKey": "Role Key (unique)",
+      "storedKey": "Stored key",
+      "label": "Label",
+      "description": "Description"
+    },
+    "placeholders": {
+      "label": "Support Manager",
+      "description": "Role purpose"
+    },
+    "permissions": {
+      "selected": "Permissions ({count} selected)",
+      "searchPlaceholder": "Search permission key or description",
+      "empty": "No permissions match the current filter.",
+      "noDescription": "No description"
+    },
+    "actions": {
+      "reload": "Reload",
+      "newRole": "New Role",
+      "selectedOnly": "Selected Only",
+      "selectVisible": "Select Visible",
+      "clearVisible": "Clear Visible",
+      "createRole": "Create Role",
+      "saveChanges": "Save Changes",
+      "deleteRole": "Delete Role",
+      "switchToCreate": "Switch to Create"
+    },
+    "validation": {
+      "createRequired": "Role key, label and at least one permission are required.",
+      "updateRequired": "Label and at least one permission are required.",
+      "createHint": "Required: role key, label, and at least one permission."
+    },
+    "confirm": {
+      "deleteRole": "Delete role “{role}”?"
+    },
+    "errors": {
+      "loadFailed": "Failed to load RBAC.",
+      "createFailed": "Failed to create role.",
+      "updateFailed": "Failed to update role.",
+      "deleteFailed": "Failed to delete role.",
+      "searchUsersFailed": "Failed to search users.",
+      "loadUserRolesFailed": "Failed to load user roles.",
+      "assignRolesFailed": "Failed to assign roles."
+    }
+  },
   "AdminGalleryManagement": {
     "header": {
       "title": "Gallery Management",
