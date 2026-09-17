@@ -4035,6 +4035,86 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminScmHome": {
+    "header": { "title": "SCM Workspace", "description": "Start from work queues, risks, and next actions instead of hunting across modules." },
+    "actions": { "myTasks": "My Tasks", "exceptions": "Exceptions", "notifications": "Notifications", "refresh": "Refresh", "sync": "Sync" },
+    "loading": "Loading SCM workspace...",
+    "common": { "notAvailable": "N/A" },
+    "empty": { "accessTitle": "SCM workspace unavailable", "accessDescription": "Your current role does not have SCM workspace access." },
+    "errors": { "tasks": "Failed to load SCM tasks", "exceptions": "Failed to load SCM exceptions", "notifications": "Failed to load SCM notifications", "overview": "Failed to load SCM overview", "workspace": "Failed to load SCM workspace." },
+    "stats": {
+      "needsMyAction": { "label": "Needs My Action", "hint": "Documents currently waiting on you." },
+      "overdue": { "label": "Overdue Work", "hint": "Items stalled beyond expected response time." },
+      "unread": { "label": "Unread Notifications", "hint": "Internal SCM workflow updates." },
+      "critical": { "label": "Critical Exceptions", "lowStock": "{count} low-stock variants", "hint": "Risk queue needing review" },
+      "pendingApprovals": { "label": "Pending Approvals", "hint": "Current approval workload" },
+      "orderedValue": { "label": "Ordered Value", "hint": "PO value (30 days)" },
+      "supplierPayments": { "label": "Supplier Payments", "hint": "Treasury settlements (30 days)" },
+      "auditEvents": { "label": "Audit Events", "hint": "Recent SCM changes" }
+    },
+    "workToday": { "title": "My Work Today", "description": "Require your approval, confirmation, or update", "emptyTitle": "Nothing is blocked on you", "emptyDescription": "Your immediate approval queue is clear" },
+    "exceptions": { "title": "Urgent Exceptions", "description": "Address these critical issues first", "emptyTitle": "No critical exceptions", "emptyDescription": "All systems are currently under control" },
+    "continueWork": { "title": "Continue Previous Work", "description": "Documents moving through other teams", "emptyTitle": "Nothing waiting on others", "emptyDescription": "No documents currently dependent on other teams" },
+    "notifications": { "title": "Recent Notifications", "description": "Latest workflow changes reaching your inbox", "openInbox": "Open Inbox", "emptyTitle": "No recent notifications", "emptyDescription": "Workflow updates will appear here" },
+    "quickStart": { "title": "Quick Start", "description": "Common SCM actions for your role" },
+    "directory": { "title": "Module Directory", "description": "Navigate by business area" },
+    "sections": { "procurement": "Procurement", "warehouse": "Warehouse", "financeSupplier": "Finance & Supplier" },
+    "links": {
+      "createRequisition": { "title": "Create Requisition", "description": "Start a new internal purchase demand." },
+      "prepareRfq": { "title": "Prepare RFQ", "description": "Launch supplier sourcing from approved demand." },
+      "postGrn": { "title": "Post GRN", "description": "Receive inbound goods and update stock." },
+      "createSupplierInvoice": { "title": "Create Supplier Invoice", "description": "Review received PO lines before AP posting." },
+      "submitPrf": { "title": "Submit PRF", "description": "Initiate supplier payment workflow." },
+      "purchaseRequisitions": { "title": "Purchase Requisitions", "description": "Raise and route demand requests." },
+      "rfqs": { "title": "RFQs", "description": "Invite suppliers and collect quotations." },
+      "comparativeStatements": { "title": "Comparative Statements", "description": "Score supplier proposals and drive approvals." },
+      "purchaseOrders": { "title": "Purchase Orders", "description": "Issue approved orders and track delivery." },
+      "goodsReceipts": { "title": "Goods Receipts", "description": "Receive stock and confirm inbound documents." },
+      "warehouseTransfers": { "title": "Warehouse Transfers", "description": "Dispatch and receive internal stock movements." },
+      "materialRequests": { "title": "Material Requests", "description": "Manage internal issue workflow and approvals." },
+      "stockReports": { "title": "Stock Reports", "description": "Review stock health, ageing, and summaries." },
+      "paymentRequests": { "title": "Payment Requests", "description": "Approve and process supplier payments." },
+      "supplierInvoices": { "title": "Supplier Invoices", "description": "Create and monitor AP invoice records." },
+      "supplierLedger": { "title": "Supplier Ledger", "description": "Track invoice and payment exposure." },
+      "threeWayMatch": { "title": "3-Way Match", "description": "Resolve invoice variance before payment." },
+      "suppliers": { "title": "Suppliers", "description": "Maintain supplier master and governance." }
+    }
+  },
+  "AdminScmCommon": {
+    "notAvailable": "N/A",
+    "actions": { "review": "Review" },
+    "priority": { "critical": "Critical", "high": "High", "normal": "Normal" },
+    "severity": { "critical": "Critical", "high": "High", "medium": "Medium" },
+    "metadata": { "age": "Age", "days": "{count, plural, =1 {# day} other {# days}}", "warehouse": "Warehouse", "created": "Created", "detected": "Detected", "due": "Due" },
+    "statuses": { "REJECTED": "Rejected", "FAILED": "Failed", "CANCELLED": "Cancelled", "VARIANCE": "Variance", "OUT_OF_STOCK": "Out of Stock", "OVERDUE": "Overdue", "SUBMITTED": "Submitted", "PENDING": "Pending", "PENDING_REVIEW": "Pending Review", "IN_PROGRESS": "In Progress", "TREASURY_PROCESSING": "Treasury Processing", "LOW_STOCK": "Low Stock", "PARTIALLY_RECEIVED": "Partially Received", "PARTIALLY_DISPATCHED": "Partially Dispatched", "PARTIALLY_RELEASED": "Partially Released", "APPROVED": "Approved", "FINAL_APPROVED": "Final Approved", "MANAGER_APPROVED": "Manager Approved", "COMMITTEE_APPROVED": "Committee Approved", "FINANCE_APPROVED": "Finance Approved", "BUDGET_CLEARED": "Budget Cleared", "ENDORSED": "Endorsed", "RECEIVED": "Received", "RELEASED": "Released", "MATCHED": "Matched", "PAID": "Paid", "DELIVERED": "Delivered", "RESOLVED": "Resolved", "CLOSED": "Closed", "DRAFT": "Draft", "OPEN": "Open", "ACKNOWLEDGED": "Acknowledged" }
+  },
+  "AdminScmTasks": {
+    "header": { "title": "My Tasks", "description": "This workspace shows exactly what needs your attention now, what is waiting on others, and what just finished." },
+    "actions": { "refresh": "Refresh" }, "loading": "Loading SCM task queue...", "errors": { "load": "Failed to load your SCM task queue." },
+    "stats": { "needsMyAction": { "label": "Needs My Action", "hint": "Documents blocked until you act." }, "overdue": { "label": "Overdue", "hint": "Items older than expected response time." }, "waiting": { "label": "Waiting On Others", "hint": "Your documents currently in someone else's queue." }, "completed": { "label": "Recently Completed", "hint": "Recent outcomes you may want to review." } },
+    "needsAction": { "title": "Needs My Action", "description": "Start here first. These are the approvals, confirmations, and workflow moves currently waiting on you.", "emptyTitle": "No immediate task assigned", "emptyDescription": "Your approval and execution queue is clear for now." },
+    "waiting": { "title": "Waiting On Others", "description": "These are your documents that already moved forward and are now with another team or approval stage.", "emptyTitle": "Nothing is waiting downstream", "emptyDescription": "You do not currently have SCM documents pending with another stage." },
+    "completed": { "title": "Recently Completed", "description": "Review recent approvals, releases, and completed treasury or warehouse actions.", "emptyTitle": "No recent completions", "emptyDescription": "Completed SCM outcomes will appear here once workflows finish." }
+  },
+  "AdminScmExceptions": {
+    "header": { "title": "Exceptions", "description": "Review the items most likely to block procurement flow, stock continuity, invoice control, or supplier governance." },
+    "actions": { "refresh": "Refresh" }, "loading": "Loading SCM exceptions...", "errors": { "load": "Failed to load SCM exceptions." },
+    "stats": { "critical": { "label": "Critical", "hint": "Immediate operational or finance risk." }, "needsReview": { "label": "Needs Review", "hint": "Items waiting for human follow-up." }, "operationalRisks": { "label": "Operational Risks", "hint": "Supply, SLA, warehouse, or delivery signals." } },
+    "critical": { "title": "Critical", "description": "Resolve these first. They are the most likely to cause payment errors, stock-outs, or major delays.", "emptyTitle": "No critical exception", "emptyDescription": "There are no severe SCM exceptions in the current queue." },
+    "needsReview": { "title": "Needs Review", "description": "These issues still require a human decision, acknowledgement, or close-out.", "emptyTitle": "No review backlog", "emptyDescription": "Pending confirmations, approval delays, and return close-outs are under control." },
+    "operationalRisks": { "title": "Operational Risks", "description": "These are live risks that may not be blocked yet, but should be watched before they escalate.", "emptyTitle": "No open operational risk", "emptyDescription": "Warehouse transfer, supplier SLA, and delivery risk indicators are currently stable." }
+  },
+  "AdminScmNotifications": {
+    "header": { "title": "SCM Notifications", "description": "Track internal approval workflow alerts across requisitions, CS, PO, and PRF." },
+    "actions": { "showAll": "Show All", "unreadOnly": "Unread Only", "refresh": "Refresh", "marking": "Marking...", "markAllRead": "Mark All Read", "processing": "Processing...", "processQueue": "Process Email Queue", "retrying": "Retrying...", "retryFailed": "Retry Failed Emails", "openWorkflow": "Open Workflow", "markRead": "Mark Read", "openModule": "Open Module" },
+    "loading": "Loading notifications...", "errors": { "load": "Failed to load notifications.", "mark": "Failed to mark notification.", "markAll": "Failed to mark all notifications.", "queue": "Failed to process notification queue." },
+    "stats": { "unread": { "label": "Unread", "hint": "Needs your attention" }, "visible": { "label": "Visible Rows", "hint": "After local filter/search" }, "failed": { "label": "Failed Emails", "hint": "Delivery issues in queue" }, "modules": { "label": "Modules", "hint": "Notification-producing SCM areas" } },
+    "controls": { "title": "Inbox Controls", "searchPlaceholder": "Search title, message, entity number, stage...", "allModules": "All modules" },
+    "health": { "system": "System", "emailSent": "Email Sent", "emailPending": "Email Pending", "emailFailed": "Email Failed" },
+    "alerts": { "title": "System Alerts", "empty": "No failed email deliveries." },
+    "labels": { "failed": "FAILED", "noEmail": "No email", "notAvailable": "N/A", "error": "Error", "unread": "UNREAD", "read": "READ", "entity": "Entity", "created": "Created", "readAt": "Read", "sent": "Sent" },
+    "empty": "No SCM notifications found.", "needsAction": { "title": "Needs Action", "empty": "No unread workflow alerts in the current filter." }, "recent": { "title": "Recent Updates", "empty": "No read updates in the current filter." }
+  },
   "AdminActivityLog": {
     "header": {
       "title": "Activity Log",

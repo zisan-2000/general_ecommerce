@@ -10,6 +10,7 @@ import {
 import { ScmEmptyState } from "@/components/admin/scm/ScmEmptyState";
 import { ScmSectionHeader } from "@/components/admin/scm/ScmSectionHeader";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
+import { useTranslations } from "next-intl";
 
 type ExceptionsResponse = {
   summary: {
@@ -31,6 +32,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function ScmExceptionsPage() {
+  const t = useTranslations("AdminScmExceptions");
   const [data, setData] = useState<ExceptionsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -41,11 +43,11 @@ export default function ScmExceptionsPage() {
       setError(null);
       const payload = await readJson<ExceptionsResponse>(
         await fetch("/api/scm/exceptions", { cache: "no-store" }),
-        "Failed to load SCM exceptions.",
+        t("errors.load"),
       );
       setData(payload);
     } catch (err: any) {
-      setError(err?.message || "Failed to load SCM exceptions.");
+      setError(err?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -53,58 +55,58 @@ export default function ScmExceptionsPage() {
 
   useEffect(() => {
     void load();
-  }, []);
+  }, [t]);
 
   return (
     <div className="space-y-8 p-4 md:p-6">
       <ScmSectionHeader
-        title="Exceptions"
-        description="Review the items most likely to block procurement flow, stock continuity, invoice control, or supplier governance."
+        title={t("header.title")}
+        description={t("header.description")}
         action={
           <Button variant="outline" onClick={() => void load()}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         }
       />
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading SCM exceptions...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("loading")}</p> : null}
       {error ? <p className="text-sm text-destructive">{error}</p> : null}
 
       <div className="grid gap-4 grid-cols-3">
         <ScmStatCard
-          label="Critical"
+          label={t("stats.critical.label")}
           value={data?.summary.critical ?? 0}
-          hint="Immediate operational or finance risk."
+          hint={t("stats.critical.hint")}
           icon={ShieldAlert}
           tone={(data?.summary.critical ?? 0) > 0 ? "critical" : "default"}
         />
         <ScmStatCard
-          label="Needs Review"
+          label={t("stats.needsReview.label")}
           value={data?.summary.needsReview ?? 0}
-          hint="Items waiting for human follow-up."
+          hint={t("stats.needsReview.hint")}
           icon={AlertTriangle}
           tone={(data?.summary.needsReview ?? 0) > 0 ? "warning" : "default"}
         />
         <ScmStatCard
-          label="Operational Risks"
+          label={t("stats.operationalRisks.label")}
           value={data?.summary.operationalRisks ?? 0}
-          hint="Supply, SLA, warehouse, or delivery signals."
+          hint={t("stats.operationalRisks.hint")}
           icon={RefreshCw}
         />
       </div>
 
       <section className="space-y-4">
         <ScmSectionHeader
-          title="Critical"
-          description="Resolve these first. They are the most likely to cause payment errors, stock-outs, or major delays."
+          title={t("critical.title")}
+          description={t("critical.description")}
         />
         <ScmExceptionList
           items={data?.critical ?? []}
           empty={
             <ScmEmptyState
-              title="No critical exception"
-              description="There are no severe SCM exceptions in the current queue."
+              title={t("critical.emptyTitle")}
+              description={t("critical.emptyDescription")}
               icon={ShieldAlert}
             />
           }
@@ -113,15 +115,15 @@ export default function ScmExceptionsPage() {
 
       <section className="space-y-4">
         <ScmSectionHeader
-          title="Needs Review"
-          description="These issues still require a human decision, acknowledgement, or close-out."
+          title={t("needsReview.title")}
+          description={t("needsReview.description")}
         />
         <ScmExceptionList
           items={data?.needsReview ?? []}
           empty={
             <ScmEmptyState
-              title="No review backlog"
-              description="Pending confirmations, approval delays, and return close-outs are under control."
+              title={t("needsReview.emptyTitle")}
+              description={t("needsReview.emptyDescription")}
               icon={AlertTriangle}
             />
           }
@@ -130,15 +132,15 @@ export default function ScmExceptionsPage() {
 
       <section className="space-y-4">
         <ScmSectionHeader
-          title="Operational Risks"
-          description="These are live risks that may not be blocked yet, but should be watched before they escalate."
+          title={t("operationalRisks.title")}
+          description={t("operationalRisks.description")}
         />
         <ScmExceptionList
           items={data?.operationalRisks ?? []}
           empty={
             <ScmEmptyState
-              title="No open operational risk"
-              description="Warehouse transfer, supplier SLA, and delivery risk indicators are currently stable."
+              title={t("operationalRisks.emptyTitle")}
+              description={t("operationalRisks.emptyDescription")}
               icon={RefreshCw}
             />
           }

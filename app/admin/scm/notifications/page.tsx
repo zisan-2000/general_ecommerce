@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
+import { useLocale, useTranslations } from "next-intl";
 
 type NotificationRow = {
   id: number;
@@ -48,14 +49,16 @@ type NotificationsResponse = {
   };
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string, unavailable: string) {
+  if (!value) return unavailable;
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return unavailable;
+  return date.toLocaleString(locale);
 }
 
 export default function ScmNotificationsPage() {
+  const t = useTranslations("AdminScmNotifications");
+  const locale = useLocale();
   const [data, setData] = useState<NotificationsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -79,11 +82,11 @@ export default function ScmNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load notifications.");
+        throw new Error(payload?.error || t("errors.load"));
       }
       setData(payload as NotificationsResponse);
     } catch (err: any) {
-      setError(err?.message || "Failed to load notifications.");
+      setError(err?.message || t("errors.load"));
       setData(null);
     } finally {
       setLoading(false);
@@ -92,7 +95,7 @@ export default function ScmNotificationsPage() {
 
   useEffect(() => {
     void load();
-  }, []);
+  }, [t]);
 
   const markRead = async (row: NotificationRow) => {
     try {
@@ -103,11 +106,11 @@ export default function ScmNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to mark notification.");
+        throw new Error(payload?.error || t("errors.mark"));
       }
       await load();
     } catch (err: any) {
-      setError(err?.message || "Failed to mark notification.");
+      setError(err?.message || t("errors.mark"));
     }
   };
 
@@ -121,11 +124,11 @@ export default function ScmNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to mark all notifications.");
+        throw new Error(payload?.error || t("errors.markAll"));
       }
       await load();
     } catch (err: any) {
-      setError(err?.message || "Failed to mark all notifications.");
+      setError(err?.message || t("errors.markAll"));
     } finally {
       setMarkingAll(false);
     }
@@ -145,11 +148,11 @@ export default function ScmNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to process notification queue.");
+        throw new Error(payload?.error || t("errors.queue"));
       }
       await load();
     } catch (err: any) {
-      setError(err?.message || "Failed to process notification queue.");
+      setError(err?.message || t("errors.queue"));
     } finally {
       if (action === "process_email_queue") {
         setProcessingQueue(false);
@@ -198,9 +201,9 @@ export default function ScmNotificationsPage() {
     <div className="space-y-6 p-4 md:p-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold">SCM Notifications</h1>
+          <h1 className="text-2xl font-semibold">{t("header.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Track internal approval workflow alerts across requisitions, CS, PO, and PRF.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -212,77 +215,77 @@ export default function ScmNotificationsPage() {
               void load(next);
             }}
           >
-            {unreadOnly ? "Show All" : "Unread Only"}
+            {unreadOnly ? t("actions.showAll") : t("actions.unreadOnly")}
           </Button>
           <Button variant="outline" onClick={() => void load()}>
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button variant="outline" onClick={() => void markAllRead()} disabled={markingAll}>
-            {markingAll ? "Marking..." : "Mark All Read"}
+            {markingAll ? t("actions.marking") : t("actions.markAllRead")}
           </Button>
           <Button
             variant="outline"
             onClick={() => void processQueue("process_email_queue")}
             disabled={processingQueue}
           >
-            {processingQueue ? "Processing..." : "Process Email Queue"}
+            {processingQueue ? t("actions.processing") : t("actions.processQueue")}
           </Button>
           <Button
             variant="outline"
             onClick={() => void processQueue("retry_failed_email_queue")}
             disabled={retryingQueue}
           >
-            {retryingQueue ? "Retrying..." : "Retry Failed Emails"}
+            {retryingQueue ? t("actions.retrying") : t("actions.retryFailed")}
           </Button>
         </div>
       </div>
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading notifications...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("loading")}</p> : null}
       {!loading && error ? <p className="text-sm text-destructive">{error}</p> : null}
 
       {!loading && !error && data ? (
         <>
           <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
             <ScmStatCard
-              label="Unread"
+              label={t("stats.unread.label")}
               value={String(data.unreadCount)}
-              hint="Needs your attention"
+              hint={t("stats.unread.hint")}
               tone={data.unreadCount > 0 ? "warning" : "default"}
             />
             <ScmStatCard
-              label="Visible Rows"
+              label={t("stats.visible.label")}
               value={String(visibleRows.length)}
-              hint="After local filter/search"
+              hint={t("stats.visible.hint")}
             />
             <ScmStatCard
-              label="Failed Emails"
+              label={t("stats.failed.label")}
               value={String(data.health.recentFailures.length)}
-              hint="Delivery issues in queue"
+              hint={t("stats.failed.hint")}
               tone={data.health.recentFailures.length > 0 ? "critical" : "default"}
             />
             <ScmStatCard
-              label="Modules"
+              label={t("stats.modules.label")}
               value={String(data.health.modules.length)}
-              hint="Notification-producing SCM areas"
+              hint={t("stats.modules.hint")}
             />
           </div>
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Inbox Controls</CardTitle>
+              <CardTitle className="text-base">{t("controls.title")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-3 md:grid-cols-[minmax(0,1fr)_260px]">
               <Input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search title, message, entity number, stage..."
+                placeholder={t("controls.searchPlaceholder")}
               />
               <select
                 className="rounded-md border bg-background px-3 py-2 text-sm"
                 value={moduleFilter}
                 onChange={(event) => setModuleFilter(event.target.value)}
               >
-                <option value="ALL">All modules</option>
+                <option value="ALL">{t("controls.allModules")}</option>
                 {moduleOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
@@ -300,19 +303,19 @@ export default function ScmNotificationsPage() {
                 </CardHeader>
                 <CardContent className="space-y-1 text-sm text-muted-foreground">
                   <div className="flex items-center justify-between">
-                    <span>System</span>
+                    <span>{t("health.system")}</span>
                     <span className="font-medium text-foreground">{module.systemCount}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Email Sent</span>
+                    <span>{t("health.emailSent")}</span>
                     <span className="font-medium text-foreground">{module.emailSent}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Email Pending</span>
+                    <span>{t("health.emailPending")}</span>
                     <span className="font-medium text-foreground">{module.emailPending}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Email Failed</span>
+                    <span>{t("health.emailFailed")}</span>
                     <span className="font-medium text-destructive">{module.emailFailed}</span>
                   </div>
                 </CardContent>
@@ -322,11 +325,11 @@ export default function ScmNotificationsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">System Alerts</CardTitle>
+              <CardTitle className="text-base">{t("alerts.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {data.health.recentFailures.length === 0 ? (
-                <p className="text-sm text-muted-foreground">No failed email deliveries.</p>
+                <p className="text-sm text-muted-foreground">{t("alerts.empty")}</p>
               ) : (
                 data.health.recentFailures.map((row) => (
                   <div key={`${row.key}-${row.id}`} className="rounded-md border p-3">
@@ -334,17 +337,17 @@ export default function ScmNotificationsPage() {
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-center gap-2">
                           <Badge variant="outline">{row.label}</Badge>
-                          <Badge variant="destructive">FAILED</Badge>
+                          <Badge variant="destructive">{t("labels.failed")}</Badge>
                         </div>
-                        <p className="text-sm font-medium">{row.recipientEmail || "No email"}</p>
+                        <p className="text-sm font-medium">{row.recipientEmail || t("labels.noEmail")}</p>
                       </div>
                       <span className="text-xs text-muted-foreground">
-                        {fmtDate(row.createdAt)}
+                        {fmtDate(row.createdAt, locale, t("labels.notAvailable"))}
                       </span>
                     </div>
                     <p className="mt-2 text-sm">{row.message}</p>
                     {row.error ? (
-                      <p className="mt-1 text-xs text-destructive">Error: {row.error}</p>
+                      <p className="mt-1 text-xs text-destructive">{t("labels.error")}: {row.error}</p>
                     ) : null}
                   </div>
                 ))
@@ -356,19 +359,19 @@ export default function ScmNotificationsPage() {
             {visibleRows.length === 0 ? (
               <Card>
                 <CardContent className="py-6 text-sm text-muted-foreground">
-                  No SCM notifications found.
+                  {t("empty")}
                 </CardContent>
               </Card>
             ) : (
               <>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Needs Action</CardTitle>
+                    <CardTitle className="text-base">{t("needsAction.title")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {needsActionRows.length === 0 ? (
                       <p className="text-sm text-muted-foreground">
-                        No unread workflow alerts in the current filter.
+                        {t("needsAction.empty")}
                       </p>
                     ) : (
                       needsActionRows.map((row) => (
@@ -379,21 +382,21 @@ export default function ScmNotificationsPage() {
                               <div className="flex flex-wrap gap-2">
                                 <Badge variant="outline">{row.type}</Badge>
                                 <Badge>{row.stage}</Badge>
-                                <Badge variant="secondary">UNREAD</Badge>
+                                <Badge variant="secondary">{t("labels.unread")}</Badge>
                               </div>
                             </div>
                             <p className="text-xs text-muted-foreground">
-                              Entity: {row.entityNumber || "N/A"} | Created: {fmtDate(row.createdAt)}
+                              {t("labels.entity")}: {row.entityNumber || t("labels.notAvailable")} | {t("labels.created")}: {fmtDate(row.createdAt, locale, t("labels.notAvailable"))}
                             </p>
                           </CardHeader>
                           <CardContent className="space-y-3">
                             <p className="text-sm">{row.message}</p>
                             <div className="flex flex-wrap gap-2">
                               <Button asChild size="sm">
-                                <Link href={row.href}>Open Workflow</Link>
+                                <Link href={row.href}>{t("actions.openWorkflow")}</Link>
                               </Button>
                               <Button size="sm" variant="outline" onClick={() => void markRead(row)}>
-                                Mark Read
+                                {t("actions.markRead")}
                               </Button>
                             </div>
                           </CardContent>
@@ -405,12 +408,12 @@ export default function ScmNotificationsPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Recent Updates</CardTitle>
+                    <CardTitle className="text-base">{t("recent.title")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {recentUpdateRows.length === 0 ? (
                       <p className="text-sm text-muted-foreground">
-                        No read updates in the current filter.
+                        {t("recent.empty")}
                       </p>
                     ) : (
                       recentUpdateRows.map((row) => (
@@ -421,21 +424,21 @@ export default function ScmNotificationsPage() {
                               <div className="flex flex-wrap gap-2">
                                 <Badge variant="outline">{row.type}</Badge>
                                 <Badge variant="outline">{row.stage}</Badge>
-                                <Badge variant="outline">READ</Badge>
+                                <Badge variant="outline">{t("labels.read")}</Badge>
                               </div>
                             </div>
                             <p className="text-xs text-muted-foreground">
-                              Entity: {row.entityNumber || "N/A"} | Read: {fmtDate(row.readAt)}
+                              {t("labels.entity")}: {row.entityNumber || t("labels.notAvailable")} | {t("labels.readAt")}: {fmtDate(row.readAt, locale, t("labels.notAvailable"))}
                             </p>
                           </CardHeader>
                           <CardContent className="space-y-3">
                             <p className="text-sm">{row.message}</p>
                             <p className="text-xs text-muted-foreground">
-                              Sent: {fmtDate(row.sentAt)}
+                              {t("labels.sent")}: {fmtDate(row.sentAt, locale, t("labels.notAvailable"))}
                             </p>
                             <div className="flex flex-wrap gap-2">
                               <Button asChild size="sm" variant="outline">
-                                <Link href={row.href}>Open Module</Link>
+                                <Link href={row.href}>{t("actions.openModule")}</Link>
                               </Button>
                             </div>
                           </CardContent>

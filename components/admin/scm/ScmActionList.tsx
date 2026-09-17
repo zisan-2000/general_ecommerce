@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScmStatusChip } from "@/components/admin/scm/ScmStatusChip";
 import { cn } from "@/lib/utils";
+import { useLocale, useTranslations } from "next-intl";
 
 export type ScmActionItem = {
   key: string;
@@ -23,27 +24,16 @@ export type ScmActionItem = {
   warehouseName: string | null;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string, unavailable: string) {
+  if (!value) return unavailable;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString(undefined, {
+  if (Number.isNaN(parsed.getTime())) return unavailable;
+  return parsed.toLocaleString(locale, {
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit'
   });
-}
-
-function priorityLabel(priority: ScmActionItem["priority"]) {
-  switch (priority) {
-    case "critical":
-      return "Critical";
-    case "high":
-      return "High";
-    default:
-      return "Normal";
-  }
 }
 
 function getPriorityClass(priority: ScmActionItem["priority"]) {
@@ -89,6 +79,8 @@ export function ScmActionList({
   items: ScmActionItem[];
   empty?: ReactNode;
 }) {
+  const t = useTranslations("AdminScmCommon");
+  const locale = useLocale();
   if (items.length === 0) {
     return <>{empty ?? null}</>;
   }
@@ -115,7 +107,7 @@ export function ScmActionList({
                     "rounded-full border px-1.5 py-0.5 sm:px-2 text-[10px] sm:text-[11px] font-medium",
                     getPriorityClass(item.priority)
                   )}>
-                    {priorityLabel(item.priority)}
+                    {t(`priority.${item.priority}` as any)}
                   </span>
                 </div>
 
@@ -152,8 +144,8 @@ export function ScmActionList({
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 sm:gap-x-4 sm:gap-y-2 text-[10px] sm:text-xs text-muted-foreground border-t border-border/50 pt-2 sm:pt-3">
               <MetadataItem 
                 icon={Clock3} 
-                label="Age" 
-                value={`${item.ageDays} day${item.ageDays === 1 ? '' : 's'}`} 
+                label={t("metadata.age")}
+                value={t("metadata.days", { count: item.ageDays })}
               />
               
               {item.warehouseName && (
@@ -161,7 +153,7 @@ export function ScmActionList({
                   <span className="hidden sm:inline text-border/50">•</span>
                   <MetadataItem 
                     icon={Building2} 
-                    label="Warehouse" 
+                    label={t("metadata.warehouse")}
                     value={item.warehouseName} 
                   />
                 </>
@@ -171,8 +163,8 @@ export function ScmActionList({
                 <span className="hidden sm:inline text-border/50">•</span>
                 <MetadataItem 
                   icon={Calendar} 
-                  label="Created" 
-                  value={fmtDate(item.createdAt)} 
+                  label={t("metadata.created")}
+                  value={fmtDate(item.createdAt, locale, t("notAvailable"))}
                 />
               </>
               
@@ -181,8 +173,8 @@ export function ScmActionList({
                   <span className="hidden sm:inline text-border/50">•</span>
                   <MetadataItem 
                     icon={AlertCircle} 
-                    label="Due" 
-                    value={fmtDate(item.dueAt)} 
+                    label={t("metadata.due")}
+                    value={fmtDate(item.dueAt, locale, t("notAvailable"))}
                     isWarning={true}
                   />
                 </>

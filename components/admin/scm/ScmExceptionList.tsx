@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScmStatusChip } from "@/components/admin/scm/ScmStatusChip";
 import { cn } from "@/lib/utils";
+import { useLocale, useTranslations } from "next-intl";
 
 export type ScmExceptionItem = {
   key: string;
@@ -22,11 +23,11 @@ export type ScmExceptionItem = {
   warehouseName: string | null;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string, unavailable: string) {
+  if (!value) return unavailable;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString(undefined, {
+  if (Number.isNaN(parsed.getTime())) return unavailable;
+  return parsed.toLocaleString(locale, {
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
@@ -54,17 +55,6 @@ function getSeverityClasses(severity: ScmExceptionItem["severity"]) {
         icon: "text-info",
         badge: "border-info/30 bg-info/10 text-info",
       };
-  }
-}
-
-function getSeverityLabel(severity: ScmExceptionItem["severity"]) {
-  switch (severity) {
-    case "critical":
-      return "Critical";
-    case "high":
-      return "High";
-    default:
-      return "Medium";
   }
 }
 
@@ -104,6 +94,9 @@ export function ScmExceptionList({
   items: ScmExceptionItem[];
   empty?: ReactNode;
 }) {
+  const t = useTranslations("AdminScmCommon");
+  const locale = useLocale();
+
   if (items.length === 0) {
     return <>{empty ?? null}</>;
   }
@@ -137,7 +130,7 @@ export function ScmExceptionList({
                       "rounded-full border px-1.5 py-0.5 sm:px-2 text-[10px] sm:text-[11px] font-medium",
                       severityStyle.badge
                     )}>
-                      {getSeverityLabel(item.severity)}
+                      {t(`severity.${item.severity}` as any)}
                     </span>
                   </div>
 
@@ -167,7 +160,7 @@ export function ScmExceptionList({
                   )}
                 >
                   <Link href={item.href} className="flex items-center justify-center gap-1.5 text-xs sm:text-sm hover:text-primary hover:border-primary">
-                    <span>Review</span>
+                    <span>{t("actions.review")}</span>
                     <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   </Link>
                 </Button>
@@ -178,8 +171,8 @@ export function ScmExceptionList({
                 {/* Age - with critical styling if needed */}
                 <MetadataItem 
                   icon={Clock} 
-                  label="Age" 
-                  value={`${item.ageDays} day${item.ageDays === 1 ? '' : 's'}`}
+                  label={t("metadata.age")}
+                  value={t("metadata.days", { count: item.ageDays })}
                   isCritical={item.severity === "critical" && item.ageDays > 7}
                   isWarning={item.severity === "high" && item.ageDays > 5}
                 />
@@ -190,7 +183,7 @@ export function ScmExceptionList({
                     <span className="hidden sm:inline text-border/50">•</span>
                     <MetadataItem 
                       icon={Building2} 
-                      label="Warehouse" 
+                      label={t("metadata.warehouse")}
                       value={item.warehouseName} 
                     />
                   </>
@@ -201,8 +194,8 @@ export function ScmExceptionList({
                   <span className="hidden sm:inline text-border/50">•</span>
                   <MetadataItem 
                     icon={Calendar} 
-                    label="Detected" 
-                    value={fmtDate(item.createdAt)} 
+                    label={t("metadata.detected")}
+                    value={fmtDate(item.createdAt, locale, t("notAvailable"))}
                   />
                 </>
                 
@@ -212,8 +205,8 @@ export function ScmExceptionList({
                     <span className="hidden sm:inline text-border/50">•</span>
                     <MetadataItem 
                       icon={AlertCircle} 
-                      label="Due" 
-                      value={fmtDate(item.dueAt)} 
+                      label={t("metadata.due")}
+                      value={fmtDate(item.dueAt, locale, t("notAvailable"))}
                       isWarning={true}
                     />
                   </>

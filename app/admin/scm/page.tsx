@@ -30,6 +30,7 @@ import {
 import { ScmSectionHeader } from "@/components/admin/scm/ScmSectionHeader";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
 import { ScmStatusChip } from "@/components/admin/scm/ScmStatusChip";
+import { useLocale, useTranslations } from "next-intl";
 
 type DashboardOverview = {
   overview: {
@@ -78,6 +79,7 @@ type ExceptionsResponse = {
 };
 
 type WorkspaceLink = {
+  key: string;
   title: string;
   href: string;
   description: string;
@@ -105,6 +107,7 @@ const REPORT_READ_PERMISSIONS = [
 
 const quickStartLinks: WorkspaceLink[] = [
   {
+    key: "createRequisition",
     title: "Create Requisition",
     href: "/admin/scm/purchase-requisitions/new",
     description: "Start a new internal purchase demand.",
@@ -112,6 +115,7 @@ const quickStartLinks: WorkspaceLink[] = [
     permissions: ["purchase_requisitions.manage"],
   },
   {
+    key: "prepareRfq",
     title: "Prepare RFQ",
     href: "/admin/scm/rfqs/new",
     description: "Launch supplier sourcing from approved demand.",
@@ -119,6 +123,7 @@ const quickStartLinks: WorkspaceLink[] = [
     permissions: ["rfq.manage"],
   },
   {
+    key: "postGrn",
     title: "Post GRN",
     href: "/admin/scm/goods-receipts/new",
     description: "Receive inbound goods and update stock.",
@@ -126,6 +131,7 @@ const quickStartLinks: WorkspaceLink[] = [
     permissions: ["goods_receipts.manage"],
   },
   {
+    key: "createSupplierInvoice",
     title: "Create Supplier Invoice",
     href: "/admin/scm/supplier-invoices",
     description: "Review received PO lines before AP posting.",
@@ -134,6 +140,7 @@ const quickStartLinks: WorkspaceLink[] = [
     globalPermissions: ["supplier_invoices.manage"],
   },
   {
+    key: "submitPrf",
     title: "Submit PRF",
     href: "/admin/scm/payment-requests/new",
     description: "Initiate supplier payment workflow.",
@@ -142,11 +149,13 @@ const quickStartLinks: WorkspaceLink[] = [
   },
 ];
 
-const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
+const moduleDirectory: Array<{ key: string; label: string; links: WorkspaceLink[] }> = [
   {
+    key: "procurement",
     label: "Procurement",
     links: [
       {
+        key: "purchaseRequisitions",
         title: "Purchase Requisitions",
         href: "/admin/scm/purchase-requisitions",
         description: "Raise and route demand requests.",
@@ -154,6 +163,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         permissions: ["purchase_requisitions.read", "purchase_requisitions.manage"],
       },
       {
+        key: "rfqs",
         title: "RFQs",
         href: "/admin/scm/rfqs",
         description: "Invite suppliers and collect quotations.",
@@ -161,6 +171,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         permissions: ["rfq.read", "rfq.manage"],
       },
       {
+        key: "comparativeStatements",
         title: "Comparative Statements",
         href: "/admin/scm/comparative-statements",
         description: "Score supplier proposals and drive approvals.",
@@ -174,6 +185,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "purchaseOrders",
         title: "Purchase Orders",
         href: "/admin/scm/purchase-orders",
         description: "Issue approved orders and track delivery.",
@@ -187,9 +199,11 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
     ],
   },
   {
+    key: "warehouse",
     label: "Warehouse",
     links: [
       {
+        key: "goodsReceipts",
         title: "Goods Receipts",
         href: "/admin/scm/goods-receipts",
         description: "Receive stock and confirm inbound documents.",
@@ -197,6 +211,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         permissions: ["goods_receipts.read", "goods_receipts.manage"],
       },
       {
+        key: "warehouseTransfers",
         title: "Warehouse Transfers",
         href: "/admin/scm/warehouse-transfers",
         description: "Dispatch and receive internal stock movements.",
@@ -208,6 +223,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "materialRequests",
         title: "Material Requests",
         href: "/admin/scm/material-requests",
         description: "Manage internal issue workflow and approvals.",
@@ -219,6 +235,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "stockReports",
         title: "Stock Reports",
         href: "/admin/scm/stock-reports",
         description: "Review stock health, ageing, and summaries.",
@@ -228,9 +245,11 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
     ],
   },
   {
+    key: "financeSupplier",
     label: "Finance & Supplier",
     links: [
       {
+        key: "paymentRequests",
         title: "Payment Requests",
         href: "/admin/scm/payment-requests",
         description: "Approve and process supplier payments.",
@@ -244,6 +263,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "supplierInvoices",
         title: "Supplier Invoices",
         href: "/admin/scm/supplier-invoices",
         description: "Create and monitor AP invoice records.",
@@ -252,6 +272,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         globalPermissions: ["supplier_invoices.read", "supplier_invoices.manage"],
       },
       {
+        key: "supplierLedger",
         title: "Supplier Ledger",
         href: "/admin/scm/supplier-ledger",
         description: "Track invoice and payment exposure.",
@@ -264,6 +285,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "threeWayMatch",
         title: "3-Way Match",
         href: "/admin/scm/three-way-match",
         description: "Resolve invoice variance before payment.",
@@ -276,6 +298,7 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
         ],
       },
       {
+        key: "suppliers",
         title: "Suppliers",
         href: "/admin/scm/suppliers",
         description: "Maintain supplier master and governance.",
@@ -287,20 +310,20 @@ const moduleDirectory: Array<{ label: string; links: WorkspaceLink[] }> = [
   },
 ];
 
-function fmtCurrency(value?: number | null) {
-  if (typeof value !== "number" || Number.isNaN(value)) return "N/A";
-  return new Intl.NumberFormat("en-BD", {
+function fmtCurrency(value: number | null | undefined, locale: string, unavailable: string) {
+  if (typeof value !== "number" || Number.isNaN(value)) return unavailable;
+  return new Intl.NumberFormat(locale, {
     style: "currency",
     currency: "BDT",
     maximumFractionDigits: 0,
   }).format(value);
 }
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string, unavailable: string) {
+  if (!value) return unavailable;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return unavailable;
+  return parsed.toLocaleString(locale);
 }
 
 async function readJson<T>(response: Response, fallback: string): Promise<T> {
@@ -312,6 +335,8 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function ScmHomePage() {
+  const t = useTranslations("AdminScmHome");
+  const locale = useLocale();
   const { data: session } = useSession();
   const permissionKeys = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -342,15 +367,15 @@ export default function ScmHomePage() {
       const requests: Array<Promise<any>> = [
         readJson<MyTasksResponse>(
           await fetch("/api/scm/my-tasks", { cache: "no-store" }),
-          "Failed to load SCM tasks",
+          t("errors.tasks"),
         ),
         readJson<ExceptionsResponse>(
           await fetch("/api/scm/exceptions", { cache: "no-store" }),
-          "Failed to load SCM exceptions",
+          t("errors.exceptions"),
         ),
         readJson<NotificationsResponse>(
           await fetch("/api/scm/notifications?limit=6", { cache: "no-store" }),
-          "Failed to load SCM notifications",
+          t("errors.notifications"),
         ),
       ];
 
@@ -366,7 +391,7 @@ export default function ScmHomePage() {
                 .slice(0, 10)}`,
               { cache: "no-store" },
             ),
-            "Failed to load SCM overview",
+            t("errors.overview"),
           ),
         );
       }
@@ -379,7 +404,7 @@ export default function ScmHomePage() {
       setNotifications(notificationsPayload);
       setOverview(overviewPayload ?? null);
     } catch (err: any) {
-      setError(err?.message || "Failed to load SCM workspace.");
+      setError(err?.message || t("errors.workspace"));
     } finally {
       setLoading(false);
     }
@@ -387,7 +412,7 @@ export default function ScmHomePage() {
 
   useEffect(() => {
     void loadWorkspace();
-  }, [hasAccess, canReadReports]);
+  }, [hasAccess, canReadReports, t]);
 
   const visibleQuickStart = useMemo(
     () =>
@@ -430,8 +455,8 @@ export default function ScmHomePage() {
     return (
       <div className="p-4 md:p-6">
         <ScmEmptyState
-          title="SCM workspace unavailable"
-          description="Your current role does not have SCM workspace access."
+          title={t("empty.accessTitle")}
+          description={t("empty.accessDescription")}
           icon={AlertTriangle}
         />
       </div>
@@ -449,23 +474,23 @@ export default function ScmHomePage() {
       {/* Header Section - Responsive */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <ScmSectionHeader
-          title="SCM Workspace"
-          description="Start from work queues, risks, and next actions instead of hunting across modules."
+          title={t("header.title")}
+          description={t("header.description")}
         />
         <div className="flex flex-wrap gap-2">
           <Button asChild variant="outline" size="sm" className="flex-1 sm:flex-initial">
-            <Link href="/admin/scm/my-tasks">My Tasks</Link>
+            <Link href="/admin/scm/my-tasks">{t("actions.myTasks")}</Link>
           </Button>
           <Button asChild variant="outline" size="sm" className="flex-1 sm:flex-initial">
-            <Link href="/admin/scm/exceptions">Exceptions</Link>
+            <Link href="/admin/scm/exceptions">{t("actions.exceptions")}</Link>
           </Button>
           <Button asChild variant="outline" size="sm" className="flex-1 sm:flex-initial">
-            <Link href="/admin/scm/notifications">Notifications</Link>
+            <Link href="/admin/scm/notifications">{t("actions.notifications")}</Link>
           </Button>
           <Button variant="outline" size="sm" onClick={() => void loadWorkspace()} className="flex-1 sm:flex-initial">
             <RefreshCw className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Refresh</span>
-            <span className="sm:hidden">Sync</span>
+            <span className="hidden sm:inline">{t("actions.refresh")}</span>
+            <span className="sm:hidden">{t("actions.sync")}</span>
           </Button>
         </div>
       </div>
@@ -475,7 +500,7 @@ export default function ScmHomePage() {
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
             <RefreshCw className="mx-auto h-8 w-8 animate-spin text-primary" />
-            <p className="mt-2 text-sm text-muted-foreground">Loading SCM workspace...</p>
+            <p className="mt-2 text-sm text-muted-foreground">{t("loading")}</p>
           </div>
         </div>
       )}
@@ -491,30 +516,30 @@ export default function ScmHomePage() {
         <>
           <div className="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
             <ScmStatCard
-              label="Needs My Action"
+              label={t("stats.needsMyAction.label")}
               value={needsMyAction}
-              hint="Documents currently waiting on you."
+              hint={t("stats.needsMyAction.hint")}
               icon={ClipboardCheck}
               tone={needsMyAction > 0 ? "warning" : "default"}
             />
             <ScmStatCard
-              label="Overdue Work"
+              label={t("stats.overdue.label")}
               value={overdue}
-              hint="Items stalled beyond expected response time."
+              hint={t("stats.overdue.hint")}
               icon={AlertTriangle}
               tone={overdue > 0 ? "critical" : "default"}
             />
             <ScmStatCard
-              label="Unread Notifications"
+              label={t("stats.unread.label")}
               value={unreadCount}
-              hint="Internal SCM workflow updates."
+              hint={t("stats.unread.hint")}
               icon={Bell}
               tone={unreadCount > 0 ? "warning" : "default"}
             />
             <ScmStatCard
-              label="Critical Exceptions"
+              label={t("stats.critical.label")}
               value={criticalExceptions}
-              hint={canReadReports ? `${lowStockCount} low-stock variants` : "Risk queue needing review"}
+              hint={canReadReports ? t("stats.critical.lowStock", { count: lowStockCount }) : t("stats.critical.hint")}
               icon={Radar}
               tone={criticalExceptions > 0 ? "critical" : "default"}
             />
@@ -524,29 +549,29 @@ export default function ScmHomePage() {
           {canReadReports && overview && (
             <div className="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
               <ScmStatCard
-                label="Pending Approvals"
+              label={t("stats.pendingApprovals.label")}
                 value={overview.overview.pendingApprovals}
-                hint="Current approval workload"
+              hint={t("stats.pendingApprovals.hint")}
                 icon={ClipboardList}
               />
               <ScmStatCard
-                label="Ordered Value"
-                value={fmtCurrency(overview.overview.totalOrderedAmount)}
-                hint="PO value (30 days)"
+              label={t("stats.orderedValue.label")}
+              value={fmtCurrency(overview.overview.totalOrderedAmount, locale, t("common.notAvailable"))}
+              hint={t("stats.orderedValue.hint")}
                 icon={ShoppingCart}
                 tone="success"
               />
               <ScmStatCard
-                label="Supplier Payments"
-                value={fmtCurrency(overview.overview.totalSupplierPayments)}
-                hint="Treasury settlements (30 days)"
+              label={t("stats.supplierPayments.label")}
+              value={fmtCurrency(overview.overview.totalSupplierPayments, locale, t("common.notAvailable"))}
+              hint={t("stats.supplierPayments.hint")}
                 icon={FileText}
                 tone="success"
               />
               <ScmStatCard
-                label="Audit Events"
+              label={t("stats.auditEvents.label")}
                 value={overview.overview.auditEvents}
-                hint="Recent SCM changes"
+              hint={t("stats.auditEvents.hint")}
                 icon={Bell}
               />
             </div>
@@ -557,15 +582,15 @@ export default function ScmHomePage() {
             {/* My Work Today */}
             <div className="space-y-4">
               <ScmSectionHeader
-                title="My Work Today"
-                description="Require your approval, confirmation, or update"
+                title={t("workToday.title")}
+                description={t("workToday.description")}
               />
               <ScmActionList
                 items={tasks?.needsMyAction.slice(0, 4) ?? []}
                 empty={
                   <ScmEmptyState
-                    title="Nothing is blocked on you"
-                    description="Your immediate approval queue is clear"
+                    title={t("workToday.emptyTitle")}
+                    description={t("workToday.emptyDescription")}
                     icon={ClipboardCheck}
                   />
                 }
@@ -575,15 +600,15 @@ export default function ScmHomePage() {
             {/* Urgent Exceptions */}
             <div className="space-y-4">
               <ScmSectionHeader
-                title="Urgent Exceptions"
-                description="Address these critical issues first"
+                title={t("exceptions.title")}
+                description={t("exceptions.description")}
               />
               <ScmExceptionList
                 items={exceptionsData?.critical.slice(0, 4) ?? []}
                 empty={
                   <ScmEmptyState
-                    title="No critical exceptions"
-                    description="All systems are currently under control"
+                    title={t("exceptions.emptyTitle")}
+                    description={t("exceptions.emptyDescription")}
                     icon={AlertTriangle}
                   />
                 }
@@ -593,15 +618,15 @@ export default function ScmHomePage() {
             {/* Continue Previous Work */}
             <div className="space-y-4">
               <ScmSectionHeader
-                title="Continue Previous Work"
-                description="Documents moving through other teams"
+                title={t("continueWork.title")}
+                description={t("continueWork.description")}
               />
               <ScmActionList
                 items={tasks?.waitingOnOthers.slice(0, 4) ?? []}
                 empty={
                   <ScmEmptyState
-                    title="Nothing waiting on others"
-                    description="No documents currently dependent on other teams"
+                    title={t("continueWork.emptyTitle")}
+                    description={t("continueWork.emptyDescription")}
                     icon={ClipboardList}
                   />
                 }
@@ -615,13 +640,13 @@ export default function ScmHomePage() {
             <Card className="shadow-none">
               <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <CardTitle className="text-base sm:text-lg">Recent Notifications</CardTitle>
+                  <CardTitle className="text-base sm:text-lg">{t("notifications.title")}</CardTitle>
                   <p className="text-xs sm:text-sm text-muted-foreground">
-                    Latest workflow changes reaching your inbox
+                    {t("notifications.description")}
                   </p>
                 </div>
                 <Button asChild variant="outline" size="sm" className="self-start sm:self-auto">
-                  <Link href="/admin/scm/notifications">Open Inbox</Link>
+                  <Link href="/admin/scm/notifications">{t("notifications.openInbox")}</Link>
                 </Button>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -645,15 +670,15 @@ export default function ScmHomePage() {
                           </p>
                         </div>
                         <span className="shrink-0 text-xs text-muted-foreground sm:text-right">
-                          {fmtDate(row.createdAt)}
+                          {fmtDate(row.createdAt, locale, t("common.notAvailable"))}
                         </span>
                       </div>
                     </Link>
                   ))
                 ) : (
                   <ScmEmptyState
-                    title="No recent notifications"
-                    description="Workflow updates will appear here"
+                    title={t("notifications.emptyTitle")}
+                    description={t("notifications.emptyDescription")}
                     icon={Bell}
                   />
                 )}
@@ -665,21 +690,21 @@ export default function ScmHomePage() {
               {/* Quick Start Section */}
               <div className="space-y-4">
                 <ScmSectionHeader
-                  title="Quick Start"
-                  description="Common SCM actions for your role"
+                  title={t("quickStart.title")}
+                  description={t("quickStart.description")}
                 />
                 <div className="grid gap-3 sm:grid-cols-2">
                   {visibleQuickStart.map((item) => (
-                    <Link key={item.title} href={item.href} className="group">
+                    <Link key={item.key} href={item.href} className="group">
                       <Card className="h-full border-border shadow-none transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm">
                         <CardContent className="flex items-start gap-3 p-4 sm:p-5">
                           <div className="rounded-xl border border-border bg-background p-2.5 shrink-0">
                             <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-foreground" />
                           </div>
                           <div className="min-w-0 flex-1 space-y-1">
-                            <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                            <p className="text-sm font-semibold text-foreground">{t(`links.${item.key}.title` as any)}</p>
                             <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">
-                              {item.description}
+                              {t(`links.${item.key}.description` as any)}
                             </p>
                           </div>
                         </CardContent>
@@ -692,19 +717,19 @@ export default function ScmHomePage() {
               {/* Module Directory */}
               <div className="space-y-4">
                 <ScmSectionHeader
-                  title="Module Directory"
-                  description="Navigate by business area"
+                  title={t("directory.title")}
+                  description={t("directory.description")}
                 />
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3">
                   {visibleDirectory.map((section) => (
-                    <Card key={section.label} className="shadow-none">
+                    <Card key={section.key} className="shadow-none">
                       <CardHeader className="pb-3">
-                        <CardTitle className="text-sm sm:text-base">{section.label}</CardTitle>
+                        <CardTitle className="text-sm sm:text-base">{t(`sections.${section.key}` as any)}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2">
                         {section.links.map((item) => (
                           <Link
-                            key={item.title}
+                            key={item.key}
                             href={item.href}
                             className="block rounded-lg border border-border p-3 transition-all duration-200 hover:bg-muted/40 hover:shadow-sm"
                           >
@@ -714,10 +739,10 @@ export default function ScmHomePage() {
                               </div>
                               <div className="min-w-0 flex-1 space-y-0.5">
                                 <p className="text-xs sm:text-sm font-medium text-foreground line-clamp-1">
-                                  {item.title}
+                                  {t(`links.${item.key}.title` as any)}
                                 </p>
                                 <p className="text-xs text-muted-foreground line-clamp-2">
-                                  {item.description}
+                                  {t(`links.${item.key}.description` as any)}
                                 </p>
                               </div>
                             </div>

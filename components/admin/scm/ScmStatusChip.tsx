@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 type ScmStatusChipProps = {
   status: string;
@@ -71,12 +72,14 @@ function getStatusClasses(status: string) {
 }
 
 export function ScmStatusChip({ status, className }: ScmStatusChipProps) {
+  const t = useTranslations("AdminScmCommon");
+  const translationKey = `statuses.${status.toUpperCase()}`;
   return (
     <Badge
       variant="outline"
       className={cn("font-medium", getStatusClasses(status), className)}
     >
-      {normalizeStatus(status)}
+      {t.has(translationKey as any) ? t(translationKey as any) : normalizeStatus(status)}
     </Badge>
   );
 }
