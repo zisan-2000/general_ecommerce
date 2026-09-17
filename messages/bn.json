@@ -4035,6 +4035,41 @@
             "deleteFailed": "কুপন মুছতে ব্যর্থ"
         }
     },
+    "AdminActivityLog": {
+        "header": {
+            "title": "কার্যকলাপের ইতিহাস",
+            "fullAccess": "অ্যাডমিন ও সুপারঅ্যাডমিন সব কার্যকলাপ দেখতে পারবেন।",
+            "limitedAccess": "আপনাকে দেওয়া অনুমতি অনুযায়ী দৃশ্যমান কার্যকলাপ ফিল্টার করা হয়েছে।"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "apply": "প্রয়োগ করুন"
+        },
+        "filters": {
+            "searchPlaceholder": "অ্যাকশন, সত্তা, ব্যবহারকারী বা সত্তার আইডি দিয়ে খুঁজুন",
+            "allEntities": "সব সত্তা"
+        },
+        "table": {
+            "time": "সময়",
+            "action": "অ্যাকশন",
+            "entity": "সত্তা",
+            "actor": "সম্পাদনকারী",
+            "target": "লক্ষ্য",
+            "metadata": "মেটাডাটা",
+            "system": "সিস্টেম",
+            "changedFields": "পরিবর্তিত ক্ষেত্র"
+        },
+        "empty": "বর্তমান ফিল্টারে কোনো কার্যকলাপের রেকর্ড পাওয়া যায়নি।",
+        "pagination": {
+            "showing": "মোট {total}টি রেকর্ডের মধ্যে {visible}টি দেখানো হচ্ছে",
+            "previous": "আগের",
+            "pageOf": "পৃষ্ঠা {page} / {totalPages}",
+            "next": "পরের"
+        },
+        "errors": {
+            "loadFailed": "কার্যকলাপের ইতিহাস লোড করা যায়নি।"
+        }
+    },
     "AdminRbacSettings": {
         "header": {
             "title": "RBAC সেটিংস",

@@ -4035,6 +4035,41 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminActivityLog": {
+    "header": {
+      "title": "Activity Log",
+      "fullAccess": "Admin and superadmin can see all activity.",
+      "limitedAccess": "Visible activity is filtered by your assigned permissions."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "apply": "Apply"
+    },
+    "filters": {
+      "searchPlaceholder": "Search action, entity, user, or entity ID",
+      "allEntities": "All entities"
+    },
+    "table": {
+      "time": "Time",
+      "action": "Action",
+      "entity": "Entity",
+      "actor": "Actor",
+      "target": "Target",
+      "metadata": "Metadata",
+      "system": "System",
+      "changedFields": "Changed Fields"
+    },
+    "empty": "No activity log found for the current filter.",
+    "pagination": {
+      "showing": "Showing {visible} of {total} records",
+      "previous": "Previous",
+      "pageOf": "Page {page} / {totalPages}",
+      "next": "Next"
+    },
+    "errors": {
+      "loadFailed": "Failed to load activity logs."
+    }
+  },
   "AdminRbacSettings": {
     "header": {
       "title": "RBAC Settings",
