@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
 import Pagination from "@/components/admin/scm/Pagination";
@@ -116,14 +117,8 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
   return payload as T;
 }
 
-function formatDate(value: string | number | null | undefined) {
-  if (value === null || value === undefined || value === "") return "N/A";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleDateString();
-}
-
 export default function ReplenishmentPlanningPage() {
+  const t = useTranslations("AdminReplenishment");
   const router = useRouter();
   const searchParams = useSearchParams();
   const { data: session } = useSession();
@@ -156,8 +151,7 @@ export default function ReplenishmentPlanningPage() {
   const [variants, setVariants] = useState<ProductVariant[]>([]);
   const [rules, setRules] = useState<Rule[]>([]);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
-  
-  // Pagination states
+
   const [rulesCurrentPage, setRulesCurrentPage] = useState(1);
   const [suggestionsCurrentPage, setSuggestionsCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -166,44 +160,33 @@ export default function ReplenishmentPlanningPage() {
     setLoading(true);
     try {
       const suffix =
-        warehouseId && Number(warehouseId) > 0
-          ? `?warehouseId=${warehouseId}`
-          : "";
-      const [warehouseData, variantData, ruleData, suggestionData] =
-        await Promise.all([
-          fetch("/api/warehouses", { cache: "no-store" }).then((response) =>
-            readJson<Warehouse[]>(response, "Failed to load warehouses"),
-          ),
-          fetch("/api/product-variants", { cache: "no-store" }).then(
-            (response) =>
-              readJson<ProductVariant[]>(response, "Failed to load variants"),
-          ),
-          fetch(
-            `/api/scm/replenishment/rules?includeInactive=1${suffix ? `&warehouseId=${warehouseId}` : ""}`,
-            {
-              cache: "no-store",
-            },
-          ).then((response) =>
-            readJson<Rule[]>(response, "Failed to load replenishment rules"),
-          ),
-          fetch(`/api/scm/replenishment/suggestions${suffix}`, {
-            cache: "no-store",
-          }).then((response) =>
-            readJson<Suggestion[]>(
-              response,
-              "Failed to load replenishment suggestions",
-            ),
-          ),
-        ]);
+        warehouseId && Number(warehouseId) > 0 ? `?warehouseId=${warehouseId}` : "";
+      const [warehouseData, variantData, ruleData, suggestionData] = await Promise.all([
+        fetch("/api/warehouses", { cache: "no-store" }).then((response) =>
+          readJson<Warehouse[]>(response, t("errors.loadWarehouses")),
+        ),
+        fetch("/api/product-variants", { cache: "no-store" }).then((response) =>
+          readJson<ProductVariant[]>(response, t("errors.loadVariants")),
+        ),
+        fetch(
+          `/api/scm/replenishment/rules?includeInactive=1${suffix ? `&warehouseId=${warehouseId}` : ""}`,
+          { cache: "no-store" },
+        ).then((response) =>
+          readJson<Rule[]>(response, t("errors.loadRules")),
+        ),
+        fetch(`/api/scm/replenishment/suggestions${suffix}`, {
+          cache: "no-store",
+        }).then((response) =>
+          readJson<Suggestion[]>(response, t("errors.loadSuggestions")),
+        ),
+      ]);
 
       setWarehouses(Array.isArray(warehouseData) ? warehouseData : []);
       setVariants(Array.isArray(variantData) ? variantData : []);
       setRules(Array.isArray(ruleData) ? ruleData : []);
       setSuggestions(Array.isArray(suggestionData) ? suggestionData : []);
     } catch (error: any) {
-      toast.error(
-        error?.message || "Failed to load replenishment planning data",
-      );
+      toast.error(error?.message || t("errors.loadData"));
       setRules([]);
       setSuggestions([]);
     } finally {
@@ -215,6 +198,7 @@ export default function ReplenishmentPlanningPage() {
     if (canRead) {
       void loadData(warehouseFilter);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead, warehouseFilter]);
 
   useEffect(() => {
@@ -222,7 +206,6 @@ export default function ReplenishmentPlanningPage() {
     setSearch(searchParams.get("search") || "");
   }, [searchParams]);
 
-  // Reset pagination when filters change
   useEffect(() => {
     setRulesCurrentPage(1);
   }, [search, warehouseFilter]);
@@ -231,12 +214,9 @@ export default function ReplenishmentPlanningPage() {
     setSuggestionsCurrentPage(1);
   }, [search, warehouseFilter]);
 
-  const selectedWarehouseId = Number(ruleForm.warehouseId);
   const selectedVariant = useMemo(
     () =>
-      variants.find(
-        (variant) => variant.id === Number(ruleForm.productVariantId),
-      ) ?? null,
+      variants.find((variant) => variant.id === Number(ruleForm.productVariantId)) ?? null,
     [ruleForm.productVariantId, variants],
   );
 
@@ -252,11 +232,10 @@ export default function ReplenishmentPlanningPage() {
     }
   }, [selectedVariant, ruleForm.ruleId]);
 
-  const visibleRules = useMemo(() => {
+  const filteredRules = useMemo(() => {
     const query = search.trim().toLowerCase();
-    const filtered = rules.filter((rule) => {
-      if (warehouseFilter && rule.warehouseId !== Number(warehouseFilter))
-        return false;
+    return rules.filter((rule) => {
+      if (warehouseFilter && rule.warehouseId !== Number(warehouseFilter)) return false;
       if (!query) return true;
       return (
         rule.productVariant.product.name.toLowerCase().includes(query) ||
@@ -264,52 +243,19 @@ export default function ReplenishmentPlanningPage() {
         rule.warehouse.name.toLowerCase().includes(query)
       );
     });
-    
-    // Pagination logic
-    const startIndex = (rulesCurrentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return filtered.slice(startIndex, endIndex);
-  }, [rules, search, warehouseFilter, rulesCurrentPage]);
-
-  const totalRulesPages = useMemo(() => {
-    const query = search.trim().toLowerCase();
-    const filtered = rules.filter((rule) => {
-      if (warehouseFilter && rule.warehouseId !== Number(warehouseFilter))
-        return false;
-      if (!query) return true;
-      return (
-        rule.productVariant.product.name.toLowerCase().includes(query) ||
-        rule.productVariant.sku.toLowerCase().includes(query) ||
-        rule.warehouse.name.toLowerCase().includes(query)
-      );
-    });
-    return Math.ceil(filtered.length / itemsPerPage);
   }, [rules, search, warehouseFilter]);
 
-  const visibleSuggestions = useMemo(() => {
-    const query = search.trim().toLowerCase();
-    const filtered = suggestions.filter((suggestion) => {
-      if (warehouseFilter && suggestion.warehouseId !== Number(warehouseFilter))
-        return false;
-      if (!query) return true;
-      return (
-        suggestion.productName.toLowerCase().includes(query) ||
-        suggestion.sku.toLowerCase().includes(query) ||
-        suggestion.warehouseName.toLowerCase().includes(query)
-      );
-    });
-    
-    // Pagination logic
-    const startIndex = (suggestionsCurrentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return filtered.slice(startIndex, endIndex);
-  }, [search, suggestions, warehouseFilter, suggestionsCurrentPage]);
+  const visibleRules = useMemo(() => {
+    const startIndex = (rulesCurrentPage - 1) * itemsPerPage;
+    return filteredRules.slice(startIndex, startIndex + itemsPerPage);
+  }, [filteredRules, rulesCurrentPage]);
 
-  const totalSuggestionsPages = useMemo(() => {
+  const totalRulesPages = Math.ceil(filteredRules.length / itemsPerPage);
+
+  const filteredSuggestions = useMemo(() => {
     const query = search.trim().toLowerCase();
-    const filtered = suggestions.filter((suggestion) => {
-      if (warehouseFilter && suggestion.warehouseId !== Number(warehouseFilter))
-        return false;
+    return suggestions.filter((suggestion) => {
+      if (warehouseFilter && suggestion.warehouseId !== Number(warehouseFilter)) return false;
       if (!query) return true;
       return (
         suggestion.productName.toLowerCase().includes(query) ||
@@ -317,8 +263,14 @@ export default function ReplenishmentPlanningPage() {
         suggestion.warehouseName.toLowerCase().includes(query)
       );
     });
-    return Math.ceil(filtered.length / itemsPerPage);
   }, [search, suggestions, warehouseFilter]);
+
+  const visibleSuggestions = useMemo(() => {
+    const startIndex = (suggestionsCurrentPage - 1) * itemsPerPage;
+    return filteredSuggestions.slice(startIndex, startIndex + itemsPerPage);
+  }, [filteredSuggestions, suggestionsCurrentPage]);
+
+  const totalSuggestionsPages = Math.ceil(filteredSuggestions.length / itemsPerPage);
 
   const purchasableSuggestions = visibleSuggestions.filter(
     (suggestion) => suggestion.purchaseQty > 0,
@@ -329,7 +281,7 @@ export default function ReplenishmentPlanningPage() {
 
   const saveRule = async () => {
     if (!ruleForm.warehouseId || !ruleForm.productVariantId) {
-      toast.error("Warehouse and variant are required");
+      toast.error(t("errors.warehouseVariantRequired"));
       return;
     }
 
@@ -348,20 +300,18 @@ export default function ReplenishmentPlanningPage() {
           safetyStock: Number(ruleForm.safetyStock),
           minOrderQty: Number(ruleForm.minOrderQty),
           orderMultiple: Number(ruleForm.orderMultiple),
-          leadTimeDays: ruleForm.leadTimeDays
-            ? Number(ruleForm.leadTimeDays)
-            : null,
+          leadTimeDays: ruleForm.leadTimeDays ? Number(ruleForm.leadTimeDays) : null,
           isActive: ruleForm.isActive,
           note: ruleForm.note,
         }),
       });
 
-      await readJson(response, "Failed to save replenishment rule");
-      toast.success("Replenishment rule saved");
+      await readJson(response, t("errors.saveRule"));
+      toast.success(t("toasts.ruleSaved"));
       setRuleForm(defaultForm);
       await loadData(warehouseFilter);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to save replenishment rule");
+      toast.error(error?.message || t("errors.saveRule"));
     } finally {
       setSaving(false);
     }
@@ -389,7 +339,7 @@ export default function ReplenishmentPlanningPage() {
       selectedRuleIds.includes(suggestion.ruleId),
     );
     if (selectedSuggestions.length === 0) {
-      toast.error("Select at least one purchase suggestion");
+      toast.error(t("errors.selectPurchaseSuggestion"));
       return;
     }
 
@@ -397,7 +347,7 @@ export default function ReplenishmentPlanningPage() {
       ...new Set(selectedSuggestions.map((item) => item.warehouseId)),
     ];
     if (distinctWarehouses.length !== 1) {
-      toast.error("Selected suggestions must belong to the same warehouse");
+      toast.error(t("errors.sameWarehouseRequired"));
       return;
     }
 
@@ -419,10 +369,10 @@ export default function ReplenishmentPlanningPage() {
 
       const requisition = await readJson<{ requisitionNumber: string }>(
         response,
-        "Failed to create replenishment requisition",
+        t("errors.createRequisition"),
       );
       toast.success(
-        `Purchase requisition ${requisition.requisitionNumber} created from planning`,
+        t("toasts.requisitionCreated", { number: requisition.requisitionNumber }),
       );
       setSelectedRuleIds([]);
       setNeededBy("");
@@ -432,9 +382,7 @@ export default function ReplenishmentPlanningPage() {
       );
       router.refresh();
     } catch (error: any) {
-      toast.error(
-        error?.message || "Failed to create replenishment requisition",
-      );
+      toast.error(error?.message || t("errors.createRequisition"));
     } finally {
       setSaving(false);
     }
@@ -442,7 +390,7 @@ export default function ReplenishmentPlanningPage() {
 
   const createTransferDraft = async (suggestion: Suggestion) => {
     if (!suggestion.sourceWarehouse || suggestion.transferQty <= 0) {
-      toast.error("This suggestion does not have a transferable quantity");
+      toast.error(t("errors.noTransferableQty"));
       return;
     }
 
@@ -457,7 +405,10 @@ export default function ReplenishmentPlanningPage() {
           neededBy: neededBy || null,
           note:
             requisitionNote ||
-            `Generated for ${suggestion.productName} (${suggestion.sku}) from replenishment planning.`,
+            t("transferNoteDefault", {
+              product: suggestion.productName,
+              sku: suggestion.sku,
+            }),
           items: [
             {
               ruleId: suggestion.ruleId,
@@ -469,17 +420,15 @@ export default function ReplenishmentPlanningPage() {
 
       const transfer = await readJson<{ transferNumber: string }>(
         response,
-        "Failed to create transfer draft",
+        t("errors.createTransfer"),
       );
-      toast.success(
-        `Transfer draft ${transfer.transferNumber} created from planning`,
-      );
+      toast.success(t("toasts.transferCreated", { number: transfer.transferNumber }));
       router.push(
         `/admin/scm/warehouse-transfers?search=${encodeURIComponent(transfer.transferNumber)}`,
       );
       router.refresh();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create transfer draft");
+      toast.error(error?.message || t("errors.createTransfer"));
     } finally {
       setSaving(false);
     }
@@ -490,10 +439,8 @@ export default function ReplenishmentPlanningPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
-            <CardDescription>
-              You do not have permission to access replenishment planning.
-            </CardDescription>
+            <CardTitle>{t("forbidden.title")}</CardTitle>
+            <CardDescription>{t("forbidden.description")}</CardDescription>
           </CardHeader>
         </Card>
       </div>
@@ -504,11 +451,8 @@ export default function ReplenishmentPlanningPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Replenishment Planning</h1>
-          <p className="text-sm text-muted-foreground">
-            Define warehouse reorder rules, review shortage signals, and convert
-            purchase needs into requisitions.
-          </p>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("header.description")}</p>
         </div>
         <Button
           variant="outline"
@@ -516,30 +460,30 @@ export default function ReplenishmentPlanningPage() {
           disabled={loading}
         >
           <RefreshCw className="mr-2 h-4 w-4" />
-          Refresh
+          {t("actions.refresh")}
         </Button>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
         <ScmStatCard
-          label="Rules"
+          label={t("stats.rules.label")}
           value={String(rules.length)}
-          hint="Configured replenishment logic"
+          hint={t("stats.rules.hint")}
         />
         <ScmStatCard
-          label="Triggered"
+          label={t("stats.triggered.label")}
           value={String(visibleSuggestions.length)}
-          hint="Current shortage or planning signals"
+          hint={t("stats.triggered.hint")}
         />
         <ScmStatCard
-          label="Purchase Signals"
+          label={t("stats.purchaseSignals.label")}
           value={String(purchasableSuggestions.length)}
-          hint="Can convert into requisitions"
+          hint={t("stats.purchaseSignals.hint")}
         />
         <ScmStatCard
-          label="Transfer Signals"
+          label={t("stats.transferSignals.label")}
           value={String(transferableSuggestions.length)}
-          hint="Can convert into transfer drafts"
+          hint={t("stats.transferSignals.hint")}
         />
       </div>
 
@@ -547,16 +491,14 @@ export default function ReplenishmentPlanningPage() {
         <Card>
           <CardHeader>
             <CardTitle>
-              {ruleForm.ruleId ? "Edit Rule" : "Create Rule"}
+              {ruleForm.ruleId ? t("ruleForm.editTitle") : t("ruleForm.createTitle")}
             </CardTitle>
-            <CardDescription>
-              Store rule-based planning thresholds by warehouse and variant.
-            </CardDescription>
+            <CardDescription>{t("ruleForm.description")}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
               <div className="space-y-2">
-                <Label>Warehouse</Label>
+                <Label>{t("ruleForm.warehouse")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={ruleForm.warehouseId}
@@ -567,7 +509,7 @@ export default function ReplenishmentPlanningPage() {
                     }))
                   }
                 >
-                  <option value="">Select warehouse</option>
+                  <option value="">{t("ruleForm.selectWarehouse")}</option>
                   {warehouses.map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>
                       {warehouse.name} ({warehouse.code})
@@ -576,7 +518,7 @@ export default function ReplenishmentPlanningPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Variant</Label>
+                <Label>{t("ruleForm.variant")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={ruleForm.productVariantId}
@@ -587,7 +529,7 @@ export default function ReplenishmentPlanningPage() {
                     }))
                   }
                 >
-                  <option value="">Select variant</option>
+                  <option value="">{t("ruleForm.selectVariant")}</option>
                   {variants.map((variant) => (
                     <option key={variant.id} value={variant.id}>
                       {variant.product.name} ({variant.sku})
@@ -596,16 +538,14 @@ export default function ReplenishmentPlanningPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Strategy</Label>
+                <Label>{t("ruleForm.strategy")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={ruleForm.strategy}
                   onChange={(event) =>
                     setRuleForm((current) => ({
                       ...current,
-                      strategy: event.target.value as
-                        | "MIN_MAX"
-                        | "REORDER_POINT",
+                      strategy: event.target.value as "MIN_MAX" | "REORDER_POINT",
                     }))
                   }
                 >
@@ -614,7 +554,7 @@ export default function ReplenishmentPlanningPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Lead Time (days)</Label>
+                <Label>{t("ruleForm.leadTimeDays")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -631,7 +571,7 @@ export default function ReplenishmentPlanningPage() {
 
             <div className="grid gap-4 grid-cols-2 xl:grid-cols-5">
               <div className="space-y-2">
-                <Label>Reorder Point</Label>
+                <Label>{t("ruleForm.reorderPoint")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -645,7 +585,7 @@ export default function ReplenishmentPlanningPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Target Stock</Label>
+                <Label>{t("ruleForm.targetStock")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -659,7 +599,7 @@ export default function ReplenishmentPlanningPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Safety Stock</Label>
+                <Label>{t("ruleForm.safetyStock")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -673,7 +613,7 @@ export default function ReplenishmentPlanningPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Min Order Qty</Label>
+                <Label>{t("ruleForm.minOrderQty")}</Label>
                 <Input
                   type="number"
                   min={1}
@@ -687,7 +627,7 @@ export default function ReplenishmentPlanningPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Order Multiple</Label>
+                <Label>{t("ruleForm.orderMultiple")}</Label>
                 <Input
                   type="number"
                   min={1}
@@ -703,7 +643,7 @@ export default function ReplenishmentPlanningPage() {
             </div>
 
             <div className="space-y-2">
-              <Label>Note</Label>
+              <Label>{t("ruleForm.note")}</Label>
               <Textarea
                 rows={3}
                 value={ruleForm.note}
@@ -727,31 +667,29 @@ export default function ReplenishmentPlanningPage() {
                   }))
                 }
               />
-              Rule Active
+              {t("ruleForm.ruleActive")}
             </label>
 
             <div className="flex gap-2">
               <Button onClick={() => void saveRule()} disabled={saving}>
                 {saving
-                  ? "Saving..."
+                  ? t("ruleForm.saving")
                   : ruleForm.ruleId
-                    ? "Update Rule"
-                    : "Save Rule"}
+                    ? t("ruleForm.updateRule")
+                    : t("ruleForm.saveRule")}
               </Button>
               {ruleForm.ruleId ? (
-                <Button
-                  variant="outline"
-                  onClick={() => setRuleForm(defaultForm)}
-                >
-                  Cancel Edit
+                <Button variant="outline" onClick={() => setRuleForm(defaultForm)}>
+                  {t("ruleForm.cancelEdit")}
                 </Button>
               ) : null}
             </div>
 
             {selectedVariant ? (
               <p className="text-xs text-muted-foreground">
-                Variant default low-stock threshold:{" "}
-                {selectedVariant.lowStockThreshold}
+                {t("ruleForm.variantDefaultThreshold", {
+                  value: selectedVariant.lowStockThreshold,
+                })}
               </p>
             ) : null}
           </CardContent>
@@ -760,11 +698,8 @@ export default function ReplenishmentPlanningPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Rules & Signals</CardTitle>
-          <CardDescription>
-            Review active replenishment signals and compare transfer vs purchase
-            guidance.
-          </CardDescription>
+          <CardTitle>{t("register.title")}</CardTitle>
+          <CardDescription>{t("register.description")}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-3 md:grid-cols-[1fr_2fr_auto]">
@@ -776,7 +711,7 @@ export default function ReplenishmentPlanningPage() {
                 setSelectedRuleIds([]);
               }}
             >
-              <option value="">All warehouses</option>
+              <option value="">{t("filters.allWarehouses")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -784,7 +719,7 @@ export default function ReplenishmentPlanningPage() {
               ))}
             </select>
             <Input
-              placeholder="Search warehouse, product, or SKU..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -793,7 +728,7 @@ export default function ReplenishmentPlanningPage() {
               onClick={() => void loadData(warehouseFilter)}
               disabled={loading}
             >
-              Refresh
+              {t("actions.refresh")}
             </Button>
           </div>
 
@@ -802,38 +737,34 @@ export default function ReplenishmentPlanningPage() {
             <Card className="shadow-sm">
               <CardHeader className="p-4 sm:p-6">
                 <CardTitle className="text-base sm:text-lg font-semibold text-foreground">
-                  Configured Rules
+                  {t("rulesCard.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
-                {/* Desktop Table View - Hidden on mobile */}
                 <div className="hidden md:block overflow-x-auto">
                   <Table>
                     <TableHeader>
                       <TableRow className="border-border hover:bg-transparent">
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Warehouse
+                          {t("rulesCard.table.warehouse")}
                         </TableHead>
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Variant
+                          {t("rulesCard.table.variant")}
                         </TableHead>
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Rule
+                          {t("rulesCard.table.rule")}
                         </TableHead>
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Status
+                          {t("rulesCard.table.status")}
                         </TableHead>
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Action
+                          {t("rulesCard.table.action")}
                         </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {visibleRules.map((rule) => (
-                        <TableRow
-                          key={rule.id}
-                          className="border-border hover:bg-muted/40"
-                        >
+                        <TableRow key={rule.id} className="border-border hover:bg-muted/40">
                           <TableCell className="py-3 text-sm text-foreground">
                             {rule.warehouse.code}
                           </TableCell>
@@ -847,12 +778,16 @@ export default function ReplenishmentPlanningPage() {
                           </TableCell>
                           <TableCell className="py-3">
                             <div className="text-sm text-foreground">
-                              RP {rule.reorderPoint} / Target{" "}
-                              {rule.targetStockLevel}
+                              {t("rulesCard.ruleSummary", {
+                                rp: rule.reorderPoint,
+                                target: rule.targetStockLevel,
+                              })}
                             </div>
                             <div className="text-xs text-muted-foreground mt-0.5">
-                              MOQ {rule.minOrderQty} / Multiple{" "}
-                              {rule.orderMultiple}
+                              {t("rulesCard.ruleDetail", {
+                                moq: rule.minOrderQty,
+                                multiple: rule.orderMultiple,
+                              })}
                             </div>
                           </TableCell>
                           <TableCell className="py-3">
@@ -864,7 +799,9 @@ export default function ReplenishmentPlanningPage() {
                                   : "bg-muted/50 text-muted-foreground border border-border",
                               )}
                             >
-                              {rule.isActive ? "ACTIVE" : "INACTIVE"}
+                              {rule.isActive
+                                ? t("rulesCard.statusActive")
+                                : t("rulesCard.statusInactive")}
                             </span>
                           </TableCell>
                           <TableCell className="py-3">
@@ -875,7 +812,7 @@ export default function ReplenishmentPlanningPage() {
                                 onClick={() => editRule(rule)}
                                 className="h-8 px-3 text-xs"
                               >
-                                Edit
+                                {t("actions.edit")}
                               </Button>
                             )}
                           </TableCell>
@@ -887,7 +824,7 @@ export default function ReplenishmentPlanningPage() {
                             <div className="flex flex-col items-center gap-2">
                               <Package className="h-8 w-8 text-muted-foreground/50" />
                               <p className="text-sm text-muted-foreground">
-                                No replenishment rules found.
+                                {t("rulesCard.empty")}
                               </p>
                             </div>
                           </TableCell>
@@ -895,14 +832,20 @@ export default function ReplenishmentPlanningPage() {
                       )}
                     </TableBody>
                   </Table>
+                  {!loading && visibleRules.length > 0 && (
+                    <Pagination
+                      currentPage={rulesCurrentPage}
+                      totalPages={totalRulesPages}
+                      onPageChange={setRulesCurrentPage}
+                    />
+                  )}
                 </div>
 
-                {/* Mobile Card View - Visible only on mobile/tablet */}
+                {/* Mobile Card View */}
                 <div className="space-y-3 md:hidden">
                   {visibleRules.map((rule) => (
                     <Card key={rule.id} className="border-border shadow-sm">
                       <CardContent className="p-4 space-y-3">
-                        {/* Header */}
                         <div className="flex items-start justify-between">
                           <div>
                             <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
@@ -917,7 +860,9 @@ export default function ReplenishmentPlanningPage() {
                                     : "bg-muted/50 text-muted-foreground",
                                 )}
                               >
-                                {rule.isActive ? "ACTIVE" : "INACTIVE"}
+                                {rule.isActive
+                                  ? t("rulesCard.statusActive")
+                                  : t("rulesCard.statusInactive")}
                               </span>
                             </div>
                           </div>
@@ -928,27 +873,25 @@ export default function ReplenishmentPlanningPage() {
                               onClick={() => editRule(rule)}
                               className="h-8 px-3 text-xs"
                             >
-                              Edit
+                              {t("actions.edit")}
                             </Button>
                           )}
                         </div>
 
-                        {/* Product Info */}
                         <div className="space-y-1.5">
                           <div>
                             <p className="text-sm font-semibold text-foreground">
                               {rule.productVariant.product.name}
                             </p>
                             <p className="text-xs text-muted-foreground">
-                              SKU: {rule.productVariant.sku}
+                              {t("rulesCard.skuLabel")}: {rule.productVariant.sku}
                             </p>
                           </div>
 
-                          {/* Rule Details */}
                           <div className="grid grid-cols-2 gap-2 pt-2 border-t border-border/50">
                             <div>
                               <p className="text-xs text-muted-foreground">
-                                Reorder Point
+                                {t("rulesCard.reorderPoint")}
                               </p>
                               <p className="text-sm font-medium text-foreground">
                                 {rule.reorderPoint}
@@ -956,7 +899,7 @@ export default function ReplenishmentPlanningPage() {
                             </div>
                             <div>
                               <p className="text-xs text-muted-foreground">
-                                Target Level
+                                {t("rulesCard.targetLevel")}
                               </p>
                               <p className="text-sm font-medium text-foreground">
                                 {rule.targetStockLevel}
@@ -964,7 +907,7 @@ export default function ReplenishmentPlanningPage() {
                             </div>
                             <div>
                               <p className="text-xs text-muted-foreground">
-                                Min Order Qty
+                                {t("rulesCard.minOrderQty")}
                               </p>
                               <p className="text-sm font-medium text-foreground">
                                 {rule.minOrderQty}
@@ -972,7 +915,7 @@ export default function ReplenishmentPlanningPage() {
                             </div>
                             <div>
                               <p className="text-xs text-muted-foreground">
-                                Order Multiple
+                                {t("rulesCard.orderMultiple")}
                               </p>
                               <p className="text-sm font-medium text-foreground">
                                 {rule.orderMultiple}
@@ -988,12 +931,11 @@ export default function ReplenishmentPlanningPage() {
                     <div className="flex flex-col items-center justify-center py-8 text-center">
                       <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
                       <p className="text-sm text-muted-foreground">
-                        No replenishment rules found.
+                        {t("rulesCard.empty")}
                       </p>
                     </div>
                   )}
-                  
-                  {/* Pagination for Rules */}
+
                   {!loading && visibleRules.length > 0 && (
                     <Pagination
                       currentPage={rulesCurrentPage}
@@ -1009,14 +951,13 @@ export default function ReplenishmentPlanningPage() {
             <Card className="shadow-sm">
               <CardHeader className="p-4 sm:p-6">
                 <CardTitle className="text-base sm:text-lg font-semibold text-foreground">
-                  Planning Suggestions
+                  {t("suggestionsCard.title")}
                 </CardTitle>
                 <CardDescription className="text-xs sm:text-sm text-muted-foreground">
-                  Triggered rules below reorder point appear here.
+                  {t("suggestionsCard.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 space-y-4">
-                {/* Create Requisition Form - Responsive */}
                 {canCreateRequisition && (
                   <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-[1fr_2fr_auto] sm:gap-3">
                     <Input
@@ -1026,11 +967,9 @@ export default function ReplenishmentPlanningPage() {
                       className="w-full"
                     />
                     <Input
-                      placeholder="Requisition note"
+                      placeholder={t("suggestionsCard.requisitionNotePlaceholder")}
                       value={requisitionNote}
-                      onChange={(event) =>
-                        setRequisitionNote(event.target.value)
-                      }
+                      onChange={(event) => setRequisitionNote(event.target.value)}
                       className="w-full"
                     />
                     <Button
@@ -1038,15 +977,14 @@ export default function ReplenishmentPlanningPage() {
                       disabled={saving || selectedRuleIds.length === 0}
                       className="w-full sm:w-auto"
                     >
-                      Create Requisition
+                      {t("suggestionsCard.createRequisition")}
                     </Button>
                   </div>
                 )}
 
-                {/* Suggestions Table/Grid */}
                 {visibleSuggestions.length > 0 ? (
                   <>
-                    {/* Desktop Table View */}
+                    {/* Desktop Table */}
                     <div className="hidden md:block overflow-x-auto">
                       <Table>
                         <TableHeader>
@@ -1057,20 +995,15 @@ export default function ReplenishmentPlanningPage() {
                                 checked={
                                   visibleSuggestions.length > 0 &&
                                   selectedRuleIds.length ===
-                                    visibleSuggestions.filter(
-                                      (s) => s.purchaseQty > 0,
-                                    ).length
+                                    visibleSuggestions.filter((s) => s.purchaseQty > 0).length
                                 }
                                 onChange={(e) => {
-                                  const selectableSuggestions =
-                                    visibleSuggestions.filter(
-                                      (s) => s.purchaseQty > 0,
-                                    );
+                                  const selectableSuggestions = visibleSuggestions.filter(
+                                    (s) => s.purchaseQty > 0,
+                                  );
                                   if (e.target.checked) {
                                     setSelectedRuleIds(
-                                      selectableSuggestions.map(
-                                        (s) => s.ruleId,
-                                      ),
+                                      selectableSuggestions.map((s) => s.ruleId),
                                     );
                                   } else {
                                     setSelectedRuleIds([]);
@@ -1080,28 +1013,26 @@ export default function ReplenishmentPlanningPage() {
                               />
                             </TableHead>
                             <TableHead className="text-xs font-medium text-muted-foreground">
-                              Item
+                              {t("suggestionsCard.table.item")}
                             </TableHead>
                             <TableHead className="text-xs font-medium text-muted-foreground">
-                              Signal
+                              {t("suggestionsCard.table.signal")}
                             </TableHead>
                             <TableHead className="text-xs font-medium text-muted-foreground">
-                              Recommendation
+                              {t("suggestionsCard.table.recommendation")}
                             </TableHead>
                             <TableHead className="text-xs font-medium text-muted-foreground">
-                              Lead Time
+                              {t("suggestionsCard.table.leadTime")}
                             </TableHead>
                             <TableHead className="text-xs font-medium text-muted-foreground">
-                              Action
+                              {t("suggestionsCard.table.action")}
                             </TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
                           {visibleSuggestions.map((suggestion) => {
                             const selectable = suggestion.purchaseQty > 0;
-                            const selected = selectedRuleIds.includes(
-                              suggestion.ruleId,
-                            );
+                            const selected = selectedRuleIds.includes(suggestion.ruleId);
                             return (
                               <TableRow
                                 key={suggestion.ruleId}
@@ -1117,8 +1048,7 @@ export default function ReplenishmentPlanningPage() {
                                         event.target.checked
                                           ? [...current, suggestion.ruleId]
                                           : current.filter(
-                                              (value) =>
-                                                value !== suggestion.ruleId,
+                                              (value) => value !== suggestion.ruleId,
                                             ),
                                       )
                                     }
@@ -1130,44 +1060,48 @@ export default function ReplenishmentPlanningPage() {
                                     {suggestion.productName}
                                   </div>
                                   <div className="text-xs text-muted-foreground mt-0.5">
-                                    {suggestion.sku} |{" "}
-                                    {suggestion.warehouseCode}
+                                    {suggestion.sku} | {suggestion.warehouseCode}
                                   </div>
                                 </TableCell>
                                 <TableCell className="py-3">
                                   <div className="text-sm text-foreground">
-                                    Available {suggestion.availableQty}, RP{" "}
-                                    {suggestion.reorderPoint}
+                                    {t("suggestionsCard.availableLine", {
+                                      available: suggestion.availableQty,
+                                      rp: suggestion.reorderPoint,
+                                    })}
                                   </div>
                                   <div className="text-xs text-muted-foreground mt-0.5">
-                                    Shortage {suggestion.shortageQty} | Reserved{" "}
-                                    {suggestion.reservedQty}
+                                    {t("suggestionsCard.shortageReservedLine", {
+                                      shortage: suggestion.shortageQty,
+                                      reserved: suggestion.reservedQty,
+                                    })}
                                   </div>
                                 </TableCell>
                                 <TableCell className="py-3">
                                   <div className="text-sm font-medium text-primary">
-                                    {suggestion.recommendedAction}
+                                    {t(`recommendedActions.${suggestion.recommendedAction}` as any)}
                                   </div>
                                   <div className="text-xs text-muted-foreground mt-0.5">
-                                    Transfer {suggestion.transferQty} | Purchase{" "}
-                                    {suggestion.purchaseQty}
+                                    {t("suggestionsCard.transferPurchaseLine", {
+                                      transfer: suggestion.transferQty,
+                                      purchase: suggestion.purchaseQty,
+                                    })}
                                   </div>
                                   {suggestion.sourceWarehouse && (
                                     <div className="text-xs text-muted-foreground mt-0.5">
-                                      Source: {suggestion.sourceWarehouse.code}{" "}
-                                      (
-                                      {
-                                        suggestion.sourceWarehouse
-                                          .transferableQty
-                                      }
-                                      )
+                                      {t("suggestionsCard.sourceLine", {
+                                        code: suggestion.sourceWarehouse.code,
+                                        qty: suggestion.sourceWarehouse.transferableQty,
+                                      })}
                                     </div>
                                   )}
                                 </TableCell>
                                 <TableCell className="py-3 text-sm text-foreground">
                                   {suggestion.leadTimeDays !== null
-                                    ? `${suggestion.leadTimeDays}d`
-                                    : "N/A"}
+                                    ? t("suggestionsCard.leadTimeDays", {
+                                        days: suggestion.leadTimeDays,
+                                      })
+                                    : t("labels.na")}
                                 </TableCell>
                                 <TableCell className="py-3">
                                   {canCreateTransfer &&
@@ -1177,16 +1111,14 @@ export default function ReplenishmentPlanningPage() {
                                       size="sm"
                                       variant="outline"
                                       disabled={saving}
-                                      onClick={() =>
-                                        void createTransferDraft(suggestion)
-                                      }
+                                      onClick={() => void createTransferDraft(suggestion)}
                                       className="h-8 px-3 text-xs whitespace-nowrap"
                                     >
-                                      Create Transfer
+                                      {t("suggestionsCard.createTransfer")}
                                     </Button>
                                   ) : (
                                     <span className="text-xs text-muted-foreground">
-                                      N/A
+                                      {t("labels.na")}
                                     </span>
                                   )}
                                 </TableCell>
@@ -1195,22 +1127,23 @@ export default function ReplenishmentPlanningPage() {
                           })}
                         </TableBody>
                       </Table>
+                      {!loading && visibleSuggestions.length > 0 && (
+                        <Pagination
+                          currentPage={suggestionsCurrentPage}
+                          totalPages={totalSuggestionsPages}
+                          onPageChange={setSuggestionsCurrentPage}
+                        />
+                      )}
                     </div>
 
-                    {/* Mobile Card View for Suggestions */}
+                    {/* Mobile Card View */}
                     <div className="space-y-3 md:hidden">
                       {visibleSuggestions.map((suggestion) => {
                         const selectable = suggestion.purchaseQty > 0;
-                        const selected = selectedRuleIds.includes(
-                          suggestion.ruleId,
-                        );
+                        const selected = selectedRuleIds.includes(suggestion.ruleId);
                         return (
-                          <Card
-                            key={suggestion.ruleId}
-                            className="border-border shadow-sm"
-                          >
+                          <Card key={suggestion.ruleId} className="border-border shadow-sm">
                             <CardContent className="p-4 space-y-3">
-                              {/* Header with Checkbox */}
                               <div className="flex items-start gap-3">
                                 <input
                                   type="checkbox"
@@ -1221,8 +1154,7 @@ export default function ReplenishmentPlanningPage() {
                                       event.target.checked
                                         ? [...current, suggestion.ruleId]
                                         : current.filter(
-                                            (value) =>
-                                              value !== suggestion.ruleId,
+                                            (value) => value !== suggestion.ruleId,
                                           ),
                                     )
                                   }
@@ -1233,18 +1165,16 @@ export default function ReplenishmentPlanningPage() {
                                     {suggestion.productName}
                                   </p>
                                   <p className="text-xs text-muted-foreground">
-                                    {suggestion.sku} |{" "}
-                                    {suggestion.warehouseCode}
+                                    {suggestion.sku} | {suggestion.warehouseCode}
                                   </p>
                                 </div>
                               </div>
 
-                              {/* Signal Details */}
                               <div className="pl-6 space-y-2">
                                 <div className="grid grid-cols-2 gap-2 text-sm">
                                   <div>
                                     <span className="text-xs text-muted-foreground">
-                                      Available:
+                                      {t("suggestionsCard.available")}:
                                     </span>
                                     <span className="ml-1 text-foreground">
                                       {suggestion.availableQty}
@@ -1252,7 +1182,7 @@ export default function ReplenishmentPlanningPage() {
                                   </div>
                                   <div>
                                     <span className="text-xs text-muted-foreground">
-                                      Reorder Point:
+                                      {t("suggestionsCard.reorderPoint")}:
                                     </span>
                                     <span className="ml-1 text-foreground">
                                       {suggestion.reorderPoint}
@@ -1260,7 +1190,7 @@ export default function ReplenishmentPlanningPage() {
                                   </div>
                                   <div>
                                     <span className="text-xs text-muted-foreground">
-                                      Shortage:
+                                      {t("suggestionsCard.shortage")}:
                                     </span>
                                     <span className="ml-1 text-warning">
                                       {suggestion.shortageQty}
@@ -1268,7 +1198,7 @@ export default function ReplenishmentPlanningPage() {
                                   </div>
                                   <div>
                                     <span className="text-xs text-muted-foreground">
-                                      Reserved:
+                                      {t("suggestionsCard.reserved")}:
                                     </span>
                                     <span className="ml-1 text-foreground">
                                       {suggestion.reservedQty}
@@ -1276,41 +1206,38 @@ export default function ReplenishmentPlanningPage() {
                                   </div>
                                 </div>
 
-                                {/* Recommendation */}
                                 <div className="pt-2 border-t border-border/50">
                                   <p className="text-sm font-medium text-primary">
-                                    {suggestion.recommendedAction}
+                                    {t(`recommendedActions.${suggestion.recommendedAction}` as any)}
                                   </p>
                                   <div className="flex gap-3 mt-1 text-xs">
                                     <span>
-                                      Transfer:{" "}
+                                      {t("suggestionsCard.transfer")}:{" "}
                                       <strong>{suggestion.transferQty}</strong>
                                     </span>
                                     <span>
-                                      Purchase:{" "}
+                                      {t("suggestionsCard.purchase")}:{" "}
                                       <strong>{suggestion.purchaseQty}</strong>
                                     </span>
                                   </div>
                                   {suggestion.sourceWarehouse && (
                                     <p className="text-xs text-muted-foreground mt-1">
-                                      Source: {suggestion.sourceWarehouse.code}{" "}
-                                      (
-                                      {
-                                        suggestion.sourceWarehouse
-                                          .transferableQty
-                                      }
-                                      )
+                                      {t("suggestionsCard.sourceLine", {
+                                        code: suggestion.sourceWarehouse.code,
+                                        qty: suggestion.sourceWarehouse.transferableQty,
+                                      })}
                                     </p>
                                   )}
                                   <p className="text-xs text-muted-foreground mt-1">
-                                    Lead Time:{" "}
+                                    {t("suggestionsCard.leadTime")}:{" "}
                                     {suggestion.leadTimeDays !== null
-                                      ? `${suggestion.leadTimeDays} days`
-                                      : "N/A"}
+                                      ? t("suggestionsCard.leadTimeDays", {
+                                          days: suggestion.leadTimeDays,
+                                        })
+                                      : t("labels.na")}
                                   </p>
                                 </div>
 
-                                {/* Action Button */}
                                 {canCreateTransfer &&
                                   suggestion.sourceWarehouse &&
                                   suggestion.transferQty > 0 && (
@@ -1318,12 +1245,10 @@ export default function ReplenishmentPlanningPage() {
                                       size="sm"
                                       variant="outline"
                                       disabled={saving}
-                                      onClick={() =>
-                                        void createTransferDraft(suggestion)
-                                      }
+                                      onClick={() => void createTransferDraft(suggestion)}
                                       className="w-full mt-2"
                                     >
-                                      Create Transfer Draft
+                                      {t("suggestionsCard.createTransferDraft")}
                                     </Button>
                                   )}
                               </div>
@@ -1331,6 +1256,14 @@ export default function ReplenishmentPlanningPage() {
                           </Card>
                         );
                       })}
+
+                      {!loading && visibleSuggestions.length > 0 && (
+                        <Pagination
+                          currentPage={suggestionsCurrentPage}
+                          totalPages={totalSuggestionsPages}
+                          onPageChange={setSuggestionsCurrentPage}
+                        />
+                      )}
                     </div>
                   </>
                 ) : (
@@ -1338,22 +1271,12 @@ export default function ReplenishmentPlanningPage() {
                     <div className="flex flex-col items-center justify-center py-8 text-center">
                       <ShoppingCart className="h-8 w-8 text-muted-foreground/50 mb-2" />
                       <p className="text-sm text-muted-foreground">
-                        No triggered replenishment suggestions.
+                        {t("suggestionsCard.empty")}
                       </p>
                     </div>
                   )
                 )}
 
-                {/* Pagination for Suggestions */}
-                {!loading && visibleSuggestions.length > 0 && (
-                  <Pagination
-                    currentPage={suggestionsCurrentPage}
-                    totalPages={totalSuggestionsPages}
-                    onPageChange={setSuggestionsCurrentPage}
-                  />
-                )}
-
-                {/* Loading State */}
                 {loading && (
                   <div className="flex items-center justify-center py-8">
                     <RefreshCw className="h-6 w-6 animate-spin text-primary" />

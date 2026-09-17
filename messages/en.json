@@ -5248,6 +5248,78 @@
     "load": "Failed to load material releases"
   }
 },
+"AdminMaterialReleaseReport": {
+  "header": {
+    "title": "Material Release Report",
+    "description": "Review release notes with challan/waybill traceability and export report snapshots."
+  },
+  "actions": {
+    "refresh": "Refresh",
+    "exportCsv": "Export CSV",
+    "challan": "Challan",
+    "waybill": "Waybill"
+  },
+  "filters": {
+    "title": "Filters",
+    "search": "Search",
+    "searchPlaceholder": "Release/challan/waybill/request",
+    "warehouse": "Warehouse",
+    "status": "Status",
+    "from": "From",
+    "to": "To",
+    "all": "All"
+  },
+  "statuses": {
+    "ISSUED": "ISSUED",
+    "CANCELLED": "CANCELLED"
+  },
+  "stats": {
+    "releaseNotes": "Release Notes",
+    "totalReleasedQty": "Total Released Qty",
+    "totalReleasedValue": "Total Released Value"
+  },
+  "register": {
+    "title": "Release Register",
+    "description": "Use print actions to generate challan/waybill documents.",
+    "totalReleases": "Total Releases: {count}"
+  },
+  "table": {
+    "release": "Release",
+    "warehouse": "Warehouse",
+    "request": "Request",
+    "status": "Status",
+    "qty": "Qty",
+    "value": "Value",
+    "actions": "Actions"
+  },
+  "labels": {
+    "challanShort": "CHL",
+    "waybillShort": "WBL",
+    "na": "N/A"
+  },
+  "csv": {
+    "releaseNo": "Release No",
+    "date": "Date",
+    "warehouse": "Warehouse",
+    "requestNo": "Request No",
+    "challan": "Challan",
+    "waybill": "Waybill",
+    "status": "Status",
+    "totalQty": "Total Qty",
+    "totalValue": "Total Value"
+  },
+  "loading": "Loading report rows...",
+  "empty": "No release data found for selected filters.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access material release reports."
+  },
+  "errors": {
+    "loadWarehouses": "Failed to load warehouses",
+    "loadReport": "Failed to load material release report",
+    "noRows": "No rows to export"
+  }
+},
  "AdminWarehouseTransfers": {
   "header": {
     "title": "Warehouse Transfers",
@@ -5433,49 +5505,216 @@
     "empty": "No landed costs found."
   },
   "AdminReplenishment": {
-    "header": {
-      "title": "Replenishment",
-      "description": "Monitor and manage stock replenishment signals."
-    },
-    "actions": {
-      "refresh": "Refresh",
-      "createOrder": "Create Order"
-    },
-    "stats": {
-      "lowStock": { "label": "Low Stock", "hint": "Items below reorder point" },
-      "reorderAlerts": { "label": "Reorder Alerts", "hint": "Active reorder alerts" },
-      "suggestions": { "label": "Suggestions", "hint": "System-generated suggestions" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search SKU, product name...",
-      "allCategories": "All categories",
-      "allWarehouses": "All warehouses"
-    },
-    "loading": "Loading replenishment data...",
-    "empty": "No replenishment signals found."
+  "header": {
+    "title": "Replenishment Planning",
+    "description": "Define warehouse reorder rules, review shortage signals, and convert purchase needs into requisitions."
   },
+  "actions": {
+    "refresh": "Refresh",
+    "edit": "Edit",
+    "createOrder": "Create Order"
+  },
+  "stats": {
+    "rules": { "label": "Rules", "hint": "Configured replenishment logic" },
+    "triggered": { "label": "Triggered", "hint": "Current shortage or planning signals" },
+    "purchaseSignals": { "label": "Purchase Signals", "hint": "Can convert into requisitions" },
+    "transferSignals": { "label": "Transfer Signals", "hint": "Can convert into transfer drafts" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search warehouse, product, or SKU...",
+    "allWarehouses": "All warehouses"
+  },
+  "ruleForm": {
+    "createTitle": "Create Rule",
+    "editTitle": "Edit Rule",
+    "description": "Store rule-based planning thresholds by warehouse and variant.",
+    "warehouse": "Warehouse",
+    "selectWarehouse": "Select warehouse",
+    "variant": "Variant",
+    "selectVariant": "Select variant",
+    "strategy": "Strategy",
+    "leadTimeDays": "Lead Time (days)",
+    "reorderPoint": "Reorder Point",
+    "targetStock": "Target Stock",
+    "safetyStock": "Safety Stock",
+    "minOrderQty": "Min Order Qty",
+    "orderMultiple": "Order Multiple",
+    "note": "Note",
+    "ruleActive": "Rule Active",
+    "saveRule": "Save Rule",
+    "updateRule": "Update Rule",
+    "saving": "Saving...",
+    "cancelEdit": "Cancel Edit",
+    "variantDefaultThreshold": "Variant default low-stock threshold: {value}"
+  },
+  "register": {
+    "title": "Rules & Signals",
+    "description": "Review active replenishment signals and compare transfer vs purchase guidance."
+  },
+  "rulesCard": {
+    "title": "Configured Rules",
+    "empty": "No replenishment rules found.",
+    "statusActive": "ACTIVE",
+    "statusInactive": "INACTIVE",
+    "skuLabel": "SKU",
+    "reorderPoint": "Reorder Point",
+    "targetLevel": "Target Level",
+    "minOrderQty": "Min Order Qty",
+    "orderMultiple": "Order Multiple",
+    "ruleSummary": "RP {rp} / Target {target}",
+    "ruleDetail": "MOQ {moq} / Multiple {multiple}",
+    "table": {
+      "warehouse": "Warehouse",
+      "variant": "Variant",
+      "rule": "Rule",
+      "status": "Status",
+      "action": "Action"
+    }
+  },
+  "suggestionsCard": {
+    "title": "Planning Suggestions",
+    "description": "Triggered rules below reorder point appear here.",
+    "requisitionNotePlaceholder": "Requisition note",
+    "createRequisition": "Create Requisition",
+    "createTransfer": "Create Transfer",
+    "createTransferDraft": "Create Transfer Draft",
+    "empty": "No triggered replenishment suggestions.",
+    "available": "Available",
+    "reorderPoint": "Reorder Point",
+    "shortage": "Shortage",
+    "reserved": "Reserved",
+    "transfer": "Transfer",
+    "purchase": "Purchase",
+    "leadTime": "Lead Time",
+    "availableLine": "Available {available}, RP {rp}",
+    "shortageReservedLine": "Shortage {shortage} | Reserved {reserved}",
+    "transferPurchaseLine": "Transfer {transfer} | Purchase {purchase}",
+    "sourceLine": "Source: {code} ({qty})",
+    "leadTimeDays": "{days} days",
+    "table": {
+      "item": "Item",
+      "signal": "Signal",
+      "recommendation": "Recommendation",
+      "leadTime": "Lead Time",
+      "action": "Action"
+    }
+  },
+  "recommendedActions": {
+    "NONE": "NONE",
+    "PURCHASE": "PURCHASE",
+    "TRANSFER": "TRANSFER",
+    "HYBRID": "HYBRID"
+  },
+  "labels": {
+    "na": "N/A"
+  },
+  "transferNoteDefault": "Generated for {product} ({sku}) from replenishment planning.",
+  "loading": "Loading replenishment data...",
+  "empty": "No replenishment signals found.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access replenishment planning."
+  },
+  "errors": {
+    "loadWarehouses": "Failed to load warehouses",
+    "loadVariants": "Failed to load variants",
+    "loadRules": "Failed to load replenishment rules",
+    "loadSuggestions": "Failed to load replenishment suggestions",
+    "loadData": "Failed to load replenishment planning data",
+    "warehouseVariantRequired": "Warehouse and variant are required",
+    "saveRule": "Failed to save replenishment rule",
+    "selectPurchaseSuggestion": "Select at least one purchase suggestion",
+    "sameWarehouseRequired": "Selected suggestions must belong to the same warehouse",
+    "createRequisition": "Failed to create replenishment requisition",
+    "noTransferableQty": "This suggestion does not have a transferable quantity",
+    "createTransfer": "Failed to create transfer draft"
+  },
+  "toasts": {
+    "ruleSaved": "Replenishment rule saved",
+    "requisitionCreated": "Purchase requisition {number} created from planning",
+    "transferCreated": "Transfer draft {number} created from planning"
+  }
+},
   "AdminReorderAlerts": {
-    "header": {
-      "title": "Reorder Alerts",
-      "description": "Configure and monitor reorder points and alerts."
-    },
-    "actions": {
-      "newAlert": "New Alert",
-      "refresh": "Refresh",
-      "edit": "Edit"
-    },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total alerts" },
-      "active": { "label": "Active", "hint": "Active alerts" },
-      "triggered": { "label": "Triggered", "hint": "Triggered alerts" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search SKU, product...",
-      "allStatuses": "All statuses"
-    },
-    "loading": "Loading reorder alerts...",
-    "empty": "No reorder alerts found."
+  "header": {
+    "title": "Reorder Alerts",
+    "description": "Review low stock signals and manage replenishment notifications."
   },
+  "actions": {
+    "newAlert": "New Alert",
+    "refresh": "Refresh",
+    "edit": "Edit",
+    "scanStock": "Scan Stock"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Total alerts" },
+    "active": { "label": "Active", "hint": "Active alerts" },
+    "triggered": { "label": "Triggered", "hint": "Triggered alerts" }
+  },
+  "filters": {
+    "title": "Filters",
+    "description": "Filter alerts by warehouse, status, or SKU.",
+    "warehouse": "Warehouse",
+    "allWarehouses": "All warehouses",
+    "status": "Status",
+    "all": "All",
+    "search": "Search",
+    "searchPlaceholder": "SKU or product name...",
+    "closeFilters": "Close Filters"
+  },
+  "statuses": {
+    "OPEN": "Open",
+    "ACKNOWLEDGED": "Acknowledged",
+    "RESOLVED": "Resolved"
+  },
+  "manual": {
+    "title": "Create Manual Alert",
+    "description": "Open a single alert for a specific variant.",
+    "selectWarehouse": "Select Warehouse",
+    "selectVariant": "Select Variant",
+    "notePlaceholder": "Note (optional)",
+    "createAlert": "Create Alert",
+    "creating": "Creating..."
+  },
+  "register": {
+    "title": "Alert Register",
+    "description": "Track open, acknowledged, and resolved alerts."
+  },
+  "table": {
+    "warehouse": "Warehouse",
+    "variant": "Variant",
+    "onHand": "On hand",
+    "threshold": "Threshold",
+    "suggested": "Suggested",
+    "status": "Status",
+    "updateStatus": "Update Status"
+  },
+  "labels": {
+    "variant": "Variant",
+    "note": "Note"
+  },
+  "loading": "Loading reorder alerts...",
+  "empty": "No alerts found.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access stock alerts."
+  },
+  "errors": {
+    "loadWarehouses": "Failed to load warehouses",
+    "loadVariants": "Failed to load variants",
+    "loadData": "Failed to load data",
+    "loadAlerts": "Failed to load alerts",
+    "warehouseVariantRequired": "Warehouse and variant are required.",
+    "createAlert": "Failed to create alert",
+    "updateAlert": "Failed to update alert",
+    "scanAlerts": "Failed to scan alerts"
+  },
+  "toasts": {
+    "alertCreated": "Alert created",
+    "alertUpdated": "Alert updated",
+    "scanResult": "Created {count} alert(s)."
+  }
+},
   "AdminStockReports": {
     "header": {
       "title": "Stock Reports",

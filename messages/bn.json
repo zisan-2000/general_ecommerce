@@ -5191,7 +5191,7 @@
     "actionCompleted": "ম্যাটেরিয়াল রিকোয়েস্ট {action} সম্পন্ন হয়েছে"
   }
 },
-   "AdminMaterialReleases": {
+"AdminMaterialReleases": {
   "header": {
     "title": "ম্যাটেরিয়াল রিলিজ",
     "description": "অনুমোদিত ম্যাটেরিয়াল রিকোয়েস্ট থেকে রিলিজ নোট ইস্যু করুন এবং ওয়্যারহাউস স্টক-আউট পোস্ট করুন।"
@@ -5248,7 +5248,79 @@
     "load": "ম্যাটেরিয়াল রিলিজ লোড করা যায়নি"
   }
 },
-    "AdminWarehouseTransfers": {
+"AdminMaterialReleaseReport": {
+  "header": {
+    "title": "ম্যাটেরিয়াল রিলিজ রিপোর্ট",
+    "description": "চালান/ওয়েবিল ট্রেসেবিলিটি সহ রিলিজ নোট পর্যালোচনা করুন এবং রিপোর্ট স্ন্যাপশট এক্সপোর্ট করুন।"
+  },
+  "actions": {
+    "refresh": "রিফ্রেশ",
+    "exportCsv": "CSV এক্সপোর্ট",
+    "challan": "চালান",
+    "waybill": "ওয়েবিল"
+  },
+  "filters": {
+    "title": "ফিল্টার",
+    "search": "খুঁজুন",
+    "searchPlaceholder": "রিলিজ/চালান/ওয়েবিল/রিকোয়েস্ট",
+    "warehouse": "ওয়্যারহাউস",
+    "status": "স্ট্যাটাস",
+    "from": "থেকে",
+    "to": "পর্যন্ত",
+    "all": "সব"
+  },
+  "statuses": {
+    "ISSUED": "ইস্যুকৃত",
+    "CANCELLED": "বাতিল"
+  },
+  "stats": {
+    "releaseNotes": "রিলিজ নোট",
+    "totalReleasedQty": "মোট রিলিজ পরিমাণ",
+    "totalReleasedValue": "মোট রিলিজ মূল্য"
+  },
+  "register": {
+    "title": "রিলিজ রেজিস্টার",
+    "description": "চালান/ওয়েবিল ডকুমেন্ট তৈরি করতে প্রিন্ট অ্যাকশন ব্যবহার করুন।",
+    "totalReleases": "মোট রিলিজ: {count}"
+  },
+  "table": {
+    "release": "রিলিজ",
+    "warehouse": "ওয়্যারহাউস",
+    "request": "রিকোয়েস্ট",
+    "status": "স্ট্যাটাস",
+    "qty": "পরিমাণ",
+    "value": "মূল্য",
+    "actions": "অ্যাকশন"
+  },
+  "labels": {
+    "challanShort": "CHL",
+    "waybillShort": "WBL",
+    "na": "প্রযোজ্য নয়"
+  },
+  "csv": {
+    "releaseNo": "রিলিজ নম্বর",
+    "date": "তারিখ",
+    "warehouse": "ওয়্যারহাউস",
+    "requestNo": "রিকোয়েস্ট নম্বর",
+    "challan": "চালান",
+    "waybill": "ওয়েবিল",
+    "status": "স্ট্যাটাস",
+    "totalQty": "মোট পরিমাণ",
+    "totalValue": "মোট মূল্য"
+  },
+  "loading": "রিপোর্ট সারি লোড হচ্ছে...",
+  "empty": "নির্বাচিত ফিল্টারের জন্য কোনো রিলিজ ডেটা পাওয়া যায়নি।",
+  "forbidden": {
+    "title": "নিষিদ্ধ",
+    "description": "ম্যাটেরিয়াল রিলিজ রিপোর্ট অ্যাক্সেস করার অনুমতি আপনার নেই।"
+  },
+  "errors": {
+    "loadWarehouses": "ওয়্যারহাউস লোড করা যায়নি",
+    "loadReport": "ম্যাটেরিয়াল রিলিজ রিপোর্ট লোড করা যায়নি",
+    "noRows": "এক্সপোর্ট করার জন্য কোনো সারি নেই"
+  }
+},
+"AdminWarehouseTransfers": {
   "header": {
     "title": "ওয়্যারহাউস ট্রান্সফার",
     "description": "ওয়্যারহাউসগুলোর মধ্যে অভ্যন্তরীণ স্টক চলাচল অনুমোদন, প্রেরণ এবং গ্রহণ করুন।"
@@ -5321,7 +5393,7 @@
     "actionCompleted": "ওয়্যারহাউস ট্রান্সফার {action} সম্পন্ন হয়েছে"
   }
 },
-    "AdminPaymentRequests": {
+"AdminPaymentRequests": {
         "header": {
             "title": "পেমেন্ট অনুরোধ",
             "description": "সরবরাহকারীদের পেমেন্ট অনুরোধ পরিচালনা করুন।"
@@ -5432,50 +5504,217 @@
         "loading": "অবতরণ খরচ লোড হচ্ছে...",
         "empty": "কোনো অবতরণ খরচ পাওয়া যায়নি।"
     },
-    "AdminReplenishment": {
-        "header": {
-            "title": "পুনরায় মজুদ",
-            "description": "স্টক পুনরায় মজুদ সংকেত পর্যবেক্ষণ এবং পরিচালনা করুন।"
-        },
-        "actions": {
-            "refresh": "রিফ্রেশ",
-            "createOrder": "অর্ডার তৈরি করুন"
-        },
-        "stats": {
-            "lowStock": { "label": "কম স্টক", "hint": "পুনঃঅর্ডার পয়েন্টের নিচে আইটেম" },
-            "reorderAlerts": { "label": "পুনঃঅর্ডার সতর্কতা", "hint": "সক্রিয় পুনঃঅর্ডার সতর্কতা" },
-            "suggestions": { "label": "পরামর্শ", "hint": "সিস্টেম-জেনারেটেড পরামর্শ" }
-        },
-        "filters": {
-            "searchPlaceholder": "এসকেইউ, পণ্যের নাম অনুসন্ধান করুন...",
-            "allCategories": "সব ক্যাটাগরি",
-            "allWarehouses": "সব ওয়্যারহাউস"
-        },
-        "loading": "পুনরায় মজুদ ডেটা লোড হচ্ছে...",
-        "empty": "কোনো পুনরায় মজুদ সংকেত পাওয়া যায়নি।"
-    },
+  "AdminReplenishment": {
+  "header": {
+    "title": "রিপ্লেনিশমেন্ট প্ল্যানিং",
+    "description": "ওয়্যারহাউস রি-অর্ডার নিয়ম নির্ধারণ করুন, ঘাটতির সংকেত পর্যালোচনা করুন এবং ক্রয় প্রয়োজনীয়তাকে রিকুইজিশনে রূপান্তর করুন।"
+  },
+  "actions": {
+    "refresh": "রিফ্রেশ",
+    "edit": "সম্পাদনা",
+    "createOrder": "অর্ডার তৈরি করুন"
+  },
+  "stats": {
+    "rules": { "label": "নিয়ম", "hint": "কনফিগার করা রিপ্লেনিশমেন্ট লজিক" },
+    "triggered": { "label": "ট্রিগারড", "hint": "বর্তমান ঘাটতি বা প্ল্যানিং সংকেত" },
+    "purchaseSignals": { "label": "ক্রয় সংকেত", "hint": "রিকুইজিশনে রূপান্তর করা যেতে পারে" },
+    "transferSignals": { "label": "স্থানান্তর সংকেত", "hint": "ট্রান্সফার ড্রাফটে রূপান্তর করা যেতে পারে" }
+  },
+  "filters": {
+    "searchPlaceholder": "ওয়্যারহাউস, পণ্য বা SKU দিয়ে খুঁজুন...",
+    "allWarehouses": "সব ওয়্যারহাউস"
+  },
+  "ruleForm": {
+    "createTitle": "নিয়ম তৈরি করুন",
+    "editTitle": "নিয়ম সম্পাদনা করুন",
+    "description": "ওয়্যারহাউস এবং ভ্যারিয়েন্ট অনুযায়ী নিয়ম-ভিত্তিক প্ল্যানিং থ্রেশহোল্ড সংরক্ষণ করুন।",
+    "warehouse": "ওয়্যারহাউস",
+    "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+    "variant": "ভ্যারিয়েন্ট",
+    "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
+    "strategy": "স্ট্র্যাটেজি",
+    "leadTimeDays": "লিড টাইম (দিন)",
+    "reorderPoint": "রি-অর্ডার পয়েন্ট",
+    "targetStock": "টার্গেট স্টক",
+    "safetyStock": "সেফটি স্টক",
+    "minOrderQty": "সর্বনিম্ন অর্ডার পরিমাণ",
+    "orderMultiple": "অর্ডার মাল্টিপল",
+    "note": "নোট",
+    "ruleActive": "নিয়ম সক্রিয়",
+    "saveRule": "নিয়ম সংরক্ষণ করুন",
+    "updateRule": "নিয়ম আপডেট করুন",
+    "saving": "সংরক্ষণ হচ্ছে...",
+    "cancelEdit": "সম্পাদনা বাতিল",
+    "variantDefaultThreshold": "ভ্যারিয়েন্টের ডিফল্ট লো-স্টক থ্রেশহোল্ড: {value}"
+  },
+  "register": {
+    "title": "নিয়ম ও সংকেত",
+    "description": "সক্রিয় রিপ্লেনিশমেন্ট সংকেত পর্যালোচনা করুন এবং ট্রান্সফার বনাম ক্রয় নির্দেশনা তুলনা করুন।"
+  },
+  "rulesCard": {
+    "title": "কনফিগার করা নিয়ম",
+    "empty": "কোনো রিপ্লেনিশমেন্ট নিয়ম পাওয়া যায়নি।",
+    "statusActive": "সক্রিয়",
+    "statusInactive": "নিষ্ক্রিয়",
+    "skuLabel": "SKU",
+    "reorderPoint": "রি-অর্ডার পয়েন্ট",
+    "targetLevel": "টার্গেট লেভেল",
+    "minOrderQty": "সর্বনিম্ন অর্ডার পরিমাণ",
+    "orderMultiple": "অর্ডার মাল্টিপল",
+    "ruleSummary": "RP {rp} / টার্গেট {target}",
+    "ruleDetail": "MOQ {moq} / মাল্টিপল {multiple}",
+    "table": {
+      "warehouse": "ওয়্যারহাউস",
+      "variant": "ভ্যারিয়েন্ট",
+      "rule": "নিয়ম",
+      "status": "স্ট্যাটাস",
+      "action": "অ্যাকশন"
+    }
+  },
+  "suggestionsCard": {
+    "title": "প্ল্যানিং সাজেশন",
+    "description": "রি-অর্ডার পয়েন্টের নিচে ট্রিগার হওয়া নিয়মগুলো এখানে দেখাবে।",
+    "requisitionNotePlaceholder": "রিকুইজিশন নোট",
+    "createRequisition": "রিকুইজিশন তৈরি করুন",
+    "createTransfer": "ট্রান্সফার তৈরি করুন",
+    "createTransferDraft": "ট্রান্সফার ড্রাফট তৈরি করুন",
+    "empty": "কোনো ট্রিগারড রিপ্লেনিশমেন্ট সাজেশন নেই।",
+    "available": "উপলব্ধ",
+    "reorderPoint": "রি-অর্ডার পয়েন্ট",
+    "shortage": "ঘাটতি",
+    "reserved": "রিজার্ভড",
+    "transfer": "ট্রান্সফার",
+    "purchase": "ক্রয়",
+    "leadTime": "লিড টাইম",
+    "availableLine": "উপলব্ধ {available}, RP {rp}",
+    "shortageReservedLine": "ঘাটতি {shortage} | রিজার্ভড {reserved}",
+    "transferPurchaseLine": "ট্রান্সফার {transfer} | ক্রয় {purchase}",
+    "sourceLine": "সোর্স: {code} ({qty})",
+    "leadTimeDays": "{days} দিন",
+    "table": {
+      "item": "আইটেম",
+      "signal": "সংকেত",
+      "recommendation": "সুপারিশ",
+      "leadTime": "লিড টাইম",
+      "action": "অ্যাকশন"
+    }
+  },
+  "recommendedActions": {
+    "NONE": "কিছু নেই",
+    "PURCHASE": "ক্রয়",
+    "TRANSFER": "স্থানান্তর",
+    "HYBRID": "হাইব্রিড"
+  },
+  "labels": {
+    "na": "প্রযোজ্য নয়"
+  },
+  "transferNoteDefault": "রিপ্লেনিশমেন্ট প্ল্যানিং থেকে {product} ({sku}) এর জন্য তৈরি।",
+  "loading": "রিপ্লেনিশমেন্ট ডেটা লোড হচ্ছে...",
+  "empty": "কোনো রিপ্লেনিশমেন্ট সংকেত পাওয়া যায়নি।",
+  "forbidden": {
+    "title": "নিষিদ্ধ",
+    "description": "রিপ্লেনিশমেন্ট প্ল্যানিং অ্যাক্সেস করার অনুমতি আপনার নেই।"
+  },
+  "errors": {
+    "loadWarehouses": "ওয়্যারহাউস লোড করা যায়নি",
+    "loadVariants": "ভ্যারিয়েন্ট লোড করা যায়নি",
+    "loadRules": "রিপ্লেনিশমেন্ট নিয়ম লোড করা যায়নি",
+    "loadSuggestions": "রিপ্লেনিশমেন্ট সাজেশন লোড করা যায়নি",
+    "loadData": "রিপ্লেনিশমেন্ট প্ল্যানিং ডেটা লোড করা যায়নি",
+    "warehouseVariantRequired": "ওয়্যারহাউস এবং ভ্যারিয়েন্ট আবশ্যক",
+    "saveRule": "রিপ্লেনিশমেন্ট নিয়ম সংরক্ষণ করা যায়নি",
+    "selectPurchaseSuggestion": "অন্তত একটি ক্রয় সাজেশন নির্বাচন করুন",
+    "sameWarehouseRequired": "নির্বাচিত সাজেশনগুলো একই ওয়্যারহাউসের হতে হবে",
+    "createRequisition": "রিপ্লেনিশমেন্ট রিকুইজিশন তৈরি করা যায়নি",
+    "noTransferableQty": "এই সাজেশনে স্থানান্তরযোগ্য পরিমাণ নেই",
+    "createTransfer": "ট্রান্সফার ড্রাফট তৈরি করা যায়নি"
+  },
+  "toasts": {
+    "ruleSaved": "রিপ্লেনিশমেন্ট নিয়ম সংরক্ষিত হয়েছে",
+    "requisitionCreated": "প্ল্যানিং থেকে ক্রয় রিকুইজিশন {number} তৈরি হয়েছে",
+    "transferCreated": "প্ল্যানিং থেকে ট্রান্সফার ড্রাফট {number} তৈরি হয়েছে"
+  }
+},
     "AdminReorderAlerts": {
-        "header": {
-            "title": "পুনঃঅর্ডার সতর্কতা",
-            "description": "পুনঃঅর্ডার পয়েন্ট এবং সতর্কতা কনফিগার এবং পর্যবেক্ষণ করুন।"
-        },
-        "actions": {
-            "newAlert": "নতুন সতর্কতা",
-            "refresh": "রিফ্রেশ",
-            "edit": "সম্পাদনা"
-        },
-        "stats": {
-            "total": { "label": "মোট", "hint": "মোট সতর্কতা" },
-            "active": { "label": "সক্রিয়", "hint": "সক্রিয় সতর্কতা" },
-            "triggered": { "label": "ট্রিগার হয়েছে", "hint": "ট্রিগার হওয়া সতর্কতা" }
-        },
-        "filters": {
-            "searchPlaceholder": "এসকেইউ, পণ্য অনুসন্ধান করুন...",
-            "allStatuses": "সব স্ট্যাটাস"
-        },
-        "loading": "পুনঃঅর্ডার সতর্কতা লোড হচ্ছে...",
-        "empty": "কোনো পুনঃঅর্ডার সতর্কতা পাওয়া যায়নি।"
-    },
+  "header": {
+    "title": "রি-অর্ডার অ্যালার্ট",
+    "description": "লো-স্টক সংকেত পর্যালোচনা করুন এবং রিপ্লেনিশমেন্ট নোটিফিকেশন পরিচালনা করুন।"
+  },
+  "actions": {
+    "newAlert": "নতুন অ্যালার্ট",
+    "refresh": "রিফ্রেশ",
+    "edit": "সম্পাদনা",
+    "scanStock": "স্টক স্ক্যান"
+  },
+  "stats": {
+    "total": { "label": "মোট", "hint": "মোট অ্যালার্ট" },
+    "active": { "label": "সক্রিয়", "hint": "সক্রিয় অ্যালার্ট" },
+    "triggered": { "label": "ট্রিগারড", "hint": "ট্রিগার হওয়া অ্যালার্ট" }
+  },
+  "filters": {
+    "title": "ফিল্টার",
+    "description": "ওয়্যারহাউস, স্ট্যাটাস বা SKU অনুযায়ী অ্যালার্ট ফিল্টার করুন।",
+    "warehouse": "ওয়্যারহাউস",
+    "allWarehouses": "সব ওয়্যারহাউস",
+    "status": "স্ট্যাটাস",
+    "all": "সব",
+    "search": "খুঁজুন",
+    "searchPlaceholder": "SKU বা পণ্যের নাম...",
+    "closeFilters": "ফিল্টার বন্ধ করুন"
+  },
+  "statuses": {
+    "OPEN": "খোলা",
+    "ACKNOWLEDGED": "স্বীকৃত",
+    "RESOLVED": "সমাধানকৃত"
+  },
+  "manual": {
+    "title": "ম্যানুয়াল অ্যালার্ট তৈরি করুন",
+    "description": "নির্দিষ্ট ভ্যারিয়েন্টের জন্য একটি অ্যালার্ট খুলুন।",
+    "selectWarehouse": "ওয়্যারহাউস নির্বাচন করুন",
+    "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
+    "notePlaceholder": "নোট (ঐচ্ছিক)",
+    "createAlert": "অ্যালার্ট তৈরি করুন",
+    "creating": "তৈরি হচ্ছে..."
+  },
+  "register": {
+    "title": "অ্যালার্ট রেজিস্টার",
+    "description": "খোলা, স্বীকৃত এবং সমাধানকৃত অ্যালার্ট ট্র্যাক করুন।"
+  },
+  "table": {
+    "warehouse": "ওয়্যারহাউস",
+    "variant": "ভ্যারিয়েন্ট",
+    "onHand": "হাতে আছে",
+    "threshold": "থ্রেশহোল্ড",
+    "suggested": "সুপারিশকৃত",
+    "status": "স্ট্যাটাস",
+    "updateStatus": "স্ট্যাটাস আপডেট করুন"
+  },
+  "labels": {
+    "variant": "ভ্যারিয়েন্ট",
+    "note": "নোট"
+  },
+  "loading": "রি-অর্ডার অ্যালার্ট লোড হচ্ছে...",
+  "empty": "কোনো অ্যালার্ট পাওয়া যায়নি।",
+  "forbidden": {
+    "title": "নিষিদ্ধ",
+    "description": "স্টক অ্যালার্ট অ্যাক্সেস করার অনুমতি আপনার নেই।"
+  },
+  "errors": {
+    "loadWarehouses": "ওয়্যারহাউস লোড করা যায়নি",
+    "loadVariants": "ভ্যারিয়েন্ট লোড করা যায়নি",
+    "loadData": "ডেটা লোড করা যায়নি",
+    "loadAlerts": "অ্যালার্ট লোড করা যায়নি",
+    "warehouseVariantRequired": "ওয়্যারহাউস এবং ভ্যারিয়েন্ট আবশ্যক।",
+    "createAlert": "অ্যালার্ট তৈরি করা যায়নি",
+    "updateAlert": "অ্যালার্ট আপডেট করা যায়নি",
+    "scanAlerts": "অ্যালার্ট স্ক্যান করা যায়নি"
+  },
+  "toasts": {
+    "alertCreated": "অ্যালার্ট তৈরি হয়েছে",
+    "alertUpdated": "অ্যালার্ট আপডেট হয়েছে",
+    "scanResult": "{count}টি অ্যালার্ট তৈরি হয়েছে।"
+  }
+},
     "AdminStockReports": {
         "header": {
             "title": "স্টক রিপোর্ট",

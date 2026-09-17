@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { RefreshCw, Filter, Package, AlertTriangle, CheckCircle, Clock, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -66,12 +67,14 @@ const getStatusIcon = (status: string) => {
 };
 
 export default function ReorderAlertsPage() {
+  const t = useTranslations("AdminReorderAlerts");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
     : [];
 
-  const canRead = permissions.includes("stock_alerts.read") || permissions.includes("stock_alerts.manage");
+  const canRead =
+    permissions.includes("stock_alerts.read") || permissions.includes("stock_alerts.manage");
   const canManage = permissions.includes("stock_alerts.manage");
 
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
@@ -90,8 +93,6 @@ export default function ReorderAlertsPage() {
     note: "",
   });
 
-  const selectedWarehouseId = Number(warehouseId);
-
   const loadAll = async () => {
     setLoading(true);
     try {
@@ -100,8 +101,8 @@ export default function ReorderAlertsPage() {
         fetch("/api/product-variants", { cache: "no-store" }),
       ]);
       const [warehouseData, variantData] = await Promise.all([
-        readJson<Warehouse[]>(warehouseRes, "Failed to load warehouses"),
-        readJson<Variant[]>(variantRes, "Failed to load variants"),
+        readJson<Warehouse[]>(warehouseRes, t("errors.loadWarehouses")),
+        readJson<Variant[]>(variantRes, t("errors.loadVariants")),
       ]);
       setWarehouses(warehouseData);
       setVariants(variantData);
@@ -109,7 +110,7 @@ export default function ReorderAlertsPage() {
         setWarehouseId(String(warehouseData[0].id));
       }
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to load data");
+      toast.error(error instanceof Error ? error.message : t("errors.loadData"));
     } finally {
       setLoading(false);
     }
@@ -124,25 +125,27 @@ export default function ReorderAlertsPage() {
       const res = await fetch(`/api/scm/reorder-alerts?${qs.toString()}`, {
         cache: "no-store",
       });
-      const data = await readJson<AlertRow[]>(res, "Failed to load alerts");
+      const data = await readJson<AlertRow[]>(res, t("errors.loadAlerts"));
       setAlerts(data);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to load alerts");
+      toast.error(error instanceof Error ? error.message : t("errors.loadAlerts"));
     }
   };
 
   useEffect(() => {
     void loadAll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (!canRead) return;
     void loadAlerts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [warehouseId, status, search, canRead]);
 
   const createManual = async () => {
     if (!manualForm.warehouseId || !manualForm.productVariantId) {
-      toast.error("Warehouse and variant are required.");
+      toast.error(t("errors.warehouseVariantRequired"));
       return;
     }
     setCreating(true);
@@ -156,12 +159,12 @@ export default function ReorderAlertsPage() {
           note: manualForm.note,
         }),
       });
-      await readJson(res, "Failed to create alert");
-      toast.success("Alert created");
+      await readJson(res, t("errors.createAlert"));
+      toast.success(t("toasts.alertCreated"));
       setManualForm({ warehouseId: "", productVariantId: "", note: "" });
       await loadAlerts();
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to create alert");
+      toast.error(error instanceof Error ? error.message : t("errors.createAlert"));
     } finally {
       setCreating(false);
     }
@@ -174,11 +177,11 @@ export default function ReorderAlertsPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, status: nextStatus }),
       });
-      await readJson(res, "Failed to update alert");
-      toast.success("Alert updated");
+      await readJson(res, t("errors.updateAlert"));
+      toast.success(t("toasts.alertUpdated"));
       await loadAlerts();
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to update alert");
+      toast.error(error instanceof Error ? error.message : t("errors.updateAlert"));
     }
   };
 
@@ -193,11 +196,11 @@ export default function ReorderAlertsPage() {
           warehouseId: warehouseId ? Number(warehouseId) : undefined,
         }),
       });
-      const data = await readJson<{ created: number }>(res, "Failed to scan alerts");
-      toast.success(`Created ${data.created} alert(s).`);
+      const data = await readJson<{ created: number }>(res, t("errors.scanAlerts"));
+      toast.success(t("toasts.scanResult", { count: data.created }));
       await loadAlerts();
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to scan alerts");
+      toast.error(error instanceof Error ? error.message : t("errors.scanAlerts"));
     } finally {
       setScanLoading(false);
     }
@@ -207,9 +210,9 @@ export default function ReorderAlertsPage() {
     () =>
       variants.map((variant) => ({
         value: String(variant.id),
-        label: `${variant.product?.name || "Variant"} (${variant.sku})`,
+        label: `${variant.product?.name || t("labels.variant")} (${variant.sku})`,
       })),
-    [variants],
+    [variants, t],
   );
 
   if (!canRead) {
@@ -217,7 +220,7 @@ export default function ReorderAlertsPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access stock alerts.
+            {t("forbidden.description")}
           </CardContent>
         </Card>
       </div>
@@ -230,32 +233,32 @@ export default function ReorderAlertsPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Reorder Alerts
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Review low stock signals and manage replenishment notifications.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           {canManage && (
-            <Button 
-              variant="outline" 
-              onClick={() => void scanAlerts()} 
+            <Button
+              variant="outline"
+              onClick={() => void scanAlerts()}
               disabled={scanLoading}
               className="flex-1 sm:flex-initial"
             >
               <RefreshCw className={cn("h-4 w-4 mr-2", scanLoading && "animate-spin")} />
-              Scan Stock
+              {t("actions.scanStock")}
             </Button>
           )}
-          <Button 
-            variant="outline" 
-            onClick={() => void loadAlerts()} 
+          <Button
+            variant="outline"
+            onClick={() => void loadAlerts()}
             disabled={loading}
             className="flex-1 sm:flex-initial"
           >
             <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button
             variant="outline"
@@ -270,21 +273,21 @@ export default function ReorderAlertsPage() {
       {/* Filters Card - Desktop */}
       <Card className="hidden sm:block shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Filters</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{t("filters.title")}</CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Filter alerts by warehouse, status, or SKU.
+            {t("filters.description")}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-2">
-              <Label className="text-xs sm:text-sm">Warehouse</Label>
+              <Label className="text-xs sm:text-sm">{t("filters.warehouse")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={warehouseId}
                 onChange={(e) => setWarehouseId(e.target.value)}
               >
-                <option value="">All warehouses</option>
+                <option value="">{t("filters.allWarehouses")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -293,22 +296,22 @@ export default function ReorderAlertsPage() {
               </select>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs sm:text-sm">Status</Label>
+              <Label className="text-xs sm:text-sm">{t("filters.status")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
               >
-                <option value="">All</option>
-                <option value="OPEN">Open</option>
-                <option value="ACKNOWLEDGED">Acknowledged</option>
-                <option value="RESOLVED">Resolved</option>
+                <option value="">{t("filters.all")}</option>
+                <option value="OPEN">{t("statuses.OPEN")}</option>
+                <option value="ACKNOWLEDGED">{t("statuses.ACKNOWLEDGED")}</option>
+                <option value="RESOLVED">{t("statuses.RESOLVED")}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs sm:text-sm">Search</Label>
+              <Label className="text-xs sm:text-sm">{t("filters.search")}</Label>
               <Input
-                placeholder="SKU or product name..."
+                placeholder={t("filters.searchPlaceholder")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="text-sm"
@@ -322,20 +325,20 @@ export default function ReorderAlertsPage() {
       {showFilters && (
         <Card className="sm:hidden shadow-sm">
           <CardHeader className="p-4">
-            <CardTitle className="text-base">Filters</CardTitle>
+            <CardTitle className="text-base">{t("filters.title")}</CardTitle>
             <CardDescription className="text-xs">
-              Filter alerts by warehouse, status, or SKU.
+              {t("filters.description")}
             </CardDescription>
           </CardHeader>
           <CardContent className="p-4 pt-0 space-y-4">
             <div className="space-y-2">
-              <Label className="text-xs">Warehouse</Label>
+              <Label className="text-xs">{t("filters.warehouse")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                 value={warehouseId}
                 onChange={(e) => setWarehouseId(e.target.value)}
               >
-                <option value="">All warehouses</option>
+                <option value="">{t("filters.allWarehouses")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -344,22 +347,22 @@ export default function ReorderAlertsPage() {
               </select>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs">Status</Label>
+              <Label className="text-xs">{t("filters.status")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
               >
-                <option value="">All</option>
-                <option value="OPEN">Open</option>
-                <option value="ACKNOWLEDGED">Acknowledged</option>
-                <option value="RESOLVED">Resolved</option>
+                <option value="">{t("filters.all")}</option>
+                <option value="OPEN">{t("statuses.OPEN")}</option>
+                <option value="ACKNOWLEDGED">{t("statuses.ACKNOWLEDGED")}</option>
+                <option value="RESOLVED">{t("statuses.RESOLVED")}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs">Search</Label>
+              <Label className="text-xs">{t("filters.search")}</Label>
               <Input
-                placeholder="SKU or product name..."
+                placeholder={t("filters.searchPlaceholder")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="text-sm"
@@ -370,7 +373,7 @@ export default function ReorderAlertsPage() {
               onClick={() => setShowFilters(false)}
               className="w-full"
             >
-              Close Filters
+              {t("filters.closeFilters")}
             </Button>
           </CardContent>
         </Card>
@@ -382,10 +385,10 @@ export default function ReorderAlertsPage() {
           <CardHeader className="p-4 sm:p-6">
             <CardTitle className="text-base sm:text-lg flex items-center gap-2">
               <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-              Create Manual Alert
+              {t("manual.title")}
             </CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              Open a single alert for a specific variant.
+              {t("manual.description")}
             </CardDescription>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
@@ -395,7 +398,7 @@ export default function ReorderAlertsPage() {
                 value={manualForm.warehouseId}
                 onChange={(e) => setManualForm((cur) => ({ ...cur, warehouseId: e.target.value }))}
               >
-                <option value="">Select Warehouse</option>
+                <option value="">{t("manual.selectWarehouse")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -405,9 +408,11 @@ export default function ReorderAlertsPage() {
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                 value={manualForm.productVariantId}
-                onChange={(e) => setManualForm((cur) => ({ ...cur, productVariantId: e.target.value }))}
+                onChange={(e) =>
+                  setManualForm((cur) => ({ ...cur, productVariantId: e.target.value }))
+                }
               >
-                <option value="">Select Variant</option>
+                <option value="">{t("manual.selectVariant")}</option>
                 {filteredVariants.map((variant) => (
                   <option key={variant.value} value={variant.value}>
                     {variant.label}
@@ -415,17 +420,17 @@ export default function ReorderAlertsPage() {
                 ))}
               </select>
               <Input
-                placeholder="Note (optional)"
+                placeholder={t("manual.notePlaceholder")}
                 value={manualForm.note}
                 onChange={(e) => setManualForm((cur) => ({ ...cur, note: e.target.value }))}
                 className="text-sm"
               />
-              <Button 
-                onClick={() => void createManual()} 
+              <Button
+                onClick={() => void createManual()}
                 disabled={creating}
                 className="w-full sm:w-auto"
               >
-                {creating ? "Creating..." : "Create Alert"}
+                {creating ? t("manual.creating") : t("manual.createAlert")}
               </Button>
             </div>
           </CardContent>
@@ -435,9 +440,9 @@ export default function ReorderAlertsPage() {
       {/* Alert Register */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Alert Register</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{t("register.title")}</CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Track open, acknowledged, and resolved alerts.
+            {t("register.description")}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
@@ -446,12 +451,24 @@ export default function ReorderAlertsPage() {
             <Table>
               <TableHeader>
                 <TableRow className="border-border hover:bg-transparent">
-                  <TableHead className="text-xs font-medium text-muted-foreground">Warehouse</TableHead>
-                  <TableHead className="text-xs font-medium text-muted-foreground">Variant</TableHead>
-                  <TableHead className="text-right text-xs font-medium text-muted-foreground">On hand</TableHead>
-                  <TableHead className="text-right text-xs font-medium text-muted-foreground">Threshold</TableHead>
-                  <TableHead className="text-right text-xs font-medium text-muted-foreground">Suggested</TableHead>
-                  <TableHead className="text-xs font-medium text-muted-foreground">Status</TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">
+                    {t("table.warehouse")}
+                  </TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">
+                    {t("table.variant")}
+                  </TableHead>
+                  <TableHead className="text-right text-xs font-medium text-muted-foreground">
+                    {t("table.onHand")}
+                  </TableHead>
+                  <TableHead className="text-right text-xs font-medium text-muted-foreground">
+                    {t("table.threshold")}
+                  </TableHead>
+                  <TableHead className="text-right text-xs font-medium text-muted-foreground">
+                    {t("table.suggested")}
+                  </TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">
+                    {t("table.status")}
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -460,7 +477,7 @@ export default function ReorderAlertsPage() {
                     <TableCell colSpan={6} className="text-center py-8">
                       <div className="flex flex-col items-center gap-2">
                         <Package className="h-8 w-8 text-muted-foreground/50" />
-                        <p className="text-sm text-muted-foreground">No alerts found.</p>
+                        <p className="text-sm text-muted-foreground">{t("empty")}</p>
                       </div>
                     </TableCell>
                   </TableRow>
@@ -468,23 +485,33 @@ export default function ReorderAlertsPage() {
                   alerts.map((alert) => (
                     <TableRow key={alert.id} className="border-border hover:bg-muted/40">
                       <TableCell className="py-3">
-                        <div className="font-medium text-sm text-foreground">{alert.warehouse.name}</div>
-                        <div className="text-xs text-muted-foreground mt-0.5">{alert.warehouse.code}</div>
+                        <div className="font-medium text-sm text-foreground">
+                          {alert.warehouse.name}
+                        </div>
+                        <div className="text-xs text-muted-foreground mt-0.5">
+                          {alert.warehouse.code}
+                        </div>
                       </TableCell>
                       <TableCell className="py-3">
                         <div className="font-medium text-sm text-foreground">
                           {alert.productVariant.product.name}
                         </div>
-                        <div className="text-xs text-muted-foreground mt-0.5">{alert.productVariant.sku}</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">
+                          {alert.productVariant.sku}
+                        </div>
                         {alert.note && (
-                          <div className="text-xs text-muted-foreground mt-1 italic">{alert.note}</div>
+                          <div className="text-xs text-muted-foreground mt-1 italic">
+                            {alert.note}
+                          </div>
                         )}
                       </TableCell>
                       <TableCell className="text-right py-3">
-                        <span className={cn(
-                          "font-medium",
-                          alert.stockOnHand <= alert.threshold && "text-destructive"
-                        )}>
+                        <span
+                          className={cn(
+                            "font-medium",
+                            alert.stockOnHand <= alert.threshold && "text-destructive",
+                          )}
+                        >
                           {alert.stockOnHand}
                         </span>
                       </TableCell>
@@ -499,21 +526,27 @@ export default function ReorderAlertsPage() {
                           <select
                             className={cn(
                               "rounded-md border px-2 py-1 text-xs font-medium",
-                              getStatusColor(alert.status)
+                              getStatusColor(alert.status),
                             )}
                             value={alert.status}
-                            onChange={(e) => void updateStatus(alert.id, e.target.value as AlertRow["status"])}
+                            onChange={(e) =>
+                              void updateStatus(alert.id, e.target.value as AlertRow["status"])
+                            }
                           >
-                            <option value="OPEN">Open</option>
-                            <option value="ACKNOWLEDGED">Acknowledged</option>
-                            <option value="RESOLVED">Resolved</option>
+                            <option value="OPEN">{t("statuses.OPEN")}</option>
+                            <option value="ACKNOWLEDGED">
+                              {t("statuses.ACKNOWLEDGED")}
+                            </option>
+                            <option value="RESOLVED">{t("statuses.RESOLVED")}</option>
                           </select>
                         ) : (
-                          <span className={cn(
-                            "inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium",
-                            getStatusColor(alert.status)
-                          )}>
-                            {alert.status}
+                          <span
+                            className={cn(
+                              "inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium",
+                              getStatusColor(alert.status),
+                            )}
+                          >
+                            {t(`statuses.${alert.status}` as any)}
                           </span>
                         )}
                       </TableCell>
@@ -529,7 +562,7 @@ export default function ReorderAlertsPage() {
             {alerts.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-8 text-center">
                 <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-                <p className="text-sm text-muted-foreground">No alerts found.</p>
+                <p className="text-sm text-muted-foreground">{t("empty")}</p>
               </div>
             ) : (
               alerts.map((alert) => {
@@ -537,7 +570,6 @@ export default function ReorderAlertsPage() {
                 return (
                   <Card key={alert.id} className="border-border shadow-sm">
                     <CardContent className="p-4 space-y-3">
-                      {/* Header */}
                       <div className="flex items-start justify-between">
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-semibold text-foreground">
@@ -547,74 +579,88 @@ export default function ReorderAlertsPage() {
                             {alert.productVariant.sku}
                           </p>
                         </div>
-                        <div className={cn(
-                          "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ml-2",
-                          getStatusColor(alert.status)
-                        )}>
+                        <div
+                          className={cn(
+                            "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ml-2",
+                            getStatusColor(alert.status),
+                          )}
+                        >
                           <StatusIcon className="h-3 w-3" />
-                          {alert.status}
+                          {t(`statuses.${alert.status}` as any)}
                         </div>
                       </div>
 
-                      {/* Warehouse */}
                       <div className="space-y-1">
                         <div className="flex items-center gap-2 text-sm">
-                          <span className="text-muted-foreground">Warehouse:</span>
+                          <span className="text-muted-foreground">
+                            {t("table.warehouse")}:
+                          </span>
                           <span className="text-foreground font-medium">
                             {alert.warehouse.name} ({alert.warehouse.code})
                           </span>
                         </div>
                       </div>
 
-                      {/* Stock Info */}
                       <div className="grid grid-cols-3 gap-3 pt-2 border-t border-border/50">
                         <div>
-                          <p className="text-xs text-muted-foreground">On Hand</p>
-                          <p className={cn(
-                            "text-base font-semibold",
-                            alert.stockOnHand <= alert.threshold && "text-destructive"
-                          )}>
+                          <p className="text-xs text-muted-foreground">
+                            {t("table.onHand")}
+                          </p>
+                          <p
+                            className={cn(
+                              "text-base font-semibold",
+                              alert.stockOnHand <= alert.threshold && "text-destructive",
+                            )}
+                          >
                             {alert.stockOnHand}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Threshold</p>
+                          <p className="text-xs text-muted-foreground">
+                            {t("table.threshold")}
+                          </p>
                           <p className="text-base font-semibold text-foreground">
                             {alert.threshold}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Suggested</p>
+                          <p className="text-xs text-muted-foreground">
+                            {t("table.suggested")}
+                          </p>
                           <p className="text-base font-semibold text-primary">
                             {alert.suggestedQty}
                           </p>
                         </div>
                       </div>
 
-                      {/* Note */}
                       {alert.note && (
                         <div className="pt-2 border-t border-border/50">
-                          <p className="text-xs text-muted-foreground italic">Note: {alert.note}</p>
+                          <p className="text-xs text-muted-foreground italic">
+                            {t("labels.note")}: {alert.note}
+                          </p>
                         </div>
                       )}
 
-                      {/* Status Update for Mobile */}
                       {canManage && (
                         <div className="pt-2">
                           <label className="text-xs text-muted-foreground block mb-1">
-                            Update Status
+                            {t("table.updateStatus")}
                           </label>
                           <select
                             className={cn(
                               "w-full rounded-md border px-3 py-2 text-sm font-medium",
-                              getStatusColor(alert.status)
+                              getStatusColor(alert.status),
                             )}
                             value={alert.status}
-                            onChange={(e) => void updateStatus(alert.id, e.target.value as AlertRow["status"])}
+                            onChange={(e) =>
+                              void updateStatus(alert.id, e.target.value as AlertRow["status"])
+                            }
                           >
-                            <option value="OPEN">Open</option>
-                            <option value="ACKNOWLEDGED">Acknowledged</option>
-                            <option value="RESOLVED">Resolved</option>
+                            <option value="OPEN">{t("statuses.OPEN")}</option>
+                            <option value="ACKNOWLEDGED">
+                              {t("statuses.ACKNOWLEDGED")}
+                            </option>
+                            <option value="RESOLVED">{t("statuses.RESOLVED")}</option>
                           </select>
                         </div>
                       )}
