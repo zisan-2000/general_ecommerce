@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { DollarSign, Package, Save, Upload, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -77,6 +78,8 @@ export default function BundleFormModal({
   bundleId,
   onSuccess,
 }: BundleFormModalProps) {
+  const t = useTranslations("AdminBundles.form");
+  const locale = useLocale();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const isEdit = mode === "edit";
 
@@ -103,7 +106,7 @@ export default function BundleFormModal({
   };
 
   const formatCurrency = (amount: number, currency = "BDT") =>
-    new Intl.NumberFormat("en-US", {
+    new Intl.NumberFormat(locale, {
       style: "currency",
       currency,
       minimumFractionDigits: 2,
@@ -166,7 +169,7 @@ export default function BundleFormModal({
 
         if (isEdit) {
           if (!bundleRes?.ok || !bundleData) {
-            throw new Error(bundleData?.error || "Failed to load bundle");
+            throw new Error(t("errors.loadBundle"));
           }
 
           setFormData({
@@ -275,7 +278,7 @@ export default function BundleFormModal({
       } catch (error) {
         console.error("Error loading bundle form data:", error);
         toast.error(
-          error instanceof Error ? error.message : "Failed to load bundle form",
+          error instanceof Error ? error.message : t("errors.loadForm"),
         );
         onOpenChange(false);
       } finally {
@@ -284,12 +287,12 @@ export default function BundleFormModal({
     };
 
     void loadModalData();
-  }, [open, isEdit, bundleId, onOpenChange]);
+  }, [open, isEdit, bundleId, onOpenChange, t]);
 
   const pricingState = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
     if (validItems.length < 1) {
-      return { value: null, error: "Choose enough default components to calculate a bundle price" };
+      return { value: null, error: t("validation.defaultComponentsForPrice") };
     }
 
     try {
@@ -305,13 +308,13 @@ export default function BundleFormModal({
         }),
         error: "",
       };
-    } catch (error) {
+    } catch {
       return {
         value: null,
-        error: error instanceof Error ? error.message : "Bundle pricing is invalid",
+        error: t("validation.invalidPricing"),
       };
     }
-  }, [selectedItems, discountType, discountValue, manualPrice]);
+  }, [selectedItems, discountType, discountValue, manualPrice, t]);
   const pricing = pricingState.value;
 
   const validation = useMemo(() => {
@@ -319,68 +322,68 @@ export default function BundleFormModal({
     if (formData.bundleStockLimit !== "") {
       const stockLimit = Number(formData.bundleStockLimit);
       if (!Number.isInteger(stockLimit) || stockLimit < 0) {
-        errors.push("Bundle stock must be a whole number of zero or more");
+        errors.push(t("validation.stockWholeNumber"));
       }
     }
-    if (groups.length < 2) errors.push("At least two groups are required");
+    if (groups.length < 2) errors.push(t("validation.twoGroups"));
     const names = new Set<string>();
     for (const [index, group] of groups.entries()) {
-      const label = `Group ${index + 1}`;
+      const label = t("validation.groupLabel", { number: index + 1 });
       const normalizedName = group.name.trim().toLowerCase();
-      if (!normalizedName) errors.push(`${label} requires a name`);
-      if (normalizedName && names.has(normalizedName)) errors.push(`${label} has a duplicate name`);
+      if (!normalizedName) errors.push(t("validation.groupNameRequired", { group: label }));
+      if (normalizedName && names.has(normalizedName)) errors.push(t("validation.groupNameDuplicate", { group: label }));
       if (normalizedName) names.add(normalizedName);
-      if (group.options.length === 0) errors.push(`${label} requires a choice`);
+      if (group.options.length === 0) errors.push(t("validation.choiceRequired", { group: label }));
       if (group.selectionType === "FIXED" && group.options.length !== 1) {
-        errors.push(`${label} must have exactly one fixed choice`);
+        errors.push(t("validation.oneFixedChoice", { group: label }));
       }
       if (group.selectionType === "OPTIONAL" && group.required) {
-        errors.push(`${label} is optional and cannot be required`);
+        errors.push(t("validation.optionalCannotBeRequired", { group: label }));
       }
       if (group.selectionType !== "OPTIONAL" && !group.required) {
-        errors.push(`${label} must be required`);
+        errors.push(t("validation.mustBeRequired", { group: label }));
       }
       if (group.selectionType === "FIXED" && (group.minSelect !== 1 || group.maxSelect !== 1)) {
-        errors.push(`${label} must select exactly one fixed choice`);
+        errors.push(t("validation.selectOneFixed", { group: label }));
       }
       if (group.selectionType === "OPTIONAL" && group.minSelect !== 0) {
-        errors.push(`${label} must allow zero choices`);
+        errors.push(t("validation.allowZero", { group: label }));
       }
       if (group.selectionType !== "OPTIONAL" && group.minSelect < 1) {
-        errors.push(`${label} must require at least one choice`);
+        errors.push(t("validation.requireOne", { group: label }));
       }
       if (!Number.isInteger(group.minSelect) || !Number.isInteger(group.maxSelect) || group.minSelect < 0 || group.maxSelect < 1 || group.minSelect > group.maxSelect) {
-        errors.push(`${label} has invalid selection limits`);
+        errors.push(t("validation.invalidSelectionLimits", { group: label }));
       }
       if (group.maxSelect > group.options.length) {
-        errors.push(`${label} cannot select more choices than it provides`);
+        errors.push(t("validation.tooManySelections", { group: label }));
       }
       const defaultCount = group.options.filter((option) => option.isDefault).length;
       if (defaultCount < group.minSelect || defaultCount > group.maxSelect) {
-        errors.push(`${label} defaults must satisfy selection limits`);
+        errors.push(t("validation.defaultsOutsideLimits", { group: label }));
       }
       if (
         !Number.isInteger(group.minQuantity) || group.minQuantity < 1 ||
         !Number.isInteger(group.maxQuantity) || group.maxQuantity < group.minQuantity ||
         !Number.isInteger(group.defaultQuantity) || group.defaultQuantity < group.minQuantity || group.defaultQuantity > group.maxQuantity
       ) {
-        errors.push(`${label} has invalid quantity limits`);
+        errors.push(t("validation.invalidQuantityLimits", { group: label }));
       }
       const choiceKeys = new Set<string>();
       const productIds = new Set<number>();
       for (const option of group.options) {
         const key = `${option.productId}:${option.variantId ?? "default"}`;
-        if (choiceKeys.has(key)) errors.push(`${label} contains a duplicate choice`);
+        if (choiceKeys.has(key)) errors.push(t("validation.duplicateChoice", { group: label }));
         choiceKeys.add(key);
         productIds.add(option.productId);
-        if (!Number.isFinite(option.priceAdjustment)) errors.push(`${label} has an invalid price adjustment`);
+        if (!Number.isFinite(option.priceAdjustment)) errors.push(t("validation.invalidPriceAdjustment", { group: label }));
       }
       if (group.selectionType === "VARIANT_SELECT" && productIds.size > 1) {
-        errors.push(`${label} can only contain variants of one product`);
+        errors.push(t("validation.oneProductVariants", { group: label }));
       }
     }
     return { isValid: errors.length === 0, errors };
-  }, [groups, formData.bundleStockLimit]);
+  }, [groups, formData.bundleStockLimit, t]);
 
   const bundleStockMetrics = useMemo(() => {
     const validItems = selectedItems.filter(
@@ -506,14 +509,14 @@ export default function BundleFormModal({
 
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.success) {
-        throw new Error(data.error || "Upload failed");
+        throw new Error(t("errors.upload"));
       }
 
       setFormData((prev) => ({ ...prev, image: data.fileUrl }));
-      toast.success("Image uploaded successfully");
+      toast.success(t("success.imageUploaded"));
     } catch (error) {
       console.error("Upload error:", error);
-      toast.error("Failed to upload image");
+      toast.error(t("errors.uploadImage"));
     } finally {
       setUploading(false);
     }
@@ -525,32 +528,32 @@ export default function BundleFormModal({
     const validItems = selectedItems.filter((item) => item?.product?.id);
 
     if (!formData.name.trim()) {
-      toast.error("Bundle name is required");
+      toast.error(t("validation.nameRequired"));
       return;
     }
 
     if (!formData.sku.trim()) {
-      toast.error("Bundle SKU is required");
+      toast.error(t("validation.skuRequired"));
       return;
     }
 
     if (!formData.description.trim()) {
-      toast.error("Bundle description is required");
+      toast.error(t("validation.descriptionRequired"));
       return;
     }
 
     if (!formData.categoryId) {
-      toast.error("Please select a bundle category");
+      toast.error(t("validation.categoryRequired"));
       return;
     }
 
     if (groups.length < 2 || groups.some((group) => !group.name.trim() || group.options.length === 0)) {
-      toast.error("Add at least two complete selection groups");
+      toast.error(t("validation.completeGroups"));
       return;
     }
 
     if (!validation.isValid || !pricing || validItems.length < 1) {
-      toast.error("Please fix the bundle configuration");
+      toast.error(t("validation.fixConfiguration"));
       return;
     }
 
@@ -620,11 +623,11 @@ export default function BundleFormModal({
 
       const result = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(result.error || "Failed to save bundle");
+        throw new Error(t("errors.save"));
       }
 
       toast.success(
-        isEdit ? "Bundle updated successfully" : "Bundle created successfully",
+        isEdit ? t("success.updated") : t("success.created"),
       );
       const nextBundleId = Number(result.bundle?.id || bundleId);
       onOpenChange(false);
@@ -634,7 +637,7 @@ export default function BundleFormModal({
     } catch (error) {
       console.error("Error saving bundle:", error);
       toast.error(
-        error instanceof Error ? error.message : "Failed to save bundle",
+        error instanceof Error ? error.message : t("errors.save"),
       );
     } finally {
       setSaving(false);
@@ -645,11 +648,11 @@ export default function BundleFormModal({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-7xl p-0 sm:rounded-2xl">
         <DialogHeader className="border-b px-6 py-4">
-          <DialogTitle>{isEdit ? "Edit Bundle" : "Create Bundle"}</DialogTitle>
+          <DialogTitle>{isEdit ? t("dialog.editTitle") : t("dialog.createTitle")}</DialogTitle>
           <DialogDescription>
             {isEdit
-              ? "Update customer choices, component inventory and pricing."
-              : "Create a configurable bundle with fixed, selectable or optional groups."}
+              ? t("dialog.editDescription")
+              : t("dialog.createDescription")}
           </DialogDescription>
         </DialogHeader>
 
@@ -666,11 +669,11 @@ export default function BundleFormModal({
               <div className="space-y-6 lg:col-span-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Basic Information</CardTitle>
+                    <CardTitle>{t("basic.title")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <Label htmlFor="bundle-name">Bundle Name *</Label>
+                      <Label htmlFor="bundle-name">{t("basic.name")}</Label>
                       <Input
                         id="bundle-name"
                         value={formData.name}
@@ -680,13 +683,13 @@ export default function BundleFormModal({
                             name: e.target.value,
                           }))
                         }
-                        placeholder="e.g., Summer Bundle, Starter Pack"
+                        placeholder={t("basic.namePlaceholder")}
                         required
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="bundle-sku">Bundle SKU *</Label>
+                      <Label htmlFor="bundle-sku">{t("basic.sku")}</Label>
                       <Input
                         id="bundle-sku"
                         value={formData.sku}
@@ -696,14 +699,14 @@ export default function BundleFormModal({
                             sku: e.target.value,
                           }))
                         }
-                        placeholder="e.g., BUNDLE-STARTER-001"
+                        placeholder={t("basic.skuPlaceholder")}
                         required
                       />
                     </div>
 
                     <div>
                       <Label htmlFor="bundle-short-desc">
-                        Short Description
+                        {t("basic.shortDescription")}
                       </Label>
                       <Input
                         id="bundle-short-desc"
@@ -714,13 +717,13 @@ export default function BundleFormModal({
                             shortDesc: e.target.value,
                           }))
                         }
-                        placeholder="Brief description for product listings"
+                        placeholder={t("basic.shortDescriptionPlaceholder")}
                       />
                     </div>
 
                     <div>
                       <Label htmlFor="bundle-description">
-                        Full Description *
+                        {t("basic.fullDescription")}
                       </Label>
                       <Textarea
                         id="bundle-description"
@@ -731,7 +734,7 @@ export default function BundleFormModal({
                             description: e.target.value,
                           }))
                         }
-                        placeholder="Detailed description of what's included in this bundle..."
+                        placeholder={t("basic.fullDescriptionPlaceholder")}
                         rows={4}
                         required
                       />
@@ -740,7 +743,7 @@ export default function BundleFormModal({
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                       <div>
                         <Label htmlFor="bundle-category">
-                          Bundle Category *
+                          {t("basic.category")}
                         </Label>
                         <Select
                           value={formData.categoryId}
@@ -752,7 +755,7 @@ export default function BundleFormModal({
                           }
                         >
                           <SelectTrigger id="bundle-category">
-                            <SelectValue placeholder="Select category" />
+                            <SelectValue placeholder={t("basic.categoryPlaceholder")} />
                           </SelectTrigger>
                           <SelectContent>
                             {categories.map((category) => (
@@ -768,7 +771,7 @@ export default function BundleFormModal({
                       </div>
 
                       <div>
-                        <Label htmlFor="bundle-brand">Brand</Label>
+                        <Label htmlFor="bundle-brand">{t("basic.brand")}</Label>
                         <Select
                           value={formData.brandId}
                           onValueChange={(value) =>
@@ -776,10 +779,10 @@ export default function BundleFormModal({
                           }
                         >
                           <SelectTrigger id="bundle-brand">
-                            <SelectValue placeholder="Select brand" />
+                            <SelectValue placeholder={t("basic.brandPlaceholder")} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="none">No brand</SelectItem>
+                            <SelectItem value="none">{t("basic.noBrand")}</SelectItem>
                             {brands.map((brand) => (
                               <SelectItem
                                 key={brand.id}
@@ -795,7 +798,7 @@ export default function BundleFormModal({
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                       <div>
-                        <Label htmlFor="bundle-vat">VAT Class</Label>
+                        <Label htmlFor="bundle-vat">{t("basic.vatClass")}</Label>
                         <Select
                           value={formData.vatClassId}
                           onValueChange={(value) =>
@@ -806,10 +809,10 @@ export default function BundleFormModal({
                           }
                         >
                           <SelectTrigger id="bundle-vat">
-                            <SelectValue placeholder="Select VAT class" />
+                            <SelectValue placeholder={t("basic.vatClassPlaceholder")} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="none">No VAT Class</SelectItem>
+                            <SelectItem value="none">{t("basic.noVatClass")}</SelectItem>
                             {vatClasses.map((vatClass) => (
                               <SelectItem
                                 key={vatClass.id}
@@ -825,7 +828,7 @@ export default function BundleFormModal({
 
                     <div>
                       <Label htmlFor="bundle-stock-limit">
-                        Bundle Stock
+                        {t("stock.fieldLabel")}
                       </Label>
                       <Input
                         id="bundle-stock-limit"
@@ -840,13 +843,12 @@ export default function BundleFormModal({
                         }
                         placeholder={
                           bundleStockMetrics.maxBundlesFromStock > 0
-                            ? `Max ${bundleStockMetrics.maxBundlesFromStock}`
-                            : "Calculated from selected products"
+                            ? t("stock.maxPlaceholder", { count: bundleStockMetrics.maxBundlesFromStock })
+                            : t("stock.calculatedPlaceholder")
                         }
                       />
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Optional global sale cap. Leave empty to use the
-                        capacity calculated from the selected components.
+                        {t("stock.saleCapHint")}
                       </p>
                     </div>
 
@@ -861,7 +863,7 @@ export default function BundleFormModal({
                             }))
                           }
                         />
-                        <span className="text-sm">Available</span>
+                        <span className="text-sm">{t("basic.available")}</span>
                       </label>
 
                       <label className="flex items-center space-x-2">
@@ -874,7 +876,7 @@ export default function BundleFormModal({
                             }))
                           }
                         />
-                        <span className="text-sm">Featured</span>
+                        <span className="text-sm">{t("basic.featured")}</span>
                       </label>
                     </div>
                   </CardContent>
@@ -884,7 +886,7 @@ export default function BundleFormModal({
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Package className="h-5 w-5" />
-                      Configurable Bundle Groups
+                      {t("groups.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -898,13 +900,13 @@ export default function BundleFormModal({
                     {(!validation.isValid || hasOutOfStockItems || pricingState.error) && (
                       <div className="mt-4 rounded-lg border border-destructive/20 bg-destructive/10 p-3" role="alert">
                         <p className="mb-1 text-sm font-medium text-destructive">
-                          Complete these bundle requirements
+                          {t("requirements.title")}
                         </p>
                         <ul className="list-inside list-disc text-sm text-destructive">
                           {validation.errors.map((error, index) => (
                             <li key={`${error}-${index}`}>{error}</li>
                           ))}
-                          {hasOutOfStockItems && <li>Some selected physical items are out of stock</li>}
+                          {hasOutOfStockItems && <li>{t("requirements.outOfStock")}</li>}
                           {pricingState.error && <li>{pricingState.error}</li>}
                         </ul>
                       </div>
@@ -915,16 +917,14 @@ export default function BundleFormModal({
                         <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                           <div>
                             <p className="text-sm font-medium">
-                              Bundle Stock Summary
+                              {t("stock.summaryTitle")}
                             </p>
                             <p className="text-xs text-muted-foreground">
-                              Default configuration capacity from available
-                              component stock
+                              {t("stock.summaryDescription")}
                             </p>
                           </div>
                           <Badge variant="secondary">
-                            Max Buildable Bundles:{" "}
-                            {bundleStockMetrics.maxBundlesFromStock}
+                            {t("stock.maxBuildable", { count: bundleStockMetrics.maxBundlesFromStock })}
                           </Badge>
                         </div>
 
@@ -936,11 +936,11 @@ export default function BundleFormModal({
                             >
                               <span className="font-medium">{item.name}</span>
                               <div className="flex flex-wrap items-center gap-3 text-muted-foreground">
-                                <span>Stock: {item.stock}</span>
+                                <span>{t("stock.itemStock", { count: item.stock })}</span>
                                 <span>
-                                  Qty / Bundle: {item.quantityPerBundle}
+                                  {t("stock.quantityPerBundle", { count: item.quantityPerBundle })}
                                 </span>
-                                <span>Possible Bundles: {item.maxBundles}</span>
+                                <span>{t("stock.possibleBundles", { count: item.maxBundles })}</span>
                               </div>
                             </div>
                           ))}
@@ -956,12 +956,12 @@ export default function BundleFormModal({
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <DollarSign className="h-5 w-5" />
-                      Pricing
+                      {t("pricing.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <Label htmlFor="discount-type">Discount Type</Label>
+                      <Label htmlFor="discount-type">{t("pricing.discountType")}</Label>
                       <Select
                         value={discountType}
                         onValueChange={(value: DiscountType) =>
@@ -973,12 +973,12 @@ export default function BundleFormModal({
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="PERCENTAGE">
-                            Percentage Discount
+                            {t("pricing.percentageDiscount")}
                           </SelectItem>
                           <SelectItem value="FIXED">
-                            Fixed Amount Discount
+                            {t("pricing.fixedDiscount")}
                           </SelectItem>
-                          <SelectItem value="MANUAL">Manual Price</SelectItem>
+                          <SelectItem value="MANUAL">{t("pricing.manualPrice")}</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -986,7 +986,7 @@ export default function BundleFormModal({
                     {discountType === "PERCENTAGE" && (
                       <div>
                         <Label htmlFor="discount-value">
-                          Discount Percentage
+                          {t("pricing.discountPercentage")}
                         </Label>
                         <div className="flex items-center gap-2">
                           <Input
@@ -1007,7 +1007,7 @@ export default function BundleFormModal({
 
                     {discountType === "FIXED" && (
                       <div>
-                        <Label htmlFor="discount-amount">Discount Amount</Label>
+                        <Label htmlFor="discount-amount">{t("pricing.discountAmount")}</Label>
                         <Input
                           id="discount-amount"
                           type="number"
@@ -1021,7 +1021,7 @@ export default function BundleFormModal({
 
                     {discountType === "MANUAL" && (
                       <div>
-                        <Label htmlFor="manual-price">Final Bundle Price</Label>
+                        <Label htmlFor="manual-price">{t("pricing.finalPrice")}</Label>
                         <Input
                           id="manual-price"
                           type="number"
@@ -1037,7 +1037,7 @@ export default function BundleFormModal({
                       <div className="space-y-3 rounded-lg border bg-muted/30 p-4">
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-muted-foreground">
-                            Regular Total:
+                            {t("pricing.regularTotal")}
                           </span>
                           <span className="font-medium line-through">
                             {formatCurrency(
@@ -1048,7 +1048,7 @@ export default function BundleFormModal({
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-muted-foreground">
-                            Bundle Price:
+                            {t("pricing.bundlePrice")}
                           </span>
                           <span className="text-lg font-bold text-green-600">
                             {formatCurrency(
@@ -1059,7 +1059,7 @@ export default function BundleFormModal({
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-muted-foreground">
-                            Savings:
+                            {t("pricing.savings")}
                           </span>
                           <Badge
                             variant="secondary"
@@ -1080,12 +1080,12 @@ export default function BundleFormModal({
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Bundle Availability</CardTitle>
+                    <CardTitle>{t("availability.title")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
-                        Default component capacity
+                        {t("availability.componentCapacity")}
                       </span>
                       <span className="font-medium">
                         {bundleStockMetrics.maxBundlesFromStock}
@@ -1093,15 +1093,15 @@ export default function BundleFormModal({
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
-                        Bundle sale limit
+                        {t("availability.saleLimit")}
                       </span>
                       <span className="font-medium">
-                        {formData.bundleStockLimit || "Not set"}
+                        {formData.bundleStockLimit || t("availability.notSet")}
                       </span>
                     </div>
                     <div className="flex items-center justify-between border-t pt-3">
                       <span className="text-sm font-medium">
-                        Effective bundle stock
+                        {t("availability.effectiveStock")}
                       </span>
                       <span className="text-lg font-bold text-primary">
                         {bundleStockMetrics.effectiveBundleStock}
@@ -1114,7 +1114,7 @@ export default function BundleFormModal({
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Upload className="h-5 w-5" />
-                      Bundle Image
+                      {t("image.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -1123,7 +1123,7 @@ export default function BundleFormModal({
                         <div className="h-48 w-full overflow-hidden rounded-lg bg-muted">
                           <Image
                             src={formData.image}
-                            alt="Bundle preview"
+                            alt={t("image.previewAlt")}
                             width={300}
                             height={200}
                             className="h-full w-full object-cover"
@@ -1138,7 +1138,7 @@ export default function BundleFormModal({
                             setFormData((prev) => ({ ...prev, image: "" }))
                           }
                         >
-                          Remove Image
+                          {t("image.remove")}
                         </Button>
                       </div>
                     ) : (
@@ -1146,7 +1146,7 @@ export default function BundleFormModal({
                         <div className="text-center">
                           <Upload className="mx-auto mb-2 h-8 w-8 text-muted-foreground" />
                           <p className="text-sm text-muted-foreground">
-                            Upload bundle image
+                            {t("image.empty")}
                           </p>
                         </div>
                       </div>
@@ -1172,7 +1172,7 @@ export default function BundleFormModal({
                         onClick={() => fileInputRef.current?.click()}
                         disabled={uploading}
                       >
-                        {uploading ? "Uploading..." : "Choose Image"}
+                        {uploading ? t("image.uploading") : t("image.choose")}
                       </Button>
                       <Button
                         type="button"
@@ -1183,13 +1183,13 @@ export default function BundleFormModal({
                         disabled={!formData.image}
                       >
                         <X className="mr-2 h-4 w-4" />
-                        Clear
+                        {t("image.clear")}
                       </Button>
                     </div>
 
                     <Input
                       type="text"
-                      placeholder="Enter image URL"
+                      placeholder={t("image.urlPlaceholder")}
                       value={formData.image}
                       onChange={(e) =>
                         setFormData((prev) => ({
@@ -1206,12 +1206,12 @@ export default function BundleFormModal({
             <div className="sticky bottom-0 z-20 -mx-6 mt-6 flex flex-col-reverse gap-3 border-t bg-background/95 px-6 py-4 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] backdrop-blur sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm text-muted-foreground" aria-live="polite">
                 {validation.isValid && pricing && !hasOutOfStockItems
-                  ? "Bundle configuration is ready to save."
-                  : "Complete the highlighted requirements before saving."}
+                  ? t("footer.ready")
+                  : t("footer.incomplete")}
               </p>
               <div className="flex gap-2">
                 <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
                 <Button
                   type="submit"
@@ -1220,12 +1220,12 @@ export default function BundleFormModal({
                   {saving ? (
                     <>
                       <div className="mr-2 h-4 w-4 animate-spin rounded-full border-b-2 border-white" />
-                      {isEdit ? "Updating Bundle..." : "Creating Bundle..."}
+                      {isEdit ? t("actions.updating") : t("actions.creating")}
                     </>
                   ) : (
                     <>
                       <Save className="mr-2 h-4 w-4" />
-                      {isEdit ? "Update Bundle" : "Create Bundle"}
+                      {isEdit ? t("actions.update") : t("actions.create")}
                     </>
                   )}
                 </Button>

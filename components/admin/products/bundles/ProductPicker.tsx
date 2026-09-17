@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { Package, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -76,6 +77,8 @@ export default function ProductPicker({
   categories,
   warehouseId,
 }: ProductPickerProps) {
+  const t = useTranslations("AdminBundles.picker");
+  const locale = useLocale();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -119,7 +122,7 @@ export default function ProductPicker({
       const response = await fetch(
         `/api/admin/operations/products/bundles/search-products?${params}`
       );
-      if (!response.ok) throw new Error("Failed to fetch products");
+      if (!response.ok) throw new Error(t("errors.fetch"));
 
       const data = await response.json();
       let fetchedProducts = data.products || [];
@@ -166,7 +169,7 @@ export default function ProductPicker({
       setShowProducts(true);
     } catch (error) {
       console.error("Error fetching products:", error);
-      toast.error("Failed to fetch products");
+      toast.error(t("errors.fetch"));
     } finally {
       setLoading(false);
     }
@@ -191,12 +194,12 @@ export default function ProductPicker({
 
   const addItem = (product: Product) => {
     if (!product || !product.id || !product.name) {
-      toast.error("Invalid product data");
+      toast.error(t("errors.invalidProduct"));
       return;
     }
 
     if (product.stock <= 0) {
-      toast.error("This product is out of stock");
+      toast.error(t("errors.productOutOfStock"));
       return;
     }
 
@@ -208,7 +211,7 @@ export default function ProductPicker({
 
     const variantStock = selectedVariant?.stock || 0;
     if (selectedVariant && variantStock <= 0) {
-      toast.error("Selected variant is out of stock");
+      toast.error(t("errors.variantOutOfStock"));
       return;
     }
 
@@ -304,7 +307,7 @@ export default function ProductPicker({
   };
 
   const formatCurrency = (amount: number, currency = "BDT") => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency: currency === "BDT" ? "BDT" : currency,
       minimumFractionDigits: 2,
@@ -319,7 +322,7 @@ export default function ProductPicker({
       {categoryIds && categoryIds.length > 0 && (
         <div>
           <label className="text-sm font-medium mb-2 block">
-            Select Category to View Products
+            {t("categoryLabel")}
           </label>
           <Select
             value={selectedCategory}
@@ -329,7 +332,7 @@ export default function ProductPicker({
             }}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select a category" />
+              <SelectValue placeholder={t("categoryPlaceholder")} />
             </SelectTrigger>
             <SelectContent>
               {categoryIds.map((categoryId) => {
@@ -338,7 +341,7 @@ export default function ProductPicker({
                 );
                 return (
                   <SelectItem key={categoryId} value={categoryId}>
-                    {category?.name || `Category ${categoryId}`}
+                    {category?.name || t("categoryNumber", { id: categoryId })}
                   </SelectItem>
                 );
               })}
@@ -350,7 +353,7 @@ export default function ProductPicker({
       {(!categoryIds || categoryIds.length === 0) && (
         <Card className="p-4 text-center text-muted-foreground">
           <Package className="h-8 w-8 mx-auto mb-2" />
-          <p>Please select product categories above to show available products</p>
+          <p>{t("chooseCategoryHint")}</p>
         </Card>
       )}
 
@@ -386,18 +389,18 @@ export default function ProductPicker({
                           variant={product.stock > 0 ? "outline" : "destructive"}
                           className="text-xs"
                         >
-                          Total Stock: {product.stock}
+                          {t("totalStock", { count: product.stock })}
                         </Badge>
 
                         {warehouseId && (
                           <Badge variant="secondary" className="text-xs">
-                            Warehouse Stock
+                            {t("warehouseStock")}
                           </Badge>
                         )}
 
                         {product.stock <= 0 && (
                           <Badge variant="destructive" className="text-xs">
-                            Out of Stock
+                            {t("outOfStock")}
                           </Badge>
                         )}
                       </div>
@@ -418,7 +421,7 @@ export default function ProductPicker({
                             }}
                           >
                             <SelectTrigger className="w-full h-8">
-                              <SelectValue placeholder="Select variant" />
+                              <SelectValue placeholder={t("variantPlaceholder")} />
                             </SelectTrigger>
                             <SelectContent>
                               {product.variants.map((variant) => (
@@ -430,10 +433,10 @@ export default function ProductPicker({
                                   {variant.sku} -{" "}
                                   {formatCurrency(variant.price, product.currency)} (
                                   {warehouseId
-                                    ? `${variant.stock || 0} in warehouse`
-                                    : `${variant.stock} in stock`}
+                                    ? t("inWarehouse", { count: variant.stock || 0 })
+                                    : t("inStock", { count: variant.stock })}
                                   )
-                                  {(variant.stock || 0) <= 0 && " - OUT OF STOCK"}
+                                  {(variant.stock || 0) <= 0 && ` - ${t("outOfStock")}`}
                                 </SelectItem>
                               ))}
                             </SelectContent>
@@ -461,7 +464,7 @@ export default function ProductPicker({
                       className="flex-shrink-0"
                       disabled={product.stock <= 0}
                     >
-                      {product.stock > 0 ? "Add" : "Out of Stock"}
+                      {product.stock > 0 ? t("add") : t("outOfStock")}
                     </Button>
                   </div>
                 </div>
@@ -474,7 +477,7 @@ export default function ProductPicker({
       {showProducts && products.length === 0 && !loading && (
         <Card className="p-4 text-center text-muted-foreground">
           <Package className="h-8 w-8 mx-auto mb-2" />
-          <p>No products found in this category</p>
+          <p>{t("emptyCategory")}</p>
         </Card>
       )}
 
@@ -483,7 +486,7 @@ export default function ProductPicker({
           <CardContent className="p-4">
             <h3 className="font-medium mb-3 flex items-center gap-2">
               <Package className="h-4 w-4" />
-              Selected Products ({selectedItems.length})
+              {t("selectedProducts", { count: selectedItems.length })}
             </h3>
 
             <div className="space-y-3">
@@ -521,7 +524,7 @@ export default function ProductPicker({
 
                       {item.variant && (
                         <div className="text-sm text-muted-foreground">
-                          Variant: {item.variant.sku}
+                          {t("variant", { sku: item.variant.sku })}
                         </div>
                       )}
 
@@ -544,16 +547,16 @@ export default function ProductPicker({
                           <>
                             <span>•</span>
                             <span className="text-destructive font-medium">
-                              Out of Stock
+                              {t("outOfStock")}
                             </span>
                           </>
                         )}
                       </div>
 
                       <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-                        <span>Total Stock: {itemStock}</span>
-                        <span>Qty / Bundle: {item.quantity}</span>
-                        <span>Max Bundles: {maxBundlesForItem}</span>
+                        <span>{t("totalStock", { count: itemStock })}</span>
+                        <span>{t("quantityPerBundle", { count: item.quantity })}</span>
+                        <span>{t("maxBundles", { count: maxBundlesForItem })}</span>
                       </div>
                     </div>
 
@@ -561,7 +564,7 @@ export default function ProductPicker({
                       <div className="flex items-center gap-2">
                         <div className="w-28">
                           <label className="mb-1 block text-[11px] font-medium text-muted-foreground">
-                            Qty / Bundle
+                            {t("quantityLabel")}
                           </label>
                           <Input
                             type="number"
@@ -592,6 +595,7 @@ export default function ProductPicker({
                             )
                           }
                           disabled={item.quantity <= 1}
+                          aria-label={t("decreaseQuantity", { product: item.product.name })}
                           className="h-8 w-8 p-0"
                         >
                           -
@@ -613,6 +617,7 @@ export default function ProductPicker({
                             )
                           }
                           className="h-8 w-8 p-0"
+                          aria-label={t("increaseQuantity", { product: item.product.name })}
                         >
                           +
                         </Button>
@@ -627,6 +632,7 @@ export default function ProductPicker({
                           removeItem(item.product.id, item.variant?.id)
                         }
                         className="h-8 w-8 p-0 text-destructive hover:text-destructive"
+                        aria-label={t("removeProduct", { product: item.product.name })}
                       >
                         <X className="h-4 w-4" />
                       </Button>
@@ -643,9 +649,9 @@ export default function ProductPicker({
         <Card>
           <CardContent className="p-8 text-center">
             <Package className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="font-medium mb-2">No products selected</h3>
+            <h3 className="font-medium mb-2">{t("emptySelection.title")}</h3>
             <p className="text-sm text-muted-foreground">
-              Select categories and add at least 2 products to create a bundle
+              {t("emptySelection.description")}
             </p>
           </CardContent>
         </Card>

@@ -5964,5 +5964,366 @@
         },
         "loading": "সরবরাহকারী পোর্টাল অ্যাক্সেস লোড হচ্ছে...",
         "empty": "কোনো সরবরাহকারী পোর্টাল ব্যবহারকারী পাওয়া যায়নি।"
+    },
+    "AdminBundles": {
+        "list": {
+            "header": {
+                "title": "বান্ডেল পণ্য",
+                "description": "পণ্যের বান্ডেল ও কম্বো অফার পরিচালনা করুন"
+            },
+            "actions": {
+                "refresh": "রিফ্রেশ",
+                "create": "বান্ডেল তৈরি করুন",
+                "view": "দেখুন",
+                "edit": "সম্পাদনা",
+                "delete": "মুছুন",
+                "deleting": "মুছে ফেলা হচ্ছে...",
+                "cancel": "বাতিল"
+            },
+            "filters": {
+                "searchLabel": "বান্ডেল খুঁজুন",
+                "searchPlaceholder": "বান্ডেল খুঁজুন...",
+                "all": "সব ({count})"
+            },
+            "status": {
+                "active": "সক্রিয়",
+                "inactive": "নিষ্ক্রিয়",
+                "featured": "ফিচার্ড"
+            },
+            "card": {
+                "items": "{count}টি আইটেম",
+                "more": "+আরও {count}টি",
+                "save": "সাশ্রয় {amount}"
+            },
+            "empty": {
+                "title": "কোনো বান্ডেল পাওয়া যায়নি",
+                "filtered": "অনুসন্ধান বা ফিল্টার পরিবর্তন করে দেখুন",
+                "initial": "আপনার প্রথম বান্ডেল তৈরি করে শুরু করুন"
+            },
+            "pagination": {
+                "previous": "আগের পৃষ্ঠা",
+                "next": "পরের পৃষ্ঠা",
+                "page": "পৃষ্ঠা {page} / {pages}"
+            },
+            "delete": {
+                "title": "বান্ডেল মুছুন",
+                "description": "আপনি কি নিশ্চিতভাবে \"{name}\" মুছতে চান? এই কাজটি ফেরানো যাবে না।",
+                "productCount": "এই বান্ডেলে {count}টি পণ্য রয়েছে।"
+            },
+            "success": {
+                "deleted": "বান্ডেল সফলভাবে মুছে ফেলা হয়েছে"
+            },
+            "errors": {
+                "fetch": "বান্ডেল আনা যায়নি",
+                "load": "বান্ডেল লোড করা যায়নি",
+                "delete": "বান্ডেল মুছে ফেলা যায়নি"
+            }
+        },
+        "detail": {
+            "header": {
+                "description": "বান্ডেলের বিস্তারিত তথ্য ও কনফিগারেশন"
+            },
+            "actions": {
+                "back": "ফিরে যান",
+                "backToBundles": "বান্ডেল তালিকায় ফিরুন",
+                "edit": "বান্ডেল সম্পাদনা"
+            },
+            "errors": {
+                "notFound": "বান্ডেল পাওয়া যায়নি",
+                "fetch": "বান্ডেল আনা যায়নি",
+                "load": "বান্ডেল লোড করা যায়নি"
+            },
+            "notFound": {
+                "title": "বান্ডেল পাওয়া যায়নি",
+                "description": "আপনি যে বান্ডেলটি খুঁজছেন সেটি নেই অথবা মুছে ফেলা হয়েছে।"
+            },
+            "overview": {
+                "title": "বান্ডেল সারসংক্ষেপ",
+                "description": "বিবরণ",
+                "shortDescription": "সংক্ষিপ্ত বিবরণ",
+                "gallery": "গ্যালারি",
+                "galleryImage": "গ্যালারি ছবি {number}"
+            },
+            "groups": {
+                "title": "নির্বাচন গ্রুপ ({count})",
+                "automaticPricing": "স্বয়ংক্রিয় মূল্য",
+                "manualPricing": "ম্যানুয়াল মূল্য",
+                "required": "আবশ্যক",
+                "optional": "ঐচ্ছিক",
+                "selectionSummary": "{min}–{max}টি বাছুন · পরিমাণ {quantity}",
+                "defaultVariant": "ডিফল্ট ভ্যারিয়েন্ট",
+                "default": "ডিফল্ট",
+                "calculatedWithGroup": "গ্রুপ অনুযায়ী হিসাব হবে",
+                "included": "অন্তর্ভুক্ত"
+            },
+            "selectionTypes": {
+                "FIXED": "নির্ধারিত আইটেম",
+                "PRODUCT_SELECT": "পণ্য নির্বাচন",
+                "VARIANT_SELECT": "ভ্যারিয়েন্ট নির্বাচন",
+                "OPTIONAL": "ঐচ্ছিক অ্যাড-অন"
+            },
+            "status": {
+                "title": "স্ট্যাটাস",
+                "available": "উপলভ্য",
+                "active": "সক্রিয়",
+                "inactive": "নিষ্ক্রিয়",
+                "featured": "ফিচার্ড",
+                "regular": "সাধারণ",
+                "created": "তৈরির সময়",
+                "updated": "সর্বশেষ আপডেট"
+            },
+            "pricing": {
+                "title": "মূল্যের বিস্তারিত",
+                "regularTotal": "নিয়মিত মোট মূল্য:",
+                "bundlePrice": "বান্ডেল মূল্য:",
+                "discountAmount": "ডিসকাউন্টের পরিমাণ:",
+                "discountPercentage": "ডিসকাউন্টের হার:",
+                "customerSaves": "গ্রাহকের সাশ্রয়"
+            },
+            "classification": {
+                "title": "শ্রেণিবিন্যাস",
+                "category": "ক্যাটাগরি:",
+                "uncategorized": "ক্যাটাগরিবিহীন",
+                "brand": "ব্র্যান্ড:",
+                "currency": "মুদ্রা:",
+                "vatClass": "ভ্যাট শ্রেণি:"
+            }
+        },
+        "form": {
+            "dialog": {
+                "createTitle": "বান্ডেল তৈরি করুন",
+                "editTitle": "বান্ডেল সম্পাদনা",
+                "createDescription": "নির্ধারিত, নির্বাচনযোগ্য বা ঐচ্ছিক গ্রুপসহ কনফিগারযোগ্য বান্ডেল তৈরি করুন।",
+                "editDescription": "গ্রাহকের পছন্দ, কম্পোনেন্ট ইনভেন্টরি ও মূল্য আপডেট করুন।"
+            },
+            "basic": {
+                "title": "প্রাথমিক তথ্য",
+                "name": "বান্ডেলের নাম *",
+                "namePlaceholder": "যেমন: সামার বান্ডেল, স্টার্টার প্যাক",
+                "sku": "বান্ডেল SKU *",
+                "skuPlaceholder": "যেমন: BUNDLE-STARTER-001",
+                "shortDescription": "সংক্ষিপ্ত বিবরণ",
+                "shortDescriptionPlaceholder": "পণ্য তালিকার জন্য সংক্ষিপ্ত বিবরণ",
+                "fullDescription": "পূর্ণ বিবরণ *",
+                "fullDescriptionPlaceholder": "এই বান্ডেলে কী কী অন্তর্ভুক্ত আছে তার বিস্তারিত লিখুন...",
+                "category": "বান্ডেল ক্যাটাগরি *",
+                "categoryPlaceholder": "ক্যাটাগরি নির্বাচন করুন",
+                "brand": "ব্র্যান্ড",
+                "brandPlaceholder": "ব্র্যান্ড নির্বাচন করুন",
+                "noBrand": "কোনো ব্র্যান্ড নেই",
+                "vatClass": "ভ্যাট শ্রেণি",
+                "vatClassPlaceholder": "ভ্যাট শ্রেণি নির্বাচন করুন",
+                "noVatClass": "কোনো ভ্যাট শ্রেণি নেই",
+                "available": "উপলভ্য",
+                "featured": "ফিচার্ড"
+            },
+            "groups": {
+                "title": "কনফিগারযোগ্য বান্ডেল গ্রুপ"
+            },
+            "requirements": {
+                "title": "বান্ডেলের এই শর্তগুলো পূরণ করুন",
+                "outOfStock": "নির্বাচিত কিছু ফিজিক্যাল আইটেম স্টকে নেই"
+            },
+            "stock": {
+                "fieldLabel": "বান্ডেল স্টক",
+                "maxPlaceholder": "সর্বোচ্চ {count}",
+                "calculatedPlaceholder": "নির্বাচিত পণ্য থেকে হিসাব হবে",
+                "saleCapHint": "ঐচ্ছিক সর্বমোট বিক্রয়সীমা। নির্বাচিত কম্পোনেন্টের ধারণক্ষমতা ব্যবহার করতে খালি রাখুন।",
+                "summaryTitle": "বান্ডেল স্টক সারসংক্ষেপ",
+                "summaryDescription": "উপলভ্য কম্পোনেন্ট স্টক অনুযায়ী ডিফল্ট কনফিগারেশনের ধারণক্ষমতা",
+                "maxBuildable": "সর্বোচ্চ তৈরি করা যাবে: {count}টি বান্ডেল",
+                "itemStock": "স্টক: {count}",
+                "quantityPerBundle": "প্রতি বান্ডেলে পরিমাণ: {count}",
+                "possibleBundles": "সম্ভাব্য বান্ডেল: {count}"
+            },
+            "pricing": {
+                "title": "মূল্য নির্ধারণ",
+                "discountType": "ডিসকাউন্টের ধরন",
+                "percentageDiscount": "শতাংশ ডিসকাউন্ট",
+                "fixedDiscount": "নির্দিষ্ট অঙ্কের ডিসকাউন্ট",
+                "manualPrice": "ম্যানুয়াল মূল্য",
+                "discountPercentage": "ডিসকাউন্টের হার",
+                "discountAmount": "ডিসকাউন্টের পরিমাণ",
+                "finalPrice": "চূড়ান্ত বান্ডেল মূল্য",
+                "regularTotal": "নিয়মিত মোট মূল্য:",
+                "bundlePrice": "বান্ডেল মূল্য:",
+                "savings": "সাশ্রয়:"
+            },
+            "availability": {
+                "title": "বান্ডেলের প্রাপ্যতা",
+                "componentCapacity": "ডিফল্ট কম্পোনেন্ট ধারণক্ষমতা",
+                "saleLimit": "বান্ডেল বিক্রয়সীমা",
+                "notSet": "নির্ধারিত নয়",
+                "effectiveStock": "কার্যকর বান্ডেল স্টক"
+            },
+            "image": {
+                "title": "বান্ডেলের ছবি",
+                "previewAlt": "বান্ডেল ছবির প্রিভিউ",
+                "remove": "ছবি সরান",
+                "empty": "বান্ডেলের ছবি আপলোড করুন",
+                "uploading": "আপলোড হচ্ছে...",
+                "choose": "ছবি নির্বাচন করুন",
+                "clear": "মুছুন",
+                "urlPlaceholder": "ছবির URL লিখুন"
+            },
+            "footer": {
+                "ready": "বান্ডেল কনফিগারেশন সংরক্ষণের জন্য প্রস্তুত।",
+                "incomplete": "সংরক্ষণের আগে চিহ্নিত শর্তগুলো পূরণ করুন।"
+            },
+            "actions": {
+                "cancel": "বাতিল",
+                "create": "বান্ডেল তৈরি করুন",
+                "creating": "বান্ডেল তৈরি হচ্ছে...",
+                "update": "বান্ডেল আপডেট করুন",
+                "updating": "বান্ডেল আপডেট হচ্ছে..."
+            },
+            "success": {
+                "imageUploaded": "ছবি সফলভাবে আপলোড হয়েছে",
+                "created": "বান্ডেল সফলভাবে তৈরি হয়েছে",
+                "updated": "বান্ডেল সফলভাবে আপডেট হয়েছে"
+            },
+            "errors": {
+                "loadBundle": "বান্ডেল লোড করা যায়নি",
+                "loadForm": "বান্ডেল ফর্ম লোড করা যায়নি",
+                "upload": "আপলোড ব্যর্থ হয়েছে",
+                "uploadImage": "ছবি আপলোড করা যায়নি",
+                "save": "বান্ডেল সংরক্ষণ করা যায়নি"
+            },
+            "validation": {
+                "defaultComponentsForPrice": "বান্ডেলের মূল্য হিসাব করতে পর্যাপ্ত ডিফল্ট কম্পোনেন্ট নির্বাচন করুন",
+                "invalidPricing": "বান্ডেলের মূল্য সঠিক নয়",
+                "stockWholeNumber": "বান্ডেল স্টক অবশ্যই শূন্য বা তার বেশি পূর্ণসংখ্যা হতে হবে",
+                "twoGroups": "অন্তত দুটি গ্রুপ প্রয়োজন",
+                "groupLabel": "গ্রুপ {number}",
+                "groupNameRequired": "{group}-এর নাম দিতে হবে",
+                "groupNameDuplicate": "{group}-এর নাম পুনরাবৃত্ত হয়েছে",
+                "choiceRequired": "{group}-এ অন্তত একটি পছন্দ দিতে হবে",
+                "oneFixedChoice": "{group}-এ ঠিক একটি নির্ধারিত পছন্দ থাকতে হবে",
+                "optionalCannotBeRequired": "{group} ঐচ্ছিক, তাই আবশ্যক করা যাবে না",
+                "mustBeRequired": "{group} আবশ্যক হতে হবে",
+                "selectOneFixed": "{group}-এ ঠিক একটি নির্ধারিত পছন্দ নির্বাচন করতে হবে",
+                "allowZero": "{group}-এ শূন্যটি পছন্দ রাখার সুযোগ থাকতে হবে",
+                "requireOne": "{group}-এ অন্তত একটি পছন্দ আবশ্যক হতে হবে",
+                "invalidSelectionLimits": "{group}-এর নির্বাচনসীমা সঠিক নয়",
+                "tooManySelections": "{group}-এ উপলভ্য পছন্দের চেয়ে বেশি নির্বাচন করা যাবে না",
+                "defaultsOutsideLimits": "{group}-এর ডিফল্ট নির্বাচন নির্ধারিত সীমার মধ্যে হতে হবে",
+                "invalidQuantityLimits": "{group}-এর পরিমাণসীমা সঠিক নয়",
+                "duplicateChoice": "{group}-এ একই পছন্দ একাধিকবার রয়েছে",
+                "invalidPriceAdjustment": "{group}-এর মূল্য সমন্বয় সঠিক নয়",
+                "oneProductVariants": "{group}-এ শুধু একটি পণ্যের ভ্যারিয়েন্ট রাখা যাবে",
+                "nameRequired": "বান্ডেলের নাম আবশ্যক",
+                "skuRequired": "বান্ডেল SKU আবশ্যক",
+                "descriptionRequired": "বান্ডেলের বিবরণ আবশ্যক",
+                "categoryRequired": "একটি বান্ডেল ক্যাটাগরি নির্বাচন করুন",
+                "completeGroups": "অন্তত দুটি সম্পূর্ণ নির্বাচন গ্রুপ যোগ করুন",
+                "fixConfiguration": "বান্ডেল কনফিগারেশনের সমস্যাগুলো ঠিক করুন"
+            }
+        },
+        "builder": {
+            "title": "বান্ডেল নির্বাচন গ্রুপ",
+            "description": "প্রতিটি গ্রুপের নিজস্ব ক্যাটাগরি, পণ্য অনুসন্ধান ও মূল্য নির্ধারণের নিয়ম রয়েছে।",
+            "groupNumber": "গ্রুপ {number}",
+            "empty": "বান্ডেল তৈরির জন্য অন্তত দুটি গ্রুপ যোগ করুন।",
+            "actions": {
+                "addGroup": "নির্বাচন গ্রুপ যোগ করুন",
+                "moveUp": "গ্রুপ {number} উপরে নিন",
+                "moveDown": "গ্রুপ {number} নিচে নিন",
+                "remove": "সরান"
+            },
+            "fields": {
+                "name": "গ্রুপের নাম",
+                "namePlaceholder": "যেমন: মনিটর নির্বাচন করুন",
+                "selectionType": "নির্বাচনের ধরন",
+                "pricingMode": "মূল্য হিসাবের নিয়ম",
+                "minChoices": "সর্বনিম্ন পছন্দ",
+                "maxChoices": "সর্বোচ্চ পছন্দ",
+                "defaultQuantity": "ডিফল্ট পরিমাণ",
+                "customerQuantity": "গ্রাহক পরিমাণ বদলাতে পারবেন",
+                "allowQuantityAria": "গ্রুপ {number}-এ গ্রাহককে পরিমাণ পরিবর্তনের অনুমতি দিন",
+                "minQuantity": "সর্বনিম্ন পরিমাণ",
+                "maxQuantity": "সর্বোচ্চ পরিমাণ"
+            },
+            "selectionTypes": {
+                "FIXED": "নির্ধারিত আইটেম",
+                "PRODUCT_SELECT": "পণ্য নির্বাচন",
+                "VARIANT_SELECT": "ভ্যারিয়েন্ট নির্বাচন",
+                "OPTIONAL": "ঐচ্ছিক অ্যাড-অন"
+            },
+            "pricingModes": {
+                "AUTOMATIC": "স্বয়ংক্রিয় মূল্য পার্থক্য",
+                "MANUAL": "ম্যানুয়াল সমন্বয়"
+            },
+            "groupTypes": {
+                "optional": "ঐচ্ছিক গ্রুপ",
+                "required": "আবশ্যক গ্রুপ"
+            },
+            "choices": {
+                "title": "অনুমোদিত পছন্দ",
+                "summary": "{count}টি যোগ হয়েছে · গ্রাহক {min}–{max}টি বাছবেন",
+                "productNumber": "পণ্য #{id}",
+                "defaultProduct": "ডিফল্ট পণ্য",
+                "default": "ডিফল্ট",
+                "defaultAria": "গ্রুপ {group}-এর পছন্দ {choice}-কে ডিফল্ট করুন",
+                "manualPrice": "ম্যানুয়াল মূল্য +/−",
+                "automaticPrice": "প্রকৃত মূল্য থেকে স্বয়ংক্রিয় হিসাব",
+                "removeAria": "গ্রুপ {group} থেকে পছন্দ {choice} সরান",
+                "empty": "এখনো কোনো অনুমোদিত পছন্দ নেই। উপরের ক্যাটাগরি ফলাফল থেকে পণ্য যোগ করুন।"
+            },
+            "catalog": {
+                "categoryLabel": "পণ্যের ক্যাটাগরি",
+                "categoryPlaceholder": "ক্যাটাগরি নির্বাচন করুন",
+                "searchLabel": "পণ্য বা ভ্যারিয়েন্ট খুঁজুন",
+                "searchPlaceholder": "পণ্যের নাম, SKU বা ভ্যারিয়েন্ট খুঁজুন",
+                "chooseCategoryHint": "যোগ্য পণ্য দেখতে এই গ্রুপের জন্য একটি ক্যাটাগরি নির্বাচন করুন।",
+                "retry": "আবার চেষ্টা করুন",
+                "fixedComplete": "এই নির্ধারিত গ্রুপে ইতোমধ্যে অনুমোদিত একটি পণ্য রয়েছে।",
+                "loading": "পণ্য লোড হচ্ছে...",
+                "eligibleChoices": "{count}টি উপযুক্ত পছন্দ",
+                "selectedCategory": "নির্বাচিত ক্যাটাগরি",
+                "empty": "কোনো উপযুক্ত পণ্য পাওয়া যায়নি।",
+                "defaultProduct": "ডিফল্ট পণ্য",
+                "stock": "স্টক {count}",
+                "added": "যোগ হয়েছে",
+                "add": "যোগ করুন",
+                "outOfStock": "স্টকে নেই",
+                "variantLocked": "{product}-এ সীমাবদ্ধ; শুধু এর ভ্যারিয়েন্ট যোগ করা যাবে।",
+                "productNumber": "পণ্য #{id}",
+                "errors": {
+                    "load": "পণ্য লোড করা যায়নি"
+                }
+            }
+        },
+        "picker": {
+            "categoryLabel": "পণ্য দেখতে ক্যাটাগরি নির্বাচন করুন",
+            "categoryPlaceholder": "একটি ক্যাটাগরি নির্বাচন করুন",
+            "categoryNumber": "ক্যাটাগরি {id}",
+            "chooseCategoryHint": "উপলভ্য পণ্য দেখতে উপরে পণ্যের ক্যাটাগরি নির্বাচন করুন",
+            "totalStock": "মোট স্টক: {count}",
+            "warehouseStock": "ওয়্যারহাউস স্টক",
+            "outOfStock": "স্টকে নেই",
+            "variantPlaceholder": "ভ্যারিয়েন্ট নির্বাচন করুন",
+            "inWarehouse": "ওয়্যারহাউসে {count}টি",
+            "inStock": "স্টকে {count}টি",
+            "add": "যোগ করুন",
+            "emptyCategory": "এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি",
+            "selectedProducts": "নির্বাচিত পণ্য ({count})",
+            "variant": "ভ্যারিয়েন্ট: {sku}",
+            "quantityPerBundle": "প্রতি বান্ডেলে পরিমাণ: {count}",
+            "maxBundles": "সর্বোচ্চ বান্ডেল: {count}",
+            "quantityLabel": "প্রতি বান্ডেলে পরিমাণ",
+            "decreaseQuantity": "{product}-এর পরিমাণ কমান",
+            "increaseQuantity": "{product}-এর পরিমাণ বাড়ান",
+            "removeProduct": "{product} সরান",
+            "emptySelection": {
+                "title": "কোনো পণ্য নির্বাচন করা হয়নি",
+                "description": "বান্ডেল তৈরির জন্য ক্যাটাগরি নির্বাচন করে অন্তত ২টি পণ্য যোগ করুন"
+            },
+            "errors": {
+                "fetch": "পণ্য আনা যায়নি",
+                "invalidProduct": "পণ্যের তথ্য সঠিক নয়",
+                "productOutOfStock": "এই পণ্যটি স্টকে নেই",
+                "variantOutOfStock": "নির্বাচিত ভ্যারিয়েন্ট স্টকে নেই"
+            }
+        }
     }
 }

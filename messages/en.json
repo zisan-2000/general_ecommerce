@@ -5964,5 +5964,366 @@
     },
     "loading": "Loading supplier portal access...",
     "empty": "No supplier portal users found."
+  },
+  "AdminBundles": {
+    "list": {
+      "header": {
+        "title": "Bundle Products",
+        "description": "Manage product bundles and combo offers"
+      },
+      "actions": {
+        "refresh": "Refresh",
+        "create": "Create Bundle",
+        "view": "View",
+        "edit": "Edit",
+        "delete": "Delete",
+        "deleting": "Deleting...",
+        "cancel": "Cancel"
+      },
+      "filters": {
+        "searchLabel": "Search bundles",
+        "searchPlaceholder": "Search bundles...",
+        "all": "All ({count})"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "featured": "Featured"
+      },
+      "card": {
+        "items": "{count, plural, one {# item} other {# items}}",
+        "more": "+{count} more",
+        "save": "Save {amount}"
+      },
+      "empty": {
+        "title": "No bundles found",
+        "filtered": "Try adjusting your search or filters",
+        "initial": "Get started by creating your first bundle"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {page} of {pages}"
+      },
+      "delete": {
+        "title": "Delete Bundle",
+        "description": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
+        "productCount": "This bundle contains {count, plural, one {# product} other {# products}}."
+      },
+      "success": {
+        "deleted": "Bundle deleted successfully"
+      },
+      "errors": {
+        "fetch": "Failed to fetch bundles",
+        "load": "Failed to load bundles",
+        "delete": "Failed to delete bundle"
+      }
+    },
+    "detail": {
+      "header": {
+        "description": "Bundle details and configuration"
+      },
+      "actions": {
+        "back": "Back",
+        "backToBundles": "Back to Bundles",
+        "edit": "Edit Bundle"
+      },
+      "errors": {
+        "notFound": "Bundle not found",
+        "fetch": "Failed to fetch bundle",
+        "load": "Failed to load bundle"
+      },
+      "notFound": {
+        "title": "Bundle not found",
+        "description": "The bundle you're looking for doesn't exist or has been deleted."
+      },
+      "overview": {
+        "title": "Bundle Overview",
+        "description": "Description",
+        "shortDescription": "Short Description",
+        "gallery": "Gallery",
+        "galleryImage": "Gallery image {number}"
+      },
+      "groups": {
+        "title": "Selection Groups ({count})",
+        "automaticPricing": "Automatic pricing",
+        "manualPricing": "Manual pricing",
+        "required": "Required",
+        "optional": "Optional",
+        "selectionSummary": "Choose {min}–{max} · Qty {quantity}",
+        "defaultVariant": "Default variant",
+        "default": "Default",
+        "calculatedWithGroup": "Calculated with group",
+        "included": "Included"
+      },
+      "selectionTypes": {
+        "FIXED": "Fixed item",
+        "PRODUCT_SELECT": "Choose product",
+        "VARIANT_SELECT": "Choose variant",
+        "OPTIONAL": "Optional add-on"
+      },
+      "status": {
+        "title": "Status",
+        "available": "Available",
+        "active": "Active",
+        "inactive": "Inactive",
+        "featured": "Featured",
+        "regular": "Regular",
+        "created": "Created",
+        "updated": "Last Updated"
+      },
+      "pricing": {
+        "title": "Pricing Details",
+        "regularTotal": "Regular Total:",
+        "bundlePrice": "Bundle Price:",
+        "discountAmount": "Discount Amount:",
+        "discountPercentage": "Discount Percentage:",
+        "customerSaves": "Customer Saves"
+      },
+      "classification": {
+        "title": "Classification",
+        "category": "Category:",
+        "uncategorized": "Uncategorized",
+        "brand": "Brand:",
+        "currency": "Currency:",
+        "vatClass": "VAT Class:"
+      }
+    },
+    "form": {
+      "dialog": {
+        "createTitle": "Create Bundle",
+        "editTitle": "Edit Bundle",
+        "createDescription": "Create a configurable bundle with fixed, selectable or optional groups.",
+        "editDescription": "Update customer choices, component inventory and pricing."
+      },
+      "basic": {
+        "title": "Basic Information",
+        "name": "Bundle Name *",
+        "namePlaceholder": "e.g., Summer Bundle, Starter Pack",
+        "sku": "Bundle SKU *",
+        "skuPlaceholder": "e.g., BUNDLE-STARTER-001",
+        "shortDescription": "Short Description",
+        "shortDescriptionPlaceholder": "Brief description for product listings",
+        "fullDescription": "Full Description *",
+        "fullDescriptionPlaceholder": "Detailed description of what's included in this bundle...",
+        "category": "Bundle Category *",
+        "categoryPlaceholder": "Select category",
+        "brand": "Brand",
+        "brandPlaceholder": "Select brand",
+        "noBrand": "No brand",
+        "vatClass": "VAT Class",
+        "vatClassPlaceholder": "Select VAT class",
+        "noVatClass": "No VAT Class",
+        "available": "Available",
+        "featured": "Featured"
+      },
+      "groups": {
+        "title": "Configurable Bundle Groups"
+      },
+      "requirements": {
+        "title": "Complete these bundle requirements",
+        "outOfStock": "Some selected physical items are out of stock"
+      },
+      "stock": {
+        "fieldLabel": "Bundle Stock",
+        "maxPlaceholder": "Max {count}",
+        "calculatedPlaceholder": "Calculated from selected products",
+        "saleCapHint": "Optional global sale cap. Leave empty to use the capacity calculated from the selected components.",
+        "summaryTitle": "Bundle Stock Summary",
+        "summaryDescription": "Default configuration capacity from available component stock",
+        "maxBuildable": "Max Buildable Bundles: {count}",
+        "itemStock": "Stock: {count}",
+        "quantityPerBundle": "Qty / Bundle: {count}",
+        "possibleBundles": "Possible Bundles: {count}"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "discountType": "Discount Type",
+        "percentageDiscount": "Percentage Discount",
+        "fixedDiscount": "Fixed Amount Discount",
+        "manualPrice": "Manual Price",
+        "discountPercentage": "Discount Percentage",
+        "discountAmount": "Discount Amount",
+        "finalPrice": "Final Bundle Price",
+        "regularTotal": "Regular Total:",
+        "bundlePrice": "Bundle Price:",
+        "savings": "Savings:"
+      },
+      "availability": {
+        "title": "Bundle Availability",
+        "componentCapacity": "Default component capacity",
+        "saleLimit": "Bundle sale limit",
+        "notSet": "Not set",
+        "effectiveStock": "Effective bundle stock"
+      },
+      "image": {
+        "title": "Bundle Image",
+        "previewAlt": "Bundle preview",
+        "remove": "Remove Image",
+        "empty": "Upload bundle image",
+        "uploading": "Uploading...",
+        "choose": "Choose Image",
+        "clear": "Clear",
+        "urlPlaceholder": "Enter image URL"
+      },
+      "footer": {
+        "ready": "Bundle configuration is ready to save.",
+        "incomplete": "Complete the highlighted requirements before saving."
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "create": "Create Bundle",
+        "creating": "Creating Bundle...",
+        "update": "Update Bundle",
+        "updating": "Updating Bundle..."
+      },
+      "success": {
+        "imageUploaded": "Image uploaded successfully",
+        "created": "Bundle created successfully",
+        "updated": "Bundle updated successfully"
+      },
+      "errors": {
+        "loadBundle": "Failed to load bundle",
+        "loadForm": "Failed to load bundle form",
+        "upload": "Upload failed",
+        "uploadImage": "Failed to upload image",
+        "save": "Failed to save bundle"
+      },
+      "validation": {
+        "defaultComponentsForPrice": "Choose enough default components to calculate a bundle price",
+        "invalidPricing": "Bundle pricing is invalid",
+        "stockWholeNumber": "Bundle stock must be a whole number of zero or more",
+        "twoGroups": "At least two groups are required",
+        "groupLabel": "Group {number}",
+        "groupNameRequired": "{group} requires a name",
+        "groupNameDuplicate": "{group} has a duplicate name",
+        "choiceRequired": "{group} requires a choice",
+        "oneFixedChoice": "{group} must have exactly one fixed choice",
+        "optionalCannotBeRequired": "{group} is optional and cannot be required",
+        "mustBeRequired": "{group} must be required",
+        "selectOneFixed": "{group} must select exactly one fixed choice",
+        "allowZero": "{group} must allow zero choices",
+        "requireOne": "{group} must require at least one choice",
+        "invalidSelectionLimits": "{group} has invalid selection limits",
+        "tooManySelections": "{group} cannot select more choices than it provides",
+        "defaultsOutsideLimits": "{group} defaults must satisfy selection limits",
+        "invalidQuantityLimits": "{group} has invalid quantity limits",
+        "duplicateChoice": "{group} contains a duplicate choice",
+        "invalidPriceAdjustment": "{group} has an invalid price adjustment",
+        "oneProductVariants": "{group} can only contain variants of one product",
+        "nameRequired": "Bundle name is required",
+        "skuRequired": "Bundle SKU is required",
+        "descriptionRequired": "Bundle description is required",
+        "categoryRequired": "Please select a bundle category",
+        "completeGroups": "Add at least two complete selection groups",
+        "fixConfiguration": "Please fix the bundle configuration"
+      }
+    },
+    "builder": {
+      "title": "Bundle selection groups",
+      "description": "Each group has its own category, product search and pricing rule.",
+      "groupNumber": "Group {number}",
+      "empty": "Add at least two groups to create a bundle.",
+      "actions": {
+        "addGroup": "Add selection group",
+        "moveUp": "Move group {number} up",
+        "moveDown": "Move group {number} down",
+        "remove": "Remove"
+      },
+      "fields": {
+        "name": "Group name",
+        "namePlaceholder": "e.g. Choose your monitor",
+        "selectionType": "Selection type",
+        "pricingMode": "Price calculation",
+        "minChoices": "Min choices",
+        "maxChoices": "Max choices",
+        "defaultQuantity": "Default quantity",
+        "customerQuantity": "Customer quantity",
+        "allowQuantityAria": "Allow customer quantity changes for group {number}",
+        "minQuantity": "Min quantity",
+        "maxQuantity": "Max quantity"
+      },
+      "selectionTypes": {
+        "FIXED": "Fixed item",
+        "PRODUCT_SELECT": "Choose product",
+        "VARIANT_SELECT": "Choose variant",
+        "OPTIONAL": "Optional add-on"
+      },
+      "pricingModes": {
+        "AUTOMATIC": "Automatic price difference",
+        "MANUAL": "Manual adjustment"
+      },
+      "groupTypes": {
+        "optional": "Optional group",
+        "required": "Required group"
+      },
+      "choices": {
+        "title": "Allowed choices",
+        "summary": "{count} added · customer selects {min}–{max}",
+        "productNumber": "Product #{id}",
+        "defaultProduct": "Default product",
+        "default": "Default",
+        "defaultAria": "Use choice {choice} as a default in group {group}",
+        "manualPrice": "Manual price +/−",
+        "automaticPrice": "Automatic from actual price",
+        "removeAria": "Remove choice {choice} from group {group}",
+        "empty": "No allowed choices yet. Use the category results above to add products."
+      },
+      "catalog": {
+        "categoryLabel": "Product category",
+        "categoryPlaceholder": "Choose a category",
+        "searchLabel": "Find products or variants",
+        "searchPlaceholder": "Search product name, SKU or variant",
+        "chooseCategoryHint": "Choose a category for this group to browse eligible products.",
+        "retry": "Retry",
+        "fixedComplete": "A fixed group already has its one allowed product.",
+        "loading": "Loading products...",
+        "eligibleChoices": "{count, plural, one {# eligible choice} other {# eligible choices}}",
+        "selectedCategory": "Selected category",
+        "empty": "No eligible products found.",
+        "defaultProduct": "Default product",
+        "stock": "Stock {count}",
+        "added": "Added",
+        "add": "Add",
+        "outOfStock": "Out of stock",
+        "variantLocked": "Locked to {product}; only its variants can be added.",
+        "productNumber": "product #{id}",
+        "errors": {
+          "load": "Could not load products"
+        }
+      }
+    },
+    "picker": {
+      "categoryLabel": "Select Category to View Products",
+      "categoryPlaceholder": "Select a category",
+      "categoryNumber": "Category {id}",
+      "chooseCategoryHint": "Please select product categories above to show available products",
+      "totalStock": "Total Stock: {count}",
+      "warehouseStock": "Warehouse Stock",
+      "outOfStock": "Out of Stock",
+      "variantPlaceholder": "Select variant",
+      "inWarehouse": "{count} in warehouse",
+      "inStock": "{count} in stock",
+      "add": "Add",
+      "emptyCategory": "No products found in this category",
+      "selectedProducts": "Selected Products ({count})",
+      "variant": "Variant: {sku}",
+      "quantityPerBundle": "Qty / Bundle: {count}",
+      "maxBundles": "Max Bundles: {count}",
+      "quantityLabel": "Qty / Bundle",
+      "decreaseQuantity": "Decrease quantity for {product}",
+      "increaseQuantity": "Increase quantity for {product}",
+      "removeProduct": "Remove {product}",
+      "emptySelection": {
+        "title": "No products selected",
+        "description": "Select categories and add at least 2 products to create a bundle"
+      },
+      "errors": {
+        "fetch": "Failed to fetch products",
+        "invalidProduct": "Invalid product data",
+        "productOutOfStock": "This product is out of stock",
+        "variantOutOfStock": "Selected variant is out of stock"
+      }
+    }
   }
 }

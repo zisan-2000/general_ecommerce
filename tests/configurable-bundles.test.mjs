@@ -272,7 +272,7 @@ test("admin validation enforces group semantics and variant-selector product ide
 });
 
 test("cart, order, warehouse, admin and storefront retain the configurable-bundle contract", async () => {
-  const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch, customerConfigurator] = await Promise.all([
+  const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch, customerConfigurator, messagesEn, messagesBn] = await Promise.all([
     readFile(new URL("../app/api/cart/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/orders/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../lib/order-warehouse-stock.ts", import.meta.url), "utf8"),
@@ -282,6 +282,8 @@ test("cart, order, warehouse, admin and storefront retain the configurable-bundl
     readFile(new URL("../components/admin/products/bundles/ConfigurableBundleGroupBuilder.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/api/admin/products/bundles/search-products/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../components/ecommarce/product-detail/BundleConfigurator.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../messages/en.json", import.meta.url), "utf8"),
+    readFile(new URL("../messages/bn.json", import.meta.url), "utf8"),
   ]);
 
   assert.match(cart, /bundleConfiguration/);
@@ -294,10 +296,13 @@ test("cart, order, warehouse, admin and storefront retain the configurable-bundl
   assert.doesNotMatch(adminCreate, /Please select a valid warehouse/);
   assert.match(adminUpdate, /requireProductManager/);
   assert.match(categoryPicker, /categoryIds: categoryId/);
-  assert.match(categoryPicker, /Product category/);
-  assert.match(categoryPicker, /Automatic price difference/);
-  assert.match(categoryPicker, /Retry/);
-  assert.match(categoryPicker, /Move group/);
+  assert.match(categoryPicker, /AdminBundles\.builder\.catalog/);
+  assert.match(categoryPicker, /t\("categoryLabel"\)/);
+  assert.match(categoryPicker, /t\("pricingModes\.AUTOMATIC"\)/);
+  assert.match(categoryPicker, /t\("retry"\)/);
+  assert.match(categoryPicker, /t\("actions\.moveUp"/);
+  assert.equal(JSON.parse(messagesEn).AdminBundles.builder.catalog.categoryLabel, "Product category");
+  assert.equal(JSON.parse(messagesBn).AdminBundles.builder.catalog.categoryLabel, "পণ্যের ক্যাটাগরি");
   assert.match(catalogSearch, /effectiveCategoryIds/);
   assert.match(catalogSearch, /category\.parentId/);
   assert.match(catalogSearch, /stockLevels/);

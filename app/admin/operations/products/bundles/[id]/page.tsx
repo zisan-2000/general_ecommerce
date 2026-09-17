@@ -17,6 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 import BundleFormModal from "@/components/admin/products/bundles/BundleFormModal";
 
 interface Bundle {
@@ -104,6 +105,8 @@ export default function BundleDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const router = useRouter();
+  const t = useTranslations("AdminBundles.detail");
+  const locale = useLocale();
   const { id } = use(params);
   const bundleId = parseInt(id);
 
@@ -116,18 +119,18 @@ export default function BundleDetailPage({
       const response = await fetch(`/api/admin/operations/products/bundles/${bundleId}`);
       if (!response.ok) {
         if (response.status === 404) {
-          toast.error("Bundle not found");
+          toast.error(t("errors.notFound"));
           router.push("/admin/operations/products/bundles");
           return;
         }
-        throw new Error("Failed to fetch bundle");
+        throw new Error(t("errors.fetch"));
       }
 
       const bundleData: Bundle = await response.json();
       setBundle(bundleData);
     } catch (error) {
       console.error("Error fetching bundle:", error);
-      toast.error("Failed to load bundle");
+      toast.error(t("errors.load"));
       router.push("/admin/operations/products/bundles");
     } finally {
       setLoading(false);
@@ -141,7 +144,7 @@ export default function BundleDetailPage({
   }, [bundleId, router]);
 
   const formatCurrency = (amount: number, currency = "USD") => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency,
       minimumFractionDigits: 2,
@@ -150,7 +153,7 @@ export default function BundleDetailPage({
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
+    return new Date(dateString).toLocaleDateString(locale, {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -173,12 +176,12 @@ export default function BundleDetailPage({
     return (
       <div className="p-6">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-2">Bundle not found</h2>
+          <h2 className="text-2xl font-semibold mb-2">{t("notFound.title")}</h2>
           <p className="text-muted-foreground mb-4">
-            The bundle you're looking for doesn't exist or has been deleted.
+            {t("notFound.description")}
           </p>
           <Button onClick={() => router.push("/admin/operations/products/bundles")}>
-            Back to Bundles
+            {t("actions.backToBundles")}
           </Button>
         </div>
       </div>
@@ -192,19 +195,19 @@ export default function BundleDetailPage({
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" onClick={() => router.back()}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back
+            {t("actions.back")}
           </Button>
           <div>
             <h1 className="text-3xl font-bold">{bundle.name}</h1>
             <p className="text-muted-foreground">
-              Bundle details and configuration
+              {t("header.description")}
             </p>
           </div>
         </div>
 
         <Button onClick={() => setEditModalOpen(true)}>
           <Edit3 className="h-4 w-4 mr-2" />
-          Edit Bundle
+          {t("actions.edit")}
         </Button>
       </div>
 
@@ -214,7 +217,7 @@ export default function BundleDetailPage({
           {/* Bundle Overview */}
           <Card>
             <CardHeader>
-              <CardTitle>Bundle Overview</CardTitle>
+              <CardTitle>{t("overview.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Bundle Image */}
@@ -232,7 +235,7 @@ export default function BundleDetailPage({
 
               {/* Description */}
               <div>
-                <h3 className="font-medium mb-2">Description</h3>
+                <h3 className="font-medium mb-2">{t("overview.description")}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {bundle.description}
                 </p>
@@ -241,7 +244,7 @@ export default function BundleDetailPage({
               {/* Short Description */}
               {bundle.shortDesc && (
                 <div>
-                  <h3 className="font-medium mb-2">Short Description</h3>
+                  <h3 className="font-medium mb-2">{t("overview.shortDescription")}</h3>
                   <p className="text-muted-foreground">{bundle.shortDesc}</p>
                 </div>
               )}
@@ -249,7 +252,7 @@ export default function BundleDetailPage({
               {/* Gallery */}
               {bundle.gallery && bundle.gallery.length > 0 && (
                 <div>
-                  <h3 className="font-medium mb-2">Gallery</h3>
+                  <h3 className="font-medium mb-2">{t("overview.gallery")}</h3>
                   <div className="grid grid-cols-4 gap-2">
                     {bundle.gallery.map((image, index) => (
                       <div
@@ -258,7 +261,7 @@ export default function BundleDetailPage({
                       >
                         <Image
                           src={image}
-                          alt={`Gallery image ${index + 1}`}
+                          alt={t("overview.galleryImage", { number: index + 1 })}
                           width={100}
                           height={100}
                           className="w-full h-full object-cover"
@@ -276,7 +279,7 @@ export default function BundleDetailPage({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Package className="h-5 w-5" />
-                Selection Groups ({bundle._stats.itemCount})
+                {t("groups.title", { count: bundle._stats.itemCount })}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -294,10 +297,10 @@ export default function BundleDetailPage({
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{index + 1}</span>
                       <h4 className="font-semibold">{group.name}</h4>
-                      <Badge variant="outline">{group.selectionType.replace("_", " ")}</Badge>
-                      <Badge variant="outline">{group.pricingMode === "AUTOMATIC" ? "Automatic pricing" : "Manual pricing"}</Badge>
-                      <Badge variant={group.required ? "default" : "secondary"}>{group.required ? "Required" : "Optional"}</Badge>
-                      <span className="text-xs text-muted-foreground">Choose {group.minSelect}–{group.maxSelect} · Qty {group.defaultQuantity}</span>
+                      <Badge variant="outline">{t(`selectionTypes.${group.selectionType}`)}</Badge>
+                      <Badge variant="outline">{group.pricingMode === "AUTOMATIC" ? t("groups.automaticPricing") : t("groups.manualPricing")}</Badge>
+                      <Badge variant={group.required ? "default" : "secondary"}>{group.required ? t("groups.required") : t("groups.optional")}</Badge>
+                      <span className="text-xs text-muted-foreground">{t("groups.selectionSummary", { min: group.minSelect, max: group.maxSelect, quantity: group.defaultQuantity })}</span>
                     </div>
                     <div className="mt-3 grid gap-2 sm:grid-cols-2">
                       {group.options.map((option) => {
@@ -315,15 +318,15 @@ export default function BundleDetailPage({
                           </div>
                           <div className="min-w-0 flex-1">
                             <p className="truncate text-sm font-medium">{option.product.name}</p>
-                            <p className="truncate text-xs text-muted-foreground">{option.variant?.sku || "Default variant"}</p>
+                            <p className="truncate text-xs text-muted-foreground">{option.variant?.sku || t("groups.defaultVariant")}</p>
                           </div>
                           <div className="text-right text-xs">
-                            {option.isDefault ? <Badge variant="secondary">Default</Badge> : null}
+                            {option.isDefault ? <Badge variant="secondary">{t("groups.default")}</Badge> : null}
                             <p className="mt-1 font-medium">
                               {group.pricingMode === "AUTOMATIC" && group.maxSelect > 1
-                                ? "Calculated with group"
+                                ? t("groups.calculatedWithGroup")
                                 : displayedAdjustment === 0
-                                  ? "Included"
+                                  ? t("groups.included")
                                   : `${displayedAdjustment > 0 ? "+" : "−"}${formatCurrency(Math.abs(displayedAdjustment), bundle.currency)}`}
                             </p>
                           </div>
@@ -344,34 +347,34 @@ export default function BundleDetailPage({
           {/* Status */}
           <Card>
             <CardHeader>
-              <CardTitle>Status</CardTitle>
+              <CardTitle>{t("status.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Available</span>
+                <span className="text-sm font-medium">{t("status.available")}</span>
                 <Badge variant={bundle.available ? "default" : "secondary"}>
-                  {bundle.available ? "Active" : "Inactive"}
+                  {bundle.available ? t("status.active") : t("status.inactive")}
                 </Badge>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Featured</span>
+                <span className="text-sm font-medium">{t("status.featured")}</span>
                 <Badge variant={bundle.featured ? "default" : "outline"}>
-                  {bundle.featured ? "Featured" : "Regular"}
+                  {bundle.featured ? t("status.featured") : t("status.regular")}
                 </Badge>
               </div>
 
               <Separator />
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Created</span>
+                <span className="text-sm font-medium">{t("status.created")}</span>
                 <span className="text-xs text-muted-foreground">
                   {formatDate(bundle.createdAt)}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Last Updated</span>
+                <span className="text-sm font-medium">{t("status.updated")}</span>
                 <span className="text-xs text-muted-foreground">
                   {formatDate(bundle.updatedAt)}
                 </span>
@@ -384,14 +387,14 @@ export default function BundleDetailPage({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <DollarSign className="h-5 w-5" />
-                Pricing Details
+                {t("pricing.title")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Regular Total:
+                    {t("pricing.regularTotal")}
                   </span>
                   <span className="font-medium line-through">
                     {formatCurrency(
@@ -403,7 +406,7 @@ export default function BundleDetailPage({
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Bundle Price:
+                    {t("pricing.bundlePrice")}
                   </span>
                   <span className="font-bold text-lg text-green-600">
                     {formatCurrency(
@@ -415,7 +418,7 @@ export default function BundleDetailPage({
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Discount Amount:
+                    {t("pricing.discountAmount")}
                   </span>
                   <span className="font-medium text-green-600">
                     {formatCurrency(
@@ -427,7 +430,7 @@ export default function BundleDetailPage({
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Discount Percentage:
+                    {t("pricing.discountPercentage")}
                   </span>
                   <Badge
                     variant="secondary"
@@ -443,7 +446,7 @@ export default function BundleDetailPage({
               <div className="text-center p-3 bg-green-50 rounded-lg">
                 <div className="flex items-center justify-center gap-2 text-green-700">
                   <TrendingDown className="h-4 w-4" />
-                  <span className="font-medium">Customer Saves</span>
+                  <span className="font-medium">{t("pricing.customerSaves")}</span>
                 </div>
                 <div className="text-2xl font-bold text-green-700 mt-1">
                   {bundle._stats.savings}
@@ -457,32 +460,32 @@ export default function BundleDetailPage({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Tag className="h-5 w-5" />
-                Categories
+                {t("classification.title")}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Category:</span>
+                <span className="text-sm font-medium">{t("classification.category")}</span>
                 <Badge variant="outline">
-                  {bundle.category?.name || "Uncategorized"}
+                  {bundle.category?.name || t("classification.uncategorized")}
                 </Badge>
               </div>
 
               {bundle.brand && (
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">Brand:</span>
+                  <span className="text-sm font-medium">{t("classification.brand")}</span>
                   <Badge variant="outline">{bundle.brand.name}</Badge>
                 </div>
               )}
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Currency:</span>
+                <span className="text-sm font-medium">{t("classification.currency")}</span>
                 <Badge variant="outline">{bundle.currency}</Badge>
               </div>
 
               {bundle.VatClass && (
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">VAT Class:</span>
+                  <span className="text-sm font-medium">{t("classification.vatClass")}</span>
                   <Badge variant="outline">
                     {bundle.VatClass.name} ({bundle.VatClass.code})
                   </Badge>
@@ -500,7 +503,7 @@ export default function BundleDetailPage({
                   onClick={() => setEditModalOpen(true)}
                 >
                   <Edit3 className="h-4 w-4 mr-2" />
-                  Edit Bundle
+                  {t("actions.edit")}
                 </Button>
 
                 {/* <Button

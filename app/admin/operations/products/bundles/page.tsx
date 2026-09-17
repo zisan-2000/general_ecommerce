@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 import BundleFormModal from "@/components/admin/products/bundles/BundleFormModal";
 
 interface Bundle {
@@ -89,6 +90,8 @@ interface BundlesResponse {
 
 export default function BundlesPage() {
   const router = useRouter();
+  const t = useTranslations("AdminBundles.list");
+  const locale = useLocale();
   const [bundles, setBundles] = useState<Bundle[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -118,14 +121,14 @@ export default function BundlesPage() {
       });
 
       const response = await fetch(`/api/admin/operations/products/bundles?${params}`);
-      if (!response.ok) throw new Error("Failed to fetch bundles");
+      if (!response.ok) throw new Error(t("errors.fetch"));
 
       const data: BundlesResponse = await response.json();
       setBundles(data.bundles);
       setPagination(data.pagination);
     } catch (error) {
       console.error("Error fetching bundles:", error);
-      toast.error("Failed to load bundles");
+      toast.error(t("errors.load"));
     } finally {
       setLoading(false);
       setRefreshing(false);
@@ -149,15 +152,15 @@ export default function BundlesPage() {
         },
       );
 
-      if (!response.ok) throw new Error("Failed to delete bundle");
+      if (!response.ok) throw new Error(t("errors.delete"));
 
-      toast.success("Bundle deleted successfully");
+      toast.success(t("success.deleted"));
       setDeleteModalOpen(false);
       setDeletingBundle(null);
       fetchBundles();
     } catch (error) {
       console.error("Error deleting bundle:", error);
-      toast.error("Failed to delete bundle");
+      toast.error(t("errors.delete"));
     } finally {
       setIsDeleting(false);
     }
@@ -169,7 +172,7 @@ export default function BundlesPage() {
   };
 
   const formatCurrency = (amount: number, currency = "USD") => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency,
       minimumFractionDigits: 2,
@@ -195,9 +198,9 @@ export default function BundlesPage() {
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Bundle Products</h1>
+          <h1 className="text-3xl font-bold">{t("header.title")}</h1>
           <p className="text-muted-foreground">
-            Manage product bundles and combo offers
+            {t("header.description")}
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -210,11 +213,11 @@ export default function BundlesPage() {
             <RefreshCw
               className={`h-4 w-4 mr-2 ${refreshing ? "animate-spin" : ""}`}
             />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button onClick={() => setCreateModalOpen(true)}>
             <Plus className="h-4 w-4 mr-2" />
-            Create Bundle
+            {t("actions.create")}
           </Button>
         </div>
       </div>
@@ -227,7 +230,8 @@ export default function BundlesPage() {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
-                  placeholder="Search bundles..."
+                  placeholder={t("filters.searchPlaceholder")}
+                  aria-label={t("filters.searchLabel")}
                   value={search}
                   onChange={(e) => {
                     setSearch(e.target.value);
@@ -246,7 +250,7 @@ export default function BundlesPage() {
                   setPage(1);
                 }}
               >
-                All ({pagination.total})
+                {t("filters.all", { count: pagination.total })}
               </Button>
               <Button
                 variant={statusFilter === "active" ? "default" : "outline"}
@@ -256,7 +260,7 @@ export default function BundlesPage() {
                   setPage(1);
                 }}
               >
-                Active
+                {t("status.active")}
               </Button>
               <Button
                 variant={statusFilter === "inactive" ? "default" : "outline"}
@@ -266,7 +270,7 @@ export default function BundlesPage() {
                   setPage(1);
                 }}
               >
-                Inactive
+                {t("status.inactive")}
               </Button>
             </div>
           </div>
@@ -278,16 +282,16 @@ export default function BundlesPage() {
         <Card>
           <CardContent className="p-12 text-center">
             <Package className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">No bundles found</h3>
+            <h3 className="text-lg font-semibold mb-2">{t("empty.title")}</h3>
             <p className="text-muted-foreground mb-4">
               {search || statusFilter !== "all"
-                ? "Try adjusting your search or filters"
-                : "Get started by creating your first bundle"}
+                ? t("empty.filtered")
+                : t("empty.initial")}
             </p>
             {!search && statusFilter === "all" && (
               <Button onClick={() => setCreateModalOpen(true)}>
                 <Plus className="h-4 w-4 mr-2" />
-                Create Bundle
+                {t("actions.create")}
               </Button>
             )}
           </CardContent>
@@ -332,10 +336,10 @@ export default function BundlesPage() {
                           <Badge
                             variant={bundle.available ? "default" : "secondary"}
                           >
-                            {bundle.available ? "Active" : "Inactive"}
+                            {bundle.available ? t("status.active") : t("status.inactive")}
                           </Badge>
                           {bundle.featured && (
-                            <Badge variant="outline">Featured</Badge>
+                            <Badge variant="outline">{t("status.featured")}</Badge>
                           )}
                         </div>
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
@@ -348,7 +352,7 @@ export default function BundlesPage() {
                     <div className="mb-3">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
                         <Package className="h-4 w-4" />
-                        <span>{bundle._stats.itemCount} items</span>
+                        <span>{t("card.items", { count: bundle._stats.itemCount })}</span>
                       </div>
                       <div className="flex flex-wrap gap-1">
                         {bundle.bundleItems.slice(0, 3).map((item) => (
@@ -362,7 +366,7 @@ export default function BundlesPage() {
                         ))}
                         {bundle.bundleItems.length > 3 && (
                           <Badge variant="outline" className="text-xs">
-                            +{bundle.bundleItems.length - 3} more
+                            {t("card.more", { count: bundle.bundleItems.length - 3 })}
                           </Badge>
                         )}
                       </div>
@@ -389,7 +393,7 @@ export default function BundlesPage() {
                         variant="secondary"
                         className="text-green-700 bg-green-50"
                       >
-                        Save {bundle._stats.savings}
+                        {t("card.save", { amount: bundle._stats.savings })}
                       </Badge>
                     </div>
                   </div>
@@ -404,7 +408,7 @@ export default function BundlesPage() {
                     }
                   >
                     <Eye className="h-4 w-4 mr-2" />
-                    View
+                    {t("actions.view")}
                   </Button>
                   <Button
                     variant="outline"
@@ -414,7 +418,7 @@ export default function BundlesPage() {
                     }
                   >
                     <Edit3 className="h-4 w-4 mr-2" />
-                    Edit
+                    {t("actions.edit")}
                   </Button>
                   <Button
                     variant="outline"
@@ -426,7 +430,7 @@ export default function BundlesPage() {
                     className="text-destructive hover:text-destructive"
                   >
                     <Trash2 className="h-4 w-4 mr-2" />
-                    Delete
+                    {t("actions.delete")}
                   </Button>
                 </div>
               </CardContent>
@@ -444,10 +448,10 @@ export default function BundlesPage() {
             onClick={() => setPage(page - 1)}
             disabled={page === 1}
           >
-            Previous
+            {t("pagination.previous")}
           </Button>
           <span className="text-sm text-muted-foreground">
-            Page {page} of {pagination.pages}
+            {t("pagination.page", { page, pages: pagination.pages })}
           </span>
           <Button
             variant="outline"
@@ -455,7 +459,7 @@ export default function BundlesPage() {
             onClick={() => setPage(page + 1)}
             disabled={page === pagination.pages}
           >
-            Next
+            {t("pagination.next")}
           </Button>
         </div>
       )}
@@ -464,26 +468,24 @@ export default function BundlesPage() {
       <AlertDialog open={deleteModalOpen} onOpenChange={setDeleteModalOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Delete Bundle</AlertDialogTitle>
+            <AlertDialogTitle>{t("delete.title")}</AlertDialogTitle>
             <AlertDialogDescription>
-              Are you sure you want to delete "{deletingBundle?.name}"? This
-              action cannot be undone.
+              {t("delete.description", { name: deletingBundle?.name ?? "" })}
               {deletingBundle && (
                 <span className="block mt-2 text-sm">
-                  This bundle contains {deletingBundle._stats.itemCount}{" "}
-                  products.
+                  {t("delete.productCount", { count: deletingBundle._stats.itemCount })}
                 </span>
               )}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>{t("actions.cancel")}</AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDelete}
               disabled={isDeleting}
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
             >
-              {isDeleting ? "Deleting..." : "Delete"}
+              {isDeleting ? t("actions.deleting") : t("actions.delete")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
