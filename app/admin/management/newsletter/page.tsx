@@ -1,32 +1,38 @@
 "use client";
 
 import { useState, useCallback, useEffect, memo } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import NewsletterManagement from "@/components/newsletter/NewsletterManager";
 import SubscriberManagement from "@/components/newsletter/SubscriberManagement";
 
 const NewsletterPage = memo(function NewsletterPage() {
-  const [activeTab, setActiveTab] = useState<"newsletters" | "subscribers">("newsletters");
+  const t = useTranslations("AdminNewsletterPage");
+
+  const [activeTab, setActiveTab] = useState<"newsletters" | "subscribers">(
+    "newsletters",
+  );
   const [loading, setLoading] = useState(true);
   const [tabLoading, setTabLoading] = useState(false);
 
-  const handleTabChange = useCallback((tab: "newsletters" | "subscribers") => {
-    if (tab === activeTab) return;
-    
-    setTabLoading(true);
-    // Simulate tab switching delay for better UX
-    setTimeout(() => {
-      setActiveTab(tab);
-      setTabLoading(false);
-    }, 150);
-  }, [activeTab]);
+  const handleTabChange = useCallback(
+    (tab: "newsletters" | "subscribers") => {
+      if (tab === activeTab) return;
 
-  // Initial loading state - moved to useEffect
+      setTabLoading(true);
+      setTimeout(() => {
+        setActiveTab(tab);
+        setTabLoading(false);
+      }, 150);
+    },
+    [activeTab],
+  );
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 800);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -50,10 +56,12 @@ const NewsletterPage = memo(function NewsletterPage() {
 
           {/* Content Skeleton */}
           <div className="space-y-6">
-            {/* Stats Cards Skeleton */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {Array.from({ length: 3 }, (_, i) => (
-                <div key={i} className="bg-card border border-border rounded-2xl shadow-lg p-6">
+                <div
+                  key={i}
+                  className="bg-card border border-border rounded-2xl shadow-lg p-6"
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="h-4 bg-muted rounded w-20 mb-2 animate-pulse"></div>
@@ -65,7 +73,6 @@ const NewsletterPage = memo(function NewsletterPage() {
               ))}
             </div>
 
-            {/* Table/List Skeleton */}
             <div className="bg-card border border-border rounded-2xl shadow-lg overflow-hidden">
               <div className="p-6 border-b border-border">
                 <div className="flex items-center justify-between">
@@ -86,13 +93,15 @@ const NewsletterPage = memo(function NewsletterPage() {
               </div>
             </div>
 
-            {/* Pagination Skeleton */}
             <div className="bg-card border border-border rounded-2xl shadow-lg p-6">
               <div className="flex items-center justify-between">
                 <div className="h-10 bg-muted rounded w-20 animate-pulse"></div>
                 <div className="flex items-center space-x-2">
                   {Array.from({ length: 5 }, (_, i) => (
-                    <div key={i} className="w-10 h-10 bg-muted rounded animate-pulse"></div>
+                    <div
+                      key={i}
+                      className="w-10 h-10 bg-muted rounded animate-pulse"
+                    ></div>
                   ))}
                 </div>
                 <div className="h-10 bg-muted rounded w-20 animate-pulse"></div>
@@ -110,10 +119,10 @@ const NewsletterPage = memo(function NewsletterPage() {
         {/* Header */}
         <div className="bg-card border border-border shadow-lg p-6 mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-            Email Management
+            {t("header.title")}
           </h1>
           <p className="text-muted-foreground text-sm">
-            Manage newsletters and subscribers
+            {t("header.description")}
           </p>
         </div>
 
@@ -135,7 +144,7 @@ const NewsletterPage = memo(function NewsletterPage() {
                     <div className="w-4 h-4 border-2 border-foreground border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 ) : (
-                  "Newsletters"
+                  t("tabs.newsletters")
                 )}
               </button>
               <button
@@ -152,7 +161,7 @@ const NewsletterPage = memo(function NewsletterPage() {
                     <div className="w-4 h-4 border-2 border-foreground border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 ) : (
-                  "Subscribers"
+                  t("tabs.subscribers")
                 )}
               </button>
             </div>
@@ -160,7 +169,11 @@ const NewsletterPage = memo(function NewsletterPage() {
         </Card>
 
         {/* Content */}
-        <div className={`transition-opacity pl-6 pr-6 duration-300 ${tabLoading ? "opacity-50" : "opacity-100"}`}>
+        <div
+          className={`transition-opacity pl-6 pr-6 duration-300 ${
+            tabLoading ? "opacity-50" : "opacity-100"
+          }`}
+        >
           {activeTab === "newsletters" && <NewsletterManagement />}
           {activeTab === "subscribers" && <SubscriberManagement />}
         </div>

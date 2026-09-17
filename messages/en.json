@@ -3754,5 +3754,215 @@
       "removeFailed": "Unable to remove the flash sale",
       "tryAgain": "Please try again"
     }
+  },
+  "AdminSearchManagement": {
+    "hero": {
+      "badge": "Search operations",
+      "title": "Search Management",
+      "description": "Tune synonyms and merchandising rules, then monitor real customer searches."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "queuing": "Queuing…",
+      "queueReindex": "Queue full reindex"
+    },
+    "provider": {
+      "label": "Active provider:",
+      "typesenseLabel": "Typesense:",
+      "configured": "Configured",
+      "notConfigured": "Optional / not configured",
+      "pendingJobs": "Pending index jobs:"
+    },
+    "performance": {
+      "title": "Performance",
+      "range": {
+        "last7": "Last 7 days",
+        "last30": "Last 30 days",
+        "last90": "Last 90 days"
+      },
+      "kpis": {
+        "searches": "Searches",
+        "zeroResultRate": "Zero-result rate",
+        "clicks": "Search clicks",
+        "clickThroughRate": "Click-through rate",
+        "addToCarts": "Add to carts"
+      },
+      "table": {
+        "query": "Query",
+        "searches": "Searches",
+        "zeroResults": "Zero results",
+        "clicks": "Clicks",
+        "cart": "Cart"
+      }
+    },
+    "synonyms": {
+      "title": "Synonyms",
+      "addButton": "Add synonym group",
+      "localeAria": "Locale",
+      "deleteAria": "Delete {label}",
+      "placeholders": {
+        "label": "Group name (GPU)",
+        "terms": "gpu, graphics card, video card"
+      }
+    },
+    "rules": {
+      "title": "Query merchandising rules",
+      "addButton": "Add query rule",
+      "summary": "{matchType}: “{query}” · priority {priority}",
+      "deleteAria": "Delete {name}",
+      "placeholders": {
+        "name": "Gaming campaign",
+        "query": "gaming laptop",
+        "priority": "Priority",
+        "pinProductIds": "Pin IDs: 12, 18",
+        "boostProductIds": "Boost IDs: 24, 31",
+        "suggestedQueries": "Suggested: rtx laptop, gaming pc"
+      }
+    },
+    "matchTypes": {
+      "CONTAINS": "Contains",
+      "PREFIX": "Prefix",
+      "EXACT": "Exact"
+    },
+    "status": {
+      "active": "Active",
+      "paused": "Paused"
+    },
+    "confirm": {
+      "delete": "Delete this search configuration permanently?"
+    },
+    "toasts": {
+      "synonymCreated": "Synonym group created.",
+      "ruleCreated": "Query rule created.",
+      "configDeleted": "Search configuration deleted.",
+      "reindexQueued": "{count} products queued for indexing."
+    },
+    "errors": {
+      "loadFailed": "Search management could not load.",
+      "synonymNotSaved": "Synonym was not saved.",
+      "ruleNotSaved": "Rule was not saved.",
+      "statusNotChanged": "Status was not changed.",
+      "notDeleted": "Configuration was not deleted.",
+      "reindexFailed": "Reindex was not queued."
+    }
+  },
+  "AdminNewsletterPage": {
+    "header": {
+      "title": "Email Management",
+      "description": "Manage newsletters and subscribers"
+    },
+    "tabs": {
+      "newsletters": "Newsletters",
+      "subscribers": "Subscribers"
+    }
+  },
+  "AdminNewsletterManagement": {
+    "loading": "Loading newsletters...",
+    "actions": {
+      "createNewsletter": "Create Newsletter",
+      "updateNewsletter": "Update Newsletter",
+      "preview": "Preview",
+      "edit": "Edit",
+      "send": "Send",
+      "sending": "Sending...",
+      "delete": "Delete",
+      "deletePermanently": "Delete Permanently",
+      "cancel": "Cancel"
+    },
+    "form": {
+      "title": "Title",
+      "subject": "Subject",
+      "content": "Content",
+      "contentPlaceholder": "Enter newsletter content..."
+    },
+    "status": {
+      "sent": "Sent",
+      "draft": "Draft"
+    },
+    "meta": {
+      "created": "Created:",
+      "sent": "Sent:"
+    },
+    "createDialog": {
+      "title": "Create New Newsletter"
+    },
+    "editDialog": {
+      "title": "Edit Newsletter"
+    },
+    "previewDialog": {
+      "title": "Preview Newsletter"
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete this newsletter? This action cannot be undone."
+    },
+    "empty": {
+      "title": "No newsletters yet",
+      "description": "Create your first newsletter to get started"
+    },
+    "sendError": {
+      "title": "Newsletter was not sent"
+    },
+    "toasts": {
+      "successTitle": "Success",
+      "errorTitle": "Error",
+      "created": "Newsletter created successfully",
+      "updated": "Newsletter updated successfully",
+      "sent": "Newsletter sent successfully",
+      "deleted": "Newsletter deleted successfully"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch newsletters",
+      "saveFailed": "Failed to save newsletter",
+      "sendFailed": "Failed to send newsletter",
+      "deleteFailed": "Failed to delete newsletter",
+      "noSubscribers": "No subscribed recipients found. Please add at least one active subscriber before sending this newsletter."
+    }
+  },
+  "AdminSubscriberManagement": {
+    "loading": "Loading subscribers...",
+    "header": {
+      "title": "Subscriber Management",
+      "total": "Total {count} subscribers"
+    },
+    "actions": {
+      "exportShort": "Export",
+      "exportCsv": "Export CSV",
+      "addSubscriber": "Add Subscriber",
+      "removeSubscriber": "Remove Subscriber",
+      "cancel": "Cancel"
+    },
+    "addDialog": {
+      "title": "Add New Subscriber",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter email address"
+    },
+    "status": {
+      "subscribed": "Subscribed",
+      "unsubscribed": "Unsubscribed"
+    },
+    "empty": {
+      "title": "No subscribers yet",
+      "description": "Add your first subscriber to get started"
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to remove {email} from subscribers?"
+    },
+    "export": {
+      "headers": "Email,Status"
+    },
+    "toasts": {
+      "successTitle": "Success",
+      "errorTitle": "Error",
+      "added": "Subscriber added successfully",
+      "deleted": "Subscriber deleted successfully",
+      "exported": "Subscribers exported successfully"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch subscribers",
+      "addFailed": "Failed to add subscriber",
+      "deleteFailed": "Failed to delete subscriber"
+    }
   }
 }

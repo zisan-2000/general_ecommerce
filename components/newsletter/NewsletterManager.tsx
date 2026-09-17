@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,6 +30,8 @@ interface Newsletter {
 const API_BASE = "/api/newsletter";
 
 export default function NewsletterManagement() {
+  const t = useTranslations("AdminNewsletterManagement");
+
   const [newsletters, setNewsletters] = useState<Newsletter[]>([]);
   const [loading, setLoading] = useState(true);
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
@@ -69,14 +72,15 @@ export default function NewsletterManagement() {
         const data = await response.json();
         setNewsletters(data);
       } else {
-        throw new Error("Failed to fetch newsletters");
+        throw new Error(t("errors.fetchFailed"));
       }
     } catch (error) {
       console.error("Failed to fetch newsletters:", error);
-      showToast("Error", "Failed to fetch newsletters", "destructive");
+      showToast(t("toasts.errorTitle"), t("errors.fetchFailed"), "destructive");
     } finally {
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showToast]);
 
   useEffect(() => {
@@ -101,8 +105,8 @@ export default function NewsletterManagement() {
 
       if (response.ok) {
         showToast(
-          "Success",
-          `Newsletter ${editingNewsletter ? "updated" : "created"} successfully`,
+          t("toasts.successTitle"),
+          editingNewsletter ? t("toasts.updated") : t("toasts.created"),
         );
         fetchNewsletters();
         setIsCreateDialogOpen(false);
@@ -110,11 +114,11 @@ export default function NewsletterManagement() {
         setEditingNewsletter(null);
         setFormData({ title: "", subject: "", content: "" });
       } else {
-        throw new Error("Failed to save newsletter");
+        throw new Error(t("errors.saveFailed"));
       }
     } catch (error) {
       console.error("Failed to save newsletter:", error);
-      showToast("Error", "Failed to save newsletter", "destructive");
+      showToast(t("toasts.errorTitle"), t("errors.saveFailed"), "destructive");
     }
   };
 
@@ -128,26 +132,22 @@ export default function NewsletterManagement() {
       const result = await response.json();
 
       if (response.ok) {
-        showToast("Success", result.message || "Newsletter sent successfully");
+        showToast(t("toasts.successTitle"), result.message || t("toasts.sent"));
         setSendError(null);
         fetchNewsletters();
       } else {
-        throw new Error(result.error || "Failed to send newsletter");
+        throw new Error(result.error || t("errors.sendFailed"));
       }
     } catch (error) {
       console.error("Failed to send newsletter:", error);
       const errorMessage =
-        error instanceof Error ? error.message : "Failed to send newsletter";
+        error instanceof Error ? error.message : t("errors.sendFailed");
       const displayMessage =
         errorMessage === "No subscribers found."
-          ? "No subscribed recipients found. Please add at least one active subscriber before sending this newsletter."
+          ? t("errors.noSubscribers")
           : errorMessage;
       setSendError(displayMessage);
-      showToast(
-        "Error",
-        displayMessage,
-        "destructive",
-      );
+      showToast(t("toasts.errorTitle"), displayMessage, "destructive");
     } finally {
       setSendingId(null);
     }
@@ -162,14 +162,18 @@ export default function NewsletterManagement() {
       });
 
       if (response.ok) {
-        showToast("Success", "Newsletter deleted successfully");
+        showToast(t("toasts.successTitle"), t("toasts.deleted"));
         fetchNewsletters();
       } else {
-        throw new Error("Failed to delete newsletter");
+        throw new Error(t("errors.deleteFailed"));
       }
     } catch (error) {
       console.error("Failed to delete newsletter:", error);
-      showToast("Error", "Failed to delete newsletter", "destructive");
+      showToast(
+        t("toasts.errorTitle"),
+        t("errors.deleteFailed"),
+        "destructive",
+      );
     } finally {
       setDeletingId(null);
       setIsDeleteDialogOpen(false);
@@ -206,7 +210,7 @@ export default function NewsletterManagement() {
       <div className="flex justify-center items-center min-h-64">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-foreground">Loading newsletters...</p>
+          <p className="text-foreground">{t("loading")}</p>
         </div>
       </div>
     );
@@ -226,19 +230,19 @@ export default function NewsletterManagement() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
             >
               <Plus className="mr-2 h-4 w-4" />
-              Create Newsletter
+              {t("actions.createNewsletter")}
             </Button>
           </DialogTrigger>
           <DialogContent className="max-w-2xl mx-4 max-h-[90vh] overflow-y-auto bg-background border border-border rounded-2xl shadow-2xl">
             <DialogHeader className="border-b border-border pb-4">
               <DialogTitle className="text-xl font-semibold text-foreground">
-                Create New Newsletter
+                {t("createDialog.title")}
               </DialogTitle>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-6 pt-4">
               <div>
                 <Label htmlFor="title" className="text-foreground font-medium">
-                  Title
+                  {t("form.title")}
                 </Label>
                 <Input
                   id="title"
@@ -255,7 +259,7 @@ export default function NewsletterManagement() {
                   htmlFor="subject"
                   className="text-foreground font-medium"
                 >
-                  Subject
+                  {t("form.subject")}
                 </Label>
                 <Input
                   id="subject"
@@ -272,11 +276,11 @@ export default function NewsletterManagement() {
                   htmlFor="content"
                   className="text-foreground font-medium"
                 >
-                  Content
+                  {t("form.content")}
                 </Label>
                 <div className="border border-border rounded-lg overflow-hidden">
                   <JoditEditorComponent
-                    placeholder="Enter newsletter content..."
+                    placeholder={t("form.contentPlaceholder")}
                     initialValue={formData.content}
                     onContentChange={(content) =>
                       setFormData({ ...formData, content })
@@ -289,7 +293,7 @@ export default function NewsletterManagement() {
                 type="submit"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
               >
-                Create Newsletter
+                {t("actions.createNewsletter")}
               </Button>
             </form>
           </DialogContent>
@@ -303,7 +307,7 @@ export default function NewsletterManagement() {
         >
           <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0" />
           <div>
-            <p className="font-semibold">Newsletter was not sent</p>
+            <p className="font-semibold">{t("sendError.title")}</p>
             <p className="text-sm leading-relaxed">{sendError}</p>
           </div>
         </div>
@@ -333,7 +337,9 @@ export default function NewsletterManagement() {
                       : "bg-orange-100/20 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400 border-orange-200 dark:border-orange-800"
                   }`}
                 >
-                  {newsletter.status === "sent" ? "পাঠানো হয়েছে" : "খসড়া"}
+                  {newsletter.status === "sent"
+                    ? t("status.sent")
+                    : t("status.draft")}
                 </div>
               </div>
             </CardHeader>
@@ -344,16 +350,16 @@ export default function NewsletterManagement() {
               />
               <div className="text-xs text-muted-foreground border-t border-border pt-3 space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">তৈরি:</span>
+                  <span className="font-medium">{t("meta.created")}</span>
                   <span>
-                    {new Date(newsletter.createdAt).toLocaleDateString("bn-BD")}
+                    {new Date(newsletter.createdAt).toLocaleDateString()}
                   </span>
                 </div>
                 {newsletter.sentAt && (
                   <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                    <span className="font-bold">পাঠানো:</span>
+                    <span className="font-bold">{t("meta.sent")}</span>
                     <span>
-                      {new Date(newsletter.sentAt).toLocaleDateString("bn-BD")}
+                      {new Date(newsletter.sentAt).toLocaleDateString()}
                     </span>
                   </div>
                 )}
@@ -366,7 +372,7 @@ export default function NewsletterManagement() {
                   className="border-border text-foreground hover:bg-muted hover:border-primary rounded-lg transition-all duration-300"
                 >
                   <Eye className="h-4 w-4 mr-1" />
-                  Preview
+                  {t("actions.preview")}
                 </Button>
                 <Button
                   variant="outline"
@@ -375,7 +381,7 @@ export default function NewsletterManagement() {
                   className="border-border text-foreground hover:bg-muted hover:border-primary rounded-lg transition-all duration-300"
                 >
                   <Edit className="h-4 w-4 mr-1" />
-                  Edit
+                  {t("actions.edit")}
                 </Button>
                 {newsletter.status !== "sent" && (
                   <Button
@@ -386,7 +392,9 @@ export default function NewsletterManagement() {
                     className="border-green-200 text-green-700 hover:bg-green-50 dark:border-green-800 dark:text-green-400 dark:hover:bg-green-900/20 rounded-lg transition-all duration-300"
                   >
                     <Send className="h-4 w-4 mr-1" />
-                    {sendingId === newsletter.id ? "Sending..." : "Send"}
+                    {sendingId === newsletter.id
+                      ? t("actions.sending")
+                      : t("actions.send")}
                   </Button>
                 )}
                 <Button
@@ -396,7 +404,7 @@ export default function NewsletterManagement() {
                   className="rounded-lg transition-all duration-300"
                 >
                   <Trash2 className="h-4 w-4 mr-1" />
-                  Delete
+                  {t("actions.delete")}
                 </Button>
               </div>
             </CardContent>
@@ -410,11 +418,9 @@ export default function NewsletterManagement() {
             <Send className="w-10 h-10 text-muted-foreground" />
           </div>
           <h3 className="text-xl font-semibold text-foreground mb-2">
-            No newsletters yet
+            {t("empty.title")}
           </h3>
-          <p className="text-muted-foreground mb-6">
-            Create your first newsletter to get started
-          </p>
+          <p className="text-muted-foreground mb-6">{t("empty.description")}</p>
           <Button
             onClick={() => {
               resetForm();
@@ -423,7 +429,7 @@ export default function NewsletterManagement() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
           >
             <Plus className="mr-2 h-4 w-4" />
-            Create Newsletter
+            {t("actions.createNewsletter")}
           </Button>
         </div>
       )}
@@ -431,9 +437,9 @@ export default function NewsletterManagement() {
       {/* Preview Dialog */}
       <Dialog open={isPreviewOpen} onOpenChange={setIsPreviewOpen}>
         <DialogContent className="max-w-2xl mx-4 max-h-[90vh] overflow-y-auto bg-background border border-border rounded-2xl shadow-2xl">
-          <DialogHeader className="border-b border-[#D1D8BE] pb-4">
-            <DialogTitle className="text-xl font-semibold text-[#0D1414]">
-              Preview Newsletter
+          <DialogHeader className="border-b border-border pb-4">
+            <DialogTitle className="text-xl font-semibold text-foreground">
+              {t("previewDialog.title")}
             </DialogTitle>
           </DialogHeader>
           {previewNewsletter && (
@@ -448,7 +454,9 @@ export default function NewsletterManagement() {
               </div>
               <div
                 className="bg-muted rounded-xl p-6 border border-border leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: previewNewsletter.content }}
+                dangerouslySetInnerHTML={{
+                  __html: previewNewsletter.content,
+                }}
               />
             </div>
           )}
@@ -458,9 +466,9 @@ export default function NewsletterManagement() {
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
         <DialogContent className="max-w-2xl mx-4 max-h-[90vh] overflow-y-auto bg-background border border-border rounded-2xl shadow-2xl">
-          <DialogHeader className="border-b border-[#D1D8BE] pb-4">
-            <DialogTitle className="text-xl font-semibold text-[#0D1414]">
-              Edit Newsletter
+          <DialogHeader className="border-b border-border pb-4">
+            <DialogTitle className="text-xl font-semibold text-foreground">
+              {t("editDialog.title")}
             </DialogTitle>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-6 pt-4">
@@ -469,7 +477,7 @@ export default function NewsletterManagement() {
                 htmlFor="edit-title"
                 className="text-foreground font-medium"
               >
-                Title
+                {t("form.title")}
               </Label>
               <Input
                 id="edit-title"
@@ -486,7 +494,7 @@ export default function NewsletterManagement() {
                 htmlFor="edit-subject"
                 className="text-foreground font-medium"
               >
-                Subject
+                {t("form.subject")}
               </Label>
               <Input
                 id="edit-subject"
@@ -503,11 +511,11 @@ export default function NewsletterManagement() {
                 htmlFor="edit-content"
                 className="text-foreground font-medium"
               >
-                Content
+                {t("form.content")}
               </Label>
               <div className="border border-border rounded-lg overflow-hidden">
                 <JoditEditorComponent
-                  placeholder="Enter newsletter content..."
+                  placeholder={t("form.contentPlaceholder")}
                   initialValue={formData.content}
                   onContentChange={(content) =>
                     setFormData({ ...formData, content })
@@ -520,7 +528,7 @@ export default function NewsletterManagement() {
               type="submit"
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
             >
-              Update Newsletter
+              {t("actions.updateNewsletter")}
             </Button>
           </form>
         </DialogContent>
@@ -531,25 +539,24 @@ export default function NewsletterManagement() {
         <DialogContent className="max-w-sm mx-4 bg-background border border-border rounded-2xl shadow-2xl p-6">
           <DialogHeader className="border-b border-border pb-3 mb-4">
             <DialogTitle className="text-xl font-semibold text-destructive">
-              Confirm Deletion
+              {t("deleteDialog.title")}
             </DialogTitle>
           </DialogHeader>
           <p className="text-foreground mb-6">
-            Are you sure you want to delete this newsletter? This action cannot
-            be undone.
+            {t("deleteDialog.description")}
           </p>
           <div className="flex justify-end gap-3">
             <Button
               onClick={() => setIsDeleteDialogOpen(false)}
               className="bg-muted text-foreground hover:bg-muted/80 rounded-lg transition-all"
             >
-              Cancel
+              {t("actions.cancel")}
             </Button>
             <Button
               onClick={handleConfirmDelete}
               className="bg-destructive hover:bg-destructive/90 text-white rounded-lg transition-all"
             >
-              Delete Permanently
+              {t("actions.deletePermanently")}
             </Button>
           </div>
         </DialogContent>

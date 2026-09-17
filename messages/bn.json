@@ -3754,5 +3754,215 @@
             "removeFailed": "এই ফ্ল্যাশ সেল সরানো যায়নি",
             "tryAgain": "অনুগ্রহ করে আবার চেষ্টা করুন"
         }
+    },
+    "AdminSearchManagement": {
+        "hero": {
+            "badge": "সার্চ কার্যক্রম",
+            "title": "সার্চ ব্যবস্থাপনা",
+            "description": "সমনাম ও মার্চেন্ডাইজিং নিয়ম টিউন করুন, তারপর প্রকৃত ক্রেতার সার্চ পর্যবেক্ষণ করুন।"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "queuing": "কিউ করা হচ্ছে…",
+            "queueReindex": "সম্পূর্ণ রিইনডেক্স কিউ করুন"
+        },
+        "provider": {
+            "label": "সক্রিয় প্রদানকারী:",
+            "typesenseLabel": "টাইপসেন্স:",
+            "configured": "কনফিগার করা হয়েছে",
+            "notConfigured": "ঐচ্ছিক / কনফিগার করা হয়নি",
+            "pendingJobs": "অপেক্ষমাণ ইনডেক্স কাজ:"
+        },
+        "performance": {
+            "title": "পারফরম্যান্স",
+            "range": {
+                "last7": "গত ৭ দিন",
+                "last30": "গত ৩০ দিন",
+                "last90": "গত ৯০ দিন"
+            },
+            "kpis": {
+                "searches": "সার্চ",
+                "zeroResultRate": "শূন্য-ফলাফলের হার",
+                "clicks": "সার্চ ক্লিক",
+                "clickThroughRate": "ক্লিক-থ্রু হার",
+                "addToCarts": "কার্টে যোগ"
+            },
+            "table": {
+                "query": "কোয়েরি",
+                "searches": "সার্চ",
+                "zeroResults": "শূন্য ফলাফল",
+                "clicks": "ক্লিক",
+                "cart": "কার্ট"
+            }
+        },
+        "synonyms": {
+            "title": "সমনাম",
+            "addButton": "সমনাম গ্রুপ যোগ করুন",
+            "localeAria": "লোকেল",
+            "deleteAria": "{label} মুছুন",
+            "placeholders": {
+                "label": "গ্রুপের নাম (GPU)",
+                "terms": "gpu, graphics card, video card"
+            }
+        },
+        "rules": {
+            "title": "কোয়েরি মার্চেন্ডাইজিং নিয়ম",
+            "addButton": "কোয়েরি নিয়ম যোগ করুন",
+            "summary": "{matchType}: “{query}” · প্রায়োরিটি {priority}",
+            "deleteAria": "{name} মুছুন",
+            "placeholders": {
+                "name": "গেমিং ক্যাম্পেইন",
+                "query": "gaming laptop",
+                "priority": "প্রায়োরিটি",
+                "pinProductIds": "পিন আইডি: 12, 18",
+                "boostProductIds": "বুস্ট আইডি: 24, 31",
+                "suggestedQueries": "প্রস্তাবিত: rtx laptop, gaming pc"
+            }
+        },
+        "matchTypes": {
+            "CONTAINS": "অন্তর্ভুক্ত",
+            "PREFIX": "প্রিফিক্স",
+            "EXACT": "সঠিক"
+        },
+        "status": {
+            "active": "সক্রিয়",
+            "paused": "বিরত"
+        },
+        "confirm": {
+            "delete": "এই সার্চ কনফিগারেশন স্থায়ীভাবে মুছবেন?"
+        },
+        "toasts": {
+            "synonymCreated": "সমনাম গ্রুপ তৈরি হয়েছে।",
+            "ruleCreated": "কোয়েরি নিয়ম তৈরি হয়েছে।",
+            "configDeleted": "সার্চ কনফিগারেশন মুছে ফেলা হয়েছে।",
+            "reindexQueued": "{count}টি পণ্য ইনডেক্সিংয়ের জন্য কিউ করা হয়েছে।"
+        },
+        "errors": {
+            "loadFailed": "সার্চ ব্যবস্থাপনা লোড করা যায়নি।",
+            "synonymNotSaved": "সমনাম সংরক্ষণ করা হয়নি।",
+            "ruleNotSaved": "নিয়ম সংরক্ষণ করা হয়নি।",
+            "statusNotChanged": "স্ট্যাটাস পরিবর্তন করা হয়নি।",
+            "notDeleted": "কনফিগারেশন মোছা হয়নি।",
+            "reindexFailed": "রিইনডেক্স কিউ করা যায়নি।"
+        }
+    },
+    "AdminNewsletterPage": {
+        "header": {
+            "title": "ইমেইল ব্যবস্থাপনা",
+            "description": "নিউজলেটার ও সাবস্ক্রাইবার পরিচালনা করুন"
+        },
+        "tabs": {
+            "newsletters": "নিউজলেটার",
+            "subscribers": "সাবস্ক্রাইবার"
+        }
+    },
+    "AdminNewsletterManagement": {
+        "loading": "নিউজলেটার লোড হচ্ছে...",
+        "actions": {
+            "createNewsletter": "নিউজলেটার তৈরি করুন",
+            "updateNewsletter": "নিউজলেটার আপডেট করুন",
+            "preview": "প্রিভিউ",
+            "edit": "সম্পাদনা",
+            "send": "পাঠান",
+            "sending": "পাঠানো হচ্ছে...",
+            "delete": "মুছুন",
+            "deletePermanently": "স্থায়ীভাবে মুছুন",
+            "cancel": "বাতিল করুন"
+        },
+        "form": {
+            "title": "শিরোনাম",
+            "subject": "বিষয়",
+            "content": "কনটেন্ট",
+            "contentPlaceholder": "নিউজলেটারের কনটেন্ট লিখুন..."
+        },
+        "status": {
+            "sent": "পাঠানো হয়েছে",
+            "draft": "খসড়া"
+        },
+        "meta": {
+            "created": "তৈরি:",
+            "sent": "পাঠানো:"
+        },
+        "createDialog": {
+            "title": "নতুন নিউজলেটার তৈরি করুন"
+        },
+        "editDialog": {
+            "title": "নিউজলেটার সম্পাদনা করুন"
+        },
+        "previewDialog": {
+            "title": "নিউজলেটার প্রিভিউ"
+        },
+        "deleteDialog": {
+            "title": "মুছে ফেলা নিশ্চিত করুন",
+            "description": "আপনি কি নিশ্চিতভাবে এই নিউজলেটারটি মুছতে চান? এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না।"
+        },
+        "empty": {
+            "title": "এখনও কোনো নিউজলেটার নেই",
+            "description": "শুরু করতে আপনার প্রথম নিউজলেটার তৈরি করুন"
+        },
+        "sendError": {
+            "title": "নিউজলেটার পাঠানো হয়নি"
+        },
+        "toasts": {
+            "successTitle": "সফল",
+            "errorTitle": "ত্রুটি",
+            "created": "নিউজলেটার সফলভাবে তৈরি হয়েছে",
+            "updated": "নিউজলেটার সফলভাবে আপডেট হয়েছে",
+            "sent": "নিউজলেটার সফলভাবে পাঠানো হয়েছে",
+            "deleted": "নিউজলেটার সফলভাবে মুছে ফেলা হয়েছে"
+        },
+        "errors": {
+            "fetchFailed": "নিউজলেটার আনতে ব্যর্থ",
+            "saveFailed": "নিউজলেটার সংরক্ষণ করতে ব্যর্থ",
+            "sendFailed": "নিউজলেটার পাঠাতে ব্যর্থ",
+            "deleteFailed": "নিউজলেটার মুছতে ব্যর্থ",
+            "noSubscribers": "কোনো সাবস্ক্রাইবড প্রাপক পাওয়া যায়নি। এই নিউজলেটার পাঠানোর আগে অনুগ্রহ করে অন্তত একজন সক্রিয় সাবস্ক্রাইবার যোগ করুন।"
+        }
+    },
+    "AdminSubscriberManagement": {
+        "loading": "সাবস্ক্রাইবার লোড হচ্ছে...",
+        "header": {
+            "title": "সাবস্ক্রাইবার ব্যবস্থাপনা",
+            "total": "মোট {count} জন সাবস্ক্রাইবার"
+        },
+        "actions": {
+            "exportShort": "এক্সপোর্ট",
+            "exportCsv": "CSV এক্সপোর্ট",
+            "addSubscriber": "সাবস্ক্রাইবার যোগ করুন",
+            "removeSubscriber": "সাবস্ক্রাইবার সরান",
+            "cancel": "বাতিল করুন"
+        },
+        "addDialog": {
+            "title": "নতুন সাবস্ক্রাইবার যোগ করুন",
+            "emailLabel": "ইমেইল ঠিকানা",
+            "emailPlaceholder": "ইমেইল ঠিকানা লিখুন"
+        },
+        "status": {
+            "subscribed": "সাবস্ক্রাইব করা",
+            "unsubscribed": "আনসাবস্ক্রাইব করা"
+        },
+        "empty": {
+            "title": "এখনও কোনো সাবস্ক্রাইবার নেই",
+            "description": "শুরু করতে আপনার প্রথম সাবস্ক্রাইবার যোগ করুন"
+        },
+        "deleteDialog": {
+            "title": "মুছে ফেলা নিশ্চিত করুন",
+            "description": "আপনি কি নিশ্চিতভাবে {email} কে সাবস্ক্রাইবার থেকে সরাতে চান?"
+        },
+        "export": {
+            "headers": "ইমেইল,স্ট্যাটাস"
+        },
+        "toasts": {
+            "successTitle": "সফল",
+            "errorTitle": "ত্রুটি",
+            "added": "সাবস্ক্রাইবার সফলভাবে যোগ করা হয়েছে",
+            "deleted": "সাবস্ক্রাইবার সফলভাবে মোছা হয়েছে",
+            "exported": "সাবস্ক্রাইবার সফলভাবে এক্সপোর্ট করা হয়েছে"
+        },
+        "errors": {
+            "fetchFailed": "সাবস্ক্রাইবার আনতে ব্যর্থ",
+            "addFailed": "সাবস্ক্রাইবার যোগ করতে ব্যর্থ",
+            "deleteFailed": "সাবস্ক্রাইবার মুছতে ব্যর্থ"
+        }
     }
 }
