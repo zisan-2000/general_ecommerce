@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { gateStoreFeature } from '@/lib/store-feature-gates-server';
 import { requireProductManager } from '@/lib/product-management-access';
+import { computeWarehouseAvailableStock } from '@/lib/warehouse-stock';
 
 export async function GET(request: NextRequest) {
   const auth = await requireProductManager();
@@ -11,7 +12,10 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const search = searchParams.get('search') || '';
-    const limit = parseInt(searchParams.get('limit') || '20');
+    const requestedLimit = Number(searchParams.get('limit') || 20);
+    const limit = Number.isInteger(requestedLimit)
+      ? Math.min(100, Math.max(1, requestedLimit))
+      : 20;
     const excludeBundleId = searchParams.get('excludeBundleId'); // Exclude products already in this bundle
     const categoryIds = searchParams.get('categoryIds'); // Filter by selected categories
 
@@ -93,7 +97,10 @@ export async function GET(request: NextRequest) {
             currency: true,
             stock: true,
             isDefault: true,
-            options: true
+            options: true,
+            stockLevels: {
+              select: { quantity: true, reserved: true },
+            },
           },
           orderBy: { isDefault: 'desc' }
         },
@@ -117,7 +124,12 @@ export async function GET(request: NextRequest) {
     // Format products for response
     const formattedProducts = filteredProducts.map(product => {
       // Get default variant or first variant
-      const defaultVariant = product.variants.find(v => v.isDefault) || product.variants[0];
+      const variants = product.variants.map((variant) => ({
+        ...variant,
+        availableStock:
+          computeWarehouseAvailableStock(variant) ?? Math.max(0, Number(variant.stock)),
+      }));
+      const defaultVariant = variants.find(v => v.isDefault) || variants[0];
       
       return {
         id: product.id,
@@ -133,13 +145,15 @@ export async function GET(request: NextRequest) {
         category: product.category,
         brand: product.brand,
         defaultPrice: defaultVariant ? Number(defaultVariant.price) : Number(product.basePrice),
-        stock: defaultVariant?.stock || 0,
-        variants: product.variants.map(variant => ({
+        stock: product.type === 'PHYSICAL'
+          ? (defaultVariant?.availableStock ?? 0)
+          : 99,
+        variants: variants.map(variant => ({
           id: variant.id,
           sku: variant.sku,
           price: Number(variant.price),
           currency: variant.currency,
-          stock: variant.stock,
+          stock: product.type === 'PHYSICAL' ? variant.availableStock : 99,
           isDefault: variant.isDefault,
           options: variant.options
         }))

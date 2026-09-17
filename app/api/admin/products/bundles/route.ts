@@ -125,12 +125,8 @@ export async function POST(request: NextRequest) {
     const name = String(body.name || "").trim();
     const description = String(body.description || "").trim();
     const categoryId = Number(body.categoryId);
-    const warehouseId = Number(body.warehouseId);
     if (!name || !description || !Number.isInteger(categoryId) || categoryId <= 0) {
       return NextResponse.json({ error: "Name, description and category are required" }, { status: 400 });
-    }
-    if (!Number.isInteger(warehouseId) || warehouseId <= 0) {
-      return NextResponse.json({ error: "Please select a valid warehouse" }, { status: 400 });
     }
     const requestedLimit = normalizeBundleStockQuantity(body.bundleStockLimit);
     if (requestedLimit === undefined) {

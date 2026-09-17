@@ -229,10 +229,18 @@ test("admin validation enforces group semantics and variant-selector product ide
         { productId: 3, variantId: 30, isDefault: false },
       ],
     },
+    {
+      name: "Required selector",
+      selectionType: "PRODUCT_SELECT",
+      required: false,
+      minSelect: 0,
+      options: [{ productId: 4, variantId: 40, isDefault: false }],
+    },
   ]);
   assert.equal(invalid.valid, false);
   assert.match(invalid.errors.join("\n"), /optional and cannot be required/);
   assert.match(invalid.errors.join("\n"), /same product/);
+  assert.match(invalid.errors.join("\n"), /must be required/);
 });
 
 test("cart, order, warehouse and admin routes retain the configurable-bundle contract", async () => {
@@ -254,9 +262,14 @@ test("cart, order, warehouse and admin routes retain the configurable-bundle con
   assert.match(warehouse, /orderBundleComponent/);
   assert.match(shipment, /bundleComponents/);
   assert.match(adminCreate, /requireProductManager/);
+  assert.doesNotMatch(adminCreate, /Please select a valid warehouse/);
   assert.match(adminUpdate, /requireProductManager/);
   assert.match(categoryPicker, /categoryIds: selectedCategoryId/);
   assert.match(categoryPicker, /Catalog category/);
+  assert.match(categoryPicker, /Retry/);
+  assert.match(categoryPicker, /Move group/);
   assert.match(catalogSearch, /effectiveCategoryIds/);
   assert.match(catalogSearch, /category\.parentId/);
+  assert.match(catalogSearch, /stockLevels/);
+  assert.match(catalogSearch, /reserved/);
 });

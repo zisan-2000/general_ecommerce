@@ -196,6 +196,9 @@ export function validateBundleAdminGroups(value: unknown) {
     if (group.selectionType === "OPTIONAL" && group.required !== false) {
       errors.push(`${label} is optional and cannot be required`);
     }
+    if (group.selectionType !== "OPTIONAL" && group.required === false) {
+      errors.push(`${label} must be required`);
+    }
 
     const minSelect = Math.max(0, Number(group.minSelect ?? (group.required === false ? 0 : 1)));
     const maxSelect = Math.max(1, Number(group.maxSelect ?? 1));
@@ -203,6 +206,15 @@ export function validateBundleAdminGroups(value: unknown) {
       errors.push(`${label} has invalid minimum/maximum selections`);
     }
     if (maxSelect > options.length) errors.push(`${label} cannot select more choices than it provides`);
+    if (group.selectionType === "FIXED" && (minSelect !== 1 || maxSelect !== 1)) {
+      errors.push(`${label} must select exactly one fixed choice`);
+    }
+    if (group.selectionType === "OPTIONAL" && minSelect !== 0) {
+      errors.push(`${label} must allow zero choices`);
+    }
+    if (group.selectionType !== "OPTIONAL" && minSelect < 1) {
+      errors.push(`${label} must require at least one choice`);
+    }
     const defaultCount = options.filter((option) => Boolean(option.isDefault)).length;
     if (defaultCount < minSelect || defaultCount > maxSelect) {
       errors.push(`${label} default choices must satisfy its selection limits`);

@@ -26,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import ConfigurableBundleGroupBuilder, {
+  createBundleGroup,
   type BundleBuilderGroup,
 } from "./ConfigurableBundleGroupBuilder";
 import {
@@ -33,10 +34,10 @@ import {
   mergeDuplicateBundleItems,
   type DiscountType,
 } from "@/lib/bundle";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 
 type Category = { id: number; name: string };
 type Brand = { id: number; name: string };
-type Warehouse = { id: number; name: string; code: string; isDefault: boolean };
 type VatClass = { id: number; name: string; code: string };
 
 type BundleSelectedItem = {
@@ -66,7 +67,6 @@ const defaultFormData = {
   available: true,
   featured: false,
   currency: "BDT",
-  warehouseId: "",
   vatClassId: "none",
   bundleStockLimit: "",
 };
@@ -92,7 +92,6 @@ export default function BundleFormModal({
   const [groups, setGroups] = useState<BundleBuilderGroup[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
-  const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
   const [vatClasses, setVatClasses] = useState<VatClass[]>([]);
 
   const resetState = () => {
@@ -126,7 +125,6 @@ export default function BundleFormModal({
         const lookupRequests = [
           fetch("/api/categories"),
           fetch("/api/brands"),
-          fetch("/api/warehouses"),
           fetch("/api/vat-classes"),
         ];
 
@@ -142,7 +140,6 @@ export default function BundleFormModal({
         const [
           categoriesRes,
           brandsRes,
-          warehousesRes,
           vatClassesRes,
           bundleRes,
         ] = responses;
@@ -150,13 +147,11 @@ export default function BundleFormModal({
         const [
           categoriesData,
           brandsData,
-          warehousesData,
           vatClassesData,
           bundleData,
         ] = await Promise.all([
           categoriesRes.json().catch(() => []),
           brandsRes.json().catch(() => []),
-          warehousesRes.json().catch(() => []),
           vatClassesRes.json().catch(() => []),
           bundleRes?.json().catch(() => null),
         ]);
@@ -164,12 +159,10 @@ export default function BundleFormModal({
         const nextCategories =
           categoriesData.categories || categoriesData || [];
         const nextBrands = brandsData.brands || brandsData || [];
-        const nextWarehouses = warehousesData || [];
         const nextVatClasses = vatClassesData || [];
 
         setCategories(nextCategories);
         setBrands(nextBrands);
-        setWarehouses(nextWarehouses);
         setVatClasses(nextVatClasses);
 
         if (isEdit) {
@@ -197,21 +190,13 @@ export default function BundleFormModal({
             available: Boolean(bundleData.available),
             featured: Boolean(bundleData.featured),
             currency: bundleData.currency || "BDT",
-            warehouseId:
-              bundleData.variants
-                ?.find((variant: any) => variant.isDefault)
-                ?.stockLevels?.[0]?.warehouseId?.toString() ||
-              bundleData.variants?.[0]?.stockLevels?.[0]?.warehouseId?.toString() ||
-              nextWarehouses
-                .find((warehouse: Warehouse) => warehouse.isDefault)
-                ?.id?.toString() ||
-              "",
             vatClassId: bundleData.VatClassId
               ? String(bundleData.VatClassId)
               : "none",
-            bundleStockLimit: bundleData.bundleStockLimit
-              ? String(bundleData.bundleStockLimit)
-              : "",
+            bundleStockLimit:
+              bundleData.bundleStockLimit !== null && bundleData.bundleStockLimit !== undefined
+                ? String(bundleData.bundleStockLimit)
+                : "",
           });
 
           const loadedGroups: BundleBuilderGroup[] = (bundleData.bundleGroups || []).map(
@@ -226,18 +211,31 @@ export default function BundleFormModal({
               minQuantity: Number(group.minQuantity ?? 1),
               maxQuantity: Number(group.maxQuantity ?? 1),
               allowQuantityChange: Boolean(group.allowQuantityChange),
-              options: (group.options || []).map((option: any) => ({
-                productId: option.productId,
-                variantId: option.variantId ?? option.variant?.id ?? null,
-                isDefault: Boolean(option.isDefault),
-                priceAdjustment: Number(option.priceAdjustment ?? 0),
-                product: {
-                  ...option.product,
-                  defaultPrice: Number(option.variant?.price ?? option.product.basePrice),
-                  stock: Number(option.variant?.stock ?? option.product.variants?.[0]?.stock ?? 0),
-                },
-                variant: option.variant ?? null,
-              })),
+              options: (group.options || []).map((option: any) => {
+                const availableVariant = option.variant
+                  ? {
+                      ...option.variant,
+                      stock: computeVariantAvailableStock(option.variant),
+                    }
+                  : null;
+                const fallbackVariant = option.product.variants?.[0];
+                return {
+                  productId: option.productId,
+                  variantId: option.variantId ?? option.variant?.id ?? null,
+                  isDefault: Boolean(option.isDefault),
+                  priceAdjustment: Number(option.priceAdjustment ?? 0),
+                  product: {
+                    ...option.product,
+                    defaultPrice: Number(option.variant?.price ?? option.product.basePrice),
+                    stock: availableVariant
+                      ? availableVariant.stock
+                      : fallbackVariant
+                        ? computeVariantAvailableStock(fallbackVariant)
+                        : 0,
+                  },
+                  variant: availableVariant,
+                };
+              }),
             }),
           );
           setGroups(loadedGroups);
@@ -265,14 +263,11 @@ export default function BundleFormModal({
           setDiscountValue(discountPercentage.toFixed(1));
           setManualPrice("");
         } else {
-          const defaultWarehouse = nextWarehouses.find(
-            (warehouse: Warehouse) => warehouse.isDefault,
-          );
           setFormData((prev) => ({
             ...prev,
-            warehouseId: defaultWarehouse ? String(defaultWarehouse.id) : "",
             bundleStockLimit: "",
           }));
+          setGroups([createBundleGroup(), createBundleGroup()]);
         }
       } catch (error) {
         console.error("Error loading bundle form data:", error);
@@ -288,42 +283,106 @@ export default function BundleFormModal({
     void loadModalData();
   }, [open, isEdit, bundleId, onOpenChange]);
 
-  const pricing = useMemo(() => {
+  const pricingState = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
-    if (validItems.length < 1) return null;
+    if (validItems.length < 1) {
+      return { value: null, error: "Choose enough default components to calculate a bundle price" };
+    }
 
     try {
-      return calculateBundlePricing({
-        items: mergeDuplicateBundleItems(validItems),
-        discountType,
-        discountValue: parseFloat(discountValue) || 0,
-        manualPrice:
-          discountType === "MANUAL" && manualPrice
-            ? parseFloat(manualPrice)
-            : undefined,
-      });
+      return {
+        value: calculateBundlePricing({
+          items: mergeDuplicateBundleItems(validItems),
+          discountType,
+          discountValue: parseFloat(discountValue) || 0,
+          manualPrice:
+            discountType === "MANUAL" && manualPrice
+              ? parseFloat(manualPrice)
+              : undefined,
+        }),
+        error: "",
+      };
     } catch (error) {
-      console.error("Error calculating pricing:", error);
-      return null;
+      return {
+        value: null,
+        error: error instanceof Error ? error.message : "Bundle pricing is invalid",
+      };
     }
   }, [selectedItems, discountType, discountValue, manualPrice]);
+  const pricing = pricingState.value;
 
   const validation = useMemo(() => {
     const errors: string[] = [];
+    if (formData.bundleStockLimit !== "") {
+      const stockLimit = Number(formData.bundleStockLimit);
+      if (!Number.isInteger(stockLimit) || stockLimit < 0) {
+        errors.push("Bundle stock must be a whole number of zero or more");
+      }
+    }
     if (groups.length < 2) errors.push("At least two groups are required");
+    const names = new Set<string>();
     for (const [index, group] of groups.entries()) {
-      if (!group.name.trim()) errors.push(`Group ${index + 1} requires a name`);
-      if (group.options.length === 0) errors.push(`Group ${index + 1} requires a choice`);
+      const label = `Group ${index + 1}`;
+      const normalizedName = group.name.trim().toLowerCase();
+      if (!normalizedName) errors.push(`${label} requires a name`);
+      if (normalizedName && names.has(normalizedName)) errors.push(`${label} has a duplicate name`);
+      if (normalizedName) names.add(normalizedName);
+      if (group.options.length === 0) errors.push(`${label} requires a choice`);
+      if (group.selectionType === "FIXED" && group.options.length !== 1) {
+        errors.push(`${label} must have exactly one fixed choice`);
+      }
+      if (group.selectionType === "OPTIONAL" && group.required) {
+        errors.push(`${label} is optional and cannot be required`);
+      }
+      if (group.selectionType !== "OPTIONAL" && !group.required) {
+        errors.push(`${label} must be required`);
+      }
+      if (group.selectionType === "FIXED" && (group.minSelect !== 1 || group.maxSelect !== 1)) {
+        errors.push(`${label} must select exactly one fixed choice`);
+      }
+      if (group.selectionType === "OPTIONAL" && group.minSelect !== 0) {
+        errors.push(`${label} must allow zero choices`);
+      }
+      if (group.selectionType !== "OPTIONAL" && group.minSelect < 1) {
+        errors.push(`${label} must require at least one choice`);
+      }
+      if (!Number.isInteger(group.minSelect) || !Number.isInteger(group.maxSelect) || group.minSelect < 0 || group.maxSelect < 1 || group.minSelect > group.maxSelect) {
+        errors.push(`${label} has invalid selection limits`);
+      }
+      if (group.maxSelect > group.options.length) {
+        errors.push(`${label} cannot select more choices than it provides`);
+      }
       const defaultCount = group.options.filter((option) => option.isDefault).length;
       if (defaultCount < group.minSelect || defaultCount > group.maxSelect) {
-        errors.push(`Group ${index + 1} defaults must satisfy selection limits`);
+        errors.push(`${label} defaults must satisfy selection limits`);
+      }
+      if (
+        !Number.isInteger(group.minQuantity) || group.minQuantity < 1 ||
+        !Number.isInteger(group.maxQuantity) || group.maxQuantity < group.minQuantity ||
+        !Number.isInteger(group.defaultQuantity) || group.defaultQuantity < group.minQuantity || group.defaultQuantity > group.maxQuantity
+      ) {
+        errors.push(`${label} has invalid quantity limits`);
+      }
+      const choiceKeys = new Set<string>();
+      const productIds = new Set<number>();
+      for (const option of group.options) {
+        const key = `${option.productId}:${option.variantId ?? "default"}`;
+        if (choiceKeys.has(key)) errors.push(`${label} contains a duplicate choice`);
+        choiceKeys.add(key);
+        productIds.add(option.productId);
+        if (!Number.isFinite(option.priceAdjustment)) errors.push(`${label} has an invalid price adjustment`);
+      }
+      if (group.selectionType === "VARIANT_SELECT" && productIds.size > 1) {
+        errors.push(`${label} can only contain variants of one product`);
       }
     }
     return { isValid: errors.length === 0, errors };
-  }, [groups]);
+  }, [groups, formData.bundleStockLimit]);
 
   const bundleStockMetrics = useMemo(() => {
-    const validItems = selectedItems.filter((item) => item?.product?.id);
+    const validItems = selectedItems.filter(
+      (item) => item?.product?.id && item.product.type === "PHYSICAL",
+    );
 
     if (validItems.length === 0) {
       return {
@@ -339,51 +398,48 @@ export default function BundleFormModal({
       };
     }
 
-    // Aggregate items by product id so stock is computed across variants
     const agg = new Map<
-      number,
+      string,
       {
         product: any;
-        totalStock: number;
+        stock: number;
         totalQuantity: number;
-        variantSkus: string[];
+        variantSku?: string;
       }
     >();
 
     for (const item of validItems) {
-      const pid = item.product.id;
-      const variantStock = Number(item.variant?.stock ?? 0);
-      const productStock = Number(item.product?.stock ?? 0);
-      // prefer variant stock when a variant is selected, otherwise use product stock
-      const stockToAdd = item.variant ? variantStock : productStock;
+      const key = item.variant?.id
+        ? `variant:${item.variant.id}`
+        : `product:${item.product.id}`;
+      const stock = Number(item.variant?.stock ?? item.product?.stock ?? 0);
       const qty = Number(item.quantity || 0);
 
-      const existing = agg.get(pid);
+      const existing = agg.get(key);
       if (existing) {
-        existing.totalStock += stockToAdd;
         existing.totalQuantity += qty;
-        if (item.variant?.sku) existing.variantSkus.push(item.variant.sku);
+        existing.stock = Math.min(existing.stock, stock);
       } else {
-        agg.set(pid, {
+        agg.set(key, {
           product: item.product,
-          totalStock: stockToAdd,
+          stock,
           totalQuantity: qty,
-          variantSkus: item.variant?.sku ? [item.variant.sku] : [],
+          variantSku: item.variant?.sku,
         });
       }
     }
 
-    const limitingItems = Array.from(agg.entries()).map(([pid, entry]) => {
-      const stock = entry.totalStock;
+    const limitingItems = Array.from(agg.entries()).map(([key, entry]) => {
+      const stock = entry.stock;
       const quantityPerBundle = entry.totalQuantity;
       const maxBundles =
         quantityPerBundle > 0 ? Math.floor(stock / quantityPerBundle) : 0;
-      const name = entry.variantSkus.length
-        ? `${entry.product.name} (${entry.variantSkus.join(",")})`
+      const name = entry.variantSku
+        ? `${entry.product.name} (${entry.variantSku})`
         : entry.product.name;
 
       return {
-        key: `${pid}`,
+        key,
         name,
         stock,
         quantityPerBundle,
@@ -396,9 +452,13 @@ export default function BundleFormModal({
         ? Math.min(...limitingItems.map((item) => item.maxBundles))
         : 0;
 
-    const requestedBundleStock = Number(formData.bundleStockLimit || 0);
+    const requestedBundleStock = formData.bundleStockLimit === ""
+      ? null
+      : Number(formData.bundleStockLimit);
     const effectiveBundleStock =
-      requestedBundleStock > 0
+      requestedBundleStock !== null &&
+      Number.isInteger(requestedBundleStock) &&
+      requestedBundleStock >= 0
         ? Math.min(requestedBundleStock, maxBundlesFromStock)
         : maxBundlesFromStock;
 
@@ -410,7 +470,7 @@ export default function BundleFormModal({
   }, [selectedItems, formData.bundleStockLimit]);
 
   const hasOutOfStockItems = selectedItems.some((item) => {
-    if (!item?.product) return false;
+    if (!item?.product || item.product.type !== "PHYSICAL") return false;
     const itemStock = item.variant ? item.variant.stock : item.product.stock;
     return Number(itemStock) <= 0;
   });
@@ -481,11 +541,6 @@ export default function BundleFormModal({
       return;
     }
 
-    if (!formData.warehouseId) {
-      toast.error("Please select a warehouse");
-      return;
-    }
-
     if (groups.length < 2 || groups.some((group) => !group.name.trim() || group.options.length === 0)) {
       toast.error("Add at least two complete selection groups");
       return;
@@ -513,9 +568,6 @@ export default function BundleFormModal({
         available: formData.available,
         featured: formData.featured,
         currency: formData.currency,
-        warehouseId: formData.warehouseId
-          ? parseInt(formData.warehouseId, 10)
-          : null,
         vatClassId:
           formData.vatClassId && formData.vatClassId !== "none"
             ? parseInt(formData.vatClassId, 10)
@@ -692,12 +744,9 @@ export default function BundleFormModal({
                             setFormData((prev) => ({
                               ...prev,
                               categoryId: value,
-                              selectedCategoryIds:
-                                prev.selectedCategoryIds.length > 0
-                                  ? prev.selectedCategoryIds
-                                  : value
-                                    ? [value]
-                                    : [],
+                              selectedCategoryIds: value
+                                ? Array.from(new Set([...prev.selectedCategoryIds, value]))
+                                : prev.selectedCategoryIds,
                             }))
                           }
                         >
@@ -744,33 +793,6 @@ export default function BundleFormModal({
                     </div>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div>
-                        <Label htmlFor="bundle-warehouse">Warehouse *</Label>
-                        <Select
-                          value={formData.warehouseId}
-                          onValueChange={(value) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              warehouseId: value,
-                            }))
-                          }
-                        >
-                          <SelectTrigger id="bundle-warehouse">
-                            <SelectValue placeholder="Select warehouse" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {warehouses.map((warehouse) => (
-                              <SelectItem
-                                key={warehouse.id}
-                                value={String(warehouse.id)}
-                              >
-                                {warehouse.name} ({warehouse.code})
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-
                       <div>
                         <Label htmlFor="bundle-vat">VAT Class</Label>
                         <Select
@@ -822,8 +844,8 @@ export default function BundleFormModal({
                         }
                       />
                       <p className="mt-1 text-xs text-muted-foreground">
-                        This stock is saved to the selected warehouse. Leave
-                        empty to use the calculated build capacity.
+                        Optional global sale cap. Leave empty to use the
+                        capacity calculated from the selected components.
                       </p>
                     </div>
 
@@ -912,6 +934,21 @@ export default function BundleFormModal({
                       categories={categories}
                     />
 
+                    {(!validation.isValid || hasOutOfStockItems || pricingState.error) && (
+                      <div className="mt-4 rounded-lg border border-destructive/20 bg-destructive/10 p-3" role="alert">
+                        <p className="mb-1 text-sm font-medium text-destructive">
+                          Complete these bundle requirements
+                        </p>
+                        <ul className="list-inside list-disc text-sm text-destructive">
+                          {validation.errors.map((error, index) => (
+                            <li key={`${error}-${index}`}>{error}</li>
+                          ))}
+                          {hasOutOfStockItems && <li>Some selected physical items are out of stock</li>}
+                          {pricingState.error && <li>{pricingState.error}</li>}
+                        </ul>
+                      </div>
+                    )}
+
                     {selectedItems.length > 0 && (
                       <div className="mt-4 rounded-lg border bg-muted/30 p-4">
                         <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
@@ -920,8 +957,8 @@ export default function BundleFormModal({
                               Bundle Stock Summary
                             </p>
                             <p className="text-xs text-muted-foreground">
-                              Calculated from selected product stock and qty per
-                              bundle
+                              Default configuration capacity from available
+                              component stock
                             </p>
                           </div>
                           <Badge variant="secondary">
@@ -1087,7 +1124,7 @@ export default function BundleFormModal({
                   <CardContent className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
-                        From component stock
+                        Default component capacity
                       </span>
                       <span className="font-medium">
                         {bundleStockMetrics.maxBundlesFromStock}
@@ -1203,62 +1240,34 @@ export default function BundleFormModal({
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="space-y-3">
-                      {(!validation.isValid || hasOutOfStockItems) && (
-                        <div className="rounded-lg border border-destructive/20 bg-destructive/10 p-3">
-                          <p className="mb-1 text-sm font-medium text-destructive">
-                            Bundle Requirements
-                          </p>
-                          <ul className="list-inside list-disc text-sm text-destructive">
-                            {!validation.isValid &&
-                              validation.errors.map((error, index) => (
-                                <li key={`${error}-${index}`}>{error}</li>
-                              ))}
-                            {hasOutOfStockItems && (
-                              <li>Some selected items are out of stock</li>
-                            )}
-                          </ul>
-                        </div>
-                      )}
-
-                      <Button
-                        type="submit"
-                        className="w-full"
-                        disabled={
-                          saving ||
-                          !validation.isValid ||
-                          !pricing ||
-                          hasOutOfStockItems
-                        }
-                      >
-                        {saving ? (
-                          <>
-                            <div className="mr-2 h-4 w-4 animate-spin rounded-full border-b-2 border-white" />
-                            {isEdit
-                              ? "Updating Bundle..."
-                              : "Creating Bundle..."}
-                          </>
-                        ) : (
-                          <>
-                            <Save className="mr-2 h-4 w-4" />
-                            {isEdit ? "Update Bundle" : "Create Bundle"}
-                          </>
-                        )}
-                      </Button>
-
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className="w-full"
-                        onClick={() => onOpenChange(false)}
-                      >
-                        Cancel
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+              </div>
+            </div>
+            <div className="sticky bottom-0 z-20 -mx-6 mt-6 flex flex-col-reverse gap-3 border-t bg-background/95 px-6 py-4 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-muted-foreground" aria-live="polite">
+                {validation.isValid && pricing && !hasOutOfStockItems
+                  ? "Bundle configuration is ready to save."
+                  : "Complete the highlighted requirements before saving."}
+              </p>
+              <div className="flex gap-2">
+                <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={saving || !validation.isValid || !pricing || hasOutOfStockItems}
+                >
+                  {saving ? (
+                    <>
+                      <div className="mr-2 h-4 w-4 animate-spin rounded-full border-b-2 border-white" />
+                      {isEdit ? "Updating Bundle..." : "Creating Bundle..."}
+                    </>
+                  ) : (
+                    <>
+                      <Save className="mr-2 h-4 w-4" />
+                      {isEdit ? "Update Bundle" : "Create Bundle"}
+                    </>
+                  )}
+                </Button>
               </div>
             </div>
           </form>

@@ -20,7 +20,11 @@ const detailInclude = {
         include: {
           category: true,
           brand: true,
-          variants: { where: { active: true }, orderBy: { isDefault: "desc" as const } },
+          variants: {
+            where: { active: true },
+            include: { stockLevels: { select: { quantity: true, reserved: true } } },
+            orderBy: { isDefault: "desc" as const },
+          },
         },
       },
     },
@@ -36,10 +40,16 @@ const detailInclude = {
             include: {
               category: true,
               brand: true,
-              variants: { where: { active: true }, orderBy: { isDefault: "desc" as const } },
+              variants: {
+                where: { active: true },
+                include: { stockLevels: { select: { quantity: true, reserved: true } } },
+                orderBy: { isDefault: "desc" as const },
+              },
             },
           },
-          variant: true,
+          variant: {
+            include: { stockLevels: { select: { quantity: true, reserved: true } } },
+          },
         },
       },
     },

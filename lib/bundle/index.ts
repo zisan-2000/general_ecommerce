@@ -290,7 +290,6 @@ export function isProductAvailableForBundling(product: Product): boolean {
  * Merge duplicate products in bundle items (combines quantities)
  */
 export function mergeDuplicateBundleItems(items: BundleItem[]): BundleItem[] {
-  console.log('mergeDuplicateBundleItems input:', items);
   
   // Filter out any invalid items first
   const validItems = items.filter(item => {
@@ -301,10 +300,8 @@ export function mergeDuplicateBundleItems(items: BundleItem[]): BundleItem[] {
     return isValid;
   });
   
-  console.log('mergeDuplicateBundleItems valid items:', validItems);
   
   if (validItems.length === 0) {
-    console.log('No valid items to merge');
     return [];
   }
   
@@ -319,7 +316,6 @@ export function mergeDuplicateBundleItems(items: BundleItem[]): BundleItem[] {
     if (existing) {
       // Merge quantities
       existing.quantity += item.quantity;
-      console.log(`Merged item ${key}: new quantity ${existing.quantity}`);
     } else {
       // Add new item with a clean copy
       const cleanItem: BundleItem = {
@@ -328,11 +324,9 @@ export function mergeDuplicateBundleItems(items: BundleItem[]): BundleItem[] {
         quantity: item.quantity
       };
       merged.set(key, cleanItem);
-      console.log(`Added new item ${key}:`, cleanItem);
     }
   }
 
   const result = Array.from(merged.values());
-  console.log('mergeDuplicateBundleItems result:', result);
   return result;
 }
