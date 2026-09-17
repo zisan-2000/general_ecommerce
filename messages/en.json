@@ -4035,6 +4035,73 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminStoreFeatures": {
+    "eyebrow": "Store configuration",
+    "title": "Optional modules",
+    "description": "These switches control navigation, storefront discovery, management actions and new purchases. Existing order and audit history stays readable.",
+    "migrationWarning": "The StoreFeature migration has not been applied. Safe defaults are active, but changes cannot be saved yet.",
+    "actions": {
+      "refresh": "Refresh",
+      "enableFeature": "Enable {feature}",
+      "disableFeature": "Disable {feature}"
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "requires": "Requires {feature}"
+    },
+    "success": {
+      "enabled": "{feature} enabled.",
+      "disabled": "{feature} disabled."
+    },
+    "errors": {
+      "loadFailed": "Features could not be loaded.",
+      "updateFailed": "Feature was not updated.",
+      "blockedBy": "Blocked by: {features}."
+    },
+    "featureNames": {
+      "PC_BUILDER": "PC Builder",
+      "BOOKS": "Books",
+      "AUTHORS": "Authors",
+      "COMPARE": "Product comparison",
+      "DIGITAL_PRODUCTS": "Digital products",
+      "SERVICE_PRODUCTS": "Service products",
+      "BUNDLES": "Product bundles",
+      "PHYSICAL_PRODUCTS": "Physical products",
+      "CART": "Cart",
+      "INVENTORY": "Inventory"
+    },
+    "features": {
+      "PC_BUILDER": {
+        "label": "PC Builder",
+        "description": "Compatible component selection, saved builds and grouped checkout."
+      },
+      "BOOKS": {
+        "label": "Books",
+        "description": "Book-specific discovery and structured book metadata."
+      },
+      "AUTHORS": {
+        "label": "Authors",
+        "description": "Author discovery and author-to-book navigation."
+      },
+      "COMPARE": {
+        "label": "Product comparison",
+        "description": "Side-by-side comparison of selected products."
+      },
+      "DIGITAL_PRODUCTS": {
+        "label": "Digital products",
+        "description": "Products fulfilled through protected digital delivery."
+      },
+      "SERVICE_PRODUCTS": {
+        "label": "Service products",
+        "description": "Bookable or scheduled service products."
+      },
+      "BUNDLES": {
+        "label": "Product bundles",
+        "description": "Products composed from multiple purchasable products."
+      }
+    }
+  },
   "AdminPaymentGateway": {
     "title": "Payment Gateway Management",
     "dialog": {

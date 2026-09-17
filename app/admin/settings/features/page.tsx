@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import type { ResolvedStoreFeature, StoreFeatureKey } from "@/lib/store-features";
 import { STOREFRONT_FEATURES_CHANGED_EVENT } from "@/providers/storefront-features-provider";
+import { useTranslations } from "next-intl";
 
 type FeatureResponse = {
   storage?: "database" | "defaults";
@@ -15,6 +16,7 @@ type FeatureResponse = {
 };
 
 export default function StoreFeaturesPage() {
+  const t = useTranslations("AdminStoreFeatures");
   const [features, setFeatures] = useState<ResolvedStoreFeature[]>([]);
   const [storage, setStorage] = useState<"database" | "defaults">("database");
   const [loading, setLoading] = useState(true);
@@ -29,15 +31,15 @@ export default function StoreFeaturesPage() {
         cache: "no-store",
       });
       const payload = (await response.json()) as FeatureResponse;
-      if (!response.ok) throw new Error(payload.error || "Features could not be loaded.");
+      if (!response.ok) throw new Error(t("errors.loadFailed"));
       setFeatures(payload.features ?? []);
       setStorage(payload.storage ?? "database");
     } catch (loadError) {
-      setError(loadError instanceof Error ? loadError.message : "Features could not be loaded.");
+      setError(loadError instanceof Error ? loadError.message : t("errors.loadFailed"));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     void loadFeatures();
@@ -55,21 +57,35 @@ export default function StoreFeaturesPage() {
         const payload = (await response.json()) as FeatureResponse;
         if (!response.ok) {
           const blocked = payload.blockedBy?.length
-            ? ` Blocked by: ${payload.blockedBy.join(", ")}.`
+            ? t("errors.blockedBy", {
+                features: payload.blockedBy
+                  .map((key) => t(`featureNames.${key}`))
+                  .join(", "),
+              })
             : "";
-          throw new Error(`${payload.error || "Feature was not updated."}${blocked}`);
+          throw new Error(
+            blocked || t("errors.updateFailed"),
+          );
         }
         setFeatures(payload.features ?? []);
         setStorage("database");
         window.dispatchEvent(new Event(STOREFRONT_FEATURES_CHANGED_EVENT));
-        toast.success(`${feature.label} ${feature.configuredEnabled ? "disabled" : "enabled"}.`);
+        toast.success(
+          feature.configuredEnabled
+            ? t("success.disabled", { feature: t(`features.${feature.key}.label`) })
+            : t("success.enabled", { feature: t(`features.${feature.key}.label`) }),
+        );
       } catch (updateError) {
-        toast.error(updateError instanceof Error ? updateError.message : "Feature was not updated.");
+        toast.error(
+          updateError instanceof Error
+            ? updateError.message
+            : t("errors.updateFailed"),
+        );
       } finally {
         setSaving(null);
       }
     },
-    [],
+    [t],
   );
 
   return (
@@ -79,23 +95,23 @@ export default function StoreFeaturesPage() {
           <div>
             <div className="flex items-center gap-2 text-primary">
               <SlidersHorizontal className="h-5 w-5" aria-hidden="true" />
-              <p className="text-xs font-bold uppercase tracking-[0.16em]">Store configuration</p>
+              <p className="text-xs font-bold uppercase tracking-[0.16em]">{t("eyebrow")}</p>
             </div>
-            <h1 className="mt-2 text-2xl font-black">Optional modules</h1>
+            <h1 className="mt-2 text-2xl font-black">{t("title")}</h1>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              These switches control navigation, storefront discovery, management actions and new purchases. Existing order and audit history stays readable.
+              {t("description")}
             </p>
           </div>
           <Button variant="outline" onClick={() => void loadFeatures()} disabled={loading}>
             <RefreshCw className={`mr-2 h-4 w-4 ${loading ? "animate-spin" : ""}`} aria-hidden="true" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
 
         {storage === "defaults" ? (
           <div className="flex gap-3 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:bg-amber-950/20 dark:text-amber-100">
             <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
-            <p>The StoreFeature migration has not been applied. Safe defaults are active, but changes cannot be saved yet.</p>
+            <p>{t("migrationWarning")}</p>
           </div>
         ) : null}
 
@@ -119,14 +135,18 @@ export default function StoreFeaturesPage() {
                 <section key={feature.key} className="rounded-2xl border bg-card p-5 shadow-sm">
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <h2 className="font-bold">{feature.label}</h2>
-                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{feature.description}</p>
+                      <h2 className="font-bold">{t(`features.${feature.key}.label`)}</h2>
+                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{t(`features.${feature.key}.description`)}</p>
                     </div>
                     <button
                       type="button"
                       role="switch"
                       aria-checked={feature.configuredEnabled}
-                      aria-label={`${feature.configuredEnabled ? "Disable" : "Enable"} ${feature.label}`}
+                      aria-label={
+                        feature.configuredEnabled
+                          ? t("actions.disableFeature", { feature: t(`features.${feature.key}.label`) })
+                          : t("actions.enableFeature", { feature: t(`features.${feature.key}.label`) })
+                      }
                       disabled={busy || storage === "defaults"}
                       onClick={() => void updateFeature(feature)}
                       className={`relative h-7 w-12 shrink-0 rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 ${feature.configuredEnabled ? "bg-primary" : "bg-muted-foreground/30"}`}
@@ -136,11 +156,11 @@ export default function StoreFeaturesPage() {
                   </div>
                   <div className="mt-4 flex flex-wrap gap-2 text-xs">
                     <span className={`rounded-full px-2.5 py-1 font-semibold ${feature.enabled ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
-                      {feature.enabled ? "Enabled" : "Disabled"}
+                      {feature.enabled ? t("status.enabled") : t("status.disabled")}
                     </span>
                     {feature.blockedBy.map((dependency) => (
                       <span key={dependency} className="rounded-full bg-amber-100 px-2.5 py-1 text-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
-                        Requires {dependency}
+                        {t("status.requires", { feature: t(`featureNames.${dependency}`) })}
                       </span>
                     ))}
                   </div>

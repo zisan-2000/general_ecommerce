@@ -4035,6 +4035,73 @@
             "deleteFailed": "কুপন মুছতে ব্যর্থ"
         }
     },
+    "AdminStoreFeatures": {
+        "eyebrow": "স্টোর কনফিগারেশন",
+        "title": "ঐচ্ছিক মডিউল",
+        "description": "এই সুইচগুলো নেভিগেশন, স্টোরফ্রন্টে পণ্য খোঁজা, ব্যবস্থাপনার কাজ এবং নতুন কেনাকাটা নিয়ন্ত্রণ করে। বিদ্যমান অর্ডার ও অডিট ইতিহাস দেখা যাবে।",
+        "migrationWarning": "StoreFeature মাইগ্রেশন প্রয়োগ করা হয়নি। নিরাপদ ডিফল্ট সেটিংস সক্রিয় আছে, তবে এখনই পরিবর্তন সংরক্ষণ করা যাবে না।",
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "enableFeature": "{feature} সক্রিয় করুন",
+            "disableFeature": "{feature} নিষ্ক্রিয় করুন"
+        },
+        "status": {
+            "enabled": "সক্রিয়",
+            "disabled": "নিষ্ক্রিয়",
+            "requires": "{feature} প্রয়োজন"
+        },
+        "success": {
+            "enabled": "{feature} সক্রিয় হয়েছে।",
+            "disabled": "{feature} নিষ্ক্রিয় হয়েছে।"
+        },
+        "errors": {
+            "loadFailed": "ফিচারগুলো লোড করা যায়নি।",
+            "updateFailed": "ফিচারটি আপডেট করা যায়নি।",
+            "blockedBy": "এই ফিচারগুলোর কারণে বাধাপ্রাপ্ত: {features}।"
+        },
+        "featureNames": {
+            "PC_BUILDER": "পিসি বিল্ডার",
+            "BOOKS": "বই",
+            "AUTHORS": "লেখক",
+            "COMPARE": "পণ্য তুলনা",
+            "DIGITAL_PRODUCTS": "ডিজিটাল পণ্য",
+            "SERVICE_PRODUCTS": "সেবা পণ্য",
+            "BUNDLES": "পণ্য বান্ডেল",
+            "PHYSICAL_PRODUCTS": "ভৌত পণ্য",
+            "CART": "কার্ট",
+            "INVENTORY": "ইনভেন্টরি"
+        },
+        "features": {
+            "PC_BUILDER": {
+                "label": "পিসি বিল্ডার",
+                "description": "সামঞ্জস্যপূর্ণ কম্পোনেন্ট নির্বাচন, সংরক্ষিত বিল্ড এবং একসঙ্গে চেকআউট।"
+            },
+            "BOOKS": {
+                "label": "বই",
+                "description": "বই-কেন্দ্রিক অনুসন্ধান এবং কাঠামোবদ্ধ বইয়ের তথ্য।"
+            },
+            "AUTHORS": {
+                "label": "লেখক",
+                "description": "লেখক অনুসন্ধান এবং লেখক থেকে বইয়ের নেভিগেশন।"
+            },
+            "COMPARE": {
+                "label": "পণ্য তুলনা",
+                "description": "নির্বাচিত পণ্যগুলো পাশাপাশি রেখে তুলনা।"
+            },
+            "DIGITAL_PRODUCTS": {
+                "label": "ডিজিটাল পণ্য",
+                "description": "সুরক্ষিত ডিজিটাল ডেলিভারির মাধ্যমে সরবরাহ করা পণ্য।"
+            },
+            "SERVICE_PRODUCTS": {
+                "label": "সেবা পণ্য",
+                "description": "বুকিং বা সময়সূচি নির্ধারণযোগ্য সেবা পণ্য।"
+            },
+            "BUNDLES": {
+                "label": "পণ্য বান্ডেল",
+                "description": "একাধিক ক্রয়যোগ্য পণ্য নিয়ে তৈরি সমন্বিত পণ্য।"
+            }
+        }
+    },
     "AdminPaymentGateway": {
         "title": "পেমেন্ট গেটওয়ে ব্যবস্থাপনা",
         "dialog": {
