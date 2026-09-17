@@ -4035,6 +4035,103 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminGalleryManagement": {
+    "header": {
+      "title": "Gallery Management",
+      "description": "Manage image assets stored inside the public folder."
+    },
+    "upload": {
+      "targetPlaceholder": "Upload target",
+      "targets": {
+        "general": "General Uploads",
+        "site": "Site Assets",
+        "banners": "Banners",
+        "products": "Products",
+        "productGallery": "Product Gallery",
+        "variantGallery": "Variant Gallery",
+        "profiles": "User Profile Pictures"
+      }
+    },
+    "stats": {
+      "totalImages": "Total Images",
+      "visible": "{count} visible on this page",
+      "storageUsed": "Storage Used",
+      "currentScope": "Current folder scope",
+      "folders": "Folders",
+      "detectedFolders": "Detected image folders"
+    },
+    "filters": {
+      "searchPlaceholder": "Search by file name, folder, path, or type",
+      "folder": "Folder",
+      "allImages": "All public images",
+      "uploadFolder": "Upload folder",
+      "pageSize": "Page size",
+      "perPage": "{count} / page"
+    },
+    "actions": {
+      "uploadImages": "Upload Images",
+      "refresh": "Refresh",
+      "select": "Select",
+      "unselect": "Unselect",
+      "selectPage": "Select Page",
+      "unselectPage": "Unselect Page",
+      "selectCurrentPage": "Select current page",
+      "unselectCurrentPage": "Unselect current page",
+      "clear": "Clear",
+      "cancel": "Cancel",
+      "deleting": "Deleting...",
+      "deleteImage": "Delete Image",
+      "deleteSelected": "Delete Selected",
+      "copy": "Copy",
+      "replaceHint": "Replace this image (keeps the same URL/path)"
+    },
+    "selection": {
+      "selected": "{count} selected",
+      "showing": "Showing {visible} of {total}"
+    },
+    "empty": {
+      "title": "No images found",
+      "description": "Upload an image or change the current filter."
+    },
+    "pagination": {
+      "pageOf": "Page {page} of {totalPages}",
+      "previous": "Prev",
+      "next": "Next"
+    },
+    "deleteDialog": {
+      "title": "Delete Image?",
+      "description": "Are you sure you want to delete",
+      "warning": "This action cannot be undone."
+    },
+    "card": {
+      "used": "Used",
+      "publicRoot": "public root",
+      "usedReferences": "Used: {references}"
+    },
+    "confirm": {
+      "bulkDelete": "Delete {count} image(s)? Used images will be skipped."
+    },
+    "success": {
+      "uploaded": "Image uploaded successfully",
+      "urlCopied": "Image URL copied",
+      "replaced": "Image replaced",
+      "deleted": "Image deleted",
+      "bulkDeleted": "Deleted {count} image(s)",
+      "noneDeleted": "No images deleted"
+    },
+    "errors": {
+      "loadFailed": "Failed to load gallery",
+      "notImage": "{name} is not an image",
+      "uploadFailed": "Image upload failed",
+      "copyFailed": "Failed to copy URL",
+      "inUse": "This image is currently in use and cannot be deleted.",
+      "replaceFailed": "Failed to replace image",
+      "deleteFailed": "Failed to delete image",
+      "bulkDeleteFailed": "Bulk delete failed",
+      "usedSkipped": "{count} used image(s) skipped",
+      "deleteCountFailed": "{count} image(s) failed to delete"
+    }
+  },
   "AdminStoreFeatures": {
     "eyebrow": "Store configuration",
     "title": "Optional modules",

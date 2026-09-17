@@ -44,6 +44,7 @@ import {
   DialogTitle,
   DialogFooter,
 } from "@/components/ui/dialog";
+import { useLocale, useTranslations } from "next-intl";
 
 type GalleryImage = {
   name: string;
@@ -70,14 +71,14 @@ type ImageUsageRef = {
 };
 
 const uploadTargets = [
-  { label: "General Uploads", value: "root" },
-  { label: "Site Assets", value: "site" },
-  { label: "Banners", value: "banners" },
-  { label: "Products", value: "products" },
-  { label: "Product Gallery", value: "products/gallery" },
-  { label: "Variant Gallery", value: "products/variants/gallery" },
-  { label: "User Profile Pictures", value: "userProfilePic" },
-];
+  { key: "general", value: "root" },
+  { key: "site", value: "site" },
+  { key: "banners", value: "banners" },
+  { key: "products", value: "products" },
+  { key: "productGallery", value: "products/gallery" },
+  { key: "variantGallery", value: "products/variants/gallery" },
+  { key: "profiles", value: "userProfilePic" },
+] as const;
 
 function formatBytes(bytes: number) {
   if (!bytes) return "0 B";
@@ -92,8 +93,8 @@ function formatBytes(bytes: number) {
   return `${value.toFixed(value >= 10 || index === 0 ? 0 : 1)} ${units[index]}`;
 }
 
-function formatDate(value: string) {
-  return new Intl.DateTimeFormat("en-US", {
+function formatDate(value: string, locale: string) {
+  return new Intl.DateTimeFormat(locale, {
     month: "short",
     day: "2-digit",
     year: "numeric",
@@ -107,6 +108,7 @@ function toUploadEndpoint(target: string) {
 }
 
 export default function GalleryManagementPage() {
+  const t = useTranslations("AdminGalleryManagement");
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [folders, setFolders] = useState<string[]>([]);
   const [folder, setFolder] = useState("all");
@@ -162,7 +164,7 @@ export default function GalleryManagementPage() {
       };
 
       if (!res.ok) {
-        throw new Error(data?.error || "Failed to load gallery");
+        throw new Error(t("errors.loadFailed"));
       }
 
       setImages(Array.isArray(data.images) ? data.images : []);
@@ -201,12 +203,12 @@ export default function GalleryManagementPage() {
         setUsageByPath({});
       }
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load gallery");
+      toast.error(error?.message || t("errors.loadFailed"));
     } finally {
       setLoading(false);
       setPageLoading(false);
     }
-  }, [folder, images.length, page, pageSize]);
+  }, [folder, images.length, page, pageSize, t]);
 
   useEffect(() => {
     setPage(1);
@@ -278,7 +280,7 @@ export default function GalleryManagementPage() {
 
       for (const file of selectedFiles) {
         if (!file.type.startsWith("image/")) {
-          toast.error(`${file.name} is not an image`);
+          toast.error(t("errors.notImage", { name: file.name }));
           continue;
         }
 
@@ -292,16 +294,14 @@ export default function GalleryManagementPage() {
         const data = await res.json().catch(() => ({}));
 
         if (!res.ok || (!data?.success && !data?.url && !data?.fileUrl)) {
-          throw new Error(
-            data?.message || data?.error || "Image upload failed",
-          );
+          throw new Error(t("errors.uploadFailed"));
         }
       }
 
-      toast.success("Image uploaded successfully");
+      toast.success(t("success.uploaded"));
       await loadGallery({ refresh: true });
     } catch (error: any) {
-      toast.error(error?.message || "Image upload failed");
+      toast.error(error?.message || t("errors.uploadFailed"));
     } finally {
       setUploading(false);
     }
@@ -310,15 +310,15 @@ export default function GalleryManagementPage() {
   const copyUrl = async (url: string) => {
     try {
       await navigator.clipboard.writeText(url);
-      toast.success("Image URL copied");
+      toast.success(t("success.urlCopied"));
     } catch {
-      toast.error("Failed to copy URL");
+      toast.error(t("errors.copyFailed"));
     }
   };
 
   const deleteImage = (image: GalleryImage) => {
     if (usageByPath[image.path]?.length) {
-      toast.error("This image is currently in use and cannot be deleted.");
+      toast.error(t("errors.inUse"));
       return;
     }
     setDeleteTarget(image);
@@ -358,7 +358,7 @@ export default function GalleryManagementPage() {
       };
 
       if (!res.ok || !data?.image) {
-        throw new Error(data?.error || "Failed to replace image");
+        throw new Error(t("errors.replaceFailed"));
       }
 
       const previousPath = data.previousPath || target.path;
@@ -384,9 +384,9 @@ export default function GalleryManagementPage() {
         return next;
       });
 
-      toast.success("Image replaced");
+      toast.success(t("success.replaced"));
     } catch (error: any) {
-      toast.error(error?.message || "Failed to replace image");
+      toast.error(error?.message || t("errors.replaceFailed"));
     } finally {
       setReplacingPath(null);
     }
@@ -422,11 +422,11 @@ export default function GalleryManagementPage() {
             .map((r) => `${r.entity}:${r.field}#${r.id}`)
             .join(", ");
           throw new Error(
-            `${data?.error || "This image is in use"}${hint ? ` (${hint}${data.refs.length > 4 ? "..." : ""})` : ""}`,
+            `${t("errors.inUse")}${hint ? ` (${hint}${data.refs.length > 4 ? "..." : ""})` : ""}`,
           );
         }
 
-        throw new Error(data?.error || "Failed to delete image");
+        throw new Error(t("errors.deleteFailed"));
       }
 
       setImages((prev) => prev.filter((img) => img.path !== deleteTarget.path));
@@ -442,13 +442,13 @@ export default function GalleryManagementPage() {
         return next;
       });
       setDeleteTarget(null);
-      toast.success("Image deleted");
+      toast.success(t("success.deleted"));
     } catch (error: any) {
-      toast.error(error?.message || "Failed to delete image");
+      toast.error(error?.message || t("errors.deleteFailed"));
     } finally {
       setDeletingPath(null);
     }
-  }, [deleteTarget]);
+  }, [deleteTarget, t]);
 
   const closeDialog = useCallback(() => {
     setDeleteTarget(null);
@@ -459,7 +459,7 @@ export default function GalleryManagementPage() {
     if (paths.length === 0) return;
 
     const confirmed = window.confirm(
-      `Delete ${paths.length} image(s)? Used images will be skipped.`,
+      t("confirm.bulkDelete", { count: paths.length }),
     );
     if (!confirmed) return;
 
@@ -480,7 +480,7 @@ export default function GalleryManagementPage() {
       };
 
       if (!res.ok) {
-        throw new Error(data?.error || "Bulk delete failed");
+        throw new Error(t("errors.bulkDeleteFailed"));
       }
 
       const deleted = Array.isArray(data.deleted) ? data.deleted : [];
@@ -494,25 +494,25 @@ export default function GalleryManagementPage() {
           for (const p of deleted) next.delete(p);
           return next;
         });
-        toast.success(`Deleted ${deleted.length} image(s)`);
+        toast.success(t("success.bulkDeleted", { count: deleted.length }));
       } else {
-        toast.message("No images deleted");
+        toast.message(t("success.noneDeleted"));
       }
 
       if (blockedCount > 0) {
-        toast.error(`${blockedCount} used image(s) skipped`);
+        toast.error(t("errors.usedSkipped", { count: blockedCount }));
       }
       if (failedCount > 0) {
-        toast.error(`${failedCount} image(s) failed to delete`);
+        toast.error(t("errors.deleteCountFailed", { count: failedCount }));
       }
 
       await loadGallery({ refresh: true });
     } catch (error: any) {
-      toast.error(error?.message || "Bulk delete failed");
+      toast.error(error?.message || t("errors.bulkDeleteFailed"));
     } finally {
       setBulkDeleting(false);
     }
-  }, [selectedPaths, loadGallery]);
+  }, [selectedPaths, loadGallery, t]);
 
   const goToPage = useCallback(
     (next: number) => {
@@ -564,22 +564,22 @@ export default function GalleryManagementPage() {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div className="space-y-1">
           <h1 className="text-3xl font-bold tracking-tight">
-            Gallery Management
+            {t("header.title")}
           </h1>
           <p className="text-sm text-muted-foreground">
-            Manage image assets stored inside the public folder.
+            {t("header.description")}
           </p>
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <Select value={uploadTarget} onValueChange={setUploadTarget}>
             <SelectTrigger className="w-full sm:w-[230px]">
-              <SelectValue placeholder="Upload target" />
+              <SelectValue placeholder={t("upload.targetPlaceholder")} />
             </SelectTrigger>
             <SelectContent>
               {uploadTargets.map((target) => (
                 <SelectItem key={target.value} value={target.value}>
-                  {target.label}
+                  {t(`upload.targets.${target.key}`)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -591,7 +591,7 @@ export default function GalleryManagementPage() {
             ) : (
               <Upload className="h-4 w-4" />
             )}
-            Upload Images
+            {t("actions.uploadImages")}
             <Input
               type="file"
               accept="image/*"
@@ -607,39 +607,39 @@ export default function GalleryManagementPage() {
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Images</CardTitle>
+            <CardTitle className="text-sm font-medium">{t("stats.totalImages")}</CardTitle>
             <ImageIcon className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{total}</div>
             <p className="text-xs text-muted-foreground">
-              {filteredImages.length} visible on this page
+              {t("stats.visible", { count: filteredImages.length })}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Storage Used</CardTitle>
+            <CardTitle className="text-sm font-medium">{t("stats.storageUsed")}</CardTitle>
             <Grid3X3 className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatBytes(totalSize)}</div>
             <p className="text-xs text-muted-foreground">
-              Current folder scope
+              {t("stats.currentScope")}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Folders</CardTitle>
+            <CardTitle className="text-sm font-medium">{t("stats.folders")}</CardTitle>
             <FolderOpen className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{folders.length}</div>
             <p className="text-xs text-muted-foreground">
-              Detected image folders
+              {t("stats.detectedFolders")}
             </p>
           </CardContent>
         </Card>
@@ -651,7 +651,7 @@ export default function GalleryManagementPage() {
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search by file name, folder, path, or type"
+            placeholder={t("filters.searchPlaceholder")}
             className="pl-9"
           />
         </div>
@@ -662,23 +662,23 @@ export default function GalleryManagementPage() {
           onClick={toggleSelectPage}
           disabled={loading || pageLoading || filteredImages.length === 0}
           className="w-full md:w-auto"
-          title={pageAllSelected ? "Unselect current page" : "Select current page"}
+          title={pageAllSelected ? t("actions.unselectCurrentPage") : t("actions.selectCurrentPage")}
         >
           {pageAllSelected ? (
             <CheckSquare className="mr-2 h-4 w-4" />
           ) : (
             <Square className="mr-2 h-4 w-4" />
           )}
-          {pageAllSelected ? "Unselect Page" : "Select Page"}
+          {pageAllSelected ? t("actions.unselectPage") : t("actions.selectPage")}
         </Button>
 
         <Select value={folder} onValueChange={setFolder}>
           <SelectTrigger className="w-full md:w-[280px]">
-            <SelectValue placeholder="Folder" />
+            <SelectValue placeholder={t("filters.folder")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All public images</SelectItem>
-            <SelectItem value="upload">Upload folder</SelectItem>
+            <SelectItem value="all">{t("filters.allImages")}</SelectItem>
+            <SelectItem value="upload">{t("filters.uploadFolder")}</SelectItem>
             {folders.map((item) => (
               <SelectItem key={item} value={item}>
                 {item}
@@ -692,13 +692,13 @@ export default function GalleryManagementPage() {
           onValueChange={(value) => setPageSize(Number(value))}
         >
           <SelectTrigger className="w-full md:w-[160px]">
-            <SelectValue placeholder="Page size" />
+            <SelectValue placeholder={t("filters.pageSize")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="30">30 / page</SelectItem>
-            <SelectItem value="60">60 / page</SelectItem>
-            <SelectItem value="90">90 / page</SelectItem>
-            <SelectItem value="120">120 / page</SelectItem>
+            <SelectItem value="30">{t("filters.perPage", { count: 30 })}</SelectItem>
+            <SelectItem value="60">{t("filters.perPage", { count: 60 })}</SelectItem>
+            <SelectItem value="90">{t("filters.perPage", { count: 90 })}</SelectItem>
+            <SelectItem value="120">{t("filters.perPage", { count: 120 })}</SelectItem>
           </SelectContent>
         </Select>
 
@@ -713,7 +713,7 @@ export default function GalleryManagementPage() {
               loading || pageLoading ? "animate-spin" : ""
             }`}
           />
-          Refresh
+          {t("actions.refresh")}
         </Button>
       </div>
 
@@ -722,19 +722,11 @@ export default function GalleryManagementPage() {
           <span className="text-sm text-muted-foreground">
             {pageSomeSelected || pageAllSelected ? (
               <>
-                Selected{" "}
-                <span className="font-medium text-foreground">
-                  {selectedCount}
-                </span>
+                {t("selection.selected", { count: selectedCount })}
               </>
             ) : (
               <>
-                Showing{" "}
-                <span className="font-medium text-foreground">
-                  {filteredImages.length}
-                </span>{" "}
-                of{" "}
-                <span className="font-medium text-foreground">{total}</span>
+                {t("selection.showing", { visible: filteredImages.length, total })}
               </>
             )}
           </span>
@@ -746,7 +738,7 @@ export default function GalleryManagementPage() {
               size="sm"
               onClick={clearSelection}
             >
-              Clear
+              {t("actions.clear")}
             </Button>
           ) : null}
         </div>
@@ -776,9 +768,9 @@ export default function GalleryManagementPage() {
       ) : filteredImages.length === 0 ? (
         <div className="flex min-h-[320px] flex-col items-center justify-center rounded-lg border bg-card text-center">
           <ImageIcon className="mb-3 h-10 w-10 text-muted-foreground" />
-          <h2 className="text-lg font-semibold">No images found</h2>
+          <h2 className="text-lg font-semibold">{t("empty.title")}</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Upload an image or change the current filter.
+            {t("empty.description")}
           </p>
         </div>
       ) : (
@@ -826,8 +818,7 @@ export default function GalleryManagementPage() {
       {!loading && totalPages > 1 ? (
         <div className="flex flex-col items-center justify-between gap-3 rounded-lg border bg-card p-4 sm:flex-row">
           <div className="text-sm text-muted-foreground">
-            Page <span className="font-medium text-foreground">{page}</span> of{" "}
-            <span className="font-medium text-foreground">{totalPages}</span>
+            {t("pagination.pageOf", { page, totalPages })}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2">
@@ -839,7 +830,7 @@ export default function GalleryManagementPage() {
               disabled={pageLoading || page <= 1}
             >
               <ChevronLeft className="mr-2 h-4 w-4" />
-              Prev
+              {t("pagination.previous")}
             </Button>
 
             {paginationItems.map((item, idx) =>
@@ -872,7 +863,7 @@ export default function GalleryManagementPage() {
               onClick={() => goToPage(page + 1)}
               disabled={pageLoading || page >= totalPages}
             >
-              Next
+              {t("pagination.next")}
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -893,13 +884,13 @@ export default function GalleryManagementPage() {
 
             <DialogHeader>
               <DialogTitle className="text-center text-xl font-bold text-gray-900">
-                Delete Image?
+                {t("deleteDialog.title")}
               </DialogTitle>
             </DialogHeader>
 
             <div className="mt-4 rounded-xl border bg-muted/40 p-4 text-center">
               <p className="text-sm text-muted-foreground">
-                Are you sure you want to delete
+                {t("deleteDialog.description")}
               </p>
 
               <p className="mt-1 truncate text-base font-semibold text-gray-900">
@@ -907,7 +898,7 @@ export default function GalleryManagementPage() {
               </p>
 
               <p className="mt-3 text-sm font-medium text-red-600">
-                This action cannot be undone.
+                {t("deleteDialog.warning")}
               </p>
             </div>
 
@@ -919,7 +910,7 @@ export default function GalleryManagementPage() {
                 onClick={() => setDeleteTarget(null)}
                 disabled={deletingPath === deleteTarget?.path}
               >
-                Cancel
+                {t("actions.cancel")}
               </Button>
 
               <Button
@@ -932,12 +923,12 @@ export default function GalleryManagementPage() {
                 {deletingPath === deleteTarget?.path ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Deleting...
+                    {t("actions.deleting")}
                   </>
                 ) : (
                   <>
                     <Trash2 className="mr-2 h-4 w-4" />
-                    Delete Image
+                    {t("actions.deleteImage")}
                   </>
                 )}
               </Button>
@@ -950,7 +941,7 @@ export default function GalleryManagementPage() {
         <div className="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-5xl">
           <div className="flex flex-col gap-3 rounded-xl border bg-card p-4 shadow-lg sm:flex-row sm:items-center sm:justify-between">
             <div className="text-sm">
-              <span className="font-medium">{selectedCount}</span> selected
+              {t("selection.selected", { count: selectedCount })}
             </div>
             <div className="flex gap-2">
               <Button
@@ -959,7 +950,7 @@ export default function GalleryManagementPage() {
                 onClick={clearSelection}
                 disabled={bulkDeleting}
               >
-                Clear
+                {t("actions.clear")}
               </Button>
               <Button
                 type="button"
@@ -970,12 +961,12 @@ export default function GalleryManagementPage() {
                 {bulkDeleting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Deleting...
+                    {t("actions.deleting")}
                   </>
                 ) : (
                   <>
                     <Trash2 className="mr-2 h-4 w-4" />
-                    Delete Selected
+                    {t("actions.deleteSelected")}
                   </>
                 )}
               </Button>
@@ -1010,6 +1001,8 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
   selected: boolean;
   onToggleSelected: () => void;
 }) {
+  const t = useTranslations("AdminGalleryManagement");
+  const locale = useLocale();
   const isUsed = Array.isArray(refs) && refs.length > 0;
 
   const usedHint = refs
@@ -1041,7 +1034,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
               type="button"
               className="inline-flex h-7 w-7 items-center justify-center rounded border bg-background hover:bg-muted"
               onClick={onToggleSelected}
-              title={selected ? "Unselect" : "Select"}
+              title={selected ? t("actions.unselect") : t("actions.select")}
             >
               {selected ? (
                 <CheckSquare className="h-4 w-4 text-primary" />
@@ -1060,13 +1053,13 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
 
             {isUsed ? (
               <Badge variant="destructive" className="shrink-0">
-                Used
+                {t("card.used")}
               </Badge>
             ) : null}
           </div>
 
           <p className="mt-1 truncate text-xs text-muted-foreground">
-            {image.folder || "public root"}
+            {image.folder || t("card.publicRoot")}
           </p>
 
           {isUsed ? (
@@ -1076,7 +1069,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
                 .map((r) => `${r.entity}:${r.field}#${r.id}`)
                 .join(", ")}
             >
-              Used: {usedHint}
+              {t("card.usedReferences", { references: usedHint })}
               {refs.length > 2 ? "..." : ""}
             </p>
           ) : null}
@@ -1084,7 +1077,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
 
         <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
           <span>{formatBytes(image.size)}</span>
-          <span className="text-right">{formatDate(image.updatedAt)}</span>
+          <span className="text-right">{formatDate(image.updatedAt, locale)}</span>
         </div>
 
         <div className="flex gap-2">
@@ -1096,7 +1089,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
             onClick={() => onCopy(image.url)}
           >
             <Copy className="mr-2 h-4 w-4" />
-            Copy
+            {t("actions.copy")}
           </Button>
 
           <Button
@@ -1104,7 +1097,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
             variant="outline"
             size="sm"
             onClick={() => onReplace(image)}
-            title="Replace this image (keeps same URL/path)"
+            title={t("actions.replaceHint")}
           >
             {replacingPath === image.path ? (
               <Loader2 className="h-4 w-4 animate-spin" />
@@ -1123,6 +1116,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
               replacingPath === image.path
             }
             onClick={() => onDelete(image)}
+            title={t("actions.deleteImage")}
           >
             {deletingPath === image.path ? (
               <Loader2 className="h-4 w-4 animate-spin" />

@@ -4035,6 +4035,103 @@
             "deleteFailed": "কুপন মুছতে ব্যর্থ"
         }
     },
+    "AdminGalleryManagement": {
+        "header": {
+            "title": "গ্যালারি ব্যবস্থাপনা",
+            "description": "পাবলিক ফোল্ডারে সংরক্ষিত ছবিগুলো পরিচালনা করুন।"
+        },
+        "upload": {
+            "targetPlaceholder": "আপলোডের গন্তব্য",
+            "targets": {
+                "general": "সাধারণ আপলোড",
+                "site": "সাইটের অ্যাসেট",
+                "banners": "ব্যানার",
+                "products": "পণ্য",
+                "productGallery": "পণ্য গ্যালারি",
+                "variantGallery": "ভ্যারিয়েন্ট গ্যালারি",
+                "profiles": "ব্যবহারকারীর প্রোফাইল ছবি"
+            }
+        },
+        "stats": {
+            "totalImages": "মোট ছবি",
+            "visible": "এই পৃষ্ঠায় {count}টি দৃশ্যমান",
+            "storageUsed": "ব্যবহৃত স্টোরেজ",
+            "currentScope": "বর্তমান ফোল্ডারের পরিধি",
+            "folders": "ফোল্ডার",
+            "detectedFolders": "শনাক্ত করা ছবির ফোল্ডার"
+        },
+        "filters": {
+            "searchPlaceholder": "ফাইলের নাম, ফোল্ডার, পাথ বা ধরন দিয়ে খুঁজুন",
+            "folder": "ফোল্ডার",
+            "allImages": "সব পাবলিক ছবি",
+            "uploadFolder": "আপলোড ফোল্ডার",
+            "pageSize": "পৃষ্ঠা আকার",
+            "perPage": "প্রতি পৃষ্ঠায় {count}টি"
+        },
+        "actions": {
+            "uploadImages": "ছবি আপলোড করুন",
+            "refresh": "রিফ্রেশ",
+            "select": "নির্বাচন করুন",
+            "unselect": "নির্বাচন বাতিল করুন",
+            "selectPage": "পৃষ্ঠা নির্বাচন করুন",
+            "unselectPage": "পৃষ্ঠা নির্বাচন বাতিল করুন",
+            "selectCurrentPage": "বর্তমান পৃষ্ঠা নির্বাচন করুন",
+            "unselectCurrentPage": "বর্তমান পৃষ্ঠা নির্বাচন বাতিল করুন",
+            "clear": "পরিষ্কার করুন",
+            "cancel": "বাতিল করুন",
+            "deleting": "মুছে ফেলা হচ্ছে...",
+            "deleteImage": "ছবি মুছুন",
+            "deleteSelected": "নির্বাচিত ছবি মুছুন",
+            "copy": "কপি করুন",
+            "replaceHint": "একই URL/পাথ রেখে ছবিটি প্রতিস্থাপন করুন"
+        },
+        "selection": {
+            "selected": "{count}টি নির্বাচিত",
+            "showing": "{total}টির মধ্যে {visible}টি দেখানো হচ্ছে"
+        },
+        "empty": {
+            "title": "কোনো ছবি পাওয়া যায়নি",
+            "description": "একটি ছবি আপলোড করুন অথবা বর্তমান ফিল্টার পরিবর্তন করুন।"
+        },
+        "pagination": {
+            "pageOf": "পৃষ্ঠা {page} / {totalPages}",
+            "previous": "আগের",
+            "next": "পরের"
+        },
+        "deleteDialog": {
+            "title": "ছবিটি মুছবেন?",
+            "description": "আপনি কি নিশ্চিতভাবে মুছতে চান",
+            "warning": "এই কাজটি ফিরিয়ে নেওয়া যাবে না।"
+        },
+        "card": {
+            "used": "ব্যবহৃত",
+            "publicRoot": "পাবলিক রুট",
+            "usedReferences": "ব্যবহৃত: {references}"
+        },
+        "confirm": {
+            "bulkDelete": "{count}টি ছবি মুছবেন? ব্যবহৃত ছবিগুলো বাদ দেওয়া হবে।"
+        },
+        "success": {
+            "uploaded": "ছবি সফলভাবে আপলোড হয়েছে",
+            "urlCopied": "ছবির URL কপি হয়েছে",
+            "replaced": "ছবি প্রতিস্থাপন হয়েছে",
+            "deleted": "ছবি মুছে ফেলা হয়েছে",
+            "bulkDeleted": "{count}টি ছবি মুছে ফেলা হয়েছে",
+            "noneDeleted": "কোনো ছবি মুছে ফেলা হয়নি"
+        },
+        "errors": {
+            "loadFailed": "গ্যালারি লোড করা যায়নি",
+            "notImage": "{name} একটি ছবি নয়",
+            "uploadFailed": "ছবি আপলোড করা যায়নি",
+            "copyFailed": "URL কপি করা যায়নি",
+            "inUse": "ছবিটি বর্তমানে ব্যবহৃত হচ্ছে, তাই মোছা যাবে না।",
+            "replaceFailed": "ছবি প্রতিস্থাপন করা যায়নি",
+            "deleteFailed": "ছবি মোছা যায়নি",
+            "bulkDeleteFailed": "একাধিক ছবি মোছা যায়নি",
+            "usedSkipped": "ব্যবহৃত {count}টি ছবি বাদ দেওয়া হয়েছে",
+            "deleteCountFailed": "{count}টি ছবি মোছা যায়নি"
+        }
+    },
     "AdminStoreFeatures": {
         "eyebrow": "স্টোর কনফিগারেশন",
         "title": "ঐচ্ছিক মডিউল",
