@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -275,17 +275,24 @@ function toInputDate(value: Date) {
   return value.toISOString().slice(0, 10);
 }
 
-function formatMoney(value: string | number, currency = "BDT") {
+function formatMoney(
+  value: string | number,
+  currency = "BDT",
+  locale = "en",
+) {
   const amount = typeof value === "number" ? value : Number(value || 0);
   if (Number.isNaN(amount)) return `0.00 ${currency}`;
-  return `${amount.toFixed(2)} ${currency}`;
+  return `${amount.toLocaleString(locale, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })} ${currency}`;
 }
 
-function formatDateTime(value?: string | null) {
-  if (!value) return "N/A";
+function formatDateTime(value?: string | null, locale = "en") {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
 export default function InvestorWorkspace({
@@ -294,6 +301,11 @@ export default function InvestorWorkspace({
   section?: InvestorSection;
 }) {
   const t = useTranslations("AdminInvestors.workspace");
+  const locale = useLocale();
+  const enumLabel = (group: string, value: string) => {
+    const key = `enums.${group}.${value}` as any;
+    return t.has(key) ? t(key) : value;
+  };
   const searchParams = useSearchParams();
   const defaultStatementFrom = useMemo(() => {
     const date = new Date();
@@ -671,7 +683,7 @@ export default function InvestorWorkspace({
       );
       const payload = await readJson<StatementPayload>(
         response,
-        "Failed to load investor statements",
+        t("errors.loadStatements"),
       );
       setStatementSummary(payload.summary);
       setStatementRows(payload.statements);
@@ -689,8 +701,8 @@ export default function InvestorWorkspace({
         }
         return preferredInvestorId;
       });
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor statements");
+    } catch {
+      toast.error(t("errors.loadStatements"));
     } finally {
       setLoadingStatementPreview(false);
     }
@@ -701,6 +713,7 @@ export default function InvestorWorkspace({
     selectedInvestorId,
     statementFrom,
     statementTo,
+    t,
   ]);
 
   useEffect(() => {
@@ -772,16 +785,16 @@ export default function InvestorWorkspace({
             : null,
         }),
       });
-      await readJson(response, "Failed to create transaction");
+      await readJson(response, t("errors.createTransaction"));
       setTransactionForm((current) => ({
         ...current,
         amount: "",
         productVariantId: "",
       }));
-      toast.success("Transaction posted");
+      toast.success(t("success.transactionPosted"));
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to create transaction");
+    } catch {
+      toast.error(t("errors.createTransaction"));
     }
   };
 
@@ -796,16 +809,16 @@ export default function InvestorWorkspace({
           productVariantId: Number(allocationForm.productVariantId),
         }),
       });
-      await readJson(response, "Failed to create allocation");
+      await readJson(response, t("errors.createAllocation"));
       setAllocationForm((current) => ({
         ...current,
         participationPercent: "",
         committedAmount: "",
       }));
-      toast.success("Allocation created");
+      toast.success(t("success.allocationCreated"));
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to create allocation");
+    } catch {
+      toast.error(t("errors.createAllocation"));
     }
   };
 
@@ -819,12 +832,14 @@ export default function InvestorWorkspace({
       });
       const data = await readJson<{
         run: ProfitRun;
-      }>(response, "Failed to run profitability calculation");
-      toast.success(`Profit run ${data.run.runNumber} completed`);
+      }>(response, t("errors.runProfitCalculation"));
+      toast.success(
+        t("success.profitRunCompleted", { runNumber: data.run.runNumber }),
+      );
       setSelectedProfitRunId(String(data.run.id));
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to run profitability calculation");
+    } catch {
+      toast.error(t("errors.runProfitCalculation"));
     } finally {
       setRunningProfit(false);
     }
@@ -860,7 +875,7 @@ export default function InvestorWorkspace({
 
   const changeProfitRunStatus = async (action: "approve" | "reject") => {
     if (!selectedProfitRun) {
-      toast.error("Select a profit run first.");
+      toast.error(t("errors.selectProfitRun"));
       return;
     }
     try {
@@ -876,13 +891,15 @@ export default function InvestorWorkspace({
           }),
         },
       );
-      await readJson(response, `Failed to ${action} run`);
+      await readJson(response, t(`errors.profitRunAction.${action}` as any));
       toast.success(
-        action === "approve" ? "Profit run approved" : "Profit run rejected",
+        action === "approve"
+          ? t("success.profitRunApproved")
+          : t("success.profitRunRejected"),
       );
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || `Failed to ${action} run`);
+    } catch {
+      toast.error(t(`errors.profitRunAction.${action}` as any));
     } finally {
       setUpdatingRunStatus(false);
     }
@@ -890,7 +907,7 @@ export default function InvestorWorkspace({
 
   const postSelectedRun = async () => {
     if (!selectedProfitRun) {
-      toast.error("Select a profit run first.");
+      toast.error(t("errors.selectProfitRun"));
       return;
     }
     try {
@@ -907,14 +924,16 @@ export default function InvestorWorkspace({
       );
       const result = await readJson<{ postedTransactionCount: number }>(
         response,
-        "Failed to post run to ledger",
+        t("errors.postProfitRun"),
       );
       toast.success(
-        `Posted ${result.postedTransactionCount} ledger transaction(s)`,
+        t("success.profitRunPosted", {
+          count: result.postedTransactionCount,
+        }),
       );
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to post run");
+    } catch {
+      toast.error(t("errors.postProfitRun"));
     } finally {
       setPostingRun(false);
     }
@@ -922,7 +941,7 @@ export default function InvestorWorkspace({
 
   const createPayout = async () => {
     if (!selectedProfitRun) {
-      toast.error("Select a posted run first.");
+      toast.error(t("errors.selectPostedProfitRun"));
       return;
     }
     try {
@@ -937,12 +956,12 @@ export default function InvestorWorkspace({
       );
       const result = await readJson<{ payoutCount: number }>(
         response,
-        "Failed to create investor payout draft",
+        t("errors.createPayout"),
       );
-      toast.success(`Created ${result.payoutCount} payout draft(s)`);
+      toast.success(t("success.payoutDraftsCreated", { count: result.payoutCount }));
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to create payout draft");
+    } catch {
+      toast.error(t("errors.createPayout"));
     } finally {
       setProcessingPayout(false);
     }
@@ -977,17 +996,17 @@ export default function InvestorWorkspace({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      await readJson(response, `Failed to ${action} payout`);
+      await readJson(response, t(`errors.payoutAction.${action}` as any));
       const messageMap: Record<typeof action, string> = {
-        approve: "Payout approved",
-        reject: "Payout rejected",
-        pay: "Payout settled",
-        void: "Payout voided",
+        approve: t("success.payoutApproved"),
+        reject: t("success.payoutRejected"),
+        pay: t("success.payoutSettled"),
+        void: t("success.payoutVoided"),
       };
       toast.success(messageMap[action]);
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || `Failed to ${action} payout`);
+    } catch {
+      toast.error(t(`errors.payoutAction.${action}` as any));
     } finally {
       setActingPayoutId(null);
     }
@@ -1012,7 +1031,7 @@ export default function InvestorWorkspace({
       if (!response.ok) {
         const payload = await response.json().catch(() => ({}));
         throw new Error(
-          (payload as { error?: string }).error || "Failed to export statement",
+          (payload as { error?: string }).error || t("errors.exportStatement"),
         );
       }
       const blob = await response.blob();
@@ -1024,9 +1043,9 @@ export default function InvestorWorkspace({
       link.click();
       link.remove();
       URL.revokeObjectURL(url);
-      toast.success("Investor statement exported");
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to export statement");
+      toast.success(t("success.statementCsvExported"));
+    } catch {
+      toast.error(t("errors.exportStatement"));
     } finally {
       setExportingStatement(false);
     }
@@ -1069,10 +1088,11 @@ export default function InvestorWorkspace({
             paidAt: string | null;
           }>;
         }>;
-      }>(response, "Failed to load statement data");
+      }>(response, t("errors.loadStatementData"));
 
       await exportInvestorStatementPdf({
         fileName: `investor-statement-${payload.from.slice(0, 10)}-to-${payload.to.slice(0, 10)}.pdf`,
+        // jsPDF's bundled font does not support Bengali glyphs yet.
         title: "Investor Statement",
         from: payload.from,
         to: payload.to,
@@ -1091,9 +1111,9 @@ export default function InvestorWorkspace({
           })),
         })),
       });
-      toast.success("Investor statement PDF exported");
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to export statement PDF");
+      toast.success(t("success.statementPdfExported"));
+    } catch {
+      toast.error(t("errors.exportStatementPdf"));
     } finally {
       setExportingStatement(false);
     }
@@ -1170,7 +1190,10 @@ export default function InvestorWorkspace({
             <CardContent className="p-4">
               <p className="text-xs text-muted-foreground">{t("summary.netBalance")}</p>
               <p className="text-xl font-semibold">
-                {summary.totalBalance.toFixed(2)}
+                {summary.totalBalance.toLocaleString(locale, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </p>
             </CardContent>
           </Card>
@@ -1446,13 +1469,13 @@ export default function InvestorWorkspace({
               value="form"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Post Transaction
+              {t("ledger.tabs.post")}
             </TabsTrigger>
             <TabsTrigger
               value="transactions"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Transaction History
+              {t("ledger.tabs.history")}
             </TabsTrigger>
           </TabsList>
 
@@ -1461,16 +1484,18 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Post Transaction
+                    {t("ledger.form.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Record capital transactions for investors.
+                    {t("ledger.form.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="transaction-investor">Investor</Label>
+                      <Label htmlFor="transaction-investor">
+                        {t("ledger.form.investor")}
+                      </Label>
                       <select
                         id="transaction-investor"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -1482,7 +1507,7 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="">Select investor</option>
+                        <option value="">{t("common.selectInvestor")}</option>
                         {investors.map((investor) => (
                           <option key={investor.id} value={investor.id}>
                             {investor.name} ({investor.code})
@@ -1491,7 +1516,9 @@ export default function InvestorWorkspace({
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="transaction-type">Transaction Type</Label>
+                      <Label htmlFor="transaction-type">
+                        {t("ledger.form.transactionType")}
+                      </Label>
                       <select
                         id="transaction-type"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -1506,13 +1533,15 @@ export default function InvestorWorkspace({
                       >
                         {TRANSACTION_TYPES.map((type) => (
                           <option key={type} value={type}>
-                            {type}
+                            {enumLabel("transactionTypes", type)}
                           </option>
                         ))}
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="transaction-direction">Direction</Label>
+                      <Label htmlFor="transaction-direction">
+                        {t("ledger.form.direction")}
+                      </Label>
                       <select
                         id="transaction-direction"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -1525,15 +1554,21 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="CREDIT">CREDIT</option>
-                        <option value="DEBIT">DEBIT</option>
+                        <option value="CREDIT">
+                          {enumLabel("directions", "CREDIT")}
+                        </option>
+                        <option value="DEBIT">
+                          {enumLabel("directions", "DEBIT")}
+                        </option>
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="transaction-amount">Amount</Label>
+                      <Label htmlFor="transaction-amount">
+                        {t("common.amount")}
+                      </Label>
                       <Input
                         id="transaction-amount"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={transactionForm.amount}
                         onChange={(event) =>
                           setTransactionForm((current) => ({
@@ -1545,7 +1580,7 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="transaction-variant">
-                        Product Variant
+                        {t("common.productVariant")}
                       </Label>
                       <select
                         id="transaction-variant"
@@ -1558,7 +1593,7 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="">General pool</option>
+                        <option value="">{t("ledger.form.generalPool")}</option>
                         {variants.map((variant) => (
                           <option key={variant.id} value={variant.id}>
                             {variant.product.name} ({variant.sku})
@@ -1575,7 +1610,7 @@ export default function InvestorWorkspace({
                       }
                       className="min-w-[120px]"
                     >
-                      Post Transaction
+                      {t("ledger.form.submit")}
                     </Button>
                   </div>
                 </CardContent>
@@ -1584,7 +1619,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to post transactions.
+                    {t("ledger.permissions.post")}
                   </p>
                 </CardContent>
               </Card>
@@ -1596,22 +1631,22 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Transaction History
+                    {t("ledger.history.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    View all capital transactions recorded in the ledger.
+                    {t("ledger.history.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="overflow-x-auto">
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>No</TableHead>
-                        <TableHead>Investor</TableHead>
-                        <TableHead>Type</TableHead>
-                        <TableHead>Direction</TableHead>
-                        <TableHead>Amount</TableHead>
-                        <TableHead>Product</TableHead>
+                        <TableHead>{t("common.number")}</TableHead>
+                        <TableHead>{t("common.investor")}</TableHead>
+                        <TableHead>{t("common.type")}</TableHead>
+                        <TableHead>{t("common.direction")}</TableHead>
+                        <TableHead>{t("common.amount")}</TableHead>
+                        <TableHead>{t("common.product")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -1641,7 +1676,7 @@ export default function InvestorWorkspace({
                                   : "bg-red-100 text-red-800"
                               }`}
                             >
-                              {item.type}
+                              {enumLabel("transactionTypes", item.type)}
                             </span>
                           </TableCell>
                           <TableCell>
@@ -1652,7 +1687,7 @@ export default function InvestorWorkspace({
                                   : "bg-orange-100 text-orange-800"
                               }`}
                             >
-                              {item.direction}
+                              {enumLabel("directions", item.direction)}
                             </span>
                           </TableCell>
                           <TableCell className="text-right font-medium">
@@ -1673,7 +1708,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view transactions.
+                    {t("ledger.permissions.view")}
                   </p>
                 </CardContent>
               </Card>
@@ -1689,25 +1724,25 @@ export default function InvestorWorkspace({
               value="form"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Run Calculation
+              {t("profitRuns.tabs.calculate")}
             </TabsTrigger>
             <TabsTrigger
               value="runs"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Profit Runs
+              {t("profitRuns.tabs.runs")}
             </TabsTrigger>
             <TabsTrigger
               value="workflow"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Workflow
+              {t("profitRuns.tabs.workflow")}
             </TabsTrigger>
             <TabsTrigger
               value="analysis"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Analysis
+              {t("profitRuns.tabs.analysis")}
             </TabsTrigger>
           </TabsList>
 
@@ -1716,17 +1751,18 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Run Product Profitability
+                    {t("profitRuns.form.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Calculate profit distribution across investors for a
-                    specific period.
+                    {t("profitRuns.form.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="profit-from">From Date</Label>
+                      <Label htmlFor="profit-from">
+                        {t("common.fromDate")}
+                      </Label>
                       <Input
                         id="profit-from"
                         type="date"
@@ -1740,7 +1776,7 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="profit-to">To Date</Label>
+                      <Label htmlFor="profit-to">{t("common.toDate")}</Label>
                       <Input
                         id="profit-to"
                         type="date"
@@ -1754,7 +1790,9 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="allocation-basis">Allocation Basis</Label>
+                      <Label htmlFor="allocation-basis">
+                        {t("profitRuns.form.allocationBasis")}
+                      </Label>
                       <select
                         id="allocation-basis"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -1768,19 +1806,23 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="NET_REVENUE">NET_REVENUE</option>
-                        <option value="NET_UNITS">NET_UNITS</option>
+                        <option value="NET_REVENUE">
+                          {enumLabel("allocationBases", "NET_REVENUE")}
+                        </option>
+                        <option value="NET_UNITS">
+                          {enumLabel("allocationBases", "NET_UNITS")}
+                        </option>
                       </select>
                     </div>
                   </div>
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="marketing-expense">
-                        Marketing Expense
+                        {t("profitRuns.form.marketingExpense")}
                       </Label>
                       <Input
                         id="marketing-expense"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={profitRunForm.marketingExpense}
                         onChange={(event) =>
                           setProfitRunForm((current) => ({
@@ -1791,10 +1833,12 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="ads-expense">Ads Expense</Label>
+                      <Label htmlFor="ads-expense">
+                        {t("profitRuns.form.adsExpense")}
+                      </Label>
                       <Input
                         id="ads-expense"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={profitRunForm.adsExpense}
                         onChange={(event) =>
                           setProfitRunForm((current) => ({
@@ -1806,11 +1850,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="logistics-expense">
-                        Logistics Expense
+                        {t("profitRuns.form.logisticsExpense")}
                       </Label>
                       <Input
                         id="logistics-expense"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={profitRunForm.logisticsExpense}
                         onChange={(event) =>
                           setProfitRunForm((current) => ({
@@ -1821,10 +1865,12 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="other-expense">Other Expense</Label>
+                      <Label htmlFor="other-expense">
+                        {t("profitRuns.form.otherExpense")}
+                      </Label>
                       <Input
                         id="other-expense"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={profitRunForm.otherExpense}
                         onChange={(event) =>
                           setProfitRunForm((current) => ({
@@ -1836,10 +1882,12 @@ export default function InvestorWorkspace({
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="profit-note">Note (Optional)</Label>
+                    <Label htmlFor="profit-note">
+                      {t("common.noteOptional")}
+                    </Label>
                     <Input
                       id="profit-note"
-                      placeholder="Add any additional notes"
+                      placeholder={t("common.additionalNotes")}
                       value={profitRunForm.note}
                       onChange={(event) =>
                         setProfitRunForm((current) => ({
@@ -1855,7 +1903,9 @@ export default function InvestorWorkspace({
                       disabled={runningProfit}
                       className="min-w-[180px]"
                     >
-                      {runningProfit ? "Running..." : "Run Profit Calculation"}
+                      {runningProfit
+                        ? t("profitRuns.form.running")
+                        : t("profitRuns.form.submit")}
                     </Button>
                   </div>
                 </CardContent>
@@ -1864,7 +1914,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to run profit calculations.
+                    {t("profitRuns.permissions.calculate")}
                   </p>
                 </CardContent>
               </Card>
@@ -1876,15 +1926,17 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Profit Runs History
+                    {t("profitRuns.history.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    View all profit calculation runs and their status.
+                    {t("profitRuns.history.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <Label htmlFor="profit-run-select">Select Run</Label>
+                    <Label htmlFor="profit-run-select">
+                      {t("profitRuns.history.selectRun")}
+                    </Label>
                     <select
                       id="profit-run-select"
                       className="h-10 w-full rounded-md border bg-background px-3 text-sm md:w-[460px]"
@@ -1893,17 +1945,22 @@ export default function InvestorWorkspace({
                         setPayoutRunFilter(event.target.value)
                       }
                     >
-                      <option value="">Latest run</option>
+                      <option value="">{t("profitRuns.history.latestRun")}</option>
                       {profitRuns.map((run) => (
                         <option key={run.id} value={run.id}>
-                          {run.runNumber} • {run.fromDate.slice(0, 10)} to{" "}
-                          {run.toDate.slice(0, 10)}
+                          {t("profitRuns.history.runOption", {
+                            runNumber: run.runNumber,
+                            from: run.fromDate.slice(0, 10),
+                            to: run.toDate.slice(0, 10),
+                          })}
                         </option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <Label htmlFor="profit-status-filter">Run Status</Label>
+                    <Label htmlFor="profit-status-filter">
+                      {t("profitRuns.history.runStatus")}
+                    </Label>
                     <select
                       id="profit-status-filter"
                       className="h-10 w-full rounded-md border bg-background px-3 text-sm md:w-[240px]"
@@ -1912,27 +1969,35 @@ export default function InvestorWorkspace({
                         setProfitStatusFilter(event.target.value)
                       }
                     >
-                      <option value="">All statuses</option>
-                      <option value="PENDING_APPROVAL">PENDING_APPROVAL</option>
-                      <option value="APPROVED">APPROVED</option>
-                      <option value="REJECTED">REJECTED</option>
-                      <option value="POSTED">POSTED</option>
+                      <option value="">{t("common.allStatuses")}</option>
+                      <option value="PENDING_APPROVAL">
+                        {enumLabel("profitStatuses", "PENDING_APPROVAL")}
+                      </option>
+                      <option value="APPROVED">
+                        {enumLabel("profitStatuses", "APPROVED")}
+                      </option>
+                      <option value="REJECTED">
+                        {enumLabel("profitStatuses", "REJECTED")}
+                      </option>
+                      <option value="POSTED">
+                        {enumLabel("profitStatuses", "POSTED")}
+                      </option>
                     </select>
                   </div>
                   <div className="overflow-x-auto">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Run</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead>Basis</TableHead>
-                          <TableHead>Net Revenue</TableHead>
-                          <TableHead>Net COGS</TableHead>
-                          <TableHead>Operating Expense</TableHead>
-                          <TableHead>Net Profit</TableHead>
-                          <TableHead>Approved</TableHead>
-                          <TableHead>Posted</TableHead>
-                          <TableHead>Lines</TableHead>
+                          <TableHead>{t("common.run")}</TableHead>
+                          <TableHead>{t("common.status")}</TableHead>
+                          <TableHead>{t("common.basis")}</TableHead>
+                          <TableHead>{t("common.netRevenue")}</TableHead>
+                          <TableHead>{t("common.netCogs")}</TableHead>
+                          <TableHead>{t("common.operatingExpense")}</TableHead>
+                          <TableHead>{t("common.netProfit")}</TableHead>
+                          <TableHead>{t("common.approved")}</TableHead>
+                          <TableHead>{t("common.posted")}</TableHead>
+                          <TableHead>{t("common.lines")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -1958,10 +2023,12 @@ export default function InvestorWorkspace({
                                         : "bg-red-100 text-red-800"
                                 }`}
                               >
-                                {run.status}
+                                {enumLabel("profitStatuses", run.status)}
                               </span>
                             </TableCell>
-                            <TableCell>{run.allocationBasis}</TableCell>
+                            <TableCell>
+                              {enumLabel("allocationBases", run.allocationBasis)}
+                            </TableCell>
                             <TableCell className="text-right">
                               {Number(run.totalNetRevenue).toFixed(2)}
                             </TableCell>
@@ -1983,9 +2050,11 @@ export default function InvestorWorkspace({
                               {run.postedAt ? run.postedAt.slice(0, 10) : "-"}
                             </TableCell>
                             <TableCell className="text-xs">
-                              {run._count?.variantLines || 0} variants /{" "}
-                              {run._count?.allocationLines || 0} allocations /{" "}
-                              {run._count?.payouts || 0} payouts
+                              {t("profitRuns.history.lineCounts", {
+                                variants: run._count?.variantLines || 0,
+                                allocations: run._count?.allocationLines || 0,
+                                payouts: run._count?.payouts || 0,
+                              })}
                             </TableCell>
                           </TableRow>
                         ))}
@@ -1995,7 +2064,7 @@ export default function InvestorWorkspace({
                               colSpan={10}
                               className="text-center text-sm text-muted-foreground"
                             >
-                              No profit runs matched the current filters.
+                              {t("profitRuns.history.empty")}
                             </TableCell>
                           </TableRow>
                         ) : null}
@@ -2008,7 +2077,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view profit runs.
+                    {t("profitRuns.permissions.view")}
                   </p>
                 </CardContent>
               </Card>
@@ -2020,26 +2089,34 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Run Workflow Controls
+                    {t("profitRuns.workflow.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Manage the approval and posting workflow for profit runs.
+                    {t("profitRuns.workflow.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-4">
                     <div className="space-y-2">
-                      <p className="text-xs text-muted-foreground">Run</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t("common.run")}
+                      </p>
                       <p className="font-medium">
                         {selectedProfitRun.runNumber}
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <p className="text-xs text-muted-foreground">Status</p>
-                      <p className="font-medium">{selectedProfitRun.status}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t("common.status")}
+                      </p>
+                      <p className="font-medium">
+                        {enumLabel("profitStatuses", selectedProfitRun.status)}
+                      </p>
                     </div>
                     <div className="space-y-2">
-                      <p className="text-xs text-muted-foreground">Approved</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t("common.approved")}
+                      </p>
                       <p className="font-medium">
                         {selectedProfitRun.approvedAt
                           ? selectedProfitRun.approvedAt
@@ -2049,7 +2126,9 @@ export default function InvestorWorkspace({
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <p className="text-xs text-muted-foreground">Posted</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t("common.posted")}
+                      </p>
                       <p className="font-medium">
                         {selectedProfitRun.postedAt
                           ? selectedProfitRun.postedAt
@@ -2061,11 +2140,11 @@ export default function InvestorWorkspace({
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="workflow-note">
-                      Governance Note (Optional)
+                      {t("profitRuns.workflow.governanceNote")}
                     </Label>
                     <Input
                       id="workflow-note"
-                      placeholder="Add governance notes for this action"
+                      placeholder={t("profitRuns.workflow.notePlaceholder")}
                       value={runActionNote}
                       onChange={(event) => setRunActionNote(event.target.value)}
                     />
@@ -2078,14 +2157,18 @@ export default function InvestorWorkspace({
                           onClick={() => void changeProfitRunStatus("approve")}
                           disabled={updatingRunStatus}
                         >
-                          {updatingRunStatus ? "Updating..." : "Approve Run"}
+                          {updatingRunStatus
+                            ? t("common.updating")
+                            : t("profitRuns.workflow.approve")}
                         </Button>
                         <Button
                           variant="outline"
                           onClick={() => void changeProfitRunStatus("reject")}
                           disabled={updatingRunStatus}
                         >
-                          {updatingRunStatus ? "Updating..." : "Reject Run"}
+                          {updatingRunStatus
+                            ? t("common.updating")
+                            : t("profitRuns.workflow.reject")}
                         </Button>
                       </>
                     ) : null}
@@ -2095,7 +2178,9 @@ export default function InvestorWorkspace({
                         onClick={() => void postSelectedRun()}
                         disabled={postingRun}
                       >
-                        {postingRun ? "Posting..." : "Post To Investor Ledger"}
+                        {postingRun
+                          ? t("profitRuns.workflow.posting")
+                          : t("profitRuns.workflow.postToLedger")}
                       </Button>
                     ) : null}
                   </div>
@@ -2105,7 +2190,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    Select a profit run to view workflow controls.
+                    {t("profitRuns.workflow.selectRun")}
                   </p>
                 </CardContent>
               </Card>
@@ -2118,23 +2203,27 @@ export default function InvestorWorkspace({
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg font-semibold">
-                      Variant Profit Lines
+                      {t("profitRuns.analysis.variantTitle")}
                     </CardTitle>
                     <p className="text-sm text-muted-foreground">
-                      Profit breakdown by product variants.
+                      {t("profitRuns.analysis.variantDescription")}
                     </p>
                   </CardHeader>
                   <CardContent className="overflow-x-auto">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Variant</TableHead>
-                          <TableHead>Units (Net)</TableHead>
-                          <TableHead>Net Revenue</TableHead>
-                          <TableHead>Net COGS</TableHead>
-                          <TableHead>Allocated Expense</TableHead>
-                          <TableHead>Net Profit</TableHead>
-                          <TableHead>Unallocated %</TableHead>
+                          <TableHead>{t("common.variant")}</TableHead>
+                          <TableHead>{t("profitRuns.analysis.netUnits")}</TableHead>
+                          <TableHead>{t("common.netRevenue")}</TableHead>
+                          <TableHead>{t("common.netCogs")}</TableHead>
+                          <TableHead>
+                            {t("profitRuns.analysis.allocatedExpense")}
+                          </TableHead>
+                          <TableHead>{t("common.netProfit")}</TableHead>
+                          <TableHead>
+                            {t("profitRuns.analysis.unallocatedPercent")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -2174,21 +2263,25 @@ export default function InvestorWorkspace({
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg font-semibold">
-                      Investor Profit Share Lines
+                      {t("profitRuns.analysis.investorTitle")}
                     </CardTitle>
                     <p className="text-sm text-muted-foreground">
-                      Profit distribution across investors.
+                      {t("profitRuns.analysis.investorDescription")}
                     </p>
                   </CardHeader>
                   <CardContent className="overflow-x-auto">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Investor</TableHead>
-                          <TableHead>Variant</TableHead>
-                          <TableHead>Share %</TableHead>
-                          <TableHead>Allocated Revenue</TableHead>
-                          <TableHead>Allocated Net Profit</TableHead>
+                          <TableHead>{t("common.investor")}</TableHead>
+                          <TableHead>{t("common.variant")}</TableHead>
+                          <TableHead>{t("profitRuns.analysis.sharePercent")}</TableHead>
+                          <TableHead>
+                            {t("profitRuns.analysis.allocatedRevenue")}
+                          </TableHead>
+                          <TableHead>
+                            {t("profitRuns.analysis.allocatedNetProfit")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -2223,7 +2316,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view profit analysis.
+                    {t("profitRuns.permissions.analysis")}
                   </p>
                 </CardContent>
               </Card>
@@ -2239,13 +2332,13 @@ export default function InvestorWorkspace({
               value="form"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Create Payout
+              {t("payouts.tabs.create")}
             </TabsTrigger>
             <TabsTrigger
               value="register"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Payout Register
+              {t("payouts.tabs.register")}
             </TabsTrigger>
           </TabsList>
 
@@ -2254,20 +2347,21 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Create Payout Draft
+                    {t("payouts.form.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Generate payout drafts for investors based on profit
-                    distribution.
+                    {t("payouts.form.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-3">
                     <div className="space-y-2">
-                      <Label htmlFor="payout-percent">Payout % (0-100)</Label>
+                      <Label htmlFor="payout-percent">
+                        {t("payouts.form.payoutPercent")}
+                      </Label>
                       <Input
                         id="payout-percent"
-                        placeholder="Enter percentage"
+                        placeholder={t("common.enterPercentage")}
                         value={payoutForm.payoutPercent}
                         onChange={(event) =>
                           setPayoutForm((current) => ({
@@ -2279,11 +2373,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="holdback-percent">
-                        Holdback % (0-100)
+                        {t("payouts.form.holdbackPercent")}
                       </Label>
                       <Input
                         id="holdback-percent"
-                        placeholder="Enter percentage"
+                        placeholder={t("common.enterPercentage")}
                         value={payoutForm.holdbackPercent}
                         onChange={(event) =>
                           setPayoutForm((current) => ({
@@ -2294,10 +2388,12 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="payout-currency">Currency</Label>
+                      <Label htmlFor="payout-currency">
+                        {t("common.currency")}
+                      </Label>
                       <Input
                         id="payout-currency"
-                        placeholder="Enter currency"
+                        placeholder={t("common.enterCurrency")}
                         value={payoutForm.currency}
                         onChange={(event) =>
                           setPayoutForm((current) => ({
@@ -2309,10 +2405,12 @@ export default function InvestorWorkspace({
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="payout-note">Payout Note (Optional)</Label>
+                    <Label htmlFor="payout-note">
+                      {t("payouts.form.note")}
+                    </Label>
                     <Input
                       id="payout-note"
-                      placeholder="Add any additional notes"
+                      placeholder={t("common.additionalNotes")}
                       value={payoutForm.note}
                       onChange={(event) =>
                         setPayoutForm((current) => ({
@@ -2329,8 +2427,8 @@ export default function InvestorWorkspace({
                       className="min-w-[160px]"
                     >
                       {processingPayout
-                        ? "Processing..."
-                        : "Create Payout Draft"}
+                        ? t("common.processing")
+                        : t("payouts.form.submit")}
                     </Button>
                   </div>
                 </CardContent>
@@ -2340,10 +2438,10 @@ export default function InvestorWorkspace({
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
                     {!selectedProfitRun
-                      ? "Select a posted profit run first."
+                      ? t("payouts.form.selectPostedRun")
                       : selectedProfitRun?.status !== "POSTED"
-                        ? "Only posted profit runs can generate payouts."
-                        : "You don't have permission to create payouts."}
+                        ? t("payouts.form.postedOnly")
+                        : t("payouts.permissions.create")}
                   </p>
                 </CardContent>
               </Card>
@@ -2355,16 +2453,18 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Payout Register
+                    {t("payouts.register.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    View and manage all payout records and their status.
+                    {t("payouts.register.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4 overflow-x-auto">
                   <div className="grid gap-4 md:grid-cols-3">
                     <div className="space-y-2">
-                      <Label htmlFor="payout-run-filter">Profit Run</Label>
+                      <Label htmlFor="payout-run-filter">
+                        {t("payouts.register.profitRun")}
+                      </Label>
                       <select
                         id="payout-run-filter"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -2373,7 +2473,7 @@ export default function InvestorWorkspace({
                           setSelectedProfitRunId(event.target.value)
                         }
                       >
-                        <option value="">All runs</option>
+                        <option value="">{t("payouts.register.allRuns")}</option>
                         {profitRuns.map((run) => (
                           <option key={run.id} value={run.id}>
                             {run.runNumber}
@@ -2383,7 +2483,7 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="payout-status-filter">
-                        Payout Status
+                        {t("payouts.register.payoutStatus")}
                       </Label>
                       <select
                         id="payout-status-filter"
@@ -2393,19 +2493,27 @@ export default function InvestorWorkspace({
                           setPayoutStatusFilter(event.target.value)
                         }
                       >
-                        <option value="">All statuses</option>
+                        <option value="">{t("common.allStatuses")}</option>
                         <option value="PENDING_APPROVAL">
-                          PENDING_APPROVAL
+                          {enumLabel("payoutStatuses", "PENDING_APPROVAL")}
                         </option>
-                        <option value="APPROVED">APPROVED</option>
-                        <option value="REJECTED">REJECTED</option>
-                        <option value="PAID">PAID</option>
-                        <option value="VOID">VOID</option>
+                        <option value="APPROVED">
+                          {enumLabel("payoutStatuses", "APPROVED")}
+                        </option>
+                        <option value="REJECTED">
+                          {enumLabel("payoutStatuses", "REJECTED")}
+                        </option>
+                        <option value="PAID">
+                          {enumLabel("payoutStatuses", "PAID")}
+                        </option>
+                        <option value="VOID">
+                          {enumLabel("payoutStatuses", "VOID")}
+                        </option>
                       </select>
                     </div>
                     <div className="rounded-md border p-3">
                       <p className="text-xs text-muted-foreground">
-                        Visible Payouts
+                        {t("payouts.register.visiblePayouts")}
                       </p>
                       <p className="text-2xl font-semibold">
                         {filteredPayoutRegister.length}
@@ -2415,10 +2523,12 @@ export default function InvestorWorkspace({
                   {canApprovePayout || canPayPayout || canVoidPayout ? (
                     <div className="grid gap-4 md:grid-cols-5">
                       <div className="space-y-2">
-                        <Label htmlFor="action-note">Action Note</Label>
+                        <Label htmlFor="action-note">
+                          {t("payouts.register.actionNote")}
+                        </Label>
                         <Input
                           id="action-note"
-                          placeholder="Enter note"
+                          placeholder={t("common.enterNote")}
                           value={payoutActionForm.note}
                           onChange={(event) =>
                             setPayoutActionForm((current) => ({
@@ -2429,7 +2539,9 @@ export default function InvestorWorkspace({
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="payment-method">Payment Method</Label>
+                        <Label htmlFor="payment-method">
+                          {t("payouts.register.paymentMethod")}
+                        </Label>
                         <select
                           id="payment-method"
                           className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -2445,17 +2557,27 @@ export default function InvestorWorkspace({
                             }))
                           }
                         >
-                          <option value="BANK_TRANSFER">BANK_TRANSFER</option>
-                          <option value="MOBILE_BANKING">MOBILE_BANKING</option>
-                          <option value="CHEQUE">CHEQUE</option>
-                          <option value="CASH">CASH</option>
+                          <option value="BANK_TRANSFER">
+                            {enumLabel("paymentMethods", "BANK_TRANSFER")}
+                          </option>
+                          <option value="MOBILE_BANKING">
+                            {enumLabel("paymentMethods", "MOBILE_BANKING")}
+                          </option>
+                          <option value="CHEQUE">
+                            {enumLabel("paymentMethods", "CHEQUE")}
+                          </option>
+                          <option value="CASH">
+                            {enumLabel("paymentMethods", "CASH")}
+                          </option>
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="bank-reference">Bank Reference</Label>
+                        <Label htmlFor="bank-reference">
+                          {t("payouts.register.bankReference")}
+                        </Label>
                         <Input
                           id="bank-reference"
-                          placeholder="Enter reference"
+                          placeholder={t("payouts.register.referencePlaceholder")}
                           value={payoutActionForm.bankReference}
                           onChange={(event) =>
                             setPayoutActionForm((current) => ({
@@ -2466,7 +2588,9 @@ export default function InvestorWorkspace({
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="paid-at">Paid At</Label>
+                        <Label htmlFor="paid-at">
+                          {t("payouts.register.paidAt")}
+                        </Label>
                         <Input
                           id="paid-at"
                           type="datetime-local"
@@ -2480,10 +2604,12 @@ export default function InvestorWorkspace({
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="void-reason">Void Reason</Label>
+                        <Label htmlFor="void-reason">
+                          {t("payouts.register.voidReason")}
+                        </Label>
                         <Input
                           id="void-reason"
-                          placeholder="Enter reason"
+                          placeholder={t("payouts.register.reasonPlaceholder")}
                           value={payoutActionForm.voidReason}
                           onChange={(event) =>
                             setPayoutActionForm((current) => ({
@@ -2498,19 +2624,19 @@ export default function InvestorWorkspace({
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Payout</TableHead>
-                        <TableHead>Run</TableHead>
-                        <TableHead>Investor</TableHead>
-                        <TableHead>Gross Profit</TableHead>
-                        <TableHead>Holdback</TableHead>
-                        <TableHead>Payout Amount</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead>Method</TableHead>
-                        <TableHead>Bank Ref</TableHead>
-                        <TableHead>Timeline</TableHead>
-                        <TableHead>Ledger Txn</TableHead>
+                        <TableHead>{t("common.payout")}</TableHead>
+                        <TableHead>{t("common.run")}</TableHead>
+                        <TableHead>{t("common.investor")}</TableHead>
+                        <TableHead>{t("payouts.register.grossProfit")}</TableHead>
+                        <TableHead>{t("payouts.register.holdback")}</TableHead>
+                        <TableHead>{t("payouts.register.payoutAmount")}</TableHead>
+                        <TableHead>{t("common.status")}</TableHead>
+                        <TableHead>{t("common.method")}</TableHead>
+                        <TableHead>{t("payouts.register.bankRef")}</TableHead>
+                        <TableHead>{t("common.timeline")}</TableHead>
+                        <TableHead>{t("payouts.register.ledgerTransaction")}</TableHead>
                         {canApprovePayout || canPayPayout || canVoidPayout ? (
-                          <TableHead>Actions</TableHead>
+                          <TableHead>{t("common.actions")}</TableHead>
                         ) : null}
                       </TableRow>
                     </TableHeader>
@@ -2538,10 +2664,11 @@ export default function InvestorWorkspace({
                               {item.investor.name} ({item.investor.code})
                             </div>
                             <div className="text-xs text-muted-foreground">
-                              Beneficiary{" "}
-                              {item.investor.beneficiaryVerifiedAt
-                                ? "verified"
-                                : "pending"}
+                              {t("payouts.register.beneficiary", {
+                                status: item.investor.beneficiaryVerifiedAt
+                                  ? t("payouts.register.beneficiaryVerified")
+                                  : t("payouts.register.beneficiaryPending"),
+                              })}
                             </div>
                           </TableCell>
                           <TableCell className="text-right">
@@ -2569,32 +2696,38 @@ export default function InvestorWorkspace({
                                         : "bg-gray-100 text-gray-800"
                               }`}
                             >
-                              {item.status}
+                              {enumLabel("payoutStatuses", item.status)}
                             </span>
                           </TableCell>
-                          <TableCell>{item.paymentMethod || "-"}</TableCell>
+                          <TableCell>
+                            {item.paymentMethod
+                              ? enumLabel("paymentMethods", item.paymentMethod)
+                              : "-"}
+                          </TableCell>
                           <TableCell>{item.bankReference || "-"}</TableCell>
                           <TableCell className="text-xs">
                             <div>
-                              A:{" "}
+                              {t("payouts.register.timelineApproved")}: {" "}
                               {item.approvedAt
                                 ? item.approvedAt.slice(0, 10)
                                 : "-"}
                             </div>
                             <div>
-                              H: {item.heldAt ? item.heldAt.slice(0, 10) : "-"}
+                              {t("payouts.register.timelineHeld")}: {" "}
+                              {item.heldAt ? item.heldAt.slice(0, 10) : "-"}
                             </div>
                             <div>
-                              R:{" "}
+                              {t("payouts.register.timelineReleased")}: {" "}
                               {item.releasedAt
                                 ? item.releasedAt.slice(0, 10)
                                 : "-"}
                             </div>
                             <div>
-                              P: {item.paidAt ? item.paidAt.slice(0, 10) : "-"}
+                              {t("payouts.register.timelinePaid")}: {" "}
+                              {item.paidAt ? item.paidAt.slice(0, 10) : "-"}
                             </div>
                             <div>
-                              V:{" "}
+                              {t("payouts.register.timelineVoided")}: {" "}
                               {item.voidedAt ? item.voidedAt.slice(0, 10) : "-"}
                             </div>
                           </TableCell>
@@ -2617,7 +2750,7 @@ export default function InvestorWorkspace({
                                       }
                                       disabled={actingPayoutId === item.id}
                                     >
-                                      Approve
+                                      {t("common.approve")}
                                     </Button>
                                     <Button
                                       size="sm"
@@ -2630,7 +2763,7 @@ export default function InvestorWorkspace({
                                       }
                                       disabled={actingPayoutId === item.id}
                                     >
-                                      Reject
+                                      {t("common.reject")}
                                     </Button>
                                   </>
                                 ) : null}
@@ -2642,7 +2775,7 @@ export default function InvestorWorkspace({
                                     }
                                     disabled={actingPayoutId === item.id}
                                   >
-                                    Pay
+                                    {t("common.pay")}
                                   </Button>
                                 ) : null}
                                 {canVoidPayout &&
@@ -2656,7 +2789,7 @@ export default function InvestorWorkspace({
                                     }
                                     disabled={actingPayoutId === item.id}
                                   >
-                                    Void
+                                    {t("common.void")}
                                   </Button>
                                 ) : null}
                               </div>
@@ -2674,7 +2807,7 @@ export default function InvestorWorkspace({
                             }
                             className="text-center text-sm text-muted-foreground"
                           >
-                            No payouts matched the current filters.
+                            {t("payouts.register.empty")}
                           </TableCell>
                         </TableRow>
                       ) : null}
@@ -2686,7 +2819,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view the payout register.
+                    {t("payouts.permissions.view")}
                   </p>
                 </CardContent>
               </Card>
@@ -2702,13 +2835,13 @@ export default function InvestorWorkspace({
               value="form"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Create Allocation
+              {t("allocations.tabs.create")}
             </TabsTrigger>
             <TabsTrigger
               value="allocations"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              View Allocations
+              {t("allocations.tabs.view")}
             </TabsTrigger>
           </TabsList>
 
@@ -2717,17 +2850,18 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Create Allocation
+                    {t("allocations.form.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Allocate investors to product variants with participation
-                    terms.
+                    {t("allocations.form.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="allocation-investor">Investor</Label>
+                      <Label htmlFor="allocation-investor">
+                        {t("common.investor")}
+                      </Label>
                       <select
                         id="allocation-investor"
                         className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -2739,7 +2873,7 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="">Select investor</option>
+                        <option value="">{t("common.selectInvestor")}</option>
                         {investors.map((investor) => (
                           <option key={investor.id} value={investor.id}>
                             {investor.name} ({investor.code})
@@ -2749,7 +2883,7 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="allocation-variant">
-                        Product Variant
+                        {t("common.productVariant")}
                       </Label>
                       <select
                         id="allocation-variant"
@@ -2762,7 +2896,7 @@ export default function InvestorWorkspace({
                           }))
                         }
                       >
-                        <option value="">Select variant</option>
+                        <option value="">{t("common.selectVariant")}</option>
                         {variants.map((variant) => (
                           <option key={variant.id} value={variant.id}>
                             {variant.product.name} ({variant.sku})
@@ -2772,11 +2906,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="allocation-participation">
-                        Participation %
+                        {t("allocations.form.participationPercent")}
                       </Label>
                       <Input
                         id="allocation-participation"
-                        placeholder="Enter percentage"
+                        placeholder={t("common.enterPercentage")}
                         value={allocationForm.participationPercent}
                         onChange={(event) =>
                           setAllocationForm((current) => ({
@@ -2788,11 +2922,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="allocation-committed">
-                        Committed Amount
+                        {t("allocations.form.committedAmount")}
                       </Label>
                       <Input
                         id="allocation-committed"
-                        placeholder="Enter amount"
+                        placeholder={t("common.enterAmount")}
                         value={allocationForm.committedAmount}
                         onChange={(event) =>
                           setAllocationForm((current) => ({
@@ -2812,7 +2946,7 @@ export default function InvestorWorkspace({
                       }
                       className="min-w-[120px]"
                     >
-                      Create Allocation
+                      {t("allocations.form.submit")}
                     </Button>
                   </div>
                 </CardContent>
@@ -2821,7 +2955,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to create allocations.
+                    {t("allocations.permissions.create")}
                   </p>
                 </CardContent>
               </Card>
@@ -2833,23 +2967,27 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Investor Allocations
+                    {t("allocations.list.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    View all investor allocations to product variants.
+                    {t("allocations.list.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="overflow-x-auto">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Allocation</TableHead>
-                          <TableHead>Investor</TableHead>
-                          <TableHead>Variant</TableHead>
-                          <TableHead>Participation %</TableHead>
-                          <TableHead>Committed</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead className="text-right">Action</TableHead>
+                          <TableHead>{t("common.allocation")}</TableHead>
+                          <TableHead>{t("common.investor")}</TableHead>
+                          <TableHead>{t("common.variant")}</TableHead>
+                          <TableHead>
+                            {t("allocations.form.participationPercent")}
+                          </TableHead>
+                          <TableHead>{t("allocations.list.committed")}</TableHead>
+                          <TableHead>{t("common.status")}</TableHead>
+                          <TableHead className="text-right">
+                            {t("common.action")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -2860,10 +2998,12 @@ export default function InvestorWorkspace({
                               href={`/admin/investors/allocations/${item.id}`}
                               className="hover:text-primary"
                             >
-                              Allocation #{item.id}
+                              {t("allocations.list.allocationNumber", {
+                                id: item.id,
+                              })}
                             </Link>
                             <div className="text-xs text-muted-foreground">
-                              Open allocation detail
+                              {t("allocations.list.openDetailHint")}
                             </div>
                           </TableCell>
                           <TableCell className="font-medium">
@@ -2874,7 +3014,7 @@ export default function InvestorWorkspace({
                               {item.investor.name}
                             </Link>
                             <div className="text-xs text-muted-foreground">
-                              Investor profile
+                              {t("allocations.list.investorProfile")}
                             </div>
                           </TableCell>
                           <TableCell>
@@ -2894,13 +3034,13 @@ export default function InvestorWorkspace({
                                   : "bg-gray-100 text-gray-800"
                               }`}
                             >
-                              {item.status}
+                              {enumLabel("allocationStatuses", item.status)}
                             </span>
                           </TableCell>
                           <TableCell className="text-right">
                             <Button asChild size="sm" variant="outline">
                               <Link href={`/admin/investors/allocations/${item.id}`}>
-                                Open Detail
+                                {t("common.openDetail")}
                               </Link>
                             </Button>
                           </TableCell>
@@ -2909,7 +3049,7 @@ export default function InvestorWorkspace({
                       {allocations.length === 0 ? (
                         <TableRow>
                           <TableCell colSpan={7} className="text-center text-sm text-muted-foreground">
-                            No allocations found.
+                            {t("allocations.list.empty")}
                           </TableCell>
                         </TableRow>
                       ) : null}
@@ -2921,7 +3061,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view allocations.
+                    {t("allocations.permissions.view")}
                   </p>
                 </CardContent>
               </Card>
@@ -2936,16 +3076,17 @@ export default function InvestorWorkspace({
         <div className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Investor Statements</CardTitle>
+              <CardTitle>{t("statements.title")}</CardTitle>
               <p className="text-sm text-muted-foreground">
-                Review investor statement scope, preview ledger and payout
-                activity, then export the selected range.
+                {t("statements.description")}
               </p>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid gap-4 lg:grid-cols-4">
                 <div className="space-y-2">
-                  <Label htmlFor="statement-investor">Investor Scope</Label>
+                  <Label htmlFor="statement-investor">
+                    {t("statements.filters.investorScope")}
+                  </Label>
                   <div className="relative">
                     <select
                       id="statement-investor"
@@ -2955,7 +3096,7 @@ export default function InvestorWorkspace({
                         setSelectedInvestorId(event.target.value)
                       }
                     >
-                      <option value="">All Investors</option>
+                      <option value="">{t("common.allInvestors")}</option>
                       {investors.map((investor) => (
                         <option key={investor.id} value={investor.id}>
                           {investor.name} ({investor.code})
@@ -2980,7 +3121,9 @@ export default function InvestorWorkspace({
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="statement-from">From</Label>
+                  <Label htmlFor="statement-from">
+                    {t("common.from")}
+                  </Label>
                   <Input
                     id="statement-from"
                     type="date"
@@ -2989,7 +3132,7 @@ export default function InvestorWorkspace({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="statement-to">To</Label>
+                  <Label htmlFor="statement-to">{t("common.to")}</Label>
                   <Input
                     id="statement-to"
                     type="date"
@@ -2998,27 +3141,33 @@ export default function InvestorWorkspace({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label>Actions</Label>
+                  <Label>{t("common.actions")}</Label>
                   <div className="flex flex-wrap gap-2">
                     <Button
                       variant="outline"
                       onClick={() => void loadStatementPreview()}
                       disabled={loadingStatementPreview}
                     >
-                      {loadingStatementPreview ? "Refreshing..." : "Apply"}
+                      {loadingStatementPreview
+                        ? t("common.refreshing")
+                        : t("common.apply")}
                     </Button>
                     <Button
                       variant="outline"
                       onClick={() => void exportStatementCsv()}
                       disabled={exportingStatement}
                     >
-                      {exportingStatement ? "Exporting..." : "Export CSV"}
+                      {exportingStatement
+                        ? t("common.exporting")
+                        : t("statements.actions.exportCsv")}
                     </Button>
                     <Button
                       onClick={() => void exportStatementPdfFile()}
                       disabled={exportingStatement}
                     >
-                      {exportingStatement ? "Exporting..." : "Export PDF"}
+                      {exportingStatement
+                        ? t("common.exporting")
+                        : t("statements.actions.exportPdf")}
                     </Button>
                   </div>
                 </div>
@@ -3027,7 +3176,7 @@ export default function InvestorWorkspace({
               <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-6">
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Investors In Scope
+                    {t("statements.summary.investors")}
                   </p>
                   <p className="mt-2 text-2xl font-semibold">
                     {statementSummary.investorCount}
@@ -3035,7 +3184,7 @@ export default function InvestorWorkspace({
                 </div>
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Transactions
+                    {t("statements.summary.transactions")}
                   </p>
                   <p className="mt-2 text-2xl font-semibold">
                     {statementSummary.transactionCount}
@@ -3043,7 +3192,7 @@ export default function InvestorWorkspace({
                 </div>
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Payouts
+                    {t("statements.summary.payouts")}
                   </p>
                   <p className="mt-2 text-2xl font-semibold">
                     {statementSummary.payoutCount}
@@ -3051,26 +3200,26 @@ export default function InvestorWorkspace({
                 </div>
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Total Credit
+                    {t("statements.summary.totalCredit")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
-                    {formatMoney(statementSummary.totalCredit)}
+                    {formatMoney(statementSummary.totalCredit, "BDT", locale)}
                   </p>
                 </div>
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Total Debit
+                    {t("statements.summary.totalDebit")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
-                    {formatMoney(statementSummary.totalDebit)}
+                    {formatMoney(statementSummary.totalDebit, "BDT", locale)}
                   </p>
                 </div>
                 <div className="rounded-lg border p-4">
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Net Movement
+                    {t("statements.summary.netMovement")}
                   </p>
                   <p className="mt-2 text-xl font-semibold">
-                    {formatMoney(statementSummary.totalNet)}
+                    {formatMoney(statementSummary.totalNet, "BDT", locale)}
                   </p>
                 </div>
               </div>
@@ -3078,25 +3227,29 @@ export default function InvestorWorkspace({
               <div className="rounded-lg border bg-muted/20 p-4 text-sm">
                 <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <p className="font-medium">Statement Period</p>
+                    <p className="font-medium">
+                      {t("statements.period.title")}
+                    </p>
                     <p className="text-muted-foreground">
                       {formatDateTime(
                         `${statementFrom || defaultStatementFrom}T00:00:00`,
+                        locale,
                       )}{" "}
-                      to{" "}
+                      {t("common.toLowercase")} {" "}
                       {formatDateTime(
                         `${statementTo || defaultStatementTo}T23:59:59`,
+                        locale,
                       )}
                     </p>
                   </div>
                   <div className="text-muted-foreground">
-                    Scope:{" "}
+                    {t("statements.period.scope")}: {" "}
                     <span className="font-medium text-foreground">
                       {selectedInvestorId
                         ? investors.find(
                             (item) => String(item.id) === selectedInvestorId,
-                          )?.name || "Selected investor"
-                        : "All investors"}
+                          )?.name || t("statements.period.selectedInvestor")
+                        : t("common.allInvestors")}
                     </span>
                   </div>
                 </div>
@@ -3106,10 +3259,9 @@ export default function InvestorWorkspace({
 
           <Card>
             <CardHeader>
-              <CardTitle>Investor Statement Register</CardTitle>
+              <CardTitle>{t("statements.register.title")}</CardTitle>
               <p className="text-sm text-muted-foreground">
-                Each row shows the statement result for one investor in the
-                selected scope.
+                {t("statements.register.description")}
               </p>
             </CardHeader>
             <CardContent>
@@ -3117,14 +3269,24 @@ export default function InvestorWorkspace({
                 <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Investor</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Credit</TableHead>
-                    <TableHead className="text-right">Debit</TableHead>
-                    <TableHead className="text-right">Net</TableHead>
-                    <TableHead className="text-right">Transactions</TableHead>
-                    <TableHead className="text-right">Payouts</TableHead>
-                    <TableHead className="text-right">Detail</TableHead>
+                    <TableHead>{t("common.investor")}</TableHead>
+                    <TableHead>{t("common.status")}</TableHead>
+                    <TableHead className="text-right">
+                      {t("common.credit")}
+                    </TableHead>
+                    <TableHead className="text-right">
+                      {t("common.debit")}
+                    </TableHead>
+                    <TableHead className="text-right">{t("common.net")}</TableHead>
+                    <TableHead className="text-right">
+                      {t("common.transactions")}
+                    </TableHead>
+                    <TableHead className="text-right">
+                      {t("common.payouts")}
+                    </TableHead>
+                    <TableHead className="text-right">
+                      {t("common.detail")}
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -3151,15 +3313,17 @@ export default function InvestorWorkspace({
                             </p>
                           </div>
                         </TableCell>
-                        <TableCell>{row.investor.status}</TableCell>
-                        <TableCell className="text-right">
-                          {formatMoney(row.totals.credit)}
+                        <TableCell>
+                          {enumLabel("investorStatuses", row.investor.status)}
                         </TableCell>
                         <TableCell className="text-right">
-                          {formatMoney(row.totals.debit)}
+                          {formatMoney(row.totals.credit, "BDT", locale)}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          {formatMoney(row.totals.debit, "BDT", locale)}
                         </TableCell>
                         <TableCell className="text-right font-medium">
-                          {formatMoney(row.totals.net)}
+                          {formatMoney(row.totals.net, "BDT", locale)}
                         </TableCell>
                         <TableCell className="text-right">
                           {row.counts.transactionCount}
@@ -3177,7 +3341,9 @@ export default function InvestorWorkspace({
                               )
                             }
                           >
-                            {isSelected ? "Viewing" : "View Detail"}
+                            {isSelected
+                              ? t("common.viewing")
+                              : t("common.viewDetail")}
                           </Button>
                         </TableCell>
                       </TableRow>
@@ -3190,8 +3356,8 @@ export default function InvestorWorkspace({
                         className="text-center text-sm text-muted-foreground"
                       >
                         {loadingStatementPreview
-                          ? "Loading statement preview..."
-                          : "No statement data found for the selected scope."}
+                          ? t("statements.register.loading")
+                          : t("statements.register.empty")}
                       </TableCell>
                     </TableRow>
                   ) : null}
@@ -3206,18 +3372,19 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle>
-                    Statement Detail: {selectedStatementDetail.investor.name}
+                    {t("statements.detail.title", {
+                      investor: selectedStatementDetail.investor.name,
+                    })}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Full transaction and payout activity for the selected
-                    investor.
+                    {t("statements.detail.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-5">
                     <div className="rounded-lg border p-3 md:col-span-2">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Investor
+                        {t("common.investor")}
                       </p>
                       <p className="mt-2 text-base font-semibold">
                         {selectedStatementDetail.investor.name}
@@ -3228,26 +3395,38 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="rounded-lg border p-3">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Credit
+                        {t("common.credit")}
                       </p>
                       <p className="mt-2 font-semibold">
-                        {formatMoney(selectedStatementDetail.totals.credit)}
+                        {formatMoney(
+                          selectedStatementDetail.totals.credit,
+                          "BDT",
+                          locale,
+                        )}
                       </p>
                     </div>
                     <div className="rounded-lg border p-3">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Debit
+                        {t("common.debit")}
                       </p>
                       <p className="mt-2 font-semibold">
-                        {formatMoney(selectedStatementDetail.totals.debit)}
+                        {formatMoney(
+                          selectedStatementDetail.totals.debit,
+                          "BDT",
+                          locale,
+                        )}
                       </p>
                     </div>
                     <div className="rounded-lg border p-3">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Net
+                        {t("common.net")}
                       </p>
                       <p className="mt-2 font-semibold">
-                        {formatMoney(selectedStatementDetail.totals.net)}
+                        {formatMoney(
+                          selectedStatementDetail.totals.net,
+                          "BDT",
+                          locale,
+                        )}
                       </p>
                     </div>
                   </div>
@@ -3255,21 +3434,26 @@ export default function InvestorWorkspace({
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-semibold">
-                        Ledger Transactions
+                        {t("statements.detail.ledgerTransactions")}
                       </h3>
                       <span className="text-xs text-muted-foreground">
-                        {selectedStatementDetail.counts.transactionCount} item(s)
+                        {t("common.itemCount", {
+                          count:
+                            selectedStatementDetail.counts.transactionCount,
+                        })}
                       </span>
                     </div>
                     <div className="overflow-x-auto">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>No</TableHead>
-                          <TableHead>Date</TableHead>
-                          <TableHead>Type</TableHead>
-                          <TableHead>Direction</TableHead>
-                          <TableHead className="text-right">Amount</TableHead>
+                          <TableHead>{t("common.number")}</TableHead>
+                          <TableHead>{t("common.date")}</TableHead>
+                          <TableHead>{t("common.type")}</TableHead>
+                          <TableHead>{t("common.direction")}</TableHead>
+                          <TableHead className="text-right">
+                            {t("common.amount")}
+                          </TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -3279,12 +3463,16 @@ export default function InvestorWorkspace({
                               {item.transactionNumber}
                             </TableCell>
                             <TableCell>
-                              {formatDateTime(item.transactionDate)}
+                              {formatDateTime(item.transactionDate, locale)}
                             </TableCell>
-                            <TableCell>{item.type}</TableCell>
-                            <TableCell>{item.direction}</TableCell>
+                            <TableCell>
+                              {enumLabel("transactionTypes", item.type)}
+                            </TableCell>
+                            <TableCell>
+                              {enumLabel("directions", item.direction)}
+                            </TableCell>
                             <TableCell className="text-right">
-                              {formatMoney(item.amount, item.currency)}
+                              {formatMoney(item.amount, item.currency, locale)}
                             </TableCell>
                           </TableRow>
                         ))}
@@ -3294,7 +3482,7 @@ export default function InvestorWorkspace({
                               colSpan={5}
                               className="text-center text-sm text-muted-foreground"
                             >
-                              No transactions in the selected date range.
+                              {t("statements.detail.noTransactions")}
                             </TableCell>
                           </TableRow>
                         ) : null}
@@ -3307,16 +3495,16 @@ export default function InvestorWorkspace({
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Payout Activity</CardTitle>
+                  <CardTitle>{t("statements.detail.payoutActivity")}</CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Payout records created within the selected statement period.
+                    {t("statements.detail.payoutDescription")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between rounded-lg border p-3">
                     <div>
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Payout Count
+                        {t("statements.detail.payoutCount")}
                       </p>
                       <p className="mt-1 text-xl font-semibold">
                         {selectedStatementDetail.counts.payoutCount}
@@ -3324,10 +3512,13 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="text-right">
                       <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                        Investor Status
+                        {t("statements.detail.investorStatus")}
                       </p>
                       <p className="mt-1 font-medium">
-                        {selectedStatementDetail.investor.status}
+                        {enumLabel(
+                          "investorStatuses",
+                          selectedStatementDetail.investor.status,
+                        )}
                       </p>
                     </div>
                   </div>
@@ -3335,11 +3526,13 @@ export default function InvestorWorkspace({
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Payout</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead>Created</TableHead>
-                        <TableHead>Paid</TableHead>
-                        <TableHead className="text-right">Amount</TableHead>
+                        <TableHead>{t("common.payout")}</TableHead>
+                        <TableHead>{t("common.status")}</TableHead>
+                        <TableHead>{t("common.created")}</TableHead>
+                        <TableHead>{t("common.paid")}</TableHead>
+                        <TableHead className="text-right">
+                          {t("common.amount")}
+                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -3348,11 +3541,21 @@ export default function InvestorWorkspace({
                           <TableCell className="font-medium">
                             {item.payoutNumber}
                           </TableCell>
-                          <TableCell>{item.status}</TableCell>
-                          <TableCell>{formatDateTime(item.createdAt)}</TableCell>
-                          <TableCell>{formatDateTime(item.paidAt)}</TableCell>
+                          <TableCell>
+                            {enumLabel("payoutStatuses", item.status)}
+                          </TableCell>
+                          <TableCell>
+                            {formatDateTime(item.createdAt, locale)}
+                          </TableCell>
+                          <TableCell>
+                            {formatDateTime(item.paidAt, locale)}
+                          </TableCell>
                           <TableCell className="text-right">
-                            {formatMoney(item.payoutAmount, item.currency)}
+                            {formatMoney(
+                              item.payoutAmount,
+                              item.currency,
+                              locale,
+                            )}
                           </TableCell>
                         </TableRow>
                       ))}
@@ -3362,7 +3565,7 @@ export default function InvestorWorkspace({
                             colSpan={5}
                             className="text-center text-sm text-muted-foreground"
                           >
-                            No payouts in the selected date range.
+                            {t("statements.detail.noPayouts")}
                           </TableCell>
                         </TableRow>
                       ) : null}

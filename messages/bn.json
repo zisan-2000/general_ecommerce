@@ -6375,7 +6375,7 @@
                     "title": "অভ্যন্তরীণ সতর্কতা",
                     "description": "বিজ্ঞপ্তিকে ইভেন্ট ইনবক্স হিসেবে ব্যবহার করে প্রতিটি সতর্কতার সংশ্লিষ্ট কার্যপ্রবাহ খুলুন।"
                 },
-                "registry": {
+        "registry": {
                     "title": "বিনিয়োগকারী মাস্টার",
                     "description": "নিবন্ধন প্রথম ধাপ। বিনিয়োগকারীর মূল তথ্য দুর্বল হলে পরবর্তী সব ধাপে সমস্যা তৈরি হয়।"
                 },
@@ -6516,15 +6516,343 @@
                 "permissions": {
                     "create": "আপনার বিনিয়োগকারী তৈরির অনুমতি নেই।",
                     "view": "আপনার বিনিয়োগকারী নিবন্ধন দেখার অনুমতি নেই।"
-                }
-            },
-            "errors": {
-                "load": "বিনিয়োগকারী কর্মক্ষেত্র লোড করা যায়নি",
-                "createInvestor": "বিনিয়োগকারী তৈরি করা যায়নি"
-            },
-            "success": {
-                "investorCreated": "বিনিয়োগকারী তৈরি হয়েছে"
             }
+        },
+        "common": {
+            "action": "অ্যাকশন",
+            "actions": "অ্যাকশনসমূহ",
+            "allocation": "বরাদ্দ",
+            "allInvestors": "সব বিনিয়োগকারী",
+            "allStatuses": "সব স্ট্যাটাস",
+            "amount": "পরিমাণ",
+            "apply": "প্রয়োগ করুন",
+            "approve": "অনুমোদন",
+            "approved": "অনুমোদিত",
+            "basis": "ভিত্তি",
+            "created": "তৈরির সময়",
+            "credit": "ক্রেডিট",
+            "currency": "মুদ্রা",
+            "date": "তারিখ",
+            "debit": "ডেবিট",
+            "detail": "বিস্তারিত",
+            "direction": "দিক",
+            "enterAmount": "পরিমাণ লিখুন",
+            "enterCurrency": "মুদ্রা লিখুন",
+            "enterNote": "নোট লিখুন",
+            "enterPercentage": "শতাংশ লিখুন",
+            "exporting": "এক্সপোর্ট হচ্ছে...",
+            "from": "শুরু",
+            "fromDate": "শুরুর তারিখ",
+            "investor": "বিনিয়োগকারী",
+            "itemCount": "{count}টি আইটেম",
+            "lines": "লাইনসমূহ",
+            "method": "পদ্ধতি",
+            "net": "নিট",
+            "netCogs": "নিট বিক্রিত পণ্যের ব্যয়",
+            "netProfit": "নিট মুনাফা",
+            "netRevenue": "নিট রাজস্ব",
+            "noteOptional": "নোট (ঐচ্ছিক)",
+            "additionalNotes": "অতিরিক্ত নোট লিখুন",
+            "number": "নং",
+            "openDetail": "বিস্তারিত খুলুন",
+            "operatingExpense": "পরিচালন ব্যয়",
+            "paid": "পরিশোধিত",
+            "pay": "পরিশোধ",
+            "payout": "পরিশোধ",
+            "payouts": "পরিশোধসমূহ",
+            "posted": "পোস্ট হয়েছে",
+            "processing": "প্রক্রিয়াকরণ চলছে...",
+            "product": "পণ্য",
+            "productVariant": "পণ্যের ভ্যারিয়েন্ট",
+            "refreshing": "রিফ্রেশ হচ্ছে...",
+            "reject": "প্রত্যাখ্যান",
+            "run": "রান",
+            "selectInvestor": "বিনিয়োগকারী নির্বাচন করুন",
+            "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
+            "status": "স্ট্যাটাস",
+            "timeline": "সময়রেখা",
+            "to": "শেষ",
+            "toDate": "শেষের তারিখ",
+            "toLowercase": "থেকে",
+            "transactions": "লেনদেনসমূহ",
+            "type": "ধরন",
+            "updating": "আপডেট হচ্ছে...",
+            "variant": "ভ্যারিয়েন্ট",
+            "viewDetail": "বিস্তারিত দেখুন",
+            "viewing": "দেখছেন",
+            "void": "বাতিল"
+        },
+        "enums": {
+            "transactionTypes": {
+                "CAPITAL_COMMITMENT": "মূলধন প্রতিশ্রুতি",
+                "CAPITAL_CONTRIBUTION": "মূলধন অবদান",
+                "PROFIT_ALLOCATION": "মুনাফা বরাদ্দ",
+                "LOSS_ALLOCATION": "ক্ষতি বরাদ্দ",
+                "DISTRIBUTION": "বিতরণ",
+                "WITHDRAWAL": "উত্তোলন",
+                "ADJUSTMENT": "সমন্বয়"
+            },
+            "directions": {
+                "CREDIT": "ক্রেডিট",
+                "DEBIT": "ডেবিট"
+            },
+            "allocationBases": {
+                "NET_REVENUE": "নিট রাজস্ব",
+                "NET_UNITS": "নিট ইউনিট"
+            },
+            "profitStatuses": {
+                "PENDING_APPROVAL": "অনুমোদনের অপেক্ষায়",
+                "APPROVED": "অনুমোদিত",
+                "REJECTED": "প্রত্যাখ্যাত",
+                "POSTED": "পোস্ট হয়েছে"
+            },
+            "payoutStatuses": {
+                "PENDING_APPROVAL": "অনুমোদনের অপেক্ষায়",
+                "APPROVED": "অনুমোদিত",
+                "REJECTED": "প্রত্যাখ্যাত",
+                "PAID": "পরিশোধিত",
+                "VOID": "বাতিল"
+            },
+            "paymentMethods": {
+                "BANK_TRANSFER": "ব্যাংক ট্রান্সফার",
+                "MOBILE_BANKING": "মোবাইল ব্যাংকিং",
+                "CHEQUE": "চেক",
+                "CASH": "নগদ"
+            },
+            "allocationStatuses": {
+                "ACTIVE": "সক্রিয়",
+                "INACTIVE": "নিষ্ক্রিয়",
+                "CLOSED": "বন্ধ"
+            },
+            "investorStatuses": {
+                "ACTIVE": "সক্রিয়",
+                "INACTIVE": "নিষ্ক্রিয়",
+                "SUSPENDED": "স্থগিত"
+            }
+        },
+        "ledger": {
+            "tabs": { "post": "লেনদেন পোস্ট", "history": "লেনদেনের ইতিহাস" },
+            "form": {
+                "title": "লেনদেন পোস্ট করুন",
+                "description": "বিনিয়োগকারীদের মূলধন লেনদেন রেকর্ড করুন।",
+                "investor": "বিনিয়োগকারী",
+                "transactionType": "লেনদেনের ধরন",
+                "direction": "দিক",
+                "generalPool": "সাধারণ তহবিল",
+                "submit": "লেনদেন পোস্ট করুন"
+            },
+            "history": {
+                "title": "লেনদেনের ইতিহাস",
+                "description": "খতিয়ানে রেকর্ড করা সব মূলধন লেনদেন দেখুন।"
+            },
+            "permissions": {
+                "post": "আপনার লেনদেন পোস্ট করার অনুমতি নেই।",
+                "view": "আপনার লেনদেন দেখার অনুমতি নেই।"
+            }
+        },
+        "allocations": {
+            "tabs": { "create": "বরাদ্দ তৈরি", "view": "বরাদ্দ দেখুন" },
+            "form": {
+                "title": "বরাদ্দ তৈরি করুন",
+                "description": "অংশগ্রহণের শর্তসহ বিনিয়োগকারীদের পণ্যের ভ্যারিয়েন্টে বরাদ্দ করুন।",
+                "participationPercent": "অংশগ্রহণ %",
+                "committedAmount": "প্রতিশ্রুত পরিমাণ",
+                "submit": "বরাদ্দ তৈরি করুন"
+            },
+            "list": {
+                "title": "বিনিয়োগকারী বরাদ্দ",
+                "description": "পণ্যের ভ্যারিয়েন্টে সব বিনিয়োগকারী বরাদ্দ দেখুন।",
+                "committed": "প্রতিশ্রুত",
+                "allocationNumber": "বরাদ্দ #{id}",
+                "openDetailHint": "বরাদ্দের বিস্তারিত খুলুন",
+                "investorProfile": "বিনিয়োগকারী প্রোফাইল",
+                "empty": "কোনো বরাদ্দ পাওয়া যায়নি।"
+            },
+            "permissions": {
+                "create": "আপনার বরাদ্দ তৈরির অনুমতি নেই।",
+                "view": "আপনার বরাদ্দ দেখার অনুমতি নেই।"
+            }
+        },
+        "profitRuns": {
+            "tabs": {
+                "calculate": "হিসাব চালান",
+                "runs": "মুনাফা রান",
+                "workflow": "কার্যপ্রবাহ",
+                "analysis": "বিশ্লেষণ"
+            },
+            "form": {
+                "title": "পণ্যের মুনাফা হিসাব চালান",
+                "description": "নির্দিষ্ট সময়ের জন্য বিনিয়োগকারীদের মধ্যে মুনাফা বণ্টন হিসাব করুন।",
+                "allocationBasis": "বরাদ্দের ভিত্তি",
+                "marketingExpense": "বিপণন ব্যয়",
+                "adsExpense": "বিজ্ঞাপন ব্যয়",
+                "logisticsExpense": "লজিস্টিকস ব্যয়",
+                "otherExpense": "অন্যান্য ব্যয়",
+                "running": "হিসাব চলছে...",
+                "submit": "মুনাফা হিসাব চালান"
+            },
+            "history": {
+                "title": "মুনাফা রানের ইতিহাস",
+                "description": "সব মুনাফা হিসাবের রান ও তাদের স্ট্যাটাস দেখুন।",
+                "selectRun": "রান নির্বাচন করুন",
+                "latestRun": "সর্বশেষ রান",
+                "runOption": "{runNumber} • {from} থেকে {to}",
+                "runStatus": "রানের স্ট্যাটাস",
+                "lineCounts": "{variants}টি ভ্যারিয়েন্ট / {allocations}টি বরাদ্দ / {payouts}টি পরিশোধ",
+                "empty": "বর্তমান ফিল্টারে কোনো মুনাফা রান পাওয়া যায়নি।"
+            },
+            "workflow": {
+                "title": "রান কার্যপ্রবাহ নিয়ন্ত্রণ",
+                "description": "মুনাফা রানের অনুমোদন ও পোস্টিং কার্যপ্রবাহ পরিচালনা করুন।",
+                "governanceNote": "নিয়ন্ত্রণ নোট (ঐচ্ছিক)",
+                "notePlaceholder": "এই অ্যাকশনের জন্য নিয়ন্ত্রণ নোট লিখুন",
+                "approve": "রান অনুমোদন করুন",
+                "reject": "রান প্রত্যাখ্যান করুন",
+                "posting": "পোস্ট হচ্ছে...",
+                "postToLedger": "বিনিয়োগকারী খতিয়ানে পোস্ট করুন",
+                "selectRun": "কার্যপ্রবাহ নিয়ন্ত্রণ দেখতে একটি মুনাফা রান নির্বাচন করুন।"
+            },
+            "analysis": {
+                "variantTitle": "ভ্যারিয়েন্ট মুনাফা লাইন",
+                "variantDescription": "পণ্যের ভ্যারিয়েন্ট অনুযায়ী মুনাফার বিশ্লেষণ।",
+                "netUnits": "ইউনিট (নিট)",
+                "allocatedExpense": "বরাদ্দকৃত ব্যয়",
+                "unallocatedPercent": "অবরাদ্দকৃত %",
+                "investorTitle": "বিনিয়োগকারী মুনাফা অংশের লাইন",
+                "investorDescription": "বিনিয়োগকারীদের মধ্যে মুনাফা বণ্টন।",
+                "sharePercent": "অংশ %",
+                "allocatedRevenue": "বরাদ্দকৃত রাজস্ব",
+                "allocatedNetProfit": "বরাদ্দকৃত নিট মুনাফা"
+            },
+            "permissions": {
+                "calculate": "আপনার মুনাফা হিসাব চালানোর অনুমতি নেই।",
+                "view": "আপনার মুনাফা রান দেখার অনুমতি নেই।",
+                "analysis": "আপনার মুনাফা বিশ্লেষণ দেখার অনুমতি নেই।"
+            }
+        },
+        "payouts": {
+            "tabs": { "create": "পরিশোধ তৈরি", "register": "পরিশোধ নিবন্ধন" },
+            "form": {
+                "title": "পরিশোধের খসড়া তৈরি করুন",
+                "description": "মুনাফা বণ্টনের ভিত্তিতে বিনিয়োগকারীদের পরিশোধের খসড়া তৈরি করুন।",
+                "payoutPercent": "পরিশোধ % (০-১০০)",
+                "holdbackPercent": "সংরক্ষণ % (০-১০০)",
+                "note": "পরিশোধ নোট (ঐচ্ছিক)",
+                "submit": "পরিশোধের খসড়া তৈরি করুন",
+                "selectPostedRun": "প্রথমে পোস্ট করা একটি মুনাফা রান নির্বাচন করুন।",
+                "postedOnly": "শুধু পোস্ট করা মুনাফা রান থেকে পরিশোধ তৈরি করা যায়।"
+            },
+            "register": {
+                "title": "পরিশোধ নিবন্ধন",
+                "description": "সব পরিশোধ রেকর্ড ও তাদের স্ট্যাটাস দেখুন এবং পরিচালনা করুন।",
+                "profitRun": "মুনাফা রান",
+                "allRuns": "সব রান",
+                "payoutStatus": "পরিশোধ স্ট্যাটাস",
+                "visiblePayouts": "দৃশ্যমান পরিশোধ",
+                "actionNote": "অ্যাকশন নোট",
+                "paymentMethod": "পরিশোধ পদ্ধতি",
+                "bankReference": "ব্যাংক রেফারেন্স",
+                "referencePlaceholder": "রেফারেন্স লিখুন",
+                "paidAt": "পরিশোধের সময়",
+                "voidReason": "বাতিলের কারণ",
+                "reasonPlaceholder": "কারণ লিখুন",
+                "grossProfit": "মোট মুনাফা",
+                "holdback": "সংরক্ষিত",
+                "payoutAmount": "পরিশোধের পরিমাণ",
+                "bankRef": "ব্যাংক রেফারেন্স",
+                "ledgerTransaction": "খতিয়ান লেনদেন",
+                "beneficiary": "সুবিধাভোগী {status}",
+                "beneficiaryVerified": "যাচাইকৃত",
+                "beneficiaryPending": "অপেক্ষমাণ",
+                "timelineApproved": "অনুমোদিত",
+                "timelineHeld": "স্থগিত",
+                "timelineReleased": "মুক্ত",
+                "timelinePaid": "পরিশোধিত",
+                "timelineVoided": "বাতিল",
+                "empty": "বর্তমান ফিল্টারে কোনো পরিশোধ পাওয়া যায়নি।"
+            },
+            "permissions": {
+                "create": "আপনার পরিশোধ তৈরির অনুমতি নেই।",
+                "view": "আপনার পরিশোধ নিবন্ধন দেখার অনুমতি নেই।"
+            }
+        },
+        "statements": {
+            "title": "বিনিয়োগকারী বিবরণী",
+            "description": "বিবরণীর পরিধি, খতিয়ান ও পরিশোধ কার্যক্রম পর্যালোচনা করে নির্বাচিত সময়সীমা এক্সপোর্ট করুন।",
+            "filters": { "investorScope": "বিনিয়োগকারীর পরিধি" },
+            "actions": { "exportCsv": "CSV এক্সপোর্ট", "exportPdf": "PDF এক্সপোর্ট" },
+            "summary": {
+                "investors": "পরিধির বিনিয়োগকারী",
+                "transactions": "লেনদেনসমূহ",
+                "payouts": "পরিশোধসমূহ",
+                "totalCredit": "মোট ক্রেডিট",
+                "totalDebit": "মোট ডেবিট",
+                "netMovement": "নিট পরিবর্তন"
+            },
+            "period": {
+                "title": "বিবরণীর সময়কাল",
+                "scope": "পরিধি",
+                "selectedInvestor": "নির্বাচিত বিনিয়োগকারী"
+            },
+            "register": {
+                "title": "বিনিয়োগকারী বিবরণী নিবন্ধন",
+                "description": "প্রতিটি সারিতে নির্বাচিত পরিধির একজন বিনিয়োগকারীর বিবরণীর ফলাফল দেখানো হয়।",
+                "loading": "বিবরণীর প্রিভিউ লোড হচ্ছে...",
+                "empty": "নির্বাচিত পরিধিতে কোনো বিবরণীর তথ্য পাওয়া যায়নি।"
+            },
+            "detail": {
+                "title": "বিবরণীর বিস্তারিত: {investor}",
+                "description": "নির্বাচিত বিনিয়োগকারীর সম্পূর্ণ লেনদেন ও পরিশোধ কার্যক্রম।",
+                "ledgerTransactions": "খতিয়ান লেনদেন",
+                "noTransactions": "নির্বাচিত সময়সীমায় কোনো লেনদেন নেই।",
+                "payoutActivity": "পরিশোধ কার্যক্রম",
+                "payoutDescription": "নির্বাচিত বিবরণী সময়কালে তৈরি পরিশোধ রেকর্ড।",
+                "payoutCount": "পরিশোধ সংখ্যা",
+                "investorStatus": "বিনিয়োগকারীর স্ট্যাটাস",
+                "noPayouts": "নির্বাচিত সময়সীমায় কোনো পরিশোধ নেই।"
+            }
+        },
+        "errors": {
+            "load": "বিনিয়োগকারী কর্মক্ষেত্র লোড করা যায়নি",
+            "createInvestor": "বিনিয়োগকারী তৈরি করা যায়নি",
+            "createTransaction": "লেনদেন তৈরি করা যায়নি",
+            "createAllocation": "বরাদ্দ তৈরি করা যায়নি",
+            "runProfitCalculation": "মুনাফা হিসাব চালানো যায়নি",
+            "selectProfitRun": "প্রথমে একটি মুনাফা রান নির্বাচন করুন।",
+            "selectPostedProfitRun": "প্রথমে পোস্ট করা একটি রান নির্বাচন করুন।",
+            "postProfitRun": "রানটি খতিয়ানে পোস্ট করা যায়নি",
+            "createPayout": "পরিশোধের খসড়া তৈরি করা যায়নি",
+            "loadStatements": "বিনিয়োগকারী বিবরণী লোড করা যায়নি",
+            "loadStatementData": "বিবরণীর তথ্য লোড করা যায়নি",
+            "exportStatement": "বিবরণী এক্সপোর্ট করা যায়নি",
+            "exportStatementPdf": "বিবরণীর PDF এক্সপোর্ট করা যায়নি",
+            "profitRunAction": {
+                "approve": "রান অনুমোদন করা যায়নি",
+                "reject": "রান প্রত্যাখ্যান করা যায়নি"
+            },
+            "payoutAction": {
+                "approve": "পরিশোধ অনুমোদন করা যায়নি",
+                "reject": "পরিশোধ প্রত্যাখ্যান করা যায়নি",
+                "pay": "পরিশোধ নিষ্পত্তি করা যায়নি",
+                "void": "পরিশোধ বাতিল করা যায়নি"
+            }
+        },
+        "success": {
+            "investorCreated": "বিনিয়োগকারী তৈরি হয়েছে",
+            "transactionPosted": "লেনদেন পোস্ট হয়েছে",
+            "allocationCreated": "বরাদ্দ তৈরি হয়েছে",
+            "profitRunCompleted": "মুনাফা রান {runNumber} সম্পন্ন হয়েছে",
+            "profitRunApproved": "মুনাফা রান অনুমোদিত হয়েছে",
+            "profitRunRejected": "মুনাফা রান প্রত্যাখ্যাত হয়েছে",
+            "profitRunPosted": "{count}টি খতিয়ান লেনদেন পোস্ট হয়েছে",
+            "payoutDraftsCreated": "{count}টি পরিশোধের খসড়া তৈরি হয়েছে",
+            "payoutApproved": "পরিশোধ অনুমোদিত হয়েছে",
+            "payoutRejected": "পরিশোধ প্রত্যাখ্যাত হয়েছে",
+            "payoutSettled": "পরিশোধ নিষ্পত্তি হয়েছে",
+            "payoutVoided": "পরিশোধ বাতিল হয়েছে",
+            "statementCsvExported": "বিনিয়োগকারী বিবরণী এক্সপোর্ট হয়েছে",
+            "statementPdfExported": "বিনিয়োগকারী বিবরণীর PDF এক্সপোর্ট হয়েছে"
+        }
         },
         "operations": {
             "page": {

@@ -6518,12 +6518,340 @@
           "view": "You don't have permission to view the investor registry."
         }
       },
+      "common": {
+        "action": "Action",
+        "actions": "Actions",
+        "allocation": "Allocation",
+        "allInvestors": "All Investors",
+        "allStatuses": "All statuses",
+        "amount": "Amount",
+        "apply": "Apply",
+        "approve": "Approve",
+        "approved": "Approved",
+        "basis": "Basis",
+        "created": "Created",
+        "credit": "Credit",
+        "currency": "Currency",
+        "date": "Date",
+        "debit": "Debit",
+        "detail": "Detail",
+        "direction": "Direction",
+        "enterAmount": "Enter amount",
+        "enterCurrency": "Enter currency",
+        "enterNote": "Enter note",
+        "enterPercentage": "Enter percentage",
+        "exporting": "Exporting...",
+        "from": "From",
+        "fromDate": "From Date",
+        "investor": "Investor",
+        "itemCount": "{count} item(s)",
+        "lines": "Lines",
+        "method": "Method",
+        "net": "Net",
+        "netCogs": "Net COGS",
+        "netProfit": "Net Profit",
+        "netRevenue": "Net Revenue",
+        "noteOptional": "Note (Optional)",
+        "additionalNotes": "Add any additional notes",
+        "number": "No",
+        "openDetail": "Open Detail",
+        "operatingExpense": "Operating Expense",
+        "paid": "Paid",
+        "pay": "Pay",
+        "payout": "Payout",
+        "payouts": "Payouts",
+        "posted": "Posted",
+        "processing": "Processing...",
+        "product": "Product",
+        "productVariant": "Product Variant",
+        "refreshing": "Refreshing...",
+        "reject": "Reject",
+        "run": "Run",
+        "selectInvestor": "Select investor",
+        "selectVariant": "Select variant",
+        "status": "Status",
+        "timeline": "Timeline",
+        "to": "To",
+        "toDate": "To Date",
+        "toLowercase": "to",
+        "transactions": "Transactions",
+        "type": "Type",
+        "updating": "Updating...",
+        "variant": "Variant",
+        "viewDetail": "View Detail",
+        "viewing": "Viewing",
+        "void": "Void"
+      },
+      "enums": {
+        "transactionTypes": {
+          "CAPITAL_COMMITMENT": "Capital Commitment",
+          "CAPITAL_CONTRIBUTION": "Capital Contribution",
+          "PROFIT_ALLOCATION": "Profit Allocation",
+          "LOSS_ALLOCATION": "Loss Allocation",
+          "DISTRIBUTION": "Distribution",
+          "WITHDRAWAL": "Withdrawal",
+          "ADJUSTMENT": "Adjustment"
+        },
+        "directions": {
+          "CREDIT": "Credit",
+          "DEBIT": "Debit"
+        },
+        "allocationBases": {
+          "NET_REVENUE": "Net Revenue",
+          "NET_UNITS": "Net Units"
+        },
+        "profitStatuses": {
+          "PENDING_APPROVAL": "Pending Approval",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected",
+          "POSTED": "Posted"
+        },
+        "payoutStatuses": {
+          "PENDING_APPROVAL": "Pending Approval",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected",
+          "PAID": "Paid",
+          "VOID": "Void"
+        },
+        "paymentMethods": {
+          "BANK_TRANSFER": "Bank Transfer",
+          "MOBILE_BANKING": "Mobile Banking",
+          "CHEQUE": "Cheque",
+          "CASH": "Cash"
+        },
+        "allocationStatuses": {
+          "ACTIVE": "Active",
+          "INACTIVE": "Inactive",
+          "CLOSED": "Closed"
+        },
+        "investorStatuses": {
+          "ACTIVE": "Active",
+          "INACTIVE": "Inactive",
+          "SUSPENDED": "Suspended"
+        }
+      },
+      "ledger": {
+        "tabs": { "post": "Post Transaction", "history": "Transaction History" },
+        "form": {
+          "title": "Post Transaction",
+          "description": "Record capital transactions for investors.",
+          "investor": "Investor",
+          "transactionType": "Transaction Type",
+          "direction": "Direction",
+          "generalPool": "General pool",
+          "submit": "Post Transaction"
+        },
+        "history": {
+          "title": "Transaction History",
+          "description": "View all capital transactions recorded in the ledger."
+        },
+        "permissions": {
+          "post": "You don't have permission to post transactions.",
+          "view": "You don't have permission to view transactions."
+        }
+      },
+      "allocations": {
+        "tabs": { "create": "Create Allocation", "view": "View Allocations" },
+        "form": {
+          "title": "Create Allocation",
+          "description": "Allocate investors to product variants with participation terms.",
+          "participationPercent": "Participation %",
+          "committedAmount": "Committed Amount",
+          "submit": "Create Allocation"
+        },
+        "list": {
+          "title": "Investor Allocations",
+          "description": "View all investor allocations to product variants.",
+          "committed": "Committed",
+          "allocationNumber": "Allocation #{id}",
+          "openDetailHint": "Open allocation detail",
+          "investorProfile": "Investor profile",
+          "empty": "No allocations found."
+        },
+        "permissions": {
+          "create": "You don't have permission to create allocations.",
+          "view": "You don't have permission to view allocations."
+        }
+      },
+      "profitRuns": {
+        "tabs": {
+          "calculate": "Run Calculation",
+          "runs": "Profit Runs",
+          "workflow": "Workflow",
+          "analysis": "Analysis"
+        },
+        "form": {
+          "title": "Run Product Profitability",
+          "description": "Calculate profit distribution across investors for a specific period.",
+          "allocationBasis": "Allocation Basis",
+          "marketingExpense": "Marketing Expense",
+          "adsExpense": "Ads Expense",
+          "logisticsExpense": "Logistics Expense",
+          "otherExpense": "Other Expense",
+          "running": "Running...",
+          "submit": "Run Profit Calculation"
+        },
+        "history": {
+          "title": "Profit Runs History",
+          "description": "View all profit calculation runs and their status.",
+          "selectRun": "Select Run",
+          "latestRun": "Latest run",
+          "runOption": "{runNumber} • {from} to {to}",
+          "runStatus": "Run Status",
+          "lineCounts": "{variants} variants / {allocations} allocations / {payouts} payouts",
+          "empty": "No profit runs matched the current filters."
+        },
+        "workflow": {
+          "title": "Run Workflow Controls",
+          "description": "Manage the approval and posting workflow for profit runs.",
+          "governanceNote": "Governance Note (Optional)",
+          "notePlaceholder": "Add governance notes for this action",
+          "approve": "Approve Run",
+          "reject": "Reject Run",
+          "posting": "Posting...",
+          "postToLedger": "Post To Investor Ledger",
+          "selectRun": "Select a profit run to view workflow controls."
+        },
+        "analysis": {
+          "variantTitle": "Variant Profit Lines",
+          "variantDescription": "Profit breakdown by product variants.",
+          "netUnits": "Units (Net)",
+          "allocatedExpense": "Allocated Expense",
+          "unallocatedPercent": "Unallocated %",
+          "investorTitle": "Investor Profit Share Lines",
+          "investorDescription": "Profit distribution across investors.",
+          "sharePercent": "Share %",
+          "allocatedRevenue": "Allocated Revenue",
+          "allocatedNetProfit": "Allocated Net Profit"
+        },
+        "permissions": {
+          "calculate": "You don't have permission to run profit calculations.",
+          "view": "You don't have permission to view profit runs.",
+          "analysis": "You don't have permission to view profit analysis."
+        }
+      },
+      "payouts": {
+        "tabs": { "create": "Create Payout", "register": "Payout Register" },
+        "form": {
+          "title": "Create Payout Draft",
+          "description": "Generate payout drafts for investors based on profit distribution.",
+          "payoutPercent": "Payout % (0-100)",
+          "holdbackPercent": "Holdback % (0-100)",
+          "note": "Payout Note (Optional)",
+          "submit": "Create Payout Draft",
+          "selectPostedRun": "Select a posted profit run first.",
+          "postedOnly": "Only posted profit runs can generate payouts."
+        },
+        "register": {
+          "title": "Payout Register",
+          "description": "View and manage all payout records and their status.",
+          "profitRun": "Profit Run",
+          "allRuns": "All runs",
+          "payoutStatus": "Payout Status",
+          "visiblePayouts": "Visible Payouts",
+          "actionNote": "Action Note",
+          "paymentMethod": "Payment Method",
+          "bankReference": "Bank Reference",
+          "referencePlaceholder": "Enter reference",
+          "paidAt": "Paid At",
+          "voidReason": "Void Reason",
+          "reasonPlaceholder": "Enter reason",
+          "grossProfit": "Gross Profit",
+          "holdback": "Holdback",
+          "payoutAmount": "Payout Amount",
+          "bankRef": "Bank Ref",
+          "ledgerTransaction": "Ledger Txn",
+          "beneficiary": "Beneficiary {status}",
+          "beneficiaryVerified": "verified",
+          "beneficiaryPending": "pending",
+          "timelineApproved": "A",
+          "timelineHeld": "H",
+          "timelineReleased": "R",
+          "timelinePaid": "P",
+          "timelineVoided": "V",
+          "empty": "No payouts matched the current filters."
+        },
+        "permissions": {
+          "create": "You don't have permission to create payouts.",
+          "view": "You don't have permission to view the payout register."
+        }
+      },
+      "statements": {
+        "title": "Investor Statements",
+        "description": "Review investor statement scope, preview ledger and payout activity, then export the selected range.",
+        "filters": { "investorScope": "Investor Scope" },
+        "actions": { "exportCsv": "Export CSV", "exportPdf": "Export PDF" },
+        "summary": {
+          "investors": "Investors In Scope",
+          "transactions": "Transactions",
+          "payouts": "Payouts",
+          "totalCredit": "Total Credit",
+          "totalDebit": "Total Debit",
+          "netMovement": "Net Movement"
+        },
+        "period": {
+          "title": "Statement Period",
+          "scope": "Scope",
+          "selectedInvestor": "Selected investor"
+        },
+        "register": {
+          "title": "Investor Statement Register",
+          "description": "Each row shows the statement result for one investor in the selected scope.",
+          "loading": "Loading statement preview...",
+          "empty": "No statement data found for the selected scope."
+        },
+        "detail": {
+          "title": "Statement Detail: {investor}",
+          "description": "Full transaction and payout activity for the selected investor.",
+          "ledgerTransactions": "Ledger Transactions",
+          "noTransactions": "No transactions in the selected date range.",
+          "payoutActivity": "Payout Activity",
+          "payoutDescription": "Payout records created within the selected statement period.",
+          "payoutCount": "Payout Count",
+          "investorStatus": "Investor Status",
+          "noPayouts": "No payouts in the selected date range."
+        }
+      },
       "errors": {
         "load": "Failed to load investor workspace",
-        "createInvestor": "Failed to create investor"
+        "createInvestor": "Failed to create investor",
+        "createTransaction": "Failed to create transaction",
+        "createAllocation": "Failed to create allocation",
+        "runProfitCalculation": "Failed to run profitability calculation",
+        "selectProfitRun": "Select a profit run first.",
+        "selectPostedProfitRun": "Select a posted run first.",
+        "postProfitRun": "Failed to post run to ledger",
+        "createPayout": "Failed to create payout draft",
+        "loadStatements": "Failed to load investor statements",
+        "loadStatementData": "Failed to load statement data",
+        "exportStatement": "Failed to export statement",
+        "exportStatementPdf": "Failed to export statement PDF",
+        "profitRunAction": {
+          "approve": "Failed to approve run",
+          "reject": "Failed to reject run"
+        },
+        "payoutAction": {
+          "approve": "Failed to approve payout",
+          "reject": "Failed to reject payout",
+          "pay": "Failed to settle payout",
+          "void": "Failed to void payout"
+        }
       },
       "success": {
-        "investorCreated": "Investor created"
+        "investorCreated": "Investor created",
+        "transactionPosted": "Transaction posted",
+        "allocationCreated": "Allocation created",
+        "profitRunCompleted": "Profit run {runNumber} completed",
+        "profitRunApproved": "Profit run approved",
+        "profitRunRejected": "Profit run rejected",
+        "profitRunPosted": "Posted {count} ledger transaction(s)",
+        "payoutDraftsCreated": "Created {count} payout draft(s)",
+        "payoutApproved": "Payout approved",
+        "payoutRejected": "Payout rejected",
+        "payoutSettled": "Payout settled",
+        "payoutVoided": "Payout voided",
+        "statementCsvExported": "Investor statement exported",
+        "statementPdfExported": "Investor statement PDF exported"
       }
     },
     "operations": {
