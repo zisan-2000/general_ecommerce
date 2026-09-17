@@ -55,7 +55,6 @@ export default function SiteSettingsForm() {
         setData(res);
       })
       .catch((error) => toast.error(error.message));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const uploadFile = async (file: File, folder: string) => {

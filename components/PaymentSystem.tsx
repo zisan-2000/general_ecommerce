@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Plus, Trash2, Edit, Save, Copy, Check } from "lucide-react";
 import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 
 interface PaymentGatewayData {
   type?: string;
@@ -31,6 +32,8 @@ interface Payment {
 }
 
 export default function PaymentGatewayManager() {
+  const t = useTranslations("AdminPaymentGateway");
+  const locale = useLocale();
   const [payments, setPayments] = useState<Payment[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState<number | null>(null);
@@ -65,7 +68,7 @@ export default function PaymentGatewayManager() {
       }
     } catch (error) {
       console.error("Failed to fetch payments:", error);
-      toast.error("Failed to fetch payments");
+      toast.error(t("errors.fetchFailed"));
     } finally {
       setLoading(false);
     }
@@ -124,11 +127,11 @@ export default function PaymentGatewayManager() {
     try {
       await navigator.clipboard.writeText(text);
       setCopiedIndex(index);
-      toast.success("Copied to clipboard!");
+      toast.success(t("success.copied"));
       setTimeout(() => setCopiedIndex(null), 2000);
     } catch (err) {
       console.error("Failed to copy to clipboard:", err);
-      toast.error("Failed to copy");
+      toast.error(t("errors.copyFailed"));
     }
   };
 
@@ -139,13 +142,13 @@ export default function PaymentGatewayManager() {
 
       if (gatewayType === "MANUAL") {
         if (!channel.trim()) {
-          toast.error("Channel name is required");
+          toast.error(t("validation.channelRequired"));
           return;
         }
 
         const validAccounts = accountNumbers.filter((acc) => acc.trim() !== "");
         if (validAccounts.length === 0) {
-          toast.error("At least one account number is required");
+          toast.error(t("validation.accountRequired"));
           return;
         }
 
@@ -156,7 +159,7 @@ export default function PaymentGatewayManager() {
         };
       } else {
         if (!sslStoreId.trim() || (!editingId && !sslStorePassword.trim())) {
-          toast.error("Store ID and Store Password are required");
+          toast.error(t("validation.credentialsRequired"));
           return;
         }
 
@@ -183,15 +186,15 @@ export default function PaymentGatewayManager() {
       });
 
       if (response.ok) {
-        toast.success("Payment gateway created successfully");
+        toast.success(t("success.created"));
         resetForm();
         fetchPayments();
       } else {
-        toast.error("Failed to create payment gateway");
+        toast.error(t("errors.createFailed"));
       }
     } catch (error) {
       console.error("Failed to create payment gateway:", error);
-      toast.error("Failed to create payment gateway");
+      toast.error(t("errors.createFailed"));
     }
   };
 
@@ -202,13 +205,13 @@ export default function PaymentGatewayManager() {
 
       if (gatewayType === "MANUAL") {
         if (!channel.trim()) {
-          toast.error("Channel name is required");
+          toast.error(t("validation.channelRequired"));
           return;
         }
 
         const validAccounts = accountNumbers.filter((acc) => acc.trim() !== "");
         if (validAccounts.length === 0) {
-          toast.error("At least one account number is required");
+          toast.error(t("validation.accountRequired"));
           return;
         }
 
@@ -219,7 +222,7 @@ export default function PaymentGatewayManager() {
         };
       } else {
         if (!sslStoreId.trim()) {
-          toast.error("Store ID is required");
+          toast.error(t("validation.storeIdRequired"));
           return;
         }
 
@@ -246,21 +249,21 @@ export default function PaymentGatewayManager() {
       });
 
       if (response.ok) {
-        toast.success("Payment gateway updated successfully");
+        toast.success(t("success.updated"));
         resetForm();
         fetchPayments();
       } else {
-        toast.error("Failed to update payment gateway");
+        toast.error(t("errors.updateFailed"));
       }
     } catch (error) {
       console.error("Failed to update payment gateway:", error);
-      toast.error("Failed to update payment gateway");
+      toast.error(t("errors.updateFailed"));
     }
   };
 
   // Delete payment
   const deletePayment = async (id: number) => {
-    if (!confirm("Are you sure you want to delete this payment gateway?")) {
+    if (!confirm(t("confirm.delete"))) {
       return;
     }
 
@@ -270,14 +273,14 @@ export default function PaymentGatewayManager() {
       });
 
       if (response.ok) {
-        toast.success("Payment gateway deleted successfully");
+        toast.success(t("success.deleted"));
         fetchPayments();
       } else {
-        toast.error("Failed to delete payment gateway");
+        toast.error(t("errors.deleteFailed"));
       }
     } catch (error) {
       console.error("Failed to delete payment gateway:", error);
-      toast.error("Failed to delete payment gateway");
+      toast.error(t("errors.deleteFailed"));
     }
   };
 
@@ -384,14 +387,14 @@ export default function PaymentGatewayManager() {
       {/* Header */}
       <div className="flex justify-between items-center sm:flex-row flex-col">
         <div>
-          <h1 className="text-3xl font-bold" style={{ color: 'hsl(var(--foreground))' }}>Payment Gateway Management</h1>
+          <h1 className="text-3xl font-bold" style={{ color: 'hsl(var(--foreground))' }}>{t("title")}</h1>
         </div>
         <Button
           onClick={startCreating}
           className="mt-4"
         >
           <Plus className="h-4 w-4 mr-2 " />
-          Add Payment Gateway
+          {t("actions.addGateway")}
         </Button>
       </div>
 
@@ -400,13 +403,13 @@ export default function PaymentGatewayManager() {
         <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle>
-              {editingId ? "Edit Payment Gateway" : "Add New Payment Gateway"}
+              {editingId ? t("dialog.editTitle") : t("dialog.addTitle")}
             </DialogTitle>
           </DialogHeader>
 
           <div className="space-y-4 mt-2">
             <div className="space-y-2">
-              <Label htmlFor="gatewayType">Gateway Type *</Label>
+              <Label htmlFor="gatewayType">{t("fields.gatewayType")} *</Label>
               <select
                 id="gatewayType"
                 value={gatewayType}
@@ -416,7 +419,7 @@ export default function PaymentGatewayManager() {
                 }}
                 className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
               >
-                <option value="MANUAL">Manual (bKash/Nagad/Rocket/Bank)</option>
+                <option value="MANUAL">{t("gatewayTypes.manual")}</option>
                 <option value="SSLCOMMERZ">SSLCommerz</option>
               </select>
             </div>
@@ -424,10 +427,10 @@ export default function PaymentGatewayManager() {
             {/* Channel Input */}
             {gatewayType === "MANUAL" && (
               <div className="space-y-2">
-                <Label htmlFor="channel">Channel Name *</Label>
+                <Label htmlFor="channel">{t("fields.channelName")} *</Label>
                 <Input
                   id="channel"
-                  placeholder="e.g., bKash, Nagad, Bank, Rocket, etc."
+                  placeholder={t("placeholders.channel")}
                   value={channel}
                   onChange={(e) => setChannel(e.target.value)}
                   className="bg-background"
@@ -438,11 +441,11 @@ export default function PaymentGatewayManager() {
             {/* Account Numbers */}
             {gatewayType === "MANUAL" && (
               <div className="space-y-3">
-                <Label>Account Numbers *</Label>
+                <Label>{t("fields.accountNumbers")} *</Label>
                 {accountNumbers.map((account, index) => (
                   <div key={index} className="flex gap-2">
                     <Input
-                      placeholder="Enter account number"
+                      placeholder={t("placeholders.accountNumber")}
                       value={account}
                       onChange={(e) => updateAccountNumber(index, e.target.value)}
                       className="bg-background flex-1"
@@ -455,6 +458,7 @@ export default function PaymentGatewayManager() {
                       disabled={accountNumbers.length === 1}
                     >
                       <Trash2 className="h-4 w-4" />
+                      <span className="sr-only">{t("actions.removeAccount")}</span>
                     </Button>
                   </div>
                 ))}
@@ -466,7 +470,7 @@ export default function PaymentGatewayManager() {
                   className="w-full"
                 >
                   <Plus className="h-4 w-4 mr-2" />
-                  Add Another Account Number
+                  {t("actions.addAccount")}
                 </Button>
               </div>
             )}
@@ -474,10 +478,10 @@ export default function PaymentGatewayManager() {
             {gatewayType === "SSLCOMMERZ" && (
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="sslStoreId">Store ID *</Label>
+                  <Label htmlFor="sslStoreId">{t("fields.storeId")} *</Label>
                   <Input
                     id="sslStoreId"
-                    placeholder="Your SSLCommerz Store ID"
+                    placeholder={t("placeholders.storeId")}
                     value={sslStoreId}
                     onChange={(e) => setSslStoreId(e.target.value)}
                     className="bg-background"
@@ -485,11 +489,11 @@ export default function PaymentGatewayManager() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sslStorePassword">Store Password *</Label>
+                  <Label htmlFor="sslStorePassword">{t("fields.storePassword")} *</Label>
                   <Input
                     id="sslStorePassword"
                     type="password"
-                    placeholder="Your SSLCommerz Store Password"
+                    placeholder={t("placeholders.storePassword")}
                     value={sslStorePassword}
                     onChange={(e) => setSslStorePassword(e.target.value)}
                     className="bg-background"
@@ -498,9 +502,9 @@ export default function PaymentGatewayManager() {
 
                 <div className="flex items-center justify-between gap-3 rounded-md border border-input bg-background px-3 py-2">
                   <div>
-                    <div className="text-sm font-medium">Sandbox Mode</div>
+                    <div className="text-sm font-medium">{t("fields.sandboxMode")}</div>
                     <div className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                      Keep enabled for testing; disable for live payments.
+                      {t("hints.sandbox")}
                     </div>
                   </div>
                   <input
@@ -512,7 +516,7 @@ export default function PaymentGatewayManager() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sslSuccessUrl">Success URL</Label>
+                  <Label htmlFor="sslSuccessUrl">{t("fields.successUrl")}</Label>
                   <Input
                     id="sslSuccessUrl"
                     placeholder="https://your-domain.com/api/sslcommerz/success"
@@ -523,7 +527,7 @@ export default function PaymentGatewayManager() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sslFailUrl">Fail URL</Label>
+                  <Label htmlFor="sslFailUrl">{t("fields.failUrl")}</Label>
                   <Input
                     id="sslFailUrl"
                     placeholder="https://your-domain.com/api/sslcommerz/fail"
@@ -534,7 +538,7 @@ export default function PaymentGatewayManager() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sslCancelUrl">Cancel URL</Label>
+                  <Label htmlFor="sslCancelUrl">{t("fields.cancelUrl")}</Label>
                   <Input
                     id="sslCancelUrl"
                     placeholder="https://your-domain.com/api/sslcommerz/cancel"
@@ -545,7 +549,7 @@ export default function PaymentGatewayManager() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="sslIpnUrl">IPN URL</Label>
+                  <Label htmlFor="sslIpnUrl">{t("fields.ipnUrl")}</Label>
                   <Input
                     id="sslIpnUrl"
                     placeholder="https://your-domain.com/api/sslcommerz/ipn"
@@ -563,13 +567,13 @@ export default function PaymentGatewayManager() {
                 variant="outline" 
                 onClick={() => setIsDialogOpen(false)}
               >
-                Cancel
+                {t("actions.cancel")}
               </Button>
               <Button
                 onClick={handleSubmit}
               >
                 <Save className="h-4 w-4 mr-2" />
-                {editingId ? "Update Gateway" : "Create Gateway"}
+                {editingId ? t("actions.updateGateway") : t("actions.createGateway")}
               </Button>
             </div>
           </div>
@@ -582,13 +586,13 @@ export default function PaymentGatewayManager() {
           <Card className="col-span-2">
             <CardContent className="py-12 text-center">
               <p className="text-lg mb-4" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                No payment gateways configured yet
+                {t("empty.description")}
               </p>
               <Button
                 onClick={startCreating}
               >
                 <Plus className="h-4 w-4 mr-2" />
-                Setup Your First Payment Gateway
+                {t("empty.action")}
               </Button>
             </CardContent>
           </Card>
@@ -603,13 +607,14 @@ export default function PaymentGatewayManager() {
                   <CardTitle className="text-lg" style={{ color: 'hsl(var(--foreground))' }}>
                     {getGatewayType(payment.paymentGatewayData) === "SSLCOMMERZ"
                       ? "SSLCommerz"
-                      : payment.paymentGatewayData?.channel || "Unnamed Channel"}
+                      : payment.paymentGatewayData?.channel || t("labels.unnamedChannel")}
                   </CardTitle>
                   <div className="flex gap-1">
                     <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => startEditing(payment)}
+                      aria-label={t("actions.editGateway")}
                     >
                       <Edit className="h-4 w-4" />
                     </Button>
@@ -617,6 +622,7 @@ export default function PaymentGatewayManager() {
                       variant="ghost"
                       size="sm"
                       onClick={() => deletePayment(payment.id)}
+                      aria-label={t("actions.deleteGateway")}
                     >
                       <Trash2 className="h-4 w-4" />
                     </Button>
@@ -631,7 +637,7 @@ export default function PaymentGatewayManager() {
                   payment.paymentGatewayData.accountNumbers.length > 0 ? (
                     <div className="space-y-2">
                       <Label className="text-sm font-medium">
-                        Account Numbers:
+                        {t("labels.accountNumbers")}:
                       </Label>
                       {payment.paymentGatewayData.accountNumbers.map(
                         (account, index) => (
@@ -651,6 +657,7 @@ export default function PaymentGatewayManager() {
                               size="sm"
                               onClick={() => copyToClipboard(account, index)}
                               className="h-8 w-8 p-0"
+                              aria-label={t("actions.copyAccount")}
                             >
                               {copiedIndex === index ? (
                                 <Check
@@ -670,12 +677,12 @@ export default function PaymentGatewayManager() {
                       className="text-sm"
                       style={{ color: "hsl(var(--muted-foreground))" }}
                     >
-                      No account numbers
+                      {t("labels.noAccountNumbers")}
                     </p>
                   )
                 ) : (
                   <div className="space-y-2">
-                    <Label className="text-sm font-medium">Configuration:</Label>
+                    <Label className="text-sm font-medium">{t("labels.configuration")}:</Label>
                     <div
                       className="rounded border p-2"
                       style={{ backgroundColor: "hsl(var(--muted))" }}
@@ -684,13 +691,13 @@ export default function PaymentGatewayManager() {
                         className="text-sm"
                         style={{ color: "hsl(var(--foreground))" }}
                       >
-                        Mode: {payment.paymentGatewayData?.sandbox ? "Sandbox" : "Live"}
+                        {t("labels.mode")}: {payment.paymentGatewayData?.sandbox ? t("labels.sandbox") : t("labels.live")}
                       </div>
                       <div
                         className="text-xs"
                         style={{ color: "hsl(var(--muted-foreground))" }}
                       >
-                        Store ID: {payment.paymentGatewayData?.storeId || "—"}
+                        {t("fields.storeId")}: {payment.paymentGatewayData?.storeId || "—"}
                       </div>
                     </div>
                   </div>
@@ -699,7 +706,7 @@ export default function PaymentGatewayManager() {
                 {/* Created Date */}
                 <div className="pt-2 border-t">
                   <p className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                    Created: {new Date(payment.createdAt).toLocaleDateString()}
+                    {t("labels.created")}: {new Date(payment.createdAt).toLocaleDateString(locale)}
                   </p>
                 </div>
               </CardContent>

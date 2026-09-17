@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import BannerManager from "@/components/Settings/BannerManager";
 import PaymentGatewayManager from "@/components/PaymentSystem";
 import SiteSettingsForm from "@/components/Settings/SiteSettingsForm";
+import { useTranslations } from "next-intl";
 
 interface Banner {
   id: number;
@@ -18,6 +19,7 @@ interface Banner {
 }
 
 export default function SettingsPage() {
+  const t = useTranslations("AdminSettingsPage");
   const [banners, setBanners] = useState<Banner[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("site");
@@ -28,7 +30,7 @@ export default function SettingsPage() {
       const data = await res.json();
       setBanners(Array.isArray(data) ? data : []);
     } catch {
-      toast.error("Failed to load banners");
+      toast.error(t("toasts.loadFailed"));
     } finally {
       setLoading(false);
     }
@@ -45,9 +47,9 @@ export default function SettingsPage() {
       if (!res.ok) throw new Error();
 
       await loadBanners();
-      toast.success("Banner created successfully");
+      toast.success(t("toasts.created"));
     } catch {
-      toast.error("Failed to create banner");
+      toast.error(t("toasts.createFailed"));
     }
   };
 
@@ -62,9 +64,9 @@ export default function SettingsPage() {
       if (!res.ok) throw new Error();
 
       await loadBanners();
-      toast.success("Banner updated successfully");
+      toast.success(t("toasts.updated"));
     } catch {
-      toast.error("Failed to update banner");
+      toast.error(t("toasts.updateFailed"));
     }
   };
 
@@ -77,9 +79,9 @@ export default function SettingsPage() {
       if (!res.ok) throw new Error();
 
       await loadBanners();
-      toast.success("Banner deleted successfully");
+      toast.success(t("toasts.deleted"));
     } catch {
-      toast.error("Failed to delete banner");
+      toast.error(t("toasts.deleteFailed"));
     }
   };
 
@@ -90,9 +92,9 @@ export default function SettingsPage() {
   return (
     <div className="p-6 space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Settings</h1>
+        <h1 className="text-3xl font-bold">{t("header.title")}</h1>
         <p className="text-muted-foreground">
-          Manage your application settings and configurations
+          {t("header.description")}
         </p>
       </div>
 
@@ -106,21 +108,21 @@ export default function SettingsPage() {
     value="site"
     className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
   >
-    Site Settings
+    {t("tabs.site")}
   </TabsTrigger>
 
   <TabsTrigger
     value="banners"
     className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
   >
-    Banner Management
+    {t("tabs.banners")}
   </TabsTrigger>
 
   <TabsTrigger
     value="payments"
     className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
   >
-    Payment Settings
+    {t("tabs.payments")}
   </TabsTrigger>
 </TabsList>
 
@@ -128,7 +130,7 @@ export default function SettingsPage() {
         <TabsContent value="site" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Site Title & Logo</CardTitle>
+              <CardTitle>{t("sections.site")}</CardTitle>
             </CardHeader>
             <CardContent>
               <SiteSettingsForm />
@@ -141,14 +143,14 @@ export default function SettingsPage() {
           <Card className="overflow-hidden">
             <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-lg sm:text-xl">
-                Banner Management
+                {t("sections.banners")}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 pt-0 sm:p-6 sm:pt-0">
               {loading ? (
                 <div className="flex items-center justify-center py-10">
                   <div className="text-sm text-muted-foreground">
-                    Loading banners...
+                    {t("loadingBanners")}
                   </div>
                 </div>
               ) : (
@@ -169,7 +171,7 @@ export default function SettingsPage() {
         <TabsContent value="payments" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Payment Gateway Settings</CardTitle>
+              <CardTitle>{t("sections.payments")}</CardTitle>
             </CardHeader>
             <CardContent>
               <PaymentGatewayManager />

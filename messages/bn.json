@@ -4035,6 +4035,110 @@
             "deleteFailed": "কুপন মুছতে ব্যর্থ"
         }
     },
+    "AdminPaymentGateway": {
+        "title": "পেমেন্ট গেটওয়ে ব্যবস্থাপনা",
+        "dialog": {
+            "addTitle": "নতুন পেমেন্ট গেটওয়ে যোগ করুন",
+            "editTitle": "পেমেন্ট গেটওয়ে সম্পাদনা করুন"
+        },
+        "gatewayTypes": {
+            "manual": "ম্যানুয়াল (বিকাশ/নগদ/রকেট/ব্যাংক)"
+        },
+        "fields": {
+            "gatewayType": "গেটওয়ের ধরন",
+            "channelName": "চ্যানেলের নাম",
+            "accountNumbers": "অ্যাকাউন্ট নম্বর",
+            "storeId": "স্টোর আইডি",
+            "storePassword": "স্টোর পাসওয়ার্ড",
+            "sandboxMode": "স্যান্ডবক্স মোড",
+            "successUrl": "সফলতার URL",
+            "failUrl": "ব্যর্থতার URL",
+            "cancelUrl": "বাতিলের URL",
+            "ipnUrl": "IPN URL"
+        },
+        "placeholders": {
+            "channel": "যেমন: বিকাশ, নগদ, ব্যাংক, রকেট ইত্যাদি",
+            "accountNumber": "অ্যাকাউন্ট নম্বর লিখুন",
+            "storeId": "আপনার SSLCommerz স্টোর আইডি",
+            "storePassword": "আপনার SSLCommerz স্টোর পাসওয়ার্ড"
+        },
+        "hints": {
+            "sandbox": "পরীক্ষার জন্য চালু রাখুন; লাইভ পেমেন্টের জন্য বন্ধ করুন।"
+        },
+        "actions": {
+            "addGateway": "পেমেন্ট গেটওয়ে যোগ করুন",
+            "addAccount": "আরেকটি অ্যাকাউন্ট নম্বর যোগ করুন",
+            "removeAccount": "অ্যাকাউন্ট নম্বর সরান",
+            "cancel": "বাতিল করুন",
+            "createGateway": "গেটওয়ে তৈরি করুন",
+            "updateGateway": "গেটওয়ে আপডেট করুন",
+            "editGateway": "পেমেন্ট গেটওয়ে সম্পাদনা করুন",
+            "deleteGateway": "পেমেন্ট গেটওয়ে মুছুন",
+            "copyAccount": "অ্যাকাউন্ট নম্বর কপি করুন"
+        },
+        "labels": {
+            "unnamedChannel": "নামহীন চ্যানেল",
+            "accountNumbers": "অ্যাকাউন্ট নম্বর",
+            "noAccountNumbers": "কোনো অ্যাকাউন্ট নম্বর নেই",
+            "configuration": "কনফিগারেশন",
+            "mode": "মোড",
+            "sandbox": "স্যান্ডবক্স",
+            "live": "লাইভ",
+            "created": "তৈরি হয়েছে"
+        },
+        "empty": {
+            "description": "এখনও কোনো পেমেন্ট গেটওয়ে কনফিগার করা হয়নি",
+            "action": "প্রথম পেমেন্ট গেটওয়ে সেটআপ করুন"
+        },
+        "validation": {
+            "channelRequired": "চ্যানেলের নাম আবশ্যক",
+            "accountRequired": "অন্তত একটি অ্যাকাউন্ট নম্বর আবশ্যক",
+            "credentialsRequired": "স্টোর আইডি ও স্টোর পাসওয়ার্ড আবশ্যক",
+            "storeIdRequired": "স্টোর আইডি আবশ্যক"
+        },
+        "confirm": {
+            "delete": "আপনি কি নিশ্চিতভাবে এই পেমেন্ট গেটওয়েটি মুছতে চান?"
+        },
+        "success": {
+            "copied": "ক্লিপবোর্ডে কপি হয়েছে!",
+            "created": "পেমেন্ট গেটওয়ে সফলভাবে তৈরি হয়েছে",
+            "updated": "পেমেন্ট গেটওয়ে সফলভাবে আপডেট হয়েছে",
+            "deleted": "পেমেন্ট গেটওয়ে সফলভাবে মুছে ফেলা হয়েছে"
+        },
+        "errors": {
+            "fetchFailed": "পেমেন্ট তথ্য আনা যায়নি",
+            "copyFailed": "কপি করা যায়নি",
+            "createFailed": "পেমেন্ট গেটওয়ে তৈরি করা যায়নি",
+            "updateFailed": "পেমেন্ট গেটওয়ে আপডেট করা যায়নি",
+            "deleteFailed": "পেমেন্ট গেটওয়ে মুছে ফেলা যায়নি"
+        }
+    },
+    "AdminSettingsPage": {
+        "header": {
+            "title": "সেটিংস",
+            "description": "আপনার অ্যাপ্লিকেশনের সেটিংস ও কনফিগারেশন পরিচালনা করুন"
+        },
+        "tabs": {
+            "site": "সাইট সেটিংস",
+            "banners": "ব্যানার ব্যবস্থাপনা",
+            "payments": "পেমেন্ট সেটিংস"
+        },
+        "sections": {
+            "site": "সাইটের শিরোনাম ও লোগো",
+            "banners": "ব্যানার ব্যবস্থাপনা",
+            "payments": "পেমেন্ট গেটওয়ে সেটিংস"
+        },
+        "loadingBanners": "ব্যানার লোড হচ্ছে...",
+        "toasts": {
+            "loadFailed": "ব্যানার লোড করা যায়নি",
+            "created": "ব্যানার সফলভাবে তৈরি হয়েছে",
+            "createFailed": "ব্যানার তৈরি করা যায়নি",
+            "updated": "ব্যানার সফলভাবে আপডেট হয়েছে",
+            "updateFailed": "ব্যানার আপডেট করা যায়নি",
+            "deleted": "ব্যানার সফলভাবে মুছে ফেলা হয়েছে",
+            "deleteFailed": "ব্যানার মুছে ফেলা যায়নি"
+        }
+    },
     "AdminChatsPage": {
         "header": {
             "title": "সাপোর্ট চ্যাট",

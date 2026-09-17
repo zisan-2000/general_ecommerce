@@ -4035,6 +4035,110 @@
       "deleteFailed": "Failed to delete coupon"
     }
   },
+  "AdminPaymentGateway": {
+    "title": "Payment Gateway Management",
+    "dialog": {
+      "addTitle": "Add New Payment Gateway",
+      "editTitle": "Edit Payment Gateway"
+    },
+    "gatewayTypes": {
+      "manual": "Manual (bKash/Nagad/Rocket/Bank)"
+    },
+    "fields": {
+      "gatewayType": "Gateway Type",
+      "channelName": "Channel Name",
+      "accountNumbers": "Account Numbers",
+      "storeId": "Store ID",
+      "storePassword": "Store Password",
+      "sandboxMode": "Sandbox Mode",
+      "successUrl": "Success URL",
+      "failUrl": "Fail URL",
+      "cancelUrl": "Cancel URL",
+      "ipnUrl": "IPN URL"
+    },
+    "placeholders": {
+      "channel": "e.g., bKash, Nagad, Bank, Rocket, etc.",
+      "accountNumber": "Enter account number",
+      "storeId": "Your SSLCommerz Store ID",
+      "storePassword": "Your SSLCommerz Store Password"
+    },
+    "hints": {
+      "sandbox": "Keep enabled for testing; disable for live payments."
+    },
+    "actions": {
+      "addGateway": "Add Payment Gateway",
+      "addAccount": "Add Another Account Number",
+      "removeAccount": "Remove account number",
+      "cancel": "Cancel",
+      "createGateway": "Create Gateway",
+      "updateGateway": "Update Gateway",
+      "editGateway": "Edit payment gateway",
+      "deleteGateway": "Delete payment gateway",
+      "copyAccount": "Copy account number"
+    },
+    "labels": {
+      "unnamedChannel": "Unnamed Channel",
+      "accountNumbers": "Account Numbers",
+      "noAccountNumbers": "No account numbers",
+      "configuration": "Configuration",
+      "mode": "Mode",
+      "sandbox": "Sandbox",
+      "live": "Live",
+      "created": "Created"
+    },
+    "empty": {
+      "description": "No payment gateways configured yet",
+      "action": "Set Up Your First Payment Gateway"
+    },
+    "validation": {
+      "channelRequired": "Channel name is required",
+      "accountRequired": "At least one account number is required",
+      "credentialsRequired": "Store ID and Store Password are required",
+      "storeIdRequired": "Store ID is required"
+    },
+    "confirm": {
+      "delete": "Are you sure you want to delete this payment gateway?"
+    },
+    "success": {
+      "copied": "Copied to clipboard!",
+      "created": "Payment gateway created successfully",
+      "updated": "Payment gateway updated successfully",
+      "deleted": "Payment gateway deleted successfully"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch payments",
+      "copyFailed": "Failed to copy",
+      "createFailed": "Failed to create payment gateway",
+      "updateFailed": "Failed to update payment gateway",
+      "deleteFailed": "Failed to delete payment gateway"
+    }
+  },
+  "AdminSettingsPage": {
+    "header": {
+      "title": "Settings",
+      "description": "Manage your application settings and configurations"
+    },
+    "tabs": {
+      "site": "Site Settings",
+      "banners": "Banner Management",
+      "payments": "Payment Settings"
+    },
+    "sections": {
+      "site": "Site Title & Logo",
+      "banners": "Banner Management",
+      "payments": "Payment Gateway Settings"
+    },
+    "loadingBanners": "Loading banners...",
+    "toasts": {
+      "loadFailed": "Failed to load banners",
+      "created": "Banner created successfully",
+      "createFailed": "Failed to create banner",
+      "updated": "Banner updated successfully",
+      "updateFailed": "Failed to update banner",
+      "deleted": "Banner deleted successfully",
+      "deleteFailed": "Failed to delete banner"
+    }
+  },
   "AdminChatsPage": {
     "header": {
       "title": "Support Chats",
