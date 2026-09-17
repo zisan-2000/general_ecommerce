@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -15,15 +16,19 @@ type PdfExportButtonProps = {
 export function PdfExportButton({
   targetId,
   filename,
-  label = "Export PDF",
+  label,
   className,
 }: PdfExportButtonProps) {
+  const t = useTranslations("CommonPdfExport");
+
+  const resolvedLabel = label ?? t("exportPdf");
+
   const [exporting, setExporting] = useState(false);
 
   const handleExport = async () => {
     const target = document.getElementById(targetId);
     if (!target) {
-      toast.error("Report content not found");
+      toast.error(t("errors.contentNotFound"));
       return;
     }
 
@@ -32,20 +37,17 @@ export function PdfExportButton({
       const html2pdf = (await import("html2pdf.js")).default;
 
       const options = {
-          margin: 10,
-          filename,
-          image: { type: "jpeg" as const, quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
-          jsPDF: { unit: "mm", format: "a4", orientation: "landscape" as const },
-          pagebreak: { mode: ["avoid-all", "css", "legacy"] },
-        };
+        margin: 10,
+        filename,
+        image: { type: "jpeg" as const, quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+        jsPDF: { unit: "mm", format: "a4", orientation: "landscape" as const },
+        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+      };
 
-      await html2pdf()
-        .set(options)
-        .from(target)
-        .save();
+      await html2pdf().set(options).from(target).save();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to export PDF");
+      toast.error(error?.message || t("errors.exportFailed"));
     } finally {
       setExporting(false);
     }
@@ -60,7 +62,7 @@ export function PdfExportButton({
       className={className}
     >
       <Download className="mr-2 h-4 w-4" />
-      {exporting ? "Exporting..." : label}
+      {exporting ? t("exporting") : resolvedLabel}
     </Button>
   );
 }

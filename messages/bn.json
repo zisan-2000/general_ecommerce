@@ -3293,5 +3293,285 @@
             "periodSaveFailed": "পেরোল পিরিয়ড সংরক্ষণ করা যায়নি",
             "entrySaveFailed": "পেরোল এন্ট্রি সংরক্ষণ করা যায়নি"
         }
+    },
+    "AdminCourierPage": {
+        "title": "কুরিয়ার ব্যবস্থাপনা",
+        "actions": {
+            "addCourier": "কুরিয়ার যোগ করুন",
+            "edit": "সম্পাদনা",
+            "delete": "মুছুন"
+        },
+        "status": {
+            "label": "স্ট্যাটাস: {status}",
+            "active": "সক্রিয়",
+            "inactive": "নিষ্ক্রিয়"
+        },
+        "confirm": {
+            "delete": "আপনি কি নিশ্চিতভাবে {name} মুছতে চান?"
+        }
+    },
+    "AdminCourierFormModal2": {
+        "titleAdd": "কুরিয়ার যোগ করুন",
+        "titleEdit": "কুরিয়ার সম্পাদনা করুন",
+        "fields": {
+            "name": "কুরিয়ারের নাম",
+            "type": "কুরিয়ারের ধরন",
+            "baseUrlOptional": "বেস URL (ঐচ্ছিক)",
+            "apiKeyOptional": "API কী (ঐচ্ছিক)",
+            "secretKeyOptional": "সিক্রেট কী (ঐচ্ছিক)",
+            "clientIdOptional": "ক্লায়েন্ট আইডি (ঐচ্ছিক)"
+        },
+        "placeholders": {
+            "name": "কুরিয়ারের নাম",
+            "baseUrl": "বেস URL (ঐচ্ছিক)",
+            "apiKey": "API কী",
+            "secretKey": "সিক্রেট কী (ঐচ্ছিক)",
+            "clientId": "ক্লায়েন্ট আইডি (ঐচ্ছিক)"
+        },
+        "courierTypes": {
+            "PATHAO": "পাঠাও",
+            "REDX": "রেডএক্স",
+            "STEADFAST": "স্টেডফাস্ট",
+            "CUSTOM": "কাস্টম"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "save": "কুরিয়ার সংরক্ষণ করুন",
+            "update": "কুরিয়ার আপডেট করুন",
+            "creating": "তৈরি হচ্ছে...",
+            "updating": "আপডেট হচ্ছে..."
+        },
+        "success": {
+            "created": "কুরিয়ার সফলভাবে তৈরি হয়েছে!",
+            "updated": "কুরিয়ার সফলভাবে আপডেট হয়েছে!"
+        },
+        "errors": {
+            "nameRequired": "কুরিয়ারের নাম আবশ্যক",
+            "createFailed": "কুরিয়ার তৈরি করা যায়নি",
+            "updateFailed": "কুরিয়ার আপডেট করা যায়নি",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
+        }
+    },
+    "AdminVatReports": {
+        "hero": {
+            "badge": "ভ্যাট ড্যাশবোর্ড",
+            "title": "ভ্যাট রিপোর্ট ও ব্যবস্থাপনা",
+            "description": "সামগ্রিক ভ্যাট সংগ্রহ, ক্লাস-ভিত্তিক রিপোর্টিং এবং অর্ডার-সময়ের ট্যাক্স স্ন্যাপশটসহ রেট ব্যবস্থাপনা।",
+            "rangeLabel": "পরিসর: {range}",
+            "refreshing": "রিফ্রেশ হচ্ছে",
+            "taxedOrders": "{count}টি করযুক্ত অর্ডার"
+        },
+        "range": {
+            "between": "{from} থেকে {to}",
+            "onward": "{from} থেকে onward",
+            "upTo": "{to} পর্যন্ত",
+            "allDates": "সব তারিখ"
+        },
+        "filters": {
+            "title": "তারিখের পরিসর দিয়ে ফিল্টার করুন",
+            "description": "তারিখের পরিসর পরিবর্তিত হলে রিপোর্ট স্বয়ংক্রিয়ভাবে আপডেট হয়।",
+            "startDate": "শুরুর তারিখ",
+            "endDate": "শেষের তারিখ"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "clear": "মুছুন",
+            "addClass": "ভ্যাট ক্লাস যোগ করুন",
+            "addRate": "রেট যোগ করুন",
+            "viewReport": "রিপোর্ট দেখুন",
+            "report": "রিপোর্ট",
+            "edit": "সম্পাদনা",
+            "delete": "মুছুন",
+            "save": "সংরক্ষণ",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "create": "তৈরি করুন",
+            "update": "আপডেট করুন",
+            "createRate": "রেট তৈরি করুন",
+            "updateRate": "রেট আপডেট করুন"
+        },
+        "metrics": {
+            "totalVat": "মোট সংগৃহীত ভ্যাট",
+            "taxedOrders": "{count}টি করযুক্ত অর্ডার",
+            "taxableValue": "করযোগ্য মূল্য",
+            "taxableValueHint": "আউটপুট ভ্যাট গণনার জন্য ব্যবহৃত মূল ভিত্তি",
+            "vatClasses": "ভ্যাট ক্লাস",
+            "productsAssigned": "{count}টি পণ্য অ্যাসাইন করা হয়েছে",
+            "exclusiveTaxCharge": "একচেটিয়া ট্যাক্স চার্জ",
+            "exclusiveTaxHint": "পণ্যের মূল্যের উপর যোগ করা ভ্যাট"
+        },
+        "classReport": {
+            "title": "ক্লাস-ভিত্তিক ভ্যাট রিপোর্ট",
+            "description": "রিপোর্টের মোট হিসাব সংরক্ষিত অর্ডার-সময়ের ট্যাক্স স্ন্যাপশট থেকে তৈরি।",
+            "empty": "কোনো ভ্যাট ক্লাস ডেটা পাওয়া যায়নি।",
+            "table": {
+                "vatClass": "ভ্যাট ক্লাস",
+                "products": "পণ্য",
+                "orders": "অর্ডার",
+                "taxableValue": "করযোগ্য মূল্য",
+                "vatAmount": "ভ্যাট পরিমাণ",
+                "taxCharge": "ট্যাক্স চার্জ",
+                "currentRate": "বর্তমান রেট",
+                "actions": "কার্যক্রম"
+            }
+        },
+        "classCard": {
+            "code": "কোড: {code}",
+            "noDescription": "কোনো বিবরণ নেই",
+            "ratesTitle": "রেট",
+            "noRates": "এখনও কোনো রেট নেই",
+            "inclusive": "(অন্তর্ভুক্ত)",
+            "dateRangeTo": "থেকে"
+        },
+        "classModal": {
+            "titleNew": "নতুন ভ্যাট ক্লাস",
+            "titleEdit": "ভ্যাট ক্লাস সম্পাদনা",
+            "fields": {
+                "name": "নাম *",
+                "code": "কোড *",
+                "description": "বিবরণ"
+            }
+        },
+        "rateModal": {
+            "titleNew": "নতুন ভ্যাট রেট",
+            "titleEdit": "ভ্যাট রেট সম্পাদনা",
+            "classLabel": "ক্লাস: {name} ({code})",
+            "fields": {
+                "countryCode": "দেশের কোড *",
+                "regionCode": "অঞ্চলের কোড",
+                "rate": "রেট (%) *",
+                "inclusive": "অন্তর্ভুক্ত",
+                "startDate": "শুরুর তারিখ",
+                "endDate": "শেষের তারিখ"
+            },
+            "placeholders": {
+                "countryCode": "BD",
+                "regionCode": "ঐচ্ছিক",
+                "rate": "৭.৫"
+            }
+        },
+        "success": {
+            "classCreated": "ভ্যাট ক্লাস তৈরি হয়েছে",
+            "classUpdated": "ভ্যাট ক্লাস আপডেট হয়েছে",
+            "classDeleted": "ভ্যাট ক্লাস মোছা হয়েছে",
+            "rateCreated": "ভ্যাট রেট তৈরি হয়েছে",
+            "rateUpdated": "ভ্যাট রেট আপডেট হয়েছে",
+            "rateDeleted": "ভ্যাট রেট মোছা হয়েছে"
+        },
+        "confirm": {
+            "deleteRate": "এই ভ্যাট রেটটি মুছবেন?",
+            "deleteClass": "এই ভ্যাট ক্লাসটি মুছবেন?"
+        },
+        "errors": {
+            "loadReport": "ভ্যাট রিপোর্ট লোড করা যায়নি",
+            "loadClasses": "ভ্যাট ক্লাস লোড করা যায়নি",
+            "loadDashboard": "ভ্যাট ড্যাশবোর্ড লোড করা যায়নি",
+            "nameCodeRequired": "নাম ও কোড আবশ্যক",
+            "countryCodeInvalid": "দেশের কোড ২ অক্ষরের হতে হবে (যেমন BD)",
+            "rateInvalid": "রেট একটি সংখ্যা হতে হবে (যেমন 7.5)",
+            "saveClass": "ভ্যাট ক্লাস সংরক্ষণ করা যায়নি",
+            "saveRate": "ভ্যাট রেট সংরক্ষণ করা যায়নি",
+            "saveRateFailed": "রেট সংরক্ষণ করা যায়নি",
+            "deleteClass": "ভ্যাট ক্লাস মোছা যায়নি",
+            "deleteRate": "ভ্যাট রেট মোছা যায়নি",
+            "deleteFailed": "মুছে ফেলা ব্যর্থ হয়েছে",
+            "generic": "কিছু একটা সমস্যা হয়েছে"
+        }
+    },
+    "CommonPdfExport": {
+        "exportPdf": "PDF এক্সপোর্ট",
+        "exporting": "এক্সপোর্ট হচ্ছে...",
+        "errors": {
+            "contentNotFound": "রিপোর্ট কনটেন্ট পাওয়া যায়নি",
+            "exportFailed": "PDF এক্সপোর্ট করা যায়নি"
+        }
+    },
+    "AdminBlogManagement": {
+        "header": {
+            "title": "ব্লগ ব্যবস্থাপনা",
+            "subtitle": "আপনার ব্লগ পোস্ট তৈরি ও পরিচালনা করুন"
+        },
+        "actions": {
+            "newPost": "নতুন ব্লগ পোস্ট",
+            "edit": "সম্পাদনা",
+            "delete": "মুছুন"
+        },
+        "searchPlaceholder": "ব্লগ খুঁজুন...",
+        "resultsSummary": "{total}টির মধ্যে {start} থেকে {end}টি ব্লগ দেখানো হচ্ছে",
+        "resultsFor": "\"{term}\" এর জন্য",
+        "card": {
+            "editAria": "{title} সম্পাদনা করুন"
+        },
+        "empty": {
+            "title": "কোনো ব্লগ পাওয়া যায়নি",
+            "description": "আপনার প্রথম ব্লগ পোস্ট তৈরি করে শুরু করুন",
+            "createPost": "ব্লগ পোস্ট তৈরি করুন"
+        },
+        "pagination": {
+            "previous": "আগের",
+            "next": "পরের"
+        },
+        "confirm": {
+            "delete": "আপনি কি নিশ্চিতভাবে এই ব্লগটি মুছতে চান?"
+        },
+        "errors": {
+            "fetchFailed": "ব্লগ লোড করা যায়নি",
+            "deleteFailed": "ব্লগ মোছা যায়নি"
+        }
+    },
+    "AdminBlogForm": {
+        "titleCreate": "নতুন ব্লগ তৈরি করুন",
+        "titleEdit": "ব্লগ সম্পাদনা করুন",
+        "fields": {
+            "title": "শিরোনাম *",
+            "author": "লেখক *",
+            "date": "প্রকাশের তারিখ *",
+            "summary": "সারসংক্ষেপ (ঐচ্ছিক)",
+            "content": "কনটেন্ট *",
+            "featuredImage": "ফিচার্ড ছবি *",
+            "adsImage": "বিজ্ঞাপনের ছবি (ঐচ্ছিক)"
+        },
+        "placeholders": {
+            "title": "ব্লগের শিরোনাম লিখুন",
+            "author": "লেখকের নাম লিখুন",
+            "summary": "সারসংক্ষেপ লিখুন বা স্বয়ংক্রিয় সারসংক্ষেপের জন্য খালি রাখুন",
+            "imageUrl": "অথবা ছবির URL পেস্ট করুন (ঐচ্ছিক)",
+            "adImageUrl": "অথবা বিজ্ঞাপনের ছবির URL পেস্ট করুন (ঐচ্ছিক)"
+        },
+        "slug": {
+            "label": "স্লাগ:",
+            "url": "URL: /ecommerce/blogs/{slug}"
+        },
+        "alt": {
+            "featuredImage": "ব্লগের ফিচার্ড ছবি",
+            "adImage": "ব্লগ বিজ্ঞাপন"
+        },
+        "actions": {
+            "cancel": "বাতিল করুন",
+            "create": "ব্লগ তৈরি করুন",
+            "update": "ব্লগ আপডেট করুন",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "removeImage": "ছবি মুছুন",
+            "removeAdImage": "বিজ্ঞাপনের ছবি মুছুন",
+            "uploadImage": "ছবি আপলোড করুন",
+            "uploadAdImage": "বিজ্ঞাপনের ছবি আপলোড করুন",
+            "orDragDrop": "অথবা ড্র্যাগ অ্যান্ড ড্রপ করুন",
+            "uploadingImage": "ছবি আপলোড হচ্ছে...",
+            "uploadingAdImage": "বিজ্ঞাপনের ছবি আপলোড হচ্ছে..."
+        },
+        "uploadHint": "PNG, JPG, GIF সর্বোচ্চ 5MB",
+        "success": {
+            "created": "ব্লগ সফলভাবে তৈরি হয়েছে",
+            "updated": "ব্লগ সফলভাবে আপডেট হয়েছে",
+            "imageUploaded": "ছবি সফলভাবে আপলোড হয়েছে",
+            "adImageUploaded": "বিজ্ঞাপনের ছবি সফলভাবে আপলোড হয়েছে"
+        },
+        "errors": {
+            "generic": "কিছু একটা সমস্যা হয়েছে",
+            "requestFailed": "অনুরোধ ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+            "saveFailed": "ব্লগ সংরক্ষণে সমস্যা হয়েছে",
+            "imageUploadFailed": "ছবি আপলোড করা যায়নি",
+            "adImageUploadFailed": "বিজ্ঞাপনের ছবি আপলোড করা যায়নি",
+            "invalidUploadResponse": "অবৈধ আপলোড প্রতিক্রিয়া: url অনুপস্থিত"
+        }
     }
 }

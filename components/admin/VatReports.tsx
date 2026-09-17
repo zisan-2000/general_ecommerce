@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -102,6 +103,8 @@ function formatDateLabel(value: string) {
 }
 
 export default function VatReports() {
+  const t = useTranslations("AdminVatReports");
+
   const [report, setReport] = useState<VatOverviewReport | null>(null);
   const [vatClasses, setVatClasses] = useState<VatClass[]>([]);
   const [loading, setLoading] = useState(true);
@@ -151,10 +154,10 @@ export default function VatReports() {
       const classesData = await classesRes.json();
 
       if (!reportRes.ok) {
-        throw new Error(reportData?.error || "Failed to load VAT report");
+        throw new Error(reportData?.error || t("errors.loadReport"));
       }
       if (!classesRes.ok) {
-        throw new Error(classesData?.error || "Failed to load VAT classes");
+        throw new Error(classesData?.error || t("errors.loadClasses"));
       }
 
       if (requestId !== requestIdRef.current) {
@@ -167,14 +170,14 @@ export default function VatReports() {
       if (requestId !== requestIdRef.current) {
         return;
       }
-      toast.error(error?.message || "Failed to load VAT dashboard");
+      toast.error(error?.message || t("errors.loadDashboard"));
     } finally {
       if (requestId !== requestIdRef.current) {
         return;
       }
       setLoading(false);
     }
-  }, [dateFrom, dateTo]);
+  }, [dateFrom, dateTo, t]);
 
   useEffect(() => {
     loadData();
@@ -237,7 +240,7 @@ export default function VatReports() {
 
   const handleSubmit = async () => {
     if (!form.name.trim() || !form.code.trim()) {
-      toast.error("Name and Code required");
+      toast.error(t("errors.nameCodeRequired"));
       return;
     }
 
@@ -257,14 +260,16 @@ export default function VatReports() {
 
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result?.error || "Failed to save VAT class");
+        throw new Error(result?.error || t("errors.saveClass"));
       }
 
-      toast.success(editing ? "VAT class updated" : "VAT class created");
+      toast.success(
+        editing ? t("success.classUpdated") : t("success.classCreated"),
+      );
       closeModal();
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Something went wrong");
+      toast.error(error?.message || t("errors.generic"));
     } finally {
       setSaving(false);
     }
@@ -275,13 +280,13 @@ export default function VatReports() {
 
     const countryCode = rateForm.countryCode.trim().toUpperCase();
     if (countryCode.length !== 2) {
-      toast.error("Country code must be 2 letters (e.g. BD)");
+      toast.error(t("errors.countryCodeInvalid"));
       return;
     }
 
     const percent = Number(rateForm.ratePercent);
     if (!Number.isFinite(percent) || percent < 0) {
-      toast.error("Rate must be a number (e.g. 7.5)");
+      toast.error(t("errors.rateInvalid"));
       return;
     }
 
@@ -311,21 +316,23 @@ export default function VatReports() {
 
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result?.error || "Failed to save VAT rate");
+        throw new Error(result?.error || t("errors.saveRate"));
       }
 
-      toast.success(editingRate ? "VAT rate updated" : "VAT rate created");
+      toast.success(
+        editingRate ? t("success.rateUpdated") : t("success.rateCreated"),
+      );
       closeRateModal();
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to save rate");
+      toast.error(error?.message || t("errors.saveRateFailed"));
     } finally {
       setSaving(false);
     }
   };
 
   const handleRateDelete = async (rateId: number) => {
-    if (!confirm("Delete this VAT rate?")) return;
+    if (!confirm(t("confirm.deleteRate"))) return;
 
     try {
       setSaving(true);
@@ -334,20 +341,20 @@ export default function VatReports() {
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result?.error || "Failed to delete VAT rate");
+        throw new Error(result?.error || t("errors.deleteRate"));
       }
 
-      toast.success("VAT rate deleted");
+      toast.success(t("success.rateDeleted"));
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Delete failed");
+      toast.error(error?.message || t("errors.deleteFailed"));
     } finally {
       setSaving(false);
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm("Delete this VAT class?")) return;
+    if (!confirm(t("confirm.deleteClass"))) return;
 
     try {
       setSaving(true);
@@ -356,13 +363,13 @@ export default function VatReports() {
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result?.error || "Failed to delete VAT class");
+        throw new Error(result?.error || t("errors.deleteClass"));
       }
 
-      toast.success("VAT class deleted");
+      toast.success(t("success.classDeleted"));
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Delete failed");
+      toast.error(error?.message || t("errors.deleteFailed"));
     } finally {
       setSaving(false);
     }
@@ -372,12 +379,15 @@ export default function VatReports() {
   vatClasses.forEach((item) => classById.set(item.id, item));
   const rangeLabel =
     dateFrom && dateTo
-      ? `${formatDateLabel(dateFrom)} to ${formatDateLabel(dateTo)}`
+      ? t("range.between", {
+          from: formatDateLabel(dateFrom),
+          to: formatDateLabel(dateTo),
+        })
       : dateFrom
-        ? `${formatDateLabel(dateFrom)} onward`
+        ? t("range.onward", { from: formatDateLabel(dateFrom) })
         : dateTo
-          ? `Up to ${formatDateLabel(dateTo)}`
-          : "All dates";
+          ? t("range.upTo", { to: formatDateLabel(dateTo) })
+          : t("range.allDates");
 
   return (
     <section className="space-y-6 p-6">
@@ -385,23 +395,26 @@ export default function VatReports() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-4">
             <Badge variant="outline" className="w-fit bg-background/80">
-              VAT Dashboard
+              {t("hero.badge")}
             </Badge>
             <div className="space-y-2">
               <h1 className="text-3xl font-semibold tracking-tight">
-                VAT Report and Management
+                {t("hero.title")}
               </h1>
               <p className="max-w-3xl text-sm text-muted-foreground">
-                Overall VAT collection, class-wise reporting, and rate
-                management with order-time tax snapshots.
+                {t("hero.description")}
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Badge className="px-3 py-1">Range: {rangeLabel}</Badge>
+              <Badge className="px-3 py-1">
+                {t("hero.rangeLabel", { range: rangeLabel })}
+              </Badge>
               <Badge variant="outline" className="px-3 py-1">
                 {loading
-                  ? "Refreshing"
-                  : `${fmtNumber(report?.totals.taxedOrders || 0)} taxed orders`}
+                  ? t("hero.refreshing")
+                  : t("hero.taxedOrders", {
+                      count: fmtNumber(report?.totals.taxedOrders || 0),
+                    })}
               </Badge>
             </div>
           </div>
@@ -409,15 +422,19 @@ export default function VatReports() {
           <div className="flex flex-wrap gap-2">
             <Button onClick={loadData} variant="outline">
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {t("actions.refresh")}
             </Button>
             <PdfExportButton
               targetId="vat-overview-export"
-              filename={`vat-overview${dateFrom || dateTo ? `-${dateFrom || "all"}-${dateTo || "all"}` : ""}.pdf`}
+              filename={`vat-overview${
+                dateFrom || dateTo
+                  ? `-${dateFrom || "all"}-${dateTo || "all"}`
+                  : ""
+              }.pdf`}
             />
             <Button onClick={openAdd}>
               <Plus className="mr-2 h-4 w-4" />
-              Add VAT Class
+              {t("actions.addClass")}
             </Button>
           </div>
         </div>
@@ -426,15 +443,15 @@ export default function VatReports() {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <h3 className="text-lg font-semibold mb-2">
-                Filter by date Range
+                {t("filters.title")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                The report updates automatically when the date range changes.
+                {t("filters.description")}
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-[1fr_1fr_auto] md:items-end">
               <div className="space-y-2">
-                <Label htmlFor="vat-from">Start date</Label>
+                <Label htmlFor="vat-from">{t("filters.startDate")}</Label>
                 <Input
                   id="vat-from"
                   type="date"
@@ -443,7 +460,7 @@ export default function VatReports() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="vat-to">End date</Label>
+                <Label htmlFor="vat-to">{t("filters.endDate")}</Label>
                 <Input
                   id="vat-to"
                   type="date"
@@ -460,7 +477,7 @@ export default function VatReports() {
                     setDateTo("");
                   }}
                 >
-                  Clear
+                  {t("actions.clear")}
                 </Button>
               </div>
             </div>
@@ -494,27 +511,31 @@ export default function VatReports() {
         <div id="vat-overview-export" className="space-y-6">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <MetricCard
-              title="Total VAT Collected"
+              title={t("metrics.totalVat")}
               value={fmtMoney(report.totals.totalVatAmount)}
-              hint={`${fmtNumber(report.totals.taxedOrders)} taxed orders`}
+              hint={t("metrics.taxedOrders", {
+                count: fmtNumber(report.totals.taxedOrders),
+              })}
               className="bg-card/90"
             />
             <MetricCard
-              title="Taxable Value"
+              title={t("metrics.taxableValue")}
               value={fmtMoney(report.totals.totalTaxableValue)}
-              hint="Base value used for output VAT calculation"
+              hint={t("metrics.taxableValueHint")}
               className="bg-card/90"
             />
             <MetricCard
-              title="VAT Classes"
+              title={t("metrics.vatClasses")}
               value={fmtNumber(report.totals.vatClasses)}
-              hint={`${fmtNumber(report.totals.productsAssigned)} products assigned`}
+              hint={t("metrics.productsAssigned", {
+                count: fmtNumber(report.totals.productsAssigned),
+              })}
               className="bg-card/90"
             />
             <MetricCard
-              title="Exclusive Tax Charge"
+              title={t("metrics.exclusiveTaxCharge")}
               value={fmtMoney(report.totals.totalTaxCharge)}
-              hint="VAT added on top of product prices"
+              hint={t("metrics.exclusiveTaxHint")}
               className="bg-card/90"
             />
           </div>
@@ -522,26 +543,36 @@ export default function VatReports() {
           <Card className="overflow-hidden border-border/70">
             <div className="h-1 bg-gradient-to-r from-primary via-primary/70 to-transparent" />
             <CardHeader className="border-b border-border/60 bg-muted/20">
-              <CardTitle>Class-wise VAT Report</CardTitle>
-              <CardDescription>
-                Report totals are built from saved order-time tax snapshots.
-              </CardDescription>
+              <CardTitle>{t("classReport.title")}</CardTitle>
+              <CardDescription>{t("classReport.description")}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
                     <TableRow className="bg-muted/40">
-                      <TableHead>VAT Class</TableHead>
-                      <TableHead className="text-right">Products</TableHead>
-                      <TableHead className="text-right">Orders</TableHead>
+                      <TableHead>{t("classReport.table.vatClass")}</TableHead>
                       <TableHead className="text-right">
-                        Taxable Value
+                        {t("classReport.table.products")}
                       </TableHead>
-                      <TableHead className="text-right">VAT Amount</TableHead>
-                      <TableHead className="text-right">Tax Charge</TableHead>
-                      <TableHead>Current Rate</TableHead>
-                      <TableHead className="text-right">Actions</TableHead>
+                      <TableHead className="text-right">
+                        {t("classReport.table.orders")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("classReport.table.taxableValue")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("classReport.table.vatAmount")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("classReport.table.taxCharge")}
+                      </TableHead>
+                      <TableHead>
+                        {t("classReport.table.currentRate")}
+                      </TableHead>
+                      <TableHead className="text-right">
+                        {t("classReport.table.actions")}
+                      </TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -551,7 +582,7 @@ export default function VatReports() {
                           colSpan={8}
                           className="py-8 text-center text-muted-foreground"
                         >
-                          No VAT class data found.
+                          {t("classReport.empty")}
                         </TableCell>
                       </TableRow>
                     ) : (
@@ -594,7 +625,7 @@ export default function VatReports() {
                                   <Link
                                     href={`/admin/management/vatmanagent/${row.id}`}
                                   >
-                                    View Report
+                                    {t("actions.viewReport")}
                                   </Link>
                                 </Button>
                                 <Button
@@ -626,29 +657,31 @@ export default function VatReports() {
                   <div className="space-y-1">
                     <h3 className="text-lg font-semibold">{vat.name}</h3>
                     <p className="text-sm text-muted-foreground">
-                      Code: {vat.code}
+                      {t("classCard.code", { code: vat.code })}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {vat.description || "No description"}
+                      {vat.description || t("classCard.noDescription")}
                     </p>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <p className="text-sm font-medium">Rates</p>
+                      <p className="text-sm font-medium">
+                        {t("classCard.ratesTitle")}
+                      </p>
                       <Button
                         size="sm"
                         variant="outline"
                         onClick={() => openAddRate(vat)}
                       >
                         <Plus className="mr-1 h-4 w-4" />
-                        Add Rate
+                        {t("actions.addRate")}
                       </Button>
                     </div>
 
                     {(vat.rates || []).length === 0 ? (
                       <p className="text-sm text-muted-foreground">
-                        No rates yet
+                        {t("classCard.noRates")}
                       </p>
                     ) : (
                       <div className="space-y-2">
@@ -664,14 +697,16 @@ export default function VatReports() {
                                   ? `-${rate.regionCode}`
                                   : ""}{" "}
                                 {toPercentString(rate.rate)}%
-                                {rate.inclusive ? " (inclusive)" : ""}
+                                {rate.inclusive
+                                  ? ` ${t("classCard.inclusive")}`
+                                  : ""}
                               </div>
                               {(rate.startDate || rate.endDate) && (
                                 <div className="text-muted-foreground">
                                   {rate.startDate
                                     ? String(rate.startDate).slice(0, 10)
                                     : "-"}{" "}
-                                  to{" "}
+                                  {t("classCard.dateRangeTo")}{" "}
                                   {rate.endDate
                                     ? String(rate.endDate).slice(0, 10)
                                     : "-"}
@@ -704,7 +739,7 @@ export default function VatReports() {
                   <div className="flex flex-wrap gap-2 pt-1">
                     <Button size="sm" variant="outline" asChild>
                       <Link href={`/admin/management/vatmanagent/${vat.id}`}>
-                        Report
+                        {t("actions.report")}
                       </Link>
                     </Button>
                     <Button
@@ -713,7 +748,7 @@ export default function VatReports() {
                       onClick={() => openEdit(vat)}
                     >
                       <Edit3 className="h-4 w-4" />
-                      Edit
+                      {t("actions.edit")}
                     </Button>
                     <Button
                       size="sm"
@@ -721,7 +756,7 @@ export default function VatReports() {
                       onClick={() => handleDelete(vat.id)}
                     >
                       <Trash2 className="h-4 w-4" />
-                      Delete
+                      {t("actions.delete")}
                     </Button>
                   </div>
                 </CardContent>
@@ -742,7 +777,7 @@ export default function VatReports() {
           >
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold">
-                {editing ? "Edit VAT Class" : "New VAT Class"}
+                {editing ? t("classModal.titleEdit") : t("classModal.titleNew")}
               </h2>
               <Button size="icon" variant="ghost" onClick={closeModal}>
                 <X className="h-4 w-4" />
@@ -751,21 +786,21 @@ export default function VatReports() {
 
             <div className="space-y-3">
               <div className="space-y-2">
-                <Label>Name *</Label>
+                <Label>{t("classModal.fields.name")}</Label>
                 <Input
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </div>
               <div className="space-y-2">
-                <Label>Code *</Label>
+                <Label>{t("classModal.fields.code")}</Label>
                 <Input
                   value={form.code}
                   onChange={(e) => setForm({ ...form, code: e.target.value })}
                 />
               </div>
               <div className="space-y-2">
-                <Label>Description</Label>
+                <Label>{t("classModal.fields.description")}</Label>
                 <Input
                   value={form.description}
                   onChange={(e) =>
@@ -779,7 +814,11 @@ export default function VatReports() {
                 className="w-full"
                 disabled={saving}
               >
-                {saving ? "Saving..." : editing ? "Update" : "Create"}
+                {saving
+                  ? t("actions.saving")
+                  : editing
+                    ? t("actions.update")
+                    : t("actions.create")}
               </Button>
             </div>
           </div>
@@ -797,7 +836,9 @@ export default function VatReports() {
           >
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold">
-                {editingRate ? "Edit VAT Rate" : "New VAT Rate"}
+                {editingRate
+                  ? t("rateModal.titleEdit")
+                  : t("rateModal.titleNew")}
               </h2>
               <Button size="icon" variant="ghost" onClick={closeRateModal}>
                 <X className="h-4 w-4" />
@@ -805,41 +846,44 @@ export default function VatReports() {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              Class: {rateClass?.name} ({rateClass?.code})
+              {t("rateModal.classLabel", {
+                name: rateClass?.name,
+                code: rateClass?.code,
+              })}
             </p>
 
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <Label>Country Code *</Label>
+                <Label>{t("rateModal.fields.countryCode")}</Label>
                 <Input
                   value={rateForm.countryCode}
                   onChange={(e) =>
                     setRateForm({ ...rateForm, countryCode: e.target.value })
                   }
-                  placeholder="BD"
+                  placeholder={t("rateModal.placeholders.countryCode")}
                 />
               </div>
 
               <div className="space-y-2">
-                <Label>Region Code</Label>
+                <Label>{t("rateModal.fields.regionCode")}</Label>
                 <Input
                   value={rateForm.regionCode}
                   onChange={(e) =>
                     setRateForm({ ...rateForm, regionCode: e.target.value })
                   }
-                  placeholder="Optional"
+                  placeholder={t("rateModal.placeholders.regionCode")}
                 />
               </div>
 
               <div className="space-y-2">
-                <Label>Rate (%) *</Label>
+                <Label>{t("rateModal.fields.rate")}</Label>
                 <Input
                   type="number"
                   value={rateForm.ratePercent}
                   onChange={(e) =>
                     setRateForm({ ...rateForm, ratePercent: e.target.value })
                   }
-                  placeholder="7.5"
+                  placeholder={t("rateModal.placeholders.rate")}
                 />
               </div>
 
@@ -852,11 +896,13 @@ export default function VatReports() {
                     setRateForm({ ...rateForm, inclusive: e.target.checked })
                   }
                 />
-                <Label htmlFor="inclusive">Inclusive</Label>
+                <Label htmlFor="inclusive">
+                  {t("rateModal.fields.inclusive")}
+                </Label>
               </div>
 
               <div className="space-y-2">
-                <Label>Start Date</Label>
+                <Label>{t("rateModal.fields.startDate")}</Label>
                 <Input
                   type="date"
                   value={rateForm.startDate}
@@ -867,7 +913,7 @@ export default function VatReports() {
               </div>
 
               <div className="space-y-2">
-                <Label>End Date</Label>
+                <Label>{t("rateModal.fields.endDate")}</Label>
                 <Input
                   type="date"
                   value={rateForm.endDate}
@@ -884,10 +930,10 @@ export default function VatReports() {
               disabled={saving}
             >
               {saving
-                ? "Saving..."
+                ? t("actions.saving")
                 : editingRate
-                  ? "Update Rate"
-                  : "Create Rate"}
+                  ? t("actions.updateRate")
+                  : t("actions.createRate")}
             </Button>
           </div>
         </div>

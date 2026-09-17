@@ -15,7 +15,7 @@ export default function CourierFormModal({
   refresh,
   editingCourier,
 }: CourierFormModalProps) {
-  const t = useTranslations("AdminCourierFormModal");
+  const t = useTranslations("AdminCourierFormModal2");
 
   const [form, setForm] = useState<CourierForm>({
     name: "",

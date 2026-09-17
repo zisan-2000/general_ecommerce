@@ -3,6 +3,7 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { Label } from "@/components/ui/label";
 import { Upload } from "lucide-react";
 import { toast } from "sonner";
@@ -25,7 +26,7 @@ const RichTextEditor = dynamic(() => import("./JoditEditor"), {
   ssr: false,
   loading: () => (
     <div className="h-[400px] border border-border rounded-lg p-4 bg-card">
-      Loading editor...
+      <span className="text-sm text-muted-foreground">Loading editor...</span>
     </div>
   ),
 });
@@ -36,6 +37,8 @@ interface BlogFormProps {
 }
 
 export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
+  const t = useTranslations("AdminBlogForm");
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -52,7 +55,6 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
     ads: "",
   });
 
-  // Generate slug from title
   const slug = generateSlug(formData.title);
 
   useEffect(() => {
@@ -93,9 +95,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
       });
 
       if (response.ok) {
-        toast.success(
-          blog ? "Blog updated successfully" : "Blog created successfully",
-        );
+        toast.success(blog ? t("success.updated") : t("success.created"));
 
         if (onSuccess) {
           onSuccess();
@@ -109,16 +109,16 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
           ?.includes("application/json");
         if (isJson) {
           const error = await response.json();
-          toast.error(error.error || "Something went wrong");
+          toast.error(error.error || t("errors.generic"));
         } else {
           const text = await response.text();
           console.error("Non-JSON error response:", text);
-          toast.error("Request failed. Please try again.");
+          toast.error(t("errors.requestFailed"));
         }
       }
     } catch (error) {
       console.error("Error saving blog:", error);
-      toast.error("Error saving blog");
+      toast.error(t("errors.saveFailed"));
     } finally {
       setLoading(false);
     }
@@ -141,15 +141,11 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
     }));
   };
 
-  // Main image upload → POST /api/upload (no folder param)
-  // /api/upload/${folder} → /api/upload/blogImages
-
-  // Main image upload → /api/upload/${folder}
   const handleImageFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const folder = "blogImages"; // public/upload/blogImages এর জন্য
+    const folder = "blogImages";
 
     try {
       setUploadingImage(true);
@@ -165,14 +161,14 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
       if (!res.ok) {
         const data = await res.json().catch(() => null);
         console.error("Image upload failed:", data || res.statusText);
-        throw new Error("Image upload failed");
+        throw new Error(t("errors.imageUploadFailed"));
       }
 
       const data = await res.json();
 
       if (!data.url) {
         console.error("Invalid upload response:", data);
-        throw new Error("Invalid upload response: url missing");
+        throw new Error(t("errors.invalidUploadResponse"));
       }
 
       setFormData((prev) => ({
@@ -180,10 +176,10 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
         image: data.url,
       }));
 
-      toast.success("Image uploaded successfully");
+      toast.success(t("success.imageUploaded"));
     } catch (err: any) {
       console.error("Error uploading image:", err);
-      toast.error(err.message || "Error uploading image");
+      toast.error(err.message || t("errors.imageUploadFailed"));
     } finally {
       setUploadingImage(false);
     }
@@ -209,14 +205,14 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
       if (!res.ok) {
         const data = await res.json().catch(() => null);
         console.error("Ad image upload failed:", data || res.statusText);
-        throw new Error("Ad image upload failed");
+        throw new Error(t("errors.adImageUploadFailed"));
       }
 
       const data = await res.json();
 
       if (!data.url) {
         console.error("Invalid upload response:", data);
-        throw new Error("Invalid upload response: url missing");
+        throw new Error(t("errors.invalidUploadResponse"));
       }
 
       setFormData((prev) => ({
@@ -224,10 +220,10 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
         ads: data.url,
       }));
 
-      toast.success("Ad image uploaded successfully");
+      toast.success(t("success.adImageUploaded"));
     } catch (err: any) {
       console.error("Error uploading ad image:", err);
-      toast.error(err.message || "Error uploading ad image");
+      toast.error(err.message || t("errors.adImageUploadFailed"));
     } finally {
       setUploadingAdImage(false);
     }
@@ -236,7 +232,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
   return (
     <div className="bg-card rounded-lg shadow border-border">
       <h2 className="text-lg font-semibold p-4 text-foreground">
-        {blog ? "Edit Blog" : "Create New Blog"}
+        {blog ? t("titleEdit") : t("titleCreate")}
       </h2>
       <form onSubmit={handleSubmit} className="p-6 space-y-6">
         <div>
@@ -244,7 +240,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
             htmlFor="title"
             className="block text-sm font-medium text-foreground mb-2"
           >
-            Title *
+            {t("fields.title")}
           </label>
           <input
             type="text"
@@ -254,18 +250,17 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
             onChange={handleChange}
             required
             className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background text-foreground"
-            placeholder="Enter blog title"
+            placeholder={t("placeholders.title")}
           />
 
-          {/* Slug Preview */}
           <div className="mt-2 p-3 bg-muted rounded-lg border border-border">
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-muted-foreground">
-                Slug:
+                {t("slug.label")}
               </span>
             </div>
             <p className="text-xs text-muted-foreground mt-1">
-              URL: /ecommerce/blogs/{slug}
+              {t("slug.url", { slug })}
             </p>
           </div>
         </div>
@@ -276,7 +271,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
               htmlFor="author"
               className="block text-sm font-medium text-foreground mb-2"
             >
-              Author *
+              {t("fields.author")}
             </label>
             <input
               type="text"
@@ -286,7 +281,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background text-foreground"
-              placeholder="Enter author name"
+              placeholder={t("placeholders.author")}
             />
           </div>
 
@@ -295,7 +290,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
               htmlFor="date"
               className="block text-sm font-medium text-foreground mb-2"
             >
-              Publish Date *
+              {t("fields.date")}
             </label>
             <input
               type="date"
@@ -311,21 +306,20 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
 
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Summary (optional)
+            {t("fields.summary")}
           </label>
           <textarea
             name="summary"
             value={formData.summary}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground"
-            placeholder="Write summary or leave empty for auto summary"
+            placeholder={t("placeholders.summary")}
           />
         </div>
 
-        {/* Content */}
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Content *
+            {t("fields.content")}
           </label>
           {isClient && (
             <RichTextEditor
@@ -336,16 +330,14 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
           )}
         </div>
 
-        {/* Featured Image (upload + URL) */}
         <div className="space-y-2">
-          <Label className="text-foreground">Featured Image *</Label>
+          <Label className="text-foreground">{t("fields.featuredImage")}</Label>
 
-          {/* Preview */}
           {formData.image && (
             <div className="mb-3 flex items-center gap-4">
               <img
                 src={formData.image}
-                alt="Blog featured"
+                alt={t("alt.featuredImage")}
                 className="w-24 h-24 rounded-md object-cover border border-border"
               />
               <button
@@ -353,12 +345,11 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
                 onClick={() => setFormData((prev) => ({ ...prev, image: "" }))}
                 className="text-xs text-destructive hover:underline"
               >
-                Remove image
+                {t("actions.removeImage")}
               </button>
             </div>
           )}
 
-          {/* File upload → /api/upload */}
           <label
             htmlFor="blog-image-upload"
             className="mt-1 flex flex-col items-center justify-center px-6 pt-5 pb-6 border-2 border-dashed border-border rounded-lg hover:border-primary transition-colors cursor-pointer"
@@ -369,13 +360,11 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
               </div>
               <div className="flex text-sm text-muted-foreground justify-center">
                 <span className="relative font-medium text-primary hover:text-primary/80 focus-within:outline-none">
-                  Upload an image
+                  {t("actions.uploadImage")}
                 </span>
-                <span className="pl-1">or drag and drop</span>
+                <span className="pl-1">{t("actions.orDragDrop")}</span>
               </div>
-              <p className="text-xs text-muted-foreground">
-                PNG, JPG, GIF up to 5MB
-              </p>
+              <p className="text-xs text-muted-foreground">{t("uploadHint")}</p>
             </div>
             <input
               id="blog-image-upload"
@@ -389,31 +378,28 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
 
           {uploadingImage && (
             <p className="text-xs text-muted-foreground mt-1">
-              Uploading image...
+              {t("actions.uploadingImage")}
             </p>
           )}
 
-          {/* Optional: manual URL input */}
           <input
             type="text"
             name="image"
             value={formData.image}
             onChange={handleChange}
-            placeholder="Or paste image URL (optional)"
+            placeholder={t("placeholders.imageUrl")}
             className="mt-2 w-full px-3 py-2 border border-border rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary bg-background text-foreground"
           />
         </div>
 
         <div className="space-y-2">
-          <Label className="text-foreground">
-            Advertisement Image (optional)
-          </Label>
+          <Label className="text-foreground">{t("fields.adsImage")}</Label>
 
           {formData.ads && (
             <div className="mb-3 flex items-center gap-4">
               <img
                 src={formData.ads}
-                alt="Blog ad"
+                alt={t("alt.adImage")}
                 className="w-24 h-24 rounded-md object-cover border border-border"
               />
               <button
@@ -421,7 +407,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
                 onClick={() => setFormData((prev) => ({ ...prev, ads: "" }))}
                 className="text-xs text-destructive hover:underline"
               >
-                Remove ad image
+                {t("actions.removeAdImage")}
               </button>
             </div>
           )}
@@ -436,13 +422,11 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
               </div>
               <div className="flex text-sm text-muted-foreground justify-center">
                 <span className="relative font-medium text-primary hover:text-primary/80 focus-within:outline-none">
-                  Upload an ad image
+                  {t("actions.uploadAdImage")}
                 </span>
-                <span className="pl-1">or drag and drop</span>
+                <span className="pl-1">{t("actions.orDragDrop")}</span>
               </div>
-              <p className="text-xs text-muted-foreground">
-                PNG, JPG, GIF up to 5MB
-              </p>
+              <p className="text-xs text-muted-foreground">{t("uploadHint")}</p>
             </div>
             <input
               id="blog-ad-image-upload"
@@ -456,7 +440,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
 
           {uploadingAdImage && (
             <p className="text-xs text-muted-foreground mt-1">
-              Uploading ad image...
+              {t("actions.uploadingAdImage")}
             </p>
           )}
 
@@ -465,7 +449,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
             name="ads"
             value={formData.ads}
             onChange={handleChange}
-            placeholder="Or paste ad image URL (optional)"
+            placeholder={t("placeholders.adImageUrl")}
             className="mt-2 w-full px-3 py-2 border border-border rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary bg-background text-foreground"
           />
         </div>
@@ -476,14 +460,18 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
             onClick={() => router.back()}
             className="px-4 py-2 border border-border rounded-lg text-foreground hover:bg-muted"
           >
-            Cancel
+            {t("actions.cancel")}
           </button>
           <button
             type="submit"
             disabled={loading}
             className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50"
           >
-            {loading ? "Saving..." : blog ? "Update Blog" : "Create Blog"}
+            {loading
+              ? t("actions.saving")
+              : blog
+                ? t("actions.update")
+                : t("actions.create")}
           </button>
         </div>
       </form>

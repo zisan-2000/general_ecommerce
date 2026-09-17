@@ -3293,5 +3293,285 @@
       "periodSaveFailed": "Failed to save payroll period",
       "entrySaveFailed": "Failed to save payroll entry"
     }
+  },
+  "AdminCourierPage": {
+    "title": "Courier Management",
+    "actions": {
+      "addCourier": "Add Courier",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "status": {
+      "label": "Status: {status}",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "confirm": {
+      "delete": "Are you sure you want to delete {name}?"
+    }
+  },
+  "AdminCourierFormModal2": {
+    "titleAdd": "Add Courier",
+    "titleEdit": "Edit Courier",
+    "fields": {
+      "name": "Courier Name",
+      "type": "Courier Type",
+      "baseUrlOptional": "Base URL (optional)",
+      "apiKeyOptional": "API Key (optional)",
+      "secretKeyOptional": "Secret Key (optional)",
+      "clientIdOptional": "Client ID (optional)"
+    },
+    "placeholders": {
+      "name": "Courier Name",
+      "baseUrl": "Base URL (optional)",
+      "apiKey": "API Key",
+      "secretKey": "Secret Key (optional)",
+      "clientId": "Client ID (optional)"
+    },
+    "courierTypes": {
+      "PATHAO": "Pathao",
+      "REDX": "RedX",
+      "STEADFAST": "Steadfast",
+      "CUSTOM": "Custom"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save Courier",
+      "update": "Update Courier",
+      "creating": "Creating...",
+      "updating": "Updating..."
+    },
+    "success": {
+      "created": "Courier created successfully!",
+      "updated": "Courier updated successfully!"
+    },
+    "errors": {
+      "nameRequired": "Courier name is required",
+      "createFailed": "Failed to create courier",
+      "updateFailed": "Failed to update courier",
+      "generic": "Something went wrong"
+    }
+  },
+  "AdminVatReports": {
+    "hero": {
+      "badge": "VAT Dashboard",
+      "title": "VAT Report and Management",
+      "description": "Overall VAT collection, class-wise reporting, and rate management with order-time tax snapshots.",
+      "rangeLabel": "Range: {range}",
+      "refreshing": "Refreshing",
+      "taxedOrders": "{count} taxed orders"
+    },
+    "range": {
+      "between": "{from} to {to}",
+      "onward": "{from} onward",
+      "upTo": "Up to {to}",
+      "allDates": "All dates"
+    },
+    "filters": {
+      "title": "Filter by date Range",
+      "description": "The report updates automatically when the date range changes.",
+      "startDate": "Start date",
+      "endDate": "End date"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "clear": "Clear",
+      "addClass": "Add VAT Class",
+      "addRate": "Add Rate",
+      "viewReport": "View Report",
+      "report": "Report",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "saving": "Saving...",
+      "create": "Create",
+      "update": "Update",
+      "createRate": "Create Rate",
+      "updateRate": "Update Rate"
+    },
+    "metrics": {
+      "totalVat": "Total VAT Collected",
+      "taxedOrders": "{count} taxed orders",
+      "taxableValue": "Taxable Value",
+      "taxableValueHint": "Base value used for output VAT calculation",
+      "vatClasses": "VAT Classes",
+      "productsAssigned": "{count} products assigned",
+      "exclusiveTaxCharge": "Exclusive Tax Charge",
+      "exclusiveTaxHint": "VAT added on top of product prices"
+    },
+    "classReport": {
+      "title": "Class-wise VAT Report",
+      "description": "Report totals are built from saved order-time tax snapshots.",
+      "empty": "No VAT class data found.",
+      "table": {
+        "vatClass": "VAT Class",
+        "products": "Products",
+        "orders": "Orders",
+        "taxableValue": "Taxable Value",
+        "vatAmount": "VAT Amount",
+        "taxCharge": "Tax Charge",
+        "currentRate": "Current Rate",
+        "actions": "Actions"
+      }
+    },
+    "classCard": {
+      "code": "Code: {code}",
+      "noDescription": "No description",
+      "ratesTitle": "Rates",
+      "noRates": "No rates yet",
+      "inclusive": "(inclusive)",
+      "dateRangeTo": "to"
+    },
+    "classModal": {
+      "titleNew": "New VAT Class",
+      "titleEdit": "Edit VAT Class",
+      "fields": {
+        "name": "Name *",
+        "code": "Code *",
+        "description": "Description"
+      }
+    },
+    "rateModal": {
+      "titleNew": "New VAT Rate",
+      "titleEdit": "Edit VAT Rate",
+      "classLabel": "Class: {name} ({code})",
+      "fields": {
+        "countryCode": "Country Code *",
+        "regionCode": "Region Code",
+        "rate": "Rate (%) *",
+        "inclusive": "Inclusive",
+        "startDate": "Start Date",
+        "endDate": "End Date"
+      },
+      "placeholders": {
+        "countryCode": "BD",
+        "regionCode": "Optional",
+        "rate": "7.5"
+      }
+    },
+    "success": {
+      "classCreated": "VAT class created",
+      "classUpdated": "VAT class updated",
+      "classDeleted": "VAT class deleted",
+      "rateCreated": "VAT rate created",
+      "rateUpdated": "VAT rate updated",
+      "rateDeleted": "VAT rate deleted"
+    },
+    "confirm": {
+      "deleteRate": "Delete this VAT rate?",
+      "deleteClass": "Delete this VAT class?"
+    },
+    "errors": {
+      "loadReport": "Failed to load VAT report",
+      "loadClasses": "Failed to load VAT classes",
+      "loadDashboard": "Failed to load VAT dashboard",
+      "nameCodeRequired": "Name and Code required",
+      "countryCodeInvalid": "Country code must be 2 letters (e.g. BD)",
+      "rateInvalid": "Rate must be a number (e.g. 7.5)",
+      "saveClass": "Failed to save VAT class",
+      "saveRate": "Failed to save VAT rate",
+      "saveRateFailed": "Failed to save rate",
+      "deleteClass": "Failed to delete VAT class",
+      "deleteRate": "Failed to delete VAT rate",
+      "deleteFailed": "Delete failed",
+      "generic": "Something went wrong"
+    }
+  },
+  "CommonPdfExport": {
+    "exportPdf": "Export PDF",
+    "exporting": "Exporting...",
+    "errors": {
+      "contentNotFound": "Report content not found",
+      "exportFailed": "Failed to export PDF"
+    }
+  },
+  "AdminBlogManagement": {
+    "header": {
+      "title": "Blog Management",
+      "subtitle": "Create and manage your blog posts"
+    },
+    "actions": {
+      "newPost": "New Blog Post",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "searchPlaceholder": "Search blogs...",
+    "resultsSummary": "Showing {start} to {end} of {total} blogs",
+    "resultsFor": "for \"{term}\"",
+    "card": {
+      "editAria": "Edit {title}"
+    },
+    "empty": {
+      "title": "No blogs found",
+      "description": "Get started by creating your first blog post",
+      "createPost": "Create Blog Post"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "confirm": {
+      "delete": "Are you sure you want to delete this blog?"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch blogs",
+      "deleteFailed": "Error deleting blog"
+    }
+  },
+  "AdminBlogForm": {
+    "titleCreate": "Create New Blog",
+    "titleEdit": "Edit Blog",
+    "fields": {
+      "title": "Title *",
+      "author": "Author *",
+      "date": "Publish Date *",
+      "summary": "Summary (optional)",
+      "content": "Content *",
+      "featuredImage": "Featured Image *",
+      "adsImage": "Advertisement Image (optional)"
+    },
+    "placeholders": {
+      "title": "Enter blog title",
+      "author": "Enter author name",
+      "summary": "Write summary or leave empty for auto summary",
+      "imageUrl": "Or paste image URL (optional)",
+      "adImageUrl": "Or paste ad image URL (optional)"
+    },
+    "slug": {
+      "label": "Slug:",
+      "url": "URL: /ecommerce/blogs/{slug}"
+    },
+    "alt": {
+      "featuredImage": "Blog featured",
+      "adImage": "Blog ad"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create Blog",
+      "update": "Update Blog",
+      "saving": "Saving...",
+      "removeImage": "Remove image",
+      "removeAdImage": "Remove ad image",
+      "uploadImage": "Upload an image",
+      "uploadAdImage": "Upload an ad image",
+      "orDragDrop": "or drag and drop",
+      "uploadingImage": "Uploading image...",
+      "uploadingAdImage": "Uploading ad image..."
+    },
+    "uploadHint": "PNG, JPG, GIF up to 5MB",
+    "success": {
+      "created": "Blog created successfully",
+      "updated": "Blog updated successfully",
+      "imageUploaded": "Image uploaded successfully",
+      "adImageUploaded": "Ad image uploaded successfully"
+    },
+    "errors": {
+      "generic": "Something went wrong",
+      "requestFailed": "Request failed. Please try again.",
+      "saveFailed": "Error saving blog",
+      "imageUploadFailed": "Image upload failed",
+      "adImageUploadFailed": "Ad image upload failed",
+      "invalidUploadResponse": "Invalid upload response: url missing"
+    }
   }
 }

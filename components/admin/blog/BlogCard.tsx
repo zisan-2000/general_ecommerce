@@ -3,6 +3,7 @@
 import { useState, useEffect, memo } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { processBlogSummary } from "./summaryUtils";
 
 const BlogForm = dynamic(() => import("./BlogForm"), { ssr: false });
@@ -19,6 +20,8 @@ interface Blog {
 }
 
 const BlogCard = memo(function BlogCard() {
+  const t = useTranslations("AdminBlogManagement");
+
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,15 +50,14 @@ const BlogCard = memo(function BlogCard() {
         ...(debouncedSearchTerm && { search: debouncedSearchTerm }),
       });
 
-      // Add cache busting for fresh data but allow caching for pagination
       const cacheKey = debouncedSearchTerm ? "no-store" : "default";
       const response = await fetch(`/api/blog?${params}`, {
         cache: cacheKey as RequestCache,
-        next: { revalidate: debouncedSearchTerm ? 0 : 60 }, // Cache for 60 seconds when not searching
+        next: { revalidate: debouncedSearchTerm ? 0 : 60 },
       });
 
       if (!response.ok) {
-        throw new Error("Failed to fetch blogs");
+        throw new Error(t("errors.fetchFailed"));
       }
 
       const data = await response.json();
@@ -67,19 +69,18 @@ const BlogCard = memo(function BlogCard() {
       }
     } catch (error) {
       console.error("Error fetching blogs:", error);
-      // Keep existing blogs on error to avoid empty state
     } finally {
       setLoading(false);
     }
   };
 
-  // Optimized useEffect with proper dependencies
   useEffect(() => {
     fetchBlogs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, debouncedSearchTerm]);
 
   const handleDelete = async (id: number) => {
-    if (!confirm("Are you sure you want to delete this blog?")) return;
+    if (!confirm(t("confirm.delete"))) return;
 
     try {
       const response = await fetch(`/api/blog/${id}`, {
@@ -89,11 +90,11 @@ const BlogCard = memo(function BlogCard() {
       if (response.ok) {
         fetchBlogs();
       } else {
-        alert("Error deleting blog");
+        alert(t("errors.deleteFailed"));
       }
     } catch (error) {
       console.error("Error deleting blog:", error);
-      alert("Error deleting blog");
+      alert(t("errors.deleteFailed"));
     }
   };
 
@@ -110,7 +111,6 @@ const BlogCard = memo(function BlogCard() {
             <div className="h-12 w-full rounded-full bg-muted sm:w-40"></div>
           </div>
 
-          {/* Search Bar Skeleton */}
           <div className="mt-6">
             <div className="relative max-w-full md:max-w-md">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-muted rounded"></div>
@@ -126,20 +126,15 @@ const BlogCard = memo(function BlogCard() {
               key={i}
               className="bg-card border border-border rounded-2xl shadow-lg overflow-hidden"
             >
-              {/* Image Skeleton */}
               <div className="relative h-44 overflow-hidden sm:h-48">
                 <div className="w-full h-full bg-gradient-to-br from-muted to-muted/50 animate-pulse"></div>
               </div>
-
-              {/* Content Skeleton */}
               <div className="p-4 sm:p-5">
                 <div className="h-6 bg-muted rounded w-3/4 mb-2 animate-pulse"></div>
                 <div className="space-y-2 mb-4">
                   <div className="h-4 bg-muted rounded w-full animate-pulse"></div>
                   <div className="h-4 bg-muted rounded w-5/6 animate-pulse"></div>
                 </div>
-
-                {/* Meta Information Skeleton */}
                 <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-center space-x-1">
                     <div className="w-4 h-4 bg-muted rounded animate-pulse"></div>
@@ -150,8 +145,6 @@ const BlogCard = memo(function BlogCard() {
                     <div className="h-4 bg-muted rounded w-20 animate-pulse"></div>
                   </div>
                 </div>
-
-                {/* Actions Skeleton */}
                 <div className="flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
                   <div className="h-4 w-full rounded bg-muted animate-pulse sm:w-12"></div>
                   <div className="h-4 w-full rounded bg-muted animate-pulse sm:w-16"></div>
@@ -187,10 +180,10 @@ const BlogCard = memo(function BlogCard() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div className="min-w-0">
             <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Blog Management
+              {t("header.title")}
             </h1>
             <p className="text-muted-foreground text-sm">
-              Create and manage your blog posts
+              {t("header.subtitle")}
             </p>
           </div>
           <button
@@ -210,7 +203,7 @@ const BlogCard = memo(function BlogCard() {
                 d="M12 4v16m8-8H4"
               />
             </svg>
-            <span>New Blog Post</span>
+            <span>{t("actions.newPost")}</span>
           </button>
         </div>
 
@@ -232,7 +225,7 @@ const BlogCard = memo(function BlogCard() {
             </svg>
             <input
               type="text"
-              placeholder="Search blogs..."
+              placeholder={t("searchPlaceholder")}
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
@@ -250,9 +243,13 @@ const BlogCard = memo(function BlogCard() {
           {/* Results Summary */}
           <div className="bg-card backdrop-blur-sm border border-border rounded-2xl shadow-lg p-4">
             <p className="text-sm text-muted-foreground">
-              Showing {(page - 1) * 12 + 1} to {Math.min(page * 12, totalCount)}{" "}
-              of {totalCount} blogs
-              {debouncedSearchTerm && ` for "${debouncedSearchTerm}"`}
+              {t("resultsSummary", {
+                start: (page - 1) * 12 + 1,
+                end: Math.min(page * 12, totalCount),
+                total: totalCount,
+              })}
+              {debouncedSearchTerm &&
+                ` ${t("resultsFor", { term: debouncedSearchTerm })}`}
             </p>
           </div>
 
@@ -262,11 +259,10 @@ const BlogCard = memo(function BlogCard() {
                 key={blog.id}
                 className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-lg transition-all duration-300 hover:shadow-xl sm:hover:scale-[1.02]"
               >
-                {/* Clickable overlay that doesn't interfere with buttons */}
                 <Link
                   href={`/admin/management/blogs/edit/${blog.id}`}
                   className="absolute inset-0 z-0"
-                  aria-label={`Edit ${blog.title}`}
+                  aria-label={t("card.editAria", { title: blog.title })}
                 />
 
                 {/* Image */}
@@ -344,7 +340,7 @@ const BlogCard = memo(function BlogCard() {
                     </span>
                   </div>
 
-                  {/* Actions - Wrapped in a div with higher z-index to stay above the clickable overlay */}
+                  {/* Actions */}
                   <div className="relative z-10 flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
                     <Link
                       href={`/admin/management/blogs/edit/${blog.id}`}
@@ -364,7 +360,7 @@ const BlogCard = memo(function BlogCard() {
                           d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
                         />
                       </svg>
-                      <span>Edit</span>
+                      <span>{t("actions.edit")}</span>
                     </Link>
                     <button
                       onClick={(e) => {
@@ -387,7 +383,7 @@ const BlogCard = memo(function BlogCard() {
                           d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                         />
                       </svg>
-                      <span>Delete</span>
+                      <span>{t("actions.delete")}</span>
                     </button>
                   </div>
                 </div>
@@ -413,16 +409,14 @@ const BlogCard = memo(function BlogCard() {
             </svg>
           </div>
           <h3 className="text-xl font-semibold text-foreground mb-2">
-            No blogs found
+            {t("empty.title")}
           </h3>
-          <p className="text-muted-foreground mb-6">
-            Get started by creating your first blog post
-          </p>
+          <p className="text-muted-foreground mb-6">{t("empty.description")}</p>
           <button
             onClick={() => setIsModalOpen(true)}
             className="w-full rounded-full border border-secondary bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:border-secondary/80 hover:bg-secondary/80 hover:shadow-lg sm:w-auto"
           >
-            Create Blog Post
+            {t("empty.createPost")}
           </button>
         </div>
       )}
@@ -449,12 +443,10 @@ const BlogCard = memo(function BlogCard() {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              <span>Previous</span>
+              <span>{t("pagination.previous")}</span>
             </button>
 
-            {/* Smart pagination - show limited page numbers */}
             <div className="flex flex-wrap items-center justify-center gap-2">
-              {/* First page */}
               {page > 3 && (
                 <>
                   <button
@@ -469,7 +461,6 @@ const BlogCard = memo(function BlogCard() {
                 </>
               )}
 
-              {/* Page range around current page */}
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                 let pageNum;
                 if (totalPages <= 5) {
@@ -497,7 +488,6 @@ const BlogCard = memo(function BlogCard() {
                 ) : null;
               })}
 
-              {/* Last page */}
               {page < totalPages - 2 && (
                 <>
                   {page < totalPages - 3 && (
@@ -518,7 +508,7 @@ const BlogCard = memo(function BlogCard() {
               disabled={page === totalPages}
               className="flex w-full items-center justify-center space-x-2 rounded-xl border border-border px-4 py-2 text-foreground transition-all duration-300 hover:bg-muted disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
             >
-              <span>Next</span>
+              <span>{t("pagination.next")}</span>
               <svg
                 className="w-4 h-4"
                 fill="none"
