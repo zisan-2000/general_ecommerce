@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Plus, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -98,10 +99,10 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
   return payload as T;
 }
 
-function formatDateTime(value: string | null) {
-  if (!value) return "N/A";
+function formatDateTime(value: string | null, fallback: string) {
+  if (!value) return fallback;
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
+  if (Number.isNaN(date.getTime())) return fallback;
   return date.toLocaleString();
 }
 
@@ -110,6 +111,7 @@ function formatMoney(value: string | number | null | undefined) {
 }
 
 export default function MaterialReleasesPage() {
+  const t = useTranslations("AdminMaterialReleases");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -140,11 +142,11 @@ export default function MaterialReleasesPage() {
     setLoading(true);
     try {
       const releaseData = await fetch("/api/scm/material-releases", { cache: "no-store" }).then((res) =>
-        readJson<MaterialRelease[]>(res, "Failed to load material releases"),
+        readJson<MaterialRelease[]>(res, t("errors.load")),
       );
       setMaterialReleases(Array.isArray(releaseData) ? releaseData : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load material release data");
+      toast.error(error?.message || t("errors.load"));
       setMaterialReleases([]);
     } finally {
       setLoading(false);
@@ -155,6 +157,7 @@ export default function MaterialReleasesPage() {
     if (canRead) {
       void loadData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead]);
 
   const visibleReleases = useMemo(() => {
@@ -189,10 +192,8 @@ export default function MaterialReleasesPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
-            <CardDescription>
-              You do not have permission to access material releases.
-            </CardDescription>
+            <CardTitle>{t("forbidden.title")}</CardTitle>
+            <CardDescription>{t("forbidden.description")}</CardDescription>
           </CardHeader>
         </Card>
       </div>
@@ -203,45 +204,57 @@ export default function MaterialReleasesPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Material Releases</h1>
-          <p className="text-sm text-muted-foreground">
-            Issue release notes from approved material requests and post warehouse stock-out.
-          </p>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("header.description")}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {canManage ? (
             <Button asChild>
               <Link href="/admin/scm/material-releases/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New Release
+                {t("actions.newRelease")}
               </Link>
             </Button>
           ) : null}
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Total" value={String(summary.total)} hint="Visible release notes" />
-        <ScmStatCard label="Issued" value={String(summary.issued)} hint="Completed warehouse stock-out" />
-        <ScmStatCard label="Cancelled" value={String(summary.cancelled)} hint="Release notes voided before use" />
-        <ScmStatCard label="Asset Tagged" value={String(summary.assetTagged)} hint="Releases that generated asset tags" />
+        <ScmStatCard
+          label={t("stats.total.label")}
+          value={String(summary.total)}
+          hint={t("stats.total.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.issued.label")}
+          value={String(summary.issued)}
+          hint={t("stats.issued.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.cancelled.label")}
+          value={String(summary.cancelled)}
+          hint={t("stats.cancelled.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.assetTagged.label")}
+          value={String(summary.assetTagged)}
+          hint={t("stats.assetTagged.hint")}
+        />
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Release Register</CardTitle>
-          <CardDescription>
-            Track issued release notes, line-level stock-out, and generated asset tags.
-          </CardDescription>
+          <CardTitle>{t("register.title")}</CardTitle>
+          <CardDescription>{t("register.description")}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-3 md:grid-cols-[2fr_1fr_auto]">
             <Input
-              placeholder="Search release/challan/waybill/request/warehouse..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -250,20 +263,20 @@ export default function MaterialReleasesPage() {
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
             >
-              <option value="ALL">All statuses</option>
-              <option value="ISSUED">ISSUED</option>
-              <option value="CANCELLED">CANCELLED</option>
+              <option value="ALL">{t("filters.allStatuses")}</option>
+              <option value="ISSUED">{t("statuses.ISSUED")}</option>
+              <option value="CANCELLED">{t("statuses.CANCELLED")}</option>
             </select>
             <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {t("actions.refresh")}
             </Button>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading material releases...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visibleReleases.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No material releases found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visibleReleases.map((release) => {
@@ -278,26 +291,41 @@ export default function MaterialReleasesPage() {
 
                 return (
                   <Card key={release.id}>
-                  <CardHeader className="gap-3">
+                    <CardHeader className="gap-3">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div>
                           <CardTitle className="text-lg">{release.releaseNumber}</CardTitle>
                           <CardDescription>
-                            Request {release.materialRequest.requestNumber} | {release.warehouse.name}
+                            {t("labels.requestShort")} {release.materialRequest.requestNumber} |{" "}
+                            {release.warehouse.name}
                           </CardDescription>
                         </div>
                         <div className="flex items-center gap-2">
                           <Button size="sm" variant="outline" asChild>
-                            <Link href={`/admin/scm/material-releases/${release.id}`}>Open Detail</Link>
+                            <Link href={`/admin/scm/material-releases/${release.id}`}>
+                              {t("actions.openDetail")}
+                            </Link>
                           </Button>
                           <ScmStatusChip status={release.status} />
                         </div>
                       </div>
                       <div className="grid gap-2 text-sm text-muted-foreground md:grid-cols-2 xl:grid-cols-4">
-                        <div>Released At: {formatDateTime(release.releasedAt)}</div>
-                        <div>Challan: {release.challanNumber || "N/A"}</div>
-                        <div>Waybill: {release.waybillNumber || "N/A"}</div>
-                        <div>Released By: {release.releasedBy?.name || release.releasedBy?.email || "N/A"}</div>
+                        <div>
+                          {t("labels.releasedAt")}:{" "}
+                          {formatDateTime(release.releasedAt, t("labels.na"))}
+                        </div>
+                        <div>
+                          {t("labels.challan")}: {release.challanNumber || t("labels.na")}
+                        </div>
+                        <div>
+                          {t("labels.waybill")}: {release.waybillNumber || t("labels.na")}
+                        </div>
+                        <div>
+                          {t("labels.releasedBy")}:{" "}
+                          {release.releasedBy?.name ||
+                            release.releasedBy?.email ||
+                            t("labels.na")}
+                        </div>
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-4">
@@ -308,19 +336,23 @@ export default function MaterialReleasesPage() {
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead>Item</TableHead>
-                            <TableHead>Qty</TableHead>
-                            <TableHead>Unit Cost</TableHead>
-                            <TableHead>Line Cost</TableHead>
-                            <TableHead>Asset Tags</TableHead>
+                            <TableHead>{t("table.item")}</TableHead>
+                            <TableHead>{t("table.qty")}</TableHead>
+                            <TableHead>{t("table.unitCost")}</TableHead>
+                            <TableHead>{t("table.lineCost")}</TableHead>
+                            <TableHead>{t("table.assetTags")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
                           {release.items.map((item) => (
                             <TableRow key={item.id}>
                               <TableCell>
-                                <div className="font-medium">{item.productVariant.product.name}</div>
-                                <div className="text-xs text-muted-foreground">{item.productVariant.sku}</div>
+                                <div className="font-medium">
+                                  {item.productVariant.product.name}
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  {item.productVariant.sku}
+                                </div>
                               </TableCell>
                               <TableCell>{item.quantityReleased}</TableCell>
                               <TableCell>{formatMoney(item.unitCost)}</TableCell>
@@ -335,12 +367,14 @@ export default function MaterialReleasesPage() {
                                     ))}
                                     {item.assetRegisters.length > 4 ? (
                                       <div className="text-muted-foreground">
-                                        +{item.assetRegisters.length - 4} more
+                                        {t("table.more", { count: item.assetRegisters.length - 4 })}
                                       </div>
                                     ) : null}
                                   </div>
                                 ) : (
-                                  <span className="text-xs text-muted-foreground">N/A</span>
+                                  <span className="text-xs text-muted-foreground">
+                                    {t("labels.na")}
+                                  </span>
                                 )}
                               </TableCell>
                             </TableRow>
@@ -349,8 +383,12 @@ export default function MaterialReleasesPage() {
                       </Table>
 
                       <div className="grid gap-2 text-sm md:grid-cols-2 xl:grid-cols-4">
-                        <div>Total Qty: {totalQty}</div>
-                        <div>Total Cost: {formatMoney(totalCost)}</div>
+                        <div>
+                          {t("labels.totalQty")}: {totalQty}
+                        </div>
+                        <div>
+                          {t("labels.totalCost")}: {formatMoney(totalCost)}
+                        </div>
                       </div>
                     </CardContent>
                   </Card>

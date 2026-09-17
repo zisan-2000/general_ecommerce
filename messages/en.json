@@ -4650,5 +4650,888 @@
       "updateConversation": "Failed to update conversation.",
       "sendReply": "Failed to send reply."
     }
+  },
+  "AdminPurchaseOrders": {
+    "header": {
+      "title": "Purchase Orders",
+      "description": "Browse the order queue here. Draft creation and approval decisions now happen in dedicated workspaces."
+    },
+    "actions": {
+      "newPo": "New Purchase Order",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Visible purchase orders" },
+      "draft": { "label": "Draft", "hint": "Commercial draft stage" },
+      "approval": { "label": "In Approval", "hint": "Submitted through committee stage" },
+      "approved": { "label": "Approved", "hint": "Ready for receiving" }
+    },
+    "register": {
+      "title": "PO Register",
+      "description": "Register-first view. Open detail to review line items, approve, reject, cancel, or inspect receipts and linked costs."
+    },
+    "filters": {
+      "searchPlaceholder": "Search PO number, supplier, warehouse...",
+      "allStatuses": "All statuses",
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "managerApproved": "Manager Approved",
+      "committeeApproved": "Committee Approved",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "loading": "Loading purchase orders...",
+    "empty": "No purchase orders found.",
+    "labels": {
+      "supplier": "Supplier",
+      "warehouse": "Warehouse",
+      "expected": "Expected",
+      "total": "Total"
+    },
+    "errors": {
+      "load": "Failed to load purchase orders"
+    }
+  },
+  "AdminSuppliers": {
+    "header": {
+      "title": "Suppliers",
+      "description": "Manage supplier master data, documents, and governance."
+    },
+    "actions": {
+      "addSupplier": "Add Supplier",
+      "refresh": "Refresh",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "search": "Search",
+      "filter": "Filter"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total suppliers" },
+      "active": { "label": "Active", "hint": "Active suppliers" },
+      "inactive": { "label": "Inactive", "hint": "Inactive suppliers" },
+      "complete": { "label": "Complete", "hint": "Complete documentation" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search by name, code, contact, email, phone...",
+      "allCategories": "All Categories",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "loading": "Loading suppliers...",
+    "empty": "No suppliers found.",
+    "form": {
+      "titleAdd": "Add Supplier",
+      "titleEdit": "Edit Supplier",
+      "code": "Supplier Code",
+      "name": "Supplier Name",
+      "companyType": "Company Type",
+      "contactName": "Contact Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
+      "leadTimeDays": "Lead Time (Days)",
+      "paymentTermsDays": "Payment Terms (Days)",
+      "currency": "Currency",
+      "taxNumber": "Tax Number",
+      "notes": "Notes",
+      "isActive": "Active",
+      "categories": "Categories",
+      "documents": "Documents",
+      "addCategory": "Add Category",
+      "categoryName": "Category Name",
+      "categoryCode": "Category Code",
+      "categoryDescription": "Description",
+      "createCategory": "Create Category"
+    },
+    "documents": {
+      "title": "Required Documents",
+      "upload": "Upload PDF or image. Max 10 MB.",
+      "required": "Required",
+      "uploaded": "Uploaded",
+      "replaceOnSave": "Replace on Save",
+      "readyToUpload": "Ready to Upload",
+      "removed": "Removed",
+      "currentDocument": "Current document uploaded",
+      "viewFile": "View current file",
+      "uploadReplace": "Upload / Replace",
+      "clearDocument": "Clear document",
+      "willBeUploaded": "Will be uploaded when you save",
+      "removedFromDraft": "Document removed from draft",
+      "uploadReplacement": "Upload replacement before saving"
+    },
+    "table": {
+      "code": "Code",
+      "name": "Name",
+      "type": "Type",
+      "contact": "Contact",
+      "status": "Status",
+      "documents": "Documents",
+      "actions": "Actions"
+    },
+    "pagination": {
+      "showing": "Showing {start}-{end} of {total} suppliers",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "errors": {
+      "load": "Failed to load suppliers",
+      "save": "Failed to save supplier",
+      "delete": "Failed to delete supplier",
+      "loadCategories": "Failed to load categories",
+      "createCategory": "Failed to create category",
+      "categoryNameRequired": "Category name is required",
+      "fileSize": "Each supplier document must be 10 MB or smaller"
+    },
+    "toasts": {
+      "saved": "Supplier saved successfully",
+      "categoryCreated": "Category created successfully"
+    }
+  },
+  "AdminScmDashboard": {
+    "header": {
+      "title": "SCM Dashboard & Reporting",
+      "description": "Procurement pipeline, vendor performance, warehouse stock, payments, audit, project, and budget reporting."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "exportPdf": "Export PDF"
+    },
+    "filters": {
+      "title": "Filters & Exports",
+      "description": "Date range filters apply to all dashboard widgets. Excel export is provided as CSV for direct spreadsheet import.",
+      "from": "From",
+      "to": "To",
+      "exportSection": "Export Section",
+      "exportCsv": "Export Excel CSV",
+      "exporting": "Exporting..."
+    },
+    "exportSections": {
+      "pipeline": "Procurement Pipeline",
+      "vendors": "Vendor Performance",
+      "rfqs": "RFQ Status",
+      "comparative": "CS Summary",
+      "purchaseOrders": "WO / PO Tracking",
+      "grnStock": "GRN & Stock",
+      "payments": "PRF & Payment",
+      "audit": "Audit Log",
+      "projects": "Project Procurement Summary",
+      "budgets": "Budget vs Procurement",
+      "plans": "Project Procurement Plan Tracking",
+      "mrf": "MRF Status Tracking"
+    },
+    "cards": {
+      "pendingApprovals": { "label": "Pending Approvals", "hint": "Open personal approval queue" },
+      "poValue": { "label": "PO Value", "hint": "Jump into approved order register" },
+      "invoicedValue": { "label": "Invoiced Value", "hint": "Review invoice control queue" },
+      "paidValue": { "label": "Paid Value", "hint": "Open vendor payment report" },
+      "lowStockVariants": { "label": "Low Stock Variants", "hint": "Open replenishment signals" },
+      "auditEvents": { "label": "Audit Events", "hint": "Open SCM audit activity" }
+    },
+    "tabs": {
+      "overview": "Overview",
+      "pipeline": "Pipeline",
+      "sourcing": "RFQ / CS / PO",
+      "warehouse": "GRN / Stock",
+      "finance": "PRF / Budget / Project",
+      "audit": "Audit"
+    },
+    "overview": {
+      "vendorPerformance": {
+        "title": "Vendor Performance",
+        "description": "Evaluation-driven supplier summary for the selected period."
+      },
+      "procurementPipeline": {
+        "title": "Procurement Pipeline",
+        "description": "Status breakdown across procurement workflow stages."
+      },
+      "stockHealth": {
+        "title": "Stock Health",
+        "description": "Low stock alerts and warehouse distribution."
+      },
+      "paymentHealth": {
+        "title": "Payment Health",
+        "description": "Payment requests, approvals, and treasury status."
+      }
+    },
+    "pipeline": {
+      "requisitions": "Purchase Requisitions",
+      "rfqs": "RFQs",
+      "comparativeStatements": "Comparative Statements",
+      "purchaseOrders": "Purchase Orders",
+      "goodsReceipts": "Goods Receipts",
+      "supplierInvoices": "Supplier Invoices",
+      "paymentRequests": "Payment Requests"
+    },
+    "loading": "Loading SCM dashboard...",
+    "errors": {
+      "load": "Failed to load SCM dashboard",
+      "export": "Failed to export report"
+    },
+    "empty": {
+      "noData": "No status data in selected range.",
+      "noPermission": "You do not have permission to access SCM reporting."
+    }
+  },
+  "AdminPurchaseRequisitions": {
+    "header": {
+      "title": "Purchase Requisitions",
+      "description": "Create and manage purchase requisitions for procurement."
+    },
+    "actions": {
+      "newRequisition": "New Requisition",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total requisitions" },
+      "draft": { "label": "Draft", "hint": "Draft requisitions" },
+      "submitted": { "label": "Submitted", "hint": "Submitted for approval" },
+      "approved": { "label": "Approved", "hint": "Approved requisitions" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search requisition number, requester, warehouse...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading purchase requisitions...",
+    "empty": "No purchase requisitions found."
+  },
+  "AdminRfqs": {
+    "header": {
+      "title": "Request for Quotations (RFQ)",
+      "description": "Manage RFQs and supplier quotations."
+    },
+    "actions": {
+      "newRfq": "New RFQ",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total RFQs" },
+      "open": { "label": "Open", "hint": "Open for quotations" },
+      "closed": { "label": "Closed", "hint": "Closed RFQs" },
+      "awarded": { "label": "Awarded", "hint": "Awarded to suppliers" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search RFQ number, warehouse...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading RFQs...",
+    "empty": "No RFQs found."
+  },
+  "AdminComparativeStatements": {
+    "header": {
+      "title": "Comparative Statements",
+      "description": "Compare supplier quotations and make procurement decisions."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total statements" },
+      "pending": { "label": "Pending", "hint": "Pending review" },
+      "approved": { "label": "Approved", "hint": "Approved statements" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search CS number, RFQ...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading comparative statements...",
+    "empty": "No comparative statements found."
+  },
+ "AdminMaterialRequests": {
+  "header": {
+    "title": "Material Requests",
+    "description": "Manage warehouse material requisitions from requester draft to multi-stage approval."
+  },
+  "actions": {
+    "newRequest": "New Material Request",
+    "refresh": "Refresh",
+    "clearFocus": "Clear Focus",
+    "openDetail": "Open Detail",
+    "submit": "Submit",
+    "endorseSupervisor": "Endorse (Supervisor)",
+    "endorseProjectManager": "Endorse (Project Manager)",
+    "approveAdmin": "Final Approve (Admin)",
+    "reject": "Reject",
+    "cancel": "Cancel",
+    "submitShort": "submit",
+    "endorse_supervisorShort": "endorse supervisor",
+    "endorse_project_managerShort": "endorse project manager",
+    "approve_adminShort": "approve admin",
+    "rejectShort": "reject",
+    "cancelShort": "cancel"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Visible material requests" },
+    "supervisorQueue": { "label": "Supervisor Queue", "hint": "Waiting for supervisor endorsement" },
+    "projectQueue": { "label": "Project Queue", "hint": "Waiting for project manager review" },
+    "adminQueue": { "label": "Admin Queue", "hint": "Waiting for admin approval" },
+    "releaseReady": { "label": "Release Ready", "hint": "Approved and ready for issue or release" }
+  },
+  "focus": {
+    "bannerTitle": "Focused queue active",
+    "supervisor": "Showing requests waiting for supervisor endorsement.",
+    "project": "Showing requests waiting for project manager endorsement.",
+    "admin": "Showing requests waiting for administration approval.",
+    "readyForRelease": "Showing approved requests that are ready to release.",
+    "myActive": "Showing your active requests still moving through workflow.",
+    "default": "Showing a filtered material request queue."
+  },
+  "filters": {
+    "searchPlaceholder": "Search by request number, title, purpose, or warehouse...",
+    "visibleCount": "{count} visible request(s)",
+    "queues": {
+      "all": "All queues",
+      "supervisor": "Supervisor queue",
+      "project": "Project queue",
+      "admin": "Admin queue",
+      "readyForRelease": "Ready for release",
+      "myActive": "My active requests"
+    },
+    "statuses": {
+      "all": "All statuses"
+    }
+  },
+  "statuses": {
+    "DRAFT": "DRAFT",
+    "SUBMITTED": "SUBMITTED",
+    "SUPERVISOR_ENDORSED": "SUPERVISOR_ENDORSED",
+    "PROJECT_MANAGER_ENDORSED": "PROJECT_MANAGER_ENDORSED",
+    "ADMIN_APPROVED": "ADMIN_APPROVED",
+    "PARTIALLY_RELEASED": "PARTIALLY_RELEASED",
+    "RELEASED": "RELEASED",
+    "REJECTED": "REJECTED",
+    "CANCELLED": "CANCELLED"
+  },
+  "register": {
+    "title": "Material Request Register",
+    "description": "Track request status, approval events, and release readiness."
+  },
+  "labels": {
+    "requested": "Requested",
+    "requiredBy": "Required By",
+    "submitted": "Submitted",
+    "adminApproved": "Admin Approved",
+    "purpose": "Purpose",
+    "budget": "Budget",
+    "boq": "BOQ",
+    "createdBy": "Created By",
+    "specification": "Specification",
+    "attachments": "Attachments",
+    "workflowNote": "Workflow Note (optional)",
+    "workflowNotePlaceholder": "Add note for submit/endorse/approve/reject/cancel",
+    "na": "N/A"
+  },
+  "table": {
+    "item": "Item",
+    "requested": "Requested",
+    "released": "Released",
+    "remaining": "Remaining",
+    "class": "Class",
+    "tag": "TAG"
+  },
+  "loading": "Loading material requests...",
+  "empty": "No material requests found.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access material requests."
+  },
+  "errors": {
+    "load": "Failed to load material requests",
+    "action": "Failed to {action} material request"
+  },
+  "toasts": {
+    "actionCompleted": "Material request {action} completed"
+  }
+},
+ "AdminMaterialReleases": {
+  "header": {
+    "title": "Material Releases",
+    "description": "Issue release notes from approved material requests and post warehouse stock-out."
+  },
+  "actions": {
+    "newRelease": "New Release",
+    "refresh": "Refresh",
+    "openDetail": "Open Detail",
+    "print": "Print"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Visible release notes" },
+    "issued": { "label": "Issued", "hint": "Completed warehouse stock-out" },
+    "cancelled": { "label": "Cancelled", "hint": "Release notes voided before use" },
+    "assetTagged": { "label": "Asset Tagged", "hint": "Releases that generated asset tags" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search release/challan/waybill/request/warehouse...",
+    "allStatuses": "All statuses"
+  },
+  "statuses": {
+    "ISSUED": "ISSUED",
+    "CANCELLED": "CANCELLED"
+  },
+  "register": {
+    "title": "Release Register",
+    "description": "Track issued release notes, line-level stock-out, and generated asset tags."
+  },
+  "labels": {
+    "requestShort": "Request",
+    "releasedAt": "Released At",
+    "challan": "Challan",
+    "waybill": "Waybill",
+    "releasedBy": "Released By",
+    "totalQty": "Total Qty",
+    "totalCost": "Total Cost",
+    "na": "N/A"
+  },
+  "table": {
+    "item": "Item",
+    "qty": "Qty",
+    "unitCost": "Unit Cost",
+    "lineCost": "Line Cost",
+    "assetTags": "Asset Tags",
+    "more": "+{count} more"
+  },
+  "loading": "Loading material releases...",
+  "empty": "No material releases found.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access material releases."
+  },
+  "errors": {
+    "load": "Failed to load material releases"
+  }
+},
+  "AdminWarehouseTransfers": {
+    "header": {
+      "title": "Warehouse Transfers",
+      "description": "Transfer stock between warehouse locations."
+    },
+    "actions": {
+      "newTransfer": "New Transfer",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total transfers" },
+      "pending": { "label": "Pending", "hint": "Pending transfers" },
+      "completed": { "label": "Completed", "hint": "Completed transfers" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search transfer number, warehouses...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading warehouse transfers...",
+    "empty": "No warehouse transfers found."
+  },
+  "AdminPaymentRequests": {
+    "header": {
+      "title": "Payment Requests",
+      "description": "Manage payment requests to suppliers."
+    },
+    "actions": {
+      "newRequest": "New Payment Request",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total requests" },
+      "pending": { "label": "Pending", "hint": "Pending approval" },
+      "approved": { "label": "Approved", "hint": "Approved requests" },
+      "paid": { "label": "Paid", "hint": "Paid requests" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search PRF number, supplier...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading payment requests...",
+    "empty": "No payment requests found."
+  },
+  "AdminSupplierReturns": {
+    "header": {
+      "title": "Supplier Returns",
+      "description": "Manage returns to suppliers for defective or excess goods."
+    },
+    "actions": {
+      "newReturn": "New Return",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total returns" },
+      "pending": { "label": "Pending", "hint": "Pending returns" },
+      "completed": { "label": "Completed", "hint": "Completed returns" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search return number, supplier...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading supplier returns...",
+    "empty": "No supplier returns found."
+  },
+  "AdminPhysicalVerifications": {
+    "header": {
+      "title": "Physical Verifications",
+      "description": "Verify physical stock counts against system records."
+    },
+    "actions": {
+      "newVerification": "New Verification",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total verifications" },
+      "pending": { "label": "Pending", "hint": "Pending verifications" },
+      "completed": { "label": "Completed", "hint": "Completed verifications" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search verification number, warehouse...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading physical verifications...",
+    "empty": "No physical verifications found."
+  },
+  "AdminAssets": {
+    "header": {
+      "title": "Asset Management",
+      "description": "Manage fixed assets and their lifecycle."
+    },
+    "actions": {
+      "newAsset": "New Asset",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total assets" },
+      "active": { "label": "Active", "hint": "Active assets" },
+      "depreciated": { "label": "Depreciated", "hint": "Depreciated assets" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search asset number, name...",
+      "allCategories": "All categories"
+    },
+    "loading": "Loading assets...",
+    "empty": "No assets found."
+  },
+  "AdminLandedCosts": {
+    "header": {
+      "title": "Landed Costs",
+      "description": "Calculate and manage landed costs for imported goods."
+    },
+    "actions": {
+      "newCost": "New Landed Cost",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total cost entries" },
+      "pending": { "label": "Pending", "hint": "Pending allocation" },
+      "allocated": { "label": "Allocated", "hint": "Allocated costs" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search PO number, shipment...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading landed costs...",
+    "empty": "No landed costs found."
+  },
+  "AdminReplenishment": {
+    "header": {
+      "title": "Replenishment",
+      "description": "Monitor and manage stock replenishment signals."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "createOrder": "Create Order"
+    },
+    "stats": {
+      "lowStock": { "label": "Low Stock", "hint": "Items below reorder point" },
+      "reorderAlerts": { "label": "Reorder Alerts", "hint": "Active reorder alerts" },
+      "suggestions": { "label": "Suggestions", "hint": "System-generated suggestions" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search SKU, product name...",
+      "allCategories": "All categories",
+      "allWarehouses": "All warehouses"
+    },
+    "loading": "Loading replenishment data...",
+    "empty": "No replenishment signals found."
+  },
+  "AdminReorderAlerts": {
+    "header": {
+      "title": "Reorder Alerts",
+      "description": "Configure and monitor reorder points and alerts."
+    },
+    "actions": {
+      "newAlert": "New Alert",
+      "refresh": "Refresh",
+      "edit": "Edit"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total alerts" },
+      "active": { "label": "Active", "hint": "Active alerts" },
+      "triggered": { "label": "Triggered", "hint": "Triggered alerts" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search SKU, product...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading reorder alerts...",
+    "empty": "No reorder alerts found."
+  },
+  "AdminStockReports": {
+    "header": {
+      "title": "Stock Reports",
+      "description": "View comprehensive stock reports and analytics."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "export": "Export"
+    },
+    "tabs": {
+      "summary": "Summary",
+      "movement": "Movement",
+      "valuation": "Valuation",
+      "aging": "Aging"
+    },
+    "filters": {
+      "warehouse": "Warehouse",
+      "category": "Category",
+      "dateRange": "Date Range"
+    },
+    "loading": "Loading stock reports...",
+    "empty": "No stock data available."
+  },
+  "AdminStockCards": {
+    "header": {
+      "title": "Stock Cards",
+      "description": "View individual stock cards for each variant."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "print": "Print"
+    },
+    "filters": {
+      "searchPlaceholder": "Search SKU, product...",
+      "warehouse": "Warehouse"
+    },
+    "loading": "Loading stock cards...",
+    "empty": "No stock cards found."
+  },
+  "AdminWarehouseLocations": {
+    "header": {
+      "title": "Warehouse Locations",
+      "description": "Manage warehouse locations and bin setup."
+    },
+    "actions": {
+      "newLocation": "New Location",
+      "refresh": "Refresh",
+      "edit": "Edit"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total locations" },
+      "active": { "label": "Active", "hint": "Active locations" }
+    },
+    "filters": {
+      "warehouse": "Warehouse",
+      "zone": "Zone"
+    },
+    "loading": "Loading warehouse locations...",
+    "empty": "No warehouse locations found."
+  },
+  "AdminSupplierInvoices": {
+    "header": {
+      "title": "Supplier Invoices",
+      "description": "Manage supplier invoices and matching."
+    },
+    "actions": {
+      "newInvoice": "New Invoice",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total invoices" },
+      "pending": { "label": "Pending", "hint": "Pending matching" },
+      "matched": { "label": "Matched", "hint": "Matched invoices" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search invoice number, supplier...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading supplier invoices...",
+    "empty": "No supplier invoices found."
+  },
+  "AdminSupplierLedger": {
+    "header": {
+      "title": "Supplier Ledger",
+      "description": "View supplier account balances and transaction history."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "export": "Export"
+    },
+    "filters": {
+      "supplier": "Supplier",
+      "dateRange": "Date Range"
+    },
+    "loading": "Loading supplier ledger...",
+    "empty": "No ledger data found."
+  },
+  "AdminThreeWayMatch": {
+    "header": {
+      "title": "3-Way Match",
+      "description": "Match purchase orders, goods receipts, and supplier invoices."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total matches" },
+      "matched": { "label": "Matched", "hint": "Successfully matched" },
+      "variance": { "label": "Variance", "hint": "With variance" },
+      "pending": { "label": "Pending", "hint": "Pending matching" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search PO, GRN, invoice...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading 3-way match data...",
+    "empty": "No 3-way match data found."
+  },
+  "AdminPaymentReports": {
+    "header": {
+      "title": "Payment Reports",
+      "description": "View payment history and analytics."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "export": "Export"
+    },
+    "tabs": {
+      "summary": "Summary",
+      "details": "Details",
+      "aging": "Aging"
+    },
+    "filters": {
+      "supplier": "Supplier",
+      "dateRange": "Date Range",
+      "status": "Status"
+    },
+    "loading": "Loading payment reports...",
+    "empty": "No payment data found."
+  },
+  "AdminSla": {
+    "header": {
+      "title": "SLA Policies",
+      "description": "Configure service level agreements for suppliers."
+    },
+    "actions": {
+      "newSla": "New SLA",
+      "refresh": "Refresh",
+      "edit": "Edit"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total SLAs" },
+      "active": { "label": "Active", "hint": "Active SLAs" }
+    },
+    "filters": {
+      "supplier": "Supplier",
+      "category": "Category"
+    },
+    "loading": "Loading SLA policies...",
+    "empty": "No SLA policies found."
+  },
+  "AdminVendorApprovals": {
+    "header": {
+      "title": "Vendor Approvals",
+      "description": "Manage vendor approval workflow and status."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "stats": {
+      "pending": { "label": "Pending", "hint": "Pending approvals" },
+      "approved": { "label": "Approved", "hint": "Approved vendors" },
+      "rejected": { "label": "Rejected", "hint": "Rejected vendors" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search vendor name, code...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading vendor approvals...",
+    "empty": "No vendor approvals found."
+  },
+  "AdminVendorFeedback": {
+    "header": {
+      "title": "Vendor Feedback",
+      "description": "Collect and manage vendor performance feedback."
+    },
+    "actions": {
+      "newFeedback": "New Feedback",
+      "refresh": "Refresh",
+      "view": "View"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total feedback" },
+      "positive": { "label": "Positive", "hint": "Positive feedback" },
+      "negative": { "label": "Negative", "hint": "Negative feedback" }
+    },
+    "filters": {
+      "supplier": "Supplier",
+      "rating": "Rating"
+    },
+    "loading": "Loading vendor feedback...",
+    "empty": "No vendor feedback found."
+  },
+  "AdminSupplierIntelligence": {
+    "header": {
+      "title": "Supplier Intelligence",
+      "description": "Analyze supplier performance and market intelligence."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "export": "Export"
+    },
+    "tabs": {
+      "performance": "Performance",
+      "risk": "Risk Analysis",
+      "market": "Market Data"
+    },
+    "filters": {
+      "supplier": "Supplier",
+      "timeRange": "Time Range"
+    },
+    "loading": "Loading supplier intelligence...",
+    "empty": "No intelligence data found."
+  },
+  "AdminSupplierPortalAccess": {
+    "header": {
+      "title": "Supplier Portal Access",
+      "description": "Manage supplier portal access and permissions."
+    },
+    "actions": {
+      "invite": "Invite Supplier",
+      "refresh": "Refresh",
+      "revoke": "Revoke Access"
+    },
+    "stats": {
+      "total": { "label": "Total", "hint": "Total suppliers" },
+      "active": { "label": "Active", "hint": "Active portal users" },
+      "pending": { "label": "Pending", "hint": "Pending invitations" }
+    },
+    "filters": {
+      "searchPlaceholder": "Search supplier name, email...",
+      "allStatuses": "All statuses"
+    },
+    "loading": "Loading supplier portal access...",
+    "empty": "No supplier portal users found."
   }
 }

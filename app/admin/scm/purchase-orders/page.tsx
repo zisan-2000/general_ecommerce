@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { Plus, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -39,6 +40,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 export default function PurchaseOrdersPage() {
   const searchParams = useSearchParams();
   const { data: session } = useSession();
+  const t = useTranslations("AdminPurchaseOrders");
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
     : [];
@@ -61,10 +63,10 @@ export default function PurchaseOrdersPage() {
       if (statusFilter !== "ALL") params.set("status", statusFilter);
       if (search.trim()) params.set("search", search.trim());
       const response = await fetch(`/api/scm/purchase-orders?${params.toString()}`, { cache: "no-store" });
-      const data = await readJson<PurchaseOrder[]>(response, "Failed to load purchase orders");
+      const data = await readJson<PurchaseOrder[]>(response, t("errors.load"));
       setPurchaseOrders(Array.isArray(data) ? data : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load purchase orders");
+      toast.error(error?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -95,9 +97,9 @@ export default function PurchaseOrdersPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Purchase Orders</h1>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Browse the order queue here. Draft creation and approval decisions now happen in dedicated workspaces.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex gap-2">
@@ -105,51 +107,51 @@ export default function PurchaseOrdersPage() {
             <Button asChild>
               <Link href="/admin/scm/purchase-orders/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New Purchase Order
+                {t("actions.newPo")}
               </Link>
             </Button>
           ) : null}
           <Button variant="outline" onClick={() => void loadPurchaseOrders()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Total" value={String(summary.total)} hint="Visible purchase orders" />
-        <ScmStatCard label="Draft" value={String(summary.draft)} hint="Commercial draft stage" />
-        <ScmStatCard label="In Approval" value={String(summary.approval)} hint="Submitted through committee stage" />
-        <ScmStatCard label="Approved" value={String(summary.approved)} hint="Ready for receiving" />
+        <ScmStatCard label={t("stats.total.label")} value={String(summary.total)} hint={t("stats.total.hint")} />
+        <ScmStatCard label={t("stats.draft.label")} value={String(summary.draft)} hint={t("stats.draft.hint")} />
+        <ScmStatCard label={t("stats.approval.label")} value={String(summary.approval)} hint={t("stats.approval.hint")} />
+        <ScmStatCard label={t("stats.approved.label")} value={String(summary.approved)} hint={t("stats.approved.hint")} />
       </div>
 
       <Card>
         <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <CardTitle>PO Register</CardTitle>
+            <CardTitle>{t("register.title")}</CardTitle>
             <p className="text-sm text-muted-foreground">
-              Register-first view. Open detail to review line items, approve, reject, cancel, or inspect receipts and linked costs.
+              {t("register.description")}
             </p>
           </div>
           <div className="flex w-full flex-col gap-2 md:w-auto md:flex-row">
-            <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search PO number, supplier, warehouse..." className="w-full md:w-80" />
+            <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={t("filters.searchPlaceholder")} className="w-full md:w-80" />
             <select className="w-full rounded-md border bg-background px-3 py-2 md:w-56" value={statusFilter} onChange={(event) => setStatusFilter(event.target.value)}>
-              <option value="ALL">All statuses</option>
-              <option value="DRAFT">Draft</option>
-              <option value="SUBMITTED">Submitted</option>
-              <option value="MANAGER_APPROVED">Manager Approved</option>
-              <option value="COMMITTEE_APPROVED">Committee Approved</option>
-              <option value="APPROVED">Approved</option>
-              <option value="REJECTED">Rejected</option>
-              <option value="CANCELLED">Cancelled</option>
+              <option value="ALL">{t("filters.allStatuses")}</option>
+              <option value="DRAFT">{t("filters.draft")}</option>
+              <option value="SUBMITTED">{t("filters.submitted")}</option>
+              <option value="MANAGER_APPROVED">{t("filters.managerApproved")}</option>
+              <option value="COMMITTEE_APPROVED">{t("filters.committeeApproved")}</option>
+              <option value="APPROVED">{t("filters.approved")}</option>
+              <option value="REJECTED">{t("filters.rejected")}</option>
+              <option value="CANCELLED">{t("filters.cancelled")}</option>
             </select>
           </div>
         </CardHeader>
         <CardContent>
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading purchase orders...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visibleOrders.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No purchase orders found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visibleOrders.map((purchaseOrder) => (
@@ -163,15 +165,15 @@ export default function PurchaseOrdersPage() {
                         <ScmStatusChip status={purchaseOrder.status} />
                       </div>
                       <div className="grid gap-2 text-sm text-muted-foreground md:grid-cols-2 xl:grid-cols-4">
-                        <div>Supplier: {purchaseOrder.supplier.name}</div>
-                        <div>Warehouse: {purchaseOrder.warehouse.name}</div>
-                        <div>Expected: {purchaseOrder.expectedAt ? new Date(purchaseOrder.expectedAt).toLocaleDateString() : "-"}</div>
-                        <div>Total: {Number(purchaseOrder.grandTotal).toFixed(2)} {purchaseOrder.currency}</div>
+                        <div>{t("labels.supplier")}: {purchaseOrder.supplier.name}</div>
+                        <div>{t("labels.warehouse")}: {purchaseOrder.warehouse.name}</div>
+                        <div>{t("labels.expected")}: {purchaseOrder.expectedAt ? new Date(purchaseOrder.expectedAt).toLocaleDateString() : "-"}</div>
+                        <div>{t("labels.total")}: {Number(purchaseOrder.grandTotal).toFixed(2)} {purchaseOrder.currency}</div>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       <Button asChild variant="secondary" size="sm">
-                        <Link href={`/admin/scm/purchase-orders/${purchaseOrder.id}`}>Open Detail</Link>
+                        <Link href={`/admin/scm/purchase-orders/${purchaseOrder.id}`}>{t("actions.openDetail")}</Link>
                       </Button>
                     </div>
                   </div>

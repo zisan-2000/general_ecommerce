@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Download, RefreshCw } from "lucide-react";
 import { PdfExportButton } from "@/components/admin/PdfExportButton";
@@ -228,19 +229,19 @@ type ExportSection =
   | "plans"
   | "mrf";
 
-const EXPORT_SECTIONS: Array<{ value: ExportSection; label: string }> = [
-  { value: "pipeline", label: "Procurement Pipeline" },
-  { value: "vendors", label: "Vendor Performance" },
-  { value: "rfqs", label: "RFQ Status" },
-  { value: "comparative", label: "CS Summary" },
-  { value: "purchase-orders", label: "WO / PO Tracking" },
-  { value: "grn-stock", label: "GRN & Stock" },
-  { value: "payments", label: "PRF & Payment" },
-  { value: "audit", label: "Audit Log" },
-  { value: "projects", label: "Project Procurement Summary" },
-  { value: "budgets", label: "Budget vs Procurement" },
-  { value: "plans", label: "Project Procurement Plan Tracking" },
-  { value: "mrf", label: "MRF Status Tracking" },
+const EXPORT_SECTIONS: Array<{ value: ExportSection; key: string }> = [
+  { value: "pipeline", key: "pipeline" },
+  { value: "vendors", key: "vendors" },
+  { value: "rfqs", key: "rfqs" },
+  { value: "comparative", key: "comparative" },
+  { value: "purchase-orders", key: "purchaseOrders" },
+  { value: "grn-stock", key: "grnStock" },
+  { value: "payments", key: "payments" },
+  { value: "audit", key: "audit" },
+  { value: "projects", key: "projects" },
+  { value: "budgets", key: "budgets" },
+  { value: "plans", key: "plans" },
+  { value: "mrf", key: "mrf" },
 ];
 
 const REPORT_READ_PERMISSIONS = [
@@ -367,6 +368,7 @@ function StatusSummary({
 export default function ScmDashboardPage() {
   const searchParams = useSearchParams();
   const { data: session } = useSession();
+  const t = useTranslations("AdminScmDashboard");
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
     : [];
@@ -401,11 +403,11 @@ export default function ScmDashboardPage() {
         | { error?: string }
         | null;
       if (!response.ok) {
-        throw new Error(payload && "error" in payload ? payload.error : "Failed to load SCM dashboard");
+        throw new Error(payload && "error" in payload ? payload.error : t("errors.load"));
       }
       setReport(payload as DashboardResponse);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to load SCM dashboard");
+      toast.error(error instanceof Error ? error.message : t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -433,7 +435,7 @@ export default function ScmDashboardPage() {
       });
       if (!response.ok) {
         const payload = await response.json().catch(() => null);
-        throw new Error(payload?.error || "Failed to export report");
+        throw new Error(payload?.error || t("errors.export"));
       }
 
       const blob = await response.blob();
@@ -446,7 +448,7 @@ export default function ScmDashboardPage() {
       anchor.click();
       URL.revokeObjectURL(url);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Failed to export report");
+      toast.error(error instanceof Error ? error.message : t("errors.export"));
     } finally {
       setExporting(false);
     }
@@ -456,50 +458,50 @@ export default function ScmDashboardPage() {
     if (!report) return [];
     return [
       {
-        label: "Pending Approvals",
+        label: t("cards.pendingApprovals.label"),
         value: report.overview.pendingApprovals,
         href: "/admin/scm/my-tasks",
-        hint: "Open personal approval queue",
+        hint: t("cards.pendingApprovals.hint"),
       },
       {
-        label: "PO Value",
+        label: t("cards.poValue.label"),
         value: formatMoney(report.overview.totalOrderedAmount),
         href: buildHref("/admin/scm/purchase-orders", { status: "APPROVED" }),
-        hint: "Jump into approved order register",
+        hint: t("cards.poValue.hint"),
       },
       {
-        label: "Invoiced Value",
+        label: t("cards.invoicedValue.label"),
         value: formatMoney(report.overview.totalInvoicedAmount),
         href: "/admin/scm/three-way-match",
-        hint: "Review invoice control queue",
+        hint: t("cards.invoicedValue.hint"),
       },
       {
-        label: "Paid Value",
+        label: t("cards.paidValue.label"),
         value: formatMoney(report.overview.totalSupplierPayments),
         href: "/admin/scm/payment-reports",
-        hint: "Open vendor payment report",
+        hint: t("cards.paidValue.hint"),
       },
       {
-        label: "Low Stock Variants",
+        label: t("cards.lowStockVariants.label"),
         value: report.overview.lowStockVariants,
         href: "/admin/scm/replenishment",
-        hint: "Open replenishment signals",
+        hint: t("cards.lowStockVariants.hint"),
       },
       {
-        label: "Audit Events",
+        label: t("cards.auditEvents.label"),
         value: report.overview.auditEvents,
         href: "/admin/settings/activitylog",
-        hint: "Open SCM audit activity",
+        hint: t("cards.auditEvents.hint"),
       },
     ];
-  }, [report]);
+  }, [report, t]);
 
   if (!canRead) {
     return (
       <div className="p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access SCM reporting.
+            {t("empty.noPermission")}
           </CardContent>
         </Card>
       </div>
@@ -510,42 +512,42 @@ export default function ScmDashboardPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">SCM Dashboard & Reporting</h1>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Procurement pipeline, vendor performance, warehouse stock, payments, audit, project, and budget reporting.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className={loading ? "mr-2 h-4 w-4 animate-spin" : "mr-2 h-4 w-4"} />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <PdfExportButton
             targetId="scm-dashboard-export"
             filename={`scm-dashboard-${from}-to-${to}.pdf`}
-            label="Export PDF"
+            label={t("actions.exportPdf")}
           />
         </div>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Filters & Exports</CardTitle>
+          <CardTitle>{t("filters.title")}</CardTitle>
           <CardDescription>
-            Date range filters apply to all dashboard widgets. Excel export is provided as CSV for direct spreadsheet import.
+            {t("filters.description")}
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-wrap items-end gap-4">
           <div className="space-y-2">
-            <Label>From</Label>
+            <Label>{t("filters.from")}</Label>
             <Input type="date" value={from} onChange={(event) => setFrom(event.target.value)} />
           </div>
           <div className="space-y-2">
-            <Label>To</Label>
+            <Label>{t("filters.to")}</Label>
             <Input type="date" value={to} onChange={(event) => setTo(event.target.value)} />
           </div>
           <div className="space-y-2">
-            <Label>Export Section</Label>
+            <Label>{t("filters.exportSection")}</Label>
             <select
               className="min-w-[260px] rounded-md border bg-background px-3 py-2 text-sm"
               value={exportSection}
@@ -553,14 +555,14 @@ export default function ScmDashboardPage() {
             >
               {EXPORT_SECTIONS.map((option) => (
                 <option key={option.value} value={option.value}>
-                  {option.label}
+                  {t(`exportSections.${option.key}` as any)}
                 </option>
               ))}
             </select>
           </div>
           <Button type="button" variant="outline" onClick={() => void exportCsv()} disabled={exporting}>
             <Download className="mr-2 h-4 w-4" />
-            {exporting ? "Exporting..." : "Export Excel CSV"}
+            {exporting ? t("filters.exporting") : t("filters.exportCsv")}
           </Button>
         </CardContent>
       </Card>
@@ -583,27 +585,27 @@ export default function ScmDashboardPage() {
         {loading && !report ? (
           <Card>
             <CardContent className="p-6 text-sm text-muted-foreground">
-              Loading SCM dashboard...
+              {t("loading")}
             </CardContent>
           </Card>
         ) : report ? (
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="pipeline">Pipeline</TabsTrigger>
-              <TabsTrigger value="sourcing">RFQ / CS / PO</TabsTrigger>
-              <TabsTrigger value="warehouse">GRN / Stock</TabsTrigger>
-              <TabsTrigger value="finance">PRF / Budget / Project</TabsTrigger>
-              <TabsTrigger value="audit">Audit</TabsTrigger>
+              <TabsTrigger value="overview">{t("tabs.overview")}</TabsTrigger>
+              <TabsTrigger value="pipeline">{t("tabs.pipeline")}</TabsTrigger>
+              <TabsTrigger value="sourcing">{t("tabs.sourcing")}</TabsTrigger>
+              <TabsTrigger value="warehouse">{t("tabs.warehouse")}</TabsTrigger>
+              <TabsTrigger value="finance">{t("tabs.finance")}</TabsTrigger>
+              <TabsTrigger value="audit">{t("tabs.audit")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
               <div className="grid gap-4 lg:grid-cols-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Vendor Performance</CardTitle>
+                    <CardTitle>{t("overview.vendorPerformance.title")}</CardTitle>
                     <CardDescription>
-                      Evaluation-driven supplier summary for the selected period.
+                      {t("overview.vendorPerformance.description")}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>

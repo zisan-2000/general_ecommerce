@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Paperclip, Plus, RefreshCw } from "lucide-react";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
@@ -101,14 +102,15 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
   return payload as T;
 }
 
-function formatDateTime(value: string | null) {
-  if (!value) return "N/A";
+function formatDateTime(value: string | null, fallback: string) {
+  if (!value) return fallback;
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
+  if (Number.isNaN(date.getTime())) return fallback;
   return date.toLocaleString();
 }
 
 export default function MaterialRequestsPage() {
+  const t = useTranslations("AdminMaterialRequests");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const userId = (session?.user as any)?.id as string | undefined;
@@ -153,11 +155,11 @@ export default function MaterialRequestsPage() {
     try {
       const requestData = await fetch("/api/scm/material-requests", {
         cache: "no-store",
-      }).then((res) => readJson<MaterialRequest[]>(res, "Failed to load material requests"));
+      }).then((res) => readJson<MaterialRequest[]>(res, t("errors.load")));
 
       setRequests(Array.isArray(requestData) ? requestData : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load material request data");
+      toast.error(error?.message || t("errors.load"));
       setRequests([]);
     } finally {
       setLoading(false);
@@ -168,6 +170,7 @@ export default function MaterialRequestsPage() {
     if (canRead) {
       void loadData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead]);
 
   const visibleRequests = useMemo(() => {
@@ -235,8 +238,10 @@ export default function MaterialRequestsPage() {
         }),
       });
 
-      await readJson(response, `Failed to ${action} material request`);
-      toast.success(`Material request ${action.replaceAll("_", " ")} completed`);
+      await readJson(response, t("errors.action", { action }));
+      toast.success(
+        t("toasts.actionCompleted", { action: t(`actions.${action}` as any) }),
+      );
 
       setActionNotes((current) => ({
         ...current,
@@ -245,7 +250,7 @@ export default function MaterialRequestsPage() {
 
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || `Failed to ${action} material request`);
+      toast.error(error?.message || t("errors.action", { action }));
     } finally {
       setSaving(false);
     }
@@ -256,24 +261,29 @@ export default function MaterialRequestsPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
-            <CardDescription>
-              You do not have permission to access material requests.
-            </CardDescription>
+            <CardTitle>{t("forbidden.title")}</CardTitle>
+            <CardDescription>{t("forbidden.description")}</CardDescription>
           </CardHeader>
         </Card>
       </div>
     );
   }
 
+  const focusBanner = (() => {
+    if (focusFilter === "SUPERVISOR-QUEUE") return t("focus.supervisor");
+    if (focusFilter === "PROJECT-QUEUE") return t("focus.project");
+    if (focusFilter === "ADMIN-QUEUE") return t("focus.admin");
+    if (focusFilter === "READY-FOR-RELEASE") return t("focus.readyForRelease");
+    if (focusFilter === "MY-ACTIVE") return t("focus.myActive");
+    return t("focus.default");
+  })();
+
   return (
     <div className="space-y-6 p-4 sm:p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Material Requests</h1>
-          <p className="text-sm text-muted-foreground">
-            Manage warehouse material requisitions from requester draft to multi-stage approval.
-          </p>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("header.description")}</p>
         </div>
 
         <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap">
@@ -281,7 +291,7 @@ export default function MaterialRequestsPage() {
             <Button asChild className="w-full sm:w-auto">
               <Link href="/admin/scm/material-requests/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New Material Request
+                {t("actions.newRequest")}
               </Link>
             </Button>
           ) : null}
@@ -293,37 +303,46 @@ export default function MaterialRequestsPage() {
             className="w-full sm:w-auto"
           >
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-5">
-        <ScmStatCard className="col-span-2 md:col-span-1" label="Total" value={String(summary.total)} hint="Visible material requests" />
-        <ScmStatCard label="Supervisor Queue" value={String(summary.awaitingSupervisor)} hint="Waiting for supervisor endorsement" />
-        <ScmStatCard label="Project Queue" value={String(summary.awaitingProject)} hint="Waiting for project manager review" />
-        <ScmStatCard label="Admin Queue" value={String(summary.awaitingAdmin)} hint="Waiting for admin approval" />
-        <ScmStatCard label="Release Ready" value={String(summary.readyForRelease)} hint="Approved and ready for issue or release" />
+        <ScmStatCard
+          className="col-span-2 md:col-span-1"
+          label={t("stats.total.label")}
+          value={String(summary.total)}
+          hint={t("stats.total.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.supervisorQueue.label")}
+          value={String(summary.awaitingSupervisor)}
+          hint={t("stats.supervisorQueue.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.projectQueue.label")}
+          value={String(summary.awaitingProject)}
+          hint={t("stats.projectQueue.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.adminQueue.label")}
+          value={String(summary.awaitingAdmin)}
+          hint={t("stats.adminQueue.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.releaseReady.label")}
+          value={String(summary.readyForRelease)}
+          hint={t("stats.releaseReady.hint")}
+        />
       </div>
 
       {focusFilter !== "ALL" || search.trim() ? (
         <Card className="border-amber-200 bg-amber-50/60 shadow-none">
           <CardContent className="flex flex-col gap-2 p-4 text-sm md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="font-medium text-foreground">Focused queue active</p>
-              <p className="text-muted-foreground">
-                {focusFilter === "SUPERVISOR-QUEUE"
-                  ? "Showing requests waiting for supervisor endorsement."
-                  : focusFilter === "PROJECT-QUEUE"
-                    ? "Showing requests waiting for project manager endorsement."
-                    : focusFilter === "ADMIN-QUEUE"
-                      ? "Showing requests waiting for administration approval."
-                      : focusFilter === "READY-FOR-RELEASE"
-                        ? "Showing approved requests that are ready to release."
-                        : focusFilter === "MY-ACTIVE"
-                          ? "Showing your active requests still moving through workflow."
-                          : "Showing a filtered material request queue."}
-              </p>
+              <p className="font-medium text-foreground">{t("focus.bannerTitle")}</p>
+              <p className="text-muted-foreground">{focusBanner}</p>
             </div>
 
             <Button
@@ -335,7 +354,7 @@ export default function MaterialRequestsPage() {
                 setSearch("");
               }}
             >
-              Clear Focus
+              {t("actions.clearFocus")}
             </Button>
           </CardContent>
         </Card>
@@ -343,16 +362,14 @@ export default function MaterialRequestsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Material Request Register</CardTitle>
-          <CardDescription>
-            Track request status, approval events, and release readiness.
-          </CardDescription>
+          <CardTitle>{t("register.title")}</CardTitle>
+          <CardDescription>{t("register.description")}</CardDescription>
         </CardHeader>
 
         <CardContent className="space-y-4">
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1fr_auto]">
             <Input
-              placeholder="Search by request number, title, purpose, or warehouse..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -362,12 +379,12 @@ export default function MaterialRequestsPage() {
               value={focusFilter}
               onChange={(event) => setFocusFilter(event.target.value)}
             >
-              <option value="ALL">All queues</option>
-              <option value="SUPERVISOR-QUEUE">Supervisor queue</option>
-              <option value="PROJECT-QUEUE">Project queue</option>
-              <option value="ADMIN-QUEUE">Admin queue</option>
-              <option value="READY-FOR-RELEASE">Ready for release</option>
-              <option value="MY-ACTIVE">My active requests</option>
+              <option value="ALL">{t("filters.queues.all")}</option>
+              <option value="SUPERVISOR-QUEUE">{t("filters.queues.supervisor")}</option>
+              <option value="PROJECT-QUEUE">{t("filters.queues.project")}</option>
+              <option value="ADMIN-QUEUE">{t("filters.queues.admin")}</option>
+              <option value="READY-FOR-RELEASE">{t("filters.queues.readyForRelease")}</option>
+              <option value="MY-ACTIVE">{t("filters.queues.myActive")}</option>
             </select>
 
             <select
@@ -375,27 +392,27 @@ export default function MaterialRequestsPage() {
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
             >
-              <option value="ALL">All statuses</option>
-              <option value="DRAFT">DRAFT</option>
-              <option value="SUBMITTED">SUBMITTED</option>
-              <option value="SUPERVISOR_ENDORSED">SUPERVISOR_ENDORSED</option>
-              <option value="PROJECT_MANAGER_ENDORSED">PROJECT_MANAGER_ENDORSED</option>
-              <option value="ADMIN_APPROVED">ADMIN_APPROVED</option>
-              <option value="PARTIALLY_RELEASED">PARTIALLY_RELEASED</option>
-              <option value="RELEASED">RELEASED</option>
-              <option value="REJECTED">REJECTED</option>
-              <option value="CANCELLED">CANCELLED</option>
+              <option value="ALL">{t("filters.statuses.all")}</option>
+              <option value="DRAFT">{t("statuses.DRAFT")}</option>
+              <option value="SUBMITTED">{t("statuses.SUBMITTED")}</option>
+              <option value="SUPERVISOR_ENDORSED">{t("statuses.SUPERVISOR_ENDORSED")}</option>
+              <option value="PROJECT_MANAGER_ENDORSED">{t("statuses.PROJECT_MANAGER_ENDORSED")}</option>
+              <option value="ADMIN_APPROVED">{t("statuses.ADMIN_APPROVED")}</option>
+              <option value="PARTIALLY_RELEASED">{t("statuses.PARTIALLY_RELEASED")}</option>
+              <option value="RELEASED">{t("statuses.RELEASED")}</option>
+              <option value="REJECTED">{t("statuses.REJECTED")}</option>
+              <option value="CANCELLED">{t("statuses.CANCELLED")}</option>
             </select>
 
             <div className="rounded-md border bg-muted/30 px-3 py-2 text-sm text-muted-foreground">
-              {visibleRequests.length} visible request{visibleRequests.length === 1 ? "" : "s"}
+              {t("filters.visibleCount", { count: visibleRequests.length })}
             </div>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading material requests...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visibleRequests.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No material requests found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visibleRequests.map((request) => {
@@ -425,36 +442,48 @@ export default function MaterialRequestsPage() {
                       </div>
 
                       <div className="grid gap-2 text-sm text-muted-foreground md:grid-cols-2 xl:grid-cols-4">
-                        <div>Requested: {formatDateTime(request.requestedAt)}</div>
-                        <div>Required By: {formatDateTime(request.requiredBy)}</div>
-                        <div>Submitted: {formatDateTime(request.submittedAt)}</div>
-                        <div>Admin Approved: {formatDateTime(request.adminApprovedAt)}</div>
+                        <div>
+                          {t("labels.requested")}:{" "}
+                          {formatDateTime(request.requestedAt, t("labels.na"))}
+                        </div>
+                        <div>
+                          {t("labels.requiredBy")}:{" "}
+                          {formatDateTime(request.requiredBy, t("labels.na"))}
+                        </div>
+                        <div>
+                          {t("labels.submitted")}:{" "}
+                          {formatDateTime(request.submittedAt, t("labels.na"))}
+                        </div>
+                        <div>
+                          {t("labels.adminApproved")}:{" "}
+                          {formatDateTime(request.adminApprovedAt, t("labels.na"))}
+                        </div>
                       </div>
                     </CardHeader>
 
                     <CardContent className="space-y-4">
                       <div className="grid gap-2 text-sm md:grid-cols-2 xl:grid-cols-4">
                         <div>
-                          <span className="text-muted-foreground">Purpose:</span>{" "}
+                          <span className="text-muted-foreground">{t("labels.purpose")}:</span>{" "}
                           {request.purpose || "-"}
                         </div>
                         <div>
-                          <span className="text-muted-foreground">Budget:</span>{" "}
+                          <span className="text-muted-foreground">{t("labels.budget")}:</span>{" "}
                           {request.budgetCode || "-"}
                         </div>
                         <div>
-                          <span className="text-muted-foreground">BOQ:</span>{" "}
+                          <span className="text-muted-foreground">{t("labels.boq")}:</span>{" "}
                           {request.boqReference || "-"}
                         </div>
                         <div>
-                          <span className="text-muted-foreground">Created By:</span>{" "}
-                          {request.createdBy?.name || request.createdBy?.email || "N/A"}
+                          <span className="text-muted-foreground">{t("labels.createdBy")}:</span>{" "}
+                          {request.createdBy?.name || request.createdBy?.email || t("labels.na")}
                         </div>
                       </div>
 
                       {request.specification ? (
                         <p className="text-sm text-muted-foreground">
-                          Specification: {request.specification}
+                          {t("labels.specification")}: {request.specification}
                         </p>
                       ) : null}
 
@@ -462,11 +491,11 @@ export default function MaterialRequestsPage() {
                         <Table className="min-w-[720px]">
                           <TableHeader>
                             <TableRow>
-                              <TableHead>Item</TableHead>
-                              <TableHead>Requested</TableHead>
-                              <TableHead>Released</TableHead>
-                              <TableHead>Remaining</TableHead>
-                              <TableHead>Class</TableHead>
+                              <TableHead>{t("table.item")}</TableHead>
+                              <TableHead>{t("table.requested")}</TableHead>
+                              <TableHead>{t("table.released")}</TableHead>
+                              <TableHead>{t("table.remaining")}</TableHead>
+                              <TableHead>{t("table.class")}</TableHead>
                             </TableRow>
                           </TableHeader>
 
@@ -492,7 +521,9 @@ export default function MaterialRequestsPage() {
                                   <TableCell>{remaining}</TableCell>
                                   <TableCell>
                                     {item.productVariant.product.inventoryItemClass}
-                                    {item.productVariant.product.requiresAssetTag ? " • TAG" : ""}
+                                    {item.productVariant.product.requiresAssetTag
+                                      ? ` • ${t("table.tag")}`
+                                      : ""}
                                   </TableCell>
                                 </TableRow>
                               );
@@ -503,7 +534,7 @@ export default function MaterialRequestsPage() {
 
                       {request.attachments.length > 0 ? (
                         <div className="rounded-md border p-3">
-                          <div className="mb-2 text-sm font-medium">Attachments</div>
+                          <div className="mb-2 text-sm font-medium">{t("labels.attachments")}</div>
                           <div className="space-y-1 text-sm">
                             {request.attachments.map((attachment) => (
                               <div
@@ -531,7 +562,7 @@ export default function MaterialRequestsPage() {
                       ) : null}
 
                       <div className="space-y-2">
-                        <Label>Workflow Note (optional)</Label>
+                        <Label>{t("labels.workflowNote")}</Label>
                         <Input
                           value={actionNotes[request.id] || ""}
                           onChange={(event) =>
@@ -540,14 +571,14 @@ export default function MaterialRequestsPage() {
                               [request.id]: event.target.value,
                             }))
                           }
-                          placeholder="Add note for submit/endorse/approve/reject/cancel"
+                          placeholder={t("labels.workflowNotePlaceholder")}
                         />
                       </div>
 
                       <div className="grid gap-2 sm:flex sm:flex-wrap">
                         <Button size="sm" variant="outline" asChild className="w-full sm:w-auto">
                           <Link href={`/admin/scm/material-requests/${request.id}`}>
-                            Open Detail
+                            {t("actions.openDetail")}
                           </Link>
                         </Button>
 
@@ -559,7 +590,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "submit")}
                             disabled={saving}
                           >
-                            Submit
+                            {t("actions.submit")}
                           </Button>
                         ) : null}
 
@@ -571,7 +602,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "endorse_supervisor")}
                             disabled={saving}
                           >
-                            Endorse (Supervisor)
+                            {t("actions.endorseSupervisor")}
                           </Button>
                         ) : null}
 
@@ -583,7 +614,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "endorse_project_manager")}
                             disabled={saving}
                           >
-                            Endorse (Project Manager)
+                            {t("actions.endorseProjectManager")}
                           </Button>
                         ) : null}
 
@@ -595,7 +626,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "approve_admin")}
                             disabled={saving}
                           >
-                            Final Approve (Admin)
+                            {t("actions.approveAdmin")}
                           </Button>
                         ) : null}
 
@@ -607,7 +638,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "reject")}
                             disabled={saving}
                           >
-                            Reject
+                            {t("actions.reject")}
                           </Button>
                         ) : null}
 
@@ -619,7 +650,7 @@ export default function MaterialRequestsPage() {
                             onClick={() => void runAction(request.id, "cancel")}
                             disabled={saving}
                           >
-                            Cancel
+                            {t("actions.cancel")}
                           </Button>
                         ) : null}
                       </div>
