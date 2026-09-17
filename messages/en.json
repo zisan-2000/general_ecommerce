@@ -6449,6 +6449,83 @@
         "description": "Try adjusting your search or filters"
       }
     },
+    "workspace": {
+      "sections": {
+        "overview": "Overview",
+        "registry": "Registry & KYC",
+        "ledger": "Capital Ledger",
+        "allocations": "Allocations",
+        "profitRuns": "Profit Runs",
+        "payouts": "Payouts",
+        "statements": "Statements"
+      },
+      "header": {
+        "title": "Investor Module",
+        "description": "Investor onboarding, capital transactions, and product allocation.",
+        "activeView": "Active view: {view}.",
+        "refreshing": "Refreshing investor data..."
+      },
+      "access": {
+        "title": "Access Restricted",
+        "description": "You do not have permission to access the {view} view."
+      },
+      "summary": {
+        "totalInvestors": "Total Investors",
+        "activeInvestors": "Active Investors",
+        "netBalance": "Net Balance"
+      },
+      "registry": {
+        "tabs": {
+          "create": "Create Investor",
+          "registry": "Investor Registry"
+        },
+        "form": {
+          "title": "Create New Investor",
+          "description": "Add a new investor to the system with their contact information.",
+          "name": "Investor Name *",
+          "namePlaceholder": "Enter investor name",
+          "email": "Email Address",
+          "emailPlaceholder": "investor@example.com",
+          "phone": "Phone Number",
+          "phonePlaceholder": "+880 1XXX XXXXXX",
+          "legalName": "Legal Name",
+          "legalNamePlaceholder": "Legal business name",
+          "taxNumber": "Tax Number",
+          "taxNumberPlaceholder": "TIN-1001",
+          "nationalId": "National ID Number",
+          "nationalIdPlaceholder": "NID number",
+          "passport": "Passport Number",
+          "passportPlaceholder": "Passport number",
+          "bankName": "Bank Name",
+          "bankNamePlaceholder": "DBBL",
+          "bankAccountName": "Bank Account Name",
+          "bankAccountNamePlaceholder": "Account holder name",
+          "bankAccountNumber": "Bank Account Number",
+          "bankAccountNumberPlaceholder": "1234567890",
+          "notes": "Notes",
+          "notesPlaceholder": "Additional notes about this investor",
+          "submit": "Create Investor"
+        },
+        "list": {
+          "title": "Investor Registry",
+          "description": "View and manage all registered investors.",
+          "filterLabel": "Filter by Investor",
+          "allInvestors": "All Investors",
+          "total": "Total investors: {count}"
+        },
+        "permissions": {
+          "create": "You don't have permission to create investors.",
+          "view": "You don't have permission to view the investor registry."
+        }
+      },
+      "errors": {
+        "load": "Failed to load investor workspace",
+        "createInvestor": "Failed to create investor"
+      },
+      "success": {
+        "investorCreated": "Investor created"
+      }
+    },
     "operations": {
       "page": {
         "overview": {

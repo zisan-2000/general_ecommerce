@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -292,6 +293,7 @@ export default function InvestorWorkspace({
 }: {
   section?: InvestorSection;
 }) {
+  const t = useTranslations("AdminInvestors.workspace");
   const searchParams = useSearchParams();
   const defaultStatementFrom = useMemo(() => {
     const date = new Date();
@@ -354,13 +356,13 @@ export default function InvestorWorkspace({
   const showSection = (target: Exclude<InvestorSection, "overview">) =>
     isOverview || section === target;
   const sectionTitleMap: Record<InvestorSection, string> = {
-    overview: "Overview",
-    registry: "Registry & KYC",
-    ledger: "Capital Ledger",
-    allocations: "Allocations",
-    "profit-runs": "Profit Runs",
-    payouts: "Payouts",
-    statements: "Statements",
+    overview: t("sections.overview"),
+    registry: t("sections.registry"),
+    ledger: t("sections.ledger"),
+    allocations: t("sections.allocations"),
+    "profit-runs": t("sections.profitRuns"),
+    payouts: t("sections.payouts"),
+    statements: t("sections.statements"),
   };
   const canAccessSelectedSection =
     section === "overview"
@@ -568,19 +570,19 @@ export default function InvestorWorkspace({
 
       const investorData = await readJson<Investor[]>(
         investorRes,
-        "Failed to load investors",
+        t("errors.load"),
       );
       const txData = await readJson<TxPayload>(
         txRes,
-        "Failed to load transactions",
+        t("errors.load"),
       );
       const allocationData = await readJson<Allocation[]>(
         allocationRes,
-        "Failed to load allocations",
+        t("errors.load"),
       );
       const payoutData = await readJson<{ payouts: PayoutRegisterItem[] }>(
         payoutRes,
-        "Failed to load investor payouts",
+        t("errors.load"),
       );
       let profitData: ProfitPayload = {
         runs: [],
@@ -593,7 +595,7 @@ export default function InvestorWorkspace({
         const profitRes = await fetch(profitUrl, { cache: "no-store" });
         profitData = await readJson<ProfitPayload>(
           profitRes,
-          "Failed to load investor profit runs",
+          t("errors.load"),
         );
       }
 
@@ -621,8 +623,8 @@ export default function InvestorWorkspace({
       if (apiRunId !== selectedProfitRunId) {
         setSelectedProfitRunId(apiRunId);
       }
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor workspace");
+    } catch {
+      toast.error(t("errors.load"));
     } finally {
       setLoading(false);
       setHasLoadedOnce(true);
@@ -738,7 +740,7 @@ export default function InvestorWorkspace({
           notes: investorNotes,
         }),
       });
-      await readJson(response, "Failed to create investor");
+      await readJson(response, t("errors.createInvestor"));
       setInvestorName("");
       setInvestorEmail("");
       setInvestorPhone("");
@@ -750,10 +752,10 @@ export default function InvestorWorkspace({
       setInvestorBankAccountName("");
       setInvestorBankAccountNumber("");
       setInvestorNotes("");
-      toast.success("Investor created");
+      toast.success(t("success.investorCreated"));
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to create investor");
+    } catch {
+      toast.error(t("errors.createInvestor"));
     }
   };
 
@@ -1121,16 +1123,16 @@ export default function InvestorWorkspace({
   return (
     <div className="space-y-6 p-6">
       <div>
-        <h1 className="text-2xl font-bold">Investor Module</h1>
+        <h1 className="text-2xl font-bold">{t("header.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Investor onboarding, capital transactions, and product allocation.
+          {t("header.description")}
           <span className="ml-1 font-medium text-foreground">
-            Active view: {sectionTitleMap[section]}.
+            {t("header.activeView", { view: sectionTitleMap[section] })}
           </span>
         </p>
         {loading && !hasLoadedOnce ? (
           <p className="text-xs text-muted-foreground">
-            Refreshing investor data...
+            {t("header.refreshing")}
           </p>
         ) : null}
       </div>
@@ -1140,12 +1142,11 @@ export default function InvestorWorkspace({
       {!canAccessSelectedSection ? (
         <Card>
           <CardHeader>
-            <CardTitle>Access Restricted</CardTitle>
+            <CardTitle>{t("access.title")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground">
-              You do not have permission to access the{" "}
-              {sectionTitleMap[section]} view.
+              {t("access.description", { view: sectionTitleMap[section] })}
             </p>
           </CardContent>
         </Card>
@@ -1155,19 +1156,19 @@ export default function InvestorWorkspace({
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
             <CardContent className="p-4">
-              <p className="text-xs text-muted-foreground">Total Investors</p>
+              <p className="text-xs text-muted-foreground">{t("summary.totalInvestors")}</p>
               <p className="text-xl font-semibold">{summary.totalInvestors}</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
-              <p className="text-xs text-muted-foreground">Active Investors</p>
+              <p className="text-xs text-muted-foreground">{t("summary.activeInvestors")}</p>
               <p className="text-xl font-semibold">{summary.activeInvestors}</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
-              <p className="text-xs text-muted-foreground">Net Balance</p>
+              <p className="text-xs text-muted-foreground">{t("summary.netBalance")}</p>
               <p className="text-xl font-semibold">
                 {summary.totalBalance.toFixed(2)}
               </p>
@@ -1183,13 +1184,13 @@ export default function InvestorWorkspace({
               value="forms"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Create Investor
+              {t("registry.tabs.create")}
             </TabsTrigger>
             <TabsTrigger
               value="registry"
               className="inline-flex items-center justify-start whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-foreground data-[state=active]:shadow"
             >
-              Investor Registry
+              {t("registry.tabs.registry")}
             </TabsTrigger>
           </TabsList>
 
@@ -1198,20 +1199,19 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Create New Investor
+                    {t("registry.form.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Add a new investor to the system with their contact
-                    information.
+                    {t("registry.form.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="investor-name">Investor Name *</Label>
+                      <Label htmlFor="investor-name">{t("registry.form.name")}</Label>
                       <Input
                         id="investor-name"
-                        placeholder="Enter investor name"
+                        placeholder={t("registry.form.namePlaceholder")}
                         value={investorName}
                         onChange={(event) =>
                           setInvestorName(event.target.value)
@@ -1220,11 +1220,11 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-email">Email Address</Label>
+                      <Label htmlFor="investor-email">{t("registry.form.email")}</Label>
                       <Input
                         id="investor-email"
                         type="email"
-                        placeholder="investor@example.com"
+                        placeholder={t("registry.form.emailPlaceholder")}
                         value={investorEmail}
                         onChange={(event) =>
                           setInvestorEmail(event.target.value)
@@ -1233,10 +1233,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-phone">Phone Number</Label>
+                      <Label htmlFor="investor-phone">{t("registry.form.phone")}</Label>
                       <Input
                         id="investor-phone"
-                        placeholder="+880 1XXX XXXXXX"
+                        placeholder={t("registry.form.phonePlaceholder")}
                         value={investorPhone}
                         onChange={(event) =>
                           setInvestorPhone(event.target.value)
@@ -1245,10 +1245,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-legal-name">Legal Name</Label>
+                      <Label htmlFor="investor-legal-name">{t("registry.form.legalName")}</Label>
                       <Input
                         id="investor-legal-name"
-                        placeholder="Legal business name"
+                        placeholder={t("registry.form.legalNamePlaceholder")}
                         value={investorLegalName}
                         onChange={(event) =>
                           setInvestorLegalName(event.target.value)
@@ -1257,10 +1257,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-tax-number">Tax Number</Label>
+                      <Label htmlFor="investor-tax-number">{t("registry.form.taxNumber")}</Label>
                       <Input
                         id="investor-tax-number"
-                        placeholder="TIN-1001"
+                        placeholder={t("registry.form.taxNumberPlaceholder")}
                         value={investorTaxNumber}
                         onChange={(event) =>
                           setInvestorTaxNumber(event.target.value)
@@ -1269,10 +1269,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-nid">National ID Number</Label>
+                      <Label htmlFor="investor-nid">{t("registry.form.nationalId")}</Label>
                       <Input
                         id="investor-nid"
-                        placeholder="NID number"
+                        placeholder={t("registry.form.nationalIdPlaceholder")}
                         value={investorNationalIdNumber}
                         onChange={(event) =>
                           setInvestorNationalIdNumber(event.target.value)
@@ -1281,10 +1281,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-passport">Passport Number</Label>
+                      <Label htmlFor="investor-passport">{t("registry.form.passport")}</Label>
                       <Input
                         id="investor-passport"
-                        placeholder="Passport number"
+                        placeholder={t("registry.form.passportPlaceholder")}
                         value={investorPassportNumber}
                         onChange={(event) =>
                           setInvestorPassportNumber(event.target.value)
@@ -1293,10 +1293,10 @@ export default function InvestorWorkspace({
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="investor-bank-name">Bank Name</Label>
+                      <Label htmlFor="investor-bank-name">{t("registry.form.bankName")}</Label>
                       <Input
                         id="investor-bank-name"
-                        placeholder="DBBL"
+                        placeholder={t("registry.form.bankNamePlaceholder")}
                         value={investorBankName}
                         onChange={(event) =>
                           setInvestorBankName(event.target.value)
@@ -1306,11 +1306,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="investor-bank-account-name">
-                        Bank Account Name
+                        {t("registry.form.bankAccountName")}
                       </Label>
                       <Input
                         id="investor-bank-account-name"
-                        placeholder="Account holder name"
+                        placeholder={t("registry.form.bankAccountNamePlaceholder")}
                         value={investorBankAccountName}
                         onChange={(event) =>
                           setInvestorBankAccountName(event.target.value)
@@ -1320,11 +1320,11 @@ export default function InvestorWorkspace({
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="investor-bank-account-number">
-                        Bank Account Number
+                        {t("registry.form.bankAccountNumber")}
                       </Label>
                       <Input
                         id="investor-bank-account-number"
-                        placeholder="1234567890"
+                        placeholder={t("registry.form.bankAccountNumberPlaceholder")}
                         value={investorBankAccountNumber}
                         onChange={(event) =>
                           setInvestorBankAccountNumber(event.target.value)
@@ -1334,10 +1334,10 @@ export default function InvestorWorkspace({
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="investor-notes">Notes</Label>
+                    <Label htmlFor="investor-notes">{t("registry.form.notes")}</Label>
                     <textarea
                       id="investor-notes"
-                      placeholder="Additional notes about this investor"
+                      placeholder={t("registry.form.notesPlaceholder")}
                       value={investorNotes}
                       onChange={(event) => setInvestorNotes(event.target.value)}
                       className="w-full h-20 rounded-lg border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -1349,7 +1349,7 @@ export default function InvestorWorkspace({
                       disabled={!investorName.trim()}
                       className="min-w-[120px]"
                     >
-                      Create Investor
+                      {t("registry.form.submit")}
                     </Button>
                   </div>
                 </CardContent>
@@ -1358,7 +1358,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to create investors.
+                    {t("registry.permissions.create")}
                   </p>
                 </CardContent>
               </Card>
@@ -1370,10 +1370,10 @@ export default function InvestorWorkspace({
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold">
-                    Investor Registry
+                    {t("registry.list.title")}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    View and manage all registered investors.
+                    {t("registry.list.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -1383,7 +1383,7 @@ export default function InvestorWorkspace({
                         htmlFor="investor-filter"
                         className="text-sm font-medium"
                       >
-                        Filter by Investor
+                        {t("registry.list.filterLabel")}
                       </Label>
                       <div className="relative">
                         <select
@@ -1394,7 +1394,7 @@ export default function InvestorWorkspace({
                             setSelectedInvestorId(event.target.value)
                           }
                         >
-                          <option value="">All Investors</option>
+                          <option value="">{t("registry.list.allInvestors")}</option>
                           {investors.map((investor) => (
                             <option key={investor.id} value={investor.id}>
                               {investor.name} ({investor.code})
@@ -1419,10 +1419,7 @@ export default function InvestorWorkspace({
                       </div>
                     </div>
                     <div className="flex items-center text-sm text-muted-foreground">
-                      Total investors{" "}
-                      <span className="font-medium p-1">
-                        {investors.length}
-                      </span>
+                      {t("registry.list.total", { count: investors.length })}
                     </div>
                   </div>
 
@@ -1433,7 +1430,7 @@ export default function InvestorWorkspace({
               <Card>
                 <CardContent className="p-6">
                   <p className="text-center text-muted-foreground">
-                    You don't have permission to view the investor registry.
+                    {t("registry.permissions.view")}
                   </p>
                 </CardContent>
               </Card>

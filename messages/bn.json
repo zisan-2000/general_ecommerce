@@ -6449,6 +6449,83 @@
                 "description": "অনুসন্ধান বা ফিল্টার পরিবর্তন করে দেখুন"
             }
         },
+        "workspace": {
+            "sections": {
+                "overview": "সারসংক্ষেপ",
+                "registry": "নিবন্ধন ও KYC",
+                "ledger": "মূলধন খতিয়ান",
+                "allocations": "বরাদ্দ",
+                "profitRuns": "মুনাফা হিসাব",
+                "payouts": "পরিশোধ",
+                "statements": "বিবরণী"
+            },
+            "header": {
+                "title": "বিনিয়োগকারী মডিউল",
+                "description": "বিনিয়োগকারী অনবোর্ডিং, মূলধন লেনদেন ও পণ্য বরাদ্দ পরিচালনা করুন।",
+                "activeView": "সক্রিয় ভিউ: {view}।",
+                "refreshing": "বিনিয়োগকারীর তথ্য রিফ্রেশ হচ্ছে..."
+            },
+            "access": {
+                "title": "অ্যাক্সেস সীমাবদ্ধ",
+                "description": "আপনার {view} ভিউ দেখার অনুমতি নেই।"
+            },
+            "summary": {
+                "totalInvestors": "মোট বিনিয়োগকারী",
+                "activeInvestors": "সক্রিয় বিনিয়োগকারী",
+                "netBalance": "নিট ব্যালেন্স"
+            },
+            "registry": {
+                "tabs": {
+                    "create": "বিনিয়োগকারী তৈরি",
+                    "registry": "বিনিয়োগকারী নিবন্ধন"
+                },
+                "form": {
+                    "title": "নতুন বিনিয়োগকারী তৈরি",
+                    "description": "যোগাযোগের তথ্যসহ সিস্টেমে নতুন বিনিয়োগকারী যোগ করুন।",
+                    "name": "বিনিয়োগকারীর নাম *",
+                    "namePlaceholder": "বিনিয়োগকারীর নাম লিখুন",
+                    "email": "ইমেইল ঠিকানা",
+                    "emailPlaceholder": "investor@example.com",
+                    "phone": "ফোন নম্বর",
+                    "phonePlaceholder": "+880 1XXX XXXXXX",
+                    "legalName": "আইনগত নাম",
+                    "legalNamePlaceholder": "আইনগত ব্যবসায়িক নাম",
+                    "taxNumber": "কর শনাক্তকরণ নম্বর",
+                    "taxNumberPlaceholder": "TIN-1001",
+                    "nationalId": "জাতীয় পরিচয়পত্র নম্বর",
+                    "nationalIdPlaceholder": "NID নম্বর",
+                    "passport": "পাসপোর্ট নম্বর",
+                    "passportPlaceholder": "পাসপোর্ট নম্বর",
+                    "bankName": "ব্যাংকের নাম",
+                    "bankNamePlaceholder": "যেমন: DBBL",
+                    "bankAccountName": "ব্যাংক হিসাবের নাম",
+                    "bankAccountNamePlaceholder": "হিসাবধারীর নাম",
+                    "bankAccountNumber": "ব্যাংক হিসাব নম্বর",
+                    "bankAccountNumberPlaceholder": "1234567890",
+                    "notes": "নোট",
+                    "notesPlaceholder": "এই বিনিয়োগকারী সম্পর্কে অতিরিক্ত নোট",
+                    "submit": "বিনিয়োগকারী তৈরি করুন"
+                },
+                "list": {
+                    "title": "বিনিয়োগকারী নিবন্ধন",
+                    "description": "সব নিবন্ধিত বিনিয়োগকারী দেখুন ও পরিচালনা করুন।",
+                    "filterLabel": "বিনিয়োগকারী অনুযায়ী ফিল্টার",
+                    "allInvestors": "সব বিনিয়োগকারী",
+                    "total": "মোট বিনিয়োগকারী: {count}"
+                },
+                "permissions": {
+                    "create": "আপনার বিনিয়োগকারী তৈরির অনুমতি নেই।",
+                    "view": "আপনার বিনিয়োগকারী নিবন্ধন দেখার অনুমতি নেই।"
+                }
+            },
+            "errors": {
+                "load": "বিনিয়োগকারী কর্মক্ষেত্র লোড করা যায়নি",
+                "createInvestor": "বিনিয়োগকারী তৈরি করা যায়নি"
+            },
+            "success": {
+                "investorCreated": "বিনিয়োগকারী তৈরি হয়েছে"
+            }
+        },
         "operations": {
             "page": {
                 "overview": {
