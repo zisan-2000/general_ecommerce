@@ -6325,5 +6325,273 @@
         "variantOutOfStock": "Selected variant is out of stock"
       }
     }
+  },
+  "AdminInvestors": {
+    "workflow": {
+      "title": "Investor Workflow",
+      "description": "Keep the current stage clean, then move right.",
+      "openQueue": "Open Live Queue",
+      "step": "Step {number}",
+      "current": "Current",
+      "inThisStage": "In This Stage",
+      "next": "Next",
+      "stages": {
+        "onboard": { "title": "Onboard And Verify" },
+        "fund": { "title": "Fund And Allocate" },
+        "profit": { "title": "Calculate And Govern" },
+        "settle": { "title": "Settle And Communicate" }
+      },
+      "steps": {
+        "overview": { "title": "Investor Workspace" },
+        "tasks": { "title": "My Tasks" },
+        "exceptions": { "title": "Exceptions" },
+        "notifications": { "title": "Notifications" },
+        "registry": { "title": "Investor Registry" },
+        "documents": { "title": "Documents" },
+        "profile-requests": { "title": "Profile Requests" },
+        "portal-access": { "title": "Portal Access" },
+        "ledger": { "title": "Capital Ledger" },
+        "allocations": { "title": "Allocations" },
+        "profit-runs": { "title": "Profit Runs" },
+        "payouts": { "title": "Payouts" },
+        "withdrawals": { "title": "Withdrawals" },
+        "statements": { "title": "Statements" },
+        "statement-schedules": { "title": "Statement Schedules" }
+      },
+      "sections": {
+        "overview": {
+          "title": "Investor Workspace",
+          "description": "Start here to understand the lifecycle, then jump into the active queue or the next operational stage."
+        },
+        "tasks": {
+          "title": "Action Queue",
+          "description": "Use this when you need to know what demands attention right now."
+        },
+        "exceptions": {
+          "title": "Exception Control",
+          "description": "Use this page to remove blockers before the lifecycle can move forward."
+        },
+        "notifications": {
+          "title": "Internal Alerts",
+          "description": "Use notifications as the event inbox, then open the exact workflow object behind each alert."
+        },
+        "registry": {
+          "title": "Investor Master",
+          "description": "Registry comes first. If the investor master is weak, everything downstream gets noisy."
+        },
+        "documents": {
+          "title": "KYC Governance",
+          "description": "After registry, document review is the clearest next step before funding and payout activity."
+        },
+        "profile-requests": {
+          "title": "Sensitive Change Review",
+          "description": "Use this after portal users submit identity or beneficiary changes, then re-check document/KYC alignment."
+        },
+        "portal-access": {
+          "title": "Portal Enablement",
+          "description": "This is the final onboarding step before the investor starts self-service interactions."
+        },
+        "ledger": {
+          "title": "Funding Ledger",
+          "description": "Capital movement should come before allocation and profit distribution."
+        },
+        "allocations": {
+          "title": "Allocation Control",
+          "description": "This stage defines who owns what before profit can be governed correctly."
+        },
+        "profit-runs": {
+          "title": "Profit Governance",
+          "description": "This stage is calculation, approval, and posting control. Do not jump to payouts before posting."
+        },
+        "payouts": {
+          "title": "Settlement Control",
+          "description": "This stage is approval, hold, release, payment, and reversal control."
+        },
+        "withdrawals": {
+          "title": "Capital Return Control",
+          "description": "Use this stage to govern requested capital withdrawals before the final ledger debit is posted."
+        },
+        "statements": {
+          "title": "Investor Reporting",
+          "description": "Statements come last. Use them after ledger and payout data are in the expected state."
+        },
+        "statement-schedules": {
+          "title": "Reporting Automation",
+          "description": "Use schedules after the statement output is already correct and auditable."
+        }
+      }
+    },
+    "table": {
+      "headers": {
+        "investor": "Investor Details",
+        "status": "Status",
+        "kycStatus": "KYC Status",
+        "credit": "Credit",
+        "debit": "Debit",
+        "balance": "Balance"
+      },
+      "idLabel": "ID:",
+      "totalCredits": "Total Credits",
+      "totalDebits": "Total Debits",
+      "currentBalance": "Current Balance",
+      "statuses": {
+        "ACTIVE": "Active",
+        "INACTIVE": "Inactive",
+        "SUSPENDED": "Suspended"
+      },
+      "kycStatuses": {
+        "VERIFIED": "Verified",
+        "PENDING": "Pending",
+        "REJECTED": "Rejected"
+      },
+      "empty": {
+        "title": "No investors found",
+        "description": "Try adjusting your search or filters"
+      }
+    },
+    "operations": {
+      "page": {
+        "overview": {
+          "title": "Investor Workspace",
+          "description": "Operate the investor registry, profit cycle, and payout flow from one place."
+        },
+        "tasks": {
+          "title": "Investor My Tasks",
+          "description": "Action queues for onboarding, profit governance, and payout execution."
+        },
+        "exceptions": {
+          "title": "Investor Exceptions",
+          "description": "Compliance and payout risks that need active follow-up."
+        }
+      },
+      "loading": "Loading investor workspace...",
+      "errors": {
+        "load": "Failed to load investor workspace."
+      },
+      "labels": {
+        "open": "Open",
+        "flagged": "Flagged",
+        "system": "System",
+        "unavailable": "N/A"
+      },
+      "empty": {
+        "tasks": "No investor tasks are currently assigned to this workspace.",
+        "exceptions": "No investor exceptions are currently flagged.",
+        "activity": "No recent investor activity found."
+      },
+      "overview": {
+        "actionQueue": {
+          "title": "My Action Queue",
+          "description": "Profit, payout, and onboarding work that is currently open.",
+          "open": "Open Tasks"
+        },
+        "exceptions": {
+          "title": "Urgent Exceptions",
+          "description": "Risk items that should not stay buried in the registers.",
+          "open": "Open Exceptions"
+        },
+        "quickStart": {
+          "title": "Quick Start",
+          "description": "Jump straight into the investor workflows people use most."
+        },
+        "recentActivity": {
+          "title": "Recent Activity",
+          "description": "Latest investor actions across registry, runs, payouts, and portal access."
+        }
+      },
+      "tasks": {
+        "title": "Needs My Action",
+        "description": "These queues represent current operational responsibility in investor operations."
+      },
+      "exceptions": {
+        "title": "Flagged Issues",
+        "description": "Compliance and payout problems that should be surfaced before month-end close."
+      },
+      "followUp": {
+        "title": "Follow-up Lanes",
+        "description": "Use these entry points to resolve investor issues quickly.",
+        "registry": {
+          "title": "Registry & KYC",
+          "description": "Review onboarding status, activate investors, and resolve pending KYC."
+        },
+        "profitRuns": {
+          "title": "Profit Runs",
+          "description": "Approve, post, or complete profit cycle actions before payout creation."
+        },
+        "payouts": {
+          "title": "Payouts",
+          "description": "Resolve approval backlog, execute payments, and clear aged payout items."
+        },
+        "statementSchedules": {
+          "title": "Statement Schedules",
+          "description": "Dispatch due investor statements and clear overdue schedule backlog."
+        }
+      },
+      "payload": {
+        "summary": {
+          "active-investors": { "label": "Active Investors", "hint": "Currently active investor profiles." },
+          "pending-kyc": { "label": "Pending KYC", "hint": "Profiles still under onboarding review." },
+          "open-tasks": { "label": "Open Tasks", "hint": "Actionable investor operations assigned to this workspace." },
+          "exceptions": { "label": "Exceptions", "hint": "Risk items needing follow-up or governance review." }
+        },
+        "tasks": {
+          "investor-kyc-review": { "title": "KYC review queue", "description": "Active investors still waiting on KYC review or verification." },
+          "profit-run-approval": { "title": "Profit runs awaiting approval", "description": "Review and approve pending investor profitability runs." },
+          "profit-run-post": { "title": "Approved runs awaiting posting", "description": "Approved investor profit runs still need ledger posting." },
+          "payout-approval": { "title": "Payouts awaiting approval", "description": "Investor payout drafts are waiting for approval decision." },
+          "payout-pay": { "title": "Approved payouts awaiting payment", "description": "Approved investor payouts are ready for payment execution." },
+          "profile-request-review": { "title": "Profile requests awaiting review", "description": "Investor-submitted profile and bank updates are waiting for review." },
+          "statement-schedule-due": { "title": "Scheduled statements due", "description": "Recurring investor statements are due for dispatch." },
+          "portal-access-provisioning": { "title": "Portal access provisioning", "description": "Active investors do not yet have active portal access." }
+        },
+        "exceptions": {
+          "aged-kyc-review": { "title": "Aged KYC backlog", "description": "KYC review has been open for more than seven days." },
+          "aged-approved-payouts": { "title": "Approved payouts aging", "description": "Approved payouts have not been paid for more than three days." },
+          "posted-without-payout": { "title": "Posted runs without payout draft", "description": "Posted profit runs still have no payout draft created." },
+          "allocation-governance-gap": { "title": "Allocations tied to inactive investors", "description": "Active allocations still point to suspended or inactive investors." },
+          "missing-investor-portal": { "title": "Portal access gap", "description": "Active investors cannot use the investor portal yet." },
+          "overdue-statement-schedules": { "title": "Overdue statement dispatches", "description": "Scheduled investor statements were not dispatched within one day of due time." }
+        },
+        "quickLinks": {
+          "new-investor": { "label": "Investor Registry", "description": "Create or update investor master records and KYC status." },
+          "ledger": { "label": "Capital Ledger", "description": "Post capital contributions, distributions, and adjustments." },
+          "allocations": { "label": "Allocations", "description": "Manage investor participation across product variants." },
+          "profit-runs": { "label": "Profit Runs", "description": "Generate, approve, and post investor profitability runs." },
+          "payouts": { "label": "Payouts", "description": "Approve, pay, or void investor payout batches." },
+          "portal-access": { "label": "Portal Access", "description": "Provision investor self-service access and monitor status." },
+          "statement-schedules": { "label": "Statement Schedules", "description": "Manage recurring investor statement dispatch cadence and due queue." }
+        }
+      },
+      "activity": {
+        "actions": {
+          "create": "Created",
+          "update": "Updated",
+          "approve": "Approved",
+          "reject": "Rejected",
+          "post": "Posted",
+          "pay": "Paid",
+          "void": "Voided",
+          "settle": "Settled",
+          "verify": "Verified",
+          "revoke": "Revoked",
+          "hold": "Held",
+          "release": "Released"
+        },
+        "entities": {
+          "investor": "Investor",
+          "investor_master_change_request": "Investor master change request",
+          "investor_beneficiary_verification": "Beneficiary verification",
+          "investor_capital_transaction": "Capital transaction",
+          "investor_product_allocation": "Product allocation",
+          "investor_profit_run": "Profit run",
+          "investor_profit_payout": "Profit payout",
+          "investor_statement_schedule": "Statement schedule",
+          "investor_withdrawal_request": "Withdrawal request",
+          "investor_portal_access": "Portal access",
+          "investor_profile_update_request": "Profile update request",
+          "investor_document": "Investor document"
+        }
+      }
+    }
   }
 }

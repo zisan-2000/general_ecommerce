@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { AlertTriangle, ArrowRight, CheckCircle2, Clock3, FolderKanban } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -49,10 +50,10 @@ type WorkspacePayload = {
   recentActivity: WorkspaceActivity[];
 };
 
-function fmtDate(value: string) {
+function fmtDate(value: string, locale: string, unavailable: string) {
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return unavailable;
+  return parsed.toLocaleString(locale);
 }
 
 function toneClasses(tone: WorkspaceItem["tone"]) {
@@ -78,6 +79,8 @@ export default function InvestorOperationsClient({
 }: {
   mode: "overview" | "tasks" | "exceptions";
 }) {
+  const t = useTranslations("AdminInvestors.operations");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<WorkspacePayload | null>(null);
@@ -94,14 +97,14 @@ export default function InvestorOperationsClient({
         });
         const payload = await response.json().catch(() => null);
         if (!response.ok) {
-          throw new Error(payload?.error || "Failed to load investor workspace.");
+          throw new Error(t("errors.load"));
         }
         if (active) {
           setData(payload as WorkspacePayload);
         }
       } catch (err: any) {
         if (active) {
-          setError(err?.message || "Failed to load investor workspace.");
+          setError(err?.message || t("errors.load"));
         }
       } finally {
         if (active) {
@@ -114,26 +117,36 @@ export default function InvestorOperationsClient({
     return () => {
       active = false;
     };
-  }, []);
+  }, [t]);
+
+  const payloadCopy = (
+    collection: "summary" | "tasks" | "exceptions" | "quickLinks",
+    id: string,
+    field: "label" | "hint" | "title" | "description",
+    fallback: string,
+  ) => {
+    const key = `payload.${collection}.${id}.${field}`;
+    return t.has(key as any) ? t(key as any) : fallback;
+  };
 
   const pageMeta = useMemo(() => {
     if (mode === "tasks") {
       return {
-        title: "Investor My Tasks",
-        description: "Action queues for onboarding, profit governance, and payout execution.",
+        title: t("page.tasks.title"),
+        description: t("page.tasks.description"),
       };
     }
     if (mode === "exceptions") {
       return {
-        title: "Investor Exceptions",
-        description: "Compliance and payout risks that need active follow-up.",
+        title: t("page.exceptions.title"),
+        description: t("page.exceptions.description"),
       };
     }
     return {
-      title: "Investor Workspace",
-      description: "Operate the investor registry, profit cycle, and payout flow from one place.",
+      title: t("page.overview.title"),
+      description: t("page.overview.description"),
     };
-  }, [mode]);
+  }, [mode, t]);
 
   return (
     <div className="space-y-6 p-6">
@@ -142,7 +155,7 @@ export default function InvestorOperationsClient({
         <p className="text-sm text-muted-foreground">{pageMeta.description}</p>
       </div>
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading investor workspace...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("loading")}</p> : null}
       {!loading && error ? <p className="text-sm text-destructive">{error}</p> : null}
 
       {!loading && !error && data ? (
@@ -163,12 +176,12 @@ export default function InvestorOperationsClient({
                 <Card className="h-full transition-colors hover:border-primary/40">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium text-muted-foreground">
-                      {card.label}
+                      {payloadCopy("summary", card.id, "label", card.label)}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-3xl font-semibold">{card.value}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{card.hint}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{payloadCopy("summary", card.id, "hint", card.hint)}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -181,18 +194,18 @@ export default function InvestorOperationsClient({
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between">
                     <div>
-                      <CardTitle className="text-base">My Action Queue</CardTitle>
+                      <CardTitle className="text-base">{t("overview.actionQueue.title")}</CardTitle>
                       <p className="text-sm text-muted-foreground">
-                        Profit, payout, and onboarding work that is currently open.
+                        {t("overview.actionQueue.description")}
                       </p>
                     </div>
                     <Button asChild variant="outline" size="sm">
-                      <Link href="/admin/investors/my-tasks">Open Tasks</Link>
+                      <Link href="/admin/investors/my-tasks">{t("overview.actionQueue.open")}</Link>
                     </Button>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {data.tasks.length === 0 ? (
-                      <EmptyState message="No investor tasks are currently assigned to this workspace." />
+                      <EmptyState message={t("empty.tasks")} />
                     ) : (
                       data.tasks.slice(0, 5).map((item) => (
                         <Link
@@ -202,12 +215,12 @@ export default function InvestorOperationsClient({
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="space-y-1">
-                              <p className="font-medium">{item.title}</p>
-                              <p className="text-sm opacity-90">{item.description}</p>
+                              <p className="font-medium">{payloadCopy("tasks", item.id, "title", item.title)}</p>
+                              <p className="text-sm opacity-90">{payloadCopy("tasks", item.id, "description", item.description)}</p>
                             </div>
                             <div className="text-right">
                               <p className="text-2xl font-semibold">{item.count}</p>
-                              <p className="text-xs uppercase tracking-wide opacity-75">Open</p>
+                              <p className="text-xs uppercase tracking-wide opacity-75">{t("labels.open")}</p>
                             </div>
                           </div>
                         </Link>
@@ -219,18 +232,18 @@ export default function InvestorOperationsClient({
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between">
                     <div>
-                      <CardTitle className="text-base">Urgent Exceptions</CardTitle>
+                      <CardTitle className="text-base">{t("overview.exceptions.title")}</CardTitle>
                       <p className="text-sm text-muted-foreground">
-                        Risk items that should not stay buried in the registers.
+                        {t("overview.exceptions.description")}
                       </p>
                     </div>
                     <Button asChild variant="outline" size="sm">
-                      <Link href="/admin/investors/exceptions">Open Exceptions</Link>
+                      <Link href="/admin/investors/exceptions">{t("overview.exceptions.open")}</Link>
                     </Button>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {data.exceptions.length === 0 ? (
-                      <EmptyState message="No investor exceptions are currently flagged." />
+                      <EmptyState message={t("empty.exceptions")} />
                     ) : (
                       data.exceptions.slice(0, 5).map((item) => (
                         <Link
@@ -240,12 +253,12 @@ export default function InvestorOperationsClient({
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="space-y-1">
-                              <p className="font-medium">{item.title}</p>
-                              <p className="text-sm opacity-90">{item.description}</p>
+                              <p className="font-medium">{payloadCopy("exceptions", item.id, "title", item.title)}</p>
+                              <p className="text-sm opacity-90">{payloadCopy("exceptions", item.id, "description", item.description)}</p>
                             </div>
                             <div className="text-right">
                               <p className="text-2xl font-semibold">{item.count}</p>
-                              <p className="text-xs uppercase tracking-wide opacity-75">Flagged</p>
+                              <p className="text-xs uppercase tracking-wide opacity-75">{t("labels.flagged")}</p>
                             </div>
                           </div>
                         </Link>
@@ -258,9 +271,9 @@ export default function InvestorOperationsClient({
               <div className="space-y-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Quick Start</CardTitle>
+                    <CardTitle className="text-base">{t("overview.quickStart.title")}</CardTitle>
                     <p className="text-sm text-muted-foreground">
-                      Jump straight into the investor workflows people use most.
+                      {t("overview.quickStart.description")}
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-3">
@@ -271,8 +284,8 @@ export default function InvestorOperationsClient({
                         className="flex items-start justify-between rounded-lg border p-4 transition-colors hover:border-primary/40"
                       >
                         <div className="space-y-1">
-                          <p className="font-medium">{item.label}</p>
-                          <p className="text-sm text-muted-foreground">{item.description}</p>
+                          <p className="font-medium">{payloadCopy("quickLinks", item.id, "label", item.label)}</p>
+                          <p className="text-sm text-muted-foreground">{payloadCopy("quickLinks", item.id, "description", item.description)}</p>
                         </div>
                         <ArrowRight className="mt-1 h-4 w-4 text-muted-foreground" />
                       </Link>
@@ -282,14 +295,14 @@ export default function InvestorOperationsClient({
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Recent Activity</CardTitle>
+                    <CardTitle className="text-base">{t("overview.recentActivity.title")}</CardTitle>
                     <p className="text-sm text-muted-foreground">
-                      Latest investor actions across registry, runs, payouts, and portal access.
+                      {t("overview.recentActivity.description")}
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {data.recentActivity.length === 0 ? (
-                      <EmptyState message="No recent investor activity found." />
+                      <EmptyState message={t("empty.activity")} />
                     ) : (
                       data.recentActivity.map((item) => (
                         <div key={item.id} className="rounded-lg border p-4">
@@ -297,15 +310,17 @@ export default function InvestorOperationsClient({
                             <div className="space-y-1">
                               <p className="font-medium">{item.message}</p>
                               <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                                {item.entity.replace(/_/g, " ")}
+                              {t.has(`activity.entities.${item.entity}` as any)
+                                ? t(`activity.entities.${item.entity}` as any)
+                                : item.entity.replace(/_/g, " ")}
                               </p>
                             </div>
                             <p className="text-xs text-muted-foreground">
-                              {fmtDate(item.createdAt)}
+                              {fmtDate(item.createdAt, locale, t("labels.unavailable"))}
                             </p>
                           </div>
                           <p className="mt-2 text-xs text-muted-foreground">
-                            {item.userName || "System"} • {item.action}
+                            {item.userName || t("labels.system")} • {t.has(`activity.actions.${item.action}` as any) ? t(`activity.actions.${item.action}` as any) : item.action}
                           </p>
                         </div>
                       ))
@@ -319,14 +334,14 @@ export default function InvestorOperationsClient({
           {mode === "tasks" ? (
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Needs My Action</CardTitle>
+                <CardTitle className="text-base">{t("tasks.title")}</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  These queues represent current operational responsibility in investor ops.
+                  {t("tasks.description")}
                 </p>
               </CardHeader>
               <CardContent className="space-y-3">
                 {data.tasks.length === 0 ? (
-                  <EmptyState message="No investor tasks are currently assigned to this workspace." />
+                  <EmptyState message={t("empty.tasks")} />
                 ) : (
                   data.tasks.map((item) => (
                     <Link
@@ -337,10 +352,10 @@ export default function InvestorOperationsClient({
                       <Clock3 className="mt-0.5 h-5 w-5 shrink-0" />
                       <div className="min-w-0 flex-1 space-y-1">
                         <div className="flex items-center justify-between gap-3">
-                          <p className="font-medium">{item.title}</p>
+                          <p className="font-medium">{payloadCopy("tasks", item.id, "title", item.title)}</p>
                           <p className="text-lg font-semibold">{item.count}</p>
                         </div>
-                        <p className="text-sm opacity-90">{item.description}</p>
+                        <p className="text-sm opacity-90">{payloadCopy("tasks", item.id, "description", item.description)}</p>
                       </div>
                     </Link>
                   ))
@@ -353,14 +368,14 @@ export default function InvestorOperationsClient({
             <div className="grid gap-6 xl:grid-cols-[1.2fr,0.8fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">Flagged Issues</CardTitle>
+                  <CardTitle className="text-base">{t("exceptions.title")}</CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Compliance and payout problems that should be surfaced before month-end close.
+                    {t("exceptions.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {data.exceptions.length === 0 ? (
-                    <EmptyState message="No investor exceptions are currently flagged." />
+                    <EmptyState message={t("empty.exceptions")} />
                   ) : (
                     data.exceptions.map((item) => (
                       <Link
@@ -371,10 +386,10 @@ export default function InvestorOperationsClient({
                         <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" />
                         <div className="min-w-0 flex-1 space-y-1">
                           <div className="flex items-center justify-between gap-3">
-                            <p className="font-medium">{item.title}</p>
+                            <p className="font-medium">{payloadCopy("exceptions", item.id, "title", item.title)}</p>
                             <p className="text-lg font-semibold">{item.count}</p>
                           </div>
-                          <p className="text-sm opacity-90">{item.description}</p>
+                          <p className="text-sm opacity-90">{payloadCopy("exceptions", item.id, "description", item.description)}</p>
                         </div>
                       </Link>
                     ))
@@ -384,38 +399,38 @@ export default function InvestorOperationsClient({
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">Follow-up Lanes</CardTitle>
+                  <CardTitle className="text-base">{t("followUp.title")}</CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Use these entry points to resolve investor issues quickly.
+                    {t("followUp.description")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {[
                     {
                       id: "registry-followup",
-                      label: "Registry & KYC",
-                      description: "Review onboarding status, activate investors, and resolve pending KYC.",
+                      label: t("followUp.registry.title"),
+                      description: t("followUp.registry.description"),
                       href: "/admin/investors/registry",
                       icon: CheckCircle2,
                     },
                     {
                       id: "profit-followup",
-                      label: "Profit Runs",
-                      description: "Approve, post, or complete profit cycle actions before payout creation.",
+                      label: t("followUp.profitRuns.title"),
+                      description: t("followUp.profitRuns.description"),
                       href: "/admin/investors/profit-runs",
                       icon: FolderKanban,
                     },
                     {
                       id: "payout-followup",
-                      label: "Payouts",
-                      description: "Resolve approval backlog, execute payments, and clear aged payout items.",
+                      label: t("followUp.payouts.title"),
+                      description: t("followUp.payouts.description"),
                       href: "/admin/investors/payouts",
                       icon: Clock3,
                     },
                     {
                       id: "statement-followup",
-                      label: "Statement Schedules",
-                      description: "Dispatch due investor statements and clear overdue schedule backlog.",
+                      label: t("followUp.statementSchedules.title"),
+                      description: t("followUp.statementSchedules.description"),
                       href: "/admin/investors/statement-schedules?dueOnly=true",
                       icon: CheckCircle2,
                     },

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import {
   Table,
   TableBody,
@@ -34,6 +35,8 @@ interface InvestorTableProps {
 }
 
 export function InvestorTable({ investors, className = "" }: InvestorTableProps) {
+  const t = useTranslations("AdminInvestors.table");
+  const locale = useLocale();
   const getStatusColor = (status: string) => {
     switch (status) {
       case "ACTIVE":
@@ -84,23 +87,23 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
               <TableHead className="w-[320px] py-4 text-sm font-semibold text-gray-700">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  Investor Details
+                  {t("headers.investor")}
                 </div>
               </TableHead>
               <TableHead className="w-[110px] text-center text-sm font-semibold text-gray-700">
-                Status
+                {t("headers.status")}
               </TableHead>
               <TableHead className="w-[110px] text-center text-sm font-semibold text-gray-700">
-                KYC Status
+                {t("headers.kycStatus")}
               </TableHead>
               <TableHead className="w-[130px] text-right text-sm font-semibold text-gray-700">
-                Credit 
+                {t("headers.credit")}
               </TableHead>
               <TableHead className="w-[130px] text-right text-sm font-semibold text-gray-700">
-                Debit 
+                {t("headers.debit")}
               </TableHead>
               <TableHead className="w-[130px] text-right text-sm font-semibold text-gray-700">
-                Balance 
+                {t("headers.balance")}
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -125,7 +128,7 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                         {investor.name}
                       </Link>
                       <div className="flex items-center gap-1.5">
-                        <span className="text-xs font-mono text-gray-400">ID:</span>
+                        <span className="text-xs font-mono text-gray-400">{t("idLabel")}</span>
                         <Link
                           href={`/admin/investors/${investor.id}`}
                           className="text-xs font-mono font-medium text-gray-500 hover:text-primary"
@@ -139,7 +142,7 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                 <TableCell className="py-4">
                   <div className="flex justify-center">
                     <Badge className={`${getStatusColor(investor.status)} px-3 py-1 text-xs font-semibold shadow-sm`}>
-                      {investor.status}
+                      {t.has(`statuses.${investor.status}` as any) ? t(`statuses.${investor.status}` as any) : investor.status}
                     </Badge>
                   </div>
                 </TableCell>
@@ -149,7 +152,7 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                       <div className="flex items-center gap-1">
                         {investor.kycStatus === "VERIFIED" && <CheckCircle className="h-2.5 w-2.5" />}
                         {investor.kycStatus === "PENDING" && <Clock className="h-2.5 w-2.5" />}
-                        {investor.kycStatus}
+                        {t.has(`kycStatuses.${investor.kycStatus}` as any) ? t(`kycStatuses.${investor.kycStatus}` as any) : investor.kycStatus}
                       </div>
                     </Badge>
                   </div>
@@ -157,17 +160,17 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                 <TableCell className="py-4 text-right">
                   <div className="space-y-0.5">
                     <div className="font-mono text-sm font-medium text-emerald-600">
-                      {Number(investor.totals.credit).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {Number(investor.totals.credit).toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </div>
-                    <div className="text-[10px] text-gray-400">Total Credits</div>
+                    <div className="text-[10px] text-gray-400">{t("totalCredits")}</div>
                   </div>
                 </TableCell>
                 <TableCell className="py-4 text-right">
                   <div className="space-y-0.5">
                     <div className="font-mono text-sm font-medium text-red-600">
-                      {Number(investor.totals.debit).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {Number(investor.totals.debit).toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </div>
-                    <div className="text-[10px] text-gray-400">Total Debits</div>
+                    <div className="text-[10px] text-gray-400">{t("totalDebits")}</div>
                   </div>
                 </TableCell>
                 <TableCell className="py-4 text-right">
@@ -182,9 +185,9 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                       }`}
                     >
                       {getBalanceIcon(Number(investor.totals.balance))}
-                      {Number(investor.totals.balance).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {Number(investor.totals.balance).toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </div>
-                    <div className="text-[10px] text-gray-400">Current Balance</div>
+                    <div className="text-[10px] text-gray-400">{t("currentBalance")}</div>
                   </div>
                 </TableCell>
               </TableRow>
@@ -198,8 +201,8 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
           <div className="rounded-full bg-gray-100 p-4 mb-3">
             <User className="h-8 w-8 text-gray-400" />
           </div>
-          <p className="text-sm text-gray-500">No investors found</p>
-          <p className="text-xs text-gray-400 mt-1">Try adjusting your search or filters</p>
+          <p className="text-sm text-gray-500">{t("empty.title")}</p>
+          <p className="text-xs text-gray-400 mt-1">{t("empty.description")}</p>
         </div>
       )}
     </div>

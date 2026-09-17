@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   ArrowRight,
   CheckCircle2,
@@ -244,6 +247,7 @@ export function InvestorWorkflowGuide({
 }: {
   currentSection: InvestorWorkflowSection;
 }) {
+  const t = useTranslations("AdminInvestors.workflow");
   const currentMeta = SECTION_META[currentSection];
   const currentStage = WORKFLOW_STAGES.find((stage) => stage.id === currentMeta.stageId);
   const currentStageIndex = WORKFLOW_STAGES.findIndex(
@@ -256,15 +260,15 @@ export function InvestorWorkflowGuide({
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="space-y-1">
             <div className="flex flex-wrap items-center gap-2">
-              <CardTitle className="text-base">Investor Workflow</CardTitle>
-              <Badge variant="outline">{currentMeta.title}</Badge>
+              <CardTitle className="text-base">{t("title")}</CardTitle>
+              <Badge variant="outline">{t(`sections.${currentSection}.title`)}</Badge>
             </div>
             <p className="max-w-3xl text-xs text-muted-foreground">
-              Keep the current stage clean, then move right.
+              {t("description")}
             </p>
           </div>
           <Button asChild variant="outline" size="sm">
-            <Link href="/admin/investors/my-tasks">Open Live Queue</Link>
+            <Link href="/admin/investors/my-tasks">{t("openQueue")}</Link>
           </Button>
         </div>
       </CardHeader>
@@ -303,13 +307,13 @@ export function InvestorWorkflowGuide({
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                      Step {index + 1}
+                      {t("step", { number: index + 1 })}
                     </span>
                     {isCurrent ? (
-                      <Badge className="h-5 px-2 text-[10px]">Current</Badge>
+                      <Badge className="h-5 px-2 text-[10px]">{t("current")}</Badge>
                     ) : null}
                   </div>
-                  <p className="mt-1 text-sm font-semibold leading-tight">{stage.title}</p>
+                  <p className="mt-1 text-sm font-semibold leading-tight">{t(`stages.${stage.id}.title`)}</p>
                 </div>
               </div>
             );
@@ -322,18 +326,18 @@ export function InvestorWorkflowGuide({
               <div className="flex items-center gap-2">
                 <CircleDotDashed className="h-4 w-4 text-primary" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                  Current
+                  {t("current")}
                 </p>
               </div>
-              <p className="mt-1 text-sm font-medium">{currentMeta.title}</p>
+              <p className="mt-1 text-sm font-medium">{t(`sections.${currentSection}.title`)}</p>
               <p className="mt-1 text-xs text-muted-foreground">
-                {currentMeta.description}
+                {t(`sections.${currentSection}.description`)}
               </p>
             </div>
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                In This Stage
+                {t("inThisStage")}
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {currentStage?.steps.map((step) => {
@@ -351,7 +355,7 @@ export function InvestorWorkflowGuide({
                       {isPage ? (
                         <CheckCircle2 className="h-3.5 w-3.5" />
                       ) : null}
-                      <span>{step.title}</span>
+                      <span>{t(`steps.${step.id}.title`)}</span>
                     </Link>
                   );
                 })}
@@ -360,7 +364,7 @@ export function InvestorWorkflowGuide({
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                Next
+                {t("next")}
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {currentMeta.next.map((step) => (
@@ -369,7 +373,7 @@ export function InvestorWorkflowGuide({
                     href={step.href}
                     className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary/50"
                   >
-                    <span>{step.title}</span>
+                    <span>{t(`steps.${step.id}.title`)}</span>
                     <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
                   </Link>
                 ))}
