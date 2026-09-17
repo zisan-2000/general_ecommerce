@@ -3964,5 +3964,126 @@
       "addFailed": "Failed to add subscriber",
       "deleteFailed": "Failed to delete subscriber"
     }
+  },
+  "AdminCouponManagement": {
+    "header": {
+      "title": "Coupon Management",
+      "description": "Create and manage discount coupons for your customers"
+    },
+    "actions": {
+      "createCoupon": "Create Coupon",
+      "updateCoupon": "Update Coupon"
+    },
+    "createDialog": {
+      "title": "Create New Coupon"
+    },
+    "editDialog": {
+      "title": "Edit Coupon"
+    },
+    "form": {
+      "code": "Coupon Code",
+      "discountType": "Discount Type",
+      "discountValue": "Discount Value",
+      "minOrderValue": "Minimum Order Value (Optional)",
+      "maxDiscount": "Maximum Discount (Optional)",
+      "usageLimit": "Usage Limit (Optional)",
+      "expiresAt": "Expiry Date (Optional)",
+      "active": "Active"
+    },
+    "placeholders": {
+      "code": "SAVE20",
+      "discountType": "Select discount type",
+      "percentValue": "10",
+      "amountValue": "100",
+      "minOrderValue": "500",
+      "maxDiscount": "100",
+      "usageLimit": "100"
+    },
+    "discountTypes": {
+      "percentage": "Percentage",
+      "fixed": "Fixed Amount"
+    },
+    "card": {
+      "percentOff": "{value}% off",
+      "amountOff": "৳{value} off",
+      "active": "Active",
+      "inactive": "Inactive",
+      "expired": "Expired",
+      "used": "Used:",
+      "min": "Min:",
+      "max": "Max:",
+      "expiry": "Expiry:",
+      "created": "Created: {date}"
+    },
+    "empty": {
+      "title": "No coupons yet",
+      "description": "Create your first discount coupon to get started"
+    },
+    "confirm": {
+      "delete": "Are you sure you want to delete this coupon?"
+    },
+    "toasts": {
+      "successTitle": "Success",
+      "errorTitle": "Error",
+      "created": "Coupon created successfully",
+      "updated": "Coupon updated successfully",
+      "deleted": "Coupon deleted successfully"
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch coupons",
+      "saveFailed": "Failed to save coupon",
+      "deleteFailed": "Failed to delete coupon"
+    }
+  },
+  "AdminChatsPage": {
+    "header": {
+      "title": "Support Chats",
+      "description": "Shared inbox for customer support conversations."
+    },
+    "statuses": {
+      "OPEN": "Open",
+      "IN_PROGRESS": "In Progress",
+      "CLOSED": "Closed"
+    },
+    "priorities": {
+      "LOW": "Low",
+      "NORMAL": "Normal",
+      "HIGH": "High"
+    },
+    "filters": {
+      "allStatus": "All Status",
+      "allPriority": "All Priority",
+      "allAssignees": "All Assignees",
+      "assignedToMe": "Assigned to Me",
+      "unassigned": "Unassigned"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "assignToMe": "Assign to Me",
+      "unassign": "Unassign"
+    },
+    "conversations": {
+      "title": "Conversations ({count})",
+      "empty": "No conversations found.",
+      "customer": "Customer",
+      "noMessages": "No messages yet",
+      "priorityLabel": "Priority: {priority}",
+      "messagesCount": "{count} msgs"
+    },
+    "thread": {
+      "selectHint": "Select a conversation to view messages.",
+      "assignedLabel": "Assigned: {name}",
+      "unassigned": "Unassigned",
+      "loadingMessages": "Loading messages...",
+      "noMessages": "No messages yet.",
+      "viewAttachment": "View attachment",
+      "replyPlaceholder": "Type your reply..."
+    },
+    "errors": {
+      "loadChats": "Failed to load chats.",
+      "loadMessages": "Failed to load conversation messages.",
+      "updateConversation": "Failed to update conversation.",
+      "sendReply": "Failed to send reply."
+    }
   }
 }

@@ -3964,5 +3964,126 @@
             "addFailed": "সাবস্ক্রাইবার যোগ করতে ব্যর্থ",
             "deleteFailed": "সাবস্ক্রাইবার মুছতে ব্যর্থ"
         }
+    },
+    "AdminCouponManagement": {
+        "header": {
+            "title": "কুপন ব্যবস্থাপনা",
+            "description": "আপনার ক্রেতাদের জন্য ডিসকাউন্ট কুপন তৈরি ও পরিচালনা করুন"
+        },
+        "actions": {
+            "createCoupon": "কুপন তৈরি করুন",
+            "updateCoupon": "কুপন আপডেট করুন"
+        },
+        "createDialog": {
+            "title": "নতুন কুপন তৈরি করুন"
+        },
+        "editDialog": {
+            "title": "কুপন সম্পাদনা করুন"
+        },
+        "form": {
+            "code": "কুপন কোড",
+            "discountType": "ডিসকাউন্টের ধরন",
+            "discountValue": "ডিসকাউন্টের মান",
+            "minOrderValue": "সর্বনিম্ন অর্ডার মূল্য (ঐচ্ছিক)",
+            "maxDiscount": "সর্বোচ্চ ডিসকাউন্ট (ঐচ্ছিক)",
+            "usageLimit": "ব্যবহারের সীমা (ঐচ্ছিক)",
+            "expiresAt": "মেয়াদ শেষের তারিখ (ঐচ্ছিক)",
+            "active": "সক্রিয়"
+        },
+        "placeholders": {
+            "code": "SAVE20",
+            "discountType": "ডিসকাউন্টের ধরন নির্বাচন করুন",
+            "percentValue": "10",
+            "amountValue": "100",
+            "minOrderValue": "500",
+            "maxDiscount": "100",
+            "usageLimit": "100"
+        },
+        "discountTypes": {
+            "percentage": "শতকরা",
+            "fixed": "নির্দিষ্ট পরিমাণ"
+        },
+        "card": {
+            "percentOff": "{value}% ছাড়",
+            "amountOff": "৳{value} ছাড়",
+            "active": "সক্রিয়",
+            "inactive": "নিষ্ক্রিয়",
+            "expired": "মেয়াদোত্তীর্ণ",
+            "used": "ব্যবহৃত:",
+            "min": "সর্বনিম্ন:",
+            "max": "সর্বোচ্চ:",
+            "expiry": "মেয়াদ:",
+            "created": "তৈরি: {date}"
+        },
+        "empty": {
+            "title": "এখনও কোনো কুপন নেই",
+            "description": "শুরু করতে আপনার প্রথম ডিসকাউন্ট কুপন তৈরি করুন"
+        },
+        "confirm": {
+            "delete": "আপনি কি নিশ্চিতভাবে এই কুপনটি মুছতে চান?"
+        },
+        "toasts": {
+            "successTitle": "সফল",
+            "errorTitle": "ত্রুটি",
+            "created": "কুপন সফলভাবে তৈরি হয়েছে",
+            "updated": "কুপন সফলভাবে আপডেট হয়েছে",
+            "deleted": "কুপন সফলভাবে মোছা হয়েছে"
+        },
+        "errors": {
+            "fetchFailed": "কুপন আনতে ব্যর্থ",
+            "saveFailed": "কুপন সংরক্ষণ করতে ব্যর্থ",
+            "deleteFailed": "কুপন মুছতে ব্যর্থ"
+        }
+    },
+    "AdminChatsPage": {
+        "header": {
+            "title": "সাপোর্ট চ্যাট",
+            "description": "গ্রাহক সাপোর্ট কথোপকথনের জন্য শেয়ার্ড ইনবক্স।"
+        },
+        "statuses": {
+            "OPEN": "খোলা",
+            "IN_PROGRESS": "চলমান",
+            "CLOSED": "বন্ধ"
+        },
+        "priorities": {
+            "LOW": "নিম্ন",
+            "NORMAL": "স্বাভাবিক",
+            "HIGH": "উচ্চ"
+        },
+        "filters": {
+            "allStatus": "সব স্ট্যাটাস",
+            "allPriority": "সব প্রায়োরিটি",
+            "allAssignees": "সব অ্যাসাইনি",
+            "assignedToMe": "আমার কাছে অ্যাসাইন করা",
+            "unassigned": "অ্যাসাইন করা হয়নি"
+        },
+        "actions": {
+            "refresh": "রিফ্রেশ",
+            "assignToMe": "আমাকে অ্যাসাইন করুন",
+            "unassign": "অ্যাসাইন বাতিল করুন"
+        },
+        "conversations": {
+            "title": "কথোপকথন ({count})",
+            "empty": "কোনো কথোপকথন পাওয়া যায়নি।",
+            "customer": "ক্রেতা",
+            "noMessages": "এখনও কোনো বার্তা নেই",
+            "priorityLabel": "প্রায়োরিটি: {priority}",
+            "messagesCount": "{count}টি বার্তা"
+        },
+        "thread": {
+            "selectHint": "বার্তা দেখতে একটি কথোপকথন নির্বাচন করুন।",
+            "assignedLabel": "অ্যাসাইন করা হয়েছে: {name}",
+            "unassigned": "অ্যাসাইন করা হয়নি",
+            "loadingMessages": "বার্তা লোড হচ্ছে...",
+            "noMessages": "এখনও কোনো বার্তা নেই।",
+            "viewAttachment": "সংযুক্তি দেখুন",
+            "replyPlaceholder": "আপনার উত্তর লিখুন..."
+        },
+        "errors": {
+            "loadChats": "চ্যাট লোড করা যায়নি।",
+            "loadMessages": "কথোপকথনের বার্তা লোড করা যায়নি।",
+            "updateConversation": "কথোপকথন আপডেট করা যায়নি।",
+            "sendReply": "উত্তর পাঠানো যায়নি।"
+        }
     }
 }

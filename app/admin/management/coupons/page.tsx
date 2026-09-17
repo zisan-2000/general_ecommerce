@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, memo } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -38,6 +39,8 @@ interface Coupon {
 }
 
 const CouponManagement = memo(function CouponManagement() {
+  const t = useTranslations("AdminCouponManagement");
+
   const [coupons, setCoupons] = useState<Coupon[]>([]);
   const [loading, setLoading] = useState(true);
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
@@ -56,6 +59,7 @@ const CouponManagement = memo(function CouponManagement() {
 
   useEffect(() => {
     fetchCoupons();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchCoupons = async () => {
@@ -67,8 +71,8 @@ const CouponManagement = memo(function CouponManagement() {
       }
     } catch {
       toast({
-        title: "Error",
-        description: "Failed to fetch coupons",
+        title: t("toasts.errorTitle"),
+        description: t("errors.fetchFailed"),
         variant: "destructive",
       });
     } finally {
@@ -92,8 +96,10 @@ const CouponManagement = memo(function CouponManagement() {
 
       if (response.ok) {
         toast({
-          title: "Success",
-          description: `Coupon ${editingCoupon ? "updated" : "created"} successfully`,
+          title: t("toasts.successTitle"),
+          description: editingCoupon
+            ? t("toasts.updated")
+            : t("toasts.created"),
         });
         fetchCoupons();
         setIsCreateDialogOpen(false);
@@ -110,34 +116,37 @@ const CouponManagement = memo(function CouponManagement() {
           expiresAt: "",
         });
       } else {
-        throw new Error("Failed to save coupon");
+        throw new Error(t("errors.saveFailed"));
       }
     } catch {
       toast({
-        title: "Error",
-        description: "Failed to save coupon",
+        title: t("toasts.errorTitle"),
+        description: t("errors.saveFailed"),
         variant: "destructive",
       });
     }
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this coupon?")) return;
+    if (!confirm(t("confirm.delete"))) return;
 
     try {
       const response = await fetch(`/api/admin/management/coupons/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
-        toast({ title: "Success", description: "Coupon deleted successfully" });
+        toast({
+          title: t("toasts.successTitle"),
+          description: t("toasts.deleted"),
+        });
         fetchCoupons();
       } else {
-        throw new Error("Failed to delete coupon");
+        throw new Error(t("errors.deleteFailed"));
       }
     } catch {
       toast({
-        title: "Error",
-        description: "Failed to delete coupon",
+        title: t("toasts.errorTitle"),
+        description: t("errors.deleteFailed"),
         variant: "destructive",
       });
     }
@@ -169,7 +178,6 @@ const CouponManagement = memo(function CouponManagement() {
     return (
       <div className="min-h-screen bg-background p-4 sm:p-6">
         <div className="space-y-8">
-          {/* Header Skeleton */}
           <div className="bg-muted rounded-2xl shadow-lg p-6 mb-8 animate-pulse">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div>
@@ -180,14 +188,12 @@ const CouponManagement = memo(function CouponManagement() {
             </div>
           </div>
 
-          {/* Coupon Grid Skeleton */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Array.from({ length: 6 }, (_, i) => (
               <div
                 key={i}
                 className="bg-card border border-border rounded-2xl shadow-lg overflow-hidden"
               >
-                {/* Card Header Skeleton */}
                 <div className="bg-muted/50 border-b border-border p-4">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
@@ -204,7 +210,6 @@ const CouponManagement = memo(function CouponManagement() {
                   </div>
                 </div>
 
-                {/* Card Content Skeleton */}
                 <div className="p-4">
                   <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                     <div>
@@ -248,10 +253,10 @@ const CouponManagement = memo(function CouponManagement() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                Coupon Management
+                {t("header.title")}
               </h1>
               <p className="text-muted-foreground text-sm">
-                Create and manage discount coupons for your customers
+                {t("header.description")}
               </p>
             </div>
             <Dialog
@@ -261,13 +266,13 @@ const CouponManagement = memo(function CouponManagement() {
               <DialogTrigger asChild>
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
                   <Plus className="mr-2 h-4 w-4" />
-                  Create Coupon
+                  {t("actions.createCoupon")}
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-md bg-background border border-border rounded-2xl shadow-2xl">
                 <DialogHeader className="border-b border-border pb-4">
                   <DialogTitle className="text-xl font-semibold text-foreground">
-                    Create New Coupon
+                    {t("createDialog.title")}
                   </DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit} className="space-y-4 pt-4">
@@ -276,7 +281,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="code"
                       className="text-foreground font-medium"
                     >
-                      Coupon Code
+                      {t("form.code")}
                     </Label>
                     <Input
                       id="code"
@@ -287,7 +292,7 @@ const CouponManagement = memo(function CouponManagement() {
                           code: e.target.value.toUpperCase(),
                         })
                       }
-                      placeholder="SAVE20"
+                      placeholder={t("placeholders.code")}
                       className="bg-muted border-border focus:border-primary text-foreground placeholder-muted-foreground transition-colors duration-300"
                       required
                     />
@@ -297,7 +302,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="discountType"
                       className="text-foreground font-medium"
                     >
-                      Discount Type
+                      {t("form.discountType")}
                     </Label>
                     <Select
                       value={formData.discountType}
@@ -306,11 +311,17 @@ const CouponManagement = memo(function CouponManagement() {
                       }
                     >
                       <SelectTrigger className="bg-muted border-border focus:border-primary text-foreground">
-                        <SelectValue placeholder="Select discount type" />
+                        <SelectValue
+                          placeholder={t("placeholders.discountType")}
+                        />
                       </SelectTrigger>
                       <SelectContent className="bg-background border-border">
-                        <SelectItem value="percentage">Percentage</SelectItem>
-                        <SelectItem value="fixed">Fixed Amount</SelectItem>
+                        <SelectItem value="percentage">
+                          {t("discountTypes.percentage")}
+                        </SelectItem>
+                        <SelectItem value="fixed">
+                          {t("discountTypes.fixed")}
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -319,7 +330,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="discountValue"
                       className="text-foreground font-medium"
                     >
-                      Discount Value
+                      {t("form.discountValue")}
                     </Label>
                     <Input
                       id="discountValue"
@@ -333,7 +344,9 @@ const CouponManagement = memo(function CouponManagement() {
                         })
                       }
                       placeholder={
-                        formData.discountType === "percentage" ? "10" : "100"
+                        formData.discountType === "percentage"
+                          ? t("placeholders.percentValue")
+                          : t("placeholders.amountValue")
                       }
                       className="bg-muted border-border focus:border-primary text-foreground placeholder-muted-foreground transition-colors duration-300"
                       required
@@ -344,7 +357,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="minOrderValue"
                       className="text-foreground font-medium"
                     >
-                      Minimum Order Value (Optional)
+                      {t("form.minOrderValue")}
                     </Label>
                     <Input
                       id="minOrderValue"
@@ -357,7 +370,7 @@ const CouponManagement = memo(function CouponManagement() {
                           minOrderValue: e.target.value,
                         })
                       }
-                      placeholder="500"
+                      placeholder={t("placeholders.minOrderValue")}
                       className="bg-muted border-border focus:border-primary text-foreground placeholder-muted-foreground transition-colors duration-300"
                     />
                   </div>
@@ -366,7 +379,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="maxDiscount"
                       className="text-foreground font-medium"
                     >
-                      Maximum Discount (Optional)
+                      {t("form.maxDiscount")}
                     </Label>
                     <Input
                       id="maxDiscount"
@@ -379,7 +392,7 @@ const CouponManagement = memo(function CouponManagement() {
                           maxDiscount: e.target.value,
                         })
                       }
-                      placeholder="100"
+                      placeholder={t("placeholders.maxDiscount")}
                       className="bg-muted border-border focus:border-primary text-foreground placeholder-muted-foreground transition-colors duration-300"
                     />
                   </div>
@@ -388,7 +401,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="usageLimit"
                       className="text-foreground font-medium"
                     >
-                      Usage Limit (Optional)
+                      {t("form.usageLimit")}
                     </Label>
                     <Input
                       id="usageLimit"
@@ -397,7 +410,7 @@ const CouponManagement = memo(function CouponManagement() {
                       onChange={(e) =>
                         setFormData({ ...formData, usageLimit: e.target.value })
                       }
-                      placeholder="100"
+                      placeholder={t("placeholders.usageLimit")}
                       className="bg-muted border-border focus:border-primary text-foreground placeholder-muted-foreground transition-colors duration-300"
                     />
                   </div>
@@ -406,7 +419,7 @@ const CouponManagement = memo(function CouponManagement() {
                       htmlFor="expiresAt"
                       className="text-foreground font-medium"
                     >
-                      Expiry Date (Optional)
+                      {t("form.expiresAt")}
                     </Label>
                     <Input
                       id="expiresAt"
@@ -422,7 +435,7 @@ const CouponManagement = memo(function CouponManagement() {
                     type="submit"
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
                   >
-                    Create Coupon
+                    {t("actions.createCoupon")}
                   </Button>
                 </form>
               </DialogContent>
@@ -446,8 +459,12 @@ const CouponManagement = memo(function CouponManagement() {
                     </CardTitle>
                     <p className="text-muted-foreground text-sm mt-1">
                       {coupon.discountType === "percentage"
-                        ? `${coupon.discountValue}% off`
-                        : `৳${coupon.discountValue} off`}
+                        ? t("card.percentOff", {
+                            value: coupon.discountValue,
+                          })
+                        : t("card.amountOff", {
+                            value: coupon.discountValue,
+                          })}
                     </p>
                   </div>
                   <div className="flex gap-2">
@@ -458,11 +475,11 @@ const CouponManagement = memo(function CouponManagement() {
                           : "bg-orange-100/20 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400 border-orange-200 dark:border-orange-800"
                       }`}
                     >
-                      {coupon.isValid ? "সক্রিয়" : "নিষ্ক্রিয়"}
+                      {coupon.isValid ? t("card.active") : t("card.inactive")}
                     </div>
                     {isExpired(coupon.expiresAt) && (
                       <div className="px-3 py-1 rounded-full text-xs font-semibold bg-orange-100/20 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400 border border-orange-200 dark:border-orange-800">
-                        মেয়াদোত্তীর্ণ
+                        {t("card.expired")}
                       </div>
                     )}
                   </div>
@@ -471,14 +488,18 @@ const CouponManagement = memo(function CouponManagement() {
               <CardContent className="p-4">
                 <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                   <div>
-                    <span className="text-muted-foreground">ব্যবহৃত:</span>
+                    <span className="text-muted-foreground">
+                      {t("card.used")}
+                    </span>
                     <p className="font-medium text-foreground">
                       {coupon.usedCount} / {coupon.usageLimit || "∞"}
                     </p>
                   </div>
                   {coupon.minOrderValue && (
                     <div>
-                      <span className="text-muted-foreground">সর্বনিম্ন:</span>
+                      <span className="text-muted-foreground">
+                        {t("card.min")}
+                      </span>
                       <p className="font-medium text-foreground">
                         ৳{coupon.minOrderValue}
                       </p>
@@ -486,7 +507,9 @@ const CouponManagement = memo(function CouponManagement() {
                   )}
                   {coupon.maxDiscount && (
                     <div>
-                      <span className="text-muted-foreground">সর্বোচ্চ:</span>
+                      <span className="text-muted-foreground">
+                        {t("card.max")}
+                      </span>
                       <p className="font-medium text-foreground">
                         ৳{coupon.maxDiscount}
                       </p>
@@ -494,17 +517,20 @@ const CouponManagement = memo(function CouponManagement() {
                   )}
                   {coupon.expiresAt && (
                     <div>
-                      <span className="text-muted-foreground">মেয়াদ:</span>
+                      <span className="text-muted-foreground">
+                        {t("card.expiry")}
+                      </span>
                       <p className="font-medium text-foreground">
-                        {new Date(coupon.expiresAt).toLocaleDateString("bn-BD")}
+                        {new Date(coupon.expiresAt).toLocaleDateString()}
                       </p>
                     </div>
                   )}
                 </div>
                 <div className="flex justify-between items-center pt-4 border-t border-border">
                   <div className="text-xs text-muted-foreground">
-                    তৈরি:{" "}
-                    {new Date(coupon.createdAt).toLocaleDateString("bn-BD")}
+                    {t("card.created", {
+                      date: new Date(coupon.createdAt).toLocaleDateString(),
+                    })}
                   </div>
                   <div className="flex gap-2">
                     <Button
@@ -536,10 +562,10 @@ const CouponManagement = memo(function CouponManagement() {
               <Tag className="w-10 h-10 text-muted-foreground" />
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-2">
-              No coupons yet
+              {t("empty.title")}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Create your first discount coupon to get started
+              {t("empty.description")}
             </p>
             <Dialog
               open={isCreateDialogOpen}
@@ -548,7 +574,7 @@ const CouponManagement = memo(function CouponManagement() {
               <DialogTrigger asChild>
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
                   <Plus className="mr-2 h-4 w-4" />
-                  Create Coupon
+                  {t("actions.createCoupon")}
                 </Button>
               </DialogTrigger>
             </Dialog>
@@ -560,7 +586,7 @@ const CouponManagement = memo(function CouponManagement() {
           <DialogContent className="max-w-md bg-background border border-border rounded-2xl shadow-2xl">
             <DialogHeader className="border-b border-border pb-4">
               <DialogTitle className="text-xl font-semibold text-foreground">
-                Edit Coupon
+                {t("editDialog.title")}
               </DialogTitle>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4 pt-4">
@@ -569,7 +595,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-code"
                   className="text-foreground font-medium"
                 >
-                  Coupon Code
+                  {t("form.code")}
                 </Label>
                 <Input
                   id="edit-code"
@@ -589,7 +615,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-discountType"
                   className="text-foreground font-medium"
                 >
-                  Discount Type
+                  {t("form.discountType")}
                 </Label>
                 <Select
                   value={formData.discountType}
@@ -598,11 +624,15 @@ const CouponManagement = memo(function CouponManagement() {
                   }
                 >
                   <SelectTrigger className="bg-muted border-border focus:border-primary text-foreground">
-                    <SelectValue placeholder="Select discount type" />
+                    <SelectValue placeholder={t("placeholders.discountType")} />
                   </SelectTrigger>
                   <SelectContent className="bg-background border-border">
-                    <SelectItem value="percentage">Percentage</SelectItem>
-                    <SelectItem value="fixed">Fixed Amount</SelectItem>
+                    <SelectItem value="percentage">
+                      {t("discountTypes.percentage")}
+                    </SelectItem>
+                    <SelectItem value="fixed">
+                      {t("discountTypes.fixed")}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -611,7 +641,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-discountValue"
                   className="text-foreground font-medium"
                 >
-                  Discount Value
+                  {t("form.discountValue")}
                 </Label>
                 <Input
                   id="edit-discountValue"
@@ -630,7 +660,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-minOrderValue"
                   className="text-foreground font-medium"
                 >
-                  Minimum Order Value
+                  {t("form.minOrderValue")}
                 </Label>
                 <Input
                   id="edit-minOrderValue"
@@ -648,7 +678,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-maxDiscount"
                   className="text-foreground font-medium"
                 >
-                  Maximum Discount
+                  {t("form.maxDiscount")}
                 </Label>
                 <Input
                   id="edit-maxDiscount"
@@ -666,7 +696,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-usageLimit"
                   className="text-foreground font-medium"
                 >
-                  Usage Limit
+                  {t("form.usageLimit")}
                 </Label>
                 <Input
                   id="edit-usageLimit"
@@ -683,7 +713,7 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-expiresAt"
                   className="text-foreground font-medium"
                 >
-                  Expiry Date
+                  {t("form.expiresAt")}
                 </Label>
                 <Input
                   id="edit-expiresAt"
@@ -708,14 +738,14 @@ const CouponManagement = memo(function CouponManagement() {
                   htmlFor="edit-isValid"
                   className="text-foreground font-medium"
                 >
-                  Active
+                  {t("form.active")}
                 </Label>
               </div>
               <Button
                 type="submit"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
               >
-                Update Coupon
+                {t("actions.updateCoupon")}
               </Button>
             </form>
           </DialogContent>
