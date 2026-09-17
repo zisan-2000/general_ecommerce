@@ -236,13 +236,15 @@ test("admin validation enforces group semantics and variant-selector product ide
 });
 
 test("cart, order, warehouse and admin routes retain the configurable-bundle contract", async () => {
-  const [cart, order, warehouse, adminCreate, adminUpdate, shipment] = await Promise.all([
+  const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch] = await Promise.all([
     readFile(new URL("../app/api/cart/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/orders/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../lib/order-warehouse-stock.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/admin/products/bundles/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/admin/products/bundles/[id]/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/shipments/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../components/admin/products/bundles/ConfigurableBundleGroupBuilder.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/admin/products/bundles/search-products/route.ts", import.meta.url), "utf8"),
   ]);
 
   assert.match(cart, /bundleConfiguration/);
@@ -253,4 +255,8 @@ test("cart, order, warehouse and admin routes retain the configurable-bundle con
   assert.match(shipment, /bundleComponents/);
   assert.match(adminCreate, /requireProductManager/);
   assert.match(adminUpdate, /requireProductManager/);
+  assert.match(categoryPicker, /categoryIds: selectedCategoryId/);
+  assert.match(categoryPicker, /Catalog category/);
+  assert.match(catalogSearch, /effectiveCategoryIds/);
+  assert.match(catalogSearch, /category\.parentId/);
 });

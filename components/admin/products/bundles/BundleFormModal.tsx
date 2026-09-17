@@ -902,6 +902,14 @@ export default function BundleFormModal({
                     <ConfigurableBundleGroupBuilder
                       groups={groups}
                       onChange={handleGroupsChange}
+                      categoryIds={
+                        formData.selectedCategoryIds.length > 0
+                          ? formData.selectedCategoryIds
+                          : formData.categoryId
+                            ? [formData.categoryId]
+                            : []
+                      }
+                      categories={categories}
                     />
 
                     {selectedItems.length > 0 && (

@@ -33,9 +33,33 @@ export async function GET(request: NextRequest) {
 
     // Filter by categories if provided
     if (categoryIds) {
-      const categoryIdArray = categoryIds.split(',').map(id => parseInt(id.trim())).filter(id => !isNaN(id));
-      if (categoryIdArray.length > 0) {
-        where.categoryId = { in: categoryIdArray };
+      const requestedCategoryIds = categoryIds
+        .split(',')
+        .map((id) => parseInt(id.trim(), 10))
+        .filter((id) => Number.isInteger(id) && id > 0);
+      if (requestedCategoryIds.length > 0) {
+        // A merchant often selects a parent category (for example, Components).
+        // Include every active child category so its actual catalog is visible.
+        const categories = await prisma.category.findMany({
+          where: { deleted: false },
+          select: { id: true, parentId: true },
+        });
+        const effectiveCategoryIds = new Set(requestedCategoryIds);
+        let changed = true;
+        while (changed) {
+          changed = false;
+          for (const category of categories) {
+            if (
+              category.parentId !== null &&
+              effectiveCategoryIds.has(category.parentId) &&
+              !effectiveCategoryIds.has(category.id)
+            ) {
+              effectiveCategoryIds.add(category.id);
+              changed = true;
+            }
+          }
+        }
+        where.categoryId = { in: [...effectiveCategoryIds] };
       }
     }
 

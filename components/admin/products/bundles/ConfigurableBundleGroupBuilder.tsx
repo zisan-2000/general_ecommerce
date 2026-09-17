@@ -30,6 +30,11 @@ type CatalogProduct = {
   variants: CatalogVariant[];
 };
 
+type CatalogCategory = {
+  id: number;
+  name: string;
+};
+
 export type BundleBuilderOption = {
   productId: number;
   variantId: number | null;
@@ -71,20 +76,49 @@ export const createBundleGroup = (): BundleBuilderGroup => ({
 export default function ConfigurableBundleGroupBuilder({
   groups,
   onChange,
+  categoryIds = [],
+  categories = [],
 }: {
   groups: BundleBuilderGroup[];
   onChange: (groups: BundleBuilderGroup[]) => void;
+  categoryIds?: string[];
+  categories?: CatalogCategory[];
 }) {
   const [products, setProducts] = useState<CatalogProduct[]>([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
+  const [selectedCategoryId, setSelectedCategoryId] = useState("");
+
+  const usableCategoryIds = useMemo(
+    () => categoryIds.filter((id) => Number.isInteger(Number(id)) && Number(id) > 0),
+    [categoryIds],
+  );
+  const categoryKey = usableCategoryIds.join(",");
+  const selectedCategory = categories.find(
+    (category) => String(category.id) === selectedCategoryId,
+  );
 
   useEffect(() => {
+    setSelectedCategoryId((current) =>
+      usableCategoryIds.includes(current) ? current : usableCategoryIds[0] ?? "",
+    );
+  }, [categoryKey, usableCategoryIds]);
+
+  useEffect(() => {
+    if (!selectedCategoryId) {
+      setProducts([]);
+      setLoading(false);
+      return;
+    }
     const controller = new AbortController();
     const timer = window.setTimeout(async () => {
       setLoading(true);
       try {
-        const params = new URLSearchParams({ search, limit: "100" });
+        const params = new URLSearchParams({
+          search,
+          categoryIds: selectedCategoryId,
+          limit: "100",
+        });
         const response = await fetch(`/api/admin/operations/products/bundles/search-products?${params}`, {
           signal: controller.signal,
         });
@@ -100,7 +134,7 @@ export default function ConfigurableBundleGroupBuilder({
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [search]);
+  }, [search, selectedCategoryId]);
 
   const choices = useMemo(
     () => products.flatMap((product) => {
@@ -149,6 +183,30 @@ export default function ConfigurableBundleGroupBuilder({
   return (
     <div className="space-y-4">
       <div className="flex flex-col gap-3 rounded-lg border bg-muted/20 p-4 sm:flex-row sm:items-end">
+        <div className="min-w-52">
+          <Label htmlFor="bundle-catalog-category">Catalog category</Label>
+          <Select
+            value={selectedCategoryId}
+            onValueChange={setSelectedCategoryId}
+            disabled={usableCategoryIds.length === 0}
+          >
+            <SelectTrigger id="bundle-catalog-category" className="mt-1">
+              <SelectValue placeholder="Select categories above" />
+            </SelectTrigger>
+            <SelectContent>
+              {usableCategoryIds.map((categoryId) => {
+                const category = categories.find(
+                  (candidate) => String(candidate.id) === categoryId,
+                );
+                return (
+                  <SelectItem key={categoryId} value={categoryId}>
+                    {category?.name ?? `Category ${categoryId}`}
+                  </SelectItem>
+                );
+              })}
+            </SelectContent>
+          </Select>
+        </div>
         <div className="flex-1">
           <Label htmlFor="bundle-choice-search">Search allowed products and variants</Label>
           <div className="relative mt-1">
@@ -160,6 +218,18 @@ export default function ConfigurableBundleGroupBuilder({
           <Plus className="mr-2 h-4 w-4" />Add selection group
         </Button>
       </div>
+
+      {usableCategoryIds.length === 0 ? (
+        <p className="rounded-md border border-dashed p-3 text-sm text-muted-foreground">
+          Select one or more Product Categories above to load products for this bundle.
+        </p>
+      ) : (
+        <p className="text-xs text-muted-foreground" aria-live="polite">
+          {loading
+            ? `Loading products from ${selectedCategory?.name ?? "the selected category"}…`
+            : `${products.length} product${products.length === 1 ? "" : "s"} available in ${selectedCategory?.name ?? "the selected category"}.`}
+        </p>
+      )}
 
       {groups.map((group, groupIndex) => (
         <Card key={group.key}>
@@ -218,7 +288,7 @@ export default function ConfigurableBundleGroupBuilder({
               <Select onValueChange={(value) => addOption(groupIndex, value)} disabled={loading || (group.selectionType === "FIXED" && group.options.length >= 1)}>
                 <SelectTrigger><SelectValue placeholder={loading ? "Loading products…" : "Select product / exact variant"} /></SelectTrigger>
                 <SelectContent>
-                  {choices.map((choice) => <SelectItem key={choice.key} value={choice.key}>{choice.label}</SelectItem>)}
+                  {choices.length > 0 ? choices.map((choice) => <SelectItem key={choice.key} value={choice.key}>{choice.label}</SelectItem>) : <SelectItem value="no-products" disabled>No products found in this category</SelectItem>}
                 </SelectContent>
               </Select>
             </div>
