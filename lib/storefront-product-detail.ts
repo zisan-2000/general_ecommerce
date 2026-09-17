@@ -7,6 +7,7 @@ import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-ser
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 
 type RawProduct = Prisma.ProductGetPayload<{
   select: typeof storefrontProductSelect;
@@ -32,6 +33,7 @@ function serializeProduct(product: RawProduct) {
     variants: product.variants.map((variant) => ({
       ...variant,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
+      stock: computeVariantAvailableStock(variant),
     })),
     bundleGroups: product.bundleGroups.map((group) => ({
       ...group,
@@ -43,7 +45,11 @@ function serializeProduct(product: RawProduct) {
           basePrice: Number(option.product.basePrice),
         },
         variant: option.variant
-          ? { ...option.variant, price: Number(option.variant.price) }
+          ? {
+              ...option.variant,
+              price: Number(option.variant.price),
+              stock: computeVariantAvailableStock(option.variant),
+            }
           : null,
       })),
     })),

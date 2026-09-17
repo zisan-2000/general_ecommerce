@@ -47,11 +47,12 @@ function product(id, name, variants) {
   };
 }
 
-function group({ id, name, selectionType, options, required = true, minSelect = 1 }) {
+function group({ id, name, selectionType, options, required = true, minSelect = 1, pricingMode = "MANUAL" }) {
   return {
     id,
     name,
     selectionType,
+    pricingMode,
     required,
     minSelect,
     maxSelect: 1,
@@ -141,6 +142,33 @@ test("variant and product choices change price and configuration-specific stock"
   assert.equal(resolved.finalPrice, 1170);
   assert.equal(resolved.availableQuantity, 3);
   assert.deepEqual(resolved.components.map((component) => component.variantId), [102, 201, 401]);
+});
+
+test("automatic pricing uses actual component price differences when manual adjustments are zero", () => {
+  const bundle = fixture();
+  bundle.bundleGroups = bundle.bundleGroups.map((item) => ({
+    ...item,
+    pricingMode: "AUTOMATIC",
+    options: item.options.map((choice) => ({ ...choice, priceAdjustment: 0 })),
+  }));
+  const configured = resolveBundleConfiguration({
+    bundle,
+    selections: [
+      { groupId: 1, optionId: 12 },
+      { groupId: 2, optionId: 21 },
+      { groupId: 3, optionId: 32 },
+      { groupId: 4, optionId: null, omitted: true },
+    ],
+    strictWarehouseStock: true,
+  });
+  assert.equal(configured.finalPrice, 1180);
+
+  const withOptional = resolveBundleConfiguration({
+    bundle,
+    selections: [{ groupId: 4, optionId: 41 }],
+    strictWarehouseStock: true,
+  });
+  assert.equal(withOptional.finalPrice, 1120);
 });
 
 test("optional choices can be selected or explicitly omitted, other groups cannot", () => {
@@ -243,8 +271,8 @@ test("admin validation enforces group semantics and variant-selector product ide
   assert.match(invalid.errors.join("\n"), /must be required/);
 });
 
-test("cart, order, warehouse and admin routes retain the configurable-bundle contract", async () => {
-  const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch] = await Promise.all([
+test("cart, order, warehouse, admin and storefront retain the configurable-bundle contract", async () => {
+  const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch, customerConfigurator] = await Promise.all([
     readFile(new URL("../app/api/cart/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/orders/route-core.ts", import.meta.url), "utf8"),
     readFile(new URL("../lib/order-warehouse-stock.ts", import.meta.url), "utf8"),
@@ -253,6 +281,7 @@ test("cart, order, warehouse and admin routes retain the configurable-bundle con
     readFile(new URL("../app/api/shipments/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../components/admin/products/bundles/ConfigurableBundleGroupBuilder.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/api/admin/products/bundles/search-products/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../components/ecommarce/product-detail/BundleConfigurator.tsx", import.meta.url), "utf8"),
   ]);
 
   assert.match(cart, /bundleConfiguration/);
@@ -264,12 +293,16 @@ test("cart, order, warehouse and admin routes retain the configurable-bundle con
   assert.match(adminCreate, /requireProductManager/);
   assert.doesNotMatch(adminCreate, /Please select a valid warehouse/);
   assert.match(adminUpdate, /requireProductManager/);
-  assert.match(categoryPicker, /categoryIds: selectedCategoryId/);
-  assert.match(categoryPicker, /Catalog category/);
+  assert.match(categoryPicker, /categoryIds: categoryId/);
+  assert.match(categoryPicker, /Product category/);
+  assert.match(categoryPicker, /Automatic price difference/);
   assert.match(categoryPicker, /Retry/);
   assert.match(categoryPicker, /Move group/);
   assert.match(catalogSearch, /effectiveCategoryIds/);
   assert.match(catalogSearch, /category\.parentId/);
   assert.match(catalogSearch, /stockLevels/);
   assert.match(catalogSearch, /reserved/);
+  assert.match(customerConfigurator, /calculateConfiguredBundlePricing/);
+  assert.match(customerConfigurator, /Configuration ready/);
+  assert.match(customerConfigurator, /selectionLimitReached/);
 });

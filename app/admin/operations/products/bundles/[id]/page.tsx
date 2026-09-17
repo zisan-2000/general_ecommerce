@@ -74,6 +74,7 @@ interface Bundle {
     id: number;
     name: string;
     selectionType: string;
+    pricingMode: "AUTOMATIC" | "MANUAL";
     required: boolean;
     minSelect: number;
     maxSelect: number;
@@ -83,7 +84,7 @@ interface Bundle {
       id: number;
       isDefault: boolean;
       priceAdjustment: number;
-      product: { id: number; name: string; image?: string; available: boolean };
+      product: { id: number; name: string; image?: string; available: boolean; basePrice: number };
       variant?: { id: number; sku: string; price: number } | null;
     }>;
   }>;
@@ -280,17 +281,34 @@ export default function BundleDetailPage({
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {bundle.bundleGroups.map((group, index) => (
+                {bundle.bundleGroups.map((group, index) => {
+                  const defaultUnitPrice = group.options
+                    .filter((option) => option.isDefault)
+                    .reduce(
+                      (total, option) => total + Number(option.variant?.price ?? option.product.basePrice),
+                      0,
+                    );
+                  const hasDefault = group.options.some((option) => option.isDefault);
+                  return (
                   <div key={group.id} className="rounded-lg bg-muted/30 p-4">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{index + 1}</span>
                       <h4 className="font-semibold">{group.name}</h4>
                       <Badge variant="outline">{group.selectionType.replace("_", " ")}</Badge>
+                      <Badge variant="outline">{group.pricingMode === "AUTOMATIC" ? "Automatic pricing" : "Manual pricing"}</Badge>
                       <Badge variant={group.required ? "default" : "secondary"}>{group.required ? "Required" : "Optional"}</Badge>
                       <span className="text-xs text-muted-foreground">Choose {group.minSelect}–{group.maxSelect} · Qty {group.defaultQuantity}</span>
                     </div>
                     <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                      {group.options.map((option) => (
+                      {group.options.map((option) => {
+                        const unitPrice = Number(option.variant?.price ?? option.product.basePrice);
+                        const automaticDifference = !hasDefault
+                          ? unitPrice
+                          : unitPrice - defaultUnitPrice;
+                        const displayedAdjustment = group.pricingMode === "AUTOMATIC"
+                          ? automaticDifference
+                          : Number(option.priceAdjustment);
+                        return (
                         <div key={option.id} className="flex items-center gap-3 rounded border bg-background p-2">
                           <div className="relative h-10 w-10 overflow-hidden rounded bg-muted">
                             {option.product.image ? <Image src={option.product.image} alt="" fill sizes="40px" className="object-contain" /> : <Package className="m-2 h-6 w-6 text-muted-foreground" />}
@@ -301,13 +319,21 @@ export default function BundleDetailPage({
                           </div>
                           <div className="text-right text-xs">
                             {option.isDefault ? <Badge variant="secondary">Default</Badge> : null}
-                            <p className="mt-1 font-medium">{Number(option.priceAdjustment) === 0 ? "Included" : `${Number(option.priceAdjustment) > 0 ? "+" : ""}${formatCurrency(Number(option.priceAdjustment), bundle.currency)}`}</p>
+                            <p className="mt-1 font-medium">
+                              {group.pricingMode === "AUTOMATIC" && group.maxSelect > 1
+                                ? "Calculated with group"
+                                : displayedAdjustment === 0
+                                  ? "Included"
+                                  : `${displayedAdjustment > 0 ? "+" : "−"}${formatCurrency(Math.abs(displayedAdjustment), bundle.currency)}`}
+                            </p>
                           </div>
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </CardContent>
           </Card>

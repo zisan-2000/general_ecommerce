@@ -1,6 +1,10 @@
 import { createHash } from "node:crypto";
 import type { Prisma } from "@/generated/prisma";
 import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
+import {
+  calculateConfiguredBundlePricing,
+  type BundlePricingModeValue,
+} from "@/lib/bundle-configuration-pricing";
 
 export const BUNDLE_SELECTION_TYPES = [
   "FIXED",
@@ -10,6 +14,7 @@ export const BUNDLE_SELECTION_TYPES = [
 ] as const;
 
 export type BundleSelectionTypeValue = (typeof BUNDLE_SELECTION_TYPES)[number];
+export const BUNDLE_PRICING_MODES = ["AUTOMATIC", "MANUAL"] as const;
 
 export type BundleSelectionInput = {
   groupId: number;
@@ -28,6 +33,7 @@ export type BundleAdminOptionInput = {
 export type BundleAdminGroupInput = {
   name: string;
   selectionType: BundleSelectionTypeValue;
+  pricingMode?: BundlePricingModeValue;
   required?: boolean;
   minSelect?: number;
   maxSelect?: number;
@@ -74,6 +80,7 @@ type ResolvableGroup = {
   id: number;
   name: string;
   selectionType: BundleSelectionTypeValue;
+  pricingMode: BundlePricingModeValue;
   required: boolean;
   minSelect: number;
   maxSelect: number;
@@ -183,6 +190,12 @@ export function validateBundleAdminGroups(value: unknown) {
     names.add(name.toLowerCase());
     if (!BUNDLE_SELECTION_TYPES.includes(group.selectionType)) {
       errors.push(`${label} has an invalid selection type`);
+    }
+    if (
+      group.pricingMode !== undefined &&
+      !BUNDLE_PRICING_MODES.includes(group.pricingMode)
+    ) {
+      errors.push(`${label} has an invalid pricing mode`);
     }
 
     const options = Array.isArray(group.options) ? group.options : [];
@@ -376,16 +389,14 @@ export function resolveBundleConfiguration(params: {
     }
   }
 
-  const priceAdjustment = components.reduce(
-    (total, component) => total + component.priceAdjustment * component.quantity,
-    0,
-  );
-  const basePrice = Number(bundle.basePrice);
-  const finalPrice = Math.max(0, basePrice + priceAdjustment);
-  const regularTotal = components.reduce(
-    (total, component) => total + component.unitPrice * component.quantity,
-    0,
-  );
+  const pricing = calculateConfiguredBundlePricing({
+    basePrice: bundle.basePrice,
+    groups: bundle.bundleGroups,
+    selections: selections.map((selection) => ({
+      ...selection,
+      quantity: selection.quantity ?? 1,
+    })),
+  });
   const componentCapacity = demandByVariant.size
     ? Math.min(
         ...Array.from(demandByVariant.values()).map(({ available, required }) =>
@@ -408,10 +419,10 @@ export function resolveBundleConfiguration(params: {
   return {
     selections: canonicalSelections,
     components,
-    basePrice,
-    priceAdjustment,
-    finalPrice,
-    regularTotal,
+    basePrice: pricing.basePrice,
+    priceAdjustment: pricing.priceAdjustment,
+    finalPrice: pricing.finalPrice,
+    regularTotal: pricing.regularTotal,
     availableQuantity,
     configurationKey,
   };

@@ -82,6 +82,9 @@ export const storefrontProductSelect = {
       colorImage: true,
       isDefault: true,
       active: true,
+      stockLevels: {
+        select: { quantity: true, reserved: true },
+      },
     },
   },
   attributes: {
@@ -121,6 +124,7 @@ export const storefrontProductSelect = {
       id: true,
       name: true,
       selectionType: true,
+      pricingMode: true,
       required: true,
       minSelect: true,
       maxSelect: true,
@@ -157,8 +161,12 @@ export const storefrontProductSelect = {
               currency: true,
               stock: true,
               options: true,
+              colorImage: true,
               active: true,
               isDefault: true,
+              stockLevels: {
+                select: { quantity: true, reserved: true },
+              },
             },
           },
         },

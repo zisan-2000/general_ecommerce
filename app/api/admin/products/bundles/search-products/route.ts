@@ -32,6 +32,7 @@ export async function GET(request: NextRequest) {
         { slug: { contains: search, mode: 'insensitive' } },
         { sku: { contains: search, mode: 'insensitive' } },
         { description: { contains: search, mode: 'insensitive' } },
+        { variants: { some: { active: true, sku: { contains: search, mode: 'insensitive' } } } },
       ];
     }
 

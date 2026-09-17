@@ -26,6 +26,7 @@ export type ProductPurchaseData = {
     id: number;
     name: string;
     selectionType: "FIXED" | "PRODUCT_SELECT" | "VARIANT_SELECT" | "OPTIONAL";
+    pricingMode: "AUTOMATIC" | "MANUAL";
     required: boolean;
     minSelect: number;
     maxSelect: number;

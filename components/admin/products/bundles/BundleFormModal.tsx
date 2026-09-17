@@ -60,7 +60,6 @@ const defaultFormData = {
   description: "",
   shortDesc: "",
   categoryId: "",
-  selectedCategoryIds: [] as string[],
   brandId: "none",
   image: "",
   gallery: [] as string[],
@@ -181,9 +180,6 @@ export default function BundleFormModal({
             description: bundleData.description || "",
             shortDesc: bundleData.shortDesc || "",
             categoryId: String(bundleData.categoryId || ""),
-            selectedCategoryIds: bundleData.categoryId
-              ? [String(bundleData.categoryId)]
-              : [],
             brandId: bundleData.brandId ? String(bundleData.brandId) : "none",
             image: bundleData.image || "",
             gallery: bundleData.gallery || [],
@@ -204,6 +200,13 @@ export default function BundleFormModal({
               key: `saved-group-${group.id || groupIndex}`,
               name: group.name || "",
               selectionType: group.selectionType || "FIXED",
+              pricingMode: group.pricingMode || "AUTOMATIC",
+              catalogCategoryId: String(
+                group.options?.[0]?.product?.categoryId ??
+                group.options?.[0]?.product?.category?.id ??
+                bundleData.categoryId ??
+                "",
+              ),
               required: Boolean(group.required),
               minSelect: Number(group.minSelect ?? 1),
               maxSelect: Number(group.maxSelect ?? 1),
@@ -587,6 +590,7 @@ export default function BundleFormModal({
         groups: groups.map((group) => ({
           name: group.name,
           selectionType: group.selectionType,
+          pricingMode: group.pricingMode,
           required: group.required,
           minSelect: group.minSelect,
           maxSelect: group.maxSelect,
@@ -744,9 +748,6 @@ export default function BundleFormModal({
                             setFormData((prev) => ({
                               ...prev,
                               categoryId: value,
-                              selectedCategoryIds: value
-                                ? Array.from(new Set([...prev.selectedCategoryIds, value]))
-                                : prev.selectedCategoryIds,
                             }))
                           }
                         >
@@ -849,40 +850,6 @@ export default function BundleFormModal({
                       </p>
                     </div>
 
-                    <div>
-                      <Label>Product Categories</Label>
-                      <div className="max-h-32 overflow-y-auto rounded-md border bg-background p-3">
-                        {categories.map((category) => (
-                          <label
-                            key={category.id}
-                            className="mb-2 flex items-center space-x-2 text-sm last:mb-0"
-                          >
-                            <input
-                              type="checkbox"
-                              checked={formData.selectedCategoryIds.includes(
-                                String(category.id),
-                              )}
-                              onChange={(e) =>
-                                setFormData((prev) => ({
-                                  ...prev,
-                                  selectedCategoryIds: e.target.checked
-                                    ? [
-                                        ...prev.selectedCategoryIds,
-                                        String(category.id),
-                                      ]
-                                    : prev.selectedCategoryIds.filter(
-                                        (id) => id !== String(category.id),
-                                      ),
-                                }))
-                              }
-                              className="rounded border-border text-primary focus:ring-ring"
-                            />
-                            <span>{category.name}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-
                     <div className="flex items-center gap-6">
                       <label className="flex items-center space-x-2">
                         <Switch
@@ -924,13 +891,7 @@ export default function BundleFormModal({
                     <ConfigurableBundleGroupBuilder
                       groups={groups}
                       onChange={handleGroupsChange}
-                      categoryIds={
-                        formData.selectedCategoryIds.length > 0
-                          ? formData.selectedCategoryIds
-                          : formData.categoryId
-                            ? [formData.categoryId]
-                            : []
-                      }
+                      defaultCategoryId={formData.categoryId}
                       categories={categories}
                     />
 

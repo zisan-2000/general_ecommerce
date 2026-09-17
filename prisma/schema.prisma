@@ -459,6 +459,7 @@ model BundleGroup {
   bundleId            Int
   name                String
   selectionType       BundleSelectionType @default(FIXED)
+  pricingMode         BundlePricingMode   @default(AUTOMATIC)
   required            Boolean             @default(true)
   minSelect           Int                 @default(1)
   maxSelect           Int                 @default(1)
@@ -4272,6 +4273,11 @@ enum BundleSelectionType {
   PRODUCT_SELECT
   VARIANT_SELECT
   OPTIONAL
+}
+
+enum BundlePricingMode {
+  AUTOMATIC
+  MANUAL
 }
 
 enum AttributeType {

@@ -43,6 +43,9 @@ export async function prepareBundleGroups(
     const defaultQuantity = Number(group.defaultQuantity ?? 1);
     const minQuantity = Number(group.minQuantity ?? defaultQuantity);
     const maxQuantity = Number(group.maxQuantity ?? defaultQuantity);
+    const pricingMode = group.pricingMode === "MANUAL"
+      ? ("MANUAL" as const)
+      : ("AUTOMATIC" as const);
     const options = group.options.map((option, optionIndex) => {
       const product = productById.get(Number(option.productId));
       if (!product) throw new Error("Bundle choice product was not found");
@@ -79,6 +82,7 @@ export async function prepareBundleGroups(
     return {
       name: String(group.name).trim(),
       selectionType: group.selectionType,
+      pricingMode,
       required,
       minSelect,
       maxSelect,
