@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -92,10 +93,10 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
   return payload as T;
 }
 
-function formatDate(value: string | null) {
-  if (!value) return "N/A";
+function formatDate(value: string | null, fallback: string) {
+  if (!value) return fallback;
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
+  if (Number.isNaN(date.getTime())) return fallback;
   return date.toLocaleString();
 }
 
@@ -104,6 +105,7 @@ function formatMoney(value: string | number) {
 }
 
 export default function ComparativeStatementsPage() {
+  const t = useTranslations("AdminComparativeStatements");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -148,13 +150,10 @@ export default function ComparativeStatementsPage() {
     try {
       const [statementData, rfqData] = await Promise.all([
         fetch("/api/scm/comparative-statements", { cache: "no-store" }).then((response) =>
-          readJson<ComparativeStatement[]>(
-            response,
-            "Failed to load comparative statements",
-          ),
+          readJson<ComparativeStatement[]>(response, t("errors.loadStatements")),
         ),
         fetch("/api/scm/rfqs", { cache: "no-store" }).then((response) =>
-          readJson<Rfq[]>(response, "Failed to load RFQs"),
+          readJson<Rfq[]>(response, t("errors.loadRfqs")),
         ),
       ]);
 
@@ -172,7 +171,7 @@ export default function ComparativeStatementsPage() {
               : "";
       setSelectedId(nextSelectedId);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load comparative statement workspace");
+      toast.error(error?.message || t("errors.loadWorkspace"));
       setStatements([]);
       setRfqs([]);
       setSelectedId("");
@@ -185,6 +184,7 @@ export default function ComparativeStatementsPage() {
     if (canRead) {
       void loadData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead]);
 
   useEffect(() => {
@@ -233,8 +233,7 @@ export default function ComparativeStatementsPage() {
   }, [selectedStatement]);
 
   const eligibleRfqs = useMemo(
-    () =>
-      rfqs.filter((rfq) => ["SUBMITTED", "CLOSED", "AWARDED"].includes(rfq.status)),
+    () => rfqs.filter((rfq) => ["SUBMITTED", "CLOSED", "AWARDED"].includes(rfq.status)),
     [rfqs],
   );
 
@@ -253,7 +252,7 @@ export default function ComparativeStatementsPage() {
 
   const createStatement = async () => {
     if (!rfqId) {
-      toast.error("RFQ is required");
+      toast.error(t("errors.rfqRequired"));
       return;
     }
     setSaving(true);
@@ -270,14 +269,14 @@ export default function ComparativeStatementsPage() {
       });
       const created = await readJson<ComparativeStatement>(
         response,
-        "Failed to generate comparative statement",
+        t("errors.generateFailed"),
       );
-      toast.success(`Generated ${created.csNumber}`);
+      toast.success(t("toasts.generated", { number: created.csNumber }));
       setRfqId("");
       setCreateNote("");
       await loadData(created.id);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to generate comparative statement");
+      toast.error(error?.message || t("errors.generateFailed"));
     } finally {
       setSaving(false);
     }
@@ -307,12 +306,12 @@ export default function ComparativeStatementsPage() {
       });
       const updated = await readJson<ComparativeStatement>(
         response,
-        "Failed to update scorecard",
+        t("errors.scorecardFailed"),
       );
-      toast.success(`Updated ${updated.csNumber} scorecard`);
+      toast.success(t("toasts.scorecardUpdated", { number: updated.csNumber }));
       await loadData(updated.id);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to update scorecard");
+      toast.error(error?.message || t("errors.scorecardFailed"));
     } finally {
       setSaving(false);
     }
@@ -331,11 +330,11 @@ export default function ComparativeStatementsPage() {
           rejectionNote: workflowNote,
         }),
       });
-      const updated = await readJson<ComparativeStatement>(response, `Failed to ${action}`);
-      toast.success(`${updated.csNumber}: ${action} done`);
+      const updated = await readJson<ComparativeStatement>(response, t("errors.actionFailed", { action }));
+      toast.success(t("toasts.actionDone", { number: updated.csNumber, action }));
       await loadData(updated.id);
     } catch (error: any) {
-      toast.error(error?.message || `Failed to ${action}`);
+      toast.error(error?.message || t("errors.actionFailed", { action }));
     } finally {
       setSaving(false);
     }
@@ -346,43 +345,47 @@ export default function ComparativeStatementsPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
-            <CardDescription>
-              You do not have permission to access comparative statements.
-            </CardDescription>
+            <CardTitle>{t("forbidden.title")}</CardTitle>
+            <CardDescription>{t("forbidden.description")}</CardDescription>
           </CardHeader>
         </Card>
       </div>
     );
   }
 
+  const statusOptions = [
+    "DRAFT",
+    "SUBMITTED",
+    "MANAGER_APPROVED",
+    "COMMITTEE_APPROVED",
+    "FINAL_APPROVED",
+    "REJECTED",
+    "CANCELLED",
+  ];
+
   return (
     <div className="space-y-6 p-6">
       <div>
-        <h1 className="text-2xl font-bold">Comparative Statements</h1>
-        <p className="text-sm text-muted-foreground">
-          Auto-generate CS from supplier financial proposals, maintain technical scorecards, and run manager-committee-final approval workflow.
-        </p>
+        <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+        <p className="text-sm text-muted-foreground">{t("header.description")}</p>
       </div>
 
       {canManage ? (
         <Card>
           <CardHeader>
-            <CardTitle>Generate Comparative Statement</CardTitle>
-            <CardDescription>
-              Extract supplier financial proposals from an RFQ and start CS workflow in AAB format.
-            </CardDescription>
+            <CardTitle>{t("generate.title")}</CardTitle>
+            <CardDescription>{t("generate.description")}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid gap-4 md:grid-cols-4">
               <div className="space-y-2 md:col-span-2">
-                <Label>RFQ</Label>
+                <Label>{t("generate.rfqLabel")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={rfqId}
                   onChange={(event) => setRfqId(event.target.value)}
                 >
-                  <option value="">Select RFQ</option>
+                  <option value="">{t("generate.selectRfq")}</option>
                   {eligibleRfqs.map((rfq) => (
                     <option key={rfq.id} value={rfq.id}>
                       {rfq.rfqNumber} • {rfq.warehouse.code} • {rfq.status}
@@ -391,7 +394,7 @@ export default function ComparativeStatementsPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Technical Weight (%)</Label>
+                <Label>{t("generate.technicalWeight")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -402,7 +405,7 @@ export default function ComparativeStatementsPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Financial Weight (%)</Label>
+                <Label>{t("generate.financialWeight")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -414,16 +417,16 @@ export default function ComparativeStatementsPage() {
               </div>
             </div>
             <div className="space-y-2">
-              <Label>Note</Label>
+              <Label>{t("generate.noteLabel")}</Label>
               <Textarea
                 rows={2}
                 value={createNote}
                 onChange={(event) => setCreateNote(event.target.value)}
-                placeholder="Optional CS generation note"
+                placeholder={t("generate.notePlaceholder")}
               />
             </div>
             <Button onClick={() => void createStatement()} disabled={saving}>
-              {saving ? "Generating..." : "Generate CS"}
+              {saving ? t("generate.generating") : t("generate.generateButton")}
             </Button>
           </CardContent>
         </Card>
@@ -431,15 +434,13 @@ export default function ComparativeStatementsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>CS Register</CardTitle>
-          <CardDescription>
-            Monitor comparative statement versions and approval progress.
-          </CardDescription>
+          <CardTitle>{t("register.title")}</CardTitle>
+          <CardDescription>{t("register.description")}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-3 md:grid-cols-[2fr_1fr_1fr_auto]">
             <Input
-              placeholder="Search CS number / RFQ / warehouse..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -448,21 +449,19 @@ export default function ComparativeStatementsPage() {
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
             >
-              <option value="">All statuses</option>
-              <option value="DRAFT">DRAFT</option>
-              <option value="SUBMITTED">SUBMITTED</option>
-              <option value="MANAGER_APPROVED">MANAGER_APPROVED</option>
-              <option value="COMMITTEE_APPROVED">COMMITTEE_APPROVED</option>
-              <option value="FINAL_APPROVED">FINAL_APPROVED</option>
-              <option value="REJECTED">REJECTED</option>
-              <option value="CANCELLED">CANCELLED</option>
+              <option value="">{t("filters.allStatuses")}</option>
+              {statusOptions.map((status) => (
+                <option key={status} value={status}>
+                  {t(`statuses.${status}` as any)}
+                </option>
+              ))}
             </select>
             <select
               className="w-full rounded-md border bg-background px-3 py-2 text-sm"
               value={selectedId}
               onChange={(event) => setSelectedId(event.target.value)}
             >
-              <option value="">Select CS</option>
+              <option value="">{t("filters.selectCs")}</option>
               {visibleStatements.map((statement) => (
                 <option key={statement.id} value={statement.id}>
                   {statement.csNumber} • {statement.status}
@@ -470,14 +469,14 @@ export default function ComparativeStatementsPage() {
               ))}
             </select>
             <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
-              Refresh
+              {t("actions.refresh")}
             </Button>
           </div>
 
-          {loading ? <p className="text-sm text-muted-foreground">Loading...</p> : null}
+          {loading ? <p className="text-sm text-muted-foreground">{t("loading")}</p> : null}
 
           {!selectedStatement && !loading ? (
-            <p className="text-sm text-muted-foreground">No comparative statement selected.</p>
+            <p className="text-sm text-muted-foreground">{t("noSelection")}</p>
           ) : null}
 
           {selectedStatement ? (
@@ -485,53 +484,53 @@ export default function ComparativeStatementsPage() {
               <div className="rounded-md border p-4">
                 <div className="grid gap-2 text-sm md:grid-cols-2 xl:grid-cols-4">
                   <div>
-                    <span className="text-muted-foreground">CS:</span> {selectedStatement.csNumber}
+                    <span className="text-muted-foreground">{t("detail.cs")}:</span>{" "}
+                    {selectedStatement.csNumber}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">RFQ:</span> {selectedStatement.rfq.rfqNumber}
+                    <span className="text-muted-foreground">{t("detail.rfq")}:</span>{" "}
+                    {selectedStatement.rfq.rfqNumber}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Warehouse:</span>{" "}
+                    <span className="text-muted-foreground">{t("detail.warehouse")}:</span>{" "}
                     {selectedStatement.warehouse.name}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Status:</span>{" "}
-                    {selectedStatement.status}
+                    <span className="text-muted-foreground">{t("detail.status")}:</span>{" "}
+                    {t(`statuses.${selectedStatement.status}` as any)}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Generated PO:</span>{" "}
-                    {selectedStatement.generatedPurchaseOrder?.poNumber ?? "N/A"}
+                    <span className="text-muted-foreground">{t("detail.generatedPo")}:</span>{" "}
+                    {selectedStatement.generatedPurchaseOrder?.poNumber ?? t("labels.na")}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Generated:</span>{" "}
-                    {formatDate(selectedStatement.generatedAt)}
+                    <span className="text-muted-foreground">{t("detail.generated")}:</span>{" "}
+                    {formatDate(selectedStatement.generatedAt, t("labels.na"))}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Submitted:</span>{" "}
-                    {formatDate(selectedStatement.submittedAt)}
+                    <span className="text-muted-foreground">{t("detail.submitted")}:</span>{" "}
+                    {formatDate(selectedStatement.submittedAt, t("labels.na"))}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Manager Approved:</span>{" "}
-                    {formatDate(selectedStatement.managerApprovedAt)}
+                    <span className="text-muted-foreground">{t("detail.managerApproved")}:</span>{" "}
+                    {formatDate(selectedStatement.managerApprovedAt, t("labels.na"))}
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Final Approved:</span>{" "}
-                    {formatDate(selectedStatement.finalApprovedAt)}
+                    <span className="text-muted-foreground">{t("detail.finalApproved")}:</span>{" "}
+                    {formatDate(selectedStatement.finalApprovedAt, t("labels.na"))}
                   </div>
                 </div>
               </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Technical Scorecard</CardTitle>
-                  <CardDescription>
-                    Enter technical scores and responsiveness. Financial scores/rank are auto-calculated.
-                  </CardDescription>
+                  <CardTitle>{t("scorecard.title")}</CardTitle>
+                  <CardDescription>{t("scorecard.description")}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-3 lg:grid-cols-3">
                     <div className="space-y-2">
-                      <Label>Technical Weight (%)</Label>
+                      <Label>{t("generate.technicalWeight")}</Label>
                       <Input
                         type="number"
                         min={0}
@@ -543,7 +542,7 @@ export default function ComparativeStatementsPage() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>Financial Weight (%)</Label>
+                      <Label>{t("generate.financialWeight")}</Label>
                       <Input
                         type="number"
                         min={0}
@@ -555,12 +554,12 @@ export default function ComparativeStatementsPage() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>Workflow Note</Label>
+                      <Label>{t("scorecard.workflowNote")}</Label>
                       <Input
                         value={workflowNote}
                         onChange={(event) => setWorkflowNote(event.target.value)}
                         disabled={!canManage && !canApproveAny}
-                        placeholder="Approval/rejection note"
+                        placeholder={t("scorecard.workflowNotePlaceholder")}
                       />
                     </div>
                   </div>
@@ -570,22 +569,20 @@ export default function ComparativeStatementsPage() {
                       <div key={line.id} className="rounded-lg border p-4">
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
-                            <div className="break-words font-medium">
-                              {line.supplier.name}
-                            </div>
+                            <div className="break-words font-medium">{line.supplier.name}</div>
                             <div className="text-xs text-muted-foreground">
                               {line.supplier.code}
                             </div>
                           </div>
                           <div className="shrink-0 rounded-md bg-muted px-2 py-1 text-xs font-medium">
-                            Rank {line.rank ?? "-"}
+                            {t("scorecard.rank")} {line.rank ?? "-"}
                           </div>
                         </div>
 
                         <div className="mt-4 grid gap-3 sm:grid-cols-2">
                           <div className="rounded-md bg-muted/30 p-3 text-sm">
                             <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                              Financial
+                              {t("scorecard.financial")}
                             </div>
                             <div className="mt-1 font-medium">
                               {Number(line.financialScore || 0).toFixed(2)}
@@ -593,7 +590,7 @@ export default function ComparativeStatementsPage() {
                           </div>
                           <div className="rounded-md bg-muted/30 p-3 text-sm">
                             <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                              Combined
+                              {t("scorecard.combined")}
                             </div>
                             <div className="mt-1 font-medium">
                               {Number(line.combinedScore || 0).toFixed(4)}
@@ -601,7 +598,7 @@ export default function ComparativeStatementsPage() {
                           </div>
                           <div className="rounded-md bg-muted/30 p-3 text-sm sm:col-span-2">
                             <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                              Grand Total
+                              {t("scorecard.grandTotal")}
                             </div>
                             <div className="mt-1 break-words font-medium">
                               {formatMoney(line.financialGrandTotal)} {line.currency}
@@ -621,12 +618,12 @@ export default function ComparativeStatementsPage() {
                                 })
                               }
                             />
-                            Responsive
+                            {t("scorecard.responsive")}
                           </label>
 
                           <div className="space-y-2">
                             <Label htmlFor={`technical-score-${line.id}`}>
-                              Technical Score
+                              {t("scorecard.technicalScore")}
                             </Label>
                             <Input
                               id={`technical-score-${line.id}`}
@@ -649,7 +646,7 @@ export default function ComparativeStatementsPage() {
 
                           <div className="space-y-2">
                             <Label htmlFor={`technical-note-${line.id}`}>
-                              Technical Note
+                              {t("scorecard.technicalNote")}
                             </Label>
                             <Input
                               id={`technical-note-${line.id}`}
@@ -671,14 +668,14 @@ export default function ComparativeStatementsPage() {
                     <Table className="min-w-[920px]">
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Rank</TableHead>
-                          <TableHead>Supplier</TableHead>
-                          <TableHead>Responsive</TableHead>
-                          <TableHead>Technical</TableHead>
-                          <TableHead>Financial</TableHead>
-                          <TableHead>Combined</TableHead>
-                          <TableHead>Grand Total</TableHead>
-                          <TableHead>Technical Note</TableHead>
+                          <TableHead>{t("table.rank")}</TableHead>
+                          <TableHead>{t("table.supplier")}</TableHead>
+                          <TableHead>{t("table.responsive")}</TableHead>
+                          <TableHead>{t("table.technical")}</TableHead>
+                          <TableHead>{t("table.financial")}</TableHead>
+                          <TableHead>{t("table.combined")}</TableHead>
+                          <TableHead>{t("table.grandTotal")}</TableHead>
+                          <TableHead>{t("table.technicalNote")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -721,12 +718,8 @@ export default function ComparativeStatementsPage() {
                                 }
                               />
                             </TableCell>
-                            <TableCell>
-                              {Number(line.financialScore || 0).toFixed(2)}
-                            </TableCell>
-                            <TableCell>
-                              {Number(line.combinedScore || 0).toFixed(4)}
-                            </TableCell>
+                            <TableCell>{Number(line.financialScore || 0).toFixed(2)}</TableCell>
+                            <TableCell>{Number(line.combinedScore || 0).toFixed(4)}</TableCell>
                             <TableCell className="min-w-[150px]">
                               {formatMoney(line.financialGrandTotal)} {line.currency}
                             </TableCell>
@@ -754,7 +747,7 @@ export default function ComparativeStatementsPage() {
                       onClick={() => void saveScorecard()}
                       disabled={saving}
                     >
-                      {saving ? "Saving..." : "Save Scorecard"}
+                      {saving ? t("scorecard.saving") : t("scorecard.saveButton")}
                     </Button>
                   ) : null}
                 </CardContent>
@@ -762,18 +755,18 @@ export default function ComparativeStatementsPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Approval Workflow</CardTitle>
+                  <CardTitle>{t("workflow.title")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex flex-wrap gap-2">
                     {canManage && selectedStatement.status === "DRAFT" ? (
                       <Button onClick={() => void runAction("submit")} disabled={saving}>
-                        Submit
+                        {t("workflow.submit")}
                       </Button>
                     ) : null}
                     {canApproveManager && selectedStatement.status === "SUBMITTED" ? (
                       <Button onClick={() => void runAction("manager_approve")} disabled={saving}>
-                        Manager Approve
+                        {t("workflow.managerApprove")}
                       </Button>
                     ) : null}
                     {canApproveCommittee &&
@@ -782,20 +775,20 @@ export default function ComparativeStatementsPage() {
                         onClick={() => void runAction("committee_approve")}
                         disabled={saving}
                       >
-                        Committee Approve
+                        {t("workflow.committeeApprove")}
                       </Button>
                     ) : null}
                     {canApproveFinal &&
                     selectedStatement.status === "COMMITTEE_APPROVED" ? (
                       <Button onClick={() => void runAction("final_approve")} disabled={saving}>
-                        Final Approve
+                        {t("workflow.finalApprove")}
                       </Button>
                     ) : null}
                     {canGeneratePo &&
                     selectedStatement.status === "FINAL_APPROVED" &&
                     !selectedStatement.generatedPurchaseOrder ? (
                       <Button onClick={() => void runAction("generate_po")} disabled={saving}>
-                        Generate PO
+                        {t("workflow.generatePo")}
                       </Button>
                     ) : null}
                     {(canManage || canApproveAny) &&
@@ -807,7 +800,7 @@ export default function ComparativeStatementsPage() {
                         onClick={() => void runAction("reject")}
                         disabled={saving}
                       >
-                        Reject
+                        {t("workflow.reject")}
                       </Button>
                     ) : null}
                     {canManage &&
@@ -817,21 +810,24 @@ export default function ComparativeStatementsPage() {
                         onClick={() => void runAction("cancel")}
                         disabled={saving}
                       >
-                        Cancel
+                        {t("workflow.cancel")}
                       </Button>
                     ) : null}
                   </div>
 
                   <div className="space-y-2 rounded-md border p-3">
-                    <div className="text-sm font-medium">Approval Trail</div>
+                    <div className="text-sm font-medium">{t("workflow.trailTitle")}</div>
                     {selectedStatement.approvalEvents.length === 0 ? (
-                      <div className="text-xs text-muted-foreground">No approval events yet.</div>
+                      <div className="text-xs text-muted-foreground">
+                        {t("workflow.noEvents")}
+                      </div>
                     ) : (
                       selectedStatement.approvalEvents.map((event) => (
                         <div key={event.id} className="text-xs text-muted-foreground">
-                          {formatDate(event.actedAt)} • {event.stage} • {event.decision} •{" "}
-                          {event.actedBy?.name || event.actedBy?.email || "Unknown"} •{" "}
-                          {event.note || "No note"}
+                          {formatDate(event.actedAt, t("labels.na"))} • {event.stage} •{" "}
+                          {event.decision} •{" "}
+                          {event.actedBy?.name || event.actedBy?.email || t("workflow.unknown")}{" "}
+                          • {event.note || t("workflow.noNote")}
                         </div>
                       ))
                     )}

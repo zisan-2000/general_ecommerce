@@ -4878,72 +4878,213 @@
     }
   },
   "AdminPurchaseRequisitions": {
-    "header": {
-      "title": "Purchase Requisitions",
-      "description": "Create and manage purchase requisitions for procurement."
-    },
-    "actions": {
-      "newRequisition": "New Requisition",
-      "refresh": "Refresh",
-      "openDetail": "Open Detail"
-    },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total requisitions" },
-      "draft": { "label": "Draft", "hint": "Draft requisitions" },
-      "submitted": { "label": "Submitted", "hint": "Submitted for approval" },
-      "approved": { "label": "Approved", "hint": "Approved requisitions" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search requisition number, requester, warehouse...",
-      "allStatuses": "All statuses"
-    },
-    "loading": "Loading purchase requisitions...",
-    "empty": "No purchase requisitions found."
+  "header": {
+    "title": "Purchase Requisitions",
+    "description": "Browse requisitions, filter backlog, and move into detail workspaces for approvals or conversion."
   },
+  "actions": {
+    "newRequisition": "New Requisition",
+    "refresh": "Refresh",
+    "openDetail": "Open Detail"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Visible requisitions" },
+    "pendingApproval": { "label": "Pending Approval", "hint": "Submitted, budget-cleared, endorsed" },
+    "approved": { "label": "Approved", "hint": "Ready for sourcing or conversion" },
+    "converted": { "label": "Converted", "hint": "Already linked to purchase orders" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search requisition, title, warehouse, budget...",
+    "allStatuses": "All Statuses"
+  },
+  "statuses": {
+    "DRAFT": "Draft",
+    "SUBMITTED": "Submitted",
+    "BUDGET_CLEARED": "Budget Cleared",
+    "ENDORSED": "Endorsed",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "CONVERTED": "Converted",
+    "CANCELLED": "Cancelled"
+  },
+  "register": {
+    "title": "Requisition Register",
+    "description": "This screen is now queue-focused. Create, approvals, and conversion happen in dedicated workspaces."
+  },
+  "labels": {
+    "warehouse": "Warehouse",
+    "budget": "Budget",
+    "neededBy": "Needed By",
+    "poLinks": "PO Links"
+  },
+  "loading": "Loading purchase requisitions...",
+  "empty": "No purchase requisitions found.",
+  "errors": {
+    "load": "Failed to load purchase requisitions"
+  }
+},
   "AdminRfqs": {
-    "header": {
-      "title": "Request for Quotations (RFQ)",
-      "description": "Manage RFQs and supplier quotations."
-    },
-    "actions": {
-      "newRfq": "New RFQ",
-      "refresh": "Refresh",
-      "openDetail": "Open Detail"
-    },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total RFQs" },
-      "open": { "label": "Open", "hint": "Open for quotations" },
-      "closed": { "label": "Closed", "hint": "Closed RFQs" },
-      "awarded": { "label": "Awarded", "hint": "Awarded to suppliers" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search RFQ number, warehouse...",
-      "allStatuses": "All statuses"
-    },
-    "loading": "Loading RFQs...",
-    "empty": "No RFQs found."
+  "header": {
+    "title": "RFQ Management",
+    "description": "Browse RFQ queue here. Draft creation, invites, quoting, and awarding now flow through dedicated workspaces."
   },
-  "AdminComparativeStatements": {
-    "header": {
-      "title": "Comparative Statements",
-      "description": "Compare supplier quotations and make procurement decisions."
-    },
-    "actions": {
-      "refresh": "Refresh",
-      "openDetail": "Open Detail"
-    },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total statements" },
-      "pending": { "label": "Pending", "hint": "Pending review" },
-      "approved": { "label": "Approved", "hint": "Approved statements" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search CS number, RFQ...",
-      "allStatuses": "All statuses"
-    },
-    "loading": "Loading comparative statements...",
-    "empty": "No comparative statements found."
+  "actions": {
+    "newRfq": "New RFQ",
+    "refresh": "Refresh",
+    "openDetail": "Open Detail"
   },
+  "stats": {
+    "total": { "label": "Total", "hint": "Visible RFQs" },
+    "open": { "label": "Open", "hint": "Draft and submitted" },
+    "awarded": { "label": "Awarded", "hint": "Ready for PO conversion or already awarded" },
+    "closed": { "label": "Closed", "hint": "Closed or cancelled sourcing cycles" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search RFQ, MRF, supplier...",
+    "allStatuses": "All statuses"
+  },
+  "statuses": {
+    "DRAFT": "Draft",
+    "SUBMITTED": "Submitted",
+    "CLOSED": "Closed",
+    "AWARDED": "Awarded",
+    "CANCELLED": "Cancelled"
+  },
+  "register": {
+    "title": "RFQ Register",
+    "description": "Register-first view. Open detail to invite suppliers, capture quotations, request resubmission, or convert award to PO."
+  },
+  "labels": {
+    "warehouse": "Warehouse",
+    "mrf": "MRF",
+    "invites": "Invites",
+    "quotes": "Quotes"
+  },
+  "loading": "Loading RFQs...",
+  "empty": "No RFQ found.",
+  "errors": {
+    "load": "Failed to load RFQs"
+  }
+},
+ "AdminComparativeStatements": {
+  "header": {
+    "title": "Comparative Statements",
+    "description": "Auto-generate CS from supplier financial proposals, maintain technical scorecards, and run manager-committee-final approval workflow."
+  },
+  "actions": {
+    "refresh": "Refresh",
+    "openDetail": "Open Detail"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Total statements" },
+    "pending": { "label": "Pending", "hint": "Pending review" },
+    "approved": { "label": "Approved", "hint": "Approved statements" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search CS number / RFQ / warehouse...",
+    "allStatuses": "All statuses",
+    "selectCs": "Select CS"
+  },
+  "statuses": {
+    "DRAFT": "DRAFT",
+    "SUBMITTED": "SUBMITTED",
+    "MANAGER_APPROVED": "MANAGER_APPROVED",
+    "COMMITTEE_APPROVED": "COMMITTEE_APPROVED",
+    "FINAL_APPROVED": "FINAL_APPROVED",
+    "REJECTED": "REJECTED",
+    "CANCELLED": "CANCELLED"
+  },
+  "generate": {
+    "title": "Generate Comparative Statement",
+    "description": "Extract supplier financial proposals from an RFQ and start CS workflow in AAB format.",
+    "rfqLabel": "RFQ",
+    "selectRfq": "Select RFQ",
+    "technicalWeight": "Technical Weight (%)",
+    "financialWeight": "Financial Weight (%)",
+    "noteLabel": "Note",
+    "notePlaceholder": "Optional CS generation note",
+    "generateButton": "Generate CS",
+    "generating": "Generating..."
+  },
+  "register": {
+    "title": "CS Register",
+    "description": "Monitor comparative statement versions and approval progress."
+  },
+  "detail": {
+    "cs": "CS",
+    "rfq": "RFQ",
+    "warehouse": "Warehouse",
+    "status": "Status",
+    "generatedPo": "Generated PO",
+    "generated": "Generated",
+    "submitted": "Submitted",
+    "managerApproved": "Manager Approved",
+    "finalApproved": "Final Approved"
+  },
+  "scorecard": {
+    "title": "Technical Scorecard",
+    "description": "Enter technical scores and responsiveness. Financial scores/rank are auto-calculated.",
+    "workflowNote": "Workflow Note",
+    "workflowNotePlaceholder": "Approval/rejection note",
+    "rank": "Rank",
+    "financial": "Financial",
+    "combined": "Combined",
+    "grandTotal": "Grand Total",
+    "responsive": "Responsive",
+    "technicalScore": "Technical Score",
+    "technicalNote": "Technical Note",
+    "saveButton": "Save Scorecard",
+    "saving": "Saving..."
+  },
+  "table": {
+    "rank": "Rank",
+    "supplier": "Supplier",
+    "responsive": "Responsive",
+    "technical": "Technical",
+    "financial": "Financial",
+    "combined": "Combined",
+    "grandTotal": "Grand Total",
+    "technicalNote": "Technical Note"
+  },
+  "workflow": {
+    "title": "Approval Workflow",
+    "submit": "Submit",
+    "managerApprove": "Manager Approve",
+    "committeeApprove": "Committee Approve",
+    "finalApprove": "Final Approve",
+    "generatePo": "Generate PO",
+    "reject": "Reject",
+    "cancel": "Cancel",
+    "trailTitle": "Approval Trail",
+    "noEvents": "No approval events yet.",
+    "unknown": "Unknown",
+    "noNote": "No note"
+  },
+  "labels": {
+    "na": "N/A"
+  },
+  "loading": "Loading comparative statements...",
+  "empty": "No comparative statements found.",
+  "noSelection": "No comparative statement selected.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access comparative statements."
+  },
+  "errors": {
+    "loadStatements": "Failed to load comparative statements",
+    "loadRfqs": "Failed to load RFQs",
+    "loadWorkspace": "Failed to load comparative statement workspace",
+    "rfqRequired": "RFQ is required",
+    "generateFailed": "Failed to generate comparative statement",
+    "scorecardFailed": "Failed to update scorecard",
+    "actionFailed": "Failed to {action}"
+  },
+  "toasts": {
+    "generated": "Generated {number}",
+    "scorecardUpdated": "Updated {number} scorecard",
+    "actionDone": "{number}: {action} done"
+  }
+},
  "AdminMaterialRequests": {
   "header": {
     "title": "Material Requests",
@@ -5107,28 +5248,79 @@
     "load": "Failed to load material releases"
   }
 },
-  "AdminWarehouseTransfers": {
-    "header": {
-      "title": "Warehouse Transfers",
-      "description": "Transfer stock between warehouse locations."
-    },
-    "actions": {
-      "newTransfer": "New Transfer",
-      "refresh": "Refresh",
-      "openDetail": "Open Detail"
-    },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total transfers" },
-      "pending": { "label": "Pending", "hint": "Pending transfers" },
-      "completed": { "label": "Completed", "hint": "Completed transfers" }
-    },
-    "filters": {
-      "searchPlaceholder": "Search transfer number, warehouses...",
-      "allStatuses": "All statuses"
-    },
-    "loading": "Loading warehouse transfers...",
-    "empty": "No warehouse transfers found."
+ "AdminWarehouseTransfers": {
+  "header": {
+    "title": "Warehouse Transfers",
+    "description": "Approve, dispatch, and receive internal stock movement between warehouses."
   },
+  "actions": {
+    "newTransfer": "New Transfer",
+    "refresh": "Refresh",
+    "openDetail": "Open Detail",
+    "submit": "Submit",
+    "approve": "Approve",
+    "dispatch": "Dispatch",
+    "receive": "Receive",
+    "cancel": "Cancel"
+  },
+  "stats": {
+    "total": { "label": "Total", "hint": "Visible transfer queue" },
+    "pendingApproval": { "label": "Pending Approval", "hint": "Waiting for approval" },
+    "inTransit": { "label": "In Transit", "hint": "Still active between warehouses" },
+    "received": { "label": "Received", "hint": "Completed internal movement" }
+  },
+  "filters": {
+    "searchPlaceholder": "Search transfer number or warehouse...",
+    "allStatuses": "All statuses"
+  },
+  "statuses": {
+    "DRAFT": "DRAFT",
+    "SUBMITTED": "SUBMITTED",
+    "APPROVED": "APPROVED",
+    "PARTIALLY_DISPATCHED": "PARTIALLY_DISPATCHED",
+    "DISPATCHED": "DISPATCHED",
+    "PARTIALLY_RECEIVED": "PARTIALLY_RECEIVED",
+    "RECEIVED": "RECEIVED",
+    "CANCELLED": "CANCELLED"
+  },
+  "register": {
+    "title": "Transfer Queue",
+    "description": "Monitor transfer requests and progress through approval, dispatch, and receipt."
+  },
+  "labels": {
+    "requested": "Requested",
+    "dispatched": "Dispatched",
+    "received": "Received",
+    "submitted": "Submitted",
+    "approved": "Approved",
+    "to": "to",
+    "needBy": "Need by",
+    "requiredBy": "Required By",
+    "quantity": "Quantity",
+    "na": "N/A"
+  },
+  "table": {
+    "transfer": "Transfer",
+    "route": "Route",
+    "status": "Status",
+    "items": "Items",
+    "timeline": "Timeline",
+    "actions": "Actions"
+  },
+  "loading": "Loading warehouse transfers...",
+  "empty": "No warehouse transfers found.",
+  "forbidden": {
+    "title": "Forbidden",
+    "description": "You do not have permission to access warehouse transfers."
+  },
+  "errors": {
+    "load": "Failed to load warehouse transfers",
+    "action": "Failed to {action} warehouse transfer"
+  },
+  "toasts": {
+    "actionCompleted": "Warehouse transfer {action} completed"
+  }
+},
   "AdminPaymentRequests": {
     "header": {
       "title": "Payment Requests",

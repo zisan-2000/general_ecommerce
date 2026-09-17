@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { Plus, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function RfqPage() {
+  const t = useTranslations("AdminRfqs");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -61,10 +63,10 @@ export default function RfqPage() {
       if (status !== "ALL") params.set("status", status);
       if (search.trim()) params.set("search", search.trim());
       const response = await fetch(`/api/scm/rfqs?${params.toString()}`, { cache: "no-store" });
-      const data = await readJson<Rfq[]>(response, "Failed to load RFQs");
+      const data = await readJson<Rfq[]>(response, t("errors.load"));
       setRfqs(Array.isArray(data) ? data : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load RFQs");
+      toast.error(error?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -72,6 +74,7 @@ export default function RfqPage() {
 
   useEffect(() => {
     void loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status]);
 
   const visible = useMemo(() => {
@@ -85,70 +88,96 @@ export default function RfqPage() {
     );
   }, [rfqs, search]);
 
-  const summary = useMemo(() => ({
-    total: rfqs.length,
-    open: rfqs.filter((row) => ["DRAFT", "SUBMITTED"].includes(row.status)).length,
-    awarded: rfqs.filter((row) => row.status === "AWARDED").length,
-    closed: rfqs.filter((row) => ["CLOSED", "CANCELLED"].includes(row.status)).length,
-  }), [rfqs]);
+  const summary = useMemo(
+    () => ({
+      total: rfqs.length,
+      open: rfqs.filter((row) => ["DRAFT", "SUBMITTED"].includes(row.status)).length,
+      awarded: rfqs.filter((row) => row.status === "AWARDED").length,
+      closed: rfqs.filter((row) => ["CLOSED", "CANCELLED"].includes(row.status)).length,
+    }),
+    [rfqs],
+  );
+
+  const statusOptions = ["DRAFT", "SUBMITTED", "CLOSED", "AWARDED", "CANCELLED"];
 
   return (
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">RFQ Management</h1>
-          <p className="text-sm text-muted-foreground">
-            Browse RFQ queue here. Draft creation, invites, quoting, and awarding now flow through dedicated workspaces.
-          </p>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("header.description")}</p>
         </div>
         <div className="flex gap-2">
           {canManage ? (
             <Button asChild>
               <Link href="/admin/scm/rfqs/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New RFQ
+                {t("actions.newRfq")}
               </Link>
             </Button>
           ) : null}
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Total" value={String(summary.total)} hint="Visible RFQs" />
-        <ScmStatCard label="Open" value={String(summary.open)} hint="Draft and submitted" />
-        <ScmStatCard label="Awarded" value={String(summary.awarded)} hint="Ready for PO conversion or already awarded" />
-        <ScmStatCard label="Closed" value={String(summary.closed)} hint="Closed or cancelled sourcing cycles" />
+        <ScmStatCard
+          label={t("stats.total.label")}
+          value={String(summary.total)}
+          hint={t("stats.total.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.open.label")}
+          value={String(summary.open)}
+          hint={t("stats.open.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.awarded.label")}
+          value={String(summary.awarded)}
+          hint={t("stats.awarded.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.closed.label")}
+          value={String(summary.closed)}
+          hint={t("stats.closed.hint")}
+        />
       </div>
 
       <Card>
         <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <CardTitle>RFQ Register</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Register-first view. Open detail to invite suppliers, capture quotations, request resubmission, or convert award to PO.
-            </p>
+            <CardTitle>{t("register.title")}</CardTitle>
+            <p className="text-sm text-muted-foreground">{t("register.description")}</p>
           </div>
           <div className="flex w-full flex-col gap-2 md:w-auto md:flex-row">
-            <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search RFQ, MRF, supplier..." className="w-full md:w-80" />
-            <select className="w-full rounded-md border bg-background px-3 py-2 md:w-52" value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="ALL">All statuses</option>
-              <option value="DRAFT">Draft</option>
-              <option value="SUBMITTED">Submitted</option>
-              <option value="CLOSED">Closed</option>
-              <option value="AWARDED">Awarded</option>
-              <option value="CANCELLED">Cancelled</option>
+            <Input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder={t("filters.searchPlaceholder")}
+              className="w-full md:w-80"
+            />
+            <select
+              className="w-full rounded-md border bg-background px-3 py-2 md:w-52"
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            >
+              <option value="ALL">{t("filters.allStatuses")}</option>
+              {statusOptions.map((option) => (
+                <option key={option} value={option}>
+                  {t(`statuses.${option}` as any)}
+                </option>
+              ))}
             </select>
           </div>
         </CardHeader>
         <CardContent>
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading RFQs...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visible.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No RFQ found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visible.map((rfq) => (
@@ -156,21 +185,36 @@ export default function RfqPage() {
                   <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div className="space-y-2">
                       <div className="flex flex-wrap items-center gap-2">
-                        <Link href={`/admin/scm/rfqs/${rfq.id}`} className="text-lg font-semibold underline-offset-4 hover:underline">
+                        <Link
+                          href={`/admin/scm/rfqs/${rfq.id}`}
+                          className="text-lg font-semibold underline-offset-4 hover:underline"
+                        >
                           {rfq.rfqNumber}
                         </Link>
                         <ScmStatusChip status={rfq.status} />
                       </div>
                       <div className="grid gap-2 text-sm text-muted-foreground md:grid-cols-2 xl:grid-cols-4">
-                        <div>Warehouse: {rfq.warehouse.name}</div>
-                        <div>MRF: {rfq.purchaseRequisition?.requisitionNumber || "-"}</div>
-                        <div>Invites: {rfq.supplierInvites.length}</div>
-                        <div>Quotes: {rfq.quotationSubmissionCount ?? rfq.quotations.length}</div>
+                        <div>
+                          {t("labels.warehouse")}: {rfq.warehouse.name}
+                        </div>
+                        <div>
+                          {t("labels.mrf")}:{" "}
+                          {rfq.purchaseRequisition?.requisitionNumber || "-"}
+                        </div>
+                        <div>
+                          {t("labels.invites")}: {rfq.supplierInvites.length}
+                        </div>
+                        <div>
+                          {t("labels.quotes")}:{" "}
+                          {rfq.quotationSubmissionCount ?? rfq.quotations.length}
+                        </div>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       <Button asChild variant="secondary" size="sm">
-                        <Link href={`/admin/scm/rfqs/${rfq.id}`}>Open Detail</Link>
+                        <Link href={`/admin/scm/rfqs/${rfq.id}`}>
+                          {t("actions.openDetail")}
+                        </Link>
                       </Button>
                     </div>
                   </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { Plus, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -53,7 +54,15 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
   return data as T;
 }
 
+function formatDate(value: string | null, fallback: string) {
+  if (!value) return fallback;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return fallback;
+  return date.toLocaleDateString();
+}
+
 export default function PurchaseRequisitionsPage() {
+  const t = useTranslations("AdminPurchaseRequisitions");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -81,13 +90,10 @@ export default function PurchaseRequisitionsPage() {
       const response = await fetch(`/api/scm/purchase-requisitions?${params.toString()}`, {
         cache: "no-store",
       });
-      const data = await readJson<PurchaseRequisition[]>(
-        response,
-        "Failed to load purchase requisitions",
-      );
+      const data = await readJson<PurchaseRequisition[]>(response, t("errors.load"));
       setRequisitions(Array.isArray(data) ? data : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load purchase requisitions");
+      toast.error(error?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -95,6 +101,7 @@ export default function PurchaseRequisitionsPage() {
 
   useEffect(() => {
     void loadRequisitions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [statusFilter]);
 
   const visibleRequisitions = useMemo(() => {
@@ -123,51 +130,74 @@ export default function PurchaseRequisitionsPage() {
     };
   }, [requisitions]);
 
+  const statusOptions = [
+    "DRAFT",
+    "SUBMITTED",
+    "BUDGET_CLEARED",
+    "ENDORSED",
+    "APPROVED",
+    "REJECTED",
+    "CONVERTED",
+    "CANCELLED",
+  ];
+
   return (
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Purchase Requisitions</h1>
-          <p className="text-sm text-muted-foreground">
-            Browse requisitions, filter backlog, and move into detail workspaces for approvals or conversion.
-          </p>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
+          <p className="text-sm text-muted-foreground">{t("header.description")}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {canManage ? (
             <Button asChild>
               <Link href="/admin/scm/purchase-requisitions/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New Requisition
+                {t("actions.newRequisition")}
               </Link>
             </Button>
           ) : null}
           <Button variant="outline" onClick={() => void loadRequisitions()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Total" value={String(summary.total)} hint="Visible requisitions" />
-        <ScmStatCard label="Pending Approval" value={String(summary.pending)} hint="Submitted, budget-cleared, endorsed" />
-        <ScmStatCard label="Approved" value={String(summary.approved)} hint="Ready for sourcing or conversion" />
-        <ScmStatCard label="Converted" value={String(summary.converted)} hint="Already linked to purchase orders" />
+        <ScmStatCard
+          label={t("stats.total.label")}
+          value={String(summary.total)}
+          hint={t("stats.total.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.pendingApproval.label")}
+          value={String(summary.pending)}
+          hint={t("stats.pendingApproval.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.approved.label")}
+          value={String(summary.approved)}
+          hint={t("stats.approved.hint")}
+        />
+        <ScmStatCard
+          label={t("stats.converted.label")}
+          value={String(summary.converted)}
+          hint={t("stats.converted.hint")}
+        />
       </div>
 
       <Card>
         <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <CardTitle>Requisition Register</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              This screen is now queue-focused. Create, approvals, and conversion happen in dedicated workspaces.
-            </p>
+            <CardTitle>{t("register.title")}</CardTitle>
+            <p className="text-sm text-muted-foreground">{t("register.description")}</p>
           </div>
           <div className="flex w-full flex-col gap-2 md:w-auto md:flex-row">
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search requisition, title, warehouse, budget..."
+              placeholder={t("filters.searchPlaceholder")}
               className="w-full md:w-80"
             />
             <select
@@ -175,23 +205,20 @@ export default function PurchaseRequisitionsPage() {
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
             >
-              <option value="ALL">All Statuses</option>
-              <option value="DRAFT">Draft</option>
-              <option value="SUBMITTED">Submitted</option>
-              <option value="BUDGET_CLEARED">Budget Cleared</option>
-              <option value="ENDORSED">Endorsed</option>
-              <option value="APPROVED">Approved</option>
-              <option value="REJECTED">Rejected</option>
-              <option value="CONVERTED">Converted</option>
-              <option value="CANCELLED">Cancelled</option>
+              <option value="ALL">{t("filters.allStatuses")}</option>
+              {statusOptions.map((status) => (
+                <option key={status} value={status}>
+                  {t(`statuses.${status}` as any)}
+                </option>
+              ))}
             </select>
           </div>
         </CardHeader>
         <CardContent>
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading purchase requisitions...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visibleRequisitions.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No purchase requisitions found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visibleRequisitions.map((requisition) => (
@@ -207,18 +234,29 @@ export default function PurchaseRequisitionsPage() {
                         </Link>
                         <ScmStatusChip status={requisition.status} />
                       </div>
-                      {requisition.title ? <div className="text-sm font-medium">{requisition.title}</div> : null}
+                      {requisition.title ? (
+                        <div className="text-sm font-medium">{requisition.title}</div>
+                      ) : null}
                       <div className="grid gap-2 text-sm text-muted-foreground md:grid-cols-2 xl:grid-cols-4">
-                        <div>Warehouse: {requisition.warehouse.name}</div>
-                        <div>Budget: {requisition.budgetCode || "-"}</div>
-                        <div>Needed By: {requisition.neededBy ? new Date(requisition.neededBy).toLocaleDateString() : "-"}</div>
-                        <div>PO Links: {requisition.purchaseOrders.length}</div>
+                        <div>
+                          {t("labels.warehouse")}: {requisition.warehouse.name}
+                        </div>
+                        <div>
+                          {t("labels.budget")}: {requisition.budgetCode || "-"}
+                        </div>
+                        <div>
+                          {t("labels.neededBy")}:{" "}
+                          {formatDate(requisition.neededBy, "-")}
+                        </div>
+                        <div>
+                          {t("labels.poLinks")}: {requisition.purchaseOrders.length}
+                        </div>
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       <Button asChild variant="secondary" size="sm">
                         <Link href={`/admin/scm/purchase-requisitions/${requisition.id}`}>
-                          Open Detail
+                          {t("actions.openDetail")}
                         </Link>
                       </Button>
                     </div>
