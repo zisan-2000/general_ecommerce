@@ -4080,6 +4080,119 @@
       "suppliers": { "title": "Suppliers", "description": "Maintain supplier master and governance." }
     }
   },
+  "AdminGoodsReceipts": {
+    "header": {
+      "title": "Goods Receiving Note (GRN)",
+      "description": "Receive goods, confirm requester review, check WO-vs-delivery-vs-invoice variance, upload challan/bill documents, and complete 3-role vendor evaluation."
+    },
+    "common": { "notAvailable": "N/A" },
+    "actions": {
+      "newGrn": "New GRN",
+      "refresh": "Refresh",
+      "openGrnCreator": "Open GRN Creator",
+      "clearFocus": "Clear Focus",
+      "openDetail": "Open Detail",
+      "confirmGrn": "Confirm GRN",
+      "viewFile": "View file",
+      "uploading": "Uploading...",
+      "uploadAttachment": "Upload Attachment",
+      "submitting": "Submitting...",
+      "submitEvaluation": "Submit Evaluation"
+    },
+    "stats": {
+      "total": { "label": "Total GRN", "hint": "Visible receipt register" },
+      "pendingConfirmation": { "label": "Pending Confirmation", "hint": "Requester still needs to confirm" },
+      "variance": { "label": "Variance", "hint": "WO vs delivery vs invoice mismatch" },
+      "evaluationPending": { "label": "Evaluation Pending", "hint": "One or more roles still missing" },
+      "readyToReceive": { "label": "Ready To Receive", "hint": "Approved PO still open for receipt" }
+    },
+    "focus": {
+      "activeTitle": "Focused queue active",
+      "pendingConfirmation": "Showing receipts that still need requester confirmation.",
+      "variance": "Showing receipts with PO vs delivery vs invoice mismatch.",
+      "incompleteEvaluation": "Showing receipts missing one or more evaluation roles.",
+      "post": "Use the guided GRN creation page to post a new inbound receipt.",
+      "filtered": "Showing a filtered goods receipt queue."
+    },
+    "register": {
+      "title": "GRN Register",
+      "visibleReceipts": "{count, plural, =1 {# visible receipt} other {# visible receipts}}"
+    },
+    "filters": {
+      "searchPlaceholder": "Search receipt, PO, supplier, requisition, or warehouse...",
+      "allQueues": "All queues",
+      "pendingConfirmation": "Pending confirmation",
+      "variance": "Variance",
+      "evaluationPending": "Evaluation pending",
+      "readyToPost": "Ready to post"
+    },
+    "loading": "Loading goods receipts...",
+    "empty": "No goods receipts found.",
+    "labels": {
+      "dateAndWarehouse": "{date} • {warehouse}",
+      "by": "By {name}",
+      "note": "Note: {note}"
+    },
+    "match": {
+      "title": "WO vs Delivered vs Invoice",
+      "quantities": "Ordered {ordered} | Delivered {delivered} | Invoiced {invoiced}",
+      "invoices": "Invoices {count} | Match {status}",
+      "statuses": { "PENDING": "Pending", "MATCHED": "Matched", "VARIANCE": "Variance" }
+    },
+    "confirmation": {
+      "title": "Requester Confirmation",
+      "reviewTitle": "Requester Review & Confirmation",
+      "confirmedAt": "Confirmed at {date}",
+      "pending": "Pending requester confirmation",
+      "notePlaceholder": "Requester confirmation note (optional)"
+    },
+    "table": { "item": "Item", "qtyReceived": "Qty Received" },
+    "attachments": {
+      "title": "Challan / Bill Attachments",
+      "empty": "No attachments yet.",
+      "attachmentFallback": "Attachment",
+      "fileTitle": "{type} • {fileName}",
+      "uploadedBy": "Uploaded {date} by {name}",
+      "notePlaceholder": "Attachment note (optional)"
+    },
+    "attachmentTypes": { "CHALLAN": "CHALLAN", "BILL": "BILL", "OTHER": "OTHER" },
+    "roles": {
+      "REQUESTER": "Requester",
+      "PROCUREMENT": "Procurement",
+      "ADMINISTRATION": "Manager Administration"
+    },
+    "evaluation": {
+      "title": "Vendor Performance Evaluation (1-5)",
+      "completionTitle": "Evaluation Completion",
+      "completed": "All three roles completed",
+      "pendingRoles": "Pending: {roles}",
+      "overall": "Overall {rating}/5",
+      "breakdown": "Service {service} | Delivery {delivery} | Compliance {compliance}",
+      "byAt": "By {name} at {date}",
+      "pending": "Pending",
+      "notePlaceholder": "Evaluation note (optional)",
+      "noRole": "You do not have an evaluation role for this GRN.",
+      "fields": {
+        "overall": "Overall",
+        "service": "Service",
+        "delivery": "Delivery",
+        "compliance": "Compliance"
+      }
+    },
+    "toasts": {
+      "requesterConfirmed": "Requester confirmation submitted",
+      "attachmentUploaded": "Attachment uploaded",
+      "evaluationSubmitted": "{role} evaluation submitted"
+    },
+    "errors": {
+      "load": "Failed to load receipt data",
+      "loadPurchaseOrders": "Failed to load purchase orders",
+      "update": "Failed to update goods receipt",
+      "selectFile": "Select a file first",
+      "uploadAttachment": "Failed to upload attachment",
+      "evaluatorRole": "You cannot submit this evaluator role"
+    }
+  },
   "AdminScmCommon": {
     "notAvailable": "N/A",
     "actions": { "review": "Review" },

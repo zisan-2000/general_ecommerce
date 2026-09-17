@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Plus, RefreshCw } from "lucide-react";
 import { uploadFile } from "@/lib/upload-file";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { ScmStatCard } from "@/components/admin/scm/ScmStatCard";
 import { ScmStatusChip } from "@/components/admin/scm/ScmStatusChip";
 import {
@@ -122,12 +122,6 @@ type EvaluationDraft = {
   comment: string;
 };
 
-const ROLE_LABEL: Record<ReceiptRole, string> = {
-  REQUESTER: "Requester",
-  PROCUREMENT: "Procurement",
-  ADMINISTRATION: "Manager Administration",
-};
-
 const REQUIRED_ROLES: ReceiptRole[] = ["REQUESTER", "PROCUREMENT", "ADMINISTRATION"];
 
 async function readJson<T>(response: Response, fallbackMessage: string): Promise<T> {
@@ -138,16 +132,16 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
   return data as T;
 }
 
-async function getJson<T>(url: string): Promise<T> {
+async function getJson<T>(url: string, fallbackMessage: string): Promise<T> {
   const response = await fetch(url, { cache: "no-store" });
-  return readJson<T>(response, "Request failed");
+  return readJson<T>(response, fallbackMessage);
 }
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string, unavailable: string) {
+  if (!value) return unavailable;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return unavailable;
+  return parsed.toLocaleString(locale);
 }
 
 function getInitialEvaluationDraft(allowedRoles: ReceiptRole[]): EvaluationDraft {
@@ -164,6 +158,8 @@ function getInitialEvaluationDraft(allowedRoles: ReceiptRole[]): EvaluationDraft
 export default function GoodsReceiptsPage() {
   const searchParams = useSearchParams();
   const { data: session } = useSession();
+  const t = useTranslations("AdminGoodsReceipts");
+  const locale = useLocale();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
     : [];
@@ -189,15 +185,15 @@ export default function GoodsReceiptsPage() {
     try {
       setLoading(true);
       const [receiptData, purchaseOrderData] = await Promise.all([
-        getJson<GoodsReceipt[]>("/api/scm/goods-receipts"),
+        getJson<GoodsReceipt[]>("/api/scm/goods-receipts", t("errors.load")),
         canManagePosting
-          ? getJson<PurchaseOrder[]>("/api/scm/purchase-orders")
+          ? getJson<PurchaseOrder[]>("/api/scm/purchase-orders", t("errors.loadPurchaseOrders"))
           : Promise.resolve([] as PurchaseOrder[]),
       ]);
       setReceipts(Array.isArray(receiptData) ? receiptData : []);
       setPurchaseOrders(Array.isArray(purchaseOrderData) ? purchaseOrderData : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load receipt data");
+      toast.error(error?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -258,11 +254,11 @@ export default function GoodsReceiptsPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      await readJson(response, "Failed to update goods receipt");
+      await readJson(response, t("errors.update"));
       toast.success(successMessage);
       await loadPageData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to update goods receipt");
+      toast.error(error?.message || t("errors.update"));
     } finally {
       setBusyKey(null);
     }
@@ -281,7 +277,7 @@ export default function GoodsReceiptsPage() {
   const uploadAttachment = async (receipt: GoodsReceipt) => {
     const draft = getAttachmentDraft(receipt.id);
     if (!draft.file) {
-      toast.error("Select a file first");
+      toast.error(t("errors.selectFile"));
       return;
     }
     const busy = `${receipt.id}:upload_attachment`;
@@ -301,15 +297,15 @@ export default function GoodsReceiptsPage() {
           fileSize: draft.file.size,
         }),
       });
-      await readJson(response, "Failed to upload attachment");
-      toast.success("Attachment uploaded");
+      await readJson(response, t("errors.uploadAttachment"));
+      toast.success(t("toasts.attachmentUploaded"));
       setAttachmentDrafts((prev) => ({
         ...prev,
         [receipt.id]: { type: draft.type, note: "", file: null },
       }));
       await loadPageData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to upload attachment");
+      toast.error(error?.message || t("errors.uploadAttachment"));
     } finally {
       setBusyKey(null);
     }
@@ -340,7 +336,7 @@ export default function GoodsReceiptsPage() {
   const submitEvaluation = async (receipt: GoodsReceipt) => {
     const draft = getEvaluationDraft(receipt);
     if (!receipt.workflow.allowedEvaluationRoles.includes(draft.evaluatorRole)) {
-      toast.error("You cannot submit this evaluator role");
+      toast.error(t("errors.evaluatorRole"));
       return;
     }
     await patchReceipt(
@@ -358,18 +354,25 @@ export default function GoodsReceiptsPage() {
           : null,
         comment: draft.comment,
       },
-      `${ROLE_LABEL[draft.evaluatorRole]} evaluation submitted`,
+      t("toasts.evaluationSubmitted", { role: t(`roles.${draft.evaluatorRole}` as any) }),
       `${receipt.id}:submit_evaluation`,
     );
   };
+
+  const formatDate = (value?: string | null) =>
+    fmtDate(value, locale, t("common.notAvailable"));
+
+  const roleLabel = (role: ReceiptRole) => t(`roles.${role}` as any);
+  const matchStatusLabel = (status: GoodsReceipt["matchSummary"]["status"]) =>
+    t(`match.statuses.${status}` as any);
 
   return (
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Goods Receiving Note (GRN)</h1>
+          <h1 className="text-2xl font-bold">{t("header.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Receive goods, requester confirmation, WO-vs-delivery-vs-invoice check, challan/bill upload, and 3-role vendor evaluation.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -377,46 +380,46 @@ export default function GoodsReceiptsPage() {
             <Button asChild>
               <Link href="/admin/scm/goods-receipts/new">
                 <Plus className="mr-2 h-4 w-4" />
-                New GRN
+                {t("actions.newGrn")}
               </Link>
             </Button>
           ) : null}
           <Button variant="outline" onClick={() => void loadPageData()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-5">
-        <ScmStatCard className="col-span-2 md:col-span-1" label="Total GRN" value={String(summary.total)} hint="Visible receipt register" />
-        <ScmStatCard label="Pending Confirmation" value={String(summary.pendingConfirmation)} hint="Requester still needs to confirm" />
-        <ScmStatCard label="Variance" value={String(summary.variance)} hint="WO vs delivery vs invoice mismatch" />
-        <ScmStatCard label="Evaluation Pending" value={String(summary.incompleteEvaluation)} hint="One or more roles still missing" />
-        <ScmStatCard label="Ready To Receive" value={String(summary.readyToReceive)} hint="Approved PO still open for receipt" />
+        <ScmStatCard className="col-span-2 md:col-span-1" label={t("stats.total.label")} value={String(summary.total)} hint={t("stats.total.hint")} />
+        <ScmStatCard label={t("stats.pendingConfirmation.label")} value={String(summary.pendingConfirmation)} hint={t("stats.pendingConfirmation.hint")} />
+        <ScmStatCard label={t("stats.variance.label")} value={String(summary.variance)} hint={t("stats.variance.hint")} />
+        <ScmStatCard label={t("stats.evaluationPending.label")} value={String(summary.incompleteEvaluation)} hint={t("stats.evaluationPending.hint")} />
+        <ScmStatCard label={t("stats.readyToReceive.label")} value={String(summary.readyToReceive)} hint={t("stats.readyToReceive.hint")} />
       </div>
 
       {focus !== "ALL" || search.trim() ? (
         <Card className="border-amber-200 bg-amber-50/60 shadow-none">
           <CardContent className="flex flex-col gap-2 p-4 text-sm md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="font-medium text-foreground">Focused queue active</p>
+              <p className="font-medium text-foreground">{t("focus.activeTitle")}</p>
               <p className="text-muted-foreground">
                 {focus === "PENDING-CONFIRMATION"
-                  ? "Showing receipts that still need requester confirmation."
+                  ? t("focus.pendingConfirmation")
                   : focus === "VARIANCE"
-                    ? "Showing receipts with PO vs delivery vs invoice mismatch."
+                    ? t("focus.variance")
                     : focus === "INCOMPLETE-EVALUATION"
-                      ? "Showing receipts missing one or more evaluation roles."
+                      ? t("focus.incompleteEvaluation")
                       : focus === "POST"
-                        ? "Use the guided GRN creation page to post a new inbound receipt."
-                        : "Showing a filtered goods receipt queue."}
+                        ? t("focus.post")
+                        : t("focus.filtered")}
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {canManagePosting && focus === "POST" ? (
                 <Button asChild>
-                  <Link href="/admin/scm/goods-receipts/new">Open GRN Creator</Link>
+                  <Link href="/admin/scm/goods-receipts/new">{t("actions.openGrnCreator")}</Link>
                 </Button>
               ) : null}
               <Button
@@ -426,7 +429,7 @@ export default function GoodsReceiptsPage() {
                   setSearch("");
                 }}
               >
-                Clear Focus
+                {t("actions.clearFocus")}
               </Button>
             </div>
           </CardContent>
@@ -435,12 +438,12 @@ export default function GoodsReceiptsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>GRN Register</CardTitle>
+          <CardTitle>{t("register.title")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-3 md:grid-cols-[2fr_1fr_1fr_auto]">
             <Input
-              placeholder="Search receipt, PO, supplier, requisition, or warehouse..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -449,25 +452,25 @@ export default function GoodsReceiptsPage() {
               value={focus}
               onChange={(event) => setFocus(event.target.value)}
             >
-              <option value="ALL">All queues</option>
-              <option value="PENDING-CONFIRMATION">Pending confirmation</option>
-              <option value="VARIANCE">Variance</option>
-              <option value="INCOMPLETE-EVALUATION">Evaluation pending</option>
-              {canManagePosting ? <option value="POST">Ready to post</option> : null}
+              <option value="ALL">{t("filters.allQueues")}</option>
+              <option value="PENDING-CONFIRMATION">{t("filters.pendingConfirmation")}</option>
+              <option value="VARIANCE">{t("filters.variance")}</option>
+              <option value="INCOMPLETE-EVALUATION">{t("filters.evaluationPending")}</option>
+              {canManagePosting ? <option value="POST">{t("filters.readyToPost")}</option> : null}
             </select>
             <div className="rounded-md border bg-muted/30 px-3 py-2 text-sm text-muted-foreground">
-              {visibleReceipts.length} visible receipt{visibleReceipts.length === 1 ? "" : "s"}
+              {t("register.visibleReceipts", { count: visibleReceipts.length })}
             </div>
             <Button variant="outline" onClick={() => void loadPageData()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {t("actions.refresh")}
             </Button>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading goods receipts...</p>
+            <p className="text-sm text-muted-foreground">{t("loading")}</p>
           ) : visibleReceipts.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No goods receipts found.</p>
+            <p className="text-sm text-muted-foreground">{t("empty")}</p>
           ) : (
             <div className="space-y-4">
               {visibleReceipts.map((receipt) => {
@@ -486,27 +489,27 @@ export default function GoodsReceiptsPage() {
                       </div>
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
                         <Button asChild variant="outline" size="sm">
-                          <Link href={`/admin/scm/goods-receipts/${receipt.id}`}>Open Detail</Link>
+                          <Link href={`/admin/scm/goods-receipts/${receipt.id}`}>{t("actions.openDetail")}</Link>
                         </Button>
                         <ScmStatusChip status={receipt.matchSummary.status} />
-                        <span>{fmtDate(receipt.receivedAt)} • {receipt.warehouse.code}</span>
+                        <span>{t("labels.dateAndWarehouse", { date: formatDate(receipt.receivedAt), warehouse: receipt.warehouse.code })}</span>
                       </div>
                     </div>
 
                     <div className="grid gap-3 rounded-md border p-3 text-sm md:grid-cols-3">
                       <div>
-                        <p className="font-medium">WO vs Delivered vs Invoice</p>
-                        <p className="text-muted-foreground">Ordered {receipt.matchSummary.orderedQuantity} | Delivered {receipt.matchSummary.receivedQuantity} | Invoiced {receipt.matchSummary.invoicedQuantity}</p>
-                        <p className="text-muted-foreground">Invoices {receipt.matchSummary.invoiceCount} | Match {receipt.matchSummary.status}</p>
+                        <p className="font-medium">{t("match.title")}</p>
+                        <p className="text-muted-foreground">{t("match.quantities", { ordered: receipt.matchSummary.orderedQuantity, delivered: receipt.matchSummary.receivedQuantity, invoiced: receipt.matchSummary.invoicedQuantity })}</p>
+                        <p className="text-muted-foreground">{t("match.invoices", { count: receipt.matchSummary.invoiceCount, status: matchStatusLabel(receipt.matchSummary.status) })}</p>
                       </div>
                       <div>
-                        <p className="font-medium">Requester Confirmation</p>
-                        <p className="text-muted-foreground">{receipt.requesterConfirmedAt ? `Confirmed at ${fmtDate(receipt.requesterConfirmedAt)}` : "Pending requester confirmation"}</p>
-                        {receipt.requesterConfirmedBy ? <p className="text-muted-foreground">By {receipt.requesterConfirmedBy.name || receipt.requesterConfirmedBy.email || "N/A"}</p> : null}
+                        <p className="font-medium">{t("confirmation.title")}</p>
+                        <p className="text-muted-foreground">{receipt.requesterConfirmedAt ? t("confirmation.confirmedAt", { date: formatDate(receipt.requesterConfirmedAt) }) : t("confirmation.pending")}</p>
+                        {receipt.requesterConfirmedBy ? <p className="text-muted-foreground">{t("labels.by", { name: receipt.requesterConfirmedBy.name || receipt.requesterConfirmedBy.email || t("common.notAvailable") })}</p> : null}
                       </div>
                       <div>
-                        <p className="font-medium">Evaluation Completion</p>
-                        <p className="text-muted-foreground">{receipt.workflow.evaluationCompleted ? "All three roles completed" : `Pending: ${receipt.workflow.missingEvaluationRoles.map((role) => ROLE_LABEL[role]).join(", ") || "N/A"}`}</p>
+                        <p className="font-medium">{t("evaluation.completionTitle")}</p>
+                        <p className="text-muted-foreground">{receipt.workflow.evaluationCompleted ? t("evaluation.completed") : t("evaluation.pendingRoles", { roles: receipt.workflow.missingEvaluationRoles.map(roleLabel).join(", ") || t("common.notAvailable") })}</p>
                       </div>
                     </div>
 
@@ -514,8 +517,8 @@ export default function GoodsReceiptsPage() {
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead>Item</TableHead>
-                            <TableHead>Qty Received</TableHead>
+                            <TableHead>{t("table.item")}</TableHead>
+                            <TableHead>{t("table.qtyReceived")}</TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -534,13 +537,13 @@ export default function GoodsReceiptsPage() {
 
                     <div className="grid gap-4 md:grid-cols-2">
                       <div className="space-y-2 rounded-md border p-3">
-                        <p className="font-medium">Requester Review & Confirmation</p>
-                        {receipt.requesterConfirmationNote ? <p className="text-sm text-muted-foreground">Note: {receipt.requesterConfirmationNote}</p> : null}
+                        <p className="font-medium">{t("confirmation.reviewTitle")}</p>
+                        {receipt.requesterConfirmationNote ? <p className="text-sm text-muted-foreground">{t("labels.note", { note: receipt.requesterConfirmationNote })}</p> : null}
                         {receipt.workflow.canRequesterConfirm ? (
                           <>
                             <Textarea
                               rows={3}
-                              placeholder="Requester confirmation note (optional)"
+                              placeholder={t("confirmation.notePlaceholder")}
                               value={confirmationNotes[receipt.id] || ""}
                               onChange={(event) =>
                                 setConfirmationNotes((prev) => ({ ...prev, [receipt.id]: event.target.value }))
@@ -551,30 +554,30 @@ export default function GoodsReceiptsPage() {
                                 void patchReceipt(
                                   receipt.id,
                                   { action: "requester_confirm", note: confirmationNotes[receipt.id] || "" },
-                                  "Requester confirmation submitted",
+                                  t("toasts.requesterConfirmed"),
                                   `${receipt.id}:requester_confirm`,
                                 )
                               }
                               disabled={busyKey === `${receipt.id}:requester_confirm`}
                             >
-                              Confirm GRN
+                              {t("actions.confirmGrn")}
                             </Button>
                           </>
                         ) : null}
                       </div>
 
                       <div className="space-y-2 rounded-md border p-3">
-                        <p className="font-medium">Challan / Bill Attachments</p>
+                        <p className="font-medium">{t("attachments.title")}</p>
                         {receipt.attachments.length === 0 ? (
-                          <p className="text-sm text-muted-foreground">No attachments yet.</p>
+                          <p className="text-sm text-muted-foreground">{t("attachments.empty")}</p>
                         ) : (
                           <div className="space-y-2">
                             {receipt.attachments.map((attachment) => (
                               <div key={attachment.id} className="rounded border p-2 text-sm">
-                                <p className="font-medium">{attachment.type} • {attachment.fileName || "Attachment"}</p>
-                                <p className="text-muted-foreground">Uploaded {fmtDate(attachment.createdAt)} by {attachment.uploadedBy?.name || attachment.uploadedBy?.email || "N/A"}</p>
-                                {attachment.note ? <p className="text-muted-foreground">Note: {attachment.note}</p> : null}
-                                <a href={attachment.fileUrl} target="_blank" rel="noreferrer" className="text-primary underline">View file</a>
+                                <p className="font-medium">{t("attachments.fileTitle", { type: t(`attachmentTypes.${attachment.type}` as any), fileName: attachment.fileName || t("attachments.attachmentFallback") })}</p>
+                                <p className="text-muted-foreground">{t("attachments.uploadedBy", { date: formatDate(attachment.createdAt), name: attachment.uploadedBy?.name || attachment.uploadedBy?.email || t("common.notAvailable") })}</p>
+                                {attachment.note ? <p className="text-muted-foreground">{t("labels.note", { note: attachment.note })}</p> : null}
+                                <a href={attachment.fileUrl} target="_blank" rel="noreferrer" className="text-primary underline">{t("actions.viewFile")}</a>
                               </div>
                             ))}
                           </div>
@@ -588,9 +591,9 @@ export default function GoodsReceiptsPage() {
                                 value={attachmentDraft.type}
                                 onChange={(event) => setAttachmentDraft(receipt.id, { type: event.target.value as AttachmentType })}
                               >
-                                <option value="CHALLAN">CHALLAN</option>
-                                <option value="BILL">BILL</option>
-                                <option value="OTHER">OTHER</option>
+                                <option value="CHALLAN">{t("attachmentTypes.CHALLAN")}</option>
+                                <option value="BILL">{t("attachmentTypes.BILL")}</option>
+                                <option value="OTHER">{t("attachmentTypes.OTHER")}</option>
                               </select>
                               <Input
                                 type="file"
@@ -599,12 +602,12 @@ export default function GoodsReceiptsPage() {
                             </div>
                             <Textarea
                               rows={2}
-                              placeholder="Attachment note (optional)"
+                              placeholder={t("attachments.notePlaceholder")}
                               value={attachmentDraft.note}
                               onChange={(event) => setAttachmentDraft(receipt.id, { note: event.target.value })}
                             />
                             <Button onClick={() => void uploadAttachment(receipt)} disabled={busyKey === `${receipt.id}:upload_attachment`}>
-                              {busyKey === `${receipt.id}:upload_attachment` ? "Uploading..." : "Upload Attachment"}
+                              {busyKey === `${receipt.id}:upload_attachment` ? t("actions.uploading") : t("actions.uploadAttachment")}
                             </Button>
                           </div>
                         ) : null}
@@ -612,21 +615,21 @@ export default function GoodsReceiptsPage() {
                     </div>
 
                     <div className="space-y-3 rounded-md border p-3">
-                      <p className="font-medium">Vendor Performance Evaluation (1-5)</p>
+                      <p className="font-medium">{t("evaluation.title")}</p>
                       <div className="grid gap-2 md:grid-cols-3">
                         {REQUIRED_ROLES.map((role) => {
                           const row = evaluationsByRole.get(role);
                           return (
                             <div key={role} className="rounded border p-2 text-sm">
-                              <p className="font-medium">{ROLE_LABEL[role]}</p>
+                              <p className="font-medium">{roleLabel(role)}</p>
                               {row ? (
                                 <>
-                                  <p className="text-muted-foreground">Overall {row.overallRating}/5</p>
-                                  <p className="text-muted-foreground">Service {row.serviceQualityRating ?? "N/A"} | Delivery {row.deliveryRating ?? "N/A"} | Compliance {row.complianceRating ?? "N/A"}</p>
-                                  <p className="text-muted-foreground">By {row.createdBy?.name || row.createdBy?.email || "N/A"} at {fmtDate(row.updatedAt)}</p>
+                                  <p className="text-muted-foreground">{t("evaluation.overall", { rating: row.overallRating })}</p>
+                                  <p className="text-muted-foreground">{t("evaluation.breakdown", { service: row.serviceQualityRating ?? t("common.notAvailable"), delivery: row.deliveryRating ?? t("common.notAvailable"), compliance: row.complianceRating ?? t("common.notAvailable") })}</p>
+                                  <p className="text-muted-foreground">{t("evaluation.byAt", { name: row.createdBy?.name || row.createdBy?.email || t("common.notAvailable"), date: formatDate(row.updatedAt) })}</p>
                                 </>
                               ) : (
-                                <p className="text-muted-foreground">Pending</p>
+                                <p className="text-muted-foreground">{t("evaluation.pending")}</p>
                               )}
                             </div>
                           );
@@ -642,26 +645,26 @@ export default function GoodsReceiptsPage() {
                               onChange={(event) => setEvaluationDraft(receipt, { evaluatorRole: event.target.value as ReceiptRole })}
                             >
                               {receipt.workflow.allowedEvaluationRoles.map((role) => (
-                                <option key={role} value={role}>{ROLE_LABEL[role]}</option>
+                                <option key={role} value={role}>{roleLabel(role)}</option>
                               ))}
                             </select>
-                            <Input type="number" min={1} max={5} placeholder="Overall" value={evaluationDraft.overallRating} onChange={(event) => setEvaluationDraft(receipt, { overallRating: event.target.value })} />
-                            <Input type="number" min={1} max={5} placeholder="Service" value={evaluationDraft.serviceQualityRating} onChange={(event) => setEvaluationDraft(receipt, { serviceQualityRating: event.target.value })} />
-                            <Input type="number" min={1} max={5} placeholder="Delivery" value={evaluationDraft.deliveryRating} onChange={(event) => setEvaluationDraft(receipt, { deliveryRating: event.target.value })} />
-                            <Input type="number" min={1} max={5} placeholder="Compliance" value={evaluationDraft.complianceRating} onChange={(event) => setEvaluationDraft(receipt, { complianceRating: event.target.value })} />
+                            <Input type="number" min={1} max={5} placeholder={t("evaluation.fields.overall")} value={evaluationDraft.overallRating} onChange={(event) => setEvaluationDraft(receipt, { overallRating: event.target.value })} />
+                            <Input type="number" min={1} max={5} placeholder={t("evaluation.fields.service")} value={evaluationDraft.serviceQualityRating} onChange={(event) => setEvaluationDraft(receipt, { serviceQualityRating: event.target.value })} />
+                            <Input type="number" min={1} max={5} placeholder={t("evaluation.fields.delivery")} value={evaluationDraft.deliveryRating} onChange={(event) => setEvaluationDraft(receipt, { deliveryRating: event.target.value })} />
+                            <Input type="number" min={1} max={5} placeholder={t("evaluation.fields.compliance")} value={evaluationDraft.complianceRating} onChange={(event) => setEvaluationDraft(receipt, { complianceRating: event.target.value })} />
                           </div>
                           <Textarea
                             rows={2}
-                            placeholder="Evaluation note (optional)"
+                            placeholder={t("evaluation.notePlaceholder")}
                             value={evaluationDraft.comment}
                             onChange={(event) => setEvaluationDraft(receipt, { comment: event.target.value })}
                           />
                           <Button onClick={() => void submitEvaluation(receipt)} disabled={busyKey === `${receipt.id}:submit_evaluation`}>
-                            {busyKey === `${receipt.id}:submit_evaluation` ? "Submitting..." : "Submit Evaluation"}
+                            {busyKey === `${receipt.id}:submit_evaluation` ? t("actions.submitting") : t("actions.submitEvaluation")}
                           </Button>
                         </div>
                       ) : (
-                        <p className="text-sm text-muted-foreground">You do not have an evaluation role for this GRN.</p>
+                        <p className="text-sm text-muted-foreground">{t("evaluation.noRole")}</p>
                       )}
                     </div>
                   </div>

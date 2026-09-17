@@ -4080,6 +4080,119 @@
             "suppliers": { "title": "সরবরাহকারী", "description": "সরবরাহকারী মাস্টার ও নীতিমালা পরিচালনা করুন।" }
         }
     },
+    "AdminGoodsReceipts": {
+        "header": {
+            "title": "পণ্য গ্রহণ নোট (GRN)",
+            "description": "পণ্য গ্রহণ, অনুরোধকারীর নিশ্চিতকরণ, WO-ডেলিভারি-চালান তারতম্য যাচাই, চালান/বিল নথি আপলোড এবং ৩-ভূমিকার সরবরাহকারী মূল্যায়ন সম্পন্ন করুন।"
+        },
+        "common": { "notAvailable": "প্রযোজ্য নয়" },
+        "actions": {
+            "newGrn": "নতুন GRN",
+            "refresh": "রিফ্রেশ",
+            "openGrnCreator": "GRN তৈরি খুলুন",
+            "clearFocus": "ফোকাস মুছুন",
+            "openDetail": "বিস্তারিত খুলুন",
+            "confirmGrn": "GRN নিশ্চিত করুন",
+            "viewFile": "ফাইল দেখুন",
+            "uploading": "আপলোড হচ্ছে...",
+            "uploadAttachment": "সংযুক্তি আপলোড করুন",
+            "submitting": "জমা হচ্ছে...",
+            "submitEvaluation": "মূল্যায়ন জমা দিন"
+        },
+        "stats": {
+            "total": { "label": "মোট GRN", "hint": "দৃশ্যমান রসিদ রেজিস্টার" },
+            "pendingConfirmation": { "label": "নিশ্চিতকরণ অপেক্ষমাণ", "hint": "অনুরোধকারীর নিশ্চিতকরণ এখনো বাকি" },
+            "variance": { "label": "তারতম্য", "hint": "WO, ডেলিভারি ও চালানের অমিল" },
+            "evaluationPending": { "label": "মূল্যায়ন অপেক্ষমাণ", "hint": "এক বা একাধিক ভূমিকা এখনো বাকি" },
+            "readyToReceive": { "label": "গ্রহণের জন্য প্রস্তুত", "hint": "অনুমোদিত PO এখনো গ্রহণের জন্য খোলা" }
+        },
+        "focus": {
+            "activeTitle": "ফোকাসড সারি সক্রিয়",
+            "pendingConfirmation": "যেসব রসিদে অনুরোধকারীর নিশ্চিতকরণ দরকার সেগুলো দেখানো হচ্ছে।",
+            "variance": "PO, ডেলিভারি ও চালানের অমিল আছে এমন রসিদ দেখানো হচ্ছে।",
+            "incompleteEvaluation": "এক বা একাধিক মূল্যায়ন ভূমিকা বাকি আছে এমন রসিদ দেখানো হচ্ছে।",
+            "post": "নতুন আগত পণ্য গ্রহণ পোস্ট করতে নির্দেশিত GRN তৈরি পেজ ব্যবহার করুন।",
+            "filtered": "ফিল্টার করা পণ্য গ্রহণ সারি দেখানো হচ্ছে।"
+        },
+        "register": {
+            "title": "GRN রেজিস্টার",
+            "visibleReceipts": "{count}টি দৃশ্যমান রসিদ"
+        },
+        "filters": {
+            "searchPlaceholder": "রসিদ, PO, সরবরাহকারী, রিকুইজিশন বা গুদাম খুঁজুন...",
+            "allQueues": "সব সারি",
+            "pendingConfirmation": "নিশ্চিতকরণ অপেক্ষমাণ",
+            "variance": "তারতম্য",
+            "evaluationPending": "মূল্যায়ন অপেক্ষমাণ",
+            "readyToPost": "পোস্টের জন্য প্রস্তুত"
+        },
+        "loading": "পণ্য গ্রহণ লোড হচ্ছে...",
+        "empty": "কোনো পণ্য গ্রহণ রসিদ পাওয়া যায়নি।",
+        "labels": {
+            "dateAndWarehouse": "{date} • {warehouse}",
+            "by": "{name} দ্বারা",
+            "note": "নোট: {note}"
+        },
+        "match": {
+            "title": "WO বনাম ডেলিভারি বনাম চালান",
+            "quantities": "অর্ডার {ordered} | ডেলিভারি {delivered} | চালান {invoiced}",
+            "invoices": "চালান {count} | মিল {status}",
+            "statuses": { "PENDING": "অপেক্ষমাণ", "MATCHED": "মিলেছে", "VARIANCE": "তারতম্য" }
+        },
+        "confirmation": {
+            "title": "অনুরোধকারীর নিশ্চিতকরণ",
+            "reviewTitle": "অনুরোধকারীর পর্যালোচনা ও নিশ্চিতকরণ",
+            "confirmedAt": "{date}-এ নিশ্চিত হয়েছে",
+            "pending": "অনুরোধকারীর নিশ্চিতকরণ অপেক্ষমাণ",
+            "notePlaceholder": "অনুরোধকারীর নিশ্চিতকরণ নোট (ঐচ্ছিক)"
+        },
+        "table": { "item": "আইটেম", "qtyReceived": "প্রাপ্ত পরিমাণ" },
+        "attachments": {
+            "title": "চালান / বিল সংযুক্তি",
+            "empty": "এখনো কোনো সংযুক্তি নেই।",
+            "attachmentFallback": "সংযুক্তি",
+            "fileTitle": "{type} • {fileName}",
+            "uploadedBy": "{date}-এ {name} আপলোড করেছেন",
+            "notePlaceholder": "সংযুক্তির নোট (ঐচ্ছিক)"
+        },
+        "attachmentTypes": { "CHALLAN": "চালান", "BILL": "বিল", "OTHER": "অন্যান্য" },
+        "roles": {
+            "REQUESTER": "অনুরোধকারী",
+            "PROCUREMENT": "ক্রয় বিভাগ",
+            "ADMINISTRATION": "ম্যানেজার প্রশাসন"
+        },
+        "evaluation": {
+            "title": "সরবরাহকারী পারফরম্যান্স মূল্যায়ন (১-৫)",
+            "completionTitle": "মূল্যায়ন সম্পন্নের অবস্থা",
+            "completed": "তিনটি ভূমিকাই সম্পন্ন হয়েছে",
+            "pendingRoles": "অপেক্ষমাণ: {roles}",
+            "overall": "সামগ্রিক {rating}/৫",
+            "breakdown": "সেবা {service} | ডেলিভারি {delivery} | কমপ্লায়েন্স {compliance}",
+            "byAt": "{name} দ্বারা {date}-এ",
+            "pending": "অপেক্ষমাণ",
+            "notePlaceholder": "মূল্যায়ন নোট (ঐচ্ছিক)",
+            "noRole": "এই GRN-এর জন্য আপনার কোনো মূল্যায়ন ভূমিকা নেই।",
+            "fields": {
+                "overall": "সামগ্রিক",
+                "service": "সেবা",
+                "delivery": "ডেলিভারি",
+                "compliance": "কমপ্লায়েন্স"
+            }
+        },
+        "toasts": {
+            "requesterConfirmed": "অনুরোধকারীর নিশ্চিতকরণ জমা হয়েছে",
+            "attachmentUploaded": "সংযুক্তি আপলোড হয়েছে",
+            "evaluationSubmitted": "{role} মূল্যায়ন জমা হয়েছে"
+        },
+        "errors": {
+            "load": "রসিদ ডেটা লোড করা যায়নি",
+            "loadPurchaseOrders": "ক্রয় আদেশ লোড করা যায়নি",
+            "update": "পণ্য গ্রহণ রসিদ আপডেট করা যায়নি",
+            "selectFile": "আগে একটি ফাইল নির্বাচন করুন",
+            "uploadAttachment": "সংযুক্তি আপলোড করা যায়নি",
+            "evaluatorRole": "আপনি এই মূল্যায়ন ভূমিকা জমা দিতে পারবেন না"
+        }
+    },
     "AdminScmCommon": {
         "notAvailable": "প্রযোজ্য নয়",
         "actions": { "review": "পর্যালোচনা করুন" },
