@@ -5858,25 +5858,216 @@
         "empty": "কোনো পেমেন্ট ডেটা পাওয়া যায়নি।"
     },
     "AdminSla": {
+        "access": {
+            "forbiddenTitle": "প্রবেশাধিকার নেই",
+            "forbiddenDescription": "সরবরাহকারীর SLA নীতিমালা দেখার অনুমতি আপনার নেই।"
+        },
         "header": {
-            "title": "এসএলএ নীতিমালা",
-            "description": "সরবরাহকারীদের জন্য সার্ভিস লেভেল এগ্রিমেন্ট কনফিগার করুন।"
+            "title": "সরবরাহকারী SLA নীতিমালা",
+            "description": "সরবরাহকারীর SLA সীমা নির্ধারণ করুন এবং পরিচালনাগত পর্যালোচনার জন্য ভঙ্গের রেকর্ড সংরক্ষণ করুন।"
         },
         "actions": {
-            "newSla": "নতুন এসএলএ",
+            "createPolicy": "নীতিমালা তৈরি করুন",
+            "createFirstPolicy": "প্রথম নীতিমালা তৈরি করুন",
+            "updatePolicy": "নীতিমালা হালনাগাদ করুন",
             "refresh": "রিফ্রেশ",
-            "edit": "সম্পাদনা"
+            "refreshAnalytics": "অ্যানালিটিক্স রিফ্রেশ",
+            "runNotifications": "নোটিফিকেশন চালান",
+            "notifying": "নোটিফিকেশন পাঠানো হচ্ছে...",
+            "edit": "সম্পাদনা",
+            "evaluate": "মূল্যায়ন করুন",
+            "viewWorkflow": "ওয়ার্কফ্লো দেখুন",
+            "editSupplierPolicy": "{supplier}-এর SLA নীতিমালা সম্পাদনা করুন",
+            "viewSupplierWorkflow": "{supplier}-এর SLA ওয়ার্কফ্লো দেখুন"
         },
-        "stats": {
-            "total": { "label": "মোট", "hint": "মোট এসএলএ" },
-            "active": { "label": "সক্রিয়", "hint": "সক্রিয় এসএলএ" }
+        "timeRanges": {
+            "days": "{count} দিন"
+        },
+        "analytics": {
+            "title": "SLA অ্যানালিটিক্স",
+            "description": "গত {days} দিনের পরিচালনাগত KPI, প্রবণতা এবং সরবরাহকারী ঝুঁকির ক্রম।",
+            "loading": "অ্যানালিটিক্স লোড হচ্ছে...",
+            "empty": "কোনো অ্যানালিটিক্স ডেটা পাওয়া যায়নি।",
+            "metrics": {
+                "evaluations": "মূল্যায়ন",
+                "breaches": "ভঙ্গ",
+                "overdueActions": "মেয়াদোত্তীর্ণ পদক্ষেপ",
+                "openDisputes": "চলমান বিরোধ",
+                "terminationCases": "সম্পর্ক অবসানের কেস",
+                "appliedCredit": "প্রয়োগ করা ক্রেডিট"
+            },
+            "trendSnapshot": "প্রবণতার সারাংশ",
+            "topRiskSuppliers": "সর্বোচ্চ ঝুঁকির সরবরাহকারী",
+            "abbreviations": {
+                "ok": "ঠিক {count}",
+                "warning": "সতর্কতা {count}",
+                "breach": "ভঙ্গ {count}",
+                "dispute": "বিরোধ {count}"
+            }
+        },
+        "policyRegistry": {
+            "title": "নীতিমালা রেজিস্ট্রি",
+            "description": "প্রতিটি সরবরাহকারীর জন্য কনফিগার করা SLA নীতিমালা।",
+            "empty": "কোনো SLA নীতিমালা কনফিগার করা নেই।"
+        },
+        "breachLog": {
+            "title": "SLA ভঙ্গের রেকর্ড",
+            "description": "সরবরাহকারী পরিচালনার জন্য সমস্যার সূত্রসহ সর্বশেষ মূল্যায়নের ফলাফল।",
+            "empty": "কোনো SLA ভঙ্গের রেকর্ড পাওয়া যায়নি।"
+        },
+        "terminationQueue": {
+            "title": "সম্পর্ক অবসানের সারি",
+            "description": "সম্পর্ক অবসানের শর্তসীমা পূরণ হলে স্বয়ংক্রিয়ভাবে খোলা পরিচালনাগত কেসসমূহ।",
+            "empty": "সম্পর্ক অবসানের কোনো সক্রিয় কেস নেই।"
+        },
+        "modal": {
+            "createTitle": "SLA নীতিমালা তৈরি করুন",
+            "editTitle": "SLA নীতিমালা সম্পাদনা করুন",
+            "description": "প্রতি সরবরাহকারীর জন্য কেবল একটি নীতিমালা সক্রিয় থাকতে পারে। সরবরাহকারী ইন্টেলিজেন্সের সূচকের ভিত্তিতে সীমাগুলো মূল্যায়ন করা হয়।"
+        },
+        "fields": {
+            "supplierRequired": "সরবরাহকারী *",
+            "evaluationWindowDays": "মূল্যায়নের সময়সীমা (দিন)",
+            "minTrackedPos": "সর্বনিম্ন ট্র্যাক করা ক্রয়াদেশ",
+            "targetLeadTimeDays": "লক্ষ্য লিড টাইম (দিন)",
+            "minOnTimeRate": "সর্বনিম্ন সময়মতো সরবরাহের হার (%)",
+            "minFillRate": "সর্বনিম্ন পূরণ হার (%)",
+            "maxOpenLatePos": "সর্বোচ্চ চলমান বিলম্বিত ক্রয়াদেশ",
+            "warningDueDays": "সতর্কতামূলক পদক্ষেপের সময়সীমা (দিন)",
+            "breachDueDays": "ভঙ্গ-সংক্রান্ত পদক্ষেপের সময়সীমা (দিন)",
+            "effectiveFrom": "কার্যকর হওয়ার তারিখ",
+            "effectiveTo": "কার্যকারিতা শেষের তারিখ",
+            "lookbackDays": "পূর্ববর্তী পর্যালোচনার দিন",
+            "minBreachCount": "সর্বনিম্ন ভঙ্গের সংখ্যা",
+            "minCriticalCount": "সর্বনিম্ন গুরুতর ঘটনার সংখ্যা",
+            "recommendedAction": "সুপারিশকৃত পদক্ষেপ",
+            "warningPenalty": "সতর্কতার জরিমানা %",
+            "breachPenalty": "ভঙ্গের জরিমানা %",
+            "criticalPenalty": "গুরুতর ঘটনার জরিমানা %",
+            "maxCreditCap": "সর্বোচ্চ ক্রেডিট সীমা",
+            "policyNote": "নীতিমালার নোট",
+            "terminationNote": "সম্পর্ক অবসানের নোট"
+        },
+        "options": {
+            "selectSupplier": "সরবরাহকারী নির্বাচন করুন"
+        },
+        "placeholders": {
+            "policyNote": "নীতিমালা সম্পর্কে ঐচ্ছিক নোট...",
+            "terminationNote": "সম্পর্ক অবসানের শর্ত সম্পর্কে ঐচ্ছিক নোট..."
+        },
+        "policyControls": {
+            "title": "নীতিমালা নিয়ন্ত্রণ",
+            "active": "নীতিমালা সক্রিয়",
+            "autoDailyEvaluation": "স্বয়ংক্রিয় দৈনিক মূল্যায়ন"
+        },
+        "terminationClause": {
+            "enable": "সম্পর্ক অবসানের এসকেলেশন সক্রিয় করুন"
+        },
+        "financialControls": {
+            "title": "AP আর্থিক নিয়ন্ত্রণ",
+            "description": "পেমেন্ট স্থগিতের নিয়ম এবং SLA ক্রেডিট সুপারিশের হার কনফিগার করুন।",
+            "active": "আর্থিক নিয়ম সক্রিয়",
+            "holdOnThreeWayVariance": "থ্রি-ওয়ে অমিলে পেমেন্ট স্থগিত",
+            "holdOnOpenAction": "চলমান SLA পদক্ষেপে পেমেন্ট স্থগিত",
+            "allowOverride": "AP ওভাররাইড অনুমোদন করুন",
+            "autoCreditRecommendation": "স্বয়ংক্রিয় ক্রেডিট সুপারিশ",
+            "autoApplyCredit": "AP-তে স্বয়ংক্রিয়ভাবে ক্রেডিট প্রয়োগ"
         },
         "filters": {
-            "supplier": "সরবরাহকারী",
-            "category": "ক্যাটাগরি"
+            "searchSupplier": "সরবরাহকারী খুঁজুন...",
+            "allStatuses": "সব স্ট্যাটাস",
+            "toggle": "ফিল্টার দেখান বা লুকান"
         },
-        "loading": "এসএলএ নীতিমালা লোড হচ্ছে...",
-        "empty": "কোনো এসএলএ নীতিমালা পাওয়া যায়নি।"
+        "columns": {
+            "supplier": "সরবরাহকারী",
+            "leadTime": "লিড টাইম",
+            "onTimePercent": "সময়মতো %",
+            "fillPercent": "পূরণ %",
+            "latePo": "বিলম্বিত ক্রয়াদেশ",
+            "window": "সময়সীমা",
+            "status": "স্ট্যাটাস",
+            "actions": "পদক্ষেপ",
+            "evaluated": "মূল্যায়নের সময়",
+            "severity": "তীব্রতা",
+            "breachCount": "ভঙ্গের সংখ্যা",
+            "observedLeadTime": "পর্যবেক্ষিত লিড টাইম",
+            "onTime": "সময়মতো",
+            "fillRate": "পূরণ হার",
+            "action": "পদক্ষেপ",
+            "actionStatus": "পদক্ষেপের স্ট্যাটাস",
+            "workflow": "ওয়ার্কফ্লো",
+            "case": "কেস",
+            "owner": "দায়িত্বপ্রাপ্ত",
+            "updated": "হালনাগাদের সময়"
+        },
+        "policyStatuses": {
+            "ACTIVE": "সক্রিয়",
+            "INACTIVE": "নিষ্ক্রিয়"
+        },
+        "breachStatuses": {
+            "OK": "ঠিক আছে",
+            "WARNING": "সতর্কতা",
+            "BREACH": "ভঙ্গ"
+        },
+        "severities": {
+            "LOW": "কম",
+            "MEDIUM": "মাঝারি",
+            "HIGH": "উচ্চ",
+            "CRITICAL": "গুরুতর"
+        },
+        "actionStatuses": {
+            "NOT_REQUIRED": "প্রয়োজন নেই",
+            "OPEN": "চলমান",
+            "IN_PROGRESS": "প্রক্রিয়াধীন",
+            "RESOLVED": "সমাধান হয়েছে",
+            "DISMISSED": "বাতিল করা হয়েছে"
+        },
+        "terminationStatuses": {
+            "OPEN": "চলমান",
+            "IN_REVIEW": "পর্যালোচনাধীন",
+            "APPROVED": "অনুমোদিত",
+            "REJECTED": "প্রত্যাখ্যাত",
+            "EXECUTED": "কার্যকর হয়েছে"
+        },
+        "terminationActions": {
+            "WATCHLIST": "নজরদারির তালিকায় যোগ করুন",
+            "SUSPEND_NEW_PO": "নতুন ক্রয়াদেশ স্থগিত করুন",
+            "REVIEW_CONTRACT": "চুক্তি পর্যালোচনা করুন",
+            "TERMINATE_RELATIONSHIP": "ব্যবসায়িক সম্পর্ক শেষ করুন"
+        },
+        "common": {
+            "optional": "ঐচ্ছিক",
+            "cancel": "বাতিল",
+            "saving": "সংরক্ষণ হচ্ছে...",
+            "daysValue": "{count} দিন",
+            "unnamed": "নাম দেওয়া হয়নি",
+            "unassigned": "দায়িত্ব দেওয়া হয়নি"
+        },
+        "pagination": {
+            "previous": "আগের পৃষ্ঠা",
+            "next": "পরের পৃষ্ঠা",
+            "page": "পৃষ্ঠা {page}-এ যান"
+        },
+        "errors": {
+            "loadAnalytics": "SLA অ্যানালিটিক্স লোড করা যায়নি",
+            "loadSuppliers": "সরবরাহকারী লোড করা যায়নি",
+            "loadPolicies": "SLA নীতিমালা লোড করা যায়নি",
+            "loadBreaches": "SLA ভঙ্গের রেকর্ড লোড করা যায়নি",
+            "loadTerminationCases": "SLA সম্পর্ক অবসানের কেস লোড করা যায়নি",
+            "loadOwners": "SLA দায়িত্বপ্রাপ্ত ব্যবহারকারী লোড করা যায়নি",
+            "loadWorkspace": "SLA ওয়ার্কস্পেস লোড করা যায়নি",
+            "supplierRequired": "সরবরাহকারী নির্বাচন করা আবশ্যক",
+            "savePolicy": "SLA নীতিমালা সংরক্ষণ করা যায়নি",
+            "runEvaluation": "SLA মূল্যায়ন চালানো যায়নি",
+            "runNotifications": "SLA নোটিফিকেশন চালানো যায়নি"
+        },
+        "success": {
+            "policyCreated": "SLA নীতিমালা তৈরি হয়েছে",
+            "policyUpdated": "SLA নীতিমালা হালনাগাদ হয়েছে",
+            "evaluationCompleted": "{count}টি নীতিমালার SLA মূল্যায়ন সম্পন্ন হয়েছে।",
+            "notificationsWithErrors": "{processed}টি নোটিফিকেশন প্রক্রিয়া করা হয়েছে; ত্রুটি: {errors}টি।",
+            "notificationsSent": "নোটিফিকেশন পাঠানো হয়েছে। প্রক্রিয়াকৃত: {processed}, ইমেইল: {email}, ওয়েবহুক: {webhook}।"
+        }
     },
     "AdminVendorApprovals": {
         "header": {

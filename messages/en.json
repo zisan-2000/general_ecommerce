@@ -5858,25 +5858,216 @@
     "empty": "No payment data found."
   },
   "AdminSla": {
+    "access": {
+      "forbiddenTitle": "Forbidden",
+      "forbiddenDescription": "You do not have permission to access supplier SLA policies."
+    },
     "header": {
-      "title": "SLA Policies",
-      "description": "Configure service level agreements for suppliers."
+      "title": "Supplier SLA Policies",
+      "description": "Define supplier SLA thresholds and keep breach logs for governance review."
     },
     "actions": {
-      "newSla": "New SLA",
+      "createPolicy": "Create Policy",
+      "createFirstPolicy": "Create First Policy",
+      "updatePolicy": "Update Policy",
       "refresh": "Refresh",
-      "edit": "Edit"
+      "refreshAnalytics": "Refresh Analytics",
+      "runNotifications": "Run Notifications",
+      "notifying": "Notifying...",
+      "edit": "Edit",
+      "evaluate": "Evaluate",
+      "viewWorkflow": "View workflow",
+      "editSupplierPolicy": "Edit SLA policy for {supplier}",
+      "viewSupplierWorkflow": "View SLA workflow for {supplier}"
     },
-    "stats": {
-      "total": { "label": "Total", "hint": "Total SLAs" },
-      "active": { "label": "Active", "hint": "Active SLAs" }
+    "timeRanges": {
+      "days": "{count}d"
+    },
+    "analytics": {
+      "title": "SLA Analytics",
+      "description": "Governance KPIs, trends, and supplier risk ranking for the last {days} days.",
+      "loading": "Loading analytics...",
+      "empty": "No analytics data available.",
+      "metrics": {
+        "evaluations": "Evaluations",
+        "breaches": "Breaches",
+        "overdueActions": "Overdue Actions",
+        "openDisputes": "Open Disputes",
+        "terminationCases": "Termination Cases",
+        "appliedCredit": "Applied Credit"
+      },
+      "trendSnapshot": "Trend Snapshot",
+      "topRiskSuppliers": "Top Risk Suppliers",
+      "abbreviations": {
+        "ok": "OK {count}",
+        "warning": "W {count}",
+        "breach": "B {count}",
+        "dispute": "D {count}"
+      }
+    },
+    "policyRegistry": {
+      "title": "Policy Registry",
+      "description": "Configured SLA policy for each supplier.",
+      "empty": "No SLA policies configured."
+    },
+    "breachLog": {
+      "title": "Breach Log",
+      "description": "Latest evaluation results with issue traces for supplier governance.",
+      "empty": "No SLA breach logs found."
+    },
+    "terminationQueue": {
+      "title": "Termination Queue",
+      "description": "Governance cases opened automatically when termination-clause thresholds are reached.",
+      "empty": "No active termination escalation cases."
+    },
+    "modal": {
+      "createTitle": "Create SLA Policy",
+      "editTitle": "Edit SLA Policy",
+      "description": "Only one policy can be active per supplier. Thresholds are evaluated against supplier intelligence metrics."
+    },
+    "fields": {
+      "supplierRequired": "Supplier *",
+      "evaluationWindowDays": "Evaluation Window (days)",
+      "minTrackedPos": "Minimum Tracked POs",
+      "targetLeadTimeDays": "Target Lead Time (days)",
+      "minOnTimeRate": "Minimum On-Time Rate (%)",
+      "minFillRate": "Minimum Fill Rate (%)",
+      "maxOpenLatePos": "Maximum Open Late POs",
+      "warningDueDays": "Warning Action Due (days)",
+      "breachDueDays": "Breach Action Due (days)",
+      "effectiveFrom": "Effective From",
+      "effectiveTo": "Effective To",
+      "lookbackDays": "Lookback Days",
+      "minBreachCount": "Minimum Breach Count",
+      "minCriticalCount": "Minimum Critical Count",
+      "recommendedAction": "Recommended Action",
+      "warningPenalty": "Warning Penalty %",
+      "breachPenalty": "Breach Penalty %",
+      "criticalPenalty": "Critical Penalty %",
+      "maxCreditCap": "Maximum Credit Cap",
+      "policyNote": "Policy Note",
+      "terminationNote": "Termination Note"
+    },
+    "options": {
+      "selectSupplier": "Select supplier"
+    },
+    "placeholders": {
+      "policyNote": "Optional policy notes...",
+      "terminationNote": "Optional termination-clause notes..."
+    },
+    "policyControls": {
+      "title": "Policy Controls",
+      "active": "Active Policy",
+      "autoDailyEvaluation": "Automatic Daily Evaluation"
+    },
+    "terminationClause": {
+      "enable": "Enable Termination Escalation"
+    },
+    "financialControls": {
+      "title": "AP Financial Controls",
+      "description": "Configure payment-hold rules and SLA credit recommendation rates.",
+      "active": "Financial Rule Active",
+      "holdOnThreeWayVariance": "Hold on three-way variance",
+      "holdOnOpenAction": "Hold on open SLA action",
+      "allowOverride": "Allow AP override",
+      "autoCreditRecommendation": "Automatic credit recommendation",
+      "autoApplyCredit": "Automatically apply credit to AP"
     },
     "filters": {
-      "supplier": "Supplier",
-      "category": "Category"
+      "searchSupplier": "Search supplier...",
+      "allStatuses": "All statuses",
+      "toggle": "Show or hide filters"
     },
-    "loading": "Loading SLA policies...",
-    "empty": "No SLA policies found."
+    "columns": {
+      "supplier": "Supplier",
+      "leadTime": "Lead Time",
+      "onTimePercent": "On-Time %",
+      "fillPercent": "Fill %",
+      "latePo": "Late PO",
+      "window": "Window",
+      "status": "Status",
+      "actions": "Actions",
+      "evaluated": "Evaluated",
+      "severity": "Severity",
+      "breachCount": "Breach Count",
+      "observedLeadTime": "Observed Lead Time",
+      "onTime": "On-Time",
+      "fillRate": "Fill Rate",
+      "action": "Action",
+      "actionStatus": "Action Status",
+      "workflow": "Workflow",
+      "case": "Case",
+      "owner": "Owner",
+      "updated": "Updated"
+    },
+    "policyStatuses": {
+      "ACTIVE": "Active",
+      "INACTIVE": "Inactive"
+    },
+    "breachStatuses": {
+      "OK": "OK",
+      "WARNING": "Warning",
+      "BREACH": "Breach"
+    },
+    "severities": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High",
+      "CRITICAL": "Critical"
+    },
+    "actionStatuses": {
+      "NOT_REQUIRED": "Not Required",
+      "OPEN": "Open",
+      "IN_PROGRESS": "In Progress",
+      "RESOLVED": "Resolved",
+      "DISMISSED": "Dismissed"
+    },
+    "terminationStatuses": {
+      "OPEN": "Open",
+      "IN_REVIEW": "In Review",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected",
+      "EXECUTED": "Executed"
+    },
+    "terminationActions": {
+      "WATCHLIST": "Add to Watchlist",
+      "SUSPEND_NEW_PO": "Suspend New POs",
+      "REVIEW_CONTRACT": "Review Contract",
+      "TERMINATE_RELATIONSHIP": "Terminate Relationship"
+    },
+    "common": {
+      "optional": "Optional",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "daysValue": "{count}d",
+      "unnamed": "Unnamed",
+      "unassigned": "Unassigned"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Go to page {page}"
+    },
+    "errors": {
+      "loadAnalytics": "Failed to load SLA analytics",
+      "loadSuppliers": "Failed to load suppliers",
+      "loadPolicies": "Failed to load SLA policies",
+      "loadBreaches": "Failed to load SLA breach logs",
+      "loadTerminationCases": "Failed to load SLA termination cases",
+      "loadOwners": "Failed to load SLA owners",
+      "loadWorkspace": "Failed to load the SLA workspace",
+      "supplierRequired": "Supplier is required",
+      "savePolicy": "Failed to save SLA policy",
+      "runEvaluation": "Failed to run SLA evaluation",
+      "runNotifications": "Failed to run SLA notifications"
+    },
+    "success": {
+      "policyCreated": "SLA policy created",
+      "policyUpdated": "SLA policy updated",
+      "evaluationCompleted": "SLA evaluation completed for {count} policies.",
+      "notificationsWithErrors": "Notifications processed: {processed}; errors: {errors}.",
+      "notificationsSent": "Notifications sent. Processed: {processed}, email: {email}, webhook: {webhook}."
+    }
   },
   "AdminVendorApprovals": {
     "header": {

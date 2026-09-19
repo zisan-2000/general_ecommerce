@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import {
   RefreshCw,
   ChevronLeft,
@@ -428,11 +429,11 @@ async function readJson<T>(
   return data as T;
 }
 
-function fmtDate(value: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null, locale: string) {
+  if (!value) return "—";
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 function fmtValue(value: number | string | null, suffix = "") {
@@ -471,6 +472,8 @@ function Pagination({
   totalPages: number;
   onPageChange: (page: number) => void;
 }) {
+  const t = useTranslations("AdminSla");
+
   const getVisiblePages = () => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -505,6 +508,8 @@ function Pagination({
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.previous")}
+        title={t("pagination.previous")}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -516,6 +521,8 @@ function Pagination({
           size="sm"
           onClick={() => onPageChange(page)}
           className="h-8 w-8 p-0"
+          aria-label={t("pagination.page", { page })}
+          aria-current={currentPage === page ? "page" : undefined}
         >
           {page}
         </Button>
@@ -527,6 +534,8 @@ function Pagination({
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.next")}
+        title={t("pagination.next")}
       >
         <ChevronRight className="h-4 w-4" />
       </Button>
@@ -554,6 +563,8 @@ function SlaPolicyModal({
   onSave: () => void;
   saving: boolean;
 }) {
+  const t = useTranslations("AdminSla");
+
   const handleClose = () => {
     onOpenChange(false);
   };
@@ -563,11 +574,10 @@ function SlaPolicyModal({
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-lg sm:text-xl">
-            {editingId ? "Edit SLA Policy" : "Create SLA Policy"}
+            {editingId ? t("modal.editTitle") : t("modal.createTitle")}
           </DialogTitle>
           <DialogDescription className="text-xs sm:text-sm">
-            One active policy per supplier. Thresholds are evaluated against
-            supplier intelligence metrics.
+            {t("modal.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -575,7 +585,7 @@ function SlaPolicyModal({
           {/* Basic Info Grid */}
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-1.5">
-              <Label className="text-sm">Supplier *</Label>
+              <Label className="text-sm">{t("fields.supplierRequired")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={form.supplierId}
@@ -583,7 +593,7 @@ function SlaPolicyModal({
                   onFormChange({ supplierId: event.target.value })
                 }
               >
-                <option value="">Select supplier</option>
+                <option value="">{t("options.selectSupplier")}</option>
                 {suppliers.map((supplier) => (
                   <option key={supplier.id} value={supplier.id}>
                     {supplier.name} ({supplier.code})
@@ -592,7 +602,7 @@ function SlaPolicyModal({
               </select>
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Evaluation Window (days)</Label>
+              <Label className="text-sm">{t("fields.evaluationWindowDays")}</Label>
               <Input
                 type="number"
                 min={7}
@@ -605,7 +615,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Min Tracked POs</Label>
+              <Label className="text-sm">{t("fields.minTrackedPos")}</Label>
               <Input
                 type="number"
                 min={1}
@@ -618,7 +628,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Target Lead Time (days)</Label>
+              <Label className="text-sm">{t("fields.targetLeadTimeDays")}</Label>
               <Input
                 type="number"
                 min={1}
@@ -631,7 +641,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Min On-Time Rate (%)</Label>
+              <Label className="text-sm">{t("fields.minOnTimeRate")}</Label>
               <Input
                 type="number"
                 min={0}
@@ -644,7 +654,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Min Fill Rate (%)</Label>
+              <Label className="text-sm">{t("fields.minFillRate")}</Label>
               <Input
                 type="number"
                 min={0}
@@ -657,7 +667,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Max Open Late POs</Label>
+              <Label className="text-sm">{t("fields.maxOpenLatePos")}</Label>
               <Input
                 type="number"
                 min={0}
@@ -670,7 +680,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Warning Due (days)</Label>
+              <Label className="text-sm">{t("fields.warningDueDays")}</Label>
               <Input
                 type="number"
                 min={1}
@@ -683,7 +693,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Breach Due (days)</Label>
+              <Label className="text-sm">{t("fields.breachDueDays")}</Label>
               <Input
                 type="number"
                 min={1}
@@ -700,7 +710,7 @@ function SlaPolicyModal({
           {/* Date Range */}
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="space-y-1.5">
-              <Label className="text-sm">Effective From</Label>
+              <Label className="text-sm">{t("fields.effectiveFrom")}</Label>
               <Input
                 type="date"
                 value={form.effectiveFrom}
@@ -711,7 +721,7 @@ function SlaPolicyModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Effective To</Label>
+              <Label className="text-sm">{t("fields.effectiveTo")}</Label>
               <Input
                 type="date"
                 value={form.effectiveTo}
@@ -725,7 +735,7 @@ function SlaPolicyModal({
 
           {/* Policy Controls */}
           <div className="space-y-3 rounded-lg border border-border p-4">
-            <Label className="text-sm font-medium">Policy Controls</Label>
+            <Label className="text-sm font-medium">{t("policyControls.title")}</Label>
             <div className="flex flex-wrap gap-4">
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -736,7 +746,7 @@ function SlaPolicyModal({
                   }
                   className="rounded border-border"
                 />
-                Active Policy
+                {t("policyControls.active")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -749,7 +759,7 @@ function SlaPolicyModal({
                   }
                   className="rounded border-border"
                 />
-                Auto Daily Evaluation
+                {t("policyControls.autoDailyEvaluation")}
               </label>
             </div>
           </div>
@@ -767,13 +777,13 @@ function SlaPolicyModal({
                 }
                 className="rounded border-border"
               />
-              Enable Termination Escalation
+              {t("terminationClause.enable")}
             </label>
 
             {form.terminationClauseEnabled && (
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Lookback Days</Label>
+                  <Label className="text-xs">{t("fields.lookbackDays")}</Label>
                   <Input
                     type="number"
                     min={30}
@@ -788,7 +798,7 @@ function SlaPolicyModal({
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Min Breach Count</Label>
+                  <Label className="text-xs">{t("fields.minBreachCount")}</Label>
                   <Input
                     type="number"
                     min={1}
@@ -803,7 +813,7 @@ function SlaPolicyModal({
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Min Critical Count</Label>
+                  <Label className="text-xs">{t("fields.minCriticalCount")}</Label>
                   <Input
                     type="number"
                     min={0}
@@ -818,7 +828,7 @@ function SlaPolicyModal({
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <Label className="text-xs">Recommended Action</Label>
+                  <Label className="text-xs">{t("fields.recommendedAction")}</Label>
                   <select
                     className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                     value={form.terminationRecommendedAction}
@@ -828,11 +838,11 @@ function SlaPolicyModal({
                       })
                     }
                   >
-                    <option value="WATCHLIST">WATCHLIST</option>
-                    <option value="SUSPEND_NEW_PO">SUSPEND_NEW_PO</option>
-                    <option value="REVIEW_CONTRACT">REVIEW_CONTRACT</option>
+                    <option value="WATCHLIST">{t("terminationActions.WATCHLIST")}</option>
+                    <option value="SUSPEND_NEW_PO">{t("terminationActions.SUSPEND_NEW_PO")}</option>
+                    <option value="REVIEW_CONTRACT">{t("terminationActions.REVIEW_CONTRACT")}</option>
                     <option value="TERMINATE_RELATIONSHIP">
-                      TERMINATE_RELATIONSHIP
+                      {t("terminationActions.TERMINATE_RELATIONSHIP")}
                     </option>
                   </select>
                 </div>
@@ -844,11 +854,10 @@ function SlaPolicyModal({
           <div className="space-y-3 rounded-lg border border-border p-4">
             <div>
               <Label className="text-sm font-medium">
-                AP Financial Controls
+                {t("financialControls.title")}
               </Label>
               <p className="text-xs text-muted-foreground mt-0.5">
-                Configure payment hold policy and SLA credit recommendation
-                rates.
+                {t("financialControls.description")}
               </p>
             </div>
 
@@ -861,7 +870,7 @@ function SlaPolicyModal({
                     onFormChange({ financialRuleActive: event.target.checked })
                   }
                 />
-                Financial Rule Active
+                {t("financialControls.active")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -873,7 +882,7 @@ function SlaPolicyModal({
                     })
                   }
                 />
-                Hold on 3-way variance
+                {t("financialControls.holdOnThreeWayVariance")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -885,7 +894,7 @@ function SlaPolicyModal({
                     })
                   }
                 />
-                Hold on open SLA action
+                {t("financialControls.holdOnOpenAction")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -897,7 +906,7 @@ function SlaPolicyModal({
                     })
                   }
                 />
-                Allow AP override
+                {t("financialControls.allowOverride")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -909,7 +918,7 @@ function SlaPolicyModal({
                     })
                   }
                 />
-                Auto credit recommendation
+                {t("financialControls.autoCreditRecommendation")}
               </label>
               <label className="flex items-center gap-2 text-sm">
                 <input
@@ -921,13 +930,13 @@ function SlaPolicyModal({
                     })
                   }
                 />
-                Auto-apply credit to AP
+                {t("financialControls.autoApplyCredit")}
               </label>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <div className="space-y-1.5">
-                <Label className="text-xs">Warning Penalty %</Label>
+                <Label className="text-xs">{t("fields.warningPenalty")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -942,7 +951,7 @@ function SlaPolicyModal({
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs">Breach Penalty %</Label>
+                <Label className="text-xs">{t("fields.breachPenalty")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -957,7 +966,7 @@ function SlaPolicyModal({
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs">Critical Penalty %</Label>
+                <Label className="text-xs">{t("fields.criticalPenalty")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -972,7 +981,7 @@ function SlaPolicyModal({
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs">Max Credit Cap</Label>
+                <Label className="text-xs">{t("fields.maxCreditCap")}</Label>
                 <Input
                   type="number"
                   min={0}
@@ -981,7 +990,7 @@ function SlaPolicyModal({
                   onChange={(event) =>
                     onFormChange({ maxCreditCapAmount: event.target.value })
                   }
-                  placeholder="Optional"
+                  placeholder={t("common.optional")}
                 />
               </div>
             </div>
@@ -990,24 +999,24 @@ function SlaPolicyModal({
           {/* Notes */}
           <div className="space-y-3">
             <div className="space-y-1.5">
-              <Label className="text-sm">Policy Note</Label>
+              <Label className="text-sm">{t("fields.policyNote")}</Label>
               <Textarea
                 rows={2}
                 value={form.note}
                 onChange={(event) => onFormChange({ note: event.target.value })}
-                placeholder="Optional policy notes..."
+                placeholder={t("placeholders.policyNote")}
                 className="text-sm"
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Termination Note</Label>
+              <Label className="text-sm">{t("fields.terminationNote")}</Label>
               <Textarea
                 rows={2}
                 value={form.terminationNote}
                 onChange={(event) =>
                   onFormChange({ terminationNote: event.target.value })
                 }
-                placeholder="Optional termination clause notes..."
+                placeholder={t("placeholders.terminationNote")}
                 className="text-sm"
               />
             </div>
@@ -1016,14 +1025,14 @@ function SlaPolicyModal({
 
         <DialogFooter className="flex flex-col-reverse sm:flex-row gap-2">
           <Button variant="outline" onClick={handleClose} disabled={saving}>
-            Cancel
+            {t("common.cancel")}
           </Button>
           <Button onClick={onSave} disabled={saving}>
             {saving
-              ? "Saving..."
+              ? t("common.saving")
               : editingId
-                ? "Update Policy"
-                : "Create Policy"}
+                ? t("actions.updatePolicy")
+                : t("actions.createPolicy")}
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -1032,6 +1041,8 @@ function SlaPolicyModal({
 }
 
 export default function SupplierSlaPage() {
+  const locale = useLocale();
+  const t = useTranslations("AdminSla");
   const { data: session } = useSession();
   const globalPermissions = Array.isArray(
     (session?.user as any)?.globalPermissions,
@@ -1086,11 +1097,11 @@ export default function SupplierSlaPage() {
       );
       const data = await readJson<SlaAnalytics>(
         response,
-        "Failed to load SLA analytics",
+        t("errors.loadAnalytics"),
       );
       setAnalytics(data);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load SLA analytics");
+      toast.error(error?.message || t("errors.loadAnalytics"));
       setAnalytics(null);
     } finally {
       setAnalyticsLoading(false);
@@ -1127,26 +1138,26 @@ export default function SupplierSlaPage() {
 
       const supplierData = await readJson<Supplier[]>(
         supplierRes,
-        "Failed to load suppliers",
+        t("errors.loadSuppliers"),
       );
       const policyData = await readJson<SlaPolicy[]>(
         policyRes,
-        "Failed to load SLA policies",
+        t("errors.loadPolicies"),
       );
       const breachData = await readJson<SlaBreach[]>(
         breachRes,
-        "Failed to load SLA breach logs",
+        t("errors.loadBreaches"),
       );
       const terminationData = await readJson<TerminationCase[]>(
         terminationRes,
-        "Failed to load SLA termination cases",
+        t("errors.loadTerminationCases"),
       );
       const analyticsData = await readJson<SlaAnalytics>(
         analyticsRes,
-        "Failed to load SLA analytics",
+        t("errors.loadAnalytics"),
       );
       const ownerData = ownerRes
-        ? await readJson<SlaOwner[]>(ownerRes, "Failed to load SLA owners")
+        ? await readJson<SlaOwner[]>(ownerRes, t("errors.loadOwners"))
         : [];
 
       setSuppliers(Array.isArray(supplierData) ? supplierData : []);
@@ -1158,7 +1169,7 @@ export default function SupplierSlaPage() {
       setAnalytics(analyticsData || null);
       setOwners(Array.isArray(ownerData) ? ownerData : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load SLA workspace");
+      toast.error(error?.message || t("errors.loadWorkspace"));
       setPolicies([]);
       setBreaches([]);
       setTerminationCases([]);
@@ -1204,7 +1215,7 @@ export default function SupplierSlaPage() {
   const submitPolicy = async () => {
     if (!canManage) return;
     if (!form.supplierId) {
-      toast.error("Supplier is required");
+      toast.error(t("errors.supplierRequired"));
       return;
     }
 
@@ -1256,16 +1267,18 @@ export default function SupplierSlaPage() {
         }),
       });
 
-      await readJson<SlaPolicy>(response, "Failed to save SLA policy");
+      await readJson<SlaPolicy>(response, t("errors.savePolicy"));
       toast.success(
-        editingPolicyId ? "SLA policy updated" : "SLA policy created",
+        editingPolicyId
+          ? t("success.policyUpdated")
+          : t("success.policyCreated"),
       );
       setEditingPolicyId(null);
       setForm(DEFAULT_FORM);
       setPolicyModalOpen(false);
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to save SLA policy");
+      toast.error(error?.message || t("errors.savePolicy"));
     } finally {
       setSaving(false);
     }
@@ -1356,14 +1369,12 @@ export default function SupplierSlaPage() {
       });
       const data = await readJson<{ count: number }>(
         response,
-        "Failed to run SLA evaluation",
+        t("errors.runEvaluation"),
       );
-      toast.success(
-        `SLA evaluation completed for ${data.count} policy${data.count === 1 ? "" : "ies"}`,
-      );
+      toast.success(t("success.evaluationCompleted", { count: data.count }));
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to run SLA evaluation");
+      toast.error(error?.message || t("errors.runEvaluation"));
     } finally {
       setRunning(false);
     }
@@ -1388,19 +1399,26 @@ export default function SupplierSlaPage() {
         emailedCount: number;
         webhookCount: number;
         errors: string[];
-      }>(response, "Failed to run SLA notifications");
+      }>(response, t("errors.runNotifications"));
       if (Array.isArray(result.errors) && result.errors.length > 0) {
         toast.warning(
-          `Notifications processed ${result.processedCount}; errors: ${result.errors.length}`,
+          t("success.notificationsWithErrors", {
+            processed: result.processedCount,
+            errors: result.errors.length,
+          }),
         );
       } else {
         toast.success(
-          `Notifications sent. Processed ${result.processedCount}, email ${result.emailedCount}, webhook ${result.webhookCount}`,
+          t("success.notificationsSent", {
+            processed: result.processedCount,
+            email: result.emailedCount,
+            webhook: result.webhookCount,
+          }),
         );
       }
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to run SLA notifications");
+      toast.error(error?.message || t("errors.runNotifications"));
     } finally {
       setNotifying(false);
     }
@@ -1411,9 +1429,11 @@ export default function SupplierSlaPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Forbidden</CardTitle>
+            <CardTitle className="text-base sm:text-lg">
+              {t("access.forbiddenTitle")}
+            </CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              You do not have permission to access supplier SLA policies.
+              {t("access.forbiddenDescription")}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -1427,11 +1447,10 @@ export default function SupplierSlaPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Supplier SLA Policies
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Define supplier SLA thresholds and keep breach logs for governance
-            review.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -1440,11 +1459,11 @@ export default function SupplierSlaPage() {
             value={analyticsDays}
             onChange={(event) => setAnalyticsDays(event.target.value)}
           >
-            <option value="30">30d</option>
-            <option value="60">60d</option>
-            <option value="90">90d</option>
-            <option value="180">180d</option>
-            <option value="365">365d</option>
+            <option value="30">{t("timeRanges.days", { count: 30 })}</option>
+            <option value="60">{t("timeRanges.days", { count: 60 })}</option>
+            <option value="90">{t("timeRanges.days", { count: 90 })}</option>
+            <option value="180">{t("timeRanges.days", { count: 180 })}</option>
+            <option value="365">{t("timeRanges.days", { count: 365 })}</option>
           </select>
           <Button
             variant="outline"
@@ -1452,7 +1471,7 @@ export default function SupplierSlaPage() {
             onClick={() => void loadAnalytics()}
             disabled={analyticsLoading}
           >
-            Refresh Analytics
+            {t("actions.refreshAnalytics")}
           </Button>
           <Button
             variant="outline"
@@ -1463,7 +1482,7 @@ export default function SupplierSlaPage() {
             <RefreshCw
               className={cn("h-4 w-4 mr-2", loading && "animate-spin")}
             />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           {canManageNotifications && (
             <Button
@@ -1472,13 +1491,15 @@ export default function SupplierSlaPage() {
               onClick={() => void runNotifications()}
               disabled={notifying}
             >
-              {notifying ? "Notifying..." : "Run Notifications"}
+              {notifying
+                ? t("actions.notifying")
+                : t("actions.runNotifications")}
             </Button>
           )}
           {canManage && (
             <Button onClick={openCreateModal} size="sm">
               <Plus className="h-4 w-4 mr-2" />
-              Create Policy
+              {t("actions.createPolicy")}
             </Button>
           )}
         </div>
@@ -1487,51 +1508,60 @@ export default function SupplierSlaPage() {
       {/* Analytics Section */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">SLA Analytics</CardTitle>
+          <CardTitle className="text-base sm:text-lg">
+            {t("analytics.title")}
+          </CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Governance KPIs, trend, and supplier risk ranking (
-            {analytics?.range.days || Number(analyticsDays) || 90} days).
+            {t("analytics.description", {
+              days: analytics?.range.days || Number(analyticsDays) || 90,
+            })}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0 space-y-4">
           {!analytics ? (
             <p className="text-sm text-muted-foreground text-center py-4">
               {analyticsLoading
-                ? "Loading analytics..."
-                : "No analytics data available."}
+                ? t("analytics.loading")
+                : t("analytics.empty")}
             </p>
           ) : (
             <>
               <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
                 <div className="rounded-lg border border-border p-3">
-                  <p className="text-xs text-muted-foreground">Evaluations</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t("analytics.metrics.evaluations")}
+                  </p>
                   <p className="text-lg sm:text-xl font-semibold text-foreground">
                     {analytics.summary.totalEvaluations}
                   </p>
                 </div>
                 <div className="rounded-lg border border-border p-3">
-                  <p className="text-xs text-muted-foreground">Breaches</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t("analytics.metrics.breaches")}
+                  </p>
                   <p className="text-lg sm:text-xl font-semibold text-destructive">
                     {analytics.summary.breachCount}
                   </p>
                 </div>
                 <div className="rounded-lg border border-border p-3">
                   <p className="text-xs text-muted-foreground">
-                    Overdue Actions
+                    {t("analytics.metrics.overdueActions")}
                   </p>
                   <p className="text-lg sm:text-xl font-semibold text-warning">
                     {analytics.summary.overdueActionCount}
                   </p>
                 </div>
                 <div className="rounded-lg border border-border p-3">
-                  <p className="text-xs text-muted-foreground">Open Disputes</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t("analytics.metrics.openDisputes")}
+                  </p>
                   <p className="text-lg sm:text-xl font-semibold text-info">
                     {analytics.summary.openDisputeCount}
                   </p>
                 </div>
                 <div className="rounded-lg border border-border p-3">
                   <p className="text-xs text-muted-foreground">
-                    Termination Cases
+                    {t("analytics.metrics.terminationCases")}
                   </p>
                   <p className="text-lg sm:text-xl font-semibold text-destructive">
                     {analytics.summary.openTerminationCaseCount}
@@ -1539,7 +1569,7 @@ export default function SupplierSlaPage() {
                 </div>
                 <div className="rounded-lg border border-border p-3">
                   <p className="text-xs text-muted-foreground">
-                    Applied Credit
+                    {t("analytics.metrics.appliedCredit")}
                   </p>
                   <p className="text-lg sm:text-xl font-semibold text-success">
                     {analytics.summary.appliedCreditAmount}
@@ -1550,7 +1580,7 @@ export default function SupplierSlaPage() {
               <div className="grid gap-4 lg:grid-cols-2">
                 <div className="rounded-lg border border-border p-3">
                   <p className="mb-2 text-sm font-medium text-foreground">
-                    Trend Snapshot
+                    {t("analytics.trendSnapshot")}
                   </p>
                   <div className="space-y-1 text-xs">
                     {analytics.trends.slice(-7).map((row) => (
@@ -1562,13 +1592,20 @@ export default function SupplierSlaPage() {
                           {row.date}
                         </span>
                         <span className="text-muted-foreground">
-                          <span className="text-success">OK {row.OK}</span> |
+                          <span className="text-success">
+                            {t("analytics.abbreviations.ok", { count: row.OK })}
+                          </span>{" "}
+                          |
                           <span className="text-warning ml-1">
-                            W {row.WARNING}
+                            {t("analytics.abbreviations.warning", {
+                              count: row.WARNING,
+                            })}
                           </span>{" "}
                           |
                           <span className="text-destructive ml-1">
-                            B {row.BREACH}
+                            {t("analytics.abbreviations.breach", {
+                              count: row.BREACH,
+                            })}
                           </span>
                         </span>
                       </div>
@@ -1577,7 +1614,7 @@ export default function SupplierSlaPage() {
                 </div>
                 <div className="rounded-lg border border-border p-3">
                   <p className="mb-2 text-sm font-medium text-foreground">
-                    Top Risk Suppliers
+                    {t("analytics.topRiskSuppliers")}
                   </p>
                   <div className="space-y-1 text-xs">
                     {analytics.topSuppliers.slice(0, 6).map((row) => (
@@ -1590,15 +1627,21 @@ export default function SupplierSlaPage() {
                         </span>
                         <span className="text-muted-foreground">
                           <span className="text-destructive">
-                            B {row.breachCount}
+                            {t("analytics.abbreviations.breach", {
+                              count: row.breachCount,
+                            })}
                           </span>{" "}
                           |
                           <span className="text-warning ml-1">
-                            W {row.warningCount}
+                            {t("analytics.abbreviations.warning", {
+                              count: row.warningCount,
+                            })}
                           </span>{" "}
                           |
                           <span className="text-info ml-1">
-                            D {row.openDisputes}
+                            {t("analytics.abbreviations.dispute", {
+                              count: row.openDisputes,
+                            })}
                           </span>
                         </span>
                       </div>
@@ -1615,10 +1658,10 @@ export default function SupplierSlaPage() {
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
           <CardTitle className="text-base sm:text-lg">
-            Policy Registry
+            {t("policyRegistry.title")}
           </CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Configured SLA policy per supplier.
+            {t("policyRegistry.description")}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0">
@@ -1630,7 +1673,7 @@ export default function SupplierSlaPage() {
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <FileText className="h-8 w-8 text-muted-foreground/50 mb-2" />
               <p className="text-sm text-muted-foreground">
-                No SLA policies configured.
+                {t("policyRegistry.empty")}
               </p>
               {canManage && (
                 <Button
@@ -1639,7 +1682,7 @@ export default function SupplierSlaPage() {
                   className="mt-3"
                 >
                   <Plus className="h-4 w-4 mr-2" />
-                  Create First Policy
+                  {t("actions.createFirstPolicy")}
                 </Button>
               )}
             </div>
@@ -1649,29 +1692,29 @@ export default function SupplierSlaPage() {
                 <TableHeader>
                   <TableRow className="border-border hover:bg-transparent">
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Supplier
+                      {t("columns.supplier")}
                     </TableHead>
                     <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                      Lead Time
+                      {t("columns.leadTime")}
                     </TableHead>
                     <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                      On-Time %
+                      {t("columns.onTimePercent")}
                     </TableHead>
                     <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                      Fill %
+                      {t("columns.fillPercent")}
                     </TableHead>
                     <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                      Late PO
+                      {t("columns.latePo")}
                     </TableHead>
                     <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                      Window
+                      {t("columns.window")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Status
+                      {t("columns.status")}
                     </TableHead>
                     {canManage && (
                       <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                        Actions
+                        {t("columns.actions")}
                       </TableHead>
                     )}
                   </TableRow>
@@ -1691,7 +1734,9 @@ export default function SupplierSlaPage() {
                         </div>
                       </TableCell>
                       <TableCell className="text-right py-3 text-sm text-foreground">
-                        {policy.targetLeadTimeDays}d
+                        {t("common.daysValue", {
+                          count: policy.targetLeadTimeDays,
+                        })}
                       </TableCell>
                       <TableCell className="text-right py-3 text-sm text-foreground">
                         {policy.minimumOnTimeRate}%
@@ -1703,7 +1748,9 @@ export default function SupplierSlaPage() {
                         {policy.maxOpenLatePoCount}
                       </TableCell>
                       <TableCell className="text-right py-3 text-sm text-foreground">
-                        {policy.evaluationWindowDays}d
+                        {t("common.daysValue", {
+                          count: policy.evaluationWindowDays,
+                        })}
                       </TableCell>
                       <TableCell className="py-3">
                         <Badge
@@ -1715,7 +1762,9 @@ export default function SupplierSlaPage() {
                               : "bg-muted text-muted-foreground",
                           )}
                         >
-                          {policy.isActive ? "ACTIVE" : "INACTIVE"}
+                          {policy.isActive
+                            ? t("policyStatuses.ACTIVE")
+                            : t("policyStatuses.INACTIVE")}
                         </Badge>
                       </TableCell>
                       {canManage && (
@@ -1725,6 +1774,10 @@ export default function SupplierSlaPage() {
                               size="sm"
                               variant="outline"
                               onClick={() => openEditModal(policy)}
+                              aria-label={t("actions.editSupplierPolicy", {
+                                supplier: policy.supplier.name,
+                              })}
+                              title={t("actions.edit")}
                             >
                               <Edit className="h-3.5 w-3.5" />
                             </Button>
@@ -1735,7 +1788,7 @@ export default function SupplierSlaPage() {
                               }
                               disabled={running}
                             >
-                              Evaluate
+                              {t("actions.evaluate")}
                             </Button>
                           </div>
                         </TableCell>
@@ -1754,16 +1807,17 @@ export default function SupplierSlaPage() {
         <CardHeader className="p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle className="text-base sm:text-lg">Breach Log</CardTitle>
+              <CardTitle className="text-base sm:text-lg">
+                {t("breachLog.title")}
+              </CardTitle>
               <CardDescription className="text-xs sm:text-sm">
-                Latest evaluation results with issue trace for supplier
-                governance.
+                {t("breachLog.description")}
               </CardDescription>
             </div>
             <div className="flex gap-2">
               <div className="relative flex-1 sm:flex-initial">
                 <Input
-                  placeholder="Search supplier..."
+                  placeholder={t("filters.searchSupplier")}
                   value={search}
                   onChange={(event) => setSearch(event.target.value)}
                   className="w-full sm:w-56 text-sm"
@@ -1774,16 +1828,18 @@ export default function SupplierSlaPage() {
                 value={statusFilter}
                 onChange={(event) => setStatusFilter(event.target.value)}
               >
-                <option value="ALL">All statuses</option>
-                <option value="OK">OK</option>
-                <option value="WARNING">Warning</option>
-                <option value="BREACH">Breach</option>
+                <option value="ALL">{t("filters.allStatuses")}</option>
+                <option value="OK">{t("breachStatuses.OK")}</option>
+                <option value="WARNING">{t("breachStatuses.WARNING")}</option>
+                <option value="BREACH">{t("breachStatuses.BREACH")}</option>
               </select>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setShowFilters(!showFilters)}
                 className="sm:hidden"
+                aria-label={t("filters.toggle")}
+                title={t("filters.toggle")}
               >
                 <Filter className="h-4 w-4" />
               </Button>
@@ -1799,7 +1855,7 @@ export default function SupplierSlaPage() {
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <CheckCircle className="h-8 w-8 text-success/50 mb-2" />
               <p className="text-sm text-muted-foreground">
-                No SLA breach logs found.
+                {t("breachLog.empty")}
               </p>
             </div>
           ) : (
@@ -1810,35 +1866,35 @@ export default function SupplierSlaPage() {
                   <TableHeader>
                     <TableRow className="border-border hover:bg-transparent">
                       <TableHead className="text-xs font-medium text-muted-foreground">
-                        Supplier
+                        {t("columns.supplier")}
                       </TableHead>
                       <TableHead className="text-xs font-medium text-muted-foreground">
-                        Evaluated
+                        {t("columns.evaluated")}
                       </TableHead>
                       <TableHead className="text-xs font-medium text-muted-foreground">
-                        Status
+                        {t("columns.status")}
                       </TableHead>
                       <TableHead className="text-xs font-medium text-muted-foreground">
-                        Severity
+                        {t("columns.severity")}
                       </TableHead>
                       <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                        Breach Count
+                        {t("columns.breachCount")}
                       </TableHead>
                       <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                        Observed LT
+                        {t("columns.observedLeadTime")}
                       </TableHead>
                       <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                        On-Time
+                        {t("columns.onTime")}
                       </TableHead>
                       <TableHead className="text-right text-xs font-medium text-muted-foreground">
-                        Fill Rate
+                        {t("columns.fillRate")}
                       </TableHead>
                       <TableHead className="text-xs font-medium text-muted-foreground">
-                        Action
+                        {t("columns.action")}
                       </TableHead>
                       {canManage && (
                         <TableHead className="text-xs font-medium text-muted-foreground">
-                          Workflow
+                          {t("columns.workflow")}
                         </TableHead>
                       )}
                     </TableRow>
@@ -1858,7 +1914,7 @@ export default function SupplierSlaPage() {
                           </div>
                         </TableCell>
                         <TableCell className="py-3 text-sm text-muted-foreground">
-                          {fmtDate(row.evaluationDate)}
+                          {fmtDate(row.evaluationDate, locale)}
                         </TableCell>
                         <TableCell className="py-3">
                           <Badge
@@ -1868,7 +1924,7 @@ export default function SupplierSlaPage() {
                               getStatusVariant(row.status),
                             )}
                           >
-                            {row.status}
+                            {t(`breachStatuses.${row.status}`)}
                           </Badge>
                         </TableCell>
                         <TableCell className="py-3">
@@ -1879,14 +1935,18 @@ export default function SupplierSlaPage() {
                               getSeverityVariant(row.severity),
                             )}
                           >
-                            {row.severity}
+                            {t(`severities.${row.severity}`)}
                           </Badge>
                         </TableCell>
                         <TableCell className="text-right py-3 font-medium text-foreground">
                           {row.breachCount}
                         </TableCell>
                         <TableCell className="text-right py-3 text-sm">
-                          {fmtValue(row.observedLeadTimeDays, "d")}
+                          {row.observedLeadTimeDays === null
+                            ? "—"
+                            : t("common.daysValue", {
+                                count: Number(row.observedLeadTimeDays),
+                              })}
                         </TableCell>
                         <TableCell className="text-right py-3">
                           <span
@@ -1909,7 +1969,7 @@ export default function SupplierSlaPage() {
                               getActionVariant(row.actionStatus),
                             )}
                           >
-                            {row.actionStatus}
+                            {t(`actionStatuses.${row.actionStatus}`)}
                           </Badge>
                         </TableCell>
                         {canManage && (
@@ -1922,6 +1982,10 @@ export default function SupplierSlaPage() {
                                   expandedBreach === row.id ? null : row.id,
                                 )
                               }
+                              aria-label={t("actions.viewSupplierWorkflow", {
+                                supplier: row.supplier.name,
+                              })}
+                              title={t("actions.viewWorkflow")}
                             >
                               <Eye className="h-3.5 w-3.5" />
                             </Button>
@@ -1955,7 +2019,7 @@ export default function SupplierSlaPage() {
                             getStatusVariant(row.status),
                           )}
                         >
-                          {row.status}
+                          {t(`breachStatuses.${row.status}`)}
                         </Badge>
                       </div>
 
@@ -1963,15 +2027,15 @@ export default function SupplierSlaPage() {
                       <div className="grid grid-cols-2 gap-3 pt-2">
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Evaluated
+                            {t("columns.evaluated")}
                           </p>
                           <p className="text-sm text-foreground">
-                            {fmtDate(row.evaluationDate)}
+                            {fmtDate(row.evaluationDate, locale)}
                           </p>
                         </div>
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Severity
+                            {t("columns.severity")}
                           </p>
                           <Badge
                             variant="outline"
@@ -1980,12 +2044,12 @@ export default function SupplierSlaPage() {
                               getSeverityVariant(row.severity),
                             )}
                           >
-                            {row.severity}
+                            {t(`severities.${row.severity}`)}
                           </Badge>
                         </div>
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Breach Count
+                            {t("columns.breachCount")}
                           </p>
                           <p className="text-sm font-semibold text-foreground">
                             {row.breachCount}
@@ -1993,15 +2057,19 @@ export default function SupplierSlaPage() {
                         </div>
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Observed LT
+                            {t("columns.observedLeadTime")}
                           </p>
                           <p className="text-sm">
-                            {fmtValue(row.observedLeadTimeDays, "d")}
+                            {row.observedLeadTimeDays === null
+                              ? "—"
+                              : t("common.daysValue", {
+                                  count: Number(row.observedLeadTimeDays),
+                                })}
                           </p>
                         </div>
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            On-Time
+                            {t("columns.onTime")}
                           </p>
                           <p
                             className={cn(
@@ -2014,7 +2082,7 @@ export default function SupplierSlaPage() {
                         </div>
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Fill Rate
+                            {t("columns.fillRate")}
                           </p>
                           <p className="text-sm">
                             {fmtValue(row.fillRatePercent, "%")}
@@ -2026,7 +2094,7 @@ export default function SupplierSlaPage() {
                       <div className="pt-2 border-t border-border/50">
                         <div className="flex items-center justify-between">
                           <span className="text-xs text-muted-foreground">
-                            Action Status
+                            {t("columns.actionStatus")}
                           </span>
                           <Badge
                             variant="outline"
@@ -2035,7 +2103,7 @@ export default function SupplierSlaPage() {
                               getActionVariant(row.actionStatus),
                             )}
                           >
-                            {row.actionStatus}
+                            {t(`actionStatuses.${row.actionStatus}`)}
                           </Badge>
                         </div>
                       </div>
@@ -2061,11 +2129,10 @@ export default function SupplierSlaPage() {
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
           <CardTitle className="text-base sm:text-lg">
-            Termination Queue
+            {t("terminationQueue.title")}
           </CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Auto-opened governance queue when policy termination clause
-            thresholds are reached.
+            {t("terminationQueue.description")}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0">
@@ -2077,7 +2144,7 @@ export default function SupplierSlaPage() {
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <AlertTriangle className="h-8 w-8 text-muted-foreground/50 mb-2" />
               <p className="text-sm text-muted-foreground">
-                No active termination escalation cases.
+                {t("terminationQueue.empty")}
               </p>
             </div>
           ) : (
@@ -2086,22 +2153,22 @@ export default function SupplierSlaPage() {
                 <TableHeader>
                   <TableRow className="border-border hover:bg-transparent">
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Case
+                      {t("columns.case")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Supplier
+                      {t("columns.supplier")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Status
+                      {t("columns.status")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Action
+                      {t("columns.action")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Owner
+                      {t("columns.owner")}
                     </TableHead>
                     <TableHead className="text-xs font-medium text-muted-foreground">
-                      Updated
+                      {t("columns.updated")}
                     </TableHead>
                   </TableRow>
                 </TableHeader>
@@ -2134,29 +2201,30 @@ export default function SupplierSlaPage() {
                               : "bg-muted",
                           )}
                         >
-                          {row.status}
+                          {t(`terminationStatuses.${row.status}`)}
                         </Badge>
                       </TableCell>
                       <TableCell className="py-3 text-sm text-foreground">
-                        {row.recommendedAction}
+                        {t(`terminationActions.${row.recommendedAction}`)}
                       </TableCell>
                       <TableCell className="py-3">
                         {row.owner ? (
                           <div className="text-xs">
-                            <p>{row.owner.name || "Unnamed"}</p>
+                            <p>{row.owner.name || t("common.unnamed")}</p>
                             <p className="text-muted-foreground">
                               {row.owner.email}
                             </p>
                           </div>
                         ) : (
                           <span className="text-muted-foreground">
-                            Unassigned
+                            {t("common.unassigned")}
                           </span>
                         )}
                       </TableCell>
                       <TableCell className="py-3 text-sm text-muted-foreground">
                         {fmtDate(
                           row.reviewedAt || row.resolvedAt || row.createdAt,
+                          locale,
                         )}
                       </TableCell>
                     </TableRow>
