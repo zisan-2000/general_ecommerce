@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
@@ -70,6 +72,7 @@ async function readJson<T>(res: Response, errorMessage: string) {
 }
 
 export default function WarehouseLocationsPage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -151,7 +154,7 @@ export default function WarehouseLocationsPage() {
 
   const createLocation = async (type: "zone" | "aisle" | "bin") => {
     if (!selectedWarehouseId) {
-      toast.error("Select a warehouse first.");
+      toast.error(tScm("k_cd495704cc3c"));
       return;
     }
     const payload =
@@ -188,7 +191,7 @@ export default function WarehouseLocationsPage() {
       body: JSON.stringify(payload),
     });
     await readJson(res, "Failed to create location");
-    toast.success("Location created");
+    toast.success(tScm("k_ac1c9c296f07"));
     if (type === "zone") setZoneForm({ code: "", name: "", description: "" });
     if (type === "aisle") setAisleForm({ zoneId: "", code: "", name: "", description: "" });
     if (type === "bin")
@@ -203,7 +206,7 @@ export default function WarehouseLocationsPage() {
       body: JSON.stringify({ type, id, isActive }),
     });
     await readJson(res, "Failed to update location");
-    toast.success("Location updated");
+    toast.success(tScm("k_4a38f4ef542f"));
     await refreshAll();
   };
 
@@ -222,7 +225,7 @@ export default function WarehouseLocationsPage() {
       <div className="p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access warehouse locations.
+            {tScm("k_8017aa14a1fd")}
           </CardContent>
         </Card>
       </div>
@@ -233,31 +236,31 @@ export default function WarehouseLocationsPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Warehouse Locations</h1>
+          <h1 className="text-2xl font-bold">{tScm("k_1d0c73d85f54")}</h1>
           <p className="text-sm text-muted-foreground">
-            Maintain zone, aisle, and bin layout for facility-level stock tracking.
+            {tScm("k_4d786d7f81ef")}
           </p>
         </div>
         <Button variant="outline" onClick={() => void refreshAll()} disabled={loading}>
           <RefreshCw className={loading ? "h-4 w-4 animate-spin" : "h-4 w-4"} />
-          Refresh
+          {tScm("k_56e3badc4e6c")}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Warehouse Context</CardTitle>
-          <CardDescription>Select the warehouse to manage locations.</CardDescription>
+          <CardTitle>{tScm("k_35cd1adc62e7")}</CardTitle>
+          <CardDescription>{tScm("k_57e3dc836eaa")}</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4 sm:grid-cols-[220px_1fr]">
           <div className="space-y-2">
-            <Label>Warehouse</Label>
+            <Label>{tScm("k_298dff72dae2")}</Label>
             <select
               className="w-full rounded-md border bg-background px-3 py-2"
               value={warehouseId}
               onChange={(e) => setWarehouseId(e.target.value)}
             >
-              <option value="">Select warehouse</option>
+              <option value="">{tScm("k_cfab2ae6ca21")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -277,36 +280,36 @@ export default function WarehouseLocationsPage() {
         <div className="grid gap-4 lg:grid-cols-3">
           <Card>
             <CardHeader>
-              <CardTitle>Create Zone</CardTitle>
-              <CardDescription>Start with top-level warehouse zones.</CardDescription>
+              <CardTitle>{tScm("k_f4b9b43f39db")}</CardTitle>
+              <CardDescription>{tScm("k_d2c3b6ac66e3")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <Input
-                placeholder="Zone code (e.g. Z-01)"
+                placeholder={tScm("k_a817f745e86d")}
                 value={zoneForm.code}
                 onChange={(e) => setZoneForm((cur) => ({ ...cur, code: e.target.value }))}
               />
               <Input
-                placeholder="Zone name"
+                placeholder={tScm("k_597e227239ad")}
                 value={zoneForm.name}
                 onChange={(e) => setZoneForm((cur) => ({ ...cur, name: e.target.value }))}
               />
               <Input
-                placeholder="Description (optional)"
+                placeholder={tScm("k_388de6fa3aa3")}
                 value={zoneForm.description}
                 onChange={(e) => setZoneForm((cur) => ({ ...cur, description: e.target.value }))}
               />
               <Button onClick={() => void createLocation("zone")} disabled={!selectedWarehouseId}>
                 <Plus className="h-4 w-4" />
-                Add Zone
+                {tScm("k_a06cebbd763a")}
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Create Aisle</CardTitle>
-              <CardDescription>Group aisles under an existing zone.</CardDescription>
+              <CardTitle>{tScm("k_47502e932851")}</CardTitle>
+              <CardDescription>{tScm("k_2e3ba75f7cfb")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <select
@@ -314,7 +317,7 @@ export default function WarehouseLocationsPage() {
                 value={aisleForm.zoneId}
                 onChange={(e) => setAisleForm((cur) => ({ ...cur, zoneId: e.target.value }))}
               >
-                <option value="">Select zone</option>
+                <option value="">{tScm("k_38328d84288b")}</option>
                 {zones.map((zone) => (
                   <option key={zone.id} value={zone.id}>
                     {zone.code} · {zone.name}
@@ -322,31 +325,31 @@ export default function WarehouseLocationsPage() {
                 ))}
               </select>
               <Input
-                placeholder="Aisle code (e.g. A-01)"
+                placeholder={tScm("k_77f625222ed3")}
                 value={aisleForm.code}
                 onChange={(e) => setAisleForm((cur) => ({ ...cur, code: e.target.value }))}
               />
               <Input
-                placeholder="Aisle name"
+                placeholder={tScm("k_f997dc14c13a")}
                 value={aisleForm.name}
                 onChange={(e) => setAisleForm((cur) => ({ ...cur, name: e.target.value }))}
               />
               <Input
-                placeholder="Description (optional)"
+                placeholder={tScm("k_388de6fa3aa3")}
                 value={aisleForm.description}
                 onChange={(e) => setAisleForm((cur) => ({ ...cur, description: e.target.value }))}
               />
               <Button onClick={() => void createLocation("aisle")} disabled={!selectedWarehouseId}>
                 <Plus className="h-4 w-4" />
-                Add Aisle
+                {tScm("k_1e5d5ce9f5f1")}
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Create Bin</CardTitle>
-              <CardDescription>Record bin locations for exact putaway tracking.</CardDescription>
+              <CardTitle>{tScm("k_7af6ead5938b")}</CardTitle>
+              <CardDescription>{tScm("k_f72be0dbf273")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <select
@@ -360,7 +363,7 @@ export default function WarehouseLocationsPage() {
                   }))
                 }
               >
-                <option value="">Select zone</option>
+                <option value="">{tScm("k_38328d84288b")}</option>
                 {zones.map((zone) => (
                   <option key={zone.id} value={zone.id}>
                     {zone.code} · {zone.name}
@@ -372,7 +375,7 @@ export default function WarehouseLocationsPage() {
                 value={binForm.aisleId}
                 onChange={(e) => setBinForm((cur) => ({ ...cur, aisleId: e.target.value }))}
               >
-                <option value="">Select aisle</option>
+                <option value="">{tScm("k_fc5aead5ed20")}</option>
                 {aisles
                   .filter((aisle) => String(aisle.zoneId) === binForm.zoneId)
                   .map((aisle) => (
@@ -382,23 +385,23 @@ export default function WarehouseLocationsPage() {
                   ))}
               </select>
               <Input
-                placeholder="Bin code (e.g. B-01)"
+                placeholder={tScm("k_0cc26f9f15b1")}
                 value={binForm.code}
                 onChange={(e) => setBinForm((cur) => ({ ...cur, code: e.target.value }))}
               />
               <Input
-                placeholder="Bin name"
+                placeholder={tScm("k_c22b93d3524e")}
                 value={binForm.name}
                 onChange={(e) => setBinForm((cur) => ({ ...cur, name: e.target.value }))}
               />
               <Input
-                placeholder="Description (optional)"
+                placeholder={tScm("k_388de6fa3aa3")}
                 value={binForm.description}
                 onChange={(e) => setBinForm((cur) => ({ ...cur, description: e.target.value }))}
               />
               <Button onClick={() => void createLocation("bin")} disabled={!selectedWarehouseId}>
                 <Plus className="h-4 w-4" />
-                Add Bin
+                {tScm("k_ada2a93103de")}
               </Button>
             </CardContent>
           </Card>
@@ -408,23 +411,23 @@ export default function WarehouseLocationsPage() {
       <div className="grid gap-4 lg:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle>Zones</CardTitle>
-            <CardDescription>Active and inactive zones for this warehouse.</CardDescription>
+            <CardTitle>{tScm("k_182e2eb72d8d")}</CardTitle>
+            <CardDescription>{tScm("k_43b3e4814601")}</CardDescription>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Code</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Status</TableHead>
+                  <TableHead>{tScm("k_adac69379a62")}</TableHead>
+                  <TableHead>{tScm("k_709a23220f2c")}</TableHead>
+                  <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {zones.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={3} className="text-center text-muted-foreground">
-                      No zones created yet.
+                      {tScm("k_73b723177c08")}
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -452,23 +455,23 @@ export default function WarehouseLocationsPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Aisles</CardTitle>
-            <CardDescription>Warehouse aisles grouped by zone.</CardDescription>
+            <CardTitle>{tScm("k_8e17756c679d")}</CardTitle>
+            <CardDescription>{tScm("k_a47bac4c5a73")}</CardDescription>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Zone</TableHead>
-                  <TableHead>Code</TableHead>
-                  <TableHead>Status</TableHead>
+                  <TableHead>{tScm("k_03efccb49f3f")}</TableHead>
+                  <TableHead>{tScm("k_adac69379a62")}</TableHead>
+                  <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {aisles.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={3} className="text-center text-muted-foreground">
-                      No aisles created yet.
+                      {tScm("k_baeb9fbfc94e")}
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -499,23 +502,23 @@ export default function WarehouseLocationsPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Bins</CardTitle>
-            <CardDescription>Bins available for stock assignment.</CardDescription>
+            <CardTitle>{tScm("k_3f1d8e6968d0")}</CardTitle>
+            <CardDescription>{tScm("k_c5b0b7fd8e7c")}</CardDescription>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Aisle</TableHead>
-                  <TableHead>Code</TableHead>
-                  <TableHead>Status</TableHead>
+                  <TableHead>{tScm("k_ee6f23c25ad0")}</TableHead>
+                  <TableHead>{tScm("k_adac69379a62")}</TableHead>
+                  <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {bins.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={3} className="text-center text-muted-foreground">
-                      No bins created yet.
+                      {tScm("k_4597fbb50fcd")}
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -547,37 +550,37 @@ export default function WarehouseLocationsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Stock by Bin</CardTitle>
-          <CardDescription>View bin-level stock for putaway accuracy.</CardDescription>
+          <CardTitle>{tScm("k_e575f446311c")}</CardTitle>
+          <CardDescription>{tScm("k_53ae4625c7f8")}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex flex-wrap items-end gap-3">
             <div className="space-y-2">
-              <Label>Search</Label>
+              <Label>{tScm("k_bce06414177f")}</Label>
               <Input
-                placeholder="Bin code, SKU, product..."
+                placeholder={tScm("k_3e745c5ffb0d")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
             <Button variant="outline" onClick={() => void loadBinLevels(selectedWarehouseId, search)}>
-              Search
+              {tScm("k_bce06414177f")}
             </Button>
           </div>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Bin</TableHead>
-                <TableHead>Variant</TableHead>
-                <TableHead className="text-right">Qty</TableHead>
-                <TableHead className="text-right">Reserved</TableHead>
+                <TableHead>{tScm("k_4c5ec7b06df2")}</TableHead>
+                <TableHead>{tScm("k_cc91b1ea2c16")}</TableHead>
+                <TableHead className="text-right">{tScm("k_1e5ff9e500c2")}</TableHead>
+                <TableHead className="text-right">{tScm("k_67a6ff10f1b9")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {filteredBinLevels.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={4} className="text-center text-muted-foreground">
-                    No bin-level stock recorded yet.
+                    {tScm("k_41c85e95e11b")}
                   </TableCell>
                 </TableRow>
               ) : (

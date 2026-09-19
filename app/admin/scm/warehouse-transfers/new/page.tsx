@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -54,6 +56,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function NewWarehouseTransferPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -116,11 +119,11 @@ export default function NewWarehouseTransferPage() {
 
   const createTransfer = async () => {
     if (!sourceWarehouseId || !destinationWarehouseId) {
-      toast.error("Source and destination warehouses are required");
+      toast.error(tScm("k_1a8d8577ebc0"));
       return;
     }
     if (sourceWarehouseId === destinationWarehouseId) {
-      toast.error("Source and destination warehouses must be different");
+      toast.error(tScm("k_0db18d43befc"));
       return;
     }
 
@@ -139,7 +142,7 @@ export default function NewWarehouseTransferPage() {
       );
 
     if (payloadItems.length === 0) {
-      toast.error("At least one valid transfer line is required");
+      toast.error(tScm("k_83be47018fcf"));
       return;
     }
 
@@ -160,7 +163,7 @@ export default function NewWarehouseTransferPage() {
         response,
         "Failed to create warehouse transfer",
       );
-      toast.success("Warehouse transfer created");
+      toast.success(tScm("k_83518dc2217a"));
       router.push(`/admin/scm/warehouse-transfers?search=${encodeURIComponent(created.transferNumber)}`);
       router.refresh();
     } catch (error: any) {
@@ -175,10 +178,10 @@ export default function NewWarehouseTransferPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
+            <CardTitle>{tScm("k_3dab5f6012e3")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            You do not have permission to create warehouse transfers.
+            {tScm("k_e5eba228d0c1")}
           </CardContent>
         </Card>
       </div>
@@ -188,43 +191,43 @@ export default function NewWarehouseTransferPage() {
   return (
     <div className="space-y-6 p-6">
       <ScmSectionHeader
-        title="Create Warehouse Transfer"
-        description="Use the guided inter-warehouse workflow to define route, requested timing, and transfer lines before approval."
+        title={tScm("k_dd26e793495a")}
+        description={tScm("k_267bcd836cb9")}
         action={
           <div className="flex flex-wrap gap-2">
             <Button asChild variant="outline">
               <Link href="/admin/scm/warehouse-transfers">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back To Queue
+                {tScm("k_31c9b2152c0c")}
               </Link>
             </Button>
             <Button variant="outline" onClick={() => void loadReferenceData()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
         }
       />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <ScmStatCard label="Warehouses" value={String(summary.warehouses)} hint="Available route endpoints" />
-        <ScmStatCard label="Variants" value={String(summary.variants)} hint="Transferable item master" />
-        <ScmStatCard label="Transfer Lines" value={String(summary.lines)} hint="Current transfer draft lines" />
+        <ScmStatCard label={tScm("k_65d6e169cb6e")} value={String(summary.warehouses)} hint={tScm("k_88a2d7dbdfc7")} />
+        <ScmStatCard label={tScm("k_1bc3d368f8ad")} value={String(summary.variants)} hint={tScm("k_66328361e551")} />
+        <ScmStatCard label={tScm("k_4dfc24a609dc")} value={String(summary.lines)} hint={tScm("k_4b4ee6a1cd98")} />
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 1: Define Route</CardTitle>
+          <CardTitle>{tScm("k_d9dc44ffcc32")}</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-2">
-            <Label>Source Warehouse</Label>
+            <Label>{tScm("k_8b4bc74e600f")}</Label>
             <select
               className="w-full rounded-md border bg-background px-3 py-2 text-sm"
               value={sourceWarehouseId}
               onChange={(event) => setSourceWarehouseId(event.target.value)}
             >
-              <option value="">Select warehouse</option>
+              <option value="">{tScm("k_cfab2ae6ca21")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -233,13 +236,13 @@ export default function NewWarehouseTransferPage() {
             </select>
           </div>
           <div className="space-y-2">
-            <Label>Destination Warehouse</Label>
+            <Label>{tScm("k_b04156809d3f")}</Label>
             <select
               className="w-full rounded-md border bg-background px-3 py-2 text-sm"
               value={destinationWarehouseId}
               onChange={(event) => setDestinationWarehouseId(event.target.value)}
             >
-              <option value="">Select warehouse</option>
+              <option value="">{tScm("k_cfab2ae6ca21")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -248,7 +251,7 @@ export default function NewWarehouseTransferPage() {
             </select>
           </div>
           <div className="space-y-2">
-            <Label>Required By</Label>
+            <Label>{tScm("k_e0951fc243c4")}</Label>
             <Input
               type="datetime-local"
               value={requiredBy}
@@ -256,7 +259,7 @@ export default function NewWarehouseTransferPage() {
             />
           </div>
           <div className="space-y-2">
-            <Label>Note</Label>
+            <Label>{tScm("k_2c924e308820")}</Label>
             <Textarea
               value={note}
               onChange={(event) => setNote(event.target.value)}
@@ -268,34 +271,34 @@ export default function NewWarehouseTransferPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 2: Transfer Lines</CardTitle>
+          <CardTitle>{tScm("k_0248c1602a16")}</CardTitle>
           <CardDescription>
-            Add the exact variants and requested quantities that should move between warehouses.
+            {tScm("k_faf5b6027fb9")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
-            <Label className="text-sm font-medium">Transfer Items</Label>
+            <Label className="text-sm font-medium">{tScm("k_4846eb7678d2")}</Label>
             <Button
               type="button"
               variant="outline"
               onClick={() => setItems((current) => [...current, emptyLine()])}
             >
               <Plus className="mr-2 h-4 w-4" />
-              Add Line
+              {tScm("k_63dcfb6701b9")}
             </Button>
           </div>
 
           {items.map((item, index) => (
             <div key={index} className="grid gap-3 rounded-lg border p-3 md:grid-cols-[2fr_1fr_2fr_auto]">
               <div className="space-y-2">
-                <Label>Variant</Label>
+                <Label>{tScm("k_cc91b1ea2c16")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={item.productVariantId}
                   onChange={(event) => updateItem(index, "productVariantId", event.target.value)}
                 >
-                  <option value="">Select variant</option>
+                  <option value="">{tScm("k_3785e871dc02")}</option>
                   {variants.map((variant) => (
                     <option key={variant.id} value={variant.id}>
                       {variant.product?.name ?? "Variant"} ({variant.sku})
@@ -304,7 +307,7 @@ export default function NewWarehouseTransferPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Qty</Label>
+                <Label>{tScm("k_1e5ff9e500c2")}</Label>
                 <Input
                   type="number"
                   min={1}
@@ -313,7 +316,7 @@ export default function NewWarehouseTransferPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Description</Label>
+                <Label>{tScm("k_55f8ebc805e6")}</Label>
                 <Input
                   value={item.description}
                   onChange={(event) => updateItem(index, "description", event.target.value)}
@@ -328,7 +331,7 @@ export default function NewWarehouseTransferPage() {
                     setItems((current) => current.filter((_, itemIndex) => itemIndex !== index))
                   }
                 >
-                  Remove
+                  {tScm("k_e963907dac5c")}
                 </Button>
               </div>
             </div>
@@ -338,15 +341,15 @@ export default function NewWarehouseTransferPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 3: Save Draft</CardTitle>
+          <CardTitle>{tScm("k_8de48bbefeb1")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="rounded-lg border bg-muted/30 p-4 text-sm text-muted-foreground">
-            After creation, the transfer enters the warehouse queue and can then move through approval, dispatch, and receipt.
+            {tScm("k_873c325d95b6")}
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={() => router.push("/admin/scm/warehouse-transfers")}>
-              Cancel
+              {tScm("k_77dfd2135f4d")}
             </Button>
             <Button onClick={() => void createTransfer()} disabled={saving || loading}>
               {saving ? "Saving..." : "Create Transfer"}

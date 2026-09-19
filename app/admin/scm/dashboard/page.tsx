@@ -1,5 +1,6 @@
 "use client";
 
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -335,6 +336,7 @@ function StatusSummary({
   rows: StatusCount[];
   rowHref?: (status: string) => string;
 }) {
+  const tScm = useTranslations("ScmAuto");
   return (
     <Card>
       <CardHeader className="pb-3">
@@ -342,7 +344,7 @@ function StatusSummary({
       </CardHeader>
       <CardContent className="space-y-2">
         {rows.length === 0 ? (
-          <p className="text-sm text-muted-foreground">No status data in selected range.</p>
+          <p className="text-sm text-muted-foreground">{tScm("k_d41e11de4fe2")}</p>
         ) : (
           rows.map((row) => (
             <div key={`${title}-${row.status}`} className="flex items-center justify-between text-sm">
@@ -366,6 +368,7 @@ function StatusSummary({
 }
 
 export default function ScmDashboardPage() {
+  const tScm = useTranslations("ScmAuto");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const t = useTranslations("AdminScmDashboard");
@@ -612,10 +615,10 @@ export default function ScmDashboardPage() {
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Supplier</TableHead>
-                          <TableHead className="text-right">Avg Rating</TableHead>
-                          <TableHead className="text-right">Awards</TableHead>
-                          <TableHead className="text-right">Returns</TableHead>
+                          <TableHead>{tScm("k_55edd462872a")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_a78010cf73eb")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_75226d73db5b")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_9582a02f141f")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -641,7 +644,7 @@ export default function ScmDashboardPage() {
                         ) : (
                           <TableRow>
                             <TableCell colSpan={4} className="text-center text-muted-foreground">
-                              No vendor performance rows found.
+                              {tScm("k_d81e0f10b9e5")}
                             </TableCell>
                           </TableRow>
                         )}
@@ -652,19 +655,19 @@ export default function ScmDashboardPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Low Stock Exceptions</CardTitle>
+                    <CardTitle>{tScm("k_68f3b5d924f5")}</CardTitle>
                     <CardDescription>
-                      Current low stock list from latest inventory snapshot.
+                      {tScm("k_76575d0e708f")}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Item</TableHead>
-                          <TableHead>Warehouse</TableHead>
-                          <TableHead className="text-right">Stock</TableHead>
-                          <TableHead className="text-right">Threshold</TableHead>
+                          <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                          <TableHead>{tScm("k_298dff72dae2")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_bcecf4562f17")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_c51f7b72279e")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -691,7 +694,7 @@ export default function ScmDashboardPage() {
                         ) : (
                           <TableRow>
                             <TableCell colSpan={4} className="text-center text-muted-foreground">
-                              No low stock exceptions found.
+                              {tScm("k_719743136c42")}
                             </TableCell>
                           </TableRow>
                         )}
@@ -705,22 +708,22 @@ export default function ScmDashboardPage() {
             <TabsContent value="pipeline" className="space-y-6">
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 <StatusSummary
-                  title="MRF / Requisition"
+                  title={tScm("k_73f0c0137897")}
                   rows={report.procurementPipeline.requisitions}
                   rowHref={(status) => buildHref("/admin/scm/purchase-requisitions", { status })}
                 />
                 <StatusSummary
-                  title="RFQ"
+                  title={tScm("k_97619681ade9")}
                   rows={report.procurementPipeline.rfqs}
                   rowHref={(status) => buildHref("/admin/scm/rfqs", { status })}
                 />
                 <StatusSummary
-                  title="CS"
+                  title={tScm("k_0e0bd9224cae")}
                   rows={report.procurementPipeline.comparativeStatements}
                   rowHref={(status) => buildHref("/admin/scm/comparative-statements", { status })}
                 />
                 <StatusSummary
-                  title="Payment Request"
+                  title={tScm("k_47b96c66a290")}
                   rows={report.procurementPipeline.paymentRequests}
                   rowHref={(status) => buildHref("/admin/scm/payment-requests", { status })}
                 />
@@ -729,19 +732,19 @@ export default function ScmDashboardPage() {
               <div className="grid gap-4 lg:grid-cols-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Procurement Plan Tracking</CardTitle>
+                    <CardTitle>{tScm("k_7ea30545af85")}</CardTitle>
                   </CardHeader>
                   <CardContent className="grid gap-4 md:grid-cols-3">
                     <div>
-                      <div className="text-xs uppercase text-muted-foreground">With Plan Ref</div>
+                      <div className="text-xs uppercase text-muted-foreground">{tScm("k_785720363a97")}</div>
                       <div className="text-2xl font-semibold">{report.planStatusTracking.totalWithPlanReference}</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase text-muted-foreground">Routed To Procurement</div>
+                      <div className="text-xs uppercase text-muted-foreground">{tScm("k_00b445f26fa1")}</div>
                       <div className="text-2xl font-semibold">{report.planStatusTracking.routedToProcurement}</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase text-muted-foreground">Converted</div>
+                      <div className="text-xs uppercase text-muted-foreground">{tScm("k_312028625ca8")}</div>
                       <div className="text-2xl font-semibold">{report.planStatusTracking.converted}</div>
                     </div>
                   </CardContent>
@@ -749,7 +752,7 @@ export default function ScmDashboardPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>MRF Status Tracking</CardTitle>
+                    <CardTitle>{tScm("k_bffc124b58f9")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
                     {report.mrfStatusTracking.counts.length ? (
@@ -760,7 +763,7 @@ export default function ScmDashboardPage() {
                         </div>
                       ))
                     ) : (
-                      <p className="text-sm text-muted-foreground">No MRF rows found.</p>
+                      <p className="text-sm text-muted-foreground">{tScm("k_5063158b0eb2")}</p>
                     )}
                   </CardContent>
                 </Card>
@@ -768,20 +771,20 @@ export default function ScmDashboardPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Plan / MRF Register</CardTitle>
+                  <CardTitle>{tScm("k_e6540375806b")}</CardTitle>
                   <CardDescription>
-                    Project/plan grouping currently uses planning note, requisition title, purpose, then warehouse fallback.
+                    {tScm("k_081726d2ef56")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Requisition</TableHead>
-                        <TableHead>Project / Plan</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead>Officer</TableHead>
-                        <TableHead>Requested</TableHead>
+                        <TableHead>{tScm("k_7dc430086b99")}</TableHead>
+                        <TableHead>{tScm("k_b256ad382eb2")}</TableHead>
+                        <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                        <TableHead>{tScm("k_f58330ab22f6")}</TableHead>
+                        <TableHead>{tScm("k_c26bf60fed37")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -807,7 +810,7 @@ export default function ScmDashboardPage() {
                       ) : (
                         <TableRow>
                           <TableCell colSpan={5} className="text-center text-muted-foreground">
-                            No procurement plan rows found.
+                            {tScm("k_7fccfe006476")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -820,17 +823,17 @@ export default function ScmDashboardPage() {
             <TabsContent value="sourcing" className="space-y-6">
               <div className="grid gap-4 md:grid-cols-3">
                 <StatusSummary
-                  title="RFQ Status"
+                  title={tScm("k_403156a7706c")}
                   rows={report.rfqStatus.counts}
                   rowHref={(status) => buildHref("/admin/scm/rfqs", { status })}
                 />
                 <StatusSummary
-                  title="CS Status"
+                  title={tScm("k_056f5ef5d778")}
                   rows={report.comparativeStatementSummary.counts}
                   rowHref={(status) => buildHref("/admin/scm/comparative-statements", { status })}
                 />
                 <StatusSummary
-                  title="PO Status"
+                  title={tScm("k_761fc5615126")}
                   rows={report.purchaseOrderTracking.counts}
                   rowHref={(status) => buildHref("/admin/scm/purchase-orders", { status })}
                 />
@@ -839,15 +842,15 @@ export default function ScmDashboardPage() {
               <div className="grid gap-4 xl:grid-cols-3">
                 <Card className="xl:col-span-1">
                   <CardHeader>
-                    <CardTitle>RFQ Register</CardTitle>
+                    <CardTitle>{tScm("k_2eba7537a250")}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>RFQ</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead className="text-right">Quotes</TableHead>
+                          <TableHead>{tScm("k_97619681ade9")}</TableHead>
+                          <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_7b0257ce75ad")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -873,15 +876,15 @@ export default function ScmDashboardPage() {
 
                 <Card className="xl:col-span-1">
                   <CardHeader>
-                    <CardTitle>CS Summary</CardTitle>
+                    <CardTitle>{tScm("k_cd1ee2d952f6")}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>CS</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead>Stage</TableHead>
+                          <TableHead>{tScm("k_0e0bd9224cae")}</TableHead>
+                          <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                          <TableHead>{tScm("k_ca6d0e3aaa7d")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -910,15 +913,15 @@ export default function ScmDashboardPage() {
 
                 <Card className="xl:col-span-1">
                   <CardHeader>
-                    <CardTitle>WO / PO Tracking</CardTitle>
+                    <CardTitle>{tScm("k_6615cee779a0")}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>PO</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead className="text-right">Amount</TableHead>
+                          <TableHead>{tScm("k_eea0c00c5051")}</TableHead>
+                          <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_43dc8532f7e5")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -947,7 +950,7 @@ export default function ScmDashboardPage() {
             <TabsContent value="warehouse" className="space-y-6">
               <div className="grid gap-4 md:grid-cols-3">
                 <StatusSummary
-                  title="GRN Status"
+                  title={tScm("k_8eb705dee4a4")}
                   rows={report.grnStockSummary.counts}
                   rowHref={(status) =>
                     status === "POSTED"
@@ -957,11 +960,11 @@ export default function ScmDashboardPage() {
                 />
                 <Card>
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-base">Warehouse Exceptions</CardTitle>
+                    <CardTitle className="text-base">{tScm("k_95d7c9be51e0")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Pending Requester Confirmation</span>
+                      <span className="text-muted-foreground">{tScm("k_72275756951f")}</span>
                       <Link
                         href={buildHref("/admin/scm/goods-receipts", { focus: "pending-confirmation" })}
                         className="font-medium underline-offset-4 hover:underline"
@@ -970,7 +973,7 @@ export default function ScmDashboardPage() {
                       </Link>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Low Stock Variants</span>
+                      <span className="text-muted-foreground">{tScm("k_387d367dfa86")}</span>
                       <Link
                         href="/admin/scm/replenishment"
                         className="font-medium underline-offset-4 hover:underline"
@@ -979,18 +982,18 @@ export default function ScmDashboardPage() {
                       </Link>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Latest Snapshot</span>
+                      <span className="text-muted-foreground">{tScm("k_1c54aaa0b8bc")}</span>
                       <span className="font-medium">{formatDate(report.grnStockSummary.latestSnapshotDate)}</span>
                     </div>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-base">Vendor Performance Input</CardTitle>
+                    <CardTitle className="text-base">{tScm("k_1ec754a98b48")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Goods Receipt Evaluations</span>
+                      <span className="text-muted-foreground">{tScm("k_4978f395c4d0")}</span>
                       <Link
                         href={buildHref("/admin/scm/goods-receipts", { focus: "incomplete-evaluation" })}
                         className="font-medium underline-offset-4 hover:underline"
@@ -999,7 +1002,7 @@ export default function ScmDashboardPage() {
                       </Link>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Supplier Return Cases</span>
+                      <span className="text-muted-foreground">{tScm("k_501128a632c8")}</span>
                       <Link
                         href="/admin/scm/supplier-returns"
                         className="font-medium underline-offset-4 hover:underline"
@@ -1013,18 +1016,18 @@ export default function ScmDashboardPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>GRN Register</CardTitle>
+                  <CardTitle>{tScm("k_f7e16ef9e36f")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Receipt</TableHead>
-                        <TableHead>Warehouse</TableHead>
-                        <TableHead>Supplier</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead className="text-right">Qty</TableHead>
-                        <TableHead>Requester Confirmation</TableHead>
+                        <TableHead>{tScm("k_f6ce3b6fcfca")}</TableHead>
+                        <TableHead>{tScm("k_298dff72dae2")}</TableHead>
+                        <TableHead>{tScm("k_55edd462872a")}</TableHead>
+                        <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                        <TableHead className="text-right">{tScm("k_1e5ff9e500c2")}</TableHead>
+                        <TableHead>{tScm("k_413722dd6d27")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -1050,7 +1053,7 @@ export default function ScmDashboardPage() {
                       ) : (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center text-muted-foreground">
-                            No GRN rows found.
+                            {tScm("k_c3f59048b23d")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -1063,32 +1066,32 @@ export default function ScmDashboardPage() {
             <TabsContent value="finance" className="space-y-6">
               <div className="grid gap-4 md:grid-cols-3">
                 <StatusSummary
-                  title="PRF Status"
+                  title={tScm("k_f9ea40aecd65")}
                   rows={report.paymentSummary.prfCounts}
                   rowHref={(status) => buildHref("/admin/scm/payment-requests", { status })}
                 />
                 <Card>
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-base">Payment Summary</CardTitle>
+                    <CardTitle className="text-base">{tScm("k_dad7cf7fe87b")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Requested Amount</span>
+                      <span className="text-muted-foreground">{tScm("k_cde287cda27d")}</span>
                       <span className="font-medium">{formatMoney(report.paymentSummary.totalRequestedAmount)}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Paid Amount</span>
+                      <span className="text-muted-foreground">{tScm("k_1950b3cfee35")}</span>
                       <span className="font-medium">{formatMoney(report.paymentSummary.totalPaidAmount)}</span>
                     </div>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-base">Budget Coverage</CardTitle>
+                    <CardTitle className="text-base">{tScm("k_9691330dc5de")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Budget Codes In Scope</span>
+                      <span className="text-muted-foreground">{tScm("k_d89503f21f86")}</span>
                       <Link
                         href="/admin/scm/dashboard?tab=finance"
                         className="font-medium underline-offset-4 hover:underline"
@@ -1097,7 +1100,7 @@ export default function ScmDashboardPage() {
                       </Link>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Project / Plan Rows</span>
+                      <span className="text-muted-foreground">{tScm("k_3ee53839fa70")}</span>
                       <Link
                         href="/admin/scm/dashboard?tab=finance"
                         className="font-medium underline-offset-4 hover:underline"
@@ -1112,16 +1115,16 @@ export default function ScmDashboardPage() {
               <div className="grid gap-4 xl:grid-cols-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project-wise Procurement Summary</CardTitle>
+                    <CardTitle>{tScm("k_73d0debca23e")}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Project / Plan</TableHead>
-                          <TableHead className="text-right">Ordered</TableHead>
-                          <TableHead className="text-right">Invoiced</TableHead>
-                          <TableHead className="text-right">Paid</TableHead>
+                          <TableHead>{tScm("k_b256ad382eb2")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_c9dd3b77c90c")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_4da40d1d15fd")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_dc9d4584a554")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -1146,7 +1149,7 @@ export default function ScmDashboardPage() {
                         ) : (
                           <TableRow>
                             <TableCell colSpan={4} className="text-center text-muted-foreground">
-                              No project summary rows found.
+                              {tScm("k_d28bb5d8ce48")}
                             </TableCell>
                           </TableRow>
                         )}
@@ -1157,16 +1160,16 @@ export default function ScmDashboardPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Budget vs Procurement</CardTitle>
+                    <CardTitle>{tScm("k_8b3d60d576ba")}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Budget Code</TableHead>
-                          <TableHead className="text-right">Estimated</TableHead>
-                          <TableHead className="text-right">Ordered</TableHead>
-                          <TableHead className="text-right">Gap</TableHead>
+                          <TableHead>{tScm("k_88f4ea85a48f")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_ae64c7cf8d54")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_c9dd3b77c90c")}</TableHead>
+                          <TableHead className="text-right">{tScm("k_b2464742da10")}</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -1191,7 +1194,7 @@ export default function ScmDashboardPage() {
                         ) : (
                           <TableRow>
                             <TableCell colSpan={4} className="text-center text-muted-foreground">
-                              No budget rows found.
+                              {tScm("k_ba334d41b3ce")}
                             </TableCell>
                           </TableRow>
                         )}
@@ -1203,18 +1206,18 @@ export default function ScmDashboardPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>PRF & Payment Status</CardTitle>
+                  <CardTitle>{tScm("k_97c0cb7d448d")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>PRF</TableHead>
-                        <TableHead>Supplier</TableHead>
-                        <TableHead>Invoice</TableHead>
-                        <TableHead>Status</TableHead>
-                        <TableHead className="text-right">Amount</TableHead>
-                        <TableHead>Paid At</TableHead>
+                        <TableHead>{tScm("k_d6de20fdc9f1")}</TableHead>
+                        <TableHead>{tScm("k_55edd462872a")}</TableHead>
+                        <TableHead>{tScm("k_f9f38818c406")}</TableHead>
+                        <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
+                        <TableHead className="text-right">{tScm("k_43dc8532f7e5")}</TableHead>
+                        <TableHead>{tScm("k_55c62e1a5165")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -1240,7 +1243,7 @@ export default function ScmDashboardPage() {
                       ) : (
                         <TableRow>
                           <TableCell colSpan={6} className="text-center text-muted-foreground">
-                            No PRF rows found.
+                            {tScm("k_7d94843b293c")}
                           </TableCell>
                         </TableRow>
                       )}
@@ -1254,7 +1257,7 @@ export default function ScmDashboardPage() {
               <div className="grid gap-4 lg:grid-cols-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Audit Entity Breakdown</CardTitle>
+                    <CardTitle>{tScm("k_860fce26a4b6")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
                     {report.auditSummary.entityBreakdown.length ? (
@@ -1270,23 +1273,23 @@ export default function ScmDashboardPage() {
                         </div>
                       ))
                     ) : (
-                      <p className="text-sm text-muted-foreground">No audit rows found.</p>
+                      <p className="text-sm text-muted-foreground">{tScm("k_6f31ee4f1f4e")}</p>
                     )}
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Audit Snapshot</CardTitle>
+                    <CardTitle>{tScm("k_53b272d8efea")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Events In Range</span>
+                      <span className="text-muted-foreground">{tScm("k_a65d74694da5")}</span>
                       <span className="font-medium">{report.auditSummary.totalEvents}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Date Range</span>
+                      <span className="text-muted-foreground">{tScm("k_6bb4b674b323")}</span>
                       <span className="font-medium">
-                        {report.filters.from} to {report.filters.to}
+                        {report.filters.from} {tScm("k_4374aaee247f")} {report.filters.to}
                       </span>
                     </div>
                   </CardContent>
@@ -1295,17 +1298,17 @@ export default function ScmDashboardPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Recent SCM Audit Events</CardTitle>
+                  <CardTitle>{tScm("k_f0ee847cfd2b")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Action</TableHead>
-                        <TableHead>Entity</TableHead>
-                        <TableHead>Entity ID</TableHead>
-                        <TableHead>Actor</TableHead>
-                        <TableHead>Timestamp</TableHead>
+                        <TableHead>{tScm("k_97c89a4d6630")}</TableHead>
+                        <TableHead>{tScm("k_c7fb31772579")}</TableHead>
+                        <TableHead>{tScm("k_04d694e29810")}</TableHead>
+                        <TableHead>{tScm("k_cbd19b5c397e")}</TableHead>
+                        <TableHead>{tScm("k_19eabc961735")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -1340,7 +1343,7 @@ export default function ScmDashboardPage() {
                       ) : (
                         <TableRow>
                           <TableCell colSpan={5} className="text-center text-muted-foreground">
-                            No audit events found.
+                            {tScm("k_c76eb4f78468")}
                           </TableCell>
                         </TableRow>
                       )}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
 import { RefreshCw } from "lucide-react";
@@ -60,6 +62,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 }
 
 export default function ThreeWayMatchPage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const globalPermissions = Array.isArray((session?.user as any)?.globalPermissions)
     ? ((session?.user as any).globalPermissions as string[])
@@ -112,21 +115,21 @@ export default function ThreeWayMatchPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">3-Way Match</h1>
+          <h1 className="text-2xl font-bold">{tScm("k_ca63a1d38873")}</h1>
           <p className="text-sm text-muted-foreground">
-            Compare purchase orders, goods receipts, and supplier invoices before payment release.
+            {tScm("k_8fad5a565731")}
           </p>
         </div>
         <div className="flex gap-2">
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search invoice, supplier, or PO..."
+            placeholder={tScm("k_f84a973d8ff4")}
             className="w-full md:w-80"
           />
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
         </div>
       </div>
@@ -134,25 +137,25 @@ export default function ThreeWayMatchPage() {
       <Card>
         <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <CardTitle>Invoice Match Queue</CardTitle>
-            <CardDescription>Only PO-linked supplier invoices appear here.</CardDescription>
+            <CardTitle>{tScm("k_462e3af2a5ca")}</CardTitle>
+            <CardDescription>{tScm("k_293db44faf75")}</CardDescription>
           </div>
           <select
             className="w-full rounded-md border bg-background px-3 py-2 text-sm md:w-56"
             value={statusFilter}
             onChange={(event) => setStatusFilter(event.target.value)}
           >
-            <option value="ALL">All statuses</option>
-            <option value="MATCHED">Matched</option>
-            <option value="VARIANCE">Variance</option>
-            <option value="PENDING">Pending</option>
+            <option value="ALL">{tScm("k_6405179d241b")}</option>
+            <option value="MATCHED">{tScm("k_1bf3ec5bf8dd")}</option>
+            <option value="VARIANCE">{tScm("k_eb39bbf6ccbb")}</option>
+            <option value="PENDING">{tScm("k_96f608c16cef")}</option>
           </select>
         </CardHeader>
         <CardContent className="space-y-4">
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading 3-way match queue...</p>
+            <p className="text-sm text-muted-foreground">{tScm("k_c3d5d0d774f0")}</p>
           ) : visibleMatches.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No 3-way match records found.</p>
+            <p className="text-sm text-muted-foreground">{tScm("k_4f25351babce")}</p>
           ) : (
             visibleMatches.map((entry) => (
               <Card key={entry.invoice.id}>
@@ -161,33 +164,33 @@ export default function ThreeWayMatchPage() {
                     {entry.invoice.invoiceNumber} • {entry.invoice.supplier.name}
                   </CardTitle>
                   <CardDescription>
-                    {entry.invoice.purchaseOrder?.poNumber || "No PO"} • Status: {entry.match.status} • Variances:{" "}
+                    {entry.invoice.purchaseOrder?.poNumber || "No PO"} {tScm("k_b25d2dfab1bd")} {entry.match.status} {tScm("k_e2f689e9dec6")}{" "}
                     {entry.match.summary.varianceCount}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-4">
                     <div className="rounded-lg border p-3">
-                      <div className="text-sm text-muted-foreground">Invoice Subtotal</div>
+                      <div className="text-sm text-muted-foreground">{tScm("k_a3d399c1d66a")}</div>
                       <div className="text-lg font-semibold">{entry.match.summary.invoiceSubtotal}</div>
                     </div>
                     <div className="rounded-lg border p-3">
-                      <div className="text-sm text-muted-foreground">Expected Subtotal</div>
+                      <div className="text-sm text-muted-foreground">{tScm("k_9b21b39480d2")}</div>
                       <div className="text-lg font-semibold">{entry.match.summary.expectedSubtotal || "-"}</div>
                     </div>
                     <div className="rounded-lg border p-3">
-                      <div className="text-sm text-muted-foreground">Matched Lines</div>
+                      <div className="text-sm text-muted-foreground">{tScm("k_e6d8435bd526")}</div>
                       <div className="text-lg font-semibold">{entry.match.summary.matchedLineCount}</div>
                     </div>
                     <div className="rounded-lg border p-3">
-                      <div className="text-sm text-muted-foreground">Match Status</div>
+                      <div className="text-sm text-muted-foreground">{tScm("k_459030b6a872")}</div>
                       <div className="text-lg font-semibold">{entry.match.status}</div>
                     </div>
                   </div>
 
                   {entry.match.summary.issues.length > 0 ? (
                     <div className="rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm">
-                      <div className="font-medium">Invoice-level issues</div>
+                      <div className="font-medium">{tScm("k_cf0a5fd97ed5")}</div>
                       <ul className="mt-2 list-disc pl-5">
                         {entry.match.summary.issues.map((issue, index) => (
                           <li key={index}>{issue}</li>
@@ -199,13 +202,13 @@ export default function ThreeWayMatchPage() {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Item</TableHead>
-                        <TableHead>PO Qty</TableHead>
-                        <TableHead>GR Qty</TableHead>
-                        <TableHead>Inv Qty</TableHead>
-                        <TableHead>PO Cost</TableHead>
-                        <TableHead>Inv Cost</TableHead>
-                        <TableHead>Status</TableHead>
+                        <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                        <TableHead>{tScm("k_a34cd60f96a5")}</TableHead>
+                        <TableHead>{tScm("k_fec046f9cfe8")}</TableHead>
+                        <TableHead>{tScm("k_dcc47fe51216")}</TableHead>
+                        <TableHead>{tScm("k_57806a1930ad")}</TableHead>
+                        <TableHead>{tScm("k_2aed97257d8d")}</TableHead>
+                        <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>

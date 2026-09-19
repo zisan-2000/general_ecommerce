@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -54,6 +56,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 }
 
 export default function NewGoodsReceiptPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -132,7 +135,7 @@ export default function NewGoodsReceiptPage() {
 
   const postReceipt = async () => {
     if (!selectedPurchaseOrder) {
-      toast.error("Select a purchase order");
+      toast.error(tScm("k_adb43fa72368"));
       return;
     }
 
@@ -144,7 +147,7 @@ export default function NewGoodsReceiptPage() {
       .filter((item) => Number.isInteger(item.quantityReceived) && item.quantityReceived > 0);
 
     if (payloadItems.length === 0) {
-      toast.error("At least one receipt quantity must be greater than zero");
+      toast.error(tScm("k_aed8b875ba09"));
       return;
     }
 
@@ -160,7 +163,7 @@ export default function NewGoodsReceiptPage() {
         }),
       });
       const created = await readJson<GoodsReceipt>(response, "Failed to post goods receipt");
-      toast.success("Goods receipt posted");
+      toast.success(tScm("k_55ded0a954d4"));
       router.push(`/admin/scm/goods-receipts/${created.id}`);
       router.refresh();
     } catch (error: any) {
@@ -175,10 +178,10 @@ export default function NewGoodsReceiptPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
+            <CardTitle>{tScm("k_3dab5f6012e3")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            You do not have permission to post goods receipts.
+            {tScm("k_89be79b95b43")}
           </CardContent>
         </Card>
       </div>
@@ -188,43 +191,43 @@ export default function NewGoodsReceiptPage() {
   return (
     <div className="space-y-6 p-6">
       <ScmSectionHeader
-        title="Post Goods Receipt"
-        description="Use the guided inbound workflow to select an approved PO, confirm quantities, and create the GRN cleanly."
+        title={tScm("k_c70a7bee590d")}
+        description={tScm("k_f474fb5ec1cc")}
         action={
           <div className="flex flex-wrap gap-2">
             <Button asChild variant="outline">
               <Link href="/admin/scm/goods-receipts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back To Register
+                {tScm("k_1763e9ae8697")}
               </Link>
             </Button>
             <Button variant="outline" onClick={() => void loadPurchaseOrders()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
         }
       />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <ScmStatCard label="Ready To Receive" value={String(summary.readyToReceive)} hint="Approved or partially received PO" icon={PackageCheck} />
-        <ScmStatCard label="Partial PO" value={String(summary.partiallyReceived)} hint="Need another inbound receipt" icon={ClipboardCheck} />
-        <ScmStatCard label="Open Units" value={String(summary.linesOpen)} hint="Remaining units on selected PO" />
+        <ScmStatCard label={tScm("k_19658080540b")} value={String(summary.readyToReceive)} hint={tScm("k_57c8f945195f")} icon={PackageCheck} />
+        <ScmStatCard label={tScm("k_6ae6c2d973e7")} value={String(summary.partiallyReceived)} hint={tScm("k_413538ff1a98")} icon={ClipboardCheck} />
+        <ScmStatCard label={tScm("k_0cee1b3dad5f")} value={String(summary.linesOpen)} hint={tScm("k_d5d7f2256856")} />
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 1: Select Approved Purchase Order</CardTitle>
+          <CardTitle>{tScm("k_32efc23f1f7b")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <Label>Purchase Order</Label>
+            <Label>{tScm("k_3c45b957fdc8")}</Label>
             <select
               className="w-full rounded-md border bg-background px-3 py-2"
               value={selectedPurchaseOrderId}
               onChange={(event) => setSelectedPurchaseOrderId(event.target.value)}
             >
-              <option value="">Select approved purchase order</option>
+              <option value="">{tScm("k_973848060da3")}</option>
               {eligiblePurchaseOrders.map((purchaseOrder) => (
                 <option key={purchaseOrder.id} value={purchaseOrder.id}>
                   {purchaseOrder.poNumber} • {purchaseOrder.supplier.name} • {purchaseOrder.warehouse.code}
@@ -233,21 +236,21 @@ export default function NewGoodsReceiptPage() {
             </select>
           </div>
           <p className="text-sm text-muted-foreground">
-            Only approved or partially received purchase orders are eligible for GRN posting.
+            {tScm("k_f6e2911e17f7")}
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 2: Confirm Receipt Quantities</CardTitle>
+          <CardTitle>{tScm("k_e786b8d41f53")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading eligible purchase orders...</p>
+            <p className="text-sm text-muted-foreground">{tScm("k_3c9a728cd2da")}</p>
           ) : !selectedPurchaseOrder ? (
             <p className="text-sm text-muted-foreground">
-              Select an approved purchase order first. Then the system will open the receiving lines below.
+              {tScm("k_7a71979cb898")}
             </p>
           ) : (
             <>
@@ -258,11 +261,11 @@ export default function NewGoodsReceiptPage() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Item</TableHead>
-                      <TableHead>Ordered</TableHead>
-                      <TableHead>Received</TableHead>
-                      <TableHead>Remaining</TableHead>
-                      <TableHead>Receive Now</TableHead>
+                      <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                      <TableHead>{tScm("k_c9dd3b77c90c")}</TableHead>
+                      <TableHead>{tScm("k_27548c4fc95d")}</TableHead>
+                      <TableHead>{tScm("k_cc632b5e2fd2")}</TableHead>
+                      <TableHead>{tScm("k_d60a7fe92a15")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -301,25 +304,24 @@ export default function NewGoodsReceiptPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 3: Add Receipt Context</CardTitle>
+          <CardTitle>{tScm("k_bade8c81daf3")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <Label>Receipt Note</Label>
+            <Label>{tScm("k_505862ef4ca7")}</Label>
             <Textarea
               rows={4}
               value={receiptNote}
               onChange={(event) => setReceiptNote(event.target.value)}
-              placeholder="Optional inbound note, delivery observation, or condition summary"
+              placeholder={tScm("k_a48f9714c2d7")}
             />
           </div>
           <div className="rounded-lg border bg-muted/30 p-4 text-sm text-muted-foreground">
-            After posting, the receipt will enter the GRN register and can then move into requester confirmation,
-            attachment upload, and vendor evaluation workflow.
+            {tScm("k_fa7f1fe91d7b")}
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={() => router.push("/admin/scm/goods-receipts")}>
-              Cancel
+              {tScm("k_77dfd2135f4d")}
             </Button>
             <Button onClick={() => void postReceipt()} disabled={saving || !selectedPurchaseOrder}>
               {saving ? "Posting..." : "Post Goods Receipt"}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -54,6 +56,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function NewRfqPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -139,17 +142,17 @@ export default function NewRfqPage() {
 
   const createRfq = async () => {
     if (!warehouseId) {
-      toast.error("Warehouse is required");
+      toast.error(tScm("k_8e8ea1054915"));
       return;
     }
     if (selectedCategoryIds.length === 0) {
-      toast.error("At least one supplier category is required");
+      toast.error(tScm("k_fb1119c4687c"));
       return;
     }
 
     const shouldSendManualItems = !purchaseRequisitionId || !useRequisitionItems;
     if (shouldSendManualItems && validLines.length === 0) {
-      toast.error("Valid RFQ lines are required when MRF auto-pull is off.");
+      toast.error(tScm("k_98ca8d818152"));
       return;
     }
 
@@ -187,7 +190,7 @@ export default function NewRfqPage() {
         }),
       });
       const created = await readJson<{ id: number }>(response, "Failed to create RFQ");
-      toast.success("RFQ draft created");
+      toast.success(tScm("k_c066c294eb90"));
       router.push(`/admin/scm/rfqs/${created.id}`);
     } catch (error: any) {
       toast.error(error?.message || "Failed to create RFQ");
@@ -203,13 +206,13 @@ export default function NewRfqPage() {
           <Button asChild variant="outline" size="sm">
             <Link href="/admin/scm/rfqs">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back To Register
+              {tScm("k_1763e9ae8697")}
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold">New RFQ</h1>
+            <h1 className="text-2xl font-bold">{tScm("k_80d8bf8ae26e")}</h1>
             <p className="text-sm text-muted-foreground">
-              Build the sourcing package in sequence: upstream MRF, scope and terms, vendor targeting, then save the RFQ draft.
+              {tScm("k_102e44a0cc1d")}
             </p>
           </div>
         </div>
@@ -219,36 +222,36 @@ export default function NewRfqPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Warehouse" value={selectedRequisition ? warehouses.find((item) => item.id === selectedRequisition.warehouseId)?.name || "Inherited" : warehouses.find((item) => item.id === Number(warehouseId))?.name || "Not selected"} hint={selectedRequisition ? "Inherited from approved MRF" : "Choose sourcing warehouse"} />
-        <ScmStatCard label="Categories" value={String(selectedCategoryIds.length)} hint="Vendor categories targeted" />
-        <ScmStatCard label="Lines" value={String(validLines.length)} hint={purchaseRequisitionId && useRequisitionItems ? "Auto-pulled from MRF" : "Manual RFQ lines"} />
-        <ScmStatCard label="Attachments" value={String(attachments.length)} hint="Scope and reference files" />
+        <ScmStatCard label={tScm("k_298dff72dae2")} value={selectedRequisition ? warehouses.find((item) => item.id === selectedRequisition.warehouseId)?.name || "Inherited" : warehouses.find((item) => item.id === Number(warehouseId))?.name || "Not selected"} hint={selectedRequisition ? "Inherited from approved MRF" : "Choose sourcing warehouse"} />
+        <ScmStatCard label={tScm("k_6ccb60071be8")} value={String(selectedCategoryIds.length)} hint={tScm("k_007cde8961fb")} />
+        <ScmStatCard label={tScm("k_c6fd3870c86e")} value={String(validLines.length)} hint={purchaseRequisitionId && useRequisitionItems ? "Auto-pulled from MRF" : "Manual RFQ lines"} />
+        <ScmStatCard label={tScm("k_6771ade6e896")} value={String(attachments.length)} hint={tScm("k_70e0dd3799f5")} />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>1. Upstream Demand</CardTitle>
+              <CardTitle>{tScm("k_590aa6c76fec")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-3">
               <div className="space-y-2 md:col-span-2">
-                <Label>Approved MRF</Label>
+                <Label>{tScm("k_e64043a21b30")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={purchaseRequisitionId} onChange={(e) => setPurchaseRequisitionId(e.target.value)}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {approvedRequisitions.map((requisition) => (
                     <option key={requisition.id} value={requisition.id}>{requisition.requisitionNumber}</option>
                   ))}
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Submission Deadline</Label>
+                <Label>{tScm("k_da81902f60ba")}</Label>
                 <Input type="date" value={submissionDeadline} onChange={(e) => setSubmissionDeadline(e.target.value)} />
               </div>
               <div className="space-y-2 md:col-span-3">
-                <Label>Warehouse</Label>
+                <Label>{tScm("k_298dff72dae2")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={warehouseId} onChange={(e) => setWarehouseId(e.target.value)}>
-                  <option value="">Select warehouse</option>
+                  <option value="">{tScm("k_cfab2ae6ca21")}</option>
                   {warehouses.map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>{warehouse.name} ({warehouse.code})</option>
                   ))}
@@ -257,7 +260,7 @@ export default function NewRfqPage() {
               {purchaseRequisitionId ? (
                 <label className="md:col-span-3 flex items-center gap-2 text-sm">
                   <input type="checkbox" checked={useRequisitionItems} onChange={(e) => setUseRequisitionItems(e.target.checked)} />
-                  Auto-pull items from approved MRF
+                  {tScm("k_079ed84d1cde")}
                 </label>
               ) : null}
             </CardContent>
@@ -265,21 +268,21 @@ export default function NewRfqPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>2. Sourcing Pack</CardTitle>
+              <CardTitle>{tScm("k_8a1c73115e1f")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-2">
-              <div><Label>Scope of Work</Label><Textarea rows={3} value={scopeOfWork} onChange={(e) => setScopeOfWork(e.target.value)} /></div>
-              <div><Label>Terms and Conditions</Label><Textarea rows={3} value={termsAndConditions} onChange={(e) => setTermsAndConditions(e.target.value)} /></div>
-              <div><Label>BoQ / Reference</Label><Textarea rows={2} value={boqDetails} onChange={(e) => setBoqDetails(e.target.value)} /></div>
-              <div><Label>Technical Specifications</Label><Textarea rows={2} value={technicalSpecifications} onChange={(e) => setTechnicalSpecifications(e.target.value)} /></div>
-              <div><Label>Evaluation Criteria</Label><Textarea rows={2} value={evaluationCriteria} onChange={(e) => setEvaluationCriteria(e.target.value)} /></div>
-              <div><Label>Note</Label><Textarea rows={2} value={note} onChange={(e) => setNote(e.target.value)} /></div>
+              <div><Label>{tScm("k_07438684e480")}</Label><Textarea rows={3} value={scopeOfWork} onChange={(e) => setScopeOfWork(e.target.value)} /></div>
+              <div><Label>{tScm("k_894031ed8d34")}</Label><Textarea rows={3} value={termsAndConditions} onChange={(e) => setTermsAndConditions(e.target.value)} /></div>
+              <div><Label>{tScm("k_61371345ade1")}</Label><Textarea rows={2} value={boqDetails} onChange={(e) => setBoqDetails(e.target.value)} /></div>
+              <div><Label>{tScm("k_9719a1d80d88")}</Label><Textarea rows={2} value={technicalSpecifications} onChange={(e) => setTechnicalSpecifications(e.target.value)} /></div>
+              <div><Label>{tScm("k_19fbd3efcc80")}</Label><Textarea rows={2} value={evaluationCriteria} onChange={(e) => setEvaluationCriteria(e.target.value)} /></div>
+              <div><Label>{tScm("k_2c924e308820")}</Label><Textarea rows={2} value={note} onChange={(e) => setNote(e.target.value)} /></div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>3. Vendor Scope and Attachments</CardTitle>
+              <CardTitle>{tScm("k_822a555dddc2")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-2 md:grid-cols-3">
@@ -303,15 +306,15 @@ export default function NewRfqPage() {
               </div>
               {supplierCategories.length === 0 ? (
                 <p className="text-sm text-amber-700">
-                  No predefined supplier category is active. Create category master data in the supplier workspace before opening a new RFQ.
+                  {tScm("k_7a1a2eb61569")}
                 </p>
               ) : (
                 <p className="text-xs text-muted-foreground">
-                  RFQ targeting is category-driven. Select at least one predefined supplier category so only relevant vendors are scoped into sourcing.
+                  {tScm("k_079d9051b7d9")}
                 </p>
               )}
               <div className="space-y-2">
-                <Label>RFQ Attachments</Label>
+                <Label>{tScm("k_bb2679bcd42b")}</Label>
                 <Input type="file" onChange={(event) => {
                   const file = event.target.files?.[0];
                   addAttachment(file || null);
@@ -322,8 +325,8 @@ export default function NewRfqPage() {
                     {attachments.map((attachment, index) => (
                       <div key={`${attachment.file.name}-${index}`} className="grid gap-2 rounded-md border p-2 md:grid-cols-[2fr_2fr_auto]">
                         <div className="text-sm">{attachment.file.name}</div>
-                        <Input placeholder="Label (optional)" value={attachment.label} onChange={(event) => setAttachments((current) => current.map((item, i) => i === index ? { ...item, label: event.target.value } : item))} />
-                        <Button variant="outline" size="sm" onClick={() => setAttachments((current) => current.filter((_, i) => i !== index))}>Remove</Button>
+                        <Input placeholder={tScm("k_8496866d89b4")} value={attachment.label} onChange={(event) => setAttachments((current) => current.map((item, i) => i === index ? { ...item, label: event.target.value } : item))} />
+                        <Button variant="outline" size="sm" onClick={() => setAttachments((current) => current.filter((_, i) => i !== index))}>{tScm("k_e963907dac5c")}</Button>
                       </div>
                     ))}
                   </div>
@@ -335,27 +338,27 @@ export default function NewRfqPage() {
           {!useRequisitionItems || !purchaseRequisitionId ? (
             <Card>
               <CardHeader>
-                <CardTitle>4. RFQ Line Items</CardTitle>
+                <CardTitle>{tScm("k_d64c7dd80e94")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <p className="text-sm text-muted-foreground">Use manual lines when this RFQ is not directly inheriting approved MRF items.</p>
+                  <p className="text-sm text-muted-foreground">{tScm("k_98981f5f8875")}</p>
                   <Button variant="outline" size="sm" onClick={() => setLines((cur) => [...cur, emptyLine()])}>
                     <Plus className="mr-2 h-4 w-4" />
-                    Add Line
+                    {tScm("k_63dcfb6701b9")}
                   </Button>
                 </div>
                 {lines.map((line, index) => (
                   <div key={index} className="grid gap-3 rounded-lg border p-3 md:grid-cols-[2fr_1fr_1fr_2fr_auto]">
                     <select className="rounded-md border bg-background px-3 py-2" value={line.productVariantId} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, productVariantId: e.target.value } : item))}>
-                      <option value="">Variant</option>
+                      <option value="">{tScm("k_cc91b1ea2c16")}</option>
                       {variants.map((variant) => (
                         <option key={variant.id} value={variant.id}>{variant.product?.name || "Variant"} ({variant.sku})</option>
                       ))}
                     </select>
                     <Input type="number" min="1" value={line.quantityRequested} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, quantityRequested: e.target.value } : item))} />
-                    <Input type="number" min="0" step="0.01" placeholder="Target cost" value={line.targetUnitCost} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, targetUnitCost: e.target.value } : item))} />
-                    <Input placeholder="Description" value={line.description} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, description: e.target.value } : item))} />
+                    <Input type="number" min="0" step="0.01" placeholder={tScm("k_285f5e059f56")} value={line.targetUnitCost} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, targetUnitCost: e.target.value } : item))} />
+                    <Input placeholder={tScm("k_55f8ebc805e6")} value={line.description} onChange={(e) => setLines((cur) => cur.map((item, i) => i === index ? { ...item, description: e.target.value } : item))} />
                     <Button variant="outline" size="icon" disabled={lines.length === 1} onClick={() => setLines((cur) => cur.length === 1 ? cur : cur.filter((_, i) => i !== index))}>
                       <Trash2 className="h-4 w-4" />
                     </Button>
@@ -369,30 +372,30 @@ export default function NewRfqPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Checklist</CardTitle>
+              <CardTitle>{tScm("k_61b294646988")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>1. Warehouse selected</div>
-              <div className={submissionDeadline ? "text-foreground" : "text-muted-foreground"}>2. Submission deadline set</div>
-              <div className={selectedCategoryIds.length > 0 ? "text-foreground" : "text-destructive"}>3. Vendor categories selected</div>
-              <div className={purchaseRequisitionId && useRequisitionItems || validLines.length > 0 ? "text-foreground" : "text-muted-foreground"}>4. Items available for the RFQ</div>
+              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_ee2b430356bc")}</div>
+              <div className={submissionDeadline ? "text-foreground" : "text-muted-foreground"}>{tScm("k_56ce983e7c90")}</div>
+              <div className={selectedCategoryIds.length > 0 ? "text-foreground" : "text-destructive"}>{tScm("k_eae33741e201")}</div>
+              <div className={purchaseRequisitionId && useRequisitionItems || validLines.length > 0 ? "text-foreground" : "text-muted-foreground"}>{tScm("k_b68e2bab58f6")}</div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Draft Summary</CardTitle>
+              <CardTitle>{tScm("k_4e141c6d3967")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">MRF</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_981e9af099cd")}</div>
                 <div className="mt-1 font-medium">{selectedRequisition?.requisitionNumber || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Categories</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_6ccb60071be8")}</div>
                 <div className="mt-1 font-medium">{selectedCategoryIds.length}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Attachments</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_6771ade6e896")}</div>
                 <div className="mt-1 font-medium">{attachments.length}</div>
               </div>
             </CardContent>

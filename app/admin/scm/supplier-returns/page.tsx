@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
@@ -343,6 +345,7 @@ function CreateReturnModal({
   onItemUpdate: (index: number, key: keyof DraftItem, value: string) => void;
   onCreate: () => void;
 }) {
+  const tScm = useTranslations("ScmAuto");
   const selectedReceipt = goodsReceipts.find(r => r.id === Number(selectedReceiptId));
   const availableInvoices = supplierInvoices.filter(
     invoice => selectedReceipt && invoice.supplierId === selectedReceipt.purchaseOrder.supplier.id
@@ -352,9 +355,9 @@ function CreateReturnModal({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-lg sm:text-xl">Create Supplier Return</DialogTitle>
+          <DialogTitle className="text-lg sm:text-xl">{tScm("k_4a6fba014ef1")}</DialogTitle>
           <DialogDescription className="text-xs sm:text-sm">
-            Start a supplier return against an existing goods receipt to keep stock and payable adjustments aligned.
+            {tScm("k_6efce360faf7")}
           </DialogDescription>
         </DialogHeader>
 
@@ -362,13 +365,13 @@ function CreateReturnModal({
           {/* Form Fields */}
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-1.5">
-              <Label className="text-sm">Goods Receipt *</Label>
+              <Label className="text-sm">{tScm("k_4ae4f4c6d5a8")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={selectedReceiptId}
                 onChange={(e) => onReceiptChange(e.target.value)}
               >
-                <option value="">Select goods receipt</option>
+                <option value="">{tScm("k_2005fcdeaf16")}</option>
                 {goodsReceipts.map((receipt) => (
                   <option key={receipt.id} value={receipt.id}>
                     {receipt.receiptNumber} - {receipt.purchaseOrder.supplier.name} - {receipt.warehouse.code}
@@ -377,14 +380,14 @@ function CreateReturnModal({
               </select>
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Linked Invoice</Label>
+              <Label className="text-sm">{tScm("k_a4c529c8ccfa")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={selectedInvoiceId}
                 onChange={(e) => onInvoiceChange(e.target.value)}
                 disabled={!selectedReceiptId}
               >
-                <option value="">No linked invoice</option>
+                <option value="">{tScm("k_90a7073c7a6c")}</option>
                 {availableInvoices.map((invoice) => (
                   <option key={invoice.id} value={invoice.id}>
                     {invoice.invoiceNumber} ({invoice.status})
@@ -393,7 +396,7 @@ function CreateReturnModal({
               </select>
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Required By</Label>
+              <Label className="text-sm">{tScm("k_e0951fc243c4")}</Label>
               <Input
                 type="datetime-local"
                 value={requiredBy}
@@ -402,9 +405,9 @@ function CreateReturnModal({
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm">Reason Code</Label>
+              <Label className="text-sm">{tScm("k_e830321953ac")}</Label>
               <Input
-                placeholder="DAMAGED / WRONG_ITEM / EXCESS"
+                placeholder={tScm("k_19726c21884a")}
                 value={reasonCode}
                 onChange={(e) => onReasonCodeChange(e.target.value)}
                 className="text-sm"
@@ -413,12 +416,12 @@ function CreateReturnModal({
           </div>
 
           <div className="space-y-1.5">
-            <Label className="text-sm">Note</Label>
+            <Label className="text-sm">{tScm("k_2c924e308820")}</Label>
             <Textarea
               rows={2}
               value={note}
               onChange={(e) => onNoteChange(e.target.value)}
-              placeholder="Optional notes about the return..."
+              placeholder={tScm("k_d84f679be9b9")}
               className="text-sm"
             />
           </div>
@@ -428,9 +431,9 @@ function CreateReturnModal({
             <div className="rounded-lg border border-border overflow-hidden">
               <div className="border-b border-border px-3 py-2 sm:px-4 sm:py-3 text-sm text-muted-foreground bg-muted/30">
                 <div className="flex flex-wrap gap-2 justify-between">
-                  <span>Supplier: {selectedReceipt.purchaseOrder.supplier.name} ({selectedReceipt.purchaseOrder.supplier.code})</span>
-                  <span>PO: {selectedReceipt.purchaseOrder.poNumber}</span>
-                  <span>Warehouse: {selectedReceipt.warehouse.name}</span>
+                  <span>{tScm("k_1c8a21290f72")} {selectedReceipt.purchaseOrder.supplier.name} ({selectedReceipt.purchaseOrder.supplier.code})</span>
+                  <span>{tScm("k_0e83a5786fc9")} {selectedReceipt.purchaseOrder.poNumber}</span>
+                  <span>{tScm("k_edce1fb96bf3")} {selectedReceipt.warehouse.name}</span>
                 </div>
               </div>
               
@@ -439,12 +442,12 @@ function CreateReturnModal({
                 <Table>
                   <TableHeader>
                     <TableRow className="border-border">
-                      <TableHead className="text-xs font-medium text-muted-foreground">Item</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Received</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Available</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Unit Cost</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Return Qty</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Reason</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_ecdda59aea5e")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_27548c4fc95d")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_7c62a1424469")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_0105252023c5")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_76e1a0d562ed")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_f219cc0614ae")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -471,7 +474,7 @@ function CreateReturnModal({
                           <Input
                             value={item.reason}
                             onChange={(e) => onItemUpdate(index, "reason", e.target.value)}
-                            placeholder="Damaged / wrong item"
+                            placeholder={tScm("k_bea2927cc79d")}
                             className="text-sm"
                           />
                         </TableCell>
@@ -491,20 +494,20 @@ function CreateReturnModal({
                     </div>
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div>
-                        <span className="text-xs text-muted-foreground">Received:</span>
+                        <span className="text-xs text-muted-foreground">{tScm("k_6475a0a34fe5")}</span>
                         <span className="ml-1 text-foreground">{item.receivedQty}</span>
                       </div>
                       <div>
-                        <span className="text-xs text-muted-foreground">Available:</span>
+                        <span className="text-xs text-muted-foreground">{tScm("k_4a8c2fb2e589")}</span>
                         <span className="ml-1 text-foreground">{item.availableQty}</span>
                       </div>
                       <div>
-                        <span className="text-xs text-muted-foreground">Unit Cost:</span>
+                        <span className="text-xs text-muted-foreground">{tScm("k_09dd42ca7ef4")}</span>
                         <span className="ml-1 text-foreground">{formatMoney(item.unitCost)}</span>
                       </div>
                     </div>
                     <div>
-                      <Label className="text-xs text-muted-foreground">Return Qty</Label>
+                      <Label className="text-xs text-muted-foreground">{tScm("k_76e1a0d562ed")}</Label>
                       <Input
                         type="number"
                         min={0}
@@ -515,11 +518,11 @@ function CreateReturnModal({
                       />
                     </div>
                     <div>
-                      <Label className="text-xs text-muted-foreground">Reason</Label>
+                      <Label className="text-xs text-muted-foreground">{tScm("k_f219cc0614ae")}</Label>
                       <Input
                         value={item.reason}
                         onChange={(e) => onItemUpdate(index, "reason", e.target.value)}
-                        placeholder="Damaged / wrong item"
+                        placeholder={tScm("k_bea2927cc79d")}
                         className="mt-1 text-sm"
                       />
                     </div>
@@ -532,7 +535,7 @@ function CreateReturnModal({
 
         <DialogFooter className="flex flex-col-reverse sm:flex-row gap-2">
           <Button variant="outline" onClick={() => onOpenChange(false)} disabled={saving}>
-            Cancel
+            {tScm("k_77dfd2135f4d")}
           </Button>
           <Button onClick={onCreate} disabled={saving || !selectedReceiptId}>
             {saving ? "Creating..." : "Create Supplier Return"}
@@ -544,6 +547,7 @@ function CreateReturnModal({
 }
 
 export default function SupplierReturnsPage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -687,7 +691,7 @@ export default function SupplierReturnsPage() {
 
   const createSupplierReturn = async () => {
     if (!selectedReceipt) {
-      toast.error("Goods receipt is required");
+      toast.error(tScm("k_a658b7fbe0b3"));
       return;
     }
 
@@ -700,7 +704,7 @@ export default function SupplierReturnsPage() {
       .filter((item) => Number.isInteger(item.quantityRequested) && item.quantityRequested > 0);
 
     if (payloadItems.length === 0) {
-      toast.error("At least one valid supplier return line is required");
+      toast.error(tScm("k_64464ca9791b"));
       return;
     }
 
@@ -720,7 +724,7 @@ export default function SupplierReturnsPage() {
       });
 
       await readJson(response, "Failed to create supplier return");
-      toast.success("Supplier return created");
+      toast.success(tScm("k_b5ea7674de34"));
       setSelectedReceiptId("");
       setSelectedInvoiceId("");
       setRequiredBy("");
@@ -777,9 +781,9 @@ export default function SupplierReturnsPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Forbidden</CardTitle>
+            <CardTitle className="text-base sm:text-lg">{tScm("k_3dab5f6012e3")}</CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              You do not have permission to access supplier returns.
+              {tScm("k_18359b021982")}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -793,22 +797,22 @@ export default function SupplierReturnsPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Supplier Returns
+            {tScm("k_ded7e6ab3a5b")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Raise vendor returns from received stock, deduct warehouse inventory on dispatch, and post credit adjustments on closure.
+            {tScm("k_128f236725e3")}
           </p>
         </div>
         <div className="flex gap-2">
           {canManage && (
             <Button onClick={() => setCreateModalOpen(true)}>
               <Plus className="h-4 w-4 mr-2" />
-              Create Return
+              {tScm("k_b8b22e950f8f")}
             </Button>
           )}
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           <Button
             variant="outline"
@@ -826,9 +830,9 @@ export default function SupplierReturnsPage() {
         <CardHeader className="p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle className="text-base sm:text-lg">Supplier Return Queue</CardTitle>
+              <CardTitle className="text-base sm:text-lg">{tScm("k_8e03140538e3")}</CardTitle>
               <CardDescription className="text-xs sm:text-sm">
-                Track the return through submission, approval, warehouse dispatch, and AP closure.
+                {tScm("k_5024eee96f94")}
               </CardDescription>
             </div>
           </div>
@@ -837,7 +841,7 @@ export default function SupplierReturnsPage() {
           {/* Desktop Filters */}
           <div className="hidden sm:flex gap-3">
             <Input
-              placeholder="Search return number, supplier, warehouse, or receipt..."
+              placeholder={tScm("k_4ff037f069a7")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               className="max-w-md text-sm"
@@ -847,7 +851,7 @@ export default function SupplierReturnsPage() {
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value)}
             >
-              <option value="">All statuses</option>
+              <option value="">{tScm("k_6405179d241b")}</option>
               {statusOptions.map((status) => (
                 <option key={status} value={status}>
                   {status}
@@ -860,7 +864,7 @@ export default function SupplierReturnsPage() {
           {showFilters && (
             <div className="space-y-3 sm:hidden">
               <Input
-                placeholder="Search..."
+                placeholder={tScm("k_6d7a30a931a3")}
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 className="text-sm"
@@ -870,7 +874,7 @@ export default function SupplierReturnsPage() {
                 value={statusFilter}
                 onChange={(event) => setStatusFilter(event.target.value)}
               >
-                <option value="">All statuses</option>
+                <option value="">{tScm("k_6405179d241b")}</option>
                 {statusOptions.map((status) => (
                   <option key={status} value={status}>
                     {status}
@@ -878,7 +882,7 @@ export default function SupplierReturnsPage() {
                 ))}
               </select>
               <Button variant="outline" onClick={() => setShowFilters(false)} className="w-full">
-                Close Filters
+                {tScm("k_6834a4e56490")}
               </Button>
             </div>
           )}
@@ -927,12 +931,12 @@ export default function SupplierReturnsPage() {
                             </div>
                           </div>
                           <CardDescription className="text-xs sm:text-sm mt-1">
-                            {supplierReturn.supplier.name} | {supplierReturn.warehouse.name} | GRN {supplierReturn.goodsReceipt.receiptNumber}
+                            {supplierReturn.supplier.name} | {supplierReturn.warehouse.name} {tScm("k_6f574afdc8eb")} {supplierReturn.goodsReceipt.receiptNumber}
                           </CardDescription>
                         </div>
                         <Button size="sm" variant="outline" asChild className="self-start">
                           <Link href={`/admin/scm/supplier-returns/${supplierReturn.id}`}>
-                            Open Detail
+                            {tScm("k_5444ca5a25cf")}
                           </Link>
                         </Button>
                       </div>
@@ -943,38 +947,38 @@ export default function SupplierReturnsPage() {
                       <div className="grid gap-2 text-xs sm:text-sm text-muted-foreground grid-cols-2 sm:grid-cols-4">
                         <div className="flex items-center gap-1.5">
                           <Calendar className="h-3.5 w-3.5" />
-                          <span>Requested: {formatDate(supplierReturn.requestedAt)}</span>
+                          <span>{tScm("k_0bb6adcc63eb")} {formatDate(supplierReturn.requestedAt)}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                           <Clock className="h-3.5 w-3.5" />
-                          <span>Required: {formatDate(supplierReturn.requiredBy)}</span>
+                          <span>{tScm("k_d57939886670")} {formatDate(supplierReturn.requiredBy)}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                           <Package className="h-3.5 w-3.5" />
-                          <span>Dispatched: {totalDispatched}/{totalRequested}</span>
+                          <span>{tScm("k_9c93af4a2e41")} {totalDispatched}/{totalRequested}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                           <DollarSign className="h-3.5 w-3.5" />
-                          <span>Credit: {formatMoney(dispatchedValue)}</span>
+                          <span>{tScm("k_7b57fda673d9")} {formatMoney(dispatchedValue)}</span>
                         </div>
                       </div>
 
                       {/* Details Grid */}
                       <div className="grid gap-2 text-xs sm:text-sm grid-cols-2 sm:grid-cols-4 border-t border-border/50 pt-3">
                         <div>
-                          <span className="text-muted-foreground">PO:</span>{" "}
+                          <span className="text-muted-foreground">{tScm("k_0e83a5786fc9")}</span>{" "}
                           <span className="text-foreground">{supplierReturn.purchaseOrder?.poNumber ?? "N/A"}</span>
                         </div>
                         <div>
-                          <span className="text-muted-foreground">Invoice:</span>{" "}
+                          <span className="text-muted-foreground">{tScm("k_2706e3eac5c7")}</span>{" "}
                           <span className="text-foreground">{supplierReturn.supplierInvoice?.invoiceNumber ?? "Not linked"}</span>
                         </div>
                         <div>
-                          <span className="text-muted-foreground">Reason Code:</span>{" "}
+                          <span className="text-muted-foreground">{tScm("k_b2621ccc59eb")}</span>{" "}
                           <span className="text-foreground">{supplierReturn.reasonCode || "N/A"}</span>
                         </div>
                         <div>
-                          <span className="text-muted-foreground">Closed At:</span>{" "}
+                          <span className="text-muted-foreground">{tScm("k_d040b84c5ac0")}</span>{" "}
                           <span className="text-foreground">{formatDate(supplierReturn.closedAt)}</span>
                         </div>
                       </div>
@@ -982,7 +986,7 @@ export default function SupplierReturnsPage() {
                       {/* Note */}
                       {supplierReturn.note && (
                         <div className="rounded-md bg-muted/30 p-2 text-xs text-muted-foreground">
-                          Note: {supplierReturn.note}
+                          {tScm("k_83423c198b60")} {supplierReturn.note}
                         </div>
                       )}
 
@@ -991,11 +995,11 @@ export default function SupplierReturnsPage() {
                         <Table>
                           <TableHeader>
                             <TableRow className="border-border">
-                              <TableHead className="text-xs font-medium text-muted-foreground">Item</TableHead>
-                              <TableHead className="text-right text-xs font-medium text-muted-foreground">Requested</TableHead>
-                              <TableHead className="text-right text-xs font-medium text-muted-foreground">Dispatched</TableHead>
-                              <TableHead className="text-right text-xs font-medium text-muted-foreground">Unit Cost</TableHead>
-                              <TableHead className="text-xs font-medium text-muted-foreground">Reason</TableHead>
+                              <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_ecdda59aea5e")}</TableHead>
+                              <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_c26bf60fed37")}</TableHead>
+                              <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_ff07201ae2e7")}</TableHead>
+                              <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_0105252023c5")}</TableHead>
+                              <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_f219cc0614ae")}</TableHead>
                             </TableRow>
                           </TableHeader>
                           <TableBody>
@@ -1027,20 +1031,20 @@ export default function SupplierReturnsPage() {
                             </div>
                             <div className="grid grid-cols-3 gap-2 text-sm">
                               <div>
-                                <span className="text-xs text-muted-foreground">Requested:</span>
+                                <span className="text-xs text-muted-foreground">{tScm("k_0bb6adcc63eb")}</span>
                                 <span className="ml-1 text-foreground">{item.quantityRequested}</span>
                               </div>
                               <div>
-                                <span className="text-xs text-muted-foreground">Dispatched:</span>
+                                <span className="text-xs text-muted-foreground">{tScm("k_9c93af4a2e41")}</span>
                                 <span className="ml-1 text-foreground">{item.quantityDispatched}</span>
                               </div>
                               <div>
-                                <span className="text-xs text-muted-foreground">Unit Cost:</span>
+                                <span className="text-xs text-muted-foreground">{tScm("k_09dd42ca7ef4")}</span>
                                 <span className="ml-1 text-foreground">{formatMoney(item.unitCost)}</span>
                               </div>
                             </div>
                             {item.reason && (
-                              <p className="text-xs text-muted-foreground">Reason: {item.reason}</p>
+                              <p className="text-xs text-muted-foreground">{tScm("k_2c25e64f53a5")} {item.reason}</p>
                             )}
                           </div>
                         ))}
@@ -1054,7 +1058,7 @@ export default function SupplierReturnsPage() {
                             onClick={() => void runAction(supplierReturn.id, "submit")}
                             disabled={saving}
                           >
-                            Submit
+                            {tScm("k_2dacf6595984")}
                           </Button>
                         )}
 
@@ -1064,7 +1068,7 @@ export default function SupplierReturnsPage() {
                             onClick={() => void runAction(supplierReturn.id, "approve")}
                             disabled={saving}
                           >
-                            Approve
+                            {tScm("k_7b2c7f146aba")}
                           </Button>
                         )}
 
@@ -1076,7 +1080,7 @@ export default function SupplierReturnsPage() {
                             disabled={saving}
                           >
                             <Truck className="h-3.5 w-3.5 mr-1" />
-                            Dispatch
+                            {tScm("k_840e1b364a32")}
                           </Button>
                         )}
 
@@ -1088,12 +1092,12 @@ export default function SupplierReturnsPage() {
                               onClick={() => void runAction(supplierReturn.id, "close")}
                               disabled={saving || dispatchedValue <= 0}
                             >
-                              Close & Post Credit
+                              {tScm("k_cf4df8f96b17")}
                             </Button>
                             {dispatchedValue <= 0 && (
                               <p className="text-xs text-destructive flex items-center gap-1">
                                 <AlertCircle className="h-3 w-3" />
-                                Credit value is 0.00. Review PO/GR unit cost.
+                                {tScm("k_de6fa27a5c5a")}
                               </p>
                             )}
                           </>
@@ -1106,7 +1110,7 @@ export default function SupplierReturnsPage() {
                             onClick={() => void runAction(supplierReturn.id, "cancel")}
                             disabled={saving}
                           >
-                            Cancel
+                            {tScm("k_77dfd2135f4d")}
                           </Button>
                         )}
                       </div>
@@ -1121,11 +1125,11 @@ export default function SupplierReturnsPage() {
           {!loading && paginatedReturns.length === 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No supplier returns found.</p>
+              <p className="text-sm text-muted-foreground">{tScm("k_d79ce28a8929")}</p>
               {canManage && (
                 <Button onClick={() => setCreateModalOpen(true)} variant="outline" className="mt-3">
                   <Plus className="h-4 w-4 mr-2" />
-                  Create First Return
+                  {tScm("k_5bcedb8ddee7")}
                 </Button>
               )}
             </div>

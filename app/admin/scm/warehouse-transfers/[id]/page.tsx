@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -79,6 +81,7 @@ function toStageLabel(value: string) {
 }
 
 export default function WarehouseTransferDetailPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const warehouseTransferId = Number(params?.id);
@@ -95,7 +98,7 @@ export default function WarehouseTransferDetailPage() {
 
   const loadTransfer = async () => {
     if (!Number.isInteger(warehouseTransferId) || warehouseTransferId <= 0) {
-      toast.error("Invalid warehouse transfer id");
+      toast.error(tScm("k_3ab01ddaf1ef"));
       router.replace("/admin/scm/warehouse-transfers");
       return;
     }
@@ -121,19 +124,19 @@ export default function WarehouseTransferDetailPage() {
     if (!transfer) return [] as Array<{ action: string; label: string }>;
     const buttons: Array<{ action: string; label: string }> = [];
     if (canManage && transfer.status === "DRAFT") {
-      buttons.push({ action: "submit", label: "Submit" });
+      buttons.push({ action: "submit", label: tScm("k_2dacf6595984") });
     }
     if (canApprove && transfer.status === "SUBMITTED") {
-      buttons.push({ action: "approve", label: "Approve" });
+      buttons.push({ action: "approve", label: tScm("k_7b2c7f146aba") });
     }
     if (canManage && ["APPROVED", "PARTIALLY_DISPATCHED", "PARTIALLY_RECEIVED"].includes(transfer.status)) {
-      buttons.push({ action: "dispatch", label: "Dispatch" });
+      buttons.push({ action: "dispatch", label: tScm("k_840e1b364a32") });
     }
     if (canManage && ["DISPATCHED", "PARTIALLY_DISPATCHED", "PARTIALLY_RECEIVED"].includes(transfer.status)) {
-      buttons.push({ action: "receive", label: "Receive" });
+      buttons.push({ action: "receive", label: tScm("k_965fb2ddf63d") });
     }
     if ((canManage || canApprove) && ["DRAFT", "SUBMITTED", "APPROVED"].includes(transfer.status)) {
-      buttons.push({ action: "cancel", label: "Cancel" });
+      buttons.push({ action: "cancel", label: tScm("k_77dfd2135f4d") });
     }
     return buttons;
   }, [transfer, canManage, canApprove]);
@@ -143,15 +146,15 @@ export default function WarehouseTransferDetailPage() {
     return [
       {
         key: "requested",
-        label: "Requested",
+        label: tScm("k_c26bf60fed37"),
         value: fmtDate(transfer.requestedAt),
-        helperText: "Transfer drafted",
+        helperText: tScm("k_3e3346550053"),
         href: `/admin/scm/warehouse-transfers/${transfer.id}`,
         state: "linked" as const,
       },
       {
         key: "approved",
-        label: "Approved",
+        label: tScm("k_41b81eb8db1b"),
         value: transfer.approvedAt ? fmtDate(transfer.approvedAt) : "Pending",
         helperText: transfer.approvedAt ? "Approval complete" : "Awaiting approval",
         href: null,
@@ -159,7 +162,7 @@ export default function WarehouseTransferDetailPage() {
       },
       {
         key: "dispatch",
-        label: "Dispatch",
+        label: tScm("k_840e1b364a32"),
         value: transfer.dispatchedAt ? fmtDate(transfer.dispatchedAt) : "Pending",
         helperText: transfer.dispatchedAt ? "Stock moved out" : "Awaiting source dispatch",
         href: null,
@@ -167,7 +170,7 @@ export default function WarehouseTransferDetailPage() {
       },
       {
         key: "receipt",
-        label: "Receipt",
+        label: tScm("k_f6ce3b6fcfca"),
         value: transfer.receivedAt ? fmtDate(transfer.receivedAt) : "Pending",
         helperText: transfer.receivedAt ? "Destination received" : "Awaiting receipt confirmation",
         href: null,
@@ -196,7 +199,7 @@ export default function WarehouseTransferDetailPage() {
   };
 
   if (loading) {
-    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">Loading warehouse transfer workspace...</p></div>;
+    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">{tScm("k_3663f66663df")}</p></div>;
   }
 
   if (!transfer) {
@@ -205,10 +208,10 @@ export default function WarehouseTransferDetailPage() {
         <Button asChild variant="outline">
           <Link href="/admin/scm/warehouse-transfers">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back To Register
+            {tScm("k_1763e9ae8697")}
           </Link>
         </Button>
-        <Card><CardContent className="py-10 text-sm text-muted-foreground">Warehouse transfer not found.</CardContent></Card>
+        <Card><CardContent className="py-10 text-sm text-muted-foreground">{tScm("k_74fb560bf8cf")}</CardContent></Card>
       </div>
     );
   }
@@ -225,20 +228,20 @@ export default function WarehouseTransferDetailPage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/admin/scm/warehouse-transfers">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back
+                {tScm("k_b52b36b7269f")}
               </Link>
             </Button>
             <ScmStatusChip status={transfer.status} />
           </div>
           <div>
             <h1 className="text-2xl font-bold">{transfer.transferNumber}</h1>
-            <p className="text-sm text-muted-foreground">{transfer.sourceWarehouse.name} to {transfer.destinationWarehouse.name}</p>
+            <p className="text-sm text-muted-foreground">{transfer.sourceWarehouse.name} {tScm("k_4374aaee247f")} {transfer.destinationWarehouse.name}</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadTransfer()} disabled={loading || saving}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           {actionButtons.map((button) => (
             <Button key={button.action} variant={button.action === "cancel" ? "outline" : "default"} onClick={() => void runAction(button.action)} disabled={saving}>
@@ -249,10 +252,10 @@ export default function WarehouseTransferDetailPage() {
       </div>
 
       <div className="grid gap-4 grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Requested" value={String(requested)} hint={`${transfer.items.length} lines`} />
-        <ScmStatCard label="Dispatched" value={String(dispatched)} hint={`Remaining ${Math.max(0, requested - dispatched)}`} />
-        <ScmStatCard label="Received" value={String(received)} hint={`In transit ${Math.max(0, dispatched - received)}`} />
-        <ScmStatCard label="Need By" value={transfer.requiredBy ? new Date(transfer.requiredBy).toLocaleDateString() : "-"} hint={`Raised ${new Date(transfer.requestedAt).toLocaleDateString()}`} />
+        <ScmStatCard label={tScm("k_c26bf60fed37")} value={String(requested)} hint={`${transfer.items.length} lines`} />
+        <ScmStatCard label={tScm("k_ff07201ae2e7")} value={String(dispatched)} hint={`Remaining ${Math.max(0, requested - dispatched)}`} />
+        <ScmStatCard label={tScm("k_27548c4fc95d")} value={String(received)} hint={`In transit ${Math.max(0, dispatched - received)}`} />
+        <ScmStatCard label={tScm("k_0d9626e5ac5f")} value={transfer.requiredBy ? new Date(transfer.requiredBy).toLocaleDateString() : "-"} hint={`Raised ${new Date(transfer.requestedAt).toLocaleDateString()}`} />
       </div>
 
       <ScmDocumentLifecycle stages={lifecycleStages} />
@@ -261,33 +264,33 @@ export default function WarehouseTransferDetailPage() {
         <div className="space-y-6">
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="items">Items</TabsTrigger>
-              <TabsTrigger value="timeline">Timeline</TabsTrigger>
+              <TabsTrigger value="overview">{tScm("k_0efc2e6be4c2")}</TabsTrigger>
+              <TabsTrigger value="items">{tScm("k_44d25b5d1b6d")}</TabsTrigger>
+              <TabsTrigger value="timeline">{tScm("k_018514a3d58a")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview">
               <Card>
-                <CardHeader><CardTitle>Transfer Context</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_84fc431f66c4")}</CardTitle></CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-2">
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Source Warehouse</div><p className="mt-2 text-sm">{transfer.sourceWarehouse.name} ({transfer.sourceWarehouse.code})</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Destination Warehouse</div><p className="mt-2 text-sm">{transfer.destinationWarehouse.name} ({transfer.destinationWarehouse.code})</p></div>
-                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">Note</div><p className="mt-2 text-sm whitespace-pre-wrap">{transfer.note || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_8b4bc74e600f")}</div><p className="mt-2 text-sm">{transfer.sourceWarehouse.name} ({transfer.sourceWarehouse.code})</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_b04156809d3f")}</div><p className="mt-2 text-sm">{transfer.destinationWarehouse.name} ({transfer.destinationWarehouse.code})</p></div>
+                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_2c924e308820")}</div><p className="mt-2 text-sm whitespace-pre-wrap">{transfer.note || "-"}</p></div>
                 </CardContent>
               </Card>
             </TabsContent>
 
             <TabsContent value="items">
               <Card>
-                <CardHeader><CardTitle>Transfer Lines</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_4dfc24a609dc")}</CardTitle></CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Item</TableHead>
-                        <TableHead>Requested</TableHead>
-                        <TableHead>Dispatched</TableHead>
-                        <TableHead>Received</TableHead>
+                        <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                        <TableHead>{tScm("k_c26bf60fed37")}</TableHead>
+                        <TableHead>{tScm("k_ff07201ae2e7")}</TableHead>
+                        <TableHead>{tScm("k_27548c4fc95d")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -311,14 +314,14 @@ export default function WarehouseTransferDetailPage() {
 
             <TabsContent value="timeline">
               <Card>
-                <CardHeader><CardTitle>Operational Timeline</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_a997f30b5e69")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
                   {[
-                    { label: "Requested", value: fmtDate(transfer.requestedAt) },
-                    { label: "Submitted", value: fmtDate(transfer.submittedAt) },
-                    { label: "Approved", value: fmtDate(transfer.approvedAt) },
-                    { label: "Dispatched", value: fmtDate(transfer.dispatchedAt) },
-                    { label: "Received", value: fmtDate(transfer.receivedAt) },
+                    { label: tScm("k_c26bf60fed37"), value: fmtDate(transfer.requestedAt) },
+                    { label: tScm("k_2e00359b9802"), value: fmtDate(transfer.submittedAt) },
+                    { label: tScm("k_41b81eb8db1b"), value: fmtDate(transfer.approvedAt) },
+                    { label: tScm("k_ff07201ae2e7"), value: fmtDate(transfer.dispatchedAt) },
+                    { label: tScm("k_27548c4fc95d"), value: fmtDate(transfer.receivedAt) },
                   ].map((step) => (
                     <div key={step.label} className="rounded-lg border p-3">
                       <div className="text-xs uppercase tracking-wide text-muted-foreground">{step.label}</div>
@@ -333,18 +336,18 @@ export default function WarehouseTransferDetailPage() {
 
         <div className="space-y-6">
           <Card>
-            <CardHeader><CardTitle>People</CardTitle></CardHeader>
+            <CardHeader><CardTitle>{tScm("k_b37554f695b1")}</CardTitle></CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created By</div><div className="mt-1">{transfer.createdBy?.name || transfer.createdBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Approved By</div><div className="mt-1">{transfer.approvedBy?.name || transfer.approvedBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Dispatched By</div><div className="mt-1">{transfer.dispatchedBy?.name || transfer.dispatchedBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Received By</div><div className="mt-1">{transfer.receivedBy?.name || transfer.receivedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_43de2bcd6337")}</div><div className="mt-1">{transfer.createdBy?.name || transfer.createdBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_2b62a43b5586")}</div><div className="mt-1">{transfer.approvedBy?.name || transfer.approvedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_434385ecbffd")}</div><div className="mt-1">{transfer.dispatchedBy?.name || transfer.dispatchedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_f84f73c618d9")}</div><div className="mt-1">{transfer.receivedBy?.name || transfer.receivedBy?.email || "-"}</div></div>
             </CardContent>
           </Card>
 
           <ScmNextStepPanel
             title={transfer.status}
-            subtitle="This panel keeps approval, dispatch, and receipt actions on the document workspace."
+            subtitle={tScm("k_0844d6e7205d")}
             actions={actionButtons.map((button) => ({
               key: button.action,
               label: button.label,
@@ -352,7 +355,7 @@ export default function WarehouseTransferDetailPage() {
               disabled: saving,
               variant: button.action === "cancel" ? "outline" : "default",
             }))}
-            emptyMessage="No direct workflow action is available for your current permissions."
+            emptyMessage={tScm("k_ad90a4161999")}
           />
         </div>
       </div>

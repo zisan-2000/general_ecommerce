@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -82,6 +84,7 @@ function getStockStatusColor(available: number, quantity: number) {
 }
 
 export default function StockCardsPage() {
+  const tScm = useTranslations("ScmAuto");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -226,9 +229,9 @@ export default function StockCardsPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Forbidden</CardTitle>
+            <CardTitle className="text-base sm:text-lg">{tScm("k_3dab5f6012e3")}</CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              You do not have permission to access stock cards.
+              {tScm("k_1c5583477172")}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -240,18 +243,18 @@ export default function StockCardsPage() {
     <div className="min-h-screen space-y-4 sm:space-y-6 p-3 sm:p-4 md:p-6">
       {/* Header */}
       <div>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">Stock Cards</h1>
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">{tScm("k_9db89ea0e549")}</h1>
         <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-          Track item-wise historical stock movement with current warehouse balance.
+          {tScm("k_7ece26376d9f")}
         </p>
       </div>
 
       {/* Stock Position Card */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Stock Position</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{tScm("k_8445b87ab2c6")}</CardTitle>
           <CardDescription className="text-xs sm:text-sm">
-            Select a row to view opening, movement, and closing stock details.
+            {tScm("k_4db1c137ad7e")}
           </CardDescription>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 space-y-4">
@@ -260,7 +263,7 @@ export default function StockCardsPage() {
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search by product, sku, or warehouse..."
+              placeholder={tScm("k_17ff267ad3e4")}
               className="text-sm"
             />
             <select
@@ -268,7 +271,7 @@ export default function StockCardsPage() {
               value={warehouseId}
               onChange={(event) => setWarehouseId(event.target.value)}
             >
-              <option value="">All warehouses</option>
+              <option value="">{tScm("k_4398170593bf")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -277,7 +280,7 @@ export default function StockCardsPage() {
             </select>
             <Button variant="outline" onClick={() => void loadSummary()} disabled={loading}>
               <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
 
@@ -294,13 +297,13 @@ export default function StockCardsPage() {
               <Table>
                 <TableHeader>
                   <TableRow className="border-border hover:bg-transparent">
-                    <TableHead className="text-xs font-medium text-muted-foreground">Item</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Warehouse</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Class</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">On Hand</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Reserved</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Available</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Last Movement</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_ecdda59aea5e")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_298dff72dae2")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_41ff354b2b33")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_41733d8e5596")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_67a6ff10f1b9")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_7c62a1424469")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_3461e78baba4")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -335,7 +338,7 @@ export default function StockCardsPage() {
                           </span>
                           {item.requiresAssetTag && (
                             <span className="inline-flex items-center ml-1 rounded-full px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary">
-                              TAG
+                              {tScm("k_41ea8208e1f9")}
                             </span>
                           )}
                         </TableCell>
@@ -394,7 +397,7 @@ export default function StockCardsPage() {
                           </span>
                           {item.requiresAssetTag && (
                             <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary">
-                              TAG
+                              {tScm("k_41ea8208e1f9")}
                             </span>
                           )}
                         </div>
@@ -410,15 +413,15 @@ export default function StockCardsPage() {
                       {/* Stock Numbers */}
                       <div className="grid grid-cols-3 gap-3 pt-2 border-t border-border/50">
                         <div>
-                          <p className="text-xs text-muted-foreground">On Hand</p>
+                          <p className="text-xs text-muted-foreground">{tScm("k_41733d8e5596")}</p>
                           <p className="text-lg font-semibold text-foreground">{item.quantity}</p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Reserved</p>
+                          <p className="text-xs text-muted-foreground">{tScm("k_67a6ff10f1b9")}</p>
                           <p className="text-lg font-semibold text-muted-foreground">{item.reserved}</p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Available</p>
+                          <p className="text-xs text-muted-foreground">{tScm("k_7c62a1424469")}</p>
                           <p className={cn("text-lg font-semibold", getStockStatusColor(item.available, item.quantity))}>
                             {item.available}
                           </p>
@@ -429,7 +432,7 @@ export default function StockCardsPage() {
                       {item.lastMovementAt && (
                         <div className="flex items-center gap-2 text-xs text-muted-foreground pt-1">
                           <Calendar className="h-3 w-3" />
-                          <span>Last: {formatDateTime(item.lastMovementAt)}</span>
+                          <span>{tScm("k_9b08e4dbe735")} {formatDateTime(item.lastMovementAt)}</span>
                         </div>
                       )}
                     </CardContent>
@@ -443,7 +446,7 @@ export default function StockCardsPage() {
           {!loading && paginatedSummaries.length === 0 && summaries.length > 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No stock card data found for this page.</p>
+              <p className="text-sm text-muted-foreground">{tScm("k_33b2990e4948")}</p>
             </div>
           )}
 
@@ -462,7 +465,7 @@ export default function StockCardsPage() {
       {selected && (
         <Card className="shadow-sm">
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Stock Card Detail</CardTitle>
+            <CardTitle className="text-base sm:text-lg">{tScm("k_dd00376ce90f")}</CardTitle>
             <CardDescription className="text-xs sm:text-sm break-words">
               {selectedLabel || "Selected item"}
             </CardDescription>
@@ -471,7 +474,7 @@ export default function StockCardsPage() {
             {/* Date Range Filters */}
             <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-[1fr_1fr_auto] sm:gap-3">
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">From Date</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_6b7587a9cdd9")}</Label>
                 <Input 
                   type="datetime-local" 
                   value={from} 
@@ -480,7 +483,7 @@ export default function StockCardsPage() {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">To Date</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_642cced347da")}</Label>
                 <Input 
                   type="datetime-local" 
                   value={to} 
@@ -514,7 +517,7 @@ export default function StockCardsPage() {
                 <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
                   <Card className="border-border/50 bg-muted/20">
                     <CardContent className="p-3 sm:p-4">
-                      <div className="text-xs text-muted-foreground">Opening</div>
+                      <div className="text-xs text-muted-foreground">{tScm("k_56e44065a564")}</div>
                       <div className="text-lg sm:text-xl font-semibold text-foreground">
                         {detail.openingBalance}
                       </div>
@@ -522,7 +525,7 @@ export default function StockCardsPage() {
                   </Card>
                   <Card className="border-border/50 bg-muted/20">
                     <CardContent className="p-3 sm:p-4">
-                      <div className="text-xs text-muted-foreground">Movement</div>
+                      <div className="text-xs text-muted-foreground">{tScm("k_dc812752b758")}</div>
                       <div className={cn(
                         "text-lg sm:text-xl font-semibold flex items-center gap-1",
                         detail.movementDelta >= 0 ? "text-success" : "text-destructive"
@@ -538,7 +541,7 @@ export default function StockCardsPage() {
                   </Card>
                   <Card className="border-border/50 bg-muted/20">
                     <CardContent className="p-3 sm:p-4">
-                      <div className="text-xs text-muted-foreground">Closing</div>
+                      <div className="text-xs text-muted-foreground">{tScm("k_76a032e9c77c")}</div>
                       <div className="text-lg sm:text-xl font-semibold text-foreground">
                         {detail.closingBalance}
                       </div>
@@ -546,7 +549,7 @@ export default function StockCardsPage() {
                   </Card>
                   <Card className="border-border/50 bg-muted/20">
                     <CardContent className="p-3 sm:p-4">
-                      <div className="text-xs text-muted-foreground">On Hand</div>
+                      <div className="text-xs text-muted-foreground">{tScm("k_41733d8e5596")}</div>
                       <div className="text-lg sm:text-xl font-semibold text-foreground">
                         {detail.quantity}
                       </div>
@@ -554,7 +557,7 @@ export default function StockCardsPage() {
                   </Card>
                   <Card className="border-border/50 bg-muted/20">
                     <CardContent className="p-3 sm:p-4">
-                      <div className="text-xs text-muted-foreground">Available</div>
+                      <div className="text-xs text-muted-foreground">{tScm("k_7c62a1424469")}</div>
                       <div className={cn("text-lg sm:text-xl font-semibold", getStockStatusColor(detail.available, detail.quantity))}>
                         {detail.available}
                       </div>
@@ -567,9 +570,9 @@ export default function StockCardsPage() {
                   <Table>
                     <TableHeader>
                       <TableRow className="border-border">
-                        <TableHead className="text-xs font-medium text-muted-foreground">Time</TableHead>
-                        <TableHead className="text-right text-xs font-medium text-muted-foreground">Change</TableHead>
-                        <TableHead className="text-xs font-medium text-muted-foreground">Reason</TableHead>
+                        <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_6c82e6dd8680")}</TableHead>
+                        <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_64fbd995d3b6")}</TableHead>
+                        <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_f219cc0614ae")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -597,7 +600,7 @@ export default function StockCardsPage() {
                             <div className="flex flex-col items-center gap-2">
                               <Info className="h-8 w-8 text-muted-foreground/50" />
                               <p className="text-sm text-muted-foreground">
-                                No inventory movement in selected range.
+                                {tScm("k_414122f5b44e")}
                               </p>
                             </div>
                           </TableCell>
@@ -614,7 +617,7 @@ export default function StockCardsPage() {
               <div className="flex flex-col items-center justify-center py-8 text-center">
                 <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
                 <p className="text-sm text-muted-foreground">
-                  Select a stock row to view detailed movement history.
+                  {tScm("k_fcc7b604ddb5")}
                 </p>
               </div>
             )}

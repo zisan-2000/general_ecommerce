@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -118,6 +119,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function ReplenishmentPlanningPage() {
+  const tScm = useTranslations("ScmAuto");
   const t = useTranslations("AdminReplenishment");
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -549,8 +551,8 @@ export default function ReplenishmentPlanningPage() {
                     }))
                   }
                 >
-                  <option value="MIN_MAX">MIN_MAX</option>
-                  <option value="REORDER_POINT">REORDER_POINT</option>
+                  <option value="MIN_MAX">{tScm("k_efe9633e2a02")}</option>
+                  <option value="REORDER_POINT">{tScm("k_4032b04cc9ed")}</option>
                 </select>
               </div>
               <div className="space-y-2">

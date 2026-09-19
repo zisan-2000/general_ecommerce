@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -59,6 +62,7 @@ function fmtDate(value: Date) {
 }
 
 export default function StockReportsPage() {
+  const tScm = useTranslations("ScmAuto");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -161,7 +165,7 @@ export default function StockReportsPage() {
       <div className="p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access stock reports.
+            {tScm("k_8ccee4eaf02d")}
           </CardContent>
         </Card>
       </div>
@@ -172,31 +176,31 @@ export default function StockReportsPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Stock Reports</h1>
+          <h1 className="text-2xl font-bold">{tScm("k_f0534f0d3623")}</h1>
           <p className="text-sm text-muted-foreground">
-            Daily snapshots, aging view, and monthly warehouse summary reports.
+            {tScm("k_12a6d97a1603")}
           </p>
         </div>
         <Button variant="outline" onClick={() => void refresh()} disabled={loading}>
           <RefreshCw className={loading ? "h-4 w-4 animate-spin" : "h-4 w-4"} />
-          Refresh
+          {tScm("k_56e3badc4e6c")}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Filters</CardTitle>
-          <CardDescription>Pick warehouse scope and date ranges.</CardDescription>
+          <CardTitle>{tScm("k_96e578211aa2")}</CardTitle>
+          <CardDescription>{tScm("k_824cdb210353")}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-4">
           <div className="space-y-2">
-            <Label>Warehouse</Label>
+            <Label>{tScm("k_298dff72dae2")}</Label>
             <select
               className="rounded-md border bg-background px-3 py-2"
               value={warehouseId}
               onChange={(e) => setWarehouseId(e.target.value)}
             >
-              <option value="">All warehouses</option>
+              <option value="">{tScm("k_4398170593bf")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -206,18 +210,18 @@ export default function StockReportsPage() {
           </div>
           {tab === "daily" ? (
             <div className="space-y-2">
-              <Label>Date</Label>
+              <Label>{tScm("k_eb9a4bc1c0c1")}</Label>
               <Input type="date" value={dailyDate} onChange={(e) => setDailyDate(e.target.value)} />
             </div>
           ) : null}
           {tab === "monthly" ? (
             <>
               <div className="space-y-2">
-                <Label>From</Label>
+                <Label>{tScm("k_3f66052a107e")}</Label>
                 <Input type="date" value={monthlyFrom} onChange={(e) => setMonthlyFrom(e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label>To</Label>
+                <Label>{tScm("k_ae79ea1e9c63")}</Label>
                 <Input type="date" value={monthlyTo} onChange={(e) => setMonthlyTo(e.target.value)} />
               </div>
             </>
@@ -227,54 +231,54 @@ export default function StockReportsPage() {
 
       <Tabs value={tab} onValueChange={setTab} className="space-y-4">
         <TabsList className="w-full justify-start">
-          <TabsTrigger value="daily">Daily Stock</TabsTrigger>
-          <TabsTrigger value="aging">Stock Aging</TabsTrigger>
-          <TabsTrigger value="monthly">Monthly Summary</TabsTrigger>
+          <TabsTrigger value="daily">{tScm("k_dab503b4ac86")}</TabsTrigger>
+          <TabsTrigger value="aging">{tScm("k_e40fd2635c24")}</TabsTrigger>
+          <TabsTrigger value="monthly">{tScm("k_e96ac2bf45fc")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="daily" className="space-y-4">
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <CardContent className="p-4">
-                <div className="text-xs uppercase text-muted-foreground">Total Qty</div>
+                <div className="text-xs uppercase text-muted-foreground">{tScm("k_42fa648388d1")}</div>
                 <div className="text-xl font-semibold">{dailySummary.quantity}</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-4">
-                <div className="text-xs uppercase text-muted-foreground">Reserved</div>
+                <div className="text-xs uppercase text-muted-foreground">{tScm("k_67a6ff10f1b9")}</div>
                 <div className="text-xl font-semibold">{dailySummary.reserved}</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-4">
-                <div className="text-xs uppercase text-muted-foreground">Available</div>
+                <div className="text-xs uppercase text-muted-foreground">{tScm("k_7c62a1424469")}</div>
                 <div className="text-xl font-semibold">{dailySummary.available}</div>
               </CardContent>
             </Card>
           </div>
           <Card>
             <CardHeader>
-              <CardTitle>Daily Snapshot</CardTitle>
-              <CardDescription>Stock by variant and warehouse.</CardDescription>
+              <CardTitle>{tScm("k_b3655c1695d6")}</CardTitle>
+              <CardDescription>{tScm("k_f73dfb9f4c35")}</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Warehouse</TableHead>
-                    <TableHead>Variant</TableHead>
-                    <TableHead className="text-right">Qty</TableHead>
-                    <TableHead className="text-right">Reserved</TableHead>
-                    <TableHead className="text-right">Available</TableHead>
-                    <TableHead>Status</TableHead>
+                    <TableHead>{tScm("k_298dff72dae2")}</TableHead>
+                    <TableHead>{tScm("k_cc91b1ea2c16")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_1e5ff9e500c2")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_67a6ff10f1b9")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_7c62a1424469")}</TableHead>
+                    <TableHead>{tScm("k_bae7d5be7082")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {dailyRows.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={6} className="text-center text-muted-foreground">
-                        No daily stock rows found.
+                        {tScm("k_40b2883bce1e")}
                       </TableCell>
                     </TableRow>
                   ) : (
@@ -309,26 +313,26 @@ export default function StockReportsPage() {
         <TabsContent value="aging" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Stock Aging</CardTitle>
-              <CardDescription>Days since last stock movement per variant.</CardDescription>
+              <CardTitle>{tScm("k_e40fd2635c24")}</CardTitle>
+              <CardDescription>{tScm("k_83dd906c975b")}</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Warehouse</TableHead>
-                    <TableHead>Variant</TableHead>
-                    <TableHead className="text-right">Qty</TableHead>
-                    <TableHead className="text-right">Available</TableHead>
-                    <TableHead className="text-right">Age (days)</TableHead>
-                    <TableHead>Last Movement</TableHead>
+                    <TableHead>{tScm("k_298dff72dae2")}</TableHead>
+                    <TableHead>{tScm("k_cc91b1ea2c16")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_1e5ff9e500c2")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_7c62a1424469")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_8705b9ef375d")}</TableHead>
+                    <TableHead>{tScm("k_3461e78baba4")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {agingRows.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={6} className="text-center text-muted-foreground">
-                        No aging records found.
+                        {tScm("k_0066e91968d9")}
                       </TableCell>
                     </TableRow>
                   ) : (
@@ -365,26 +369,26 @@ export default function StockReportsPage() {
         <TabsContent value="monthly" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Monthly Warehouse Summary</CardTitle>
-              <CardDescription>Average and ending stock positions per warehouse.</CardDescription>
+              <CardTitle>{tScm("k_69eb3361a9d0")}</CardTitle>
+              <CardDescription>{tScm("k_f7c7633cb34d")}</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Warehouse</TableHead>
-                    <TableHead className="text-right">Days Tracked</TableHead>
-                    <TableHead className="text-right">Avg Qty</TableHead>
-                    <TableHead className="text-right">Avg Available</TableHead>
-                    <TableHead className="text-right">End Qty</TableHead>
-                    <TableHead>Last Snapshot</TableHead>
+                    <TableHead>{tScm("k_298dff72dae2")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_ebb3f5381b0b")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_d07b02aa58c2")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_1ed746e51daf")}</TableHead>
+                    <TableHead className="text-right">{tScm("k_1bc0c3721d84")}</TableHead>
+                    <TableHead>{tScm("k_2badb6bf625f")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {monthlyRows.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={6} className="text-center text-muted-foreground">
-                        No monthly summary rows found.
+                        {tScm("k_5cd0a1348209")}
                       </TableCell>
                     </TableRow>
                   ) : (

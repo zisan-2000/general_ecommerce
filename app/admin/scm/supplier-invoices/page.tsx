@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowLeft, Ban, CreditCard, ExternalLink, FileText, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
@@ -139,11 +140,11 @@ function formatMoney(value: number | string, currency = "") {
   return `${Number.isFinite(amount) ? amount.toFixed(2) : "0.00"}${currency ? ` ${currency}` : ""}`;
 }
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleDateString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleDateString(locale);
 }
 
 function toStageLabel(value?: string | null) {
@@ -223,6 +224,8 @@ function computeLandedAllocation(purchaseOrder: PurchaseOrderOption) {
 }
 
 export default function SupplierInvoicesAdminPage() {
+  const locale = useLocale();
+  const t = useTranslations("AdminSupplierInvoices");
   const searchParams = useSearchParams();
   const requestedPurchaseOrderId = searchParams.get("purchaseOrderId") || "";
   const requestedGoodsReceiptId = searchParams.get("goodsReceiptId") || "";
@@ -318,13 +321,13 @@ export default function SupplierInvoicesAdminPage() {
         fetch("/api/scm/supplier-invoices", { cache: "no-store" }),
       ]);
       const [poData, invoiceData] = await Promise.all([
-        readJson<PurchaseOrderOption[]>(poResponse, "Failed to load purchase orders"),
-        readJson<SupplierInvoice[]>(invoiceResponse, "Failed to load supplier invoices"),
+        readJson<PurchaseOrderOption[]>(poResponse, t("errors.loadPurchaseOrders")),
+        readJson<SupplierInvoice[]>(invoiceResponse, t("errors.loadInvoices")),
       ]);
       setPurchaseOrders(Array.isArray(poData) ? poData : []);
       setInvoices(Array.isArray(invoiceData) ? invoiceData : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier invoice workspace");
+      toast.error(error?.message || t("errors.loadWorkspace"));
     } finally {
       setLoading(false);
     }
@@ -383,11 +386,11 @@ export default function SupplierInvoicesAdminPage() {
 
   const createInvoice = async () => {
     if (!canManageInvoices) {
-      toast.error("You do not have permission to create supplier invoices.");
+      toast.error(t("errors.noCreatePermission"));
       return;
     }
     if (!supplierId || !purchaseOrderId) {
-      toast.error("Select a supplier and purchase order.");
+      toast.error(t("errors.selectSupplierAndPo"));
       return;
     }
     const invoiceLines = lines
@@ -400,7 +403,7 @@ export default function SupplierInvoicesAdminPage() {
         description: line.description,
       }));
     if (invoiceLines.length === 0) {
-      toast.error("At least one received line is required.");
+      toast.error(t("errors.receivedLineRequired"));
       return;
     }
 
@@ -421,14 +424,14 @@ export default function SupplierInvoicesAdminPage() {
           items: invoiceLines,
         }),
       });
-      const created = await readJson<SupplierInvoice>(response, "Failed to create supplier invoice");
-      toast.success(`Supplier invoice ${created.invoiceNumber} created`);
+      const created = await readJson<SupplierInvoice>(response, t("errors.createInvoice"));
+      toast.success(t("success.invoiceCreated", { invoice: created.invoiceNumber }));
       setNote("");
       setTaxTotal("0");
       setOtherCharges("0");
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create supplier invoice");
+      toast.error(error?.message || t("errors.createInvoice"));
     } finally {
       setSaving(false);
     }
@@ -452,21 +455,21 @@ export default function SupplierInvoicesAdminPage() {
   const createPayment = async () => {
     const invoice = invoices.find((row) => row.id === paymentDraft.invoiceId) ?? null;
     if (!invoice) {
-      toast.error("Select an invoice for payment.");
+      toast.error(t("errors.selectInvoiceForPayment"));
       return;
     }
     const outstanding = getInvoiceOutstanding(invoice);
     const amount = Number(paymentDraft.amount);
     if (!Number.isFinite(amount) || amount <= 0) {
-      toast.error("Payment amount must be greater than zero.");
+      toast.error(t("errors.paymentAmountPositive"));
       return;
     }
     if (amount > outstanding) {
-      toast.error("Payment amount exceeds outstanding balance.");
+      toast.error(t("errors.paymentExceedsOutstanding"));
       return;
     }
     if (invoice.paymentHoldStatus === "HELD" && !paymentDraft.holdOverride) {
-      toast.error(invoice.paymentHoldReason || "Payment is blocked by AP hold policy.");
+      toast.error(invoice.paymentHoldReason || t("errors.paymentHeld"));
       return;
     }
 
@@ -488,11 +491,11 @@ export default function SupplierInvoicesAdminPage() {
           holdOverrideNote: paymentDraft.holdOverrideNote,
         }),
       });
-      await readJson(response, "Failed to create supplier payment");
+      await readJson(response, t("errors.createPayment"));
       toast.success(
         paymentDraft.mode === "FULL"
-          ? "Full supplier payment posted"
-          : "Partial supplier payment posted",
+          ? t("success.fullPaymentPosted")
+          : t("success.partialPaymentPosted"),
       );
       setPaymentDraft((current) => ({
         ...current,
@@ -505,7 +508,7 @@ export default function SupplierInvoicesAdminPage() {
       }));
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create supplier payment");
+      toast.error(error?.message || t("errors.createPayment"));
     } finally {
       setSavingPayment(false);
     }
@@ -513,7 +516,7 @@ export default function SupplierInvoicesAdminPage() {
 
   const voidInvoice = async (invoice: SupplierInvoice) => {
     if (voidNote.trim().length < 3) {
-      toast.error("Void note is required.");
+      toast.error(t("errors.voidNoteRequired"));
       return;
     }
     try {
@@ -526,13 +529,13 @@ export default function SupplierInvoicesAdminPage() {
           note: voidNote,
         }),
       });
-      await readJson(response, "Failed to void supplier invoice");
-      toast.success("Supplier invoice voided");
+      await readJson(response, t("errors.voidInvoice"));
+      toast.success(t("success.invoiceVoided"));
       setVoidInvoiceId(null);
       setVoidNote("");
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to void supplier invoice");
+      toast.error(error?.message || t("errors.voidInvoice"));
     } finally {
       setVoidingInvoiceId(null);
     }
@@ -551,41 +554,41 @@ export default function SupplierInvoicesAdminPage() {
           <Button asChild variant="outline" size="sm">
             <Link href={requestedGoodsReceiptId ? `/admin/scm/goods-receipts/${requestedGoodsReceiptId}` : "/admin/scm"}>
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back
+              {t("actions.back")}
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold">Supplier Invoices</h1>
+            <h1 className="text-2xl font-bold">{t("header.title")}</h1>
             <p className="text-sm text-muted-foreground">
-              Create PO-backed supplier invoices after goods receipt review, then monitor AP match status.
+              {t("header.description")}
             </p>
           </div>
         </div>
         <Button variant="outline" onClick={() => void loadData()} disabled={loading || saving}>
           <RefreshCw className="mr-2 h-4 w-4" />
-          Refresh
+          {t("actions.refresh")}
         </Button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Invoices" value={String(invoices.length)} hint="Supplier invoice register" icon={FileText} />
-        <ScmStatCard label="Received POs" value={String(receivedPurchaseOrderCount)} hint="POs with GRN quantities" />
-        <ScmStatCard label="Selected PO Invoices" value={String(selectedInvoiceCount)} hint={selectedPurchaseOrder?.poNumber || "No PO selected"} />
-        <ScmStatCard label="Landed Cost" value={formatMoney(landedTotal, currency)} hint={landedTotal > 0 ? "Included in other charges" : "No landed cost on PO"} />
+        <ScmStatCard label={t("stats.invoices.label")} value={String(invoices.length)} hint={t("stats.invoices.hint")} icon={FileText} />
+        <ScmStatCard label={t("stats.receivedPos.label")} value={String(receivedPurchaseOrderCount)} hint={t("stats.receivedPos.hint")} />
+        <ScmStatCard label={t("stats.selectedPoInvoices.label")} value={String(selectedInvoiceCount)} hint={selectedPurchaseOrder?.poNumber || t("stats.selectedPoInvoices.emptyHint")} />
+        <ScmStatCard label={t("stats.landedCost.label")} value={formatMoney(landedTotal, currency)} hint={landedTotal > 0 ? t("stats.landedCost.includedHint") : t("stats.landedCost.emptyHint")} />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.15fr_1fr]">
         <Card>
           <CardHeader>
-            <CardTitle>Create Supplier Invoice</CardTitle>
+            <CardTitle>{t("create.title")}</CardTitle>
             <CardDescription>
-              Review supplier, PO, received quantity, unit cost, tax, charges, and dates before posting.
+              {t("create.description")}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <Label>Supplier</Label>
+                <Label>{t("fields.supplier")}</Label>
                 <select
                   className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                   value={supplierId}
@@ -595,7 +598,7 @@ export default function SupplierInvoicesAdminPage() {
                   }}
                   disabled={!canManageInvoices}
                 >
-                  <option value="">Select supplier</option>
+                  <option value="">{t("options.selectSupplier")}</option>
                   {supplierOptions.map((supplier) => (
                     <option key={supplier.id} value={supplier.id}>
                       {supplier.name} ({supplier.code})
@@ -604,14 +607,14 @@ export default function SupplierInvoicesAdminPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Purchase Order</Label>
+                <Label>{t("fields.purchaseOrder")}</Label>
                 <select
                   className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                   value={purchaseOrderId}
                   onChange={(event) => setPurchaseOrderId(event.target.value)}
                   disabled={!canManageInvoices}
                 >
-                  <option value="">Select received PO</option>
+                  <option value="">{t("options.selectReceivedPo")}</option>
                   {supplierPurchaseOrders
                     .filter((po) => po.items.some((item) => item.quantityReceived > 0))
                     .map((po) => (
@@ -622,11 +625,11 @@ export default function SupplierInvoicesAdminPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Invoice Date</Label>
+                <Label>{t("fields.invoiceDate")}</Label>
                 <Input type="date" value={issueDate} onChange={(event) => setIssueDate(event.target.value)} disabled={!canManageInvoices} />
               </div>
               <div className="space-y-2">
-                <Label>Due Date</Label>
+                <Label>{t("fields.dueDate")}</Label>
                 <Input type="date" value={dueDate} onChange={(event) => setDueDate(event.target.value)} disabled={!canManageInvoices} />
               </div>
             </div>
@@ -634,15 +637,15 @@ export default function SupplierInvoicesAdminPage() {
             {selectedPurchaseOrder ? (
               <div className="grid gap-3 md:grid-cols-3">
                 <div className="rounded-lg border p-3 text-sm">
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">Supplier</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("fields.supplier")}</div>
                   <div className="mt-1 font-medium">{selectedPurchaseOrder.supplier.name}</div>
                 </div>
                 <div className="rounded-lg border p-3 text-sm">
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">Purchase Order</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("fields.purchaseOrder")}</div>
                   <div className="mt-1 font-medium">{selectedPurchaseOrder.poNumber}</div>
                 </div>
                 <div className="rounded-lg border p-3 text-sm">
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">Received Qty</div>
+                  <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("fields.receivedQuantity")}</div>
                   <div className="mt-1 font-medium">
                     {selectedPurchaseOrder.items.reduce((sum, item) => sum + item.quantityReceived, 0)}
                   </div>
@@ -654,9 +657,9 @@ export default function SupplierInvoicesAdminPage() {
               <div className="space-y-3 rounded-lg border p-3">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
-                    <div className="text-sm font-medium">Landed Cost From PO</div>
+                    <div className="text-sm font-medium">{t("landedCost.title")}</div>
                     <div className="text-xs text-muted-foreground">
-                      Added to invoice other charges so item unit cost still matches PO for 3-way match.
+                      {t("landedCost.description")}
                     </div>
                   </div>
                   <div className="text-sm font-semibold">{formatMoney(landedTotal, currency)}</div>
@@ -669,7 +672,7 @@ export default function SupplierInvoicesAdminPage() {
                         <span className="font-medium">{formatMoney(cost.amount, cost.currency || currency)}</span>
                       </div>
                       <div className="mt-1 text-xs text-muted-foreground">
-                        {fmtDate(cost.incurredAt)}
+                        {fmtDate(cost.incurredAt, locale)}
                         {cost.note ? ` - ${cost.note}` : ""}
                       </div>
                     </div>
@@ -678,7 +681,7 @@ export default function SupplierInvoicesAdminPage() {
               </div>
             ) : selectedPurchaseOrder ? (
               <div className="rounded-lg border p-3 text-sm text-muted-foreground">
-                No landed cost is linked with this purchase order.
+                {t("landedCost.empty")}
               </div>
             ) : null}
 
@@ -686,20 +689,20 @@ export default function SupplierInvoicesAdminPage() {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Item</TableHead>
-                    <TableHead>Received</TableHead>
-                        <TableHead>Invoice Qty</TableHead>
-                        <TableHead>Unit Cost</TableHead>
-                        <TableHead>Landed / Unit</TableHead>
-                        <TableHead>Stock Unit Cost</TableHead>
-                        <TableHead className="text-right">Line Total</TableHead>
+                    <TableHead>{t("columns.item")}</TableHead>
+                    <TableHead>{t("columns.received")}</TableHead>
+                    <TableHead>{t("columns.invoiceQuantity")}</TableHead>
+                    <TableHead>{t("columns.unitCost")}</TableHead>
+                    <TableHead>{t("columns.landedPerUnit")}</TableHead>
+                    <TableHead>{t("columns.stockUnitCost")}</TableHead>
+                    <TableHead className="text-right">{t("columns.lineTotal")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {lines.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={7} className="py-8 text-center text-sm text-muted-foreground">
-                        Select a purchase order with successful goods receipt lines.
+                        {t("create.selectPoHint")}
                       </TableCell>
                     </TableRow>
                   ) : (
@@ -713,7 +716,9 @@ export default function SupplierInvoicesAdminPage() {
                           </TableCell>
                           <TableCell>
                             {line.quantityReceived}
-                            <div className="text-xs text-muted-foreground">Ordered {line.quantityOrdered}</div>
+                            <div className="text-xs text-muted-foreground">
+                              {t("common.orderedValue", { count: line.quantityOrdered })}
+                            </div>
                           </TableCell>
                           <TableCell>
                             <Input
@@ -749,33 +754,37 @@ export default function SupplierInvoicesAdminPage() {
 
             <div className="grid gap-4 md:grid-cols-3">
               <div className="space-y-2">
-                <Label>Tax</Label>
+                <Label>{t("fields.tax")}</Label>
                 <Input type="number" min={0} step="0.01" value={taxTotal} onChange={(event) => setTaxTotal(event.target.value)} disabled={!canManageInvoices} />
               </div>
               <div className="space-y-2">
-                <Label>Other Charges{landedTotal > 0 ? " (Includes Landed Cost)" : ""}</Label>
+                <Label>
+                  {landedTotal > 0
+                    ? t("fields.otherChargesWithLandedCost")
+                    : t("fields.otherCharges")}
+                </Label>
                 <Input type="number" min={0} step="0.01" value={otherCharges} onChange={(event) => setOtherCharges(event.target.value)} disabled={!canManageInvoices} />
               </div>
               <div className="rounded-lg border p-3">
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Invoice Total</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("fields.invoiceTotal")}</div>
                 <div className="mt-1 text-lg font-semibold">{formatMoney(total, currency)}</div>
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label>Note</Label>
-              <Textarea rows={3} value={note} onChange={(event) => setNote(event.target.value)} placeholder="Optional AP note for this invoice." disabled={!canManageInvoices} />
+              <Label>{t("fields.note")}</Label>
+              <Textarea rows={3} value={note} onChange={(event) => setNote(event.target.value)} placeholder={t("placeholders.invoiceNote")} disabled={!canManageInvoices} />
             </div>
 
             <div className="flex flex-wrap gap-2">
               <Button onClick={() => void createInvoice()} disabled={saving || loading || !canManageInvoices || lines.length === 0}>
-                {saving ? "Creating..." : "Create Supplier Invoice"}
+                {saving ? t("actions.creating") : t("actions.createInvoice")}
               </Button>
               {selectedPurchaseOrder ? (
                 <Button asChild variant="outline">
                   <Link href={`/admin/scm/three-way-match?search=${encodeURIComponent(selectedPurchaseOrder.poNumber)}`}>
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Three-Way Match
+                    {t("actions.threeWayMatch")}
                   </Link>
                 </Button>
               ) : null}
@@ -783,7 +792,7 @@ export default function SupplierInvoicesAdminPage() {
                 <Button asChild variant="outline">
                   <Link href={`/admin/scm/supplier-ledger?supplierId=${supplierId}`}>
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Supplier Ledger
+                    {t("actions.supplierLedger")}
                   </Link>
                 </Button>
               ) : null}
@@ -793,15 +802,15 @@ export default function SupplierInvoicesAdminPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Invoice Register</CardTitle>
-            <CardDescription>New invoices appear here after posting and match refresh.</CardDescription>
+            <CardTitle>{t("register.title")}</CardTitle>
+            <CardDescription>{t("register.description")}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search invoice, supplier, or PO..." />
+            <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={t("placeholders.search")} />
             {loading ? (
-              <p className="text-sm text-muted-foreground">Loading supplier invoices...</p>
+              <p className="text-sm text-muted-foreground">{t("register.loading")}</p>
             ) : visibleInvoices.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No supplier invoices found.</p>
+              <p className="text-sm text-muted-foreground">{t("register.empty")}</p>
             ) : (
               <div className="space-y-3">
                 {visibleInvoices.map((invoice) => (
@@ -816,46 +825,50 @@ export default function SupplierInvoicesAdminPage() {
                       <div className="flex flex-wrap gap-1">
                         {invoice.status === "CANCELLED" ? (
                           <Badge variant="outline" className="border-muted-foreground/30 text-muted-foreground">
-                            Voided
+                            {t("invoiceStatuses.CANCELLED")}
                           </Badge>
                         ) : (
                           <ScmStatusChip status={invoice.status} />
                         )}
-                        <Badge variant="outline">{toStageLabel(invoice.matchStatus || "PENDING")}</Badge>
+                        <Badge variant="outline">
+                          {t.has(`matchStatuses.${invoice.matchStatus || "PENDING"}`)
+                            ? t(`matchStatuses.${invoice.matchStatus || "PENDING"}`)
+                            : toStageLabel(invoice.matchStatus || "PENDING")}
+                        </Badge>
                       </div>
                     </div>
                     <div className="mt-3 grid gap-2 text-sm md:grid-cols-2">
                       <div>
-                        <span className="text-muted-foreground">Invoice:</span>{" "}
+                        <span className="text-muted-foreground">{t("register.invoice")}:</span>{" "}
                         {formatMoney(invoice.total, invoice.currency)}
                       </div>
                       <div>
-                        <span className="text-muted-foreground">Outstanding:</span>{" "}
+                        <span className="text-muted-foreground">{t("register.outstanding")}:</span>{" "}
                         {formatMoney(getInvoiceOutstanding(invoice), invoice.currency)}
                       </div>
                       <div>
-                        <span className="text-muted-foreground">Lines:</span> {invoice.items.length}
+                        <span className="text-muted-foreground">{t("register.lines")}:</span> {invoice.items.length}
                       </div>
                       <div>
-                        <span className="text-muted-foreground">Date:</span> {fmtDate(invoice.issueDate)}
+                        <span className="text-muted-foreground">{t("register.date")}:</span> {fmtDate(invoice.issueDate, locale)}
                       </div>
                       <div>
-                        <span className="text-muted-foreground">Due:</span> {fmtDate(invoice.dueDate)}
+                        <span className="text-muted-foreground">{t("register.due")}:</span> {fmtDate(invoice.dueDate, locale)}
                       </div>
                     </div>
                     {invoice.paymentHoldStatus === "HELD" ? (
                       <div className="rounded-md border border-destructive/30 bg-destructive/5 p-2 text-xs text-destructive">
-                        {invoice.paymentHoldReason || "Payment is currently held by AP controls."}
+                        {invoice.paymentHoldReason || t("register.paymentHeld")}
                       </div>
                     ) : null}
                     {canManagePayments && invoice.status !== "CANCELLED" && getInvoiceOutstanding(invoice) > 0 ? (
                       <div className="flex flex-wrap gap-2 border-t pt-3">
                         <Button size="sm" onClick={() => startPayment(invoice, "FULL")} disabled={savingPayment}>
                           <CreditCard className="mr-2 h-4 w-4" />
-                          Full Pay
+                          {t("actions.fullPay")}
                         </Button>
                         <Button size="sm" variant="outline" onClick={() => startPayment(invoice, "PARTIAL")} disabled={savingPayment}>
-                          Partial Pay
+                          {t("actions.partialPay")}
                         </Button>
                       </div>
                     ) : null}
@@ -863,12 +876,12 @@ export default function SupplierInvoicesAdminPage() {
                       <div className="border-t pt-3">
                         {voidInvoiceId === invoice.id ? (
                           <div className="space-y-2">
-                            <Label>Void Note</Label>
+                            <Label>{t("fields.voidNote")}</Label>
                             <Textarea
                               rows={2}
                               value={voidNote}
                               onChange={(event) => setVoidNote(event.target.value)}
-                              placeholder="Reason for voiding this invoice"
+                              placeholder={t("placeholders.voidReason")}
                             />
                             <div className="flex flex-wrap gap-2">
                               <Button
@@ -877,7 +890,9 @@ export default function SupplierInvoicesAdminPage() {
                                 onClick={() => void voidInvoice(invoice)}
                                 disabled={voidingInvoiceId === invoice.id}
                               >
-                                {voidingInvoiceId === invoice.id ? "Voiding..." : "Confirm Void"}
+                                {voidingInvoiceId === invoice.id
+                                  ? t("actions.voiding")
+                                  : t("actions.confirmVoid")}
                               </Button>
                               <Button
                                 size="sm"
@@ -888,7 +903,7 @@ export default function SupplierInvoicesAdminPage() {
                                 }}
                                 disabled={voidingInvoiceId === invoice.id}
                               >
-                                Cancel
+                                {t("actions.cancel")}
                               </Button>
                             </div>
                           </div>
@@ -900,7 +915,7 @@ export default function SupplierInvoicesAdminPage() {
                             disabled={voidingInvoiceId === invoice.id}
                           >
                             <Ban className="mr-2 h-4 w-4" />
-                            Void Invoice
+                            {t("actions.voidInvoice")}
                           </Button>
                         )}
                       </div>
@@ -909,15 +924,19 @@ export default function SupplierInvoicesAdminPage() {
                       <div className="space-y-3 rounded-lg border bg-muted/20 p-3">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <div className="text-sm font-medium">
-                            {paymentDraft.mode === "FULL" ? "Full Payment" : "Partial Payment"}
+                            {paymentDraft.mode === "FULL"
+                              ? t("payment.fullTitle")
+                              : t("payment.partialTitle")}
                           </div>
                           <div className="text-xs text-muted-foreground">
-                            Outstanding {formatMoney(getInvoiceOutstanding(invoice), invoice.currency)}
+                            {t("payment.outstanding", {
+                              amount: formatMoney(getInvoiceOutstanding(invoice), invoice.currency),
+                            })}
                           </div>
                         </div>
                         <div className="grid gap-3 md:grid-cols-2">
                           <div className="space-y-2">
-                            <Label>Payment Date</Label>
+                            <Label>{t("fields.paymentDate")}</Label>
                             <Input
                               type="date"
                               value={paymentDraft.paymentDate}
@@ -927,7 +946,7 @@ export default function SupplierInvoicesAdminPage() {
                             />
                           </div>
                           <div className="space-y-2">
-                            <Label>Amount</Label>
+                            <Label>{t("fields.amount")}</Label>
                             <Input
                               type="number"
                               min={0}
@@ -941,7 +960,7 @@ export default function SupplierInvoicesAdminPage() {
                             />
                           </div>
                           <div className="space-y-2">
-                            <Label>Method</Label>
+                            <Label>{t("fields.method")}</Label>
                             <select
                               className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                               value={paymentDraft.method}
@@ -949,33 +968,33 @@ export default function SupplierInvoicesAdminPage() {
                                 setPaymentDraft((current) => ({ ...current, method: event.target.value }))
                               }
                             >
-                              <option value="BANK_TRANSFER">Bank Transfer</option>
-                              <option value="CASH">Cash</option>
-                              <option value="CHEQUE">Cheque</option>
-                              <option value="MOBILE_BANKING">Mobile Banking</option>
-                              <option value="ADJUSTMENT">Adjustment</option>
+                              <option value="BANK_TRANSFER">{t("paymentMethods.BANK_TRANSFER")}</option>
+                              <option value="CASH">{t("paymentMethods.CASH")}</option>
+                              <option value="CHEQUE">{t("paymentMethods.CHEQUE")}</option>
+                              <option value="MOBILE_BANKING">{t("paymentMethods.MOBILE_BANKING")}</option>
+                              <option value="ADJUSTMENT">{t("paymentMethods.ADJUSTMENT")}</option>
                             </select>
                           </div>
                           <div className="space-y-2">
-                            <Label>Reference</Label>
+                            <Label>{t("fields.reference")}</Label>
                             <Input
                               value={paymentDraft.reference}
                               onChange={(event) =>
                                 setPaymentDraft((current) => ({ ...current, reference: event.target.value }))
                               }
-                              placeholder="Transaction / cheque reference"
+                              placeholder={t("placeholders.paymentReference")}
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <Label>Payment Note</Label>
+                          <Label>{t("fields.paymentNote")}</Label>
                           <Textarea
                             rows={2}
                             value={paymentDraft.note}
                             onChange={(event) =>
                               setPaymentDraft((current) => ({ ...current, note: event.target.value }))
                             }
-                            placeholder="Optional payment note"
+                            placeholder={t("placeholders.paymentNote")}
                           />
                         </div>
                         {invoice.paymentHoldStatus === "HELD" && canOverridePaymentHold ? (
@@ -991,7 +1010,7 @@ export default function SupplierInvoicesAdminPage() {
                                   }))
                                 }
                               />
-                              Override payment hold
+                              {t("payment.overrideHold")}
                             </label>
                             <Textarea
                               rows={2}
@@ -1002,20 +1021,22 @@ export default function SupplierInvoicesAdminPage() {
                                   holdOverrideNote: event.target.value,
                                 }))
                               }
-                              placeholder="Required override note"
+                              placeholder={t("placeholders.overrideNote")}
                             />
                           </div>
                         ) : null}
                         <div className="flex flex-wrap gap-2">
                           <Button onClick={() => void createPayment()} disabled={savingPayment}>
-                            {savingPayment ? "Posting..." : "Post Payment"}
+                            {savingPayment
+                              ? t("actions.posting")
+                              : t("actions.postPayment")}
                           </Button>
                           <Button
                             variant="outline"
                             onClick={() => setPaymentDraft((current) => ({ ...current, invoiceId: null }))}
                             disabled={savingPayment}
                           >
-                            Cancel
+                            {t("actions.cancel")}
                           </Button>
                         </div>
                       </div>

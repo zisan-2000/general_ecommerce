@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -108,6 +110,7 @@ function toStageLabel(value: string) {
 }
 
 export default function MaterialRequestDetailPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const materialRequestId = Number(params?.id);
@@ -128,7 +131,7 @@ export default function MaterialRequestDetailPage() {
 
   const loadMaterialRequest = async () => {
     if (!Number.isInteger(materialRequestId) || materialRequestId <= 0) {
-      toast.error("Invalid material request id");
+      toast.error(tScm("k_d5db01b3526f"));
       router.replace("/admin/scm/material-requests");
       return;
     }
@@ -155,25 +158,25 @@ export default function MaterialRequestDetailPage() {
     const isOwner = materialRequest.createdBy?.id === userId;
     const buttons: Array<{ action: string; label: string }> = [];
     if (canManage && materialRequest.status === "DRAFT") {
-      buttons.push({ action: "submit", label: "Submit" });
+      buttons.push({ action: "submit", label: tScm("k_2dacf6595984") });
     }
     if (canSupervisorEndorse && materialRequest.status === "SUBMITTED") {
-      buttons.push({ action: "endorse_supervisor", label: "Endorse (Supervisor)" });
+      buttons.push({ action: "endorse_supervisor", label: tScm("k_6124bf7cc32e") });
     }
     if (canProjectManagerEndorse && materialRequest.status === "SUPERVISOR_ENDORSED") {
-      buttons.push({ action: "endorse_project_manager", label: "Endorse (Project Manager)" });
+      buttons.push({ action: "endorse_project_manager", label: tScm("k_254bfeabee02") });
     }
     if (canAdminApprove && materialRequest.status === "PROJECT_MANAGER_ENDORSED") {
-      buttons.push({ action: "approve_admin", label: "Final Approve (Admin)" });
+      buttons.push({ action: "approve_admin", label: tScm("k_9948caa896c6") });
     }
     if (
       ["SUBMITTED", "SUPERVISOR_ENDORSED", "PROJECT_MANAGER_ENDORSED"].includes(materialRequest.status) &&
       (canSupervisorEndorse || canProjectManagerEndorse || canAdminApprove)
     ) {
-      buttons.push({ action: "reject", label: "Reject" });
+      buttons.push({ action: "reject", label: tScm("k_2b03b59293b6") });
     }
     if (["DRAFT", "SUBMITTED"].includes(materialRequest.status) && (canManage || isOwner)) {
-      buttons.push({ action: "cancel", label: "Cancel" });
+      buttons.push({ action: "cancel", label: tScm("k_77dfd2135f4d") });
     }
     return buttons;
   }, [materialRequest, canManage, canSupervisorEndorse, canProjectManagerEndorse, canAdminApprove, userId]);
@@ -184,7 +187,7 @@ export default function MaterialRequestDetailPage() {
     return [
       {
         key: "request",
-        label: "Material Request",
+        label: tScm("k_074f52030ded"),
         value: materialRequest.requestNumber,
         helperText: toStageLabel(materialRequest.status),
         href: `/admin/scm/material-requests/${materialRequest.id}`,
@@ -192,7 +195,7 @@ export default function MaterialRequestDetailPage() {
       },
       {
         key: "release",
-        label: "Release",
+        label: tScm("k_d41f56cea1ac"),
         value: latestRelease?.releaseNumber || "Not issued",
         helperText: latestRelease ? `Released ${fmtDate(latestRelease.releasedAt)}` : "Awaiting approved issue",
         href: latestRelease ? `/admin/scm/material-releases/${latestRelease.id}` : null,
@@ -222,7 +225,7 @@ export default function MaterialRequestDetailPage() {
   };
 
   if (loading) {
-    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">Loading material request workspace...</p></div>;
+    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">{tScm("k_72dacc5f1acc")}</p></div>;
   }
 
   if (!materialRequest) {
@@ -231,10 +234,10 @@ export default function MaterialRequestDetailPage() {
         <Button asChild variant="outline">
           <Link href="/admin/scm/material-requests">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back To Register
+            {tScm("k_1763e9ae8697")}
           </Link>
         </Button>
-        <Card><CardContent className="py-10 text-sm text-muted-foreground">Material request not found.</CardContent></Card>
+        <Card><CardContent className="py-10 text-sm text-muted-foreground">{tScm("k_e45d8170a515")}</CardContent></Card>
       </div>
     );
   }
@@ -250,7 +253,7 @@ export default function MaterialRequestDetailPage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/admin/scm/material-requests">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back
+                {tScm("k_b52b36b7269f")}
               </Link>
             </Button>
             <ScmStatusChip status={materialRequest.status} />
@@ -264,7 +267,7 @@ export default function MaterialRequestDetailPage() {
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadMaterialRequest()} disabled={loading || saving}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           {actionButtons.map((button) => (
             <Button
@@ -280,10 +283,10 @@ export default function MaterialRequestDetailPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Warehouse" value={materialRequest.warehouse.name} hint={materialRequest.warehouse.code} />
-        <ScmStatCard label="Requested Qty" value={String(totalRequested)} hint={`${totalReleased} already released`} />
-        <ScmStatCard label="Required By" value={materialRequest.requiredBy ? new Date(materialRequest.requiredBy).toLocaleDateString() : "-"} hint={`Raised ${new Date(materialRequest.requestedAt).toLocaleDateString()}`} />
-        <ScmStatCard label="Budget" value={materialRequest.budgetCode || "-"} hint={materialRequest.boqReference || "No BOQ reference"} />
+        <ScmStatCard label={tScm("k_298dff72dae2")} value={materialRequest.warehouse.name} hint={materialRequest.warehouse.code} />
+        <ScmStatCard label={tScm("k_294f180aa374")} value={String(totalRequested)} hint={`${totalReleased} already released`} />
+        <ScmStatCard label={tScm("k_e0951fc243c4")} value={materialRequest.requiredBy ? new Date(materialRequest.requiredBy).toLocaleDateString() : "-"} hint={`Raised ${new Date(materialRequest.requestedAt).toLocaleDateString()}`} />
+        <ScmStatCard label={tScm("k_7aeba4cd15b1")} value={materialRequest.budgetCode || "-"} hint={materialRequest.boqReference || "No BOQ reference"} />
       </div>
 
       <ScmDocumentLifecycle stages={lifecycleStages} />
@@ -292,38 +295,38 @@ export default function MaterialRequestDetailPage() {
         <div className="space-y-6">
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="items">Items</TabsTrigger>
-              <TabsTrigger value="workflow">Workflow</TabsTrigger>
-              <TabsTrigger value="attachments">Attachments</TabsTrigger>
-              <TabsTrigger value="releases">Releases</TabsTrigger>
+              <TabsTrigger value="overview">{tScm("k_0efc2e6be4c2")}</TabsTrigger>
+              <TabsTrigger value="items">{tScm("k_44d25b5d1b6d")}</TabsTrigger>
+              <TabsTrigger value="workflow">{tScm("k_d7a484140f5f")}</TabsTrigger>
+              <TabsTrigger value="attachments">{tScm("k_6771ade6e896")}</TabsTrigger>
+              <TabsTrigger value="releases">{tScm("k_8fa41d59c259")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview">
               <Card>
-                <CardHeader><CardTitle>Request Context</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_18fc3bc0dce8")}</CardTitle></CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-2">
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Purpose</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.purpose || "-"}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Specification</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.specification || "-"}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Budget Code</div><p className="mt-2 text-sm">{materialRequest.budgetCode || "-"}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">BOQ Reference</div><p className="mt-2 text-sm">{materialRequest.boqReference || "-"}</p></div>
-                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">Internal Note</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.note || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_a0fb821bdaf9")}</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.purpose || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_1ccf5d25dfed")}</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.specification || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_88f4ea85a48f")}</div><p className="mt-2 text-sm">{materialRequest.budgetCode || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_f3ffde94f687")}</div><p className="mt-2 text-sm">{materialRequest.boqReference || "-"}</p></div>
+                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_ee2a43f64d7b")}</div><p className="mt-2 text-sm whitespace-pre-wrap">{materialRequest.note || "-"}</p></div>
                 </CardContent>
               </Card>
             </TabsContent>
 
             <TabsContent value="items">
               <Card>
-                <CardHeader><CardTitle>Requested Lines</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_4541a0842422")}</CardTitle></CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Item</TableHead>
-                        <TableHead>Requested</TableHead>
-                        <TableHead>Released</TableHead>
-                        <TableHead>Remaining</TableHead>
-                        <TableHead>Class</TableHead>
+                        <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                        <TableHead>{tScm("k_c26bf60fed37")}</TableHead>
+                        <TableHead>{tScm("k_35d9bc51591e")}</TableHead>
+                        <TableHead>{tScm("k_cc632b5e2fd2")}</TableHead>
+                        <TableHead>{tScm("k_41ff354b2b33")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -348,17 +351,17 @@ export default function MaterialRequestDetailPage() {
 
             <TabsContent value="workflow" className="space-y-4">
               <Card>
-                <CardHeader><CardTitle>Workflow Note</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_12720dada01c")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
-                  <Input value={workflowNote} onChange={(event) => setWorkflowNote(event.target.value)} placeholder="Add optional note for your next workflow action" />
-                  <p className="text-xs text-muted-foreground">This note will be attached to the next submit, endorsement, approval, rejection, or cancellation action.</p>
+                  <Input value={workflowNote} onChange={(event) => setWorkflowNote(event.target.value)} placeholder={tScm("k_9a199769c868")} />
+                  <p className="text-xs text-muted-foreground">{tScm("k_0be862ba39bf")}</p>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader><CardTitle>Approval Timeline</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_33f6a9385a4b")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
                   {materialRequest.approvalEvents.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No workflow actions recorded yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_b8cfd3a910cc")}</p>
                   ) : (
                     materialRequest.approvalEvents.map((event) => (
                       <div key={event.id} className="rounded-lg border p-3">
@@ -377,10 +380,10 @@ export default function MaterialRequestDetailPage() {
 
             <TabsContent value="attachments">
               <Card>
-                <CardHeader><CardTitle>Supporting Documents</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_8851c0e9f744")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
                   {materialRequest.attachments.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No attachments found.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_3a4a2aba5367")}</p>
                   ) : (
                     materialRequest.attachments.map((attachment) => (
                       <div key={attachment.id} className="rounded-lg border p-3">
@@ -392,7 +395,7 @@ export default function MaterialRequestDetailPage() {
                         <Button asChild variant="outline" size="sm" className="mt-3">
                           <a href={attachment.fileUrl} target="_blank" rel="noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            Open Attachment
+                            {tScm("k_31d36f42d637")}
                           </a>
                         </Button>
                       </div>
@@ -404,10 +407,10 @@ export default function MaterialRequestDetailPage() {
 
             <TabsContent value="releases">
               <Card>
-                <CardHeader><CardTitle>Release Notes</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_0ea4af908fe0")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
                   {materialRequest.releaseNotes.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No material release has been issued yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_7b7c860a31c0")}</p>
                   ) : (
                     materialRequest.releaseNotes.map((release) => (
                       <div key={release.id} className="rounded-lg border p-3">
@@ -416,11 +419,11 @@ export default function MaterialRequestDetailPage() {
                           <Button asChild variant="outline" size="sm">
                             <Link href={`/admin/scm/material-releases/${release.id}`}>
                               <ExternalLink className="mr-2 h-4 w-4" />
-                              Open Detail
+                              {tScm("k_5444ca5a25cf")}
                             </Link>
                           </Button>
                         </div>
-                        <div className="mt-2 text-sm text-muted-foreground">Released {fmtDate(release.releasedAt)}{release.challanNumber ? ` • Challan ${release.challanNumber}` : ""}{release.waybillNumber ? ` • Waybill ${release.waybillNumber}` : ""}</div>
+                        <div className="mt-2 text-sm text-muted-foreground">{tScm("k_35d9bc51591e")} {fmtDate(release.releasedAt)}{release.challanNumber ? ` • Challan ${release.challanNumber}` : ""}{release.waybillNumber ? ` • Waybill ${release.waybillNumber}` : ""}</div>
                       </div>
                     ))
                   )}
@@ -432,18 +435,18 @@ export default function MaterialRequestDetailPage() {
 
         <div className="space-y-6">
           <Card>
-            <CardHeader><CardTitle>People</CardTitle></CardHeader>
+            <CardHeader><CardTitle>{tScm("k_b37554f695b1")}</CardTitle></CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created By</div><div className="mt-1">{materialRequest.createdBy?.name || materialRequest.createdBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Supervisor</div><div className="mt-1">{materialRequest.supervisorEndorsedBy?.name || materialRequest.supervisorEndorsedBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Project Manager</div><div className="mt-1">{materialRequest.projectManagerEndorsedBy?.name || materialRequest.projectManagerEndorsedBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Administration</div><div className="mt-1">{materialRequest.adminApprovedBy?.name || materialRequest.adminApprovedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_43de2bcd6337")}</div><div className="mt-1">{materialRequest.createdBy?.name || materialRequest.createdBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_2cd4fa195ed5")}</div><div className="mt-1">{materialRequest.supervisorEndorsedBy?.name || materialRequest.supervisorEndorsedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_92e918a7831f")}</div><div className="mt-1">{materialRequest.projectManagerEndorsedBy?.name || materialRequest.projectManagerEndorsedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_b8be3d126431")}</div><div className="mt-1">{materialRequest.adminApprovedBy?.name || materialRequest.adminApprovedBy?.email || "-"}</div></div>
             </CardContent>
           </Card>
 
           <ScmNextStepPanel
             title={materialRequest.status}
-            subtitle="This panel keeps approval actions visible without sending users back to the register."
+            subtitle={tScm("k_aec2d98468f1")}
             actions={actionButtons.map((button) => ({
               key: button.action,
               label: button.label,
@@ -451,7 +454,7 @@ export default function MaterialRequestDetailPage() {
               disabled: saving,
               variant: button.action === "reject" || button.action === "cancel" ? "outline" : "default",
             }))}
-            emptyMessage="No direct workflow action is available for your current permissions."
+            emptyMessage={tScm("k_ad90a4161999")}
           />
         </div>
       </div>

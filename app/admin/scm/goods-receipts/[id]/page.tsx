@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -143,6 +145,7 @@ function toStageLabel(value: string) {
 }
 
 export default function GoodsReceiptDetailPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const goodsReceiptId = Number(params?.id);
@@ -172,7 +175,7 @@ export default function GoodsReceiptDetailPage() {
 
   const loadReceipt = async () => {
     if (!Number.isInteger(goodsReceiptId) || goodsReceiptId <= 0) {
-      toast.error("Invalid goods receipt id");
+      toast.error(tScm("k_654682a3b9f4"));
       router.replace("/admin/scm/goods-receipts");
       return;
     }
@@ -205,7 +208,7 @@ export default function GoodsReceiptDetailPage() {
     return [
       {
         key: "requisition",
-        label: "Requisition",
+        label: tScm("k_7dc430086b99"),
         value: requisition?.requisitionNumber || "Not linked",
         helperText: requisition ? toStageLabel(requisition.status) : "No requisition",
         href: requisition ? `/admin/scm/purchase-requisitions/${requisition.id}` : null,
@@ -213,7 +216,7 @@ export default function GoodsReceiptDetailPage() {
       },
       {
         key: "rfq",
-        label: "RFQ",
+        label: tScm("k_97619681ade9"),
         value: rfq?.rfqNumber || "Not linked",
         helperText: rfq ? "Sourcing completed" : "No RFQ",
         href: rfq ? `/admin/scm/rfqs/${rfq.id}` : null,
@@ -221,7 +224,7 @@ export default function GoodsReceiptDetailPage() {
       },
       {
         key: "cs",
-        label: "Comparative",
+        label: tScm("k_f374dc7483c7"),
         value: comparative?.csNumber || "Not linked",
         helperText: comparative ? toStageLabel(comparative.status) : "No comparative statement",
         href: null,
@@ -229,7 +232,7 @@ export default function GoodsReceiptDetailPage() {
       },
       {
         key: "po",
-        label: "Purchase Order",
+        label: tScm("k_3c45b957fdc8"),
         value: receipt.purchaseOrder.poNumber,
         helperText: toStageLabel(receipt.purchaseOrder.status),
         href: `/admin/scm/purchase-orders/${receipt.purchaseOrder.id}`,
@@ -237,7 +240,7 @@ export default function GoodsReceiptDetailPage() {
       },
       {
         key: "grn",
-        label: "Goods Receipt",
+        label: tScm("k_c60a3196b88f"),
         value: receipt.receiptNumber,
         helperText: toStageLabel(receipt.matchSummary.status),
         href: `/admin/scm/goods-receipts/${receipt.id}`,
@@ -245,7 +248,7 @@ export default function GoodsReceiptDetailPage() {
       },
       {
         key: "invoice",
-        label: "Invoice",
+        label: tScm("k_f9f38818c406"),
         value: latestInvoice?.invoiceNumber || "Not posted",
         helperText: latestInvoice ? toStageLabel(latestInvoice.status) : "Awaiting AP posting",
         href: null,
@@ -275,7 +278,7 @@ export default function GoodsReceiptDetailPage() {
 
   const uploadAttachment = async () => {
     if (!receipt || !attachmentDraft.file) {
-      toast.error("Select a file first");
+      toast.error(tScm("k_5c4a0a78d147"));
       return;
     }
     try {
@@ -295,7 +298,7 @@ export default function GoodsReceiptDetailPage() {
         }),
       });
       await readJson(response, "Failed to upload attachment");
-      toast.success("Attachment uploaded");
+      toast.success(tScm("k_f68202e2fbeb"));
       setAttachmentDraft({ type: attachmentDraft.type, note: "", file: null });
       await loadReceipt();
     } catch (error: any) {
@@ -306,7 +309,7 @@ export default function GoodsReceiptDetailPage() {
   };
 
   if (loading) {
-    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">Loading goods receipt workspace...</p></div>;
+    return <div className="space-y-6 p-6"><p className="text-sm text-muted-foreground">{tScm("k_8e62c492d060")}</p></div>;
   }
 
   if (!receipt) {
@@ -315,10 +318,10 @@ export default function GoodsReceiptDetailPage() {
         <Button asChild variant="outline">
           <Link href="/admin/scm/goods-receipts">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back To Register
+            {tScm("k_1763e9ae8697")}
           </Link>
         </Button>
-        <Card><CardContent className="py-10 text-sm text-muted-foreground">Goods receipt not found.</CardContent></Card>
+        <Card><CardContent className="py-10 text-sm text-muted-foreground">{tScm("k_4b8813fa07b8")}</CardContent></Card>
       </div>
     );
   }
@@ -333,7 +336,7 @@ export default function GoodsReceiptDetailPage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/admin/scm/goods-receipts">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back
+                {tScm("k_b52b36b7269f")}
               </Link>
             </Button>
             <ScmStatusChip status={receipt.matchSummary.status} />
@@ -347,18 +350,18 @@ export default function GoodsReceiptDetailPage() {
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadReceipt()} disabled={loading || busyKey !== null}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           {canManagePosting ? (
             <Button asChild variant="outline">
-              <Link href="/admin/scm/goods-receipts/new">New GRN</Link>
+              <Link href="/admin/scm/goods-receipts/new">{tScm("k_98670e97b3f7")}</Link>
             </Button>
           ) : null}
           {canManageSupplierInvoices ? (
             <Button asChild>
               <Link href={`/admin/scm/supplier-invoices?purchaseOrderId=${receipt.purchaseOrder.id}&goodsReceiptId=${receipt.id}`}>
                 <FileText className="mr-2 h-4 w-4" />
-                Generate Supplier Invoice
+                {tScm("k_95c6882c5421")}
               </Link>
             </Button>
           ) : null}
@@ -366,10 +369,10 @@ export default function GoodsReceiptDetailPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Warehouse" value={receipt.warehouse.name} hint={receipt.warehouse.code} />
-        <ScmStatCard label="Delivered" value={String(receipt.matchSummary.receivedQuantity)} hint={`Ordered ${receipt.matchSummary.orderedQuantity}`} />
-        <ScmStatCard label="Invoices" value={String(receipt.matchSummary.invoiceCount)} hint={`Invoiced qty ${receipt.matchSummary.invoicedQuantity}`} />
-        <ScmStatCard label="Evaluation" value={receipt.workflow.evaluationCompleted ? "Complete" : "Pending"} hint={receipt.workflow.evaluationCompleted ? "All roles submitted" : receipt.workflow.missingEvaluationRoles.map((role) => ROLE_LABEL[role]).join(", ")} />
+        <ScmStatCard label={tScm("k_298dff72dae2")} value={receipt.warehouse.name} hint={receipt.warehouse.code} />
+        <ScmStatCard label={tScm("k_eea956cde875")} value={String(receipt.matchSummary.receivedQuantity)} hint={`Ordered ${receipt.matchSummary.orderedQuantity}`} />
+        <ScmStatCard label={tScm("k_35f8f37b92ae")} value={String(receipt.matchSummary.invoiceCount)} hint={`Invoiced qty ${receipt.matchSummary.invoicedQuantity}`} />
+        <ScmStatCard label={tScm("k_ff7513853508")} value={receipt.workflow.evaluationCompleted ? "Complete" : "Pending"} hint={receipt.workflow.evaluationCompleted ? "All roles submitted" : receipt.workflow.missingEvaluationRoles.map((role) => ROLE_LABEL[role]).join(", ")} />
       </div>
 
       <ScmDocumentLifecycle stages={lifecycleStages} />
@@ -378,36 +381,36 @@ export default function GoodsReceiptDetailPage() {
         <div className="space-y-6">
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="items">Items</TabsTrigger>
-              <TabsTrigger value="documents">Documents</TabsTrigger>
-              <TabsTrigger value="evaluation">Evaluation</TabsTrigger>
-              <TabsTrigger value="history">History</TabsTrigger>
+              <TabsTrigger value="overview">{tScm("k_0efc2e6be4c2")}</TabsTrigger>
+              <TabsTrigger value="items">{tScm("k_44d25b5d1b6d")}</TabsTrigger>
+              <TabsTrigger value="documents">{tScm("k_687c82861c95")}</TabsTrigger>
+              <TabsTrigger value="evaluation">{tScm("k_ff7513853508")}</TabsTrigger>
+              <TabsTrigger value="history">{tScm("k_90ccd6497400")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview">
               <Card>
-                <CardHeader><CardTitle>Receipt Context</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_a7fca909d676")}</CardTitle></CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-2">
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Received At</div><p className="mt-2 text-sm">{fmtDate(receipt.receivedAt)}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Received By</div><p className="mt-2 text-sm">{receipt.receivedBy?.name || receipt.receivedBy?.email || "-"}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Requester Confirmation</div><p className="mt-2 text-sm">{receipt.requesterConfirmedAt ? fmtDate(receipt.requesterConfirmedAt) : "Pending"}</p></div>
-                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Receipt Note</div><p className="mt-2 text-sm whitespace-pre-wrap">{receipt.note || "-"}</p></div>
-                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">3-Way Match</div><p className="mt-2 text-sm">Ordered {receipt.matchSummary.orderedQuantity} • Delivered {receipt.matchSummary.receivedQuantity} • Invoiced {receipt.matchSummary.invoicedQuantity}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_3b8bf3ce0674")}</div><p className="mt-2 text-sm">{fmtDate(receipt.receivedAt)}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_f84f73c618d9")}</div><p className="mt-2 text-sm">{receipt.receivedBy?.name || receipt.receivedBy?.email || "-"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_413722dd6d27")}</div><p className="mt-2 text-sm">{receipt.requesterConfirmedAt ? fmtDate(receipt.requesterConfirmedAt) : "Pending"}</p></div>
+                  <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_505862ef4ca7")}</div><p className="mt-2 text-sm whitespace-pre-wrap">{receipt.note || "-"}</p></div>
+                  <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_ca63a1d38873")}</div><p className="mt-2 text-sm">{tScm("k_c9dd3b77c90c")} {receipt.matchSummary.orderedQuantity} {tScm("k_393f213a4981")} {receipt.matchSummary.receivedQuantity} {tScm("k_222a2714a213")} {receipt.matchSummary.invoicedQuantity}</p></div>
                 </CardContent>
               </Card>
             </TabsContent>
 
             <TabsContent value="items">
               <Card>
-                <CardHeader><CardTitle>Received Lines</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_3a878b713876")}</CardTitle></CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Item</TableHead>
-                        <TableHead>Qty Received</TableHead>
-                        <TableHead>Unit Cost</TableHead>
+                        <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                        <TableHead>{tScm("k_794fec425995")}</TableHead>
+                        <TableHead>{tScm("k_0105252023c5")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -429,14 +432,14 @@ export default function GoodsReceiptDetailPage() {
 
             <TabsContent value="documents" className="space-y-4">
               <Card>
-                <CardHeader><CardTitle>Requester Confirmation & Attachments</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_c6c0435f3e5d")}</CardTitle></CardHeader>
                 <CardContent className="space-y-4">
                   {receipt.workflow.canRequesterConfirm ? (
                     <div className="space-y-2 rounded-lg border p-3">
-                      <div className="text-sm font-medium">Requester Confirmation</div>
-                      <Textarea rows={3} placeholder="Confirmation note (optional)" value={confirmationNote} onChange={(event) => setConfirmationNote(event.target.value)} />
+                      <div className="text-sm font-medium">{tScm("k_413722dd6d27")}</div>
+                      <Textarea rows={3} placeholder={tScm("k_89f875a7686d")} value={confirmationNote} onChange={(event) => setConfirmationNote(event.target.value)} />
                       <Button onClick={() => void patchReceipt({ action: "requester_confirm", note: confirmationNote || undefined }, "Requester confirmation submitted", "requester_confirm")} disabled={busyKey === "requester_confirm"}>
-                        Confirm GRN
+                        {tScm("k_9d6320e1ed49")}
                       </Button>
                     </div>
                   ) : (
@@ -454,7 +457,7 @@ export default function GoodsReceiptDetailPage() {
                       <Button asChild variant="outline" size="sm" className="mt-3">
                         <a href={attachment.fileUrl} target="_blank" rel="noreferrer">
                           <ExternalLink className="mr-2 h-4 w-4" />
-                          Open Attachment
+                          {tScm("k_31d36f42d637")}
                         </a>
                       </Button>
                     </div>
@@ -462,16 +465,16 @@ export default function GoodsReceiptDetailPage() {
 
                   {receipt.workflow.canManageAttachments ? (
                     <div className="space-y-3 rounded-lg border p-3">
-                      <div className="text-sm font-medium">Upload Challan / Bill</div>
+                      <div className="text-sm font-medium">{tScm("k_707dbf591585")}</div>
                       <div className="grid gap-3 md:grid-cols-2">
                         <select className="h-10 rounded-md border bg-background px-3 text-sm" value={attachmentDraft.type} onChange={(event) => setAttachmentDraft((current) => ({ ...current, type: event.target.value as AttachmentType }))}>
-                          <option value="CHALLAN">CHALLAN</option>
-                          <option value="BILL">BILL</option>
-                          <option value="OTHER">OTHER</option>
+                          <option value="CHALLAN">{tScm("k_d1a5519a2b66")}</option>
+                          <option value="BILL">{tScm("k_fd66898490e2")}</option>
+                          <option value="OTHER">{tScm("k_957c024b38ce")}</option>
                         </select>
                         <Input type="file" onChange={(event) => setAttachmentDraft((current) => ({ ...current, file: event.target.files?.[0] || null }))} />
                       </div>
-                      <Textarea rows={2} placeholder="Attachment note (optional)" value={attachmentDraft.note} onChange={(event) => setAttachmentDraft((current) => ({ ...current, note: event.target.value }))} />
+                      <Textarea rows={2} placeholder={tScm("k_50e053baa1b9")} value={attachmentDraft.note} onChange={(event) => setAttachmentDraft((current) => ({ ...current, note: event.target.value }))} />
                       <Button onClick={() => void uploadAttachment()} disabled={busyKey === "upload_attachment"}>
                         {busyKey === "upload_attachment" ? "Uploading..." : "Upload Attachment"}
                       </Button>
@@ -483,7 +486,7 @@ export default function GoodsReceiptDetailPage() {
 
             <TabsContent value="evaluation">
               <Card>
-                <CardHeader><CardTitle>Vendor Performance Evaluation</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_7107e54eae9c")}</CardTitle></CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-3 md:grid-cols-3">
                     {(["REQUESTER", "PROCUREMENT", "ADMINISTRATION"] as ReceiptRole[]).map((role) => {
@@ -493,11 +496,11 @@ export default function GoodsReceiptDetailPage() {
                           <div className="font-medium">{ROLE_LABEL[role]}</div>
                           {evaluation ? (
                             <>
-                              <div className="mt-2 text-muted-foreground">Overall {evaluation.overallRating}/5</div>
-                              <div className="text-muted-foreground">Service {evaluation.serviceQualityRating ?? "N/A"} • Delivery {evaluation.deliveryRating ?? "N/A"} • Compliance {evaluation.complianceRating ?? "N/A"}</div>
+                              <div className="mt-2 text-muted-foreground">{tScm("k_8a528519bdab")} {evaluation.overallRating}/5</div>
+                              <div className="text-muted-foreground">{tScm("k_329cb8b6ba8c")} {evaluation.serviceQualityRating ?? "N/A"} {tScm("k_b2762a5a4ccd")} {evaluation.deliveryRating ?? "N/A"} {tScm("k_8f9ed2bd69cc")} {evaluation.complianceRating ?? "N/A"}</div>
                             </>
                           ) : (
-                            <div className="mt-2 text-muted-foreground">Pending</div>
+                            <div className="mt-2 text-muted-foreground">{tScm("k_96f608c16cef")}</div>
                           )}
                         </div>
                       );
@@ -506,25 +509,25 @@ export default function GoodsReceiptDetailPage() {
 
                   {receipt.workflow.allowedEvaluationRoles.length > 0 ? (
                     <div className="space-y-3 rounded-lg border p-3">
-                      <div className="text-sm font-medium">Submit Evaluation</div>
+                      <div className="text-sm font-medium">{tScm("k_15c5a50fce8e")}</div>
                       <div className="grid gap-3 md:grid-cols-5">
                         <select className="h-10 rounded-md border bg-background px-3 text-sm" value={evaluationDraft.evaluatorRole} onChange={(event) => setEvaluationDraft((current) => ({ ...current, evaluatorRole: event.target.value as ReceiptRole }))}>
                           {receipt.workflow.allowedEvaluationRoles.map((role) => (
                             <option key={role} value={role}>{ROLE_LABEL[role]}</option>
                           ))}
                         </select>
-                        <Input type="number" min={1} max={5} placeholder="Overall" value={evaluationDraft.overallRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, overallRating: event.target.value }))} />
-                        <Input type="number" min={1} max={5} placeholder="Service" value={evaluationDraft.serviceQualityRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, serviceQualityRating: event.target.value }))} />
-                        <Input type="number" min={1} max={5} placeholder="Delivery" value={evaluationDraft.deliveryRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, deliveryRating: event.target.value }))} />
-                        <Input type="number" min={1} max={5} placeholder="Compliance" value={evaluationDraft.complianceRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, complianceRating: event.target.value }))} />
+                        <Input type="number" min={1} max={5} placeholder={tScm("k_8a528519bdab")} value={evaluationDraft.overallRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, overallRating: event.target.value }))} />
+                        <Input type="number" min={1} max={5} placeholder={tScm("k_329cb8b6ba8c")} value={evaluationDraft.serviceQualityRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, serviceQualityRating: event.target.value }))} />
+                        <Input type="number" min={1} max={5} placeholder={tScm("k_9631af52c66f")} value={evaluationDraft.deliveryRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, deliveryRating: event.target.value }))} />
+                        <Input type="number" min={1} max={5} placeholder={tScm("k_68f0ae4911f9")} value={evaluationDraft.complianceRating} onChange={(event) => setEvaluationDraft((current) => ({ ...current, complianceRating: event.target.value }))} />
                       </div>
-                      <Textarea rows={2} placeholder="Evaluation note (optional)" value={evaluationDraft.comment} onChange={(event) => setEvaluationDraft((current) => ({ ...current, comment: event.target.value }))} />
+                      <Textarea rows={2} placeholder={tScm("k_8b4354cfdb9b")} value={evaluationDraft.comment} onChange={(event) => setEvaluationDraft((current) => ({ ...current, comment: event.target.value }))} />
                       <Button onClick={() => void patchReceipt({ action: "submit_evaluation", evaluatorRole: evaluationDraft.evaluatorRole, overallRating: Number(evaluationDraft.overallRating), serviceQualityRating: evaluationDraft.serviceQualityRating ? Number(evaluationDraft.serviceQualityRating) : null, deliveryRating: evaluationDraft.deliveryRating ? Number(evaluationDraft.deliveryRating) : null, complianceRating: evaluationDraft.complianceRating ? Number(evaluationDraft.complianceRating) : null, comment: evaluationDraft.comment || null }, `${ROLE_LABEL[evaluationDraft.evaluatorRole]} evaluation submitted`, "submit_evaluation")} disabled={busyKey === "submit_evaluation"}>
-                        Submit Evaluation
+                        {tScm("k_15c5a50fce8e")}
                       </Button>
                     </div>
                   ) : (
-                    <p className="text-sm text-muted-foreground">You do not have an evaluation role for this GRN.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_3fd25aa3bffa")}</p>
                   )}
                 </CardContent>
               </Card>
@@ -532,10 +535,10 @@ export default function GoodsReceiptDetailPage() {
 
             <TabsContent value="history">
               <Card>
-                <CardHeader><CardTitle>Invoice and Match History</CardTitle></CardHeader>
+                <CardHeader><CardTitle>{tScm("k_85857d78bf77")}</CardTitle></CardHeader>
                 <CardContent className="space-y-3">
                   {receipt.invoices.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No supplier invoice has been posted against this purchase order yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_5d15cd21c8f3")}</p>
                   ) : (
                     receipt.invoices.map((invoice) => (
                       <div key={invoice.id} className="rounded-lg border p-3">
@@ -543,7 +546,7 @@ export default function GoodsReceiptDetailPage() {
                           <div className="font-medium">{invoice.invoiceNumber}</div>
                           <ScmStatusChip status={invoice.status} />
                         </div>
-                        <div className="mt-2 text-sm text-muted-foreground">Total {Number(invoice.total).toFixed(2)}</div>
+                        <div className="mt-2 text-sm text-muted-foreground">{tScm("k_b25928c69902")} {Number(invoice.total).toFixed(2)}</div>
                       </div>
                     ))
                   )}
@@ -555,22 +558,22 @@ export default function GoodsReceiptDetailPage() {
 
         <div className="space-y-6">
           <Card>
-            <CardHeader><CardTitle>People</CardTitle></CardHeader>
+            <CardHeader><CardTitle>{tScm("k_b37554f695b1")}</CardTitle></CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Received By</div><div className="mt-1">{receipt.receivedBy?.name || receipt.receivedBy?.email || "-"}</div></div>
-              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Requester Confirmed By</div><div className="mt-1">{receipt.requesterConfirmedBy?.name || receipt.requesterConfirmedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_f84f73c618d9")}</div><div className="mt-1">{receipt.receivedBy?.name || receipt.receivedBy?.email || "-"}</div></div>
+              <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_55ec4815a129")}</div><div className="mt-1">{receipt.requesterConfirmedBy?.name || receipt.requesterConfirmedBy?.email || "-"}</div></div>
             </CardContent>
           </Card>
 
           <ScmNextStepPanel
             title={receipt.matchSummary.status}
-            subtitle="This panel keeps confirmation, invoice review, document upload, and evaluation inside the single GRN workspace."
+            subtitle={tScm("k_61714c8bf8f6")}
             actions={
               canManageSupplierInvoices
                 ? [
                     {
                       key: "generate_supplier_invoice",
-                      label: "Generate Supplier Invoice",
+                      label: tScm("k_95c6882c5421"),
                       onClick: () =>
                         router.push(
                           `/admin/scm/supplier-invoices?purchaseOrderId=${receipt.purchaseOrder.id}&goodsReceiptId=${receipt.id}`,
@@ -579,7 +582,7 @@ export default function GoodsReceiptDetailPage() {
                   ]
                 : []
             }
-            emptyMessage="No direct workflow action is required right now."
+            emptyMessage={tScm("k_cef37ef168fa")}
           >
             <div className="space-y-2 text-sm text-muted-foreground">
               <div>{receipt.requesterConfirmedAt ? `Confirmed ${fmtDate(receipt.requesterConfirmedAt)}` : "Requester confirmation pending"}</div>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -60,6 +62,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 }
 
 export default function NewPurchaseRequisitionPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
   const [variants, setVariants] = useState<Variant[]>([]);
@@ -173,13 +176,13 @@ export default function NewPurchaseRequisitionPage() {
 
   const createRequisition = async () => {
     if (!warehouseId) {
-      toast.error("Warehouse is required");
+      toast.error(tScm("k_8e8ea1054915"));
       return;
     }
 
     const validItems = items.filter((item) => item.productVariantId && Number(item.quantityRequested) > 0);
     if (validItems.length === 0) {
-      toast.error("At least one valid line item is required");
+      toast.error(tScm("k_1ce5a25eaeb0"));
       return;
     }
 
@@ -225,7 +228,7 @@ export default function NewPurchaseRequisitionPage() {
       });
 
       const created = await readJson<{ id: number }>(response, "Failed to create purchase requisition");
-      toast.success("Purchase requisition created");
+      toast.success(tScm("k_2ca891706785"));
       router.push(`/admin/scm/purchase-requisitions/${created.id}`);
     } catch (error: any) {
       await Promise.all(uploadedFileUrls.map((fileUrl) => deleteLocalUpload(fileUrl)));
@@ -242,19 +245,19 @@ export default function NewPurchaseRequisitionPage() {
           <Button asChild variant="outline" size="sm">
             <Link href="/admin/scm/purchase-requisitions">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back To Register
+              {tScm("k_1763e9ae8697")}
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold">New Purchase Requisition</h1>
+            <h1 className="text-2xl font-bold">{tScm("k_b1a907b8a356")}</h1>
             <p className="text-sm text-muted-foreground">
-              Build the requisition in sequence: planning, line items, supporting documents, then save the draft.
+              {tScm("k_bda7616d2d91")}
             </p>
           </div>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" onClick={resetForm} disabled={saving}>
-            Clear
+            {tScm("k_719ea396ad92")}
           </Button>
           <Button onClick={() => void createRequisition()} disabled={saving || loading}>
             {saving ? "Saving..." : "Create Draft"}
@@ -263,27 +266,27 @@ export default function NewPurchaseRequisitionPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Warehouse" value={selectedWarehouse?.name || "Not selected"} hint={selectedWarehouse?.code || "Choose operating warehouse"} />
-        <ScmStatCard label="Line Items" value={String(selectedItems.length)} hint="Validated procurement lines" />
-        <ScmStatCard label="Attachments" value={String(attachments.length)} hint="Supporting documents uploaded" />
-        <ScmStatCard label="Estimated Amount" value={estimatedAmount || "0.00"} hint={budgetCode || "Budget code pending"} />
+        <ScmStatCard label={tScm("k_298dff72dae2")} value={selectedWarehouse?.name || "Not selected"} hint={selectedWarehouse?.code || "Choose operating warehouse"} />
+        <ScmStatCard label={tScm("k_7cea20a1a00e")} value={String(selectedItems.length)} hint={tScm("k_fa0633a13f98")} />
+        <ScmStatCard label={tScm("k_6771ade6e896")} value={String(attachments.length)} hint={tScm("k_143e819fb605")} />
+        <ScmStatCard label={tScm("k_7b4964797053")} value={estimatedAmount || "0.00"} hint={budgetCode || "Budget code pending"} />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>1. Planning Context</CardTitle>
+              <CardTitle>{tScm("k_34301a7ccc8c")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-2">
               <div>
-                <Label>MRF Title</Label>
-                <Input value={title} onChange={(event) => setTitle(event.target.value)} placeholder="April apparel refill" />
+                <Label>{tScm("k_367675b2142f")}</Label>
+                <Input value={title} onChange={(event) => setTitle(event.target.value)} placeholder={tScm("k_d47963204654")} />
               </div>
               <div>
-                <Label>Warehouse</Label>
+                <Label>{tScm("k_298dff72dae2")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={warehouseId} onChange={(event) => setWarehouseId(event.target.value)}>
-                  <option value="">Select warehouse</option>
+                  <option value="">{tScm("k_cfab2ae6ca21")}</option>
                   {warehouses.map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>
                       {warehouse.name} ({warehouse.code})
@@ -292,58 +295,58 @@ export default function NewPurchaseRequisitionPage() {
                 </select>
               </div>
               <div>
-                <Label>Purpose</Label>
-                <Input value={purpose} onChange={(event) => setPurpose(event.target.value)} placeholder="Festival stock refill" />
+                <Label>{tScm("k_a0fb821bdaf9")}</Label>
+                <Input value={purpose} onChange={(event) => setPurpose(event.target.value)} placeholder={tScm("k_055e139d452b")} />
               </div>
               <div>
-                <Label>Needed By</Label>
+                <Label>{tScm("k_7b1121c3271f")}</Label>
                 <Input type="date" value={neededBy} onChange={(event) => setNeededBy(event.target.value)} />
               </div>
               <div>
-                <Label>Budget Code</Label>
-                <Input value={budgetCode} onChange={(event) => setBudgetCode(event.target.value)} placeholder="BUD-APP-2026-04" />
+                <Label>{tScm("k_88f4ea85a48f")}</Label>
+                <Input value={budgetCode} onChange={(event) => setBudgetCode(event.target.value)} placeholder={tScm("k_14085eebcd80")} />
               </div>
               <div>
-                <Label>BOQ Reference</Label>
-                <Input value={boqReference} onChange={(event) => setBoqReference(event.target.value)} placeholder="BOQ-APR-01" />
+                <Label>{tScm("k_f3ffde94f687")}</Label>
+                <Input value={boqReference} onChange={(event) => setBoqReference(event.target.value)} placeholder={tScm("k_91455af71045")} />
               </div>
               <div>
-                <Label>Estimated Amount</Label>
+                <Label>{tScm("k_7b4964797053")}</Label>
                 <Input type="number" min="0" step="0.01" value={estimatedAmount} onChange={(event) => setEstimatedAmount(event.target.value)} placeholder="0.00" />
               </div>
               <div>
-                <Label>Required Endorsements</Label>
+                <Label>{tScm("k_cf356bf4d9ce")}</Label>
                 <Input type="number" min="1" value={endorsementRequiredCount} onChange={(event) => setEndorsementRequiredCount(event.target.value)} />
               </div>
               <div className="md:col-span-2">
-                <Label>Specification</Label>
-                <Textarea rows={4} value={specification} onChange={(event) => setSpecification(event.target.value)} placeholder="Technical specification and quality requirements..." />
+                <Label>{tScm("k_1ccf5d25dfed")}</Label>
+                <Textarea rows={4} value={specification} onChange={(event) => setSpecification(event.target.value)} placeholder={tScm("k_2eeca991e648")} />
               </div>
               <div className="md:col-span-2">
-                <Label>Planning Note</Label>
-                <Textarea rows={4} value={planningNote} onChange={(event) => setPlanningNote(event.target.value)} placeholder="Procurement planning assumptions, project reference, or sourcing note..." />
+                <Label>{tScm("k_5ecebcab21fd")}</Label>
+                <Textarea rows={4} value={planningNote} onChange={(event) => setPlanningNote(event.target.value)} placeholder={tScm("k_e06a85e7a98a")} />
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>2. Line Items</CardTitle>
+              <CardTitle>{tScm("k_b9408be854cc")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between">
-                <p className="text-sm text-muted-foreground">Select exact variants and quantities. Duplicate variants are discouraged.</p>
+                <p className="text-sm text-muted-foreground">{tScm("k_30a46f2a7b9c")}</p>
                 <Button variant="outline" size="sm" onClick={() => setItems((prev) => [...prev, emptyLine()])}>
                   <Plus className="mr-2 h-4 w-4" />
-                  Add Line
+                  {tScm("k_63dcfb6701b9")}
                 </Button>
               </div>
               {items.map((item, index) => (
                 <div key={index} className="grid gap-3 rounded-lg border p-3 md:grid-cols-[2fr_1fr_2fr_auto]">
                   <div>
-                    <Label>Variant</Label>
+                    <Label>{tScm("k_cc91b1ea2c16")}</Label>
                     <select className="w-full rounded-md border bg-background px-3 py-2" value={item.productVariantId} onChange={(event) => updateItem(index, "productVariantId", event.target.value)}>
-                      <option value="">Select variant</option>
+                      <option value="">{tScm("k_3785e871dc02")}</option>
                       {variants.map((variant) => (
                         <option key={variant.id} value={variant.id}>
                           {variant.product?.name || "Variant"} ({variant.sku})
@@ -352,12 +355,12 @@ export default function NewPurchaseRequisitionPage() {
                     </select>
                   </div>
                   <div>
-                    <Label>Qty</Label>
+                    <Label>{tScm("k_1e5ff9e500c2")}</Label>
                     <Input type="number" min="1" value={item.quantityRequested} onChange={(event) => updateItem(index, "quantityRequested", event.target.value)} />
                   </div>
                   <div>
-                    <Label>Description</Label>
-                    <Input value={item.description} onChange={(event) => updateItem(index, "description", event.target.value)} placeholder="Optional internal description" />
+                    <Label>{tScm("k_55f8ebc805e6")}</Label>
+                    <Input value={item.description} onChange={(event) => updateItem(index, "description", event.target.value)} placeholder={tScm("k_06d78feb5eac")} />
                   </div>
                   <div className="flex items-end">
                     <Button variant="outline" size="icon" onClick={() => setItems((prev) => (prev.length === 1 ? prev : prev.filter((_, itemIndex) => itemIndex !== index)))} disabled={items.length === 1}>
@@ -371,33 +374,33 @@ export default function NewPurchaseRequisitionPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>3. Supporting Documents</CardTitle>
+              <CardTitle>{tScm("k_e4f9f5d15379")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="rounded-lg border border-dashed p-4">
                 <div className="mb-2 flex items-center gap-2 text-sm font-medium">
                   <Paperclip className="h-4 w-4" />
-                  Upload supporting files
+                  {tScm("k_a127925a2d60")}
                 </div>
                 <Input type="file" multiple onChange={(event) => addAttachmentRows(event.target.files)} />
-                <p className="mt-2 text-xs text-muted-foreground">Up to 20 files. Notes can be added per file.</p>
+                <p className="mt-2 text-xs text-muted-foreground">{tScm("k_61760d179663")}</p>
               </div>
               {attachments.length > 0 ? (
                 <div className="space-y-2">
                   {attachments.map((attachment, index) => (
                     <div key={`${attachment.fileName}-${index}`} className="grid gap-2 rounded-md border p-2 md:grid-cols-[2fr_3fr_auto]">
                       <div className="text-sm text-muted-foreground">{attachment.fileName}</div>
-                      <Input placeholder="Attachment note (optional)" value={attachment.note || ""} onChange={(event) => updateAttachmentNote(index, event.target.value)} />
+                      <Input placeholder={tScm("k_50e053baa1b9")} value={attachment.note || ""} onChange={(event) => updateAttachmentNote(index, event.target.value)} />
                       <Button type="button" variant="outline" size="sm" onClick={() => removeAttachment(index)}>
-                        Remove
+                        {tScm("k_e963907dac5c")}
                       </Button>
                     </div>
                   ))}
                 </div>
               ) : null}
               <div>
-                <Label>Notes</Label>
-                <Textarea rows={4} value={note} onChange={(event) => setNote(event.target.value)} placeholder="General note for the requisition..." />
+                <Label>{tScm("k_70440046a3dc")}</Label>
+                <Textarea rows={4} value={note} onChange={(event) => setNote(event.target.value)} placeholder={tScm("k_d9d0bf2f6f8a")} />
               </div>
             </CardContent>
           </Card>
@@ -406,35 +409,35 @@ export default function NewPurchaseRequisitionPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Submission Checklist</CardTitle>
+              <CardTitle>{tScm("k_d9714b944053")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>1. Warehouse selected</div>
-              <div className={selectedItems.length > 0 ? "text-foreground" : "text-muted-foreground"}>2. At least one line item added</div>
-              <div className={purpose ? "text-foreground" : "text-muted-foreground"}>3. Purpose captured</div>
-              <div className={budgetCode ? "text-foreground" : "text-muted-foreground"}>4. Budget code captured</div>
+              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_ee2b430356bc")}</div>
+              <div className={selectedItems.length > 0 ? "text-foreground" : "text-muted-foreground"}>{tScm("k_7f54a8059022")}</div>
+              <div className={purpose ? "text-foreground" : "text-muted-foreground"}>{tScm("k_e87ed78c946f")}</div>
+              <div className={budgetCode ? "text-foreground" : "text-muted-foreground"}>{tScm("k_3d9b758243b3")}</div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Current Draft Summary</CardTitle>
+              <CardTitle>{tScm("k_ecb221545370")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Warehouse</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_298dff72dae2")}</div>
                 <div className="mt-1 font-medium">{selectedWarehouse ? `${selectedWarehouse.name} (${selectedWarehouse.code})` : "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Needed By</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_7b1121c3271f")}</div>
                 <div className="mt-1 font-medium">{neededBy || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Lines</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_c6fd3870c86e")}</div>
                 <div className="mt-1 font-medium">{selectedItems.length}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Attachments</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_6771ade6e896")}</div>
                 <div className="mt-1 font-medium">{attachments.length}</div>
               </div>
             </CardContent>

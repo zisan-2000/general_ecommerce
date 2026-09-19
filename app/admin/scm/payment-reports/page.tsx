@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -49,6 +52,7 @@ function fmtDate(value: Date) {
 }
 
 export default function PaymentReportsPage() {
+  const tScm = useTranslations("ScmAuto");
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -123,7 +127,7 @@ export default function PaymentReportsPage() {
       <div className="p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access payment reports.
+            {tScm("k_86df0a07a19e")}
           </CardContent>
         </Card>
       </div>
@@ -134,31 +138,31 @@ export default function PaymentReportsPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Vendor Payment Reports</h1>
+          <h1 className="text-2xl font-bold">{tScm("k_7490d4ab6746")}</h1>
           <p className="text-sm text-muted-foreground">
-            Review vendor-wise payment activity, settlement totals, and invoice references.
+            {tScm("k_cf330f89594e")}
           </p>
         </div>
         <Button variant="outline" onClick={() => void loadReport()} disabled={loading}>
           <RefreshCw className={loading ? "h-4 w-4 animate-spin" : "h-4 w-4"} />
-          Refresh
+          {tScm("k_56e3badc4e6c")}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Filters</CardTitle>
-          <CardDescription>Filter by supplier and payment date.</CardDescription>
+          <CardTitle>{tScm("k_96e578211aa2")}</CardTitle>
+          <CardDescription>{tScm("k_3dea62606bd0")}</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-4">
           <div className="space-y-2">
-            <Label>Supplier</Label>
+            <Label>{tScm("k_55edd462872a")}</Label>
             <select
               className="rounded-md border bg-background px-3 py-2"
               value={supplierId}
               onChange={(e) => setSupplierId(e.target.value)}
             >
-              <option value="">All suppliers</option>
+              <option value="">{tScm("k_471f0ea6ecfc")}</option>
               {suppliers.map((supplier) => (
                 <option key={supplier.id} value={supplier.id}>
                   {supplier.name} ({supplier.code})
@@ -167,11 +171,11 @@ export default function PaymentReportsPage() {
             </select>
           </div>
           <div className="space-y-2">
-            <Label>From</Label>
+            <Label>{tScm("k_3f66052a107e")}</Label>
             <Input type="date" value={from} onChange={(e) => setFrom(e.target.value)} />
           </div>
           <div className="space-y-2">
-            <Label>To</Label>
+            <Label>{tScm("k_ae79ea1e9c63")}</Label>
             <Input type="date" value={to} onChange={(e) => setTo(e.target.value)} />
           </div>
         </CardContent>
@@ -180,19 +184,19 @@ export default function PaymentReportsPage() {
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase text-muted-foreground">Suppliers Paid</div>
+            <div className="text-xs uppercase text-muted-foreground">{tScm("k_5f7f285a76f1")}</div>
             <div className="text-xl font-semibold">{report?.summary.length ?? 0}</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase text-muted-foreground">Payments</div>
+            <div className="text-xs uppercase text-muted-foreground">{tScm("k_44357ae55a21")}</div>
             <div className="text-xl font-semibold">{totals.paymentCount}</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase text-muted-foreground">Total Paid</div>
+            <div className="text-xs uppercase text-muted-foreground">{tScm("k_6a151d73d61b")}</div>
             <div className="text-xl font-semibold">{totals.totalPaid.toFixed(2)}</div>
           </CardContent>
         </Card>
@@ -200,16 +204,16 @@ export default function PaymentReportsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Vendor Summary</CardTitle>
-          <CardDescription>Aggregated totals by supplier.</CardDescription>
+          <CardTitle>{tScm("k_d5f0085bef27")}</CardTitle>
+          <CardDescription>{tScm("k_86bdf4751158")}</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Supplier</TableHead>
-                <TableHead className="text-right">Payments</TableHead>
-                <TableHead className="text-right">Total Paid</TableHead>
+                <TableHead>{tScm("k_55edd462872a")}</TableHead>
+                <TableHead className="text-right">{tScm("k_44357ae55a21")}</TableHead>
+                <TableHead className="text-right">{tScm("k_6a151d73d61b")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -232,7 +236,7 @@ export default function PaymentReportsPage() {
               ) : (
                 <TableRow>
                   <TableCell colSpan={3} className="text-center text-muted-foreground">
-                    No payment summary available.
+                    {tScm("k_9339a04cacd8")}
                   </TableCell>
                 </TableRow>
               )}
@@ -243,19 +247,19 @@ export default function PaymentReportsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Payment Register</CardTitle>
-          <CardDescription>Detailed payment transactions.</CardDescription>
+          <CardTitle>{tScm("k_92b49b682c93")}</CardTitle>
+          <CardDescription>{tScm("k_ed635a76268d")}</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Payment</TableHead>
-                <TableHead>Supplier</TableHead>
-                <TableHead>Invoice</TableHead>
-                <TableHead>Method</TableHead>
-                <TableHead className="text-right">Amount</TableHead>
-                <TableHead>Date</TableHead>
+                <TableHead>{tScm("k_b41a92bed032")}</TableHead>
+                <TableHead>{tScm("k_55edd462872a")}</TableHead>
+                <TableHead>{tScm("k_f9f38818c406")}</TableHead>
+                <TableHead>{tScm("k_88306943fea7")}</TableHead>
+                <TableHead className="text-right">{tScm("k_43dc8532f7e5")}</TableHead>
+                <TableHead>{tScm("k_eb9a4bc1c0c1")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -304,7 +308,7 @@ export default function PaymentReportsPage() {
               ) : (
                 <TableRow>
                   <TableCell colSpan={6} className="text-center text-muted-foreground">
-                    No payment records found.
+                    {tScm("k_49aaa74061c7")}
                   </TableCell>
                 </TableRow>
               )}

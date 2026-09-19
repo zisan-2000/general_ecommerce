@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -65,6 +67,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 }
 
 export default function NewMaterialRequestPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -153,7 +156,7 @@ export default function NewMaterialRequestPage() {
 
   const createMaterialRequest = async () => {
     if (!warehouseId) {
-      toast.error("Warehouse is required");
+      toast.error(tScm("k_8e8ea1054915"));
       return;
     }
 
@@ -172,7 +175,7 @@ export default function NewMaterialRequestPage() {
       );
 
     if (payloadItems.length === 0) {
-      toast.error("At least one valid request line is required");
+      toast.error(tScm("k_f3e28180f83d"));
       return;
     }
 
@@ -218,7 +221,7 @@ export default function NewMaterialRequestPage() {
         response,
         "Failed to create material request",
       );
-      toast.success("Material request created");
+      toast.success(tScm("k_895208e4def2"));
       router.push(
         `/admin/scm/material-requests?search=${encodeURIComponent(created.requestNumber)}&focus=my-active`,
       );
@@ -235,10 +238,10 @@ export default function NewMaterialRequestPage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
+            <CardTitle>{tScm("k_3dab5f6012e3")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            You do not have permission to create material requests.
+            {tScm("k_67d263e24b04")}
           </CardContent>
         </Card>
       </div>
@@ -248,47 +251,47 @@ export default function NewMaterialRequestPage() {
   return (
     <div className="space-y-6 p-6">
       <ScmSectionHeader
-        title="Create Material Request"
-        description="Use the guided internal request flow to define warehouse, demand lines, support documents, and timing before workflow submission."
+        title={tScm("k_117d7d6f7252")}
+        description={tScm("k_4fd010f961db")}
         action={
           <div className="flex flex-wrap gap-2">
             <Button asChild variant="outline">
               <Link href="/admin/scm/material-requests">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back To Register
+                {tScm("k_1763e9ae8697")}
               </Link>
             </Button>
             <Button variant="outline" onClick={() => void loadReferenceData()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
         }
       />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <ScmStatCard label="Warehouses" value={String(warehouses.length)} hint="Eligible store or warehouse locations" />
-        <ScmStatCard label="Variants" value={String(variants.length)} hint="Item master available for request lines" />
-        <ScmStatCard label="Attachments" value={String(attachments.length)} hint="Supporting files to include with the draft" />
+        <ScmStatCard label={tScm("k_65d6e169cb6e")} value={String(warehouses.length)} hint={tScm("k_85ac8188df6f")} />
+        <ScmStatCard label={tScm("k_1bc3d368f8ad")} value={String(variants.length)} hint={tScm("k_2785e9a6eebe")} />
+        <ScmStatCard label={tScm("k_6771ade6e896")} value={String(attachments.length)} hint={tScm("k_13773e44e15d")} />
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 1: Planning Context</CardTitle>
+          <CardTitle>{tScm("k_f49c81f564ad")}</CardTitle>
           <CardDescription>
-            Define where the request belongs, why it exists, and any planning or budget reference.
+            {tScm("k_37cd418f3dfa")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <div className="space-y-2">
-              <Label>Warehouse</Label>
+              <Label>{tScm("k_298dff72dae2")}</Label>
               <select
                 className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                 value={warehouseId}
                 onChange={(event) => setWarehouseId(event.target.value)}
               >
-                <option value="">Select warehouse</option>
+                <option value="">{tScm("k_cfab2ae6ca21")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -297,15 +300,15 @@ export default function NewMaterialRequestPage() {
               </select>
             </div>
             <div className="space-y-2">
-              <Label>Title</Label>
+              <Label>{tScm("k_768e0c1c6957")}</Label>
               <Input value={title} onChange={(event) => setTitle(event.target.value)} />
             </div>
             <div className="space-y-2">
-              <Label>Purpose</Label>
+              <Label>{tScm("k_a0fb821bdaf9")}</Label>
               <Input value={purpose} onChange={(event) => setPurpose(event.target.value)} />
             </div>
             <div className="space-y-2">
-              <Label>Required By</Label>
+              <Label>{tScm("k_e0951fc243c4")}</Label>
               <Input
                 type="datetime-local"
                 value={requiredBy}
@@ -316,34 +319,34 @@ export default function NewMaterialRequestPage() {
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <div className="space-y-2">
-              <Label>Budget Code</Label>
+              <Label>{tScm("k_88f4ea85a48f")}</Label>
               <Input
                 value={budgetCode}
                 onChange={(event) => setBudgetCode(event.target.value)}
-                placeholder="BUDGET-2026-01"
+                placeholder={tScm("k_70364fac66e4")}
               />
             </div>
             <div className="space-y-2">
-              <Label>BOQ Reference</Label>
+              <Label>{tScm("k_f3ffde94f687")}</Label>
               <Input
                 value={boqReference}
                 onChange={(event) => setBoqReference(event.target.value)}
-                placeholder="BOQ-RD-04"
+                placeholder={tScm("k_f988555c6031")}
               />
             </div>
             <div className="space-y-2">
-              <Label>General Note</Label>
+              <Label>{tScm("k_e5e22bc4454b")}</Label>
               <Input value={note} onChange={(event) => setNote(event.target.value)} />
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label>Specification</Label>
+            <Label>{tScm("k_1ccf5d25dfed")}</Label>
             <Textarea
               rows={3}
               value={specification}
               onChange={(event) => setSpecification(event.target.value)}
-              placeholder="Technical specification, usage purpose, and quality constraints"
+              placeholder={tScm("k_5f40ecba662d")}
             />
           </div>
         </CardContent>
@@ -351,21 +354,21 @@ export default function NewMaterialRequestPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 2: Request Lines</CardTitle>
+          <CardTitle>{tScm("k_ea9192fe1ee9")}</CardTitle>
           <CardDescription>
-            Define the requested variants, quantity, and optional description per line.
+            {tScm("k_9337324131d9")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
-            <Label className="text-sm font-medium">Request Items</Label>
+            <Label className="text-sm font-medium">{tScm("k_593e5326d12e")}</Label>
             <Button
               type="button"
               variant="outline"
               onClick={() => setItems((current) => [...current, emptyLine()])}
             >
               <Plus className="mr-2 h-4 w-4" />
-              Add Line
+              {tScm("k_63dcfb6701b9")}
             </Button>
           </div>
 
@@ -375,13 +378,13 @@ export default function NewMaterialRequestPage() {
               className="grid gap-3 rounded-lg border p-3 md:grid-cols-[2fr_1fr_2fr_auto]"
             >
               <div className="space-y-2">
-                <Label>Variant</Label>
+                <Label>{tScm("k_cc91b1ea2c16")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2 text-sm"
                   value={item.productVariantId}
                   onChange={(event) => updateItem(index, "productVariantId", event.target.value)}
                 >
-                  <option value="">Select variant</option>
+                  <option value="">{tScm("k_3785e871dc02")}</option>
                   {variants.map((variant) => (
                     <option key={variant.id} value={variant.id}>
                       {variant.product?.name || "Variant"} ({variant.sku})
@@ -390,7 +393,7 @@ export default function NewMaterialRequestPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Qty</Label>
+                <Label>{tScm("k_1e5ff9e500c2")}</Label>
                 <Input
                   type="number"
                   min={1}
@@ -399,7 +402,7 @@ export default function NewMaterialRequestPage() {
                 />
               </div>
               <div className="space-y-2">
-                <Label>Description</Label>
+                <Label>{tScm("k_55f8ebc805e6")}</Label>
                 <Input
                   value={item.description}
                   onChange={(event) => updateItem(index, "description", event.target.value)}
@@ -429,15 +432,15 @@ export default function NewMaterialRequestPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 3: Supporting Documents</CardTitle>
+          <CardTitle>{tScm("k_4ec5e809eebf")}</CardTitle>
           <CardDescription>
-            Attach BOQ, specification, scope note, or any supporting evidence before saving the draft.
+            {tScm("k_a0c7ab115fa9")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
-            <Label>Supporting Documents</Label>
-            <div className="text-xs text-muted-foreground">Max 20 files</div>
+            <Label>{tScm("k_8851c0e9f744")}</Label>
+            <div className="text-xs text-muted-foreground">{tScm("k_8c8d8b73e548")}</div>
           </div>
           <Input type="file" multiple onChange={(event) => addAttachmentRows(event.target.files)} />
 
@@ -450,7 +453,7 @@ export default function NewMaterialRequestPage() {
                 >
                   <div className="text-sm text-muted-foreground">{attachment.file.name}</div>
                   <Input
-                    placeholder="Attachment note (optional)"
+                    placeholder={tScm("k_50e053baa1b9")}
                     value={attachment.note}
                     onChange={(event) => updateAttachmentNote(index, event.target.value)}
                   />
@@ -460,14 +463,14 @@ export default function NewMaterialRequestPage() {
                     size="sm"
                     onClick={() => removeAttachment(index)}
                   >
-                    Remove
+                    {tScm("k_e963907dac5c")}
                   </Button>
                 </div>
               ))}
             </div>
           ) : (
             <p className="text-sm text-muted-foreground">
-              No attachments added yet. You can still create the request without files.
+              {tScm("k_6f156ce6ba57")}
             </p>
           )}
         </CardContent>
@@ -475,19 +478,18 @@ export default function NewMaterialRequestPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 4: Save Draft</CardTitle>
+          <CardTitle>{tScm("k_a7226fbcbf6c")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="rounded-lg border bg-muted/30 p-4 text-sm text-muted-foreground">
-            After creation, the request will appear in the register and can then move through supervisor,
-            project manager, and administration workflow.
+            {tScm("k_a5672b71e123")}
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={resetForm} disabled={saving}>
-              Clear
+              {tScm("k_719ea396ad92")}
             </Button>
             <Button variant="outline" onClick={() => router.push("/admin/scm/material-requests")}>
-              Cancel
+              {tScm("k_77dfd2135f4d")}
             </Button>
             <Button onClick={() => void createMaterialRequest()} disabled={saving || loading}>
               {saving ? "Saving..." : "Create Draft"}

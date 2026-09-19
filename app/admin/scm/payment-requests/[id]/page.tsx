@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -149,6 +151,7 @@ function toStageLabel(value: string) {
 }
 
 export default function PaymentRequestDetailPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const requestId = Number(params?.id);
@@ -177,7 +180,7 @@ export default function PaymentRequestDetailPage() {
 
   const loadRequest = async () => {
     if (!Number.isInteger(requestId) || requestId <= 0) {
-      toast.error("Invalid payment request id");
+      toast.error(tScm("k_2cc8b6745cf8"));
       router.replace("/admin/scm/payment-requests");
       return;
     }
@@ -201,25 +204,25 @@ export default function PaymentRequestDetailPage() {
     if (!requestRow) return [];
     const buttons: Array<{ action: string; label: string }> = [];
     if (canManage && requestRow.status === "DRAFT") {
-      buttons.push({ action: "submit", label: "Submit" });
+      buttons.push({ action: "submit", label: tScm("k_2dacf6595984") });
     }
     if (canApproveAdmin && requestRow.status === "SUBMITTED") {
-      buttons.push({ action: "manager_approve", label: "Manager Approve" });
+      buttons.push({ action: "manager_approve", label: tScm("k_badf7d9fd711") });
     }
     if (canApproveFinance && requestRow.status === "MANAGER_APPROVED") {
-      buttons.push({ action: "finance_approve", label: "Finance Approve" });
+      buttons.push({ action: "finance_approve", label: tScm("k_56fa3a2941cd") });
     }
     if (canTreasury && requestRow.status === "FINANCE_APPROVED") {
-      buttons.push({ action: "treasury_start", label: "Treasury Start" });
+      buttons.push({ action: "treasury_start", label: tScm("k_f89a85901fda") });
     }
     if (canTreasury && ["FINANCE_APPROVED", "TREASURY_PROCESSING"].includes(requestRow.status)) {
-      buttons.push({ action: "mark_paid", label: "Mark Paid" });
+      buttons.push({ action: "mark_paid", label: tScm("k_522bb480eaf7") });
     }
     if (canManage && ["DRAFT", "SUBMITTED"].includes(requestRow.status)) {
-      buttons.push({ action: "cancel", label: "Cancel" });
+      buttons.push({ action: "cancel", label: tScm("k_77dfd2135f4d") });
     }
     if ((canApproveAdmin || canApproveFinance || canTreasury) && !["PAID", "CANCELLED"].includes(requestRow.status)) {
-      buttons.push({ action: "reject", label: "Reject" });
+      buttons.push({ action: "reject", label: tScm("k_2b03b59293b6") });
     }
     return buttons;
   }, [requestRow, canManage, canApproveAdmin, canApproveFinance, canTreasury]);
@@ -238,7 +241,7 @@ export default function PaymentRequestDetailPage() {
     return [
       {
         key: "requisition",
-        label: "Requisition",
+        label: tScm("k_7dc430086b99"),
         value: resolvedRequisition?.requisitionNumber || "Not linked",
         helperText: resolvedRequisition ? toStageLabel(resolvedRequisition.status) : "No requisition in chain",
         href: resolvedRequisition ? `/admin/scm/purchase-requisitions/${resolvedRequisition.id}` : null,
@@ -246,7 +249,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "rfq",
-        label: "RFQ",
+        label: tScm("k_97619681ade9"),
         value: resolvedRfq?.rfqNumber || "Not linked",
         helperText: resolvedRfq ? toStageLabel(resolvedRfq.status) : "No RFQ in chain",
         href: resolvedRfq ? `/admin/scm/rfqs/${resolvedRfq.id}` : null,
@@ -254,7 +257,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "cs",
-        label: "Comparative",
+        label: tScm("k_f374dc7483c7"),
         value: resolvedComparativeStatement?.csNumber || "Not linked",
         helperText: resolvedComparativeStatement
           ? toStageLabel(resolvedComparativeStatement.status)
@@ -264,7 +267,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "po",
-        label: "Purchase Order",
+        label: tScm("k_3c45b957fdc8"),
         value: resolvedPurchaseOrder?.poNumber || "Not linked",
         helperText: resolvedPurchaseOrder ? "Commercial commitment available" : "No purchase order",
         href: resolvedPurchaseOrder ? `/admin/scm/purchase-orders/${resolvedPurchaseOrder.id}` : null,
@@ -272,7 +275,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "grn",
-        label: "Goods Receipt",
+        label: tScm("k_c60a3196b88f"),
         value: requestRow.goodsReceipt?.receiptNumber || "Not linked",
         helperText: requestRow.goodsReceipt ? toStageLabel(requestRow.goodsReceipt.status) : "No GRN attached",
         href: null,
@@ -280,7 +283,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "invoice",
-        label: "Invoice",
+        label: tScm("k_f9f38818c406"),
         value: requestRow.supplierInvoice?.invoiceNumber || "Not linked",
         helperText: requestRow.supplierInvoice
           ? toStageLabel(requestRow.supplierInvoice.status)
@@ -290,7 +293,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "prf",
-        label: "Payment Request",
+        label: tScm("k_47b96c66a290"),
         value: requestRow.prfNumber,
         helperText: toStageLabel(requestRow.status),
         href: `/admin/scm/payment-requests/${requestRow.id}`,
@@ -298,7 +301,7 @@ export default function PaymentRequestDetailPage() {
       },
       {
         key: "payment",
-        label: "Payment",
+        label: tScm("k_b41a92bed032"),
         value: requestRow.supplierPayment?.paymentNumber || "Not settled",
         helperText: requestRow.supplierPayment ? "Supplier payment posted" : "Awaiting treasury settlement",
         href: null,
@@ -339,7 +342,7 @@ export default function PaymentRequestDetailPage() {
   if (loading) {
     return (
       <div className="space-y-6 p-6">
-        <p className="text-sm text-muted-foreground">Loading payment request workspace...</p>
+        <p className="text-sm text-muted-foreground">{tScm("k_2bb3a56919b4")}</p>
       </div>
     );
   }
@@ -350,12 +353,12 @@ export default function PaymentRequestDetailPage() {
         <Button asChild variant="outline">
           <Link href="/admin/scm/payment-requests">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back To Register
+            {tScm("k_1763e9ae8697")}
           </Link>
         </Button>
         <Card>
           <CardContent className="py-10 text-sm text-muted-foreground">
-            Payment request not found.
+            {tScm("k_ea2d550e0fbc")}
           </CardContent>
         </Card>
       </div>
@@ -370,12 +373,12 @@ export default function PaymentRequestDetailPage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/admin/scm/payment-requests">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back
+                {tScm("k_b52b36b7269f")}
               </Link>
             </Button>
             <ScmStatusChip status={requestRow.status} />
             <Badge variant="secondary">{toStageLabel(requestRow.approvalStage)}</Badge>
-            {requestRow.supplierPayment ? <Badge variant="secondary">Payment Posted</Badge> : null}
+            {requestRow.supplierPayment ? <Badge variant="secondary">{tScm("k_a94de3cce763")}</Badge> : null}
           </div>
           <div>
             <h1 className="text-2xl font-bold">{requestRow.prfNumber}</h1>
@@ -387,7 +390,7 @@ export default function PaymentRequestDetailPage() {
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadRequest()} disabled={loading || saving}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           {actionButtons.map((button) => (
             <Button
@@ -404,22 +407,22 @@ export default function PaymentRequestDetailPage() {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <ScmStatCard
-          label="Supplier"
+          label={tScm("k_55edd462872a")}
           value={requestRow.supplier.name}
           hint={requestRow.supplier.code}
         />
         <ScmStatCard
-          label="Amount"
+          label={tScm("k_43dc8532f7e5")}
           value={`${Number(requestRow.amount).toFixed(2)} ${requestRow.currency}`}
           hint={`Requested ${new Date(requestRow.requestedAt).toLocaleDateString()}`}
         />
         <ScmStatCard
-          label="Reference"
+          label={tScm("k_db1c784524e1")}
           value={requestRow.referenceNumber || "-"}
           hint={requestRow.supplierInvoice?.invoiceNumber || "No invoice linked"}
         />
         <ScmStatCard
-          label="Settlement"
+          label={tScm("k_45eaad8b8ce8")}
           value={requestRow.supplierPayment?.paymentNumber || "Pending"}
           hint={requestRow.paidAt ? `Paid ${fmtDate(requestRow.paidAt)}` : "Not paid yet"}
         />
@@ -433,11 +436,11 @@ export default function PaymentRequestDetailPage() {
             <CardContent className="pt-6">
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
                 {[
-                  { label: "Drafted", value: fmtDate(requestRow.requestedAt) },
-                  { label: "Submitted", value: fmtDate(requestRow.submittedAt) },
-                  { label: "Manager Approved", value: fmtDate(requestRow.managerApprovedAt) },
-                  { label: "Finance Approved", value: fmtDate(requestRow.financeApprovedAt) },
-                  { label: "Paid", value: fmtDate(requestRow.paidAt) },
+                  { label: tScm("k_133fc4132ccb"), value: fmtDate(requestRow.requestedAt) },
+                  { label: tScm("k_2e00359b9802"), value: fmtDate(requestRow.submittedAt) },
+                  { label: tScm("k_16227f10dc74"), value: fmtDate(requestRow.managerApprovedAt) },
+                  { label: tScm("k_83060f11374d"), value: fmtDate(requestRow.financeApprovedAt) },
+                  { label: tScm("k_dc9d4584a554"), value: fmtDate(requestRow.paidAt) },
                 ].map((step) => (
                   <div key={step.label} className="rounded-lg border p-3">
                     <div className="text-xs uppercase tracking-wide text-muted-foreground">
@@ -452,41 +455,41 @@ export default function PaymentRequestDetailPage() {
 
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="linked">Linked Docs</TabsTrigger>
-              <TabsTrigger value="workflow">Workflow</TabsTrigger>
-              <TabsTrigger value="payment">Treasury</TabsTrigger>
-              <TabsTrigger value="notifications">Notifications</TabsTrigger>
+              <TabsTrigger value="overview">{tScm("k_0efc2e6be4c2")}</TabsTrigger>
+              <TabsTrigger value="linked">{tScm("k_e646f86d62a1")}</TabsTrigger>
+              <TabsTrigger value="workflow">{tScm("k_d7a484140f5f")}</TabsTrigger>
+              <TabsTrigger value="payment">{tScm("k_286378bf777f")}</TabsTrigger>
+              <TabsTrigger value="notifications">{tScm("k_753a22b2eb61")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Commercial Summary</CardTitle>
+                  <CardTitle>{tScm("k_db2f824bad34")}</CardTitle>
                 </CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Supplier</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_55edd462872a")}</div>
                     <p className="mt-2 text-sm">
                       {requestRow.supplier.name} ({requestRow.supplier.code})
                     </p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Warehouse</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_298dff72dae2")}</div>
                     <p className="mt-2 text-sm">
                       {requestRow.warehouse ? `${requestRow.warehouse.name} (${requestRow.warehouse.code})` : "-"}
                     </p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Reference Number</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_74195db59dc9")}</div>
                     <p className="mt-2 text-sm">{requestRow.referenceNumber || "-"}</p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Current Stage</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_9f5c51b489a9")}</div>
                     <p className="mt-2 text-sm">{toStageLabel(requestRow.approvalStage)}</p>
                   </div>
                   <div className="md:col-span-2">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Note</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_2c924e308820")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{requestRow.note || "-"}</p>
                   </div>
                 </CardContent>
@@ -496,11 +499,11 @@ export default function PaymentRequestDetailPage() {
             <TabsContent value="linked">
               <Card>
                 <CardHeader>
-                  <CardTitle>Linked Procurement Documents</CardTitle>
+                  <CardTitle>{tScm("k_3e9331fb54a6")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="rounded-lg border p-3">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Purchase Order</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_3c45b957fdc8")}</div>
                     <div className="mt-2 text-sm">
                       {requestRow.purchaseOrder ? (
                         <Link
@@ -515,7 +518,7 @@ export default function PaymentRequestDetailPage() {
                     </div>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Goods Receipt</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_c60a3196b88f")}</div>
                     <div className="mt-2 text-sm">
                       {requestRow.goodsReceipt ? (
                         <Link
@@ -530,11 +533,11 @@ export default function PaymentRequestDetailPage() {
                     </div>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Supplier Invoice</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_dedacf19eaa9")}</div>
                     <div className="mt-2 text-sm">{requestRow.supplierInvoice?.invoiceNumber || "-"}</div>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Comparative Statement</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_bcb30f4eb9b0")}</div>
                     <div className="mt-2 text-sm">{requestRow.comparativeStatement?.csNumber || "-"}</div>
                   </div>
                 </CardContent>
@@ -544,28 +547,28 @@ export default function PaymentRequestDetailPage() {
             <TabsContent value="workflow" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Workflow Note</CardTitle>
+                  <CardTitle>{tScm("k_12720dada01c")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <Textarea
                     rows={3}
                     value={note}
                     onChange={(event) => setNote(event.target.value)}
-                    placeholder="Add optional note for approval, rejection, treasury, or cancellation."
+                    placeholder={tScm("k_e3dd2ba8dfc0")}
                   />
                   <p className="text-xs text-muted-foreground">
-                    This note will be attached to your next workflow action from this page.
+                    {tScm("k_561b6eeccc3c")}
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Approval Timeline</CardTitle>
+                  <CardTitle>{tScm("k_33f6a9385a4b")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {(requestRow.approvalEvents?.length || 0) === 0 ? (
-                    <p className="text-sm text-muted-foreground">No workflow actions recorded yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_b8cfd3a910cc")}</p>
                   ) : (
                     requestRow.approvalEvents?.map((event) => (
                       <div key={event.id} className="rounded-lg border p-3">
@@ -591,17 +594,17 @@ export default function PaymentRequestDetailPage() {
             <TabsContent value="payment">
               <Card>
                 <CardHeader>
-                  <CardTitle>Treasury Workspace</CardTitle>
+                  <CardTitle>{tScm("k_85d31676ed69")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {requestRow.supplierPayment ? (
                     <div className="rounded-lg border p-3 text-sm">
-                      Payment {requestRow.supplierPayment.paymentNumber} posted on{" "}
-                      {fmtDate(requestRow.supplierPayment.paymentDate)} for{" "}
+                      {tScm("k_b41a92bed032")} {requestRow.supplierPayment.paymentNumber} {tScm("k_b1d3da002a6e")}{" "}
+                      {fmtDate(requestRow.supplierPayment.paymentDate)} {tScm("k_43eef9a62abb")}{" "}
                       {Number(requestRow.supplierPayment.amount).toFixed(2)} {requestRow.currency}.
                     </div>
                   ) : (
-                    <p className="text-sm text-muted-foreground">No treasury payment posted yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_9bf54729c78f")}</p>
                   )}
 
                   {canTreasury && ["FINANCE_APPROVED", "TREASURY_PROCESSING"].includes(requestRow.status) ? (
@@ -614,28 +617,28 @@ export default function PaymentRequestDetailPage() {
                         }
                       />
                       <Input
-                        placeholder="Amount"
+                        placeholder={tScm("k_43dc8532f7e5")}
                         value={paymentForm.amount}
                         onChange={(event) =>
                           setPaymentForm((cur) => ({ ...cur, amount: event.target.value }))
                         }
                       />
                       <Input
-                        placeholder="Method"
+                        placeholder={tScm("k_88306943fea7")}
                         value={paymentForm.method}
                         onChange={(event) =>
                           setPaymentForm((cur) => ({ ...cur, method: event.target.value }))
                         }
                       />
                       <Input
-                        placeholder="Reference"
+                        placeholder={tScm("k_db1c784524e1")}
                         value={paymentForm.reference}
                         onChange={(event) =>
                           setPaymentForm((cur) => ({ ...cur, reference: event.target.value }))
                         }
                       />
                       <Input
-                        placeholder="Override note"
+                        placeholder={tScm("k_051fcbe44626")}
                         value={paymentForm.holdOverrideNote}
                         onChange={(event) =>
                           setPaymentForm((cur) => ({ ...cur, holdOverrideNote: event.target.value }))
@@ -650,11 +653,11 @@ export default function PaymentRequestDetailPage() {
             <TabsContent value="notifications">
               <Card>
                 <CardHeader>
-                  <CardTitle>Notification Trail</CardTitle>
+                  <CardTitle>{tScm("k_09a330e93825")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {(requestRow.notifications?.length || 0) === 0 ? (
-                    <p className="text-sm text-muted-foreground">No notification trail recorded yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_ee47512321df")}</p>
                   ) : (
                     requestRow.notifications?.map((notification) => (
                       <div key={notification.id} className="rounded-lg border p-3">
@@ -666,10 +669,10 @@ export default function PaymentRequestDetailPage() {
                         </div>
                         <p className="mt-2 text-sm">{notification.message}</p>
                         <div className="mt-2 text-xs text-muted-foreground">
-                          Recipient: {notification.recipientUser?.email || notification.recipientEmail || "-"}
+                          {tScm("k_ec17b2534725")} {notification.recipientUser?.email || notification.recipientEmail || "-"}
                         </div>
                         <div className="text-xs text-muted-foreground">
-                          Created {fmtDate(notification.createdAt)}
+                          {tScm("k_accf40c89baa")} {fmtDate(notification.createdAt)}
                           {notification.sentAt ? ` • Sent ${fmtDate(notification.sentAt)}` : ""}
                         </div>
                       </div>
@@ -684,23 +687,23 @@ export default function PaymentRequestDetailPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>People</CardTitle>
+              <CardTitle>{tScm("k_b37554f695b1")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Created By</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_43de2bcd6337")}</div>
                 <div className="mt-1">{requestRow.createdBy?.name || requestRow.createdBy?.email || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Manager Approved By</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_818a3029d943")}</div>
                 <div className="mt-1">{requestRow.managerApprovedBy?.name || requestRow.managerApprovedBy?.email || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Finance Approved By</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_606e5375cd7f")}</div>
                 <div className="mt-1">{requestRow.financeApprovedBy?.name || requestRow.financeApprovedBy?.email || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Treasury Processed By</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_29d065bc150d")}</div>
                 <div className="mt-1">{requestRow.treasuryProcessedBy?.name || requestRow.treasuryProcessedBy?.email || "-"}</div>
               </div>
             </CardContent>
@@ -708,8 +711,8 @@ export default function PaymentRequestDetailPage() {
 
           <ScmNextStepPanel
             title={requestRow.status}
-            subtitle="This panel keeps approval and treasury actions visible without sending users back to the register."
-            emptyMessage="No direct workflow action is available for your current permissions."
+            subtitle={tScm("k_201a3635e124")}
+            emptyMessage={tScm("k_ad90a4161999")}
             actions={actionButtons.map((button) => ({
               key: button.action,
               label: button.label,

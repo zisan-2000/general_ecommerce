@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -43,6 +45,7 @@ async function readJson<T>(res: Response, errorMessage: string) {
 }
 
 export default function NewPaymentRequestPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -67,7 +70,7 @@ export default function NewPaymentRequestPage() {
       const data = await readJson<PaymentRequestBootstrap>(response, "Failed to load payment request references");
       setBootstrap(data);
       if (!data.capabilities.canManage) {
-        toast.error("You do not have permission to create payment requests.");
+        toast.error(tScm("k_258d571bb78a"));
         router.replace("/admin/scm/payment-requests");
       }
     } catch (error: any) {
@@ -129,7 +132,7 @@ export default function NewPaymentRequestPage() {
 
   const createRequest = async () => {
     if (!form.supplierId) {
-      toast.error("Supplier is required.");
+      toast.error(tScm("k_f2737bb12b29"));
       return;
     }
     try {
@@ -151,7 +154,7 @@ export default function NewPaymentRequestPage() {
         }),
       });
       const created = await readJson<{ id: number }>(response, "Failed to create payment request");
-      toast.success("Payment request created");
+      toast.success(tScm("k_f427e474c3ac"));
       router.push(`/admin/scm/payment-requests/${created.id}`);
     } catch (error: any) {
       toast.error(error?.message || "Failed to create payment request");
@@ -167,13 +170,13 @@ export default function NewPaymentRequestPage() {
           <Button asChild variant="outline" size="sm">
             <Link href="/admin/scm/payment-requests">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back To Register
+              {tScm("k_1763e9ae8697")}
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold">New Payment Request</h1>
+            <h1 className="text-2xl font-bold">{tScm("k_72717183f3cb")}</h1>
             <p className="text-sm text-muted-foreground">
-              Build the PRF in sequence: choose supplier, attach linked commercial documents, then create the draft.
+              {tScm("k_729ea63fe558")}
             </p>
           </div>
         </div>
@@ -183,23 +186,23 @@ export default function NewPaymentRequestPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Supplier" value={selectedSupplier?.name || "Not selected"} hint={selectedSupplier?.code || "Choose legal supplier"} />
-        <ScmStatCard label="Purchase Order" value={selectedPo?.poNumber || "Optional"} hint="Attach if payment is PO-backed" />
-        <ScmStatCard label="Invoice" value={selectedInvoice?.invoiceNumber || "Optional"} hint={selectedInvoice ? `${Number(selectedInvoice.total).toFixed(2)}` : "Attach if AP already posted"} />
-        <ScmStatCard label="Amount" value={form.amount || "0.00"} hint={form.currency || "BDT"} />
+        <ScmStatCard label={tScm("k_55edd462872a")} value={selectedSupplier?.name || "Not selected"} hint={selectedSupplier?.code || "Choose legal supplier"} />
+        <ScmStatCard label={tScm("k_3c45b957fdc8")} value={selectedPo?.poNumber || "Optional"} hint={tScm("k_5614a7668ee1")} />
+        <ScmStatCard label={tScm("k_f9f38818c406")} value={selectedInvoice?.invoiceNumber || "Optional"} hint={selectedInvoice ? `${Number(selectedInvoice.total).toFixed(2)}` : "Attach if AP already posted"} />
+        <ScmStatCard label={tScm("k_43dc8532f7e5")} value={form.amount || "0.00"} hint={form.currency || "BDT"} />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>1. Counterparty and Scope</CardTitle>
+              <CardTitle>{tScm("k_97fae3277194")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-3">
               <div className="space-y-2 md:col-span-1">
-                <Label>Supplier</Label>
+                <Label>{tScm("k_55edd462872a")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.supplierId} onChange={(e) => setForm((cur) => ({ ...cur, supplierId: e.target.value, purchaseOrderId: "", goodsReceiptId: "", supplierInvoiceId: "" }))}>
-                  <option value="">Select supplier</option>
+                  <option value="">{tScm("k_cfce52686188")}</option>
                   {supplierOptions.map((supplier) => (
                     <option key={supplier.id} value={supplier.id}>
                       {supplier.name} ({supplier.code})
@@ -208,9 +211,9 @@ export default function NewPaymentRequestPage() {
                 </select>
               </div>
               <div className="space-y-2 md:col-span-1">
-                <Label>Warehouse</Label>
+                <Label>{tScm("k_298dff72dae2")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.warehouseId} onChange={(e) => setForm((cur) => ({ ...cur, warehouseId: e.target.value, comparativeStatementId: "" }))}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {(bootstrap?.warehouses ?? []).map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>
                       {warehouse.name} ({warehouse.code})
@@ -219,48 +222,48 @@ export default function NewPaymentRequestPage() {
                 </select>
               </div>
               <div className="space-y-2 md:col-span-1">
-                <Label>Amount</Label>
-                <Input placeholder="Amount" value={form.amount} onChange={(e) => setForm((cur) => ({ ...cur, amount: e.target.value }))} />
+                <Label>{tScm("k_43dc8532f7e5")}</Label>
+                <Input placeholder={tScm("k_43dc8532f7e5")} value={form.amount} onChange={(e) => setForm((cur) => ({ ...cur, amount: e.target.value }))} />
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>2. Linked Commercial Documents</CardTitle>
+              <CardTitle>{tScm("k_5128165965c0")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               <div className="space-y-2">
-                <Label>Purchase Order</Label>
+                <Label>{tScm("k_3c45b957fdc8")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.purchaseOrderId} onChange={(e) => setForm((cur) => ({ ...cur, purchaseOrderId: e.target.value, goodsReceiptId: "", supplierInvoiceId: "" }))}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {filteredPurchaseOrders.map((po) => (
                     <option key={po.id} value={po.id}>{po.poNumber}</option>
                   ))}
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Goods Receipt</Label>
+                <Label>{tScm("k_c60a3196b88f")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.goodsReceiptId} onChange={(e) => setForm((cur) => ({ ...cur, goodsReceiptId: e.target.value }))}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {filteredGoodsReceipts.map((grn) => (
                     <option key={grn.id} value={grn.id}>{grn.receiptNumber}</option>
                   ))}
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Supplier Invoice</Label>
+                <Label>{tScm("k_dedacf19eaa9")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.supplierInvoiceId} onChange={(e) => setForm((cur) => ({ ...cur, supplierInvoiceId: e.target.value }))}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {filteredInvoices.map((invoice) => (
                     <option key={invoice.id} value={invoice.id}>{invoice.invoiceNumber}</option>
                   ))}
                 </select>
               </div>
               <div className="space-y-2">
-                <Label>Comparative Statement</Label>
+                <Label>{tScm("k_bcb30f4eb9b0")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={form.comparativeStatementId} onChange={(e) => setForm((cur) => ({ ...cur, comparativeStatementId: e.target.value }))}>
-                  <option value="">Optional</option>
+                  <option value="">{tScm("k_0c6c4102d4df")}</option>
                   {filteredComparativeStatements.map((cs) => (
                     <option key={cs.id} value={cs.id}>{cs.csNumber}</option>
                   ))}
@@ -271,20 +274,20 @@ export default function NewPaymentRequestPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>3. Settlement Metadata</CardTitle>
+              <CardTitle>{tScm("k_9a8e082f04b0")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-2">
               <div>
-                <Label>Currency</Label>
+                <Label>{tScm("k_e070de224434")}</Label>
                 <Input value={form.currency} onChange={(e) => setForm((cur) => ({ ...cur, currency: e.target.value }))} />
               </div>
               <div>
-                <Label>Reference Number</Label>
-                <Input value={form.referenceNumber} onChange={(e) => setForm((cur) => ({ ...cur, referenceNumber: e.target.value }))} placeholder="Bank ref / memo" />
+                <Label>{tScm("k_74195db59dc9")}</Label>
+                <Input value={form.referenceNumber} onChange={(e) => setForm((cur) => ({ ...cur, referenceNumber: e.target.value }))} placeholder={tScm("k_de9d31d6f336")} />
               </div>
               <div className="md:col-span-2">
-                <Label>Note</Label>
-                <Textarea value={form.note} onChange={(e) => setForm((cur) => ({ ...cur, note: e.target.value }))} placeholder="Why this payment request is being raised..." rows={4} />
+                <Label>{tScm("k_2c924e308820")}</Label>
+                <Textarea value={form.note} onChange={(e) => setForm((cur) => ({ ...cur, note: e.target.value }))} placeholder={tScm("k_9f0bcd1c2d09")} rows={4} />
               </div>
             </CardContent>
           </Card>
@@ -293,29 +296,29 @@ export default function NewPaymentRequestPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Checklist</CardTitle>
+              <CardTitle>{tScm("k_61b294646988")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div className={form.supplierId ? "text-foreground" : "text-muted-foreground"}>1. Supplier selected</div>
-              <div className={form.amount ? "text-foreground" : "text-muted-foreground"}>2. Amount entered</div>
-              <div className={form.purchaseOrderId || form.supplierInvoiceId || form.comparativeStatementId ? "text-foreground" : "text-muted-foreground"}>3. At least one linked commercial document added</div>
+              <div className={form.supplierId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_177a2e385661")}</div>
+              <div className={form.amount ? "text-foreground" : "text-muted-foreground"}>{tScm("k_c466725ffc7a")}</div>
+              <div className={form.purchaseOrderId || form.supplierInvoiceId || form.comparativeStatementId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_2c76ddfb50bc")}</div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Draft Summary</CardTitle>
+              <CardTitle>{tScm("k_4e141c6d3967")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Supplier</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_55edd462872a")}</div>
                 <div className="mt-1 font-medium">{selectedSupplier ? `${selectedSupplier.name} (${selectedSupplier.code})` : "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">PO</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_eea0c00c5051")}</div>
                 <div className="mt-1 font-medium">{selectedPo?.poNumber || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Invoice</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_f9f38818c406")}</div>
                 <div className="mt-1 font-medium">{selectedInvoice?.invoiceNumber || "-"}</div>
               </div>
             </CardContent>

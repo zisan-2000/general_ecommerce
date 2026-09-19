@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import { 
   RefreshCw, 
   ChevronLeft, 
@@ -166,14 +167,28 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
   return data as T;
 }
 
-async function getJson<T>(url: string): Promise<T> {
+async function getJson<T>(url: string, fallbackMessage: string): Promise<T> {
   const response = await fetch(url, { cache: "no-store" });
-  return readJson<T>(response, "Request failed");
+  return readJson<T>(response, fallbackMessage);
 }
 
 function formatMoney(value: number | string) {
   const num = typeof value === 'string' ? parseFloat(value) : value;
   return num.toFixed(2);
+}
+
+function formatDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? "—" : date.toLocaleDateString(locale);
+}
+
+function humanizeEnum(value: string) {
+  return value
+    .toLowerCase()
+    .split("_")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
 function getBalanceColor(balance: string | number) {
@@ -185,12 +200,12 @@ function getBalanceColor(balance: string | number) {
 
 function getPaymentHoldBadge(status: string | undefined) {
   if (!status || status === "CLEAR") {
-    return { variant: "outline", text: "CLEAR", className: "border-success/20 text-success" };
+    return { status: "CLEAR", className: "border-success/20 text-success" };
   }
   if (status === "HELD") {
-    return { variant: "destructive", text: "HELD", className: "bg-destructive/10 text-destructive" };
+    return { status: "HELD", className: "bg-destructive/10 text-destructive" };
   }
-  return { variant: "secondary", text: "OVERRIDDEN", className: "bg-warning/10 text-warning" };
+  return { status: "OVERRIDDEN", className: "bg-warning/10 text-warning" };
 }
 
 // Pagination Component
@@ -199,6 +214,8 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
   totalPages: number; 
   onPageChange: (page: number) => void;
 }) {
+  const t = useTranslations("AdminSupplierLedger");
+
   const getVisiblePages = () => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -233,6 +250,8 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.previous")}
+        title={t("pagination.previous")}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -244,6 +263,8 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
           size="sm"
           onClick={() => onPageChange(page)}
           className="h-8 w-8 p-0"
+          aria-label={t("pagination.page", { page })}
+          aria-current={currentPage === page ? "page" : undefined}
         >
           {page}
         </Button>
@@ -255,6 +276,8 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.next")}
+        title={t("pagination.next")}
       >
         <ChevronRight className="h-4 w-4" />
       </Button>
@@ -284,6 +307,8 @@ function LedgerDetailModal({
   onInvoiceAction: (invoiceId: number, action: "reevaluate" | "override_hold" | "clear_override" | "apply_credit" | "waive_credit", note?: string) => Promise<void>;
   invoiceActionId: number | null;
 }) {
+  const locale = useLocale();
+  const t = useTranslations("AdminSupplierLedger");
   const [activeTab, setActiveTab] = useState<"entries" | "invoices" | "payments">("entries");
   
   if (!detail) return null;
@@ -298,11 +323,13 @@ function LedgerDetailModal({
             <Building2 className="h-5 w-5 text-muted-foreground" />
             {detail.supplier.name} ({detail.supplier.code})
             <Badge variant="outline" className={detail.supplier.isActive ? "bg-success/10 text-success" : "bg-muted text-muted-foreground"}>
-              {detail.supplier.isActive ? "ACTIVE" : "INACTIVE"}
+              {detail.supplier.isActive
+                ? t("supplierStatuses.ACTIVE")
+                : t("supplierStatuses.INACTIVE")}
             </Badge>
           </DialogTitle>
           <DialogDescription className="text-xs sm:text-sm">
-            Ledger details, invoices, and payment history
+            {t("detail.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -311,7 +338,7 @@ function LedgerDetailModal({
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-3">
             <Card className="border-border shadow-sm">
               <CardContent className="p-3 sm:p-4">
-                <p className="text-xs text-muted-foreground">Total Debit</p>
+                <p className="text-xs text-muted-foreground">{t("summary.totalDebit")}</p>
                 <p className="text-lg sm:text-xl font-semibold text-destructive">
                   {formatMoney(detail.summary.totalDebit)}
                 </p>
@@ -319,7 +346,7 @@ function LedgerDetailModal({
             </Card>
             <Card className="border-border shadow-sm">
               <CardContent className="p-3 sm:p-4">
-                <p className="text-xs text-muted-foreground">Total Credit</p>
+                <p className="text-xs text-muted-foreground">{t("summary.totalCredit")}</p>
                 <p className="text-lg sm:text-xl font-semibold text-success">
                   {formatMoney(detail.summary.totalCredit)}
                 </p>
@@ -327,7 +354,7 @@ function LedgerDetailModal({
             </Card>
             <Card className="border-border shadow-sm">
               <CardContent className="p-3 sm:p-4">
-                <p className="text-xs text-muted-foreground">Outstanding Balance</p>
+                <p className="text-xs text-muted-foreground">{t("summary.outstandingBalance")}</p>
                 <p className={cn("text-lg sm:text-xl font-semibold", balanceColor)}>
                   {formatMoney(detail.summary.balance)}
                 </p>
@@ -343,7 +370,7 @@ function LedgerDetailModal({
               onClick={() => setActiveTab("entries")}
             >
               <FileText className="h-4 w-4 mr-2" />
-              Ledger Entries
+              {t("tabs.entries")}
             </Button>
             <Button
               variant={activeTab === "invoices" ? "default" : "ghost"}
@@ -351,7 +378,7 @@ function LedgerDetailModal({
               onClick={() => setActiveTab("invoices")}
             >
               <DollarSign className="h-4 w-4 mr-2" />
-              Invoices ({detail.invoices.length})
+              {t("tabs.invoices", { count: detail.invoices.length })}
             </Button>
             <Button
               variant={activeTab === "payments" ? "default" : "ghost"}
@@ -359,7 +386,7 @@ function LedgerDetailModal({
               onClick={() => setActiveTab("payments")}
             >
               <CreditCard className="h-4 w-4 mr-2" />
-              Payments ({detail.payments.length})
+              {t("tabs.payments", { count: detail.payments.length })}
             </Button>
           </div>
 
@@ -369,25 +396,27 @@ function LedgerDetailModal({
               <Table>
                 <TableHeader>
                   <TableRow className="border-border">
-                    <TableHead className="text-xs font-medium text-muted-foreground">Date</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Reference</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Type</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Debit</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Credit</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Note</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.date")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.reference")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.type")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("columns.debit")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("columns.credit")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.note")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {detail.entries.map((entry) => (
                     <TableRow key={entry.id} className="border-border">
                       <TableCell className="py-3 text-sm text-muted-foreground">
-                        {new Date(entry.entryDate).toLocaleDateString()}
+                        {formatDate(entry.entryDate, locale)}
                       </TableCell>
                       <TableCell className="py-3 text-sm text-foreground">
                         {entry.referenceNumber || "-"}
                       </TableCell>
                       <TableCell className="py-3 text-sm text-foreground">
-                        {entry.entryType}
+                        {t.has(`entryTypes.${entry.entryType}`)
+                          ? t(`entryTypes.${entry.entryType}`)
+                          : humanizeEnum(entry.entryType)}
                       </TableCell>
                       <TableCell className="text-right py-3 text-sm text-destructive">
                         {entry.direction === "DEBIT" ? formatMoney(entry.amount) : "-"}
@@ -409,7 +438,7 @@ function LedgerDetailModal({
           {activeTab === "invoices" && (
             <div className="space-y-3">
               {detail.invoices.length === 0 ? (
-                <p className="text-sm text-muted-foreground text-center py-8">No supplier invoices yet.</p>
+                <p className="text-sm text-muted-foreground text-center py-8">{t("empty.invoices")}</p>
               ) : (
                 detail.invoices.map((invoice) => {
                   const holdBadge = getPaymentHoldBadge(invoice.paymentHoldStatus);
@@ -421,20 +450,24 @@ function LedgerDetailModal({
                             <div className="flex items-center gap-2 flex-wrap">
                               <p className="text-sm font-semibold text-foreground">{invoice.invoiceNumber}</p>
                               <Badge variant="outline" className="text-xs">
-                                {invoice.status}
+                                {t.has(`invoiceStatuses.${invoice.status}`)
+                                  ? t(`invoiceStatuses.${invoice.status}`)
+                                  : humanizeEnum(invoice.status)}
                               </Badge>
                               <Badge variant="outline" className={cn("text-xs", holdBadge.className)}>
-                                {holdBadge.text}
+                                {t(`paymentHoldStatuses.${holdBadge.status}`)}
                               </Badge>
                               {invoice.slaCreditStatus && invoice.slaCreditStatus !== "NONE" && (
                                 <Badge variant="outline" className="text-xs bg-info/10 text-info">
-                                  Credit: {invoice.slaCreditStatus}
+                                  {t("detail.creditStatus", {
+                                    status: t(`creditStatuses.${invoice.slaCreditStatus}`),
+                                  })}
                                 </Badge>
                               )}
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
-                              Issue Date: {new Date(invoice.issueDate).toLocaleDateString()} | 
-                              Due Date: {invoice.dueDate ? new Date(invoice.dueDate).toLocaleDateString() : "N/A"}
+                              {t("detail.issueDate")}: {formatDate(invoice.issueDate, locale)} |{" "}
+                              {t("detail.dueDate")}: {formatDate(invoice.dueDate, locale)}
                             </div>
                           </div>
                           <div className="text-right">
@@ -442,19 +475,21 @@ function LedgerDetailModal({
                               {formatMoney(invoice.total)}
                             </p>
                             <p className="text-xs text-muted-foreground">
-                              Match: {invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}
+                              {t("detail.match")}: {t.has(`matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
+                                ? t(`matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
+                                : humanizeEnum(invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING")}
                             </p>
                           </div>
                         </div>
 
                         <div className="grid gap-2 text-xs sm:grid-cols-2">
                           <div>
-                            <span className="text-muted-foreground">PO:</span>{" "}
-                            <span className="text-foreground">{invoice.purchaseOrder?.poNumber || "Direct invoice"}</span>
+                            <span className="text-muted-foreground">{t("detail.purchaseOrder")}:</span>{" "}
+                            <span className="text-foreground">{invoice.purchaseOrder?.poNumber || t("detail.directInvoice")}</span>
                           </div>
                           {invoice.threeWayMatch?.summary?.varianceCount !== undefined && (
                             <div>
-                              <span className="text-muted-foreground">Variances:</span>{" "}
+                              <span className="text-muted-foreground">{t("detail.variances")}:</span>{" "}
                               <span className={invoice.threeWayMatch.summary.varianceCount > 0 ? "text-warning" : "text-success"}>
                                 {invoice.threeWayMatch.summary.varianceCount}
                               </span>
@@ -464,13 +499,13 @@ function LedgerDetailModal({
 
                         {invoice.paymentHoldReason && (
                           <div className="rounded-md bg-warning/10 p-2 text-xs text-warning">
-                            Hold Reason: {invoice.paymentHoldReason}
+                            {t("detail.holdReason")}: {invoice.paymentHoldReason}
                           </div>
                         )}
 
                         {invoice.slaCreditStatus === "RECOMMENDED" && invoice.slaRecommendedCredit && (
                           <div className="rounded-md bg-info/10 p-2 text-xs text-info">
-                            Suggested Credit: {formatMoney(invoice.slaRecommendedCredit)}
+                            {t("detail.suggestedCredit")}: {formatMoney(invoice.slaRecommendedCredit)}
                             {invoice.slaCreditReason && ` • ${invoice.slaCreditReason}`}
                           </div>
                         )}
@@ -484,16 +519,16 @@ function LedgerDetailModal({
                               disabled={invoiceActionId === invoice.id}
                               onClick={() => onInvoiceAction(invoice.id, "reevaluate")}
                             >
-                              Re-evaluate
+                              {t("actions.reevaluate")}
                             </Button>
                             {canOverridePaymentHold && invoice.paymentHoldStatus === "HELD" && (
                               <Button
                                 size="sm"
                                 variant="secondary"
                                 disabled={invoiceActionId === invoice.id}
-                                onClick={() => onInvoiceAction(invoice.id, "override_hold", "AP emergency release")}
+                                onClick={() => onInvoiceAction(invoice.id, "override_hold", t("actionNotes.emergencyRelease"))}
                               >
-                                Override Hold
+                                {t("actions.overrideHold")}
                               </Button>
                             )}
                             {canOverridePaymentHold && invoice.paymentHoldStatus === "OVERRIDDEN" && (
@@ -503,7 +538,7 @@ function LedgerDetailModal({
                                 disabled={invoiceActionId === invoice.id}
                                 onClick={() => onInvoiceAction(invoice.id, "clear_override")}
                               >
-                                Clear Override
+                                {t("actions.clearOverride")}
                               </Button>
                             )}
                             {invoice.slaCreditStatus === "RECOMMENDED" && (
@@ -513,15 +548,15 @@ function LedgerDetailModal({
                                   disabled={invoiceActionId === invoice.id}
                                   onClick={() => onInvoiceAction(invoice.id, "apply_credit")}
                                 >
-                                  Apply SLA Credit
+                                  {t("actions.applyCredit")}
                                 </Button>
                                 <Button
                                   size="sm"
                                   variant="outline"
                                   disabled={invoiceActionId === invoice.id}
-                                  onClick={() => onInvoiceAction(invoice.id, "waive_credit", "Waived by AP manager")}
+                                  onClick={() => onInvoiceAction(invoice.id, "waive_credit", t("actionNotes.waivedByManager"))}
                                 >
-                                  Waive Credit
+                                  {t("actions.waiveCredit")}
                                 </Button>
                               </>
                             )}
@@ -541,19 +576,19 @@ function LedgerDetailModal({
               <Table>
                 <TableHeader>
                   <TableRow className="border-border">
-                    <TableHead className="text-xs font-medium text-muted-foreground">Payment No</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Date</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Method</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Invoice</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Amount</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Reference</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.paymentNumber")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.date")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.method")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.invoice")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("columns.amount")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.reference")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {detail.payments.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={6} className="text-center py-8 text-sm text-muted-foreground">
-                        No supplier payments found.
+                        {t("empty.payments")}
                       </TableCell>
                     </TableRow>
                   ) : (
@@ -563,10 +598,12 @@ function LedgerDetailModal({
                           {payment.paymentNumber}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-muted-foreground">
-                          {new Date(payment.paymentDate).toLocaleDateString()}
+                          {formatDate(payment.paymentDate, locale)}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-foreground">
-                          {payment.method}
+                          {t.has(`paymentMethods.${payment.method}`)
+                            ? t(`paymentMethods.${payment.method}`)
+                            : humanizeEnum(payment.method)}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-foreground">
                           {payment.supplierInvoice?.invoiceNumber || "-"}
@@ -588,7 +625,7 @@ function LedgerDetailModal({
 
         <DialogFooter>
           <Button variant="outline" onClick={() => onOpenChange(false)}>
-            Close
+            {t("actions.close")}
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -597,6 +634,7 @@ function LedgerDetailModal({
 }
 
 export default function SupplierLedgerPage() {
+  const t = useTranslations("AdminSupplierLedger");
   const { data: session } = useSession();
   const globalPermissions = Array.isArray((session?.user as any)?.globalPermissions)
     ? ((session?.user as any).globalPermissions as string[])
@@ -658,13 +696,19 @@ export default function SupplierLedgerPage() {
   const loadBaseData = async () => {
     try {
       setLoading(true);
-      const summary = await getJson<SupplierSummary[]>("/api/scm/supplier-ledger");
+      const summary = await getJson<SupplierSummary[]>(
+        "/api/scm/supplier-ledger",
+        t("errors.loadLedger"),
+      );
       const normalizedSummary = Array.isArray(summary) ? summary : [];
       setSuppliers(normalizedSummary);
 
       let supplierData: SupplierOption[] = [];
       try {
-        supplierData = await getJson<SupplierOption[]>("/api/scm/suppliers");
+        supplierData = await getJson<SupplierOption[]>(
+          "/api/scm/suppliers",
+          t("errors.loadSuppliers"),
+        );
       } catch (error: any) {
         const message = String(error?.message || "").toLowerCase();
         if (!message.includes("forbidden")) {
@@ -687,7 +731,10 @@ export default function SupplierLedgerPage() {
 
       if (canReadPurchaseOrders) {
         try {
-          const purchaseOrderData = await getJson<PurchaseOrderOption[]>("/api/scm/purchase-orders");
+          const purchaseOrderData = await getJson<PurchaseOrderOption[]>(
+            "/api/scm/purchase-orders",
+            t("errors.loadPurchaseOrders"),
+          );
           setPurchaseOrders(Array.isArray(purchaseOrderData) ? purchaseOrderData : []);
         } catch (error: any) {
           const message = String(error?.message || "").toLowerCase();
@@ -700,7 +747,7 @@ export default function SupplierLedgerPage() {
         setPurchaseOrders([]);
       }
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier ledger");
+      toast.error(error?.message || t("errors.loadLedger"));
     } finally {
       setLoading(false);
     }
@@ -714,10 +761,11 @@ export default function SupplierLedgerPage() {
     try {
       const data = await getJson<SupplierLedgerDetail>(
         `/api/scm/supplier-ledger?supplierId=${supplierId}`,
+        t("errors.loadDetails"),
       );
       setDetail(data);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier details");
+      toast.error(error?.message || t("errors.loadDetails"));
       setDetail(null);
     }
   };
@@ -783,7 +831,7 @@ export default function SupplierLedgerPage() {
 
   const createInvoice = async () => {
     if (!selectedSupplierId) {
-      toast.error("Select a supplier");
+      toast.error(t("errors.selectSupplier"));
       return;
     }
     try {
@@ -811,8 +859,8 @@ export default function SupplierLedgerPage() {
             })),
         }),
       });
-      await readJson(response, "Failed to create supplier invoice");
-      toast.success("Supplier invoice created");
+      await readJson(response, t("errors.createInvoice"));
+      toast.success(t("success.invoiceCreated"));
       setInvoicePurchaseOrderId("");
       setInvoiceIssueDate("");
       setInvoiceDueDate("");
@@ -823,7 +871,7 @@ export default function SupplierLedgerPage() {
       setInvoiceItems([]);
       await Promise.all([loadBaseData(), loadDetail(selectedSupplierId)]);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create supplier invoice");
+      toast.error(error?.message || t("errors.createInvoice"));
     } finally {
       setSavingInvoice(false);
     }
@@ -831,7 +879,7 @@ export default function SupplierLedgerPage() {
 
   const createPayment = async () => {
     if (!selectedSupplierId) {
-      toast.error("Select a supplier");
+      toast.error(t("errors.selectSupplier"));
       return;
     }
     try {
@@ -851,8 +899,8 @@ export default function SupplierLedgerPage() {
           holdOverrideNote: paymentHoldOverrideNote,
         }),
       });
-      await readJson(response, "Failed to create supplier payment");
-      toast.success("Supplier payment created");
+      await readJson(response, t("errors.createPayment"));
+      toast.success(t("success.paymentCreated"));
       setPaymentInvoiceId("");
       setPaymentDate("");
       setPaymentAmount("");
@@ -863,7 +911,7 @@ export default function SupplierLedgerPage() {
       setPaymentHoldOverrideNote("");
       await Promise.all([loadBaseData(), loadDetail(selectedSupplierId)]);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create supplier payment");
+      toast.error(error?.message || t("errors.createPayment"));
     } finally {
       setSavingPayment(false);
     }
@@ -885,11 +933,11 @@ export default function SupplierLedgerPage() {
           note: note || null,
         }),
       });
-      await readJson(response, "Failed to update invoice AP control");
-      toast.success("Invoice AP control updated");
+      await readJson(response, t("errors.updateApControl"));
+      toast.success(t("success.apControlUpdated"));
       await Promise.all([loadBaseData(), loadDetail(selectedSupplierId)]);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to update invoice AP control");
+      toast.error(error?.message || t("errors.updateApControl"));
     } finally {
       setInvoiceActionId(null);
     }
@@ -913,22 +961,22 @@ export default function SupplierLedgerPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Supplier Ledger
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Track supplier payable balances using invoice debits and payment credits.
+            {t("header.description")}
           </p>
         </div>
         <Button variant="outline" onClick={() => void loadBaseData()} disabled={loading}>
           <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-          Refresh
+          {t("actions.refresh")}
         </Button>
       </div>
 
       {/* Supplier Balances Card */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Supplier Balances</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{t("balances.title")}</CardTitle>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0">
           {loading ? (
@@ -941,11 +989,11 @@ export default function SupplierLedgerPage() {
                 <Table>
                   <TableHeader>
                     <TableRow className="border-border hover:bg-transparent">
-                      <TableHead className="text-xs font-medium text-muted-foreground">Supplier</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Total Debit</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Total Credit</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Balance</TableHead>
-                      <TableHead className="text-right text-xs font-medium text-muted-foreground">Action</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("columns.supplier")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("summary.totalDebit")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("summary.totalCredit")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("columns.balance")}</TableHead>
+                      <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("columns.action")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -974,7 +1022,7 @@ export default function SupplierLedgerPage() {
                               className="h-8 px-3 text-xs"
                             >
                               <Eye className="h-3.5 w-3.5 mr-1" />
-                              Open Ledger
+                              {t("actions.openLedger")}
                             </Button>
                           </TableCell>
                         </TableRow>

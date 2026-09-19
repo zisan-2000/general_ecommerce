@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -164,6 +166,7 @@ function toStageLabel(value: string) {
 }
 
 export default function RfqDetailPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const rfqId = Number(params?.id);
@@ -191,7 +194,7 @@ export default function RfqDetailPage() {
 
   const loadData = async () => {
     if (!Number.isInteger(rfqId) || rfqId <= 0) {
-      toast.error("Invalid RFQ id");
+      toast.error(tScm("k_0d202f720195"));
       router.replace("/admin/scm/rfqs");
       return;
     }
@@ -290,7 +293,7 @@ export default function RfqDetailPage() {
     return [
       {
         key: "requisition",
-        label: "Requisition",
+        label: tScm("k_7dc430086b99"),
         value: rfq.purchaseRequisition?.requisitionNumber || "Direct RFQ",
         helperText: rfq.purchaseRequisition ? toStageLabel(rfq.purchaseRequisition.status) : "No upstream requisition",
         href: rfq.purchaseRequisition ? `/admin/scm/purchase-requisitions/${rfq.purchaseRequisition.id}` : null,
@@ -298,7 +301,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "rfq",
-        label: "RFQ",
+        label: tScm("k_97619681ade9"),
         value: rfq.rfqNumber,
         helperText: toStageLabel(rfq.status),
         href: `/admin/scm/rfqs/${rfq.id}`,
@@ -306,7 +309,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "cs",
-        label: "Comparative",
+        label: tScm("k_f374dc7483c7"),
         value: latestCs?.csNumber || "Not generated",
         helperText: latestCs ? toStageLabel(latestCs.status) : "Awaiting evaluation",
         href: null,
@@ -314,7 +317,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "po",
-        label: "Purchase Order",
+        label: tScm("k_3c45b957fdc8"),
         value: latestPo?.poNumber || "Not created",
         helperText: latestPo ? toStageLabel(latestPo.status) : "Awaiting award conversion",
         href: latestPo ? `/admin/scm/purchase-orders/${latestPo.id}` : null,
@@ -322,7 +325,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "grn",
-        label: "Goods Receipt",
+        label: tScm("k_c60a3196b88f"),
         value: latestReceipt?.receiptNumber || "Not posted",
         helperText: latestReceipt ? toStageLabel(latestReceipt.status) : "Awaiting delivery",
         href: null,
@@ -330,7 +333,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "invoice",
-        label: "Invoice",
+        label: tScm("k_f9f38818c406"),
         value: latestInvoice?.invoiceNumber || "Not posted",
         helperText: latestInvoice ? toStageLabel(latestInvoice.status) : "Awaiting AP posting",
         href: null,
@@ -338,7 +341,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "prf",
-        label: "Payment Request",
+        label: tScm("k_47b96c66a290"),
         value: latestPrf?.prfNumber || "Not created",
         helperText: latestPrf ? toStageLabel(latestPrf.status) : "Awaiting payment request",
         href: latestPrf ? `/admin/scm/payment-requests/${latestPrf.id}` : null,
@@ -346,7 +349,7 @@ export default function RfqDetailPage() {
       },
       {
         key: "payment",
-        label: "Payment",
+        label: tScm("k_b41a92bed032"),
         value: latestPayment?.paymentNumber || "Not settled",
         helperText: latestPayment ? "Supplier payment posted" : "Awaiting treasury settlement",
         href: null,
@@ -358,7 +361,7 @@ export default function RfqDetailPage() {
   if (loading) {
     return (
       <div className="space-y-6 p-6">
-        <p className="text-sm text-muted-foreground">Loading RFQ workspace...</p>
+        <p className="text-sm text-muted-foreground">{tScm("k_35a6914b3ea9")}</p>
       </div>
     );
   }
@@ -369,11 +372,11 @@ export default function RfqDetailPage() {
         <Button asChild variant="outline">
           <Link href="/admin/scm/rfqs">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back To Register
+            {tScm("k_1763e9ae8697")}
           </Link>
         </Button>
         <Card>
-          <CardContent className="py-10 text-sm text-muted-foreground">RFQ not found.</CardContent>
+          <CardContent className="py-10 text-sm text-muted-foreground">{tScm("k_ac036119590b")}</CardContent>
         </Card>
       </div>
     );
@@ -387,12 +390,12 @@ export default function RfqDetailPage() {
             <Button asChild variant="outline" size="sm">
               <Link href="/admin/scm/rfqs">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back
+                {tScm("k_b52b36b7269f")}
               </Link>
             </Button>
             <ScmStatusChip status={rfq.status} />
-            {rfq.isBlindReviewActive ? <Badge variant="secondary">Blind Review Active</Badge> : null}
-            {rfq.award?.purchaseOrderId ? <Badge variant="secondary">PO Created</Badge> : null}
+            {rfq.isBlindReviewActive ? <Badge variant="secondary">{tScm("k_324804bd2288")}</Badge> : null}
+            {rfq.award?.purchaseOrderId ? <Badge variant="secondary">{tScm("k_41a29585becb")}</Badge> : null}
           </div>
           <div>
             <h1 className="text-2xl font-bold">{rfq.rfqNumber}</h1>
@@ -406,26 +409,26 @@ export default function RfqDetailPage() {
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" onClick={() => void loadData()} disabled={loading || saving}>
             <RefreshCw className="mr-2 h-4 w-4" />
-            Refresh
+            {tScm("k_56e3badc4e6c")}
           </Button>
           {canManage && rfq.status === "DRAFT" ? (
             <Button variant="outline" onClick={() => void patchAction("submit")} disabled={saving}>
-              Submit
+              {tScm("k_2dacf6595984")}
             </Button>
           ) : null}
           {canManage && ["SUBMITTED", "AWARDED"].includes(rfq.status) ? (
             <Button variant="outline" onClick={() => void patchAction("close")} disabled={saving}>
-              Close
+              {tScm("k_bbfa773e5a63")}
             </Button>
           ) : null}
           {canManage && ["DRAFT", "SUBMITTED", "CLOSED"].includes(rfq.status) ? (
             <Button variant="outline" onClick={() => void patchAction("cancel")} disabled={saving}>
-              Cancel
+              {tScm("k_77dfd2135f4d")}
             </Button>
           ) : null}
           {canConvertPo && rfq.status === "AWARDED" && rfq.award && !rfq.award.purchaseOrderId ? (
             <Button onClick={() => void patchAction("convert_to_po")} disabled={saving}>
-              Convert To PO
+              {tScm("k_28a415574019")}
             </Button>
           ) : null}
         </div>
@@ -433,22 +436,22 @@ export default function RfqDetailPage() {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <ScmStatCard
-          label="Warehouse"
+          label={tScm("k_298dff72dae2")}
           value={rfq.warehouse.name}
           hint={rfq.warehouse.code}
         />
         <ScmStatCard
-          label="Submission Deadline"
+          label={tScm("k_da81902f60ba")}
           value={rfq.submissionDeadline ? new Date(rfq.submissionDeadline).toLocaleDateString() : "-"}
           hint={`Requested ${new Date(rfq.requestedAt).toLocaleDateString()}`}
         />
         <ScmStatCard
-          label="Invites / Quotes"
+          label={tScm("k_e7e4188f9d55")}
           value={`${rfq.supplierInvites.length} / ${rfq.quotationSubmissionCount ?? rfq.quotations.length}`}
           hint={`Round ${rfq.resubmissionRound ?? 0}`}
         />
         <ScmStatCard
-          label="Award"
+          label={tScm("k_9f094fedb591")}
           value={rfq.award?.supplier.name || "Pending"}
           hint={rfq.award?.purchaseOrderId ? "PO already created" : "No PO linked"}
         />
@@ -462,10 +465,10 @@ export default function RfqDetailPage() {
             <CardContent className="pt-6">
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {[
-                  { label: "Drafted", value: fmtDate(rfq.requestedAt) },
-                  { label: "Submitted", value: fmtDate(rfq.submittedAt) },
-                  { label: "Deadline Unlock", value: fmtDate(rfq.quotationsVisibleAt || rfq.submissionDeadline) },
-                  { label: "Closed", value: fmtDate(rfq.closedAt) },
+                  { label: tScm("k_133fc4132ccb"), value: fmtDate(rfq.requestedAt) },
+                  { label: tScm("k_2e00359b9802"), value: fmtDate(rfq.submittedAt) },
+                  { label: tScm("k_559a8f46e9d1"), value: fmtDate(rfq.quotationsVisibleAt || rfq.submissionDeadline) },
+                  { label: tScm("k_88d86b7721d5"), value: fmtDate(rfq.closedAt) },
                 ].map((step) => (
                   <div key={step.label} className="rounded-lg border p-3">
                     <div className="text-xs uppercase tracking-wide text-muted-foreground">{step.label}</div>
@@ -478,41 +481,41 @@ export default function RfqDetailPage() {
 
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="suppliers">Suppliers</TabsTrigger>
-              <TabsTrigger value="proposals">Proposals</TabsTrigger>
-              <TabsTrigger value="documents">Documents</TabsTrigger>
-              <TabsTrigger value="award">Award</TabsTrigger>
+              <TabsTrigger value="overview">{tScm("k_0efc2e6be4c2")}</TabsTrigger>
+              <TabsTrigger value="suppliers">{tScm("k_6f76bb2b1215")}</TabsTrigger>
+              <TabsTrigger value="proposals">{tScm("k_ef44f4b732a2")}</TabsTrigger>
+              <TabsTrigger value="documents">{tScm("k_687c82861c95")}</TabsTrigger>
+              <TabsTrigger value="award">{tScm("k_9f094fedb591")}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>RFQ Scope</CardTitle>
+                  <CardTitle>{tScm("k_52b5dc154507")}</CardTitle>
                 </CardHeader>
                 <CardContent className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Scope Of Work</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_0c444f6c7691")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.scopeOfWork || "-"}</p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Terms & Conditions</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_d35f2b98edf8")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.termsAndConditions || "-"}</p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">BoQ Details</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_5aa07c3076cd")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.boqDetails || "-"}</p>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Technical Specifications</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_9719a1d80d88")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.technicalSpecifications || "-"}</p>
                   </div>
                   <div className="md:col-span-2">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Evaluation Criteria</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_19fbd3efcc80")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.evaluationCriteria || "-"}</p>
                   </div>
                   <div className="md:col-span-2">
-                    <div className="text-xs uppercase tracking-wide text-muted-foreground">Internal Note</div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_ee2a43f64d7b")}</div>
                     <p className="mt-2 whitespace-pre-wrap text-sm">{rfq.note || "-"}</p>
                   </div>
                 </CardContent>
@@ -520,16 +523,16 @@ export default function RfqDetailPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>RFQ Line Items</CardTitle>
+                  <CardTitle>{tScm("k_27245af06003")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Variant</TableHead>
-                        <TableHead>Requested</TableHead>
-                        <TableHead>Target Cost</TableHead>
-                        <TableHead>Description</TableHead>
+                        <TableHead>{tScm("k_cc91b1ea2c16")}</TableHead>
+                        <TableHead>{tScm("k_c26bf60fed37")}</TableHead>
+                        <TableHead>{tScm("k_edad8124563c")}</TableHead>
+                        <TableHead>{tScm("k_55f8ebc805e6")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -553,25 +556,25 @@ export default function RfqDetailPage() {
             <TabsContent value="suppliers" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Supplier Scope</CardTitle>
+                  <CardTitle>{tScm("k_8617b3e442a1")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {(rfq.categoryTargets?.length || 0) > 0 ? (
                     <div className="rounded-lg border p-3 text-sm">
-                      Categories:{" "}
+                      {tScm("k_5749e2497aa1")}{" "}
                       {(rfq.categoryTargets || [])
                         .map((target) => `${target.supplierCategory.name} (${target.supplierCategory.code})`)
                         .join(", ")}
                     </div>
                   ) : null}
                   <div className="rounded-lg border p-3">
-                    <div className="text-sm font-medium">Suggested Suppliers</div>
+                    <div className="text-sm font-medium">{tScm("k_25ec40f8283b")}</div>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      Category targeting scopes suppliers here, but actual invite happens only when procurement explicitly clicks Invite.
+                      {tScm("k_b9dd55bf53f4")}
                     </p>
                     <div className="mt-3 space-y-2">
                       {suggestedSuppliers.length === 0 ? (
-                        <p className="text-sm text-muted-foreground">No supplier matches the targeted categories.</p>
+                        <p className="text-sm text-muted-foreground">{tScm("k_42fb4ca05d97")}</p>
                       ) : (
                         suggestedSuppliers.map((supplier) => {
                           const invited = rfq.supplierInvites.some((invite) => invite.supplierId === supplier.id);
@@ -590,13 +593,13 @@ export default function RfqDetailPage() {
                     </div>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <div className="text-sm font-medium">Invited Suppliers</div>
+                    <div className="text-sm font-medium">{tScm("k_02cec5c63520")}</div>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      Only suppliers shown here have received an explicit RFQ invite and can be treated as active invitees.
+                      {tScm("k_330feb3174d0")}
                     </p>
                     <div className="mt-3 space-y-2">
                   {rfq.supplierInvites.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No supplier invited yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_9228605444d0")}</p>
                   ) : (
                     rfq.supplierInvites.map((invite) => (
                       <div key={`${invite.supplierId}-${invite.status}`} className="rounded-lg border p-3">
@@ -617,7 +620,7 @@ export default function RfqDetailPage() {
               {canManage && ["DRAFT", "SUBMITTED"].includes(rfq.status) ? (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Invite Supplier</CardTitle>
+                    <CardTitle>{tScm("k_8544def587b9")}</CardTitle>
                   </CardHeader>
                   <CardContent className="grid gap-3 md:grid-cols-3">
                     <select
@@ -625,7 +628,7 @@ export default function RfqDetailPage() {
                       value={inviteSupplier}
                       onChange={(event) => setInviteSupplier(event.target.value)}
                     >
-                      <option value="">Invite supplier</option>
+                      <option value="">{tScm("k_6a0d93ea2e57")}</option>
                       {suppliers.map((supplier) => (
                         <option key={supplier.id} value={supplier.id}>
                           {supplier.name} ({supplier.code})
@@ -637,7 +640,7 @@ export default function RfqDetailPage() {
                       value={inviteCategory}
                       onChange={(event) => setInviteCategory(event.target.value)}
                     >
-                      <option value="">Invite by category</option>
+                      <option value="">{tScm("k_c5291b0514a4")}</option>
                       {supplierCategories.map((category) => (
                         <option key={category.id} value={category.id}>
                           {category.name} ({category.code})
@@ -654,7 +657,7 @@ export default function RfqDetailPage() {
                       }
                       disabled={saving}
                     >
-                      Invite
+                      {tScm("k_b136609f0684")}
                     </Button>
                   </CardContent>
                 </Card>
@@ -665,7 +668,7 @@ export default function RfqDetailPage() {
               {rfq.isBlindReviewActive ? (
                 <Card>
                   <CardContent className="pt-6 text-sm text-amber-700 dark:text-amber-300">
-                    Blind review is active. Technical and financial proposal details stay hidden until{" "}
+                    {tScm("k_7bdf0877a9ee")}{" "}
                     {fmtDate(rfq.quotationsVisibleAt || rfq.submissionDeadline)}.
                   </CardContent>
                 </Card>
@@ -674,7 +677,7 @@ export default function RfqDetailPage() {
               {!rfq.isBlindReviewActive && canManage && ["SUBMITTED", "CLOSED", "AWARDED"].includes(rfq.status) ? (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Manual Quotation Entry</CardTitle>
+                    <CardTitle>{tScm("k_a86a5502e464")}</CardTitle>
                   </CardHeader>
                   <CardContent className="grid gap-3 md:grid-cols-4">
                     <select
@@ -682,7 +685,7 @@ export default function RfqDetailPage() {
                       value={quoteSupplier}
                       onChange={(event) => setQuoteSupplier(event.target.value)}
                     >
-                      <option value="">Quote supplier</option>
+                      <option value="">{tScm("k_94b4d9c7c631")}</option>
                       {quotationSupplierOptions.map((supplier) => (
                         <option key={supplier.id} value={supplier.id}>
                           {supplier.name} ({supplier.code})
@@ -693,12 +696,12 @@ export default function RfqDetailPage() {
                       type="number"
                       min="0"
                       step="0.01"
-                      placeholder="Unit cost for all lines"
+                      placeholder={tScm("k_6cd3e47633c5")}
                       value={quoteUnitCost}
                       onChange={(event) => setQuoteUnitCost(event.target.value)}
                     />
                     <Input
-                      placeholder="Quotation note"
+                      placeholder={tScm("k_65f5911659e9")}
                       value={quoteNote}
                       onChange={(event) => setQuoteNote(event.target.value)}
                     />
@@ -718,7 +721,7 @@ export default function RfqDetailPage() {
                       }
                       disabled={saving}
                     >
-                      Submit Quotation
+                      {tScm("k_8b96cd320dbb")}
                     </Button>
                   </CardContent>
                 </Card>
@@ -727,7 +730,7 @@ export default function RfqDetailPage() {
               {!rfq.isBlindReviewActive && rfq.quotations.length > 0 ? (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Evaluation View</CardTitle>
+                    <CardTitle>{tScm("k_ed48ed9f341e")}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {rfq.quotations.map((quotation) => (
@@ -741,15 +744,15 @@ export default function RfqDetailPage() {
                         </div>
                         {quotation.technicalProposal ? (
                           <div className="mt-2 text-sm text-muted-foreground">
-                            Technical: {quotation.technicalProposal}
+                            {tScm("k_3a800d9a652d")} {quotation.technicalProposal}
                           </div>
                         ) : null}
                         {quotation.financialProposal ? (
                           <div className="mt-2 text-sm text-muted-foreground">
-                            Financial: {quotation.financialProposal}
+                            {tScm("k_bc04e065718a")} {quotation.financialProposal}
                           </div>
                         ) : null}
-                        {quotation.note ? <div className="mt-2 text-sm">Note: {quotation.note}</div> : null}
+                        {quotation.note ? <div className="mt-2 text-sm">{tScm("k_83423c198b60")} {quotation.note}</div> : null}
                         {(quotation.attachments?.length || 0) > 0 ? (
                           <div className="mt-3 space-y-1">
                             {quotation.attachments?.map((attachment) => (
@@ -775,11 +778,11 @@ export default function RfqDetailPage() {
             <TabsContent value="documents" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>RFQ Documents</CardTitle>
+                  <CardTitle>{tScm("k_accd58e9d4a3")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {(rfq.attachments?.length || 0) === 0 ? (
-                    <p className="text-sm text-muted-foreground">No RFQ attachment uploaded.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_935d7e1c16a3")}</p>
                   ) : (
                     rfq.attachments?.map((attachment) => (
                       <div key={attachment.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg border p-3">
@@ -790,7 +793,7 @@ export default function RfqDetailPage() {
                         <Button asChild variant="outline" size="sm">
                           <a href={attachment.fileUrl} target="_blank" rel="noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            Open
+                            {tScm("k_cf9b77061f7b")}
                           </a>
                         </Button>
                       </div>
@@ -803,16 +806,16 @@ export default function RfqDetailPage() {
             <TabsContent value="award" className="space-y-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Award Workspace</CardTitle>
+                  <CardTitle>{tScm("k_5ca189df534e")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {rfq.award ? (
                     <div className="rounded-lg border p-3 text-sm">
-                      Awarded to {rfq.award.supplier.name} ({rfq.award.supplier.code})
+                      {tScm("k_a437bf912ab0")} {rfq.award.supplier.name} ({rfq.award.supplier.code})
                       {rfq.award.purchaseOrderId ? " • Purchase order already linked." : " • Purchase order not created yet."}
                     </div>
                   ) : (
-                    <p className="text-sm text-muted-foreground">No award decision recorded yet.</p>
+                    <p className="text-sm text-muted-foreground">{tScm("k_4c9b63066dc9")}</p>
                   )}
 
                   {canApprove && !rfq.isBlindReviewActive && rfq.quotations.length > 0 ? (
@@ -822,7 +825,7 @@ export default function RfqDetailPage() {
                         value={awardQuoteId}
                         onChange={(event) => setAwardQuoteId(event.target.value)}
                       >
-                        <option value="">Select quotation</option>
+                        <option value="">{tScm("k_5a05a1cf7abb")}</option>
                         {rfq.quotations.map((quotation) => (
                           <option key={quotation.id} value={quotation.id}>
                             {quotation.supplier.name} • {quotation.total} {quotation.currency}
@@ -836,7 +839,7 @@ export default function RfqDetailPage() {
                         }
                         disabled={saving}
                       >
-                        Award
+                        {tScm("k_9f094fedb591")}
                       </Button>
                     </div>
                   ) : null}
@@ -844,7 +847,7 @@ export default function RfqDetailPage() {
                   {canManage && ["SUBMITTED", "CLOSED", "AWARDED"].includes(rfq.status) && (rfq.resubmissionAllowed ?? true) ? (
                     <div className="grid gap-2 md:grid-cols-[3fr_auto]">
                       <Input
-                        placeholder="Resubmission reason"
+                        placeholder={tScm("k_74a386a3c03a")}
                         value={resubmissionReason}
                         onChange={(event) => setResubmissionReason(event.target.value)}
                       />
@@ -857,7 +860,7 @@ export default function RfqDetailPage() {
                         }
                         disabled={saving}
                       >
-                        Request Resubmission
+                        {tScm("k_0ad06229dec8")}
                       </Button>
                     </div>
                   ) : null}
@@ -870,11 +873,11 @@ export default function RfqDetailPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Context</CardTitle>
+              <CardTitle>{tScm("k_cc11b3a28fa3")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Linked MRF</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_d4377b049a04")}</div>
                 <div className="mt-1">
                   {rfq.purchaseRequisition ? (
                     <Link
@@ -889,15 +892,15 @@ export default function RfqDetailPage() {
                 </div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Resubmission</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_5d7b53d0a275")}</div>
                 <div className="mt-1">{rfq.resubmissionAllowed ? "Allowed" : "Locked"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Blind Review</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_38189bba8f47")}</div>
                 <div className="mt-1">{rfq.isBlindReviewActive ? "Active until deadline" : "Unlocked"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Award Status</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_bffcf43b50dc")}</div>
                 <div className="mt-1">{rfq.award ? `Awarded to ${rfq.award.supplier.code}` : "Pending"}</div>
               </div>
             </CardContent>
@@ -905,20 +908,20 @@ export default function RfqDetailPage() {
 
           <ScmNextStepPanel
             title={rfq.status}
-            subtitle="This panel keeps RFQ workflow actions on the document instead of spreading them across the register."
-            emptyMessage="No direct workflow action is available for your current permissions."
+            subtitle={tScm("k_4483372ecedb")}
+            emptyMessage={tScm("k_ad90a4161999")}
             actions={[
               ...(canManage && rfq.status === "DRAFT"
-                ? [{ key: "submit", label: "Submit RFQ", variant: "outline" as const, disabled: saving, onClick: () => void patchAction("submit") }]
+                ? [{ key: "submit", label: tScm("k_9d00db7c6490"), variant: "outline" as const, disabled: saving, onClick: () => void patchAction("submit") }]
                 : []),
               ...(canManage && ["SUBMITTED", "AWARDED"].includes(rfq.status)
-                ? [{ key: "close", label: "Close RFQ", variant: "outline" as const, disabled: saving, onClick: () => void patchAction("close") }]
+                ? [{ key: "close", label: tScm("k_73a6637f2cff"), variant: "outline" as const, disabled: saving, onClick: () => void patchAction("close") }]
                 : []),
               ...(canManage && ["DRAFT", "SUBMITTED", "CLOSED"].includes(rfq.status)
-                ? [{ key: "cancel", label: "Cancel RFQ", variant: "outline" as const, disabled: saving, onClick: () => void patchAction("cancel") }]
+                ? [{ key: "cancel", label: tScm("k_ec0c5be788f5"), variant: "outline" as const, disabled: saving, onClick: () => void patchAction("cancel") }]
                 : []),
               ...(canConvertPo && rfq.status === "AWARDED" && rfq.award && !rfq.award.purchaseOrderId
-                ? [{ key: "convert_to_po", label: "Convert Award To PO", disabled: saving, onClick: () => void patchAction("convert_to_po") }]
+                ? [{ key: "convert_to_po", label: tScm("k_30f1cf435150"), disabled: saving, onClick: () => void patchAction("convert_to_po") }]
                 : []),
             ]}
           />

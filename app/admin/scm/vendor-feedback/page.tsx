@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -405,6 +406,7 @@ function FeedbackModal({
 }
 
 export default function VendorFeedbackPage() {
+  const tScm = useTranslations("ScmAuto");
   const t = useTranslations("AdminVendorFeedback");
   const locale = useLocale();
   const [data, setData] = useState<FeedbackResponse>({ suppliers: [], rows: [] });
@@ -736,9 +738,9 @@ export default function VendorFeedbackPage() {
                         {getRatingStars(row.rating)}
                       </div>
                       <div className="flex gap-2 text-xs">
-                        <span>S:{row.serviceQualityRating ?? "-"}</span>
-                        <span>D:{row.deliveryRating ?? "-"}</span>
-                        <span>C:{row.complianceRating ?? "-"}</span>
+                        <span>{tScm("k_6d77ecfb014f")}{row.serviceQualityRating ?? "-"}</span>
+                        <span>{tScm("k_850f0879891f")}{row.deliveryRating ?? "-"}</span>
+                        <span>{tScm("k_1173dbb43313")}{row.complianceRating ?? "-"}</span>
                       </div>
                     </div>
 

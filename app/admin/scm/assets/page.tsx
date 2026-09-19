@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
@@ -180,6 +182,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
 }
 
 export default function AssetLifecyclePage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -320,9 +323,9 @@ export default function AssetLifecyclePage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Forbidden</CardTitle>
+            <CardTitle className="text-base sm:text-lg">{tScm("k_3dab5f6012e3")}</CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              You do not have permission to access asset register.
+              {tScm("k_77b7dd0854cf")}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -335,10 +338,10 @@ export default function AssetLifecyclePage() {
       {/* Header */}
       <div>
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-          Asset Lifecycle
+          {tScm("k_4f2755ecf4e8")}
         </h1>
         <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-          Monitor fixed-asset tags from material release and manage lifecycle status.
+          {tScm("k_d1844d122979")}
         </p>
       </div>
 
@@ -346,7 +349,7 @@ export default function AssetLifecyclePage() {
       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-5">
         <Card className="shadow-sm">
           <CardContent className="p-3 sm:p-4">
-            <div className="text-[10px] sm:text-xs text-muted-foreground">Total</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">{tScm("k_b25928c69902")}</div>
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
               {summary.total}
             </div>
@@ -354,7 +357,7 @@ export default function AssetLifecyclePage() {
         </Card>
         <Card className="shadow-sm">
           <CardContent className="p-3 sm:p-4">
-            <div className="text-[10px] sm:text-xs text-muted-foreground">Active</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">{tScm("k_a733b809d2f1")}</div>
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-success">
               {summary.active}
             </div>
@@ -362,7 +365,7 @@ export default function AssetLifecyclePage() {
         </Card>
         <Card className="shadow-sm">
           <CardContent className="p-3 sm:p-4">
-            <div className="text-[10px] sm:text-xs text-muted-foreground">Retired</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">{tScm("k_37d1213e53ce")}</div>
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-muted-foreground">
               {summary.retired}
             </div>
@@ -370,7 +373,7 @@ export default function AssetLifecyclePage() {
         </Card>
         <Card className="shadow-sm">
           <CardContent className="p-3 sm:p-4">
-            <div className="text-[10px] sm:text-xs text-muted-foreground">Lost</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">{tScm("k_75a7bf994e9a")}</div>
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-destructive">
               {summary.lost}
             </div>
@@ -378,7 +381,7 @@ export default function AssetLifecyclePage() {
         </Card>
         <Card className="shadow-sm col-span-2 md:col-span-1">
           <CardContent className="p-3 sm:p-4">
-            <div className="text-[10px] sm:text-xs text-muted-foreground">Disposed</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">{tScm("k_1397ce5a41bd")}</div>
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-warning">
               {summary.disposed}
             </div>
@@ -391,9 +394,9 @@ export default function AssetLifecyclePage() {
         <CardHeader className="p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle className="text-base sm:text-lg">Asset Register</CardTitle>
+              <CardTitle className="text-base sm:text-lg">{tScm("k_d356631d4242")}</CardTitle>
               <CardDescription className="text-xs sm:text-sm">
-                Filter and update assigned owner, status, and lifecycle notes.
+                {tScm("k_1844c5dfc167")}
               </CardDescription>
             </div>
             <Button
@@ -403,7 +406,7 @@ export default function AssetLifecyclePage() {
               className="sm:hidden"
             >
               <Filter className="h-4 w-4 mr-2" />
-              Filters
+              {tScm("k_96e578211aa2")}
             </Button>
           </div>
         </CardHeader>
@@ -413,7 +416,7 @@ export default function AssetLifecyclePage() {
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search tag, item, sku, assigned owner..."
+              placeholder={tScm("k_2505dbdac0a9")}
               className="text-sm"
             />
             <select
@@ -421,7 +424,7 @@ export default function AssetLifecyclePage() {
               value={warehouseId}
               onChange={(event) => setWarehouseId(event.target.value)}
             >
-              <option value="">All warehouses</option>
+              <option value="">{tScm("k_4398170593bf")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -433,15 +436,15 @@ export default function AssetLifecyclePage() {
               value={status}
               onChange={(event) => setStatus(event.target.value)}
             >
-              <option value="ALL">All statuses</option>
-              <option value="ACTIVE">ACTIVE</option>
-              <option value="RETIRED">RETIRED</option>
-              <option value="LOST">LOST</option>
-              <option value="DISPOSED">DISPOSED</option>
+              <option value="ALL">{tScm("k_6405179d241b")}</option>
+              <option value="ACTIVE">{tScm("k_c72633f673ef")}</option>
+              <option value="RETIRED">{tScm("k_bda5ec3f892a")}</option>
+              <option value="LOST">{tScm("k_29494e88e9c9")}</option>
+              <option value="DISPOSED">{tScm("k_3c1b36d2e8ad")}</option>
             </select>
             <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
               <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
 
@@ -451,7 +454,7 @@ export default function AssetLifecyclePage() {
               <Input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search..."
+                placeholder={tScm("k_6d7a30a931a3")}
                 className="text-sm"
               />
               <select
@@ -459,7 +462,7 @@ export default function AssetLifecyclePage() {
                 value={warehouseId}
                 onChange={(event) => setWarehouseId(event.target.value)}
               >
-                <option value="">All warehouses</option>
+                <option value="">{tScm("k_4398170593bf")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -471,18 +474,18 @@ export default function AssetLifecyclePage() {
                 value={status}
                 onChange={(event) => setStatus(event.target.value)}
               >
-                <option value="ALL">All statuses</option>
-                <option value="ACTIVE">ACTIVE</option>
-                <option value="RETIRED">RETIRED</option>
-                <option value="LOST">LOST</option>
-                <option value="DISPOSED">DISPOSED</option>
+                <option value="ALL">{tScm("k_6405179d241b")}</option>
+                <option value="ACTIVE">{tScm("k_c72633f673ef")}</option>
+                <option value="RETIRED">{tScm("k_bda5ec3f892a")}</option>
+                <option value="LOST">{tScm("k_29494e88e9c9")}</option>
+                <option value="DISPOSED">{tScm("k_3c1b36d2e8ad")}</option>
               </select>
               <Button variant="outline" onClick={() => void loadData()} disabled={loading} className="w-full">
                 <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-                Refresh
+                {tScm("k_56e3badc4e6c")}
               </Button>
               <Button variant="outline" onClick={() => setShowFilters(false)} className="w-full">
-                Close Filters
+                {tScm("k_6834a4e56490")}
               </Button>
             </div>
           )}
@@ -500,13 +503,13 @@ export default function AssetLifecyclePage() {
               <Table>
                 <TableHeader>
                   <TableRow className="border-border hover:bg-transparent">
-                    <TableHead className="text-xs font-medium text-muted-foreground">Asset</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Warehouse</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Source</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Status</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Assigned To</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Note</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Actions</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_4426afd90a77")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_298dff72dae2")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_6da13addb000")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_bae7d5be7082")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_d00c2e68c310")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_2c924e308820")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_c3cd636a585b")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -534,10 +537,10 @@ export default function AssetLifecyclePage() {
                         </TableCell>
                         <TableCell className="py-3">
                           <div className="text-xs text-foreground">
-                            MRF: {asset.materialRequest?.requestNumber || "N/A"}
+                            {tScm("k_b6b578fd7055")} {asset.materialRequest?.requestNumber || "N/A"}
                           </div>
                           <div className="text-xs text-muted-foreground">
-                            MRN: {asset.materialReleaseNote?.releaseNumber || "N/A"}
+                            {tScm("k_a86c7356b090")} {asset.materialReleaseNote?.releaseNumber || "N/A"}
                           </div>
                         </TableCell>
                         <TableCell className="py-3">
@@ -558,10 +561,10 @@ export default function AssetLifecyclePage() {
                                 }))
                               }
                             >
-                              <option value="ACTIVE">ACTIVE</option>
-                              <option value="RETIRED">RETIRED</option>
-                              <option value="LOST">LOST</option>
-                              <option value="DISPOSED">DISPOSED</option>
+                              <option value="ACTIVE">{tScm("k_c72633f673ef")}</option>
+                              <option value="RETIRED">{tScm("k_bda5ec3f892a")}</option>
+                              <option value="LOST">{tScm("k_29494e88e9c9")}</option>
+                              <option value="DISPOSED">{tScm("k_3c1b36d2e8ad")}</option>
                             </select>
                           ) : (
                             <span className={cn(
@@ -585,7 +588,7 @@ export default function AssetLifecyclePage() {
                                   },
                                 }))
                               }
-                              placeholder="Person/department"
+                              placeholder={tScm("k_26d7853753cf")}
                               className="text-sm"
                             />
                           ) : (
@@ -607,7 +610,7 @@ export default function AssetLifecyclePage() {
                                   },
                                 }))
                               }
-                              placeholder="Lifecycle note"
+                              placeholder={tScm("k_90a55f1708fd")}
                               className="text-sm"
                             />
                           ) : (
@@ -621,7 +624,7 @@ export default function AssetLifecyclePage() {
                             <Button size="sm" variant="outline" asChild className="w-full">
                               <Link href={`/admin/scm/assets/${asset.id}`}>
                                 <FileText className="h-3 w-3 mr-1" />
-                                Detail
+                                {tScm("k_7c9a7c0610c1")}
                               </Link>
                             </Button>
                             {canManage && (
@@ -681,7 +684,7 @@ export default function AssetLifecyclePage() {
                           </span>
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">
-                          Acquired: {formatDateTime(asset.acquiredAt)}
+                          {tScm("k_fd67e8f5cbd2")} {formatDateTime(asset.acquiredAt)}
                         </p>
                       </div>
 
@@ -696,14 +699,14 @@ export default function AssetLifecyclePage() {
                       <div className="space-y-1">
                         <div className="flex items-center gap-2 text-xs">
                           <FileText className="h-3 w-3 text-muted-foreground" />
-                          <span className="text-muted-foreground">MRF:</span>
+                          <span className="text-muted-foreground">{tScm("k_b6b578fd7055")}</span>
                           <span className="text-foreground">
                             {asset.materialRequest?.requestNumber || "N/A"}
                           </span>
                         </div>
                         <div className="flex items-center gap-2 text-xs">
                           <FileText className="h-3 w-3 text-muted-foreground" />
-                          <span className="text-muted-foreground">MRN:</span>
+                          <span className="text-muted-foreground">{tScm("k_a86c7356b090")}</span>
                           <span className="text-foreground">
                             {asset.materialReleaseNote?.releaseNumber || "N/A"}
                           </span>
@@ -715,7 +718,7 @@ export default function AssetLifecyclePage() {
                         {canManage ? (
                           <>
                             <div>
-                              <Label className="text-xs text-muted-foreground">Status</Label>
+                              <Label className="text-xs text-muted-foreground">{tScm("k_bae7d5be7082")}</Label>
                               <select
                                 className={cn(
                                   "w-full rounded-md border px-2 py-1.5 text-sm mt-1",
@@ -732,14 +735,14 @@ export default function AssetLifecyclePage() {
                                   }))
                                 }
                               >
-                                <option value="ACTIVE">ACTIVE</option>
-                                <option value="RETIRED">RETIRED</option>
-                                <option value="LOST">LOST</option>
-                                <option value="DISPOSED">DISPOSED</option>
+                                <option value="ACTIVE">{tScm("k_c72633f673ef")}</option>
+                                <option value="RETIRED">{tScm("k_bda5ec3f892a")}</option>
+                                <option value="LOST">{tScm("k_29494e88e9c9")}</option>
+                                <option value="DISPOSED">{tScm("k_3c1b36d2e8ad")}</option>
                               </select>
                             </div>
                             <div>
-                              <Label className="text-xs text-muted-foreground">Assigned To</Label>
+                              <Label className="text-xs text-muted-foreground">{tScm("k_d00c2e68c310")}</Label>
                               <Input
                                 value={draft.assignedTo}
                                 onChange={(event) =>
@@ -751,12 +754,12 @@ export default function AssetLifecyclePage() {
                                     },
                                   }))
                                 }
-                                placeholder="Person/department"
+                                placeholder={tScm("k_26d7853753cf")}
                                 className="text-sm mt-1"
                               />
                             </div>
                             <div>
-                              <Label className="text-xs text-muted-foreground">Note</Label>
+                              <Label className="text-xs text-muted-foreground">{tScm("k_2c924e308820")}</Label>
                               <Input
                                 value={draft.note}
                                 onChange={(event) =>
@@ -768,7 +771,7 @@ export default function AssetLifecyclePage() {
                                     },
                                   }))
                                 }
-                                placeholder="Lifecycle note"
+                                placeholder={tScm("k_90a55f1708fd")}
                                 className="text-sm mt-1"
                               />
                             </div>
@@ -776,13 +779,13 @@ export default function AssetLifecyclePage() {
                         ) : (
                           <>
                             <div>
-                              <Label className="text-xs text-muted-foreground">Assigned To</Label>
+                              <Label className="text-xs text-muted-foreground">{tScm("k_d00c2e68c310")}</Label>
                               <p className="text-sm text-foreground mt-1">
                                 {asset.assignedTo || "N/A"}
                               </p>
                             </div>
                             <div>
-                              <Label className="text-xs text-muted-foreground">Note</Label>
+                              <Label className="text-xs text-muted-foreground">{tScm("k_2c924e308820")}</Label>
                               <p className="text-sm text-muted-foreground mt-1">
                                 {asset.note || "N/A"}
                               </p>
@@ -796,7 +799,7 @@ export default function AssetLifecyclePage() {
                         <Button size="sm" variant="outline" asChild className="flex-1">
                           <Link href={`/admin/scm/assets/${asset.id}`}>
                             <FileText className="h-3.5 w-3.5 mr-1" />
-                            View Detail
+                            {tScm("k_4274b1af463a")}
                           </Link>
                         </Button>
                         {canManage && (
@@ -823,9 +826,9 @@ export default function AssetLifecyclePage() {
           {!loading && paginatedAssets.length === 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No assets found.</p>
+              <p className="text-sm text-muted-foreground">{tScm("k_065e17b72bdd")}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Try adjusting your filters or search criteria.
+                {tScm("k_56fb07fd6653")}
               </p>
             </div>
           )}

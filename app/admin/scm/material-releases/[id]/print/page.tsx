@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
+
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -72,6 +75,7 @@ function formatMoney(value: string | number | null | undefined) {
 }
 
 export default function MaterialReleasePrintPage() {
+  const tScm = useTranslations("ScmAuto");
   const params = useParams<{ id: string }>();
   const searchParams = useSearchParams();
   const printType = (searchParams.get("type") || "challan").toLowerCase();
@@ -113,7 +117,7 @@ export default function MaterialReleasePrintPage() {
   }, [release]);
 
   if (loading) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading printable document...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{tScm("k_9aba059ebb56")}</div>;
   }
 
   if (error || !release) {
@@ -127,7 +131,7 @@ export default function MaterialReleasePrintPage() {
     <div className="mx-auto max-w-5xl space-y-4 p-4 print:p-0">
       <div className="flex items-center justify-between print:hidden">
         <h1 className="text-xl font-bold">{title}</h1>
-        <Button onClick={() => window.print()}>Print</Button>
+        <Button onClick={() => window.print()}>{tScm("k_5b221e9c2a45")}</Button>
       </div>
 
       <Card className="print:border-none print:shadow-none">
@@ -137,27 +141,27 @@ export default function MaterialReleasePrintPage() {
         <CardContent className="space-y-4 text-sm">
           <div className="grid gap-2 md:grid-cols-2">
             <div>
-              <div><strong>Document No:</strong> {docNo || "AUTO"}</div>
-              <div><strong>Release No:</strong> {release.releaseNumber}</div>
-              <div><strong>Request No:</strong> {release.materialRequest.requestNumber}</div>
-              <div><strong>Status:</strong> {release.status}</div>
+              <div><strong>{tScm("k_9e515d40898a")}</strong> {docNo || "AUTO"}</div>
+              <div><strong>{tScm("k_3f22fcd2ae0f")}</strong> {release.releaseNumber}</div>
+              <div><strong>{tScm("k_2c1cdd6bce0e")}</strong> {release.materialRequest.requestNumber}</div>
+              <div><strong>{tScm("k_11dc9e195292")}</strong> {release.status}</div>
             </div>
             <div>
-              <div><strong>Warehouse:</strong> {release.warehouse.name} ({release.warehouse.code})</div>
-              <div><strong>Released At:</strong> {formatDateTime(release.releasedAt)}</div>
-              <div><strong>Released By:</strong> {release.releasedBy?.name || release.releasedBy?.email || "N/A"}</div>
-              <div><strong>Requester:</strong> {release.materialRequest.createdBy?.name || release.materialRequest.createdBy?.email || "N/A"}</div>
+              <div><strong>{tScm("k_edce1fb96bf3")}</strong> {release.warehouse.name} ({release.warehouse.code})</div>
+              <div><strong>{tScm("k_702f46bcd39f")}</strong> {formatDateTime(release.releasedAt)}</div>
+              <div><strong>{tScm("k_730a5474aa58")}</strong> {release.releasedBy?.name || release.releasedBy?.email || "N/A"}</div>
+              <div><strong>{tScm("k_c0f1db2d87f9")}</strong> {release.materialRequest.createdBy?.name || release.materialRequest.createdBy?.email || "N/A"}</div>
             </div>
           </div>
 
           <table className="w-full border-collapse border text-xs">
             <thead>
               <tr>
-                <th className="border px-2 py-1 text-left">Item</th>
-                <th className="border px-2 py-1 text-left">SKU</th>
-                <th className="border px-2 py-1 text-right">Qty</th>
-                <th className="border px-2 py-1 text-right">Unit Cost</th>
-                <th className="border px-2 py-1 text-right">Line Total</th>
+                <th className="border px-2 py-1 text-left">{tScm("k_ecdda59aea5e")}</th>
+                <th className="border px-2 py-1 text-left">{tScm("k_d59192b9c8f2")}</th>
+                <th className="border px-2 py-1 text-right">{tScm("k_1e5ff9e500c2")}</th>
+                <th className="border px-2 py-1 text-right">{tScm("k_0105252023c5")}</th>
+                <th className="border px-2 py-1 text-right">{tScm("k_2d1a09efa038")}</th>
               </tr>
             </thead>
             <tbody>
@@ -175,7 +179,7 @@ export default function MaterialReleasePrintPage() {
             </tbody>
             <tfoot>
               <tr>
-                <td className="border px-2 py-1" colSpan={2}><strong>Total</strong></td>
+                <td className="border px-2 py-1" colSpan={2}><strong>{tScm("k_b25928c69902")}</strong></td>
                 <td className="border px-2 py-1 text-right"><strong>{totals.qty}</strong></td>
                 <td className="border px-2 py-1" />
                 <td className="border px-2 py-1 text-right"><strong>{formatMoney(totals.value)}</strong></td>
@@ -185,7 +189,7 @@ export default function MaterialReleasePrintPage() {
 
           {release.items.some((item) => item.assetRegisters.length > 0) ? (
             <div>
-              <div className="mb-1 font-semibold">Asset Tags</div>
+              <div className="mb-1 font-semibold">{tScm("k_1c8091bffc2a")}</div>
               <div className="space-y-1 text-xs">
                 {release.items
                   .filter((item) => item.assetRegisters.length > 0)
@@ -200,15 +204,15 @@ export default function MaterialReleasePrintPage() {
 
           {release.note ? (
             <div>
-              <div className="font-semibold">Note</div>
+              <div className="font-semibold">{tScm("k_2c924e308820")}</div>
               <div>{release.note}</div>
             </div>
           ) : null}
 
           <div className="grid gap-6 pt-10 md:grid-cols-3">
-            <div className="border-t pt-2 text-center">Prepared By</div>
-            <div className="border-t pt-2 text-center">Checked By</div>
-            <div className="border-t pt-2 text-center">Approved By</div>
+            <div className="border-t pt-2 text-center">{tScm("k_447abf81cf80")}</div>
+            <div className="border-t pt-2 text-center">{tScm("k_80f2a2955c12")}</div>
+            <div className="border-t pt-2 text-center">{tScm("k_2b62a43b5586")}</div>
           </div>
         </CardContent>
       </Card>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
@@ -168,6 +170,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
 }
 
 export default function PhysicalVerificationsPage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -330,11 +333,11 @@ export default function PhysicalVerificationsPage() {
 
   const createVerification = async () => {
     if (!form.warehouseId || !form.periodStart || !form.periodEnd) {
-      toast.error("Warehouse and period dates are required.");
+      toast.error(tScm("k_2048c7b83c3d"));
       return;
     }
     if (lines.length === 0) {
-      toast.error("Add at least one counted line.");
+      toast.error(tScm("k_09c4abc803db"));
       return;
     }
     setCreating(true);
@@ -359,7 +362,7 @@ export default function PhysicalVerificationsPage() {
         }),
       });
       await readJson(res, "Failed to create verification");
-      toast.success("Verification created");
+      toast.success(tScm("k_06bacd1b9805"));
       setForm({
         warehouseId: "",
         frequency: "MONTHLY",
@@ -385,7 +388,7 @@ export default function PhysicalVerificationsPage() {
         body: JSON.stringify({ action }),
       });
       await readJson(res, "Failed to update verification");
-      toast.success("Verification updated");
+      toast.success(tScm("k_08e5e6725515"));
       await loadVerifications();
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Failed to update verification");
@@ -399,7 +402,7 @@ export default function PhysicalVerificationsPage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have permission to access physical verifications.
+            {tScm("k_2813baf32b4d")}
           </CardContent>
         </Card>
       </div>
@@ -412,15 +415,15 @@ export default function PhysicalVerificationsPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Physical Verification
+            {tScm("k_4142a28f5370")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Schedule warehouse verification cycles, capture counts, and approve variance outcomes.
+            {tScm("k_f72fa73d4458")}
           </p>
         </div>
         <Button variant="outline" onClick={() => void loadVerifications()} disabled={loading}>
           <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-          Refresh
+          {tScm("k_56e3badc4e6c")}
         </Button>
       </div>
 
@@ -428,22 +431,22 @@ export default function PhysicalVerificationsPage() {
       {canManage && (
         <Card className="shadow-sm">
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-base sm:text-lg">Create Verification Cycle</CardTitle>
+            <CardTitle className="text-base sm:text-lg">{tScm("k_51bcc01c1dfc")}</CardTitle>
             <CardDescription className="text-xs sm:text-sm">
-              Capture counted stock for a verification period.
+              {tScm("k_d562c7b5fb83")}
             </CardDescription>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 space-y-4">
             {/* Basic Info Grid */}
             <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-3">
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Warehouse</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_298dff72dae2")}</Label>
                 <select
                   className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   value={form.warehouseId}
                   onChange={(e) => setForm((cur) => ({ ...cur, warehouseId: e.target.value }))}
                 >
-                  <option value="">Select warehouse</option>
+                  <option value="">{tScm("k_cfab2ae6ca21")}</option>
                   {warehouses.map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>
                       {warehouse.name} ({warehouse.code})
@@ -452,19 +455,19 @@ export default function PhysicalVerificationsPage() {
                 </select>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Frequency</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_89836a870e44")}</Label>
                 <select
                   className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   value={form.frequency}
                   onChange={(e) => setForm((cur) => ({ ...cur, frequency: e.target.value }))}
                 >
-                  <option value="MONTHLY">Monthly</option>
-                  <option value="QUARTERLY">Quarterly</option>
-                  <option value="ANNUAL">Annual</option>
+                  <option value="MONTHLY">{tScm("k_d31edb7b8a94")}</option>
+                  <option value="QUARTERLY">{tScm("k_8a34f7088055")}</option>
+                  <option value="ANNUAL">{tScm("k_0930f3f8992c")}</option>
                 </select>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Period Start</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_026ce8e3362b")}</Label>
                 <Input
                   type="date"
                   value={form.periodStart}
@@ -473,7 +476,7 @@ export default function PhysicalVerificationsPage() {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Period End</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_420b295ed55d")}</Label>
                 <Input
                   type="date"
                   value={form.periodEnd}
@@ -486,10 +489,10 @@ export default function PhysicalVerificationsPage() {
             {/* Committee & Note */}
             <div className="space-y-3 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-3">
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Committee Members</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_e08febf4aded")}</Label>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 max-h-24 overflow-y-auto p-2 border border-border rounded-md">
                   {visibleUsers.length === 0 ? (
-                    <div className="text-xs text-muted-foreground">No users available.</div>
+                    <div className="text-xs text-muted-foreground">{tScm("k_d09009497910")}</div>
                   ) : (
                     visibleUsers.map((user) => (
                       <button
@@ -510,11 +513,11 @@ export default function PhysicalVerificationsPage() {
                 </div>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs sm:text-sm">Note</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_2c924e308820")}</Label>
                 <Textarea
                   value={form.note}
                   onChange={(e) => setForm((cur) => ({ ...cur, note: e.target.value }))}
-                  placeholder="Optional verification note"
+                  placeholder={tScm("k_d61f37e3ae63")}
                   className="text-sm min-h-[80px]"
                 />
               </div>
@@ -523,16 +526,16 @@ export default function PhysicalVerificationsPage() {
             {/* Counted Lines */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <Label className="text-xs sm:text-sm">Counted Lines</Label>
+                <Label className="text-xs sm:text-sm">{tScm("k_037b9aea8a9b")}</Label>
                 <Button variant="outline" size="sm" onClick={addLine}>
                   <Plus className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1" />
-                  Add line
+                  {tScm("k_a147e4e01e58")}
                 </Button>
               </div>
               
               {lines.length === 0 ? (
                 <div className="rounded-md border border-dashed p-4 text-center text-sm text-muted-foreground">
-                  Add counted lines to record verification results.
+                  {tScm("k_091fd89791fb")}
                 </div>
               ) : (
                 <div className="space-y-2 max-h-[400px] overflow-y-auto">
@@ -547,7 +550,7 @@ export default function PhysicalVerificationsPage() {
                           value={line.productVariantId}
                           onChange={(e) => updateLine(index, "productVariantId", e.target.value)}
                         >
-                          <option value="">Variant</option>
+                          <option value="">{tScm("k_cc91b1ea2c16")}</option>
                           {variants.map((variant) => (
                             <option key={variant.id} value={variant.id}>
                               {variant.product?.name || "Variant"} ({variant.sku})
@@ -559,7 +562,7 @@ export default function PhysicalVerificationsPage() {
                           value={line.binId}
                           onChange={(e) => updateLine(index, "binId", e.target.value)}
                         >
-                          <option value="">Bin (optional)</option>
+                          <option value="">{tScm("k_636bb3801d91")}</option>
                           {bins.map((bin) => (
                             <option key={bin.id} value={bin.id}>
                               {bin.code} · {bin.name}
@@ -567,26 +570,26 @@ export default function PhysicalVerificationsPage() {
                           ))}
                         </select>
                         <Input
-                          placeholder="System qty"
+                          placeholder={tScm("k_8e17c8b581cf")}
                           value={line.systemQty}
                           onChange={(e) => updateLine(index, "systemQty", e.target.value)}
                           className="text-sm"
                         />
                         <Input
-                          placeholder="Counted qty"
+                          placeholder={tScm("k_76c6b404651a")}
                           value={line.countedQty}
                           onChange={(e) => updateLine(index, "countedQty", e.target.value)}
                           className="text-sm"
                         />
                         <div className="flex gap-2">
                           <Input
-                            placeholder="Note"
+                            placeholder={tScm("k_2c924e308820")}
                             value={line.note}
                             onChange={(e) => updateLine(index, "note", e.target.value)}
                             className="text-sm flex-1"
                           />
                           <Button variant="ghost" size="sm" onClick={() => removeLine(index)} className="px-2">
-                            Remove
+                            {tScm("k_e963907dac5c")}
                           </Button>
                         </div>
                       </div>
@@ -608,9 +611,9 @@ export default function PhysicalVerificationsPage() {
         <CardHeader className="p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle className="text-base sm:text-lg">Verification Register</CardTitle>
+              <CardTitle className="text-base sm:text-lg">{tScm("k_9959e12cd7c4")}</CardTitle>
               <CardDescription className="text-xs sm:text-sm">
-                Monitor verification status and approvals.
+                {tScm("k_8b2ecbb962f9")}
               </CardDescription>
             </div>
             <Button
@@ -620,7 +623,7 @@ export default function PhysicalVerificationsPage() {
               className="sm:hidden"
             >
               <Filter className="h-4 w-4 mr-2" />
-              Filters
+              {tScm("k_96e578211aa2")}
             </Button>
           </div>
         </CardHeader>
@@ -632,7 +635,7 @@ export default function PhysicalVerificationsPage() {
               value={warehouseId}
               onChange={(e) => setWarehouseId(e.target.value)}
             >
-              <option value="">All warehouses</option>
+              <option value="">{tScm("k_4398170593bf")}</option>
               {warehouses.map((warehouse) => (
                 <option key={warehouse.id} value={warehouse.id}>
                   {warehouse.name} ({warehouse.code})
@@ -644,13 +647,13 @@ export default function PhysicalVerificationsPage() {
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
             >
-              <option value="">All statuses</option>
-              <option value="DRAFT">Draft</option>
-              <option value="SUBMITTED">Submitted</option>
-              <option value="COMMITTEE_REVIEW">Committee review</option>
-              <option value="APPROVED">Approved</option>
-              <option value="REJECTED">Rejected</option>
-              <option value="CLOSED">Closed</option>
+              <option value="">{tScm("k_6405179d241b")}</option>
+              <option value="DRAFT">{tScm("k_23d33e22acfc")}</option>
+              <option value="SUBMITTED">{tScm("k_2e00359b9802")}</option>
+              <option value="COMMITTEE_REVIEW">{tScm("k_55d497ca1f48")}</option>
+              <option value="APPROVED">{tScm("k_41b81eb8db1b")}</option>
+              <option value="REJECTED">{tScm("k_27eeb7a291bf")}</option>
+              <option value="CLOSED">{tScm("k_88d86b7721d5")}</option>
             </select>
           </div>
 
@@ -662,7 +665,7 @@ export default function PhysicalVerificationsPage() {
                 value={warehouseId}
                 onChange={(e) => setWarehouseId(e.target.value)}
               >
-                <option value="">All warehouses</option>
+                <option value="">{tScm("k_4398170593bf")}</option>
                 {warehouses.map((warehouse) => (
                   <option key={warehouse.id} value={warehouse.id}>
                     {warehouse.name} ({warehouse.code})
@@ -674,16 +677,16 @@ export default function PhysicalVerificationsPage() {
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
               >
-                <option value="">All statuses</option>
-                <option value="DRAFT">Draft</option>
-                <option value="SUBMITTED">Submitted</option>
-                <option value="COMMITTEE_REVIEW">Committee review</option>
-                <option value="APPROVED">Approved</option>
-                <option value="REJECTED">Rejected</option>
-                <option value="CLOSED">Closed</option>
+                <option value="">{tScm("k_6405179d241b")}</option>
+                <option value="DRAFT">{tScm("k_23d33e22acfc")}</option>
+                <option value="SUBMITTED">{tScm("k_2e00359b9802")}</option>
+                <option value="COMMITTEE_REVIEW">{tScm("k_55d497ca1f48")}</option>
+                <option value="APPROVED">{tScm("k_41b81eb8db1b")}</option>
+                <option value="REJECTED">{tScm("k_27eeb7a291bf")}</option>
+                <option value="CLOSED">{tScm("k_88d86b7721d5")}</option>
               </select>
               <Button variant="outline" onClick={() => setShowFilters(false)} className="w-full">
-                Close Filters
+                {tScm("k_6834a4e56490")}
               </Button>
             </div>
           )}
@@ -693,11 +696,11 @@ export default function PhysicalVerificationsPage() {
             <Table>
               <TableHeader>
                 <TableRow className="border-border hover:bg-transparent">
-                  <TableHead className="text-xs font-medium text-muted-foreground">Warehouse</TableHead>
-                  <TableHead className="text-xs font-medium text-muted-foreground">Period</TableHead>
-                  <TableHead className="text-xs font-medium text-muted-foreground">Status</TableHead>
-                  <TableHead className="text-right text-xs font-medium text-muted-foreground">Lines</TableHead>
-                  <TableHead className="text-xs font-medium text-muted-foreground">Actions</TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_298dff72dae2")}</TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_170a28a9db6d")}</TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_bae7d5be7082")}</TableHead>
+                  <TableHead className="text-right text-xs font-medium text-muted-foreground">{tScm("k_c6fd3870c86e")}</TableHead>
+                  <TableHead className="text-xs font-medium text-muted-foreground">{tScm("k_c3cd636a585b")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -706,7 +709,7 @@ export default function PhysicalVerificationsPage() {
                     <TableCell colSpan={5} className="text-center py-8">
                       <div className="flex flex-col items-center gap-2">
                         <Package className="h-8 w-8 text-muted-foreground/50" />
-                        <p className="text-sm text-muted-foreground">No verifications found.</p>
+                        <p className="text-sm text-muted-foreground">{tScm("k_67378bb1f456")}</p>
                       </div>
                     </TableCell>
                   </TableRow>
@@ -744,26 +747,26 @@ export default function PhysicalVerificationsPage() {
                             <Button size="sm" variant="outline" asChild className="h-8 px-2 text-xs">
                               <Link href={`/admin/scm/physical-verifications/${verification.id}`}>
                                 <Eye className="h-3 w-3 mr-1" />
-                                View
+                                {tScm("k_69bd4ef9fbd0")}
                               </Link>
                             </Button>
                             {canManage && verification.status === "DRAFT" && (
                               <Button size="sm" onClick={() => void runAction(verification.id, "submit")} className="h-8 px-2 text-xs">
-                                Submit
+                                {tScm("k_2dacf6595984")}
                               </Button>
                             )}
                             {canApprove && verification.status === "SUBMITTED" && (
                               <Button size="sm" variant="outline" onClick={() => void runAction(verification.id, "committee_review")} className="h-8 px-2 text-xs">
-                                Review
+                                {tScm("k_e29a79fe0c34")}
                               </Button>
                             )}
                             {canApprove && verification.status === "COMMITTEE_REVIEW" && (
                               <>
                                 <Button size="sm" onClick={() => void runAction(verification.id, "committee_approve")} className="h-8 px-2 text-xs">
-                                  Approve
+                                  {tScm("k_7b2c7f146aba")}
                                 </Button>
                                 <Button size="sm" variant="destructive" onClick={() => void runAction(verification.id, "committee_reject")} className="h-8 px-2 text-xs">
-                                  Reject
+                                  {tScm("k_2b03b59293b6")}
                                 </Button>
                               </>
                             )}
@@ -782,7 +785,7 @@ export default function PhysicalVerificationsPage() {
             {paginatedVerifications.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-8 text-center">
                 <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-                <p className="text-sm text-muted-foreground">No verifications found.</p>
+                <p className="text-sm text-muted-foreground">{tScm("k_67378bb1f456")}</p>
               </div>
             ) : (
               paginatedVerifications.map((verification) => {
@@ -825,7 +828,7 @@ export default function PhysicalVerificationsPage() {
                       <div className="flex items-center gap-2 text-sm">
                         <Package className="h-3.5 w-3.5 text-muted-foreground" />
                         <span className="text-foreground">
-                          {verification.lines.length} line{verification.lines.length !== 1 ? "s" : ""}
+                          {verification.lines.length} {tScm("k_264f39cab871")}{verification.lines.length !== 1 ? "s" : ""}
                         </span>
                       </div>
 
@@ -834,26 +837,26 @@ export default function PhysicalVerificationsPage() {
                         <Button size="sm" variant="outline" asChild className="flex-1">
                           <Link href={`/admin/scm/physical-verifications/${verification.id}`}>
                             <Eye className="h-3.5 w-3.5 mr-1" />
-                            View Details
+                            {tScm("k_907b3bee2778")}
                           </Link>
                         </Button>
                         {canManage && verification.status === "DRAFT" && (
                           <Button size="sm" onClick={() => void runAction(verification.id, "submit")} className="flex-1">
-                            Submit
+                            {tScm("k_2dacf6595984")}
                           </Button>
                         )}
                         {canApprove && verification.status === "SUBMITTED" && (
                           <Button size="sm" variant="outline" onClick={() => void runAction(verification.id, "committee_review")} className="flex-1">
-                            Start Review
+                            {tScm("k_10227c577f3d")}
                           </Button>
                         )}
                         {canApprove && verification.status === "COMMITTEE_REVIEW" && (
                           <div className="flex gap-2 w-full">
                             <Button size="sm" onClick={() => void runAction(verification.id, "committee_approve")} className="flex-1">
-                              Approve
+                              {tScm("k_7b2c7f146aba")}
                             </Button>
                             <Button size="sm" variant="destructive" onClick={() => void runAction(verification.id, "committee_reject")} className="flex-1">
-                              Reject
+                              {tScm("k_2b03b59293b6")}
                             </Button>
                           </div>
                         )}

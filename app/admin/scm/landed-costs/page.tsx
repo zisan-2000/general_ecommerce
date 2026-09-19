@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useMemo, useState } from "react";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
@@ -124,6 +126,7 @@ function formatComponent(component: string) {
 }
 
 export default function LandedCostsPage() {
+  const tScm = useTranslations("ScmAuto");
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -197,11 +200,11 @@ export default function LandedCostsPage() {
 
   const createLandedCost = async () => {
     if (!selectedPurchaseOrderId) {
-      toast.error("Select a purchase order first.");
+      toast.error(tScm("k_066571655f0f"));
       return;
     }
     if (!amount || Number(amount) <= 0) {
-      toast.error("Amount must be greater than 0.");
+      toast.error(tScm("k_11d766c549fb"));
       return;
     }
 
@@ -219,7 +222,7 @@ export default function LandedCostsPage() {
         }),
       });
       await readJson(response, "Failed to create landed cost");
-      toast.success("Landed cost added");
+      toast.success(tScm("k_a5d21ba536b4"));
       clearForm();
       await loadWorkspace(selectedPurchaseOrderId);
     } catch (error: any) {
@@ -236,7 +239,7 @@ export default function LandedCostsPage() {
         method: "DELETE",
       });
       await readJson(response, "Failed to delete landed cost");
-      toast.success("Landed cost removed");
+      toast.success(tScm("k_2aa1d8f4f84c"));
       await loadWorkspace(selectedPurchaseOrderId);
     } catch (error: any) {
       toast.error(error?.message || "Failed to delete landed cost");
@@ -249,10 +252,9 @@ export default function LandedCostsPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Landed Cost Allocation</h1>
+          <h1 className="text-2xl font-bold">{tScm("k_e61f23a1f3b7")}</h1>
           <p className="text-sm text-muted-foreground">
-            Capture freight/customs/handling and allocate cost across PO line items before
-            stock receipt.
+            {tScm("k_346425877b4f")}
           </p>
         </div>
         <Button
@@ -261,18 +263,18 @@ export default function LandedCostsPage() {
           disabled={loading}
         >
           <RefreshCw className="mr-2 h-4 w-4" />
-          Refresh
+          {tScm("k_56e3badc4e6c")}
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Purchase Order Workspace</CardTitle>
+          <CardTitle>{tScm("k_e9116a67c5dd")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <Label>Purchase Order</Label>
+              <Label>{tScm("k_3c45b957fdc8")}</Label>
               <select
                 className="w-full rounded-md border bg-background px-3 py-2"
                 value={selectedPurchaseOrderId ?? ""}
@@ -282,7 +284,7 @@ export default function LandedCostsPage() {
                   )
                 }
               >
-                <option value="">Select purchase order</option>
+                <option value="">{tScm("k_7f6382a08038")}</option>
                 {purchaseOrders.map((po) => (
                   <option key={po.id} value={po.id}>
                     {po.poNumber} - {po.supplier.name} - {po.warehouse.code} ({po.status})
@@ -306,21 +308,21 @@ export default function LandedCostsPage() {
               </div>
               <div className="grid gap-2 md:grid-cols-3">
                 <div>
-                  Base subtotal:{" "}
+                  {tScm("k_73e770a21e40")}{" "}
                   <span className="font-medium">
                     {formatMoney(selectedPurchaseOrder.totals.baseSubtotal)}{" "}
                     {selectedPurchaseOrder.currency}
                   </span>
                 </div>
                 <div>
-                  Landed cost total:{" "}
+                  {tScm("k_629b9d7e8dfd")}{" "}
                   <span className="font-medium">
                     {formatMoney(selectedPurchaseOrder.totals.landedTotal)}{" "}
                     {selectedPurchaseOrder.currency}
                   </span>
                 </div>
                 <div>
-                  Effective subtotal:{" "}
+                  {tScm("k_e952644d83b5")}{" "}
                   <span className="font-medium">
                     {formatMoney(selectedPurchaseOrder.totals.effectiveSubtotal)}{" "}
                     {selectedPurchaseOrder.currency}
@@ -340,12 +342,12 @@ export default function LandedCostsPage() {
       {selectedPurchaseOrder ? (
         <Card>
           <CardHeader>
-            <CardTitle>Add Landed Cost Component</CardTitle>
+            <CardTitle>{tScm("k_d3edfe945595")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid gap-4 md:grid-cols-4">
               <div>
-                <Label>Component</Label>
+                <Label>{tScm("k_c92c529e0731")}</Label>
                 <select
                   className="w-full rounded-md border bg-background px-3 py-2"
                   value={component}
@@ -362,7 +364,7 @@ export default function LandedCostsPage() {
                 </select>
               </div>
               <div>
-                <Label>Amount ({selectedPurchaseOrder.currency})</Label>
+                <Label>{tScm("k_52b139c9d30c")}{selectedPurchaseOrder.currency})</Label>
                 <Input
                   type="number"
                   min="0"
@@ -373,7 +375,7 @@ export default function LandedCostsPage() {
                 />
               </div>
               <div>
-                <Label>Incurred Date</Label>
+                <Label>{tScm("k_e5b8ba6ba688")}</Label>
                 <Input
                   type="datetime-local"
                   value={incurredAt}
@@ -382,7 +384,7 @@ export default function LandedCostsPage() {
                 />
               </div>
               <div>
-                <Label>Note</Label>
+                <Label>{tScm("k_2c924e308820")}</Label>
                 <Textarea
                   value={note}
                   onChange={(event) => setNote(event.target.value)}
@@ -396,14 +398,14 @@ export default function LandedCostsPage() {
                 onClick={() => void createLandedCost()}
                 disabled={!canEditCurrent || saving}
               >
-                Add Component
+                {tScm("k_186ea6166538")}
               </Button>
               <Button
                 variant="outline"
                 onClick={clearForm}
                 disabled={!canEditCurrent || saving}
               >
-                Clear
+                {tScm("k_719ea396ad92")}
               </Button>
             </div>
           </CardContent>
@@ -413,11 +415,11 @@ export default function LandedCostsPage() {
       {selectedPurchaseOrder ? (
         <Card>
           <CardHeader>
-            <CardTitle>Component Register</CardTitle>
+            <CardTitle>{tScm("k_be223e0b2e52")}</CardTitle>
           </CardHeader>
           <CardContent>
             {selectedPurchaseOrder.landedCosts.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No landed cost components yet.</p>
+              <p className="text-sm text-muted-foreground">{tScm("k_b7cace9129dd")}</p>
             ) : (
               <>
                 <div className="space-y-3 md:hidden">
@@ -446,7 +448,7 @@ export default function LandedCostsPage() {
                       <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Incurred
+                            {tScm("k_92eff367b4b1")}
                           </div>
                           <div className="mt-1 break-words font-medium">
                             {new Date(row.incurredAt).toLocaleString()}
@@ -454,7 +456,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Created By
+                            {tScm("k_43de2bcd6337")}
                           </div>
                           <div className="mt-1 break-words font-medium">
                             {row.createdBy?.name || row.createdBy?.email || "N/A"}
@@ -462,7 +464,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm sm:col-span-2">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Note
+                            {tScm("k_2c924e308820")}
                           </div>
                           <div className="mt-1 break-words font-medium">
                             {row.note || "N/A"}
@@ -478,7 +480,7 @@ export default function LandedCostsPage() {
                         disabled={!canEditCurrent || saving}
                       >
                         <Trash2 className="mr-2 h-4 w-4" />
-                        Remove
+                        {tScm("k_e963907dac5c")}
                       </Button>
                     </div>
                   ))}
@@ -488,12 +490,12 @@ export default function LandedCostsPage() {
                   <Table className="min-w-[860px]">
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Component</TableHead>
-                        <TableHead>Amount</TableHead>
-                        <TableHead>Incurred</TableHead>
-                        <TableHead>Note</TableHead>
-                        <TableHead>Created By</TableHead>
-                        <TableHead className="text-right">Action</TableHead>
+                        <TableHead>{tScm("k_c92c529e0731")}</TableHead>
+                        <TableHead>{tScm("k_43dc8532f7e5")}</TableHead>
+                        <TableHead>{tScm("k_92eff367b4b1")}</TableHead>
+                        <TableHead>{tScm("k_2c924e308820")}</TableHead>
+                        <TableHead>{tScm("k_43de2bcd6337")}</TableHead>
+                        <TableHead className="text-right">{tScm("k_97c89a4d6630")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -518,7 +520,7 @@ export default function LandedCostsPage() {
                               disabled={!canEditCurrent || saving}
                             >
                               <Trash2 className="mr-2 h-4 w-4" />
-                              Remove
+                              {tScm("k_e963907dac5c")}
                             </Button>
                           </TableCell>
                         </TableRow>
@@ -535,11 +537,11 @@ export default function LandedCostsPage() {
       {selectedPurchaseOrder ? (
         <Card>
           <CardHeader>
-            <CardTitle>Allocation Preview</CardTitle>
+            <CardTitle>{tScm("k_f37b845ff970")}</CardTitle>
           </CardHeader>
           <CardContent>
             {selectedPurchaseOrder.allocationLines.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No PO line item found.</p>
+              <p className="text-sm text-muted-foreground">{tScm("k_4a301ceefc28")}</p>
             ) : (
               <>
                 <div className="space-y-3 md:hidden">
@@ -553,13 +555,13 @@ export default function LandedCostsPage() {
                       <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Qty
+                            {tScm("k_1e5ff9e500c2")}
                           </div>
                           <div className="mt-1 font-medium">{line.quantityOrdered}</div>
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Base Unit
+                            {tScm("k_f1e3347bd968")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.baseUnitCost)}
@@ -567,7 +569,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Landed / Unit
+                            {tScm("k_fc3178c44274")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.landedPerUnit)}
@@ -575,7 +577,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Effective Unit
+                            {tScm("k_ee50338ff976")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.effectiveUnitCost)}
@@ -583,7 +585,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Base Line
+                            {tScm("k_25925b541d6f")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.baseLineTotal)}
@@ -591,7 +593,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Landed Allocation
+                            {tScm("k_677213c0aa75")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.landedAllocationTotal)}
@@ -599,7 +601,7 @@ export default function LandedCostsPage() {
                         </div>
                         <div className="rounded-md bg-muted/30 p-3 text-sm sm:col-span-2">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                            Effective Line
+                            {tScm("k_6b917eca0aef")}
                           </div>
                           <div className="mt-1 font-medium">
                             {formatMoney(line.effectiveLineTotal)}
@@ -614,14 +616,14 @@ export default function LandedCostsPage() {
                   <Table className="min-w-[980px]">
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Item</TableHead>
-                        <TableHead>Qty</TableHead>
-                        <TableHead>Base Unit</TableHead>
-                        <TableHead>Landed / Unit</TableHead>
-                        <TableHead>Effective Unit</TableHead>
-                        <TableHead>Base Line</TableHead>
-                        <TableHead>Landed Allocation</TableHead>
-                        <TableHead>Effective Line</TableHead>
+                        <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                        <TableHead>{tScm("k_1e5ff9e500c2")}</TableHead>
+                        <TableHead>{tScm("k_f1e3347bd968")}</TableHead>
+                        <TableHead>{tScm("k_fc3178c44274")}</TableHead>
+                        <TableHead>{tScm("k_ee50338ff976")}</TableHead>
+                        <TableHead>{tScm("k_25925b541d6f")}</TableHead>
+                        <TableHead>{tScm("k_677213c0aa75")}</TableHead>
+                        <TableHead>{tScm("k_6b917eca0aef")}</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>

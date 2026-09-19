@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -34,6 +36,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 }
 
 export default function NewPurchaseOrderPage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
@@ -115,7 +118,7 @@ export default function NewPurchaseOrderPage() {
 
   const createPurchaseOrder = async () => {
     if (!supplierId || !warehouseId) {
-      toast.error("Supplier and warehouse are required");
+      toast.error(tScm("k_9f9b8f762ecc"));
       return;
     }
     try {
@@ -139,7 +142,7 @@ export default function NewPurchaseOrderPage() {
         }),
       });
       const created = await readJson<{ id: number }>(response, "Failed to create purchase order");
-      toast.success("Purchase order created");
+      toast.success(tScm("k_f490986bc6c4"));
       router.push(`/admin/scm/purchase-orders/${created.id}`);
     } catch (error: any) {
       toast.error(error?.message || "Failed to create purchase order");
@@ -155,13 +158,13 @@ export default function NewPurchaseOrderPage() {
           <Button asChild variant="outline" size="sm">
             <Link href="/admin/scm/purchase-orders">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back To Register
+              {tScm("k_1763e9ae8697")}
             </Link>
           </Button>
           <div>
-            <h1 className="text-2xl font-bold">New Purchase Order</h1>
+            <h1 className="text-2xl font-bold">{tScm("k_ab431d5b6294")}</h1>
             <p className="text-sm text-muted-foreground">
-              Build the commercial order in sequence: counterparty, line items, terms, then save the draft.
+              {tScm("k_bab20a84a581")}
             </p>
           </div>
         </div>
@@ -171,39 +174,39 @@ export default function NewPurchaseOrderPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ScmStatCard label="Supplier" value={suppliers.find((row) => row.id === Number(supplierId))?.name || "Not selected"} hint="Legal supplier on the order" />
-        <ScmStatCard label="Warehouse" value={warehouses.find((row) => row.id === Number(warehouseId))?.name || "Not selected"} hint="Receiving warehouse" />
-        <ScmStatCard label="Lines" value={String(items.length)} hint="Draft commercial lines" />
-        <ScmStatCard label="Estimated Total" value={estimatedTotal.toFixed(2)} hint={suppliers.find((row) => row.id === Number(supplierId))?.currency || "BDT"} />
+        <ScmStatCard label={tScm("k_55edd462872a")} value={suppliers.find((row) => row.id === Number(supplierId))?.name || "Not selected"} hint={tScm("k_d039fe161d05")} />
+        <ScmStatCard label={tScm("k_298dff72dae2")} value={warehouses.find((row) => row.id === Number(warehouseId))?.name || "Not selected"} hint={tScm("k_0fdadd25e9a3")} />
+        <ScmStatCard label={tScm("k_c6fd3870c86e")} value={String(items.length)} hint={tScm("k_167eb397b036")} />
+        <ScmStatCard label={tScm("k_1636f5a9808d")} value={estimatedTotal.toFixed(2)} hint={suppliers.find((row) => row.id === Number(supplierId))?.currency || "BDT"} />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[2fr_1fr]">
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>1. Counterparty and Delivery</CardTitle>
+              <CardTitle>{tScm("k_f586059328a9")}</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 md:grid-cols-3">
               <div>
-                <Label>Supplier</Label>
+                <Label>{tScm("k_55edd462872a")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={supplierId} onChange={(event) => setSupplierId(event.target.value)}>
-                  <option value="">Select supplier</option>
+                  <option value="">{tScm("k_cfce52686188")}</option>
                   {suppliers.map((supplier) => (
                     <option key={supplier.id} value={supplier.id}>{supplier.name} ({supplier.code})</option>
                   ))}
                 </select>
               </div>
               <div>
-                <Label>Warehouse</Label>
+                <Label>{tScm("k_298dff72dae2")}</Label>
                 <select className="w-full rounded-md border bg-background px-3 py-2" value={warehouseId} onChange={(event) => setWarehouseId(event.target.value)}>
-                  <option value="">Select warehouse</option>
+                  <option value="">{tScm("k_cfab2ae6ca21")}</option>
                   {warehouses.map((warehouse) => (
                     <option key={warehouse.id} value={warehouse.id}>{warehouse.name} ({warehouse.code})</option>
                   ))}
                 </select>
               </div>
               <div>
-                <Label>Expected Delivery</Label>
+                <Label>{tScm("k_b8130a089018")}</Label>
                 <Input type="date" value={expectedAt} onChange={(event) => setExpectedAt(event.target.value)} />
               </div>
             </CardContent>
@@ -211,37 +214,37 @@ export default function NewPurchaseOrderPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>2. Commercial Lines</CardTitle>
+              <CardTitle>{tScm("k_2ee79a96103d")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between">
-                <p className="text-sm text-muted-foreground">Capture exact variant, quantity, and unit cost per line.</p>
+                <p className="text-sm text-muted-foreground">{tScm("k_6b19500df386")}</p>
                 <Button variant="outline" size="sm" onClick={() => setItems((prev) => [...prev, emptyLine()])}>
                   <Plus className="mr-2 h-4 w-4" />
-                  Add Line
+                  {tScm("k_63dcfb6701b9")}
                 </Button>
               </div>
               {items.map((item, index) => (
                 <div key={index} className="grid gap-3 rounded-lg border p-3 md:grid-cols-[2fr_1fr_1fr_2fr_auto]">
                   <div>
-                    <Label>Variant</Label>
+                    <Label>{tScm("k_cc91b1ea2c16")}</Label>
                     <select className="w-full rounded-md border bg-background px-3 py-2" value={item.productVariantId} onChange={(event) => setItems((prev) => prev.map((row, rowIndex) => rowIndex === index ? { ...row, productVariantId: event.target.value } : row))}>
-                      <option value="">Select variant</option>
+                      <option value="">{tScm("k_3785e871dc02")}</option>
                       {variants.map((variant) => (
                         <option key={variant.id} value={variant.id}>{variant.sku}</option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <Label>Qty</Label>
+                    <Label>{tScm("k_1e5ff9e500c2")}</Label>
                     <Input type="number" min="1" value={item.quantityOrdered} onChange={(event) => setItems((prev) => prev.map((row, rowIndex) => rowIndex === index ? { ...row, quantityOrdered: event.target.value } : row))} />
                   </div>
                   <div>
-                    <Label>Unit Cost</Label>
+                    <Label>{tScm("k_0105252023c5")}</Label>
                     <Input type="number" min="0" step="0.01" value={item.unitCost} onChange={(event) => setItems((prev) => prev.map((row, rowIndex) => rowIndex === index ? { ...row, unitCost: event.target.value } : row))} />
                   </div>
                   <div>
-                    <Label>Description</Label>
+                    <Label>{tScm("k_55f8ebc805e6")}</Label>
                     <Input value={item.description} onChange={(event) => setItems((prev) => prev.map((row, rowIndex) => rowIndex === index ? { ...row, description: event.target.value } : row))} />
                   </div>
                   <div className="flex items-end">
@@ -256,14 +259,14 @@ export default function NewPurchaseOrderPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>3. Terms and Commercial Notes</CardTitle>
+              <CardTitle>{tScm("k_3ebb7be64f01")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <Label>Terms Template</Label>
+                  <Label>{tScm("k_d4d97a486a7e")}</Label>
                   <select className="w-full rounded-md border bg-background px-3 py-2" value={termsTemplateId} onChange={(event) => applyTemplateSelection(event.target.value)}>
-                    <option value="">No template</option>
+                    <option value="">{tScm("k_aaeb18315059")}</option>
                     {termsTemplates.map((template) => (
                       <option key={template.id} value={template.id}>
                         {template.name}{template.isDefault ? " (Default)" : ""}
@@ -272,12 +275,12 @@ export default function NewPurchaseOrderPage() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <Label>Notes</Label>
+                  <Label>{tScm("k_70440046a3dc")}</Label>
                   <Textarea value={notes} onChange={(event) => setNotes(event.target.value)} rows={4} />
                 </div>
               </div>
               <div>
-                <Label>Terms and Conditions</Label>
+                <Label>{tScm("k_894031ed8d34")}</Label>
                 <Textarea value={termsAndConditions} onChange={(event) => setTermsAndConditions(event.target.value)} rows={7} />
               </div>
             </CardContent>
@@ -287,30 +290,30 @@ export default function NewPurchaseOrderPage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Checklist</CardTitle>
+              <CardTitle>{tScm("k_61b294646988")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
-              <div className={supplierId ? "text-foreground" : "text-muted-foreground"}>1. Supplier selected</div>
-              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>2. Warehouse selected</div>
-              <div className={items.some((item) => item.productVariantId && item.unitCost && item.quantityOrdered) ? "text-foreground" : "text-muted-foreground"}>3. At least one priced line added</div>
-              <div className={termsAndConditions ? "text-foreground" : "text-muted-foreground"}>4. Terms captured</div>
+              <div className={supplierId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_177a2e385661")}</div>
+              <div className={warehouseId ? "text-foreground" : "text-muted-foreground"}>{tScm("k_cd0191561649")}</div>
+              <div className={items.some((item) => item.productVariantId && item.unitCost && item.quantityOrdered) ? "text-foreground" : "text-muted-foreground"}>{tScm("k_201e8d5ef1cd")}</div>
+              <div className={termsAndConditions ? "text-foreground" : "text-muted-foreground"}>{tScm("k_1b65922f82cb")}</div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Draft Summary</CardTitle>
+              <CardTitle>{tScm("k_4e141c6d3967")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm">
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Expected Delivery</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_b8130a089018")}</div>
                 <div className="mt-1 font-medium">{expectedAt || "-"}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Line Count</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_4e279c840887")}</div>
                 <div className="mt-1 font-medium">{items.length}</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Terms Template</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{tScm("k_d4d97a486a7e")}</div>
                 <div className="mt-1 font-medium">{termsTemplates.find((template) => String(template.id) === termsTemplateId)?.name || "Custom / None"}</div>
               </div>
             </CardContent>

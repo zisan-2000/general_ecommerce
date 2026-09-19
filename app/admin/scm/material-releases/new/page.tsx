@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -75,6 +77,7 @@ function formatDateTime(value: string | null) {
 }
 
 export default function NewMaterialReleasePage() {
+  const tScm = useTranslations("ScmAuto");
   const router = useRouter();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
@@ -168,7 +171,7 @@ export default function NewMaterialReleasePage() {
 
   const createRelease = async () => {
     if (!selectedMaterialRequest) {
-      toast.error("Material request is required");
+      toast.error(tScm("k_01cf2a054564"));
       return;
     }
 
@@ -180,7 +183,7 @@ export default function NewMaterialReleasePage() {
       .filter((item) => Number.isInteger(item.quantityReleased) && item.quantityReleased > 0);
 
     if (payloadItems.length === 0) {
-      toast.error("No valid release quantity found");
+      toast.error(tScm("k_d0aa9c28a413"));
       return;
     }
 
@@ -198,7 +201,7 @@ export default function NewMaterialReleasePage() {
         }),
       });
       const created = await readJson<MaterialRelease>(response, "Failed to issue material release");
-      toast.success("Material release issued");
+      toast.success(tScm("k_e65998f5d8d3"));
       router.push(`/admin/scm/material-releases?search=${encodeURIComponent(created.releaseNumber)}`);
       router.refresh();
     } catch (error: any) {
@@ -213,10 +216,10 @@ export default function NewMaterialReleasePage() {
       <div className="p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Forbidden</CardTitle>
+            <CardTitle>{tScm("k_3dab5f6012e3")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            You do not have permission to issue material releases.
+            {tScm("k_6c7859f4f707")}
           </CardContent>
         </Card>
       </div>
@@ -226,46 +229,46 @@ export default function NewMaterialReleasePage() {
   return (
     <div className="space-y-6 p-6">
       <ScmSectionHeader
-        title="Issue Material Release"
-        description="Use the guided warehouse issue flow to select an approved request, confirm release quantities, and generate challan and waybill cleanly."
+        title={tScm("k_4664e0332c53")}
+        description={tScm("k_8bf5a91063ec")}
         action={
           <div className="flex flex-wrap gap-2">
             <Button asChild variant="outline">
               <Link href="/admin/scm/material-releases">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back To Register
+                {tScm("k_1763e9ae8697")}
               </Link>
             </Button>
             <Button variant="outline" onClick={() => void loadRequests()} disabled={loading}>
               <RefreshCw className="mr-2 h-4 w-4" />
-              Refresh
+              {tScm("k_56e3badc4e6c")}
             </Button>
           </div>
         }
       />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <ScmStatCard label="Releasable Requests" value={String(summary.releasable)} hint="Approved or partially released requests" />
-        <ScmStatCard label="Partial Requests" value={String(summary.partialRequests)} hint="Still have remaining warehouse issue quantity" icon={ClipboardCheck} />
-        <ScmStatCard label="Open Units" value={String(summary.openLines)} hint="Remaining units on selected request" />
+        <ScmStatCard label={tScm("k_60c59538868f")} value={String(summary.releasable)} hint={tScm("k_64028e895e0c")} />
+        <ScmStatCard label={tScm("k_0d3d1f76e9cc")} value={String(summary.partialRequests)} hint={tScm("k_6e95ce02290e")} icon={ClipboardCheck} />
+        <ScmStatCard label={tScm("k_0cee1b3dad5f")} value={String(summary.openLines)} hint={tScm("k_f787fbcbaba4")} />
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 1: Select Releasable Request</CardTitle>
+          <CardTitle>{tScm("k_0ccc973c8c4d")}</CardTitle>
           <CardDescription>
-            Only administration-approved or partially released requests are eligible for warehouse issue.
+            {tScm("k_2340df1dfce5")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label>Material Request</Label>
+            <Label>{tScm("k_074f52030ded")}</Label>
             <select
               className="w-full rounded-md border bg-background px-3 py-2 text-sm"
               value={materialRequestId}
               onChange={(event) => setMaterialRequestId(event.target.value)}
             >
-              <option value="">Select request</option>
+              <option value="">{tScm("k_0df479644b08")}</option>
               {releasableRequests.map((request) => (
                 <option key={request.id} value={request.id}>
                   {request.requestNumber} - {request.warehouse.name} ({request.status})
@@ -278,27 +281,27 @@ export default function NewMaterialReleasePage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 2: Delivery Documents</CardTitle>
+          <CardTitle>{tScm("k_9210f1639e82")}</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4 md:grid-cols-3">
           <div className="space-y-2">
-            <Label>Challan No (optional)</Label>
+            <Label>{tScm("k_68f86fd1267b")}</Label>
             <Input
               value={challanNumber}
               onChange={(event) => setChallanNumber(event.target.value)}
-              placeholder="Auto if empty"
+              placeholder={tScm("k_5e564164709b")}
             />
           </div>
           <div className="space-y-2">
-            <Label>Waybill No (optional)</Label>
+            <Label>{tScm("k_dc60c7ace45e")}</Label>
             <Input
               value={waybillNumber}
               onChange={(event) => setWaybillNumber(event.target.value)}
-              placeholder="Auto if empty"
+              placeholder={tScm("k_5e564164709b")}
             />
           </div>
           <div className="space-y-2">
-            <Label>Issue Note</Label>
+            <Label>{tScm("k_d1c29194ea1d")}</Label>
             <Input value={note} onChange={(event) => setNote(event.target.value)} />
           </div>
         </CardContent>
@@ -306,26 +309,26 @@ export default function NewMaterialReleasePage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 3: Confirm Release Quantities</CardTitle>
+          <CardTitle>{tScm("k_4a2a33416e3b")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {!selectedMaterialRequest ? (
             <p className="text-sm text-muted-foreground">
-              Select a releasable request first. Then the system will open the remaining warehouse issue lines.
+              {tScm("k_a3b0fca59407")}
             </p>
           ) : (
             <>
               <div className="rounded-lg border p-4 text-sm text-muted-foreground">
-                Request: {selectedMaterialRequest.requestNumber} | Warehouse: {selectedMaterialRequest.warehouse.name} | Required By: {formatDateTime(selectedMaterialRequest.requiredBy)}
+                {tScm("k_ec0e7ce9ae95")} {selectedMaterialRequest.requestNumber} {tScm("k_03132f2317a5")} {selectedMaterialRequest.warehouse.name} {tScm("k_634e7b7de11e")} {formatDateTime(selectedMaterialRequest.requiredBy)}
               </div>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Item</TableHead>
-                    <TableHead>Requested</TableHead>
-                    <TableHead>Released</TableHead>
-                    <TableHead>Remaining</TableHead>
-                    <TableHead>Release Qty</TableHead>
+                    <TableHead>{tScm("k_ecdda59aea5e")}</TableHead>
+                    <TableHead>{tScm("k_c26bf60fed37")}</TableHead>
+                    <TableHead>{tScm("k_35d9bc51591e")}</TableHead>
+                    <TableHead>{tScm("k_cc632b5e2fd2")}</TableHead>
+                    <TableHead>{tScm("k_d862ce4666fb")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -358,15 +361,15 @@ export default function NewMaterialReleasePage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Step 4: Issue Release</CardTitle>
+          <CardTitle>{tScm("k_80fb33f8fb91")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="rounded-lg border bg-muted/30 p-4 text-sm text-muted-foreground">
-            When the release is posted, warehouse stock will move out and fixed-asset items will receive asset tags automatically where applicable.
+            {tScm("k_7c5e8ebac6e8")}
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={() => router.push("/admin/scm/material-releases")}>
-              Cancel
+              {tScm("k_77dfd2135f4d")}
             </Button>
             <Button onClick={() => void createRelease()} disabled={saving || !selectedMaterialRequest}>
               {saving ? "Issuing..." : "Issue Release"}
