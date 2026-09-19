@@ -5886,7 +5886,11 @@
     "actions": {
       "refresh": "Refresh",
       "approve": "Approve",
-      "reject": "Reject"
+      "reject": "Reject",
+      "view": "View",
+      "viewPayload": "View Payload Details",
+      "hidePayload": "Hide Payload Details",
+      "processing": "Processing..."
     },
     "stats": {
       "pending": { "label": "Pending", "hint": "Pending approvals" },
@@ -5894,11 +5898,45 @@
       "rejected": { "label": "Rejected", "hint": "Rejected vendors" }
     },
     "filters": {
-      "searchPlaceholder": "Search vendor name, code...",
-      "allStatuses": "All statuses"
+      "search": "Search",
+      "searchPlaceholder": "Supplier name, code, or requester...",
+      "mobileSearchPlaceholder": "Search...",
+      "allStatuses": "All statuses",
+      "toggle": "Toggle filters",
+      "close": "Close Filters"
     },
+    "common": {
+      "request": "Request",
+      "supplier": "Supplier",
+      "type": "Type",
+      "status": "Status",
+      "requestedBy": "Requested By",
+      "date": "Date",
+      "actions": "Actions",
+      "noEmail": "No email",
+      "codeValue": "Code: {code}",
+      "noteValue": "Note: {note}"
+    },
+    "queue": {
+      "title": "Request Queue",
+      "requestNumber": "Request #{id}",
+      "payloadSnapshot": "Payload Snapshot",
+      "reviewNotePlaceholder": "Add review note (optional)...",
+      "reviewedBy": "Reviewed: {date} by {reviewer}"
+    },
+    "requestTypes": {
+      "PROFILE_UPDATE": "Profile Update",
+      "DOCUMENT_UPDATE": "Document Update",
+      "ANNUAL_RENEWAL": "Annual Renewal"
+    },
+    "statuses": { "PENDING": "Pending", "APPROVED": "Approved", "REJECTED": "Rejected" },
+    "pagination": { "previous": "Previous page", "next": "Next page" },
+    "errors": { "load": "Failed to load vendor approvals.", "review": "Failed to review request." },
+    "success": { "approved": "Request approved.", "rejected": "Request rejected." },
     "loading": "Loading vendor approvals...",
-    "empty": "No vendor approvals found."
+    "empty": "No requests found.",
+    "emptyFiltered": "Try adjusting your filters.",
+    "emptyDefault": "Requests will appear here when submitted."
   },
   "AdminVendorFeedback": {
     "header": {

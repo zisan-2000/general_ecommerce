@@ -5886,7 +5886,11 @@
         "actions": {
             "refresh": "রিফ্রেশ",
             "approve": "অনুমোদন",
-            "reject": "প্রত্যাখ্যান"
+            "reject": "প্রত্যাখ্যান",
+            "view": "দেখুন",
+            "viewPayload": "পেলোডের বিস্তারিত দেখুন",
+            "hidePayload": "পেলোডের বিস্তারিত লুকান",
+            "processing": "প্রক্রিয়া চলছে..."
         },
         "stats": {
             "pending": { "label": "অপেক্ষমাণ", "hint": "অপেক্ষমাণ অনুমোদন" },
@@ -5894,11 +5898,45 @@
             "rejected": { "label": "প্রত্যাখ্যাত", "hint": "প্রত্যাখ্যাত ভেন্ডর" }
         },
         "filters": {
-            "searchPlaceholder": "ভেন্ডর নাম, কোড অনুসন্ধান করুন...",
-            "allStatuses": "সব স্ট্যাটাস"
+            "search": "অনুসন্ধান",
+            "searchPlaceholder": "সরবরাহকারীর নাম, কোড বা অনুরোধকারী খুঁজুন...",
+            "mobileSearchPlaceholder": "অনুসন্ধান করুন...",
+            "allStatuses": "সব স্ট্যাটাস",
+            "toggle": "ফিল্টার দেখান বা লুকান",
+            "close": "ফিল্টার বন্ধ করুন"
         },
+        "common": {
+            "request": "অনুরোধ",
+            "supplier": "সরবরাহকারী",
+            "type": "ধরন",
+            "status": "স্ট্যাটাস",
+            "requestedBy": "অনুরোধকারী",
+            "date": "তারিখ",
+            "actions": "কার্যক্রম",
+            "noEmail": "ইমেইল নেই",
+            "codeValue": "কোড: {code}",
+            "noteValue": "নোট: {note}"
+        },
+        "queue": {
+            "title": "অনুরোধের কিউ",
+            "requestNumber": "অনুরোধ #{id}",
+            "payloadSnapshot": "পেলোড স্ন্যাপশট",
+            "reviewNotePlaceholder": "পর্যালোচনা নোট লিখুন (ঐচ্ছিক)...",
+            "reviewedBy": "{reviewer} কর্তৃক {date}-এ পর্যালোচিত"
+        },
+        "requestTypes": {
+            "PROFILE_UPDATE": "প্রোফাইল আপডেট",
+            "DOCUMENT_UPDATE": "ডকুমেন্ট আপডেট",
+            "ANNUAL_RENEWAL": "বার্ষিক নবায়ন"
+        },
+        "statuses": { "PENDING": "অপেক্ষমাণ", "APPROVED": "অনুমোদিত", "REJECTED": "প্রত্যাখ্যাত" },
+        "pagination": { "previous": "আগের পৃষ্ঠা", "next": "পরের পৃষ্ঠা" },
+        "errors": { "load": "ভেন্ডর অনুমোদন লোড করা যায়নি।", "review": "অনুরোধ পর্যালোচনা করা যায়নি।" },
+        "success": { "approved": "অনুরোধ অনুমোদিত হয়েছে।", "rejected": "অনুরোধ প্রত্যাখ্যাত হয়েছে।" },
         "loading": "ভেন্ডর অনুমোদন লোড হচ্ছে...",
-        "empty": "কোনো ভেন্ডর অনুমোদন পাওয়া যায়নি।"
+        "empty": "কোনো অনুরোধ পাওয়া যায়নি।",
+        "emptyFiltered": "ফিল্টার পরিবর্তন করে দেখুন।",
+        "emptyDefault": "নতুন অনুরোধ জমা হলে এখানে দেখা যাবে।"
     },
     "AdminVendorFeedback": {
         "header": {
