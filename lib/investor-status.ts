@@ -29,25 +29,25 @@ const STATUS_MAP: Record<string, { variant: BadgeVariant; label?: string }> = {
   SUSPENDED: { variant: "destructive" },
 };
 
-export function statusBadge(status: string): { variant: BadgeVariant; label: string } {
+export function statusBadge(status: string, localizedLabel?: string): { variant: BadgeVariant; label: string } {
   const entry = STATUS_MAP[status?.toUpperCase()];
   return {
     variant: entry?.variant ?? "outline",
-    label: entry?.label ?? status,
+    label: localizedLabel ?? entry?.label ?? status,
   };
 }
 
-export function shortDate(value?: string | null): string {
-  if (!value) return "N/A";
+export function shortDate(value?: string | null, locale?: string, fallback = "—"): string {
+  if (!value) return fallback;
   const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return "N/A";
-  return d.toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" });
+  if (Number.isNaN(d.getTime())) return fallback;
+  return d.toLocaleDateString(locale, { day: "2-digit", month: "short", year: "numeric" });
 }
 
-export function shortDateTime(value?: string | null): string {
-  if (!value) return "N/A";
+export function shortDateTime(value?: string | null, locale?: string, fallback = "—"): string {
+  if (!value) return fallback;
   const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return "N/A";
-  return d.toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" }) +
-    " " + d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+  if (Number.isNaN(d.getTime())) return fallback;
+  return d.toLocaleDateString(locale, { day: "2-digit", month: "short", year: "numeric" }) +
+    " " + d.toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
 }

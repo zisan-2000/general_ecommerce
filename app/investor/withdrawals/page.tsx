@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -59,13 +60,15 @@ type Payload = {
   requests: WithdrawalRequestRow[];
 };
 
-function fmtAmount(value: string) {
+function fmtAmount(value: string, locale: string) {
   const n = Number(value);
   if (!Number.isFinite(n)) return value;
-  return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return n.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 export default function InvestorWithdrawalsPage() {
+  const t = useTranslations("InvestorPortal");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [data, setData] = useState<Payload | null>(null);
@@ -78,10 +81,10 @@ export default function InvestorWithdrawalsPage() {
       setLoading(true);
       const response = await fetch("/api/investor/withdrawals", { cache: "no-store" });
       const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || "Failed to load withdrawal center.");
+      if (!response.ok) throw new Error(payload?.error || t("errors.loadWithdrawals"));
       setData(payload as Payload);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load withdrawal center.");
+      toast.error(error?.message || t("errors.loadWithdrawals"));
     } finally {
       setLoading(false);
     }
@@ -98,14 +101,14 @@ export default function InvestorWithdrawalsPage() {
         body: JSON.stringify({ amount, requestedSettlementDate: requestedSettlementDate || null, requestNote: requestNote || null }),
       });
       const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || "Failed to submit withdrawal request.");
-      toast.success("Withdrawal request submitted.");
+      if (!response.ok) throw new Error(payload?.error || t("errors.submitWithdrawal"));
+      toast.success(t("success.withdrawalSubmitted"));
       setAmount("");
       setRequestedSettlementDate("");
       setRequestNote("");
       await load();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to submit withdrawal request.");
+      toast.error(error?.message || t("errors.submitWithdrawal"));
     } finally {
       setSaving(false);
     }
@@ -136,9 +139,9 @@ export default function InvestorWithdrawalsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold md:text-2xl">Withdrawal Center</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">{t("withdrawals.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Review withdrawable balance, submit requests, and track approval and settlement.
+          {t("withdrawals.description")}
         </p>
       </div>
 
@@ -146,68 +149,68 @@ export default function InvestorWithdrawalsPage() {
         <>
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
             {[
-              { label: "Available Balance", value: data.metrics.availableBalance },
-              { label: "Active Committed", value: data.metrics.activeCommittedAmount },
-              { label: "Pending Payouts", value: data.metrics.pendingPayoutAmount },
-              { label: "Pending Withdrawals", value: data.metrics.pendingWithdrawalAmount },
-              { label: "Withdrawable", value: data.metrics.withdrawableBalance },
+              { label: t("withdrawals.availableBalance"), value: data.metrics.availableBalance },
+              { label: t("withdrawals.activeCommitted"), value: data.metrics.activeCommittedAmount },
+              { label: t("withdrawals.pendingPayouts"), value: data.metrics.pendingPayoutAmount },
+              { label: t("withdrawals.pendingWithdrawals"), value: data.metrics.pendingWithdrawalAmount },
+              { label: t("withdrawals.withdrawable"), value: data.metrics.withdrawableBalance },
             ].map(({ label, value }) => (
               <Card key={label}>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-sm font-medium text-muted-foreground">{label}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-2xl font-semibold">{fmtAmount(value)}</CardContent>
+                <CardContent className="text-2xl font-semibold">{fmtAmount(value, locale)}</CardContent>
               </Card>
             ))}
           </div>
 
           {data.investor.kycStatus !== "VERIFIED" || !data.investor.beneficiaryVerifiedAt ? (
             <div className="rounded-lg border border-yellow-500/40 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-700 dark:text-yellow-400">
-              Withdrawal requests require VERIFIED KYC and a verified beneficiary account.
+              {t("withdrawals.verificationRequired")}
             </div>
           ) : null}
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Submit Withdrawal Request</CardTitle>
+              <CardTitle className="text-base">{t("withdrawals.submitTitle")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
                 <div className="space-y-1">
-                  <Label>Requested Amount</Label>
+                  <Label>{t("withdrawals.requestedAmount")}</Label>
                   <Input type="number" min="0" step="0.01" value={amount} onChange={(e) => setAmount(e.target.value)} />
                 </div>
                 <div className="space-y-1">
-                  <Label>Requested Settlement Date</Label>
+                  <Label>{t("withdrawals.requestedSettlementDate")}</Label>
                   <Input type="date" value={requestedSettlementDate} onChange={(e) => setRequestedSettlementDate(e.target.value)} />
                 </div>
                 <div className="space-y-1">
-                  <Label>Beneficiary</Label>
+                  <Label>{t("withdrawals.beneficiary")}</Label>
                   <div className="rounded-md border bg-muted/40 px-3 py-2 text-sm">
-                    {(data.investor.bankAccountName || data.investor.name) + " | " + (data.investor.bankName || "No Bank")}
+                    {(data.investor.bankAccountName || data.investor.name) + " | " + (data.investor.bankName || t("withdrawals.noBank"))}
                   </div>
                 </div>
               </div>
               <div className="space-y-1">
-                <Label>Request Note</Label>
-                <Textarea value={requestNote} onChange={(e) => setRequestNote(e.target.value)} placeholder="Explain why the withdrawal is needed or any settlement instruction." />
+                <Label>{t("withdrawals.requestNote")}</Label>
+                <Textarea value={requestNote} onChange={(e) => setRequestNote(e.target.value)} placeholder={t("withdrawals.requestNotePlaceholder")} />
               </div>
               <Button onClick={() => void submit()} disabled={saving || !amount.trim() || Number(amount) <= 0}>
-                {saving ? "Submitting..." : "Submit Withdrawal Request"}
+                {saving ? t("common.submitting") : t("withdrawals.submit")}
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Recent Withdrawal Requests</CardTitle>
+              <CardTitle className="text-base">{t("withdrawals.recentRequests")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {data.requests.length === 0 ? (
-                <p className="text-sm text-muted-foreground">No withdrawal requests found.</p>
+                <p className="text-sm text-muted-foreground">{t("withdrawals.empty")}</p>
               ) : (
                 data.requests.map((row) => {
-                  const badge = statusBadge(row.status);
+                  const badge = statusBadge(row.status, t(`statuses.${row.status}` as any));
                   return (
                     <div key={row.id} className="rounded-lg border p-4">
                       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -217,26 +220,26 @@ export default function InvestorWithdrawalsPage() {
                             <Badge variant={badge.variant}>{badge.label}</Badge>
                           </div>
                           <p className="text-sm text-muted-foreground">
-                            Submitted {shortDateTime(row.submittedAt)} | Requested {row.requestedAmount} {row.currency}
+                            {t("withdrawals.submittedLine", { date: shortDateTime(row.submittedAt, locale), amount: row.requestedAmount, currency: row.currency })}
                           </p>
                         </div>
                         {row.transaction ? (
                           <div className="text-right text-sm text-muted-foreground">
                             <div>{row.transaction.transactionNumber}</div>
-                            <div>{shortDateTime(row.transaction.transactionDate)}</div>
+                            <div>{shortDateTime(row.transaction.transactionDate, locale)}</div>
                           </div>
                         ) : null}
                       </div>
                       <div className="mt-3 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
-                        <div>Approved: {row.approvedAmount ?? "N/A"} {row.approvedAmount ? row.currency : ""}</div>
-                        <div>Settlement Date: {shortDateTime(row.requestedSettlementDate)}</div>
-                        <div>Reviewed: {shortDateTime(row.reviewedAt)}</div>
-                        <div>Settled: {shortDateTime(row.settledAt)}</div>
+                        <div>{t("common.approved")}: {row.approvedAmount ?? "—"} {row.approvedAmount ? row.currency : ""}</div>
+                        <div>{t("withdrawals.settlementDate")}: {shortDateTime(row.requestedSettlementDate, locale)}</div>
+                        <div>{t("common.reviewed")}: {shortDateTime(row.reviewedAt, locale)}</div>
+                        <div>{t("common.settled")}: {shortDateTime(row.settledAt, locale)}</div>
                       </div>
-                      {row.requestNote ? <p className="mt-3 text-sm">Request note: {row.requestNote}</p> : null}
-                      {row.reviewNote ? <p className="mt-2 text-sm text-muted-foreground">Review note: {row.reviewNote}</p> : null}
-                      {row.rejectionReason ? <p className="mt-2 text-sm text-destructive">Rejection reason: {row.rejectionReason}</p> : null}
-                      {row.settlementNote ? <p className="mt-2 text-sm text-muted-foreground">Settlement note: {row.settlementNote}</p> : null}
+                      {row.requestNote ? <p className="mt-3 text-sm">{t("withdrawals.requestNoteValue", { note: row.requestNote })}</p> : null}
+                      {row.reviewNote ? <p className="mt-2 text-sm text-muted-foreground">{t("withdrawals.reviewNoteValue", { note: row.reviewNote })}</p> : null}
+                      {row.rejectionReason ? <p className="mt-2 text-sm text-destructive">{t("withdrawals.rejectionReasonValue", { reason: row.rejectionReason })}</p> : null}
+                      {row.settlementNote ? <p className="mt-2 text-sm text-muted-foreground">{t("withdrawals.settlementNoteValue", { note: row.settlementNote })}</p> : null}
                     </div>
                   );
                 })

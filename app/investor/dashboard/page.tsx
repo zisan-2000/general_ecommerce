@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SkeletonCards, SkeletonCard } from "@/components/investor/InvestorSkeleton";
@@ -48,13 +49,15 @@ type OverviewPayload = {
   }>;
 };
 
-function fmtAmount(value: string) {
+function fmtAmount(value: string, locale: string) {
   const amount = Number(value);
   if (!Number.isFinite(amount)) return value;
-  return amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return amount.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 export default function InvestorDashboardPage() {
+  const t = useTranslations("InvestorPortal");
+  const locale = useLocale();
   const [data, setData] = useState<OverviewPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -67,17 +70,17 @@ export default function InvestorDashboardPage() {
         setError(null);
         const response = await fetch("/api/investor/overview", { cache: "no-store" });
         const payload = await response.json().catch(() => null);
-        if (!response.ok) throw new Error(payload?.error || "Failed to load investor overview.");
+        if (!response.ok) throw new Error(payload?.error || t("errors.loadOverview"));
         if (active) setData(payload as OverviewPayload);
       } catch (err: any) {
-        if (active) setError(err?.message || "Failed to load investor overview.");
+        if (active) setError(err?.message || t("errors.loadOverview"));
       } finally {
         if (active) setLoading(false);
       }
     }
     void load();
     return () => { active = false; };
-  }, []);
+  }, [t]);
 
   if (loading) {
     return (
@@ -99,9 +102,9 @@ export default function InvestorDashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold md:text-2xl">Investor Dashboard</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">{t("dashboard.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Monitor your portfolio snapshots, ledger balance, and payout timeline.
+          {t("dashboard.description")}
         </p>
       </div>
 
@@ -112,25 +115,25 @@ export default function InvestorDashboardPage() {
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Total Credit</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("common.totalCredit")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.totalCredit)}</CardContent>
+              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.totalCredit, locale)}</CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Total Debit</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("common.totalDebit")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.totalDebit)}</CardContent>
+              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.totalDebit, locale)}</CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Net Balance</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("common.netBalance")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.balance)}</CardContent>
+              <CardContent className="text-2xl font-semibold">{fmtAmount(data.summary.balance, locale)}</CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Active Allocations</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("dashboard.activeAllocations")}</CardTitle>
               </CardHeader>
               <CardContent className="text-2xl font-semibold">
                 {data.summary.activeAllocationCount}/{data.summary.allocationCount}
@@ -138,13 +141,13 @@ export default function InvestorDashboardPage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Unread Notifications</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("dashboard.unreadNotifications")}</CardTitle>
               </CardHeader>
               <CardContent className="text-2xl font-semibold">{data.summary.unreadNotificationCount}</CardContent>
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Pending Profile Requests</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("dashboard.pendingProfileRequests")}</CardTitle>
               </CardHeader>
               <CardContent className="text-2xl font-semibold">{data.summary.pendingProfileRequestCount}</CardContent>
             </Card>
@@ -153,14 +156,14 @@ export default function InvestorDashboardPage() {
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Recent Transactions</CardTitle>
+                <CardTitle className="text-base">{t("dashboard.recentTransactions")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {data.recentTransactions.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">No transactions found.</p>
+                  <p className="text-sm text-muted-foreground">{t("common.noTransactions")}</p>
                 ) : (
                   data.recentTransactions.map((item) => {
-                    const badge = statusBadge(item.direction);
+                    const badge = statusBadge(item.direction, t(`statuses.${item.direction}` as any));
                     return (
                       <div key={item.id} className="rounded-md border p-3">
                         <div className="flex items-center justify-between gap-2">
@@ -168,9 +171,9 @@ export default function InvestorDashboardPage() {
                           <Badge variant={badge.variant}>{badge.label}</Badge>
                         </div>
                         <p className="mt-1 text-xs text-muted-foreground">
-                          {item.type} • {fmtAmount(item.amount)} {item.currency}
+                          {t.has(`transactionTypes.${item.type}` as any) ? t(`transactionTypes.${item.type}` as any) : item.type} • {fmtAmount(item.amount, locale)} {item.currency}
                         </p>
-                        <p className="text-xs text-muted-foreground">{shortDateTime(item.transactionDate)}</p>
+                        <p className="text-xs text-muted-foreground">{shortDateTime(item.transactionDate, locale)}</p>
                       </div>
                     );
                   })
@@ -180,14 +183,14 @@ export default function InvestorDashboardPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Recent Payouts</CardTitle>
+                <CardTitle className="text-base">{t("dashboard.recentPayouts")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {data.recentPayouts.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">No payouts found.</p>
+                  <p className="text-sm text-muted-foreground">{t("common.noPayouts")}</p>
                 ) : (
                   data.recentPayouts.map((item) => {
-                    const badge = statusBadge(item.status);
+                    const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                     return (
                       <div key={item.id} className="rounded-md border p-3">
                         <div className="flex items-center justify-between gap-2">
@@ -195,10 +198,10 @@ export default function InvestorDashboardPage() {
                           <Badge variant={badge.variant}>{badge.label}</Badge>
                         </div>
                         <p className="mt-1 text-xs text-muted-foreground">
-                          {fmtAmount(item.payoutAmount)} {item.currency}
+                          {fmtAmount(item.payoutAmount, locale)} {item.currency}
                         </p>
                         <p className="text-xs text-muted-foreground">
-                          {item.run.runNumber} • {shortDateTime(item.paidAt || item.createdAt)}
+                          {item.run.runNumber} • {shortDateTime(item.paidAt || item.createdAt, locale)}
                         </p>
                       </div>
                     );
@@ -209,14 +212,14 @@ export default function InvestorDashboardPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Recent Profit Runs</CardTitle>
+                <CardTitle className="text-base">{t("dashboard.recentProfitRuns")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {data.recentRuns.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">No profit runs found.</p>
+                  <p className="text-sm text-muted-foreground">{t("common.noProfitRuns")}</p>
                 ) : (
                   data.recentRuns.map((item) => {
-                    const badge = statusBadge(item.status);
+                    const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                     return (
                       <div key={item.id} className="rounded-md border p-3">
                         <div className="flex items-center justify-between gap-2">
@@ -224,10 +227,10 @@ export default function InvestorDashboardPage() {
                           <Badge variant={badge.variant}>{badge.label}</Badge>
                         </div>
                         <p className="mt-1 text-xs text-muted-foreground">
-                          Net Profit: {fmtAmount(item.totalNetProfit)}
+                          {t("common.netProfit")}: {fmtAmount(item.totalNetProfit, locale)}
                         </p>
                         <p className="text-xs text-muted-foreground">
-                          {shortDateTime(item.fromDate)} – {shortDateTime(item.toDate)}
+                          {shortDateTime(item.fromDate, locale)} – {shortDateTime(item.toDate, locale)}
                         </p>
                       </div>
                     );

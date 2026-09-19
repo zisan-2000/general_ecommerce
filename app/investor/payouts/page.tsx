@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -33,13 +34,15 @@ type PayoutPayload = {
   }>;
 };
 
-function fmtAmount(value: string) {
+function fmtAmount(value: string, locale: string) {
   const amount = Number(value);
   if (!Number.isFinite(amount)) return value;
-  return amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return amount.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 export default function InvestorPayoutsPage() {
+  const t = useTranslations("InvestorPortal");
+  const locale = useLocale();
   const [data, setData] = useState<PayoutPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -52,17 +55,17 @@ export default function InvestorPayoutsPage() {
         setError(null);
         const response = await fetch("/api/investor/payouts", { cache: "no-store" });
         const payload = await response.json().catch(() => null);
-        if (!response.ok) throw new Error(payload?.error || "Failed to load payouts.");
+        if (!response.ok) throw new Error(payload?.error || t("errors.loadPayouts"));
         if (active) setData(payload as PayoutPayload);
       } catch (err: any) {
-        if (active) setError(err?.message || "Failed to load payouts.");
+        if (active) setError(err?.message || t("errors.loadPayouts"));
       } finally {
         if (active) setLoading(false);
       }
     }
     void load();
     return () => { active = false; };
-  }, []);
+  }, [t]);
 
   if (loading) {
     return (
@@ -83,9 +86,9 @@ export default function InvestorPayoutsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold md:text-2xl">Investor Payouts</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">{t("payouts.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Track payout lifecycle from run creation to final settlement.
+          {t("payouts.description")}
         </p>
       </div>
 
@@ -94,38 +97,38 @@ export default function InvestorPayoutsPage() {
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Payout Count</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("payouts.payoutCount")}</CardTitle>
           </CardHeader>
           <CardContent className="text-2xl font-semibold">{data?.summary.payoutCount || 0}</CardContent>
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Paid Count</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("payouts.paidCount")}</CardTitle>
           </CardHeader>
           <CardContent className="text-2xl font-semibold">{data?.summary.paidCount || 0}</CardContent>
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Total Amount</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("common.totalAmount")}</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-semibold">{fmtAmount(data?.summary.totalAmount || "0")}</CardContent>
+          <CardContent className="text-2xl font-semibold">{fmtAmount(data?.summary.totalAmount || "0", locale)}</CardContent>
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Paid Amount</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("payouts.paidAmount")}</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-semibold">{fmtAmount(data?.summary.paidAmount || "0")}</CardContent>
+          <CardContent className="text-2xl font-semibold">{fmtAmount(data?.summary.paidAmount || "0", locale)}</CardContent>
         </Card>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Payout Register</CardTitle>
+          <CardTitle className="text-base">{t("payouts.register")}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3 md:hidden">
             {(data?.payouts || []).map((item) => {
-              const badge = statusBadge(item.status);
+              const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
               return (
                 <div key={item.id} className="rounded-lg border p-3">
                   <div className="flex items-start justify-between gap-3">
@@ -133,37 +136,37 @@ export default function InvestorPayoutsPage() {
                     <Badge variant={badge.variant}>{badge.label}</Badge>
                   </div>
                   <div className="mt-3 grid grid-cols-2 gap-2 text-xs text-muted-foreground">
-                    <div>Run: <span className="font-medium text-foreground">{item.run.runNumber}</span></div>
-                    <div>Amount: <span className="font-medium text-foreground">{fmtAmount(item.payoutAmount)} {item.currency}</span></div>
-                    <div>Method: <span className="font-medium text-foreground">{item.paymentMethod || "-"}</span></div>
-                    <div>Created: <span className="font-medium text-foreground">{shortDate(item.createdAt)}</span></div>
-                    <div>Approved: <span className="font-medium text-foreground">{shortDate(item.approvedAt)}</span></div>
-                    <div>Paid: <span className="font-medium text-foreground">{shortDate(item.paidAt)}</span></div>
+                    <div>{t("common.run")}: <span className="font-medium text-foreground">{item.run.runNumber}</span></div>
+                    <div>{t("common.amount")}: <span className="font-medium text-foreground">{fmtAmount(item.payoutAmount, locale)} {item.currency}</span></div>
+                    <div>{t("common.method")}: <span className="font-medium text-foreground">{item.paymentMethod ? (t.has(`paymentMethods.${item.paymentMethod}` as any) ? t(`paymentMethods.${item.paymentMethod}` as any) : item.paymentMethod) : "—"}</span></div>
+                    <div>{t("common.created")}: <span className="font-medium text-foreground">{shortDate(item.createdAt, locale)}</span></div>
+                    <div>{t("common.approved")}: <span className="font-medium text-foreground">{shortDate(item.approvedAt, locale)}</span></div>
+                    <div>{t("common.paid")}: <span className="font-medium text-foreground">{shortDate(item.paidAt, locale)}</span></div>
                   </div>
                 </div>
               );
             })}
             {data?.payouts?.length === 0 ? (
-              <p className="py-6 text-center text-sm text-muted-foreground">No payouts found.</p>
+              <p className="py-6 text-center text-sm text-muted-foreground">{t("common.noPayouts")}</p>
             ) : null}
           </div>
           <div className="hidden overflow-x-auto md:block">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Payout</TableHead>
-                  <TableHead>Run</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Amount</TableHead>
-                  <TableHead className="hidden md:table-cell">Method</TableHead>
-                  <TableHead className="hidden lg:table-cell">Created</TableHead>
-                  <TableHead className="hidden lg:table-cell">Approved</TableHead>
-                  <TableHead>Paid</TableHead>
+                  <TableHead>{t("common.payout")}</TableHead>
+                  <TableHead>{t("common.run")}</TableHead>
+                  <TableHead>{t("common.status")}</TableHead>
+                  <TableHead>{t("common.amount")}</TableHead>
+                  <TableHead className="hidden md:table-cell">{t("common.method")}</TableHead>
+                  <TableHead className="hidden lg:table-cell">{t("common.created")}</TableHead>
+                  <TableHead className="hidden lg:table-cell">{t("common.approved")}</TableHead>
+                  <TableHead>{t("common.paid")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {(data?.payouts || []).map((item) => {
-                  const badge = statusBadge(item.status);
+                  const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                   return (
                     <TableRow key={item.id}>
                       <TableCell className="whitespace-nowrap font-medium">{item.payoutNumber}</TableCell>
@@ -172,19 +175,19 @@ export default function InvestorPayoutsPage() {
                         <Badge variant={badge.variant}>{badge.label}</Badge>
                       </TableCell>
                       <TableCell className="whitespace-nowrap font-medium">
-                        {fmtAmount(item.payoutAmount)} {item.currency}
+                        {fmtAmount(item.payoutAmount, locale)} {item.currency}
                       </TableCell>
                       <TableCell className="hidden md:table-cell text-muted-foreground">
-                        {item.paymentMethod || "-"}
+                        {item.paymentMethod ? (t.has(`paymentMethods.${item.paymentMethod}` as any) ? t(`paymentMethods.${item.paymentMethod}` as any) : item.paymentMethod) : "—"}
                       </TableCell>
                       <TableCell className="hidden lg:table-cell whitespace-nowrap text-muted-foreground">
-                        {shortDate(item.createdAt)}
+                        {shortDate(item.createdAt, locale)}
                       </TableCell>
                       <TableCell className="hidden lg:table-cell whitespace-nowrap text-muted-foreground">
-                        {shortDate(item.approvedAt)}
+                        {shortDate(item.approvedAt, locale)}
                       </TableCell>
                       <TableCell className="whitespace-nowrap text-muted-foreground">
-                        {shortDate(item.paidAt)}
+                        {shortDate(item.paidAt, locale)}
                       </TableCell>
                     </TableRow>
                   );
@@ -192,7 +195,7 @@ export default function InvestorPayoutsPage() {
                 {data?.payouts?.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={8} className="py-6 text-center text-sm text-muted-foreground">
-                      No payouts found.
+                      {t("common.noPayouts")}
                     </TableCell>
                   </TableRow>
                 ) : null}

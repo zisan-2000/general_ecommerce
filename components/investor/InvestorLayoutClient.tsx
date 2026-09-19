@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import InvestorNav from "./InvestorNav";
 
 type Props = {
@@ -16,6 +17,7 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const t = useTranslations("InvestorPortal");
 
   useEffect(() => {
     setMounted(true);
@@ -63,12 +65,12 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
           <button
             onClick={() => setSidebarOpen(true)}
             className="rounded-md p-1.5 text-muted-foreground hover:bg-accent hover:text-foreground"
-            aria-label="Open navigation"
+            aria-label={t("layout.openNavigation")}
           >
             <Menu className="h-5 w-5" />
           </button>
           <div className="min-w-0 flex-1">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">Investor Portal</p>
+            <p className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.portal")}</p>
             <p className="truncate text-sm font-semibold">{investorName}</p>
           </div>
           {mounted && (
@@ -81,7 +83,7 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
                 setTheme(active === "dark" ? "light" : "dark");
               }}
               className="rounded-md p-1.5 text-muted-foreground hover:bg-accent hover:text-foreground"
-              aria-label="Toggle theme"
+              aria-label={t("layout.toggleTheme")}
             >
               {(() => {
                 const active =

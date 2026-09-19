@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -24,13 +25,15 @@ type AllocationPayload = {
   }>;
 };
 
-function fmtAmount(value: string) {
+function fmtAmount(value: string, locale: string) {
   const amount = Number(value);
   if (!Number.isFinite(amount)) return value;
-  return amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return amount.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 export default function InvestorAllocationsPage() {
+  const t = useTranslations("InvestorPortal");
+  const locale = useLocale();
   const [data, setData] = useState<AllocationPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,30 +46,30 @@ export default function InvestorAllocationsPage() {
         setError(null);
         const response = await fetch("/api/investor/allocations", { cache: "no-store" });
         const payload = await response.json().catch(() => null);
-        if (!response.ok) throw new Error(payload?.error || "Failed to load allocations.");
+        if (!response.ok) throw new Error(payload?.error || t("errors.loadAllocations"));
         if (active) setData(payload as AllocationPayload);
       } catch (err: any) {
-        if (active) setError(err?.message || "Failed to load allocations.");
+        if (active) setError(err?.message || t("errors.loadAllocations"));
       } finally {
         if (active) setLoading(false);
       }
     }
     void load();
     return () => { active = false; };
-  }, []);
+  }, [t]);
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold md:text-2xl">Investor Allocations</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">{t("allocations.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Product participation scopes assigned to your investor account.
+          {t("allocations.description")}
         </p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Allocation Register</CardTitle>
+          <CardTitle className="text-base">{t("allocations.register")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           {error ? <p className="text-sm text-destructive">{error}</p> : null}
@@ -76,7 +79,7 @@ export default function InvestorAllocationsPage() {
             <>
               <div className="space-y-3 md:hidden">
                 {(data?.allocations || []).map((item) => {
-                  const badge = statusBadge(item.status);
+                  const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                   return (
                     <div key={item.id} className="rounded-lg border p-3">
                       <div className="flex items-start justify-between gap-3">
@@ -87,33 +90,33 @@ export default function InvestorAllocationsPage() {
                         <Badge variant={badge.variant}>{badge.label}</Badge>
                       </div>
                       <div className="mt-3 grid grid-cols-2 gap-2 text-xs text-muted-foreground">
-                        <div>Share: <span className="font-medium text-foreground">{fmtAmount(item.participationPercent)}%</span></div>
-                        <div>Committed: <span className="font-medium text-foreground">{fmtAmount(item.committedAmount)}</span></div>
-                        <div className="col-span-2">Effective: <span className="font-medium text-foreground">{shortDate(item.effectiveFrom)} - {item.effectiveTo ? shortDate(item.effectiveTo) : "ongoing"}</span></div>
-                        <div className="col-span-2">Note: <span className="font-medium text-foreground">{item.note || "-"}</span></div>
+                        <div>{t("common.share")}: <span className="font-medium text-foreground">{fmtAmount(item.participationPercent, locale)}%</span></div>
+                        <div>{t("common.committed")}: <span className="font-medium text-foreground">{fmtAmount(item.committedAmount, locale)}</span></div>
+                        <div className="col-span-2">{t("common.effective")}: <span className="font-medium text-foreground">{shortDate(item.effectiveFrom, locale)} - {item.effectiveTo ? shortDate(item.effectiveTo, locale) : t("common.ongoing")}</span></div>
+                        <div className="col-span-2">{t("common.note")}: <span className="font-medium text-foreground">{item.note || "—"}</span></div>
                       </div>
                     </div>
                   );
                 })}
                 {data?.allocations?.length === 0 ? (
-                  <p className="text-center text-sm text-muted-foreground">No allocations found.</p>
+                  <p className="text-center text-sm text-muted-foreground">{t("common.noAllocations")}</p>
                 ) : null}
               </div>
               <div className="hidden overflow-x-auto md:block">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Product</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Share %</TableHead>
-                      <TableHead>Committed</TableHead>
-                      <TableHead>Effective</TableHead>
-                      <TableHead>Note</TableHead>
+                      <TableHead>{t("common.product")}</TableHead>
+                      <TableHead>{t("common.status")}</TableHead>
+                      <TableHead>{t("common.sharePercent")}</TableHead>
+                      <TableHead>{t("common.committed")}</TableHead>
+                      <TableHead>{t("common.effective")}</TableHead>
+                      <TableHead>{t("common.note")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {(data?.allocations || []).map((item) => {
-                      const badge = statusBadge(item.status);
+                      const badge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                       return (
                         <TableRow key={item.id}>
                           <TableCell className="font-medium">
@@ -123,10 +126,10 @@ export default function InvestorAllocationsPage() {
                           <TableCell>
                             <Badge variant={badge.variant}>{badge.label}</Badge>
                           </TableCell>
-                          <TableCell>{fmtAmount(item.participationPercent)}%</TableCell>
-                          <TableCell className="whitespace-nowrap font-medium">{fmtAmount(item.committedAmount)}</TableCell>
+                          <TableCell>{fmtAmount(item.participationPercent, locale)}%</TableCell>
+                          <TableCell className="whitespace-nowrap font-medium">{fmtAmount(item.committedAmount, locale)}</TableCell>
                           <TableCell className="whitespace-nowrap text-sm">
-                            {shortDate(item.effectiveFrom)} - {item.effectiveTo ? shortDate(item.effectiveTo) : "ongoing"}
+                            {shortDate(item.effectiveFrom, locale)} - {item.effectiveTo ? shortDate(item.effectiveTo, locale) : t("common.ongoing")}
                           </TableCell>
                           <TableCell className="text-sm text-muted-foreground">{item.note || "-"}</TableCell>
                         </TableRow>
@@ -135,7 +138,7 @@ export default function InvestorAllocationsPage() {
                     {data?.allocations?.length === 0 ? (
                       <TableRow>
                         <TableCell colSpan={6} className="text-center text-sm text-muted-foreground">
-                          No allocations found.
+                          {t("common.noAllocations")}
                         </TableCell>
                       </TableRow>
                     ) : null}

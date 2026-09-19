@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -47,16 +48,11 @@ type Payload = {
 };
 
 const FORM_FIELDS: [string, string][] = [
-  ["name", "Display Name"],
-  ["legalName", "Legal Name"],
-  ["email", "Email"],
-  ["phone", "Phone"],
-  ["taxNumber", "Tax Number"],
-  ["nationalIdNumber", "National ID"],
-  ["passportNumber", "Passport Number"],
-  ["bankName", "Bank Name"],
-  ["bankAccountName", "Account Name"],
-  ["bankAccountNumber", "Account Number"],
+  ["name", "profile.fields.name"], ["legalName", "profile.fields.legalName"],
+  ["email", "profile.fields.email"], ["phone", "profile.fields.phone"],
+  ["taxNumber", "profile.fields.taxNumber"], ["nationalIdNumber", "profile.fields.nationalId"],
+  ["passportNumber", "profile.fields.passportNumber"], ["bankName", "profile.fields.bankName"],
+  ["bankAccountName", "profile.fields.accountName"], ["bankAccountNumber", "profile.fields.accountNumber"],
 ];
 
 type FormState = {
@@ -73,6 +69,8 @@ const EMPTY_FORM: FormState = {
 };
 
 export default function InvestorProfilePage() {
+  const t = useTranslations("InvestorPortal");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [data, setData] = useState<Payload | null>(null);
@@ -84,7 +82,7 @@ export default function InvestorProfilePage() {
       setLoading(true);
       const response = await fetch("/api/investor/profile", { cache: "no-store" });
       const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || "Failed to load investor profile.");
+      if (!response.ok) throw new Error(payload?.error || t("errors.loadProfile"));
       const next = payload as Payload;
       setData(next);
       const loaded: FormState = {
@@ -104,7 +102,7 @@ export default function InvestorProfilePage() {
       setOriginal(loaded);
       setForm(loaded);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor profile.");
+      toast.error(error?.message || t("errors.loadProfile"));
     } finally {
       setLoading(false);
     }
@@ -121,11 +119,11 @@ export default function InvestorProfilePage() {
         body: JSON.stringify(form),
       });
       const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || "Failed to submit profile request.");
-      toast.success("Profile update request submitted.");
+      if (!response.ok) throw new Error(payload?.error || t("errors.submitProfile"));
+      toast.success(t("success.profileSubmitted"));
       await load();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to submit profile request.");
+      toast.error(error?.message || t("errors.submitProfile"));
     } finally {
       setSaving(false);
     }
@@ -157,15 +155,15 @@ export default function InvestorProfilePage() {
   }
   const hasDirtyFields = dirtyFields.size > 0;
 
-  const statusBadgeInvestor = data ? statusBadge(data.investor.status) : null;
-  const kycBadge = data ? statusBadge(data.investor.kycStatus) : null;
+  const statusBadgeInvestor = data ? statusBadge(data.investor.status, t(`statuses.${data.investor.status}` as any)) : null;
+  const kycBadge = data ? statusBadge(data.investor.kycStatus, t(`statuses.${data.investor.kycStatus}` as any)) : null;
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold md:text-2xl">Profile</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">{t("profile.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Review your identity and beneficiary information. Sensitive changes go through approval.
+          {t("profile.description")}
         </p>
       </div>
 
@@ -174,7 +172,7 @@ export default function InvestorProfilePage() {
           <div className="grid gap-4 sm:grid-cols-3">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Investor Status</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("profile.investorStatus")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <Badge variant={statusBadgeInvestor!.variant} className="text-sm px-3 py-1">
@@ -184,7 +182,7 @@ export default function InvestorProfilePage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">KYC Status</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("profile.kycStatus")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <Badge variant={kycBadge!.variant} className="text-sm px-3 py-1">
@@ -194,15 +192,15 @@ export default function InvestorProfilePage() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Beneficiary Verified</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t("profile.beneficiaryVerified")}</CardTitle>
               </CardHeader>
               <CardContent>
                 {data.investor.beneficiaryVerifiedAt ? (
                   <Badge variant="default" className="text-sm px-3 py-1">
-                    {shortDateTime(data.investor.beneficiaryVerifiedAt)}
+                    {shortDateTime(data.investor.beneficiaryVerifiedAt, locale)}
                   </Badge>
                 ) : (
-                  <Badge variant="secondary" className="text-sm px-3 py-1">Pending</Badge>
+                  <Badge variant="secondary" className="text-sm px-3 py-1">{t("statuses.PENDING")}</Badge>
                 )}
               </CardContent>
             </Card>
@@ -211,10 +209,10 @@ export default function InvestorProfilePage() {
           <Card>
             <CardHeader>
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <CardTitle className="text-base">Submit Profile Update Request</CardTitle>
+                <CardTitle className="text-base">{t("profile.submitTitle")}</CardTitle>
                 {hasDirtyFields && (
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                    {dirtyFields.size} field{dirtyFields.size > 1 ? "s" : ""} changed
+                    {t("profile.changedFields", { count: dirtyFields.size })}
                   </span>
                 )}
               </div>
@@ -222,18 +220,18 @@ export default function InvestorProfilePage() {
             <CardContent className="space-y-4">
               {hasDirtyFields && (
                 <div className="rounded-md border border-primary/20 bg-primary/5 px-3 py-2 text-sm text-primary">
-                  Fields highlighted in blue have been modified from their saved values.
+                  {t("profile.changedHint")}
                 </div>
               )}
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                {FORM_FIELDS.map(([key, label]) => {
+                {FORM_FIELDS.map(([key, labelKey]) => {
                   const isDirty = dirtyFields.has(key as keyof FormState);
                   return (
                     <div key={key} className="space-y-1">
                       <div className="flex items-center justify-between">
-                        <Label className={isDirty ? "text-primary" : ""}>{label}</Label>
+                        <Label className={isDirty ? "text-primary" : ""}>{t(labelKey as any)}</Label>
                         {isDirty && (
-                          <span className="text-xs text-primary">modified</span>
+                          <span className="text-xs text-primary">{t("profile.modified")}</span>
                         )}
                       </div>
                       <Input
@@ -249,8 +247,8 @@ export default function InvestorProfilePage() {
                 {(() => { const isDirty = dirtyFields.has("notes"); return (
                   <>
                     <div className="flex items-center justify-between">
-                      <Label className={isDirty ? "text-primary" : ""}>Notes</Label>
-                      {isDirty && <span className="text-xs text-primary">modified</span>}
+                      <Label className={isDirty ? "text-primary" : ""}>{t("common.notes")}</Label>
+                      {isDirty && <span className="text-xs text-primary">{t("profile.modified")}</span>}
                     </div>
                     <Textarea
                       value={form.notes}
@@ -261,20 +259,20 @@ export default function InvestorProfilePage() {
                 );})()}
               </div>
               <div className="space-y-1">
-                <Label>Request Note <span className="text-xs text-muted-foreground">(explain why you&apos;re requesting this change)</span></Label>
+                <Label>{t("profile.requestNote")} <span className="text-xs text-muted-foreground">({t("profile.requestNoteHint")})</span></Label>
                 <Textarea
                   value={form.requestNote}
                   onChange={(e) => setForm((c) => ({ ...c, requestNote: e.target.value }))}
-                  placeholder="e.g. Updating bank account due to account change."
+                  placeholder={t("profile.requestNotePlaceholder")}
                 />
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <Button onClick={() => void submit()} disabled={saving || !hasDirtyFields}>
-                  {saving ? "Submitting..." : "Submit Update Request"}
+                  {saving ? t("common.submitting") : t("profile.submit")}
                 </Button>
                 {hasDirtyFields && (
                   <Button variant="ghost" size="sm" onClick={() => setForm(original)}>
-                    Reset changes
+                    {t("profile.reset")}
                   </Button>
                 )}
               </div>
@@ -283,25 +281,25 @@ export default function InvestorProfilePage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Recent Requests</CardTitle>
+              <CardTitle className="text-base">{t("profile.recentRequests")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {data.requests.length === 0 ? (
-                <p className="text-sm text-muted-foreground">No profile requests found.</p>
+                <p className="text-sm text-muted-foreground">{t("profile.empty")}</p>
               ) : (
                 data.requests.map((item) => {
-                  const reqBadge = statusBadge(item.status);
+                  const reqBadge = statusBadge(item.status, t(`statuses.${item.status}` as any));
                   return (
                     <div key={item.id} className="rounded-md border p-3">
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <p className="font-medium">Request #{item.id}</p>
+                        <p className="font-medium">{t("profile.requestNumber", { id: item.id })}</p>
                         <Badge variant={reqBadge.variant}>{reqBadge.label}</Badge>
                       </div>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Submitted: {shortDateTime(item.submittedAt)} | Reviewed: {shortDateTime(item.reviewedAt)}
+                        {t("profile.requestDates", { submitted: shortDateTime(item.submittedAt, locale), reviewed: shortDateTime(item.reviewedAt, locale) })}
                       </p>
-                      {item.requestNote ? <p className="mt-2 text-sm">Request note: {item.requestNote}</p> : null}
-                      {item.reviewNote ? <p className="mt-1 text-sm text-muted-foreground">Review note: {item.reviewNote}</p> : null}
+                      {item.requestNote ? <p className="mt-2 text-sm">{t("withdrawals.requestNoteValue", { note: item.requestNote })}</p> : null}
+                      {item.reviewNote ? <p className="mt-1 text-sm text-muted-foreground">{t("withdrawals.reviewNoteValue", { note: item.reviewNote })}</p> : null}
                     </div>
                   );
                 })

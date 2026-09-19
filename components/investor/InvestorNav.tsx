@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,8 +32,8 @@ import {
 } from "lucide-react";
 
 const THEME_OPTIONS = [
-  { value: "light", label: "Light", icon: Sun },
-  { value: "dark", label: "Dark", icon: Moon },
+  { value: "light", labelKey: "theme.light", icon: Sun },
+  { value: "dark", labelKey: "theme.dark", icon: Moon },
 ] as const;
 
 type InvestorNavProps = {
@@ -42,16 +43,16 @@ type InvestorNavProps = {
 };
 
 const navItems = [
-  { href: "/investor/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/investor/ledger", label: "Ledger", icon: Wallet },
-  { href: "/investor/allocations", label: "Allocations", icon: PieChart },
-  { href: "/investor/profit-runs", label: "Profit Runs", icon: TrendingUp },
-  { href: "/investor/payouts", label: "Payouts", icon: HandCoins },
-  { href: "/investor/withdrawals", label: "Withdrawals", icon: ArrowDownCircle },
-  { href: "/investor/statements", label: "Statements", icon: FileText },
-  { href: "/investor/documents", label: "Documents", icon: FolderOpen },
-  { href: "/investor/profile", label: "Profile", icon: UserCircle2 },
-  { href: "/investor/notifications", label: "Notifications", icon: Bell },
+  { href: "/investor/dashboard", labelKey: "nav.dashboard", icon: LayoutDashboard },
+  { href: "/investor/ledger", labelKey: "nav.ledger", icon: Wallet },
+  { href: "/investor/allocations", labelKey: "nav.allocations", icon: PieChart },
+  { href: "/investor/profit-runs", labelKey: "nav.profitRuns", icon: TrendingUp },
+  { href: "/investor/payouts", labelKey: "nav.payouts", icon: HandCoins },
+  { href: "/investor/withdrawals", labelKey: "nav.withdrawals", icon: ArrowDownCircle },
+  { href: "/investor/statements", labelKey: "nav.statements", icon: FileText },
+  { href: "/investor/documents", labelKey: "nav.documents", icon: FolderOpen },
+  { href: "/investor/profile", labelKey: "nav.profile", icon: UserCircle2 },
+  { href: "/investor/notifications", labelKey: "nav.notifications", icon: Bell },
 ];
 
 export default function InvestorNav({ investorName, investorCode, onNavClick }: InvestorNavProps) {
@@ -60,6 +61,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
+  const t = useTranslations("InvestorPortal");
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -98,7 +100,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
     <aside className="flex h-full w-full flex-col border-r border-border bg-card/70 backdrop-blur md:w-72">
       <div className="flex h-full flex-col">
         <div className="border-b border-border p-5">
-          <p className="text-xs uppercase tracking-wide text-muted-foreground">Investor Portal</p>
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.portal")}</p>
           <h2 className="mt-1 text-lg font-semibold">{investorName}</h2>
           <p className="text-sm text-muted-foreground">{investorCode}</p>
         </div>
@@ -120,7 +122,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
               >
                 <item.icon className="h-4 w-4" />
                 <span className="flex items-center gap-2">
-                  {item.label}
+                  {t(item.labelKey)}
                   {item.href === "/investor/notifications" && unreadCount > 0 ? (
                     <span className="rounded-full bg-primary/15 px-2 py-0.5 text-xs font-medium text-primary">
                       {unreadCount}
@@ -145,11 +147,11 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
                     if (active === "dark") return <Moon className="h-4 w-4" />;
                     return <Sun className="h-4 w-4" />;
                   })()}
-                  <span className="flex-1 text-left">Theme</span>
+                  <span className="flex-1 text-left">{t("theme.label")}</span>
                   <span className="text-xs text-muted-foreground capitalize">
                     {theme === "dark" || resolvedTheme === "dark"
-                      ? "dark"
-                      : "light"}
+                      ? t("theme.dark")
+                      : t("theme.light")}
                   </span>
                 </Button>
               </DropdownMenuTrigger>
@@ -161,7 +163,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
                     className="flex items-center gap-2"
                   >
                     <opt.icon className="h-4 w-4" />
-                    <span className="flex-1">{opt.label}</span>
+                    <span className="flex-1">{t(opt.labelKey)}</span>
                     {theme === opt.value && (
                       <Check className="h-4 w-4" />
                     )}
@@ -181,7 +183,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
             }}
           >
             <LogOut className="h-4 w-4" />
-            Logout
+            {t("nav.logout")}
           </Button>
         </div>
       </div>
