@@ -3,10 +3,10 @@ import type { AppLocale } from "./config";
 const messageLoaders = {
   en: () => import("@/messages/en.json").then((module) => module.default),
   bn: () => import("@/messages/bn.json").then((module) => module.default),
-  zh: () => import("@/messages/en.json").then((module) => module.default),
-  ar: () => import("@/messages/en.json").then((module) => module.default),
-  ne: () => import("@/messages/en.json").then((module) => module.default),
-  id: () => import("@/messages/en.json").then((module) => module.default),
+  zh: () => import("@/messages/zh.json").then((module) => module.default),
+  ar: () => import("@/messages/ar.json").then((module) => module.default),
+  ne: () => import("@/messages/ne.json").then((module) => module.default),
+  id: () => import("@/messages/id.json").then((module) => module.default),
 } satisfies Record<AppLocale, () => Promise<Record<string, unknown>>>;
 
 export async function loadMessages(locale: AppLocale) {
