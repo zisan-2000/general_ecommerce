@@ -5946,7 +5946,10 @@
     "actions": {
       "newFeedback": "New Feedback",
       "refresh": "Refresh",
-      "view": "View"
+      "view": "View",
+      "cancel": "Cancel",
+      "create": "Create Feedback",
+      "creating": "Creating..."
     },
     "stats": {
       "total": { "label": "Total", "hint": "Total feedback" },
@@ -5955,10 +5958,26 @@
     },
     "filters": {
       "supplier": "Supplier",
-      "rating": "Rating"
+      "rating": "Rating",
+      "searchPlaceholder": "Search by supplier, client, or reference...",
+      "mobileSearchPlaceholder": "Search...",
+      "allSuppliers": "All suppliers",
+      "toggle": "Toggle filters",
+      "close": "Close Filters"
     },
+    "modal": { "title": "Create Vendor Feedback", "description": "Capture service quality and vendor performance feedback from operations or clients." },
+    "register": { "title": "Feedback Register" },
+    "fields": {
+      "supplierRequired": "Supplier *", "selectSupplier": "Select supplier", "sourceType": "Source Type", "sourceReference": "Source Reference", "sourceReferencePlaceholder": "PO / WO / Ticket reference", "clientName": "Client Name", "clientNamePlaceholder": "Client or department name", "clientEmail": "Client Email", "clientEmailPlaceholder": "client@example.com", "ratings": "Ratings (1-5)", "overall": "Overall", "serviceQuality": "Service Quality", "delivery": "Delivery", "compliance": "Compliance", "comment": "Comment", "commentPlaceholder": "Detailed feedback about vendor performance, strengths, and areas for improvement..."
+    },
+    "sourceTypes": { "INTERNAL": "Internal Team", "CLIENT": "Client Feedback", "VENDOR_SELF": "Vendor Self-Assessment" },
+    "common": { "supplier": "Supplier", "rating": "Rating", "source": "Source", "client": "Client", "details": "Details", "date": "Date", "codeValue": "Code: {code}", "reference": "Reference:", "referenceValue": "Ref: {reference}", "byValue": "By: {creator}", "noComment": "No comment", "serviceShort": "S", "deliveryShort": "D", "complianceShort": "C" },
+    "pagination": { "previous": "Previous page", "next": "Next page" },
+    "errors": { "load": "Failed to load supplier feedback.", "create": "Failed to create feedback.", "supplierRequired": "Please select a supplier." },
+    "success": { "created": "Supplier feedback created successfully." },
     "loading": "Loading vendor feedback...",
-    "empty": "No vendor feedback found."
+    "empty": "No feedback records found.",
+    "emptyHint": "Select Add Feedback to create your first vendor feedback."
   },
   "AdminSupplierIntelligence": {
     "header": {
@@ -5976,10 +5995,23 @@
     },
     "filters": {
       "supplier": "Supplier",
-      "timeRange": "Time Range"
+      "timeRange": "Time Range",
+      "label": "Filters", "toggle": "Toggle filters", "searchPlaceholder": "Search supplier name, code, or email...", "mobileSearchPlaceholder": "Search...", "allBands": "All bands", "close": "Close Filters"
     },
+    "access": { "denied": "You do not have access to supplier intelligence." },
+    "windows": { "days90": "Last 90 days", "days180": "Last 180 days", "days365": "Last 365 days", "days730": "Last 730 days" },
+    "overview": { "suppliersTracked": "Suppliers Tracked", "trackedPos": "Tracked POs", "observedLeadTime": "Observed Lead Time", "averageOnTime": "Avg On-Time Rate", "openLatePos": "Open Late POs" },
+    "scorecard": { "title": "Supplier Lead-Time Scorecard", "description": "Recommended lead time uses real receipt history and keeps the configured baseline when safer." },
+    "bands": { "STABLE": "Stable", "WATCH": "Watch", "AT_RISK": "At Risk", "INSUFFICIENT_DATA": "Insufficient Data" },
+    "common": { "supplier": "Supplier", "configLt": "Config LT", "observedLt": "Observed LT", "recommendedLt": "Recommended LT", "onTime": "On-Time", "openLate": "Open Late", "partialRate": "Partial Rate", "band": "Band", "codeValue": "Code: {code}", "daysSuffix": " days" },
+    "detail": { "summary": "Configured lead time {configured} • Recommended {recommended} • Last receipt {receipt}", "completedPos": "Completed POs", "averageFirstReceipt": "Avg First Receipt", "averageFinalReceipt": "Avg Final Receipt", "averageDelay": "Avg Delay", "fillRate": "Fill Rate", "suggestedBuffer": "Suggested Buffer" },
+    "orders": { "title": "Recent Orders", "po": "PO", "warehouse": "Warehouse", "status": "Status", "due": "Due", "leadTime": "Lead Time", "delay": "Delay", "openLate": "Open late", "delayed": "Delayed", "onTime": "On time", "empty": "No recent orders found for this supplier." },
+    "orderStatuses": { "DRAFT": "Draft", "SUBMITTED": "Submitted", "MANAGER_APPROVED": "Manager Approved", "COMMITTEE_APPROVED": "Committee Approved", "APPROVED": "Approved", "PARTIALLY_RECEIVED": "Partially Received", "RECEIVED": "Received", "REJECTED": "Rejected", "CANCELLED": "Cancelled" },
+    "pagination": { "previous": "Previous page", "next": "Next page" },
+    "errors": { "load": "Failed to load supplier intelligence data." },
     "loading": "Loading supplier intelligence...",
-    "empty": "No intelligence data found."
+    "empty": "No supplier intelligence records found.",
+    "emptyHint": "Try adjusting your filters or window period."
   },
   "AdminSupplierPortalAccess": {
     "header": {
@@ -5989,7 +6021,8 @@
     "actions": {
       "invite": "Invite Supplier",
       "refresh": "Refresh",
-      "revoke": "Revoke Access"
+      "revoke": "Revoke Access",
+      "add": "Add Access", "cancel": "Cancel", "create": "Create Access", "update": "Update Access", "saving": "Saving...", "edit": "Edit", "editAccess": "Edit Access"
     },
     "stats": {
       "total": { "label": "Total", "hint": "Total suppliers" },
@@ -5998,10 +6031,23 @@
     },
     "filters": {
       "searchPlaceholder": "Search supplier name, email...",
-      "allStatuses": "All statuses"
+      "mobileSearchPlaceholder": "Search...",
+      "allStatuses": "All statuses",
+      "toggle": "Toggle search filters"
     },
+    "modal": { "createTitle": "Create Supplier Portal Access", "editTitle": "Edit Supplier Portal Access", "createDescription": "Assign a user to a supplier and configure portal access settings.", "editDescription": "Update access permissions and security settings for this supplier user." },
+    "registry": { "title": "Access Registry" },
+    "fields": { "userRequired": "User *", "selectUser": "Select user", "supplierRequired": "Supplier *", "selectSupplier": "Select supplier", "twoFactorPolicy": "2FA Policy", "noteOptional": "Note (Optional)", "notePlaceholder": "Add governance notes, reason for access, or special conditions..." },
+    "statuses": { "ACTIVE": "Active", "SUSPENDED": "Suspended", "REVOKED": "Revoked", "INACTIVE": "Inactive" },
+    "statusOptions": { "ACTIVE": "ACTIVE - Full access", "SUSPENDED": "SUSPENDED - Temporarily blocked", "REVOKED": "REVOKED - Permanently removed" },
+    "twoFactor": { "DISABLED": "Disabled (Optional only)", "EMAIL_OTP": "Required: Email OTP", "TOTP": "Required: TOTP App", "AUTH_APP": "Required: Authenticator App", "requiredValue": "Required ({method})", "optional": "Optional", "mobileRequiredValue": "2FA Required ({method})", "mobileOptional": "2FA Optional" },
+    "common": { "user": "User", "supplier": "Supplier", "status": "Status", "twoFactor": "2FA", "lastUpdated": "Last Updated", "actions": "Actions", "unnamed": "Unnamed", "unnamedUser": "Unnamed user", "noEmail": "No email", "system": "System", "roleValue": "Role: {role}", "codeValue": "Code: {code}", "byValue": "By: {creator}", "noteValue": "Note: {note}", "updatedValue": "Updated: {date}", "createdByValue": "Created by: {creator}" },
+    "pagination": { "previous": "Previous page", "next": "Next page" },
+    "errors": { "load": "Failed to load supplier portal access.", "required": "User and supplier are required.", "save": "Failed to save supplier portal access." },
+    "success": { "created": "Access created.", "updated": "Access updated." },
     "loading": "Loading supplier portal access...",
-    "empty": "No supplier portal users found."
+    "empty": "No supplier portal assignments found.",
+    "emptyHint": "Select Add Access to create your first assignment."
   },
   "AdminBundles": {
     "list": {

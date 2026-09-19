@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { 
   Badge, 
@@ -85,10 +86,10 @@ type AccessPayload = {
   users: UserOption[];
 };
 
-function fmtDate(value: string) {
+function fmtDate(value: string, locale: string) {
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 function getStatusColor(status: string) {
@@ -123,6 +124,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
   totalPages: number; 
   onPageChange: (page: number) => void;
 }) {
+  const t = useTranslations("AdminSupplierPortalAccess");
   const getVisiblePages = () => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -157,6 +159,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.previous")}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -179,6 +182,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.next")}
       >
         <ChevronRight className="h-4 w-4" />
       </Button>
@@ -230,6 +234,7 @@ function AccessModal({
   saving: boolean;
   onReset: () => void;
 }) {
+  const t = useTranslations("AdminSupplierPortalAccess");
   const handleClose = () => {
     onReset();
     onOpenChange(false);
@@ -240,43 +245,43 @@ function AccessModal({
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-lg sm:text-xl">
-            {editingId ? "Edit Supplier Portal Access" : "Create Supplier Portal Access"}
+            {editingId ? t("modal.editTitle") : t("modal.createTitle")}
           </DialogTitle>
           <DialogDescription className="text-xs sm:text-sm">
             {editingId 
-              ? "Update access permissions and security settings for this supplier user."
-              : "Assign a user to a supplier and configure their portal access settings."}
+              ? t("modal.editDescription")
+              : t("modal.createDescription")}
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4 py-4">
           <div className="space-y-3">
-            <Label className="text-sm font-medium">User *</Label>
+            <Label className="text-sm font-medium">{t("fields.userRequired")}</Label>
             <select
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               value={selectedUserId}
               onChange={(event) => onUserIdChange(event.target.value)}
             >
-              <option value="">Select user</option>
+              <option value="">{t("fields.selectUser")}</option>
               {availableUsers.map((user) => (
                 <option key={user.id} value={user.id}>
-                  {user.name || "Unnamed"} ({user.email || "No email"}) - {user.role}
+                  {user.name || t("common.unnamed")} ({user.email || t("common.noEmail")}) - {user.role}
                 </option>
               ))}
             </select>
           </div>
 
           <div className="space-y-3">
-            <Label className="text-sm font-medium">Supplier *</Label>
+            <Label className="text-sm font-medium">{t("fields.supplierRequired")}</Label>
             <select
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               value={selectedSupplierId}
               onChange={(event) => onSupplierIdChange(event.target.value)}
             >
-              <option value="">Select supplier</option>
+              <option value="">{t("fields.selectSupplier")}</option>
               {suppliers.map((supplier) => (
                 <option key={supplier.id} value={supplier.id}>
-                  {supplier.name} ({supplier.code}) {!supplier.isActive && "- Inactive"}
+                  {supplier.name} ({supplier.code}) {!supplier.isActive && `- ${t("statuses.INACTIVE")}`}
                 </option>
               ))}
             </select>
@@ -284,7 +289,7 @@ function AccessModal({
 
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="space-y-3">
-              <Label className="text-sm font-medium">Status</Label>
+              <Label className="text-sm font-medium">{t("common.status")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={status}
@@ -292,14 +297,14 @@ function AccessModal({
                   onStatusChange(event.target.value as "ACTIVE" | "SUSPENDED" | "REVOKED")
                 }
               >
-                <option value="ACTIVE">ACTIVE - Full access</option>
-                <option value="SUSPENDED">SUSPENDED - Temporarily blocked</option>
-                <option value="REVOKED">REVOKED - Permanently removed</option>
+                <option value="ACTIVE">{t("statusOptions.ACTIVE")}</option>
+                <option value="SUSPENDED">{t("statusOptions.SUSPENDED")}</option>
+                <option value="REVOKED">{t("statusOptions.REVOKED")}</option>
               </select>
             </div>
 
             <div className="space-y-3">
-              <Label className="text-sm font-medium">2FA Policy</Label>
+              <Label className="text-sm font-medium">{t("fields.twoFactorPolicy")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={twoFactorRequired ? twoFactorMethod : "DISABLED"}
@@ -312,18 +317,18 @@ function AccessModal({
                   onTwoFactorChange(true, value);
                 }}
               >
-                <option value="DISABLED">Disabled (Optional only)</option>
-                <option value="EMAIL_OTP">Required: Email OTP</option>
-                <option value="TOTP">Required: TOTP App</option>
-                <option value="AUTH_APP">Required: Authenticator App</option>
+                <option value="DISABLED">{t("twoFactor.DISABLED")}</option>
+                <option value="EMAIL_OTP">{t("twoFactor.EMAIL_OTP")}</option>
+                <option value="TOTP">{t("twoFactor.TOTP")}</option>
+                <option value="AUTH_APP">{t("twoFactor.AUTH_APP")}</option>
               </select>
             </div>
           </div>
 
           <div className="space-y-3">
-            <Label className="text-sm font-medium">Note (Optional)</Label>
+            <Label className="text-sm font-medium">{t("fields.noteOptional")}</Label>
             <Textarea
-              placeholder="Add governance notes, reason for access, or special conditions..."
+              placeholder={t("fields.notePlaceholder")}
               value={note}
               onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => onNoteChange(event.target.value)}
               rows={3}
@@ -334,10 +339,10 @@ function AccessModal({
 
         <DialogFooter className="flex flex-col-reverse sm:flex-row gap-2">
           <Button variant="outline" onClick={handleClose} disabled={saving}>
-            Cancel
+            {t("actions.cancel")}
           </Button>
           <Button onClick={onSave} disabled={saving}>
-            {saving ? "Saving..." : editingId ? "Update Access" : "Create Access"}
+            {saving ? t("actions.saving") : editingId ? t("actions.update") : t("actions.create")}
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -346,6 +351,8 @@ function AccessModal({
 }
 
 export default function SupplierPortalAccessPage() {
+  const t = useTranslations("AdminSupplierPortalAccess");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [query, setQuery] = useState("");
@@ -377,14 +384,14 @@ export default function SupplierPortalAccessPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load supplier portal access.");
+        throw new Error(payload?.error || t("errors.load"));
       }
       const data = payload as AccessPayload;
       setRecords(Array.isArray(data.records) ? data.records : []);
       setSuppliers(Array.isArray(data.suppliers) ? data.suppliers : []);
       setUsers(Array.isArray(data.users) ? data.users : []);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier portal access.");
+      toast.error(error?.message || t("errors.load"));
     } finally {
       setLoading(false);
     }
@@ -446,7 +453,7 @@ export default function SupplierPortalAccessPage() {
 
   const saveRecord = async () => {
     if (!selectedUserId || !selectedSupplierId) {
-      toast.error("User and supplier are required.");
+      toast.error(t("errors.required"));
       return;
     }
 
@@ -467,14 +474,14 @@ export default function SupplierPortalAccessPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to save supplier portal access.");
+        throw new Error(payload?.error || t("errors.save"));
       }
-      toast.success(editingId ? "Access updated." : "Access created.");
+      toast.success(editingId ? t("success.updated") : t("success.created"));
       resetForm();
       setModalOpen(false);
       await loadData();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to save supplier portal access.");
+      toast.error(error?.message || t("errors.save"));
     } finally {
       setSaving(false);
     }
@@ -486,20 +493,20 @@ export default function SupplierPortalAccessPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Supplier Portal Access
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Assign supplier users to exactly one supplier scope for secure portal access.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex gap-2">
           <Button onClick={openCreateModal} className="flex-1 sm:flex-initial">
             <Plus className="h-4 w-4 mr-2" />
-            Add Access
+            {t("actions.add")}
           </Button>
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button
             variant="outline"
@@ -508,6 +515,7 @@ export default function SupplierPortalAccessPage() {
             className="sm:hidden"
           >
             <Filter className="h-4 w-4" />
+            <span className="sr-only">{t("filters.toggle")}</span>
           </Button>
         </div>
       </div>
@@ -515,7 +523,7 @@ export default function SupplierPortalAccessPage() {
       {/* Search Section */}
       <div className="hidden sm:block">
         <Input
-          placeholder="Search by supplier name, user email, or user name..."
+          placeholder={t("filters.searchPlaceholder")}
           value={query}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => setQuery(event.target.value)}
           className="max-w-md text-sm"
@@ -526,7 +534,7 @@ export default function SupplierPortalAccessPage() {
       {showFilters && (
         <div className="sm:hidden">
           <Input
-            placeholder="Search..."
+            placeholder={t("filters.mobileSearchPlaceholder")}
             value={query}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => setQuery(event.target.value)}
             className="text-sm"
@@ -537,7 +545,7 @@ export default function SupplierPortalAccessPage() {
       {/* Access Registry Card */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Access Registry</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{t("registry.title")}</CardTitle>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0">
           {/* Loading State */}
@@ -553,12 +561,12 @@ export default function SupplierPortalAccessPage() {
               <table className="w-full">
                 <thead className="border-b border-border">
                   <tr>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">User</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Supplier</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Status</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">2FA</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Last Updated</th>
-                    <th className="text-right py-3 px-2 text-xs font-medium text-muted-foreground">Actions</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.user")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.supplier")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.status")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.twoFactor")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.lastUpdated")}</th>
+                    <th className="text-right py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.actions")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -568,38 +576,38 @@ export default function SupplierPortalAccessPage() {
                       <tr key={record.id} className="border-b border-border hover:bg-muted/40 transition-colors">
                         <td className="py-3 px-2">
                           <div className="font-medium text-sm text-foreground">
-                            {record.user.name || "Unnamed user"}
+                            {record.user.name || t("common.unnamedUser")}
                           </div>
                           <div className="text-xs text-muted-foreground mt-0.5">
-                            {record.user.email || "No email"}
+                            {record.user.email || t("common.noEmail")}
                           </div>
                           <div className="text-xs text-muted-foreground">
-                            Role: {record.user.role}
+                            {t("common.roleValue", { role: record.user.role })}
                           </div>
                         </td>
                         <td className="py-3 px-2">
                           <div className="text-sm text-foreground">{record.supplier.name}</div>
-                          <div className="text-xs text-muted-foreground">Code: {record.supplier.code}</div>
+                          <div className="text-xs text-muted-foreground">{t("common.codeValue", { code: record.supplier.code })}</div>
                         </td>
                         <td className="py-3 px-2">
                           <Badge variant="outline" className={cn("text-xs", getStatusColor(record.status))}>
                             <StatusIcon className="h-3 w-3 mr-1" />
-                            {record.status}
+                            {t(`statuses.${record.status}`)}
                           </Badge>
                         </td>
                         <td className="py-3 px-2">
                           <Badge variant="outline" className="text-xs">
                             {record.twoFactorRequired 
-                              ? `Required (${record.twoFactorMethod || "EMAIL_OTP"})` 
-                              : "Optional"}
+                              ? t("twoFactor.requiredValue", { method: record.twoFactorMethod || "EMAIL_OTP" })
+                              : t("twoFactor.optional")}
                           </Badge>
                         </td>
                         <td className="py-3 px-2">
                           <div className="text-xs text-muted-foreground">
-                            {fmtDate(record.updatedAt)}
+                            {fmtDate(record.updatedAt, locale)}
                           </div>
                           <div className="text-xs text-muted-foreground mt-0.5">
-                            By: {record.createdBy?.email || "System"}
+                            {t("common.byValue", { creator: record.createdBy?.email || t("common.system") })}
                           </div>
                         </td>
                         <td className="py-3 px-2 text-right">
@@ -609,7 +617,7 @@ export default function SupplierPortalAccessPage() {
                             onClick={() => startEdit(record)}
                             className="h-8 px-3 text-xs"
                           >
-                            Edit
+                            {t("actions.edit")}
                           </Button>
                         </td>
                       </tr>
@@ -633,19 +641,19 @@ export default function SupplierPortalAccessPage() {
                         <div className="flex items-start justify-between">
                           <div className="min-w-0 flex-1">
                             <p className="text-sm font-semibold text-foreground">
-                              {record.user.name || "Unnamed user"}
+                              {record.user.name || t("common.unnamedUser")}
                             </p>
                             <p className="text-xs text-muted-foreground mt-0.5 break-all">
-                              {record.user.email || "No email"}
+                              {record.user.email || t("common.noEmail")}
                             </p>
                           </div>
                           <Badge variant="outline" className={cn("text-xs shrink-0 ml-2", getStatusColor(record.status))}>
                             <StatusIcon className="h-3 w-3 mr-1" />
-                            {record.status}
+                            {t(`statuses.${record.status}`)}
                           </Badge>
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">
-                          Role: {record.user.role}
+                          {t("common.roleValue", { role: record.user.role })}
                         </p>
                       </div>
 
@@ -654,7 +662,7 @@ export default function SupplierPortalAccessPage() {
                         <Building2 className="h-3.5 w-3.5 text-muted-foreground mt-0.5 shrink-0" />
                         <div className="min-w-0 flex-1">
                           <p className="text-sm text-foreground">{record.supplier.name}</p>
-                          <p className="text-xs text-muted-foreground">Code: {record.supplier.code}</p>
+                          <p className="text-xs text-muted-foreground">{t("common.codeValue", { code: record.supplier.code })}</p>
                         </div>
                       </div>
 
@@ -663,8 +671,8 @@ export default function SupplierPortalAccessPage() {
                         <Shield className="h-3.5 w-3.5 text-muted-foreground" />
                         <span className="text-sm text-foreground">
                           {record.twoFactorRequired 
-                            ? `2FA Required (${record.twoFactorMethod || "EMAIL_OTP"})` 
-                            : "2FA Optional"}
+                            ? t("twoFactor.mobileRequiredValue", { method: record.twoFactorMethod || "EMAIL_OTP" })
+                            : t("twoFactor.mobileOptional")}
                         </span>
                       </div>
 
@@ -672,7 +680,7 @@ export default function SupplierPortalAccessPage() {
                       {record.note && (
                         <div className="rounded-md bg-muted/30 p-2">
                           <p className="text-xs text-muted-foreground">
-                            Note: {record.note}
+                            {t("common.noteValue", { note: record.note })}
                           </p>
                         </div>
                       )}
@@ -680,10 +688,10 @@ export default function SupplierPortalAccessPage() {
                       {/* Metadata */}
                       <div className="flex items-center gap-2 text-xs text-muted-foreground pt-2 border-t border-border/50">
                         <Clock className="h-3 w-3" />
-                        <span>Updated: {fmtDate(record.updatedAt)}</span>
+                        <span>{t("common.updatedValue", { date: fmtDate(record.updatedAt, locale) })}</span>
                       </div>
                       <div className="text-xs text-muted-foreground">
-                        Created by: {record.createdBy?.email || "System"}
+                        {t("common.createdByValue", { creator: record.createdBy?.email || t("common.system") })}
                       </div>
 
                       {/* Actions */}
@@ -693,7 +701,7 @@ export default function SupplierPortalAccessPage() {
                         onClick={() => startEdit(record)}
                         className="w-full mt-2"
                       >
-                        Edit Access
+                        {t("actions.editAccess")}
                       </Button>
                     </CardContent>
                   </Card>
@@ -706,9 +714,9 @@ export default function SupplierPortalAccessPage() {
           {!loading && paginatedRecords.length === 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Shield className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No supplier portal assignments found.</p>
+              <p className="text-sm text-muted-foreground">{t("empty")}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Click "Add Access" to create your first assignment.
+                {t("emptyHint")}
               </p>
             </div>
           )}

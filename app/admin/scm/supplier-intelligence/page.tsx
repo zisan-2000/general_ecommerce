@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { RefreshCw, ChevronLeft, ChevronRight, Filter, Building2, Clock, AlertTriangle, CheckCircle, Package, TrendingUp, TrendingDown } from "lucide-react";
@@ -105,9 +106,9 @@ async function readJson<T>(
   return data as T;
 }
 
-function formatDate(value: string | null) {
-  if (!value) return "-";
-  return new Date(value).toLocaleDateString();
+function formatDate(value: string | null, locale: string) {
+  if (!value) return "—";
+  return new Date(value).toLocaleDateString(locale);
 }
 
 function formatNumber(value: number | null, suffix = "") {
@@ -160,6 +161,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
   totalPages: number; 
   onPageChange: (page: number) => void;
 }) {
+  const t = useTranslations("AdminSupplierIntelligence");
   const getVisiblePages = () => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -194,6 +196,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.previous")}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -216,6 +219,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.next")}
       >
         <ChevronRight className="h-4 w-4" />
       </Button>
@@ -224,6 +228,8 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
 }
 
 export default function SupplierIntelligencePage() {
+  const t = useTranslations("AdminSupplierIntelligence");
+  const locale = useLocale();
   const searchParams = useSearchParams();
   const { data: session } = useSession();
   const globalPermissions = Array.isArray(
@@ -269,11 +275,11 @@ export default function SupplierIntelligencePage() {
       );
       const data = await readJson<SupplierIntelligenceResponse>(
         response,
-        "Failed to load supplier intelligence data",
+        t("errors.load"),
       );
       setDataset(data);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier intelligence data");
+      toast.error(error?.message || t("errors.load"));
       setDataset((current) => ({ ...current, rows: [] }));
     } finally {
       setLoading(false);
@@ -339,7 +345,7 @@ export default function SupplierIntelligencePage() {
       <div className="p-4 sm:p-6">
         <Card>
           <CardContent className="p-6 text-sm text-muted-foreground">
-            You do not have access to supplier intelligence.
+            {t("access.denied")}
           </CardContent>
         </Card>
       </div>
@@ -352,10 +358,10 @@ export default function SupplierIntelligencePage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Supplier Intelligence
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Compare configured supplier lead times against real PO-to-receipt performance.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex gap-2">
@@ -364,14 +370,14 @@ export default function SupplierIntelligencePage() {
             value={windowDays}
             onChange={(event) => setWindowDays(event.target.value)}
           >
-            <option value="90">Last 90 days</option>
-            <option value="180">Last 180 days</option>
-            <option value="365">Last 365 days</option>
-            <option value="730">Last 730 days</option>
+            <option value="90">{t("windows.days90")}</option>
+            <option value="180">{t("windows.days180")}</option>
+            <option value="365">{t("windows.days365")}</option>
+            <option value="730">{t("windows.days730")}</option>
           </select>
           <Button variant="outline" onClick={() => void loadData()} disabled={loading}>
             <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button
             variant="outline"
@@ -380,6 +386,7 @@ export default function SupplierIntelligencePage() {
             className="sm:hidden"
           >
             <Filter className="h-4 w-4" />
+            <span className="sr-only">{t("filters.toggle")}</span>
           </Button>
         </div>
       </div>
@@ -388,19 +395,19 @@ export default function SupplierIntelligencePage() {
       <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
         <Card className="shadow-sm">
           <CardHeader className="p-3 sm:p-4">
-            <CardDescription className="text-xs sm:text-sm">Suppliers Tracked</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">{t("overview.suppliersTracked")}</CardDescription>
             <CardTitle className="text-xl sm:text-2xl">{dataset.overview.supplierCount}</CardTitle>
           </CardHeader>
         </Card>
         <Card className="shadow-sm">
           <CardHeader className="p-3 sm:p-4">
-            <CardDescription className="text-xs sm:text-sm">Tracked POs</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">{t("overview.trackedPos")}</CardDescription>
             <CardTitle className="text-xl sm:text-2xl">{dataset.overview.trackedPoCount}</CardTitle>
           </CardHeader>
         </Card>
         <Card className="shadow-sm">
           <CardHeader className="p-3 sm:p-4">
-            <CardDescription className="text-xs sm:text-sm">Observed Lead Time</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">{t("overview.observedLeadTime")}</CardDescription>
             <CardTitle className="text-xl sm:text-2xl">
               {formatNumber(dataset.overview.averageObservedLeadTimeDays, "d")}
             </CardTitle>
@@ -408,7 +415,7 @@ export default function SupplierIntelligencePage() {
         </Card>
         <Card className="shadow-sm">
           <CardHeader className="p-3 sm:p-4">
-            <CardDescription className="text-xs sm:text-sm">Avg On-Time Rate</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">{t("overview.averageOnTime")}</CardDescription>
             <CardTitle className={cn("text-xl sm:text-2xl", getPerformanceColor(dataset.overview.averageOnTimeRatePercent))}>
               {formatNumber(dataset.overview.averageOnTimeRatePercent, "%")}
             </CardTitle>
@@ -416,7 +423,7 @@ export default function SupplierIntelligencePage() {
         </Card>
         <Card className="shadow-sm col-span-2 sm:col-span-1">
           <CardHeader className="p-3 sm:p-4">
-            <CardDescription className="text-xs sm:text-sm">Open Late POs</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">{t("overview.openLatePos")}</CardDescription>
             <CardTitle className="text-xl sm:text-2xl text-destructive">
               {dataset.overview.openLatePoCount}
             </CardTitle>
@@ -429,9 +436,9 @@ export default function SupplierIntelligencePage() {
         <CardHeader className="p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle className="text-base sm:text-lg">Supplier Lead-Time Scorecard</CardTitle>
+              <CardTitle className="text-base sm:text-lg">{t("scorecard.title")}</CardTitle>
               <CardDescription className="text-xs sm:text-sm">
-                Recommended lead time uses real receipt history and keeps configured baseline when safer.
+                {t("scorecard.description")}
               </CardDescription>
             </div>
             <Button
@@ -441,7 +448,7 @@ export default function SupplierIntelligencePage() {
               className="sm:hidden"
             >
               <Filter className="h-4 w-4 mr-2" />
-              Filters
+              {t("filters.label")}
             </Button>
           </div>
         </CardHeader>
@@ -451,7 +458,7 @@ export default function SupplierIntelligencePage() {
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search supplier name, code, or email..."
+              placeholder={t("filters.searchPlaceholder")}
               className="max-w-md text-sm"
             />
             <select
@@ -459,11 +466,11 @@ export default function SupplierIntelligencePage() {
               value={bandFilter}
               onChange={(event) => setBandFilter(event.target.value)}
             >
-              <option value="ALL">All bands</option>
-              <option value="STABLE">Stable</option>
-              <option value="WATCH">Watch</option>
-              <option value="AT_RISK">At Risk</option>
-              <option value="INSUFFICIENT_DATA">Insufficient Data</option>
+              <option value="ALL">{t("filters.allBands")}</option>
+              <option value="STABLE">{t("bands.STABLE")}</option>
+              <option value="WATCH">{t("bands.WATCH")}</option>
+              <option value="AT_RISK">{t("bands.AT_RISK")}</option>
+              <option value="INSUFFICIENT_DATA">{t("bands.INSUFFICIENT_DATA")}</option>
             </select>
           </div>
 
@@ -471,7 +478,7 @@ export default function SupplierIntelligencePage() {
           {showFilters && (
             <div className="space-y-3 sm:hidden">
               <Input
-                placeholder="Search..."
+                placeholder={t("filters.mobileSearchPlaceholder")}
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 className="text-sm"
@@ -481,14 +488,14 @@ export default function SupplierIntelligencePage() {
                 value={bandFilter}
                 onChange={(event) => setBandFilter(event.target.value)}
               >
-                <option value="ALL">All bands</option>
-                <option value="STABLE">Stable</option>
-                <option value="WATCH">Watch</option>
-                <option value="AT_RISK">At Risk</option>
-                <option value="INSUFFICIENT_DATA">Insufficient Data</option>
+                <option value="ALL">{t("filters.allBands")}</option>
+                <option value="STABLE">{t("bands.STABLE")}</option>
+                <option value="WATCH">{t("bands.WATCH")}</option>
+                <option value="AT_RISK">{t("bands.AT_RISK")}</option>
+                <option value="INSUFFICIENT_DATA">{t("bands.INSUFFICIENT_DATA")}</option>
               </select>
               <Button variant="outline" onClick={() => setShowFilters(false)} className="w-full">
-                Close Filters
+                {t("filters.close")}
               </Button>
             </div>
           )}
@@ -506,14 +513,14 @@ export default function SupplierIntelligencePage() {
               <Table>
                 <TableHeader>
                   <TableRow className="border-border hover:bg-transparent">
-                    <TableHead className="text-xs font-medium text-muted-foreground">Supplier</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Config LT</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Observed LT</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Recommended LT</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">On-Time</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Open Late</TableHead>
-                    <TableHead className="text-right text-xs font-medium text-muted-foreground">Partial Rate</TableHead>
-                    <TableHead className="text-xs font-medium text-muted-foreground">Band</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("common.supplier")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.configLt")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.observedLt")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.recommendedLt")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.onTime")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.openLate")}</TableHead>
+                    <TableHead className="text-right text-xs font-medium text-muted-foreground">{t("common.partialRate")}</TableHead>
+                    <TableHead className="text-xs font-medium text-muted-foreground">{t("common.band")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -564,7 +571,7 @@ export default function SupplierIntelligencePage() {
                         <TableCell className="py-3">
                           <Badge variant="outline" className={cn("text-xs", getBandVariant(row.metrics.performanceBand))}>
                             <BandIcon className="h-3 w-3 mr-1" />
-                            {row.metrics.performanceBand.replaceAll("_", " ")}
+                            {t(`bands.${row.metrics.performanceBand}`)}
                           </Badge>
                         </TableCell>
                       </TableRow>
@@ -595,30 +602,30 @@ export default function SupplierIntelligencePage() {
                       <div className="flex items-start justify-between">
                         <div>
                           <p className="text-sm font-semibold text-foreground">{row.supplier.name}</p>
-                          <p className="text-xs text-muted-foreground">Code: {row.supplier.code}</p>
+                          <p className="text-xs text-muted-foreground">{t("common.codeValue", { code: row.supplier.code })}</p>
                         </div>
                         <Badge variant="outline" className={cn("text-xs", getBandVariant(row.metrics.performanceBand))}>
                           <BandIcon className="h-3 w-3 mr-1" />
-                          {row.metrics.performanceBand.replaceAll("_", " ")}
+                          {t(`bands.${row.metrics.performanceBand}`)}
                         </Badge>
                       </div>
 
                       {/* Lead Times */}
                       <div className="grid grid-cols-3 gap-2 pt-2">
                         <div>
-                          <p className="text-xs text-muted-foreground">Config LT</p>
+                          <p className="text-xs text-muted-foreground">{t("common.configLt")}</p>
                           <p className="text-sm font-medium text-foreground">
                             {formatNumber(row.supplier.configuredLeadTimeDays, "d")}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Observed LT</p>
+                          <p className="text-xs text-muted-foreground">{t("common.observedLt")}</p>
                           <p className={cn("text-sm font-medium", getPerformanceColor(row.metrics.averageFinalReceiptLeadTimeDays, true))}>
                             {formatNumber(row.metrics.averageFinalReceiptLeadTimeDays, "d")}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Recommended LT</p>
+                          <p className="text-xs text-muted-foreground">{t("common.recommendedLt")}</p>
                           <p className="text-sm font-medium text-primary">
                             {formatNumber(row.metrics.recommendedLeadTimeDays, "d")}
                           </p>
@@ -628,19 +635,19 @@ export default function SupplierIntelligencePage() {
                       {/* Performance Metrics */}
                       <div className="grid grid-cols-3 gap-2">
                         <div>
-                          <p className="text-xs text-muted-foreground">On-Time</p>
+                          <p className="text-xs text-muted-foreground">{t("common.onTime")}</p>
                           <p className={cn("text-sm font-medium", getPerformanceColor(row.metrics.onTimeRatePercent))}>
                             {formatNumber(row.metrics.onTimeRatePercent, "%")}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Open Late</p>
+                          <p className="text-xs text-muted-foreground">{t("common.openLate")}</p>
                           <p className={cn("text-sm font-medium", row.metrics.openLatePoCount > 0 ? "text-destructive" : "text-success")}>
                             {row.metrics.openLatePoCount}
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground">Partial Rate</p>
+                          <p className="text-xs text-muted-foreground">{t("common.partialRate")}</p>
                           <p className="text-sm font-medium text-muted-foreground">
                             {formatNumber(row.metrics.partialReceiptRatePercent, "%")}
                           </p>
@@ -666,9 +673,9 @@ export default function SupplierIntelligencePage() {
           {!loading && paginatedRows.length === 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Package className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No supplier intelligence records found.</p>
+              <p className="text-sm text-muted-foreground">{t("empty")}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Try adjusting your filters or window period.
+                {t("emptyHint")}
               </p>
             </div>
           )}
@@ -692,13 +699,11 @@ export default function SupplierIntelligencePage() {
               <div>
                 <CardTitle className="text-base sm:text-lg">{selectedSupplier.supplier.name}</CardTitle>
                 <CardDescription className="text-xs sm:text-sm">
-                  Configured lead time {formatNumber(selectedSupplier.supplier.configuredLeadTimeDays, " days")} • 
-                  Recommended {formatNumber(selectedSupplier.metrics.recommendedLeadTimeDays, " days")} • 
-                  Last receipt {formatDate(selectedSupplier.metrics.latestReceiptAt)}
+                  {t("detail.summary", { configured: formatNumber(selectedSupplier.supplier.configuredLeadTimeDays, t("common.daysSuffix")), recommended: formatNumber(selectedSupplier.metrics.recommendedLeadTimeDays, t("common.daysSuffix")), receipt: formatDate(selectedSupplier.metrics.latestReceiptAt, locale) })}
                 </CardDescription>
               </div>
               <Badge variant="outline" className={cn("text-xs self-start", getBandVariant(selectedSupplier.metrics.performanceBand))}>
-                {selectedSupplier.metrics.performanceBand.replaceAll("_", " ")}
+                {t(`bands.${selectedSupplier.metrics.performanceBand}`)}
               </Badge>
             </div>
           </CardHeader>
@@ -706,37 +711,37 @@ export default function SupplierIntelligencePage() {
             {/* Metrics Cards */}
             <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Completed POs</div>
+                <div className="text-xs text-muted-foreground">{t("detail.completedPos")}</div>
                 <div className="text-lg sm:text-xl font-semibold text-foreground">
                   {selectedSupplier.metrics.completedPoCount}
                 </div>
               </div>
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Avg First Receipt</div>
+                <div className="text-xs text-muted-foreground">{t("detail.averageFirstReceipt")}</div>
                 <div className="text-lg sm:text-xl font-semibold text-foreground">
                   {formatNumber(selectedSupplier.metrics.averageFirstReceiptLeadTimeDays, "d")}
                 </div>
               </div>
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Avg Final Receipt</div>
+                <div className="text-xs text-muted-foreground">{t("detail.averageFinalReceipt")}</div>
                 <div className={cn("text-lg sm:text-xl font-semibold", getPerformanceColor(selectedSupplier.metrics.averageFinalReceiptLeadTimeDays, true))}>
                   {formatNumber(selectedSupplier.metrics.averageFinalReceiptLeadTimeDays, "d")}
                 </div>
               </div>
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Avg Delay</div>
+                <div className="text-xs text-muted-foreground">{t("detail.averageDelay")}</div>
                 <div className={cn("text-lg sm:text-xl font-semibold", getPerformanceColor(selectedSupplier.metrics.averageDelayDays, true))}>
                   {formatNumber(selectedSupplier.metrics.averageDelayDays, "d")}
                 </div>
               </div>
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Fill Rate</div>
+                <div className="text-xs text-muted-foreground">{t("detail.fillRate")}</div>
                 <div className={cn("text-lg sm:text-xl font-semibold", getPerformanceColor(selectedSupplier.metrics.averageFillRatePercent))}>
                   {formatNumber(selectedSupplier.metrics.averageFillRatePercent, "%")}
                 </div>
               </div>
               <div className="rounded-lg border border-border p-3">
-                <div className="text-xs text-muted-foreground">Suggested Buffer</div>
+                <div className="text-xs text-muted-foreground">{t("detail.suggestedBuffer")}</div>
                 <div className="text-lg sm:text-xl font-semibold text-primary">
                   {formatNumber(selectedSupplier.metrics.recommendedBufferDays, "d")}
                 </div>
@@ -745,18 +750,18 @@ export default function SupplierIntelligencePage() {
 
             {/* Recent Orders Table */}
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold text-foreground">Recent Orders</h3>
+              <h3 className="text-sm font-semibold text-foreground">{t("orders.title")}</h3>
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
                     <TableRow className="border-border">
-                      <TableHead className="text-xs font-medium text-muted-foreground">PO</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Warehouse</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Status</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Due</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Lead Time</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Delay</TableHead>
-                      <TableHead className="text-xs font-medium text-muted-foreground">Fill Rate</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.po")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.warehouse")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.status")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.due")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.leadTime")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("orders.delay")}</TableHead>
+                      <TableHead className="text-xs font-medium text-muted-foreground">{t("detail.fillRate")}</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -765,7 +770,7 @@ export default function SupplierIntelligencePage() {
                         <TableCell className="py-3">
                           <div className="text-sm font-medium text-foreground">{order.poNumber}</div>
                           <div className="text-xs text-muted-foreground">
-                            {formatDate(order.orderDate)}
+                            {formatDate(order.orderDate, locale)}
                           </div>
                         </TableCell>
                         <TableCell className="py-3">
@@ -773,19 +778,19 @@ export default function SupplierIntelligencePage() {
                           <div className="text-xs text-muted-foreground">{order.warehouse.code}</div>
                         </TableCell>
                         <TableCell className="py-3">
-                          <div className="text-sm text-foreground">{order.status}</div>
+                          <div className="text-sm text-foreground">{t.has(`orderStatuses.${order.status}` as any) ? t(`orderStatuses.${order.status}` as any) : order.status}</div>
                           {order.isLateOpen && (
-                            <div className="text-xs text-destructive">Open late</div>
+                            <div className="text-xs text-destructive">{t("orders.openLate")}</div>
                           )}
                           {order.isOnTime === false && (
-                            <div className="text-xs text-destructive">Delayed</div>
+                            <div className="text-xs text-destructive">{t("orders.delayed")}</div>
                           )}
                           {order.isOnTime === true && (
-                            <div className="text-xs text-success">On time</div>
+                            <div className="text-xs text-success">{t("orders.onTime")}</div>
                           )}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-foreground">
-                          {formatDate(order.benchmarkDueAt)}
+                          {formatDate(order.benchmarkDueAt, locale)}
                         </TableCell>
                         <TableCell className="py-3">
                           <span className={cn("text-sm", getPerformanceColor(order.finalReceiptLeadTimeDays, true))}>
@@ -809,7 +814,7 @@ export default function SupplierIntelligencePage() {
               </div>
               {selectedSupplier.recentOrders.length === 0 && (
                 <p className="text-sm text-muted-foreground text-center py-4">
-                  No recent orders found for this supplier.
+                  {t("orders.empty")}
                 </p>
               )}
             </div>

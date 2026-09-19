@@ -5946,7 +5946,10 @@
         "actions": {
             "newFeedback": "নতুন মতামত",
             "refresh": "রিফ্রেশ",
-            "view": "দেখুন"
+            "view": "দেখুন",
+            "cancel": "বাতিল",
+            "create": "ফিডব্যাক তৈরি করুন",
+            "creating": "তৈরি হচ্ছে..."
         },
         "stats": {
             "total": { "label": "মোট", "hint": "মোট মতামত" },
@@ -5955,10 +5958,26 @@
         },
         "filters": {
             "supplier": "সরবরাহকারী",
-            "rating": "রেটিং"
+            "rating": "রেটিং",
+            "searchPlaceholder": "সরবরাহকারী, ক্লায়েন্ট বা রেফারেন্স দিয়ে খুঁজুন...",
+            "mobileSearchPlaceholder": "অনুসন্ধান করুন...",
+            "allSuppliers": "সব সরবরাহকারী",
+            "toggle": "ফিল্টার দেখান বা লুকান",
+            "close": "ফিল্টার বন্ধ করুন"
         },
+        "modal": { "title": "ভেন্ডর ফিডব্যাক তৈরি করুন", "description": "অপারেশন বা ক্লায়েন্টের কাছ থেকে সেবার মান ও ভেন্ডর পারফরম্যান্সের ফিডব্যাক নিন।" },
+        "register": { "title": "ফিডব্যাক রেজিস্টার" },
+        "fields": {
+            "supplierRequired": "সরবরাহকারী *", "selectSupplier": "সরবরাহকারী নির্বাচন করুন", "sourceType": "উৎসের ধরন", "sourceReference": "উৎস রেফারেন্স", "sourceReferencePlaceholder": "PO / WO / টিকিট রেফারেন্স", "clientName": "ক্লায়েন্টের নাম", "clientNamePlaceholder": "ক্লায়েন্ট বা বিভাগের নাম", "clientEmail": "ক্লায়েন্টের ইমেইল", "clientEmailPlaceholder": "client@example.com", "ratings": "রেটিং (১-৫)", "overall": "সামগ্রিক", "serviceQuality": "সেবার মান", "delivery": "ডেলিভারি", "compliance": "কমপ্লায়েন্স", "comment": "মন্তব্য", "commentPlaceholder": "ভেন্ডরের পারফরম্যান্স, শক্তি ও উন্নতির ক্ষেত্র সম্পর্কে বিস্তারিত লিখুন..."
+        },
+        "sourceTypes": { "INTERNAL": "অভ্যন্তরীণ দল", "CLIENT": "ক্লায়েন্ট ফিডব্যাক", "VENDOR_SELF": "ভেন্ডরের স্ব-মূল্যায়ন" },
+        "common": { "supplier": "সরবরাহকারী", "rating": "রেটিং", "source": "উৎস", "client": "ক্লায়েন্ট", "details": "বিস্তারিত", "date": "তারিখ", "codeValue": "কোড: {code}", "reference": "রেফারেন্স:", "referenceValue": "রেফারেন্স: {reference}", "byValue": "তৈরি করেছেন: {creator}", "noComment": "কোনো মন্তব্য নেই", "serviceShort": "সেবা", "deliveryShort": "ডেলিভারি", "complianceShort": "কমপ্লায়েন্স" },
+        "pagination": { "previous": "আগের পৃষ্ঠা", "next": "পরের পৃষ্ঠা" },
+        "errors": { "load": "সরবরাহকারীর ফিডব্যাক লোড করা যায়নি।", "create": "ফিডব্যাক তৈরি করা যায়নি।", "supplierRequired": "একজন সরবরাহকারী নির্বাচন করুন।" },
+        "success": { "created": "সরবরাহকারীর ফিডব্যাক সফলভাবে তৈরি হয়েছে।" },
         "loading": "ভেন্ডর মতামত লোড হচ্ছে...",
-        "empty": "কোনো ভেন্ডর মতামত পাওয়া যায়নি।"
+        "empty": "কোনো ফিডব্যাক রেকর্ড পাওয়া যায়নি।",
+        "emptyHint": "প্রথম ভেন্ডর ফিডব্যাক তৈরি করতে ফিডব্যাক যোগ করুন নির্বাচন করুন।"
     },
     "AdminSupplierIntelligence": {
         "header": {
@@ -5976,10 +5995,23 @@
         },
         "filters": {
             "supplier": "সরবরাহকারী",
-            "timeRange": "সময়ের পরিসর"
+            "timeRange": "সময়ের পরিসর",
+            "label": "ফিল্টার", "toggle": "ফিল্টার দেখান বা লুকান", "searchPlaceholder": "সরবরাহকারীর নাম, কোড বা ইমেইল দিয়ে খুঁজুন...", "mobileSearchPlaceholder": "অনুসন্ধান করুন...", "allBands": "সব ব্যান্ড", "close": "ফিল্টার বন্ধ করুন"
         },
+        "access": { "denied": "আপনার সরবরাহকারী বিশ্লেষণ দেখার অনুমতি নেই।" },
+        "windows": { "days90": "গত ৯০ দিন", "days180": "গত ১৮০ দিন", "days365": "গত ৩৬৫ দিন", "days730": "গত ৭৩০ দিন" },
+        "overview": { "suppliersTracked": "পর্যবেক্ষণাধীন সরবরাহকারী", "trackedPos": "পর্যবেক্ষণাধীন PO", "observedLeadTime": "পর্যবেক্ষিত লিড টাইম", "averageOnTime": "গড় সময়মতো হার", "openLatePos": "দেরি হওয়া খোলা PO" },
+        "scorecard": { "title": "সরবরাহকারী লিড-টাইম স্কোরকার্ড", "description": "প্রস্তাবিত লিড টাইম বাস্তব রিসিপ্ট ইতিহাস ব্যবহার করে এবং নিরাপদ হলে কনফিগার করা বেসলাইন রাখে।" },
+        "bands": { "STABLE": "স্থিতিশীল", "WATCH": "নজরদারি", "AT_RISK": "ঝুঁকিতে", "INSUFFICIENT_DATA": "অপর্যাপ্ত তথ্য" },
+        "common": { "supplier": "সরবরাহকারী", "configLt": "কনফিগারড LT", "observedLt": "পর্যবেক্ষিত LT", "recommendedLt": "প্রস্তাবিত LT", "onTime": "সময়মতো", "openLate": "দেরিতে খোলা", "partialRate": "আংশিক হার", "band": "ব্যান্ড", "codeValue": "কোড: {code}", "daysSuffix": " দিন" },
+        "detail": { "summary": "কনফিগারড লিড টাইম {configured} • প্রস্তাবিত {recommended} • সর্বশেষ রিসিপ্ট {receipt}", "completedPos": "সম্পন্ন PO", "averageFirstReceipt": "প্রথম রিসিপ্টের গড়", "averageFinalReceipt": "চূড়ান্ত রিসিপ্টের গড়", "averageDelay": "গড় বিলম্ব", "fillRate": "ফিল রেট", "suggestedBuffer": "প্রস্তাবিত বাফার" },
+        "orders": { "title": "সাম্প্রতিক অর্ডার", "po": "PO", "warehouse": "ওয়্যারহাউস", "status": "স্ট্যাটাস", "due": "নির্ধারিত", "leadTime": "লিড টাইম", "delay": "বিলম্ব", "openLate": "দেরিতে খোলা", "delayed": "বিলম্বিত", "onTime": "সময়মতো", "empty": "এই সরবরাহকারীর কোনো সাম্প্রতিক অর্ডার পাওয়া যায়নি।" },
+        "orderStatuses": { "DRAFT": "খসড়া", "SUBMITTED": "জমাকৃত", "MANAGER_APPROVED": "ম্যানেজার অনুমোদিত", "COMMITTEE_APPROVED": "কমিটি অনুমোদিত", "APPROVED": "অনুমোদিত", "PARTIALLY_RECEIVED": "আংশিক গ্রহণ করা হয়েছে", "RECEIVED": "গ্রহণ করা হয়েছে", "REJECTED": "প্রত্যাখ্যাত", "CANCELLED": "বাতিল" },
+        "pagination": { "previous": "আগের পৃষ্ঠা", "next": "পরের পৃষ্ঠা" },
+        "errors": { "load": "সরবরাহকারী বিশ্লেষণের তথ্য লোড করা যায়নি।" },
         "loading": "সরবরাহকারী বিশ্লেষণ লোড হচ্ছে...",
-        "empty": "কোনো বিশ্লেষণ ডেটা পাওয়া যায়নি।"
+        "empty": "কোনো সরবরাহকারী বিশ্লেষণ রেকর্ড পাওয়া যায়নি।",
+        "emptyHint": "ফিল্টার বা সময়সীমা পরিবর্তন করে দেখুন।"
     },
     "AdminSupplierPortalAccess": {
         "header": {
@@ -5989,7 +6021,8 @@
         "actions": {
             "invite": "সরবরাহকারী আমন্ত্রণ জানান",
             "refresh": "রিফ্রেশ",
-            "revoke": "অ্যাক্সেস বাতিল করুন"
+            "revoke": "অ্যাক্সেস বাতিল করুন",
+            "add": "অ্যাক্সেস যোগ করুন", "cancel": "বাতিল", "create": "অ্যাক্সেস তৈরি করুন", "update": "অ্যাক্সেস আপডেট করুন", "saving": "সংরক্ষণ হচ্ছে...", "edit": "সম্পাদনা", "editAccess": "অ্যাক্সেস সম্পাদনা করুন"
         },
         "stats": {
             "total": { "label": "মোট", "hint": "মোট সরবরাহকারী" },
@@ -5998,10 +6031,23 @@
         },
         "filters": {
             "searchPlaceholder": "সরবরাহকারী নাম, ইমেইল অনুসন্ধান করুন...",
-            "allStatuses": "সব স্ট্যাটাস"
+            "mobileSearchPlaceholder": "অনুসন্ধান করুন...",
+            "allStatuses": "সব স্ট্যাটাস",
+            "toggle": "অনুসন্ধান ফিল্টার দেখান বা লুকান"
         },
+        "modal": { "createTitle": "সরবরাহকারী পোর্টাল অ্যাক্সেস তৈরি করুন", "editTitle": "সরবরাহকারী পোর্টাল অ্যাক্সেস সম্পাদনা করুন", "createDescription": "একজন ব্যবহারকারীকে সরবরাহকারীর সঙ্গে যুক্ত করে পোর্টাল অ্যাক্সেস কনফিগার করুন।", "editDescription": "এই সরবরাহকারী ব্যবহারকারীর অ্যাক্সেস অনুমতি ও নিরাপত্তা সেটিংস আপডেট করুন।" },
+        "registry": { "title": "অ্যাক্সেস রেজিস্টার" },
+        "fields": { "userRequired": "ব্যবহারকারী *", "selectUser": "ব্যবহারকারী নির্বাচন করুন", "supplierRequired": "সরবরাহকারী *", "selectSupplier": "সরবরাহকারী নির্বাচন করুন", "twoFactorPolicy": "2FA নীতি", "noteOptional": "নোট (ঐচ্ছিক)", "notePlaceholder": "গভর্ন্যান্স নোট, অ্যাক্সেসের কারণ বা বিশেষ শর্ত লিখুন..." },
+        "statuses": { "ACTIVE": "সক্রিয়", "SUSPENDED": "স্থগিত", "REVOKED": "প্রত্যাহারকৃত", "INACTIVE": "নিষ্ক্রিয়" },
+        "statusOptions": { "ACTIVE": "সক্রিয় - পূর্ণ অ্যাক্সেস", "SUSPENDED": "স্থগিত - সাময়িকভাবে অবরুদ্ধ", "REVOKED": "প্রত্যাহারকৃত - স্থায়ীভাবে সরানো" },
+        "twoFactor": { "DISABLED": "নিষ্ক্রিয় (শুধু ঐচ্ছিক)", "EMAIL_OTP": "আবশ্যক: ইমেইল OTP", "TOTP": "আবশ্যক: TOTP অ্যাপ", "AUTH_APP": "আবশ্যক: অথেনটিকেটর অ্যাপ", "requiredValue": "আবশ্যক ({method})", "optional": "ঐচ্ছিক", "mobileRequiredValue": "2FA আবশ্যক ({method})", "mobileOptional": "2FA ঐচ্ছিক" },
+        "common": { "user": "ব্যবহারকারী", "supplier": "সরবরাহকারী", "status": "স্ট্যাটাস", "twoFactor": "2FA", "lastUpdated": "সর্বশেষ আপডেট", "actions": "কার্যক্রম", "unnamed": "নামহীন", "unnamedUser": "নামহীন ব্যবহারকারী", "noEmail": "ইমেইল নেই", "system": "সিস্টেম", "roleValue": "ভূমিকা: {role}", "codeValue": "কোড: {code}", "byValue": "তৈরি করেছেন: {creator}", "noteValue": "নোট: {note}", "updatedValue": "আপডেট: {date}", "createdByValue": "তৈরি করেছেন: {creator}" },
+        "pagination": { "previous": "আগের পৃষ্ঠা", "next": "পরের পৃষ্ঠা" },
+        "errors": { "load": "সরবরাহকারী পোর্টাল অ্যাক্সেস লোড করা যায়নি।", "required": "ব্যবহারকারী ও সরবরাহকারী দুটিই আবশ্যক।", "save": "সরবরাহকারী পোর্টাল অ্যাক্সেস সংরক্ষণ করা যায়নি।" },
+        "success": { "created": "অ্যাক্সেস তৈরি হয়েছে।", "updated": "অ্যাক্সেস আপডেট হয়েছে।" },
         "loading": "সরবরাহকারী পোর্টাল অ্যাক্সেস লোড হচ্ছে...",
-        "empty": "কোনো সরবরাহকারী পোর্টাল ব্যবহারকারী পাওয়া যায়নি।"
+        "empty": "কোনো সরবরাহকারী পোর্টাল অ্যাসাইনমেন্ট পাওয়া যায়নি।",
+        "emptyHint": "প্রথম অ্যাসাইনমেন্ট তৈরি করতে অ্যাক্সেস যোগ করুন নির্বাচন করুন।"
     },
     "AdminBundles": {
         "list": {

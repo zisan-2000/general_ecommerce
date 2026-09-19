@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { 
   Button, 
@@ -64,10 +65,10 @@ type FeedbackResponse = {
   rows: FeedbackRow[];
 };
 
-function fmtDate(value: string) {
+function fmtDate(value: string, locale: string) {
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 function getRatingColor(rating: number) {
@@ -111,6 +112,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
   totalPages: number; 
   onPageChange: (page: number) => void;
 }) {
+  const t = useTranslations("AdminVendorFeedback");
   const getVisiblePages = () => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -145,6 +147,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.previous")}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -167,6 +170,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="h-8 w-8 p-0"
+        aria-label={t("pagination.next")}
       >
         <ChevronRight className="h-4 w-4" />
       </Button>
@@ -206,6 +210,7 @@ function FeedbackModal({
   onSave: () => void;
   saving: boolean;
 }) {
+  const t = useTranslations("AdminVendorFeedback");
   const handleClose = () => {
     onOpenChange(false);
   };
@@ -214,22 +219,22 @@ function FeedbackModal({
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-lg sm:text-xl">Create Vendor Feedback</DialogTitle>
+          <DialogTitle className="text-lg sm:text-xl">{t("modal.title")}</DialogTitle>
           <DialogDescription className="text-xs sm:text-sm">
-            Capture service quality and vendor performance feedback from operations or clients.
+            {t("modal.description")}
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4 py-4">
           {/* Supplier Selection */}
           <div className="space-y-2">
-            <Label className="text-sm font-medium">Supplier *</Label>
+            <Label className="text-sm font-medium">{t("fields.supplierRequired")}</Label>
             <select
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               value={selectedSupplierId}
               onChange={(event) => onSupplierChange(event.target.value)}
             >
-              <option value="">Select supplier</option>
+              <option value="">{t("fields.selectSupplier")}</option>
               {suppliers.map((supplier) => (
                 <option key={supplier.id} value={supplier.id}>
                   {supplier.name} ({supplier.code})
@@ -241,7 +246,7 @@ function FeedbackModal({
           {/* Source Information */}
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label className="text-sm font-medium">Source Type</Label>
+              <Label className="text-sm font-medium">{t("fields.sourceType")}</Label>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 value={form.sourceType}
@@ -249,15 +254,15 @@ function FeedbackModal({
                   onFormChange({ sourceType: event.target.value })
                 }
               >
-                <option value="INTERNAL">Internal Team</option>
-                <option value="CLIENT">Client Feedback</option>
-                <option value="VENDOR_SELF">Vendor Self-Assessment</option>
+                <option value="INTERNAL">{t("sourceTypes.INTERNAL")}</option>
+                <option value="CLIENT">{t("sourceTypes.CLIENT")}</option>
+                <option value="VENDOR_SELF">{t("sourceTypes.VENDOR_SELF")}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <Label className="text-sm font-medium">Source Reference</Label>
+              <Label className="text-sm font-medium">{t("fields.sourceReference")}</Label>
               <Input
-                placeholder="PO / WO / Ticket reference"
+                placeholder={t("fields.sourceReferencePlaceholder")}
                 value={form.sourceReference}
                 onChange={(event) =>
                   onFormChange({ sourceReference: event.target.value })
@@ -270,9 +275,9 @@ function FeedbackModal({
           {/* Client Information */}
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label className="text-sm font-medium">Client Name</Label>
+              <Label className="text-sm font-medium">{t("fields.clientName")}</Label>
               <Input
-                placeholder="Client or department name"
+                placeholder={t("fields.clientNamePlaceholder")}
                 value={form.clientName}
                 onChange={(event) =>
                   onFormChange({ clientName: event.target.value })
@@ -281,10 +286,10 @@ function FeedbackModal({
               />
             </div>
             <div className="space-y-2">
-              <Label className="text-sm font-medium">Client Email</Label>
+              <Label className="text-sm font-medium">{t("fields.clientEmail")}</Label>
               <Input
                 type="email"
-                placeholder="client@example.com"
+                placeholder={t("fields.clientEmailPlaceholder")}
                 value={form.clientEmail}
                 onChange={(event) =>
                   onFormChange({ clientEmail: event.target.value })
@@ -296,10 +301,10 @@ function FeedbackModal({
 
           {/* Ratings Section */}
           <div className="space-y-3">
-            <Label className="text-sm font-medium">Ratings (1-5)</Label>
+            <Label className="text-sm font-medium">{t("fields.ratings")}</Label>
             <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
               <div className="space-y-1.5">
-                <Label className="text-xs text-muted-foreground">Overall</Label>
+                <Label className="text-xs text-muted-foreground">{t("fields.overall")}</Label>
                 <div className="flex items-center gap-2">
                   <Input
                     type="number"
@@ -318,7 +323,7 @@ function FeedbackModal({
                 </div>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs text-muted-foreground">Service Quality</Label>
+                <Label className="text-xs text-muted-foreground">{t("fields.serviceQuality")}</Label>
                 <div className="flex items-center gap-2">
                   <Input
                     type="number"
@@ -335,7 +340,7 @@ function FeedbackModal({
                 </div>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs text-muted-foreground">Delivery</Label>
+                <Label className="text-xs text-muted-foreground">{t("fields.delivery")}</Label>
                 <div className="flex items-center gap-2">
                   <Input
                     type="number"
@@ -352,7 +357,7 @@ function FeedbackModal({
                 </div>
               </div>
               <div className="space-y-1.5">
-                <Label className="text-xs text-muted-foreground">Compliance</Label>
+                <Label className="text-xs text-muted-foreground">{t("fields.compliance")}</Label>
                 <div className="flex items-center gap-2">
                   <Input
                     type="number"
@@ -373,9 +378,9 @@ function FeedbackModal({
 
           {/* Comment */}
           <div className="space-y-2">
-            <Label className="text-sm font-medium">Comment</Label>
+            <Label className="text-sm font-medium">{t("fields.comment")}</Label>
             <Textarea
-              placeholder="Detailed feedback about vendor performance, strengths, areas for improvement..."
+              placeholder={t("fields.commentPlaceholder")}
               value={form.comment}
               onChange={(event) =>
                 onFormChange({ comment: event.target.value })
@@ -388,10 +393,10 @@ function FeedbackModal({
 
         <DialogFooter className="flex flex-row justify-end gap-2">
           <Button variant="outline" onClick={handleClose} disabled={saving}>
-            Cancel
+            {t("actions.cancel")}
           </Button>
           <Button onClick={onSave} disabled={saving}>
-            {saving ? "Creating..." : "Create Feedback"}
+            {saving ? t("actions.creating") : t("actions.create")}
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -400,6 +405,8 @@ function FeedbackModal({
 }
 
 export default function VendorFeedbackPage() {
+  const t = useTranslations("AdminVendorFeedback");
+  const locale = useLocale();
   const [data, setData] = useState<FeedbackResponse>({ suppliers: [], rows: [] });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -436,11 +443,11 @@ export default function VendorFeedbackPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load supplier feedback.");
+        throw new Error(payload?.error || t("errors.load"));
       }
       setData(payload as FeedbackResponse);
     } catch (error: any) {
-      toast.error(error?.message || "Failed to load supplier feedback.");
+      toast.error(error?.message || t("errors.load"));
       setData({ suppliers: [], rows: [] });
     } finally {
       setLoading(false);
@@ -487,7 +494,7 @@ export default function VendorFeedbackPage() {
 
   const createFeedback = async () => {
     if (!supplierId) {
-      toast.error("Please select a supplier.");
+      toast.error(t("errors.supplierRequired"));
       return;
     }
     try {
@@ -510,14 +517,14 @@ export default function VendorFeedbackPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to create feedback.");
+        throw new Error(payload?.error || t("errors.create"));
       }
-      toast.success("Supplier feedback created successfully.");
+      toast.success(t("success.created"));
       setModalOpen(false);
       resetForm();
       await load();
     } catch (error: any) {
-      toast.error(error?.message || "Failed to create feedback.");
+      toast.error(error?.message || t("errors.create"));
     } finally {
       setSaving(false);
     }
@@ -529,20 +536,20 @@ export default function VendorFeedbackPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-            Vendor Feedback
+            {t("header.title")}
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
-            Capture service quality and vendor performance feedback from operations/clients.
+            {t("header.description")}
           </p>
         </div>
         <div className="flex gap-2">
           <Button onClick={openCreateModal} className="flex-1 sm:flex-initial">
             <Plus className="h-4 w-4 mr-2" />
-            Add Feedback
+            {t("actions.newFeedback")}
           </Button>
           <Button variant="outline" onClick={() => void load()} disabled={loading}>
             <RefreshCw className={cn("h-4 w-4 mr-2", loading && "animate-spin")} />
-            Refresh
+            {t("actions.refresh")}
           </Button>
           <Button
             variant="outline"
@@ -551,6 +558,7 @@ export default function VendorFeedbackPage() {
             className="sm:hidden"
           >
             <Filter className="h-4 w-4" />
+            <span className="sr-only">{t("filters.toggle")}</span>
           </Button>
         </div>
       </div>
@@ -558,14 +566,14 @@ export default function VendorFeedbackPage() {
       {/* Filters Card */}
       <Card className="shadow-sm">
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-base sm:text-lg">Feedback Register</CardTitle>
+          <CardTitle className="text-base sm:text-lg">{t("register.title")}</CardTitle>
         </CardHeader>
         <CardContent className="p-4 sm:p-6 pt-0 space-y-4">
           {/* Desktop Filters */}
           <div className="hidden sm:flex gap-3">
             <Input
               className="max-w-md text-sm"
-              placeholder="Search by supplier, client, or reference..."
+              placeholder={t("filters.searchPlaceholder")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -574,7 +582,7 @@ export default function VendorFeedbackPage() {
               value={supplierId}
               onChange={(event) => setSupplierId(event.target.value)}
             >
-              <option value="">All suppliers</option>
+              <option value="">{t("filters.allSuppliers")}</option>
               {data.suppliers.map((supplier) => (
                 <option key={supplier.id} value={supplier.id}>
                   {supplier.name} ({supplier.code})
@@ -587,7 +595,7 @@ export default function VendorFeedbackPage() {
           {showFilters && (
             <div className="space-y-3 sm:hidden">
               <Input
-                placeholder="Search..."
+                placeholder={t("filters.mobileSearchPlaceholder")}
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 className="text-sm"
@@ -597,7 +605,7 @@ export default function VendorFeedbackPage() {
                 value={supplierId}
                 onChange={(event) => setSupplierId(event.target.value)}
               >
-                <option value="">All suppliers</option>
+                <option value="">{t("filters.allSuppliers")}</option>
                 {data.suppliers.map((supplier) => (
                   <option key={supplier.id} value={supplier.id}>
                     {supplier.name} ({supplier.code})
@@ -605,7 +613,7 @@ export default function VendorFeedbackPage() {
                 ))}
               </select>
               <Button variant="outline" onClick={() => setShowFilters(false)} className="w-full">
-                Close Filters
+                {t("filters.close")}
               </Button>
             </div>
           )}
@@ -623,12 +631,12 @@ export default function VendorFeedbackPage() {
               <table className="w-full">
                 <thead className="border-b border-border">
                   <tr>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Supplier</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Rating</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Source</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Client</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Details</th>
-                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">Date</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.supplier")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.rating")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.source")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.client")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.details")}</th>
+                    <th className="text-left py-3 px-2 text-xs font-medium text-muted-foreground">{t("common.date")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -636,7 +644,7 @@ export default function VendorFeedbackPage() {
                     <tr key={row.id} className="border-b border-border hover:bg-muted/40 transition-colors">
                       <td className="py-3 px-2">
                         <div className="font-medium text-sm text-foreground">{row.supplier.name}</div>
-                        <div className="text-xs text-muted-foreground">Code: {row.supplier.code}</div>
+                        <div className="text-xs text-muted-foreground">{t("common.codeValue", { code: row.supplier.code })}</div>
                       </td>
                       <td className="py-3 px-2">
                         <div className="flex flex-col gap-1">
@@ -647,19 +655,19 @@ export default function VendorFeedbackPage() {
                             {getRatingStars(row.rating)}
                           </div>
                           <div className="flex gap-2 text-xs text-muted-foreground">
-                            <span>S:{row.serviceQualityRating ?? "N/A"}</span>
-                            <span>D:{row.deliveryRating ?? "N/A"}</span>
-                            <span>C:{row.complianceRating ?? "N/A"}</span>
+                            <span>{t("common.serviceShort")}:{row.serviceQualityRating ?? "—"}</span>
+                            <span>{t("common.deliveryShort")}:{row.deliveryRating ?? "—"}</span>
+                            <span>{t("common.complianceShort")}:{row.complianceRating ?? "—"}</span>
                           </div>
                         </div>
                       </td>
                       <td className="py-3 px-2">
                         <Badge variant="outline" className={cn("text-xs", getSourceTypeColor(row.sourceType))}>
-                          {row.sourceType}
+                          {t(`sourceTypes.${row.sourceType}` as any)}
                         </Badge>
                         {row.sourceReference && (
                           <div className="text-xs text-muted-foreground mt-1">
-                            Ref: {row.sourceReference}
+                            {t("common.referenceValue", { reference: row.sourceReference })}
                           </div>
                         )}
                       </td>
@@ -680,16 +688,16 @@ export default function VendorFeedbackPage() {
                             {row.comment}
                           </div>
                         ) : (
-                          <span className="text-xs text-muted-foreground">No comment</span>
+                          <span className="text-xs text-muted-foreground">{t("common.noComment")}</span>
                         )}
                       </td>
                       <td className="py-3 px-2">
                         <div className="text-xs text-muted-foreground">
-                          {fmtDate(row.createdAt)}
+                          {fmtDate(row.createdAt, locale)}
                         </div>
                         {row.createdBy && (
                           <div className="text-xs text-muted-foreground mt-0.5">
-                            By: {row.createdBy.email}
+                            {t("common.byValue", { creator: row.createdBy.email || "—" })}
                           </div>
                         )}
                       </td>
@@ -712,10 +720,10 @@ export default function VendorFeedbackPage() {
                         <p className="text-sm font-semibold text-foreground">
                           {row.supplier.name}
                         </p>
-                        <p className="text-xs text-muted-foreground">Code: {row.supplier.code}</p>
+                        <p className="text-xs text-muted-foreground">{t("common.codeValue", { code: row.supplier.code })}</p>
                       </div>
                       <Badge variant="outline" className={cn("text-xs", getSourceTypeColor(row.sourceType))}>
-                        {row.sourceType}
+                        {t(`sourceTypes.${row.sourceType}` as any)}
                       </Badge>
                     </div>
 
@@ -737,7 +745,7 @@ export default function VendorFeedbackPage() {
                     {/* Source Reference */}
                     {row.sourceReference && (
                       <div className="flex items-center gap-2 text-sm">
-                        <span className="text-xs text-muted-foreground">Reference:</span>
+                        <span className="text-xs text-muted-foreground">{t("common.reference")}</span>
                         <span className="text-foreground">{row.sourceReference}</span>
                       </div>
                     )}
@@ -769,8 +777,8 @@ export default function VendorFeedbackPage() {
 
                     {/* Footer */}
                     <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/50">
-                      <span>{fmtDate(row.createdAt)}</span>
-                      {row.createdBy && <span>By: {row.createdBy.email}</span>}
+                      <span>{fmtDate(row.createdAt, locale)}</span>
+                      {row.createdBy && <span>{t("common.byValue", { creator: row.createdBy.email || "—" })}</span>}
                     </div>
                   </CardContent>
                 </Card>
@@ -782,9 +790,9 @@ export default function VendorFeedbackPage() {
           {!loading && paginatedRows.length === 0 && (
             <div className="flex flex-col items-center justify-center py-8 text-center">
               <Star className="h-8 w-8 text-muted-foreground/50 mb-2" />
-              <p className="text-sm text-muted-foreground">No feedback records found.</p>
+              <p className="text-sm text-muted-foreground">{t("empty")}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Click "Add Feedback" to create your first vendor feedback.
+                {t("emptyHint")}
               </p>
             </div>
           )}
