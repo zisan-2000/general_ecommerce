@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -62,21 +63,23 @@ type Payload = {
   selectedRun: SelectedRun | null;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
-function fmtMoney(value: string) {
-  return Number(value || 0).toLocaleString(undefined, {
+function fmtMoney(value: string, locale: string) {
+  return Number(value || 0).toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
 export default function InvestorRetainedProfitPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const today = useMemo(() => new Date().toISOString().slice(0, 10), []);
   const monthStart = useMemo(() => {
     const date = new Date();
@@ -107,13 +110,13 @@ export default function InvestorRetainedProfitPage() {
       );
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to load retained profit report.");
+        throw new Error(t("errors.loadRetainedProfit"));
       }
       const data = next as Payload;
       setPayload(data);
       setSelectedRunId(data.selectedRunId ?? "");
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load retained profit report.");
+    } catch {
+      toast.error(t("errors.loadRetainedProfit"));
     } finally {
       setLoading(false);
     }
@@ -133,67 +136,67 @@ export default function InvestorRetainedProfitPage() {
   };
 
   if (loading && !payload) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading retained profit report...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{t("retainedProfit.loading")}</div>;
   }
 
   return (
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
-          <h1 className="text-2xl font-semibold">Company Retained Profit</h1>
+          <h1 className="text-2xl font-semibold">{t("retainedProfit.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Company-side view of profit left outside investor allocation. This amount is not posted to investor ledger or payouts.
+            {t("retainedProfit.description")}
           </p>
         </div>
         <Button asChild variant="outline">
-          <Link href="/admin/investors/profit-runs">Open Profit Runs</Link>
+          <Link href="/admin/investors/profit-runs">{t("retainedProfit.openRuns")}</Link>
         </Button>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Filters</CardTitle>
+          <CardTitle className="text-base">{t("common.filters")}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-wrap items-end gap-4">
           <div className="space-y-2">
-            <Label>From</Label>
+            <Label>{t("common.from")}</Label>
             <Input type="date" value={from} onChange={(event) => setFrom(event.target.value)} />
           </div>
           <div className="space-y-2">
-            <Label>To</Label>
+            <Label>{t("common.to")}</Label>
             <Input type="date" value={to} onChange={(event) => setTo(event.target.value)} />
           </div>
           <div className="space-y-2">
-            <Label>Status</Label>
+            <Label>{t("common.status")}</Label>
             <select
               className="h-10 min-w-[180px] rounded-md border bg-background px-3 text-sm"
               value={status}
               onChange={(event) => setStatus(event.target.value)}
             >
-              <option value="POSTED">POSTED</option>
-              <option value="APPROVED">APPROVED</option>
-              <option value="PENDING_APPROVAL">PENDING_APPROVAL</option>
-              <option value="">ALL</option>
+              <option value="POSTED">{t("enums.profitStatuses.POSTED")}</option>
+              <option value="APPROVED">{t("enums.profitStatuses.APPROVED")}</option>
+              <option value="PENDING_APPROVAL">{t("enums.profitStatuses.PENDING_APPROVAL")}</option>
+              <option value="">{t("common.all")}</option>
             </select>
           </div>
           <Button onClick={() => void applyFilters()} disabled={loading}>
-            {loading ? "Loading..." : "Apply"}
+            {loading ? t("common.loading") : t("common.apply")}
           </Button>
         </CardContent>
       </Card>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Runs In Scope</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.totalRuns ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Runs With Retained Profit</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.runsWithRetainedProfit ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Retained Variants</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.retainedVariantCount ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Retained Revenue</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payload?.summary.totalRetainedRevenue || "0")}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Retained Profit</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payload?.summary.totalRetainedProfit || "0")}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("retainedProfit.runsInScope")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.totalRuns ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("retainedProfit.runsWithProfit")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.runsWithRetainedProfit ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("retainedProfit.retainedVariants")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payload?.summary.retainedVariantCount ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("retainedProfit.retainedRevenue")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payload?.summary.totalRetainedRevenue || "0", locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("retainedProfit.retainedProfit")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payload?.summary.totalRetainedProfit || "0", locale)}</CardContent></Card>
       </div>
 
       <div className="grid gap-4 xl:grid-cols-[1.2fr_1fr]">
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Run Register</CardTitle>
+            <CardTitle className="text-base">{t("retainedProfit.runRegister")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {payload?.runs.length ? (
@@ -212,36 +215,36 @@ export default function InvestorRetainedProfitPage() {
                     <div>
                       <div className="font-medium">{run.runNumber}</div>
                       <div className="text-sm text-muted-foreground">
-                        {fmtDate(run.fromDate)} - {fmtDate(run.toDate)} | {run.status}
+                        {fmtDate(run.fromDate, locale)} - {fmtDate(run.toDate, locale)} | {t(`enums.profitStatuses.${run.status}` as any)}
                       </div>
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Posted: {fmtDate(run.postedAt)}
+                      {t("retainedProfit.postedAt", { date: fmtDate(run.postedAt, locale) })}
                     </div>
                   </div>
                   <div className="mt-3 grid gap-3 md:grid-cols-4 text-sm">
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Variants</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.variants")}</div>
                       <div className="mt-1 font-medium">{run.retainedVariantCount}</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Retained Share Total</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.shareTotal")}</div>
                       <div className="mt-1 font-medium">{(Number(run.retainedShareTotal) * 100).toFixed(2)}%</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Retained Revenue</div>
-                      <div className="mt-1 font-medium">{fmtMoney(run.retainedRevenue)}</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.retainedRevenue")}</div>
+                      <div className="mt-1 font-medium">{fmtMoney(run.retainedRevenue, locale)}</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Retained Profit</div>
-                      <div className="mt-1 font-medium">{fmtMoney(run.retainedProfit)}</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.retainedProfit")}</div>
+                      <div className="mt-1 font-medium">{fmtMoney(run.retainedProfit, locale)}</div>
                     </div>
                   </div>
                 </button>
               ))
             ) : (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                No retained profit runs found for current filter.
+                {t("retainedProfit.emptyRuns")}
               </div>
             )}
           </CardContent>
@@ -249,7 +252,7 @@ export default function InvestorRetainedProfitPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Selected Run Breakdown</CardTitle>
+            <CardTitle className="text-base">{t("retainedProfit.selectedBreakdown")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {payload?.selectedRun ? (
@@ -257,16 +260,16 @@ export default function InvestorRetainedProfitPage() {
                 <div className="rounded-lg border p-4 text-sm">
                   <div className="font-medium">{payload.selectedRun.runNumber}</div>
                   <div className="mt-1 text-muted-foreground">
-                    {fmtDate(payload.selectedRun.fromDate)} - {fmtDate(payload.selectedRun.toDate)} | {payload.selectedRun.status}
+                    {fmtDate(payload.selectedRun.fromDate, locale)} - {fmtDate(payload.selectedRun.toDate, locale)} | {t(`enums.profitStatuses.${payload.selectedRun.status}` as any)}
                   </div>
                   <div className="mt-3 grid gap-3 md:grid-cols-2">
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Run Revenue</div>
-                      <div className="mt-1 font-medium">{fmtMoney(payload.selectedRun.totalNetRevenue)}</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.runRevenue")}</div>
+                      <div className="mt-1 font-medium">{fmtMoney(payload.selectedRun.totalNetRevenue, locale)}</div>
                     </div>
                     <div>
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">Run Profit</div>
-                      <div className="mt-1 font-medium">{fmtMoney(payload.selectedRun.totalNetProfit)}</div>
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.runProfit")}</div>
+                      <div className="mt-1 font-medium">{fmtMoney(payload.selectedRun.totalNetProfit, locale)}</div>
                     </div>
                   </div>
                 </div>
@@ -279,29 +282,29 @@ export default function InvestorRetainedProfitPage() {
                       </div>
                       <div className="mt-2 grid gap-3 md:grid-cols-3">
                         <div>
-                          <div className="text-xs uppercase tracking-wide text-muted-foreground">Company Share</div>
+                          <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.companyShare")}</div>
                           <div className="mt-1 font-medium">{(Number(line.retainedSharePct) * 100).toFixed(2)}%</div>
                         </div>
                         <div>
-                          <div className="text-xs uppercase tracking-wide text-muted-foreground">Retained Revenue</div>
-                          <div className="mt-1 font-medium">{fmtMoney(line.retainedRevenue)}</div>
+                          <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.retainedRevenue")}</div>
+                          <div className="mt-1 font-medium">{fmtMoney(line.retainedRevenue, locale)}</div>
                         </div>
                         <div>
-                          <div className="text-xs uppercase tracking-wide text-muted-foreground">Retained Profit</div>
-                          <div className="mt-1 font-medium">{fmtMoney(line.retainedProfit)}</div>
+                          <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("retainedProfit.retainedProfit")}</div>
+                          <div className="mt-1 font-medium">{fmtMoney(line.retainedProfit, locale)}</div>
                         </div>
                       </div>
                     </div>
                   ))
                 ) : (
                   <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                    This run has no company retained lines.
+                    {t("retainedProfit.noLines")}
                   </div>
                 )}
               </>
             ) : (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                Select a run to review retained profit breakdown.
+                {t("retainedProfit.selectRun")}
               </div>
             )}
           </CardContent>

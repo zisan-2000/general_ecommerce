@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -93,27 +94,33 @@ type DetailPayload = {
   recentActivity: ActivityItem[];
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
-function fmtMoney(value: string) {
-  return Number(value || 0).toLocaleString(undefined, {
+function fmtMoney(value: string, locale: string) {
+  return Number(value || 0).toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
 function maskAccount(value?: string | null) {
-  if (!value) return "N/A";
+  if (!value) return "—";
   if (value.length <= 4) return value;
   return `${"*".repeat(Math.max(0, value.length - 4))}${value.slice(-4)}`;
 }
 
 export default function InvestorDetailPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
+  const enumLabel = (group: string, value: string) => {
+    const key = `enums.${group}.${value}` as any;
+    return t.has(key) ? t(key) : value;
+  };
   const params = useParams<{ id: string }>();
   const { data: session } = useSession();
   const globalPermissions = Array.isArray((session?.user as any)?.globalPermissions)
@@ -153,7 +160,7 @@ export default function InvestorDetailPage() {
       const response = await fetch(`/api/admin/investors/${params.id}`, { cache: "no-store" });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to load investor detail.");
+        throw new Error(t("errors.loadInvestorDetail"));
       }
       const data = next as DetailPayload;
       setPayload(data);
@@ -175,8 +182,8 @@ export default function InvestorDetailPage() {
         kycReference: data.investor.kycReference ?? "",
         changeSummary: "",
       });
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor detail.");
+    } catch {
+      toast.error(t("errors.loadInvestorDetail"));
     } finally {
       setLoading(false);
     }
@@ -208,12 +215,12 @@ export default function InvestorDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to update investor.");
+        throw new Error(t("errors.updateInvestor"));
       }
-      toast.success("Investor profile updated.");
+      toast.success(t("success.investorUpdated"));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to update investor.");
+    } catch {
+      toast.error(t("errors.updateInvestor"));
     } finally {
       setSavingDirect(false);
     }
@@ -229,13 +236,13 @@ export default function InvestorDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to submit change request.");
+        throw new Error(t("errors.submitChangeRequest"));
       }
-      toast.success("Sensitive change request submitted for approval.");
+      toast.success(t("success.changeRequestSubmitted"));
       setRequestForm((current) => ({ ...current, changeSummary: "" }));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to submit change request.");
+    } catch {
+      toast.error(t("errors.submitChangeRequest"));
     } finally {
       setSavingRequest(false);
     }
@@ -254,14 +261,14 @@ export default function InvestorDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to review change request.");
+        throw new Error(t("errors.reviewChangeRequest"));
       }
       toast.success(
-        action === "approve" ? "Change request approved." : "Change request rejected.",
+        action === "approve" ? t("success.changeRequestApproved") : t("success.changeRequestRejected"),
       );
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to review change request.");
+    } catch {
+      toast.error(t("errors.reviewChangeRequest"));
     } finally {
       setReviewingId(null);
     }
@@ -279,30 +286,30 @@ export default function InvestorDetailPage() {
             action,
             note:
               action === "verify"
-                ? "Verified for payout execution."
-                : "Verification revoked pending beneficiary review.",
+                ? t("investorDetail.verifyAuditNote")
+                : t("investorDetail.revokeAuditNote"),
           }),
         },
       );
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to update beneficiary verification.");
+        throw new Error(t("errors.updateBeneficiary"));
       }
       toast.success(
         action === "verify"
-          ? "Investor beneficiary verified."
-          : "Investor beneficiary verification revoked.",
+          ? t("success.beneficiaryVerified")
+          : t("success.beneficiaryRevoked"),
       );
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to update beneficiary verification.");
+    } catch {
+      toast.error(t("errors.updateBeneficiary"));
     } finally {
       setSavingBeneficiary(false);
     }
   };
 
   if (loading || !payload) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading investor detail...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{t("investorDetail.loading")}</div>;
   }
 
   const { investor, changeRequests, recentActivity } = payload;
@@ -315,67 +322,69 @@ export default function InvestorDetailPage() {
             {investor.name} <span className="text-muted-foreground">({investor.code})</span>
           </h1>
           <p className="text-sm text-muted-foreground">
-            Investor master governance, compliance context, and controlled profile change flow.
+            {t("investorDetail.description")}
           </p>
         </div>
         <div className="text-sm text-muted-foreground">
-          Status: <span className="font-medium text-foreground">{investor.status}</span> | KYC:{" "}
-          <span className="font-medium text-foreground">{investor.kycStatus}</span>
+          {t("investorDetail.statusLine", {
+            status: enumLabel("investorStatuses", investor.status),
+            kyc: enumLabel("kycStatuses", investor.kycStatus),
+          })}
         </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Net Balance</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(investor.totals.balance)}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Allocations</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.allocations}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Payouts</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.payouts}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Documents</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.documents}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Pending Changes</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{changeRequests.filter((item) => item.status === "PENDING").length}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.netBalance")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(investor.totals.balance, locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.allocations")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.allocations}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.payouts")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.payouts}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.documents")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{investor._count.documents}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("investorDetail.pendingChanges")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{changeRequests.filter((item) => item.status === "PENDING").length}</CardContent></Card>
       </div>
 
       <Tabs defaultValue="overview" className="space-y-4">
         <TabsList className="w-full justify-start overflow-x-auto">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="direct">Direct Updates</TabsTrigger>
-          <TabsTrigger value="requests">Sensitive Changes</TabsTrigger>
-          <TabsTrigger value="activity">Activity</TabsTrigger>
+          <TabsTrigger value="overview">{t("common.overview")}</TabsTrigger>
+          <TabsTrigger value="direct">{t("investorDetail.directUpdates")}</TabsTrigger>
+          <TabsTrigger value="requests">{t("investorDetail.sensitiveChanges")}</TabsTrigger>
+          <TabsTrigger value="activity">{t("common.activity")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Investor Master</CardTitle>
+                <CardTitle className="text-base">{t("investorDetail.master")}</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-4 md:grid-cols-2">
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Legal Name</div><div className="mt-1 font-medium">{investor.legalName || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Email</div><div className="mt-1 font-medium">{investor.email || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Phone</div><div className="mt-1 font-medium">{investor.phone || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">KYC Reference</div><div className="mt-1 font-medium">{investor.kycReference || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Tax Number</div><div className="mt-1 font-medium">{investor.taxNumber || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">National ID</div><div className="mt-1 font-medium">{investor.nationalIdNumber || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Passport</div><div className="mt-1 font-medium">{investor.passportNumber || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created By</div><div className="mt-1 font-medium">{investor.createdBy?.name || investor.createdBy?.email || "N/A"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.legalName")}</div><div className="mt-1 font-medium">{investor.legalName || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.email")}</div><div className="mt-1 font-medium">{investor.email || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.phone")}</div><div className="mt-1 font-medium">{investor.phone || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.kycReference")}</div><div className="mt-1 font-medium">{investor.kycReference || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.taxNumber")}</div><div className="mt-1 font-medium">{investor.taxNumber || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.nationalId")}</div><div className="mt-1 font-medium">{investor.nationalIdNumber || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.passport")}</div><div className="mt-1 font-medium">{investor.passportNumber || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.createdBy")}</div><div className="mt-1 font-medium">{investor.createdBy?.name || investor.createdBy?.email || "—"}</div></div>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Bank & Compliance</CardTitle>
+                <CardTitle className="text-base">{t("investorDetail.bankCompliance")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm">
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Bank Name</div><div className="mt-1 font-medium">{investor.bankName || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Account Name</div><div className="mt-1 font-medium">{investor.bankAccountName || "N/A"}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Account Number</div><div className="mt-1 font-medium">{maskAccount(investor.bankAccountNumber)}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">KYC Verified At</div><div className="mt-1 font-medium">{fmtDate(investor.kycVerifiedAt)}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Beneficiary Verified</div><div className="mt-1 font-medium">{fmtDate(investor.beneficiaryVerifiedAt)}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Beneficiary Note</div><div className="mt-1 font-medium">{investor.beneficiaryVerificationNote || "N/A"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.bankName")}</div><div className="mt-1 font-medium">{investor.bankName || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.accountName")}</div><div className="mt-1 font-medium">{investor.bankAccountName || "—"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.accountNumber")}</div><div className="mt-1 font-medium">{maskAccount(investor.bankAccountNumber)}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.kycVerifiedAt")}</div><div className="mt-1 font-medium">{fmtDate(investor.kycVerifiedAt, locale)}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.beneficiaryVerified")}</div><div className="mt-1 font-medium">{fmtDate(investor.beneficiaryVerifiedAt, locale)}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.beneficiaryNote")}</div><div className="mt-1 font-medium">{investor.beneficiaryVerificationNote || "—"}</div></div>
                 <div className="flex gap-2 pt-2">
                   <Button size="sm" onClick={() => updateBeneficiaryVerification("verify")} disabled={!canManage || savingBeneficiary}>
-                    {savingBeneficiary ? "Working..." : "Verify Beneficiary"}
+                    {savingBeneficiary ? t("common.working") : t("investorDetail.verifyBeneficiary")}
                   </Button>
                   {investor.beneficiaryVerifiedAt ? (
                     <Button size="sm" variant="outline" onClick={() => updateBeneficiaryVerification("revoke")} disabled={!canManage || savingBeneficiary}>
-                      Revoke
+                      {t("common.revoke")}
                     </Button>
                   ) : null}
                 </div>
@@ -386,28 +395,28 @@ export default function InvestorDetailPage() {
           <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Portal & Document Summary</CardTitle>
+                <CardTitle className="text-base">{t("investorDetail.portalDocumentSummary")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">Verified Docs</div><div className="mt-1 text-2xl font-semibold">{documentSummary.verified}</div></div>
-                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">Pending Docs</div><div className="mt-1 text-2xl font-semibold">{documentSummary.pending}</div></div>
-                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">Expired Docs</div><div className="mt-1 text-2xl font-semibold">{documentSummary.expired}</div></div>
+                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.verifiedDocs")}</div><div className="mt-1 text-2xl font-semibold">{documentSummary.verified}</div></div>
+                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.pendingDocs")}</div><div className="mt-1 text-2xl font-semibold">{documentSummary.pending}</div></div>
+                  <div className="rounded-lg border p-3"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("investorDetail.expiredDocs")}</div><div className="mt-1 text-2xl font-semibold">{documentSummary.expired}</div></div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-sm font-medium">Portal Access</div>
+                  <div className="text-sm font-medium">{t("investorDetail.portalAccess")}</div>
                   {investor.portalAccesses.length > 0 ? (
                     investor.portalAccesses.map((item) => (
                       <div key={item.id} className="rounded-lg border p-3 text-sm">
                         <div className="font-medium">{item.user.name || item.user.email}</div>
                         <div className="text-muted-foreground">
-                          {item.status} | Created {fmtDate(item.createdAt)}
+                          {enumLabel("accessStatuses", item.status)} | {t("common.createdDate", { date: fmtDate(item.createdAt, locale) })}
                         </div>
                       </div>
                     ))
                   ) : (
                     <div className="rounded-lg border border-dashed p-3 text-sm text-muted-foreground">
-                      No investor portal access assigned.
+                      {t("investorDetail.noPortalAccess")}
                     </div>
                   )}
                 </div>
@@ -416,12 +425,12 @@ export default function InvestorDetailPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Governance Notes</CardTitle>
+                <CardTitle className="text-base">{t("investorDetail.governanceNotes")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm">
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created At</div><div className="mt-1 font-medium">{fmtDate(investor.createdAt)}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Last Updated</div><div className="mt-1 font-medium">{fmtDate(investor.updatedAt)}</div></div>
-                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Notes</div><div className="mt-1 whitespace-pre-wrap font-medium">{investor.notes || "N/A"}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.createdAt")}</div><div className="mt-1 font-medium">{fmtDate(investor.createdAt, locale)}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.lastUpdated")}</div><div className="mt-1 font-medium">{fmtDate(investor.updatedAt, locale)}</div></div>
+                <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.notes")}</div><div className="mt-1 whitespace-pre-wrap font-medium">{investor.notes || "—"}</div></div>
               </CardContent>
             </Card>
           </div>
@@ -430,32 +439,32 @@ export default function InvestorDetailPage() {
         <TabsContent value="direct" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Direct Profile Updates</CardTitle>
+              <CardTitle className="text-base">{t("investorDetail.directProfileUpdates")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Only non-sensitive fields are editable directly. Legal identity, bank, status, and KYC reference must go through a change request.
+                {t("investorDetail.directDescription")}
               </p>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-1">
-                  <Label>Name</Label>
+                  <Label>{t("common.name")}</Label>
                   <Input value={directForm.name} onChange={(event) => setDirectForm((current) => ({ ...current, name: event.target.value }))} />
                 </div>
                 <div className="space-y-1">
-                  <Label>Email</Label>
+                  <Label>{t("common.email")}</Label>
                   <Input value={directForm.email} onChange={(event) => setDirectForm((current) => ({ ...current, email: event.target.value }))} />
                 </div>
                 <div className="space-y-1">
-                  <Label>Phone</Label>
+                  <Label>{t("common.phone")}</Label>
                   <Input value={directForm.phone} onChange={(event) => setDirectForm((current) => ({ ...current, phone: event.target.value }))} />
                 </div>
                 <div className="space-y-1 md:col-span-2">
-                  <Label>Notes</Label>
+                  <Label>{t("common.notes")}</Label>
                   <Textarea value={directForm.notes} onChange={(event) => setDirectForm((current) => ({ ...current, notes: event.target.value }))} rows={4} />
                 </div>
               </div>
               <Button onClick={saveDirect} disabled={!canManage || savingDirect}>
-                {savingDirect ? "Saving..." : "Save Direct Updates"}
+                {savingDirect ? t("common.saving") : t("investorDetail.saveDirect")}
               </Button>
             </CardContent>
           </Card>
@@ -464,33 +473,33 @@ export default function InvestorDetailPage() {
         <TabsContent value="requests" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Submit Sensitive Change Request</CardTitle>
+              <CardTitle className="text-base">{t("investorDetail.submitSensitive")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                <div className="space-y-1"><Label>Legal Name</Label><Input value={requestForm.legalName} onChange={(event) => setRequestForm((current) => ({ ...current, legalName: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Status</Label><select className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={requestForm.status} onChange={(event) => setRequestForm((current) => ({ ...current, status: event.target.value }))}><option value="ACTIVE">ACTIVE</option><option value="SUSPENDED">SUSPENDED</option><option value="INACTIVE">INACTIVE</option></select></div>
-                <div className="space-y-1"><Label>KYC Reference</Label><Input value={requestForm.kycReference} onChange={(event) => setRequestForm((current) => ({ ...current, kycReference: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Tax Number</Label><Input value={requestForm.taxNumber} onChange={(event) => setRequestForm((current) => ({ ...current, taxNumber: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>National ID</Label><Input value={requestForm.nationalIdNumber} onChange={(event) => setRequestForm((current) => ({ ...current, nationalIdNumber: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Passport Number</Label><Input value={requestForm.passportNumber} onChange={(event) => setRequestForm((current) => ({ ...current, passportNumber: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Bank Name</Label><Input value={requestForm.bankName} onChange={(event) => setRequestForm((current) => ({ ...current, bankName: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Account Name</Label><Input value={requestForm.bankAccountName} onChange={(event) => setRequestForm((current) => ({ ...current, bankAccountName: event.target.value }))} /></div>
-                <div className="space-y-1"><Label>Account Number</Label><Input value={requestForm.bankAccountNumber} onChange={(event) => setRequestForm((current) => ({ ...current, bankAccountNumber: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.legalName")}</Label><Input value={requestForm.legalName} onChange={(event) => setRequestForm((current) => ({ ...current, legalName: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.status")}</Label><select className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={requestForm.status} onChange={(event) => setRequestForm((current) => ({ ...current, status: event.target.value }))}><option value="ACTIVE">{t("enums.investorStatuses.ACTIVE")}</option><option value="SUSPENDED">{t("enums.investorStatuses.SUSPENDED")}</option><option value="INACTIVE">{t("enums.investorStatuses.INACTIVE")}</option></select></div>
+                <div className="space-y-1"><Label>{t("common.kycReference")}</Label><Input value={requestForm.kycReference} onChange={(event) => setRequestForm((current) => ({ ...current, kycReference: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.taxNumber")}</Label><Input value={requestForm.taxNumber} onChange={(event) => setRequestForm((current) => ({ ...current, taxNumber: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.nationalId")}</Label><Input value={requestForm.nationalIdNumber} onChange={(event) => setRequestForm((current) => ({ ...current, nationalIdNumber: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.passportNumber")}</Label><Input value={requestForm.passportNumber} onChange={(event) => setRequestForm((current) => ({ ...current, passportNumber: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.bankName")}</Label><Input value={requestForm.bankName} onChange={(event) => setRequestForm((current) => ({ ...current, bankName: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.accountName")}</Label><Input value={requestForm.bankAccountName} onChange={(event) => setRequestForm((current) => ({ ...current, bankAccountName: event.target.value }))} /></div>
+                <div className="space-y-1"><Label>{t("common.accountNumber")}</Label><Input value={requestForm.bankAccountNumber} onChange={(event) => setRequestForm((current) => ({ ...current, bankAccountNumber: event.target.value }))} /></div>
               </div>
               <div className="space-y-1">
-                <Label>Change Summary</Label>
-                <Textarea value={requestForm.changeSummary} onChange={(event) => setRequestForm((current) => ({ ...current, changeSummary: event.target.value }))} rows={3} placeholder="Why this sensitive update is required." />
+                <Label>{t("investorDetail.changeSummary")}</Label>
+                <Textarea value={requestForm.changeSummary} onChange={(event) => setRequestForm((current) => ({ ...current, changeSummary: event.target.value }))} rows={3} placeholder={t("investorDetail.changeSummaryPlaceholder")} />
               </div>
               <Button onClick={submitChangeRequest} disabled={!canManage || savingRequest}>
-                {savingRequest ? "Submitting..." : "Submit Change Request"}
+                {savingRequest ? t("common.submitting") : t("investorDetail.submitRequest")}
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Change Request Queue</CardTitle>
+              <CardTitle className="text-base">{t("investorDetail.changeRequestQueue")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {changeRequests.length > 0 ? (
@@ -498,51 +507,58 @@ export default function InvestorDetailPage() {
                   <div key={item.id} className="rounded-lg border p-4 space-y-3">
                     <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                       <div>
-                        <div className="font-medium">Request #{item.id}</div>
+                        <div className="font-medium">{t("investorDetail.requestNumber", { id: item.id })}</div>
                         <div className="text-sm text-muted-foreground">
-                          {item.status} | Requested {fmtDate(item.requestedAt)} by {item.requestedBy?.name || item.requestedBy?.email || "Unknown"}
+                          {t("investorDetail.requestMeta", {
+                            status: enumLabel("requestStatuses", item.status),
+                            date: fmtDate(item.requestedAt, locale),
+                            actor: item.requestedBy?.name || item.requestedBy?.email || t("common.unknown"),
+                          })}
                         </div>
                       </div>
                       {item.status === "PENDING" && canManage ? (
                         <div className="flex gap-2">
                           <Button variant="outline" disabled={reviewingId === item.id} onClick={() => reviewChangeRequest(item.id, "reject")}>
-                            Reject
+                            {t("common.reject")}
                           </Button>
                           <Button disabled={reviewingId === item.id} onClick={() => reviewChangeRequest(item.id, "approve")}>
-                            {reviewingId === item.id ? "Working..." : "Approve"}
+                            {reviewingId === item.id ? t("common.working") : t("common.approve")}
                           </Button>
                         </div>
                       ) : null}
                     </div>
                     {item.changeSummary ? (
                       <div className="text-sm">
-                        <span className="font-medium">Summary:</span> {item.changeSummary}
+                        <span className="font-medium">{t("common.summary")}:</span> {item.changeSummary}
                       </div>
                     ) : null}
                     <div className="grid gap-4 lg:grid-cols-2">
                       <div className="rounded-lg border p-3">
-                        <div className="mb-2 text-sm font-medium">Current Snapshot</div>
+                        <div className="mb-2 text-sm font-medium">{t("investorDetail.currentSnapshot")}</div>
                         <pre className="overflow-x-auto whitespace-pre-wrap text-xs text-muted-foreground">{JSON.stringify(item.currentSnapshot ?? {}, null, 2)}</pre>
                       </div>
                       <div className="rounded-lg border p-3">
-                        <div className="mb-2 text-sm font-medium">Requested Changes</div>
+                        <div className="mb-2 text-sm font-medium">{t("investorDetail.requestedChanges")}</div>
                         <pre className="overflow-x-auto whitespace-pre-wrap text-xs text-muted-foreground">{JSON.stringify(item.requestedChanges ?? {}, null, 2)}</pre>
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <Label>Review Note</Label>
+                      <Label>{t("common.reviewNote")}</Label>
                       <Textarea value={reviewNotes[item.id] ?? item.reviewNote ?? ""} onChange={(event) => setReviewNotes((current) => ({ ...current, [item.id]: event.target.value }))} rows={2} />
                     </div>
                     {item.reviewedAt ? (
                       <div className="text-sm text-muted-foreground">
-                        Reviewed {fmtDate(item.reviewedAt)} by {item.reviewedBy?.name || item.reviewedBy?.email || "Unknown"}
+                        {t("investorDetail.reviewMeta", {
+                          date: fmtDate(item.reviewedAt, locale),
+                          actor: item.reviewedBy?.name || item.reviewedBy?.email || t("common.unknown"),
+                        })}
                       </div>
                     ) : null}
                   </div>
                 ))
               ) : (
                 <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                  No investor master change requests yet.
+                  {t("investorDetail.noChangeRequests")}
                 </div>
               )}
             </CardContent>
@@ -552,7 +568,7 @@ export default function InvestorDetailPage() {
         <TabsContent value="activity" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Recent Activity</CardTitle>
+              <CardTitle className="text-base">{t("common.recentActivity")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {recentActivity.length > 0 ? (
@@ -562,16 +578,16 @@ export default function InvestorDetailPage() {
                       <div className="font-medium">
                         {item.metadata?.message || `${item.action} ${item.entity}`}
                       </div>
-                      <div className="text-sm text-muted-foreground">{fmtDate(item.createdAt)}</div>
+                      <div className="text-sm text-muted-foreground">{fmtDate(item.createdAt, locale)}</div>
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      {item.actorName || item.actorEmail || "System"} | {item.action} | {item.entity}
+                      {item.actorName || item.actorEmail || t("common.system")} | {enumLabel("activityActions", item.action)} | {enumLabel("activityEntities", item.entity)}
                     </div>
                   </div>
                 ))
               ) : (
                 <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                  No investor activity yet.
+                  {t("investorDetail.noActivity")}
                 </div>
               )}
             </CardContent>

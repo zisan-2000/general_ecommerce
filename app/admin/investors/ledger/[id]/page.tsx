@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -57,21 +58,23 @@ type Payload = {
   }>;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
-function fmtMoney(value: string) {
-  return Number(value || 0).toLocaleString(undefined, {
+function fmtMoney(value: string, locale: string) {
+  return Number(value || 0).toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
 export default function InvestorTransactionDetailPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const params = useParams<{ id: string }>();
   const [loading, setLoading] = useState(true);
   const [payload, setPayload] = useState<Payload | null>(null);
@@ -85,20 +88,20 @@ export default function InvestorTransactionDetailPage() {
         });
         const next = await response.json().catch(() => null);
         if (!response.ok) {
-          throw new Error(next?.error || "Failed to load investor transaction detail.");
+          throw new Error(t("errors.loadTransactionDetail"));
         }
         setPayload(next as Payload);
-      } catch (error: any) {
-        toast.error(error?.message || "Failed to load investor transaction detail.");
+      } catch {
+        toast.error(t("errors.loadTransactionDetail"));
       } finally {
         setLoading(false);
       }
     };
     if (params.id) void load();
-  }, [params.id]);
+  }, [params.id, t]);
 
   if (loading || !payload) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading transaction detail...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{t("ledgerDetail.loading")}</div>;
   }
 
   const { transaction, investorTotals, relatedTransactions } = payload;
@@ -108,51 +111,51 @@ export default function InvestorTransactionDetailPage() {
       <div>
         <h1 className="text-2xl font-semibold">{transaction.transactionNumber}</h1>
         <p className="text-sm text-muted-foreground">
-          Investor ledger drilldown with running balance, references, and downstream payout traceability.
+          {t("ledgerDetail.description")}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Amount</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(transaction.amount)} {transaction.currency}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Direction</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{transaction.direction}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Running Balance</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(transaction.runningBalance)}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Investor Total Balance</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(investorTotals.balance)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.amount")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(transaction.amount, locale)} {transaction.currency}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.direction")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{t(`enums.directions.${transaction.direction}` as any)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("ledgerDetail.runningBalance")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(transaction.runningBalance, locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("ledgerDetail.investorTotalBalance")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(investorTotals.balance, locale)}</CardContent></Card>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Transaction Context</CardTitle>
+            <CardTitle className="text-base">{t("ledgerDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor</div><Link className="mt-1 block font-medium hover:text-primary" href={`/admin/investors/${transaction.investor.id}`}>{transaction.investor.name} ({transaction.investor.code})</Link></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Type</div><div className="mt-1 font-medium">{transaction.type}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Transaction Date</div><div className="mt-1 font-medium">{fmtDate(transaction.transactionDate)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created At</div><div className="mt-1 font-medium">{fmtDate(transaction.createdAt)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Reference Type</div><div className="mt-1 font-medium">{transaction.referenceType || "N/A"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Reference Number</div><div className="mt-1 font-medium">{transaction.referenceNumber || "N/A"}</div></div>
-            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">Note</div><div className="mt-1 whitespace-pre-wrap font-medium">{transaction.note || "N/A"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Created By</div><div className="mt-1 font-medium">{transaction.createdBy?.name || transaction.createdBy?.email || "System"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Linked Variant</div><div className="mt-1 font-medium">{transaction.productVariant ? `${transaction.productVariant.product.name} (${transaction.productVariant.sku})` : "N/A"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link className="mt-1 block font-medium hover:text-primary" href={`/admin/investors/${transaction.investor.id}`}>{transaction.investor.name} ({transaction.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.type")}</div><div className="mt-1 font-medium">{t(`enums.transactionTypes.${transaction.type}` as any)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.transactionDate")}</div><div className="mt-1 font-medium">{fmtDate(transaction.transactionDate, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.createdAt")}</div><div className="mt-1 font-medium">{fmtDate(transaction.createdAt, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.referenceType")}</div><div className="mt-1 font-medium">{transaction.referenceType || "—"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.referenceNumber")}</div><div className="mt-1 font-medium">{transaction.referenceNumber || "—"}</div></div>
+            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.note")}</div><div className="mt-1 whitespace-pre-wrap font-medium">{transaction.note || "—"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.createdBy")}</div><div className="mt-1 font-medium">{transaction.createdBy?.name || transaction.createdBy?.email || t("common.system")}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.linkedVariant")}</div><div className="mt-1 font-medium">{transaction.productVariant ? `${transaction.productVariant.product.name} (${transaction.productVariant.sku})` : "—"}</div></div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Downstream Link</CardTitle>
+            <CardTitle className="text-base">{t("ledgerDetail.downstreamLink")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor Status</div><div className="mt-1 font-medium">{transaction.investor.status}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">KYC Status</div><div className="mt-1 font-medium">{transaction.investor.kycStatus}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Linked Payout</div>{transaction.payout ? <Link href={`/admin/investors/payouts`} className="mt-1 block font-medium hover:text-primary">{transaction.payout.payoutNumber} | {transaction.payout.status}</Link> : <div className="mt-1 font-medium">No payout linked</div>}</div>
-            {transaction.payout ? <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Payout Amount</div><div className="mt-1 font-medium">{fmtMoney(transaction.payout.payoutAmount)}</div></div> : null}
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investorStatus")}</div><div className="mt-1 font-medium">{t(`enums.investorStatuses.${transaction.investor.status}` as any)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.kycStatus")}</div><div className="mt-1 font-medium">{t(`enums.kycStatuses.${transaction.investor.kycStatus}` as any)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.linkedPayout")}</div>{transaction.payout ? <Link href={`/admin/investors/payouts`} className="mt-1 block font-medium hover:text-primary">{transaction.payout.payoutNumber} | {t(`enums.payoutStatuses.${transaction.payout.status}` as any)}</Link> : <div className="mt-1 font-medium">{t("ledgerDetail.noLinkedPayout")}</div>}</div>
+            {transaction.payout ? <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.payoutAmount")}</div><div className="mt-1 font-medium">{fmtMoney(transaction.payout.payoutAmount, locale)}</div></div> : null}
           </CardContent>
         </Card>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Related Transactions</CardTitle>
+          <CardTitle className="text-base">{t("ledgerDetail.relatedTransactions")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           {relatedTransactions.length > 0 ? (
@@ -164,13 +167,13 @@ export default function InvestorTransactionDetailPage() {
               >
                 <div className="font-medium">{item.transactionNumber}</div>
                 <div className="text-muted-foreground">
-                  {item.type} | {item.direction} | {fmtMoney(item.amount)} {item.currency} | {fmtDate(item.transactionDate)}
+                  {t(`enums.transactionTypes.${item.type}` as any)} | {t(`enums.directions.${item.direction}` as any)} | {fmtMoney(item.amount, locale)} {item.currency} | {fmtDate(item.transactionDate, locale)}
                 </div>
               </Link>
             ))
           ) : (
             <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-              No related transactions for this investor/variant context.
+              {t("ledgerDetail.noRelatedTransactions")}
             </div>
           )}
         </CardContent>

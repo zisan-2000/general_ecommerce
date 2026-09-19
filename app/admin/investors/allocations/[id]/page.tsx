@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,22 +76,24 @@ type Payload = {
   }>;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "Open-ended";
+function fmtDate(value: string | null | undefined, locale: string, empty = "—") {
+  if (!value) return empty;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
-function fmtMoney(value?: string | null) {
-  if (!value) return "N/A";
-  return Number(value || 0).toLocaleString(undefined, {
+function fmtMoney(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
+  return Number(value || 0).toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
 export default function InvestorAllocationDetailPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const params = useParams<{ id: string }>();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -107,15 +110,15 @@ export default function InvestorAllocationDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to load allocation detail.");
+        throw new Error(t("errors.loadAllocationDetail"));
       }
       const data = next as Payload;
       setPayload(data);
       setStatus(data.allocation.status);
       setEffectiveTo(data.allocation.effectiveTo ? data.allocation.effectiveTo.slice(0, 10) : "");
       setNote(data.allocation.note ?? "");
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load allocation detail.");
+    } catch {
+      toast.error(t("errors.loadAllocationDetail"));
     } finally {
       setLoading(false);
     }
@@ -139,19 +142,19 @@ export default function InvestorAllocationDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to update allocation.");
+        throw new Error(t("errors.updateAllocation"));
       }
-      toast.success("Allocation updated.");
+      toast.success(t("success.allocationUpdated"));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to update allocation.");
+    } catch {
+      toast.error(t("errors.updateAllocation"));
     } finally {
       setSaving(false);
     }
   };
 
   if (loading || !payload) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading allocation detail...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{t("allocationDetail.loading")}</div>;
   }
 
   const { allocation, overlappingAllocations, investorTransactions, relatedProfitLines, productVariantAllocationPercent } = payload;
@@ -159,59 +162,59 @@ export default function InvestorAllocationDetailPage() {
   return (
     <div className="space-y-6 p-6">
       <div>
-        <h1 className="text-2xl font-semibold">Allocation #{allocation.id}</h1>
+        <h1 className="text-2xl font-semibold">{t("allocationDetail.title", { id: allocation.id })}</h1>
         <p className="text-sm text-muted-foreground">
-          Allocation lifecycle, overlap risk, and investor/variant drilldown in one workspace.
+          {t("allocationDetail.description")}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Investor</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.investor.name}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Variant</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.productVariant.sku}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Participation</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.participationPercent || "N/A"}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Committed</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{fmtMoney(allocation.committedAmount)}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Variant Active %</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{productVariantAllocationPercent}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.investor")}</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.investor.name}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.variant")}</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.productVariant.sku}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("allocationDetail.participation")}</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{allocation.participationPercent || "—"}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("allocationDetail.committed")}</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{fmtMoney(allocation.committedAmount, locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("allocationDetail.variantActivePercent")}</CardTitle></CardHeader><CardContent className="text-lg font-semibold">{productVariantAllocationPercent}</CardContent></Card>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Allocation Context</CardTitle>
+            <CardTitle className="text-base">{t("allocationDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor</div><Link href={`/admin/investors/${allocation.investor.id}`} className="mt-1 block font-medium hover:text-primary">{allocation.investor.name} ({allocation.investor.code})</Link></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor Status</div><div className="mt-1 font-medium">{allocation.investor.status} | {allocation.investor.kycStatus}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Variant</div><div className="mt-1 font-medium">{allocation.productVariant.product.name} ({allocation.productVariant.sku})</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Variant Active</div><div className="mt-1 font-medium">{allocation.productVariant.active ? "Yes" : "No"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Effective From</div><div className="mt-1 font-medium">{fmtDate(allocation.effectiveFrom)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Effective To</div><div className="mt-1 font-medium">{fmtDate(allocation.effectiveTo)}</div></div>
-            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">Note</div><div className="mt-1 whitespace-pre-wrap font-medium">{allocation.note || "N/A"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${allocation.investor.id}`} className="mt-1 block font-medium hover:text-primary">{allocation.investor.name} ({allocation.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investorStatus")}</div><div className="mt-1 font-medium">{t(`enums.investorStatuses.${allocation.investor.status}` as any)} | {t(`enums.kycStatuses.${allocation.investor.kycStatus}` as any)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.variant")}</div><div className="mt-1 font-medium">{allocation.productVariant.product.name} ({allocation.productVariant.sku})</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("allocationDetail.variantActive")}</div><div className="mt-1 font-medium">{allocation.productVariant.active ? t("common.yes") : t("common.no")}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.effectiveFrom")}</div><div className="mt-1 font-medium">{fmtDate(allocation.effectiveFrom, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.effectiveTo")}</div><div className="mt-1 font-medium">{fmtDate(allocation.effectiveTo, locale, t("common.openEnded"))}</div></div>
+            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.note")}</div><div className="mt-1 whitespace-pre-wrap font-medium">{allocation.note || "—"}</div></div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Lifecycle Control</CardTitle>
+            <CardTitle className="text-base">{t("allocationDetail.lifecycleControl")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-1">
-              <Label>Status</Label>
+              <Label>{t("common.status")}</Label>
               <select className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={status} onChange={(event) => setStatus(event.target.value)}>
-                <option value="ACTIVE">ACTIVE</option>
-                <option value="SUSPENDED">SUSPENDED</option>
-                <option value="CLOSED">CLOSED</option>
+                <option value="ACTIVE">{t("enums.allocationStatuses.ACTIVE")}</option>
+                <option value="SUSPENDED">{t("enums.allocationStatuses.SUSPENDED")}</option>
+                <option value="CLOSED">{t("enums.allocationStatuses.CLOSED")}</option>
               </select>
             </div>
             <div className="space-y-1">
-              <Label>Effective To</Label>
+              <Label>{t("common.effectiveTo")}</Label>
               <Input type="date" value={effectiveTo} onChange={(event) => setEffectiveTo(event.target.value)} />
             </div>
             <div className="space-y-1">
-              <Label>Note</Label>
+              <Label>{t("common.note")}</Label>
               <Textarea rows={4} value={note} onChange={(event) => setNote(event.target.value)} />
             </div>
             <Button onClick={save} disabled={saving}>
-              {saving ? "Saving..." : "Save Allocation Changes"}
+              {saving ? t("common.saving") : t("allocationDetail.saveChanges")}
             </Button>
           </CardContent>
         </Card>
@@ -220,7 +223,7 @@ export default function InvestorAllocationDetailPage() {
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Overlap Risks</CardTitle>
+            <CardTitle className="text-base">{t("allocationDetail.overlapRisks")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {overlappingAllocations.length > 0 ? (
@@ -228,13 +231,13 @@ export default function InvestorAllocationDetailPage() {
                 <Link key={item.id} href={`/admin/investors/allocations/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-primary/40 hover:bg-muted/30">
                   <div className="font-medium">{item.investor.name} ({item.investor.code})</div>
                   <div className="text-muted-foreground">
-                    {item.status} | {item.participationPercent || "N/A"} | {fmtDate(item.effectiveFrom)} {"->"} {fmtDate(item.effectiveTo)}
+                    {t(`enums.allocationStatuses.${item.status}` as any)} | {item.participationPercent || "—"} | {fmtDate(item.effectiveFrom, locale)} {"→"} {fmtDate(item.effectiveTo, locale, t("common.openEnded"))}
                   </div>
                 </Link>
               ))
             ) : (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                No overlapping allocations for this time window.
+                {t("allocationDetail.noOverlaps")}
               </div>
             )}
           </CardContent>
@@ -242,7 +245,7 @@ export default function InvestorAllocationDetailPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Linked Ledger Entries</CardTitle>
+            <CardTitle className="text-base">{t("allocationDetail.linkedLedgerEntries")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {investorTransactions.length > 0 ? (
@@ -250,13 +253,13 @@ export default function InvestorAllocationDetailPage() {
                 <Link key={item.id} href={`/admin/investors/ledger/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-primary/40 hover:bg-muted/30">
                   <div className="font-medium">{item.transactionNumber}</div>
                   <div className="text-muted-foreground">
-                    {item.type} | {item.direction} | {fmtMoney(item.amount)} {item.currency}
+                    {t(`enums.transactionTypes.${item.type}` as any)} | {t(`enums.directions.${item.direction}` as any)} | {fmtMoney(item.amount, locale)} {item.currency}
                   </div>
                 </Link>
               ))
             ) : (
               <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-                No investor ledger entries linked to this investor/variant pair.
+                {t("allocationDetail.noLedgerEntries")}
               </div>
             )}
           </CardContent>
@@ -265,7 +268,7 @@ export default function InvestorAllocationDetailPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Related Profit Runs</CardTitle>
+          <CardTitle className="text-base">{t("allocationDetail.relatedProfitRuns")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           {relatedProfitLines.length > 0 ? (
@@ -273,16 +276,20 @@ export default function InvestorAllocationDetailPage() {
               <div key={item.id} className="rounded-lg border p-3 text-sm">
                 <div className="font-medium">{item.profitRun.runNumber}</div>
                 <div className="text-muted-foreground">
-                  {fmtDate(item.profitRun.fromDate)} {"->"} {fmtDate(item.profitRun.toDate)} | {item.profitRun.status}
+                  {fmtDate(item.profitRun.fromDate, locale)} {"→"} {fmtDate(item.profitRun.toDate, locale)} | {t(`enums.profitStatuses.${item.profitRun.status}` as any)}
                 </div>
                 <div className="mt-1 text-muted-foreground">
-                  Share {item.participationSharePct}% | Revenue {fmtMoney(item.allocatedRevenue)} | Net Profit {fmtMoney(item.allocatedNetProfit)}
+                  {t("allocationDetail.profitLine", {
+                    share: item.participationSharePct,
+                    revenue: fmtMoney(item.allocatedRevenue, locale),
+                    profit: fmtMoney(item.allocatedNetProfit, locale),
+                  })}
                 </div>
               </div>
             ))
           ) : (
             <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-              No posted allocation history found yet for this investor/variant pair.
+              {t("allocationDetail.noProfitHistory")}
             </div>
           )}
         </CardContent>

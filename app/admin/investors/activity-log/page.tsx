@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import ActivityLogSkeleton from "@/components/ui/ActivityLogSkeleton";
 import { RefreshCcw, Search } from "lucide-react";
 
@@ -50,12 +51,12 @@ async function fetchJson<T>(url: string): Promise<T> {
   return payload as T;
 }
 
-function formatDate(value: string): string {
+function formatDate(value: string, locale: string): string {
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) {
     return value;
   }
-  return parsed.toLocaleString();
+  return parsed.toLocaleString(locale);
 }
 
 function formatMetadata(metadata: Record<string, unknown> | null | undefined): string {
@@ -102,6 +103,12 @@ function getChanges(metadata: Record<string, unknown> | null | undefined): Activ
 }
 
 export default function InvestorActivityLogPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
+  const enumLabel = (group: string, value: string) => {
+    const key = `enums.${group}.${value}` as any;
+    return t.has(key) ? t(key) : value;
+  };
   const searchParams = useSearchParams();
   const [logs, setLogs] = useState<ActivityLogRow[]>([]);
   const [entities, setEntities] = useState<string[]>([]);
@@ -141,16 +148,12 @@ export default function InvestorActivityLogPage() {
       setLogs(data.logs);
       setEntities(data.entities);
       setTotal(data.total);
-    } catch (loadError) {
-      setError(
-        loadError instanceof Error
-          ? loadError.message
-          : "Failed to load investor activity logs.",
-      );
+    } catch {
+      setError(t("errors.loadActivity"));
     } finally {
       setLoading(false);
     }
-  }, [entity, page, pageSize, search]);
+  }, [entity, page, pageSize, search, t]);
 
   useEffect(() => {
     void loadLogs();
@@ -172,10 +175,9 @@ export default function InvestorActivityLogPage() {
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Investor Activity Log</h1>
+          <h1 className="text-2xl font-bold">{t("activity.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Investor-only audit trail for onboarding, KYC, ledger, allocation, profit,
-            payout, portal access, and statement workflows.
+            {t("activity.description")}
           </p>
         </div>
         <button
@@ -184,7 +186,7 @@ export default function InvestorActivityLogPage() {
           className="btn-secondary inline-flex items-center gap-2 rounded px-4 py-2"
         >
           <RefreshCcw className="h-4 w-4" />
-          Refresh
+          {t("common.refresh")}
         </button>
       </div>
 
@@ -199,7 +201,7 @@ export default function InvestorActivityLogPage() {
                 setSearch(searchInput);
               }
             }}
-            placeholder="Search action, entity, user, entity id"
+            placeholder={t("activity.searchPlaceholder")}
             className="h-11 w-full bg-transparent text-sm outline-none"
           />
         </label>
@@ -209,10 +211,10 @@ export default function InvestorActivityLogPage() {
           onChange={(event) => setEntity(event.target.value)}
           className="h-11 rounded-md border border-border bg-background px-3 text-sm"
         >
-          <option value="">All investor entities</option>
+          <option value="">{t("activity.allEntities")}</option>
           {entities.map((item) => (
             <option key={item} value={item}>
-              {item}
+              {enumLabel("activityEntities", item)}
             </option>
           ))}
         </select>
@@ -222,7 +224,7 @@ export default function InvestorActivityLogPage() {
           onClick={() => setSearch(searchInput)}
           className="btn-primary rounded px-4 py-2 text-sm"
         >
-          Apply
+          {t("common.apply")}
         </button>
       </div>
 
@@ -240,33 +242,33 @@ export default function InvestorActivityLogPage() {
             <table className="min-w-full text-sm">
               <thead className="bg-muted/50 text-left">
                 <tr>
-                  <th className="px-4 py-3 font-medium">Time</th>
-                  <th className="px-4 py-3 font-medium">Action</th>
-                  <th className="px-4 py-3 font-medium">Entity</th>
-                  <th className="px-4 py-3 font-medium">Actor</th>
-                  <th className="px-4 py-3 font-medium">Target</th>
-                  <th className="px-4 py-3 font-medium">Metadata</th>
+                  <th className="px-4 py-3 font-medium">{t("activity.time")}</th>
+                  <th className="px-4 py-3 font-medium">{t("common.action")}</th>
+                  <th className="px-4 py-3 font-medium">{t("activity.entity")}</th>
+                  <th className="px-4 py-3 font-medium">{t("activity.actor")}</th>
+                  <th className="px-4 py-3 font-medium">{t("activity.target")}</th>
+                  <th className="px-4 py-3 font-medium">{t("activity.metadata")}</th>
                 </tr>
               </thead>
               <tbody>
                 {logs.length === 0 ? (
                   <tr>
                     <td colSpan={6} className="px-4 py-8 text-center text-muted-foreground">
-                      No investor activity found for current filter.
+                      {t("activity.empty")}
                     </td>
                   </tr>
                 ) : (
                   logs.map((log) => (
                     <tr key={log.id} className="border-t border-border align-top">
                       <td className="px-4 py-3 text-xs text-muted-foreground">
-                        {formatDate(log.createdAt)}
+                        {formatDate(log.createdAt, locale)}
                       </td>
-                      <td className="px-4 py-3 font-medium">{log.action}</td>
-                      <td className="px-4 py-3">{log.entity}</td>
+                      <td className="px-4 py-3 font-medium">{enumLabel("activityActions", log.action)}</td>
+                      <td className="px-4 py-3">{enumLabel("activityEntities", log.entity)}</td>
                       <td className="px-4 py-3">
                         <div>{log.user?.name || "-"}</div>
                         <div className="text-xs text-muted-foreground">
-                          {log.user?.email || log.userId || "System"}
+                          {log.user?.email || log.userId || t("common.system")}
                         </div>
                       </td>
                       <td className="px-4 py-3">
@@ -281,13 +283,13 @@ export default function InvestorActivityLogPage() {
                           {getChanges(log.metadata).length > 0 ? (
                             <div className="rounded-md border border-border bg-muted/30 p-2">
                               <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-foreground">
-                                Changed Fields
+                                {t("activity.changedFields")}
                               </div>
                               <div className="space-y-1">
                                 {getChanges(log.metadata).map((change) => (
                                   <div key={change.field}>
                                     <span className="font-medium text-foreground">
-                                      {change.field}
+                                      {enumLabel("profileFields", change.field)}
                                     </span>
                                     {" : "}
                                     <span className="text-muted-foreground">
@@ -315,7 +317,7 @@ export default function InvestorActivityLogPage() {
 
       <div className="flex flex-col gap-3 border-t border-border px-4 py-3 text-sm md:flex-row md:items-center md:justify-between">
         <div className="text-muted-foreground">
-          Showing {logs.length} of {total} records
+          {t("activity.showing", { shown: logs.length, total })}
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -324,10 +326,10 @@ export default function InvestorActivityLogPage() {
             disabled={page <= 1 || loading}
             className="btn-secondary rounded px-3 py-1 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Previous
+            {t("common.previous")}
           </button>
           <span className="min-w-20 text-center text-muted-foreground">
-            Page {page} / {totalPages}
+            {t("activity.page", { page, totalPages })}
           </span>
           <button
             type="button"
@@ -335,7 +337,7 @@ export default function InvestorActivityLogPage() {
             disabled={page >= totalPages || loading}
             className="btn-secondary rounded px-3 py-1 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Next
+            {t("common.next")}
           </button>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -61,14 +62,23 @@ type Payload = {
   rows: WithdrawalRow[];
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
+}
+
+function fmtMoney(value: string | null | undefined, locale: string) {
+  return Number(value || 0).toLocaleString(locale, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 }
 
 export default function InvestorWithdrawalsPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [workingId, setWorkingId] = useState<number | null>(null);
   const [status, setStatus] = useState("REQUESTED");
@@ -90,11 +100,11 @@ export default function InvestorWithdrawalsPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load investor withdrawals.");
+        throw new Error(t("errors.loadWithdrawals"));
       }
       setData(payload as Payload);
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor withdrawals.");
+    } catch {
+      toast.error(t("errors.loadWithdrawals"));
     } finally {
       setLoading(false);
     }
@@ -122,18 +132,18 @@ export default function InvestorWithdrawalsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to update investor withdrawal.");
+        throw new Error(t("errors.updateWithdrawal"));
       }
       toast.success(
         action === "approve"
-          ? "Withdrawal request approved."
+          ? t("success.withdrawalApproved")
           : action === "reject"
-            ? "Withdrawal request rejected."
-            : "Withdrawal request settled.",
+            ? t("success.withdrawalRejected")
+            : t("success.withdrawalSettled"),
       );
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to update investor withdrawal.");
+    } catch {
+      toast.error(t("errors.updateWithdrawal"));
     } finally {
       setWorkingId(null);
     }
@@ -145,30 +155,30 @@ export default function InvestorWithdrawalsPage() {
 
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold">Investor Withdrawals</h1>
+          <h1 className="text-2xl font-semibold">{t("withdrawals.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Review, approve, and settle capital withdrawal requests with balance controls.
+            {t("withdrawals.description")}
           </p>
         </div>
         <div className="flex w-full flex-wrap gap-2 sm:w-auto">
           <Input
-            placeholder="Search investor or request"
+            placeholder={t("withdrawals.searchPlaceholder")}
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             className="w-full sm:w-56"
           />
           <Button variant="outline" onClick={() => void load()}>
-            Refresh
+            {t("common.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-5">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Requested</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.requested ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Approved</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.approved ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Settled</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.settled ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Rejected</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.rejected ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Total Requested</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.totalRequestedAmount ?? "0"}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.requested")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.requested ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.approved")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.approved ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.settled")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.settled ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.rejected")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.rejected ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("withdrawals.totalRequested")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(data?.summary.totalRequestedAmount, locale)}</CardContent></Card>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -178,19 +188,19 @@ export default function InvestorWithdrawalsPage() {
             variant={status === value ? "default" : "outline"}
             onClick={() => setStatus(value)}
           >
-            {value || "ALL"}
+            {value ? t(`enums.withdrawalStatuses.${value}` as any) : t("common.all")}
           </Button>
         ))}
       </div>
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading withdrawals...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("withdrawals.loading")}</p> : null}
 
       {!loading && data ? (
         <div className="space-y-4">
           {data.rows.length === 0 ? (
             <Card>
               <CardContent className="py-6 text-sm text-muted-foreground">
-                No investor withdrawal requests found.
+                {t("withdrawals.empty")}
               </CardContent>
             </Card>
           ) : (
@@ -201,16 +211,16 @@ export default function InvestorWithdrawalsPage() {
                     <div>
                       <div className="flex flex-wrap items-center gap-2">
                         <CardTitle className="text-base">{row.requestNumber}</CardTitle>
-                        <Badge variant="outline">{row.status}</Badge>
+                        <Badge variant="outline">{t(`enums.withdrawalStatuses.${row.status}` as any)}</Badge>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        {row.investor?.name} ({row.investor?.code}) | Submitted {fmtDate(row.submittedAt)}
+                        {t("withdrawals.submittedMeta", { investor: `${row.investor?.name || "—"} (${row.investor?.code || "—"})`, date: fmtDate(row.submittedAt, locale) })}
                       </p>
                     </div>
                     <div className="flex gap-2">
                       {row.investor ? (
                         <Button size="sm" variant="outline" asChild>
-                          <Link href={`/admin/investors/${row.investor.id}`}>Open Investor</Link>
+                          <Link href={`/admin/investors/${row.investor.id}`}>{t("common.openInvestor")}</Link>
                         </Button>
                       ) : null}
                     </div>
@@ -219,37 +229,37 @@ export default function InvestorWithdrawalsPage() {
                 <CardContent className="space-y-4">
                   <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
                     <div className="rounded-md border p-3 text-sm">
-                      <div className="text-muted-foreground">Requested</div>
-                      <div className="font-semibold">{row.requestedAmount} {row.currency}</div>
+                      <div className="text-muted-foreground">{t("common.requested")}</div>
+                      <div className="font-semibold">{fmtMoney(row.requestedAmount, locale)} {row.currency}</div>
                     </div>
                     <div className="rounded-md border p-3 text-sm">
-                      <div className="text-muted-foreground">Withdrawable Snapshot</div>
-                      <div className="font-semibold">{row.withdrawableBalanceSnapshot}</div>
+                      <div className="text-muted-foreground">{t("withdrawals.withdrawableSnapshot")}</div>
+                      <div className="font-semibold">{fmtMoney(row.withdrawableBalanceSnapshot, locale)}</div>
                     </div>
                     <div className="rounded-md border p-3 text-sm">
-                      <div className="text-muted-foreground">Active Committed Snapshot</div>
-                      <div className="font-semibold">{row.activeCommittedAmountSnapshot}</div>
+                      <div className="text-muted-foreground">{t("withdrawals.committedSnapshot")}</div>
+                      <div className="font-semibold">{fmtMoney(row.activeCommittedAmountSnapshot, locale)}</div>
                     </div>
                     <div className="rounded-md border p-3 text-sm">
-                      <div className="text-muted-foreground">Pending Payout Snapshot</div>
-                      <div className="font-semibold">{row.pendingPayoutAmountSnapshot}</div>
+                      <div className="text-muted-foreground">{t("withdrawals.payoutSnapshot")}</div>
+                      <div className="font-semibold">{fmtMoney(row.pendingPayoutAmountSnapshot, locale)}</div>
                     </div>
                   </div>
 
-                  {row.requestNote ? <p className="text-sm">Request note: {row.requestNote}</p> : null}
-                  {row.reviewNote ? <p className="text-sm text-muted-foreground">Review note: {row.reviewNote}</p> : null}
-                  {row.rejectionReason ? <p className="text-sm text-destructive">Rejection reason: {row.rejectionReason}</p> : null}
-                  {row.settlementNote ? <p className="text-sm text-muted-foreground">Settlement note: {row.settlementNote}</p> : null}
+                  {row.requestNote ? <p className="text-sm">{t("withdrawals.requestNote", { note: row.requestNote })}</p> : null}
+                  {row.reviewNote ? <p className="text-sm text-muted-foreground">{t("common.reviewNoteValue", { note: row.reviewNote })}</p> : null}
+                  {row.rejectionReason ? <p className="text-sm text-destructive">{t("withdrawals.rejectionReason", { reason: row.rejectionReason })}</p> : null}
+                  {row.settlementNote ? <p className="text-sm text-muted-foreground">{t("withdrawals.settlementNoteValue", { note: row.settlementNote })}</p> : null}
                   {row.transaction ? (
                     <p className="text-sm text-muted-foreground">
-                      Posted to ledger as {row.transaction.transactionNumber} on {fmtDate(row.transaction.transactionDate)}.
+                      {t("withdrawals.ledgerPosted", { number: row.transaction.transactionNumber, date: fmtDate(row.transaction.transactionDate, locale) })}
                     </p>
                   ) : null}
 
                   {row.status === "REQUESTED" ? (
                     <div className="grid gap-4 rounded-md border p-4 md:grid-cols-2">
                       <div className="space-y-2">
-                        <Label>Approved Amount</Label>
+                        <Label>{t("withdrawals.approvedAmount")}</Label>
                         <Input
                           type="number"
                           min="0"
@@ -264,7 +274,7 @@ export default function InvestorWithdrawalsPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label>Review Note</Label>
+                        <Label>{t("common.reviewNote")}</Label>
                         <Textarea
                           value={reviewNotes[row.id] || ""}
                           onChange={(event) =>
@@ -282,7 +292,7 @@ export default function InvestorWithdrawalsPage() {
                           onClick={() => void act(row, "approve")}
                           disabled={workingId === row.id}
                         >
-                          Approve
+                          {t("common.approve")}
                         </Button>
                         <Button
                           size="sm"
@@ -291,7 +301,7 @@ export default function InvestorWithdrawalsPage() {
                           onClick={() => void act(row, "reject")}
                           disabled={workingId === row.id}
                         >
-                          Reject
+                          {t("common.reject")}
                         </Button>
                       </div>
                     </div>
@@ -300,7 +310,7 @@ export default function InvestorWithdrawalsPage() {
                   {row.status === "APPROVED" ? (
                     <div className="grid gap-4 rounded-md border p-4 md:grid-cols-2">
                       <div className="space-y-2 md:col-span-2">
-                        <Label>Settlement Note</Label>
+                        <Label>{t("withdrawals.settlementNote")}</Label>
                         <Textarea
                           value={settlementNotes[row.id] || ""}
                           onChange={(event) =>
@@ -309,7 +319,7 @@ export default function InvestorWithdrawalsPage() {
                               [row.id]: event.target.value,
                             }))
                           }
-                          placeholder="Bank reference, proof reference, or settlement comment."
+                          placeholder={t("withdrawals.settlementPlaceholder")}
                         />
                       </div>
                       <div className="md:col-span-2">
@@ -319,7 +329,7 @@ export default function InvestorWithdrawalsPage() {
                           onClick={() => void act(row, "settle")}
                           disabled={workingId === row.id}
                         >
-                          Settle Withdrawal
+                          {t("withdrawals.settle")}
                         </Button>
                       </div>
                     </div>

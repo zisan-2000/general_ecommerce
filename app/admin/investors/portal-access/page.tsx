@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -56,13 +57,15 @@ type AccessPayload = {
   users: UserOption[];
 };
 
-function fmtDate(value: string) {
+function fmtDate(value: string, locale: string) {
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 export default function InvestorPortalAccessPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [query, setQuery] = useState("");
@@ -86,14 +89,14 @@ export default function InvestorPortalAccessPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load investor portal access.");
+        throw new Error(t("errors.loadPortalAccess"));
       }
       const data = payload as AccessPayload;
       setRecords(Array.isArray(data.records) ? data.records : []);
       setInvestors(Array.isArray(data.investors) ? data.investors : []);
       setUsers(Array.isArray(data.users) ? data.users : []);
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor portal access.");
+    } catch {
+      toast.error(t("errors.loadPortalAccess"));
     } finally {
       setLoading(false);
     }
@@ -132,7 +135,7 @@ export default function InvestorPortalAccessPage() {
 
   const saveRecord = async () => {
     if (!selectedUserId || !selectedInvestorId) {
-      toast.error("User and investor are required.");
+      toast.error(t("errors.portalAccessRequired"));
       return;
     }
 
@@ -151,13 +154,13 @@ export default function InvestorPortalAccessPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to save investor portal access.");
+        throw new Error(t("errors.savePortalAccess"));
       }
-      toast.success(editingId ? "Access updated." : "Access created.");
+      toast.success(editingId ? t("success.accessUpdated") : t("success.accessCreated"));
       resetForm();
       await loadData();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to save investor portal access.");
+    } catch {
+      toast.error(t("errors.savePortalAccess"));
     } finally {
       setSaving(false);
     }
@@ -168,43 +171,43 @@ export default function InvestorPortalAccessPage() {
       <InvestorWorkflowGuide currentSection="portal-access" />
 
       <div>
-        <h1 className="text-2xl font-bold">Investor Portal Access</h1>
+        <h1 className="text-2xl font-bold">{t("portalAccess.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Assign investor users to exactly one investor scope for secure portal access.
+          {t("portalAccess.description")}
         </p>
       </div>
 
       <Card>
         <CardHeader>
           <CardTitle className="text-base">
-            {editingId ? "Edit Investor Portal Access" : "Create Investor Portal Access"}
+            {editingId ? t("portalAccess.editTitle") : t("portalAccess.createTitle")}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1">
-              <Label>User</Label>
+              <Label>{t("common.user")}</Label>
               <select
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={selectedUserId}
                 onChange={(event) => setSelectedUserId(event.target.value)}
               >
-                <option value="">Select user</option>
+                <option value="">{t("common.selectUser")}</option>
                 {availableUsers.map((user) => (
                   <option key={user.id} value={user.id}>
-                    {user.name || "Unnamed"} ({user.email || "No email"})
+                    {user.name || t("common.unnamed")} ({user.email || t("common.noEmail")})
                   </option>
                 ))}
               </select>
             </div>
             <div className="space-y-1">
-              <Label>Investor</Label>
+              <Label>{t("common.investor")}</Label>
               <select
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={selectedInvestorId}
                 onChange={(event) => setSelectedInvestorId(event.target.value)}
               >
-                <option value="">Select investor</option>
+                <option value="">{t("common.selectInvestor")}</option>
                 {investors.map((investor) => (
                   <option key={investor.id} value={investor.id}>
                     {investor.name} ({investor.code})
@@ -216,7 +219,7 @@ export default function InvestorPortalAccessPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1">
-              <Label>Status</Label>
+              <Label>{t("common.status")}</Label>
               <select
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={status}
@@ -224,17 +227,17 @@ export default function InvestorPortalAccessPage() {
                   setStatus(event.target.value as "ACTIVE" | "SUSPENDED" | "REVOKED")
                 }
               >
-                <option value="ACTIVE">ACTIVE</option>
-                <option value="SUSPENDED">SUSPENDED</option>
-                <option value="REVOKED">REVOKED</option>
+                <option value="ACTIVE">{t("enums.accessStatuses.ACTIVE")}</option>
+                <option value="SUSPENDED">{t("enums.accessStatuses.SUSPENDED")}</option>
+                <option value="REVOKED">{t("enums.accessStatuses.REVOKED")}</option>
               </select>
             </div>
           </div>
 
           <div className="space-y-1">
-            <Label>Note</Label>
+            <Label>{t("common.note")}</Label>
             <Textarea
-              placeholder="Optional governance note..."
+              placeholder={t("portalAccess.notePlaceholder")}
               value={note}
               onChange={(event) => setNote(event.target.value)}
             />
@@ -242,11 +245,11 @@ export default function InvestorPortalAccessPage() {
 
           <div className="flex flex-wrap gap-2">
             <Button onClick={() => void saveRecord()} disabled={saving}>
-              {saving ? "Saving..." : editingId ? "Update Access" : "Create Access"}
+              {saving ? t("common.saving") : editingId ? t("portalAccess.update") : t("portalAccess.create")}
             </Button>
             {editingId ? (
               <Button variant="outline" onClick={resetForm} disabled={saving}>
-                Cancel Edit
+                {t("common.cancelEdit")}
               </Button>
             ) : null}
           </div>
@@ -255,25 +258,25 @@ export default function InvestorPortalAccessPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Access Registry</CardTitle>
+          <CardTitle className="text-base">{t("portalAccess.registry")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex flex-wrap gap-2">
             <Input
-              placeholder="Search investor or user..."
+              placeholder={t("portalAccess.searchPlaceholder")}
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               className="max-w-md"
             />
             <Button variant="outline" onClick={() => void loadData()}>
-              Refresh
+              {t("common.refresh")}
             </Button>
           </div>
 
           {loading ? (
-            <p className="text-sm text-muted-foreground">Loading...</p>
+            <p className="text-sm text-muted-foreground">{t("common.loading")}</p>
           ) : records.length === 0 ? (
-            <p className="text-sm text-muted-foreground">No investor portal assignments found.</p>
+            <p className="text-sm text-muted-foreground">{t("portalAccess.empty")}</p>
           ) : (
             <div className="space-y-3">
               {records.map((record) => (
@@ -281,26 +284,26 @@ export default function InvestorPortalAccessPage() {
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div>
                       <p className="font-medium">
-                        {record.user.name || "Unnamed user"} ({record.user.email || "No email"})
+                        {record.user.name || t("common.unnamedUser")} ({record.user.email || t("common.noEmail")})
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        Investor: {record.investor.name} ({record.investor.code})
+                        {t("portalAccess.investorValue", { investor: `${record.investor.name} (${record.investor.code})` })}
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Badge variant={record.status === "ACTIVE" ? "default" : "outline"}>
-                        {record.status}
+                        {t(`enums.accessStatuses.${record.status}` as any)}
                       </Badge>
                       <Button size="sm" variant="outline" onClick={() => startEdit(record)}>
-                        Edit
+                        {t("common.edit")}
                       </Button>
                     </div>
                   </div>
                   <p className="mt-2 text-xs text-muted-foreground">
-                    Updated: {fmtDate(record.updatedAt)} | Created by: {record.createdBy?.email || "N/A"}
+                    {t("portalAccess.auditLine", { updated: fmtDate(record.updatedAt, locale), creator: record.createdBy?.email || "—" })}
                   </p>
                   {record.note ? (
-                    <p className="mt-1 text-xs text-muted-foreground">Note: {record.note}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{t("common.noteValue", { note: record.note })}</p>
                   ) : null}
                 </div>
               ))}

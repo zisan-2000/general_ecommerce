@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { uploadFile } from "@/lib/upload-file";
 import { Button } from "@/components/ui/button";
@@ -86,27 +87,29 @@ type Payload = {
   }>;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
-function fmtMoney(value: string) {
-  return Number(value || 0).toLocaleString(undefined, {
+function fmtMoney(value: string, locale: string) {
+  return Number(value || 0).toLocaleString(locale, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
 function maskAccount(value?: string | null) {
-  if (!value) return "N/A";
+  if (!value) return "—";
   if (value.length <= 4) return value;
   return `${"*".repeat(Math.max(0, value.length - 4))}${value.slice(-4)}`;
 }
 
 export default function InvestorPayoutDetailPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const params = useParams<{ id: string }>();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.globalPermissions)
@@ -136,7 +139,7 @@ export default function InvestorPayoutDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to load investor payout.");
+        throw new Error(t("errors.loadPayoutDetail"));
       }
       const data = next as Payload;
       setPayload(data);
@@ -144,8 +147,8 @@ export default function InvestorPayoutDetailPage() {
       setPaymentMethod(data.payout.paymentMethod || "BANK_TRANSFER");
       setPaidAt(data.payout.paidAt ? data.payout.paidAt.slice(0, 16) : "");
       setUploadedProofUrl(data.payout.paymentProofUrl || "");
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor payout.");
+    } catch {
+      toast.error(t("errors.loadPayoutDetail"));
     } finally {
       setLoading(false);
     }
@@ -181,21 +184,21 @@ export default function InvestorPayoutDetailPage() {
       });
       const next = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(next?.error || "Failed to process payout.");
+        throw new Error(t("errors.processPayout"));
       }
-      toast.success(`Payout action completed: ${action}.`);
+      toast.success(t("success.payoutAction", { action: t(`enums.actions.${action}` as any) }));
       setNote("");
       setFile(null);
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to process payout.");
+    } catch {
+      toast.error(t("errors.processPayout"));
     } finally {
       setSaving(false);
     }
   };
 
   if (loading || !payload) {
-    return <div className="p-6 text-sm text-muted-foreground">Loading payout detail...</div>;
+    return <div className="p-6 text-sm text-muted-foreground">{t("payoutDetail.loading")}</div>;
   }
 
   const { payout, readiness, recentActivity } = payload;
@@ -205,34 +208,34 @@ export default function InvestorPayoutDetailPage() {
       <div>
         <h1 className="text-2xl font-semibold">{payout.payoutNumber}</h1>
         <p className="text-sm text-muted-foreground">
-          Beneficiary-safe payout workspace with hold/release control, payment proof, and execution traceability.
+          {t("payoutDetail.description")}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Payout Amount</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.payoutAmount)} {payout.currency}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Gross Profit</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.grossProfitAmount)}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Holdback</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.holdbackAmount)}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Status</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{payout.status}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">On Hold</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{readiness.onHold ? "Yes" : "No"}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("payoutDetail.payoutAmount")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.payoutAmount, locale)} {payout.currency}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("payoutDetail.grossProfit")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.grossProfitAmount, locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("payoutDetail.holdback")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{fmtMoney(payout.holdbackAmount, locale)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.status")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{t(`enums.payoutStatuses.${payout.status}` as any)}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("payoutDetail.onHold")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{readiness.onHold ? t("common.yes") : t("common.no")}</CardContent></Card>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[2fr,1fr]">
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Payout Context</CardTitle>
+            <CardTitle className="text-base">{t("payoutDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor</div><Link href={`/admin/investors/${payout.investor.id}`} className="mt-1 block font-medium hover:text-primary">{payout.investor.name} ({payout.investor.code})</Link></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Run</div><Link href={`/admin/investors/profit-runs/${payout.run.id}`} className="mt-1 block font-medium hover:text-primary">{payout.run.runNumber}</Link></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Approved</div><div className="mt-1 font-medium">{fmtDate(payout.approvedAt)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Paid</div><div className="mt-1 font-medium">{fmtDate(payout.paidAt)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Hold Reason</div><div className="mt-1 font-medium">{payout.holdReason || "N/A"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Release Note</div><div className="mt-1 font-medium">{payout.releaseNote || "N/A"}</div></div>
-            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">Execution Note</div><div className="mt-1 whitespace-pre-wrap font-medium">{payout.note || "N/A"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${payout.investor.id}`} className="mt-1 block font-medium hover:text-primary">{payout.investor.name} ({payout.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.run")}</div><Link href={`/admin/investors/profit-runs/${payout.run.id}`} className="mt-1 block font-medium hover:text-primary">{payout.run.runNumber}</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.approved")}</div><div className="mt-1 font-medium">{fmtDate(payout.approvedAt, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.paid")}</div><div className="mt-1 font-medium">{fmtDate(payout.paidAt, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.holdReason")}</div><div className="mt-1 font-medium">{payout.holdReason || "—"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.releaseNote")}</div><div className="mt-1 font-medium">{payout.releaseNote || "—"}</div></div>
+            <div className="md:col-span-2"><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.executionNote")}</div><div className="mt-1 whitespace-pre-wrap font-medium">{payout.note || "—"}</div></div>
             {payout.transaction ? (
               <div className="md:col-span-2">
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">Ledger Transaction</div>
+                <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.ledgerTransaction")}</div>
                 <Link href={`/admin/investors/ledger/${payout.transaction.id}`} className="mt-1 block font-medium hover:text-primary">
                   {payout.transaction.transactionNumber}
                 </Link>
@@ -243,66 +246,66 @@ export default function InvestorPayoutDetailPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Beneficiary Readiness</CardTitle>
+            <CardTitle className="text-base">{t("payoutDetail.beneficiaryReadiness")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Investor Beneficiary Verified</div><div className="mt-1 font-medium">{fmtDate(payout.investor.beneficiaryVerifiedAt)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Snapshot Verified</div><div className="mt-1 font-medium">{fmtDate(payout.beneficiaryVerifiedAt)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Beneficiary Name</div><div className="mt-1 font-medium">{payout.beneficiaryNameSnapshot || "N/A"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Bank</div><div className="mt-1 font-medium">{payout.beneficiaryBankNameSnapshot || "N/A"}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Account</div><div className="mt-1 font-medium">{maskAccount(payout.beneficiaryAccountNumberSnapshot)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">Verification Note</div><div className="mt-1 font-medium">{payout.beneficiaryVerificationNote || "N/A"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.investorBeneficiaryVerified")}</div><div className="mt-1 font-medium">{fmtDate(payout.investor.beneficiaryVerifiedAt, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.snapshotVerified")}</div><div className="mt-1 font-medium">{fmtDate(payout.beneficiaryVerifiedAt, locale)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.beneficiaryName")}</div><div className="mt-1 font-medium">{payout.beneficiaryNameSnapshot || "—"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.bank")}</div><div className="mt-1 font-medium">{payout.beneficiaryBankNameSnapshot || "—"}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.account")}</div><div className="mt-1 font-medium">{maskAccount(payout.beneficiaryAccountNumberSnapshot)}</div></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.verificationNote")}</div><div className="mt-1 font-medium">{payout.beneficiaryVerificationNote || "—"}</div></div>
           </CardContent>
         </Card>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Execution Controls</CardTitle>
+          <CardTitle className="text-base">{t("payoutDetail.executionControls")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {!readiness.beneficiaryVerified ? (
             <div className="rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
-              Payout beneficiary is not fully verified. Approval/payment should not proceed until investor beneficiary verification is completed.
+              {t("payoutDetail.beneficiaryWarning")}
             </div>
           ) : null}
           {readiness.onHold ? (
             <div className="rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-900">
-              Payout is currently on hold. Release it before payment.
+              {t("payoutDetail.holdWarning")}
             </div>
           ) : null}
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1">
-              <Label>Workflow Note</Label>
+              <Label>{t("payoutDetail.workflowNote")}</Label>
               <Textarea value={note} onChange={(event) => setNote(event.target.value)} rows={3} />
             </div>
             <div className="space-y-1">
-              <Label>Void Reason</Label>
+              <Label>{t("payoutDetail.voidReason")}</Label>
               <Textarea value={voidReason} onChange={(event) => setVoidReason(event.target.value)} rows={3} />
             </div>
             <div className="space-y-1">
-              <Label>Payment Method</Label>
+              <Label>{t("payoutDetail.paymentMethod")}</Label>
               <select className="h-10 w-full rounded-md border bg-background px-3 text-sm" value={paymentMethod} onChange={(event) => setPaymentMethod(event.target.value)}>
-                <option value="BANK_TRANSFER">BANK_TRANSFER</option>
-                <option value="MOBILE_BANKING">MOBILE_BANKING</option>
-                <option value="CHEQUE">CHEQUE</option>
-                <option value="CASH">CASH</option>
+                <option value="BANK_TRANSFER">{t("enums.paymentMethods.BANK_TRANSFER")}</option>
+                <option value="MOBILE_BANKING">{t("enums.paymentMethods.MOBILE_BANKING")}</option>
+                <option value="CHEQUE">{t("enums.paymentMethods.CHEQUE")}</option>
+                <option value="CASH">{t("enums.paymentMethods.CASH")}</option>
               </select>
             </div>
             <div className="space-y-1">
-              <Label>Bank Reference</Label>
+              <Label>{t("payoutDetail.bankReference")}</Label>
               <Input value={bankReference} onChange={(event) => setBankReference(event.target.value)} />
             </div>
             <div className="space-y-1">
-              <Label>Paid At</Label>
+              <Label>{t("payoutDetail.paidAt")}</Label>
               <Input type="datetime-local" value={paidAt} onChange={(event) => setPaidAt(event.target.value)} />
             </div>
             <div className="space-y-1">
-              <Label>Payment Proof</Label>
+              <Label>{t("payoutDetail.paymentProof")}</Label>
               <Input type="file" onChange={(event) => setFile(event.target.files?.[0] || null)} />
               {uploadedProofUrl ? (
                 <a href={uploadedProofUrl} className="text-xs text-primary underline" target="_blank" rel="noreferrer">
-                  View current proof
+                  {t("payoutDetail.viewProof")}
                 </a>
               ) : null}
             </div>
@@ -311,31 +314,31 @@ export default function InvestorPayoutDetailPage() {
             {canApprove && payout.status === "PENDING_APPROVAL" ? (
               <>
                 <Button onClick={() => void act("approve")} disabled={saving || !readiness.beneficiaryVerified}>
-                  {saving ? "Working..." : "Approve"}
+                  {saving ? t("common.working") : t("common.approve")}
                 </Button>
                 <Button variant="outline" onClick={() => void act("reject")} disabled={saving}>
-                  {saving ? "Working..." : "Reject"}
+                  {saving ? t("common.working") : t("common.reject")}
                 </Button>
               </>
             ) : null}
             {(canManage || canApprove || canPay) && ["PENDING_APPROVAL", "APPROVED"].includes(payout.status) && !readiness.onHold ? (
               <Button variant="outline" onClick={() => void act("hold")} disabled={saving}>
-                {saving ? "Working..." : "Hold"}
+                {saving ? t("common.working") : t("common.hold")}
               </Button>
             ) : null}
             {(canManage || canApprove || canPay) && readiness.onHold ? (
               <Button variant="outline" onClick={() => void act("release")} disabled={saving}>
-                {saving ? "Working..." : "Release Hold"}
+                {saving ? t("common.working") : t("payoutDetail.releaseHold")}
               </Button>
             ) : null}
             {canPay && payout.status === "APPROVED" ? (
               <Button onClick={() => void act("pay")} disabled={saving || !readiness.canPay}>
-                {saving ? "Working..." : "Mark Paid"}
+                {saving ? t("common.working") : t("payoutDetail.markPaid")}
               </Button>
             ) : null}
             {canVoid && (payout.status === "APPROVED" || payout.status === "PAID") ? (
               <Button variant="destructive" onClick={() => void act("void")} disabled={saving}>
-                {saving ? "Working..." : "Void"}
+                {saving ? t("common.working") : t("common.void")}
               </Button>
             ) : null}
           </div>
@@ -344,7 +347,7 @@ export default function InvestorPayoutDetailPage() {
 
       <Tabs defaultValue="activity" className="space-y-4">
         <TabsList className="w-full justify-start overflow-x-auto">
-          <TabsTrigger value="activity">Activity</TabsTrigger>
+          <TabsTrigger value="activity">{t("common.activity")}</TabsTrigger>
         </TabsList>
         <TabsContent value="activity" className="space-y-3">
           {recentActivity.length > 0 ? (
@@ -352,13 +355,13 @@ export default function InvestorPayoutDetailPage() {
               <div key={item.id} className="rounded-lg border p-4 text-sm">
                 <div className="font-medium">{item.metadata?.message || item.action}</div>
                 <div className="mt-1 text-muted-foreground">
-                  {item.actorName || item.actorEmail || "System"} | {fmtDate(item.createdAt)}
+                  {item.actorName || item.actorEmail || t("common.system")} | {fmtDate(item.createdAt, locale)}
                 </div>
               </div>
             ))
           ) : (
             <div className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">
-              No payout activity logged yet.
+              {t("payoutDetail.noActivity")}
             </div>
           )}
         </TabsContent>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,22 +28,25 @@ type NotificationsResponse = {
   rows: NotificationRow[];
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
-}
-
-function formatType(value: string) {
-  return value
-    .toLowerCase()
-    .split("_")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 export default function InvestorNotificationsPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
+  const typeLabel = (value: string) => {
+    const key = `enums.notificationTypes.${value}` as any;
+    if (t.has(key)) return t(key);
+    return value
+      .toLowerCase()
+      .split("_")
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(" ");
+  };
   const [data, setData] = useState<NotificationsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -67,11 +71,11 @@ export default function InvestorNotificationsPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load investor notifications.");
+        throw new Error(t("errors.loadNotifications"));
       }
       setData(payload as NotificationsResponse);
-    } catch (err: any) {
-      setError(err?.message || "Failed to load investor notifications.");
+    } catch {
+      setError(t("errors.loadNotifications"));
       setData(null);
     } finally {
       setLoading(false);
@@ -91,11 +95,11 @@ export default function InvestorNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to mark notification.");
+        throw new Error(t("errors.markNotification"));
       }
       await load();
-    } catch (err: any) {
-      setError(err?.message || "Failed to mark notification.");
+    } catch {
+      setError(t("errors.markNotification"));
     }
   };
 
@@ -109,11 +113,11 @@ export default function InvestorNotificationsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to mark all notifications.");
+        throw new Error(t("errors.markAllNotifications"));
       }
       await load();
-    } catch (err: any) {
-      setError(err?.message || "Failed to mark all notifications.");
+    } catch {
+      setError(t("errors.markAllNotifications"));
     } finally {
       setMarkingAll(false);
     }
@@ -149,10 +153,9 @@ export default function InvestorNotificationsPage() {
 
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold">Investor Notifications</h1>
+          <h1 className="text-2xl font-semibold">{t("notifications.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Internal investor workflow alerts for reviewers, approvers, posters,
-            and payout operators.
+            {t("notifications.description")}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -164,18 +167,18 @@ export default function InvestorNotificationsPage() {
               void load(next);
             }}
           >
-            {unreadOnly ? "Show All" : "Unread Only"}
+            {unreadOnly ? t("notifications.showAll") : t("notifications.unreadOnly")}
           </Button>
           <Button variant="outline" onClick={() => void load()}>
-            Refresh
+            {t("common.refresh")}
           </Button>
           <Button variant="outline" onClick={() => void markAllRead()} disabled={markingAll}>
-            {markingAll ? "Marking..." : "Mark All Read"}
+            {markingAll ? t("notifications.marking") : t("notifications.markAllRead")}
           </Button>
         </div>
       </div>
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading notifications...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("notifications.loading")}</p> : null}
       {!loading && error ? <p className="text-sm text-destructive">{error}</p> : null}
 
       {!loading && !error && data ? (
@@ -184,7 +187,7 @@ export default function InvestorNotificationsPage() {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Unread
+                  {t("notifications.unread")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-3xl font-semibold">
@@ -194,7 +197,7 @@ export default function InvestorNotificationsPage() {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Visible Rows
+                  {t("notifications.visibleRows")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-3xl font-semibold">
@@ -204,7 +207,7 @@ export default function InvestorNotificationsPage() {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Needs Action
+                  {t("notifications.needsAction")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-3xl font-semibold">
@@ -215,12 +218,12 @@ export default function InvestorNotificationsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Notification Queue</CardTitle>
+              <CardTitle>{t("notifications.queue")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-col gap-3 md:flex-row">
                 <Input
-                  placeholder="Search notification"
+                  placeholder={t("notifications.searchPlaceholder")}
                   value={search}
                   onChange={(event) => setSearch(event.target.value)}
                   className="md:max-w-sm"
@@ -230,10 +233,10 @@ export default function InvestorNotificationsPage() {
                   value={typeFilter}
                   onChange={(event) => setTypeFilter(event.target.value)}
                 >
-                  <option value="ALL">All Types</option>
+                  <option value="ALL">{t("notifications.allTypes")}</option>
                   {typeOptions.map((value) => (
                     <option key={value} value={value}>
-                      {formatType(value)}
+                      {typeLabel(value)}
                     </option>
                   ))}
                 </select>
@@ -242,7 +245,7 @@ export default function InvestorNotificationsPage() {
               <div className="space-y-3">
                 {visibleRows.length === 0 ? (
                   <div className="rounded-md border p-4 text-sm text-muted-foreground">
-                    No investor notifications found.
+                    {t("notifications.empty")}
                   </div>
                 ) : (
                   visibleRows.map((row) => (
@@ -256,25 +259,25 @@ export default function InvestorNotificationsPage() {
                         <div className="space-y-2">
                           <div className="flex flex-wrap items-center gap-2">
                             <h3 className="font-semibold">{row.title}</h3>
-                            <Badge variant="outline">{formatType(row.type)}</Badge>
+                            <Badge variant="outline">{typeLabel(row.type)}</Badge>
                             <Badge variant={row.readAt ? "secondary" : "default"}>
-                              {row.readAt ? "Read" : "Unread"}
+                              {row.readAt ? t("notifications.read") : t("notifications.unread")}
                             </Badge>
                           </div>
                           <p className="text-sm text-muted-foreground">{row.message}</p>
                           <p className="text-xs text-muted-foreground">
-                            Created {fmtDate(row.createdAt)}
+                            {t("notifications.createdAt", { date: fmtDate(row.createdAt, locale) })}
                           </p>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {row.targetUrl ? (
                             <Button asChild size="sm" variant="outline">
-                              <Link href={row.targetUrl}>Open</Link>
+                              <Link href={row.targetUrl}>{t("common.open")}</Link>
                             </Button>
                           ) : null}
                           {!row.readAt ? (
                             <Button size="sm" onClick={() => void markRead(row)}>
-                              Mark Read
+                              {t("notifications.markRead")}
                             </Button>
                           ) : null}
                         </div>

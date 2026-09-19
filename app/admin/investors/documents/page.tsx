@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { uploadFile } from "@/lib/upload-file";
 import { Button } from "@/components/ui/button";
@@ -48,11 +49,11 @@ type Payload = {
   investors: InvestorSummary[];
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
 function toInputDate(value?: string | null) {
@@ -63,6 +64,12 @@ function toInputDate(value?: string | null) {
 }
 
 export default function InvestorDocumentsPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
+  const enumLabel = (group: string, value: string) => {
+    const key = `enums.${group}.${value}` as any;
+    return t.has(key) ? t(key) : value;
+  };
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [search, setSearch] = useState("");
@@ -88,13 +95,13 @@ export default function InvestorDocumentsPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load investor documents.");
+        throw new Error(t("errors.loadDocuments"));
       }
       const data = payload as Payload;
       setRequiredTypes(Array.isArray(data.requiredDocumentTypes) ? data.requiredDocumentTypes : []);
       setInvestors(Array.isArray(data.investors) ? data.investors : []);
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor documents.");
+    } catch {
+      toast.error(t("errors.loadDocuments"));
     } finally {
       setLoading(false);
     }
@@ -124,7 +131,7 @@ export default function InvestorDocumentsPage() {
 
   const uploadDocument = async () => {
     if (!selectedInvestorId || !selectedType || !file) {
-      toast.error("Investor, document type, and file are required.");
+      toast.error(t("errors.documentRequiredFields"));
       return;
     }
 
@@ -149,9 +156,9 @@ export default function InvestorDocumentsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to upload investor document.");
+        throw new Error(t("errors.uploadDocument"));
       }
-      toast.success("Investor document uploaded.");
+      toast.success(t("success.documentUploaded"));
       setSelectedType("");
       setFile(null);
       setDocumentNumber("");
@@ -159,8 +166,8 @@ export default function InvestorDocumentsPage() {
       setExpiresAt("");
       setNote("");
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to upload investor document.");
+    } catch {
+      toast.error(t("errors.uploadDocument"));
     } finally {
       setSaving(false);
     }
@@ -180,12 +187,12 @@ export default function InvestorDocumentsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to review investor document.");
+        throw new Error(t("errors.reviewDocument"));
       }
-      toast.success("Document review updated.");
+      toast.success(t("success.documentReviewUpdated"));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to review investor document.");
+    } catch {
+      toast.error(t("errors.reviewDocument"));
     } finally {
       setSaving(false);
     }
@@ -196,33 +203,33 @@ export default function InvestorDocumentsPage() {
       <InvestorWorkflowGuide currentSection="documents" />
 
       <div>
-        <h1 className="text-2xl font-semibold">Investor Documents</h1>
+        <h1 className="text-2xl font-semibold">{t("documents.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Manage the investor KYC document vault, review queue, and expiry visibility.
+          {t("documents.description")}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Investors</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{investors.length}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Documents</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.totalDocs}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Pending Review</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.pendingDocs}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Expired / Missing</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.expiredDocs + summary.missingSlots}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.investors")}</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{investors.length}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.documents")}</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.totalDocs}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("documents.pendingReview")}</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.pendingDocs}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("documents.expiredMissing")}</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{summary.expiredDocs + summary.missingSlots}</CardContent></Card>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Upload / Replace Document</CardTitle>
+          <CardTitle className="text-base">{t("documents.uploadTitle")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <div className="space-y-1">
-              <Label>Investor</Label>
+              <Label>{t("common.investor")}</Label>
               <select
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={selectedInvestorId}
                 onChange={(event) => setSelectedInvestorId(event.target.value)}
               >
-                <option value="">Select investor</option>
+                <option value="">{t("common.selectInvestor")}</option>
                 {investors.map((investor) => (
                   <option key={investor.id} value={investor.id}>
                     {investor.name} ({investor.code})
@@ -231,61 +238,61 @@ export default function InvestorDocumentsPage() {
               </select>
             </div>
             <div className="space-y-1">
-              <Label>Document Type</Label>
+              <Label>{t("documents.documentType")}</Label>
               <select
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={selectedType}
                 onChange={(event) => setSelectedType(event.target.value)}
               >
-                <option value="">Select document type</option>
+                <option value="">{t("documents.selectDocumentType")}</option>
                 {requiredTypes.map((type) => (
-                  <option key={type} value={type}>{type}</option>
+                  <option key={type} value={type}>{enumLabel("documentTypes", type)}</option>
                 ))}
               </select>
             </div>
             <div className="space-y-1">
-              <Label>File</Label>
+              <Label>{t("common.file")}</Label>
               <Input type="file" onChange={(event) => setFile(event.target.files?.[0] || null)} />
             </div>
             <div className="space-y-1">
-              <Label>Document Number</Label>
+              <Label>{t("documents.documentNumber")}</Label>
               <Input value={documentNumber} onChange={(event) => setDocumentNumber(event.target.value)} />
             </div>
             <div className="space-y-1">
-              <Label>Issued At</Label>
+              <Label>{t("documents.issuedAt")}</Label>
               <Input type="date" value={issuedAt} onChange={(event) => setIssuedAt(event.target.value)} />
             </div>
             <div className="space-y-1">
-              <Label>Expires At</Label>
+              <Label>{t("documents.expiresAt")}</Label>
               <Input type="date" value={expiresAt} onChange={(event) => setExpiresAt(event.target.value)} />
             </div>
           </div>
           <div className="space-y-1">
-            <Label>Upload Note</Label>
+            <Label>{t("documents.uploadNote")}</Label>
             <Textarea value={note} onChange={(event) => setNote(event.target.value)} />
           </div>
           <Button onClick={() => void uploadDocument()} disabled={saving}>
-            {saving ? "Saving..." : "Upload Document"}
+            {saving ? t("common.saving") : t("documents.upload")}
           </Button>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Document Registry</CardTitle>
+          <CardTitle className="text-base">{t("documents.registry")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex flex-wrap gap-2">
             <Input
-              placeholder="Search investor..."
+              placeholder={t("common.searchInvestor")}
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               className="w-full sm:max-w-md"
             />
-            <Button variant="outline" onClick={() => void load(search)}>Search</Button>
+            <Button variant="outline" onClick={() => void load(search)}>{t("common.search")}</Button>
           </div>
 
-          {loading ? <p className="text-sm text-muted-foreground">Loading...</p> : null}
+          {loading ? <p className="text-sm text-muted-foreground">{t("common.loading")}</p> : null}
 
           <div className="space-y-4">
             {investors.map((investor) => (
@@ -294,46 +301,55 @@ export default function InvestorDocumentsPage() {
                   <div>
                     <p className="font-medium">{investor.name} ({investor.code})</p>
                     <p className="text-sm text-muted-foreground">
-                      KYC: {investor.kycStatus} {investor.kycVerifiedAt ? `• Verified ${fmtDate(investor.kycVerifiedAt)}` : ""}
+                      {t("documents.kycLine", {
+                        status: enumLabel("kycStatuses", investor.kycStatus),
+                        verification: investor.kycVerifiedAt
+                          ? t("documents.verifiedAt", { date: fmtDate(investor.kycVerifiedAt, locale) })
+                          : "",
+                      })}
                     </p>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Missing: {investor.missingDocumentTypes.length > 0 ? investor.missingDocumentTypes.join(", ") : "None"}
+                    {t("documents.missing", {
+                      types: investor.missingDocumentTypes.length > 0
+                        ? investor.missingDocumentTypes.map((type) => enumLabel("documentTypes", type)).join(", ")
+                        : t("common.none"),
+                    })}
                   </div>
                 </div>
 
                 {investor.kycStatus === "UNDER_REVIEW" &&
                 investor.documents.some((document) => document.status === "UNDER_REVIEW") ? (
                   <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-                    KYC is under review because approved profile changes reopened supporting documents for verification.
+                    {t("documents.kycReviewNotice")}
                   </div>
                 ) : null}
 
                 <div className="mt-4 grid gap-3 lg:grid-cols-2">
                   {investor.documents.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No documents uploaded yet.</p>
+                    <p className="text-sm text-muted-foreground">{t("documents.noDocuments")}</p>
                   ) : investor.documents.map((document) => (
                     <div key={document.id} className="rounded-md border p-3">
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
-                          <p className="font-medium">{document.type}</p>
+                          <p className="font-medium">{enumLabel("documentTypes", document.type)}</p>
                           <p className="break-all text-xs text-muted-foreground">
-                            {document.fileName || "Uploaded file"} • {document.status}
+                            {document.fileName || t("documents.uploadedFile")} • {enumLabel("documentStatuses", document.status)}
                           </p>
                         </div>
                         <a href={document.fileUrl} target="_blank" rel="noreferrer" className="shrink-0 text-sm text-primary underline">
-                          View
+                          {t("common.view")}
                         </a>
                       </div>
                       <div className="mt-2 grid gap-1 break-words text-xs text-muted-foreground">
-                        <div>Uploaded: {fmtDate(document.createdAt)}</div>
-                        <div>Expires: {fmtDate(document.expiresAt)}</div>
-                        <div>Reviewed: {fmtDate(document.reviewedAt)}</div>
-                        {document.reviewNote ? <div>Note: {document.reviewNote}</div> : null}
+                        <div>{t("documents.uploadedAt", { date: fmtDate(document.createdAt, locale) })}</div>
+                        <div>{t("documents.expiresAtValue", { date: fmtDate(document.expiresAt, locale) })}</div>
+                        <div>{t("documents.reviewedAt", { date: fmtDate(document.reviewedAt, locale) })}</div>
+                        {document.reviewNote ? <div>{t("common.noteValue", { note: document.reviewNote })}</div> : null}
                       </div>
                       <Textarea
                         className="mt-3"
-                        placeholder="Review note"
+                        placeholder={t("documents.reviewNote")}
                         value={reviewNotes[document.id] ?? document.reviewNote ?? ""}
                         onChange={(event) =>
                           setReviewNotes((current) => ({ ...current, [document.id]: event.target.value }))
@@ -341,13 +357,13 @@ export default function InvestorDocumentsPage() {
                       />
                       <div className="mt-3 flex flex-wrap gap-2">
                         <Button size="sm" onClick={() => void reviewDocument(document.id, "verify")} disabled={saving}>
-                          Verify
+                          {t("common.verify")}
                         </Button>
                         <Button size="sm" variant="outline" onClick={() => void reviewDocument(document.id, "reopen")} disabled={saving}>
-                          Reopen
+                          {t("common.reopen")}
                         </Button>
                         <Button size="sm" variant="destructive" onClick={() => void reviewDocument(document.id, "reject")} disabled={saving}>
-                          Reject
+                          {t("common.reject")}
                         </Button>
                       </div>
                     </div>
@@ -356,7 +372,7 @@ export default function InvestorDocumentsPage() {
               </div>
             ))}
             {!loading && investors.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No investors found.</p>
+              <p className="text-sm text-muted-foreground">{t("common.noInvestors")}</p>
             ) : null}
           </div>
         </CardContent>

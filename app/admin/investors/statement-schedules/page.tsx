@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,14 +37,16 @@ type ScheduleRow = {
   } | null;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "N/A";
-  return parsed.toLocaleString();
+  if (Number.isNaN(parsed.getTime())) return "—";
+  return parsed.toLocaleString(locale);
 }
 
 export default function InvestorStatementSchedulesPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [investors, setInvestors] = useState<InvestorOption[]>([]);
   const [rows, setRows] = useState<ScheduleRow[]>([]);
@@ -81,10 +84,10 @@ export default function InvestorStatementSchedulesPage() {
       const schedulePayload = await scheduleRes.json().catch(() => ({}));
 
       if (!investorRes.ok) {
-        throw new Error(investorPayload?.error || "Failed to load investors.");
+        throw new Error(t("errors.loadInvestors"));
       }
       if (!scheduleRes.ok) {
-        throw new Error(schedulePayload?.error || "Failed to load statement schedules.");
+        throw new Error(t("errors.loadSchedules"));
       }
 
       setInvestors(
@@ -95,8 +98,8 @@ export default function InvestorStatementSchedulesPage() {
         })),
       );
       setRows((schedulePayload?.schedules || []) as ScheduleRow[]);
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load statement schedules.");
+    } catch {
+      toast.error(t("errors.loadSchedules"));
     } finally {
       setLoading(false);
     }
@@ -126,17 +129,17 @@ export default function InvestorStatementSchedulesPage() {
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to create schedule.");
+        throw new Error(t("errors.createSchedule"));
       }
-      toast.success("Statement schedule created");
+      toast.success(t("success.scheduleCreated"));
       setForm((current) => ({
         ...current,
         investorId: "",
         nextRunAt: "",
       }));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to create schedule.");
+    } catch {
+      toast.error(t("errors.createSchedule"));
     }
   };
 
@@ -150,18 +153,18 @@ export default function InvestorStatementSchedulesPage() {
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(payload?.error || `Failed to ${action} schedule.`);
+        throw new Error(t("errors.scheduleAction"));
       }
       toast.success(
         action === "run-now"
-          ? "Scheduled statement dispatched"
+          ? t("success.scheduleDispatched")
           : action === "pause"
-            ? "Schedule paused"
-            : "Schedule resumed",
+            ? t("success.schedulePaused")
+            : t("success.scheduleResumed"),
       );
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || `Failed to ${action} schedule.`);
+    } catch {
+      toast.error(t("errors.scheduleAction"));
     } finally {
       setActingId(null);
     }
@@ -172,16 +175,16 @@ export default function InvestorStatementSchedulesPage() {
       <InvestorWorkflowGuide currentSection="statement-schedules" />
 
       <div className="space-y-1">
-        <h1 className="text-2xl font-semibold">Investor Statement Schedules</h1>
+        <h1 className="text-2xl font-semibold">{t("schedules.title")}</h1>
         <p className="text-sm text-muted-foreground">
-          Manage recurring investor statement dispatches and clear due schedule backlog.
+          {t("schedules.description")}
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Active Schedules</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("schedules.active")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-3xl font-semibold">{rows.filter((item) => item.status === "ACTIVE").length}</p>
@@ -189,7 +192,7 @@ export default function InvestorStatementSchedulesPage() {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Due Now</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("schedules.dueNow")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-3xl font-semibold">{dueCount}</p>
@@ -197,7 +200,7 @@ export default function InvestorStatementSchedulesPage() {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Portal Ready</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">{t("schedules.portalReady")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-3xl font-semibold">{rows.filter((item) => item.investor?.hasActivePortalAccess).length}</p>
@@ -207,19 +210,19 @@ export default function InvestorStatementSchedulesPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Create Schedule</CardTitle>
+          <CardTitle className="text-base">{t("schedules.createTitle")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-5">
             <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="schedule-investor">Investor</Label>
+              <Label htmlFor="schedule-investor">{t("common.investor")}</Label>
               <select
                 id="schedule-investor"
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={form.investorId}
                 onChange={(event) => setForm((current) => ({ ...current, investorId: event.target.value }))}
               >
-                <option value="">Select investor</option>
+                <option value="">{t("common.selectInvestor")}</option>
                 {investors.map((item) => (
                   <option key={item.id} value={item.id}>
                     {item.name} ({item.code})
@@ -228,20 +231,20 @@ export default function InvestorStatementSchedulesPage() {
               </select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="schedule-frequency">Frequency</Label>
+              <Label htmlFor="schedule-frequency">{t("schedules.frequency")}</Label>
               <select
                 id="schedule-frequency"
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={form.frequency}
                 onChange={(event) => setForm((current) => ({ ...current, frequency: event.target.value }))}
               >
-                <option value="WEEKLY">WEEKLY</option>
-                <option value="MONTHLY">MONTHLY</option>
-                <option value="QUARTERLY">QUARTERLY</option>
+                <option value="WEEKLY">{t("enums.frequencies.WEEKLY")}</option>
+                <option value="MONTHLY">{t("enums.frequencies.MONTHLY")}</option>
+                <option value="QUARTERLY">{t("enums.frequencies.QUARTERLY")}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="schedule-format">Format</Label>
+              <Label htmlFor="schedule-format">{t("schedules.format")}</Label>
               <select
                 id="schedule-format"
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
@@ -250,11 +253,11 @@ export default function InvestorStatementSchedulesPage() {
               >
                 <option value="PDF">PDF</option>
                 <option value="CSV">CSV</option>
-                <option value="BOTH">BOTH</option>
+                <option value="BOTH">{t("enums.deliveryFormats.BOTH")}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="schedule-window">Window Days</Label>
+              <Label htmlFor="schedule-window">{t("schedules.windowDays")}</Label>
               <Input
                 id="schedule-window"
                 value={form.statementWindowDays}
@@ -266,7 +269,7 @@ export default function InvestorStatementSchedulesPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-[240px,auto]">
             <div className="space-y-2">
-              <Label htmlFor="schedule-next-run">First Run At</Label>
+              <Label htmlFor="schedule-next-run">{t("schedules.firstRunAt")}</Label>
               <Input
                 id="schedule-next-run"
                 type="datetime-local"
@@ -276,7 +279,7 @@ export default function InvestorStatementSchedulesPage() {
             </div>
             <div className="flex items-end justify-end">
               <Button onClick={() => void createSchedule()} disabled={!form.investorId}>
-                Create Schedule
+                {t("schedules.create")}
               </Button>
             </div>
           </div>
@@ -285,29 +288,29 @@ export default function InvestorStatementSchedulesPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Schedule Queue</CardTitle>
+          <CardTitle className="text-base">{t("schedules.queue")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-3">
             <div className="space-y-2">
-              <Label htmlFor="status-filter">Status</Label>
+              <Label htmlFor="status-filter">{t("common.status")}</Label>
               <select
                 id="status-filter"
                 className="h-10 w-full rounded-md border bg-background px-3 text-sm"
                 value={statusFilter}
                 onChange={(event) => setStatusFilter(event.target.value)}
               >
-                <option value="">All statuses</option>
-                <option value="ACTIVE">ACTIVE</option>
-                <option value="PAUSED">PAUSED</option>
+                <option value="">{t("common.allStatuses")}</option>
+                <option value="ACTIVE">{t("enums.scheduleStatuses.ACTIVE")}</option>
+                <option value="PAUSED">{t("enums.scheduleStatuses.PAUSED")}</option>
               </select>
             </div>
             <div className="flex items-end gap-2">
               <Button variant={dueOnly ? "default" : "outline"} onClick={() => setDueOnly((current) => !current)}>
-                {dueOnly ? "Showing Due Only" : "Due Only"}
+                {dueOnly ? t("schedules.showingDueOnly") : t("schedules.dueOnly")}
               </Button>
               <Button variant="outline" onClick={() => void load()} disabled={loading}>
-                Refresh
+                {t("common.refresh")}
               </Button>
             </div>
           </div>
@@ -316,15 +319,15 @@ export default function InvestorStatementSchedulesPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Investor</TableHead>
-                  <TableHead>Frequency</TableHead>
-                  <TableHead>Format</TableHead>
-                  <TableHead>Window</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Next Run</TableHead>
-                  <TableHead>Last Dispatch</TableHead>
-                  <TableHead>Portal</TableHead>
-                  <TableHead>Actions</TableHead>
+                  <TableHead>{t("common.investor")}</TableHead>
+                  <TableHead>{t("schedules.frequency")}</TableHead>
+                  <TableHead>{t("schedules.format")}</TableHead>
+                  <TableHead>{t("schedules.window")}</TableHead>
+                  <TableHead>{t("common.status")}</TableHead>
+                  <TableHead>{t("schedules.nextRun")}</TableHead>
+                  <TableHead>{t("schedules.lastDispatch")}</TableHead>
+                  <TableHead>{t("schedules.portal")}</TableHead>
+                  <TableHead>{t("common.actions")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -338,25 +341,25 @@ export default function InvestorStatementSchedulesPage() {
                             {item.investor.name} ({item.investor.code})
                           </Link>
                         ) : (
-                          "Unknown investor"
+                          t("common.unknownInvestor")
                         )}
                       </TableCell>
-                      <TableCell>{item.frequency}</TableCell>
-                      <TableCell>{item.deliveryFormat}</TableCell>
-                      <TableCell>{item.statementWindowDays} days</TableCell>
+                      <TableCell>{t(`enums.frequencies.${item.frequency}` as any)}</TableCell>
+                      <TableCell>{item.deliveryFormat === "BOTH" ? t("enums.deliveryFormats.BOTH") : item.deliveryFormat}</TableCell>
+                      <TableCell>{t("schedules.days", { count: item.statementWindowDays })}</TableCell>
                       <TableCell>
                         <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${
                           item.status === "ACTIVE" ? "bg-green-100 text-green-800" : "bg-slate-100 text-slate-700"
                         }`}>
-                          {item.status}
+                          {t(`enums.scheduleStatuses.${item.status}` as any)}
                         </span>
                       </TableCell>
                       <TableCell>
-                        <div>{fmtDate(item.nextRunAt)}</div>
-                        {due ? <div className="text-xs text-amber-700">Due now</div> : null}
+                        <div>{fmtDate(item.nextRunAt, locale)}</div>
+                        {due ? <div className="text-xs text-amber-700">{t("schedules.dueNow")}</div> : null}
                       </TableCell>
-                      <TableCell>{fmtDate(item.lastDispatchedAt)}</TableCell>
-                      <TableCell>{item.investor?.hasActivePortalAccess ? "Ready" : "Missing"}</TableCell>
+                      <TableCell>{fmtDate(item.lastDispatchedAt, locale)}</TableCell>
+                      <TableCell>{item.investor?.hasActivePortalAccess ? t("common.ready") : t("common.missing")}</TableCell>
                       <TableCell>
                         <div className="flex flex-wrap gap-2">
                           {item.status === "ACTIVE" ? (
@@ -366,7 +369,7 @@ export default function InvestorStatementSchedulesPage() {
                               onClick={() => void processAction(item.id, "pause")}
                               disabled={actingId === item.id}
                             >
-                              Pause
+                              {t("common.pause")}
                             </Button>
                           ) : (
                             <Button
@@ -375,7 +378,7 @@ export default function InvestorStatementSchedulesPage() {
                               onClick={() => void processAction(item.id, "resume")}
                               disabled={actingId === item.id}
                             >
-                              Resume
+                              {t("common.resume")}
                             </Button>
                           )}
                           <Button
@@ -383,7 +386,7 @@ export default function InvestorStatementSchedulesPage() {
                             onClick={() => void processAction(item.id, "run-now")}
                             disabled={actingId === item.id || item.status !== "ACTIVE"}
                           >
-                            Run Now
+                            {t("schedules.runNow")}
                           </Button>
                         </div>
                       </TableCell>
@@ -393,7 +396,7 @@ export default function InvestorStatementSchedulesPage() {
                 {!loading && rows.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={9} className="text-center text-sm text-muted-foreground">
-                      No investor statement schedules matched the current filters.
+                      {t("schedules.empty")}
                     </TableCell>
                   </TableRow>
                 ) : null}

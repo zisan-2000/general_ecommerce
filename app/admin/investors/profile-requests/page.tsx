@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -37,14 +38,20 @@ type Payload = {
   }>;
 };
 
-function fmtDate(value?: string | null) {
-  if (!value) return "N/A";
+function fmtDate(value: string | null | undefined, locale: string) {
+  if (!value) return "—";
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "N/A";
-  return date.toLocaleString();
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString(locale);
 }
 
 export default function InvestorProfileRequestsPage() {
+  const t = useTranslations("AdminInvestors.pages");
+  const locale = useLocale();
+  const fieldLabel = (value: string) => {
+    const key = `enums.profileFields.${value}` as any;
+    return t.has(key) ? t(key) : value;
+  };
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState("PENDING");
   const [search, setSearch] = useState("");
@@ -64,11 +71,11 @@ export default function InvestorProfileRequestsPage() {
       );
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to load investor profile requests.");
+        throw new Error(t("errors.loadProfileRequests"));
       }
       setData(payload as Payload);
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to load investor profile requests.");
+    } catch {
+      toast.error(t("errors.loadProfileRequests"));
     } finally {
       setLoading(false);
     }
@@ -91,12 +98,12 @@ export default function InvestorProfileRequestsPage() {
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(payload?.error || "Failed to review profile request.");
+        throw new Error(t("errors.reviewProfileRequest"));
       }
-      toast.success(action === "approve" ? "Request approved." : "Request rejected.");
+      toast.success(action === "approve" ? t("success.requestApproved") : t("success.requestRejected"));
       await load();
-    } catch (error: any) {
-      toast.error(error?.message || "Failed to review profile request.");
+    } catch {
+      toast.error(t("errors.reviewProfileRequest"));
     } finally {
       setWorkingId(null);
     }
@@ -108,28 +115,28 @@ export default function InvestorProfileRequestsPage() {
 
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold">Investor Profile Requests</h1>
+          <h1 className="text-2xl font-semibold">{t("profileRequests.title")}</h1>
           <p className="text-sm text-muted-foreground">
-            Review portal-submitted identity and beneficiary update requests.
+            {t("profileRequests.description")}
           </p>
         </div>
         <div className="flex w-full flex-wrap gap-2 sm:w-auto">
           <Input
-            placeholder="Search investor"
+            placeholder={t("common.searchInvestor")}
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             className="w-full sm:w-56"
           />
           <Button variant="outline" onClick={() => void load()}>
-            Refresh
+            {t("common.refresh")}
           </Button>
         </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Pending</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.pending ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Approved</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.approved ?? 0}</CardContent></Card>
-        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">Rejected</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.rejected ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.pending")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.pending ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.approved")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.approved ?? 0}</CardContent></Card>
+        <Card><CardHeader className="pb-2"><CardTitle className="text-sm font-medium text-muted-foreground">{t("common.rejected")}</CardTitle></CardHeader><CardContent className="text-2xl font-semibold">{data?.summary.rejected ?? 0}</CardContent></Card>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -139,19 +146,19 @@ export default function InvestorProfileRequestsPage() {
             variant={status === value ? "default" : "outline"}
             onClick={() => setStatus(value)}
           >
-            {value || "ALL"}
+            {value ? t(`enums.requestStatuses.${value}` as any) : t("common.all")}
           </Button>
         ))}
       </div>
 
-      {loading ? <p className="text-sm text-muted-foreground">Loading requests...</p> : null}
+      {loading ? <p className="text-sm text-muted-foreground">{t("profileRequests.loading")}</p> : null}
 
       {!loading && data ? (
         <div className="space-y-4">
           {data.rows.length === 0 ? (
             <Card>
               <CardContent className="py-6 text-sm text-muted-foreground">
-                No investor profile requests found.
+                {t("profileRequests.empty")}
               </CardContent>
             </Card>
           ) : (
@@ -160,27 +167,27 @@ export default function InvestorProfileRequestsPage() {
                 <CardHeader>
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <CardTitle className="text-base">
-                      Request #{row.id} • {row.investor.name}
+                      {t("profileRequests.requestTitle", { id: row.id, investor: row.investor.name })}
                     </CardTitle>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">{row.status}</span>
+                      <span className="text-xs text-muted-foreground">{t(`enums.requestStatuses.${row.status}` as any)}</span>
                       <Button size="sm" variant="outline" asChild>
-                        <Link href={`/admin/investors/${row.investor.id}`}>Open Investor</Link>
+                        <Link href={`/admin/investors/${row.investor.id}`}>{t("common.openInvestor")}</Link>
                       </Button>
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    {row.investor.code} • Submitted {fmtDate(row.submittedAt)} • KYC {row.investor.kycStatus}
+                    {t("profileRequests.meta", { code: row.investor.code, submitted: fmtDate(row.submittedAt, locale), kyc: t(`enums.kycStatuses.${row.investor.kycStatus}` as any) })}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  {row.requestNote ? <p className="text-sm">Request note: {row.requestNote}</p> : null}
+                  {row.requestNote ? <p className="text-sm">{t("profileRequests.requestNote", { note: row.requestNote })}</p> : null}
                   <div className="rounded-md border p-3 text-sm">
-                    <p className="mb-2 font-medium">Requested Changes</p>
+                    <p className="mb-2 font-medium">{t("profileRequests.requestedChanges")}</p>
                     <div className="space-y-1 text-muted-foreground">
                       {Object.entries(row.requestedChanges || {}).map(([key, value]) => (
                         <div key={key}>
-                          {key}: {String(value ?? "") || "N/A"}
+                          {fieldLabel(key)}: {String(value ?? "") || "—"}
                         </div>
                       ))}
                     </div>
@@ -188,7 +195,7 @@ export default function InvestorProfileRequestsPage() {
                   {row.status === "PENDING" ? (
                     <div className="space-y-2">
                       <div className="space-y-1">
-                        <Label>Review Note</Label>
+                        <Label>{t("common.reviewNote")}</Label>
                         <Textarea
                           value={reviewNotes[row.id] || ""}
                           onChange={(event) =>
@@ -206,7 +213,7 @@ export default function InvestorProfileRequestsPage() {
                           onClick={() => void review(row.id, "approve")}
                           disabled={workingId === row.id}
                         >
-                          Approve
+                          {t("common.approve")}
                         </Button>
                         <Button
                           size="sm"
@@ -215,12 +222,12 @@ export default function InvestorProfileRequestsPage() {
                           onClick={() => void review(row.id, "reject")}
                           disabled={workingId === row.id}
                         >
-                          Reject
+                          {t("common.reject")}
                         </Button>
                       </div>
                     </div>
                   ) : row.reviewNote ? (
-                    <p className="text-sm text-muted-foreground">Review note: {row.reviewNote}</p>
+                    <p className="text-sm text-muted-foreground">{t("common.reviewNoteValue", { note: row.reviewNote })}</p>
                   ) : null}
                 </CardContent>
               </Card>
