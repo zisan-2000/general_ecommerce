@@ -29,7 +29,8 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { useMessages } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
+import { getLocaleDirection } from "@/i18n/config";
 
 type TranslateLabel = (label: string) => string;
 
@@ -1137,7 +1138,10 @@ export default function Sidebar({
   onClose?: () => void;
 }) {
   const pathname = usePathname();
+  const locale = useLocale();
   const messages = useMessages();
+  const direction = getLocaleDirection(locale);
+  const isRtl = direction === "rtl";
   const { data: session } = useSession();
   const [siteSettings, setSiteSettings] = useState<any>(null);
   const [enabledFeatures, setEnabledFeatures] = useState<Set<string>>(() => new Set());
@@ -1316,7 +1320,7 @@ export default function Sidebar({
 
   if (isMobile) {
     return (
-      <div className={cn("h-full w-[86vw] max-w-80 flex flex-col", themeBg)}>
+      <div dir={direction} className={cn("h-full w-[86vw] max-w-80 flex flex-col", themeBg)}>
         {/* Modern Header */}
         <div className="h-20 flex flex-col items-center justify-center border-b border-border px-4">
           <div className="text-center">
@@ -1343,8 +1347,10 @@ export default function Sidebar({
   // Desktop Sidebar
   return (
     <aside
+      dir={direction}
       className={cn(
-        "w-60 shadow-lg h-screen fixed left-0 top-0 border-r flex flex-col",
+        "w-60 shadow-lg h-screen fixed top-0 flex flex-col",
+        isRtl ? "right-0 left-auto border-l" : "left-0 right-auto border-r",
         themeBg,
         themeBorder,
       )}

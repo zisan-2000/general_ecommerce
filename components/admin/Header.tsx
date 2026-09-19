@@ -29,6 +29,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import {
+  getLocaleDirection,
   localeCookieName,
   type AppLocale,
 } from "@/i18n/config";
@@ -40,6 +41,10 @@ const THEME_OPTIONS = [
 
 const LANGUAGE_OPTIONS = [
   { value: "en", label: "English", shortLabel: "EN" },
+  { value: "zh", label: "中文", shortLabel: "中文" },
+  { value: "ar", label: "العربية", shortLabel: "AR" },
+  { value: "ne", label: "नेपाली", shortLabel: "NE" },
+  { value: "id", label: "Bahasa Indonesia", shortLabel: "ID" },
   { value: "bn", label: "বাংলা", shortLabel: "BN" },
 ] as const;
 
@@ -233,6 +238,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
     document.cookie = `${localeCookieName}=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
     document.documentElement.lang = nextLocale;
+    document.documentElement.dir = getLocaleDirection(nextLocale);
     router.refresh();
   };
 

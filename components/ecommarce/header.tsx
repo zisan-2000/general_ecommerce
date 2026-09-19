@@ -21,6 +21,7 @@ import { useTheme } from "next-themes";
 import { useLocale } from "next-intl";
 
 import {
+  getLocaleDirection,
   localeCookieName,
   type AppLocale,
 } from "@/i18n/config";
@@ -99,6 +100,10 @@ const THEME_OPTIONS = [
 
 const LANGUAGE_OPTIONS = [
   { value: "en", label: "English", shortLabel: "EN" },
+  { value: "zh", label: "中文", shortLabel: "中文" },
+  { value: "ar", label: "العربية", shortLabel: "AR" },
+  { value: "ne", label: "नेपाली", shortLabel: "NE" },
+  { value: "id", label: "Bahasa Indonesia", shortLabel: "ID" },
   { value: "bn", label: "বাংলা", shortLabel: "BN" },
 ] as const;
 
@@ -714,6 +719,7 @@ export default function Header({
 
     document.cookie = `${localeCookieName}=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
     document.documentElement.lang = nextLocale;
+    document.documentElement.dir = getLocaleDirection(nextLocale);
     router.refresh();
   };
 

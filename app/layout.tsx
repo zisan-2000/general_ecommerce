@@ -31,6 +31,7 @@ import {
   STORE_FEATURE_KEYS,
   type StoreFeatureKey,
 } from "@/lib/store-features";
+import { getLocaleDirection } from "@/i18n/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -149,7 +150,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} dir={getLocaleDirection(locale)} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${syne.variable} ${lexend.variable} antialiased min-h-screen flex flex-col`}

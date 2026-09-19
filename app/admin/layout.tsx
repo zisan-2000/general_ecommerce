@@ -3,6 +3,7 @@
 import { SidebarProvider, useSidebar } from "@/providers/sidebar-provider";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 import { useEffect } from "react";
 import Sidebar from "@/components/admin/Sidebar";
 import Header from "@/components/admin/Header";
@@ -10,10 +11,11 @@ import {
   getDashboardRoute,
   isDeliveryAdminShellRoute,
 } from "@/lib/dashboard-route";
+import { getLocaleDirection } from "@/i18n/config";
 
-function AdminLoadingShell() {
+function AdminLoadingShell({ direction }: { direction: "ltr" | "rtl" }) {
   return (
-    <div className="flex min-h-screen bg-background">
+    <div dir={direction} className="flex min-h-screen bg-background">
       <div className="hidden lg:block lg:w-60 bg-card border-r border-border">
         <div className="p-6 space-y-6">
           <div className="h-10 bg-muted rounded-lg animate-pulse" />
@@ -86,8 +88,11 @@ function AdminLoadingShell() {
 function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   const { openMobile, toggleSidebar, setOpenMobile } = useSidebar();
   const { data: session, status } = useSession();
+  const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const contentDirection = getLocaleDirection(locale);
+  const isRtl = contentDirection === "rtl";
   const permissionKeys = Array.isArray((session?.user as any)?.permissions)
     ? (((session?.user as any).permissions as string[]) ?? [])
     : [];
@@ -143,11 +148,11 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
     status === "unauthenticated" ||
     (status === "authenticated" && (!canUseAdminLayout || shouldRedirectAdminRoot))
   ) {
-    return <AdminLoadingShell />;
+    return <AdminLoadingShell direction={contentDirection} />;
   }
 
   return (
-    <div className="flex min-h-screen bg-background relative">
+    <div dir={contentDirection} className="flex min-h-screen bg-background relative">
       <style>{`
         .rbac-hide-dashboard-links a[href="/admin"],
         .rbac-hide-dashboard-links a[href="/admin/analytics"] {
@@ -166,7 +171,13 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
         />
       )}
 
-      <div className={`fixed inset-y-0 left-0 transform ${openMobile ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out z-30 lg:hidden ${limitedOverviewClass}`}>
+      <div
+        className={`fixed inset-y-0 transform ${
+          isRtl
+            ? `right-0 left-auto ${openMobile ? "translate-x-0" : "translate-x-full"}`
+            : `left-0 right-auto ${openMobile ? "translate-x-0" : "-translate-x-full"}`
+        } transition-transform duration-300 ease-in-out z-30 lg:hidden ${limitedOverviewClass}`}
+      >
         <Sidebar isMobile onClose={() => setOpenMobile(false)} />
       </div>
 
