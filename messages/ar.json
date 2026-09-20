@@ -9347,6 +9347,41 @@
       }
     }
   },
+  "StorefrontShell": {
+    "header": {
+      "logoAlt": "شعار المتجر", "user": "المستخدم",
+      "search": { "placeholder": "ابحث عن المنتجات أو العلامات التجارية أو الطرازات...", "label": "بحث", "mobilePlaceholder": "بحث...", "open": "فتح البحث", "close": "إغلاق البحث", "unavailable": "البحث غير متاح مؤقتًا. اضغط Enter لعرض النتائج." },
+      "changeLanguage": "تغيير اللغة",
+      "theme": { "select": "اختيار السمة", "label": "السمة", "light": "فاتح", "dark": "داكن" },
+      "wishlist": "قائمة الرغبات", "cart": "السلة", "profile": "الملف الشخصي", "account": "الحساب", "dashboard": "لوحة المعلومات", "logout": "تسجيل الخروج", "login": "تسجيل الدخول", "signOut": "تسجيل الخروج", "blog": "المدونة", "shopShortcuts": "اختصارات التسوق",
+      "menu": { "open": "فتح القائمة", "close": "إغلاق القائمة", "closeOverlay": "إغلاق طبقة القائمة", "more": "المزيد" },
+      "categories": { "loading": "جارٍ التحميل...", "empty": "لم يتم العثور على فئات.", "noSubcategories": "لا توجد فئات فرعية.", "noChildCategories": "لا توجد فئات تابعة.", "collapse": "طي {name}", "expand": "توسيع {name}", "scrollPrevious": "تمرير الفئات إلى اليسار", "scrollNext": "تمرير الفئات إلى اليمين", "explore": "استكشاف الفئة", "viewAll": "عرض الكل", "subcategories": "فئات {name} الفرعية" },
+      "shopActions": {
+        "flashSale": { "label": "تخفيضات سريعة", "description": "عرض العروض النشطة محدودة الوقت" },
+        "compare": { "label": "مقارنة", "description": "مقارنة المنتجات المحددة" },
+        "books": { "label": "الكتب", "description": "تصفح مجموعة الكتب" },
+        "authors": { "label": "المؤلفون", "description": "تصفح الكتب حسب المؤلف" },
+        "publishers": { "label": "دور النشر", "description": "تصفح الكتب حسب دار النشر" },
+        "pcBuilder": { "label": "تجميع الكمبيوتر", "description": "أنشئ كمبيوتر مكتبيًا مخصصًا ومتوافقًا" }
+      }
+    },
+    "search": { "suggestions": "اقتراحات البحث", "searching": "جارٍ البحث عن المنتجات...", "noMatch": "لم يتم العثور على منتج مطابق", "noMatchHint": "تحقق من الإملاء أو ابحث بالعلامة التجارية أو الطراز أو SKU أو الفئة.", "products": "المنتجات", "inStock": "متوفر", "outOfStock": "غير متوفر", "categories": "الفئات", "brands": "العلامات التجارية", "popularSearches": "عمليات البحث الشائعة", "viewAllResults": "عرض جميع نتائج “{query}”" },
+    "footer": {
+      "logoAlt": "شعار المتجر",
+      "features": {
+        "delivery": { "label": "توصيل سريع", "description": "خيارات توصيل في جميع أنحاء البلاد" },
+        "ordering": { "label": "طلب عبر الإنترنت", "description": "اطلب على مدار الساعة" },
+        "payment": { "label": "دفع آمن", "description": "عملية دفع محمية" },
+        "authentic": { "label": "أصلي 100%", "description": "منتجات أصلية مضمونة" }
+      },
+      "brand": { "defaultTagline": "منتجات عالية الجودة وتسوق آمن وخدمة موثوقة", "defaultDescription": "اكتشف منتجات عالية الجودة بمعلومات واضحة ودفع آمن وتوصيل موثوق." },
+      "contact": { "callUs": "اتصل بنا", "emailUs": "راسلنا بالبريد", "address": "العنوان", "phoneUnavailable": "رقم الاتصال غير مُعد", "emailUnavailable": "بريد الاتصال غير مُعد", "addressUnavailable": "عنوان النشاط التجاري غير مُعد" },
+      "sections": { "quickLinks": "روابط سريعة", "categories": "الفئات", "customerService": "خدمة العملاء" },
+      "links": { "allProducts": "جميع المنتجات", "flashSale": "تخفيضات سريعة", "blogs": "المدونات", "bestsellers": "الأكثر مبيعًا", "about": "من نحن", "contact": "اتصل بنا", "shippingPolicy": "سياسة الشحن", "returnPolicy": "سياسة الإرجاع", "privacyPolicy": "سياسة الخصوصية", "faq": "الأسئلة الشائعة", "terms": "شروط الخدمة", "sitemap": "خريطة الموقع" },
+      "newsletter": { "title": "النشرة الإخبارية", "description": "اشترك في نشرتنا للحصول على آخر التحديثات والعروض الحصرية.", "emailLabel": "عنوان البريد للنشرة الإخبارية", "placeholder": "أدخل بريدك الإلكتروني", "subscribing": "جارٍ الاشتراك...", "subscribe": "اشتراك", "success": "تم الاشتراك بنجاح!", "errors": { "emailRequired": "يرجى إدخال عنوان بريدك الإلكتروني", "invalidOrExists": "هذا البريد غير صالح أو مسجل بالفعل", "failed": "حدث خطأ أثناء الاشتراك", "tryAgain": "حدث خطأ. يرجى المحاولة مرة أخرى." } },
+      "secureTransactions": "معاملات آمنة 100%", "rights": "© {year} {site} جميع الحقوق محفوظة."
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. الطرف المقابل والتسليم",
     "k_97fae3277194": "1. الطرف المقابل والنطاق",

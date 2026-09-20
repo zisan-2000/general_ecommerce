@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { cachedFetchJson } from "@/lib/client-cache-fetch";
 import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
 import {
@@ -93,6 +94,7 @@ export default function Footer({
   siteSettingsData?: SiteSettings;
   categoriesData?: ApiCategory[];
 }) {
+  const t = useTranslations("StorefrontShell.footer");
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [isSubscribing, setIsSubscribing] = useState(false);
@@ -156,7 +158,7 @@ export default function Footer({
     e.preventDefault();
 
     if (!email.trim()) {
-      toast.error("Please enter your email address");
+      toast.error(t("newsletter.errors.emailRequired"));
       return;
     }
 
@@ -172,7 +174,7 @@ export default function Footer({
       const check = await checkRes.json();
 
       if (!check.valid) {
-        toast.error("This email is not valid or already exists");
+        toast.error(t("newsletter.errors.invalidOrExists"));
         setIsSubscribing(false);
         return;
       }
@@ -183,51 +185,49 @@ export default function Footer({
         body: JSON.stringify({ email }),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
-        toast.success("Successfully subscribed!");
+        toast.success(t("newsletter.success"));
         setEmail("");
       } else {
-        toast.error(data.error || "Something went wrong while subscribing");
+        toast.error(t("newsletter.errors.failed"));
       }
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong. Please try again.");
+      toast.error(t("newsletter.errors.tryAgain"));
     } finally {
       setIsSubscribing(false);
     }
   };
 
   const features = [
-    { icon: Truck, label: "Fast Delivery", desc: "Nationwide delivery options" },
-    { icon: Clock, label: "Online Ordering", desc: "Place orders 24/7" },
-    { icon: CreditCard, label: "Secure Payment", desc: "Protected payment flow" },
+    { icon: Truck, label: t("features.delivery.label"), desc: t("features.delivery.description") },
+    { icon: Clock, label: t("features.ordering.label"), desc: t("features.ordering.description") },
+    { icon: CreditCard, label: t("features.payment.label"), desc: t("features.payment.description") },
     {
       icon: Award,
-      label: "100% Authentic",
-      desc: "Guaranteed genuine products",
+      label: t("features.authentic.label"),
+      desc: t("features.authentic.description"),
     },
   ];
 
   const quickLinks = [
-    { href: "/ecommerce/products", label: "All Products" },
-    { href: "/ecommerce/flash-sale", label: "Flash Sale" },
-    { href: "/ecommerce/blogs", label: "Blogs" },
-    { href: "/ecommerce/bestsellers", label: "Bestsellers" },
-    { href: "/ecommerce/about", label: "About Us" },
-    { href: "/ecommerce/contact", label: "Contact Us" },
+    { href: "/ecommerce/products", label: t("links.allProducts") },
+    { href: "/ecommerce/flash-sale", label: t("links.flashSale") },
+    { href: "/ecommerce/blogs", label: t("links.blogs") },
+    { href: "/ecommerce/bestsellers", label: t("links.bestsellers") },
+    { href: "/ecommerce/about", label: t("links.about") },
+    { href: "/ecommerce/contact", label: t("links.contact") },
   ];
 
   const customerService = [
-    { href: "/ecommerce/shipping", label: "Shipping Policy", icon: Truck },
+    { href: "/ecommerce/shipping", label: t("links.shippingPolicy"), icon: Truck },
     {
       href: "/ecommerce/returns",
-      label: "Return Policy",
+      label: t("links.returnPolicy"),
       icon: HeadphonesIcon,
     },
-    { href: "/ecommerce/privacy", label: "Privacy Policy", icon: Shield },
-    { href: "/ecommerce/faq", label: "FAQ", icon: CircleHelp },
+    { href: "/ecommerce/privacy", label: t("links.privacyPolicy"), icon: Shield },
+    { href: "/ecommerce/faq", label: t("links.faq"), icon: CircleHelp },
   ];
 
   const socialLinks = [
@@ -277,7 +277,7 @@ export default function Footer({
                 <div className="bg-primary rounded-2xl text-primary-foreground">
                   <Image
                     src={siteSettings.logo || "/assets/examplelogo.jpg"}
-                    alt="Logo"
+                    alt={t("logoAlt")}
                     width={50}
                     height={50}
                     className="object-contain rounded-2xl"
@@ -291,7 +291,7 @@ export default function Footer({
                   </h3>
                   <p className="text-xs text-muted-foreground">
                     {siteSettings.storeTagline ||
-                      "Quality products, secure shopping and dependable service"}
+                      t("brand.defaultTagline")}
                   </p>
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function Footer({
 
             <p className="text-sm text-muted-foreground leading-relaxed">
               {siteSettings.footerDescription ||
-                "Discover quality products with clear information, secure checkout and dependable delivery."}
+                t("brand.defaultDescription")}
             </p>
 
             <div className="space-y-3">
@@ -308,9 +308,9 @@ export default function Footer({
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Call us</p>
+                  <p className="text-xs text-muted-foreground">{t("contact.callUs")}</p>
                   <p className="text-sm font-medium text-foreground">
-                    {siteSettings.contactNumber || "Contact number not configured"}
+                    {siteSettings.contactNumber || t("contact.phoneUnavailable")}
                   </p>
                 </div>
               </div>
@@ -320,9 +320,9 @@ export default function Footer({
                   <Mail className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Email us</p>
+                  <p className="text-xs text-muted-foreground">{t("contact.emailUs")}</p>
                   <p className="text-sm font-medium text-foreground">
-                    {siteSettings.contactEmail || "Contact email not configured"}
+                    {siteSettings.contactEmail || t("contact.emailUnavailable")}
                   </p>
                 </div>
               </div>
@@ -332,9 +332,9 @@ export default function Footer({
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Address</p>
+                  <p className="text-xs text-muted-foreground">{t("contact.address")}</p>
                   <p className="text-sm font-medium text-foreground leading-relaxed">
-                    {siteSettings.address || "Business address not configured"}
+                    {siteSettings.address || t("contact.addressUnavailable")}
                   </p>
                 </div>
               </div>
@@ -364,7 +364,7 @@ export default function Footer({
               <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
               <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Quick Links
+                {t("sections.quickLinks")}
               </h3>
               <ul className="space-y-1.5">
                 {quickLinks.map((link) => (
@@ -388,7 +388,7 @@ export default function Footer({
                 <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
                 <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  Categories
+                  {t("sections.categories")}
                 </h3>
                 <ul className="space-y-1.5">
                   {categories.slice(0, 10).map((link) => (
@@ -412,7 +412,7 @@ export default function Footer({
               <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
               <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Customer Service
+                {t("sections.customerService")}
               </h3>
               <ul className="space-y-1.5">
                 {customerService.map((link) => (
@@ -439,18 +439,18 @@ export default function Footer({
             >
               <div className="bg-muted/30 rounded-xl p-6 border border-border">
                 <h3 className="text-sm font-semibold text-foreground mb-2">
-                  Newsletter
+                  {t("newsletter.title")}
                 </h3>
                 <p className="text-xs text-muted-foreground mb-4">
-                  Subscribe to our newsletter to get the latest updates and
-                  exclusive offers.
+                  {t("newsletter.description")}
                 </p>
 
                 <form onSubmit={handleSubscribe} className="space-y-3">
                   <div className="relative">
                     <Input
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder={t("newsletter.placeholder")}
+                      aria-label={t("newsletter.emailLabel")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full bg-background border-border text-foreground placeholder:text-muted-foreground/50 pr-10"
@@ -465,11 +465,11 @@ export default function Footer({
                     {isSubscribing ? (
                       <span className="flex items-center gap-2">
                         <div className="h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-                        Subscribing...
+                        {t("newsletter.subscribing")}
                       </span>
                     ) : (
                       <span className="flex items-center gap-2">
-                        Subscribe
+                        {t("newsletter.subscribe")}
                         <Send className="h-4 w-4" />
                       </span>
                     )}
@@ -480,7 +480,7 @@ export default function Footer({
                   <div className="flex items-center gap-2">
                     <Heart className="h-4 w-4 text-primary" />
                     <p className="text-xs text-muted-foreground">
-                      100% Secure Transactions
+                      {t("secureTransactions")}
                     </p>
                   </div>
                 </div>
@@ -495,14 +495,17 @@ export default function Footer({
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground">
-              © {currentYear} {siteSettings.siteTitle?.trim() || DEFAULT_SITE_TITLE} All rights reserved.
+              {t("rights", {
+                year: currentYear,
+                site: siteSettings.siteTitle?.trim() || DEFAULT_SITE_TITLE,
+              })}
             </p>
 
             <div className="flex items-center gap-6">
               {[
-                { href: "/ecommerce/privacy", label: "Privacy Policy" },
-                { href: "/ecommerce/terms", label: "Terms of Service" },
-                { href: "/sitemap.xml", label: "Sitemap" },
+                { href: "/ecommerce/privacy", label: t("links.privacyPolicy") },
+                { href: "/ecommerce/terms", label: t("links.terms") },
+                { href: "/sitemap.xml", label: t("links.sitemap") },
               ].map((link) => (
                 <Link
                   key={link.href}

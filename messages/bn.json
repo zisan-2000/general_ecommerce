@@ -8428,6 +8428,112 @@
             }
         }
     },
+    "StorefrontShell": {
+        "header": {
+            "logoAlt": "স্টোরের লোগো",
+            "user": "ব্যবহারকারী",
+            "search": {
+                "placeholder": "পণ্য, ব্র্যান্ড বা মডেল খুঁজুন...",
+                "label": "খুঁজুন",
+                "mobilePlaceholder": "খুঁজুন...",
+                "open": "সার্চ খুলুন",
+                "close": "সার্চ বন্ধ করুন",
+                "unavailable": "সার্চ সাময়িকভাবে পাওয়া যাচ্ছে না। ফলাফল দেখতে Enter চাপুন।"
+            },
+            "changeLanguage": "ভাষা পরিবর্তন করুন",
+            "theme": { "select": "থিম নির্বাচন করুন", "label": "থিম", "light": "লাইট", "dark": "ডার্ক" },
+            "wishlist": "উইশলিস্ট",
+            "cart": "কার্ট",
+            "profile": "প্রোফাইল",
+            "account": "অ্যাকাউন্ট",
+            "dashboard": "ড্যাশবোর্ড",
+            "logout": "লগআউট",
+            "login": "লগইন",
+            "signOut": "সাইন আউট",
+            "blog": "ব্লগ",
+            "shopShortcuts": "দ্রুত কেনাকাটা",
+            "menu": { "open": "মেনু খুলুন", "close": "মেনু বন্ধ করুন", "closeOverlay": "মেনুর ওভারলে বন্ধ করুন", "more": "আরও" },
+            "categories": {
+                "loading": "লোড হচ্ছে...",
+                "empty": "কোনো ক্যাটাগরি পাওয়া যায়নি।",
+                "noSubcategories": "কোনো সাবক্যাটাগরি নেই।",
+                "noChildCategories": "কোনো চাইল্ড ক্যাটাগরি নেই।",
+                "collapse": "{name} সংকুচিত করুন",
+                "expand": "{name} প্রসারিত করুন",
+                "scrollPrevious": "ক্যাটাগরি বামে স্ক্রল করুন",
+                "scrollNext": "ক্যাটাগরি ডানে স্ক্রল করুন",
+                "explore": "ক্যাটাগরি দেখুন",
+                "viewAll": "সব দেখুন",
+                "subcategories": "{name}-এর সাবক্যাটাগরি"
+            },
+            "shopActions": {
+                "flashSale": { "label": "ফ্ল্যাশ সেল", "description": "চলমান সীমিত সময়ের অফার দেখুন" },
+                "compare": { "label": "তুলনা", "description": "নির্বাচিত পণ্য তুলনা করুন" },
+                "books": { "label": "বই", "description": "বইয়ের সংগ্রহ দেখুন" },
+                "authors": { "label": "লেখক", "description": "লেখক অনুযায়ী বই দেখুন" },
+                "publishers": { "label": "প্রকাশক", "description": "প্রকাশক অনুযায়ী বই দেখুন" },
+                "pcBuilder": { "label": "পিসি বিল্ডার", "description": "সামঞ্জস্যপূর্ণ কাস্টম ডেস্কটপ পিসি তৈরি করুন" }
+            }
+        },
+        "search": {
+            "suggestions": "সার্চের পরামর্শ",
+            "searching": "পণ্য খোঁজা হচ্ছে...",
+            "noMatch": "মিলে এমন কোনো পণ্য পাওয়া যায়নি",
+            "noMatchHint": "বানান পরীক্ষা করুন অথবা ব্র্যান্ড, মডেল, SKU বা ক্যাটাগরি দিয়ে খুঁজুন।",
+            "products": "পণ্য",
+            "inStock": "স্টকে আছে",
+            "outOfStock": "স্টকে নেই",
+            "categories": "ক্যাটাগরি",
+            "brands": "ব্র্যান্ড",
+            "popularSearches": "জনপ্রিয় সার্চ",
+            "viewAllResults": "“{query}”-এর সব ফলাফল দেখুন"
+        },
+        "footer": {
+            "logoAlt": "স্টোরের লোগো",
+            "features": {
+                "delivery": { "label": "দ্রুত ডেলিভারি", "description": "সারাদেশে ডেলিভারির সুবিধা" },
+                "ordering": { "label": "অনলাইন অর্ডার", "description": "২৪/৭ অর্ডার করুন" },
+                "payment": { "label": "নিরাপদ পেমেন্ট", "description": "সুরক্ষিত পেমেন্ট প্রক্রিয়া" },
+                "authentic": { "label": "১০০% আসল", "description": "আসল পণ্যের নিশ্চয়তা" }
+            },
+            "brand": {
+                "defaultTagline": "মানসম্মত পণ্য, নিরাপদ কেনাকাটা ও নির্ভরযোগ্য সেবা",
+                "defaultDescription": "স্পষ্ট তথ্য, নিরাপদ চেকআউট ও নির্ভরযোগ্য ডেলিভারিসহ মানসম্মত পণ্য আবিষ্কার করুন।"
+            },
+            "contact": {
+                "callUs": "আমাদের কল করুন",
+                "emailUs": "আমাদের ইমেইল করুন",
+                "address": "ঠিকানা",
+                "phoneUnavailable": "যোগাযোগের নম্বর কনফিগার করা নেই",
+                "emailUnavailable": "যোগাযোগের ইমেইল কনফিগার করা নেই",
+                "addressUnavailable": "ব্যবসার ঠিকানা কনফিগার করা নেই"
+            },
+            "sections": { "quickLinks": "দ্রুত লিংক", "categories": "ক্যাটাগরি", "customerService": "গ্রাহকসেবা" },
+            "links": {
+                "allProducts": "সব পণ্য", "flashSale": "ফ্ল্যাশ সেল", "blogs": "ব্লগ", "bestsellers": "সেরা বিক্রিত",
+                "about": "আমাদের সম্পর্কে", "contact": "যোগাযোগ করুন", "shippingPolicy": "শিপিং নীতিমালা",
+                "returnPolicy": "রিটার্ন নীতিমালা", "privacyPolicy": "গোপনীয়তা নীতিমালা", "faq": "সাধারণ প্রশ্ন",
+                "terms": "সেবার শর্তাবলি", "sitemap": "সাইটম্যাপ"
+            },
+            "newsletter": {
+                "title": "নিউজলেটার",
+                "description": "সর্বশেষ আপডেট ও বিশেষ অফার পেতে আমাদের নিউজলেটারে সাবস্ক্রাইব করুন।",
+                "emailLabel": "নিউজলেটারের ইমেইল ঠিকানা",
+                "placeholder": "আপনার ইমেইল লিখুন",
+                "subscribing": "সাবস্ক্রাইব হচ্ছে...",
+                "subscribe": "সাবস্ক্রাইব করুন",
+                "success": "সফলভাবে সাবস্ক্রাইব হয়েছে!",
+                "errors": {
+                    "emailRequired": "আপনার ইমেইল ঠিকানা লিখুন",
+                    "invalidOrExists": "ইমেইলটি সঠিক নয় অথবা ইতিমধ্যে ব্যবহৃত হয়েছে",
+                    "failed": "সাবস্ক্রাইব করার সময় সমস্যা হয়েছে",
+                    "tryAgain": "কিছু সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+                }
+            },
+            "secureTransactions": "১০০% নিরাপদ লেনদেন",
+            "rights": "© {year} {site} সর্বস্বত্ব সংরক্ষিত।"
+        }
+    },
     "ScmAuto": {
         "k_f586059328a9": "1. কাউন্টারপার্টি এবং ডেলিভারি",
         "k_97fae3277194": "1. কাউন্টারপার্টি এবং সুযোগ",

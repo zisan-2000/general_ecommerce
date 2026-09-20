@@ -9347,6 +9347,41 @@
       }
     }
   },
+  "StorefrontShell": {
+    "header": {
+      "logoAlt": "商店徽标", "user": "用户",
+      "search": { "placeholder": "搜索商品、品牌或型号...", "label": "搜索", "mobilePlaceholder": "搜索...", "open": "打开搜索", "close": "关闭搜索", "unavailable": "搜索暂时不可用。按 Enter 查看结果。" },
+      "changeLanguage": "切换语言",
+      "theme": { "select": "选择主题", "label": "主题", "light": "浅色", "dark": "深色" },
+      "wishlist": "愿望清单", "cart": "购物车", "profile": "个人资料", "account": "账户", "dashboard": "仪表板", "logout": "退出登录", "login": "登录", "signOut": "退出登录", "blog": "博客", "shopShortcuts": "购物快捷入口",
+      "menu": { "open": "打开菜单", "close": "关闭菜单", "closeOverlay": "关闭菜单遮罩", "more": "更多" },
+      "categories": { "loading": "加载中...", "empty": "未找到分类。", "noSubcategories": "没有子分类。", "noChildCategories": "没有下级分类。", "collapse": "收起{name}", "expand": "展开{name}", "scrollPrevious": "向左滚动分类", "scrollNext": "向右滚动分类", "explore": "浏览分类", "viewAll": "查看全部", "subcategories": "{name}子分类" },
+      "shopActions": {
+        "flashSale": { "label": "限时抢购", "description": "查看当前限时优惠" },
+        "compare": { "label": "比较", "description": "比较已选商品" },
+        "books": { "label": "图书", "description": "浏览图书合集" },
+        "authors": { "label": "作者", "description": "按作者浏览图书" },
+        "publishers": { "label": "出版社", "description": "按出版社浏览图书" },
+        "pcBuilder": { "label": "电脑组装", "description": "组装兼容的自定义台式电脑" }
+      }
+    },
+    "search": { "suggestions": "搜索建议", "searching": "正在搜索商品...", "noMatch": "未找到匹配商品", "noMatchHint": "请检查拼写，或按品牌、型号、SKU 或分类搜索。", "products": "商品", "inStock": "有货", "outOfStock": "缺货", "categories": "分类", "brands": "品牌", "popularSearches": "热门搜索", "viewAllResults": "查看“{query}”的全部结果" },
+    "footer": {
+      "logoAlt": "商店徽标",
+      "features": {
+        "delivery": { "label": "快速配送", "description": "全国配送服务" },
+        "ordering": { "label": "在线下单", "description": "全天候下单" },
+        "payment": { "label": "安全支付", "description": "受保护的支付流程" },
+        "authentic": { "label": "100% 正品", "description": "保证正品" }
+      },
+      "brand": { "defaultTagline": "优质商品、安全购物与可靠服务", "defaultDescription": "通过清晰的信息、安全结账和可靠配送选购优质商品。" },
+      "contact": { "callUs": "致电我们", "emailUs": "给我们发邮件", "address": "地址", "phoneUnavailable": "尚未配置联系电话", "emailUnavailable": "尚未配置联系邮箱", "addressUnavailable": "尚未配置营业地址" },
+      "sections": { "quickLinks": "快捷链接", "categories": "分类", "customerService": "客户服务" },
+      "links": { "allProducts": "全部商品", "flashSale": "限时抢购", "blogs": "博客", "bestsellers": "畅销商品", "about": "关于我们", "contact": "联系我们", "shippingPolicy": "配送政策", "returnPolicy": "退货政策", "privacyPolicy": "隐私政策", "faq": "常见问题", "terms": "服务条款", "sitemap": "网站地图" },
+      "newsletter": { "title": "新闻通讯", "description": "订阅新闻通讯，获取最新动态和专属优惠。", "emailLabel": "新闻通讯邮箱地址", "placeholder": "输入您的邮箱", "subscribing": "正在订阅...", "subscribe": "订阅", "success": "订阅成功！", "errors": { "emailRequired": "请输入您的邮箱地址", "invalidOrExists": "该邮箱无效或已存在", "failed": "订阅时出现问题", "tryAgain": "出现问题，请重试。" } },
+      "secureTransactions": "100% 安全交易", "rights": "© {year} {site} 保留所有权利。"
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. 交易方与交付",
     "k_97fae3277194": "1. 交易方与范围",

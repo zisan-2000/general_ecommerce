@@ -8324,6 +8324,134 @@
       }
     }
   },
+  "StorefrontShell": {
+    "header": {
+      "logoAlt": "Store logo",
+      "user": "User",
+      "search": {
+        "placeholder": "Search products, brands, models...",
+        "label": "Search",
+        "mobilePlaceholder": "Search...",
+        "open": "Open search",
+        "close": "Close search",
+        "unavailable": "Search is temporarily unavailable. Press Enter to view results."
+      },
+      "changeLanguage": "Change language",
+      "theme": {
+        "select": "Select theme",
+        "label": "Theme",
+        "light": "Light",
+        "dark": "Dark"
+      },
+      "wishlist": "Wishlist",
+      "cart": "Cart",
+      "profile": "Profile",
+      "account": "Account",
+      "dashboard": "Dashboard",
+      "logout": "Logout",
+      "login": "Login",
+      "signOut": "Sign out",
+      "blog": "Blog",
+      "shopShortcuts": "Shop shortcuts",
+      "menu": {
+        "open": "Open menu",
+        "close": "Close menu",
+        "closeOverlay": "Close menu overlay",
+        "more": "More"
+      },
+      "categories": {
+        "loading": "Loading...",
+        "empty": "No categories found.",
+        "noSubcategories": "No subcategories.",
+        "noChildCategories": "No child categories.",
+        "collapse": "Collapse {name}",
+        "expand": "Expand {name}",
+        "scrollPrevious": "Scroll categories left",
+        "scrollNext": "Scroll categories right",
+        "explore": "Explore category",
+        "viewAll": "View all",
+        "subcategories": "{name} subcategories"
+      },
+      "shopActions": {
+        "flashSale": { "label": "Flash Sale", "description": "View active limited-time deals" },
+        "compare": { "label": "Compare", "description": "Compare selected products" },
+        "books": { "label": "Books", "description": "Browse the book collection" },
+        "authors": { "label": "Authors", "description": "Browse books by author" },
+        "publishers": { "label": "Publishers", "description": "Browse books by publisher" },
+        "pcBuilder": { "label": "PC Builder", "description": "Build a compatible custom desktop PC" }
+      }
+    },
+    "search": {
+      "suggestions": "Search suggestions",
+      "searching": "Searching products...",
+      "noMatch": "No matching product found",
+      "noMatchHint": "Check the spelling or search by brand, model, SKU, or category.",
+      "products": "Products",
+      "inStock": "In stock",
+      "outOfStock": "Out of stock",
+      "categories": "Categories",
+      "brands": "Brands",
+      "popularSearches": "Popular searches",
+      "viewAllResults": "View all results for “{query}”"
+    },
+    "footer": {
+      "logoAlt": "Store logo",
+      "features": {
+        "delivery": { "label": "Fast Delivery", "description": "Nationwide delivery options" },
+        "ordering": { "label": "Online Ordering", "description": "Place orders 24/7" },
+        "payment": { "label": "Secure Payment", "description": "Protected payment flow" },
+        "authentic": { "label": "100% Authentic", "description": "Guaranteed genuine products" }
+      },
+      "brand": {
+        "defaultTagline": "Quality products, secure shopping and dependable service",
+        "defaultDescription": "Discover quality products with clear information, secure checkout and dependable delivery."
+      },
+      "contact": {
+        "callUs": "Call us",
+        "emailUs": "Email us",
+        "address": "Address",
+        "phoneUnavailable": "Contact number not configured",
+        "emailUnavailable": "Contact email not configured",
+        "addressUnavailable": "Business address not configured"
+      },
+      "sections": {
+        "quickLinks": "Quick Links",
+        "categories": "Categories",
+        "customerService": "Customer Service"
+      },
+      "links": {
+        "allProducts": "All Products",
+        "flashSale": "Flash Sale",
+        "blogs": "Blogs",
+        "bestsellers": "Bestsellers",
+        "about": "About Us",
+        "contact": "Contact Us",
+        "shippingPolicy": "Shipping Policy",
+        "returnPolicy": "Return Policy",
+        "privacyPolicy": "Privacy Policy",
+        "faq": "FAQ",
+        "terms": "Terms of Service",
+        "sitemap": "Sitemap"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Subscribe to our newsletter to get the latest updates and exclusive offers.",
+        "emailLabel": "Newsletter email address",
+        "placeholder": "Enter your email",
+        "subscribing": "Subscribing...",
+        "subscribe": "Subscribe",
+        "success": "Successfully subscribed!",
+        "errors": {
+          "emailRequired": "Please enter your email address",
+          "invalidOrExists": "This email is not valid or already exists",
+          "failed": "Something went wrong while subscribing",
+          "tryAgain": "Something went wrong. Please try again."
+        }
+      },
+      "secureTransactions": "100% Secure Transactions",
+      "rights": "© {year} {site} All rights reserved."
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. Counterparty and Delivery",
     "k_97fae3277194": "1. Counterparty and Scope",

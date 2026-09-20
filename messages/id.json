@@ -9347,6 +9347,41 @@
       }
     }
   },
+  "StorefrontShell": {
+    "header": {
+      "logoAlt": "Logo toko", "user": "Pengguna",
+      "search": { "placeholder": "Cari produk, merek, atau model...", "label": "Cari", "mobilePlaceholder": "Cari...", "open": "Buka pencarian", "close": "Tutup pencarian", "unavailable": "Pencarian sementara tidak tersedia. Tekan Enter untuk melihat hasil." },
+      "changeLanguage": "Ubah bahasa",
+      "theme": { "select": "Pilih tema", "label": "Tema", "light": "Terang", "dark": "Gelap" },
+      "wishlist": "Daftar keinginan", "cart": "Keranjang", "profile": "Profil", "account": "Akun", "dashboard": "Dasbor", "logout": "Keluar", "login": "Masuk", "signOut": "Keluar", "blog": "Blog", "shopShortcuts": "Pintasan belanja",
+      "menu": { "open": "Buka menu", "close": "Tutup menu", "closeOverlay": "Tutup lapisan menu", "more": "Lainnya" },
+      "categories": { "loading": "Memuat...", "empty": "Tidak ada kategori ditemukan.", "noSubcategories": "Tidak ada subkategori.", "noChildCategories": "Tidak ada kategori turunan.", "collapse": "Ciutkan {name}", "expand": "Perluas {name}", "scrollPrevious": "Gulir kategori ke kiri", "scrollNext": "Gulir kategori ke kanan", "explore": "Jelajahi kategori", "viewAll": "Lihat semua", "subcategories": "Subkategori {name}" },
+      "shopActions": {
+        "flashSale": { "label": "Promo Kilat", "description": "Lihat promo terbatas yang sedang aktif" },
+        "compare": { "label": "Bandingkan", "description": "Bandingkan produk yang dipilih" },
+        "books": { "label": "Buku", "description": "Jelajahi koleksi buku" },
+        "authors": { "label": "Penulis", "description": "Jelajahi buku berdasarkan penulis" },
+        "publishers": { "label": "Penerbit", "description": "Jelajahi buku berdasarkan penerbit" },
+        "pcBuilder": { "label": "Perakit PC", "description": "Rakit PC desktop khusus yang kompatibel" }
+      }
+    },
+    "search": { "suggestions": "Saran pencarian", "searching": "Mencari produk...", "noMatch": "Tidak ada produk yang cocok", "noMatchHint": "Periksa ejaan atau cari berdasarkan merek, model, SKU, atau kategori.", "products": "Produk", "inStock": "Tersedia", "outOfStock": "Stok habis", "categories": "Kategori", "brands": "Merek", "popularSearches": "Pencarian populer", "viewAllResults": "Lihat semua hasil untuk “{query}”" },
+    "footer": {
+      "logoAlt": "Logo toko",
+      "features": {
+        "delivery": { "label": "Pengiriman Cepat", "description": "Pilihan pengiriman ke seluruh negeri" },
+        "ordering": { "label": "Pemesanan Online", "description": "Pesan kapan saja" },
+        "payment": { "label": "Pembayaran Aman", "description": "Alur pembayaran terlindungi" },
+        "authentic": { "label": "100% Asli", "description": "Produk asli terjamin" }
+      },
+      "brand": { "defaultTagline": "Produk berkualitas, belanja aman, dan layanan tepercaya", "defaultDescription": "Temukan produk berkualitas dengan informasi jelas, pembayaran aman, dan pengiriman tepercaya." },
+      "contact": { "callUs": "Hubungi kami", "emailUs": "Email kami", "address": "Alamat", "phoneUnavailable": "Nomor kontak belum dikonfigurasi", "emailUnavailable": "Email kontak belum dikonfigurasi", "addressUnavailable": "Alamat bisnis belum dikonfigurasi" },
+      "sections": { "quickLinks": "Tautan Cepat", "categories": "Kategori", "customerService": "Layanan Pelanggan" },
+      "links": { "allProducts": "Semua Produk", "flashSale": "Promo Kilat", "blogs": "Blog", "bestsellers": "Terlaris", "about": "Tentang Kami", "contact": "Hubungi Kami", "shippingPolicy": "Kebijakan Pengiriman", "returnPolicy": "Kebijakan Pengembalian", "privacyPolicy": "Kebijakan Privasi", "faq": "Tanya Jawab", "terms": "Ketentuan Layanan", "sitemap": "Peta Situs" },
+      "newsletter": { "title": "Buletin", "description": "Berlangganan buletin kami untuk mendapatkan kabar terbaru dan penawaran eksklusif.", "emailLabel": "Alamat email buletin", "placeholder": "Masukkan email Anda", "subscribing": "Berlangganan...", "subscribe": "Berlangganan", "success": "Berhasil berlangganan!", "errors": { "emailRequired": "Masukkan alamat email Anda", "invalidOrExists": "Email ini tidak valid atau sudah terdaftar", "failed": "Terjadi masalah saat berlangganan", "tryAgain": "Terjadi masalah. Silakan coba lagi." } },
+      "secureTransactions": "Transaksi 100% Aman", "rights": "© {year} {site} Hak cipta dilindungi."
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. Rekanan dan Pengiriman",
     "k_97fae3277194": "1. Rekanan dan Cakupan",

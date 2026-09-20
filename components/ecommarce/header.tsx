@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 
 import { useTheme } from "next-themes";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   getLocaleDirection,
@@ -93,9 +93,9 @@ import {
 const CATEGORIES_API = "/api/categories?view=storefront";
 
 const THEME_OPTIONS = [
-  { value: "light", label: "Light" },
+  { value: "light", labelKey: "theme.light" },
 
-  { value: "dark", label: "Dark" },
+  { value: "dark", labelKey: "theme.dark" },
 ] as const;
 
 const LANGUAGE_OPTIONS = [
@@ -110,44 +110,44 @@ const LANGUAGE_OPTIONS = [
 const HEADER_SHOP_ACTIONS = [
   {
     id: "flash-sale",
-    label: "Flash Sale",
+    labelKey: "shopActions.flashSale.label",
     href: "/ecommerce/flash-sale",
-    description: "View active limited-time deals",
+    descriptionKey: "shopActions.flashSale.description",
     icon: BadgePercent,
   },
   {
     id: "compare",
-    label: "Compare",
+    labelKey: "shopActions.compare.label",
     href: "/ecommerce/compare",
-    description: "Compare selected products",
+    descriptionKey: "shopActions.compare.description",
     icon: GitCompareArrows,
   },
   {
     id: "books",
-    label: "Books",
+    labelKey: "shopActions.books.label",
     href: "/ecommerce/books",
-    description: "Browse the book collection",
+    descriptionKey: "shopActions.books.description",
     icon: BookOpen,
   },
   {
     id: "authors",
-    label: "Authors",
+    labelKey: "shopActions.authors.label",
     href: "/ecommerce/authors",
-    description: "Browse books by author",
+    descriptionKey: "shopActions.authors.description",
     icon: UsersRound,
   },
   {
     id: "publishers",
-    label: "Publishers",
+    labelKey: "shopActions.publishers.label",
     href: "/ecommerce/publishers",
-    description: "Browse books by publisher",
+    descriptionKey: "shopActions.publishers.description",
     icon: Building2,
   },
   {
     id: "pc-builder",
-    label: "PC Builder",
+    labelKey: "shopActions.pcBuilder.label",
     href: "/ecommerce/pc-builder",
-    description: "Build a compatible custom desktop PC",
+    descriptionKey: "shopActions.pcBuilder.description",
     icon: Monitor,
   },
 ] as const;
@@ -294,6 +294,7 @@ function DesktopCategoryDropdown({
   onClose: () => void;
 }) {
   const router = useRouter();
+  const t = useTranslations("StorefrontShell.header.categories");
 
   const [activeParentId, setActiveParentId] = useState<number | null>(null);
 
@@ -330,7 +331,7 @@ function DesktopCategoryDropdown({
   if (loading) {
     return (
       <div className="rounded-xl border border-border bg-popover px-5 py-4 text-sm shadow-2xl">
-        Loading...
+        {t("loading")}
       </div>
     );
   }
@@ -338,7 +339,7 @@ function DesktopCategoryDropdown({
   if (!categories.length) {
     return (
       <div className="rounded-xl border border-border bg-popover px-5 py-4 text-sm shadow-2xl">
-        No categories found.
+        {t("empty")}
       </div>
     );
   }
@@ -380,7 +381,7 @@ function DesktopCategoryDropdown({
         >
           {subList.length === 0 ? (
             <div className="px-4 py-3 text-sm text-muted-foreground">
-              No subcategories.
+              {t("noSubcategories")}
             </div>
           ) : (
             subList.map((s) => {
@@ -411,7 +412,7 @@ function DesktopCategoryDropdown({
         <div className={`${ddColShell} ${activeSubId ? "block" : "hidden"}`}>
           {childList.length === 0 ? (
             <div className="px-4 py-3 text-sm text-muted-foreground">
-              No child categories.
+              {t("noChildCategories")}
             </div>
           ) : (
             childList.map((c) => (
@@ -445,6 +446,7 @@ function MobileCategoryTree({
 
   onGo: (slug: string) => void;
 }) {
+  const t = useTranslations("StorefrontShell.header.categories");
   const [openIds, setOpenIds] = useState<Set<number>>(() => new Set());
 
   const toggle = (id: number) => {
@@ -470,7 +472,7 @@ function MobileCategoryTree({
 
   if (!categories.length) {
     return (
-      <div className="text-sm text-muted-foreground">No categories found.</div>
+      <div className="text-sm text-muted-foreground">{t("empty")}</div>
     );
   }
 
@@ -534,7 +536,11 @@ function MobileCategoryTree({
               type="button"
               onClick={() => toggle(node.id)}
               aria-expanded={isOpen}
-              aria-label={`${isOpen ? "Collapse" : "Expand"} ${node.name}`}
+              aria-label={
+                isOpen
+                  ? t("collapse", { name: node.name })
+                  : t("expand", { name: node.name })
+              }
               className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted"
             >
               <ChevronRight
@@ -581,6 +587,7 @@ export default function Header({
   const { theme, resolvedTheme, setTheme } = useTheme();
 
   const locale = useLocale();
+  const t = useTranslations("StorefrontShell.header");
 
   const { cartItems } = useCart();
 
@@ -821,7 +828,7 @@ export default function Header({
         console.error("Header search suggestions failed", error);
         setSearchData(null);
         setSearchError(
-          "Search is temporarily unavailable. Press Enter to view results.",
+          t("search.unavailable"),
         );
       } finally {
         if (!controller.signal.aborted) setSearchLoading(false);
@@ -832,7 +839,7 @@ export default function Header({
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [searchTerm]);
+  }, [searchTerm, t]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -980,7 +987,7 @@ export default function Header({
     defaultAdminRoute?: "/admin" | "/admin/warehouse";
   } | null;
 
-  const userName = sessionUser?.name || "User";
+  const userName = sessionUser?.name || t("user");
 
   const userRole = sessionUser?.role || "user";
 
@@ -1068,7 +1075,7 @@ export default function Header({
             <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md bg-white md:h-10 md:w-10">
               <Image
                 src={siteSettings.logo || "/assets/examplelogo.jpg"}
-                alt="Logo"
+                alt={t("logoAlt")}
                 fill
                 className="object-contain"
                 sizes="(max-width: 767px) 36px, 40px"
@@ -1101,7 +1108,7 @@ export default function Header({
                   ? `desktop-search-suggestions-product-${searchData.products[activeSearchIndex].id}`
                   : undefined
               }
-              placeholder="Search products, brands, models..."
+              placeholder={t("search.placeholder")}
               className="h-11 w-full rounded-md border border-white/10 bg-white/95 px-4 pr-12 text-sm text-slate-900 outline-none placeholder:text-slate-400 transition focus:border-white/30 focus:bg-white focus:ring-2 focus:ring-white/20"
             />
 
@@ -1109,7 +1116,7 @@ export default function Header({
               type="button"
               onClick={() => submitCatalogSearch()}
               className="absolute bottom-0 right-0 top-0 flex w-11 items-center justify-center text-slate-500 transition hover:text-slate-800"
-              aria-label="Search"
+              aria-label={t("search.label")}
             >
               <Search className="h-[18px] w-[18px]" />
             </button>
@@ -1136,6 +1143,8 @@ export default function Header({
               const ActionIcon = action.icon;
               const actionHref =
                 action.id === "compare" ? compareHref : action.href;
+              const actionLabel = t(action.labelKey as any);
+              const actionDescription = t(action.descriptionKey as any);
 
               return (
                 <Link
@@ -1144,11 +1153,11 @@ export default function Header({
                   className={`${desktopActionClass} relative ${
                     action.id === "pc-builder" ? "lg:hidden xl:flex" : ""
                   }`}
-                  aria-label={`${action.label}: ${action.description}`}
-                  title={action.description}
+                  aria-label={`${actionLabel}: ${actionDescription}`}
+                  title={actionDescription}
                 >
                   <ActionIcon className="h-[18px] w-[18px]" aria-hidden="true" />
-                  <span>{action.label}</span>
+                  <span>{actionLabel}</span>
                   {action.id === "compare" &&
                   hasMounted &&
                   compareCount > 0 ? (
@@ -1165,8 +1174,8 @@ export default function Header({
                 <button
                   type="button"
                   className={`${headerIconClass} gap-1 sm:w-auto sm:px-2.5`}
-                  title="Change language"
-                  aria-label="Change language"
+                  title={t("changeLanguage")}
+                  aria-label={t("changeLanguage")}
                 >
                   <Globe2 className="h-[18px] w-[18px]" aria-hidden="true" />
                   <span className="hidden text-xs font-semibold sm:inline">
@@ -1197,7 +1206,8 @@ export default function Header({
                 <DropdownMenuTrigger asChild>
                   <button
                     className={`${headerIconClass} hidden xl:flex`}
-                    title="Select theme"
+                    title={t("theme.select")}
+                    aria-label={t("theme.select")}
                   >
                     {darkLikeActiveTheme ? (
                       <Sun className="h-[18px] w-[18px]" />
@@ -1205,7 +1215,7 @@ export default function Header({
                       <Moon className="h-[18px] w-[18px]" />
                     )}
 
-                    <span className="sr-only">Theme</span>
+                    <span className="sr-only">{t("theme.label")}</span>
                   </button>
                 </DropdownMenuTrigger>
 
@@ -1216,7 +1226,7 @@ export default function Header({
                       onClick={() => setTheme(option.value)}
                       className="flex items-center justify-between"
                     >
-                      <span>{option.label}</span>
+                      <span>{t(option.labelKey)}</span>
 
                       {activeTheme === option.value ? (
                         <Check className="h-4 w-4" />
@@ -1239,7 +1249,7 @@ export default function Header({
                 </span>
               )}
 
-              <span className="sr-only">Wishlist</span>
+              <span className="sr-only">{t("wishlist")}</span>
             </Link>
 
             <div
@@ -1252,7 +1262,11 @@ export default function Header({
                   type="button"
                   onClick={() => setMobileSearchOpen((prev) => !prev)}
                   className="flex h-10 w-10 shrink-0 items-center justify-center text-white"
-                  aria-label={mobileSearchOpen ? "Close search" : "Open search"}
+                  aria-label={
+                    mobileSearchOpen
+                      ? t("search.close")
+                      : t("search.open")
+                  }
                 >
                   <Search className="h-5 w-5" />
                 </button>
@@ -1274,7 +1288,7 @@ export default function Header({
                       ? `mobile-search-suggestions-product-${searchData.products[activeSearchIndex].id}`
                       : undefined
                   }
-                  placeholder="Search..."
+                  placeholder={t("search.mobilePlaceholder")}
                   className={`h-10 min-w-0 flex-1 bg-transparent pr-3 text-sm text-white outline-none placeholder:text-white/60 transition-all duration-300 ${
                     mobileSearchOpen
                       ? "opacity-100"
@@ -1305,8 +1319,8 @@ export default function Header({
                 <DropdownMenuTrigger asChild>
                   <button
                     className={`${headerIconClass} md:hidden`}
-                    title="Select theme"
-                    aria-label="Select theme"
+                    title={t("theme.select")}
+                    aria-label={t("theme.select")}
                   >
                     {activeThemeOption.value === "light" ? (
                       <Sun className="h-5 w-5" />
@@ -1314,7 +1328,7 @@ export default function Header({
                       <Moon className="h-5 w-5" />
                     )}
 
-                    <span className="hidden">Theme</span>
+                    <span className="hidden">{t("theme.label")}</span>
                   </button>
                 </DropdownMenuTrigger>
 
@@ -1332,7 +1346,7 @@ export default function Header({
                           <Moon className="h-4 w-4" />
                         )}
 
-                        {option.label}
+                        {t(option.labelKey)}
                       </span>
 
                       {activeTheme === option.value ? (
@@ -1353,7 +1367,7 @@ export default function Header({
                 </span>
               )}
 
-              <span className="sr-only">Cart</span>
+              <span className="sr-only">{t("cart")}</span>
             </Link>
 
             <div ref={profileRef} className="relative hidden sm:block">
@@ -1363,7 +1377,7 @@ export default function Header({
                     type="button"
                     onClick={() => setProfileOpen((p) => !p)}
                     className={headerIconClass}
-                    aria-label="Profile"
+                    aria-label={t("profile")}
                   >
                     {/* User Image or Icon */}
                     <div className="relative h-5 w-5 overflow-hidden rounded-full">
@@ -1380,7 +1394,7 @@ export default function Header({
                       )}
                     </div>
                     <span className="sr-only">
-                      {userName?.split(" ")[0] || "Account"}
+                      {userName?.split(" ")[0] || t("account")}
                     </span>
                   </button>
 
@@ -1424,7 +1438,7 @@ export default function Header({
                         className="flex items-center gap-2 px-4 py-3 text-sm hover:bg-muted"
                       >
                         <LayoutDashboard className="h-4 w-4" />
-                        Dashboard
+                        {t("dashboard")}
                       </Link>
 
                       <Link
@@ -1433,7 +1447,7 @@ export default function Header({
                         className="flex items-center gap-2 px-4 py-3 text-sm hover:bg-muted"
                       >
                         <UserIcon className="h-4 w-4" />
-                        Profile
+                        {t("profile")}
                       </Link>
 
                       <button
@@ -1446,7 +1460,7 @@ export default function Header({
                         className="flex w-full items-center gap-2 px-4 py-3 text-sm text-destructive hover:bg-muted disabled:opacity-60"
                       >
                         <LogOut className="h-4 w-4" />
-                        Logout
+                        {t("logout")}
                       </button>
                     </div>
                   )}
@@ -1457,7 +1471,7 @@ export default function Header({
                   className={`${headerIconClass} md:w-auto md:px-3`}
                 >
                   <UserIcon className="h-5 w-5" />
-                  <span className="hidden lg:inline">Login</span>
+                  <span className="hidden lg:inline">{t("login")}</span>
                 </Link>
               )}
             </div>
@@ -1466,11 +1480,11 @@ export default function Header({
               type="button"
               onClick={() => setMobileMenuOpen(true)}
               className={`${headerIconClass} md:hidden`}
-              aria-label="Open menu"
+              aria-label={t("menu.open")}
             >
               <Menu className="h-6 w-6" />
 
-              <span className="hidden">More</span>
+              <span className="hidden">{t("menu.more")}</span>
             </button>
           </div>
         </div>
@@ -1483,7 +1497,7 @@ export default function Header({
               type="button"
               onClick={() => scrollDesktopNav("left")}
               className="absolute left-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-muted active:scale-95"
-              aria-label="Scroll categories left"
+              aria-label={t("categories.scrollPrevious")}
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -1492,7 +1506,7 @@ export default function Header({
               type="button"
               onClick={() => scrollDesktopNav("right")}
               className="absolute right-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-muted active:scale-95"
-              aria-label="Scroll categories right"
+              aria-label={t("categories.scrollNext")}
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -1553,7 +1567,7 @@ export default function Header({
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-                    Explore category
+                    {t("categories.explore")}
                   </p>
                   <p className="mt-0.5 text-base font-semibold">
                     {hoveredNavCat.name}
@@ -1564,7 +1578,7 @@ export default function Header({
                   onClick={() => setNavHoverCatId(null)}
                   className="text-sm font-medium text-foreground/70 hover:text-foreground"
                 >
-                  View all
+                  {t("categories.viewAll")}
                 </Link>
               </div>
 
@@ -1597,7 +1611,9 @@ export default function Header({
                       {hasChildren && (
                         <div
                           data-menu-level="3"
-                          aria-label={`${sub.name} subcategories`}
+                          aria-label={t("categories.subcategories", {
+                            name: sub.name,
+                          })}
                           className={`pointer-events-none invisible absolute top-0 z-30 w-72 rounded-lg border border-border bg-popover p-2 opacity-0 shadow-xl transition duration-150 group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100 ${
                             opensToLeft
                               ? "right-[calc(100%-0.25rem)]"
@@ -1613,7 +1629,7 @@ export default function Header({
                               onClick={() => setNavHoverCatId(null)}
                               className="shrink-0 text-xs font-medium text-foreground/70 hover:text-foreground"
                             >
-                              View all
+                              {t("categories.viewAll")}
                             </Link>
                           </div>
 
@@ -1647,7 +1663,7 @@ export default function Header({
           <button
             type="button"
             className="absolute inset-0 bg-black/50"
-            aria-label="Close menu overlay"
+            aria-label={t("menu.closeOverlay")}
             onClick={() => setMobileMenuOpen(false)}
           />
 
@@ -1662,7 +1678,7 @@ export default function Header({
                   <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-border bg-muted">
                     <Image
                       src={siteSettings.logo || "/assets/examplelogo.jpg"}
-                      alt="Logo"
+                      alt={t("logoAlt")}
                       fill
                       className="object-contain"
                       sizes="44px"
@@ -1686,6 +1702,7 @@ export default function Header({
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-muted"
+                  aria-label={t("menu.close")}
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -1700,8 +1717,8 @@ export default function Header({
                   href="/ecommerce/blogs"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
-                  aria-label="Blog"
-                  title="Blog"
+                  aria-label={t("blog")}
+                  title={t("blog")}
                 >
                   <Newspaper className="h-[18px] w-[18px]" />
                 </Link>
@@ -1710,8 +1727,8 @@ export default function Header({
                   href="/ecommerce/wishlist"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
-                  aria-label="Wishlist"
-                  title="Wishlist"
+                  aria-label={t("wishlist")}
+                  title={t("wishlist")}
                 >
                   <Heart className="h-[18px] w-[18px]" />
                 </Link>
@@ -1720,8 +1737,8 @@ export default function Header({
                   href="/ecommerce/cart"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
-                  aria-label="Cart"
-                  title="Cart"
+                  aria-label={t("cart")}
+                  title={t("cart")}
                 >
                   <ShoppingCart className="h-[18px] w-[18px]" />
                 </Link>
@@ -1732,7 +1749,7 @@ export default function Header({
                   id="mobile-shop-shortcuts-heading"
                   className="mb-2 px-1 text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground"
                 >
-                  Shop shortcuts
+                  {t("shopShortcuts")}
                 </h2>
 
                 <div className="grid grid-cols-3 gap-2">
@@ -1740,6 +1757,8 @@ export default function Header({
                     const ActionIcon = action.icon;
                     const actionHref =
                       action.id === "compare" ? compareHref : action.href;
+                    const actionLabel = t(action.labelKey as any);
+                    const actionDescription = t(action.descriptionKey as any);
 
                     return (
                       <Link
@@ -1747,14 +1766,14 @@ export default function Header({
                         href={actionHref}
                         onClick={() => setMobileMenuOpen(false)}
                         className="relative flex min-h-20 flex-col items-center justify-center gap-2 rounded-lg border border-border bg-card px-2 py-3 text-center text-foreground transition hover:border-primary/40 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        aria-label={`${action.label}: ${action.description}`}
+                        aria-label={`${actionLabel}: ${actionDescription}`}
                       >
                         <ActionIcon
                           className="h-5 w-5 text-primary"
                           aria-hidden="true"
                         />
                         <span className="text-[11px] font-bold leading-tight">
-                          {action.label}
+                          {actionLabel}
                         </span>
                         {action.id === "compare" &&
                         hasMounted &&
@@ -1831,7 +1850,7 @@ export default function Header({
                             className="flex items-center gap-2"
                           >
                             <LayoutDashboard className="h-4 w-4" />
-                            Dashboard
+                            {t("dashboard")}
                           </Link>
                         </DropdownMenuItem>
 
@@ -1842,7 +1861,7 @@ export default function Header({
                             className="flex items-center gap-2"
                           >
                             <UserIcon className="h-4 w-4" />
-                            Profile
+                            {t("profile")}
                           </Link>
                         </DropdownMenuItem>
                       </DropdownMenuContent>
@@ -1856,7 +1875,7 @@ export default function Header({
                         await handleSignOut();
                       }}
                       className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted text-destructive hover:bg-destructive hover:text-destructive-foreground disabled:opacity-60"
-                      aria-label="Sign out"
+                      aria-label={t("signOut")}
                     >
                       <LogOut className="h-4 w-4" />
                     </button>
@@ -1871,7 +1890,7 @@ export default function Header({
                     className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground"
                   >
                     <LogIn className="h-5 w-5" />
-                    Login
+                    {t("login")}
                   </button>
                 )}
               </div>

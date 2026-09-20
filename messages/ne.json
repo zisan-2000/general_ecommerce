@@ -9347,6 +9347,41 @@
       }
     }
   },
+  "StorefrontShell": {
+    "header": {
+      "logoAlt": "स्टोरको लोगो", "user": "प्रयोगकर्ता",
+      "search": { "placeholder": "उत्पादन, ब्रान्ड वा मोडेल खोज्नुहोस्...", "label": "खोज्नुहोस्", "mobilePlaceholder": "खोज्नुहोस्...", "open": "खोज खोल्नुहोस्", "close": "खोज बन्द गर्नुहोस्", "unavailable": "खोज अस्थायी रूपमा उपलब्ध छैन। नतिजा हेर्न Enter थिच्नुहोस्।" },
+      "changeLanguage": "भाषा परिवर्तन गर्नुहोस्",
+      "theme": { "select": "थिम चयन गर्नुहोस्", "label": "थिम", "light": "उज्यालो", "dark": "गाढा" },
+      "wishlist": "इच्छासूची", "cart": "कार्ट", "profile": "प्रोफाइल", "account": "खाता", "dashboard": "ड्यासबोर्ड", "logout": "लगआउट", "login": "लगइन", "signOut": "साइन आउट", "blog": "ब्लग", "shopShortcuts": "किनमेल सर्टकटहरू",
+      "menu": { "open": "मेनु खोल्नुहोस्", "close": "मेनु बन्द गर्नुहोस्", "closeOverlay": "मेनु ओभरले बन्द गर्नुहोस्", "more": "थप" },
+      "categories": { "loading": "लोड हुँदैछ...", "empty": "कुनै श्रेणी भेटिएन।", "noSubcategories": "कुनै उपश्रेणी छैन।", "noChildCategories": "कुनै तल्लो श्रेणी छैन।", "collapse": "{name} खुम्च्याउनुहोस्", "expand": "{name} फैलाउनुहोस्", "scrollPrevious": "श्रेणीहरू बायाँ सार्नुहोस्", "scrollNext": "श्रेणीहरू दायाँ सार्नुहोस्", "explore": "श्रेणी हेर्नुहोस्", "viewAll": "सबै हेर्नुहोस्", "subcategories": "{name} का उपश्रेणीहरू" },
+      "shopActions": {
+        "flashSale": { "label": "फ्ल्यास सेल", "description": "चलिरहेका सीमित समयका अफरहरू हेर्नुहोस्" },
+        "compare": { "label": "तुलना", "description": "चयन गरिएका उत्पादनहरू तुलना गर्नुहोस्" },
+        "books": { "label": "पुस्तकहरू", "description": "पुस्तक संग्रह हेर्नुहोस्" },
+        "authors": { "label": "लेखकहरू", "description": "लेखकअनुसार पुस्तकहरू हेर्नुहोस्" },
+        "publishers": { "label": "प्रकाशकहरू", "description": "प्रकाशकअनुसार पुस्तकहरू हेर्नुहोस्" },
+        "pcBuilder": { "label": "पीसी बिल्डर", "description": "मिल्दो कस्टम डेस्कटप पीसी बनाउनुहोस्" }
+      }
+    },
+    "search": { "suggestions": "खोज सुझावहरू", "searching": "उत्पादनहरू खोजिँदैछन्...", "noMatch": "मिल्दो उत्पादन भेटिएन", "noMatchHint": "हिज्जे जाँच्नुहोस् वा ब्रान्ड, मोडेल, SKU वा श्रेणीबाट खोज्नुहोस्।", "products": "उत्पादनहरू", "inStock": "स्टकमा छ", "outOfStock": "स्टकमा छैन", "categories": "श्रेणीहरू", "brands": "ब्रान्डहरू", "popularSearches": "लोकप्रिय खोजहरू", "viewAllResults": "“{query}” का सबै नतिजा हेर्नुहोस्" },
+    "footer": {
+      "logoAlt": "स्टोरको लोगो",
+      "features": {
+        "delivery": { "label": "छिटो डेलिभरी", "description": "देशभर डेलिभरी विकल्प" },
+        "ordering": { "label": "अनलाइन अर्डर", "description": "२४/७ अर्डर गर्नुहोस्" },
+        "payment": { "label": "सुरक्षित भुक्तानी", "description": "सुरक्षित भुक्तानी प्रक्रिया" },
+        "authentic": { "label": "१००% प्रामाणिक", "description": "सक्कली उत्पादनको ग्यारेन्टी" }
+      },
+      "brand": { "defaultTagline": "गुणस्तरीय उत्पादन, सुरक्षित किनमेल र भरपर्दो सेवा", "defaultDescription": "स्पष्ट जानकारी, सुरक्षित चेकआउट र भरपर्दो डेलिभरीसहित गुणस्तरीय उत्पादन पत्ता लगाउनुहोस्।" },
+      "contact": { "callUs": "हामीलाई फोन गर्नुहोस्", "emailUs": "हामीलाई इमेल गर्नुहोस्", "address": "ठेगाना", "phoneUnavailable": "सम्पर्क नम्बर कन्फिगर गरिएको छैन", "emailUnavailable": "सम्पर्क इमेल कन्फिगर गरिएको छैन", "addressUnavailable": "व्यावसायिक ठेगाना कन्फिगर गरिएको छैन" },
+      "sections": { "quickLinks": "द्रुत लिङ्कहरू", "categories": "श्रेणीहरू", "customerService": "ग्राहक सेवा" },
+      "links": { "allProducts": "सबै उत्पादन", "flashSale": "फ्ल्यास सेल", "blogs": "ब्लगहरू", "bestsellers": "सर्वाधिक बिक्री", "about": "हाम्रो बारेमा", "contact": "सम्पर्क गर्नुहोस्", "shippingPolicy": "ढुवानी नीति", "returnPolicy": "फिर्ता नीति", "privacyPolicy": "गोपनीयता नीति", "faq": "बारम्बार सोधिने प्रश्न", "terms": "सेवाका सर्तहरू", "sitemap": "साइटम्याप" },
+      "newsletter": { "title": "न्युजलेटर", "description": "नवीनतम अपडेट र विशेष अफर पाउन हाम्रो न्युजलेटर सदस्यता लिनुहोस्।", "emailLabel": "न्युजलेटर इमेल ठेगाना", "placeholder": "आफ्नो इमेल लेख्नुहोस्", "subscribing": "सदस्यता लिइँदैछ...", "subscribe": "सदस्यता लिनुहोस्", "success": "सफलतापूर्वक सदस्यता लिइयो!", "errors": { "emailRequired": "कृपया आफ्नो इमेल ठेगाना लेख्नुहोस्", "invalidOrExists": "यो इमेल मान्य छैन वा पहिले नै अवस्थित छ", "failed": "सदस्यता लिँदा समस्या भयो", "tryAgain": "केही समस्या भयो। फेरि प्रयास गर्नुहोस्।" } },
+      "secureTransactions": "१००% सुरक्षित कारोबार", "rights": "© {year} {site} सर्वाधिकार सुरक्षित।"
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "१. काउन्टरपार्टी र डेलिभरी",
     "k_97fae3277194": "१. काउन्टरपार्टी र स्कोप",
