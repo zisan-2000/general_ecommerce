@@ -4,12 +4,16 @@ import CompareWorkspace from "@/components/ecommarce/compare/CompareWorkspace";
 import { normalizeCompareProductIds } from "@/lib/product-compare";
 import { getStorefrontProductDetail } from "@/lib/storefront-product-detail";
 import { isFeatureEnabled } from "@/lib/store-features-server";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Compare products",
-  description: "Compare product pricing, stock and specifications side by side.",
-  robots: { index: false, follow: true },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("StorefrontCompare.metadata");
+  return {
+    title: t("title"),
+    description: t("description"),
+    robots: { index: false, follow: true },
+  };
+}
 
 type ComparePageProps = {
   searchParams: Promise<{ ids?: string | string[] }>;

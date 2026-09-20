@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { useProductCompare } from "@/hooks/use-product-compare";
 import { productCompareHref } from "@/lib/product-compare";
+import { useTranslations } from "next-intl";
 
 export default function CompareProductActions({
   productId,
@@ -14,6 +15,7 @@ export default function CompareProductActions({
 }) {
   const router = useRouter();
   const compare = useProductCompare();
+  const t = useTranslations("StorefrontCompare");
 
   const remove = () => {
     compare.remove(productId);
@@ -25,9 +27,9 @@ export default function CompareProductActions({
       type="button"
       onClick={remove}
       className="inline-flex h-9 items-center gap-1 rounded-lg border px-3 text-xs font-bold hover:border-destructive hover:text-destructive"
-      aria-label="Remove product from comparison"
+      aria-label={t("removeAriaLabel")}
     >
-      <X className="h-4 w-4" /> Remove
+      <X className="h-4 w-4" /> {t("remove")}
     </button>
   );
 }
