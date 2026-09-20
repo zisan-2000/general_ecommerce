@@ -7680,7 +7680,8 @@
     },
     "layout": {
       "openNavigation": "नेभिगेसन खोल्नुहोस्",
-      "toggleTheme": "थिम टगल गर्नुहोस्"
+      "toggleTheme": "थिम टगल गर्नुहोस्",
+      "changeLanguage": "भाषा परिवर्तन गर्नुहोस्"
     },
     "theme": {
       "label": "थिम",

@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import InvestorLanguageSwitcher from "./InvestorLanguageSwitcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -97,7 +98,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
   }, []);
 
   return (
-    <aside className="flex h-full w-full flex-col border-r border-border bg-card/70 backdrop-blur md:w-72">
+    <aside className="flex h-full w-full flex-col border-e border-border bg-card/70 backdrop-blur md:w-72">
       <div className="flex h-full flex-col">
         <div className="border-b border-border p-5">
           <p className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.portal")}</p>
@@ -135,6 +136,8 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
         </nav>
 
         <div className="border-t border-border p-3 space-y-2">
+          <InvestorLanguageSwitcher />
+
           {mounted && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -147,7 +150,7 @@ export default function InvestorNav({ investorName, investorCode, onNavClick }: 
                     if (active === "dark") return <Moon className="h-4 w-4" />;
                     return <Sun className="h-4 w-4" />;
                   })()}
-                  <span className="flex-1 text-left">{t("theme.label")}</span>
+                  <span className="flex-1 text-start">{t("theme.label")}</span>
                   <span className="text-xs text-muted-foreground capitalize">
                     {theme === "dark" || resolvedTheme === "dark"
                       ? t("theme.dark")

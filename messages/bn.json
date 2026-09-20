@@ -6888,7 +6888,8 @@
     },
     "layout": {
       "openNavigation": "নেভিগেশন খুলুন",
-      "toggleTheme": "থিম পরিবর্তন করুন"
+      "toggleTheme": "থিম পরিবর্তন করুন",
+      "changeLanguage": "ভাষা পরিবর্তন করুন"
     },
     "theme": {
       "label": "থিম",

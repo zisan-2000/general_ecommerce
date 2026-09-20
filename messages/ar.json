@@ -7680,7 +7680,8 @@
     },
     "layout": {
       "openNavigation": "فتح التنقل",
-      "toggleTheme": "تبديل السمة"
+      "toggleTheme": "تبديل السمة",
+      "changeLanguage": "تغيير اللغة"
     },
     "theme": {
       "label": "السمة",

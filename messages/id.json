@@ -7680,7 +7680,8 @@
     },
     "layout": {
       "openNavigation": "Buka navigasi",
-      "toggleTheme": "Buka/tutup tema"
+      "toggleTheme": "Buka/tutup tema",
+      "changeLanguage": "Ubah bahasa"
     },
     "theme": {
       "label": "Tema",

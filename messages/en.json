@@ -6888,7 +6888,8 @@
     },
     "layout": {
       "openNavigation": "Open navigation",
-      "toggleTheme": "Toggle theme"
+      "toggleTheme": "Toggle theme",
+      "changeLanguage": "Change language"
     },
     "theme": {
       "label": "Theme",

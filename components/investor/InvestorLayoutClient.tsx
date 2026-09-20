@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { Menu, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getLocaleDirection, type AppLocale } from "@/i18n/config";
 import InvestorNav from "./InvestorNav";
+import InvestorLanguageSwitcher from "./InvestorLanguageSwitcher";
 
 type Props = {
   investorName: string;
@@ -17,7 +19,9 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const locale = useLocale() as AppLocale;
   const t = useTranslations("InvestorPortal");
+  const isRtl = getLocaleDirection(locale) === "rtl";
 
   useEffect(() => {
     setMounted(true);
@@ -39,10 +43,14 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
       {/* Sidebar */}
       <div
         className={[
-          "fixed inset-y-0 left-0 z-50 w-[82vw] max-w-80 transform transition-transform duration-300 ease-in-out",
+          `fixed inset-y-0 z-50 w-[82vw] max-w-80 transform transition-transform duration-300 ease-in-out ${isRtl ? "right-0" : "left-0"}`,
           "md:relative md:translate-x-0 md:transition-none",
           "md:w-72 md:max-w-none",
-          sidebarOpen ? "translate-x-0" : "-translate-x-full",
+          sidebarOpen
+            ? "translate-x-0"
+            : isRtl
+              ? "translate-x-full"
+              : "-translate-x-full",
         ].join(" ")}
       >
         <InvestorNav
@@ -73,6 +81,7 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
             <p className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.portal")}</p>
             <p className="truncate text-sm font-semibold">{investorName}</p>
           </div>
+          <InvestorLanguageSwitcher compact className="shrink-0" />
           {mounted && (
             <button
               onClick={() => {
