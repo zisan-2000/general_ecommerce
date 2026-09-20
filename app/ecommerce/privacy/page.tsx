@@ -1,242 +1,131 @@
-import { Shield, Lock, Eye, User, CreditCard } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CreditCard, Eye, Lock, Shield, User } from "lucide-react";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Button } from "@/components/ui/button";
 
-export default function PrivacyPolicyPage() {
+const collectedGroups = [
+  { icon: User, key: "personal", items: ["nameEmail", "phone", "address"] },
+  { icon: CreditCard, key: "order", items: ["preferences", "history", "payment"] },
+  { icon: Eye, key: "usage", items: ["browsing", "wishlist", "pageViews"] },
+  { icon: Shield, key: "notStored", items: ["bank", "card", "password"] },
+] as const;
+
+const usageGroups = [
+  { key: "essential", items: ["processing", "account", "support", "recommendations"] },
+  { key: "permission", items: ["marketing", "offers", "notifications", "surveys"] },
+] as const;
+
+export default async function PrivacyPolicyPage() {
+  const t = await getTranslations("StorefrontSupport.privacy");
+  const overview = [
+    { icon: Lock, key: "security" },
+    { icon: Eye, key: "transparency" },
+    { icon: User, key: "control" },
+  ] as const;
+  const rights = [
+    { icon: Eye, key: "access" },
+    { icon: User, key: "update" },
+  ] as const;
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-r from-primary to-primary/80">
+    <main className="min-h-screen bg-background text-foreground">
+      <section className="bg-gradient-to-r from-primary to-primary/80 py-16 text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Shield className="h-8 w-8 text-primary-foreground" />
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-background/20">
+            <Shield className="h-8 w-8" aria-hidden />
           </div>
-
-          <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Privacy Policy
-          </h1>
-          <p className="text-lg text-primary-foreground/90">
-            Your privacy is our priority
-          </p>
+          <h1 className="text-3xl font-bold md:text-4xl">{t("title")}</h1>
+          <p className="mt-4 text-lg text-primary-foreground/90">{t("subtitle")}</p>
         </div>
       </section>
 
-      {/* Quick Overview */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
-              <Lock className="h-8 w-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">
-                Data Security
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Your data is protected using SSL encryption
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
-              <Eye className="h-8 w-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">
-                Transparency
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                We clearly explain what data we collect and why
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
-              <User className="h-8 w-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">Control</h3>
-              <p className="text-sm text-muted-foreground">
-                You can manage and control your information
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Data Collection */}
-      <section className="py-12 bg-card">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-            What We Collect
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <User className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Personal Information
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Name and email address</li>
-                    <li>• Phone number</li>
-                    <li>• Delivery address</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <CreditCard className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Order Information
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Product preferences</li>
-                    <li>• Order history</li>
-                    <li>• Payment method (non-sensitive)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Eye className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    Usage Information
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Browsing activity</li>
-                    <li>• Wishlist items</li>
-                    <li>• Page views</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Shield className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    What We Do Not Store
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Full bank details</li>
-                    <li>• Full card numbers</li>
-                    <li>• Plain-text passwords (stored securely/encrypted)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Data Usage */}
-      <section className="py-12 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-            How We Use Your Data
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-xl p-6 border border-border">
-              <h3 className="font-semibold mb-4 text-green-600 dark:text-green-400">
-                Essential
-              </h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                {[
-                  "Order processing and delivery",
-                  "Account management",
-                  "Customer support",
-                  "Product recommendations (based on activity)",
-                ].map((t) => (
-                  <li key={t} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full mt-1.5 flex-shrink-0" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-card rounded-xl p-6 border border-border">
-              <h3 className="font-semibold mb-4 text-amber-600 dark:text-amber-400">
-                With Your Permission
-              </h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                {[
-                  "Marketing emails",
-                  "Special offers and promotions",
-                  "New product notifications",
-                  "Surveys and feedback requests",
-                ].map((t) => (
-                  <li key={t} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-amber-600 dark:bg-amber-400 rounded-full mt-1.5 flex-shrink-0" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Your Rights */}
-      <section className="py-12 bg-card">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-            Your Rights
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Eye,
-                title: "Access Your Data",
-                desc: "You can view and download the information we have about you.",
-              },
-              {
-                icon: User,
-                title: "Update Information",
-                desc: "You can edit your profile details anytime.",
-              }
-            
-            ].map((x) => (
-              <div
-                key={x.title}
-                className="text-center p-6 bg-background rounded-xl border border-border"
-              >
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                  <x.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  {x.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">{x.desc}</p>
-              </div>
+      <section className="bg-background py-12">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="grid gap-6 md:grid-cols-3">
+            {overview.map((item) => (
+              <article key={item.key} className="rounded-xl border border-border bg-card p-6 text-center shadow-sm">
+                <item.icon className="mx-auto h-8 w-8 text-primary" aria-hidden />
+                <h2 className="mt-3 font-semibold">{t(`overview.${item.key}Title`)}</h2>
+                <p className="mt-2 text-sm text-muted-foreground">{t(`overview.${item.key}Description`)}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact & Updates */}
-      <section className="py-12 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-        <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
-          <p className="mb-6 opacity-90">
-            Contact us for any privacy-related inquiries.
-          </p>
-
-          <div className="flex justify-center">
-            <Button asChild className="bg-background text-foreground hover:bg-background/90">
-              <Link href="/ecommerce/contact">Contact our privacy team</Link>
-            </Button>
-          </div>
-
-          <div className="mt-8 pt-6 border-t border-primary-foreground/20">
-            <p className="text-sm opacity-80">
-              <strong>Last Updated:</strong> January 2024
-              <br />
-              We may update this policy from time to time.
-            </p>
+      <section className="bg-card py-12">
+        <div className="container mx-auto max-w-4xl px-4">
+          <h2 className="text-center text-2xl font-bold">{t("collect.title")}</h2>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {collectedGroups.map((group) => (
+              <article key={group.key} className="flex items-start gap-4">
+                <group.icon className="mt-1 h-6 w-6 shrink-0 text-primary" aria-hidden />
+                <div>
+                  <h3 className="font-semibold">{t(`collect.${group.key}.title`)}</h3>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                    {group.items.map((item) => (
+                      <li key={item}>• {t(`collect.${group.key}.${item}`)}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
-    </div>
+
+      <section className="bg-muted/30 py-12">
+        <div className="container mx-auto max-w-4xl px-4">
+          <h2 className="text-center text-2xl font-bold">{t("usage.title")}</h2>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {usageGroups.map((group) => (
+              <article key={group.key} className="rounded-xl border border-border bg-card p-6">
+                <h3 className="font-semibold text-primary">{t(`usage.${group.key}.title`)}</h3>
+                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" aria-hidden />
+                      <span>{t(`usage.${group.key}.${item}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-card py-12">
+        <div className="container mx-auto max-w-4xl px-4">
+          <h2 className="text-center text-2xl font-bold">{t("rights.title")}</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {rights.map((right) => (
+              <article key={right.key} className="rounded-xl border border-border bg-background p-6 text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <right.icon className="h-6 w-6" aria-hidden />
+                </div>
+                <h3 className="mt-3 font-semibold">{t(`rights.${right.key}Title`)}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{t(`rights.${right.key}Description`)}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-primary to-primary/80 py-12 text-primary-foreground">
+        <div className="container mx-auto max-w-2xl px-4 text-center">
+          <h2 className="text-2xl font-bold">{t("cta.title")}</h2>
+          <p className="mt-4 opacity-90">{t("cta.description")}</p>
+          <Button asChild className="mt-6 bg-background text-foreground hover:bg-background/90">
+            <Link href="/ecommerce/contact">{t("cta.action")}</Link>
+          </Button>
+          <p className="mt-8 border-t border-primary-foreground/20 pt-6 text-sm opacity-80">
+            <strong>{t("cta.lastUpdated")}</strong> {t("cta.date")}
+            <br />
+            {t("cta.updateNote")}
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }

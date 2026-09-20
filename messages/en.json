@@ -9985,6 +9985,436 @@
     "k_965fb2ddf63d": "Receive",
     "k_3e3346550053": "Transfer drafted"
   },
+  "StorefrontSupport": {
+    "tracking": {
+      "title": "Track your delivery",
+      "subtitle": "See the latest status and delivery progress for this shipment.",
+      "loading": "Loading tracking details...",
+      "notFound": "Tracking information could not be found.",
+      "loadError": "Unable to load tracking information right now.",
+      "trackingNumber": "Tracking number",
+      "orderNumber": "Order number",
+      "courier": "Courier",
+      "updatedAt": "Last updated",
+      "status": "Current status",
+      "openCourier": "Open courier tracking",
+      "statuses": {
+        "pending": "Pending",
+        "assigned": "Courier assigned",
+        "picked_up": "Picked up",
+        "in_transit": "In transit",
+        "out_for_delivery": "Out for delivery",
+        "delivered": "Delivered",
+        "failed": "Delivery failed",
+        "returned": "Returned",
+        "cancelled": "Cancelled"
+      }
+    },
+    "returns": {
+      "title": "Returns and refunds",
+      "subtitle": "A clear process for reporting eligible product issues and receiving support.",
+      "overview": {
+        "windowTitle": "Return window",
+        "windowDescription": "Request a return within the period shown on the product or order details.",
+        "conditionTitle": "Product condition",
+        "conditionDescription": "Keep the product, accessories, invoice and original packaging together.",
+        "processingTitle": "Review and resolution",
+        "processingDescription": "We inspect the request and confirm the appropriate exchange, replacement or refund."
+      },
+      "eligible": {
+        "title": "Eligible return reasons",
+        "wrongProduct": "You received a different product or variant.",
+        "defect": "The product has a verified manufacturing or quality defect.",
+        "damaged": "The product arrived damaged in transit.",
+        "missingParts": "Required accessories or parts are missing."
+      },
+      "ineligible": {
+        "title": "Usually not eligible",
+        "customerDamage": "Damage caused after delivery through misuse or an accident.",
+        "modified": "Products that have been altered, repaired or modified without approval.",
+        "late": "Requests submitted after the applicable return window.",
+        "packaging": "Products returned without required packaging, accessories or proof of purchase."
+      },
+      "process": {
+        "title": "How the return process works",
+        "contactTitle": "Contact support",
+        "contactDescription": "Share your order number, the issue and clear photos or video when relevant.",
+        "approvalTitle": "Get approval",
+        "approvalDescription": "Our team reviews eligibility and provides the return instructions.",
+        "sendTitle": "Send or hand over the item",
+        "sendDescription": "Pack all included items securely and follow the approved handover method.",
+        "refundTitle": "Receive the resolution",
+        "refundDescription": "After inspection, we complete the approved replacement, exchange or refund."
+      },
+      "refund": {
+        "title": "Refund and exchange details",
+        "timeLabel": "Processing time",
+        "timeValue": "Usually 5–7 business days after approval and inspection.",
+        "methodLabel": "Refund method",
+        "methodValue": "Refunds are generally returned through the original payment method.",
+        "shippingLabel": "Return shipping",
+        "shippingValue": "Responsibility depends on the return reason and the approved instructions.",
+        "exchangeLabel": "Exchange availability",
+        "exchangeValue": "Exchanges depend on current stock and product eligibility."
+      },
+      "cta": {
+        "title": "Need to request a return?",
+        "description": "Contact support with your order number so we can review the request.",
+        "action": "Contact support"
+      }
+    },
+    "shipping": {
+      "metadata": {
+        "title": "Shipping and delivery",
+        "description": "Learn how orders are confirmed, packed, handed to couriers and delivered."
+      },
+      "title": "Shipping and delivery",
+      "subtitle": "From order confirmation to doorstep delivery, see how your package moves.",
+      "overview": {
+        "estimateTitle": "Delivery estimate",
+        "estimateValue": "Shown during checkout",
+        "estimateNote": "Timing varies by location, inventory and courier coverage.",
+        "protectionTitle": "Secure packaging",
+        "protectionValue": "Packed with care",
+        "protectionNote": "Items are prepared to reduce the risk of damage in transit.",
+        "supportTitle": "Delivery support",
+        "supportValue": "Help when needed",
+        "supportNote": "Contact us if tracking stalls or the package arrives with an issue."
+      },
+      "process": {
+        "eyebrow": "Delivery journey",
+        "title": "How your order reaches you",
+        "confirmationTitle": "Order confirmation",
+        "confirmationDescription": "We verify payment, stock and delivery details before processing.",
+        "packingTitle": "Picking and packing",
+        "packingDescription": "The correct items are checked and packed securely.",
+        "handoverTitle": "Courier handover",
+        "handoverDescription": "The shipment is assigned to an available delivery partner.",
+        "deliveryTitle": "Doorstep delivery",
+        "deliveryDescription": "Track progress and inspect the package when it arrives."
+      },
+      "guidance": {
+        "eyebrow": "Before delivery",
+        "title": "Helpful delivery guidance",
+        "description": "A few simple checks can help avoid delays and make delivery smoother.",
+        "items": {
+          "address": "Provide a complete address, landmark and reachable phone number.",
+          "estimate": "Treat delivery dates as estimates, especially during holidays or severe weather.",
+          "handling": "Keep your phone available when the courier contacts you.",
+          "delays": "Use order tracking or contact support if there is no update for an unusual period.",
+          "damage": "Check the outer package and report visible damage as soon as possible.",
+          "retain": "Keep the invoice and packaging until you are satisfied with the product."
+        }
+      },
+      "cta": {
+        "title": "Need help with a delivery?",
+        "description": "Our support team can help with tracking, delays and delivery concerns.",
+        "contact": "Contact support",
+        "orders": "View my orders"
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "About us",
+        "description": "Learn about {site}, our store experience and our commitment to customers."
+      },
+      "eyebrow": "About {site}",
+      "title": "A dependable store for everyday needs",
+      "subtitle": "{tagline} We combine a well-organized catalog, reliable fulfilment and helpful support in one shopping experience.",
+      "explore": "Explore products",
+      "contact": "Contact us",
+      "features": {
+        "genuineTitle": "Trusted products",
+        "genuineDescription": "Clear product information and sourcing standards help customers buy confidently.",
+        "guidanceTitle": "Helpful guidance",
+        "guidanceDescription": "Specifications, options and support make it easier to choose the right item.",
+        "coverageTitle": "Flexible fulfilment",
+        "coverageDescription": "Inventory and delivery workflows are designed for dependable order handling.",
+        "checkoutTitle": "Secure checkout",
+        "checkoutDescription": "Transparent totals and supported payment methods keep checkout straightforward."
+      },
+      "values": {
+        "eyebrow": "What matters to us",
+        "title": "Built around a better buying experience",
+        "description": "We focus on the details that make online shopping clearer, safer and more useful.",
+        "catalogTitle": "Organized catalog",
+        "catalogDescription": "Categories, attributes and filters help customers discover suitable products.",
+        "verifiedTitle": "Clear information",
+        "verifiedDescription": "Product details are presented in a structured and understandable way.",
+        "inventoryTitle": "Reliable inventory",
+        "inventoryDescription": "Stock-aware workflows reduce surprises after an order is placed.",
+        "secureTitle": "Protected shopping",
+        "secureDescription": "Account, checkout and payment flows are designed with security in mind.",
+        "deliveryTitle": "Order visibility",
+        "deliveryDescription": "Customers can follow order and delivery progress.",
+        "supportTitle": "Responsive support",
+        "supportDescription": "Support channels are available before and after purchase."
+      },
+      "commitment": {
+        "eyebrow": "Our commitment",
+        "title": "A store that keeps improving",
+        "first": "We continuously improve the catalog, checkout, fulfilment and support experience based on operational needs and customer feedback.",
+        "second": "Our goal is to make every interaction—from discovery to after-sales service—clear, reliable and respectful."
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "Contact us",
+        "description": "Contact {site} for product, order, corporate sales and service enquiries."
+      },
+      "subjects": {
+        "corporate": "Corporate sales enquiry",
+        "service": "Service booking enquiry"
+      },
+      "eyebrow": "{site} support",
+      "title": "How can we help?",
+      "subtitle": "Send us a message for product advice, order support, corporate purchases or service enquiries.",
+      "types": {
+        "productTitle": "Product and order support",
+        "productDescription": "Ask about products, compatibility, an existing order or delivery.",
+        "corporateTitle": "Corporate sales",
+        "corporateDescription": "Discuss bulk purchases, quotations and business requirements.",
+        "serviceTitle": "Service booking",
+        "serviceDescription": "Request help with installation, maintenance or an available service."
+      },
+      "information": {
+        "title": "Contact information",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "onlineStore": "Online store",
+        "alwaysOpen": "Available 24/7 for browsing and orders"
+      },
+      "orderHelp": {
+        "title": "Looking for order details?",
+        "description": "Signed-in customers can view status, items, totals and tracking from their order history.",
+        "action": "View my orders"
+      },
+      "form": {
+        "title": "Send a message",
+        "name": "Your name",
+        "email": "Email address",
+        "subject": "Subject",
+        "message": "Message",
+        "success": "Your message has been sent. We will respond as soon as possible.",
+        "sending": "Sending...",
+        "send": "Send message"
+      },
+      "errors": {
+        "send": "We could not send your message. Please try again."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Find quick answers about products, orders, delivery, returns and your account.",
+      "searchLabel": "Search frequently asked questions",
+      "searchPlaceholder": "Search questions and answers...",
+      "questionCount": "{count} questions",
+      "noResultsTitle": "No results found",
+      "noResultsDescription": "We could not find a question matching your search.",
+      "viewAll": "View all questions",
+      "moreHelp": "Need more help?",
+      "allProducts": "All products",
+      "contact": "Contact",
+      "about": "About us",
+      "homepage": "Homepage",
+      "loading": "Loading FAQs...",
+      "categories": {
+        "general": {
+          "title": "General information",
+          "q1": "What can I buy from this store?",
+          "a1": "Our available range is organized by the live categories shown in the storefront. Browse categories or search the catalog to see what is currently offered.",
+          "q2": "How large is your product collection?",
+          "a2": "Our product collection continues to grow and is updated regularly with new arrivals and current inventory.",
+          "q3": "How can I confirm product compatibility?",
+          "a3": "Compare the model, interface, dimensions and other requirements in the specifications. Contact support before ordering if compatibility is unclear.",
+          "q4": "How do I create an account?",
+          "a4": "Open Login or Sign Up, choose Register, and create an account with your name, email and password."
+        },
+        "ordering": {
+          "title": "Ordering and payments",
+          "q1": "Do I need an account to place an order?",
+          "a1": "Guest checkout may be available. An account makes it easier to track orders and use account features.",
+          "q2": "Which payment methods do you support?",
+          "a2": "Available payment methods appear during checkout and can include mobile payments, cards and cash on delivery.",
+          "q3": "Can I cancel my order?",
+          "a3": "Cancellation depends on the order status. Open your order details to check the available action or contact support.",
+          "q4": "Is my payment secure?",
+          "a4": "Checkout uses supported payment providers and secure handling. Sensitive payment credentials are not stored by the store.",
+          "q5": "How will I receive order confirmation?",
+          "a5": "Confirmation and status updates can appear in your account and may also be sent through configured email or SMS channels."
+        },
+        "shipping": {
+          "title": "Delivery and shipping",
+          "q1": "How much is the delivery charge?",
+          "a1": "The delivery charge depends on the delivery area, cart and current shipping rules. The final amount is shown at checkout.",
+          "q2": "How long does delivery take?",
+          "a2": "The estimate depends on inventory location, destination and courier coverage and is shown during checkout or order processing.",
+          "q3": "Where do you deliver?",
+          "a3": "Delivery availability depends on the active courier coverage and the address entered during checkout.",
+          "q4": "How can I track my order?",
+          "a4": "Open My Orders and select the order to see its current status and available shipment tracking.",
+          "q5": "Do you offer express delivery?",
+          "a5": "Express or faster delivery may appear when supported for the selected address and order."
+        },
+        "returns": {
+          "title": "Returns and refunds",
+          "q1": "Can I return a product?",
+          "a1": "Eligible products can be returned within the applicable window for supported reasons such as damage, defects or an incorrect item.",
+          "q2": "How does the refund process work?",
+          "a2": "After approval, return and inspection, the refund is issued through the approved method. Provider processing times may vary.",
+          "q3": "Can I exchange a product?",
+          "a3": "An exchange may be available depending on the return reason, product eligibility and current stock."
+        },
+        "account": {
+          "title": "Account and profile",
+          "q1": "What should I do if I forgot my password?",
+          "a1": "Use Forgot Password on the login page, enter your registered email and follow the reset instructions.",
+          "q2": "How do I update my profile?",
+          "a2": "Open your account profile to update the available personal and contact information.",
+          "q3": "How can I view my order history?",
+          "a3": "Open My Account and select My Orders to view current and previous purchases.",
+          "q4": "How do I manage saved addresses?",
+          "a4": "Open the address section in your account to add, edit or remove saved delivery addresses."
+        },
+        "products": {
+          "title": "Products and availability",
+          "q1": "How do I know whether a product is in stock?",
+          "a1": "The product page shows its current availability. Stock can change until an order is confirmed.",
+          "q2": "Do product prices change?",
+          "a2": "Prices and promotions may change. The confirmed checkout total is the price that applies to the submitted order.",
+          "q3": "Where can I find specifications?",
+          "a3": "Open the product page and review its description, attributes, variants and specification sections.",
+          "q4": "Can I compare products?",
+          "a4": "Use available categories, filters and product details to compare options, or contact support for guidance."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "subtitle": "Your privacy is important to us.",
+      "overview": {
+        "securityTitle": "Data security",
+        "securityDescription": "Reasonable safeguards are used to protect your information.",
+        "transparencyTitle": "Transparency",
+        "transparencyDescription": "We explain what information is collected and why it is needed.",
+        "controlTitle": "Your control",
+        "controlDescription": "You can review and update available account information."
+      },
+      "collect": {
+        "title": "What we collect",
+        "personal": {
+          "title": "Personal information",
+          "nameEmail": "Name and email address",
+          "phone": "Phone number",
+          "address": "Delivery address"
+        },
+        "order": {
+          "title": "Order information",
+          "preferences": "Product preferences",
+          "history": "Order history",
+          "payment": "Payment method information, excluding sensitive credentials"
+        },
+        "usage": {
+          "title": "Usage information",
+          "browsing": "Browsing activity",
+          "wishlist": "Wishlist items",
+          "pageViews": "Page views"
+        },
+        "notStored": {
+          "title": "What we do not store",
+          "bank": "Full bank account details",
+          "card": "Full card numbers",
+          "password": "Plain-text passwords"
+        }
+      },
+      "usage": {
+        "title": "How we use your information",
+        "essential": {
+          "title": "Essential uses",
+          "processing": "Order processing and delivery",
+          "account": "Account management",
+          "support": "Customer support",
+          "recommendations": "Relevant product recommendations"
+        },
+        "permission": {
+          "title": "With your permission",
+          "marketing": "Marketing emails",
+          "offers": "Special offers and promotions",
+          "notifications": "New product notifications",
+          "surveys": "Surveys and feedback requests"
+        }
+      },
+      "rights": {
+        "title": "Your rights",
+        "accessTitle": "Access your information",
+        "accessDescription": "You can request access to the information we hold about you.",
+        "updateTitle": "Update information",
+        "updateDescription": "You can edit available profile details or ask us to correct them."
+      },
+      "cta": {
+        "title": "Have privacy questions?",
+        "description": "Contact us for privacy-related questions or requests.",
+        "action": "Contact our privacy team",
+        "lastUpdated": "Last updated:",
+        "date": "August 19, 2026",
+        "updateNote": "We may update this policy when our services or legal requirements change."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Terms and conditions",
+        "description": "Terms governing accounts, orders, pricing, payments, delivery and use of {site}."
+      },
+      "title": "Terms and conditions",
+      "intro": "These terms explain how accounts, product orders, payments, fulfilment and after-sales support work when you use {site}.",
+      "effectiveDate": "Effective date: August 19, 2026",
+      "agreement": "By accessing the store, creating an account or placing an order, you agree to these terms and the linked privacy, shipping and return policies. If you do not agree, do not submit an order.",
+      "sections": {
+        "orders": {
+          "title": "Orders and availability",
+          "first": "Submitting an order is a request to purchase. An order is accepted after stock, price, payment and delivery information have been verified.",
+          "second": "Products, variants and warehouse stock can change before confirmation. If an item becomes unavailable, we may offer an alternative, revise the order with your approval or cancel and refund the affected amount."
+        },
+        "pricing": {
+          "title": "Pricing and payment",
+          "first": "Prices are shown in the displayed currency and may change without notice. The confirmed total includes applicable discounts, taxes and delivery charges shown during checkout.",
+          "second": "Payment methods are subject to provider approval. Instalment information, where shown, remains indicative until the provider confirms eligibility, fees and tenure."
+        },
+        "delivery": {
+          "title": "Delivery and inspection",
+          "first": "Delivery estimates are not guarantees and may be affected by stock location, courier coverage, weather, holidays or events outside our reasonable control.",
+          "second": "Inspect the package and product promptly. Report missing, damaged or incorrect items through support within the period stated in the return policy."
+        },
+        "warranty": {
+          "title": "Warranty and product compatibility",
+          "first": "Warranty coverage depends on the product, brand and provider shown on the product page or invoice. Manufacturer or distributor conditions may apply.",
+          "second": "Compatibility information is guidance unless expressly confirmed. Verify relevant model, size, material, specification or usage requirements before purchase."
+        },
+        "digital": {
+          "title": "Software and digital items",
+          "first": "Software, activation keys, subscriptions and digital products are governed by their publisher licence terms. Delivered or activated credentials may not be returnable except where legally required or proven defective.",
+          "second": "You must not resell, copy, bypass licensing controls or use a digital product outside its permitted licence."
+        },
+        "accounts": {
+          "title": "Accounts and acceptable use",
+          "first": "Keep account and contact information accurate and protect your credentials. You are responsible for account activity unless unauthorized use is promptly reported.",
+          "second": "Automated abuse, fraud, unlawful use, interference with the service, false claims and attempts to access restricted systems are prohibited."
+        },
+        "returns": {
+          "title": "Cancellations, returns and liability",
+          "first": "Cancellation and return eligibility follows the order status and published return policy. Refund timing can also depend on the payment provider.",
+          "second": "To the extent permitted by applicable law, liability is limited to direct loss connected to the affected order. Rights that cannot legally be excluded remain unaffected."
+        }
+      },
+      "changes": {
+        "title": "Policy changes and contact",
+        "description": "We may update these terms to reflect operational, legal or service changes. The effective date identifies the current version. Contact support before ordering if any condition is unclear.",
+        "contact": "Contact support",
+        "returns": "Read return policy"
+      }
+    }
+  },
   "CustomerAccount": {
     "common": {
       "home": "Home",

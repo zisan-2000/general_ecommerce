@@ -8,8 +8,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export default function ReturnsPolicyPage() {
+export default async function ReturnsPolicyPage() {
+  const t = await getTranslations("StorefrontSupport.returns");
+  const eligible = ["wrongProduct", "defect", "damaged", "missingParts"] as const;
+  const ineligible = ["customerDamage", "modified", "late", "packaging"] as const;
+  const steps = ["contact", "approval", "send", "refund"] as const;
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -20,11 +25,11 @@ export default function ReturnsPolicyPage() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Returns Policy
+            {t("title")}
           </h1>
 
           <p className="text-lg text-primary-foreground/90">
-            Simple and transparent return process
+            {t("subtitle")}
           </p>
         </div>
       </section>
@@ -36,30 +41,30 @@ export default function ReturnsPolicyPage() {
             <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
               <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold text-foreground mb-2">
-                Within 7 Days
+                {t("overview.windowTitle")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Returns must be requested within 7 days of delivery
+                {t("overview.windowDescription")}
               </p>
             </div>
 
             <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
               <Package className="h-8 w-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold text-foreground mb-2">
-                Unchanged Condition
+                {t("overview.conditionTitle")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Product must be unused and in original condition
+                {t("overview.conditionDescription")}
               </p>
             </div>
 
             <div className="text-center p-6 bg-card rounded-xl shadow-sm border border-border">
               <RefreshCw className="h-8 w-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold text-foreground mb-2">
-                Fast Processing
+                {t("overview.processingTitle")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Refund processed within 5–7 business days
+                {t("overview.processingDescription")}
               </p>
             </div>
           </div>
@@ -74,19 +79,14 @@ export default function ReturnsPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center">
                 <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400 mr-3" />
-                Eligible for Return
+                {t("eligible.title")}
               </h2>
 
               <div className="space-y-4">
-                {[
-                  "Wrong product delivered",
-                  "Manufacturing / printing defect",
-                  "Product arrived damaged",
-                  "Missing parts or accessories",
-                ].map((t) => (
-                  <div key={t} className="flex items-start space-x-3">
+                {eligible.map((item) => (
+                  <div key={item} className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-muted-foreground">{t}</p>
+                    <p className="text-muted-foreground">{t(`eligible.${item}`)}</p>
                   </div>
                 ))}
               </div>
@@ -96,19 +96,14 @@ export default function ReturnsPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center">
                 <XCircle className="h-6 w-6 text-destructive mr-3" />
-                Not Eligible for Return
+                {t("ineligible.title")}
               </h2>
 
               <div className="space-y-4">
-                {[
-                  "Used or damaged by customer",
-                  "Scratches, marks, or modifications",
-                  "Return request after 7 days",
-                  "Original packaging missing or heavily damaged",
-                ].map((t) => (
-                  <div key={t} className="flex items-start space-x-3">
+                {ineligible.map((item) => (
+                  <div key={item} className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-muted-foreground">{t}</p>
+                    <p className="text-muted-foreground">{t(`ineligible.${item}`)}</p>
                   </div>
                 ))}
               </div>
@@ -121,40 +116,19 @@ export default function ReturnsPolicyPage() {
       <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-            Return Process
+            {t("process.title")}
           </h2>
 
           <div className="grid md:grid-cols-4 gap-6">
-            {[
-              {
-                step: "1",
-                title: "Contact Support",
-                desc: "Reach out to our support team",
-              },
-              {
-                step: "2",
-                title: "Get Approval",
-                desc: "Your return request will be reviewed",
-              },
-              {
-                step: "3",
-                title: "Send Product",
-                desc: "Ship the product to our address",
-              },
-              {
-                step: "4",
-                title: "Receive Refund",
-                desc: "Refund processed within 5–7 business days",
-              },
-            ].map((x) => (
-              <div key={x.step} className="text-center">
+            {steps.map((step, index) => (
+              <div key={step} className="text-center">
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-lg">
-                  {x.step}
+                  {index + 1}
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  {x.title}
+                  {t(`process.${step}Title`)}
                 </h3>
-                <p className="text-sm text-muted-foreground">{x.desc}</p>
+                <p className="text-sm text-muted-foreground">{t(`process.${step}Description`)}</p>
               </div>
             ))}
           </div>
@@ -165,26 +139,26 @@ export default function ReturnsPolicyPage() {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-foreground mb-6">
-            Refund Details
+            {t("refund.title")}
           </h2>
 
           <div className="bg-card rounded-xl p-6 border border-border">
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">Refund Time:</strong>{" "}
-                5–7 business days
+                <strong className="text-foreground">{t("refund.timeLabel")}:</strong>{" "}
+                {t("refund.timeValue")}
               </p>
               <p>
-                <strong className="text-foreground">Refund Method:</strong>{" "}
-                Original payment method
+                <strong className="text-foreground">{t("refund.methodLabel")}:</strong>{" "}
+                {t("refund.methodValue")}
               </p>
               <p>
-                <strong className="text-foreground">Shipping Charge:</strong>{" "}
-                Non-refundable (except if it was our mistake)
+                <strong className="text-foreground">{t("refund.shippingLabel")}:</strong>{" "}
+                {t("refund.shippingValue")}
               </p>
               <p>
-                <strong className="text-foreground">Exchange:</strong> Same
-                product or another product of equal value
+                <strong className="text-foreground">{t("refund.exchangeLabel")}:</strong>{" "}
+                {t("refund.exchangeValue")}
               </p>
             </div>
           </div>
@@ -195,17 +169,17 @@ export default function ReturnsPolicyPage() {
       <section className="py-12 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl font-bold mb-4">
-            Need help with a return?
+            {t("cta.title")}
           </h2>
           <p className="mb-6 opacity-90">
-            Our support team is ready to assist you.
+            {t("cta.description")}
           </p>
 
           <div className="flex justify-center">
             <Button asChild className="bg-background text-foreground hover:bg-background/90">
               <Link href="/ecommerce/contact">
                 <Headphones className="h-4 w-4 mr-2" />
-                Contact support
+                {t("cta.action")}
               </Link>
             </Button>
           </div>

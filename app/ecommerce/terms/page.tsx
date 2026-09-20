@@ -10,79 +10,37 @@ import {
   ShoppingCart,
   Wrench,
 } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { getSiteSettingsForSeo } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSiteSettingsForSeo();
+  const [settings, t] = await Promise.all([
+    getSiteSettingsForSeo(),
+    getTranslations("StorefrontSupport.terms"),
+  ]);
   return {
-    title: "Terms and Conditions",
-    description: `Terms governing accounts, orders, pricing, payments, delivery and use of ${settings.siteTitle}.`,
+    title: t("metadata.title"),
+    description: t("metadata.description", { site: settings.siteTitle }),
     alternates: { canonical: "/ecommerce/terms" },
   };
 }
 
 const sections = [
-  {
-    icon: ShoppingCart,
-    title: "Orders and availability",
-    paragraphs: [
-      "Submitting an order is a request to purchase. An order is accepted after stock, price, payment and delivery information have been verified.",
-      "Products, variants and warehouse stock can change before confirmation. If an item becomes unavailable, we may offer an alternative, revise the order with your approval or cancel and refund the affected amount.",
-    ],
-  },
-  {
-    icon: CreditCard,
-    title: "Pricing and payment",
-    paragraphs: [
-      "Prices are shown in the displayed currency and may change without notice. The confirmed order total includes applicable discounts, taxes and delivery charges shown during checkout.",
-      "Payment methods are subject to provider approval. EMI information, where shown, is indicative until the issuing bank confirms eligibility, fees and tenure.",
-    ],
-  },
-  {
-    icon: PackageCheck,
-    title: "Delivery and inspection",
-    paragraphs: [
-      "Delivery estimates are not guarantees and may be affected by stock location, courier coverage, weather, holidays or events outside our reasonable control.",
-      "Inspect the package and product as soon as possible. Report missing, damaged or incorrect items through our support channel within the period stated in the return policy.",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Warranty and product compatibility",
-    paragraphs: [
-      "Warranty coverage depends on the product, brand and warranty provider shown on the product page or invoice. Manufacturer or distributor warranty conditions may apply.",
-      "Compatibility information is guidance unless expressly confirmed. Customers should verify the relevant model, size, material, specification or usage requirements before purchase.",
-    ],
-  },
-  {
-    icon: BadgeCheck,
-    title: "Software and digital items",
-    paragraphs: [
-      "Software, activation keys, subscriptions and digital products are governed by their publisher licence terms. Activated, revealed or delivered digital credentials may not be returnable except where required by law or proven defective.",
-      "You must not resell, copy, bypass licensing controls or use a digital product outside its permitted licence.",
-    ],
-  },
-  {
-    icon: ShieldCheck,
-    title: "Accounts and acceptable use",
-    paragraphs: [
-      "Keep account and contact information accurate and protect your credentials. You are responsible for activity performed through your account unless promptly reported as unauthorized.",
-      "Automated abuse, fraud, unlawful use, interference with the service, false claims and attempts to access restricted systems are prohibited.",
-    ],
-  },
-  {
-    icon: Scale,
-    title: "Cancellations, returns and liability",
-    paragraphs: [
-      "Cancellation and return eligibility follows the status of the order and our published return policy. Refund timing can also depend on the payment provider.",
-      "To the extent permitted by applicable law, liability is limited to direct loss connected to the affected order. Nothing in these terms removes rights that cannot legally be excluded.",
-    ],
-  },
-];
+  { icon: ShoppingCart, key: "orders" },
+  { icon: CreditCard, key: "pricing" },
+  { icon: PackageCheck, key: "delivery" },
+  { icon: Wrench, key: "warranty" },
+  { icon: BadgeCheck, key: "digital" },
+  { icon: ShieldCheck, key: "accounts" },
+  { icon: Scale, key: "returns" },
+] as const;
 
 export default async function TermsPage() {
-  const settings = await getSiteSettingsForSeo();
+  const [settings, t] = await Promise.all([
+    getSiteSettingsForSeo(),
+    getTranslations("StorefrontSupport.terms"),
+  ]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -91,44 +49,35 @@ export default async function TermsPage() {
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <FileText className="h-6 w-6" aria-hidden />
           </div>
-          <h1 className="mt-5 text-3xl font-bold sm:text-4xl">
-            Terms and Conditions
-          </h1>
+          <h1 className="mt-5 text-3xl font-bold sm:text-4xl">{t("title")}</h1>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
-            These terms explain how accounts, product orders, payments,
-            fulfilment and after-sales support work when you use {settings.siteTitle}.
+            {t("intro", { site: settings.siteTitle })}
           </p>
           <p className="mt-3 text-xs font-medium text-muted-foreground">
-            Effective date: 19 August 2026
+            {t("effectiveDate")}
           </p>
         </div>
       </section>
 
       <section className="container mx-auto max-w-5xl px-4 py-12">
         <div className="rounded-2xl border border-border bg-card p-5 text-sm leading-7 text-muted-foreground sm:p-6">
-          By accessing the store, creating an account or placing an order, you
-          agree to these terms and the linked privacy, shipping and return
-          policies. If you do not agree, do not submit an order.
+          {t("agreement")}
         </div>
 
         <div className="mt-8 space-y-4">
           {sections.map((section, index) => (
-            <article
-              key={section.title}
-              className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7"
-            >
+            <article key={section.key} className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
               <div className="flex gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <section.icon className="h-5 w-5" aria-hidden />
                 </div>
                 <div>
                   <h2 className="text-lg font-bold">
-                    {index + 1}. {section.title}
+                    {index + 1}. {t(`sections.${section.key}.title`)}
                   </h2>
                   <div className="mt-3 space-y-3 text-sm leading-7 text-muted-foreground">
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                    <p>{t(`sections.${section.key}.first`)}</p>
+                    <p>{t(`sections.${section.key}.second`)}</p>
                   </div>
                 </div>
               </div>
@@ -137,18 +86,14 @@ export default async function TermsPage() {
         </div>
 
         <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-6">
-          <h2 className="text-lg font-bold">Policy changes and contact</h2>
-          <p className="mt-2 text-sm leading-7 text-muted-foreground">
-            We may update these terms to reflect operational, legal or service
-            changes. The effective date above identifies the current version.
-            Contact support before ordering if any condition is unclear.
-          </p>
+          <h2 className="text-lg font-bold">{t("changes.title")}</h2>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">{t("changes.description")}</p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Button asChild size="sm">
-              <Link href="/ecommerce/contact">Contact support</Link>
+              <Link href="/ecommerce/contact">{t("changes.contact")}</Link>
             </Button>
             <Button asChild size="sm" variant="outline">
-              <Link href="/ecommerce/returns">Read return policy</Link>
+              <Link href="/ecommerce/returns">{t("changes.returns")}</Link>
             </Button>
           </div>
         </div>

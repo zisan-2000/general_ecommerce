@@ -9349,124 +9349,767 @@
   },
   "StorefrontShell": {
     "header": {
-      "logoAlt": "स्टोरको लोगो", "user": "प्रयोगकर्ता",
-      "search": { "placeholder": "उत्पादन, ब्रान्ड वा मोडेल खोज्नुहोस्...", "label": "खोज्नुहोस्", "mobilePlaceholder": "खोज्नुहोस्...", "open": "खोज खोल्नुहोस्", "close": "खोज बन्द गर्नुहोस्", "unavailable": "खोज अस्थायी रूपमा उपलब्ध छैन। नतिजा हेर्न Enter थिच्नुहोस्।" },
+      "logoAlt": "स्टोरको लोगो",
+      "user": "प्रयोगकर्ता",
+      "search": {
+        "placeholder": "उत्पादन, ब्रान्ड वा मोडेल खोज्नुहोस्...",
+        "label": "खोज्नुहोस्",
+        "mobilePlaceholder": "खोज्नुहोस्...",
+        "open": "खोज खोल्नुहोस्",
+        "close": "खोज बन्द गर्नुहोस्",
+        "unavailable": "खोज अस्थायी रूपमा उपलब्ध छैन। नतिजा हेर्न Enter थिच्नुहोस्।"
+      },
       "changeLanguage": "भाषा परिवर्तन गर्नुहोस्",
-      "theme": { "select": "थिम चयन गर्नुहोस्", "label": "थिम", "light": "उज्यालो", "dark": "गाढा" },
-      "wishlist": "इच्छासूची", "cart": "कार्ट", "profile": "प्रोफाइल", "account": "खाता", "dashboard": "ड्यासबोर्ड", "logout": "लगआउट", "login": "लगइन", "signOut": "साइन आउट", "blog": "ब्लग", "shopShortcuts": "किनमेल सर्टकटहरू",
-      "menu": { "open": "मेनु खोल्नुहोस्", "close": "मेनु बन्द गर्नुहोस्", "closeOverlay": "मेनु ओभरले बन्द गर्नुहोस्", "more": "थप" },
-      "categories": { "loading": "लोड हुँदैछ...", "empty": "कुनै श्रेणी भेटिएन।", "noSubcategories": "कुनै उपश्रेणी छैन।", "noChildCategories": "कुनै तल्लो श्रेणी छैन।", "collapse": "{name} खुम्च्याउनुहोस्", "expand": "{name} फैलाउनुहोस्", "scrollPrevious": "श्रेणीहरू बायाँ सार्नुहोस्", "scrollNext": "श्रेणीहरू दायाँ सार्नुहोस्", "explore": "श्रेणी हेर्नुहोस्", "viewAll": "सबै हेर्नुहोस्", "subcategories": "{name} का उपश्रेणीहरू" },
+      "theme": {
+        "select": "थिम चयन गर्नुहोस्",
+        "label": "थिम",
+        "light": "उज्यालो",
+        "dark": "गाढा"
+      },
+      "wishlist": "इच्छासूची",
+      "cart": "कार्ट",
+      "profile": "प्रोफाइल",
+      "account": "खाता",
+      "dashboard": "ड्यासबोर्ड",
+      "logout": "लगआउट",
+      "login": "लगइन",
+      "signOut": "साइन आउट",
+      "blog": "ब्लग",
+      "shopShortcuts": "किनमेल सर्टकटहरू",
+      "menu": {
+        "open": "मेनु खोल्नुहोस्",
+        "close": "मेनु बन्द गर्नुहोस्",
+        "closeOverlay": "मेनु ओभरले बन्द गर्नुहोस्",
+        "more": "थप"
+      },
+      "categories": {
+        "loading": "लोड हुँदैछ...",
+        "empty": "कुनै श्रेणी भेटिएन।",
+        "noSubcategories": "कुनै उपश्रेणी छैन।",
+        "noChildCategories": "कुनै तल्लो श्रेणी छैन।",
+        "collapse": "{name} खुम्च्याउनुहोस्",
+        "expand": "{name} फैलाउनुहोस्",
+        "scrollPrevious": "श्रेणीहरू बायाँ सार्नुहोस्",
+        "scrollNext": "श्रेणीहरू दायाँ सार्नुहोस्",
+        "explore": "श्रेणी हेर्नुहोस्",
+        "viewAll": "सबै हेर्नुहोस्",
+        "subcategories": "{name} का उपश्रेणीहरू"
+      },
       "shopActions": {
-        "flashSale": { "label": "फ्ल्यास सेल", "description": "चलिरहेका सीमित समयका अफरहरू हेर्नुहोस्" },
-        "compare": { "label": "तुलना", "description": "चयन गरिएका उत्पादनहरू तुलना गर्नुहोस्" },
-        "books": { "label": "पुस्तकहरू", "description": "पुस्तक संग्रह हेर्नुहोस्" },
-        "authors": { "label": "लेखकहरू", "description": "लेखकअनुसार पुस्तकहरू हेर्नुहोस्" },
-        "publishers": { "label": "प्रकाशकहरू", "description": "प्रकाशकअनुसार पुस्तकहरू हेर्नुहोस्" },
-        "pcBuilder": { "label": "पीसी बिल्डर", "description": "मिल्दो कस्टम डेस्कटप पीसी बनाउनुहोस्" }
+        "flashSale": {
+          "label": "फ्ल्यास सेल",
+          "description": "चलिरहेका सीमित समयका अफरहरू हेर्नुहोस्"
+        },
+        "compare": {
+          "label": "तुलना",
+          "description": "चयन गरिएका उत्पादनहरू तुलना गर्नुहोस्"
+        },
+        "books": {
+          "label": "पुस्तकहरू",
+          "description": "पुस्तक संग्रह हेर्नुहोस्"
+        },
+        "authors": {
+          "label": "लेखकहरू",
+          "description": "लेखकअनुसार पुस्तकहरू हेर्नुहोस्"
+        },
+        "publishers": {
+          "label": "प्रकाशकहरू",
+          "description": "प्रकाशकअनुसार पुस्तकहरू हेर्नुहोस्"
+        },
+        "pcBuilder": {
+          "label": "पीसी बिल्डर",
+          "description": "मिल्दो कस्टम डेस्कटप पीसी बनाउनुहोस्"
+        }
       }
     },
-    "search": { "suggestions": "खोज सुझावहरू", "searching": "उत्पादनहरू खोजिँदैछन्...", "noMatch": "मिल्दो उत्पादन भेटिएन", "noMatchHint": "हिज्जे जाँच्नुहोस् वा ब्रान्ड, मोडेल, SKU वा श्रेणीबाट खोज्नुहोस्।", "products": "उत्पादनहरू", "inStock": "स्टकमा छ", "outOfStock": "स्टकमा छैन", "categories": "श्रेणीहरू", "brands": "ब्रान्डहरू", "popularSearches": "लोकप्रिय खोजहरू", "viewAllResults": "“{query}” का सबै नतिजा हेर्नुहोस्" },
+    "search": {
+      "suggestions": "खोज सुझावहरू",
+      "searching": "उत्पादनहरू खोजिँदैछन्...",
+      "noMatch": "मिल्दो उत्पादन भेटिएन",
+      "noMatchHint": "हिज्जे जाँच्नुहोस् वा ब्रान्ड, मोडेल, SKU वा श्रेणीबाट खोज्नुहोस्।",
+      "products": "उत्पादनहरू",
+      "inStock": "स्टकमा छ",
+      "outOfStock": "स्टकमा छैन",
+      "categories": "श्रेणीहरू",
+      "brands": "ब्रान्डहरू",
+      "popularSearches": "लोकप्रिय खोजहरू",
+      "viewAllResults": "“{query}” का सबै नतिजा हेर्नुहोस्"
+    },
     "footer": {
       "logoAlt": "स्टोरको लोगो",
       "features": {
-        "delivery": { "label": "छिटो डेलिभरी", "description": "देशभर डेलिभरी विकल्प" },
-        "ordering": { "label": "अनलाइन अर्डर", "description": "२४/७ अर्डर गर्नुहोस्" },
-        "payment": { "label": "सुरक्षित भुक्तानी", "description": "सुरक्षित भुक्तानी प्रक्रिया" },
-        "authentic": { "label": "१००% प्रामाणिक", "description": "सक्कली उत्पादनको ग्यारेन्टी" }
+        "delivery": {
+          "label": "छिटो डेलिभरी",
+          "description": "देशभर डेलिभरी विकल्प"
+        },
+        "ordering": {
+          "label": "अनलाइन अर्डर",
+          "description": "२४/७ अर्डर गर्नुहोस्"
+        },
+        "payment": {
+          "label": "सुरक्षित भुक्तानी",
+          "description": "सुरक्षित भुक्तानी प्रक्रिया"
+        },
+        "authentic": {
+          "label": "१००% प्रामाणिक",
+          "description": "सक्कली उत्पादनको ग्यारेन्टी"
+        }
       },
-      "brand": { "defaultTagline": "गुणस्तरीय उत्पादन, सुरक्षित किनमेल र भरपर्दो सेवा", "defaultDescription": "स्पष्ट जानकारी, सुरक्षित चेकआउट र भरपर्दो डेलिभरीसहित गुणस्तरीय उत्पादन पत्ता लगाउनुहोस्।" },
-      "contact": { "callUs": "हामीलाई फोन गर्नुहोस्", "emailUs": "हामीलाई इमेल गर्नुहोस्", "address": "ठेगाना", "phoneUnavailable": "सम्पर्क नम्बर कन्फिगर गरिएको छैन", "emailUnavailable": "सम्पर्क इमेल कन्फिगर गरिएको छैन", "addressUnavailable": "व्यावसायिक ठेगाना कन्फिगर गरिएको छैन" },
-      "sections": { "quickLinks": "द्रुत लिङ्कहरू", "categories": "श्रेणीहरू", "customerService": "ग्राहक सेवा" },
-      "links": { "allProducts": "सबै उत्पादन", "flashSale": "फ्ल्यास सेल", "blogs": "ब्लगहरू", "bestsellers": "सर्वाधिक बिक्री", "about": "हाम्रो बारेमा", "contact": "सम्पर्क गर्नुहोस्", "shippingPolicy": "ढुवानी नीति", "returnPolicy": "फिर्ता नीति", "privacyPolicy": "गोपनीयता नीति", "faq": "बारम्बार सोधिने प्रश्न", "terms": "सेवाका सर्तहरू", "sitemap": "साइटम्याप" },
-      "newsletter": { "title": "न्युजलेटर", "description": "नवीनतम अपडेट र विशेष अफर पाउन हाम्रो न्युजलेटर सदस्यता लिनुहोस्।", "emailLabel": "न्युजलेटर इमेल ठेगाना", "placeholder": "आफ्नो इमेल लेख्नुहोस्", "subscribing": "सदस्यता लिइँदैछ...", "subscribe": "सदस्यता लिनुहोस्", "success": "सफलतापूर्वक सदस्यता लिइयो!", "errors": { "emailRequired": "कृपया आफ्नो इमेल ठेगाना लेख्नुहोस्", "invalidOrExists": "यो इमेल मान्य छैन वा पहिले नै अवस्थित छ", "failed": "सदस्यता लिँदा समस्या भयो", "tryAgain": "केही समस्या भयो। फेरि प्रयास गर्नुहोस्।" } },
-      "secureTransactions": "१००% सुरक्षित कारोबार", "rights": "© {year} {site} सर्वाधिकार सुरक्षित।"
+      "brand": {
+        "defaultTagline": "गुणस्तरीय उत्पादन, सुरक्षित किनमेल र भरपर्दो सेवा",
+        "defaultDescription": "स्पष्ट जानकारी, सुरक्षित चेकआउट र भरपर्दो डेलिभरीसहित गुणस्तरीय उत्पादन पत्ता लगाउनुहोस्।"
+      },
+      "contact": {
+        "callUs": "हामीलाई फोन गर्नुहोस्",
+        "emailUs": "हामीलाई इमेल गर्नुहोस्",
+        "address": "ठेगाना",
+        "phoneUnavailable": "सम्पर्क नम्बर कन्फिगर गरिएको छैन",
+        "emailUnavailable": "सम्पर्क इमेल कन्फिगर गरिएको छैन",
+        "addressUnavailable": "व्यावसायिक ठेगाना कन्फिगर गरिएको छैन"
+      },
+      "sections": {
+        "quickLinks": "द्रुत लिङ्कहरू",
+        "categories": "श्रेणीहरू",
+        "customerService": "ग्राहक सेवा"
+      },
+      "links": {
+        "allProducts": "सबै उत्पादन",
+        "flashSale": "फ्ल्यास सेल",
+        "blogs": "ब्लगहरू",
+        "bestsellers": "सर्वाधिक बिक्री",
+        "about": "हाम्रो बारेमा",
+        "contact": "सम्पर्क गर्नुहोस्",
+        "shippingPolicy": "ढुवानी नीति",
+        "returnPolicy": "फिर्ता नीति",
+        "privacyPolicy": "गोपनीयता नीति",
+        "faq": "बारम्बार सोधिने प्रश्न",
+        "terms": "सेवाका सर्तहरू",
+        "sitemap": "साइटम्याप"
+      },
+      "newsletter": {
+        "title": "न्युजलेटर",
+        "description": "नवीनतम अपडेट र विशेष अफर पाउन हाम्रो न्युजलेटर सदस्यता लिनुहोस्।",
+        "emailLabel": "न्युजलेटर इमेल ठेगाना",
+        "placeholder": "आफ्नो इमेल लेख्नुहोस्",
+        "subscribing": "सदस्यता लिइँदैछ...",
+        "subscribe": "सदस्यता लिनुहोस्",
+        "success": "सफलतापूर्वक सदस्यता लिइयो!",
+        "errors": {
+          "emailRequired": "कृपया आफ्नो इमेल ठेगाना लेख्नुहोस्",
+          "invalidOrExists": "यो इमेल मान्य छैन वा पहिले नै अवस्थित छ",
+          "failed": "सदस्यता लिँदा समस्या भयो",
+          "tryAgain": "केही समस्या भयो। फेरि प्रयास गर्नुहोस्।"
+        }
+      },
+      "secureTransactions": "१००% सुरक्षित कारोबार",
+      "rights": "© {year} {site} सर्वाधिकार सुरक्षित।"
     }
   },
   "StorefrontCommerce": {
-    "addToCart": { "label": "कार्टमा थप्नुहोस्", "adding": "थपिँदै छ...", "outOfStock": "स्टकमा छैन", "failed": "यो उत्पादन कार्टमा थप्न सकिएन।" },
+    "addToCart": {
+      "label": "कार्टमा थप्नुहोस्",
+      "adding": "थपिँदै छ...",
+      "outOfStock": "स्टकमा छैन",
+      "failed": "यो उत्पादन कार्टमा थप्न सकिएन।"
+    },
     "cart": {
-      "title": "किनमेल कार्ट", "syncing": "तपाईंको कार्ट सिङ्क हुँदै छ...", "loadFailed": "तपाईंको कार्ट लोड गर्न सकिएन", "retry": "फेरि प्रयास गर्नुहोस्", "unknownProduct": "अज्ञात उत्पादन", "products": "तपाईंका उत्पादनहरू", "itemCount": "{count} वस्तु", "clearCart": "कार्ट खाली गर्नुहोस्", "unitPrice": "एकाइ मूल्य", "unit": "एकाइ", "decreaseQuantity": "परिमाण घटाउनुहोस्", "increaseQuantity": "परिमाण बढाउनुहोस्", "removeItem": "वस्तु हटाउनुहोस्", "continueShopping": "किनमेल जारी राख्नुहोस्", "orderSummary": "अर्डर सारांश", "subtotal": "उप-जम्मा", "discount": "छुट", "total": "जम्मा", "addMore": "थप गर्नुहोस्", "checkout": "चेकआउट", "securePayment": "सुरक्षित भुक्तानी", "fastDelivery": "छिटो डेलिभरी", "shippingNote": "स्थान र तौलअनुसार ढुवानी शुल्क फरक हुन सक्छ।",
-      "empty": { "title": "तपाईंको कार्ट खाली छ", "description": "सुरु गर्न केही उत्पादन थप्नुहोस्।" },
-      "errors": { "load": "कार्ट लोड गर्न सकिएन।", "loginRequired": "चेकआउट जारी राख्न लगइन गर्नुहोस्।", "clearFailed": "कार्ट खाली गर्न सकिएन।", "removeFailed": "वस्तु हटाउन सकिएन।", "updateFailed": "परिमाण अद्यावधिक गर्न सकिएन।", "couponRequired": "कुपन कोड लेख्नुहोस्।", "couponApplyFailed": "कुपन लागू गर्न सकिएन।", "invalidCoupon": "कुपन कोड मान्य छैन।" },
-      "success": { "cleared": "कार्ट खाली गरियो।", "removed": "वस्तु हटाइयो।", "couponApplied": "कुपन लागू भयो!", "couponRemoved": "कुपन हटाइयो।" }
+      "title": "किनमेल कार्ट",
+      "syncing": "तपाईंको कार्ट सिङ्क हुँदै छ...",
+      "loadFailed": "तपाईंको कार्ट लोड गर्न सकिएन",
+      "retry": "फेरि प्रयास गर्नुहोस्",
+      "unknownProduct": "अज्ञात उत्पादन",
+      "products": "तपाईंका उत्पादनहरू",
+      "itemCount": "{count} वस्तु",
+      "clearCart": "कार्ट खाली गर्नुहोस्",
+      "unitPrice": "एकाइ मूल्य",
+      "unit": "एकाइ",
+      "decreaseQuantity": "परिमाण घटाउनुहोस्",
+      "increaseQuantity": "परिमाण बढाउनुहोस्",
+      "removeItem": "वस्तु हटाउनुहोस्",
+      "continueShopping": "किनमेल जारी राख्नुहोस्",
+      "orderSummary": "अर्डर सारांश",
+      "subtotal": "उप-जम्मा",
+      "discount": "छुट",
+      "total": "जम्मा",
+      "addMore": "थप गर्नुहोस्",
+      "checkout": "चेकआउट",
+      "securePayment": "सुरक्षित भुक्तानी",
+      "fastDelivery": "छिटो डेलिभरी",
+      "shippingNote": "स्थान र तौलअनुसार ढुवानी शुल्क फरक हुन सक्छ।",
+      "empty": {
+        "title": "तपाईंको कार्ट खाली छ",
+        "description": "सुरु गर्न केही उत्पादन थप्नुहोस्।"
+      },
+      "errors": {
+        "load": "कार्ट लोड गर्न सकिएन।",
+        "loginRequired": "चेकआउट जारी राख्न लगइन गर्नुहोस्।",
+        "clearFailed": "कार्ट खाली गर्न सकिएन।",
+        "removeFailed": "वस्तु हटाउन सकिएन।",
+        "updateFailed": "परिमाण अद्यावधिक गर्न सकिएन।",
+        "couponRequired": "कुपन कोड लेख्नुहोस्।",
+        "couponApplyFailed": "कुपन लागू गर्न सकिएन।",
+        "invalidCoupon": "कुपन कोड मान्य छैन।"
+      },
+      "success": {
+        "cleared": "कार्ट खाली गरियो।",
+        "removed": "वस्तु हटाइयो।",
+        "couponApplied": "कुपन लागू भयो!",
+        "couponRemoved": "कुपन हटाइयो।"
+      }
     },
     "floatingCart": {
-      "cart": "कार्ट", "openDrawer": "कार्ट ड्रअर खोल्नुहोस्", "closeDrawer": "कार्ट ड्रअर बन्द गर्नुहोस्", "description": "कार्टका वस्तुहरू हेर्नुहोस् र चेकआउटमा जानुहोस्।", "flyingItemAlt": "कार्टमा थपिँदै गरेको वस्तु", "selectVariant": "भेरियन्ट छान्नुहोस्", "loadingVariants": "भेरियन्टहरू लोड हुँदै छन्...", "outOfStock": "स्टकमा छैन", "noVariantsAvailable": "यस उत्पादनका लागि भेरियन्ट उपलब्ध छैन", "price": "मूल्य", "quantity": "परिमाण", "subtotal": "उप-जम्मा", "decreaseQuantity": "परिमाण घटाउनुहोस्", "increaseQuantity": "परिमाण बढाउनुहोस्", "removeItem": "वस्तु हटाउनुहोस्", "cartTotal": "कार्ट जम्मा", "selectVariants": "भेरियन्टहरू छान्नुहोस्", "checkout": "चेकआउट", "variantSelected": "भेरियन्ट चयन भयो: {variant}",
-      "empty": { "title": "तपाईंको कार्ट खाली छ", "description": "किनमेल जारी राख्न केही वस्तु थप्नुहोस्।" },
-      "errors": { "loginRequired": "चेकआउट जारी राख्न लगइन गर्नुहोस्।", "selectAllVariants": "चेकआउटअघि सबै वस्तुको भेरियन्ट छान्नुहोस्।", "noVariants": "यस उत्पादनका लागि भेरियन्ट उपलब्ध छैन।", "loadVariantsFailed": "उत्पादनका भेरियन्ट लोड गर्न सकिएन।" }
+      "cart": "कार्ट",
+      "openDrawer": "कार्ट ड्रअर खोल्नुहोस्",
+      "closeDrawer": "कार्ट ड्रअर बन्द गर्नुहोस्",
+      "description": "कार्टका वस्तुहरू हेर्नुहोस् र चेकआउटमा जानुहोस्।",
+      "flyingItemAlt": "कार्टमा थपिँदै गरेको वस्तु",
+      "selectVariant": "भेरियन्ट छान्नुहोस्",
+      "loadingVariants": "भेरियन्टहरू लोड हुँदै छन्...",
+      "outOfStock": "स्टकमा छैन",
+      "noVariantsAvailable": "यस उत्पादनका लागि भेरियन्ट उपलब्ध छैन",
+      "price": "मूल्य",
+      "quantity": "परिमाण",
+      "subtotal": "उप-जम्मा",
+      "decreaseQuantity": "परिमाण घटाउनुहोस्",
+      "increaseQuantity": "परिमाण बढाउनुहोस्",
+      "removeItem": "वस्तु हटाउनुहोस्",
+      "cartTotal": "कार्ट जम्मा",
+      "selectVariants": "भेरियन्टहरू छान्नुहोस्",
+      "checkout": "चेकआउट",
+      "variantSelected": "भेरियन्ट चयन भयो: {variant}",
+      "empty": {
+        "title": "तपाईंको कार्ट खाली छ",
+        "description": "किनमेल जारी राख्न केही वस्तु थप्नुहोस्।"
+      },
+      "errors": {
+        "loginRequired": "चेकआउट जारी राख्न लगइन गर्नुहोस्।",
+        "selectAllVariants": "चेकआउटअघि सबै वस्तुको भेरियन्ट छान्नुहोस्।",
+        "noVariants": "यस उत्पादनका लागि भेरियन्ट उपलब्ध छैन।",
+        "loadVariantsFailed": "उत्पादनका भेरियन्ट लोड गर्न सकिएन।"
+      }
     },
     "checkout": {
-      "title": "चेकआउट", "description": "आफ्नो अर्डर पूरा गर्न तलका चरणहरू पालना गर्नुहोस्।", "nextStep": "अर्को चरण", "unknownProduct": "अज्ञात उत्पादन",
-      "steps": { "details": "व्यक्तिगत विवरण", "payment": "भुक्तानी", "confirmation": "पुष्टि" },
-      "common": { "back": "पछाडि", "close": "बन्द गर्नुहोस्", "notAvailable": "उपलब्ध छैन" },
-      "fields": { "fullName": "पूरा नाम *", "namePlaceholder": "आफ्नो नाम लेख्नुहोस्", "mobile": "मोबाइल *", "emailOptional": "इमेल (वैकल्पिक)", "emailPlaceholder": "आफ्नो इमेल लेख्नुहोस्", "country": "देश *", "countryPlaceholder": "बङ्गलादेश", "district": "जिल्ला *", "districtPlaceholder": "ढाका", "area": "क्षेत्र *", "addressDetails": "ठेगाना विवरण *", "addressPlaceholder": "घर, सडक, चिनारी स्थान" },
-      "address": { "saved": "सुरक्षित ठेगाना", "addNew": "नयाँ ठेगाना थप्नुहोस्", "loading": "ठेगानाहरू लोड हुँदै छन्...", "selectOptional": "सुरक्षित ठेगाना छान्नुहोस् (वैकल्पिक)", "label": "ठेगाना लेबल *", "labelPlaceholder": "घर / कार्यालय", "saving": "सुरक्षित हुँदै छ...", "saveCurrent": "हालको ठेगाना सुरक्षित गर्नुहोस्" },
-      "shipping": { "loadingAreas": "क्षेत्रहरू लोड हुँदै छन्...", "selectArea": "क्षेत्र छान्नुहोस्", "standardRate": "मानक दर", "freeOver": "৳{amount} भन्दा माथि निःशुल्क", "noArea": "यस देशका लागि ढुवानी क्षेत्र उपलब्ध छैन।", "calculating": "गणना हुँदै छ...", "free": "निःशुल्क", "appliedRate": "लागू दर", "freeApplied": "निःशुल्क ढुवानी लागू भयो (न्यूनतम अर्डर ৳{amount} पूरा भयो)", "addMoreForFree": "निःशुल्क ढुवानीका लागि थप ৳{amount} थप्नुहोस्" },
-      "confirmation": { "title": "अर्डर पुष्टि गर्नुहोस्", "created": "अर्डर सफलतापूर्वक सिर्जना भयो!", "invoiceId": "बीजक आईडी", "orderId": "अर्डर आईडी", "customer": "ग्राहक", "name": "नाम", "mobile": "मोबाइल", "email": "इमेल", "address": "ठेगाना", "order": "अर्डर", "payment": "भुक्तानी", "status": "स्थिति", "transaction": "कारोबार", "paymentScreenshot": "भुक्तानी स्क्रिनसट", "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन", "complete": "अर्डर पूरा गर्नुहोस्", "completed": "अर्डर पूरा भयो" },
-      "coupon": { "remove": "हटाउनुहोस्", "applied": "कुपन सफलतापूर्वक लागू भयो।", "placeholder": "प्रोमो / कुपन कोड", "validating": "प्रमाणीकरण हुँदै छ...", "apply": "कुपन लागू गर्नुहोस्" },
-      "summary": { "title": "अर्डर सारांश", "subtotal": "उप-जम्मा", "discount": "छुट", "shipping": "ढुवानी", "vat": "भ्याट", "included": "समावेश", "added": "थपिएको", "total": "जम्मा", "securePayment": "सुरक्षित भुक्तानी", "deliveryTime": "२-४ कार्यदिनमा डेलिभरी" },
-      "paymentStatus": { "unknown": "अज्ञात", "unpaid": "भुक्तानी नभएको", "paid": "भुक्तानी भएको" },
-      "successModal": { "title": "अर्डर सफल भयो!", "description": "तपाईंको अर्डर सफलतापूर्वक राखियो। अर्डर ट्र्याक गर्न तल क्लिक गर्नुहोस्।", "trackOrder": "अर्डर ट्र्याक गर्नुहोस्", "continueShopping": "किनमेल जारी राख्नुहोस्" },
-      "errors": { "partialCartSync": "केही वस्तु तपाईंको खाताको कार्टमा सार्न सकिएन। ती अझै कार्टमै छन्—फेरि प्रयास गर्नुहोस्।", "fileTooLarge": "फाइलको आकार ५ MB भन्दा कम हुनुपर्छ।", "invalidImage": "मान्य तस्बिर फाइल अपलोड गर्नुहोस्।", "uploadFailed": "स्क्रिनसट अपलोड गर्न सकिएन।", "uploadMissingUrl": "अपलोड प्रतिक्रियामा फाइल URL छैन।", "couponRequired": "कुपन कोड लेख्नुहोस्।", "couponApplyFailed": "कुपन लागू गर्न सकिएन।", "invalidCoupon": "कुपन कोड मान्य छैन।", "addressRequired": "देश, जिल्ला, क्षेत्र र पूरा ठेगाना भर्नुहोस्।", "validAreaRequired": "मान्य क्षेत्र छान्नुहोस्।", "loginToSaveAddress": "ठेगाना सुरक्षित गर्न लगइन गर्नुहोस्।", "completeAddressRequired": "लेबल, देश, जिल्ला, क्षेत्र र ठेगाना विवरण भर्नुहोस्।", "saveAddressFailed": "ठेगाना सुरक्षित गर्न सकिएन।", "emptyCart": "तपाईंको कार्ट खाली छ।", "requiredInformation": "सबै आवश्यक जानकारी भर्नुहोस्।", "waitForUpload": "स्क्रिनसट अपलोड पूरा नभएसम्म पर्खनुहोस्।", "screenshotRequired": "भुक्तानी स्क्रिनसट आवश्यक छ।", "placeOrderFailedRetry": "अर्डर राख्दा समस्या भयो। पछि फेरि प्रयास गर्नुहोस्।", "gatewayStartFailed": "SSLCommerz भुक्तानी सुरु गर्न सकिएन।", "placeOrderFailed": "अर्डर राख्दा समस्या भयो।" },
-      "success": { "couponApplied": "कुपन लागू भयो!", "couponRemoved": "कुपन हटाइयो।", "addressSaved": "ठेगाना सुरक्षित भयो।", "orderCreated": "अर्डर सिर्जना भयो। अब पुष्टि गर्नुहोस्।", "orderCompleted": "अर्डर सफलतापूर्वक पूरा भयो!" }
+      "title": "चेकआउट",
+      "description": "आफ्नो अर्डर पूरा गर्न तलका चरणहरू पालना गर्नुहोस्।",
+      "nextStep": "अर्को चरण",
+      "unknownProduct": "अज्ञात उत्पादन",
+      "steps": {
+        "details": "व्यक्तिगत विवरण",
+        "payment": "भुक्तानी",
+        "confirmation": "पुष्टि"
+      },
+      "common": {
+        "back": "पछाडि",
+        "close": "बन्द गर्नुहोस्",
+        "notAvailable": "उपलब्ध छैन"
+      },
+      "fields": {
+        "fullName": "पूरा नाम *",
+        "namePlaceholder": "आफ्नो नाम लेख्नुहोस्",
+        "mobile": "मोबाइल *",
+        "emailOptional": "इमेल (वैकल्पिक)",
+        "emailPlaceholder": "आफ्नो इमेल लेख्नुहोस्",
+        "country": "देश *",
+        "countryPlaceholder": "बङ्गलादेश",
+        "district": "जिल्ला *",
+        "districtPlaceholder": "ढाका",
+        "area": "क्षेत्र *",
+        "addressDetails": "ठेगाना विवरण *",
+        "addressPlaceholder": "घर, सडक, चिनारी स्थान"
+      },
+      "address": {
+        "saved": "सुरक्षित ठेगाना",
+        "addNew": "नयाँ ठेगाना थप्नुहोस्",
+        "loading": "ठेगानाहरू लोड हुँदै छन्...",
+        "selectOptional": "सुरक्षित ठेगाना छान्नुहोस् (वैकल्पिक)",
+        "label": "ठेगाना लेबल *",
+        "labelPlaceholder": "घर / कार्यालय",
+        "saving": "सुरक्षित हुँदै छ...",
+        "saveCurrent": "हालको ठेगाना सुरक्षित गर्नुहोस्"
+      },
+      "shipping": {
+        "loadingAreas": "क्षेत्रहरू लोड हुँदै छन्...",
+        "selectArea": "क्षेत्र छान्नुहोस्",
+        "standardRate": "मानक दर",
+        "freeOver": "৳{amount} भन्दा माथि निःशुल्क",
+        "noArea": "यस देशका लागि ढुवानी क्षेत्र उपलब्ध छैन।",
+        "calculating": "गणना हुँदै छ...",
+        "free": "निःशुल्क",
+        "appliedRate": "लागू दर",
+        "freeApplied": "निःशुल्क ढुवानी लागू भयो (न्यूनतम अर्डर ৳{amount} पूरा भयो)",
+        "addMoreForFree": "निःशुल्क ढुवानीका लागि थप ৳{amount} थप्नुहोस्"
+      },
+      "confirmation": {
+        "title": "अर्डर पुष्टि गर्नुहोस्",
+        "created": "अर्डर सफलतापूर्वक सिर्जना भयो!",
+        "invoiceId": "बीजक आईडी",
+        "orderId": "अर्डर आईडी",
+        "customer": "ग्राहक",
+        "name": "नाम",
+        "mobile": "मोबाइल",
+        "email": "इमेल",
+        "address": "ठेगाना",
+        "order": "अर्डर",
+        "payment": "भुक्तानी",
+        "status": "स्थिति",
+        "transaction": "कारोबार",
+        "paymentScreenshot": "भुक्तानी स्क्रिनसट",
+        "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन",
+        "complete": "अर्डर पूरा गर्नुहोस्",
+        "completed": "अर्डर पूरा भयो"
+      },
+      "coupon": {
+        "remove": "हटाउनुहोस्",
+        "applied": "कुपन सफलतापूर्वक लागू भयो।",
+        "placeholder": "प्रोमो / कुपन कोड",
+        "validating": "प्रमाणीकरण हुँदै छ...",
+        "apply": "कुपन लागू गर्नुहोस्"
+      },
+      "summary": {
+        "title": "अर्डर सारांश",
+        "subtotal": "उप-जम्मा",
+        "discount": "छुट",
+        "shipping": "ढुवानी",
+        "vat": "भ्याट",
+        "included": "समावेश",
+        "added": "थपिएको",
+        "total": "जम्मा",
+        "securePayment": "सुरक्षित भुक्तानी",
+        "deliveryTime": "२-४ कार्यदिनमा डेलिभरी"
+      },
+      "paymentStatus": {
+        "unknown": "अज्ञात",
+        "unpaid": "भुक्तानी नभएको",
+        "paid": "भुक्तानी भएको"
+      },
+      "successModal": {
+        "title": "अर्डर सफल भयो!",
+        "description": "तपाईंको अर्डर सफलतापूर्वक राखियो। अर्डर ट्र्याक गर्न तल क्लिक गर्नुहोस्।",
+        "trackOrder": "अर्डर ट्र्याक गर्नुहोस्",
+        "continueShopping": "किनमेल जारी राख्नुहोस्"
+      },
+      "errors": {
+        "partialCartSync": "केही वस्तु तपाईंको खाताको कार्टमा सार्न सकिएन। ती अझै कार्टमै छन्—फेरि प्रयास गर्नुहोस्।",
+        "fileTooLarge": "फाइलको आकार ५ MB भन्दा कम हुनुपर्छ।",
+        "invalidImage": "मान्य तस्बिर फाइल अपलोड गर्नुहोस्।",
+        "uploadFailed": "स्क्रिनसट अपलोड गर्न सकिएन।",
+        "uploadMissingUrl": "अपलोड प्रतिक्रियामा फाइल URL छैन।",
+        "couponRequired": "कुपन कोड लेख्नुहोस्।",
+        "couponApplyFailed": "कुपन लागू गर्न सकिएन।",
+        "invalidCoupon": "कुपन कोड मान्य छैन।",
+        "addressRequired": "देश, जिल्ला, क्षेत्र र पूरा ठेगाना भर्नुहोस्।",
+        "validAreaRequired": "मान्य क्षेत्र छान्नुहोस्।",
+        "loginToSaveAddress": "ठेगाना सुरक्षित गर्न लगइन गर्नुहोस्।",
+        "completeAddressRequired": "लेबल, देश, जिल्ला, क्षेत्र र ठेगाना विवरण भर्नुहोस्।",
+        "saveAddressFailed": "ठेगाना सुरक्षित गर्न सकिएन।",
+        "emptyCart": "तपाईंको कार्ट खाली छ।",
+        "requiredInformation": "सबै आवश्यक जानकारी भर्नुहोस्।",
+        "waitForUpload": "स्क्रिनसट अपलोड पूरा नभएसम्म पर्खनुहोस्।",
+        "screenshotRequired": "भुक्तानी स्क्रिनसट आवश्यक छ।",
+        "placeOrderFailedRetry": "अर्डर राख्दा समस्या भयो। पछि फेरि प्रयास गर्नुहोस्।",
+        "gatewayStartFailed": "SSLCommerz भुक्तानी सुरु गर्न सकिएन।",
+        "placeOrderFailed": "अर्डर राख्दा समस्या भयो।"
+      },
+      "success": {
+        "couponApplied": "कुपन लागू भयो!",
+        "couponRemoved": "कुपन हटाइयो।",
+        "addressSaved": "ठेगाना सुरक्षित भयो।",
+        "orderCreated": "अर्डर सिर्जना भयो। अब पुष्टि गर्नुहोस्।",
+        "orderCompleted": "अर्डर सफलतापूर्वक पूरा भयो!"
+      }
     },
-    "payment": { "title": "भुक्तानी", "back": "पछाडि", "totalPayable": "कुल भुक्तानीयोग्य", "cashOnDelivery": "डेलिभरीमा नगद", "manualPayment": "म्यानुअल भुक्तानी", "sslDescription": "SSLCommerz मार्फत सुरक्षित भुक्तानी गर्नुहोस्", "manualDescription": "म्यानुअल भुक्तानी (स्क्रिनसट र कारोबार आईडी आवश्यक)", "codDescription": "उत्पादन प्राप्त गर्दा भुक्तानी गर्नुहोस्", "selected": "चयन गरिएको", "sendMoneyTo": "पैसा पठाउनुहोस्", "transactionId": "कारोबार आईडी *", "transactionPlaceholder": "कारोबार आईडी लेख्नुहोस्", "screenshot": "भुक्तानी स्क्रिनसट *", "uploading": "अपलोड हुँदै छ...", "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन", "sslRedirect": "अर्डर राखेपछि तपाईंलाई SSLCommerz मा पठाइनेछ।", "noPaymentNow": "अहिले भुक्तानी आवश्यक छैन।", "placeOrder": "अर्डर राख्नुहोस्" },
-    "paymentResult": { "success": "भुक्तानी सफल भयो", "cancelled": "भुक्तानी रद्द भयो", "unsuccessful": "भुक्तानी असफल भयो", "verified": "तपाईंको भुक्तानी प्रमाणित भयो।", "unpaid": "तपाईंको अर्डर अझै भुक्तानी भएको छैन।", "orderNumber": "अर्डर #{id}", "viewOrders": "अर्डरहरू हेर्नुहोस्", "continueShopping": "किनमेल जारी राख्नुहोस्" }
+    "payment": {
+      "title": "भुक्तानी",
+      "back": "पछाडि",
+      "totalPayable": "कुल भुक्तानीयोग्य",
+      "cashOnDelivery": "डेलिभरीमा नगद",
+      "manualPayment": "म्यानुअल भुक्तानी",
+      "sslDescription": "SSLCommerz मार्फत सुरक्षित भुक्तानी गर्नुहोस्",
+      "manualDescription": "म्यानुअल भुक्तानी (स्क्रिनसट र कारोबार आईडी आवश्यक)",
+      "codDescription": "उत्पादन प्राप्त गर्दा भुक्तानी गर्नुहोस्",
+      "selected": "चयन गरिएको",
+      "sendMoneyTo": "पैसा पठाउनुहोस्",
+      "transactionId": "कारोबार आईडी *",
+      "transactionPlaceholder": "कारोबार आईडी लेख्नुहोस्",
+      "screenshot": "भुक्तानी स्क्रिनसट *",
+      "uploading": "अपलोड हुँदै छ...",
+      "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन",
+      "sslRedirect": "अर्डर राखेपछि तपाईंलाई SSLCommerz मा पठाइनेछ।",
+      "noPaymentNow": "अहिले भुक्तानी आवश्यक छैन।",
+      "placeOrder": "अर्डर राख्नुहोस्"
+    },
+    "paymentResult": {
+      "success": "भुक्तानी सफल भयो",
+      "cancelled": "भुक्तानी रद्द भयो",
+      "unsuccessful": "भुक्तानी असफल भयो",
+      "verified": "तपाईंको भुक्तानी प्रमाणित भयो।",
+      "unpaid": "तपाईंको अर्डर अझै भुक्तानी भएको छैन।",
+      "orderNumber": "अर्डर #{id}",
+      "viewOrders": "अर्डरहरू हेर्नुहोस्",
+      "continueShopping": "किनमेल जारी राख्नुहोस्"
+    }
   },
   "StorefrontCatalog": {
     "page": {
-      "eyebrow": "उत्पादन सूची", "heading": "आफ्नो लागि सही उत्पादन खोज्नुहोस्", "description": "सम्पूर्ण सूची खोज्नुहोस्, हालको मूल्य तुलना गर्नुहोस् र श्रेणी, ब्रान्ड, उत्पादन प्रकार वा उपलब्धताअनुसार नतिजा सीमित गर्नुहोस्।", "filters": "फिल्टरहरू", "showHide": "देखाउनुहोस् / लुकाउनुहोस्", "clear": "हटाउनुहोस्", "clearAll": "सबै हटाउनुहोस्", "clearAllFilters": "सबै फिल्टर हटाउनुहोस्", "search": "खोज्नुहोस्", "searchPlaceholder": "नाम, SKU वा ब्रान्ड", "category": "श्रेणी", "allCategories": "सबै श्रेणी", "brands": "ब्रान्डहरू", "productType": "उत्पादन प्रकार", "allTypes": "सबै प्रकार", "priceRange": "मूल्य दायरा", "minPrice": "न्यूनतम {value}", "maxPrice": "अधिकतम {value}", "minimumPrice": "न्यूनतम मूल्य", "maximumPrice": "अधिकतम मूल्य", "availability": "उपलब्धता", "inStock": "स्टकमा", "inStockOnly": "स्टकमा भएका मात्र", "featured": "विशेष", "featuredProducts": "विशेष उत्पादनहरू", "yes": "हो", "no": "होइन", "sortBy": "क्रमबद्ध गर्नुहोस्", "productsPerPage": "प्रति पृष्ठ उत्पादन", "resultsFor": "“{query}” का नतिजाहरू", "allProducts": "सबै उत्पादन", "showingResults": "{total} उत्पादनमध्ये {first}–{last} देखाइँदै", "any": "जुनसुकै",
-      "sort": { "relevance": "सबैभन्दा सान्दर्भिक", "newest": "नयाँ", "popular": "लोकप्रिय", "priceAsc": "मूल्य: कमदेखि बढी", "priceDesc": "मूल्य: बढीदेखि कम", "nameAsc": "नाम: A–Z" },
-      "productTypes": { "physical": "भौतिक", "digital": "डिजिटल", "service": "सेवा", "bundle": "बन्डल" },
-      "active": { "label": "सक्रिय उत्पादन फिल्टर", "title": "सक्रिय", "search": "खोज: {query}", "price": "मूल्य: {min}–{max}", "remove": "{label} फिल्टर हटाउनुहोस्" },
-      "empty": { "title": "उत्पादन भेटिएन", "description": "फराकिलो खोज प्रयास गर्नुहोस् वा एक वा बढी फिल्टर हटाउनुहोस्।", "viewAll": "सबै उत्पादन हेर्नुहोस्" },
-      "pagination": { "label": "उत्पादन सूची पृष्ठहरू", "previous": "अघिल्लो", "next": "अर्को" },
-      "metadata": { "searchResults": "“{query}” का खोज नतिजाहरू", "categoryProducts": "{category} उत्पादन", "description": "श्रेणी, ब्रान्ड, मूल्य र उपलब्धता फिल्टरसहित {site} का उत्पादन हेर्नुहोस्।", "catalogName": "{site} उत्पादन सूची" }
+      "eyebrow": "उत्पादन सूची",
+      "heading": "आफ्नो लागि सही उत्पादन खोज्नुहोस्",
+      "description": "सम्पूर्ण सूची खोज्नुहोस्, हालको मूल्य तुलना गर्नुहोस् र श्रेणी, ब्रान्ड, उत्पादन प्रकार वा उपलब्धताअनुसार नतिजा सीमित गर्नुहोस्।",
+      "filters": "फिल्टरहरू",
+      "showHide": "देखाउनुहोस् / लुकाउनुहोस्",
+      "clear": "हटाउनुहोस्",
+      "clearAll": "सबै हटाउनुहोस्",
+      "clearAllFilters": "सबै फिल्टर हटाउनुहोस्",
+      "search": "खोज्नुहोस्",
+      "searchPlaceholder": "नाम, SKU वा ब्रान्ड",
+      "category": "श्रेणी",
+      "allCategories": "सबै श्रेणी",
+      "brands": "ब्रान्डहरू",
+      "productType": "उत्पादन प्रकार",
+      "allTypes": "सबै प्रकार",
+      "priceRange": "मूल्य दायरा",
+      "minPrice": "न्यूनतम {value}",
+      "maxPrice": "अधिकतम {value}",
+      "minimumPrice": "न्यूनतम मूल्य",
+      "maximumPrice": "अधिकतम मूल्य",
+      "availability": "उपलब्धता",
+      "inStock": "स्टकमा",
+      "inStockOnly": "स्टकमा भएका मात्र",
+      "featured": "विशेष",
+      "featuredProducts": "विशेष उत्पादनहरू",
+      "yes": "हो",
+      "no": "होइन",
+      "sortBy": "क्रमबद्ध गर्नुहोस्",
+      "productsPerPage": "प्रति पृष्ठ उत्पादन",
+      "resultsFor": "“{query}” का नतिजाहरू",
+      "allProducts": "सबै उत्पादन",
+      "showingResults": "{total} उत्पादनमध्ये {first}–{last} देखाइँदै",
+      "any": "जुनसुकै",
+      "sort": {
+        "relevance": "सबैभन्दा सान्दर्भिक",
+        "newest": "नयाँ",
+        "popular": "लोकप्रिय",
+        "priceAsc": "मूल्य: कमदेखि बढी",
+        "priceDesc": "मूल्य: बढीदेखि कम",
+        "nameAsc": "नाम: A–Z"
+      },
+      "productTypes": {
+        "physical": "भौतिक",
+        "digital": "डिजिटल",
+        "service": "सेवा",
+        "bundle": "बन्डल"
+      },
+      "active": {
+        "label": "सक्रिय उत्पादन फिल्टर",
+        "title": "सक्रिय",
+        "search": "खोज: {query}",
+        "price": "मूल्य: {min}–{max}",
+        "remove": "{label} फिल्टर हटाउनुहोस्"
+      },
+      "empty": {
+        "title": "उत्पादन भेटिएन",
+        "description": "फराकिलो खोज प्रयास गर्नुहोस् वा एक वा बढी फिल्टर हटाउनुहोस्।",
+        "viewAll": "सबै उत्पादन हेर्नुहोस्"
+      },
+      "pagination": {
+        "label": "उत्पादन सूची पृष्ठहरू",
+        "previous": "अघिल्लो",
+        "next": "अर्को"
+      },
+      "metadata": {
+        "searchResults": "“{query}” का खोज नतिजाहरू",
+        "categoryProducts": "{category} उत्पादन",
+        "description": "श्रेणी, ब्रान्ड, मूल्य र उपलब्धता फिल्टरसहित {site} का उत्पादन हेर्नुहोस्।",
+        "catalogName": "{site} उत्पादन सूची"
+      }
     },
-    "filters": { "updating": "उत्पादनहरू अद्यावधिक हुँदै छन्…", "updatingShort": "अद्यावधिक हुँदै छ…", "automatic": "फिल्टर स्वतः अद्यावधिक हुन्छन्", "showProducts": "उत्पादन देखाउनुहोस्", "apply": "फिल्टर लागू गर्नुहोस्" },
+    "filters": {
+      "updating": "उत्पादनहरू अद्यावधिक हुँदै छन्…",
+      "updatingShort": "अद्यावधिक हुँदै छ…",
+      "automatic": "फिल्टर स्वतः अद्यावधिक हुन्छन्",
+      "showProducts": "उत्पादन देखाउनुहोस्",
+      "apply": "फिल्टर लागू गर्नुहोस्"
+    },
     "grid": {
-      "compareSelected": "तुलनाका लागि {count} उत्पादन चयन", "compareNow": "अहिले तुलना गर्नुहोस्",
-      "login": { "title": "उत्पादन सुरक्षित गर्न साइन इन गर्नुहोस्", "description": "साइन इन हुँदा तपाईंको इच्छासूची सिङ्क रहन्छ।", "cancel": "रद्द गर्नुहोस्", "signIn": "साइन इन" },
-      "errors": { "wishlist": "इच्छासूची अद्यावधिक भएन।", "outOfStock": "यो उत्पादन स्टकमा छैन।", "addToCart": "उत्पादन कार्टमा थप्न सकिएन।", "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।" },
-      "success": { "wishlistRemoved": "इच्छासूचीबाट हटाइयो।", "wishlistAdded": "इच्छासूचीमा थपियो।", "addedToCart": "“{name}” कार्टमा थपियो।", "comparisonAdded": "तुलनामा थपियो।", "comparisonRemoved": "तुलनाबाट हटाइयो।" }
+      "compareSelected": "तुलनाका लागि {count} उत्पादन चयन",
+      "compareNow": "अहिले तुलना गर्नुहोस्",
+      "login": {
+        "title": "उत्पादन सुरक्षित गर्न साइन इन गर्नुहोस्",
+        "description": "साइन इन हुँदा तपाईंको इच्छासूची सिङ्क रहन्छ।",
+        "cancel": "रद्द गर्नुहोस्",
+        "signIn": "साइन इन"
+      },
+      "errors": {
+        "wishlist": "इच्छासूची अद्यावधिक भएन।",
+        "outOfStock": "यो उत्पादन स्टकमा छैन।",
+        "addToCart": "उत्पादन कार्टमा थप्न सकिएन।",
+        "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।"
+      },
+      "success": {
+        "wishlistRemoved": "इच्छासूचीबाट हटाइयो।",
+        "wishlistAdded": "इच्छासूचीमा थपियो।",
+        "addedToCart": "“{name}” कार्टमा थपियो।",
+        "comparisonAdded": "तुलनामा थपियो।",
+        "comparisonRemoved": "तुलनाबाट हटाइयो।"
+      }
     },
-    "card": { "viewProduct": "{name} हेर्नुहोस्", "save": "बचत: {amount}", "bestSeller": "सर्वाधिक बिक्री", "removeWishlist": "इच्छासूचीबाट हटाउनुहोस्", "addWishlist": "इच्छासूचीमा थप्नुहोस्", "outOfStock": "स्टकमा छैन", "model": "मोडेल", "unavailable": "अहिले उपलब्ध छैन", "readyToOrder": "अर्डर गर्न तयार", "reviewCount": "{count} समीक्षा", "availableColors": "उपलब्ध रङहरू", "colorVariant": "{color} रङ भेरियन्ट", "includes": "समावेश: {items}", "viewDetailsFor": "{name} को विवरण हेर्नुहोस्", "viewDetails": "विवरण हेर्नुहोस्", "addToCart": "कार्टमा थप्नुहोस्", "compared": "तुलनामा", "compare": "तुलना" },
-    "brands": { "eyebrow": "ब्रान्ड सूची", "title": "विश्वसनीय ब्रान्ड किनमेल गर्नुहोस्", "description": "कुनै पनि ब्रान्ड खोलेर श्रेणी, मूल्य, उपलब्धता र क्रमबद्ध नियन्त्रणसहित प्रत्यक्ष सूची हेर्नुहोस्।", "logoAlt": "{name} लोगो", "productCount": "{count} उत्पादन", "viewProducts": "उत्पादन हेर्नुहोस्", "empty": "सक्रिय उत्पादन भएका ब्रान्ड अझै उपलब्ध छैनन्।", "metadata": { "title": "ब्रान्डअनुसार किनमेल", "description": "ब्रान्डअनुसार उपलब्ध {site} उत्पादन हेर्नुहोस्।" } }
+    "card": {
+      "viewProduct": "{name} हेर्नुहोस्",
+      "save": "बचत: {amount}",
+      "bestSeller": "सर्वाधिक बिक्री",
+      "removeWishlist": "इच्छासूचीबाट हटाउनुहोस्",
+      "addWishlist": "इच्छासूचीमा थप्नुहोस्",
+      "outOfStock": "स्टकमा छैन",
+      "model": "मोडेल",
+      "unavailable": "अहिले उपलब्ध छैन",
+      "readyToOrder": "अर्डर गर्न तयार",
+      "reviewCount": "{count} समीक्षा",
+      "availableColors": "उपलब्ध रङहरू",
+      "colorVariant": "{color} रङ भेरियन्ट",
+      "includes": "समावेश: {items}",
+      "viewDetailsFor": "{name} को विवरण हेर्नुहोस्",
+      "viewDetails": "विवरण हेर्नुहोस्",
+      "addToCart": "कार्टमा थप्नुहोस्",
+      "compared": "तुलनामा",
+      "compare": "तुलना"
+    },
+    "brands": {
+      "eyebrow": "ब्रान्ड सूची",
+      "title": "विश्वसनीय ब्रान्ड किनमेल गर्नुहोस्",
+      "description": "कुनै पनि ब्रान्ड खोलेर श्रेणी, मूल्य, उपलब्धता र क्रमबद्ध नियन्त्रणसहित प्रत्यक्ष सूची हेर्नुहोस्।",
+      "logoAlt": "{name} लोगो",
+      "productCount": "{count} उत्पादन",
+      "viewProducts": "उत्पादन हेर्नुहोस्",
+      "empty": "सक्रिय उत्पादन भएका ब्रान्ड अझै उपलब्ध छैनन्।",
+      "metadata": {
+        "title": "ब्रान्डअनुसार किनमेल",
+        "description": "ब्रान्डअनुसार उपलब्ध {site} उत्पादन हेर्नुहोस्।"
+      }
+    }
   },
   "StorefrontProduct": {
     "page": {
-      "metadata": { "notFound": "उत्पादन भेटिएन", "buyOnline": "बङ्गलादेशमा {name} अनलाइन किन्नुहोस्।" },
-      "breadcrumb": { "label": "ब्रेडक्रम्ब", "home": "गृहपृष्ठ", "products": "उत्पादन" },
-      "information": { "productId": "उत्पादन आईडी", "category": "श्रेणी", "brand": "ब्रान्ड", "writer": "लेखक", "publisher": "प्रकाशक", "type": "प्रकार", "weight": "तौल", "dimensions": "आयाम" },
-      "types": { "physical": "भौतिक", "digital": "डिजिटल", "service": "सेवा", "bundle": "बन्डल" },
-      "recommendations": { "eyebrow": "तपाईंलाई यी पनि मन पर्न सक्छन्", "title": "सिफारिस गरिएका उत्पादन", "viewCategory": "श्रेणी हेर्नुहोस्" }
+      "metadata": {
+        "notFound": "उत्पादन भेटिएन",
+        "buyOnline": "बङ्गलादेशमा {name} अनलाइन किन्नुहोस्।"
+      },
+      "breadcrumb": {
+        "label": "ब्रेडक्रम्ब",
+        "home": "गृहपृष्ठ",
+        "products": "उत्पादन"
+      },
+      "information": {
+        "productId": "उत्पादन आईडी",
+        "category": "श्रेणी",
+        "brand": "ब्रान्ड",
+        "writer": "लेखक",
+        "publisher": "प्रकाशक",
+        "type": "प्रकार",
+        "weight": "तौल",
+        "dimensions": "आयाम"
+      },
+      "types": {
+        "physical": "भौतिक",
+        "digital": "डिजिटल",
+        "service": "सेवा",
+        "bundle": "बन्डल"
+      },
+      "recommendations": {
+        "eyebrow": "तपाईंलाई यी पनि मन पर्न सक्छन्",
+        "title": "सिफारिस गरिएका उत्पादन",
+        "viewCategory": "श्रेणी हेर्नुहोस्"
+      }
     },
     "purchase": {
-      "save": "बचत: {amount}", "viewImage": "उत्पादन तस्बिर {number} हेर्नुहोस्", "ratingLabel": "५ मध्ये {rating} तारा", "reviews": "{count} समीक्षा", "share": "साझा गर्नुहोस्", "stock": "स्टक", "inStock": "स्टकमा", "outOfStock": "स्टकमा छैन", "brand": "ब्रान्ड", "model": "मोडेल", "warranty": "वारेन्टी", "chooseOption": "विकल्प छान्नुहोस्", "option": "विकल्प {id}", "stockLeft": "{count} बाँकी", "hotline": "हटलाइन", "discountPrice": "छुट मूल्य", "youSave": "तपाईंले {amount} बचाउनुहुन्छ", "emiStarts": "EMI सुरु*", "installments": "१२ महिनासम्मको किस्ता", "decreaseQuantity": "परिमाण घटाउनुहोस्", "increaseQuantity": "परिमाण बढाउनुहोस्", "addToCart": "कार्टमा थप्नुहोस्", "wishlist": "इच्छासूची", "compare": "तुलना", "buyNow": "सुरक्षित चेकआउटबाट अहिले किन्नुहोस्", "compareSelected": "चयन गरिएका तुलना गर्नुहोस् ({count})",
-      "errors": { "addToCart": "उत्पादन कार्टमा थप्न सकिएन।", "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।", "wishlist": "इच्छासूची अद्यावधिक भएन।", "share": "उत्पादन लिङ्क साझा गर्न सकिएन।" },
-      "success": { "addedToCart": "“{name}” कार्टमा थपियो।", "comparisonAdded": "तुलनामा थपियो।", "comparisonRemoved": "तुलनाबाट हटाइयो।", "wishlistRemoved": "इच्छासूचीबाट हटाइयो।", "wishlistAdded": "इच्छासूचीमा थपियो।", "linkCopied": "उत्पादन लिङ्क प्रतिलिपि भयो।" }
+      "save": "बचत: {amount}",
+      "viewImage": "उत्पादन तस्बिर {number} हेर्नुहोस्",
+      "ratingLabel": "५ मध्ये {rating} तारा",
+      "reviews": "{count} समीक्षा",
+      "share": "साझा गर्नुहोस्",
+      "stock": "स्टक",
+      "inStock": "स्टकमा",
+      "outOfStock": "स्टकमा छैन",
+      "brand": "ब्रान्ड",
+      "model": "मोडेल",
+      "warranty": "वारेन्टी",
+      "chooseOption": "विकल्प छान्नुहोस्",
+      "option": "विकल्प {id}",
+      "stockLeft": "{count} बाँकी",
+      "hotline": "हटलाइन",
+      "discountPrice": "छुट मूल्य",
+      "youSave": "तपाईंले {amount} बचाउनुहुन्छ",
+      "emiStarts": "EMI सुरु*",
+      "installments": "१२ महिनासम्मको किस्ता",
+      "decreaseQuantity": "परिमाण घटाउनुहोस्",
+      "increaseQuantity": "परिमाण बढाउनुहोस्",
+      "addToCart": "कार्टमा थप्नुहोस्",
+      "wishlist": "इच्छासूची",
+      "compare": "तुलना",
+      "buyNow": "सुरक्षित चेकआउटबाट अहिले किन्नुहोस्",
+      "compareSelected": "चयन गरिएका तुलना गर्नुहोस् ({count})",
+      "errors": {
+        "addToCart": "उत्पादन कार्टमा थप्न सकिएन।",
+        "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।",
+        "wishlist": "इच्छासूची अद्यावधिक भएन।",
+        "share": "उत्पादन लिङ्क साझा गर्न सकिएन।"
+      },
+      "success": {
+        "addedToCart": "“{name}” कार्टमा थपियो।",
+        "comparisonAdded": "तुलनामा थपियो।",
+        "comparisonRemoved": "तुलनाबाट हटाइयो।",
+        "wishlistRemoved": "इच्छासूचीबाट हटाइयो।",
+        "wishlistAdded": "इच्छासूचीमा थपियो।",
+        "linkCopied": "उत्पादन लिङ्क प्रतिलिपि भयो।"
+      }
     },
-    "tabs": { "label": "उत्पादन विवरण", "specifications": "विशिष्टता", "description": "विवरण", "reviews": "समीक्षा", "specificationsTitle": "विशिष्टताहरू", "descriptionFallback": "उत्पादन विवरण चाँडै उपलब्ध हुनेछ।" },
+    "tabs": {
+      "label": "उत्पादन विवरण",
+      "specifications": "विशिष्टता",
+      "description": "विवरण",
+      "reviews": "समीक्षा",
+      "specificationsTitle": "विशिष्टताहरू",
+      "descriptionFallback": "उत्पादन विवरण चाँडै उपलब्ध हुनेछ।"
+    },
     "questions": {
-      "title": "प्रश्न र उत्तर", "description": "अनुकूलता, विशिष्टता वा खरिदबारे सोध्नुहोस्।", "askQuestion": "प्रश्न सोध्नुहोस्", "placeholder": "यस उत्पादनबारे के जान्न चाहनुहुन्छ?", "submit": "प्रश्न पठाउनुहोस्", "signInToAsk": "सोध्न साइन इन गर्नुहोस्", "loading": "प्रश्नहरू लोड हुँदै छन्...", "empty": "अहिलेसम्म प्रश्न छैन। पहिलो प्रश्न सोध्नुहोस्।", "questionPrefix": "प्र", "answerPrefix": "उ", "customer": "ग्राहक", "answeredBy": "{name} द्वारा उत्तर", "storeTeam": "स्टोर टोली", "awaitingAnswer": "स्टोर टोलीको उत्तर पर्खिँदै।", "updateAnswer": "प्रकाशित उत्तर अद्यावधिक गर्नुहोस्", "writeAnswer": "आधिकारिक उत्तर लेख्नुहोस्", "saving": "सुरक्षित हुँदै छ...", "publishAnswer": "उत्तर प्रकाशित गर्नुहोस्",
-      "errors": { "load": "प्रश्न लोड गर्न सकिएन।", "completeQuestion": "पूरा प्रश्न लेख्नुहोस्।", "submit": "प्रश्न पठाउन सकिएन।", "answer": "उत्तर सुरक्षित गर्न सकिएन।" },
-      "success": { "submitted": "तपाईंको प्रश्न पठाइयो।", "answerPublished": "उत्तर प्रकाशित भयो।" }
+      "title": "प्रश्न र उत्तर",
+      "description": "अनुकूलता, विशिष्टता वा खरिदबारे सोध्नुहोस्।",
+      "askQuestion": "प्रश्न सोध्नुहोस्",
+      "placeholder": "यस उत्पादनबारे के जान्न चाहनुहुन्छ?",
+      "submit": "प्रश्न पठाउनुहोस्",
+      "signInToAsk": "सोध्न साइन इन गर्नुहोस्",
+      "loading": "प्रश्नहरू लोड हुँदै छन्...",
+      "empty": "अहिलेसम्म प्रश्न छैन। पहिलो प्रश्न सोध्नुहोस्।",
+      "questionPrefix": "प्र",
+      "answerPrefix": "उ",
+      "customer": "ग्राहक",
+      "answeredBy": "{name} द्वारा उत्तर",
+      "storeTeam": "स्टोर टोली",
+      "awaitingAnswer": "स्टोर टोलीको उत्तर पर्खिँदै।",
+      "updateAnswer": "प्रकाशित उत्तर अद्यावधिक गर्नुहोस्",
+      "writeAnswer": "आधिकारिक उत्तर लेख्नुहोस्",
+      "saving": "सुरक्षित हुँदै छ...",
+      "publishAnswer": "उत्तर प्रकाशित गर्नुहोस्",
+      "errors": {
+        "load": "प्रश्न लोड गर्न सकिएन।",
+        "completeQuestion": "पूरा प्रश्न लेख्नुहोस्।",
+        "submit": "प्रश्न पठाउन सकिएन।",
+        "answer": "उत्तर सुरक्षित गर्न सकिएन।"
+      },
+      "success": {
+        "submitted": "तपाईंको प्रश्न पठाइयो।",
+        "answerPublished": "उत्तर प्रकाशित भयो।"
+      }
     },
     "conversion": {
-      "emi": { "title": "EMI योजना", "from": "{amount} बाट", "choosePeriod": "किस्ता अवधि छान्नुहोस्", "months": "{count} महिना", "perMonth": "/ महिना", "note": "यो अनुमानित विभाजन हो। बैंक शुल्क र योग्यता फरक हुन सक्छ।" },
-      "delivery": { "title": "डेलिभरी अनुमान", "checkArea": "क्षेत्र जाँच्नुहोस्", "district": "जिल्ला", "area": "डेलिभरी क्षेत्र", "checking": "जाँच हुँदै छ...", "check": "डेलिभरी जाँच्नुहोस्", "free": "निःशुल्क डेलिभरी", "cost": "{amount} डेलिभरी", "businessDays": "{count} कार्यदिन", "confirmedAtCheckout": "डेलिभरी समय चेकआउटमा पुष्टि हुन्छ" },
-      "areas": { "dhaka": "ढाका", "outsideDhaka": "ढाका बाहिर" },
-      "errors": { "districtRequired": "डेलिभरी जाँच्न जिल्ला लेख्नुहोस्।", "quoteFailed": "डेलिभरी लागत गणना गर्न सकिएन।" }
+      "emi": {
+        "title": "EMI योजना",
+        "from": "{amount} बाट",
+        "choosePeriod": "किस्ता अवधि छान्नुहोस्",
+        "months": "{count} महिना",
+        "perMonth": "/ महिना",
+        "note": "यो अनुमानित विभाजन हो। बैंक शुल्क र योग्यता फरक हुन सक्छ।"
+      },
+      "delivery": {
+        "title": "डेलिभरी अनुमान",
+        "checkArea": "क्षेत्र जाँच्नुहोस्",
+        "district": "जिल्ला",
+        "area": "डेलिभरी क्षेत्र",
+        "checking": "जाँच हुँदै छ...",
+        "check": "डेलिभरी जाँच्नुहोस्",
+        "free": "निःशुल्क डेलिभरी",
+        "cost": "{amount} डेलिभरी",
+        "businessDays": "{count} कार्यदिन",
+        "confirmedAtCheckout": "डेलिभरी समय चेकआउटमा पुष्टि हुन्छ"
+      },
+      "areas": {
+        "dhaka": "ढाका",
+        "outsideDhaka": "ढाका बाहिर"
+      },
+      "errors": {
+        "districtRequired": "डेलिभरी जाँच्न जिल्ला लेख्नुहोस्।",
+        "quoteFailed": "डेलिभरी लागत गणना गर्न सकिएन।"
+      }
     },
-    "bundle": { "configureLabel": "यो बन्डल मिलाउनुहोस्", "title": "आफ्नो बन्डल बनाउनुहोस्", "description": "स्टोरले स्वीकृत उत्पादन छान्नुहोस्। मूल्य र स्टक तुरुन्तै अद्यावधिक हुन्छ।", "price": "तपाईंको बन्डल मूल्य", "baseConfiguration": "आधार कन्फिगरेसन", "fromBase": "आधारभन्दा {difference}", "available": "{count} उपलब्ध", "ready": "कन्फिगरेसन तयार", "selectionRequired": "चयन आवश्यक", "required": "आवश्यक", "optional": "वैकल्पिक", "includedEveryBundle": "हरेक बन्डलमा समावेश", "chooseCount": "{count} छान्नुहोस्", "chooseRange": "{min} देखि {max} छान्नुहोस्", "itemValue": "वस्तु मूल्य {amount}", "outOfStock": "स्टकमा छैन", "maximumSelected": "अधिकतम चयन भयो", "priceUpdates": "चयनित वस्तुअनुसार मूल्य बदलिन्छ", "included": "समावेश", "selectToContinue": "जारी राख्न {count} विकल्प छान्नुहोस्।", "removeOptional": "यो वैकल्पिक वस्तु हटाउनुहोस्", "quantityPerBundle": "प्रति बन्डल परिमाण", "decreaseQuantity": "{group} परिमाण घटाउनुहोस्", "increaseQuantity": "{group} परिमाण बढाउनुहोस्", "notSelected": "चयन नगरिएको" },
-    "related": { "title": "सम्बन्धित उत्पादन", "viewAll": "सबै हेर्नुहोस्", "save": "बचत: {amount}", "browseAll": "सबै सम्बन्धित उत्पादन हेर्नुहोस्" },
+    "bundle": {
+      "configureLabel": "यो बन्डल मिलाउनुहोस्",
+      "title": "आफ्नो बन्डल बनाउनुहोस्",
+      "description": "स्टोरले स्वीकृत उत्पादन छान्नुहोस्। मूल्य र स्टक तुरुन्तै अद्यावधिक हुन्छ।",
+      "price": "तपाईंको बन्डल मूल्य",
+      "baseConfiguration": "आधार कन्फिगरेसन",
+      "fromBase": "आधारभन्दा {difference}",
+      "available": "{count} उपलब्ध",
+      "ready": "कन्फिगरेसन तयार",
+      "selectionRequired": "चयन आवश्यक",
+      "required": "आवश्यक",
+      "optional": "वैकल्पिक",
+      "includedEveryBundle": "हरेक बन्डलमा समावेश",
+      "chooseCount": "{count} छान्नुहोस्",
+      "chooseRange": "{min} देखि {max} छान्नुहोस्",
+      "itemValue": "वस्तु मूल्य {amount}",
+      "outOfStock": "स्टकमा छैन",
+      "maximumSelected": "अधिकतम चयन भयो",
+      "priceUpdates": "चयनित वस्तुअनुसार मूल्य बदलिन्छ",
+      "included": "समावेश",
+      "selectToContinue": "जारी राख्न {count} विकल्प छान्नुहोस्।",
+      "removeOptional": "यो वैकल्पिक वस्तु हटाउनुहोस्",
+      "quantityPerBundle": "प्रति बन्डल परिमाण",
+      "decreaseQuantity": "{group} परिमाण घटाउनुहोस्",
+      "increaseQuantity": "{group} परिमाण बढाउनुहोस्",
+      "notSelected": "चयन नगरिएको"
+    },
+    "related": {
+      "title": "सम्बन्धित उत्पादन",
+      "viewAll": "सबै हेर्नुहोस्",
+      "save": "बचत: {amount}",
+      "browseAll": "सबै सम्बन्धित उत्पादन हेर्नुहोस्"
+    },
     "reviews": {
-      "rateStar": "{value} तारा दिनुहोस्", "title": "ग्राहक समीक्षा", "averageRating": "औसत रेटिङ {rating}", "write": "समीक्षा लेख्नुहोस्", "loginToWrite": "समीक्षा लेख्न लगइन गर्नुहोस्", "loginRequired": "समीक्षा पठाउन लगइन आवश्यक छ।", "signIn": "साइन इन", "rating": "रेटिङ", "overwriteNote": "तपाईंले समीक्षा गरिसक्नुभएको छ—अद्यावधिक गर्दा पुरानो बदलिन्छ", "placeholder": "आफ्नो विचार लेख्नुहोस्...", "submitting": "पठाइँदै छ...", "update": "समीक्षा अद्यावधिक गर्नुहोस्", "submit": "समीक्षा पठाउनुहोस्", "reviews": "समीक्षा", "loading": "लोड हुँदै छ...", "empty": "अहिलेसम्म समीक्षा छैन।", "anonymous": "बेनामी", "previous": "अघिल्लो", "page": "पृष्ठ {page} / {pages}", "next": "अर्को",
-      "errors": { "submit": "समीक्षा पठाउन सकिएन।", "generic": "केही समस्या भयो।" }, "success": { "updated": "समीक्षा अद्यावधिक भयो!", "submitted": "समीक्षा पठाइयो!" }
+      "rateStar": "{value} तारा दिनुहोस्",
+      "title": "ग्राहक समीक्षा",
+      "averageRating": "औसत रेटिङ {rating}",
+      "write": "समीक्षा लेख्नुहोस्",
+      "loginToWrite": "समीक्षा लेख्न लगइन गर्नुहोस्",
+      "loginRequired": "समीक्षा पठाउन लगइन आवश्यक छ।",
+      "signIn": "साइन इन",
+      "rating": "रेटिङ",
+      "overwriteNote": "तपाईंले समीक्षा गरिसक्नुभएको छ—अद्यावधिक गर्दा पुरानो बदलिन्छ",
+      "placeholder": "आफ्नो विचार लेख्नुहोस्...",
+      "submitting": "पठाइँदै छ...",
+      "update": "समीक्षा अद्यावधिक गर्नुहोस्",
+      "submit": "समीक्षा पठाउनुहोस्",
+      "reviews": "समीक्षा",
+      "loading": "लोड हुँदै छ...",
+      "empty": "अहिलेसम्म समीक्षा छैन।",
+      "anonymous": "बेनामी",
+      "previous": "अघिल्लो",
+      "page": "पृष्ठ {page} / {pages}",
+      "next": "अर्को",
+      "errors": {
+        "submit": "समीक्षा पठाउन सकिएन।",
+        "generic": "केही समस्या भयो।"
+      },
+      "success": {
+        "updated": "समीक्षा अद्यावधिक भयो!",
+        "submitted": "समीक्षा पठाइयो!"
+      }
     },
-    "priceAlert": { "disabled": "मूल्य घट्ने सूचना बन्द भयो।", "enabled": "मूल्य घट्दा तपाईंलाई जानकारी दिइनेछ।", "error": "मूल्य घट्ने सूचना अद्यावधिक भएन।", "on": "सूचना चालु", "notify": "मूल्य घट्दा जानकारी दिनुहोस्" },
-    "error": { "title": "उत्पादन विवरण लोड गर्न सकिएन", "description": "फेरि प्रयास गर्नुहोस् वा उत्पादन सूचीमा फर्कनुहोस्।", "retry": "फेरि प्रयास", "browse": "उत्पादन हेर्नुहोस्" },
-    "notFound": { "title": "उत्पादन भेटिएन", "description": "यो उत्पादन उपलब्ध नहुन सक्छ वा लिङ्क गलत हुन सक्छ।", "browse": "उपलब्ध उत्पादन हेर्नुहोस्" }
+    "priceAlert": {
+      "disabled": "मूल्य घट्ने सूचना बन्द भयो।",
+      "enabled": "मूल्य घट्दा तपाईंलाई जानकारी दिइनेछ।",
+      "error": "मूल्य घट्ने सूचना अद्यावधिक भएन।",
+      "on": "सूचना चालु",
+      "notify": "मूल्य घट्दा जानकारी दिनुहोस्"
+    },
+    "error": {
+      "title": "उत्पादन विवरण लोड गर्न सकिएन",
+      "description": "फेरि प्रयास गर्नुहोस् वा उत्पादन सूचीमा फर्कनुहोस्।",
+      "retry": "फेरि प्रयास",
+      "browse": "उत्पादन हेर्नुहोस्"
+    },
+    "notFound": {
+      "title": "उत्पादन भेटिएन",
+      "description": "यो उत्पादन उपलब्ध नहुन सक्छ वा लिङ्क गलत हुन सक्छ।",
+      "browse": "उपलब्ध उत्पादन हेर्नुहोस्"
+    }
   },
   "ScmAuto": {
     "k_f586059328a9": "१. काउन्टरपार्टी र डेलिभरी",
@@ -10742,6 +11385,436 @@
         "upload": "फोटो अपलोड असफल भयो।",
         "submit": "डेलिभरी प्रमाण पेश गर्न असफल भयो।",
         "unavailable": "पुष्टि डेटा उपलब्ध छैन।"
+      }
+    }
+  },
+  "StorefrontSupport": {
+    "tracking": {
+      "title": "♫ track your environment",
+      "subtitle": "♫ See the nuever status and livrance progress for this transport.",
+      "loading": "♫ Loading tracking details...",
+      "notFound": "%s: Footnote information for foldering.",
+      "loadError": "Dialog QODBCResult",
+      "trackingNumber": "■ Tracking number",
+      "orderNumber": "♫ Order number",
+      "courier": "Courier",
+      "updatedAt": "♫ Last updated",
+      "status": "Actual status",
+      "openCourier": "Open Currier tracking",
+      "statuses": {
+        "pending": "± pentend",
+        "assigned": "Courier asignated",
+        "picked_up": "× picked up",
+        "in_transit": "In transitor",
+        "out_for_delivery": "♫ Output for leverage",
+        "delivered": "± Livrated",
+        "failed": "Livraison francus",
+        "returned": "Dialog Returned",
+        "cancelled": "ʹCancelded"
+      }
+    },
+    "returns": {
+      "title": "♫ Returns and restitutions",
+      "subtitle": "■ Klar process for rapporting themies of product qualified and receive subsidies.",
+      "overview": {
+        "windowTitle": "♫ Return Windows",
+        "windowDescription": "± request a return in the period showd on the product or order details.",
+        "conditionTitle": "Product condition",
+        "conditionDescription": "manteni apartament produkt, accessoires, factura and original package.",
+        "processingTitle": "• Review and resolution",
+        "processingDescription": "́ ́a inspektivue ́n request and confirm the appropriate cange, substitution of restitution."
+      },
+      "eligible": {
+        "title": "ë eliġible return rasons",
+        "wrongProduct": "你 recebite un diverse product or variant.",
+        "defect": "===============================================================================================================================================================================================================================================================",
+        "damaged": "*At produkt tienge damuit in transit.",
+        "missingParts": "mancant accessoires of parts necessary."
+      },
+      "ineligible": {
+        "title": "♫ Normally non eliminable",
+        "customerDamage": "≤ dama provocate post livration, per usouse or accident.",
+        "modified": "Products que exists modified, reparation or modified with your approbation.",
+        "late": "± requests presentats post applicable return window.",
+        "packaging": "■ produktions returnés san emballage, accessoires ou prova de aquisition."
+      },
+      "process": {
+        "title": "♫ How function the return process",
+        "contactTitle": "Contact support",
+        "contactDescription": "Share your order number, the email and clear fotos or video quando relevant.",
+        "approvalTitle": "♫ Recipe approbation",
+        "approvalDescription": "Our team reviews elegibility and for the return instructions.",
+        "sendTitle": "Send or have over the item",
+        "sendDescription": "± pakkete alles included items security and follow the approved handover method.",
+        "refundTitle": "♫ reception the resolution",
+        "refundDescription": "± post inspektion, kompletemos approved remplacement, scambio ou restitution."
+      },
+      "refund": {
+        "title": "• Refunder and swake details",
+        "timeLabel": "Processerings time",
+        "timeValue": "===============================================================================================================================================================================================================================================================",
+        "methodLabel": "■ Refunder method",
+        "methodValue": "• Refusions generalmente returneres per l'original metodo de pagamento.",
+        "shippingLabel": "ë return transport",
+        "shippingValue": "Responsabilidad depende od return rason and the approved instructions.",
+        "exchangeLabel": "Exchange",
+        "exchangeValue": "Exchanges depende o aktual stock and product admissibility."
+      },
+      "cta": {
+        "title": "♫ Necessariu return?",
+        "description": "Contact support with your order number, sound with your order number, for on review the request.",
+        "action": "Contact support"
+      }
+    },
+    "shipping": {
+      "metadata": {
+        "title": "Transport and livrance",
+        "description": "========================================================================================================================================================================================================================================="
+      },
+      "title": "Transport and livrance",
+      "subtitle": "From order confirmation to porte livrance, see how your package move.",
+      "overview": {
+        "estimateTitle": "Livras estimations",
+        "estimateValue": "View in checkout",
+        "estimateNote": "Timing variabel per location, inventar and currier coverture.",
+        "protectionTitle": "♫ Secure package",
+        "protectionValue": "ʹPacked with careful",
+        "protectionNote": "≤ elemente сте prepared to reduce the risk of danse in transit.",
+        "supportTitle": "± support fornesta",
+        "supportValue": "■ help, quando necessariu",
+        "supportNote": "Contact us si track stalls of the package arrive with un question."
+      },
+      "process": {
+        "eyebrow": "Travel de livraison",
+        "title": "♫ How your order arrive you",
+        "confirmationTitle": "Confirmation of Order",
+        "confirmationDescription": "♫ We verified paging, stock and livrance details before processing.",
+        "packingTitle": "ʹ Picking and package",
+        "packingDescription": "♫ The correct items is controled and packed security.",
+        "handoverTitle": "Courier handover",
+        "handoverDescription": "❖ Transportion asignified to a disponible partner of livrage.",
+        "deliveryTitle": "♫portstep levering",
+        "deliveryDescription": "■ track progress and inspektion the package quando arrivé."
+      },
+      "guidance": {
+        "eyebrow": "17; 2 :⁠ 3).",
+        "title": "♫ Helpful levering guidness",
+        "description": "Uneles checks, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating, democrating.",
+        "items": {
+          "address": "≤ disponible a komplete adresse, original mensage and possible telefon number.",
+          "estimate": "♫ Trata datum de livrai como estimations, specialmente durante festivals ou tempo grave.",
+          "handling": "■ Garden your telefon disponible when the currier contact you.",
+          "delays": "■ Use order tracking or contact support si no update for unbian period.",
+          "damage": "■ Kontrole extern package and rapport visible dammage tools possible.",
+          "retain": "manteni factorial and package timeo timeo timeout of the product."
+        }
+      },
+      "cta": {
+        "title": "♫ Necessita help with a livrance?",
+        "description": "ʹ Our support team kapav help to track, tards and levering problems.",
+        "contact": "Contact support",
+        "orders": "♫ View my orders"
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "Información mahin",
+        "description": "==============================================================================================================================================================================================================================================================="
+      },
+      "eyebrow": "About {site}",
+      "title": "ʹA shop fiduciable for day day needs",
+      "subtitle": "{tagline} We combine un catalogue bien organisado, fideble reality and help sound in un shopping experence.",
+      "explore": "Products exploration",
+      "contact": "Contact us",
+      "features": {
+        "genuineTitle": "ʹTrusted products",
+        "genuineDescription": "Clear information of product and suring standards help clients a buy confidencially.",
+        "guidanceTitle": "♫ Helpful guidness",
+        "guidanceDescription": "Specifikationes, options and support faciliter to choice the just item.",
+        "coverageTitle": "♫ Flexible realisation",
+        "coverageDescription": "===============================================================================================================================================================================================================================================================",
+        "checkoutTitle": "Secure checkout",
+        "checkoutDescription": "ë transparent totals and subject methods de paging hold checkout directly."
+      },
+      "values": {
+        "eyebrow": "ë ́n ́a ́a ́a ́a ́a ́a ́a ́a ́ ́a ́a ́a ́a ́ ́a ́ ́ ́a ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́",
+        "title": "Construited around a better compating experence",
+        "description": "♫ We focus on the details que facilita online shopping clear, safe and use.",
+        "catalogTitle": "♫ Organisated Catalog",
+        "catalogDescription": "ʹ Categories, attributs and filters help clients descover adequate products.",
+        "verifiedTitle": "ʹClear information",
+        "verifiedDescription": "* Details de produkt figurios strukturatos e comprendebles.",
+        "inventoryTitle": "■ confidencial inventario",
+        "inventoryDescription": "■ Stock-wise workflows reduce surprises after placed un order.",
+        "secureTitle": "♫ Protected shopping",
+        "secureDescription": "Account, checkout and page fluxs is designed with security in mind.",
+        "deliveryTitle": "Order × visibility",
+        "deliveryDescription": "ʹClients pueden følge ordre and livrance progress.",
+        "supportTitle": "• Support Responsive",
+        "supportDescription": ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+      },
+      "commitment": {
+        "eyebrow": "♫ Our engagement",
+        "title": "A store que continua a melhorar",
+        "first": "♫ We continuly melhore the catalog, checkout, realisation and support experience based on operational needs and feedback of client.",
+        "second": "♫ Our objecty is to face all interaction – from discover to after-sales service – clear, confiable and respekt."
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "Contact us",
+        "description": "Contact {site} for product, order, corporate vendes and service enquies."
+      },
+      "subjects": {
+        "corporate": "Protokoll Corporate Process Process",
+        "service": "• Service reserving request"
+      },
+      "eyebrow": "{site} support",
+      "title": "¿Checky?",
+      "subtitle": "Send us un message for product advice, order support, corporate aques of service enquies.",
+      "types": {
+        "productTitle": "Product and order support",
+        "productDescription": "• Question about products, compatibility, existing order or livration.",
+        "corporateTitle": "Corporate sales",
+        "corporateDescription": "ë diskute bulk aquits, citates and business requirements.",
+        "serviceTitle": "ë ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ servis ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ . ́ . . ́ . ́ . ́",
+        "serviceDescription": "♫ Solge help with installation, manutention or un service disponible."
+      },
+      "information": {
+        "title": "Contact information",
+        "phone": "Telefon",
+        "email": "♫ Email / Email",
+        "address": "Adresse:",
+        "onlineStore": "♫ Online store",
+        "alwaysOpen": "§ Disponible 24/7 for browsing and orders"
+      },
+      "orderHelp": {
+        "title": "♫ Search for order details?",
+        "description": "Signed-in clients can view status, items, totals and following of their order history.",
+        "action": "♫ View my orders"
+      },
+      "form": {
+        "title": "Send un message",
+        "name": "Your name",
+        "email": "E-mail: Adresse",
+        "subject": "± Subject",
+        "message": "♫Message",
+        "success": "Dialog Vostro message existing you message, on only possible to find you reage.",
+        "sending": "♫ Sendning...",
+        "send": "♫ Send mensage"
+      },
+      "errors": {
+        "send": "Dialog We new not send your message. Prova encore."
+      }
+    },
+    "faq": {
+      "title": "■ Questions frequenter questions",
+      "subtitle": "Find rapid answers about products, ordres, livration, returns and your account.",
+      "searchLabel": "Search of free questions",
+      "searchPlaceholder": "Search questions and answers...",
+      "questionCount": "{count} questions",
+      "noResultsTitle": "§No resultats found",
+      "noResultsDescription": "♫ Not trobed un question correspondant to your search.",
+      "viewAll": "View all questions",
+      "moreHelp": "♫ Necessita more help?",
+      "allProducts": "ʹAll products",
+      "contact": "Contact",
+      "about": "Información mahin",
+      "homepage": "♫ Homepage",
+      "loading": "♫ Loading FAQs...",
+      "categories": {
+        "general": {
+          "title": "Información generala",
+          "q1": "¿Qué couch me aquire d'home?",
+          "a1": "Dialog Our disponible range is organised by the live categorys showd in the storefront. Browser kategories or search the catalog for see what is offred actually.",
+          "q2": "♫ Quanto long is your product collection?",
+          "a2": "■ Nossa collection de products continua a cresce, imposible actualizado regularmente med nove arrivée e inventario de nuevo.",
+          "q3": "¿Check Spelling?",
+          "a3": "compare model, interface, dimensions and other requirements in the specifications. Contact support before ordring si compatibility is clear.",
+          "q4": "♫ How do I create un account?",
+          "a4": "Dialog Open Logging or Registre up, selection Register, and create account with your name, email and password."
+        },
+        "ordering": {
+          "title": "Ordering and pageses",
+          "q1": "♫ I need un account for command?",
+          "a1": "Like checkout de guests ́s possible exist. Un account fere facilier track orders and use account functions.",
+          "q2": "¿Qué metodes de pagamento de playments you support?",
+          "a2": "■ disponible metodes de pagamento apparues durante checkout, eventual mobil payments, cards and cash on livration.",
+          "q3": "■ ¿Putem anulerar mo ordre?",
+          "a3": "• Cancellation depend on the order status. Open your order details for control the disponible action or contact support.",
+          "q4": "¿Min page security?",
+          "a4": "Checkout usa supported page providers and secure manipulation. Sensitive page kredencials non conserved by the store.",
+          "q5": "¿Cuál do recepcionar confirmation of order?",
+          "a5": "♫ Confirmation and status updates can appeared in your account and the mail canals configurated or SMS canals."
+        },
+        "shipping": {
+          "title": "Livraison and transporting",
+          "q1": "♫ quanto livrations charge?",
+          "a1": "Livrage charge depende on the livrage area, cart and actual transport regles.",
+          "q2": "♫ Quanto tempo livration target?",
+          "a2": "L'estimation depende depende de location inventaire, destination coverture and currier, et demonstrated when checkout or order processing.",
+          "q3": "♫ Where you livre?",
+          "a3": "Disponibility of disponibility depend on the active currier coverture and the adresse inputed durante checkout.",
+          "q4": "¿Chwilo me putot seguir mine ordre?",
+          "a4": "■ Open My Orders and select the order for see the current status and displayed transmission tracking.",
+          "q5": "¿Offerta express livration?",
+          "a5": "Express or rapide livration remotely appeared when subtened for the selectioned adresse and order."
+        },
+        "returns": {
+          "title": "♫ Returns and restitutions",
+          "q1": "■ ¿Chap i returnerar un product?",
+          "a1": "■ produktions eligibless returnering in the finster applicable, por rasons som supported, como damo, defekte ou un element incorrect.",
+          "q2": "¿Cuál restitution process funkciona?",
+          "a2": "Processeringstimes for providers more variables.",
+          "q3": "■ I can witch un product?",
+          "a3": "■ dependente de return rason, de return responsibility of products and current stock."
+        },
+        "account": {
+          "title": "Account and profile",
+          "q1": "¿Qué ibba i face si forget miy password?",
+          "a1": "■ Use Forgored Password on the login page, enter your email registred and follow the reset instructions.",
+          "q2": "♫ How do I update my profil?",
+          "a2": "Open your account profile for update the displayed personal and contact information.",
+          "q3": "¿Chómo ilustration de la historia de l'ordre?",
+          "a3": "■ Open My Account and select My Orders for view current and previous accounts.",
+          "q4": "♫ How do me management saveed adresses?",
+          "a4": "Open the address section in your account for add, edit or remove saveed livrary adresses."
+        },
+        "products": {
+          "title": "Products and disponibility",
+          "q1": "♫ How you know ot un product is in stock?",
+          "a1": "♫ The product page month your actual displaying. Stock can change timeout you confirmed un order.",
+          "q2": "♫ Produkt prices cambia?",
+          "a2": "Promotions total confirmat checkout total is the price que applicable on the transmeted order.",
+          "q3": "¿Where putem trovar specifikationes?",
+          "a3": "Dialog Open the product page and review the description, attributs, variantes and specification sections.",
+          "q4": "■ ¿Putem comparadere produkte?",
+          "a4": "■ Use disponible kategories, filtros and product details to comparation options, or contact support for guiding."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Politika privacy",
+      "subtitle": "ʹNotre privacy is important for us.",
+      "overview": {
+        "securityTitle": "Data security",
+        "securityDescription": "■ rezonable garanties usas pou protegerwe information.",
+        "transparencyTitle": "Transparency",
+        "transparencyDescription": "我们 explique que information collected and why it is need.",
+        "controlTitle": "♫ your control",
+        "controlDescription": "♫ You can review and update displayed account information."
+      },
+      "collect": {
+        "title": "♫ what we collected",
+        "personal": {
+          "title": "ë/a ́n ́n ́a ́n ́a ́n ́a ́n ́a ́n ́a ́n ́a ́n ́a ́n ́a ́n ́a ́n ́ information ́a ́n ́a ́n ́a ́a ́n ́a ́n ́a ́n ́a ́a ́n ́a ́n ́a ́a ́n ́a ́a ́n information ́a ́a ́n ́a ́a ́ ́a ́n ́a ́a ́ ́ ́ ́a ́ ́ ́a ́ ́a ́ ́a ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́",
+          "nameEmail": "ʹ name and email address",
+          "phone": "■ Telefonnumber",
+          "address": "Adres destinatario"
+        },
+        "order": {
+          "title": "Información opinion",
+          "preferences": "Product preferencies",
+          "history": "History history of ring order",
+          "payment": "Información metodo de pagamento, exclusive sensitive credentials"
+        },
+        "usage": {
+          "title": "Información o Use-Use-Information",
+          "browsing": "♫ browsing activity",
+          "wishlist": "♫ List items",
+          "pageViews": "® Page Views"
+        },
+        "notStored": {
+          "title": "♫ whateer need store",
+          "bank": "Details de full bank account",
+          "card": "§Full card numbers",
+          "password": "ʹPasswords Plain-text"
+        }
+      },
+      "usage": {
+        "title": "• How us your information",
+        "essential": {
+          "title": "♫ Essential Uses",
+          "processing": "Process and levering for order",
+          "account": "Account management",
+          "support": "Support support clients",
+          "recommendations": "± relevante recomendationes de produkt"
+        },
+        "permission": {
+          "title": "ʹBive your permission",
+          "marketing": "Jean Marketing emails",
+          "offers": "Speciale offers and promotions",
+          "notifications": "Notifications of New product",
+          "surveys": "Survees and feedback requests"
+        }
+      },
+      "rights": {
+        "title": "§Your droits",
+        "accessTitle": "Access your information",
+        "accessDescription": "♫ You can request access to the information of you.",
+        "updateTitle": "Information of Update",
+        "updateDescription": "♫ You can editing disponible profil details of profile or sound us to corriged thes."
+      },
+      "cta": {
+        "title": "¿Have privacy questions?",
+        "description": "Contact us for privacy questions of requests.",
+        "action": "• Contact our privacy team",
+        "lastUpdated": "♫ Last updated:",
+        "date": "ʹAugust 19, 2026",
+        "updateNote": "♫ ́, ́, ́, ́ ́ ́, ́ ́ ́, ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ , ́ ́ ́ ́ ́"
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "Terminals and conditions",
+        "description": "± Terminals reglementares accounts, ordres, pris, pagamenti, levering and usage of {site}."
+      },
+      "title": "Terminals and conditions",
+      "intro": "Disse termines expliquen how accounts, product orders, pagations, realisation and after-sales support work when you usage {site}.",
+      "effectiveDate": "± date effective: 19 August 2026",
+      "agreement": "===============================================================================================================================================================================================================================",
+      "sections": {
+        "orders": {
+          "title": "♫ Orders and disponibility",
+          "first": "♫ Transmitting un order is a request for acquist. Un order is accepted post stock, price, paging and livrage information exist verified.",
+          "second": "Products, variantes and magazine stocks can can change anto confirmation. Si un item do not displayed, we can offre un alternative, revision the order with your homologation or cancel and restitute the affect month."
+        },
+        "pricing": {
+          "title": "• Pricing and page",
+          "first": "Limited total includ accessable discounts, taxs and livraus charges showed durante checkout.",
+          "second": "Limiteds formulators reserves, defineres, defineres, de reception, de reception, de reception, de reserves, de reception, de reception, de reception, de responsability, de courses, de reserves, de reception, de responsibility, de courses, de reserves."
+        },
+        "delivery": {
+          "title": "Livration and inspektion",
+          "first": "Lietude de distributions estimations non sunt garanties, events of the house locale, coverture, category, festivals or events exteriors of our raisonable control.",
+          "second": "• Inspektez prompt package and product. Report manked, damoused or incorrect items per sosteni intitulé download the period declared in the return politic."
+        },
+        "warranty": {
+          "title": "ʹGranty and product compatibility",
+          "first": "Product coverture depende on the product, marke and provider disponible on the product page of factory. Producent or distributor conditions can application.",
+          "second": "• information de compatibilitate is direction, exceptionally confirmed. Verifiquere relevant model, size, material, specifikation of usage requisitions anteriormente initial acquist."
+        },
+        "digital": {
+          "title": "♫ software and digital items",
+          "first": "Software, keys de activation, abonnements and digital products reglementeres by their publicer license terms. Livrated or activate kredencials most neverable returnable, excepte where legally required or proved defect.",
+          "second": "Us necessita resell, copy, bypass controls de licenciation or use un product digital extern of the permiss license."
+        },
+        "accounts": {
+          "title": "Accounts and acceptable utilisation",
+          "first": "* Guarde account and contact information exacte and protect your credentials. You are responsable for activity of account, exceptionly not reported un autorized usage.",
+          "second": "■ Automatiserings abuso, fraude, ilegal uso, interference en service, false pretensions and essaings for access to systems restrictions são prohibits."
+        },
+        "returns": {
+          "title": "• Cancellations, returns and responsability",
+          "first": "• Cancellation and return kalibity follow the stand for order and publiced return politic. Refunder time time can depend on the provider of page.",
+          "second": "Total aspekt, total aspekt, aspekt, aspekt, aspekt, aspekt, aspekt, aspekt, aspekt, aspekt, aspekt, aspekt;"
+        }
+      },
+      "changes": {
+        "title": "Cambios policy and contact",
+        "description": "♫ We can update this terms for reflecting operational, legal or service changes. The effect date identific the current version. Contact support before ordring si a condition non clear.",
+        "contact": "Contact support",
+        "returns": "Read return policy"
       }
     }
   }

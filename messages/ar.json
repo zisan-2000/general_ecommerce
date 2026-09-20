@@ -9349,124 +9349,767 @@
   },
   "StorefrontShell": {
     "header": {
-      "logoAlt": "شعار المتجر", "user": "المستخدم",
-      "search": { "placeholder": "ابحث عن المنتجات أو العلامات التجارية أو الطرازات...", "label": "بحث", "mobilePlaceholder": "بحث...", "open": "فتح البحث", "close": "إغلاق البحث", "unavailable": "البحث غير متاح مؤقتًا. اضغط Enter لعرض النتائج." },
+      "logoAlt": "شعار المتجر",
+      "user": "المستخدم",
+      "search": {
+        "placeholder": "ابحث عن المنتجات أو العلامات التجارية أو الطرازات...",
+        "label": "بحث",
+        "mobilePlaceholder": "بحث...",
+        "open": "فتح البحث",
+        "close": "إغلاق البحث",
+        "unavailable": "البحث غير متاح مؤقتًا. اضغط Enter لعرض النتائج."
+      },
       "changeLanguage": "تغيير اللغة",
-      "theme": { "select": "اختيار السمة", "label": "السمة", "light": "فاتح", "dark": "داكن" },
-      "wishlist": "قائمة الرغبات", "cart": "السلة", "profile": "الملف الشخصي", "account": "الحساب", "dashboard": "لوحة المعلومات", "logout": "تسجيل الخروج", "login": "تسجيل الدخول", "signOut": "تسجيل الخروج", "blog": "المدونة", "shopShortcuts": "اختصارات التسوق",
-      "menu": { "open": "فتح القائمة", "close": "إغلاق القائمة", "closeOverlay": "إغلاق طبقة القائمة", "more": "المزيد" },
-      "categories": { "loading": "جارٍ التحميل...", "empty": "لم يتم العثور على فئات.", "noSubcategories": "لا توجد فئات فرعية.", "noChildCategories": "لا توجد فئات تابعة.", "collapse": "طي {name}", "expand": "توسيع {name}", "scrollPrevious": "تمرير الفئات إلى اليسار", "scrollNext": "تمرير الفئات إلى اليمين", "explore": "استكشاف الفئة", "viewAll": "عرض الكل", "subcategories": "فئات {name} الفرعية" },
+      "theme": {
+        "select": "اختيار السمة",
+        "label": "السمة",
+        "light": "فاتح",
+        "dark": "داكن"
+      },
+      "wishlist": "قائمة الرغبات",
+      "cart": "السلة",
+      "profile": "الملف الشخصي",
+      "account": "الحساب",
+      "dashboard": "لوحة المعلومات",
+      "logout": "تسجيل الخروج",
+      "login": "تسجيل الدخول",
+      "signOut": "تسجيل الخروج",
+      "blog": "المدونة",
+      "shopShortcuts": "اختصارات التسوق",
+      "menu": {
+        "open": "فتح القائمة",
+        "close": "إغلاق القائمة",
+        "closeOverlay": "إغلاق طبقة القائمة",
+        "more": "المزيد"
+      },
+      "categories": {
+        "loading": "جارٍ التحميل...",
+        "empty": "لم يتم العثور على فئات.",
+        "noSubcategories": "لا توجد فئات فرعية.",
+        "noChildCategories": "لا توجد فئات تابعة.",
+        "collapse": "طي {name}",
+        "expand": "توسيع {name}",
+        "scrollPrevious": "تمرير الفئات إلى اليسار",
+        "scrollNext": "تمرير الفئات إلى اليمين",
+        "explore": "استكشاف الفئة",
+        "viewAll": "عرض الكل",
+        "subcategories": "فئات {name} الفرعية"
+      },
       "shopActions": {
-        "flashSale": { "label": "تخفيضات سريعة", "description": "عرض العروض النشطة محدودة الوقت" },
-        "compare": { "label": "مقارنة", "description": "مقارنة المنتجات المحددة" },
-        "books": { "label": "الكتب", "description": "تصفح مجموعة الكتب" },
-        "authors": { "label": "المؤلفون", "description": "تصفح الكتب حسب المؤلف" },
-        "publishers": { "label": "دور النشر", "description": "تصفح الكتب حسب دار النشر" },
-        "pcBuilder": { "label": "تجميع الكمبيوتر", "description": "أنشئ كمبيوتر مكتبيًا مخصصًا ومتوافقًا" }
+        "flashSale": {
+          "label": "تخفيضات سريعة",
+          "description": "عرض العروض النشطة محدودة الوقت"
+        },
+        "compare": {
+          "label": "مقارنة",
+          "description": "مقارنة المنتجات المحددة"
+        },
+        "books": {
+          "label": "الكتب",
+          "description": "تصفح مجموعة الكتب"
+        },
+        "authors": {
+          "label": "المؤلفون",
+          "description": "تصفح الكتب حسب المؤلف"
+        },
+        "publishers": {
+          "label": "دور النشر",
+          "description": "تصفح الكتب حسب دار النشر"
+        },
+        "pcBuilder": {
+          "label": "تجميع الكمبيوتر",
+          "description": "أنشئ كمبيوتر مكتبيًا مخصصًا ومتوافقًا"
+        }
       }
     },
-    "search": { "suggestions": "اقتراحات البحث", "searching": "جارٍ البحث عن المنتجات...", "noMatch": "لم يتم العثور على منتج مطابق", "noMatchHint": "تحقق من الإملاء أو ابحث بالعلامة التجارية أو الطراز أو SKU أو الفئة.", "products": "المنتجات", "inStock": "متوفر", "outOfStock": "غير متوفر", "categories": "الفئات", "brands": "العلامات التجارية", "popularSearches": "عمليات البحث الشائعة", "viewAllResults": "عرض جميع نتائج “{query}”" },
+    "search": {
+      "suggestions": "اقتراحات البحث",
+      "searching": "جارٍ البحث عن المنتجات...",
+      "noMatch": "لم يتم العثور على منتج مطابق",
+      "noMatchHint": "تحقق من الإملاء أو ابحث بالعلامة التجارية أو الطراز أو SKU أو الفئة.",
+      "products": "المنتجات",
+      "inStock": "متوفر",
+      "outOfStock": "غير متوفر",
+      "categories": "الفئات",
+      "brands": "العلامات التجارية",
+      "popularSearches": "عمليات البحث الشائعة",
+      "viewAllResults": "عرض جميع نتائج “{query}”"
+    },
     "footer": {
       "logoAlt": "شعار المتجر",
       "features": {
-        "delivery": { "label": "توصيل سريع", "description": "خيارات توصيل في جميع أنحاء البلاد" },
-        "ordering": { "label": "طلب عبر الإنترنت", "description": "اطلب على مدار الساعة" },
-        "payment": { "label": "دفع آمن", "description": "عملية دفع محمية" },
-        "authentic": { "label": "أصلي 100%", "description": "منتجات أصلية مضمونة" }
+        "delivery": {
+          "label": "توصيل سريع",
+          "description": "خيارات توصيل في جميع أنحاء البلاد"
+        },
+        "ordering": {
+          "label": "طلب عبر الإنترنت",
+          "description": "اطلب على مدار الساعة"
+        },
+        "payment": {
+          "label": "دفع آمن",
+          "description": "عملية دفع محمية"
+        },
+        "authentic": {
+          "label": "أصلي 100%",
+          "description": "منتجات أصلية مضمونة"
+        }
       },
-      "brand": { "defaultTagline": "منتجات عالية الجودة وتسوق آمن وخدمة موثوقة", "defaultDescription": "اكتشف منتجات عالية الجودة بمعلومات واضحة ودفع آمن وتوصيل موثوق." },
-      "contact": { "callUs": "اتصل بنا", "emailUs": "راسلنا بالبريد", "address": "العنوان", "phoneUnavailable": "رقم الاتصال غير مُعد", "emailUnavailable": "بريد الاتصال غير مُعد", "addressUnavailable": "عنوان النشاط التجاري غير مُعد" },
-      "sections": { "quickLinks": "روابط سريعة", "categories": "الفئات", "customerService": "خدمة العملاء" },
-      "links": { "allProducts": "جميع المنتجات", "flashSale": "تخفيضات سريعة", "blogs": "المدونات", "bestsellers": "الأكثر مبيعًا", "about": "من نحن", "contact": "اتصل بنا", "shippingPolicy": "سياسة الشحن", "returnPolicy": "سياسة الإرجاع", "privacyPolicy": "سياسة الخصوصية", "faq": "الأسئلة الشائعة", "terms": "شروط الخدمة", "sitemap": "خريطة الموقع" },
-      "newsletter": { "title": "النشرة الإخبارية", "description": "اشترك في نشرتنا للحصول على آخر التحديثات والعروض الحصرية.", "emailLabel": "عنوان البريد للنشرة الإخبارية", "placeholder": "أدخل بريدك الإلكتروني", "subscribing": "جارٍ الاشتراك...", "subscribe": "اشتراك", "success": "تم الاشتراك بنجاح!", "errors": { "emailRequired": "يرجى إدخال عنوان بريدك الإلكتروني", "invalidOrExists": "هذا البريد غير صالح أو مسجل بالفعل", "failed": "حدث خطأ أثناء الاشتراك", "tryAgain": "حدث خطأ. يرجى المحاولة مرة أخرى." } },
-      "secureTransactions": "معاملات آمنة 100%", "rights": "© {year} {site} جميع الحقوق محفوظة."
+      "brand": {
+        "defaultTagline": "منتجات عالية الجودة وتسوق آمن وخدمة موثوقة",
+        "defaultDescription": "اكتشف منتجات عالية الجودة بمعلومات واضحة ودفع آمن وتوصيل موثوق."
+      },
+      "contact": {
+        "callUs": "اتصل بنا",
+        "emailUs": "راسلنا بالبريد",
+        "address": "العنوان",
+        "phoneUnavailable": "رقم الاتصال غير مُعد",
+        "emailUnavailable": "بريد الاتصال غير مُعد",
+        "addressUnavailable": "عنوان النشاط التجاري غير مُعد"
+      },
+      "sections": {
+        "quickLinks": "روابط سريعة",
+        "categories": "الفئات",
+        "customerService": "خدمة العملاء"
+      },
+      "links": {
+        "allProducts": "جميع المنتجات",
+        "flashSale": "تخفيضات سريعة",
+        "blogs": "المدونات",
+        "bestsellers": "الأكثر مبيعًا",
+        "about": "من نحن",
+        "contact": "اتصل بنا",
+        "shippingPolicy": "سياسة الشحن",
+        "returnPolicy": "سياسة الإرجاع",
+        "privacyPolicy": "سياسة الخصوصية",
+        "faq": "الأسئلة الشائعة",
+        "terms": "شروط الخدمة",
+        "sitemap": "خريطة الموقع"
+      },
+      "newsletter": {
+        "title": "النشرة الإخبارية",
+        "description": "اشترك في نشرتنا للحصول على آخر التحديثات والعروض الحصرية.",
+        "emailLabel": "عنوان البريد للنشرة الإخبارية",
+        "placeholder": "أدخل بريدك الإلكتروني",
+        "subscribing": "جارٍ الاشتراك...",
+        "subscribe": "اشتراك",
+        "success": "تم الاشتراك بنجاح!",
+        "errors": {
+          "emailRequired": "يرجى إدخال عنوان بريدك الإلكتروني",
+          "invalidOrExists": "هذا البريد غير صالح أو مسجل بالفعل",
+          "failed": "حدث خطأ أثناء الاشتراك",
+          "tryAgain": "حدث خطأ. يرجى المحاولة مرة أخرى."
+        }
+      },
+      "secureTransactions": "معاملات آمنة 100%",
+      "rights": "© {year} {site} جميع الحقوق محفوظة."
     }
   },
   "StorefrontCommerce": {
-    "addToCart": { "label": "أضف إلى السلة", "adding": "جارٍ الإضافة...", "outOfStock": "غير متوفر", "failed": "تعذرت إضافة هذا المنتج إلى السلة." },
+    "addToCart": {
+      "label": "أضف إلى السلة",
+      "adding": "جارٍ الإضافة...",
+      "outOfStock": "غير متوفر",
+      "failed": "تعذرت إضافة هذا المنتج إلى السلة."
+    },
     "cart": {
-      "title": "سلة التسوق", "syncing": "جارٍ مزامنة سلتك...", "loadFailed": "تعذر تحميل سلتك", "retry": "إعادة المحاولة", "unknownProduct": "منتج غير معروف", "products": "منتجاتك", "itemCount": "{count} عنصر", "clearCart": "إفراغ السلة", "unitPrice": "سعر الوحدة", "unit": "وحدة", "decreaseQuantity": "تقليل الكمية", "increaseQuantity": "زيادة الكمية", "removeItem": "إزالة العنصر", "continueShopping": "متابعة التسوق", "orderSummary": "ملخص الطلب", "subtotal": "المجموع الفرعي", "discount": "الخصم", "total": "الإجمالي", "addMore": "إضافة المزيد", "checkout": "إتمام الشراء", "securePayment": "دفع آمن", "fastDelivery": "توصيل سريع", "shippingNote": "قد تختلف تكلفة الشحن حسب الموقع والوزن.",
-      "empty": { "title": "سلتك فارغة", "description": "أضف بعض المنتجات للبدء." },
-      "errors": { "load": "تعذر تحميل السلة.", "loginRequired": "يرجى تسجيل الدخول لمتابعة إتمام الشراء.", "clearFailed": "تعذر إفراغ السلة.", "removeFailed": "تعذرت إزالة العنصر.", "updateFailed": "تعذر تحديث الكمية.", "couponRequired": "أدخل رمز القسيمة.", "couponApplyFailed": "تعذر تطبيق القسيمة.", "invalidCoupon": "رمز القسيمة غير صالح." },
-      "success": { "cleared": "تم إفراغ السلة.", "removed": "تمت إزالة العنصر.", "couponApplied": "تم تطبيق القسيمة!", "couponRemoved": "تمت إزالة القسيمة." }
+      "title": "سلة التسوق",
+      "syncing": "جارٍ مزامنة سلتك...",
+      "loadFailed": "تعذر تحميل سلتك",
+      "retry": "إعادة المحاولة",
+      "unknownProduct": "منتج غير معروف",
+      "products": "منتجاتك",
+      "itemCount": "{count} عنصر",
+      "clearCart": "إفراغ السلة",
+      "unitPrice": "سعر الوحدة",
+      "unit": "وحدة",
+      "decreaseQuantity": "تقليل الكمية",
+      "increaseQuantity": "زيادة الكمية",
+      "removeItem": "إزالة العنصر",
+      "continueShopping": "متابعة التسوق",
+      "orderSummary": "ملخص الطلب",
+      "subtotal": "المجموع الفرعي",
+      "discount": "الخصم",
+      "total": "الإجمالي",
+      "addMore": "إضافة المزيد",
+      "checkout": "إتمام الشراء",
+      "securePayment": "دفع آمن",
+      "fastDelivery": "توصيل سريع",
+      "shippingNote": "قد تختلف تكلفة الشحن حسب الموقع والوزن.",
+      "empty": {
+        "title": "سلتك فارغة",
+        "description": "أضف بعض المنتجات للبدء."
+      },
+      "errors": {
+        "load": "تعذر تحميل السلة.",
+        "loginRequired": "يرجى تسجيل الدخول لمتابعة إتمام الشراء.",
+        "clearFailed": "تعذر إفراغ السلة.",
+        "removeFailed": "تعذرت إزالة العنصر.",
+        "updateFailed": "تعذر تحديث الكمية.",
+        "couponRequired": "أدخل رمز القسيمة.",
+        "couponApplyFailed": "تعذر تطبيق القسيمة.",
+        "invalidCoupon": "رمز القسيمة غير صالح."
+      },
+      "success": {
+        "cleared": "تم إفراغ السلة.",
+        "removed": "تمت إزالة العنصر.",
+        "couponApplied": "تم تطبيق القسيمة!",
+        "couponRemoved": "تمت إزالة القسيمة."
+      }
     },
     "floatingCart": {
-      "cart": "السلة", "openDrawer": "فتح درج السلة", "closeDrawer": "إغلاق درج السلة", "description": "راجع عناصر السلة وتابع إلى إتمام الشراء.", "flyingItemAlt": "عنصر تتم إضافته إلى السلة", "selectVariant": "اختر النوع", "loadingVariants": "جارٍ تحميل الأنواع...", "outOfStock": "غير متوفر", "noVariantsAvailable": "لا تتوفر أنواع لهذا المنتج", "price": "السعر", "quantity": "الكمية", "subtotal": "المجموع الفرعي", "decreaseQuantity": "تقليل الكمية", "increaseQuantity": "زيادة الكمية", "removeItem": "إزالة العنصر", "cartTotal": "إجمالي السلة", "selectVariants": "اختر الأنواع", "checkout": "إتمام الشراء", "variantSelected": "تم اختيار النوع: {variant}",
-      "empty": { "title": "سلتك فارغة", "description": "أضف بعض العناصر لمتابعة التسوق." },
-      "errors": { "loginRequired": "يرجى تسجيل الدخول لمتابعة إتمام الشراء.", "selectAllVariants": "يرجى اختيار نوع لكل العناصر قبل إتمام الشراء.", "noVariants": "لا تتوفر أنواع لهذا المنتج.", "loadVariantsFailed": "تعذر تحميل أنواع المنتج." }
+      "cart": "السلة",
+      "openDrawer": "فتح درج السلة",
+      "closeDrawer": "إغلاق درج السلة",
+      "description": "راجع عناصر السلة وتابع إلى إتمام الشراء.",
+      "flyingItemAlt": "عنصر تتم إضافته إلى السلة",
+      "selectVariant": "اختر النوع",
+      "loadingVariants": "جارٍ تحميل الأنواع...",
+      "outOfStock": "غير متوفر",
+      "noVariantsAvailable": "لا تتوفر أنواع لهذا المنتج",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "subtotal": "المجموع الفرعي",
+      "decreaseQuantity": "تقليل الكمية",
+      "increaseQuantity": "زيادة الكمية",
+      "removeItem": "إزالة العنصر",
+      "cartTotal": "إجمالي السلة",
+      "selectVariants": "اختر الأنواع",
+      "checkout": "إتمام الشراء",
+      "variantSelected": "تم اختيار النوع: {variant}",
+      "empty": {
+        "title": "سلتك فارغة",
+        "description": "أضف بعض العناصر لمتابعة التسوق."
+      },
+      "errors": {
+        "loginRequired": "يرجى تسجيل الدخول لمتابعة إتمام الشراء.",
+        "selectAllVariants": "يرجى اختيار نوع لكل العناصر قبل إتمام الشراء.",
+        "noVariants": "لا تتوفر أنواع لهذا المنتج.",
+        "loadVariantsFailed": "تعذر تحميل أنواع المنتج."
+      }
     },
     "checkout": {
-      "title": "إتمام الشراء", "description": "اتبع الخطوات أدناه لإكمال طلبك.", "nextStep": "الخطوة التالية", "unknownProduct": "منتج غير معروف",
-      "steps": { "details": "البيانات الشخصية", "payment": "الدفع", "confirmation": "التأكيد" },
-      "common": { "back": "رجوع", "close": "إغلاق", "notAvailable": "غير متوفر" },
-      "fields": { "fullName": "الاسم الكامل *", "namePlaceholder": "أدخل اسمك", "mobile": "رقم الجوال *", "emailOptional": "البريد الإلكتروني (اختياري)", "emailPlaceholder": "أدخل بريدك الإلكتروني", "country": "الدولة *", "countryPlaceholder": "بنغلاديش", "district": "المنطقة *", "districtPlaceholder": "دكا", "area": "الحي *", "addressDetails": "تفاصيل العنوان *", "addressPlaceholder": "المنزل، الطريق، علامة مميزة" },
-      "address": { "saved": "العنوان المحفوظ", "addNew": "إضافة عنوان جديد", "loading": "جارٍ تحميل العناوين...", "selectOptional": "اختر عنوانًا محفوظًا (اختياري)", "label": "تسمية العنوان *", "labelPlaceholder": "المنزل / المكتب", "saving": "جارٍ الحفظ...", "saveCurrent": "حفظ العنوان الحالي" },
-      "shipping": { "loadingAreas": "جارٍ تحميل الأحياء...", "selectArea": "اختر الحي", "standardRate": "السعر القياسي", "freeOver": "مجاني فوق ৳{amount}", "noArea": "لا تتوفر منطقة شحن لهذه الدولة.", "calculating": "جارٍ الحساب...", "free": "مجاني", "appliedRate": "السعر المطبق", "freeApplied": "تم تطبيق الشحن المجاني (تم بلوغ الحد الأدنى للطلب ৳{amount})", "addMoreForFree": "أضف ৳{amount} أخرى للحصول على شحن مجاني" },
-      "confirmation": { "title": "تأكيد الطلب", "created": "تم إنشاء الطلب بنجاح!", "invoiceId": "رقم الفاتورة", "orderId": "رقم الطلب", "customer": "العميل", "name": "الاسم", "mobile": "الجوال", "email": "البريد الإلكتروني", "address": "العنوان", "order": "الطلب", "payment": "الدفع", "status": "الحالة", "transaction": "المعاملة", "paymentScreenshot": "لقطة شاشة الدفع", "screenshotAlt": "معاينة لقطة شاشة الدفع", "complete": "إكمال الطلب", "completed": "اكتمل الطلب" },
-      "coupon": { "remove": "إزالة", "applied": "تم تطبيق القسيمة بنجاح.", "placeholder": "رمز العرض / القسيمة", "validating": "جارٍ التحقق...", "apply": "تطبيق القسيمة" },
-      "summary": { "title": "ملخص الطلب", "subtotal": "المجموع الفرعي", "discount": "الخصم", "shipping": "الشحن", "vat": "ضريبة القيمة المضافة", "included": "مشمولة", "added": "مضافة", "total": "الإجمالي", "securePayment": "دفع آمن", "deliveryTime": "التوصيل خلال 2-4 أيام عمل" },
-      "paymentStatus": { "unknown": "غير معروف", "unpaid": "غير مدفوع", "paid": "مدفوع" },
-      "successModal": { "title": "تم الطلب بنجاح!", "description": "تم تقديم طلبك بنجاح. انقر أدناه لتتبع طلبك.", "trackOrder": "تتبع الطلب", "continueShopping": "متابعة التسوق" },
-      "errors": { "partialCartSync": "تعذر نقل بعض العناصر إلى سلة حسابك. ما زالت العناصر في سلتك—يرجى المحاولة مجددًا.", "fileTooLarge": "يجب أن يكون حجم الملف أقل من 5 ميجابايت.", "invalidImage": "يرجى رفع ملف صورة صالح.", "uploadFailed": "تعذر رفع لقطة الشاشة.", "uploadMissingUrl": "لم تتضمن استجابة الرفع رابط الملف.", "couponRequired": "أدخل رمز القسيمة.", "couponApplyFailed": "تعذر تطبيق القسيمة.", "invalidCoupon": "رمز القسيمة غير صالح.", "addressRequired": "يرجى تعبئة الدولة والمنطقة والحي والعنوان الكامل.", "validAreaRequired": "يرجى اختيار حي صالح.", "loginToSaveAddress": "يرجى تسجيل الدخول لحفظ العنوان.", "completeAddressRequired": "يرجى تعبئة التسمية والدولة والمنطقة والحي وتفاصيل العنوان.", "saveAddressFailed": "تعذر حفظ العنوان.", "emptyCart": "سلتك فارغة.", "requiredInformation": "يرجى تعبئة جميع المعلومات المطلوبة.", "waitForUpload": "يرجى الانتظار حتى يكتمل رفع لقطة الشاشة.", "screenshotRequired": "لقطة شاشة الدفع مطلوبة.", "placeOrderFailedRetry": "حدثت مشكلة أثناء تقديم الطلب. يرجى المحاولة لاحقًا.", "gatewayStartFailed": "تعذر بدء دفع SSLCommerz.", "placeOrderFailed": "حدثت مشكلة أثناء تقديم الطلب." },
-      "success": { "couponApplied": "تم تطبيق القسيمة!", "couponRemoved": "تمت إزالة القسيمة.", "addressSaved": "تم حفظ العنوان.", "orderCreated": "تم إنشاء الطلب. يرجى تأكيده الآن.", "orderCompleted": "اكتمل الطلب بنجاح!" }
+      "title": "إتمام الشراء",
+      "description": "اتبع الخطوات أدناه لإكمال طلبك.",
+      "nextStep": "الخطوة التالية",
+      "unknownProduct": "منتج غير معروف",
+      "steps": {
+        "details": "البيانات الشخصية",
+        "payment": "الدفع",
+        "confirmation": "التأكيد"
+      },
+      "common": {
+        "back": "رجوع",
+        "close": "إغلاق",
+        "notAvailable": "غير متوفر"
+      },
+      "fields": {
+        "fullName": "الاسم الكامل *",
+        "namePlaceholder": "أدخل اسمك",
+        "mobile": "رقم الجوال *",
+        "emailOptional": "البريد الإلكتروني (اختياري)",
+        "emailPlaceholder": "أدخل بريدك الإلكتروني",
+        "country": "الدولة *",
+        "countryPlaceholder": "بنغلاديش",
+        "district": "المنطقة *",
+        "districtPlaceholder": "دكا",
+        "area": "الحي *",
+        "addressDetails": "تفاصيل العنوان *",
+        "addressPlaceholder": "المنزل، الطريق، علامة مميزة"
+      },
+      "address": {
+        "saved": "العنوان المحفوظ",
+        "addNew": "إضافة عنوان جديد",
+        "loading": "جارٍ تحميل العناوين...",
+        "selectOptional": "اختر عنوانًا محفوظًا (اختياري)",
+        "label": "تسمية العنوان *",
+        "labelPlaceholder": "المنزل / المكتب",
+        "saving": "جارٍ الحفظ...",
+        "saveCurrent": "حفظ العنوان الحالي"
+      },
+      "shipping": {
+        "loadingAreas": "جارٍ تحميل الأحياء...",
+        "selectArea": "اختر الحي",
+        "standardRate": "السعر القياسي",
+        "freeOver": "مجاني فوق ৳{amount}",
+        "noArea": "لا تتوفر منطقة شحن لهذه الدولة.",
+        "calculating": "جارٍ الحساب...",
+        "free": "مجاني",
+        "appliedRate": "السعر المطبق",
+        "freeApplied": "تم تطبيق الشحن المجاني (تم بلوغ الحد الأدنى للطلب ৳{amount})",
+        "addMoreForFree": "أضف ৳{amount} أخرى للحصول على شحن مجاني"
+      },
+      "confirmation": {
+        "title": "تأكيد الطلب",
+        "created": "تم إنشاء الطلب بنجاح!",
+        "invoiceId": "رقم الفاتورة",
+        "orderId": "رقم الطلب",
+        "customer": "العميل",
+        "name": "الاسم",
+        "mobile": "الجوال",
+        "email": "البريد الإلكتروني",
+        "address": "العنوان",
+        "order": "الطلب",
+        "payment": "الدفع",
+        "status": "الحالة",
+        "transaction": "المعاملة",
+        "paymentScreenshot": "لقطة شاشة الدفع",
+        "screenshotAlt": "معاينة لقطة شاشة الدفع",
+        "complete": "إكمال الطلب",
+        "completed": "اكتمل الطلب"
+      },
+      "coupon": {
+        "remove": "إزالة",
+        "applied": "تم تطبيق القسيمة بنجاح.",
+        "placeholder": "رمز العرض / القسيمة",
+        "validating": "جارٍ التحقق...",
+        "apply": "تطبيق القسيمة"
+      },
+      "summary": {
+        "title": "ملخص الطلب",
+        "subtotal": "المجموع الفرعي",
+        "discount": "الخصم",
+        "shipping": "الشحن",
+        "vat": "ضريبة القيمة المضافة",
+        "included": "مشمولة",
+        "added": "مضافة",
+        "total": "الإجمالي",
+        "securePayment": "دفع آمن",
+        "deliveryTime": "التوصيل خلال 2-4 أيام عمل"
+      },
+      "paymentStatus": {
+        "unknown": "غير معروف",
+        "unpaid": "غير مدفوع",
+        "paid": "مدفوع"
+      },
+      "successModal": {
+        "title": "تم الطلب بنجاح!",
+        "description": "تم تقديم طلبك بنجاح. انقر أدناه لتتبع طلبك.",
+        "trackOrder": "تتبع الطلب",
+        "continueShopping": "متابعة التسوق"
+      },
+      "errors": {
+        "partialCartSync": "تعذر نقل بعض العناصر إلى سلة حسابك. ما زالت العناصر في سلتك—يرجى المحاولة مجددًا.",
+        "fileTooLarge": "يجب أن يكون حجم الملف أقل من 5 ميجابايت.",
+        "invalidImage": "يرجى رفع ملف صورة صالح.",
+        "uploadFailed": "تعذر رفع لقطة الشاشة.",
+        "uploadMissingUrl": "لم تتضمن استجابة الرفع رابط الملف.",
+        "couponRequired": "أدخل رمز القسيمة.",
+        "couponApplyFailed": "تعذر تطبيق القسيمة.",
+        "invalidCoupon": "رمز القسيمة غير صالح.",
+        "addressRequired": "يرجى تعبئة الدولة والمنطقة والحي والعنوان الكامل.",
+        "validAreaRequired": "يرجى اختيار حي صالح.",
+        "loginToSaveAddress": "يرجى تسجيل الدخول لحفظ العنوان.",
+        "completeAddressRequired": "يرجى تعبئة التسمية والدولة والمنطقة والحي وتفاصيل العنوان.",
+        "saveAddressFailed": "تعذر حفظ العنوان.",
+        "emptyCart": "سلتك فارغة.",
+        "requiredInformation": "يرجى تعبئة جميع المعلومات المطلوبة.",
+        "waitForUpload": "يرجى الانتظار حتى يكتمل رفع لقطة الشاشة.",
+        "screenshotRequired": "لقطة شاشة الدفع مطلوبة.",
+        "placeOrderFailedRetry": "حدثت مشكلة أثناء تقديم الطلب. يرجى المحاولة لاحقًا.",
+        "gatewayStartFailed": "تعذر بدء دفع SSLCommerz.",
+        "placeOrderFailed": "حدثت مشكلة أثناء تقديم الطلب."
+      },
+      "success": {
+        "couponApplied": "تم تطبيق القسيمة!",
+        "couponRemoved": "تمت إزالة القسيمة.",
+        "addressSaved": "تم حفظ العنوان.",
+        "orderCreated": "تم إنشاء الطلب. يرجى تأكيده الآن.",
+        "orderCompleted": "اكتمل الطلب بنجاح!"
+      }
     },
-    "payment": { "title": "الدفع", "back": "رجوع", "totalPayable": "إجمالي المبلغ المستحق", "cashOnDelivery": "الدفع عند الاستلام", "manualPayment": "دفع يدوي", "sslDescription": "ادفع بأمان عبر SSLCommerz", "manualDescription": "دفع يدوي (يلزم رقم المعاملة ولقطة الشاشة)", "codDescription": "ادفع عند استلام المنتج", "selected": "المحدد", "sendMoneyTo": "أرسل المال إلى", "transactionId": "رقم المعاملة *", "transactionPlaceholder": "أدخل رقم المعاملة", "screenshot": "لقطة شاشة الدفع *", "uploading": "جارٍ الرفع...", "screenshotAlt": "معاينة لقطة شاشة الدفع", "sslRedirect": "ستتم إعادة توجيهك إلى SSLCommerz بعد تقديم الطلب.", "noPaymentNow": "لا يلزم الدفع الآن.", "placeOrder": "تقديم الطلب" },
-    "paymentResult": { "success": "تم الدفع بنجاح", "cancelled": "تم إلغاء الدفع", "unsuccessful": "فشل الدفع", "verified": "تم التحقق من دفعتك.", "unpaid": "ما زال طلبك غير مدفوع.", "orderNumber": "الطلب #{id}", "viewOrders": "عرض الطلبات", "continueShopping": "متابعة التسوق" }
+    "payment": {
+      "title": "الدفع",
+      "back": "رجوع",
+      "totalPayable": "إجمالي المبلغ المستحق",
+      "cashOnDelivery": "الدفع عند الاستلام",
+      "manualPayment": "دفع يدوي",
+      "sslDescription": "ادفع بأمان عبر SSLCommerz",
+      "manualDescription": "دفع يدوي (يلزم رقم المعاملة ولقطة الشاشة)",
+      "codDescription": "ادفع عند استلام المنتج",
+      "selected": "المحدد",
+      "sendMoneyTo": "أرسل المال إلى",
+      "transactionId": "رقم المعاملة *",
+      "transactionPlaceholder": "أدخل رقم المعاملة",
+      "screenshot": "لقطة شاشة الدفع *",
+      "uploading": "جارٍ الرفع...",
+      "screenshotAlt": "معاينة لقطة شاشة الدفع",
+      "sslRedirect": "ستتم إعادة توجيهك إلى SSLCommerz بعد تقديم الطلب.",
+      "noPaymentNow": "لا يلزم الدفع الآن.",
+      "placeOrder": "تقديم الطلب"
+    },
+    "paymentResult": {
+      "success": "تم الدفع بنجاح",
+      "cancelled": "تم إلغاء الدفع",
+      "unsuccessful": "فشل الدفع",
+      "verified": "تم التحقق من دفعتك.",
+      "unpaid": "ما زال طلبك غير مدفوع.",
+      "orderNumber": "الطلب #{id}",
+      "viewOrders": "عرض الطلبات",
+      "continueShopping": "متابعة التسوق"
+    }
   },
   "StorefrontCatalog": {
     "page": {
-      "eyebrow": "كتالوج المنتجات", "heading": "اعثر على المنتج المناسب لك", "description": "ابحث في الكتالوج الكامل وقارن الأسعار الحالية وضيّق النتائج حسب الفئة أو العلامة التجارية أو نوع المنتج أو التوفر.", "filters": "عوامل التصفية", "showHide": "إظهار / إخفاء", "clear": "مسح", "clearAll": "مسح الكل", "clearAllFilters": "مسح جميع عوامل التصفية", "search": "بحث", "searchPlaceholder": "الاسم أو SKU أو العلامة التجارية", "category": "الفئة", "allCategories": "جميع الفئات", "brands": "العلامات التجارية", "productType": "نوع المنتج", "allTypes": "جميع الأنواع", "priceRange": "نطاق السعر", "minPrice": "الحد الأدنى {value}", "maxPrice": "الحد الأقصى {value}", "minimumPrice": "الحد الأدنى للسعر", "maximumPrice": "الحد الأقصى للسعر", "availability": "التوفر", "inStock": "متوفر", "inStockOnly": "المتوفر فقط", "featured": "مميز", "featuredProducts": "منتجات مميزة", "yes": "نعم", "no": "لا", "sortBy": "الترتيب حسب", "productsPerPage": "المنتجات في الصفحة", "resultsFor": "نتائج “{query}”", "allProducts": "جميع المنتجات", "showingResults": "عرض {first}–{last} من {total} منتجًا", "any": "أي قيمة",
-      "sort": { "relevance": "الأكثر صلة", "newest": "الأحدث", "popular": "الأكثر شيوعًا", "priceAsc": "السعر: من الأقل إلى الأعلى", "priceDesc": "السعر: من الأعلى إلى الأقل", "nameAsc": "الاسم: A–Z" },
-      "productTypes": { "physical": "مادي", "digital": "رقمي", "service": "خدمة", "bundle": "حزمة" },
-      "active": { "label": "عوامل تصفية المنتجات النشطة", "title": "نشط", "search": "البحث: {query}", "price": "السعر: {min}–{max}", "remove": "إزالة عامل تصفية {label}" },
-      "empty": { "title": "لم يتم العثور على منتجات", "description": "جرّب بحثًا أوسع أو أزل عامل تصفية واحدًا أو أكثر.", "viewAll": "عرض جميع المنتجات" },
-      "pagination": { "label": "صفحات كتالوج المنتجات", "previous": "السابق", "next": "التالي" },
-      "metadata": { "searchResults": "نتائج البحث عن “{query}”", "categoryProducts": "منتجات {category}", "description": "تصفح منتجات {site} باستخدام عوامل تصفية الفئة والعلامة التجارية والسعر والتوفر.", "catalogName": "كتالوج منتجات {site}" }
+      "eyebrow": "كتالوج المنتجات",
+      "heading": "اعثر على المنتج المناسب لك",
+      "description": "ابحث في الكتالوج الكامل وقارن الأسعار الحالية وضيّق النتائج حسب الفئة أو العلامة التجارية أو نوع المنتج أو التوفر.",
+      "filters": "عوامل التصفية",
+      "showHide": "إظهار / إخفاء",
+      "clear": "مسح",
+      "clearAll": "مسح الكل",
+      "clearAllFilters": "مسح جميع عوامل التصفية",
+      "search": "بحث",
+      "searchPlaceholder": "الاسم أو SKU أو العلامة التجارية",
+      "category": "الفئة",
+      "allCategories": "جميع الفئات",
+      "brands": "العلامات التجارية",
+      "productType": "نوع المنتج",
+      "allTypes": "جميع الأنواع",
+      "priceRange": "نطاق السعر",
+      "minPrice": "الحد الأدنى {value}",
+      "maxPrice": "الحد الأقصى {value}",
+      "minimumPrice": "الحد الأدنى للسعر",
+      "maximumPrice": "الحد الأقصى للسعر",
+      "availability": "التوفر",
+      "inStock": "متوفر",
+      "inStockOnly": "المتوفر فقط",
+      "featured": "مميز",
+      "featuredProducts": "منتجات مميزة",
+      "yes": "نعم",
+      "no": "لا",
+      "sortBy": "الترتيب حسب",
+      "productsPerPage": "المنتجات في الصفحة",
+      "resultsFor": "نتائج “{query}”",
+      "allProducts": "جميع المنتجات",
+      "showingResults": "عرض {first}–{last} من {total} منتجًا",
+      "any": "أي قيمة",
+      "sort": {
+        "relevance": "الأكثر صلة",
+        "newest": "الأحدث",
+        "popular": "الأكثر شيوعًا",
+        "priceAsc": "السعر: من الأقل إلى الأعلى",
+        "priceDesc": "السعر: من الأعلى إلى الأقل",
+        "nameAsc": "الاسم: A–Z"
+      },
+      "productTypes": {
+        "physical": "مادي",
+        "digital": "رقمي",
+        "service": "خدمة",
+        "bundle": "حزمة"
+      },
+      "active": {
+        "label": "عوامل تصفية المنتجات النشطة",
+        "title": "نشط",
+        "search": "البحث: {query}",
+        "price": "السعر: {min}–{max}",
+        "remove": "إزالة عامل تصفية {label}"
+      },
+      "empty": {
+        "title": "لم يتم العثور على منتجات",
+        "description": "جرّب بحثًا أوسع أو أزل عامل تصفية واحدًا أو أكثر.",
+        "viewAll": "عرض جميع المنتجات"
+      },
+      "pagination": {
+        "label": "صفحات كتالوج المنتجات",
+        "previous": "السابق",
+        "next": "التالي"
+      },
+      "metadata": {
+        "searchResults": "نتائج البحث عن “{query}”",
+        "categoryProducts": "منتجات {category}",
+        "description": "تصفح منتجات {site} باستخدام عوامل تصفية الفئة والعلامة التجارية والسعر والتوفر.",
+        "catalogName": "كتالوج منتجات {site}"
+      }
     },
-    "filters": { "updating": "جارٍ تحديث المنتجات…", "updatingShort": "جارٍ التحديث…", "automatic": "تُحدّث عوامل التصفية تلقائيًا", "showProducts": "عرض المنتجات", "apply": "تطبيق عوامل التصفية" },
+    "filters": {
+      "updating": "جارٍ تحديث المنتجات…",
+      "updatingShort": "جارٍ التحديث…",
+      "automatic": "تُحدّث عوامل التصفية تلقائيًا",
+      "showProducts": "عرض المنتجات",
+      "apply": "تطبيق عوامل التصفية"
+    },
     "grid": {
-      "compareSelected": "تم تحديد {count} منتج للمقارنة", "compareNow": "قارن الآن",
-      "login": { "title": "سجّل الدخول لحفظ المنتجات", "description": "تظل قائمة رغباتك متزامنة عند تسجيل الدخول.", "cancel": "إلغاء", "signIn": "تسجيل الدخول" },
-      "errors": { "wishlist": "تعذر تحديث قائمة الرغبات.", "outOfStock": "هذا المنتج غير متوفر.", "addToCart": "تعذرت إضافة المنتج إلى السلة.", "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى." },
-      "success": { "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.", "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.", "addedToCart": "تمت إضافة “{name}” إلى السلة.", "comparisonAdded": "تمت الإضافة إلى المقارنة.", "comparisonRemoved": "تمت الإزالة من المقارنة." }
+      "compareSelected": "تم تحديد {count} منتج للمقارنة",
+      "compareNow": "قارن الآن",
+      "login": {
+        "title": "سجّل الدخول لحفظ المنتجات",
+        "description": "تظل قائمة رغباتك متزامنة عند تسجيل الدخول.",
+        "cancel": "إلغاء",
+        "signIn": "تسجيل الدخول"
+      },
+      "errors": {
+        "wishlist": "تعذر تحديث قائمة الرغبات.",
+        "outOfStock": "هذا المنتج غير متوفر.",
+        "addToCart": "تعذرت إضافة المنتج إلى السلة.",
+        "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى."
+      },
+      "success": {
+        "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.",
+        "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.",
+        "addedToCart": "تمت إضافة “{name}” إلى السلة.",
+        "comparisonAdded": "تمت الإضافة إلى المقارنة.",
+        "comparisonRemoved": "تمت الإزالة من المقارنة."
+      }
     },
-    "card": { "viewProduct": "عرض {name}", "save": "وفر: {amount}", "bestSeller": "الأكثر مبيعًا", "removeWishlist": "إزالة من قائمة الرغبات", "addWishlist": "إضافة إلى قائمة الرغبات", "outOfStock": "غير متوفر", "model": "الطراز", "unavailable": "غير متاح حاليًا", "readyToOrder": "جاهز للطلب", "reviewCount": "{count} مراجعة", "availableColors": "الألوان المتاحة", "colorVariant": "نسخة اللون {color}", "includes": "يتضمن {items}", "viewDetailsFor": "عرض تفاصيل {name}", "viewDetails": "عرض التفاصيل", "addToCart": "أضف إلى السلة", "compared": "تمت المقارنة", "compare": "مقارنة" },
-    "brands": { "eyebrow": "دليل العلامات التجارية", "title": "تسوق من علامات موثوقة", "description": "افتح أي علامة تجارية لعرض كتالوجها المباشر مع خيارات الفئة والسعر والتوفر والترتيب نفسها.", "logoAlt": "شعار {name}", "productCount": "{count} منتج", "viewProducts": "عرض المنتجات", "empty": "لا تتوفر حتى الآن علامات تجارية بمنتجات نشطة.", "metadata": { "title": "تسوق حسب العلامة التجارية", "description": "استكشف منتجات {site} المتاحة حسب العلامة التجارية." } }
+    "card": {
+      "viewProduct": "عرض {name}",
+      "save": "وفر: {amount}",
+      "bestSeller": "الأكثر مبيعًا",
+      "removeWishlist": "إزالة من قائمة الرغبات",
+      "addWishlist": "إضافة إلى قائمة الرغبات",
+      "outOfStock": "غير متوفر",
+      "model": "الطراز",
+      "unavailable": "غير متاح حاليًا",
+      "readyToOrder": "جاهز للطلب",
+      "reviewCount": "{count} مراجعة",
+      "availableColors": "الألوان المتاحة",
+      "colorVariant": "نسخة اللون {color}",
+      "includes": "يتضمن {items}",
+      "viewDetailsFor": "عرض تفاصيل {name}",
+      "viewDetails": "عرض التفاصيل",
+      "addToCart": "أضف إلى السلة",
+      "compared": "تمت المقارنة",
+      "compare": "مقارنة"
+    },
+    "brands": {
+      "eyebrow": "دليل العلامات التجارية",
+      "title": "تسوق من علامات موثوقة",
+      "description": "افتح أي علامة تجارية لعرض كتالوجها المباشر مع خيارات الفئة والسعر والتوفر والترتيب نفسها.",
+      "logoAlt": "شعار {name}",
+      "productCount": "{count} منتج",
+      "viewProducts": "عرض المنتجات",
+      "empty": "لا تتوفر حتى الآن علامات تجارية بمنتجات نشطة.",
+      "metadata": {
+        "title": "تسوق حسب العلامة التجارية",
+        "description": "استكشف منتجات {site} المتاحة حسب العلامة التجارية."
+      }
+    }
   },
   "StorefrontProduct": {
     "page": {
-      "metadata": { "notFound": "المنتج غير موجود", "buyOnline": "اشترِ {name} عبر الإنترنت في بنغلاديش." },
-      "breadcrumb": { "label": "مسار التنقل", "home": "الرئيسية", "products": "المنتجات" },
-      "information": { "productId": "معرّف المنتج", "category": "الفئة", "brand": "العلامة التجارية", "writer": "الكاتب", "publisher": "دار النشر", "type": "النوع", "weight": "الوزن", "dimensions": "الأبعاد" },
-      "types": { "physical": "مادي", "digital": "رقمي", "service": "خدمة", "bundle": "حزمة" },
-      "recommendations": { "eyebrow": "قد يعجبك أيضًا", "title": "منتجات مقترحة", "viewCategory": "عرض الفئة" }
+      "metadata": {
+        "notFound": "المنتج غير موجود",
+        "buyOnline": "اشترِ {name} عبر الإنترنت في بنغلاديش."
+      },
+      "breadcrumb": {
+        "label": "مسار التنقل",
+        "home": "الرئيسية",
+        "products": "المنتجات"
+      },
+      "information": {
+        "productId": "معرّف المنتج",
+        "category": "الفئة",
+        "brand": "العلامة التجارية",
+        "writer": "الكاتب",
+        "publisher": "دار النشر",
+        "type": "النوع",
+        "weight": "الوزن",
+        "dimensions": "الأبعاد"
+      },
+      "types": {
+        "physical": "مادي",
+        "digital": "رقمي",
+        "service": "خدمة",
+        "bundle": "حزمة"
+      },
+      "recommendations": {
+        "eyebrow": "قد يعجبك أيضًا",
+        "title": "منتجات مقترحة",
+        "viewCategory": "عرض الفئة"
+      }
     },
     "purchase": {
-      "save": "وفر: {amount}", "viewImage": "عرض صورة المنتج {number}", "ratingLabel": "{rating} من 5 نجوم", "reviews": "{count} مراجعة", "share": "مشاركة", "stock": "المخزون", "inStock": "متوفر", "outOfStock": "غير متوفر", "brand": "العلامة التجارية", "model": "الطراز", "warranty": "الضمان", "chooseOption": "اختر خيارًا", "option": "الخيار {id}", "stockLeft": "متبقي {count}", "hotline": "الخط الساخن", "discountPrice": "السعر بعد الخصم", "youSave": "توفر {amount}", "emiStarts": "تبدأ الأقساط من*", "installments": "حتى 12 قسطًا شهريًا", "decreaseQuantity": "تقليل الكمية", "increaseQuantity": "زيادة الكمية", "addToCart": "أضف إلى السلة", "wishlist": "قائمة الرغبات", "compare": "مقارنة", "buyNow": "اشترِ الآن بإتمام شراء آمن", "compareSelected": "مقارنة المحدد ({count})",
-      "errors": { "addToCart": "تعذرت إضافة المنتج إلى السلة.", "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى.", "wishlist": "تعذر تحديث قائمة الرغبات.", "share": "تعذرت مشاركة رابط المنتج." },
-      "success": { "addedToCart": "تمت إضافة “{name}” إلى السلة.", "comparisonAdded": "تمت الإضافة إلى المقارنة.", "comparisonRemoved": "تمت الإزالة من المقارنة.", "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.", "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.", "linkCopied": "تم نسخ رابط المنتج." }
+      "save": "وفر: {amount}",
+      "viewImage": "عرض صورة المنتج {number}",
+      "ratingLabel": "{rating} من 5 نجوم",
+      "reviews": "{count} مراجعة",
+      "share": "مشاركة",
+      "stock": "المخزون",
+      "inStock": "متوفر",
+      "outOfStock": "غير متوفر",
+      "brand": "العلامة التجارية",
+      "model": "الطراز",
+      "warranty": "الضمان",
+      "chooseOption": "اختر خيارًا",
+      "option": "الخيار {id}",
+      "stockLeft": "متبقي {count}",
+      "hotline": "الخط الساخن",
+      "discountPrice": "السعر بعد الخصم",
+      "youSave": "توفر {amount}",
+      "emiStarts": "تبدأ الأقساط من*",
+      "installments": "حتى 12 قسطًا شهريًا",
+      "decreaseQuantity": "تقليل الكمية",
+      "increaseQuantity": "زيادة الكمية",
+      "addToCart": "أضف إلى السلة",
+      "wishlist": "قائمة الرغبات",
+      "compare": "مقارنة",
+      "buyNow": "اشترِ الآن بإتمام شراء آمن",
+      "compareSelected": "مقارنة المحدد ({count})",
+      "errors": {
+        "addToCart": "تعذرت إضافة المنتج إلى السلة.",
+        "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى.",
+        "wishlist": "تعذر تحديث قائمة الرغبات.",
+        "share": "تعذرت مشاركة رابط المنتج."
+      },
+      "success": {
+        "addedToCart": "تمت إضافة “{name}” إلى السلة.",
+        "comparisonAdded": "تمت الإضافة إلى المقارنة.",
+        "comparisonRemoved": "تمت الإزالة من المقارنة.",
+        "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.",
+        "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.",
+        "linkCopied": "تم نسخ رابط المنتج."
+      }
     },
-    "tabs": { "label": "تفاصيل المنتج", "specifications": "المواصفات", "description": "الوصف", "reviews": "المراجعات", "specificationsTitle": "المواصفات", "descriptionFallback": "سيكون وصف المنتج متاحًا قريبًا." },
+    "tabs": {
+      "label": "تفاصيل المنتج",
+      "specifications": "المواصفات",
+      "description": "الوصف",
+      "reviews": "المراجعات",
+      "specificationsTitle": "المواصفات",
+      "descriptionFallback": "سيكون وصف المنتج متاحًا قريبًا."
+    },
     "questions": {
-      "title": "الأسئلة والأجوبة", "description": "اسأل عن التوافق أو المواصفات أو الشراء.", "askQuestion": "اطرح سؤالًا", "placeholder": "ما الذي تود معرفته عن هذا المنتج؟", "submit": "إرسال السؤال", "signInToAsk": "سجّل الدخول للسؤال", "loading": "جارٍ تحميل الأسئلة...", "empty": "لا توجد أسئلة بعد. كن أول من يسأل.", "questionPrefix": "س", "answerPrefix": "ج", "customer": "العميل", "answeredBy": "أجاب {name}", "storeTeam": "فريق المتجر", "awaitingAnswer": "بانتظار إجابة فريق المتجر.", "updateAnswer": "تحديث الإجابة المنشورة", "writeAnswer": "اكتب إجابة رسمية", "saving": "جارٍ الحفظ...", "publishAnswer": "نشر الإجابة",
-      "errors": { "load": "تعذر تحميل الأسئلة.", "completeQuestion": "يرجى إدخال سؤال كامل.", "submit": "تعذر إرسال السؤال.", "answer": "تعذر حفظ الإجابة." },
-      "success": { "submitted": "تم إرسال سؤالك.", "answerPublished": "تم نشر الإجابة." }
+      "title": "الأسئلة والأجوبة",
+      "description": "اسأل عن التوافق أو المواصفات أو الشراء.",
+      "askQuestion": "اطرح سؤالًا",
+      "placeholder": "ما الذي تود معرفته عن هذا المنتج؟",
+      "submit": "إرسال السؤال",
+      "signInToAsk": "سجّل الدخول للسؤال",
+      "loading": "جارٍ تحميل الأسئلة...",
+      "empty": "لا توجد أسئلة بعد. كن أول من يسأل.",
+      "questionPrefix": "س",
+      "answerPrefix": "ج",
+      "customer": "العميل",
+      "answeredBy": "أجاب {name}",
+      "storeTeam": "فريق المتجر",
+      "awaitingAnswer": "بانتظار إجابة فريق المتجر.",
+      "updateAnswer": "تحديث الإجابة المنشورة",
+      "writeAnswer": "اكتب إجابة رسمية",
+      "saving": "جارٍ الحفظ...",
+      "publishAnswer": "نشر الإجابة",
+      "errors": {
+        "load": "تعذر تحميل الأسئلة.",
+        "completeQuestion": "يرجى إدخال سؤال كامل.",
+        "submit": "تعذر إرسال السؤال.",
+        "answer": "تعذر حفظ الإجابة."
+      },
+      "success": {
+        "submitted": "تم إرسال سؤالك.",
+        "answerPublished": "تم نشر الإجابة."
+      }
     },
     "conversion": {
-      "emi": { "title": "خطط التقسيط", "from": "ابتداءً من {amount}", "choosePeriod": "اختر مدة التقسيط", "months": "{count} أشهر", "perMonth": "/ شهر", "note": "تقسيم تقديري. قد تختلف رسوم البنك والأهلية." },
-      "delivery": { "title": "تقدير التوصيل", "checkArea": "تحقق من المنطقة", "district": "المنطقة", "area": "منطقة التوصيل", "checking": "جارٍ التحقق...", "check": "تحقق من التوصيل", "free": "توصيل مجاني", "cost": "توصيل بقيمة {amount}", "businessDays": "{count} أيام عمل", "confirmedAtCheckout": "يتم تأكيد وقت التوصيل عند إتمام الشراء" },
-      "areas": { "dhaka": "دكا", "outsideDhaka": "خارج دكا" },
-      "errors": { "districtRequired": "أدخل منطقتك للتحقق من التوصيل.", "quoteFailed": "تعذر حساب تكلفة التوصيل." }
+      "emi": {
+        "title": "خطط التقسيط",
+        "from": "ابتداءً من {amount}",
+        "choosePeriod": "اختر مدة التقسيط",
+        "months": "{count} أشهر",
+        "perMonth": "/ شهر",
+        "note": "تقسيم تقديري. قد تختلف رسوم البنك والأهلية."
+      },
+      "delivery": {
+        "title": "تقدير التوصيل",
+        "checkArea": "تحقق من المنطقة",
+        "district": "المنطقة",
+        "area": "منطقة التوصيل",
+        "checking": "جارٍ التحقق...",
+        "check": "تحقق من التوصيل",
+        "free": "توصيل مجاني",
+        "cost": "توصيل بقيمة {amount}",
+        "businessDays": "{count} أيام عمل",
+        "confirmedAtCheckout": "يتم تأكيد وقت التوصيل عند إتمام الشراء"
+      },
+      "areas": {
+        "dhaka": "دكا",
+        "outsideDhaka": "خارج دكا"
+      },
+      "errors": {
+        "districtRequired": "أدخل منطقتك للتحقق من التوصيل.",
+        "quoteFailed": "تعذر حساب تكلفة التوصيل."
+      }
     },
-    "bundle": { "configureLabel": "تخصيص هذه الحزمة", "title": "أنشئ حزمتك", "description": "اختر من المنتجات المعتمدة من المتجر. يتم تحديث السعر والمخزون فورًا.", "price": "سعر حزمتك", "baseConfiguration": "التكوين الأساسي", "fromBase": "{difference} عن السعر الأساسي", "available": "{count} متاح", "ready": "التكوين جاهز", "selectionRequired": "الاختيار مطلوب", "required": "مطلوب", "optional": "اختياري", "includedEveryBundle": "مضمن في كل حزمة", "chooseCount": "اختر {count}", "chooseRange": "اختر من {min} إلى {max}", "itemValue": "قيمة العنصر {amount}", "outOfStock": "غير متوفر", "maximumSelected": "تم بلوغ الحد الأقصى", "priceUpdates": "يتغير السعر حسب العناصر المحددة", "included": "مضمن", "selectToContinue": "اختر {count} خيارًا للمتابعة.", "removeOptional": "إزالة هذا العنصر الاختياري", "quantityPerBundle": "الكمية لكل حزمة", "decreaseQuantity": "تقليل كمية {group}", "increaseQuantity": "زيادة كمية {group}", "notSelected": "غير محدد" },
-    "related": { "title": "منتجات ذات صلة", "viewAll": "عرض الكل", "save": "وفر: {amount}", "browseAll": "تصفح جميع المنتجات ذات الصلة" },
+    "bundle": {
+      "configureLabel": "تخصيص هذه الحزمة",
+      "title": "أنشئ حزمتك",
+      "description": "اختر من المنتجات المعتمدة من المتجر. يتم تحديث السعر والمخزون فورًا.",
+      "price": "سعر حزمتك",
+      "baseConfiguration": "التكوين الأساسي",
+      "fromBase": "{difference} عن السعر الأساسي",
+      "available": "{count} متاح",
+      "ready": "التكوين جاهز",
+      "selectionRequired": "الاختيار مطلوب",
+      "required": "مطلوب",
+      "optional": "اختياري",
+      "includedEveryBundle": "مضمن في كل حزمة",
+      "chooseCount": "اختر {count}",
+      "chooseRange": "اختر من {min} إلى {max}",
+      "itemValue": "قيمة العنصر {amount}",
+      "outOfStock": "غير متوفر",
+      "maximumSelected": "تم بلوغ الحد الأقصى",
+      "priceUpdates": "يتغير السعر حسب العناصر المحددة",
+      "included": "مضمن",
+      "selectToContinue": "اختر {count} خيارًا للمتابعة.",
+      "removeOptional": "إزالة هذا العنصر الاختياري",
+      "quantityPerBundle": "الكمية لكل حزمة",
+      "decreaseQuantity": "تقليل كمية {group}",
+      "increaseQuantity": "زيادة كمية {group}",
+      "notSelected": "غير محدد"
+    },
+    "related": {
+      "title": "منتجات ذات صلة",
+      "viewAll": "عرض الكل",
+      "save": "وفر: {amount}",
+      "browseAll": "تصفح جميع المنتجات ذات الصلة"
+    },
     "reviews": {
-      "rateStar": "تقييم {value} نجمة", "title": "مراجعات العملاء", "averageRating": "متوسط التقييم {rating}", "write": "اكتب مراجعة", "loginToWrite": "سجّل الدخول لكتابة مراجعة", "loginRequired": "يجب تسجيل الدخول لإرسال مراجعة.", "signIn": "تسجيل الدخول", "rating": "التقييم", "overwriteNote": "لقد راجعت المنتج مسبقًا—سيستبدل التحديث مراجعتك", "placeholder": "اكتب رأيك...", "submitting": "جارٍ الإرسال...", "update": "تحديث المراجعة", "submit": "إرسال المراجعة", "reviews": "المراجعات", "loading": "جارٍ التحميل...", "empty": "لا توجد مراجعات بعد.", "anonymous": "مجهول", "previous": "السابق", "page": "الصفحة {page} من {pages}", "next": "التالي",
-      "errors": { "submit": "تعذر إرسال المراجعة.", "generic": "حدث خطأ ما." }, "success": { "updated": "تم تحديث المراجعة!", "submitted": "تم إرسال المراجعة!" }
+      "rateStar": "تقييم {value} نجمة",
+      "title": "مراجعات العملاء",
+      "averageRating": "متوسط التقييم {rating}",
+      "write": "اكتب مراجعة",
+      "loginToWrite": "سجّل الدخول لكتابة مراجعة",
+      "loginRequired": "يجب تسجيل الدخول لإرسال مراجعة.",
+      "signIn": "تسجيل الدخول",
+      "rating": "التقييم",
+      "overwriteNote": "لقد راجعت المنتج مسبقًا—سيستبدل التحديث مراجعتك",
+      "placeholder": "اكتب رأيك...",
+      "submitting": "جارٍ الإرسال...",
+      "update": "تحديث المراجعة",
+      "submit": "إرسال المراجعة",
+      "reviews": "المراجعات",
+      "loading": "جارٍ التحميل...",
+      "empty": "لا توجد مراجعات بعد.",
+      "anonymous": "مجهول",
+      "previous": "السابق",
+      "page": "الصفحة {page} من {pages}",
+      "next": "التالي",
+      "errors": {
+        "submit": "تعذر إرسال المراجعة.",
+        "generic": "حدث خطأ ما."
+      },
+      "success": {
+        "updated": "تم تحديث المراجعة!",
+        "submitted": "تم إرسال المراجعة!"
+      }
     },
-    "priceAlert": { "disabled": "تم إيقاف تنبيه انخفاض السعر.", "enabled": "سيتم إشعارك عند انخفاض السعر.", "error": "تعذر تحديث تنبيه انخفاض السعر.", "on": "التنبيه مفعّل", "notify": "أبلغني عند انخفاض السعر" },
-    "error": { "title": "تعذر تحميل تفاصيل المنتج", "description": "يرجى إعادة المحاولة أو العودة إلى كتالوج المنتجات.", "retry": "إعادة المحاولة", "browse": "تصفح المنتجات" },
-    "notFound": { "title": "المنتج غير موجود", "description": "قد يكون المنتج غير متاح أو الرابط غير صحيح.", "browse": "تصفح المنتجات المتاحة" }
+    "priceAlert": {
+      "disabled": "تم إيقاف تنبيه انخفاض السعر.",
+      "enabled": "سيتم إشعارك عند انخفاض السعر.",
+      "error": "تعذر تحديث تنبيه انخفاض السعر.",
+      "on": "التنبيه مفعّل",
+      "notify": "أبلغني عند انخفاض السعر"
+    },
+    "error": {
+      "title": "تعذر تحميل تفاصيل المنتج",
+      "description": "يرجى إعادة المحاولة أو العودة إلى كتالوج المنتجات.",
+      "retry": "إعادة المحاولة",
+      "browse": "تصفح المنتجات"
+    },
+    "notFound": {
+      "title": "المنتج غير موجود",
+      "description": "قد يكون المنتج غير متاح أو الرابط غير صحيح.",
+      "browse": "تصفح المنتجات المتاحة"
+    }
   },
   "ScmAuto": {
     "k_f586059328a9": "1. الطرف المقابل والتسليم",
@@ -10742,6 +11385,436 @@
         "upload": "فشل تحميل الصورة.",
         "submit": "تعذر تقديم إثبات التسليم.",
         "unavailable": "بيانات التأكيد غير متوفرة."
+      }
+    }
+  },
+  "StorefrontSupport": {
+    "tracking": {
+      "title": "تتبع تسليمك",
+      "subtitle": "See the latest status and delivery progress for this shipment.",
+      "loading": "تفاصيل التعقب",
+      "notFound": "ولا يمكن العثور على معلومات تتبع.",
+      "loadError": "غير قادر على تحميل معلومات التتبع الآن",
+      "trackingNumber": "رقم التتبع",
+      "orderNumber": "رقم النظام",
+      "courier": "حامل الحقيبة",
+      "updatedAt": "آخر تحديث",
+      "status": "الحالة الراهنة",
+      "openCourier": "التعقب المفتوح",
+      "statuses": {
+        "pending": "معلقة",
+        "assigned": "عدد المتعهدين",
+        "picked_up": "التقطت",
+        "in_transit": "العبور",
+        "out_for_delivery": "خارج لتقديم",
+        "delivered": "المبلغ",
+        "failed": "فشل التسليم",
+        "returned": "أعيدت",
+        "cancelled": "ألغيت"
+      }
+    },
+    "returns": {
+      "title": "العودة والمبالغ المستردة",
+      "subtitle": "A clear process for reporting eligible product issues and receiving support.",
+      "overview": {
+        "windowTitle": "نافذة العودة",
+        "windowDescription": "طلب العودة في غضون الفترة المبينة في تفاصيل المنتج أو الطلب.",
+        "conditionTitle": "حالة المنتجات",
+        "conditionDescription": "إحتفظ بالمنتجات والزوايا والفاتورة والتعبئة الأصلية معاً",
+        "processingTitle": "الاستعراض والقرار",
+        "processingDescription": "ونحن نفتش الطلب ونؤكد التبادل المناسب أو الاستبدال أو إعادة الأموال."
+      },
+      "eligible": {
+        "title": "أسباب العودة المؤهلة",
+        "wrongProduct": "لقد حصلت على منتج مختلف أو متغير",
+        "defect": "والمنتج له عيب في التصنيع والجودة.",
+        "damaged": "ووصل المنتج مضروبا في العبور.",
+        "missingParts": "الوصلات المطلوبة أو الأجزاء مفقودة"
+      },
+      "ineligible": {
+        "title": "غير مؤهلة عادة",
+        "customerDamage": "الضرر الناجم بعد التسليم من خلال إساءة الاستخدام أو حادث.",
+        "modified": "المنتجات التي تم تغييرها أو إصلاحها أو تعديلها دون موافقة.",
+        "late": "الطلبات المقدمة بعد نافذة العودة المنطبقة.",
+        "packaging": "وتعاد المنتجات دون التغليف أو الضم أو إثبات الشراء."
+      },
+      "process": {
+        "title": "كيف تعمل عملية العودة",
+        "contactTitle": "دعم الاتصال",
+        "contactDescription": "نتشارك رقم طلبك، والقضية، والصور الواضحة أو الفيديو عند الاقتضاء.",
+        "approvalTitle": "الحصول على الموافقة",
+        "approvalDescription": "فريقنا يستعرض الأهلية ويقدم تعليمات العودة",
+        "sendTitle": "إرسال البند أو تسليمه",
+        "sendDescription": "واشتملت جميع الأصناف على نحو آمن واتباع طريقة التسليم المعتمدة.",
+        "refundTitle": "تلقي القرار",
+        "refundDescription": "بعد التفتيش، نكمل الاستبدال أو التبادل أو الاسترداد"
+      },
+      "refund": {
+        "title": "المبالغ المردودة وتفاصيل الصرف",
+        "timeLabel": "وقت التجهيز",
+        "timeValue": "عادة ٥-٧ أيام عمل بعد الموافقة والتفتيش.",
+        "methodLabel": "طريقة استرداد الأموال",
+        "methodValue": "وتعاد المبالغ المستردة عموما من خلال طريقة السداد الأصلية.",
+        "shippingLabel": "الشحنات العائدة",
+        "shippingValue": "وتتوقف المسؤولية على سبب العودة والتعليمات المعتمدة.",
+        "exchangeLabel": "توافر الصرف",
+        "exchangeValue": "وتتوقف أسعار الصرف على الاستحقاق الحالي للمخزون والمنتجات."
+      },
+      "cta": {
+        "title": "هل تريد أن تطلب العودة؟",
+        "description": "اتصلوا بدعمكم بطلبكم حتى نتمكن من مراجعة الطلب",
+        "action": "دعم الاتصال"
+      }
+    },
+    "shipping": {
+      "metadata": {
+        "title": "الشحن والتسليم",
+        "description": "تعلم كيف يتم تأكيد الأوامر، وحزمها، وتسليمها إلى الساعين وتسليمها."
+      },
+      "title": "الشحن والتسليم",
+      "subtitle": "مِنْ تَأكيدِ الطلبِ إلى تسليمِ المدخلِ، يَرى كَمْ رزمتَكَ تَتحرّكُ.",
+      "overview": {
+        "estimateTitle": "تقدير التسليم",
+        "estimateValue": "عرض أثناء عملية التفتيش",
+        "estimateNote": "ويتفاوت التوقيت حسب الموقع والمخزون وتغطية حامل الحقيبة.",
+        "protectionTitle": "التغليف المضمون",
+        "protectionValue": "حزمة من الرعاية",
+        "protectionNote": "فالبنود مستعدة للحد من خطر الضرر العابر.",
+        "supportTitle": "دعم التنفيذ",
+        "supportValue": "المساعدة عند الحاجة",
+        "supportNote": "اتصل بنا إذا وصل التعقب إلى مشكلة"
+      },
+      "process": {
+        "eyebrow": "رحلة التسليم",
+        "title": "كيف تصلك أوامرك",
+        "confirmationTitle": "تأكيد الأمر",
+        "confirmationDescription": "نتحقق من تفاصيل الدفع والمخزون والتوصيل قبل التجهيز",
+        "packingTitle": "التعبئة والتغليف",
+        "packingDescription": "يتم فحص المواد الصحيحة وحزمها بأمان",
+        "handoverTitle": "تسليم الركاب",
+        "handoverDescription": "والشحنة مخصصة لشريك التسليم المتاح.",
+        "deliveryTitle": "التسليم التدريجي",
+        "deliveryDescription": "تتبع التقدم وتفحص الطرد عندما يصل"
+      },
+      "guidance": {
+        "eyebrow": "قبل الولادة",
+        "title": "إرشادات تقديم المساعدة",
+        "description": "ويمكن أن تساعد بعض الشيكات البسيطة على تجنب التأخيرات وجعل التسليم أكثر سلاسة.",
+        "items": {
+          "address": "توفير عنوان كامل وعلامة بارزة ورقم هاتف قابل للتواصل",
+          "estimate": ":: معالجة مواعيد تقديم الخدمات كتقديرات، لا سيما أثناء العطلات أو الطقس الحاد.",
+          "handling": "أبقي هاتفك متاحاً عندما يتصل بك الساعي",
+          "delays": "Use order tracking or contact support if there is no update for an unusual period.",
+          "damage": "تحقق من الطرد الخارجي والإبلاغ عن الأضرار الظاهرة في أقرب وقت ممكن.",
+          "retain": "أبقي الفاتورة و التغليف حتى ترضى بالمنتج"
+        }
+      },
+      "cta": {
+        "title": "أتحتاجين مساعدة في التوصيل؟",
+        "description": "ويمكن لفريق دعمنا أن يساعد في التتبع والتأخيرات والشواغل المتعلقة بالتسليم.",
+        "contact": "دعم الاتصال",
+        "orders": "في أوامري"
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "عنا",
+        "description": "تعلّمْ حول CODEXPLACEHOLDERTOKEN، تجربتنا في المخزن والتزامنا بالعملاء."
+      },
+      "eyebrow": "عن {site}",
+      "title": "متجر موثوق به للاحتياجات اليومية",
+      "subtitle": "CODEXPLACEHOLDERTOKEN ونحن نجمع بين كتيب جيد التنظيم، والوفاء الموثوق به، والدعم المفيد في تجربة تسوق واحدة.",
+      "explore": "منتجات استكشافية",
+      "contact": "اتصل بنا",
+      "features": {
+        "genuineTitle": "المنتجات المشمولة بالوصاية",
+        "genuineDescription": "وتساعد المعلومات الواضحة عن المنتجات ومعايير المصادرة الزبائن على الشراء بثقة.",
+        "guidanceTitle": "إرشادات مفيدة",
+        "guidanceDescription": "وتيسر المواصفات والخيارات والدعم اختيار البند الصحيح.",
+        "coverageTitle": "الوفاء المرن",
+        "coverageDescription": "وقد صممت تدفقات العمل المتعلقة بالمخزونات والتسليم من أجل التعامل مع الطلبات التي يمكن الاعتماد عليها.",
+        "checkoutTitle": "مراقبة آمنة",
+        "checkoutDescription": "وتظل المجاميع الشفافة وطرق الدفع المدعومة جاهزة."
+      },
+      "values": {
+        "eyebrow": "ما يهمنا",
+        "title": "بناء تجربة شراء أفضل",
+        "description": "ونركز على التفاصيل التي تجعل التسوق على الإنترنت أكثر وضوحا وأكثر أمانا وأكثر فائدة.",
+        "catalogTitle": "كتيب منظمة",
+        "catalogDescription": "المراهنات والخصائص والمرشحات تساعد الزبائن على اكتشاف المنتجات المناسبة",
+        "verifiedTitle": "معلومات واضحة",
+        "verifiedDescription": "وترد تفاصيل المنتجات بطريقة منظمة ومفهومة.",
+        "inventoryTitle": "المخزون الموثوق به",
+        "inventoryDescription": "وتدفقات العمل المدركة للمخزونات تقلل من المفاجآت بعد صدور أمر.",
+        "secureTitle": "التسوق المحمي",
+        "secureDescription": "وتدفقات الحساب والمغادرة والدفع مصممة مع مراعاة الأمن.",
+        "deliveryTitle": "وضوح النظام",
+        "deliveryDescription": "ويمكن للزبائن أن يتبعوا النظام والتقدم المحرز.",
+        "supportTitle": "الدعم المستجيب",
+        "supportDescription": "وتتاح قنوات الدعم قبل الشراء وبعده."
+      },
+      "commitment": {
+        "eyebrow": "التزامنا",
+        "title": "المتجر الذي يستمر في التحسن",
+        "first": "ونعمل باستمرار على تحسين الكتالوج وفحصه والوفاء به ودعمه استنادا إلى الاحتياجات التشغيلية والتغذية المرتدة من العملاء.",
+        "second": "وهدفنا هو جعل كل تفاعل - من الاكتشاف إلى ما بعد الخدمة - واضحة وموثوقة ومحترمة."
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "اتصل بنا",
+        "description": "اتصل بشركة {site} للحصول على المنتجات والطلبات والمبيعات والخدمات."
+      },
+      "subjects": {
+        "corporate": "استفسار عن مبيعات الشركات",
+        "service": "التحقيق في حجز الخدمات"
+      },
+      "eyebrow": "دعم شركة {site}",
+      "title": "كيف يمكننا المساعدة؟",
+      "subtitle": "أرسل لنا رسالة لمشورة المنتج، دعم الطلب، مشتريات الشركات أو استفسارات الخدمات.",
+      "types": {
+        "productTitle": "دعم المنتجات والنظام",
+        "productDescription": "اسأل عن المنتجات، والتوافق، والطلب أو التسليم.",
+        "corporateTitle": "مبيعات الشركات",
+        "corporateDescription": "يناقش عمليات الشراء بالجملة والاقتباسات ومتطلبات الأعمال التجارية.",
+        "serviceTitle": "حجز الخدمات",
+        "serviceDescription": "طلب المساعدة في التركيب أو الصيانة أو الخدمات المتاحة."
+      },
+      "information": {
+        "title": "معلومات الاتصال",
+        "phone": "الهاتف",
+        "email": "Email",
+        "address": "العنوان",
+        "onlineStore": "مخزن على الإنترنت",
+        "alwaysOpen": "Available 24/7 for browsing and orders"
+      },
+      "orderHelp": {
+        "title": "تبحث عن تفاصيل الطلب؟",
+        "description": "ويمكن للزبائن الموقّعين أن ينظروا إلى الحالة، والأصناف، والمجاميع، والتتبع من تاريخ طلباتهم.",
+        "action": "في أوامري"
+      },
+      "form": {
+        "title": "أرسل رسالة",
+        "name": "اسمك",
+        "email": "عنوان البريد الإلكتروني",
+        "subject": "الموضوع",
+        "message": "الرسالة",
+        "success": "لقد أرسلت رسالتك سنستجيب بأسرع ما يمكن.",
+        "sending": "إرسال...",
+        "send": "رسالة"
+      },
+      "errors": {
+        "send": "لم نستطع إرسال رسالتك حاول مرة أخرى"
+      }
+    },
+    "faq": {
+      "title": "الأسئلة المتكررة",
+      "subtitle": "أعثر على إجابات سريعة عن المنتجات، الأوامر، التسليم، العودة وحسابك",
+      "searchLabel": "البحث في كثير من الأحيان الأسئلة",
+      "searchPlaceholder": "ابحثوا عن اسئلة واجابات",
+      "questionCount": "أسئلة",
+      "noResultsTitle": "لا توجد نتائج",
+      "noResultsDescription": "لم نستطع إيجاد سؤال يطابق بحثك",
+      "viewAll": "شاهدوا جميع الأسئلة",
+      "moreHelp": "تحتاج إلى المزيد من المساعدة؟",
+      "allProducts": "جميع المنتجات",
+      "contact": "الاتصال",
+      "about": "عنا",
+      "homepage": "صفحة الاستقبال",
+      "loading": "....",
+      "categories": {
+        "general": {
+          "title": "معلومات عامة",
+          "q1": "ما الذي يمكنني شراؤه من هذا المتجر؟",
+          "a1": "وينظم نطاقنا المتاح الفئات الحية المبينة في المخزن. فئات الحشد أو البحث في المفهرس لمعرفة ما هو مقدم حاليا.",
+          "q2": "كم حجم منتجاتك؟",
+          "a2": "وما زال جمع منتجاتنا ينمو ويستكمل بانتظام مع الوافدين الجدد والمخزون الحالي.",
+          "q3": "كيف أتأكد من توافق المنتج؟",
+          "a3": "Compare the model, interface, dimensions and other requirements in the specifications. الاتصال بالدعم قبل طلب ما إذا كان التوافق غير واضح.",
+          "q4": "كيف أصنع حساباً؟",
+          "a4": "افتحي اللوم أو وقعي، اختاري السجل، وخلقي حساباً بإسمك، والبريد الإلكتروني وكلمة السر."
+        },
+        "ordering": {
+          "title": "الأمر والمدفوعات",
+          "q1": "هل أحتاج حساباً لوضع أمر؟",
+          "a1": "قد يكون التفقد متاحاً فالحساب يجعل من الأسهل تتبع الأوامر واستخدام خصائص الحسابات.",
+          "q2": "أي طرق الدفع التي تدعمها؟",
+          "a2": "وتظهر أساليب الدفع المتاحة أثناء عملية التفتيش ويمكن أن تشمل المدفوعات المتنقلة والبطاقات والنقد عند التسليم.",
+          "q3": "هل يمكنني إلغاء طلبي؟",
+          "a3": "الإلغاء يعتمد على حالة النظام افتحي تفاصيل طلبكِ لتفقد العمل المتاح أو دعم الاتصال",
+          "q4": "هل دفعتي آمنة؟",
+          "a4": "وتدعم استخدامات التفتيش مقدمي المدفوعات والمناولة الآمنة. ولا يخزن المخزن وثائق تفويض الدفع الحساسة.",
+          "q5": "كيف سأتلقى تأكيد الطلب؟",
+          "a5": "ويمكن أن تظهر المعلومات المستكملة عن الحالة في حسابكم، كما يمكن إرسالها من خلال قنوات البريد الإلكتروني الموحّدة أو SMS."
+        },
+        "shipping": {
+          "title": "التسليم والشحن",
+          "q1": "كم ثمن الشحنة؟",
+          "a1": "وتتوقف رسوم التسليم على منطقة التسليم والعربات وقواعد الشحن الحالية. ويظهر المبلغ النهائي عند المغادرة.",
+          "q2": "كم يستغرق التسليم؟",
+          "a2": "ويتوقف هذا التقدير على تحديد موقع الجرد، والمقصد، وتغطية حاملي البريد، ويظهر أثناء عملية التفتيش أو تجهيز الطلبات.",
+          "q3": "أين تُسلّمُ؟",
+          "a3": "ويتوقف توافر التوصيل على التغطية النشطة لحاملي البريد والعنوان الذي أُدخل أثناء عملية التفتيش.",
+          "q4": "كيف يمكنني تتبع طلبي؟",
+          "a4": "افتحوا أوامري واختاروا الأمر لرؤية حالتها الحالية وتتبع الشحنات المتاحة",
+          "q5": "هَلْ تَعْرضُ الإيصال السريع؟",
+          "a5": "ويمكن أن يظهر الإيصال السريع أو السريع عند دعمه للعنوان والنظام المختارين."
+        },
+        "returns": {
+          "title": "العودة والمبالغ المستردة",
+          "q1": "هل يمكنني إعادة منتج؟",
+          "a1": "ويمكن إعادة المنتجات المؤهلة داخل النافذة المنطبقة لأسباب مدعومة مثل الضرر أو العيوب أو بند غير صحيح.",
+          "q2": "كيف تعمل عملية استرداد الأموال؟",
+          "a2": "وبعد الموافقة والعودة والتفتيش، يصدر المبلغ المسترد عن طريق الطريقة المعتمدة. وقد تتفاوت أوقات تجهيز المورد.",
+          "q3": "هل يمكنني تبادل المنتج؟",
+          "a3": "وقد يكون التبادل متاحاً حسب سبب العودة، وأهلية المنتجات، والمخزون الحالي."
+        },
+        "account": {
+          "title": "الحساب والموجز",
+          "q1": "ماذا يجب أن أفعل لو نسيت كلمة السر؟",
+          "a1": "استخدمي كلمة السر في صفحة الدخول و أدخلي بريدك الإلكتروني المسجل و اتبعي التعليمات",
+          "q2": "كيف أقوم بتحديث ملفي؟",
+          "a2": "افتح ملف حسابك لتحديث المعلومات الشخصية والمتصلة",
+          "q3": "كيف لي أن أرى تاريخ طلبي؟",
+          "a3": "افتح حسابي واختار أوامري لأرى المشتريات الحالية والسابقة",
+          "q4": "كيف أدير عناوين منقذة؟",
+          "a4": "افتحي قسم العنوان في حسابك لإضافة عناوين التسليم المنقذة أو تحريرها أو إزالتها"
+        },
+        "products": {
+          "title": "المنتجات والتوافر",
+          "q1": "كيف لي أن أعرف ما إذا كان المنتج في المخزون؟",
+          "a1": "وتبين صفحة المنتج توافرها الحالي. يمكن للمخزون أن يتغير حتى يتم تأكيد أمر",
+          "q2": "هل تغيرت أسعار المنتجات؟",
+          "a2": "وقد تتغير الأسعار والترقية. ومجموع التحقق المؤكد هو السعر الذي ينطبق على النظام المقدم.",
+          "q3": "أين أجد المواصفات؟",
+          "a3": "فتح صفحة المنتج واستعراض وصفه وخصائصه ومتغيراته وأقسام المواصفات.",
+          "q4": "هل يمكنني مقارنة المنتجات؟",
+          "a4": "Use available categories, filters and product details to comparison options, or contact support for guidance."
+        }
+      }
+    },
+    "privacy": {
+      "title": "سياسة الخصوصية",
+      "subtitle": "خصوصيتك مهمة لنا",
+      "overview": {
+        "securityTitle": "أمن البيانات",
+        "securityDescription": "الضمانات المعقولة تستخدم لحماية معلوماتك",
+        "transparencyTitle": "الشفافية",
+        "transparencyDescription": "ونحن نشرح المعلومات التي يتم جمعها ولماذا هي مطلوبة.",
+        "controlTitle": "سيطرتك",
+        "controlDescription": "يمكنك مراجعة وتحديث المعلومات المتاحة عن الحسابات"
+      },
+      "collect": {
+        "title": "ما نجمعه",
+        "personal": {
+          "title": "المعلومات الشخصية",
+          "nameEmail": "الاسم وعنوان البريد الإلكتروني",
+          "phone": "رقم الهاتف",
+          "address": "عنوان التسليم"
+        },
+        "order": {
+          "title": "المعلومات المطلوبة",
+          "preferences": "أفضليات المنتجات",
+          "history": "تاريخ النظام",
+          "payment": "معلومات عن طريقة الدفع، باستثناء وثائق التفويض الحساسة"
+        },
+        "usage": {
+          "title": "معلومات الاستخدام",
+          "browsing": "نشاط الحشد",
+          "wishlist": "بنود جدول الأعمال",
+          "pageViews": "الآراء"
+        },
+        "notStored": {
+          "title": "ما لا نخزنه",
+          "bank": "تفاصيل حساب مصرفي كامل",
+          "card": "أرقام البطاقات الكاملة",
+          "password": "كلمات السر"
+        }
+      },
+      "usage": {
+        "title": "كيف نستخدم معلوماتك",
+        "essential": {
+          "title": "الاستخدامات الأساسية",
+          "processing": "تجهيز الطلبات وتسليمها",
+          "account": "إدارة الحسابات",
+          "support": "دعم العملاء",
+          "recommendations": "توصيات المنتجات ذات الصلة"
+        },
+        "permission": {
+          "title": "بإذنك",
+          "marketing": "تسويق الرسائل الإلكترونية",
+          "offers": "العروض والترقية الخاصة",
+          "notifications": "إخطارات المنتجات الجديدة",
+          "surveys": "الدراسات الاستقصائية وطلبات التعقيب"
+        }
+      },
+      "rights": {
+        "title": "حقوقك",
+        "accessTitle": "الحصول على معلوماتك",
+        "accessDescription": "يمكنك طلب الوصول إلى المعلومات التي نحملها عنك",
+        "updateTitle": "آخر المعلومات",
+        "updateDescription": "يمكنك تحرير التفاصيل المتاحة أو أن تطلب منا تصحيحها"
+      },
+      "cta": {
+        "title": "هل لديك أسئلة خصوصية؟",
+        "description": "اتصل بنا لأسئلة أو طلبات تتعلق بالخصوصية",
+        "action": "اتصل بفريق خصوصيتنا",
+        "lastUpdated": "آخر تحديث:",
+        "date": "19 آب/أغسطس 2026",
+        "updateNote": "ويمكننا تحديث هذه السياسة عندما تتغير خدماتنا أو متطلباتنا القانونية."
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "المصطلحات والشروط",
+        "description": "الشروط التي تحكم الحسابات، والأوامر، والتسعير، والمدفوعات، وتسليم واستخدام شركة {site}."
+      },
+      "title": "المصطلحات والشروط",
+      "intro": "وتوضح هذه المصطلحات كيف تعمل الحسابات، وأوامر المنتجات، والمدفوعات، والوفاء، والدعم بعد البيع عندما تستخدم CODEXPLACEHOLDERTKEN.",
+      "effectiveDate": "تاريخ النفاذ: 19 آب/أغسطس 2026",
+      "agreement": "من خلال الوصول إلى المتجر، إنشاء حساب أو وضع أمر، توافق على هذه الشروط وربط الخصوصية، والشحن وسياسات العودة. إذا كنت لا توافق، لا تقدم أمرا.",
+      "sections": {
+        "orders": {
+          "title": "الأوامر والتوافر",
+          "first": "تقديم أمر هو طلب الشراء. ويُقبل أمر ما بعد التحقق من المعلومات المتعلقة بالمخزونات والسعر والدفع والتسليم.",
+          "second": "ويمكن أن تتغير المنتجات والمتغيرات ومخزونات المستودعات قبل تأكيدها. إذا أصبح البند غير متاح، يمكننا أن نقدم بديلاً، وننقح الأمر بموافقتك أو نلغيه، ونرد المبلغ المتضرر."
+        },
+        "pricing": {
+          "title": "الخصخصة والدفع",
+          "first": "وتظهر الأسعار بالعملة المُعرضة ويمكن أن تتغير دون إشعار. ويشمل المجموع المؤكد الخصومات والضرائب ورسوم الإيصال المطبقة التي تظهر أثناء عملية المغادرة.",
+          "second": "وتخضع أساليب الدفع لموافقة مقدمي الخدمات. وتظل المعلومات المتعلقة بالنفقة، حيثما تبين، إرشادية إلى أن يؤكد مقدم الخدمات الأهلية والرسوم والحيازة."
+        },
+        "delivery": {
+          "title": "التسليم والتفتيش",
+          "first": "وتقديرات التسليم ليست ضمانات ويمكن أن تتأثر بموقع المخزون، وتغطية حاملي الحقيبة، والطقس، والعطلات، والأحداث التي تقع خارج نطاق سيطرتنا المعقولة.",
+          "second": "فحص الطرد والمنتج بسرعة. Report missing, damaged or incorrect items through support within the period stated in the return policy."
+        },
+        "warranty": {
+          "title": "الضمان وتوافق المنتجات",
+          "first": "وتتوقف تغطية التحذيرات على المنتج والعلامة التجارية والمقدم على صفحة المنتج أو الفواتير. ويجوز تطبيق شروط المصانع أو الموزعة.",
+          "second": "والمعلومات المتعلقة بالقابلية للمقارنة هي إرشادات ما لم يتم تأكيدها صراحة. التحقق من متطلبات النموذج أو الحجم أو المواد أو المواصفات أو الاستخدام ذات الصلة قبل الشراء."
+        },
+        "digital": {
+          "title": "البرمجيات والمواد الرقمية",
+          "first": "وتخضع مفاتيح البرمجيات والتنشيط والاشتراكات والمنتجات الرقمية لشروط ترخيص ناشريها. ولا يجوز إعادة وثائق التفويض المسلَّمة أو المفعَّلة إلا إذا كان ذلك ضرورياً قانوناً أو كان معيباً.",
+          "second": "لا يجب أن تُعيد بيعها أو تُنسخها أو تُستخدم مُنتجاً رقمياً خارج رخصتها المسموح بها"
+        },
+        "accounts": {
+          "title": "الحسابات والاستخدام المقبول",
+          "first": "حافظي على معلومات الحساب والاتصال بدقة و حماية وثائق تفويضك أنت مسؤول عن نشاط الحساب ما لم يتم الإبلاغ فورا عن استخدام غير مأذون به.",
+          "second": "ويحظر الإساءة أو الاحتيال أو الاستخدام غير المشروع أو التدخل في الخدمة أو الادعاءات الكاذبة أو محاولات الوصول إلى نظم مقيدة."
+        },
+        "returns": {
+          "title": "الإلغاءات والعائدات والمسؤولية",
+          "first": "ويتبع إلغاء الأهلية واستحقاق العودة حالة النظام وينشر سياسة العودة. ويمكن أيضا أن يعتمد توقيت استرداد الأموال على مقدِّم المدفوعات.",
+          "second": "وتقتصر المسؤولية، بالقدر الذي يسمح به القانون المنطبق، على الخسارة المباشرة المرتبطة بالنظام المتأثر. ولا تزال الحقوق التي لا يمكن استبعادها قانوناً غير متأثرة."
+        }
+      },
+      "changes": {
+        "title": "التغييرات في السياسات والاتصال",
+        "description": "ويمكننا أن نستكمل هذه المصطلحات بحيث تعكس التغييرات التشغيلية أو القانونية أو التغييرات في الخدمات. ويحدد التاريخ الفعلي الصيغة الحالية. الاتصال بالدعم قبل طلب أي حالة غير واضحة.",
+        "contact": "دعم الاتصال",
+        "returns": "سياسة العودة إلى القراءة"
       }
     }
   }

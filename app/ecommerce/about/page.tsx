@@ -12,57 +12,40 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getSiteSettingsForSeo } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSiteSettingsForSeo();
+  const [settings, t] = await Promise.all([
+    getSiteSettingsForSeo(),
+    getTranslations("StorefrontSupport.about"),
+  ]);
   return {
-    title: "About Us",
-    description: `Learn how ${settings.siteTitle} makes product discovery, ordering and support straightforward.`,
+    title: t("metadata.title"),
+    description: t("metadata.description", { site: settings.siteTitle }),
     alternates: { canonical: "/ecommerce/about" },
   };
 }
 
 const capabilities = [
-  {
-    icon: ShoppingBag,
-    title: "Customer-first catalog",
-    description:
-      "Products are organized around the categories, options and information buyers actually need.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Verified product information",
-    description:
-      "Clear model, variant, stock and warranty information helps customers make confident decisions.",
-  },
-  {
-    icon: Boxes,
-    title: "Inventory visibility",
-    description:
-      "Warehouse-aware stock management reduces overselling and keeps product availability dependable.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure shopping",
-    description:
-      "Protected accounts, trusted payment options and auditable order operations are part of every purchase.",
-  },
-  {
-    icon: Truck,
-    title: "Nationwide delivery",
-    description:
-      "Delivery coverage across Bangladesh with order tracking and a clear fulfilment process.",
-  },
-  {
-    icon: Headphones,
-    title: "After-sales support",
-    description:
-      "Our support team assists with order questions, product guidance, returns and warranty directions.",
-  },
-];
+  { icon: ShoppingBag, key: "catalog" },
+  { icon: BadgeCheck, key: "verified" },
+  { icon: Boxes, key: "inventory" },
+  { icon: ShieldCheck, key: "secure" },
+  { icon: Truck, key: "delivery" },
+  { icon: Headphones, key: "support" },
+] as const;
 
 export default async function AboutPage() {
-  const settings = await getSiteSettingsForSeo();
+  const [settings, t] = await Promise.all([
+    getSiteSettingsForSeo(),
+    getTranslations("StorefrontSupport.about"),
+  ]);
+  const features = [
+    { icon: PackageCheck, key: "genuine" },
+    { icon: Wrench, key: "guidance" },
+    { icon: Truck, key: "coverage" },
+    { icon: ShieldCheck, key: "checkout" },
+  ] as const;
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -70,42 +53,36 @@ export default async function AboutPage() {
         <div className="container mx-auto grid gap-10 px-4 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:py-24">
           <div className="max-w-3xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary-foreground/75">
-              About {settings.siteTitle}
+              {t("eyebrow", { site: settings.siteTitle })}
             </p>
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-              Shopping built around clarity, availability and support
+              {t("title")}
             </h1>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-              {settings.storeTagline} We connect reliable product information,
-              secure checkout and dependable fulfilment in one storefront.
+              {t("subtitle", { tagline: settings.storeTagline })}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="secondary">
-                <Link href="/ecommerce/products">Explore products</Link>
+                <Link href="/ecommerce/products">{t("explore")}</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
               >
-                <Link href="/ecommerce/contact">Contact our team</Link>
+                <Link href="/ecommerce/contact">{t("contact")}</Link>
               </Button>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-4 backdrop-blur-sm">
-            {[
-              { icon: PackageCheck, label: "Genuine products" },
-              { icon: Wrench, label: "Product guidance" },
-              { icon: Truck, label: "Delivery coverage" },
-              { icon: ShieldCheck, label: "Secure checkout" },
-            ].map((feature) => (
+            {features.map((feature) => (
               <div
-                key={feature.label}
+                key={feature.key}
                 className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/10 p-4"
               >
                 <feature.icon className="mb-3 h-6 w-6" aria-hidden />
-                <p className="text-sm font-semibold">{feature.label}</p>
+                <p className="text-sm font-semibold">{t(`features.${feature.key}`)}</p>
               </div>
             ))}
           </div>
@@ -115,30 +92,28 @@ export default async function AboutPage() {
       <section className="container mx-auto px-4 py-14 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
-            What we stand for
+            {t("values.eyebrow")}
           </p>
           <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-            A dependable retail experience
+            {t("values.title")}
           </h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
-            Our storefront and operations are designed to keep product discovery,
-            pricing, inventory, payment and fulfilment connected from first click
-            to after-sales support.
+            {t("values.description")}
           </p>
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((capability) => (
             <article
-              key={capability.title}
+              key={capability.key}
               className="rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-sm"
             >
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <capability.icon className="h-5 w-5" aria-hidden />
               </div>
-              <h3 className="text-base font-bold">{capability.title}</h3>
+              <h3 className="text-base font-bold">{t(`capabilities.${capability.key}Title`)}</h3>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                {capability.description}
+                {t(`capabilities.${capability.key}Description`)}
               </p>
             </article>
           ))}
@@ -149,22 +124,18 @@ export default async function AboutPage() {
         <div className="container mx-auto grid gap-8 px-4 py-14 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
-              Our commitment
+              {t("commitment.eyebrow")}
             </p>
             <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              Accurate information before the sale, responsible support after it
+              {t("commitment.title")}
             </h2>
           </div>
           <div className="space-y-3 text-sm leading-7 text-muted-foreground sm:text-base">
             <p>
-              We continuously improve catalog accuracy, stock visibility and
-              operational controls so customers know what they are buying and
-              when they can expect it.
+              {t("commitment.first")}
             </p>
             <p>
-              Product availability, delivery estimates and warranty conditions
-              can vary by model and location; the applicable details are confirmed
-              during ordering and fulfilment.
+              {t("commitment.second")}
             </p>
           </div>
         </div>

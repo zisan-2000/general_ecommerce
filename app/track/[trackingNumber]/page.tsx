@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 type TrackData = {
   trackingNumber?: string | null;
@@ -25,20 +26,12 @@ type Props = {
 };
 
 export default function TrackingPage({ params }: Props) {
-  const [trackingNumber, setTrackingNumber] = useState<string>("");
+  const t = useTranslations("StorefrontSupport.tracking");
+  const locale = useLocale();
+  const { trackingNumber } = use(params);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<TrackData | null>(null);
-
-  useEffect(() => {
-    let mounted = true;
-    params.then((p) => {
-      if (mounted) setTrackingNumber(p.trackingNumber);
-    });
-    return () => {
-      mounted = false;
-    };
-  }, [params]);
 
   useEffect(() => {
     if (!trackingNumber) return;
@@ -51,13 +44,13 @@ export default function TrackingPage({ params }: Props) {
         const res = await fetch(`/api/track/${trackingNumber}`, { cache: "no-store" });
         const payload = await res.json().catch(() => ({}));
         if (!res.ok) {
-          throw new Error(payload?.error || "Tracking fetch failed");
+          throw new Error(t("errors.load"));
         }
         if (!active) return;
         setData(payload as TrackData);
       } catch (e) {
         if (!active) return;
-        setError(e instanceof Error ? e.message : "Failed to fetch tracking");
+        setError(e instanceof Error ? e.message : t("errors.load"));
       } finally {
         if (active) setLoading(false);
       }
@@ -69,7 +62,7 @@ export default function TrackingPage({ params }: Props) {
       active = false;
       clearInterval(intervalId);
     };
-  }, [trackingNumber]);
+  }, [t, trackingNumber]);
 
   const statusColor = useMemo(() => {
     const s = data?.status?.toUpperCase();
@@ -82,12 +75,12 @@ export default function TrackingPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-background px-4 py-10">
       <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6">
-        <h1 className="text-2xl font-bold text-foreground">Track Shipment</h1>
+        <h1 className="text-2xl font-bold text-foreground">{t("title")}</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Tracking Number: {trackingNumber || "..."}
+          {t("trackingNumber")}: {trackingNumber || "..."}
         </p>
 
-        {loading && <p className="mt-6 text-sm text-muted-foreground">Loading tracking...</p>}
+        {loading && <p className="mt-6 text-sm text-muted-foreground">{t("loading")}</p>}
         {error && (
           <div className="mt-6 rounded-md border border-destructive/20 bg-destructive/10 p-3 text-sm text-destructive">
             {error}
@@ -98,33 +91,33 @@ export default function TrackingPage({ params }: Props) {
           <div className="mt-6 space-y-3 text-sm">
             <div className="rounded-md border border-border bg-muted/30 p-3">
               <p>
-                <span className="font-semibold">Courier:</span>{" "}
-                {data.courier?.name || "N/A"} {data.courier?.type ? `(${data.courier.type})` : ""}
+                <span className="font-semibold">{t("courier")}:</span>{" "}
+                {data.courier?.name || t("notAvailable")} {data.courier?.type ? `(${data.courier.type})` : ""}
               </p>
               <p>
-                <span className="font-semibold">Status:</span>{" "}
-                <span className={statusColor}>{data.status}</span>
+                <span className="font-semibold">{t("status")}:</span>{" "}
+                <span className={statusColor}>{t(`statuses.${data.status.toLowerCase()}` as any)}</span>
               </p>
               <p>
-                <span className="font-semibold">Courier Status:</span>{" "}
-                {data.courierStatus || "N/A"}
+                <span className="font-semibold">{t("courierStatus")}:</span>{" "}
+                {data.courierStatus || t("notAvailable")}
               </p>
               <p>
-                <span className="font-semibold">Last Synced:</span>{" "}
-                {data.lastSyncedAt ? new Date(data.lastSyncedAt).toLocaleString() : "N/A"}
+                <span className="font-semibold">{t("lastSynced")}:</span>{" "}
+                {data.lastSyncedAt ? new Date(data.lastSyncedAt).toLocaleString(locale) : t("notAvailable")}
               </p>
             </div>
 
             {data.order && (
               <div className="rounded-md border border-border bg-muted/30 p-3">
                 <p>
-                  <span className="font-semibold">Order ID:</span> {data.order.id}
+                  <span className="font-semibold">{t("orderId")}:</span> {data.order.id}
                 </p>
                 <p>
-                  <span className="font-semibold">Recipient:</span> {data.order.name}
+                  <span className="font-semibold">{t("recipient")}:</span> {data.order.name}
                 </p>
                 <p>
-                  <span className="font-semibold">Phone:</span> {data.order.phone_number}
+                  <span className="font-semibold">{t("phone")}:</span> {data.order.phone_number}
                 </p>
               </div>
             )}
@@ -136,7 +129,7 @@ export default function TrackingPage({ params }: Props) {
                 rel="noreferrer"
                 className="inline-block rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground"
               >
-                Open Courier Tracking
+                {t("openCourier")}
               </a>
             )}
           </div>

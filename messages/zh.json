@@ -9349,124 +9349,767 @@
   },
   "StorefrontShell": {
     "header": {
-      "logoAlt": "商店徽标", "user": "用户",
-      "search": { "placeholder": "搜索商品、品牌或型号...", "label": "搜索", "mobilePlaceholder": "搜索...", "open": "打开搜索", "close": "关闭搜索", "unavailable": "搜索暂时不可用。按 Enter 查看结果。" },
+      "logoAlt": "商店徽标",
+      "user": "用户",
+      "search": {
+        "placeholder": "搜索商品、品牌或型号...",
+        "label": "搜索",
+        "mobilePlaceholder": "搜索...",
+        "open": "打开搜索",
+        "close": "关闭搜索",
+        "unavailable": "搜索暂时不可用。按 Enter 查看结果。"
+      },
       "changeLanguage": "切换语言",
-      "theme": { "select": "选择主题", "label": "主题", "light": "浅色", "dark": "深色" },
-      "wishlist": "愿望清单", "cart": "购物车", "profile": "个人资料", "account": "账户", "dashboard": "仪表板", "logout": "退出登录", "login": "登录", "signOut": "退出登录", "blog": "博客", "shopShortcuts": "购物快捷入口",
-      "menu": { "open": "打开菜单", "close": "关闭菜单", "closeOverlay": "关闭菜单遮罩", "more": "更多" },
-      "categories": { "loading": "加载中...", "empty": "未找到分类。", "noSubcategories": "没有子分类。", "noChildCategories": "没有下级分类。", "collapse": "收起{name}", "expand": "展开{name}", "scrollPrevious": "向左滚动分类", "scrollNext": "向右滚动分类", "explore": "浏览分类", "viewAll": "查看全部", "subcategories": "{name}子分类" },
+      "theme": {
+        "select": "选择主题",
+        "label": "主题",
+        "light": "浅色",
+        "dark": "深色"
+      },
+      "wishlist": "愿望清单",
+      "cart": "购物车",
+      "profile": "个人资料",
+      "account": "账户",
+      "dashboard": "仪表板",
+      "logout": "退出登录",
+      "login": "登录",
+      "signOut": "退出登录",
+      "blog": "博客",
+      "shopShortcuts": "购物快捷入口",
+      "menu": {
+        "open": "打开菜单",
+        "close": "关闭菜单",
+        "closeOverlay": "关闭菜单遮罩",
+        "more": "更多"
+      },
+      "categories": {
+        "loading": "加载中...",
+        "empty": "未找到分类。",
+        "noSubcategories": "没有子分类。",
+        "noChildCategories": "没有下级分类。",
+        "collapse": "收起{name}",
+        "expand": "展开{name}",
+        "scrollPrevious": "向左滚动分类",
+        "scrollNext": "向右滚动分类",
+        "explore": "浏览分类",
+        "viewAll": "查看全部",
+        "subcategories": "{name}子分类"
+      },
       "shopActions": {
-        "flashSale": { "label": "限时抢购", "description": "查看当前限时优惠" },
-        "compare": { "label": "比较", "description": "比较已选商品" },
-        "books": { "label": "图书", "description": "浏览图书合集" },
-        "authors": { "label": "作者", "description": "按作者浏览图书" },
-        "publishers": { "label": "出版社", "description": "按出版社浏览图书" },
-        "pcBuilder": { "label": "电脑组装", "description": "组装兼容的自定义台式电脑" }
+        "flashSale": {
+          "label": "限时抢购",
+          "description": "查看当前限时优惠"
+        },
+        "compare": {
+          "label": "比较",
+          "description": "比较已选商品"
+        },
+        "books": {
+          "label": "图书",
+          "description": "浏览图书合集"
+        },
+        "authors": {
+          "label": "作者",
+          "description": "按作者浏览图书"
+        },
+        "publishers": {
+          "label": "出版社",
+          "description": "按出版社浏览图书"
+        },
+        "pcBuilder": {
+          "label": "电脑组装",
+          "description": "组装兼容的自定义台式电脑"
+        }
       }
     },
-    "search": { "suggestions": "搜索建议", "searching": "正在搜索商品...", "noMatch": "未找到匹配商品", "noMatchHint": "请检查拼写，或按品牌、型号、SKU 或分类搜索。", "products": "商品", "inStock": "有货", "outOfStock": "缺货", "categories": "分类", "brands": "品牌", "popularSearches": "热门搜索", "viewAllResults": "查看“{query}”的全部结果" },
+    "search": {
+      "suggestions": "搜索建议",
+      "searching": "正在搜索商品...",
+      "noMatch": "未找到匹配商品",
+      "noMatchHint": "请检查拼写，或按品牌、型号、SKU 或分类搜索。",
+      "products": "商品",
+      "inStock": "有货",
+      "outOfStock": "缺货",
+      "categories": "分类",
+      "brands": "品牌",
+      "popularSearches": "热门搜索",
+      "viewAllResults": "查看“{query}”的全部结果"
+    },
     "footer": {
       "logoAlt": "商店徽标",
       "features": {
-        "delivery": { "label": "快速配送", "description": "全国配送服务" },
-        "ordering": { "label": "在线下单", "description": "全天候下单" },
-        "payment": { "label": "安全支付", "description": "受保护的支付流程" },
-        "authentic": { "label": "100% 正品", "description": "保证正品" }
+        "delivery": {
+          "label": "快速配送",
+          "description": "全国配送服务"
+        },
+        "ordering": {
+          "label": "在线下单",
+          "description": "全天候下单"
+        },
+        "payment": {
+          "label": "安全支付",
+          "description": "受保护的支付流程"
+        },
+        "authentic": {
+          "label": "100% 正品",
+          "description": "保证正品"
+        }
       },
-      "brand": { "defaultTagline": "优质商品、安全购物与可靠服务", "defaultDescription": "通过清晰的信息、安全结账和可靠配送选购优质商品。" },
-      "contact": { "callUs": "致电我们", "emailUs": "给我们发邮件", "address": "地址", "phoneUnavailable": "尚未配置联系电话", "emailUnavailable": "尚未配置联系邮箱", "addressUnavailable": "尚未配置营业地址" },
-      "sections": { "quickLinks": "快捷链接", "categories": "分类", "customerService": "客户服务" },
-      "links": { "allProducts": "全部商品", "flashSale": "限时抢购", "blogs": "博客", "bestsellers": "畅销商品", "about": "关于我们", "contact": "联系我们", "shippingPolicy": "配送政策", "returnPolicy": "退货政策", "privacyPolicy": "隐私政策", "faq": "常见问题", "terms": "服务条款", "sitemap": "网站地图" },
-      "newsletter": { "title": "新闻通讯", "description": "订阅新闻通讯，获取最新动态和专属优惠。", "emailLabel": "新闻通讯邮箱地址", "placeholder": "输入您的邮箱", "subscribing": "正在订阅...", "subscribe": "订阅", "success": "订阅成功！", "errors": { "emailRequired": "请输入您的邮箱地址", "invalidOrExists": "该邮箱无效或已存在", "failed": "订阅时出现问题", "tryAgain": "出现问题，请重试。" } },
-      "secureTransactions": "100% 安全交易", "rights": "© {year} {site} 保留所有权利。"
+      "brand": {
+        "defaultTagline": "优质商品、安全购物与可靠服务",
+        "defaultDescription": "通过清晰的信息、安全结账和可靠配送选购优质商品。"
+      },
+      "contact": {
+        "callUs": "致电我们",
+        "emailUs": "给我们发邮件",
+        "address": "地址",
+        "phoneUnavailable": "尚未配置联系电话",
+        "emailUnavailable": "尚未配置联系邮箱",
+        "addressUnavailable": "尚未配置营业地址"
+      },
+      "sections": {
+        "quickLinks": "快捷链接",
+        "categories": "分类",
+        "customerService": "客户服务"
+      },
+      "links": {
+        "allProducts": "全部商品",
+        "flashSale": "限时抢购",
+        "blogs": "博客",
+        "bestsellers": "畅销商品",
+        "about": "关于我们",
+        "contact": "联系我们",
+        "shippingPolicy": "配送政策",
+        "returnPolicy": "退货政策",
+        "privacyPolicy": "隐私政策",
+        "faq": "常见问题",
+        "terms": "服务条款",
+        "sitemap": "网站地图"
+      },
+      "newsletter": {
+        "title": "新闻通讯",
+        "description": "订阅新闻通讯，获取最新动态和专属优惠。",
+        "emailLabel": "新闻通讯邮箱地址",
+        "placeholder": "输入您的邮箱",
+        "subscribing": "正在订阅...",
+        "subscribe": "订阅",
+        "success": "订阅成功！",
+        "errors": {
+          "emailRequired": "请输入您的邮箱地址",
+          "invalidOrExists": "该邮箱无效或已存在",
+          "failed": "订阅时出现问题",
+          "tryAgain": "出现问题，请重试。"
+        }
+      },
+      "secureTransactions": "100% 安全交易",
+      "rights": "© {year} {site} 保留所有权利。"
     }
   },
   "StorefrontCommerce": {
-    "addToCart": { "label": "加入购物车", "adding": "正在添加...", "outOfStock": "缺货", "failed": "无法将此商品加入购物车。" },
+    "addToCart": {
+      "label": "加入购物车",
+      "adding": "正在添加...",
+      "outOfStock": "缺货",
+      "failed": "无法将此商品加入购物车。"
+    },
     "cart": {
-      "title": "购物车", "syncing": "正在同步购物车...", "loadFailed": "无法加载购物车", "retry": "重试", "unknownProduct": "未知商品", "products": "您的商品", "itemCount": "{count} 件商品", "clearCart": "清空购物车", "unitPrice": "单价", "unit": "件", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "removeItem": "移除商品", "continueShopping": "继续购物", "orderSummary": "订单摘要", "subtotal": "小计", "discount": "折扣", "total": "总计", "addMore": "添加更多", "checkout": "结账", "securePayment": "安全支付", "fastDelivery": "快速配送", "shippingNote": "运费可能因地区和重量而异。",
-      "empty": { "title": "购物车为空", "description": "添加一些商品即可开始购物。" },
-      "errors": { "load": "无法加载购物车。", "loginRequired": "请登录后继续结账。", "clearFailed": "无法清空购物车。", "removeFailed": "无法移除商品。", "updateFailed": "无法更新数量。", "couponRequired": "请输入优惠券代码。", "couponApplyFailed": "无法使用优惠券。", "invalidCoupon": "优惠券代码无效。" },
-      "success": { "cleared": "购物车已清空。", "removed": "商品已移除。", "couponApplied": "优惠券已使用！", "couponRemoved": "优惠券已移除。" }
+      "title": "购物车",
+      "syncing": "正在同步购物车...",
+      "loadFailed": "无法加载购物车",
+      "retry": "重试",
+      "unknownProduct": "未知商品",
+      "products": "您的商品",
+      "itemCount": "{count} 件商品",
+      "clearCart": "清空购物车",
+      "unitPrice": "单价",
+      "unit": "件",
+      "decreaseQuantity": "减少数量",
+      "increaseQuantity": "增加数量",
+      "removeItem": "移除商品",
+      "continueShopping": "继续购物",
+      "orderSummary": "订单摘要",
+      "subtotal": "小计",
+      "discount": "折扣",
+      "total": "总计",
+      "addMore": "添加更多",
+      "checkout": "结账",
+      "securePayment": "安全支付",
+      "fastDelivery": "快速配送",
+      "shippingNote": "运费可能因地区和重量而异。",
+      "empty": {
+        "title": "购物车为空",
+        "description": "添加一些商品即可开始购物。"
+      },
+      "errors": {
+        "load": "无法加载购物车。",
+        "loginRequired": "请登录后继续结账。",
+        "clearFailed": "无法清空购物车。",
+        "removeFailed": "无法移除商品。",
+        "updateFailed": "无法更新数量。",
+        "couponRequired": "请输入优惠券代码。",
+        "couponApplyFailed": "无法使用优惠券。",
+        "invalidCoupon": "优惠券代码无效。"
+      },
+      "success": {
+        "cleared": "购物车已清空。",
+        "removed": "商品已移除。",
+        "couponApplied": "优惠券已使用！",
+        "couponRemoved": "优惠券已移除。"
+      }
     },
     "floatingCart": {
-      "cart": "购物车", "openDrawer": "打开购物车抽屉", "closeDrawer": "关闭购物车抽屉", "description": "查看购物车商品并继续结账。", "flyingItemAlt": "正在加入购物车的商品", "selectVariant": "选择款式", "loadingVariants": "正在加载款式...", "outOfStock": "缺货", "noVariantsAvailable": "此商品暂无可用款式", "price": "价格", "quantity": "数量", "subtotal": "小计", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "removeItem": "移除商品", "cartTotal": "购物车总计", "selectVariants": "选择款式", "checkout": "结账", "variantSelected": "已选择款式：{variant}",
-      "empty": { "title": "购物车为空", "description": "添加一些商品后继续购物。" },
-      "errors": { "loginRequired": "请登录后继续结账。", "selectAllVariants": "结账前请为所有商品选择款式。", "noVariants": "此商品暂无可用款式。", "loadVariantsFailed": "无法加载商品款式。" }
+      "cart": "购物车",
+      "openDrawer": "打开购物车抽屉",
+      "closeDrawer": "关闭购物车抽屉",
+      "description": "查看购物车商品并继续结账。",
+      "flyingItemAlt": "正在加入购物车的商品",
+      "selectVariant": "选择款式",
+      "loadingVariants": "正在加载款式...",
+      "outOfStock": "缺货",
+      "noVariantsAvailable": "此商品暂无可用款式",
+      "price": "价格",
+      "quantity": "数量",
+      "subtotal": "小计",
+      "decreaseQuantity": "减少数量",
+      "increaseQuantity": "增加数量",
+      "removeItem": "移除商品",
+      "cartTotal": "购物车总计",
+      "selectVariants": "选择款式",
+      "checkout": "结账",
+      "variantSelected": "已选择款式：{variant}",
+      "empty": {
+        "title": "购物车为空",
+        "description": "添加一些商品后继续购物。"
+      },
+      "errors": {
+        "loginRequired": "请登录后继续结账。",
+        "selectAllVariants": "结账前请为所有商品选择款式。",
+        "noVariants": "此商品暂无可用款式。",
+        "loadVariantsFailed": "无法加载商品款式。"
+      }
     },
     "checkout": {
-      "title": "结账", "description": "请按照以下步骤完成订单。", "nextStep": "下一步", "unknownProduct": "未知商品",
-      "steps": { "details": "个人信息", "payment": "支付", "confirmation": "确认" },
-      "common": { "back": "返回", "close": "关闭", "notAvailable": "无" },
-      "fields": { "fullName": "姓名 *", "namePlaceholder": "请输入姓名", "mobile": "手机号码 *", "emailOptional": "电子邮箱（可选）", "emailPlaceholder": "请输入电子邮箱", "country": "国家 *", "countryPlaceholder": "孟加拉国", "district": "地区 *", "districtPlaceholder": "达卡", "area": "区域 *", "addressDetails": "详细地址 *", "addressPlaceholder": "门牌、道路、地标" },
-      "address": { "saved": "已保存地址", "addNew": "添加新地址", "loading": "正在加载地址...", "selectOptional": "选择已保存地址（可选）", "label": "地址标签 *", "labelPlaceholder": "住宅 / 办公室", "saving": "正在保存...", "saveCurrent": "保存当前地址" },
-      "shipping": { "loadingAreas": "正在加载区域...", "selectArea": "选择区域", "standardRate": "标准费率", "freeOver": "满 ৳{amount} 免运费", "noArea": "此国家暂无可用配送区域。", "calculating": "正在计算...", "free": "免费", "appliedRate": "已应用费率", "freeApplied": "已享受免运费（已达到最低订单金额 ৳{amount}）", "addMoreForFree": "再添加 ৳{amount} 即可免运费" },
-      "confirmation": { "title": "确认订单", "created": "订单创建成功！", "invoiceId": "发票编号", "orderId": "订单编号", "customer": "客户", "name": "姓名", "mobile": "手机号码", "email": "电子邮箱", "address": "地址", "order": "订单", "payment": "支付", "status": "状态", "transaction": "交易", "paymentScreenshot": "支付截图", "screenshotAlt": "支付截图预览", "complete": "完成订单", "completed": "订单已完成" },
-      "coupon": { "remove": "移除", "applied": "优惠券使用成功。", "placeholder": "促销 / 优惠券代码", "validating": "正在验证...", "apply": "使用优惠券" },
-      "summary": { "title": "订单摘要", "subtotal": "小计", "discount": "折扣", "shipping": "配送费", "vat": "增值税", "included": "已包含", "added": "另加", "total": "总计", "securePayment": "安全支付", "deliveryTime": "2-4 个工作日内送达" },
-      "paymentStatus": { "unknown": "未知", "unpaid": "未支付", "paid": "已支付" },
-      "successModal": { "title": "订单成功！", "description": "您的订单已成功提交。点击下方按钮跟踪订单。", "trackOrder": "跟踪订单", "continueShopping": "继续购物" },
-      "errors": { "partialCartSync": "部分商品无法移入您的账户购物车。这些商品仍在购物车中，请重试。", "fileTooLarge": "文件大小必须小于 5 MB。", "invalidImage": "请上传有效的图片文件。", "uploadFailed": "无法上传截图。", "uploadMissingUrl": "上传响应中没有文件 URL。", "couponRequired": "请输入优惠券代码。", "couponApplyFailed": "无法使用优惠券。", "invalidCoupon": "优惠券代码无效。", "addressRequired": "请填写国家、地区、区域和完整地址。", "validAreaRequired": "请选择有效区域。", "loginToSaveAddress": "请登录后保存地址。", "completeAddressRequired": "请填写标签、国家、地区、区域和详细地址。", "saveAddressFailed": "无法保存地址。", "emptyCart": "购物车为空。", "requiredInformation": "请填写所有必填信息。", "waitForUpload": "请等待截图上传完成。", "screenshotRequired": "必须上传支付截图。", "placeOrderFailedRetry": "提交订单时出现问题，请稍后重试。", "gatewayStartFailed": "无法启动 SSLCommerz 支付。", "placeOrderFailed": "提交订单时出现问题。" },
-      "success": { "couponApplied": "优惠券已使用！", "couponRemoved": "优惠券已移除。", "addressSaved": "地址已保存。", "orderCreated": "订单已创建，请立即确认。", "orderCompleted": "订单已成功完成！" }
+      "title": "结账",
+      "description": "请按照以下步骤完成订单。",
+      "nextStep": "下一步",
+      "unknownProduct": "未知商品",
+      "steps": {
+        "details": "个人信息",
+        "payment": "支付",
+        "confirmation": "确认"
+      },
+      "common": {
+        "back": "返回",
+        "close": "关闭",
+        "notAvailable": "无"
+      },
+      "fields": {
+        "fullName": "姓名 *",
+        "namePlaceholder": "请输入姓名",
+        "mobile": "手机号码 *",
+        "emailOptional": "电子邮箱（可选）",
+        "emailPlaceholder": "请输入电子邮箱",
+        "country": "国家 *",
+        "countryPlaceholder": "孟加拉国",
+        "district": "地区 *",
+        "districtPlaceholder": "达卡",
+        "area": "区域 *",
+        "addressDetails": "详细地址 *",
+        "addressPlaceholder": "门牌、道路、地标"
+      },
+      "address": {
+        "saved": "已保存地址",
+        "addNew": "添加新地址",
+        "loading": "正在加载地址...",
+        "selectOptional": "选择已保存地址（可选）",
+        "label": "地址标签 *",
+        "labelPlaceholder": "住宅 / 办公室",
+        "saving": "正在保存...",
+        "saveCurrent": "保存当前地址"
+      },
+      "shipping": {
+        "loadingAreas": "正在加载区域...",
+        "selectArea": "选择区域",
+        "standardRate": "标准费率",
+        "freeOver": "满 ৳{amount} 免运费",
+        "noArea": "此国家暂无可用配送区域。",
+        "calculating": "正在计算...",
+        "free": "免费",
+        "appliedRate": "已应用费率",
+        "freeApplied": "已享受免运费（已达到最低订单金额 ৳{amount}）",
+        "addMoreForFree": "再添加 ৳{amount} 即可免运费"
+      },
+      "confirmation": {
+        "title": "确认订单",
+        "created": "订单创建成功！",
+        "invoiceId": "发票编号",
+        "orderId": "订单编号",
+        "customer": "客户",
+        "name": "姓名",
+        "mobile": "手机号码",
+        "email": "电子邮箱",
+        "address": "地址",
+        "order": "订单",
+        "payment": "支付",
+        "status": "状态",
+        "transaction": "交易",
+        "paymentScreenshot": "支付截图",
+        "screenshotAlt": "支付截图预览",
+        "complete": "完成订单",
+        "completed": "订单已完成"
+      },
+      "coupon": {
+        "remove": "移除",
+        "applied": "优惠券使用成功。",
+        "placeholder": "促销 / 优惠券代码",
+        "validating": "正在验证...",
+        "apply": "使用优惠券"
+      },
+      "summary": {
+        "title": "订单摘要",
+        "subtotal": "小计",
+        "discount": "折扣",
+        "shipping": "配送费",
+        "vat": "增值税",
+        "included": "已包含",
+        "added": "另加",
+        "total": "总计",
+        "securePayment": "安全支付",
+        "deliveryTime": "2-4 个工作日内送达"
+      },
+      "paymentStatus": {
+        "unknown": "未知",
+        "unpaid": "未支付",
+        "paid": "已支付"
+      },
+      "successModal": {
+        "title": "订单成功！",
+        "description": "您的订单已成功提交。点击下方按钮跟踪订单。",
+        "trackOrder": "跟踪订单",
+        "continueShopping": "继续购物"
+      },
+      "errors": {
+        "partialCartSync": "部分商品无法移入您的账户购物车。这些商品仍在购物车中，请重试。",
+        "fileTooLarge": "文件大小必须小于 5 MB。",
+        "invalidImage": "请上传有效的图片文件。",
+        "uploadFailed": "无法上传截图。",
+        "uploadMissingUrl": "上传响应中没有文件 URL。",
+        "couponRequired": "请输入优惠券代码。",
+        "couponApplyFailed": "无法使用优惠券。",
+        "invalidCoupon": "优惠券代码无效。",
+        "addressRequired": "请填写国家、地区、区域和完整地址。",
+        "validAreaRequired": "请选择有效区域。",
+        "loginToSaveAddress": "请登录后保存地址。",
+        "completeAddressRequired": "请填写标签、国家、地区、区域和详细地址。",
+        "saveAddressFailed": "无法保存地址。",
+        "emptyCart": "购物车为空。",
+        "requiredInformation": "请填写所有必填信息。",
+        "waitForUpload": "请等待截图上传完成。",
+        "screenshotRequired": "必须上传支付截图。",
+        "placeOrderFailedRetry": "提交订单时出现问题，请稍后重试。",
+        "gatewayStartFailed": "无法启动 SSLCommerz 支付。",
+        "placeOrderFailed": "提交订单时出现问题。"
+      },
+      "success": {
+        "couponApplied": "优惠券已使用！",
+        "couponRemoved": "优惠券已移除。",
+        "addressSaved": "地址已保存。",
+        "orderCreated": "订单已创建，请立即确认。",
+        "orderCompleted": "订单已成功完成！"
+      }
     },
-    "payment": { "title": "支付", "back": "返回", "totalPayable": "应付总额", "cashOnDelivery": "货到付款", "manualPayment": "手动支付", "sslDescription": "通过 SSLCommerz 安全支付", "manualDescription": "手动支付（需要截图和交易编号）", "codDescription": "收到商品时付款", "selected": "已选择", "sendMoneyTo": "汇款至", "transactionId": "交易编号 *", "transactionPlaceholder": "请输入交易编号", "screenshot": "支付截图 *", "uploading": "正在上传...", "screenshotAlt": "支付截图预览", "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。", "noPaymentNow": "目前无需付款。", "placeOrder": "提交订单" },
-    "paymentResult": { "success": "支付成功", "cancelled": "支付已取消", "unsuccessful": "支付失败", "verified": "您的支付已通过验证。", "unpaid": "您的订单仍未支付。", "orderNumber": "订单 #{id}", "viewOrders": "查看订单", "continueShopping": "继续购物" }
+    "payment": {
+      "title": "支付",
+      "back": "返回",
+      "totalPayable": "应付总额",
+      "cashOnDelivery": "货到付款",
+      "manualPayment": "手动支付",
+      "sslDescription": "通过 SSLCommerz 安全支付",
+      "manualDescription": "手动支付（需要截图和交易编号）",
+      "codDescription": "收到商品时付款",
+      "selected": "已选择",
+      "sendMoneyTo": "汇款至",
+      "transactionId": "交易编号 *",
+      "transactionPlaceholder": "请输入交易编号",
+      "screenshot": "支付截图 *",
+      "uploading": "正在上传...",
+      "screenshotAlt": "支付截图预览",
+      "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。",
+      "noPaymentNow": "目前无需付款。",
+      "placeOrder": "提交订单"
+    },
+    "paymentResult": {
+      "success": "支付成功",
+      "cancelled": "支付已取消",
+      "unsuccessful": "支付失败",
+      "verified": "您的支付已通过验证。",
+      "unpaid": "您的订单仍未支付。",
+      "orderNumber": "订单 #{id}",
+      "viewOrders": "查看订单",
+      "continueShopping": "继续购物"
+    }
   },
   "StorefrontCatalog": {
     "page": {
-      "eyebrow": "商品目录", "heading": "找到适合您的商品", "description": "搜索完整目录、比较当前价格，并按类别、品牌、商品类型或库存情况筛选结果。", "filters": "筛选", "showHide": "显示 / 隐藏", "clear": "清除", "clearAll": "全部清除", "clearAllFilters": "清除所有筛选", "search": "搜索", "searchPlaceholder": "名称、SKU 或品牌", "category": "类别", "allCategories": "所有类别", "brands": "品牌", "productType": "商品类型", "allTypes": "所有类型", "priceRange": "价格范围", "minPrice": "最低 {value}", "maxPrice": "最高 {value}", "minimumPrice": "最低价格", "maximumPrice": "最高价格", "availability": "库存情况", "inStock": "有货", "inStockOnly": "仅显示有货", "featured": "精选", "featuredProducts": "精选商品", "yes": "是", "no": "否", "sortBy": "排序方式", "productsPerPage": "每页商品数", "resultsFor": "“{query}”的结果", "allProducts": "所有商品", "showingResults": "显示 {total} 件商品中的 {first}–{last}", "any": "不限",
-      "sort": { "relevance": "最相关", "newest": "最新", "popular": "热门", "priceAsc": "价格：从低到高", "priceDesc": "价格：从高到低", "nameAsc": "名称：A–Z" },
-      "productTypes": { "physical": "实体商品", "digital": "数字商品", "service": "服务", "bundle": "组合商品" },
-      "active": { "label": "已启用的商品筛选", "title": "已启用", "search": "搜索：{query}", "price": "价格：{min}–{max}", "remove": "移除 {label} 筛选" },
-      "empty": { "title": "未找到商品", "description": "请尝试更宽泛的搜索或移除一个或多个筛选条件。", "viewAll": "查看所有商品" },
-      "pagination": { "label": "商品目录分页", "previous": "上一页", "next": "下一页" },
-      "metadata": { "searchResults": "“{query}”的搜索结果", "categoryProducts": "{category} 商品", "description": "使用类别、品牌、价格和库存筛选浏览 {site} 商品。", "catalogName": "{site} 商品目录" }
+      "eyebrow": "商品目录",
+      "heading": "找到适合您的商品",
+      "description": "搜索完整目录、比较当前价格，并按类别、品牌、商品类型或库存情况筛选结果。",
+      "filters": "筛选",
+      "showHide": "显示 / 隐藏",
+      "clear": "清除",
+      "clearAll": "全部清除",
+      "clearAllFilters": "清除所有筛选",
+      "search": "搜索",
+      "searchPlaceholder": "名称、SKU 或品牌",
+      "category": "类别",
+      "allCategories": "所有类别",
+      "brands": "品牌",
+      "productType": "商品类型",
+      "allTypes": "所有类型",
+      "priceRange": "价格范围",
+      "minPrice": "最低 {value}",
+      "maxPrice": "最高 {value}",
+      "minimumPrice": "最低价格",
+      "maximumPrice": "最高价格",
+      "availability": "库存情况",
+      "inStock": "有货",
+      "inStockOnly": "仅显示有货",
+      "featured": "精选",
+      "featuredProducts": "精选商品",
+      "yes": "是",
+      "no": "否",
+      "sortBy": "排序方式",
+      "productsPerPage": "每页商品数",
+      "resultsFor": "“{query}”的结果",
+      "allProducts": "所有商品",
+      "showingResults": "显示 {total} 件商品中的 {first}–{last}",
+      "any": "不限",
+      "sort": {
+        "relevance": "最相关",
+        "newest": "最新",
+        "popular": "热门",
+        "priceAsc": "价格：从低到高",
+        "priceDesc": "价格：从高到低",
+        "nameAsc": "名称：A–Z"
+      },
+      "productTypes": {
+        "physical": "实体商品",
+        "digital": "数字商品",
+        "service": "服务",
+        "bundle": "组合商品"
+      },
+      "active": {
+        "label": "已启用的商品筛选",
+        "title": "已启用",
+        "search": "搜索：{query}",
+        "price": "价格：{min}–{max}",
+        "remove": "移除 {label} 筛选"
+      },
+      "empty": {
+        "title": "未找到商品",
+        "description": "请尝试更宽泛的搜索或移除一个或多个筛选条件。",
+        "viewAll": "查看所有商品"
+      },
+      "pagination": {
+        "label": "商品目录分页",
+        "previous": "上一页",
+        "next": "下一页"
+      },
+      "metadata": {
+        "searchResults": "“{query}”的搜索结果",
+        "categoryProducts": "{category} 商品",
+        "description": "使用类别、品牌、价格和库存筛选浏览 {site} 商品。",
+        "catalogName": "{site} 商品目录"
+      }
     },
-    "filters": { "updating": "正在更新商品…", "updatingShort": "正在更新…", "automatic": "筛选会自动更新", "showProducts": "显示商品", "apply": "应用筛选" },
+    "filters": {
+      "updating": "正在更新商品…",
+      "updatingShort": "正在更新…",
+      "automatic": "筛选会自动更新",
+      "showProducts": "显示商品",
+      "apply": "应用筛选"
+    },
     "grid": {
-      "compareSelected": "已选择 {count} 件商品进行比较", "compareNow": "立即比较",
-      "login": { "title": "登录后保存商品", "description": "登录后，您的愿望清单会保持同步。", "cancel": "取消", "signIn": "登录" },
-      "errors": { "wishlist": "愿望清单更新失败。", "outOfStock": "此商品已缺货。", "addToCart": "无法将商品加入购物车。", "compareLimit": "最多可比较 4 件商品。" },
-      "success": { "wishlistRemoved": "已从愿望清单移除。", "wishlistAdded": "已加入愿望清单。", "addedToCart": "“{name}”已加入购物车。", "comparisonAdded": "已加入比较。", "comparisonRemoved": "已从比较中移除。" }
+      "compareSelected": "已选择 {count} 件商品进行比较",
+      "compareNow": "立即比较",
+      "login": {
+        "title": "登录后保存商品",
+        "description": "登录后，您的愿望清单会保持同步。",
+        "cancel": "取消",
+        "signIn": "登录"
+      },
+      "errors": {
+        "wishlist": "愿望清单更新失败。",
+        "outOfStock": "此商品已缺货。",
+        "addToCart": "无法将商品加入购物车。",
+        "compareLimit": "最多可比较 4 件商品。"
+      },
+      "success": {
+        "wishlistRemoved": "已从愿望清单移除。",
+        "wishlistAdded": "已加入愿望清单。",
+        "addedToCart": "“{name}”已加入购物车。",
+        "comparisonAdded": "已加入比较。",
+        "comparisonRemoved": "已从比较中移除。"
+      }
     },
-    "card": { "viewProduct": "查看 {name}", "save": "节省：{amount}", "bestSeller": "畅销商品", "removeWishlist": "从愿望清单移除", "addWishlist": "加入愿望清单", "outOfStock": "缺货", "model": "型号", "unavailable": "暂不可用", "readyToOrder": "可立即下单", "reviewCount": "{count} 条评价", "availableColors": "可选颜色", "colorVariant": "{color} 颜色款式", "includes": "包含 {items}", "viewDetailsFor": "查看 {name} 的详情", "viewDetails": "查看详情", "addToCart": "加入购物车", "compared": "已比较", "compare": "比较" },
-    "brands": { "eyebrow": "品牌目录", "title": "选购可信品牌", "description": "打开任意品牌，即可使用相同的类别、价格、库存和排序选项查看实时目录。", "logoAlt": "{name} 标志", "productCount": "{count} 件商品", "viewProducts": "查看商品", "empty": "目前没有包含在售商品的品牌。", "metadata": { "title": "按品牌选购", "description": "按品牌浏览 {site} 的可用商品。" } }
+    "card": {
+      "viewProduct": "查看 {name}",
+      "save": "节省：{amount}",
+      "bestSeller": "畅销商品",
+      "removeWishlist": "从愿望清单移除",
+      "addWishlist": "加入愿望清单",
+      "outOfStock": "缺货",
+      "model": "型号",
+      "unavailable": "暂不可用",
+      "readyToOrder": "可立即下单",
+      "reviewCount": "{count} 条评价",
+      "availableColors": "可选颜色",
+      "colorVariant": "{color} 颜色款式",
+      "includes": "包含 {items}",
+      "viewDetailsFor": "查看 {name} 的详情",
+      "viewDetails": "查看详情",
+      "addToCart": "加入购物车",
+      "compared": "已比较",
+      "compare": "比较"
+    },
+    "brands": {
+      "eyebrow": "品牌目录",
+      "title": "选购可信品牌",
+      "description": "打开任意品牌，即可使用相同的类别、价格、库存和排序选项查看实时目录。",
+      "logoAlt": "{name} 标志",
+      "productCount": "{count} 件商品",
+      "viewProducts": "查看商品",
+      "empty": "目前没有包含在售商品的品牌。",
+      "metadata": {
+        "title": "按品牌选购",
+        "description": "按品牌浏览 {site} 的可用商品。"
+      }
+    }
   },
   "StorefrontProduct": {
     "page": {
-      "metadata": { "notFound": "未找到商品", "buyOnline": "在孟加拉国在线购买 {name}。" },
-      "breadcrumb": { "label": "面包屑导航", "home": "首页", "products": "商品" },
-      "information": { "productId": "商品编号", "category": "类别", "brand": "品牌", "writer": "作者", "publisher": "出版社", "type": "类型", "weight": "重量", "dimensions": "尺寸" },
-      "types": { "physical": "实体商品", "digital": "数字商品", "service": "服务", "bundle": "组合商品" },
-      "recommendations": { "eyebrow": "您可能还喜欢", "title": "推荐商品", "viewCategory": "查看类别" }
+      "metadata": {
+        "notFound": "未找到商品",
+        "buyOnline": "在孟加拉国在线购买 {name}。"
+      },
+      "breadcrumb": {
+        "label": "面包屑导航",
+        "home": "首页",
+        "products": "商品"
+      },
+      "information": {
+        "productId": "商品编号",
+        "category": "类别",
+        "brand": "品牌",
+        "writer": "作者",
+        "publisher": "出版社",
+        "type": "类型",
+        "weight": "重量",
+        "dimensions": "尺寸"
+      },
+      "types": {
+        "physical": "实体商品",
+        "digital": "数字商品",
+        "service": "服务",
+        "bundle": "组合商品"
+      },
+      "recommendations": {
+        "eyebrow": "您可能还喜欢",
+        "title": "推荐商品",
+        "viewCategory": "查看类别"
+      }
     },
     "purchase": {
-      "save": "节省：{amount}", "viewImage": "查看商品图片 {number}", "ratingLabel": "5 星中得 {rating} 星", "reviews": "{count} 条评价", "share": "分享", "stock": "库存", "inStock": "有货", "outOfStock": "缺货", "brand": "品牌", "model": "型号", "warranty": "保修", "chooseOption": "选择一个选项", "option": "选项 {id}", "stockLeft": "剩余 {count} 件", "hotline": "热线", "discountPrice": "优惠价", "youSave": "您节省 {amount}", "emiStarts": "分期起价*", "installments": "最多 12 期月供", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "addToCart": "加入购物车", "wishlist": "愿望清单", "compare": "比较", "buyNow": "通过安全结账立即购买", "compareSelected": "比较已选商品（{count}）",
-      "errors": { "addToCart": "无法将商品加入购物车。", "compareLimit": "最多可比较 4 件商品。", "wishlist": "愿望清单更新失败。", "share": "无法分享商品链接。" },
-      "success": { "addedToCart": "“{name}”已加入购物车。", "comparisonAdded": "已加入比较。", "comparisonRemoved": "已从比较中移除。", "wishlistRemoved": "已从愿望清单移除。", "wishlistAdded": "已加入愿望清单。", "linkCopied": "商品链接已复制。" }
+      "save": "节省：{amount}",
+      "viewImage": "查看商品图片 {number}",
+      "ratingLabel": "5 星中得 {rating} 星",
+      "reviews": "{count} 条评价",
+      "share": "分享",
+      "stock": "库存",
+      "inStock": "有货",
+      "outOfStock": "缺货",
+      "brand": "品牌",
+      "model": "型号",
+      "warranty": "保修",
+      "chooseOption": "选择一个选项",
+      "option": "选项 {id}",
+      "stockLeft": "剩余 {count} 件",
+      "hotline": "热线",
+      "discountPrice": "优惠价",
+      "youSave": "您节省 {amount}",
+      "emiStarts": "分期起价*",
+      "installments": "最多 12 期月供",
+      "decreaseQuantity": "减少数量",
+      "increaseQuantity": "增加数量",
+      "addToCart": "加入购物车",
+      "wishlist": "愿望清单",
+      "compare": "比较",
+      "buyNow": "通过安全结账立即购买",
+      "compareSelected": "比较已选商品（{count}）",
+      "errors": {
+        "addToCart": "无法将商品加入购物车。",
+        "compareLimit": "最多可比较 4 件商品。",
+        "wishlist": "愿望清单更新失败。",
+        "share": "无法分享商品链接。"
+      },
+      "success": {
+        "addedToCart": "“{name}”已加入购物车。",
+        "comparisonAdded": "已加入比较。",
+        "comparisonRemoved": "已从比较中移除。",
+        "wishlistRemoved": "已从愿望清单移除。",
+        "wishlistAdded": "已加入愿望清单。",
+        "linkCopied": "商品链接已复制。"
+      }
     },
-    "tabs": { "label": "商品详情", "specifications": "规格", "description": "描述", "reviews": "评价", "specificationsTitle": "规格参数", "descriptionFallback": "商品描述即将提供。" },
+    "tabs": {
+      "label": "商品详情",
+      "specifications": "规格",
+      "description": "描述",
+      "reviews": "评价",
+      "specificationsTitle": "规格参数",
+      "descriptionFallback": "商品描述即将提供。"
+    },
     "questions": {
-      "title": "问答", "description": "询问兼容性、规格或购买相关问题。", "askQuestion": "提出问题", "placeholder": "您想了解此商品的哪些信息？", "submit": "提交问题", "signInToAsk": "登录后提问", "loading": "正在加载问题...", "empty": "暂无问题，欢迎第一个提问。", "questionPrefix": "问", "answerPrefix": "答", "customer": "客户", "answeredBy": "由 {name} 回答", "storeTeam": "商店团队", "awaitingAnswer": "正在等待商店团队回复。", "updateAnswer": "更新已发布的回答", "writeAnswer": "撰写官方回答", "saving": "正在保存...", "publishAnswer": "发布回答",
-      "errors": { "load": "无法加载问题。", "completeQuestion": "请输入完整的问题。", "submit": "无法提交问题。", "answer": "无法保存回答。" },
-      "success": { "submitted": "您的问题已提交。", "answerPublished": "回答已发布。" }
+      "title": "问答",
+      "description": "询问兼容性、规格或购买相关问题。",
+      "askQuestion": "提出问题",
+      "placeholder": "您想了解此商品的哪些信息？",
+      "submit": "提交问题",
+      "signInToAsk": "登录后提问",
+      "loading": "正在加载问题...",
+      "empty": "暂无问题，欢迎第一个提问。",
+      "questionPrefix": "问",
+      "answerPrefix": "答",
+      "customer": "客户",
+      "answeredBy": "由 {name} 回答",
+      "storeTeam": "商店团队",
+      "awaitingAnswer": "正在等待商店团队回复。",
+      "updateAnswer": "更新已发布的回答",
+      "writeAnswer": "撰写官方回答",
+      "saving": "正在保存...",
+      "publishAnswer": "发布回答",
+      "errors": {
+        "load": "无法加载问题。",
+        "completeQuestion": "请输入完整的问题。",
+        "submit": "无法提交问题。",
+        "answer": "无法保存回答。"
+      },
+      "success": {
+        "submitted": "您的问题已提交。",
+        "answerPublished": "回答已发布。"
+      }
     },
     "conversion": {
-      "emi": { "title": "分期计划", "from": "低至 {amount}", "choosePeriod": "选择分期期数", "months": "{count} 个月", "perMonth": "/ 月", "note": "仅供参考，银行费用和资格可能有所不同。" },
-      "delivery": { "title": "预计配送", "checkArea": "检查区域", "district": "地区", "area": "配送区域", "checking": "正在检查...", "check": "检查配送", "free": "免费配送", "cost": "配送费 {amount}", "businessDays": "{count} 个工作日", "confirmedAtCheckout": "配送时间将在结账时确认" },
-      "areas": { "dhaka": "达卡", "outsideDhaka": "达卡以外" },
-      "errors": { "districtRequired": "请输入地区以检查配送。", "quoteFailed": "无法计算配送报价。" }
+      "emi": {
+        "title": "分期计划",
+        "from": "低至 {amount}",
+        "choosePeriod": "选择分期期数",
+        "months": "{count} 个月",
+        "perMonth": "/ 月",
+        "note": "仅供参考，银行费用和资格可能有所不同。"
+      },
+      "delivery": {
+        "title": "预计配送",
+        "checkArea": "检查区域",
+        "district": "地区",
+        "area": "配送区域",
+        "checking": "正在检查...",
+        "check": "检查配送",
+        "free": "免费配送",
+        "cost": "配送费 {amount}",
+        "businessDays": "{count} 个工作日",
+        "confirmedAtCheckout": "配送时间将在结账时确认"
+      },
+      "areas": {
+        "dhaka": "达卡",
+        "outsideDhaka": "达卡以外"
+      },
+      "errors": {
+        "districtRequired": "请输入地区以检查配送。",
+        "quoteFailed": "无法计算配送报价。"
+      }
     },
-    "bundle": { "configureLabel": "配置此组合", "title": "创建您的组合", "description": "从商店批准的商品中选择，价格和库存会即时更新。", "price": "组合价格", "baseConfiguration": "基础配置", "fromBase": "较基础配置 {difference}", "available": "可用 {count} 件", "ready": "配置已就绪", "selectionRequired": "需要选择", "required": "必选", "optional": "可选", "includedEveryBundle": "每个组合均包含", "chooseCount": "选择 {count} 项", "chooseRange": "选择 {min} 至 {max} 项", "itemValue": "商品价值 {amount}", "outOfStock": "缺货", "maximumSelected": "已达选择上限", "priceUpdates": "价格随所选商品更新", "included": "已包含", "selectToContinue": "请选择 {count} 个选项后继续。", "removeOptional": "移除此可选商品", "quantityPerBundle": "每个组合的数量", "decreaseQuantity": "减少 {group} 数量", "increaseQuantity": "增加 {group} 数量", "notSelected": "未选择" },
-    "related": { "title": "相关商品", "viewAll": "查看全部", "save": "节省：{amount}", "browseAll": "浏览所有相关商品" },
+    "bundle": {
+      "configureLabel": "配置此组合",
+      "title": "创建您的组合",
+      "description": "从商店批准的商品中选择，价格和库存会即时更新。",
+      "price": "组合价格",
+      "baseConfiguration": "基础配置",
+      "fromBase": "较基础配置 {difference}",
+      "available": "可用 {count} 件",
+      "ready": "配置已就绪",
+      "selectionRequired": "需要选择",
+      "required": "必选",
+      "optional": "可选",
+      "includedEveryBundle": "每个组合均包含",
+      "chooseCount": "选择 {count} 项",
+      "chooseRange": "选择 {min} 至 {max} 项",
+      "itemValue": "商品价值 {amount}",
+      "outOfStock": "缺货",
+      "maximumSelected": "已达选择上限",
+      "priceUpdates": "价格随所选商品更新",
+      "included": "已包含",
+      "selectToContinue": "请选择 {count} 个选项后继续。",
+      "removeOptional": "移除此可选商品",
+      "quantityPerBundle": "每个组合的数量",
+      "decreaseQuantity": "减少 {group} 数量",
+      "increaseQuantity": "增加 {group} 数量",
+      "notSelected": "未选择"
+    },
+    "related": {
+      "title": "相关商品",
+      "viewAll": "查看全部",
+      "save": "节省：{amount}",
+      "browseAll": "浏览所有相关商品"
+    },
     "reviews": {
-      "rateStar": "评 {value} 星", "title": "客户评价", "averageRating": "平均评分 {rating}", "write": "撰写评价", "loginToWrite": "登录后撰写评价", "loginRequired": "您必须登录才能提交评价。", "signIn": "登录", "rating": "评分", "overwriteNote": "您已评价过，更新将覆盖原评价", "placeholder": "写下您的看法...", "submitting": "正在提交...", "update": "更新评价", "submit": "提交评价", "reviews": "评价", "loading": "正在加载...", "empty": "暂无评价。", "anonymous": "匿名", "previous": "上一页", "page": "第 {page} 页，共 {pages} 页", "next": "下一页",
-      "errors": { "submit": "评价提交失败。", "generic": "出现错误。" }, "success": { "updated": "评价已更新！", "submitted": "评价已提交！" }
+      "rateStar": "评 {value} 星",
+      "title": "客户评价",
+      "averageRating": "平均评分 {rating}",
+      "write": "撰写评价",
+      "loginToWrite": "登录后撰写评价",
+      "loginRequired": "您必须登录才能提交评价。",
+      "signIn": "登录",
+      "rating": "评分",
+      "overwriteNote": "您已评价过，更新将覆盖原评价",
+      "placeholder": "写下您的看法...",
+      "submitting": "正在提交...",
+      "update": "更新评价",
+      "submit": "提交评价",
+      "reviews": "评价",
+      "loading": "正在加载...",
+      "empty": "暂无评价。",
+      "anonymous": "匿名",
+      "previous": "上一页",
+      "page": "第 {page} 页，共 {pages} 页",
+      "next": "下一页",
+      "errors": {
+        "submit": "评价提交失败。",
+        "generic": "出现错误。"
+      },
+      "success": {
+        "updated": "评价已更新！",
+        "submitted": "评价已提交！"
+      }
     },
-    "priceAlert": { "disabled": "降价提醒已关闭。", "enabled": "商品降价时会通知您。", "error": "无法更新降价提醒。", "on": "提醒已开启", "notify": "降价时通知我" },
-    "error": { "title": "无法加载商品详情", "description": "请重试或返回商品目录。", "retry": "重试", "browse": "浏览商品" },
-    "notFound": { "title": "未找到商品", "description": "此商品可能已下架，或链接不正确。", "browse": "浏览可用商品" }
+    "priceAlert": {
+      "disabled": "降价提醒已关闭。",
+      "enabled": "商品降价时会通知您。",
+      "error": "无法更新降价提醒。",
+      "on": "提醒已开启",
+      "notify": "降价时通知我"
+    },
+    "error": {
+      "title": "无法加载商品详情",
+      "description": "请重试或返回商品目录。",
+      "retry": "重试",
+      "browse": "浏览商品"
+    },
+    "notFound": {
+      "title": "未找到商品",
+      "description": "此商品可能已下架，或链接不正确。",
+      "browse": "浏览可用商品"
+    }
   },
   "ScmAuto": {
     "k_f586059328a9": "1. 交易方与交付",
@@ -10742,6 +11385,436 @@
         "upload": "照片上传失败。",
         "submit": "未能提交交货证明。",
         "unavailable": "确认数据不可用。"
+      }
+    }
+  },
+  "StorefrontSupport": {
+    "tracking": {
+      "title": "跟踪您的交付",
+      "subtitle": "见这批货物的最新状况和交货进度。",
+      "loading": "正在装入跟踪细节...",
+      "notFound": "找不到跟踪信息 。",
+      "loadError": "无法装入跟踪信息 。",
+      "trackingNumber": "追踪编号",
+      "orderNumber": "顺序编号",
+      "courier": "库里尔",
+      "updatedAt": "上次更新",
+      "status": "目前情况",
+      "openCourier": "开放信使追踪",
+      "statuses": {
+        "pending": "待决",
+        "assigned": "指定库里尔",
+        "picked_up": "捡起",
+        "in_transit": "过境",
+        "out_for_delivery": "外出送货",
+        "delivered": "已交付",
+        "failed": "发送失败",
+        "returned": "已返回",
+        "cancelled": "已取消"
+      }
+    },
+    "returns": {
+      "title": "回返和退款",
+      "subtitle": "报告合格产品问题和获得支持的明确程序。",
+      "overview": {
+        "windowTitle": "返回窗口",
+        "windowDescription": "要求在产品或订单细节所示的期限内返回。",
+        "conditionTitle": "产品条件",
+        "conditionDescription": "将产品,附件,发票和原包装物放在一起.",
+        "processingTitle": "审查和解决",
+        "processingDescription": "我们检查请求,确认适当的交换、替换或退款。"
+      },
+      "eligible": {
+        "title": "符合条件的返回理由",
+        "wrongProduct": "你收到了不同的产品或变体。",
+        "defect": "该产品有经过核实的制造或质量缺陷.",
+        "damaged": "产品运抵途中受损.",
+        "missingParts": "缺少必要的附件或部件。"
+      },
+      "ineligible": {
+        "title": "通常没有资格",
+        "customerDamage": "分娩后因滥用或事故而造成的损害。",
+        "modified": "未经批准而改变,修理或者修改的产品.",
+        "late": "在适用的返回窗口后提交请求。",
+        "packaging": "退回的产品不需要包装、附件或购买证明。"
+      },
+      "process": {
+        "title": "回返进程如何运作",
+        "contactTitle": "联系支助",
+        "contactDescription": "共享您的订单号, 发行和清晰的照片或视频 。",
+        "approvalTitle": "获得批准",
+        "approvalDescription": "我们的团队审查资格 并提供返回指示。",
+        "sendTitle": "发送或移交项目",
+        "sendDescription": "安全地包装所有物品,并遵循核准的移交方法。",
+        "refundTitle": "收到决议",
+        "refundDescription": "检查后,我们完成批准的替换,交换或退款."
+      },
+      "refund": {
+        "title": "退款和汇兑细目",
+        "timeLabel": "处理时间",
+        "timeValue": "通常在批准和检查后5-7个工作日。",
+        "methodLabel": "退款方法",
+        "methodValue": "退款一般通过原付款法返还.",
+        "shippingLabel": "运回",
+        "shippingValue": "责任取决于返回的理由和核准的指示。",
+        "exchangeLabel": "交换可用性",
+        "exchangeValue": "交易所取决于目前的股票和产品资格。"
+      },
+      "cta": {
+        "title": "需要请求返回吗?",
+        "description": "联系您的订单号, 这样我们就可以审查请求 。",
+        "action": "联系支助"
+      }
+    },
+    "shipping": {
+      "metadata": {
+        "title": "运输和交货",
+        "description": "学习如何确认、包装、交给信使和交付订单。"
+      },
+      "title": "运输和交货",
+      "subtitle": "从订单确认到门阶交付, 看看您的包裹如何移动。",
+      "overview": {
+        "estimateTitle": "交付估计数",
+        "estimateValue": "退出时显示",
+        "estimateNote": "时间安排因地点、库存和信使覆盖范围而异。",
+        "protectionTitle": "安全包装",
+        "protectionValue": "收拾好东西",
+        "protectionNote": "物品的准备是为了减少运输中损害的风险。",
+        "supportTitle": "交付支助",
+        "supportValue": "需要时的帮助",
+        "supportNote": "追踪摊位或者包裹有问题就联系我们"
+      },
+      "process": {
+        "eyebrow": "运送行程",
+        "title": "你的命令是怎么达到你的",
+        "confirmationTitle": "命令确认",
+        "confirmationDescription": "我们在处理之前核实付款、库存和交货详情。",
+        "packingTitle": "采摘和包装",
+        "packingDescription": "对正确的物品进行安全检查和包装。",
+        "handoverTitle": "库里尔移交",
+        "handoverDescription": "货物交给一个可用的交货伙伴。",
+        "deliveryTitle": "门阶交付",
+        "deliveryDescription": "跟踪进度,并在包裹到达时检查."
+      },
+      "guidance": {
+        "eyebrow": "交货前",
+        "title": "帮助交付指导",
+        "description": "一些简单的检查可以帮助避免延误,使交付更加平滑.",
+        "items": {
+          "address": "提供完整的地址,地标和可接触到的电话号码.",
+          "estimate": "将分娩日期作为估计,特别是在节假日或恶劣天气期间。",
+          "handling": "当信使联系你时 保持您的手机可用。",
+          "delays": "如果异常时期没有更新,则使用命令跟踪或联系支持.",
+          "damage": "检查外包并尽快报告明显损坏.",
+          "retain": "保留发票和包装,直到对产品满意为止."
+        }
+      },
+      "cta": {
+        "title": "需要帮忙送货吗?",
+        "description": "我们的支助小组可以帮助跟踪、拖延和对交付的关切。",
+        "contact": "联系支助",
+        "orders": "看我的命令"
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "关于我们",
+        "description": "了解{site},我们的店铺经验和对客户的承诺."
+      },
+      "eyebrow": "关于 CODEPLACEHOLDER0TOKEN",
+      "title": "适合日常需要的可靠商店",
+      "subtitle": "代码地址: 我们把组织良好的目录、可靠的实现和有益的支持结合起来,在一个购物经验中。",
+      "explore": "探索产品",
+      "contact": "联系我们",
+      "features": {
+        "genuineTitle": "受托产品",
+        "genuineDescription": "清晰的产品信息和出货标准帮助客户自信地购买.",
+        "guidanceTitle": "帮助性指导",
+        "guidanceDescription": "规格,选项和支持使得选择正确的项目更容易.",
+        "coverageTitle": "灵活履行",
+        "coverageDescription": "库存和交付工作流程是为可靠处理订单而设计的。",
+        "checkoutTitle": "安全检出",
+        "checkoutDescription": "透明总额和支助的付款方法保持直截了当。"
+      },
+      "values": {
+        "eyebrow": "对我们很重要",
+        "title": "围绕更好的购买经验构建",
+        "description": "我们关注细节,使在线购物更清晰,更安全,更有用.",
+        "catalogTitle": "有组织的目录",
+        "catalogDescription": "分类,属性和过滤器帮助客户发现合适的产品.",
+        "verifiedTitle": "清除信息",
+        "verifiedDescription": "产品细节以结构化和易懂的方式列报。",
+        "inventoryTitle": "可靠库存",
+        "inventoryDescription": "种群意识工作流程在发布订单后会减少出意外.",
+        "secureTitle": "受保护购物",
+        "secureDescription": "账户、结账和付款流量的设计考虑到安全因素。",
+        "deliveryTitle": "顺序可见度",
+        "deliveryDescription": "客户可以遵循订单和交货进度.",
+        "supportTitle": "响应支持",
+        "supportDescription": "购买前后有支持渠道。"
+      },
+      "commitment": {
+        "eyebrow": "我们的承诺",
+        "title": "一个不断改进的商店",
+        "first": "根据业务需要和客户反馈,我们不断改进目录、离职、履行和支持经验。",
+        "second": "我们的目标是使每一个互动——从发现到售后服务——明确、可靠并尊重。"
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "联系我们",
+        "description": "联系{site},以了解产品、订单、公司销售和服务。"
+      },
+      "subjects": {
+        "corporate": "公司销售调查",
+        "service": "服务预订查询"
+      },
+      "eyebrow": "CODEPLACEHOLDER0TOKEN支持 页面存档备份,存于互联网档案馆",
+      "title": "我们能帮上什么忙?",
+      "subtitle": "给我们发一个信息,请提供产品咨询、订单支持、公司采购或服务查询。",
+      "types": {
+        "productTitle": "产品和订单支持",
+        "productDescription": "询问产品、兼容性、现有订单或交货情况。",
+        "corporateTitle": "公司销售",
+        "corporateDescription": "讨论批量采购、报价和业务要求。",
+        "serviceTitle": "服务预订",
+        "serviceDescription": "请求帮助安装、维护或现有服务。"
+      },
+      "information": {
+        "title": "联系方式",
+        "phone": "电话",
+        "email": "电子邮件",
+        "address": "地址",
+        "onlineStore": "在线存储",
+        "alwaysOpen": "24/7可供浏览和订购"
+      },
+      "orderHelp": {
+        "title": "寻找订单的细节?",
+        "description": "已签名的客户可以查看状态,项目,总额并从其订单历史中进行追踪.",
+        "action": "看我的命令"
+      },
+      "form": {
+        "title": "发送消息",
+        "name": "你的名字",
+        "email": "电子邮件地址",
+        "subject": "议题",
+        "message": "消息",
+        "success": "您的消息已经发送 。 我们将尽快作出反应。",
+        "sending": "正在发送...",
+        "send": "发送消息"
+      },
+      "errors": {
+        "send": "我们无法发送你的信息。 请再试一次。"
+      }
+    },
+    "faq": {
+      "title": "经常问的问题",
+      "subtitle": "找到关于产品、订单、交货、回报和你的账户的快速答案。",
+      "searchLabel": "搜索常见问题",
+      "searchPlaceholder": "搜索问答...",
+      "questionCount": "代码地址:",
+      "noResultsTitle": "未找到结果",
+      "noResultsDescription": "我们找不到匹配您搜索的问题 。",
+      "viewAll": "查看所有问题",
+      "moreHelp": "需要更多帮助吗?",
+      "allProducts": "所有产品",
+      "contact": "联系人",
+      "about": "关于我们",
+      "homepage": "主页",
+      "loading": "正在装入 FAQs...",
+      "categories": {
+        "general": {
+          "title": "通告周知",
+          "q1": "我能从这家店买什么?",
+          "a1": "我们的可用范围按照存储前栏显示的活线类别排列. 浏览分类或搜索目录以查看当前提供的内容 。",
+          "q2": "你的产品收藏量有多大?",
+          "a2": "我国的产品收集继续增长,并定期以新来者和现有库存更新。",
+          "q3": "我如何确认产品兼容性?",
+          "a3": "比较规格中的模型,界面,尺寸和其他要求. 如果相容性不明, 在命令前先联系支持 。",
+          "q4": "我该怎么创建账户?",
+          "a4": "打开登录或签名, 选择注册, 并创建您的姓名、 电子邮件和密码账户 。"
+        },
+        "ordering": {
+          "title": "订购和付款",
+          "q1": "我需要一个账户来下订单吗?",
+          "a1": "可能会有来宾预约。 一个账户可以更容易地跟踪订单和使用账户特征.",
+          "q2": "你支持哪种支付方法?",
+          "a2": "现有的支付方法出现在离职时,可以包括移动支付、卡片和交货现金。",
+          "q3": "我可以取消我的订单吗?",
+          "a3": "取消取决于订单状态. 打开您的订单细节以检查可用的动作或联系人支持 。",
+          "q4": "我的付款安全吗?",
+          "a4": "离职用途支持付款提供者和安全处理。 敏感的支付凭证不由商店存储.",
+          "q5": "我怎么才能收到订单确认书?",
+          "a5": "确认和状态更新可以出现在您的账户中,也可以通过已配置的电子邮件或短消息频道发送."
+        },
+        "shipping": {
+          "title": "交货和运输",
+          "q1": "送货费多少?",
+          "a1": "交货费取决于交货区、运货车和现行货运规则。 最后数额在离职时显示。",
+          "q2": "送货要多久?",
+          "a2": "估计数取决于库存地点、目的地和信使范围,并在离职或订单处理过程中显示。",
+          "q3": "你在哪里送货?",
+          "a3": "能否交付取决于有效信使的覆盖范围和在离职时输入的地址。",
+          "q4": "我怎么追踪我的订单?",
+          "a4": "打开我的命令并选择命令查看其当前状态和可用的货运跟踪 。",
+          "q5": "你提供快递吗?",
+          "a5": "为选定的地址和顺序提供支持时,可以出现快递或快递。"
+        },
+        "returns": {
+          "title": "回返和退款",
+          "q1": "我能还个产品吗?",
+          "a1": "由于损坏、缺陷或项目不正确等支持原因,合格产品可在适用的窗口内返回。",
+          "q2": "退款过程如何运作?",
+          "a2": "经批准,退回和检查后,按照批准的办法发给退款. 供应商的处理时间可能不同。",
+          "q3": "我能换个产品吗?",
+          "a3": "根据收益原因、产品资格和现有库存情况,可以进行交易所交易。"
+        },
+        "account": {
+          "title": "账户和概况",
+          "q1": "如果我忘了密码怎么办?",
+          "a1": "在登录页面上使用被忽略的密码, 输入您注册的电子邮件并遵循重设指令 。",
+          "q2": "我要怎么更新我的档案?",
+          "a2": "打开您的账户配置以更新可用的个人和联系人信息。",
+          "q3": "我怎么能看清我的订单历史?",
+          "a3": "打开我的账户并选择我的订单以查看当前和以前的购买 。",
+          "q4": "我如何管理保存地址?",
+          "a4": "打开账户中的地址区以添加、编辑或删除保存的发送地址。"
+        },
+        "products": {
+          "title": "产品和可得性",
+          "q1": "我怎么知道产品是否库存?",
+          "a1": "产品页显示其目前可用性. 股票可以更改,直到确定订单。",
+          "q2": "产品价格是否有所变化?",
+          "a2": "价格和晋升可能发生变化。 经确认的离职总额是适用于所提交订单的价格。",
+          "q3": "哪里能找到规格?",
+          "a3": "打开产品页并审查其描述,属性,变体和规格等部分.",
+          "q4": "我能比较一下产品吗?",
+          "a4": "使用可用的类别,过滤器和产品细节来比较选项,或联系支持提供指导意见."
+        }
+      }
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "subtitle": "你的隐私对我们很重要",
+      "overview": {
+        "securityTitle": "数据安全",
+        "securityDescription": "合理保障措施用于保护您的信息。",
+        "transparencyTitle": "透明度",
+        "transparencyDescription": "我们解释收集了什么信息以及为什么需要这些信息。",
+        "controlTitle": "你来控制",
+        "controlDescription": "您可以审查并更新可用的账户信息。"
+      },
+      "collect": {
+        "title": "我们收集的",
+        "personal": {
+          "title": "个人资料",
+          "nameEmail": "姓名和电子邮件地址",
+          "phone": "电话号码",
+          "address": "发送地址"
+        },
+        "order": {
+          "title": "顺序信息",
+          "preferences": "产品偏好",
+          "history": "顺序历史",
+          "payment": "付款方法信息,不包括敏感的全权证书"
+        },
+        "usage": {
+          "title": "使用信息",
+          "browsing": "浏览活动",
+          "wishlist": "清单项目",
+          "pageViews": "页面视图"
+        },
+        "notStored": {
+          "title": "我们不储存的东西",
+          "bank": "完整的银行账户细节",
+          "card": "全卡号码",
+          "password": "纯文本密码"
+        }
+      },
+      "usage": {
+        "title": "我们如何利用你的信息",
+        "essential": {
+          "title": "必要用途",
+          "processing": "处理和交付订单",
+          "account": "账户管理",
+          "support": "客户支助",
+          "recommendations": "相关产品建议"
+        },
+        "permission": {
+          "title": "经你许可",
+          "marketing": "营销电子邮件",
+          "offers": "特别邀请和升级",
+          "notifications": "新产品通知",
+          "surveys": "调查和反馈要求"
+        }
+      },
+      "rights": {
+        "title": "你的权利",
+        "accessTitle": "获取您的信息",
+        "accessDescription": "你可以请求访问 我们掌握的关于你的信息。",
+        "updateTitle": "最新资料",
+        "updateDescription": "您可以编辑可用的配置文件细节或要求我们改正它们 。"
+      },
+      "cta": {
+        "title": "有隐私问题吗?",
+        "description": "联系我们了解与隐私有关的问题或请求。",
+        "action": "联系我们的隐私小组",
+        "lastUpdated": "上次更新 :",
+        "date": "2026年8月19日 (英语).",
+        "updateNote": "当我们的服务或法律要求发生变化时,我们可以更新这项政策。"
+      }
+    },
+    "terms": {
+      "metadata": {
+        "title": "条款和条件",
+        "description": "关于账户、订单、定价、付款、交付和使用{site}的规定。"
+      },
+      "title": "条款和条件",
+      "intro": "这些术语解释了当您使用{site}时,如何进行账户,产品订单,支付,完成和售后支持工作.",
+      "effectiveDate": "生效日期:2026年8月19日",
+      "agreement": "通过访问商店,创建账户或发布订单,你同意这些术语以及相关的隐私,航运和回程政策. 不同意的,不要提交命令.",
+      "sections": {
+        "orders": {
+          "title": "命令和可用性",
+          "first": "提交订单是购买请求。 在核实了库存、价格、付款和交货信息之后接受订单。",
+          "second": "产品,变种和仓储在确认前可以变更. 如果某物品无法提供,我们可提供替代方案,经你批准修改命令,或取消并退还所涉金额。"
+        },
+        "pricing": {
+          "title": "定价和付款",
+          "first": "价格以显示的货币显示,可不经通知而变动。 已确认的总额包括离职期间适用的折扣、税款和交货费。",
+          "second": "付款方法须经供应商批准。 所显示的批次信息在提供者确认资格、收费和保有权之前仍然是指示性的。"
+        },
+        "delivery": {
+          "title": "交付和检查",
+          "first": "交货估计数不是保证,可能受到库存地点、信使范围、天气、假日或超出我们合理控制的事件的影响。",
+          "second": "及时检查包和产品. 报告在返回政策规定的期限内通过支助丢失、损坏或不正确的物品。"
+        },
+        "warranty": {
+          "title": "保证和产品相容性",
+          "first": "保证范围取决于产品页或发票上显示的产品、品牌和提供者。 可适用制造商或经销商的条件。",
+          "second": "除非明确确认,相容性信息是指导。 在购买前核实有关的型号、大小、材料、规格或使用要求。"
+        },
+        "digital": {
+          "title": "软件和数字项目",
+          "first": "软件,活化键,订阅和数字产品由其出版商许可条款管辖. 除非法律要求或经证明存在缺陷,否则已交付或启用的证书不得退回。",
+          "second": "您不得转售、复制、绕过许可证管制或在其许可许可范围之外使用数字产品。"
+        },
+        "accounts": {
+          "title": "账目和可接受用途",
+          "first": "准确记录和联系信息,保护您的全权证书。 你对账户活动负责,除非立即报告未经授权的使用。",
+          "second": "禁止自动滥用,诈骗,非法使用,干扰服务,虚假主张和企图进入受限制系统."
+        },
+        "returns": {
+          "title": "注销、收益和负债",
+          "first": "取消和回归资格遵循订单状态并公布回归政策. 退款时间也取决于付款提供者。",
+          "second": "在适用法律允许的范围内,赔偿责任限于与受影响命令有关的直接损失。 在法律上不能排除的权利仍然没有受到影响。"
+        }
+      },
+      "changes": {
+        "title": "政策变化和联系",
+        "description": "我们可以更新这些术语,以反映业务、法律或服务的变化。 生效日期为当前版本。 在命令任何条件不明之前, 联系支持 。",
+        "contact": "联系支助",
+        "returns": "读取返回策略"
       }
     }
   }
