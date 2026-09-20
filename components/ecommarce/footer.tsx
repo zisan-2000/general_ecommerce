@@ -214,7 +214,6 @@ export default function Footer({
     { href: "/ecommerce/products", label: t("links.allProducts") },
     { href: "/ecommerce/flash-sale", label: t("links.flashSale") },
     { href: "/ecommerce/blogs", label: t("links.blogs") },
-    { href: "/ecommerce/bestsellers", label: t("links.bestsellers") },
     { href: "/ecommerce/about", label: t("links.about") },
     { href: "/ecommerce/contact", label: t("links.contact") },
   ];
