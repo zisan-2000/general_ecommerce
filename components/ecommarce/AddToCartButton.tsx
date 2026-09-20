@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { useCart } from "@/components/ecommarce/CartContext";
+import { useTranslations } from "next-intl";
 
 export default function AddToCartButton({
   productId,
   variantId,
   quantity = 1,
   className = "",
-  children = "Add to Cart",
+  children,
   disabled = false,
-  disabledText = "Out of Stock",
+  disabledText,
 }: {
   productId: string | number;
   variantId?: string | number | null;
@@ -22,6 +23,7 @@ export default function AddToCartButton({
   disabled?: boolean;
   disabledText?: string;
 }) {
+  const t = useTranslations("StorefrontCommerce.addToCart");
   const { addToCart } = useCart();
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +40,7 @@ export default function AddToCartButton({
       if (!added) throw new Error("Product could not be added to cart");
     } catch (e) {
       console.error(e);
-      alert("Failed to add to cart");
+      alert(t("failed"));
     } finally {
       setLoading(false);
     }
@@ -54,7 +56,11 @@ export default function AddToCartButton({
         "h-11 px-6 rounded-lg bg-transparent border border-primary hover:bg-primary text-primary hover:text-primary-foreground font-semibold hover:opacity-95 transition disabled:opacity-50 disabled:cursor-not-allowed"
       }
     >
-      {loading ? "Adding..." : isDisabled && disabled ? disabledText : children}
+      {loading
+        ? t("adding")
+        : isDisabled && disabled
+          ? disabledText ?? t("outOfStock")
+          : children ?? t("label")}
     </button>
   );
 }

@@ -8452,6 +8452,250 @@
       "rights": "© {year} {site} All rights reserved."
     }
   },
+  "StorefrontCommerce": {
+    "addToCart": {
+      "label": "Add to Cart",
+      "adding": "Adding...",
+      "outOfStock": "Out of Stock",
+      "failed": "Failed to add this product to the cart."
+    },
+    "cart": {
+      "title": "Shopping Cart",
+      "syncing": "Syncing your cart...",
+      "loadFailed": "Couldn’t load your cart",
+      "retry": "Retry",
+      "unknownProduct": "Unknown Product",
+      "products": "Your Products",
+      "itemCount": "{count, plural, one {# item} other {# items}}",
+      "clearCart": "Clear Cart",
+      "unitPrice": "Unit Price",
+      "unit": "unit",
+      "decreaseQuantity": "Decrease quantity",
+      "increaseQuantity": "Increase quantity",
+      "removeItem": "Remove item",
+      "continueShopping": "Continue Shopping",
+      "orderSummary": "Order Summary",
+      "subtotal": "Sub-Total",
+      "discount": "Discount",
+      "total": "Total",
+      "addMore": "Add More",
+      "checkout": "Checkout",
+      "securePayment": "Secure payment",
+      "fastDelivery": "Fast delivery",
+      "shippingNote": "Shipping may vary based on location and weight.",
+      "empty": {
+        "title": "Your cart is empty",
+        "description": "Add some products to get started."
+      },
+      "errors": {
+        "load": "Failed to load the cart.",
+        "loginRequired": "Please log in to continue to checkout.",
+        "clearFailed": "Failed to clear the cart.",
+        "removeFailed": "Failed to remove the item.",
+        "updateFailed": "Failed to update the quantity.",
+        "couponRequired": "Enter a coupon code.",
+        "couponApplyFailed": "Failed to apply the coupon.",
+        "invalidCoupon": "Invalid coupon code."
+      },
+      "success": {
+        "cleared": "Cart cleared.",
+        "removed": "Item removed.",
+        "couponApplied": "Coupon applied!",
+        "couponRemoved": "Coupon removed."
+      }
+    },
+    "floatingCart": {
+      "cart": "Cart",
+      "openDrawer": "Open cart drawer",
+      "closeDrawer": "Close cart drawer",
+      "description": "Review cart items and continue to checkout.",
+      "flyingItemAlt": "Item being added to cart",
+      "selectVariant": "Select Variant",
+      "loadingVariants": "Loading variants...",
+      "outOfStock": "Out of Stock",
+      "noVariantsAvailable": "No variants are available for this product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "subtotal": "Subtotal",
+      "decreaseQuantity": "Decrease quantity",
+      "increaseQuantity": "Increase quantity",
+      "removeItem": "Remove item",
+      "cartTotal": "Cart Total",
+      "selectVariants": "Select Variants",
+      "checkout": "Checkout",
+      "variantSelected": "Variant selected: {variant}",
+      "empty": {
+        "title": "Your cart is empty",
+        "description": "Add some items to continue shopping."
+      },
+      "errors": {
+        "loginRequired": "Please log in to continue to checkout.",
+        "selectAllVariants": "Please select variants for all items before checkout.",
+        "noVariants": "This product has no variants available.",
+        "loadVariantsFailed": "Failed to load product variants."
+      }
+    },
+    "checkout": {
+      "title": "Checkout",
+      "description": "Follow the steps below to complete your order.",
+      "nextStep": "Next Step",
+      "unknownProduct": "Unknown Product",
+      "steps": {
+        "details": "Personal Details",
+        "payment": "Payment",
+        "confirmation": "Confirmation"
+      },
+      "common": {
+        "back": "Back",
+        "close": "Close",
+        "notAvailable": "N/A"
+      },
+      "fields": {
+        "fullName": "Full Name *",
+        "namePlaceholder": "Enter your name",
+        "mobile": "Mobile *",
+        "emailOptional": "Email (Optional)",
+        "emailPlaceholder": "Enter your email",
+        "country": "Country *",
+        "countryPlaceholder": "Bangladesh",
+        "district": "District *",
+        "districtPlaceholder": "Dhaka",
+        "area": "Area *",
+        "addressDetails": "Address Details *",
+        "addressPlaceholder": "House, road, landmark"
+      },
+      "address": {
+        "saved": "Saved Address",
+        "addNew": "Add New Address",
+        "loading": "Loading addresses...",
+        "selectOptional": "Select a saved address (optional)",
+        "label": "Address Label *",
+        "labelPlaceholder": "Home / Office",
+        "saving": "Saving...",
+        "saveCurrent": "Save Current Address"
+      },
+      "shipping": {
+        "loadingAreas": "Loading areas...",
+        "selectArea": "Select area",
+        "standardRate": "Standard rate",
+        "freeOver": "Free over ৳{amount}",
+        "noArea": "No shipping area is available for this country.",
+        "calculating": "Calculating...",
+        "free": "FREE",
+        "appliedRate": "Applied Rate",
+        "freeApplied": "Free shipping applied (minimum order ৳{amount} met)",
+        "addMoreForFree": "Add ৳{amount} more for free shipping"
+      },
+      "confirmation": {
+        "title": "Confirm Order",
+        "created": "Order created successfully!",
+        "invoiceId": "Invoice ID",
+        "orderId": "Order ID",
+        "customer": "Customer",
+        "name": "Name",
+        "mobile": "Mobile",
+        "email": "Email",
+        "address": "Address",
+        "order": "Order",
+        "payment": "Payment",
+        "status": "Status",
+        "transaction": "Transaction",
+        "paymentScreenshot": "Payment Screenshot",
+        "screenshotAlt": "Payment screenshot preview",
+        "complete": "Complete Order",
+        "completed": "Order Completed"
+      },
+      "coupon": {
+        "remove": "Remove",
+        "applied": "Coupon applied successfully.",
+        "placeholder": "PROMO / COUPON Code",
+        "validating": "Validating...",
+        "apply": "Apply Coupon"
+      },
+      "summary": {
+        "title": "Order Summary",
+        "subtotal": "Subtotal",
+        "discount": "Discount",
+        "shipping": "Shipping",
+        "vat": "VAT",
+        "included": "included",
+        "added": "added",
+        "total": "Total",
+        "securePayment": "Secure payment",
+        "deliveryTime": "Delivery in 2-4 business days"
+      },
+      "paymentStatus": {
+        "unknown": "Unknown",
+        "unpaid": "Unpaid",
+        "paid": "Paid"
+      },
+      "successModal": {
+        "title": "Order Successful!",
+        "description": "Your order has been placed successfully. Click below to track your order.",
+        "trackOrder": "Track Order",
+        "continueShopping": "Continue Shopping"
+      },
+      "errors": {
+        "partialCartSync": "Some items could not be moved to your account cart. They are still in your cart—please try again.",
+        "fileTooLarge": "The file size must be less than 5 MB.",
+        "invalidImage": "Please upload a valid image file.",
+        "uploadFailed": "Failed to upload the screenshot.",
+        "uploadMissingUrl": "The upload response did not include a file URL.",
+        "couponRequired": "Enter a coupon code.",
+        "couponApplyFailed": "Failed to apply the coupon.",
+        "invalidCoupon": "Invalid coupon code.",
+        "addressRequired": "Please fill in the country, district, area, and full address.",
+        "validAreaRequired": "Please select a valid area.",
+        "loginToSaveAddress": "Please log in to save an address.",
+        "completeAddressRequired": "Please fill in the label, country, district, area, and address details.",
+        "saveAddressFailed": "Failed to save the address.",
+        "emptyCart": "Your cart is empty.",
+        "requiredInformation": "Please fill in all required information.",
+        "waitForUpload": "Please wait until the screenshot upload is complete.",
+        "screenshotRequired": "A payment screenshot is required.",
+        "placeOrderFailedRetry": "There was a problem placing the order. Please try again later.",
+        "gatewayStartFailed": "Failed to start the SSLCommerz payment.",
+        "placeOrderFailed": "There was a problem placing the order."
+      },
+      "success": {
+        "couponApplied": "Coupon applied!",
+        "couponRemoved": "Coupon removed.",
+        "addressSaved": "Address saved.",
+        "orderCreated": "Order created. Please confirm it now.",
+        "orderCompleted": "Order completed successfully!"
+      }
+    },
+    "payment": {
+      "title": "Payment",
+      "back": "Back",
+      "totalPayable": "Total payable",
+      "cashOnDelivery": "Cash on Delivery",
+      "manualPayment": "Manual Payment",
+      "sslDescription": "Pay securely via SSLCommerz",
+      "manualDescription": "Manual payment (screenshot and transaction ID required)",
+      "codDescription": "Pay when you receive the product",
+      "selected": "Selected",
+      "sendMoneyTo": "Send money to",
+      "transactionId": "Transaction ID *",
+      "transactionPlaceholder": "Enter the transaction ID",
+      "screenshot": "Payment Screenshot *",
+      "uploading": "Uploading...",
+      "screenshotAlt": "Payment screenshot preview",
+      "sslRedirect": "You will be redirected to SSLCommerz after placing the order.",
+      "noPaymentNow": "No payment is required now.",
+      "placeOrder": "Place Order"
+    },
+    "paymentResult": {
+      "success": "Payment successful",
+      "cancelled": "Payment cancelled",
+      "unsuccessful": "Payment unsuccessful",
+      "verified": "Your payment has been verified.",
+      "unpaid": "Your order remains unpaid.",
+      "orderNumber": "Order #{id}",
+      "viewOrders": "View orders",
+      "continueShopping": "Continue shopping"
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. Counterparty and Delivery",
     "k_97fae3277194": "1. Counterparty and Scope",

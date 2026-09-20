@@ -25,6 +25,7 @@ import {
 import { useSession, signIn } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { useLocale, useTranslations } from "next-intl";
 
 const STORAGE_KEY = "floating-cart-position";
 const BUTTON_WIDTH_MOBILE = 48;
@@ -128,6 +129,8 @@ function getDrawerSide(x: number): "left" | "right" {
 }
 
 export default function FloatingCartButton() {
+  const t = useTranslations("StorefrontCommerce.floatingCart");
+  const locale = useLocale();
   const router = useRouter();
   const { cartItems, cartCount, removeFromCart, updateQuantity, addToCart } = useCart();
   const { status } = useSession();
@@ -220,7 +223,7 @@ export default function FloatingCartButton() {
       imageRect?: { left: number; top: number; width: number; height: number };
     }>) => {
       const buttonRect = document
-        .querySelector('[aria-label="Open cart drawer"]')
+        .querySelector('[data-floating-cart-trigger="true"]')
         ?.getBoundingClientRect();
 
       if (!buttonRect) return;
@@ -378,14 +381,14 @@ export default function FloatingCartButton() {
       // Store cart items for after login
       sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
       sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
-      toast.info("Please log in to continue to checkout.");
+      toast.info(t("errors.loginRequired"));
       await signIn(undefined, { callbackUrl: "/ecommerce/checkout" });
       return;
     }
 
     // Check for items that need variant selection
     if (hasUnselectedVariants) {
-      toast.error("Please select variants for all items before checkout.");
+      toast.error(t("errors.selectAllVariants"));
       return;
     }
 
@@ -415,11 +418,11 @@ export default function FloatingCartButton() {
         return product.variants;
       } else {
         console.log('No variants found for product');
-        toast.info('This product has no variants available');
+        toast.info(t("errors.noVariants"));
       }
     } catch (err) {
       console.error('Failed to fetch product variants:', err);
-      toast.error('Failed to load product variants');
+      toast.error(t("errors.loadVariantsFailed"));
     } finally {
       // Remove from loading state
       setLoadingVariants(prev => new Set([...prev].filter(id => id !== item.id)));
@@ -461,7 +464,7 @@ export default function FloatingCartButton() {
       addToCart(item.productId, item.quantity, variant.id);
       
       // Show success message
-      toast.success(`Variant selected: ${getVariantLabel(variant)}`);
+      toast.success(t("variantSelected", { variant: getVariantLabel(variant) }));
       
       // Remove from expanded items
       setExpandedItems(prev => new Set([...prev].filter(id => id !== item.id)));
@@ -521,7 +524,7 @@ export default function FloatingCartButton() {
         >
           <Image
             src={flyingItem.image || "/placeholder.svg"}
-            alt="Flying item"
+            alt={t("flyingItemAlt")}
             fill
             className="object-contain p-1"
           />
@@ -531,6 +534,7 @@ export default function FloatingCartButton() {
       <Sheet open={open} onOpenChange={setOpen}>
         <button
           type="button"
+          data-floating-cart-trigger="true"
           onPointerDown={(event) => {
             const rect = event.currentTarget.getBoundingClientRect();
 
@@ -559,7 +563,7 @@ export default function FloatingCartButton() {
               ? "cursor-grabbing scale-105 shadow-2xl"
               : "cursor-grab hover:shadow-xl"
           } ${animate ? "animate-bounce-in" : ""}`}
-          aria-label="Open cart drawer"
+          aria-label={t("openDrawer")}
         >
           <div className="relative">
             <ShoppingBag className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -570,7 +574,7 @@ export default function FloatingCartButton() {
             )}
           </div>
 
-          <span className="mt-1 text-[10px] font-medium sm:text-[11px]">Cart</span>
+          <span className="mt-1 text-[10px] font-medium sm:text-[11px]">{t("cart")}</span>
         </button>
 
         <SheetContent
@@ -581,19 +585,19 @@ export default function FloatingCartButton() {
             <div className="flex w-full items-center justify-between">
               <SheetTitle className="flex gap-2 items-center justify-center text-base font-semibold text-primary-foreground">
                 <ShoppingCart width={20}/>
-                Cart
+                {t("cart")}
               </SheetTitle>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 className="rounded p-1 bg-destructive text-destructive-foreground transition hover:bg-destructive/90"
-                aria-label="Close cart drawer"
+                aria-label={t("closeDrawer")}
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
             <SheetDescription className="hidden">
-              Review cart items and continue to checkout.
+              {t("description")}
             </SheetDescription>
           </SheetHeader>
 
@@ -602,9 +606,9 @@ export default function FloatingCartButton() {
               {cartItems.length === 0 ? (
                 <div className="flex h-full min-h-[320px] flex-col items-center justify-center rounded-xl border border-dashed border-border px-6 text-center">
                   <ShoppingBag className="mb-3 h-10 w-10 text-muted-foreground" />
-                  <p className="font-medium text-foreground">Your cart is empty</p>
+                  <p className="font-medium text-foreground">{t("empty.title")}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Add some items to continue shopping.
+                    {t("empty.description")}
                   </p>
                 </div>
               ) : (
@@ -646,14 +650,14 @@ export default function FloatingCartButton() {
                       {needsVariantSelection && (
                         <div className="border-t border-orange-200 bg-orange-50 p-3">
                           <div className="mb-2">
-                            <span className="text-sm font-medium text-orange-800">Select Variant:</span>
+                            <span className="text-sm font-medium text-orange-800">{t("selectVariant")}:</span>
                           </div>
                           
                           <div className="mt-3 space-y-2">
                             {loadingVariants.has(item.id) ? (
                               <div className="flex items-center justify-center py-4">
                                 <Loader2 className="h-4 w-4 animate-spin text-orange-600 mr-2" />
-                                <span className="text-sm text-orange-600">Loading variants...</span>
+                                <span className="text-sm text-orange-600">{t("loadingVariants")}</span>
                               </div>
                             ) : itemVariants[item.id]?.length > 0 ? (
                               itemVariants[item.id].map((variant) => {
@@ -686,10 +690,10 @@ export default function FloatingCartButton() {
                                       </div>
                                       <div className="text-right">
                                         <span className="text-sm font-semibold text-orange-900">
-                                          {formatPrice(variant.price)}
+                                          {formatPrice(variant.price, locale)}
                                         </span>
                                         {outOfStock && (
-                                          <div className="text-xs text-red-600 font-medium">Out of Stock</div>
+                                          <div className="text-xs text-red-600 font-medium">{t("outOfStock")}</div>
                                         )}
                                       </div>
                                     </div>
@@ -698,7 +702,7 @@ export default function FloatingCartButton() {
                               })
                             ) : (
                               <div className="text-center py-4 text-sm text-gray-500">
-                                No variants available for this product
+                                {t("noVariantsAvailable")}
                               </div>
                             )}
                           </div>
@@ -706,14 +710,14 @@ export default function FloatingCartButton() {
                       )}
 
                       <div className="grid grid-cols-[90px_1fr] border-b border-border px-3 py-2 text-sm">
-                        <span className="text-muted-foreground">Price</span>
+                        <span className="text-muted-foreground">{t("price")}</span>
                         <span className="text-right font-medium text-foreground">
-                          {formatPrice(item.price)}
+                          {formatPrice(item.price, locale)}
                         </span>
                       </div>
 
                       <div className="grid grid-cols-[90px_1fr] border-b border-border px-3 py-2 text-sm">
-                        <span className="text-muted-foreground">Quantity</span>
+                        <span className="text-muted-foreground">{t("quantity")}</span>
                         <div className="flex items-center justify-end gap-2">
                           <button
                             type="button"
@@ -721,7 +725,7 @@ export default function FloatingCartButton() {
                               updateQuantity(item.id, Math.max(0, item.quantity - 1))
                             }
                             className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
-                            aria-label="Decrease quantity"
+                            aria-label={t("decreaseQuantity")}
                           >
                             <Minus className="h-3 w-3" />
                           </button>
@@ -732,7 +736,7 @@ export default function FloatingCartButton() {
                             type="button"
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
                             className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
-                            aria-label="Increase quantity"
+                            aria-label={t("increaseQuantity")}
                           >
                             <Plus className="h-3 w-3" />
                           </button>
@@ -740,15 +744,15 @@ export default function FloatingCartButton() {
                       </div>
 
                       <div className="grid grid-cols-[90px_1fr_auto] items-center px-3 py-2 text-sm">
-                        <span className="text-muted-foreground">Subtotal</span>
+                        <span className="text-muted-foreground">{t("subtotal")}</span>
                         <span className="text-right font-semibold text-foreground">
-                          {formatPrice(item.price * item.quantity)}
+                          {formatPrice(item.price * item.quantity, locale)}
                         </span>
                         <button
                           type="button"
                           onClick={() => removeFromCart(item.id)}
                           className="ml-3 rounded bg-destructive/10 p-2 text-destructive transition hover:bg-destructive hover:text-destructive-foreground"
-                          aria-label="Remove item"
+                          aria-label={t("removeItem")}
                         >
                           <Trash2 className="h-4 w-4" />
                         </button>
@@ -764,10 +768,10 @@ export default function FloatingCartButton() {
               <div className="grid grid-cols-[1fr_auto] items-center px-4 py-3">
                 <div>
                   <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                    Cart Total
+                    {t("cartTotal")}
                   </div>
                   <div className="text-lg font-semibold text-foreground">
-                    {formatPrice(subtotal)}
+                    {formatPrice(subtotal, locale)}
                   </div>
                 </div>
                 <Button
@@ -779,7 +783,7 @@ export default function FloatingCartButton() {
                       : 'bg-primary'
                   }`}
                 >
-                  {hasUnselectedVariants ? 'Select Variants' : 'Checkout'}
+                  {hasUnselectedVariants ? t("selectVariants") : t("checkout")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -792,6 +796,6 @@ export default function FloatingCartButton() {
   );
 }
 
-function formatPrice(value: number) {
-  return `৳ ${Math.round(Number(value) || 0).toLocaleString("en-US")}`;
+function formatPrice(value: number, locale: string) {
+  return `৳ ${Math.round(Number(value) || 0).toLocaleString(locale)}`;
 }

@@ -9382,6 +9382,37 @@
       "secureTransactions": "100% 安全交易", "rights": "© {year} {site} 保留所有权利。"
     }
   },
+  "StorefrontCommerce": {
+    "addToCart": { "label": "加入购物车", "adding": "正在添加...", "outOfStock": "缺货", "failed": "无法将此商品加入购物车。" },
+    "cart": {
+      "title": "购物车", "syncing": "正在同步购物车...", "loadFailed": "无法加载购物车", "retry": "重试", "unknownProduct": "未知商品", "products": "您的商品", "itemCount": "{count} 件商品", "clearCart": "清空购物车", "unitPrice": "单价", "unit": "件", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "removeItem": "移除商品", "continueShopping": "继续购物", "orderSummary": "订单摘要", "subtotal": "小计", "discount": "折扣", "total": "总计", "addMore": "添加更多", "checkout": "结账", "securePayment": "安全支付", "fastDelivery": "快速配送", "shippingNote": "运费可能因地区和重量而异。",
+      "empty": { "title": "购物车为空", "description": "添加一些商品即可开始购物。" },
+      "errors": { "load": "无法加载购物车。", "loginRequired": "请登录后继续结账。", "clearFailed": "无法清空购物车。", "removeFailed": "无法移除商品。", "updateFailed": "无法更新数量。", "couponRequired": "请输入优惠券代码。", "couponApplyFailed": "无法使用优惠券。", "invalidCoupon": "优惠券代码无效。" },
+      "success": { "cleared": "购物车已清空。", "removed": "商品已移除。", "couponApplied": "优惠券已使用！", "couponRemoved": "优惠券已移除。" }
+    },
+    "floatingCart": {
+      "cart": "购物车", "openDrawer": "打开购物车抽屉", "closeDrawer": "关闭购物车抽屉", "description": "查看购物车商品并继续结账。", "flyingItemAlt": "正在加入购物车的商品", "selectVariant": "选择款式", "loadingVariants": "正在加载款式...", "outOfStock": "缺货", "noVariantsAvailable": "此商品暂无可用款式", "price": "价格", "quantity": "数量", "subtotal": "小计", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "removeItem": "移除商品", "cartTotal": "购物车总计", "selectVariants": "选择款式", "checkout": "结账", "variantSelected": "已选择款式：{variant}",
+      "empty": { "title": "购物车为空", "description": "添加一些商品后继续购物。" },
+      "errors": { "loginRequired": "请登录后继续结账。", "selectAllVariants": "结账前请为所有商品选择款式。", "noVariants": "此商品暂无可用款式。", "loadVariantsFailed": "无法加载商品款式。" }
+    },
+    "checkout": {
+      "title": "结账", "description": "请按照以下步骤完成订单。", "nextStep": "下一步", "unknownProduct": "未知商品",
+      "steps": { "details": "个人信息", "payment": "支付", "confirmation": "确认" },
+      "common": { "back": "返回", "close": "关闭", "notAvailable": "无" },
+      "fields": { "fullName": "姓名 *", "namePlaceholder": "请输入姓名", "mobile": "手机号码 *", "emailOptional": "电子邮箱（可选）", "emailPlaceholder": "请输入电子邮箱", "country": "国家 *", "countryPlaceholder": "孟加拉国", "district": "地区 *", "districtPlaceholder": "达卡", "area": "区域 *", "addressDetails": "详细地址 *", "addressPlaceholder": "门牌、道路、地标" },
+      "address": { "saved": "已保存地址", "addNew": "添加新地址", "loading": "正在加载地址...", "selectOptional": "选择已保存地址（可选）", "label": "地址标签 *", "labelPlaceholder": "住宅 / 办公室", "saving": "正在保存...", "saveCurrent": "保存当前地址" },
+      "shipping": { "loadingAreas": "正在加载区域...", "selectArea": "选择区域", "standardRate": "标准费率", "freeOver": "满 ৳{amount} 免运费", "noArea": "此国家暂无可用配送区域。", "calculating": "正在计算...", "free": "免费", "appliedRate": "已应用费率", "freeApplied": "已享受免运费（已达到最低订单金额 ৳{amount}）", "addMoreForFree": "再添加 ৳{amount} 即可免运费" },
+      "confirmation": { "title": "确认订单", "created": "订单创建成功！", "invoiceId": "发票编号", "orderId": "订单编号", "customer": "客户", "name": "姓名", "mobile": "手机号码", "email": "电子邮箱", "address": "地址", "order": "订单", "payment": "支付", "status": "状态", "transaction": "交易", "paymentScreenshot": "支付截图", "screenshotAlt": "支付截图预览", "complete": "完成订单", "completed": "订单已完成" },
+      "coupon": { "remove": "移除", "applied": "优惠券使用成功。", "placeholder": "促销 / 优惠券代码", "validating": "正在验证...", "apply": "使用优惠券" },
+      "summary": { "title": "订单摘要", "subtotal": "小计", "discount": "折扣", "shipping": "配送费", "vat": "增值税", "included": "已包含", "added": "另加", "total": "总计", "securePayment": "安全支付", "deliveryTime": "2-4 个工作日内送达" },
+      "paymentStatus": { "unknown": "未知", "unpaid": "未支付", "paid": "已支付" },
+      "successModal": { "title": "订单成功！", "description": "您的订单已成功提交。点击下方按钮跟踪订单。", "trackOrder": "跟踪订单", "continueShopping": "继续购物" },
+      "errors": { "partialCartSync": "部分商品无法移入您的账户购物车。这些商品仍在购物车中，请重试。", "fileTooLarge": "文件大小必须小于 5 MB。", "invalidImage": "请上传有效的图片文件。", "uploadFailed": "无法上传截图。", "uploadMissingUrl": "上传响应中没有文件 URL。", "couponRequired": "请输入优惠券代码。", "couponApplyFailed": "无法使用优惠券。", "invalidCoupon": "优惠券代码无效。", "addressRequired": "请填写国家、地区、区域和完整地址。", "validAreaRequired": "请选择有效区域。", "loginToSaveAddress": "请登录后保存地址。", "completeAddressRequired": "请填写标签、国家、地区、区域和详细地址。", "saveAddressFailed": "无法保存地址。", "emptyCart": "购物车为空。", "requiredInformation": "请填写所有必填信息。", "waitForUpload": "请等待截图上传完成。", "screenshotRequired": "必须上传支付截图。", "placeOrderFailedRetry": "提交订单时出现问题，请稍后重试。", "gatewayStartFailed": "无法启动 SSLCommerz 支付。", "placeOrderFailed": "提交订单时出现问题。" },
+      "success": { "couponApplied": "优惠券已使用！", "couponRemoved": "优惠券已移除。", "addressSaved": "地址已保存。", "orderCreated": "订单已创建，请立即确认。", "orderCompleted": "订单已成功完成！" }
+    },
+    "payment": { "title": "支付", "back": "返回", "totalPayable": "应付总额", "cashOnDelivery": "货到付款", "manualPayment": "手动支付", "sslDescription": "通过 SSLCommerz 安全支付", "manualDescription": "手动支付（需要截图和交易编号）", "codDescription": "收到商品时付款", "selected": "已选择", "sendMoneyTo": "汇款至", "transactionId": "交易编号 *", "transactionPlaceholder": "请输入交易编号", "screenshot": "支付截图 *", "uploading": "正在上传...", "screenshotAlt": "支付截图预览", "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。", "noPaymentNow": "目前无需付款。", "placeOrder": "提交订单" },
+    "paymentResult": { "success": "支付成功", "cancelled": "支付已取消", "unsuccessful": "支付失败", "verified": "您的支付已通过验证。", "unpaid": "您的订单仍未支付。", "orderNumber": "订单 #{id}", "viewOrders": "查看订单", "continueShopping": "继续购物" }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. 交易方与交付",
     "k_97fae3277194": "1. 交易方与范围",

@@ -22,6 +22,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useSession, signIn } from "@/lib/auth-client";
+import { useLocale, useTranslations } from "next-intl";
 
 interface LocalCartItem {
   id: number | string; // server cart item id
@@ -193,6 +194,8 @@ function CartSkeleton() {
 }
 
 export default function CartPage() {
+  const t = useTranslations("StorefrontCommerce.cart");
+  const locale = useLocale();
   const { cartItems, removeFromCart, updateQuantity, clearCart, replaceCart } =
     useCart();
 
@@ -270,7 +273,7 @@ export default function CartPage() {
       if (!res.ok) {
         const data = await res.json().catch(() => null);
         console.error("Failed to load server cart:", data || res.statusText);
-        throw new Error("Failed to load cart from server.");
+        throw new Error(t("errors.load"));
       }
 
       const data = await res.json();
@@ -280,7 +283,7 @@ export default function CartPage() {
         id: item.id,
         productId: item.productId,
         variantId: item.variantId ?? item.variant?.id ?? null,
-        name: item.product?.name ?? "Unknown Product",
+        name: item.product?.name ?? t("unknownProduct"),
         price: Number(item.bundleConfiguration?.finalPrice ?? item.variant?.price ?? item.product?.basePrice ?? 0),
         image: item.product?.image ?? "/placeholder.svg",
         quantity: Number(item.quantity ?? 1),
@@ -301,12 +304,12 @@ export default function CartPage() {
       setServerCartItems(mapped);
     } catch (err) {
       setServerCartError(
-        err instanceof Error ? err.message : "Failed to load cart."
+        err instanceof Error ? err.message : t("errors.load")
       );
     } finally {
       setLoadingServerCart(false);
     }
-  }, []);
+  }, [t]);
 
   // ✅ only clear guest storage (NOT context state)
   const clearGuestCartStorageOnly = useCallback(() => {
@@ -520,7 +523,7 @@ export default function CartPage() {
     if (!isAuthenticated) {
       sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
       sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
-      toast.info("Please log in to continue to checkout.");
+      toast.info(t("errors.loginRequired"));
       await signIn(undefined, { callbackUrl: "/ecommerce/checkout" });
       return;
     }
@@ -536,7 +539,7 @@ export default function CartPage() {
         if (!res.ok) {
           const data = await res.json().catch(() => null);
           console.error("Clear cart failed:", data || res.statusText);
-          toast.error("Failed to clear cart.");
+          toast.error(t("errors.clearFailed"));
           return;
         }
         setServerCartItems([]);
@@ -546,10 +549,10 @@ export default function CartPage() {
       clearCart();
       lastReplacedRef.current = "";
       clearGuestCartStorageOnly();
-      toast.success("Cart cleared.");
+      toast.success(t("success.cleared"));
     } catch (error) {
       console.error("Error clearing cart:", error);
-      toast.error("Failed to clear cart.");
+      toast.error(t("errors.clearFailed"));
     }
   };
 
@@ -565,7 +568,7 @@ export default function CartPage() {
         if (!res.ok && res.status !== 404) {
           const data = await res.json().catch(() => null);
           console.error("Remove cart item failed:", data || res.statusText);
-          toast.error("Failed to remove item.");
+          toast.error(t("errors.removeFailed"));
           return;
         }
 
@@ -576,10 +579,10 @@ export default function CartPage() {
 
       // Always remove from context
       removeFromCart(itemId);
-      toast.success("Item removed.");
+      toast.success(t("success.removed"));
     } catch (error) {
       console.error("Error removing cart item:", error);
-      toast.error("Failed to remove item.");
+      toast.error(t("errors.removeFailed"));
     }
   };
 
@@ -621,7 +624,7 @@ export default function CartPage() {
 
         if (!res.ok) {
           const data = await res.json().catch(() => null);
-          toast.error(data?.error || "Failed to update quantity.");
+          toast.error(t("errors.updateFailed"));
           return;
         }
 
@@ -644,7 +647,7 @@ export default function CartPage() {
         if (!res.ok) {
           const data = await res.json().catch(() => null);
           console.error("Update quantity failed:", data || res.statusText);
-          toast.error("Failed to update quantity.");
+          toast.error(t("errors.updateFailed"));
           return;
         }
 
@@ -661,13 +664,13 @@ export default function CartPage() {
       updateQuantity(itemId, newQuantity);
     } catch (error) {
       console.error("Error updating quantity:", error);
-      toast.error("Failed to update quantity.");
+      toast.error(t("errors.updateFailed"));
     }
   };
 
   const applyCoupon = async () => {
     if (!couponCode.trim()) {
-      toast.error("Enter a coupon code.");
+      toast.error(t("errors.couponRequired"));
       return;
     }
 
@@ -683,18 +686,18 @@ export default function CartPage() {
 
       const data = await response.json();
 
-      if (!response.ok) throw new Error(data.error || "Failed to apply coupon.");
+      if (!response.ok) throw new Error(t("errors.couponApplyFailed"));
 
       if (data.success) {
         setDiscountAmount(data.coupon.discountAmount);
         setAppliedCoupon(data.coupon);
-        toast.success("Coupon applied!");
+        toast.success(t("success.couponApplied"));
         setCouponCode("");
       }
     } catch (error) {
       console.error("Coupon application error:", error);
       toast.error(
-        error instanceof Error ? error.message : "Invalid coupon code."
+        error instanceof Error ? error.message : t("errors.invalidCoupon")
       );
       setDiscountAmount(0);
       setAppliedCoupon(null);
@@ -705,7 +708,7 @@ export default function CartPage() {
     setDiscountAmount(0);
     setAppliedCoupon(null);
     setCouponCode("");
-    toast.info("Coupon removed.");
+    toast.info(t("success.couponRemoved"));
   };
 
   return (
@@ -720,18 +723,18 @@ export default function CartPage() {
             <Home className="h-4 w-4" />
           </Link>
           <span>/</span>
-          <span className="text-foreground/90">Shopping Cart</span>
+          <span className="text-foreground/90">{t("title")}</span>
         </div>
 
         {/* Page title */}
         <div className="mb-6">
           <h1 className="text-3xl font-semibold tracking-tight">
-            Shopping Cart
+            {t("title")}
           </h1>
 
           {isAuthenticated && (loadingServerCart || showAuthSkeleton) && (
             <p className="mt-2 text-sm text-muted-foreground">
-              Syncing your cart...
+              {t("syncing")}
             </p>
           )}
         </div>
@@ -741,26 +744,26 @@ export default function CartPage() {
         ) : showAuthError ? (
           <div className="rounded-xl border border-border bg-card p-10 text-center shadow-sm">
             <h2 className="text-lg font-semibold mb-2">
-              Couldn’t load your cart
+              {t("loadFailed")}
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
               {serverCartError}
             </p>
             <Button onClick={retryServerCart} className="rounded-md">
               <RefreshCw className="mr-2 h-4 w-4" />
-              Retry
+              {t("retry")}
             </Button>
           </div>
         ) : isCartEmpty ? (
           <div className="rounded-xl border border-border bg-card p-10 text-center shadow-sm">
             <ShoppingCart className="h-14 w-14 text-muted-foreground mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">Your cart is empty</h2>
+            <h2 className="text-xl font-semibold mb-2">{t("empty.title")}</h2>
             <p className="text-muted-foreground mb-6">
-              Add some products to get started.
+              {t("empty.description")}
             </p>
             <Link href="/">
               <Button className="rounded-md btn-primary">
-                Continue Shopping <ArrowRight className="ml-2 h-4 w-4" />
+                {t("continueShopping")} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -772,9 +775,9 @@ export default function CartPage() {
               <div className="rounded-2xl border border-border bg-card shadow-sm overflow-hidden">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 sm:px-6 py-5 border-b border-border bg-card/50">
                   <div>
-                    <h2 className="text-lg font-semibold">Your Products</h2>
+                    <h2 className="text-lg font-semibold">{t("products")}</h2>
                     <p className="text-sm text-muted-foreground">
-                      {itemsToRender.length} item(s)
+                      {t("itemCount", { count: itemsToRender.length })}
                     </p>
                   </div>
                   <Button
@@ -782,7 +785,7 @@ export default function CartPage() {
                     onClick={handleClearCart}
                     className="rounded-xl w-full sm:w-auto"
                   >
-                    Clear Cart
+                    {t("clearCart")}
                   </Button>
                 </div>
 
@@ -818,7 +821,7 @@ export default function CartPage() {
                             </div>
                           </Link>
                           <div className="mt-1 text-sm text-muted-foreground">
-                            Unit Price: ৳{item.price.toLocaleString()}
+                            {t("unitPrice")}: ৳{item.price.toLocaleString(locale)}
                           </div>
                           {item.bundleSummary?.length ? (
                             <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
@@ -838,7 +841,7 @@ export default function CartPage() {
                                     handleUpdateQuantity(item, item.quantity - 1)
                                   }
                                   disabled={item.quantity <= 1}
-                                  aria-label="Decrease quantity"
+                                  aria-label={t("decreaseQuantity")}
                                 >
                                   <Minus className="h-4 w-4" />
                                 </button>
@@ -850,7 +853,7 @@ export default function CartPage() {
                                   onClick={() =>
                                     handleUpdateQuantity(item, item.quantity + 1)
                                   }
-                                  aria-label="Increase quantity"
+                                  aria-label={t("increaseQuantity")}
                                 >
                                   <Plus className="h-4 w-4" />
                                 </button>
@@ -859,10 +862,10 @@ export default function CartPage() {
                               <div className="text-right">
                                 <div className="font-bold">
                                   ৳
-                                  {(item.price * item.quantity).toLocaleString()}
+                                  {(item.price * item.quantity).toLocaleString(locale)}
                                 </div>
                                 <div className="text-xs text-muted-foreground">
-                                  ৳{item.price.toLocaleString()}/unit
+                                  ৳{item.price.toLocaleString(locale)}/{t("unit")}
                                 </div>
                               </div>
                             </div>
@@ -870,10 +873,10 @@ export default function CartPage() {
                             <button
                               className="w-full h-10 rounded-xl border border-border bg-muted hover:bg-accent transition text-sm font-semibold flex items-center justify-center gap-2"
                               onClick={() => handleRemoveItem(item.id)}
-                              aria-label="Remove item"
+                              aria-label={t("removeItem")}
                             >
                               <Trash2 className="h-4 w-4" />
-                              Remove item
+                              {t("removeItem")}
                             </button>
                           </div>
                         </div>
@@ -886,7 +889,7 @@ export default function CartPage() {
                               handleUpdateQuantity(item, item.quantity - 1)
                             }
                             disabled={item.quantity <= 1}
-                            aria-label="Decrease quantity"
+                            aria-label={t("decreaseQuantity")}
                           >
                             <Minus className="h-4 w-4" />
                           </button>
@@ -898,7 +901,7 @@ export default function CartPage() {
                             onClick={() =>
                               handleUpdateQuantity(item, item.quantity + 1)
                             }
-                            aria-label="Increase quantity"
+                            aria-label={t("increaseQuantity")}
                           >
                             <Plus className="h-4 w-4" />
                           </button>
@@ -908,17 +911,17 @@ export default function CartPage() {
                         <div className="hidden sm:flex items-center gap-4">
                           <div className="text-right">
                             <div className="font-bold">
-                              ৳{(item.price * item.quantity).toLocaleString()}
+                              ৳{(item.price * item.quantity).toLocaleString(locale)}
                             </div>
                             <div className="text-xs text-muted-foreground">
-                              ৳{item.price.toLocaleString()}/unit
+                              ৳{item.price.toLocaleString(locale)}/{t("unit")}
                             </div>
                           </div>
 
                           <button
                             className="h-10 w-10 grid place-items-center rounded-xl hover:bg-muted transition text-muted-foreground hover:text-foreground"
                             onClick={() => handleRemoveItem(item.id)}
-                            aria-label="Remove item"
+                            aria-label={t("removeItem")}
                           >
                             <Trash2 className="h-5 w-5" />
                           </button>
@@ -935,7 +938,7 @@ export default function CartPage() {
                     className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
                   >
                     <ArrowLeft className="h-4 w-4" />
-                    Continue Shopping
+                    {t("continueShopping")}
                   </Link>
                 </div>
               </div>
@@ -1005,28 +1008,28 @@ export default function CartPage() {
             <div className="lg:col-span-1">
               <div className="rounded-2xl border border-border bg-card shadow-sm lg:sticky lg:top-6 overflow-hidden">
                 <div className="px-6 py-5 border-b border-border bg-card/50">
-                  <h2 className="text-lg font-semibold">Order Summary</h2>
+                  <h2 className="text-lg font-semibold">{t("orderSummary")}</h2>
                 </div>
 
                 <div className="px-6 py-5 space-y-4">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Sub-Total:</span>
+                    <span className="text-muted-foreground">{t("subtotal")}:</span>
                     <span className="font-semibold">
-                      ৳{subtotal.toLocaleString()}
+                      ৳{subtotal.toLocaleString(locale)}
                     </span>
                   </div>
 
                   {discountAmount > 0 && (
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">
-                        Discount
+                        {t("discount")}
                         {appliedCoupon?.discountType === "percentage"
                           ? ` (${appliedCoupon.discountValue}%)`
                           : ""}
                         :
                       </span>
                       <span className="font-semibold">
-                        -৳{discountAmount.toLocaleString()}
+                        -৳{discountAmount.toLocaleString(locale)}
                       </span>
                     </div>
                   )}
@@ -1039,9 +1042,9 @@ export default function CartPage() {
                   </div> */}
 
                   <div className="border-t border-border pt-4 flex items-center justify-between">
-                    <span className="text-sm font-semibold">Total:</span>
+                    <span className="text-sm font-semibold">{t("total")}:</span>
                     <span className="text-xl font-bold">
-                      ৳{total.toLocaleString()}
+                      ৳{total.toLocaleString(locale)}
                     </span>
                   </div>
 
@@ -1049,7 +1052,7 @@ export default function CartPage() {
                     <Link href="/ecommerce/products" className="flex-1 w-full">
                       <Button variant="outline" className="w-full rounded-xl">
                         <Plus className="mr-2 h-4 w-4" />
-                        Add More
+                        {t("addMore")}
                       </Button>
                     </Link>
 
@@ -1058,7 +1061,7 @@ export default function CartPage() {
                       onClick={handleCheckout}
                       disabled={isCartEmpty}
                     >
-                      Checkout
+                      {t("checkout")}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
@@ -1067,11 +1070,11 @@ export default function CartPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <Shield className="h-4 w-4" />
-                        Secure payment
+                        {t("securePayment")}
                       </div>
                       <div className="flex items-center gap-2">
                         <Truck className="h-4 w-4" />
-                        Fast delivery
+                        {t("fastDelivery")}
                       </div>
                     </div>
                   </div>
@@ -1079,7 +1082,7 @@ export default function CartPage() {
               </div>
 
               <div className="mt-4 text-xs text-muted-foreground">
-                Shipping may vary based on location and weight.
+                {t("shippingNote")}
               </div>
             </div>
           </div>

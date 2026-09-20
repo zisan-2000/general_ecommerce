@@ -29,6 +29,7 @@ import {
   PC_BUILDER_EXTRA_ITEMS_STORAGE_KEY,
   PC_BUILDER_STORAGE_KEY,
 } from "@/lib/pc-builder";
+import { useLocale, useTranslations } from "next-intl";
 
 function clearCompletedPcBuilderDraft() {
   try {
@@ -96,6 +97,8 @@ type TaxQuote = {
 };
 
 export default function CheckoutPage() {
+  const t = useTranslations("StorefrontCommerce.checkout");
+  const locale = useLocale();
   const { cartItems, clearCart } = useCart();
   const { data: session, status: sessionStatus } = useSession();
   const router = useRouter();
@@ -221,7 +224,7 @@ export default function CheckoutPage() {
           id: item.id,
           productId: item.productId,
           variantId: item.variantId ?? item.variant?.id ?? null,
-          name: item.product?.name ?? "Unknown product",
+          name: item.product?.name ?? t("unknownProduct"),
           price: Number(item.bundleConfiguration?.finalPrice ?? item.variant?.price ?? item.product?.basePrice ?? item.product?.variants?.[0]?.price ?? 0),
           image: item.product?.image ?? "/placeholder.svg",
           quantity: Number(item.quantity ?? 1),
@@ -307,7 +310,7 @@ export default function CheckoutPage() {
 
           if (!allSynced) {
             toast.error(
-              "Some items could not be moved to your account cart. They are still in your cart — please try again.",
+              t("errors.partialCartSync"),
             );
           }
         } else {
@@ -569,8 +572,8 @@ export default function CheckoutPage() {
       setIsUploadingScreenshot(true);
 
       const maxSize = 5 * 1024 * 1024;
-      if (file.size > maxSize) throw new Error("File size should be less than 5MB");
-      if (!file.type.startsWith("image/")) throw new Error("Please upload a valid image file");
+      if (file.size > maxSize) throw new Error(t("errors.fileTooLarge"));
+      if (!file.type.startsWith("image/")) throw new Error(t("errors.invalidImage"));
 
       const formData = new FormData();
       formData.append("file", file);
@@ -582,7 +585,7 @@ export default function CheckoutPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => null);
-        throw new Error(data?.message || "Failed to upload screenshot");
+        throw new Error(t("errors.uploadFailed"));
       }
 
       const data = await res.json();
@@ -594,11 +597,11 @@ export default function CheckoutPage() {
         data?.location ||
         null;
 
-      if (!uploadedUrl) throw new Error("Upload response missing URL");
+      if (!uploadedUrl) throw new Error(t("errors.uploadMissingUrl"));
       setPaymentScreenshotUrl(uploadedUrl);
     } catch (err) {
       console.error(err);
-      toast.error(err instanceof Error ? err.message : "Failed to upload screenshot");
+      toast.error(err instanceof Error ? err.message : t("errors.uploadFailed"));
       setPaymentScreenshotUrl(null);
     } finally {
       setIsUploadingScreenshot(false);
@@ -607,7 +610,7 @@ export default function CheckoutPage() {
 
   const applyCoupon = async () => {
     if (!couponCode.trim()) {
-      toast.error("Enter a coupon code.");
+      toast.error(t("errors.couponRequired"));
       return;
     }
 
@@ -624,18 +627,18 @@ export default function CheckoutPage() {
 
       const data = await response.json();
 
-      if (!response.ok) throw new Error(data.error || "Failed to apply coupon.");
+      if (!response.ok) throw new Error(t("errors.couponApplyFailed"));
 
       if (data.success) {
         setDiscountAmount(data.coupon.discountAmount);
         setAppliedCoupon(data.coupon);
-        toast.success("Coupon applied!");
+        toast.success(t("success.couponApplied"));
         setCouponCode("");
       }
     } catch (error) {
       console.error("Coupon application error:", error);
       toast.error(
-        error instanceof Error ? error.message : "Invalid coupon code."
+        error instanceof Error ? error.message : t("errors.invalidCoupon")
       );
       setDiscountAmount(0);
       setAppliedCoupon(null);
@@ -648,22 +651,22 @@ export default function CheckoutPage() {
     setDiscountAmount(0);
     setAppliedCoupon(null);
     setCouponCode("");
-    toast.info("Coupon removed.");
+    toast.info(t("success.couponRemoved"));
   };
 
   const getPaymentStatusFromMethod = (method: string) => {
-    if (!method) return "Unknown";
-    return method === "CashOnDelivery" ? "Unpaid" : "Paid";
+    if (!method) return t("paymentStatus.unknown");
+    return method === "CashOnDelivery" ? t("paymentStatus.unpaid") : t("paymentStatus.paid");
   };
 
   const handleGoToPaymentStep = () => {
     if (!country.trim() || !location.trim() || !area.trim() || !deliveryAddress.trim()) {
-      toast.error("Please fill in country, district, area and full address");
+      toast.error(t("errors.addressRequired"));
       return;
     }
     const safeArea = normalizeShippingArea(area);
     if (!safeArea) {
-      toast.error("Please select a valid area");
+      toast.error(t("errors.validAreaRequired"));
       return;
     }
     setStep("payment");
@@ -671,16 +674,16 @@ export default function CheckoutPage() {
 
   const handleSaveAddress = async () => {
     if (!isAuthenticated) {
-      toast.error("Please login to save address");
+      toast.error(t("errors.loginToSaveAddress"));
       return;
     }
     if (!newAddressLabel.trim() || !country.trim() || !location.trim() || !area.trim() || !deliveryAddress.trim()) {
-      toast.error("Please fill label, country, district, area and address details");
+      toast.error(t("errors.completeAddressRequired"));
       return;
     }
     const safeArea = normalizeShippingArea(area);
     if (!safeArea) {
-      toast.error("Please select a valid area");
+      toast.error(t("errors.validAreaRequired"));
       return;
     }
 
@@ -701,7 +704,7 @@ export default function CheckoutPage() {
 
       const data = await res.json().catch(() => null);
       if (!res.ok) {
-        toast.error(data?.error || "Failed to save address");
+        toast.error(t("errors.saveAddressFailed"));
         return;
       }
 
@@ -714,9 +717,9 @@ export default function CheckoutPage() {
       }
 
       setShowAddAddressForm(false);
-      toast.success("Address saved");
+      toast.success(t("success.addressSaved"));
     } catch {
-      toast.error("Failed to save address");
+      toast.error(t("errors.saveAddressFailed"));
     } finally {
       setSavingAddress(false);
     }
@@ -724,7 +727,7 @@ export default function CheckoutPage() {
 
   const handlePlaceOrder = async () => {
     if (itemsToRender.length === 0) {
-      toast.error("Your cart is empty");
+      toast.error(t("errors.emptyCart"));
       return;
     }
 
@@ -741,13 +744,13 @@ export default function CheckoutPage() {
       !deliveryAddress ||
       (isManualPayment && !transactionId)
     ) {
-      toast.error("Please fill in all required information");
+      toast.error(t("errors.requiredInformation"));
       return;
     }
 
     if (isManualPayment && (!paymentScreenshotUrl || isUploadingScreenshot)) {
-      if (isUploadingScreenshot) toast.error("Please wait until screenshot upload is complete");
-      else toast.error("Payment screenshot is required");
+      if (isUploadingScreenshot) toast.error(t("errors.waitForUpload"));
+      else toast.error(t("errors.screenshotRequired"));
       return;
     }
 
@@ -807,7 +810,7 @@ export default function CheckoutPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => null);
-        toast.error(data?.error || "Problem placing order, please try again later");
+        toast.error(t("errors.placeOrderFailedRetry"));
         return;
       }
 
@@ -828,7 +831,7 @@ export default function CheckoutPage() {
 
         const initData = await initRes.json().catch(() => null);
         if (!initRes.ok || !initData?.redirectUrl) {
-          toast.error(initData?.error || "Failed to start SSLCommerz payment");
+          toast.error(t("errors.gatewayStartFailed"));
           return;
         }
 
@@ -838,10 +841,10 @@ export default function CheckoutPage() {
 
       setInvoiceId(localInvoiceId);
       setStep("confirm");
-      toast.success("Order created, please confirm now");
+      toast.success(t("success.orderCreated"));
     } catch (err) {
       console.error(err);
-      toast.error("Problem placing order");
+      toast.error(t("errors.placeOrderFailed"));
     }
   };
 
@@ -869,7 +872,7 @@ export default function CheckoutPage() {
 
     setOrderConfirmed(true);
     setShowModal(true);
-    toast.success("Order completed successfully!");
+    toast.success(t("success.orderCompleted"));
   };
 
   const renderStepIndicator = () => (
@@ -906,7 +909,7 @@ export default function CheckoutPage() {
                 active ? "text-foreground" : "text-foreground/70",
               ].join(" ")}
             >
-              {s === "details" ? "Personal Details" : s === "payment" ? "Payment" : "Confirmation"}
+              {s === "details" ? t("steps.details") : s === "payment" ? t("steps.payment") : t("steps.confirmation")}
             </span>
 
             {i < 2 && (
@@ -967,11 +970,11 @@ export default function CheckoutPage() {
               <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
-              Checkout
+              {t("title")}
             </h1>
           </div>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            Follow the steps below to complete your order.
+            {t("description")}
           </p>
         </div>
 
@@ -986,14 +989,14 @@ export default function CheckoutPage() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-2 h-8 bg-primary rounded-full"></div>
-                    <h2 className="text-2xl font-bold text-foreground">Personal Details</h2>
+                    <h2 className="text-2xl font-bold text-foreground">{t("steps.details")}</h2>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <LabeledInput
                       id="name"
-                      label="Full Name *"
-                      placeholder="Enter your name"
+                      label={t("fields.fullName")}
+                      placeholder={t("fields.namePlaceholder")}
                       value={name}
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                       className="bg-background border-border text-foreground placeholder:text-muted-foreground"
@@ -1001,7 +1004,7 @@ export default function CheckoutPage() {
 
                     <LabeledInput
                       id="mobile"
-                      label="Mobile *"
+                      label={t("fields.mobile")}
                       placeholder="01XXXXXXXXX"
                       value={mobile}
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
@@ -1010,8 +1013,8 @@ export default function CheckoutPage() {
 
                     <LabeledInput
                       id="email"
-                      label="Email (Optional)"
-                      placeholder="Enter your email"
+                      label={t("fields.emailOptional")}
+                      placeholder={t("fields.emailPlaceholder")}
                       value={email}
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                       className="bg-background border-border text-foreground placeholder:text-muted-foreground sm:col-span-2"
@@ -1021,7 +1024,7 @@ export default function CheckoutPage() {
                       <div className="space-y-2 sm:col-span-2">
                         <div className="flex items-center justify-between">
                           <label htmlFor="savedAddress" className="text-sm font-medium text-foreground">
-                            Saved Address
+                            {t("address.saved")}
                           </label>
                           <button
                             type="button"
@@ -1033,7 +1036,7 @@ export default function CheckoutPage() {
                             ) : (
                               <Plus className="h-3.5 w-3.5" />
                             )}
-                            {showAddAddressForm ? "Close" : "Add New Address"}
+                            {showAddAddressForm ? t("common.close") : t("address.addNew")}
                           </button>
                         </div>
 
@@ -1044,7 +1047,7 @@ export default function CheckoutPage() {
                           className="w-full h-11 rounded-md border border-border bg-background px-3 text-sm outline-none focus:ring-2 focus:ring-primary/30"
                         >
                           <option value="">
-                            {loadingAddresses ? "Loading addresses..." : "Select a saved address (optional)"}
+                            {loadingAddresses ? t("address.loading") : t("address.selectOptional")}
                           </option>
                           {userAddresses.map((addr) => (
                             <option key={addr.id} value={addr.id}>
@@ -1057,8 +1060,8 @@ export default function CheckoutPage() {
                           <div className="rounded-lg border border-border bg-muted/40 p-3 space-y-3">
                             <LabeledInput
                               id="addressLabel"
-                              label="Address Label *"
-                              placeholder="Home / Office"
+                              label={t("address.label")}
+                              placeholder={t("address.labelPlaceholder")}
                               value={newAddressLabel}
                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewAddressLabel(e.target.value)}
                               className="bg-background border-border text-foreground placeholder:text-muted-foreground"
@@ -1069,7 +1072,7 @@ export default function CheckoutPage() {
                               disabled={savingAddress}
                               className="h-9 bg-primary hover:bg-primary/90 text-primary-foreground"
                             >
-                              {savingAddress ? "Saving..." : "Save Current Address"}
+                              {savingAddress ? t("address.saving") : t("address.saveCurrent")}
                             </Button>
                           </div>
                         )}
@@ -1078,8 +1081,8 @@ export default function CheckoutPage() {
 
                     <LabeledInput
                       id="country"
-                      label="Country *"
-                      placeholder="Bangladesh"
+                      label={t("fields.country")}
+                      placeholder={t("fields.countryPlaceholder")}
                       value={country}
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCountry(e.target.value)}
                       className="bg-background border-border text-foreground placeholder:text-muted-foreground"
@@ -1087,8 +1090,8 @@ export default function CheckoutPage() {
 
                     <LabeledInput
                       id="location"
-                      label="District *"
-                      placeholder="Dhaka"
+                      label={t("fields.district")}
+                      placeholder={t("fields.districtPlaceholder")}
                       value={location}
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLocation(e.target.value)}
                       className="bg-background border-border text-foreground placeholder:text-muted-foreground"
@@ -1096,7 +1099,7 @@ export default function CheckoutPage() {
 
                     <div className="space-y-2 sm:col-span-2">
                       <label htmlFor="area" className="text-sm font-medium text-foreground">
-                        Area *
+                        {t("fields.area")}
                       </label>
                       <select
                         id="area"
@@ -1104,11 +1107,11 @@ export default function CheckoutPage() {
                         onChange={(e) => setArea(e.target.value as AllowedShippingArea)}
                         className="w-full h-11 rounded-md border border-border bg-background px-3 text-sm outline-none focus:ring-2 focus:ring-primary/30"
                       >
-                        <option value="">{loadingAreas ? "Loading areas..." : "Select area"}</option>
+                        <option value="">{loadingAreas ? t("shipping.loadingAreas") : t("shipping.selectArea")}</option>
                         {availableAreas.map((areaOption) => {
                           const rate = getShippingRateInfo(areaOption);
-                          const shippingCost = rate?.baseCost ? `৳${rate.baseCost}` : "Standard rate";
-                          const freeShippingInfo = rate?.freeMinOrder ? ` (Free over ৳${rate.freeMinOrder})` : "";
+                          const shippingCost = rate?.baseCost ? `৳${rate.baseCost}` : t("shipping.standardRate");
+                          const freeShippingInfo = rate?.freeMinOrder ? ` (${t("shipping.freeOver", { amount: rate.freeMinOrder })})` : "";
                           return (
                             <option key={areaOption} value={areaOption}>
                               {areaOption} - {shippingCost}
@@ -1120,19 +1123,19 @@ export default function CheckoutPage() {
 
                       {availableAreas.length === 0 && !loadingAreas && (
                         <p className="text-xs text-muted-foreground">
-                          No shipping area available for this country.
+                          {t("shipping.noArea")}
                         </p>
                       )}
                     </div>
 
                     <div className="space-y-2 sm:col-span-2">
                       <label htmlFor="deliveryAddress" className="text-sm font-medium text-foreground">
-                        Address Details *
+                        {t("fields.addressDetails")}
                       </label>
                       <textarea
                         id="deliveryAddress"
                         className="w-full h-24 sm:h-32 p-3 sm:p-4 border border-border rounded-lg sm:rounded-xl bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
-                        placeholder="House, road, landmark"
+                        placeholder={t("fields.addressPlaceholder")}
                         value={deliveryAddress}
                         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDeliveryAddress(e.target.value)}
                       />
@@ -1143,7 +1146,7 @@ export default function CheckoutPage() {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     onClick={handleGoToPaymentStep}
                   >
-                    Next Step
+                    {t("nextStep")}
                   </Button>
                 </div>
               )}
@@ -1172,7 +1175,7 @@ export default function CheckoutPage() {
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="w-2 h-6 sm:h-8 bg-primary rounded-full"></div>
-                      <h2 className="text-xl sm:text-2xl font-bold text-foreground">Confirm Order</h2>
+                      <h2 className="text-xl sm:text-2xl font-bold text-foreground">{t("confirmation.title")}</h2>
                     </div>
                     <Button
                       variant="ghost"
@@ -1180,7 +1183,7 @@ export default function CheckoutPage() {
                       className="text-foreground/70 hover:text-foreground hover:bg-muted"
                     >
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Back
+                      {t("common.back")}
                     </Button>
                   </div>
 
@@ -1189,57 +1192,57 @@ export default function CheckoutPage() {
                       <div className="w-8 h-8 bg-primary/80 rounded-full flex items-center justify-center">
                         <Check className="w-5 h-5 text-primary-foreground" />
                       </div>
-                      <h3 className="font-semibold text-foreground">Order created successfully!</h3>
+                      <h3 className="font-semibold text-foreground">{t("confirmation.created")}</h3>
                     </div>
                     <p className="text-foreground">
-                      Invoice ID: <strong>{invoiceId}</strong>
+                      {t("confirmation.invoiceId")}: <strong>{invoiceId}</strong>
                     </p>
                     {placedOrder?.orderId && (
                       <p className="text-muted-foreground mt-1 text-sm">
-                        Order ID (DB): <strong className="text-foreground">{placedOrder.orderId}</strong>
+                        {t("confirmation.orderId")}: <strong className="text-foreground">{placedOrder.orderId}</strong>
                       </p>
                     )}
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground">Customer</h4>
+                      <h4 className="font-semibold text-foreground">{t("confirmation.customer")}</h4>
                       <div className="text-sm text-muted-foreground space-y-1">
                         <p>
-                          <span className="text-foreground/80">Name:</span>{" "}
+                          <span className="text-foreground/80">{t("confirmation.name")}:</span>{" "}
                           <span className="text-foreground">{placedOrder.customer.name}</span>
                         </p>
                         <p>
-                          <span className="text-foreground/80">Mobile:</span>{" "}
+                          <span className="text-foreground/80">{t("confirmation.mobile")}:</span>{" "}
                           <span className="text-foreground">{placedOrder.customer.mobile}</span>
                         </p>
                         <p>
-                          <span className="text-foreground/80">Email:</span>{" "}
-                          <span className="text-foreground">{placedOrder.customer.email || "N/A"}</span>
+                          <span className="text-foreground/80">{t("confirmation.email")}:</span>{" "}
+                          <span className="text-foreground">{placedOrder.customer.email || t("common.notAvailable")}</span>
                         </p>
                         <p>
-                          <span className="text-foreground/80">Address:</span>{" "}
+                          <span className="text-foreground/80">{t("confirmation.address")}:</span>{" "}
                           <span className="text-foreground">{placedOrder.customer.address}</span>
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground">Order</h4>
+                      <h4 className="font-semibold text-foreground">{t("confirmation.order")}</h4>
                       <div className="text-sm text-muted-foreground space-y-1">
                         <p>
-                          <span className="text-foreground/80">Payment:</span>{" "}
+                          <span className="text-foreground/80">{t("confirmation.payment")}:</span>{" "}
                           <span className="text-foreground">{placedOrder.paymentMethod}</span>
                         </p>
                         <p>
-                          <span className="text-foreground/80">Status:</span>{" "}
+                          <span className="text-foreground/80">{t("confirmation.status")}:</span>{" "}
                           <span className="text-foreground font-semibold">
                             {getPaymentStatusFromMethod(placedOrder.paymentMethod)}
                           </span>
                         </p>
                         {placedOrder.transactionId && (
                           <p>
-                            <span className="text-foreground/80">Txn:</span>{" "}
+                            <span className="text-foreground/80">{t("confirmation.transaction")}:</span>{" "}
                             <span className="text-foreground">{placedOrder.transactionId}</span>
                           </p>
                         )}
@@ -1249,11 +1252,11 @@ export default function CheckoutPage() {
 
                   {(paymentScreenshotUrl || paymentScreenshotPreview) && (
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Payment Screenshot</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t("confirmation.paymentScreenshot")}</h4>
                       <div className="relative w-40 h-40 border border-border rounded-xl overflow-hidden bg-background">
                         <Image
                           src={paymentScreenshotUrl || paymentScreenshotPreview!}
-                          alt="Payment screenshot preview"
+                          alt={t("confirmation.screenshotAlt")}
                           fill
                           className="object-cover"
                         />
@@ -1266,7 +1269,7 @@ export default function CheckoutPage() {
                     onClick={handleConfirmOrder}
                     disabled={orderConfirmed}
                   >
-                    {orderConfirmed ? "Order Completed" : "Complete Order"}
+                    {orderConfirmed ? t("confirmation.completed") : t("confirmation.complete")}
                   </Button>
                 </div>
               )}
@@ -1277,7 +1280,7 @@ export default function CheckoutPage() {
           <div className="lg:col-span-1">
             <div className="bg-card text-card-foreground rounded-xl sm:rounded-2xl shadow-lg border border-border p-4 sm:p-6 lg:sticky lg:top-6">
               <h2 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-border">
-                Order Summary
+                {t("summary.title")}
               </h2>
 
               <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6 max-h-64 sm:max-h-96 overflow-y-auto">
@@ -1317,7 +1320,7 @@ export default function CheckoutPage() {
 
               <div className="space-y-2 border-t border-border pt-4">
                 <div className="flex justify-between text-muted-foreground">
-                  <span>Subtotal</span>
+                  <span>{t("summary.subtotal")}</span>
                   <span className="text-foreground">৳{subtotal.toFixed(2)}</span>
                 </div>
 
@@ -1340,17 +1343,17 @@ export default function CheckoutPage() {
                           onClick={removeCoupon}
                           className="text-sm text-foreground hover:underline shrink-0"
                         >
-                          Remove
+                          {t("coupon.remove")}
                         </button>
                       </div>
                       <div className="mt-1 text-xs text-muted-foreground">
-                        Coupon applied successfully.
+                        {t("coupon.applied")}
                       </div>
                     </div>
                   ) : (
                     <div className="flex flex-col gap-2">
                       <Input
-                        placeholder="PROMO / COUPON Code"
+                        placeholder={t("coupon.placeholder")}
                         value={couponCode}
                         onChange={(e) => setCouponCode(e.target.value)}
                         className="rounded-xl"
@@ -1361,7 +1364,7 @@ export default function CheckoutPage() {
                         className="rounded-xl w-full"
                         variant="outline"
                       >
-                        {validatingCoupon ? "Validating..." : "Apply Coupon"}
+                        {validatingCoupon ? t("coupon.validating") : t("coupon.apply")}
                       </Button>
                     </div>
                   )}
@@ -1370,7 +1373,7 @@ export default function CheckoutPage() {
                 {discountAmount > 0 && (
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">
-                      Discount
+                      {t("summary.discount")}
                       {appliedCoupon?.discountType === "percentage"
                         ? ` (${appliedCoupon.discountValue}%)`
                         : ""}
@@ -1384,16 +1387,16 @@ export default function CheckoutPage() {
 
                 {(shippingLoading || hasShippingQuote) && (
                   <div className="flex justify-between text-muted-foreground">
-                    <span>Shipping</span>
+                    <span>{t("summary.shipping")}</span>
                     <span className="text-foreground">
-                      {shippingLoading ? "Calculating..." : shipping === 0 ? "FREE" : `৳${shipping.toFixed(2)}`}
+                      {shippingLoading ? t("shipping.calculating") : shipping === 0 ? t("shipping.free") : `৳${shipping.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
                     </span>
                   </div>
                 )}
                 {taxQuote && taxQuote.breakdown.length > 0 && (
                   <div className="space-y-2">
                     <div className="flex justify-between text-muted-foreground">
-                      <span>VAT</span>
+                      <span>{t("summary.vat")}</span>
                       <span className="text-foreground">৳{vat.toFixed(2)}</span>
                     </div>
                     <div className="text-xs text-muted-foreground space-y-1">
@@ -1401,7 +1404,7 @@ export default function CheckoutPage() {
                         <div key={breakdown.classCode} className="flex justify-between">
                           <span>
                             {breakdown.className} ({breakdown.rate}%)
-                            {breakdown.inclusive ? " included" : " added"}:
+                            {breakdown.inclusive ? ` ${t("summary.included")}` : ` ${t("summary.added")}`}:
                           </span>
                           <span>৳{breakdown.vatAmount.toFixed(2)}</span>
                         </div>
@@ -1412,18 +1415,18 @@ export default function CheckoutPage() {
                 {!shippingLoading && hasShippingQuote && shippingQuote?.matchedRate && (
                   <div className="text-xs text-muted-foreground space-y-1">
                     <div>
-                      Applied Rate: {shippingQuote.matchedRate.country} / {shippingQuote.matchedRate.area}
+                      {t("shipping.appliedRate")}: {shippingQuote.matchedRate.country} / {shippingQuote.matchedRate.area}
                     </div>
 
                     {shippingQuote.matchedRate.freeMinOrder && shipping === 0 && (
                       <div className="text-green-600 dark:text-green-400 font-medium">
-                        🎉 Free shipping applied (minimum order ৳{shippingQuote.matchedRate.freeMinOrder.toFixed(2)} met)
+                        🎉 {t("shipping.freeApplied", { amount: shippingQuote.matchedRate.freeMinOrder.toFixed(2) })}
                       </div>
                     )}
 
                     {shippingQuote.matchedRate.freeMinOrder && shipping > 0 && (
                       <div className="text-muted-foreground">
-                        Add ৳{(shippingQuote.matchedRate.freeMinOrder - subtotal).toFixed(2)} more for free shipping
+                        {t("shipping.addMoreForFree", { amount: (shippingQuote.matchedRate.freeMinOrder - subtotal).toFixed(2) })}
                       </div>
                     )}
                   </div>
@@ -1432,7 +1435,7 @@ export default function CheckoutPage() {
                
 
                 <div className="flex justify-between font-bold text-base text-foreground border-t border-border pt-3">
-                  <span>Total</span>
+                  <span>{t("summary.total")}</span>
                   <span>৳{total.toFixed(2)}</span>
                 </div>
               </div>
@@ -1440,11 +1443,11 @@ export default function CheckoutPage() {
               <div className="mt-6 pt-6 border-t border-border space-y-3">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Shield className="w-4 h-4 text-primary" />
-                  <span>Secure payment</span>
+                  <span>{t("summary.securePayment")}</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Truck className="w-4 h-4 text-primary" />
-                  <span>Delivery in 2-4 business days</span>
+                  <span>{t("summary.deliveryTime")}</span>
                 </div>
               </div>
             </div>
@@ -1460,22 +1463,22 @@ export default function CheckoutPage() {
               <Check className="w-8 h-8 text-primary-foreground" />
             </div>
 
-            <h2 className="text-2xl font-bold text-foreground">🎉 Order Successful!</h2>
+            <h2 className="text-2xl font-bold text-foreground">🎉 {t("successModal.title")}</h2>
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed px-2">
-              Your order has been placed successfully. Click below to track your order.
+              {t("successModal.description")}
             </p>
 
             <div className="space-y-3">
               <Link href="/ecommerce/user/orders" className="block">
                 <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-xl">
-                  Track Order
+                  {t("successModal.trackOrder")}
                 </Button>
               </Link>
 
               <Link href="/ecommerce/products">
                 <Button variant="outline" className="w-full border-border text-foreground hover:bg-muted rounded-xl">
-                  Continue Shopping
+                  {t("successModal.continueShopping")}
                 </Button>
               </Link>
             </div>

@@ -8534,7 +8534,251 @@
             "rights": "© {year} {site} সর্বস্বত্ব সংরক্ষিত।"
         }
     },
-    "ScmAuto": {
+  "StorefrontCommerce": {
+    "addToCart": {
+      "label": "কার্টে যোগ করুন",
+      "adding": "যোগ করা হচ্ছে...",
+      "outOfStock": "স্টক শেষ",
+      "failed": "পণ্যটি কার্টে যোগ করা যায়নি।"
+    },
+    "cart": {
+      "title": "শপিং কার্ট",
+      "syncing": "আপনার কার্ট সিঙ্ক হচ্ছে...",
+      "loadFailed": "আপনার কার্ট লোড করা যায়নি",
+      "retry": "আবার চেষ্টা করুন",
+      "unknownProduct": "অজানা পণ্য",
+      "products": "আপনার পণ্যসমূহ",
+      "itemCount": "{count}টি পণ্য",
+      "clearCart": "কার্ট খালি করুন",
+      "unitPrice": "একক মূল্য",
+      "unit": "একক",
+      "decreaseQuantity": "পরিমাণ কমান",
+      "increaseQuantity": "পরিমাণ বাড়ান",
+      "removeItem": "পণ্য সরান",
+      "continueShopping": "কেনাকাটা চালিয়ে যান",
+      "orderSummary": "অর্ডার সারাংশ",
+      "subtotal": "উপমোট",
+      "discount": "ছাড়",
+      "total": "মোট",
+      "addMore": "আরও যোগ করুন",
+      "checkout": "চেকআউট",
+      "securePayment": "নিরাপদ পেমেন্ট",
+      "fastDelivery": "দ্রুত ডেলিভারি",
+      "shippingNote": "অবস্থান ও ওজন অনুযায়ী শিপিং খরচ পরিবর্তিত হতে পারে।",
+      "empty": {
+        "title": "আপনার কার্ট খালি",
+        "description": "শুরু করতে কিছু পণ্য যোগ করুন।"
+      },
+      "errors": {
+        "load": "কার্ট লোড করা যায়নি।",
+        "loginRequired": "চেকআউট চালিয়ে যেতে লগইন করুন।",
+        "clearFailed": "কার্ট খালি করা যায়নি।",
+        "removeFailed": "পণ্যটি সরানো যায়নি।",
+        "updateFailed": "পরিমাণ আপডেট করা যায়নি।",
+        "couponRequired": "একটি কুপন কোড লিখুন।",
+        "couponApplyFailed": "কুপন প্রয়োগ করা যায়নি।",
+        "invalidCoupon": "কুপন কোডটি সঠিক নয়।"
+      },
+      "success": {
+        "cleared": "কার্ট খালি করা হয়েছে।",
+        "removed": "পণ্যটি সরানো হয়েছে।",
+        "couponApplied": "কুপন প্রয়োগ হয়েছে!",
+        "couponRemoved": "কুপন সরানো হয়েছে।"
+      }
+    },
+    "floatingCart": {
+      "cart": "কার্ট",
+      "openDrawer": "কার্ট ড্রয়ার খুলুন",
+      "closeDrawer": "কার্ট ড্রয়ার বন্ধ করুন",
+      "description": "কার্টের পণ্য দেখুন এবং চেকআউটে যান।",
+      "flyingItemAlt": "কার্টে যোগ হওয়া পণ্য",
+      "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
+      "loadingVariants": "ভ্যারিয়েন্ট লোড হচ্ছে...",
+      "outOfStock": "স্টক শেষ",
+      "noVariantsAvailable": "এই পণ্যের কোনো ভ্যারিয়েন্ট নেই",
+      "price": "মূল্য",
+      "quantity": "পরিমাণ",
+      "subtotal": "উপমোট",
+      "decreaseQuantity": "পরিমাণ কমান",
+      "increaseQuantity": "পরিমাণ বাড়ান",
+      "removeItem": "পণ্য সরান",
+      "cartTotal": "কার্টের মোট",
+      "selectVariants": "ভ্যারিয়েন্ট বাছুন",
+      "checkout": "চেকআউট",
+      "variantSelected": "ভ্যারিয়েন্ট নির্বাচিত: {variant}",
+      "empty": {
+        "title": "আপনার কার্ট খালি",
+        "description": "কেনাকাটা চালিয়ে যেতে কিছু পণ্য যোগ করুন।"
+      },
+      "errors": {
+        "loginRequired": "চেকআউট চালিয়ে যেতে লগইন করুন।",
+        "selectAllVariants": "চেকআউটের আগে সব পণ্যের ভ্যারিয়েন্ট নির্বাচন করুন।",
+        "noVariants": "এই পণ্যের কোনো ভ্যারিয়েন্ট নেই।",
+        "loadVariantsFailed": "পণ্যের ভ্যারিয়েন্ট লোড করা যায়নি।"
+      }
+    },
+    "checkout": {
+      "title": "চেকআউট",
+      "description": "অর্ডার সম্পন্ন করতে নিচের ধাপগুলো অনুসরণ করুন।",
+      "nextStep": "পরবর্তী ধাপ",
+      "unknownProduct": "অজানা পণ্য",
+      "steps": {
+        "details": "ব্যক্তিগত তথ্য",
+        "payment": "পেমেন্ট",
+        "confirmation": "নিশ্চিতকরণ"
+      },
+      "common": {
+        "back": "পেছনে",
+        "close": "বন্ধ করুন",
+        "notAvailable": "প্রযোজ্য নয়"
+      },
+      "fields": {
+        "fullName": "পূর্ণ নাম *",
+        "namePlaceholder": "আপনার নাম লিখুন",
+        "mobile": "মোবাইল *",
+        "emailOptional": "ইমেইল (ঐচ্ছিক)",
+        "emailPlaceholder": "আপনার ইমেইল লিখুন",
+        "country": "দেশ *",
+        "countryPlaceholder": "বাংলাদেশ",
+        "district": "জেলা *",
+        "districtPlaceholder": "ঢাকা",
+        "area": "এলাকা *",
+        "addressDetails": "ঠিকানার বিস্তারিত *",
+        "addressPlaceholder": "বাড়ি, রাস্তা, পরিচিত স্থান"
+      },
+      "address": {
+        "saved": "সংরক্ষিত ঠিকানা",
+        "addNew": "নতুন ঠিকানা যোগ করুন",
+        "loading": "ঠিকানা লোড হচ্ছে...",
+        "selectOptional": "সংরক্ষিত ঠিকানা নির্বাচন করুন (ঐচ্ছিক)",
+        "label": "ঠিকানার নাম *",
+        "labelPlaceholder": "বাসা / অফিস",
+        "saving": "সংরক্ষণ হচ্ছে...",
+        "saveCurrent": "বর্তমান ঠিকানা সংরক্ষণ করুন"
+      },
+      "shipping": {
+        "loadingAreas": "এলাকা লোড হচ্ছে...",
+        "selectArea": "এলাকা নির্বাচন করুন",
+        "standardRate": "স্ট্যান্ডার্ড রেট",
+        "freeOver": "৳{amount}-এর বেশি হলে ফ্রি",
+        "noArea": "এই দেশের জন্য কোনো শিপিং এলাকা পাওয়া যায়নি।",
+        "calculating": "হিসাব করা হচ্ছে...",
+        "free": "ফ্রি",
+        "appliedRate": "প্রযোজ্য রেট",
+        "freeApplied": "ফ্রি শিপিং প্রয়োগ হয়েছে (ন্যূনতম ৳{amount}-এর অর্ডার পূর্ণ হয়েছে)",
+        "addMoreForFree": "ফ্রি শিপিং পেতে আরও ৳{amount} যোগ করুন"
+      },
+      "confirmation": {
+        "title": "অর্ডার নিশ্চিত করুন",
+        "created": "অর্ডার সফলভাবে তৈরি হয়েছে!",
+        "invoiceId": "ইনভয়েস আইডি",
+        "orderId": "অর্ডার আইডি",
+        "customer": "গ্রাহক",
+        "name": "নাম",
+        "mobile": "মোবাইল",
+        "email": "ইমেইল",
+        "address": "ঠিকানা",
+        "order": "অর্ডার",
+        "payment": "পেমেন্ট",
+        "status": "স্ট্যাটাস",
+        "transaction": "ট্রানজ্যাকশন",
+        "paymentScreenshot": "পেমেন্ট স্ক্রিনশট",
+        "screenshotAlt": "পেমেন্ট স্ক্রিনশটের প্রিভিউ",
+        "complete": "অর্ডার সম্পন্ন করুন",
+        "completed": "অর্ডার সম্পন্ন হয়েছে"
+      },
+      "coupon": {
+        "remove": "সরান",
+        "applied": "কুপন সফলভাবে প্রয়োগ হয়েছে।",
+        "placeholder": "প্রোমো / কুপন কোড",
+        "validating": "যাচাই হচ্ছে...",
+        "apply": "কুপন প্রয়োগ করুন"
+      },
+      "summary": {
+        "title": "অর্ডার সারাংশ",
+        "subtotal": "উপমোট",
+        "discount": "ছাড়",
+        "shipping": "শিপিং",
+        "vat": "ভ্যাট",
+        "included": "অন্তর্ভুক্ত",
+        "added": "যোগ করা হয়েছে",
+        "total": "মোট",
+        "securePayment": "নিরাপদ পেমেন্ট",
+        "deliveryTime": "২-৪ কার্যদিবসের মধ্যে ডেলিভারি"
+      },
+      "paymentStatus": {
+        "unknown": "অজানা",
+        "unpaid": "অপরিশোধিত",
+        "paid": "পরিশোধিত"
+      },
+      "successModal": {
+        "title": "অর্ডার সফল হয়েছে!",
+        "description": "আপনার অর্ডার সফলভাবে দেওয়া হয়েছে। অর্ডার ট্র্যাক করতে নিচে ক্লিক করুন।",
+        "trackOrder": "অর্ডার ট্র্যাক করুন",
+        "continueShopping": "কেনাকাটা চালিয়ে যান"
+      },
+      "errors": {
+        "partialCartSync": "কিছু পণ্য আপনার অ্যাকাউন্টের কার্টে নেওয়া যায়নি। পণ্যগুলো এখনও কার্টে আছে—আবার চেষ্টা করুন।",
+        "fileTooLarge": "ফাইলের আকার ৫ এমবির কম হতে হবে।",
+        "invalidImage": "একটি সঠিক ছবি আপলোড করুন।",
+        "uploadFailed": "স্ক্রিনশট আপলোড করা যায়নি।",
+        "uploadMissingUrl": "আপলোডের উত্তরে ফাইলের URL পাওয়া যায়নি।",
+        "couponRequired": "একটি কুপন কোড লিখুন।",
+        "couponApplyFailed": "কুপন প্রয়োগ করা যায়নি।",
+        "invalidCoupon": "কুপন কোডটি সঠিক নয়।",
+        "addressRequired": "দেশ, জেলা, এলাকা ও সম্পূর্ণ ঠিকানা পূরণ করুন।",
+        "validAreaRequired": "একটি সঠিক এলাকা নির্বাচন করুন।",
+        "loginToSaveAddress": "ঠিকানা সংরক্ষণ করতে লগইন করুন।",
+        "completeAddressRequired": "ঠিকানার নাম, দেশ, জেলা, এলাকা ও বিস্তারিত পূরণ করুন।",
+        "saveAddressFailed": "ঠিকানা সংরক্ষণ করা যায়নি।",
+        "emptyCart": "আপনার কার্ট খালি।",
+        "requiredInformation": "প্রয়োজনীয় সব তথ্য পূরণ করুন।",
+        "waitForUpload": "স্ক্রিনশট আপলোড শেষ হওয়া পর্যন্ত অপেক্ষা করুন।",
+        "screenshotRequired": "পেমেন্টের স্ক্রিনশট প্রয়োজন।",
+        "placeOrderFailedRetry": "অর্ডার দিতে সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।",
+        "gatewayStartFailed": "SSLCommerz পেমেন্ট শুরু করা যায়নি।",
+        "placeOrderFailed": "অর্ডার দিতে সমস্যা হয়েছে।"
+      },
+      "success": {
+        "couponApplied": "কুপন প্রয়োগ হয়েছে!",
+        "couponRemoved": "কুপন সরানো হয়েছে।",
+        "addressSaved": "ঠিকানা সংরক্ষণ হয়েছে।",
+        "orderCreated": "অর্ডার তৈরি হয়েছে। এখন নিশ্চিত করুন।",
+        "orderCompleted": "অর্ডার সফলভাবে সম্পন্ন হয়েছে!"
+      }
+    },
+    "payment": {
+      "title": "পেমেন্ট",
+      "back": "পেছনে",
+      "totalPayable": "মোট পরিশোধযোগ্য",
+      "cashOnDelivery": "ক্যাশ অন ডেলিভারি",
+      "manualPayment": "ম্যানুয়াল পেমেন্ট",
+      "sslDescription": "SSLCommerz-এর মাধ্যমে নিরাপদে পেমেন্ট করুন",
+      "manualDescription": "ম্যানুয়াল পেমেন্ট (স্ক্রিনশট ও ট্রানজ্যাকশন আইডি প্রয়োজন)",
+      "codDescription": "পণ্য পাওয়ার সময় মূল্য পরিশোধ করুন",
+      "selected": "নির্বাচিত",
+      "sendMoneyTo": "টাকা পাঠান",
+      "transactionId": "ট্রানজ্যাকশন আইডি *",
+      "transactionPlaceholder": "ট্রানজ্যাকশন আইডি লিখুন",
+      "screenshot": "পেমেন্ট স্ক্রিনশট *",
+      "uploading": "আপলোড হচ্ছে...",
+      "screenshotAlt": "পেমেন্ট স্ক্রিনশটের প্রিভিউ",
+      "sslRedirect": "অর্ডার দেওয়ার পর আপনাকে SSLCommerz-এ পাঠানো হবে।",
+      "noPaymentNow": "এখন কোনো পেমেন্ট প্রয়োজন নেই।",
+      "placeOrder": "অর্ডার দিন"
+    },
+    "paymentResult": {
+      "success": "পেমেন্ট সফল হয়েছে",
+      "cancelled": "পেমেন্ট বাতিল হয়েছে",
+      "unsuccessful": "পেমেন্ট ব্যর্থ হয়েছে",
+      "verified": "আপনার পেমেন্ট যাচাই হয়েছে।",
+      "unpaid": "আপনার অর্ডার এখনও অপরিশোধিত।",
+      "orderNumber": "অর্ডার #{id}",
+      "viewOrders": "অর্ডার দেখুন",
+      "continueShopping": "কেনাকাটা চালিয়ে যান"
+    }
+  },
+  "ScmAuto": {
         "k_f586059328a9": "1. কাউন্টারপার্টি এবং ডেলিভারি",
         "k_97fae3277194": "1. কাউন্টারপার্টি এবং সুযোগ",
         "k_34301a7ccc8c": "1. পরিকল্পনা প্রসঙ্গ",
