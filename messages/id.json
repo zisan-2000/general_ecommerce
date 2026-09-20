@@ -11527,46 +11527,46 @@
     },
     "about": {
       "metadata": {
-        "title": "Tentang kita",
-        "description": "Pelajari tentang CODEXPLACEHODER0TOKEN, pengalaman toko kami dan komitmen kami kepada pelanggan."
+        "title": "Tentang kami",
+        "description": "Kenali {site}, pengalaman berbelanja kami, dan komitmen kami kepada pelanggan."
       },
-      "eyebrow": "Tentang CODEXPLACEHODER0TOKEN",
+      "eyebrow": "Tentang {site}",
       "title": "Toko yang dapat diandalkan untuk kebutuhan sehari-hari",
-      "subtitle": "{tagline} Kami menggabungkan katalog terorganisasi baik, pemenuhan yang dapat diandalkan dan dukungan yang membantu dalam satu pengalaman belanja.",
-      "explore": "Menjelajahi produk",
+      "subtitle": "{tagline} Kami menggabungkan katalog yang tertata, pemenuhan pesanan yang andal, dan dukungan yang membantu dalam satu pengalaman berbelanja.",
+      "explore": "Jelajahi produk",
       "contact": "Hubungi kami",
       "features": {
         "genuineTitle": "Produk terpercaya",
-        "genuineDescription": "Bersihkan informasi produk dan standar sumber membantu pelanggan membeli dengan percaya diri.",
-        "guidanceTitle": "Panduan penuh bantuan",
-        "guidanceDescription": "Spesifikasi, pilihan dan dukungan membuatnya lebih mudah untuk memilih item yang tepat.",
-        "coverageTitle": "Penurunan Fleksibel",
-        "coverageDescription": "Inventaris dan proses pengiriman dirancang untuk penanganan urutan yang dapat diandalkan.",
-        "checkoutTitle": "Secure checkout",
-        "checkoutDescription": "Transparan total dan metode pembayaran yang didukung terus checkout sederhana."
+        "genuineDescription": "Informasi produk dan standar sumber yang jelas membantu pelanggan berbelanja dengan percaya diri.",
+        "guidanceTitle": "Panduan yang membantu",
+        "guidanceDescription": "Spesifikasi, pilihan, dan dukungan memudahkan Anda memilih produk yang tepat.",
+        "coverageTitle": "Pemenuhan yang fleksibel",
+        "coverageDescription": "Alur inventaris dan pengiriman dirancang untuk menangani pesanan secara andal.",
+        "checkoutTitle": "Checkout aman",
+        "checkoutDescription": "Rincian total yang transparan dan metode pembayaran yang didukung membuat checkout tetap praktis."
       },
       "values": {
-        "eyebrow": "Apa yang penting bagi kita",
-        "title": "Dibangun di sekitar membeli pengalaman yang lebih baik",
-        "description": "Kami fokus pada rincian yang membuat belanja online lebih jelas, lebih aman dan lebih berguna.",
+        "eyebrow": "Yang penting bagi kami",
+        "title": "Dibangun untuk pengalaman berbelanja yang lebih baik",
+        "description": "Kami memperhatikan detail yang membuat belanja online lebih jelas, aman, dan bermanfaat.",
         "catalogTitle": "Katalog terorganisir",
         "catalogDescription": "Kategori, atribut dan filter membantu pelanggan menemukan produk yang cocok.",
-        "verifiedTitle": "Hapus informasi",
+        "verifiedTitle": "Informasi yang jelas",
         "verifiedDescription": "Detail produk disajikan dengan cara yang terstruktur dan dapat dimengerti.",
         "inventoryTitle": "Inventaris terpercaya",
-        "inventoryDescription": "Stock- sadar mengalir kerja mengurangi kejutan setelah perintah ditempatkan.",
-        "secureTitle": "Belanja dilindungi",
-        "secureDescription": "Akun, cek dan aliran pembayaran dirancang dengan keamanan dalam pikiran.",
-        "deliveryTitle": "Orde visibility",
-        "deliveryDescription": "Pelanggan dapat mengikuti perintah dan kemajuan pengiriman.",
+        "inventoryDescription": "Alur kerja yang peka terhadap stok mengurangi kejutan setelah pesanan dibuat.",
+        "secureTitle": "Belanja terlindungi",
+        "secureDescription": "Alur akun, checkout, dan pembayaran dirancang dengan mempertimbangkan keamanan.",
+        "deliveryTitle": "Visibilitas pesanan",
+        "deliveryDescription": "Pelanggan dapat mengikuti perkembangan pesanan dan pengiriman.",
         "supportTitle": "Dukungan responsif",
         "supportDescription": "Kanal dukungan tersedia sebelum dan sesudah pembelian."
       },
       "commitment": {
-        "eyebrow": "komitmen kami",
-        "title": "Sebuah toko yang terus meningkatkan",
+        "eyebrow": "Komitmen kami",
+        "title": "Toko yang terus berkembang",
         "first": "Kami terus meningkatkan katalog, checkout, pemenuhan dan pengalaman dukungan berdasarkan kebutuhan operasional dan umpan balik pelanggan.",
-        "second": "Tujuan kami adalah untuk membuat setiap interaksi - dari penemuan sampai setelah layanan penjualan - jelas, dapat diandalkan dan hormat."
+        "second": "Tujuan kami adalah menjadikan setiap interaksi—mulai dari penemuan produk hingga layanan purnajual—jelas, andal, dan penuh hormat."
       }
     },
     "contact": {

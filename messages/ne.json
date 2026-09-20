@@ -11527,46 +11527,46 @@
     },
     "about": {
       "metadata": {
-        "title": "Información mahin",
-        "description": "==============================================================================================================================================================================================================================================================="
+        "title": "हाम्रो बारेमा",
+        "description": "{site}, हाम्रो किनमेल अनुभव र ग्राहकप्रतिको हाम्रो प्रतिबद्धताबारे जान्नुहोस्।"
       },
-      "eyebrow": "About {site}",
-      "title": "ʹA shop fiduciable for day day needs",
-      "subtitle": "{tagline} We combine un catalogue bien organisado, fideble reality and help sound in un shopping experence.",
-      "explore": "Products exploration",
-      "contact": "Contact us",
+      "eyebrow": "{site} को बारेमा",
+      "title": "दैनिक आवश्यकताका लागि भरपर्दो पसल",
+      "subtitle": "{tagline} हामी व्यवस्थित क्याटलग, भरपर्दो अर्डर पूर्ति र सहयोगी सहायतालाई एउटै किनमेल अनुभवमा समेट्छौँ।",
+      "explore": "उत्पादनहरू हेर्नुहोस्",
+      "contact": "सम्पर्क गर्नुहोस्",
       "features": {
-        "genuineTitle": "ʹTrusted products",
-        "genuineDescription": "Clear information of product and suring standards help clients a buy confidencially.",
-        "guidanceTitle": "♫ Helpful guidness",
-        "guidanceDescription": "Specifikationes, options and support faciliter to choice the just item.",
-        "coverageTitle": "♫ Flexible realisation",
-        "coverageDescription": "===============================================================================================================================================================================================================================================================",
-        "checkoutTitle": "Secure checkout",
-        "checkoutDescription": "ë transparent totals and subject methods de paging hold checkout directly."
+        "genuineTitle": "विश्वसनीय उत्पादनहरू",
+        "genuineDescription": "स्पष्ट उत्पादन जानकारी र स्रोतसम्बन्धी मापदण्डले ग्राहकलाई ढुक्क भएर किन्न मद्दत गर्छ।",
+        "guidanceTitle": "उपयोगी मार्गदर्शन",
+        "guidanceDescription": "विशेषता, विकल्प र सहयोगले सही सामान रोज्न सजिलो बनाउँछ।",
+        "coverageTitle": "लचिलो अर्डर पूर्ति",
+        "coverageDescription": "भरपर्दो अर्डर व्यवस्थापनका लागि मौज्दात र डेलिभरी प्रक्रिया तयार गरिएको छ।",
+        "checkoutTitle": "सुरक्षित चेकआउट",
+        "checkoutDescription": "पारदर्शी कुल रकम र समर्थित भुक्तानी विधिले चेकआउट सरल बनाउँछ।"
       },
       "values": {
-        "eyebrow": "ë ́n ́a ́a ́a ́a ́a ́a ́a ́a ́ ́a ́a ́a ́a ́ ́a ́ ́ ́a ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ? ́ ́ ́ ? ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́ ́",
-        "title": "Construited around a better compating experence",
-        "description": "♫ We focus on the details que facilita online shopping clear, safe and use.",
-        "catalogTitle": "♫ Organisated Catalog",
-        "catalogDescription": "ʹ Categories, attributs and filters help clients descover adequate products.",
-        "verifiedTitle": "ʹClear information",
-        "verifiedDescription": "* Details de produkt figurios strukturatos e comprendebles.",
-        "inventoryTitle": "■ confidencial inventario",
-        "inventoryDescription": "■ Stock-wise workflows reduce surprises after placed un order.",
-        "secureTitle": "♫ Protected shopping",
-        "secureDescription": "Account, checkout and page fluxs is designed with security in mind.",
-        "deliveryTitle": "Order × visibility",
-        "deliveryDescription": "ʹClients pueden følge ordre and livrance progress.",
-        "supportTitle": "• Support Responsive",
-        "supportDescription": ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+        "eyebrow": "हाम्रा लागि महत्त्वपूर्ण कुरा",
+        "title": "राम्रो किनमेल अनुभवलाई केन्द्रमा राखेर निर्मित",
+        "description": "अनलाइन किनमेललाई स्पष्ट, सुरक्षित र उपयोगी बनाउने हरेक विवरणमा हामी ध्यान दिन्छौँ।",
+        "catalogTitle": "व्यवस्थित क्याटलग",
+        "catalogDescription": "वर्ग, विशेषता र फिल्टरहरूले ग्राहकलाई उपयुक्त उत्पादन फेला पार्न मद्दत गर्छन्।",
+        "verifiedTitle": "स्पष्ट जानकारी",
+        "verifiedDescription": "उत्पादन विवरण व्यवस्थित र बुझ्न सजिलो तरिकाले प्रस्तुत गरिन्छ।",
+        "inventoryTitle": "भरपर्दो मौज्दात",
+        "inventoryDescription": "मौज्दातअनुसार चल्ने प्रक्रियाले अर्डरपछि आउने अनपेक्षित समस्या कम गर्छ।",
+        "secureTitle": "सुरक्षित किनमेल",
+        "secureDescription": "खाता, चेकआउट र भुक्तानी प्रक्रिया सुरक्षालाई ध्यानमा राखेर बनाइएका छन्।",
+        "deliveryTitle": "अर्डरको प्रगति",
+        "deliveryDescription": "ग्राहकले अर्डर र डेलिभरीको प्रगति पछ्याउन सक्छन्।",
+        "supportTitle": "छिटो सहयोग",
+        "supportDescription": "खरिदअघि र खरिदपछि सहयोगका माध्यमहरू उपलब्ध छन्।"
       },
       "commitment": {
-        "eyebrow": "♫ Our engagement",
-        "title": "A store que continua a melhorar",
-        "first": "♫ We continuly melhore the catalog, checkout, realisation and support experience based on operational needs and feedback of client.",
-        "second": "♫ Our objecty is to face all interaction – from discover to after-sales service – clear, confiable and respekt."
+        "eyebrow": "हाम्रो प्रतिबद्धता",
+        "title": "निरन्तर सुधार हुँदै जाने पसल",
+        "first": "सञ्चालन आवश्यकता र ग्राहकको प्रतिक्रियाका आधारमा हामी क्याटलग, चेकआउट, अर्डर पूर्ति र सहयोग अनुभव निरन्तर सुधार गर्छौँ।",
+        "second": "उत्पादन खोजीदेखि बिक्रीपछिको सेवासम्म हरेक अन्तरक्रियालाई स्पष्ट, भरपर्दो र सम्मानजनक बनाउनु हाम्रो लक्ष्य हो।"
       }
     },
     "contact": {

@@ -82,7 +82,9 @@ export default async function AboutPage() {
                 className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/10 p-4"
               >
                 <feature.icon className="mb-3 h-6 w-6" aria-hidden />
-                <p className="text-sm font-semibold">{t(`features.${feature.key}`)}</p>
+                <p className="text-sm font-semibold">
+                  {t(`features.${feature.key}Title`)}
+                </p>
               </div>
             ))}
           </div>
@@ -111,9 +113,11 @@ export default async function AboutPage() {
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <capability.icon className="h-5 w-5" aria-hidden />
               </div>
-              <h3 className="text-base font-bold">{t(`capabilities.${capability.key}Title`)}</h3>
+              <h3 className="text-base font-bold">
+                {t(`values.${capability.key}Title`)}
+              </h3>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                {t(`capabilities.${capability.key}Description`)}
+                {t(`values.${capability.key}Description`)}
               </p>
             </article>
           ))}

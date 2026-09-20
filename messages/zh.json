@@ -11528,45 +11528,45 @@
     "about": {
       "metadata": {
         "title": "关于我们",
-        "description": "了解{site},我们的店铺经验和对客户的承诺."
+        "description": "了解 {site}、我们的购物体验以及我们对顾客的承诺。"
       },
-      "eyebrow": "关于 CODEPLACEHOLDER0TOKEN",
-      "title": "适合日常需要的可靠商店",
-      "subtitle": "代码地址: 我们把组织良好的目录、可靠的实现和有益的支持结合起来,在一个购物经验中。",
-      "explore": "探索产品",
+      "eyebrow": "关于 {site}",
+      "title": "满足日常所需的可靠商店",
+      "subtitle": "{tagline} 我们将井然有序的商品目录、可靠的订单履约和贴心支持融入同一购物体验。",
+      "explore": "浏览商品",
       "contact": "联系我们",
       "features": {
-        "genuineTitle": "受托产品",
-        "genuineDescription": "清晰的产品信息和出货标准帮助客户自信地购买.",
-        "guidanceTitle": "帮助性指导",
-        "guidanceDescription": "规格,选项和支持使得选择正确的项目更容易.",
-        "coverageTitle": "灵活履行",
+        "genuineTitle": "值得信赖的商品",
+        "genuineDescription": "清晰的商品信息和采购标准，让顾客能够放心选购。",
+        "guidanceTitle": "贴心选购指导",
+        "guidanceDescription": "详细规格、丰富选项和专业支持，让挑选合适商品更轻松。",
+        "coverageTitle": "灵活履约",
         "coverageDescription": "库存和交付工作流程是为可靠处理订单而设计的。",
-        "checkoutTitle": "安全检出",
-        "checkoutDescription": "透明总额和支助的付款方法保持直截了当。"
+        "checkoutTitle": "安全结账",
+        "checkoutDescription": "透明的订单总额和支持的付款方式，让结账简单明了。"
       },
       "values": {
-        "eyebrow": "对我们很重要",
-        "title": "围绕更好的购买经验构建",
-        "description": "我们关注细节,使在线购物更清晰,更安全,更有用.",
-        "catalogTitle": "有组织的目录",
-        "catalogDescription": "分类,属性和过滤器帮助客户发现合适的产品.",
-        "verifiedTitle": "清除信息",
+        "eyebrow": "我们重视什么",
+        "title": "以更好的购物体验为核心",
+        "description": "我们关注每一个细节，让网上购物更清晰、更安全、更实用。",
+        "catalogTitle": "井然有序的商品目录",
+        "catalogDescription": "分类、属性和筛选功能帮助顾客找到合适的商品。",
+        "verifiedTitle": "清晰的信息",
         "verifiedDescription": "产品细节以结构化和易懂的方式列报。",
-        "inventoryTitle": "可靠库存",
-        "inventoryDescription": "种群意识工作流程在发布订单后会减少出意外.",
-        "secureTitle": "受保护购物",
-        "secureDescription": "账户、结账和付款流量的设计考虑到安全因素。",
-        "deliveryTitle": "顺序可见度",
-        "deliveryDescription": "客户可以遵循订单和交货进度.",
-        "supportTitle": "响应支持",
+        "inventoryTitle": "可靠的库存",
+        "inventoryDescription": "实时感知库存的工作流程，减少下单后的意外情况。",
+        "secureTitle": "安心购物",
+        "secureDescription": "账户、结账和付款流程在设计时充分考虑安全性。",
+        "deliveryTitle": "订单进度可见",
+        "deliveryDescription": "顾客可以随时查看订单和配送进度。",
+        "supportTitle": "及时响应的支持",
         "supportDescription": "购买前后有支持渠道。"
       },
       "commitment": {
         "eyebrow": "我们的承诺",
         "title": "一个不断改进的商店",
-        "first": "根据业务需要和客户反馈,我们不断改进目录、离职、履行和支持经验。",
-        "second": "我们的目标是使每一个互动——从发现到售后服务——明确、可靠并尊重。"
+        "first": "我们根据运营需求和顾客反馈，持续改进商品目录、结账、订单履约和支持体验。",
+        "second": "我们的目标是让从发现商品到售后服务的每一次互动都清晰、可靠且备受尊重。"
       }
     },
     "contact": {
