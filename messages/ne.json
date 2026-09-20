@@ -9413,6 +9413,61 @@
     "payment": { "title": "भुक्तानी", "back": "पछाडि", "totalPayable": "कुल भुक्तानीयोग्य", "cashOnDelivery": "डेलिभरीमा नगद", "manualPayment": "म्यानुअल भुक्तानी", "sslDescription": "SSLCommerz मार्फत सुरक्षित भुक्तानी गर्नुहोस्", "manualDescription": "म्यानुअल भुक्तानी (स्क्रिनसट र कारोबार आईडी आवश्यक)", "codDescription": "उत्पादन प्राप्त गर्दा भुक्तानी गर्नुहोस्", "selected": "चयन गरिएको", "sendMoneyTo": "पैसा पठाउनुहोस्", "transactionId": "कारोबार आईडी *", "transactionPlaceholder": "कारोबार आईडी लेख्नुहोस्", "screenshot": "भुक्तानी स्क्रिनसट *", "uploading": "अपलोड हुँदै छ...", "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन", "sslRedirect": "अर्डर राखेपछि तपाईंलाई SSLCommerz मा पठाइनेछ।", "noPaymentNow": "अहिले भुक्तानी आवश्यक छैन।", "placeOrder": "अर्डर राख्नुहोस्" },
     "paymentResult": { "success": "भुक्तानी सफल भयो", "cancelled": "भुक्तानी रद्द भयो", "unsuccessful": "भुक्तानी असफल भयो", "verified": "तपाईंको भुक्तानी प्रमाणित भयो।", "unpaid": "तपाईंको अर्डर अझै भुक्तानी भएको छैन।", "orderNumber": "अर्डर #{id}", "viewOrders": "अर्डरहरू हेर्नुहोस्", "continueShopping": "किनमेल जारी राख्नुहोस्" }
   },
+  "StorefrontCatalog": {
+    "page": {
+      "eyebrow": "उत्पादन सूची", "heading": "आफ्नो लागि सही उत्पादन खोज्नुहोस्", "description": "सम्पूर्ण सूची खोज्नुहोस्, हालको मूल्य तुलना गर्नुहोस् र श्रेणी, ब्रान्ड, उत्पादन प्रकार वा उपलब्धताअनुसार नतिजा सीमित गर्नुहोस्।", "filters": "फिल्टरहरू", "showHide": "देखाउनुहोस् / लुकाउनुहोस्", "clear": "हटाउनुहोस्", "clearAll": "सबै हटाउनुहोस्", "clearAllFilters": "सबै फिल्टर हटाउनुहोस्", "search": "खोज्नुहोस्", "searchPlaceholder": "नाम, SKU वा ब्रान्ड", "category": "श्रेणी", "allCategories": "सबै श्रेणी", "brands": "ब्रान्डहरू", "productType": "उत्पादन प्रकार", "allTypes": "सबै प्रकार", "priceRange": "मूल्य दायरा", "minPrice": "न्यूनतम {value}", "maxPrice": "अधिकतम {value}", "minimumPrice": "न्यूनतम मूल्य", "maximumPrice": "अधिकतम मूल्य", "availability": "उपलब्धता", "inStock": "स्टकमा", "inStockOnly": "स्टकमा भएका मात्र", "featured": "विशेष", "featuredProducts": "विशेष उत्पादनहरू", "yes": "हो", "no": "होइन", "sortBy": "क्रमबद्ध गर्नुहोस्", "productsPerPage": "प्रति पृष्ठ उत्पादन", "resultsFor": "“{query}” का नतिजाहरू", "allProducts": "सबै उत्पादन", "showingResults": "{total} उत्पादनमध्ये {first}–{last} देखाइँदै", "any": "जुनसुकै",
+      "sort": { "relevance": "सबैभन्दा सान्दर्भिक", "newest": "नयाँ", "popular": "लोकप्रिय", "priceAsc": "मूल्य: कमदेखि बढी", "priceDesc": "मूल्य: बढीदेखि कम", "nameAsc": "नाम: A–Z" },
+      "productTypes": { "physical": "भौतिक", "digital": "डिजिटल", "service": "सेवा", "bundle": "बन्डल" },
+      "active": { "label": "सक्रिय उत्पादन फिल्टर", "title": "सक्रिय", "search": "खोज: {query}", "price": "मूल्य: {min}–{max}", "remove": "{label} फिल्टर हटाउनुहोस्" },
+      "empty": { "title": "उत्पादन भेटिएन", "description": "फराकिलो खोज प्रयास गर्नुहोस् वा एक वा बढी फिल्टर हटाउनुहोस्।", "viewAll": "सबै उत्पादन हेर्नुहोस्" },
+      "pagination": { "label": "उत्पादन सूची पृष्ठहरू", "previous": "अघिल्लो", "next": "अर्को" },
+      "metadata": { "searchResults": "“{query}” का खोज नतिजाहरू", "categoryProducts": "{category} उत्पादन", "description": "श्रेणी, ब्रान्ड, मूल्य र उपलब्धता फिल्टरसहित {site} का उत्पादन हेर्नुहोस्।", "catalogName": "{site} उत्पादन सूची" }
+    },
+    "filters": { "updating": "उत्पादनहरू अद्यावधिक हुँदै छन्…", "updatingShort": "अद्यावधिक हुँदै छ…", "automatic": "फिल्टर स्वतः अद्यावधिक हुन्छन्", "showProducts": "उत्पादन देखाउनुहोस्", "apply": "फिल्टर लागू गर्नुहोस्" },
+    "grid": {
+      "compareSelected": "तुलनाका लागि {count} उत्पादन चयन", "compareNow": "अहिले तुलना गर्नुहोस्",
+      "login": { "title": "उत्पादन सुरक्षित गर्न साइन इन गर्नुहोस्", "description": "साइन इन हुँदा तपाईंको इच्छासूची सिङ्क रहन्छ।", "cancel": "रद्द गर्नुहोस्", "signIn": "साइन इन" },
+      "errors": { "wishlist": "इच्छासूची अद्यावधिक भएन।", "outOfStock": "यो उत्पादन स्टकमा छैन।", "addToCart": "उत्पादन कार्टमा थप्न सकिएन।", "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।" },
+      "success": { "wishlistRemoved": "इच्छासूचीबाट हटाइयो।", "wishlistAdded": "इच्छासूचीमा थपियो।", "addedToCart": "“{name}” कार्टमा थपियो।", "comparisonAdded": "तुलनामा थपियो।", "comparisonRemoved": "तुलनाबाट हटाइयो।" }
+    },
+    "card": { "viewProduct": "{name} हेर्नुहोस्", "save": "बचत: {amount}", "bestSeller": "सर्वाधिक बिक्री", "removeWishlist": "इच्छासूचीबाट हटाउनुहोस्", "addWishlist": "इच्छासूचीमा थप्नुहोस्", "outOfStock": "स्टकमा छैन", "model": "मोडेल", "unavailable": "अहिले उपलब्ध छैन", "readyToOrder": "अर्डर गर्न तयार", "reviewCount": "{count} समीक्षा", "availableColors": "उपलब्ध रङहरू", "colorVariant": "{color} रङ भेरियन्ट", "includes": "समावेश: {items}", "viewDetailsFor": "{name} को विवरण हेर्नुहोस्", "viewDetails": "विवरण हेर्नुहोस्", "addToCart": "कार्टमा थप्नुहोस्", "compared": "तुलनामा", "compare": "तुलना" },
+    "brands": { "eyebrow": "ब्रान्ड सूची", "title": "विश्वसनीय ब्रान्ड किनमेल गर्नुहोस्", "description": "कुनै पनि ब्रान्ड खोलेर श्रेणी, मूल्य, उपलब्धता र क्रमबद्ध नियन्त्रणसहित प्रत्यक्ष सूची हेर्नुहोस्।", "logoAlt": "{name} लोगो", "productCount": "{count} उत्पादन", "viewProducts": "उत्पादन हेर्नुहोस्", "empty": "सक्रिय उत्पादन भएका ब्रान्ड अझै उपलब्ध छैनन्।", "metadata": { "title": "ब्रान्डअनुसार किनमेल", "description": "ब्रान्डअनुसार उपलब्ध {site} उत्पादन हेर्नुहोस्।" } }
+  },
+  "StorefrontProduct": {
+    "page": {
+      "metadata": { "notFound": "उत्पादन भेटिएन", "buyOnline": "बङ्गलादेशमा {name} अनलाइन किन्नुहोस्।" },
+      "breadcrumb": { "label": "ब्रेडक्रम्ब", "home": "गृहपृष्ठ", "products": "उत्पादन" },
+      "information": { "productId": "उत्पादन आईडी", "category": "श्रेणी", "brand": "ब्रान्ड", "writer": "लेखक", "publisher": "प्रकाशक", "type": "प्रकार", "weight": "तौल", "dimensions": "आयाम" },
+      "types": { "physical": "भौतिक", "digital": "डिजिटल", "service": "सेवा", "bundle": "बन्डल" },
+      "recommendations": { "eyebrow": "तपाईंलाई यी पनि मन पर्न सक्छन्", "title": "सिफारिस गरिएका उत्पादन", "viewCategory": "श्रेणी हेर्नुहोस्" }
+    },
+    "purchase": {
+      "save": "बचत: {amount}", "viewImage": "उत्पादन तस्बिर {number} हेर्नुहोस्", "ratingLabel": "५ मध्ये {rating} तारा", "reviews": "{count} समीक्षा", "share": "साझा गर्नुहोस्", "stock": "स्टक", "inStock": "स्टकमा", "outOfStock": "स्टकमा छैन", "brand": "ब्रान्ड", "model": "मोडेल", "warranty": "वारेन्टी", "chooseOption": "विकल्प छान्नुहोस्", "option": "विकल्प {id}", "stockLeft": "{count} बाँकी", "hotline": "हटलाइन", "discountPrice": "छुट मूल्य", "youSave": "तपाईंले {amount} बचाउनुहुन्छ", "emiStarts": "EMI सुरु*", "installments": "१२ महिनासम्मको किस्ता", "decreaseQuantity": "परिमाण घटाउनुहोस्", "increaseQuantity": "परिमाण बढाउनुहोस्", "addToCart": "कार्टमा थप्नुहोस्", "wishlist": "इच्छासूची", "compare": "तुलना", "buyNow": "सुरक्षित चेकआउटबाट अहिले किन्नुहोस्", "compareSelected": "चयन गरिएका तुलना गर्नुहोस् ({count})",
+      "errors": { "addToCart": "उत्पादन कार्टमा थप्न सकिएन।", "compareLimit": "अधिकतम ४ उत्पादन तुलना गर्न सकिन्छ।", "wishlist": "इच्छासूची अद्यावधिक भएन।", "share": "उत्पादन लिङ्क साझा गर्न सकिएन।" },
+      "success": { "addedToCart": "“{name}” कार्टमा थपियो।", "comparisonAdded": "तुलनामा थपियो।", "comparisonRemoved": "तुलनाबाट हटाइयो।", "wishlistRemoved": "इच्छासूचीबाट हटाइयो।", "wishlistAdded": "इच्छासूचीमा थपियो।", "linkCopied": "उत्पादन लिङ्क प्रतिलिपि भयो।" }
+    },
+    "tabs": { "label": "उत्पादन विवरण", "specifications": "विशिष्टता", "description": "विवरण", "reviews": "समीक्षा", "specificationsTitle": "विशिष्टताहरू", "descriptionFallback": "उत्पादन विवरण चाँडै उपलब्ध हुनेछ।" },
+    "questions": {
+      "title": "प्रश्न र उत्तर", "description": "अनुकूलता, विशिष्टता वा खरिदबारे सोध्नुहोस्।", "askQuestion": "प्रश्न सोध्नुहोस्", "placeholder": "यस उत्पादनबारे के जान्न चाहनुहुन्छ?", "submit": "प्रश्न पठाउनुहोस्", "signInToAsk": "सोध्न साइन इन गर्नुहोस्", "loading": "प्रश्नहरू लोड हुँदै छन्...", "empty": "अहिलेसम्म प्रश्न छैन। पहिलो प्रश्न सोध्नुहोस्।", "questionPrefix": "प्र", "answerPrefix": "उ", "customer": "ग्राहक", "answeredBy": "{name} द्वारा उत्तर", "storeTeam": "स्टोर टोली", "awaitingAnswer": "स्टोर टोलीको उत्तर पर्खिँदै।", "updateAnswer": "प्रकाशित उत्तर अद्यावधिक गर्नुहोस्", "writeAnswer": "आधिकारिक उत्तर लेख्नुहोस्", "saving": "सुरक्षित हुँदै छ...", "publishAnswer": "उत्तर प्रकाशित गर्नुहोस्",
+      "errors": { "load": "प्रश्न लोड गर्न सकिएन।", "completeQuestion": "पूरा प्रश्न लेख्नुहोस्।", "submit": "प्रश्न पठाउन सकिएन।", "answer": "उत्तर सुरक्षित गर्न सकिएन।" },
+      "success": { "submitted": "तपाईंको प्रश्न पठाइयो।", "answerPublished": "उत्तर प्रकाशित भयो।" }
+    },
+    "conversion": {
+      "emi": { "title": "EMI योजना", "from": "{amount} बाट", "choosePeriod": "किस्ता अवधि छान्नुहोस्", "months": "{count} महिना", "perMonth": "/ महिना", "note": "यो अनुमानित विभाजन हो। बैंक शुल्क र योग्यता फरक हुन सक्छ।" },
+      "delivery": { "title": "डेलिभरी अनुमान", "checkArea": "क्षेत्र जाँच्नुहोस्", "district": "जिल्ला", "area": "डेलिभरी क्षेत्र", "checking": "जाँच हुँदै छ...", "check": "डेलिभरी जाँच्नुहोस्", "free": "निःशुल्क डेलिभरी", "cost": "{amount} डेलिभरी", "businessDays": "{count} कार्यदिन", "confirmedAtCheckout": "डेलिभरी समय चेकआउटमा पुष्टि हुन्छ" },
+      "areas": { "dhaka": "ढाका", "outsideDhaka": "ढाका बाहिर" },
+      "errors": { "districtRequired": "डेलिभरी जाँच्न जिल्ला लेख्नुहोस्।", "quoteFailed": "डेलिभरी लागत गणना गर्न सकिएन।" }
+    },
+    "bundle": { "configureLabel": "यो बन्डल मिलाउनुहोस्", "title": "आफ्नो बन्डल बनाउनुहोस्", "description": "स्टोरले स्वीकृत उत्पादन छान्नुहोस्। मूल्य र स्टक तुरुन्तै अद्यावधिक हुन्छ।", "price": "तपाईंको बन्डल मूल्य", "baseConfiguration": "आधार कन्फिगरेसन", "fromBase": "आधारभन्दा {difference}", "available": "{count} उपलब्ध", "ready": "कन्फिगरेसन तयार", "selectionRequired": "चयन आवश्यक", "required": "आवश्यक", "optional": "वैकल्पिक", "includedEveryBundle": "हरेक बन्डलमा समावेश", "chooseCount": "{count} छान्नुहोस्", "chooseRange": "{min} देखि {max} छान्नुहोस्", "itemValue": "वस्तु मूल्य {amount}", "outOfStock": "स्टकमा छैन", "maximumSelected": "अधिकतम चयन भयो", "priceUpdates": "चयनित वस्तुअनुसार मूल्य बदलिन्छ", "included": "समावेश", "selectToContinue": "जारी राख्न {count} विकल्प छान्नुहोस्।", "removeOptional": "यो वैकल्पिक वस्तु हटाउनुहोस्", "quantityPerBundle": "प्रति बन्डल परिमाण", "decreaseQuantity": "{group} परिमाण घटाउनुहोस्", "increaseQuantity": "{group} परिमाण बढाउनुहोस्", "notSelected": "चयन नगरिएको" },
+    "related": { "title": "सम्बन्धित उत्पादन", "viewAll": "सबै हेर्नुहोस्", "save": "बचत: {amount}", "browseAll": "सबै सम्बन्धित उत्पादन हेर्नुहोस्" },
+    "reviews": {
+      "rateStar": "{value} तारा दिनुहोस्", "title": "ग्राहक समीक्षा", "averageRating": "औसत रेटिङ {rating}", "write": "समीक्षा लेख्नुहोस्", "loginToWrite": "समीक्षा लेख्न लगइन गर्नुहोस्", "loginRequired": "समीक्षा पठाउन लगइन आवश्यक छ।", "signIn": "साइन इन", "rating": "रेटिङ", "overwriteNote": "तपाईंले समीक्षा गरिसक्नुभएको छ—अद्यावधिक गर्दा पुरानो बदलिन्छ", "placeholder": "आफ्नो विचार लेख्नुहोस्...", "submitting": "पठाइँदै छ...", "update": "समीक्षा अद्यावधिक गर्नुहोस्", "submit": "समीक्षा पठाउनुहोस्", "reviews": "समीक्षा", "loading": "लोड हुँदै छ...", "empty": "अहिलेसम्म समीक्षा छैन।", "anonymous": "बेनामी", "previous": "अघिल्लो", "page": "पृष्ठ {page} / {pages}", "next": "अर्को",
+      "errors": { "submit": "समीक्षा पठाउन सकिएन।", "generic": "केही समस्या भयो।" }, "success": { "updated": "समीक्षा अद्यावधिक भयो!", "submitted": "समीक्षा पठाइयो!" }
+    },
+    "priceAlert": { "disabled": "मूल्य घट्ने सूचना बन्द भयो।", "enabled": "मूल्य घट्दा तपाईंलाई जानकारी दिइनेछ।", "error": "मूल्य घट्ने सूचना अद्यावधिक भएन।", "on": "सूचना चालु", "notify": "मूल्य घट्दा जानकारी दिनुहोस्" },
+    "error": { "title": "उत्पादन विवरण लोड गर्न सकिएन", "description": "फेरि प्रयास गर्नुहोस् वा उत्पादन सूचीमा फर्कनुहोस्।", "retry": "फेरि प्रयास", "browse": "उत्पादन हेर्नुहोस्" },
+    "notFound": { "title": "उत्पादन भेटिएन", "description": "यो उत्पादन उपलब्ध नहुन सक्छ वा लिङ्क गलत हुन सक्छ।", "browse": "उपलब्ध उत्पादन हेर्नुहोस्" }
+  },
   "ScmAuto": {
     "k_f586059328a9": "१. काउन्टरपार्टी र डेलिभरी",
     "k_97fae3277194": "१. काउन्टरपार्टी र स्कोप",

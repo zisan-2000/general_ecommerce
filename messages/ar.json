@@ -9413,6 +9413,61 @@
     "payment": { "title": "الدفع", "back": "رجوع", "totalPayable": "إجمالي المبلغ المستحق", "cashOnDelivery": "الدفع عند الاستلام", "manualPayment": "دفع يدوي", "sslDescription": "ادفع بأمان عبر SSLCommerz", "manualDescription": "دفع يدوي (يلزم رقم المعاملة ولقطة الشاشة)", "codDescription": "ادفع عند استلام المنتج", "selected": "المحدد", "sendMoneyTo": "أرسل المال إلى", "transactionId": "رقم المعاملة *", "transactionPlaceholder": "أدخل رقم المعاملة", "screenshot": "لقطة شاشة الدفع *", "uploading": "جارٍ الرفع...", "screenshotAlt": "معاينة لقطة شاشة الدفع", "sslRedirect": "ستتم إعادة توجيهك إلى SSLCommerz بعد تقديم الطلب.", "noPaymentNow": "لا يلزم الدفع الآن.", "placeOrder": "تقديم الطلب" },
     "paymentResult": { "success": "تم الدفع بنجاح", "cancelled": "تم إلغاء الدفع", "unsuccessful": "فشل الدفع", "verified": "تم التحقق من دفعتك.", "unpaid": "ما زال طلبك غير مدفوع.", "orderNumber": "الطلب #{id}", "viewOrders": "عرض الطلبات", "continueShopping": "متابعة التسوق" }
   },
+  "StorefrontCatalog": {
+    "page": {
+      "eyebrow": "كتالوج المنتجات", "heading": "اعثر على المنتج المناسب لك", "description": "ابحث في الكتالوج الكامل وقارن الأسعار الحالية وضيّق النتائج حسب الفئة أو العلامة التجارية أو نوع المنتج أو التوفر.", "filters": "عوامل التصفية", "showHide": "إظهار / إخفاء", "clear": "مسح", "clearAll": "مسح الكل", "clearAllFilters": "مسح جميع عوامل التصفية", "search": "بحث", "searchPlaceholder": "الاسم أو SKU أو العلامة التجارية", "category": "الفئة", "allCategories": "جميع الفئات", "brands": "العلامات التجارية", "productType": "نوع المنتج", "allTypes": "جميع الأنواع", "priceRange": "نطاق السعر", "minPrice": "الحد الأدنى {value}", "maxPrice": "الحد الأقصى {value}", "minimumPrice": "الحد الأدنى للسعر", "maximumPrice": "الحد الأقصى للسعر", "availability": "التوفر", "inStock": "متوفر", "inStockOnly": "المتوفر فقط", "featured": "مميز", "featuredProducts": "منتجات مميزة", "yes": "نعم", "no": "لا", "sortBy": "الترتيب حسب", "productsPerPage": "المنتجات في الصفحة", "resultsFor": "نتائج “{query}”", "allProducts": "جميع المنتجات", "showingResults": "عرض {first}–{last} من {total} منتجًا", "any": "أي قيمة",
+      "sort": { "relevance": "الأكثر صلة", "newest": "الأحدث", "popular": "الأكثر شيوعًا", "priceAsc": "السعر: من الأقل إلى الأعلى", "priceDesc": "السعر: من الأعلى إلى الأقل", "nameAsc": "الاسم: A–Z" },
+      "productTypes": { "physical": "مادي", "digital": "رقمي", "service": "خدمة", "bundle": "حزمة" },
+      "active": { "label": "عوامل تصفية المنتجات النشطة", "title": "نشط", "search": "البحث: {query}", "price": "السعر: {min}–{max}", "remove": "إزالة عامل تصفية {label}" },
+      "empty": { "title": "لم يتم العثور على منتجات", "description": "جرّب بحثًا أوسع أو أزل عامل تصفية واحدًا أو أكثر.", "viewAll": "عرض جميع المنتجات" },
+      "pagination": { "label": "صفحات كتالوج المنتجات", "previous": "السابق", "next": "التالي" },
+      "metadata": { "searchResults": "نتائج البحث عن “{query}”", "categoryProducts": "منتجات {category}", "description": "تصفح منتجات {site} باستخدام عوامل تصفية الفئة والعلامة التجارية والسعر والتوفر.", "catalogName": "كتالوج منتجات {site}" }
+    },
+    "filters": { "updating": "جارٍ تحديث المنتجات…", "updatingShort": "جارٍ التحديث…", "automatic": "تُحدّث عوامل التصفية تلقائيًا", "showProducts": "عرض المنتجات", "apply": "تطبيق عوامل التصفية" },
+    "grid": {
+      "compareSelected": "تم تحديد {count} منتج للمقارنة", "compareNow": "قارن الآن",
+      "login": { "title": "سجّل الدخول لحفظ المنتجات", "description": "تظل قائمة رغباتك متزامنة عند تسجيل الدخول.", "cancel": "إلغاء", "signIn": "تسجيل الدخول" },
+      "errors": { "wishlist": "تعذر تحديث قائمة الرغبات.", "outOfStock": "هذا المنتج غير متوفر.", "addToCart": "تعذرت إضافة المنتج إلى السلة.", "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى." },
+      "success": { "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.", "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.", "addedToCart": "تمت إضافة “{name}” إلى السلة.", "comparisonAdded": "تمت الإضافة إلى المقارنة.", "comparisonRemoved": "تمت الإزالة من المقارنة." }
+    },
+    "card": { "viewProduct": "عرض {name}", "save": "وفر: {amount}", "bestSeller": "الأكثر مبيعًا", "removeWishlist": "إزالة من قائمة الرغبات", "addWishlist": "إضافة إلى قائمة الرغبات", "outOfStock": "غير متوفر", "model": "الطراز", "unavailable": "غير متاح حاليًا", "readyToOrder": "جاهز للطلب", "reviewCount": "{count} مراجعة", "availableColors": "الألوان المتاحة", "colorVariant": "نسخة اللون {color}", "includes": "يتضمن {items}", "viewDetailsFor": "عرض تفاصيل {name}", "viewDetails": "عرض التفاصيل", "addToCart": "أضف إلى السلة", "compared": "تمت المقارنة", "compare": "مقارنة" },
+    "brands": { "eyebrow": "دليل العلامات التجارية", "title": "تسوق من علامات موثوقة", "description": "افتح أي علامة تجارية لعرض كتالوجها المباشر مع خيارات الفئة والسعر والتوفر والترتيب نفسها.", "logoAlt": "شعار {name}", "productCount": "{count} منتج", "viewProducts": "عرض المنتجات", "empty": "لا تتوفر حتى الآن علامات تجارية بمنتجات نشطة.", "metadata": { "title": "تسوق حسب العلامة التجارية", "description": "استكشف منتجات {site} المتاحة حسب العلامة التجارية." } }
+  },
+  "StorefrontProduct": {
+    "page": {
+      "metadata": { "notFound": "المنتج غير موجود", "buyOnline": "اشترِ {name} عبر الإنترنت في بنغلاديش." },
+      "breadcrumb": { "label": "مسار التنقل", "home": "الرئيسية", "products": "المنتجات" },
+      "information": { "productId": "معرّف المنتج", "category": "الفئة", "brand": "العلامة التجارية", "writer": "الكاتب", "publisher": "دار النشر", "type": "النوع", "weight": "الوزن", "dimensions": "الأبعاد" },
+      "types": { "physical": "مادي", "digital": "رقمي", "service": "خدمة", "bundle": "حزمة" },
+      "recommendations": { "eyebrow": "قد يعجبك أيضًا", "title": "منتجات مقترحة", "viewCategory": "عرض الفئة" }
+    },
+    "purchase": {
+      "save": "وفر: {amount}", "viewImage": "عرض صورة المنتج {number}", "ratingLabel": "{rating} من 5 نجوم", "reviews": "{count} مراجعة", "share": "مشاركة", "stock": "المخزون", "inStock": "متوفر", "outOfStock": "غير متوفر", "brand": "العلامة التجارية", "model": "الطراز", "warranty": "الضمان", "chooseOption": "اختر خيارًا", "option": "الخيار {id}", "stockLeft": "متبقي {count}", "hotline": "الخط الساخن", "discountPrice": "السعر بعد الخصم", "youSave": "توفر {amount}", "emiStarts": "تبدأ الأقساط من*", "installments": "حتى 12 قسطًا شهريًا", "decreaseQuantity": "تقليل الكمية", "increaseQuantity": "زيادة الكمية", "addToCart": "أضف إلى السلة", "wishlist": "قائمة الرغبات", "compare": "مقارنة", "buyNow": "اشترِ الآن بإتمام شراء آمن", "compareSelected": "مقارنة المحدد ({count})",
+      "errors": { "addToCart": "تعذرت إضافة المنتج إلى السلة.", "compareLimit": "يمكنك مقارنة 4 منتجات كحد أقصى.", "wishlist": "تعذر تحديث قائمة الرغبات.", "share": "تعذرت مشاركة رابط المنتج." },
+      "success": { "addedToCart": "تمت إضافة “{name}” إلى السلة.", "comparisonAdded": "تمت الإضافة إلى المقارنة.", "comparisonRemoved": "تمت الإزالة من المقارنة.", "wishlistRemoved": "تمت الإزالة من قائمة الرغبات.", "wishlistAdded": "تمت الإضافة إلى قائمة الرغبات.", "linkCopied": "تم نسخ رابط المنتج." }
+    },
+    "tabs": { "label": "تفاصيل المنتج", "specifications": "المواصفات", "description": "الوصف", "reviews": "المراجعات", "specificationsTitle": "المواصفات", "descriptionFallback": "سيكون وصف المنتج متاحًا قريبًا." },
+    "questions": {
+      "title": "الأسئلة والأجوبة", "description": "اسأل عن التوافق أو المواصفات أو الشراء.", "askQuestion": "اطرح سؤالًا", "placeholder": "ما الذي تود معرفته عن هذا المنتج؟", "submit": "إرسال السؤال", "signInToAsk": "سجّل الدخول للسؤال", "loading": "جارٍ تحميل الأسئلة...", "empty": "لا توجد أسئلة بعد. كن أول من يسأل.", "questionPrefix": "س", "answerPrefix": "ج", "customer": "العميل", "answeredBy": "أجاب {name}", "storeTeam": "فريق المتجر", "awaitingAnswer": "بانتظار إجابة فريق المتجر.", "updateAnswer": "تحديث الإجابة المنشورة", "writeAnswer": "اكتب إجابة رسمية", "saving": "جارٍ الحفظ...", "publishAnswer": "نشر الإجابة",
+      "errors": { "load": "تعذر تحميل الأسئلة.", "completeQuestion": "يرجى إدخال سؤال كامل.", "submit": "تعذر إرسال السؤال.", "answer": "تعذر حفظ الإجابة." },
+      "success": { "submitted": "تم إرسال سؤالك.", "answerPublished": "تم نشر الإجابة." }
+    },
+    "conversion": {
+      "emi": { "title": "خطط التقسيط", "from": "ابتداءً من {amount}", "choosePeriod": "اختر مدة التقسيط", "months": "{count} أشهر", "perMonth": "/ شهر", "note": "تقسيم تقديري. قد تختلف رسوم البنك والأهلية." },
+      "delivery": { "title": "تقدير التوصيل", "checkArea": "تحقق من المنطقة", "district": "المنطقة", "area": "منطقة التوصيل", "checking": "جارٍ التحقق...", "check": "تحقق من التوصيل", "free": "توصيل مجاني", "cost": "توصيل بقيمة {amount}", "businessDays": "{count} أيام عمل", "confirmedAtCheckout": "يتم تأكيد وقت التوصيل عند إتمام الشراء" },
+      "areas": { "dhaka": "دكا", "outsideDhaka": "خارج دكا" },
+      "errors": { "districtRequired": "أدخل منطقتك للتحقق من التوصيل.", "quoteFailed": "تعذر حساب تكلفة التوصيل." }
+    },
+    "bundle": { "configureLabel": "تخصيص هذه الحزمة", "title": "أنشئ حزمتك", "description": "اختر من المنتجات المعتمدة من المتجر. يتم تحديث السعر والمخزون فورًا.", "price": "سعر حزمتك", "baseConfiguration": "التكوين الأساسي", "fromBase": "{difference} عن السعر الأساسي", "available": "{count} متاح", "ready": "التكوين جاهز", "selectionRequired": "الاختيار مطلوب", "required": "مطلوب", "optional": "اختياري", "includedEveryBundle": "مضمن في كل حزمة", "chooseCount": "اختر {count}", "chooseRange": "اختر من {min} إلى {max}", "itemValue": "قيمة العنصر {amount}", "outOfStock": "غير متوفر", "maximumSelected": "تم بلوغ الحد الأقصى", "priceUpdates": "يتغير السعر حسب العناصر المحددة", "included": "مضمن", "selectToContinue": "اختر {count} خيارًا للمتابعة.", "removeOptional": "إزالة هذا العنصر الاختياري", "quantityPerBundle": "الكمية لكل حزمة", "decreaseQuantity": "تقليل كمية {group}", "increaseQuantity": "زيادة كمية {group}", "notSelected": "غير محدد" },
+    "related": { "title": "منتجات ذات صلة", "viewAll": "عرض الكل", "save": "وفر: {amount}", "browseAll": "تصفح جميع المنتجات ذات الصلة" },
+    "reviews": {
+      "rateStar": "تقييم {value} نجمة", "title": "مراجعات العملاء", "averageRating": "متوسط التقييم {rating}", "write": "اكتب مراجعة", "loginToWrite": "سجّل الدخول لكتابة مراجعة", "loginRequired": "يجب تسجيل الدخول لإرسال مراجعة.", "signIn": "تسجيل الدخول", "rating": "التقييم", "overwriteNote": "لقد راجعت المنتج مسبقًا—سيستبدل التحديث مراجعتك", "placeholder": "اكتب رأيك...", "submitting": "جارٍ الإرسال...", "update": "تحديث المراجعة", "submit": "إرسال المراجعة", "reviews": "المراجعات", "loading": "جارٍ التحميل...", "empty": "لا توجد مراجعات بعد.", "anonymous": "مجهول", "previous": "السابق", "page": "الصفحة {page} من {pages}", "next": "التالي",
+      "errors": { "submit": "تعذر إرسال المراجعة.", "generic": "حدث خطأ ما." }, "success": { "updated": "تم تحديث المراجعة!", "submitted": "تم إرسال المراجعة!" }
+    },
+    "priceAlert": { "disabled": "تم إيقاف تنبيه انخفاض السعر.", "enabled": "سيتم إشعارك عند انخفاض السعر.", "error": "تعذر تحديث تنبيه انخفاض السعر.", "on": "التنبيه مفعّل", "notify": "أبلغني عند انخفاض السعر" },
+    "error": { "title": "تعذر تحميل تفاصيل المنتج", "description": "يرجى إعادة المحاولة أو العودة إلى كتالوج المنتجات.", "retry": "إعادة المحاولة", "browse": "تصفح المنتجات" },
+    "notFound": { "title": "المنتج غير موجود", "description": "قد يكون المنتج غير متاح أو الرابط غير صحيح.", "browse": "تصفح المنتجات المتاحة" }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. الطرف المقابل والتسليم",
     "k_97fae3277194": "1. الطرف المقابل والنطاق",

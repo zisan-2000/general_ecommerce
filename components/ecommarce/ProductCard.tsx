@@ -14,6 +14,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useCart } from "@/components/ecommarce/CartContext";
 import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
+import { useLocale, useTranslations } from "next-intl";
 
 type ProductVariant = {
   id?: number | string;
@@ -227,11 +228,13 @@ export default function ProductCardCompact({
   onCompareClick,
   compared = false,
   onAddToCart,
-  addToCartLabel = "Add To Cart",
+  addToCartLabel,
   primaryAction = "add-to-cart",
   className,
   imagePriority = false,
 }: Props) {
+  const t = useTranslations("StorefrontCatalog.card");
+  const locale = useLocale();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [buttonAnimate, setButtonAnimate] = useState(false);
   const [activeVariantImage, setActiveVariantImage] = useState<string | null>(
@@ -359,7 +362,7 @@ export default function ProductCardCompact({
       >
         <Link
           href={product.href}
-          aria-label={`View ${product.name}`}
+          aria-label={t("viewProduct", { name: product.name })}
           className="block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
         >
           <Image
@@ -376,13 +379,13 @@ export default function ProductCardCompact({
         <div className="pointer-events-none absolute left-3 top-3 z-20 flex flex-col items-start gap-1.5">
           {showSavingsSticker ? (
             <span className="rounded bg-emerald-700 px-2 py-1 text-[10px] font-bold leading-none text-white shadow-sm sm:text-[11px]">
-              Save: {formatCurrency(savingsAmount)}
+              {t("save", { amount: formatCurrency(savingsAmount) })}
             </span>
           ) : null}
           {isBestSeller ? (
             <span className="inline-flex items-center gap-1 rounded bg-amber-500 px-2 py-1 text-[9px] font-bold uppercase leading-none text-white shadow-sm">
               <Flame className="h-3 w-3" aria-hidden="true" />
-              Best Seller
+              {t("bestSeller")}
             </span>
           ) : null}
         </div>
@@ -392,7 +395,7 @@ export default function ProductCardCompact({
             type="button"
             onClick={() => void onWishlistClick()}
             className="absolute right-3 top-3 z-20 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-card/95 text-muted-foreground shadow-sm transition hover:border-rose-400 hover:text-rose-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400"
-            aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
+            aria-label={wishlisted ? t("removeWishlist") : t("addWishlist")}
             aria-pressed={wishlisted}
           >
             <Heart
@@ -408,7 +411,7 @@ export default function ProductCardCompact({
         {isOutOfStock ? (
           <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-card/70 backdrop-blur-[1px]">
             <span className="rounded bg-rose-600 px-3 py-1.5 text-[11px] font-bold text-white shadow-sm">
-              Out of Stock
+              {t("outOfStock")}
             </span>
           </div>
         ) : null}
@@ -446,11 +449,11 @@ export default function ProductCardCompact({
             </ul>
           ) : (
             <div className="space-y-1 text-[10px] text-muted-foreground sm:text-[11px]">
-              {product.sku ? <p className="line-clamp-1">Model: {product.sku}</p> : null}
-              <p>{isOutOfStock ? "Currently unavailable" : "Ready to order"}</p>
+              {product.sku ? <p className="line-clamp-1">{t("model")}: {product.sku}</p> : null}
+              <p>{isOutOfStock ? t("unavailable") : t("readyToOrder")}</p>
               {Number(product.ratingCount ?? 0) > 0 ? (
                 <p>
-                  ★ {Number(product.ratingAvg ?? 0).toFixed(1)} ({Number(product.ratingCount).toLocaleString()} reviews)
+                  ★ {Number(product.ratingAvg ?? 0).toFixed(1)} ({t("reviewCount", { count: Number(product.ratingCount).toLocaleString(locale) })})
                 </p>
               ) : null}
             </div>
@@ -458,7 +461,7 @@ export default function ProductCardCompact({
         </div>
 
         {colorSwatches.length > 0 ? (
-          <div className="mt-2 flex min-h-5 items-center gap-1.5" aria-label="Available colors">
+          <div className="mt-2 flex min-h-5 items-center gap-1.5" aria-label={t("availableColors")}>
             {visibleColorSwatches.map((swatch, index) => (
               <button
                 key={swatch.label}
@@ -473,7 +476,7 @@ export default function ProductCardCompact({
                 )}
                 style={{ backgroundColor: swatch.color }}
                 title={swatch.label}
-                aria-label={`${swatch.label} color variant`}
+                aria-label={t("colorVariant", { color: swatch.label })}
                 aria-pressed={selectedVariantIndex === index}
               />
             ))}
@@ -485,7 +488,7 @@ export default function ProductCardCompact({
 
         {product.type === "BUNDLE" && product.bundleItems?.length ? (
           <p className="mt-2 line-clamp-1 text-[10px] text-muted-foreground">
-            Includes {product.bundleItems.slice(0, 2).map((item) => item.product.name).join(", ")}
+            {t("includes", { items: product.bundleItems.slice(0, 2).map((item) => item.product.name).join(", ") })}
             {product.bundleItems.length > 2 ? ` +${product.bundleItems.length - 2}` : ""}
           </p>
         ) : null}
@@ -505,11 +508,11 @@ export default function ProductCardCompact({
           {primaryAction === "view-details" ? (
             <Link
               href={product.href}
-              aria-label={`View details for ${product.name}`}
+              aria-label={t("viewDetailsFor", { name: product.name })}
               className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded bg-[#174a92] px-2 text-[11px] font-semibold text-white transition hover:bg-[#103b76] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"
             >
               <Eye className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-              <span className="truncate">View Details</span>
+              <span className="truncate">{t("viewDetails")}</span>
             </Link>
           ) : (
             <button
@@ -531,7 +534,7 @@ export default function ProductCardCompact({
                 <ShoppingCart className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               )}
               <span className="truncate">
-                {isOutOfStock ? "Out of Stock" : addToCartLabel}
+                {isOutOfStock ? t("outOfStock") : addToCartLabel ?? t("addToCart")}
               </span>
             </button>
           )}
@@ -549,7 +552,7 @@ export default function ProductCardCompact({
               )}
             >
               <GitCompareArrows className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-              <span className="truncate">{compared ? "Compared" : "Compare"}</span>
+              <span className="truncate">{compared ? t("compared") : t("compare")}</span>
             </button>
           ) : null}
         </div>

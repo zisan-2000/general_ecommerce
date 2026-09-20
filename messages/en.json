@@ -8696,6 +8696,363 @@
       "continueShopping": "Continue shopping"
     }
   },
+  "StorefrontCatalog": {
+    "page": {
+      "eyebrow": "Product catalog",
+      "heading": "Find the right product for you",
+      "description": "Search the complete catalog, compare current prices, and narrow the results by category, brand, product type, or availability.",
+      "filters": "Filters",
+      "showHide": "Show / hide",
+      "clear": "Clear",
+      "clearAll": "Clear all",
+      "clearAllFilters": "Clear all filters",
+      "search": "Search",
+      "searchPlaceholder": "Name, SKU, or brand",
+      "category": "Category",
+      "allCategories": "All categories",
+      "brands": "Brands",
+      "productType": "Product type",
+      "allTypes": "All types",
+      "priceRange": "Price range",
+      "minPrice": "Min {value}",
+      "maxPrice": "Max {value}",
+      "minimumPrice": "Minimum price",
+      "maximumPrice": "Maximum price",
+      "availability": "Availability",
+      "inStock": "In stock",
+      "inStockOnly": "In stock only",
+      "featured": "Featured",
+      "featuredProducts": "Featured products",
+      "yes": "Yes",
+      "no": "No",
+      "sortBy": "Sort by",
+      "productsPerPage": "Products per page",
+      "resultsFor": "Results for “{query}”",
+      "allProducts": "All products",
+      "showingResults": "Showing {first}–{last} of {total} products",
+      "any": "Any",
+      "sort": {
+        "relevance": "Most relevant",
+        "newest": "Newest",
+        "popular": "Popular",
+        "priceAsc": "Price: Low to High",
+        "priceDesc": "Price: High to Low",
+        "nameAsc": "Name: A–Z"
+      },
+      "productTypes": { "physical": "Physical", "digital": "Digital", "service": "Service", "bundle": "Bundle" },
+      "active": {
+        "label": "Active product filters",
+        "title": "Active",
+        "search": "Search: {query}",
+        "price": "Price: {min}–{max}",
+        "remove": "Remove {label} filter"
+      },
+      "empty": {
+        "title": "No products found",
+        "description": "Try a broader search or remove one or more filters.",
+        "viewAll": "View all products"
+      },
+      "pagination": {
+        "label": "Product catalog pagination",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "metadata": {
+        "searchResults": "Search results for “{query}”",
+        "categoryProducts": "{category} products",
+        "description": "Browse {site} products with category, brand, price, and availability filters.",
+        "catalogName": "{site} product catalog"
+      }
+    },
+    "filters": {
+      "updating": "Updating products…",
+      "updatingShort": "Updating…",
+      "automatic": "Filters update automatically",
+      "showProducts": "Show products",
+      "apply": "Apply filters"
+    },
+    "grid": {
+      "compareSelected": "{count} product(s) selected for comparison",
+      "compareNow": "Compare now",
+      "login": {
+        "title": "Sign in to save products",
+        "description": "Your wishlist stays synced when you are signed in.",
+        "cancel": "Cancel",
+        "signIn": "Sign in"
+      },
+      "errors": {
+        "wishlist": "Wishlist update failed.",
+        "outOfStock": "This product is out of stock.",
+        "addToCart": "The product could not be added to the cart.",
+        "compareLimit": "You can compare up to 4 products."
+      },
+      "success": {
+        "wishlistRemoved": "Removed from wishlist.",
+        "wishlistAdded": "Added to wishlist.",
+        "addedToCart": "“{name}” added to cart.",
+        "comparisonAdded": "Added to comparison.",
+        "comparisonRemoved": "Removed from comparison."
+      }
+    },
+    "card": {
+      "viewProduct": "View {name}",
+      "save": "Save: {amount}",
+      "bestSeller": "Best Seller",
+      "removeWishlist": "Remove from wishlist",
+      "addWishlist": "Add to wishlist",
+      "outOfStock": "Out of Stock",
+      "model": "Model",
+      "unavailable": "Currently unavailable",
+      "readyToOrder": "Ready to order",
+      "reviewCount": "{count} reviews",
+      "availableColors": "Available colors",
+      "colorVariant": "{color} color variant",
+      "includes": "Includes {items}",
+      "viewDetailsFor": "View details for {name}",
+      "viewDetails": "View Details",
+      "addToCart": "Add to Cart",
+      "compared": "Compared",
+      "compare": "Compare"
+    },
+    "brands": {
+      "eyebrow": "Brand directory",
+      "title": "Shop trusted brands",
+      "description": "Open any brand to see its live catalog with the same category, price, availability, and sorting controls.",
+      "logoAlt": "{name} logo",
+      "productCount": "{count} products",
+      "viewProducts": "View products",
+      "empty": "No brands with active products are available yet.",
+      "metadata": {
+        "title": "Shop by Brand",
+        "description": "Explore available {site} products by brand."
+      }
+    }
+  },
+  "StorefrontProduct": {
+    "page": {
+      "metadata": {
+        "notFound": "Product not found",
+        "buyOnline": "Buy {name} online in Bangladesh."
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "products": "Products"
+      },
+      "information": {
+        "productId": "Product ID",
+        "category": "Category",
+        "brand": "Brand",
+        "writer": "Writer",
+        "publisher": "Publisher",
+        "type": "Type",
+        "weight": "Weight",
+        "dimensions": "Dimensions"
+      },
+      "types": {
+        "physical": "Physical",
+        "digital": "Digital",
+        "service": "Service",
+        "bundle": "Bundle"
+      },
+      "recommendations": {
+        "eyebrow": "You may also like",
+        "title": "Recommended products",
+        "viewCategory": "View category"
+      }
+    },
+    "purchase": {
+      "save": "Save: {amount}",
+      "viewImage": "View product image {number}",
+      "ratingLabel": "{rating} out of 5 stars",
+      "reviews": "{count} reviews",
+      "share": "Share",
+      "stock": "Stock",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock",
+      "brand": "Brand",
+      "model": "Model",
+      "warranty": "Warranty",
+      "chooseOption": "Choose an option",
+      "option": "Option {id}",
+      "stockLeft": "{count} left",
+      "hotline": "Hotline",
+      "discountPrice": "Discount Price",
+      "youSave": "You save {amount}",
+      "emiStarts": "EMI Starts From*",
+      "installments": "Up to 12 monthly installments",
+      "decreaseQuantity": "Decrease quantity",
+      "increaseQuantity": "Increase quantity",
+      "addToCart": "Add to Cart",
+      "wishlist": "Wishlist",
+      "compare": "Compare",
+      "buyNow": "Buy now with secure checkout",
+      "compareSelected": "Compare selected ({count})",
+      "errors": {
+        "addToCart": "The product could not be added to the cart.",
+        "compareLimit": "You can compare up to 4 products.",
+        "wishlist": "Wishlist update failed.",
+        "share": "The product link could not be shared."
+      },
+      "success": {
+        "addedToCart": "“{name}” added to cart.",
+        "comparisonAdded": "Added to comparison.",
+        "comparisonRemoved": "Removed from comparison.",
+        "wishlistRemoved": "Removed from wishlist.",
+        "wishlistAdded": "Added to wishlist.",
+        "linkCopied": "Product link copied."
+      }
+    },
+    "tabs": {
+      "label": "Product details",
+      "specifications": "Specification",
+      "description": "Description",
+      "reviews": "Reviews",
+      "specificationsTitle": "Specifications",
+      "descriptionFallback": "Product description will be available soon."
+    },
+    "questions": {
+      "title": "Questions & answers",
+      "description": "Ask about compatibility, specifications, or purchasing.",
+      "askQuestion": "Ask a question",
+      "placeholder": "What would you like to know about this product?",
+      "submit": "Submit question",
+      "signInToAsk": "Sign in to ask",
+      "loading": "Loading questions...",
+      "empty": "No questions yet. Be the first to ask.",
+      "questionPrefix": "Q",
+      "answerPrefix": "A",
+      "customer": "Customer",
+      "answeredBy": "Answered by {name}",
+      "storeTeam": "Store team",
+      "awaitingAnswer": "Awaiting an answer from the store team.",
+      "updateAnswer": "Update the published answer",
+      "writeAnswer": "Write an official answer",
+      "saving": "Saving...",
+      "publishAnswer": "Publish answer",
+      "errors": {
+        "load": "Questions could not be loaded.",
+        "completeQuestion": "Please enter a complete question.",
+        "submit": "The question could not be submitted.",
+        "answer": "The answer could not be saved."
+      },
+      "success": {
+        "submitted": "Your question was submitted.",
+        "answerPublished": "Answer published."
+      }
+    },
+    "conversion": {
+      "emi": {
+        "title": "EMI plans",
+        "from": "from {amount}",
+        "choosePeriod": "Choose installment period",
+        "months": "{count} months",
+        "perMonth": "/ month",
+        "note": "Indicative split. Bank fees and eligibility may vary."
+      },
+      "delivery": {
+        "title": "Delivery estimate",
+        "checkArea": "Check area",
+        "district": "District",
+        "area": "Delivery area",
+        "checking": "Checking...",
+        "check": "Check delivery",
+        "free": "Free delivery",
+        "cost": "{amount} delivery",
+        "businessDays": "{count} business days",
+        "confirmedAtCheckout": "Delivery time confirmed at checkout"
+      },
+      "areas": {
+        "dhaka": "Dhaka",
+        "outsideDhaka": "Outside Dhaka"
+      },
+      "errors": {
+        "districtRequired": "Enter your district to check delivery.",
+        "quoteFailed": "The delivery quote could not be calculated."
+      }
+    },
+    "bundle": {
+      "configureLabel": "Configure this bundle",
+      "title": "Build your bundle",
+      "description": "Choose from the store-approved products. Your price and stock update instantly.",
+      "price": "Your bundle price",
+      "baseConfiguration": "Base configuration",
+      "fromBase": "{difference} from base",
+      "available": "{count} available",
+      "ready": "Configuration ready",
+      "selectionRequired": "Selection required",
+      "required": "required",
+      "optional": "optional",
+      "includedEveryBundle": "Included in every bundle",
+      "chooseCount": "Choose {count}",
+      "chooseRange": "Choose {min} to {max}",
+      "itemValue": "Item value {amount}",
+      "outOfStock": "Out of stock",
+      "maximumSelected": "Maximum selected",
+      "priceUpdates": "Price updates from selected items",
+      "included": "Included",
+      "selectToContinue": "Select {count} option(s) to continue.",
+      "removeOptional": "Remove this optional item",
+      "quantityPerBundle": "Quantity per bundle",
+      "decreaseQuantity": "Decrease {group} quantity",
+      "increaseQuantity": "Increase {group} quantity",
+      "notSelected": "Not selected"
+    },
+    "related": {
+      "title": "Related Products",
+      "viewAll": "View all",
+      "save": "Save: {amount}",
+      "browseAll": "Browse all related products"
+    },
+    "reviews": {
+      "rateStar": "Rate {value} star",
+      "title": "Customer Reviews",
+      "averageRating": "{rating} average rating",
+      "write": "Write a review",
+      "loginToWrite": "Login to write a review",
+      "loginRequired": "You must be logged in to submit a review.",
+      "signIn": "Sign In",
+      "rating": "Rating",
+      "overwriteNote": "You already reviewed—updating will overwrite it",
+      "placeholder": "Write your opinion...",
+      "submitting": "Submitting...",
+      "update": "Update Review",
+      "submit": "Submit Review",
+      "reviews": "Reviews",
+      "loading": "Loading...",
+      "empty": "No reviews yet.",
+      "anonymous": "Anonymous",
+      "previous": "Previous",
+      "page": "Page {page} of {pages}",
+      "next": "Next",
+      "errors": {
+        "submit": "Failed to submit the review.",
+        "generic": "Something went wrong."
+      },
+      "success": {
+        "updated": "Review updated!",
+        "submitted": "Review submitted!"
+      }
+    },
+    "priceAlert": {
+      "disabled": "Price drop alert turned off.",
+      "enabled": "You will be notified when the price drops.",
+      "error": "The price drop alert could not be updated.",
+      "on": "Alert On",
+      "notify": "Notify Price Drop"
+    },
+    "error": {
+      "title": "Product details could not be loaded",
+      "description": "Please retry the request or return to the product catalog.",
+      "retry": "Retry",
+      "browse": "Browse products"
+    },
+    "notFound": {
+      "title": "Product not found",
+      "description": "This product may be unavailable or the link may be incorrect.",
+      "browse": "Browse available products"
+    }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. Counterparty and Delivery",
     "k_97fae3277194": "1. Counterparty and Scope",

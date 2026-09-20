@@ -19,9 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-
-const formatBDT = (value: number) =>
-  `৳${Math.round(value).toLocaleString("en-US")}`;
+import { useLocale, useTranslations } from "next-intl";
 
 export default function CatalogProductGrid({
   products,
@@ -32,6 +30,8 @@ export default function CatalogProductGrid({
   searchQuery?: string;
   resultCount?: number;
 }) {
+  const t = useTranslations("StorefrontCatalog.grid");
+  const locale = useLocale();
   const { COMPARE: compareEnabled } = useStorefrontFeatures();
   const { status } = useSession();
   const { addToCart } = useCart();
@@ -43,6 +43,10 @@ export default function CatalogProductGrid({
     toggle: toggleComparedProduct,
   } = useProductCompare();
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const formatBDT = useCallback(
+    (value: number) => `৳${Math.round(value).toLocaleString(locale)}`,
+    [locale],
+  );
 
   const toggleWishlist = useCallback(
     async (product: StorefrontCatalogProduct) => {
@@ -63,31 +67,31 @@ export default function CatalogProductGrid({
                 body: JSON.stringify({ productId: product.id }),
               },
         );
-        if (!response.ok) throw new Error("Wishlist update failed");
+        if (!response.ok) throw new Error(t("errors.wishlist"));
 
         if (wishlisted) {
           removeFromWishlist(product.id);
-          toast.success("Removed from wishlist.");
+          toast.success(t("success.wishlistRemoved"));
         } else {
           addToWishlist(product.id);
-          toast.success("Added to wishlist.");
+          toast.success(t("success.wishlistAdded"));
         }
       } catch (error) {
         console.error(error);
-        toast.error("Wishlist update failed.");
+        toast.error(t("errors.wishlist"));
       }
     },
-    [addToWishlist, isInWishlist, removeFromWishlist, status],
+    [addToWishlist, isInWishlist, removeFromWishlist, status, t],
   );
 
   const addProductToCart = useCallback(
     async (product: StorefrontCatalogProduct) => {
       if (product.stock <= 0) {
-        toast.error("This product is out of stock.");
+        toast.error(t("errors.outOfStock"));
         return;
       }
-      if (await addToCart(product.id)) toast.success(`“${product.name}” added to cart.`);
-      else toast.error("Product could not be added to cart.");
+      if (await addToCart(product.id)) toast.success(t("success.addedToCart", { name: product.name }));
+      else toast.error(t("errors.addToCart"));
       if (searchQuery) {
         sendSearchEvent({
           event: "ADD_TO_CART",
@@ -97,24 +101,24 @@ export default function CatalogProductGrid({
         });
       }
     },
-    [addToCart, resultCount, searchQuery],
+    [addToCart, resultCount, searchQuery, t],
   );
 
   const toggleCompare = useCallback(
     (productId: number) => {
       const result = toggleComparedProduct(productId);
-      if (result.limitReached) toast.error("You can compare up to 4 products.");
-      else toast.success(result.added ? "Added to comparison." : "Removed from comparison.");
+      if (result.limitReached) toast.error(t("errors.compareLimit"));
+      else toast.success(result.added ? t("success.comparisonAdded") : t("success.comparisonRemoved"));
     },
-    [toggleComparedProduct],
+    [t, toggleComparedProduct],
   );
 
   return (
     <>
       {compareEnabled && compareCount > 0 ? (
         <div className="mb-4 flex items-center justify-between rounded-xl border bg-card px-4 py-3 text-sm">
-          <span><strong>{compareCount}</strong> product(s) selected for comparison</span>
-          <Link href={compareHref} className="font-bold text-primary hover:underline">Compare now</Link>
+          <span>{t("compareSelected", { count: compareCount })}</span>
+          <Link href={compareHref} className="font-bold text-primary hover:underline">{t("compareNow")}</Link>
         </div>
       ) : null}
       <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
@@ -174,9 +178,9 @@ export default function CatalogProductGrid({
       <Dialog open={loginModalOpen} onOpenChange={setLoginModalOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Sign in to save products</DialogTitle>
+            <DialogTitle>{t("login.title")}</DialogTitle>
             <DialogDescription>
-              Your wishlist stays synced when you are signed in.
+              {t("login.description")}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="gap-2 sm:gap-0">
@@ -185,13 +189,13 @@ export default function CatalogProductGrid({
               onClick={() => setLoginModalOpen(false)}
               className="h-10 rounded-lg border px-4 text-sm font-medium hover:bg-muted"
             >
-              Cancel
+              {t("login.cancel")}
             </button>
             <Link
               href="/signin?callbackUrl=/ecommerce/products"
               className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground"
             >
-              Sign in
+              {t("login.signIn")}
             </Link>
           </DialogFooter>
         </DialogContent>

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { HelpCircle, Loader2, MessageCircleQuestion } from "lucide-react";
 import { toast } from "sonner";
 import { useSession } from "@/lib/auth-client";
+import { useLocale, useTranslations } from "next-intl";
 
 type ProductQuestion = {
   id: number;
@@ -17,6 +18,8 @@ type ProductQuestion = {
 };
 
 export default function ProductQuestions({ productId }: { productId: number }) {
+  const t = useTranslations("StorefrontProduct.questions");
+  const locale = useLocale();
   const router = useRouter();
   const { data: session, status } = useSession();
   const role = String((session?.user as { role?: string } | undefined)?.role || "user").toLowerCase();
@@ -34,14 +37,14 @@ export default function ProductQuestions({ productId }: { productId: number }) {
       const suffix = fresh ? `&fresh=${Date.now()}` : "";
       const response = await fetch(`/api/product-questions?productId=${productId}${suffix}`);
       const data = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(data?.error || "Questions could not be loaded.");
+      if (!response.ok) throw new Error(t("errors.load"));
       setQuestions(Array.isArray(data?.questions) ? data.questions : []);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Questions could not be loaded.");
+      toast.error(error instanceof Error ? error.message : t("errors.load"));
     } finally {
       setLoading(false);
     }
-  }, [productId]);
+  }, [productId, t]);
 
   useEffect(() => {
     void loadQuestions();
@@ -54,7 +57,7 @@ export default function ProductQuestions({ productId }: { productId: number }) {
     }
     const value = question.trim();
     if (value.length < 5) {
-      toast.error("Please enter a complete question.");
+      toast.error(t("errors.completeQuestion"));
       return;
     }
     try {
@@ -65,12 +68,12 @@ export default function ProductQuestions({ productId }: { productId: number }) {
         body: JSON.stringify({ productId, question: value }),
       });
       const data = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(data?.error || "Question could not be submitted.");
+      if (!response.ok) throw new Error(t("errors.submit"));
       setQuestion("");
-      toast.success("Your question was submitted.");
+      toast.success(t("success.submitted"));
       await loadQuestions(true);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Question could not be submitted.");
+      toast.error(error instanceof Error ? error.message : t("errors.submit"));
     } finally {
       setSubmitting(false);
     }
@@ -87,12 +90,12 @@ export default function ProductQuestions({ productId }: { productId: number }) {
         body: JSON.stringify({ id, answer }),
       });
       const data = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(data?.error || "Answer could not be saved.");
+      if (!response.ok) throw new Error(t("errors.answer"));
       setAnswers((current) => ({ ...current, [id]: "" }));
-      toast.success("Answer published.");
+      toast.success(t("success.answerPublished"));
       await loadQuestions(true);
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Answer could not be saved.");
+      toast.error(error instanceof Error ? error.message : t("errors.answer"));
     } finally {
       setAnsweringId(null);
     }
@@ -103,18 +106,18 @@ export default function ProductQuestions({ productId }: { productId: number }) {
       <div className="flex items-center gap-3">
         <MessageCircleQuestion className="h-6 w-6 text-primary" />
         <div>
-          <h2 className="text-xl font-black">Questions & answers</h2>
-          <p className="text-xs text-muted-foreground">Ask about compatibility, specifications or purchasing.</p>
+          <h2 className="text-xl font-black">{t("title")}</h2>
+          <p className="text-xs text-muted-foreground">{t("description")}</p>
         </div>
       </div>
 
       <div className="rounded-2xl border bg-background p-4">
-        <label htmlFor="product-question" className="text-sm font-bold">Ask a question</label>
+        <label htmlFor="product-question" className="text-sm font-bold">{t("askQuestion")}</label>
         <textarea
           id="product-question"
           value={question}
           onChange={(event) => setQuestion(event.target.value.slice(0, 500))}
-          placeholder="What would you like to know about this product?"
+          placeholder={t("placeholder")}
           className="mt-2 min-h-24 w-full rounded-xl border bg-background p-3 text-sm outline-none focus:ring-2 focus:ring-primary/30"
         />
         <div className="mt-2 flex items-center justify-between gap-3">
@@ -126,42 +129,42 @@ export default function ProductQuestions({ productId }: { productId: number }) {
             className="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground disabled:opacity-50"
           >
             {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <HelpCircle className="h-4 w-4" />}
-            {status === "authenticated" ? "Submit question" : "Sign in to ask"}
+            {status === "authenticated" ? t("submit") : t("signInToAsk")}
           </button>
         </div>
       </div>
 
       {loading ? (
-        <div className="rounded-xl border p-5 text-sm text-muted-foreground">Loading questions...</div>
+        <div className="rounded-xl border p-5 text-sm text-muted-foreground">{t("loading")}</div>
       ) : questions.length === 0 ? (
-        <div className="rounded-xl border p-5 text-sm text-muted-foreground">No questions yet. Be the first to ask.</div>
+        <div className="rounded-xl border p-5 text-sm text-muted-foreground">{t("empty")}</div>
       ) : (
         <div className="divide-y overflow-hidden rounded-2xl border bg-background">
           {questions.map((item) => (
             <article key={item.id} className="p-4 sm:p-5">
               <div className="flex gap-3">
-                <span className="font-black text-primary">Q</span>
+                <span className="font-black text-primary">{t("questionPrefix")}</span>
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">{item.question}</p>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    {item.user?.name || "Customer"} · {new Date(item.createdAt).toLocaleDateString("en-BD")}
+                    {item.user?.name || t("customer")} · {new Date(item.createdAt).toLocaleDateString(locale)}
                   </p>
                 </div>
               </div>
               {item.answer ? (
                 <div className="ml-7 mt-3 rounded-xl bg-primary/5 p-3 text-sm leading-6">
-                  <strong className="mr-2 text-primary">A</strong>{item.answer}
-                  <p className="mt-1 text-[11px] text-muted-foreground">Answered by {item.answeredBy?.name || "Store team"}</p>
+                  <strong className="mr-2 text-primary">{t("answerPrefix")}</strong>{item.answer}
+                  <p className="mt-1 text-[11px] text-muted-foreground">{t("answeredBy", { name: item.answeredBy?.name || t("storeTeam") })}</p>
                 </div>
               ) : (
-                <p className="ml-7 mt-2 text-xs text-muted-foreground">Awaiting an answer from the store team.</p>
+                <p className="ml-7 mt-2 text-xs text-muted-foreground">{t("awaitingAnswer")}</p>
               )}
               {mayAnswer ? (
                 <div className="ml-7 mt-3 flex flex-col gap-2 sm:flex-row">
                   <input
                     value={answers[item.id] || ""}
                     onChange={(event) => setAnswers((current) => ({ ...current, [item.id]: event.target.value.slice(0, 2_000) }))}
-                    placeholder={item.answer ? "Update the published answer" : "Write an official answer"}
+                    placeholder={item.answer ? t("updateAnswer") : t("writeAnswer")}
                     className="h-10 flex-1 rounded-lg border bg-background px-3 text-sm outline-none focus:ring-2 focus:ring-primary/30"
                   />
                   <button
@@ -170,7 +173,7 @@ export default function ProductQuestions({ productId }: { productId: number }) {
                     disabled={answeringId === item.id || (answers[item.id]?.trim().length || 0) < 2}
                     className="h-10 rounded-lg border px-4 text-sm font-bold hover:border-primary disabled:opacity-50"
                   >
-                    {answeringId === item.id ? "Saving..." : "Publish answer"}
+                    {answeringId === item.id ? t("saving") : t("publishAnswer")}
                   </button>
                 </div>
               ) : null}

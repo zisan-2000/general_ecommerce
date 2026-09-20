@@ -9,6 +9,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { LoaderCircle, SlidersHorizontal } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type CatalogFilterFormProps = {
   children: ReactNode;
@@ -37,6 +38,7 @@ export default function CatalogFilterForm({
   children,
   className,
 }: CatalogFilterFormProps) {
+  const t = useTranslations("StorefrontCatalog.filters");
   const pathname = usePathname();
   const router = useRouter();
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -122,10 +124,10 @@ export default function CatalogFilterForm({
         {isPending ? (
           <span className="inline-flex items-center gap-1.5 text-primary">
             <LoaderCircle className="h-3.5 w-3.5 animate-spin" aria-hidden="true" />
-            Updating products…
+            {t("updating")}
           </span>
         ) : (
-          <span className="hidden lg:inline">Filters update automatically</span>
+          <span className="hidden lg:inline">{t("automatic")}</span>
         )}
       </div>
 
@@ -139,7 +141,7 @@ export default function CatalogFilterForm({
         ) : (
           <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
         )}
-        {isPending ? "Updating…" : "Show products"}
+        {isPending ? t("updatingShort") : t("showProducts")}
       </button>
 
       <noscript>
@@ -147,7 +149,7 @@ export default function CatalogFilterForm({
           type="submit"
           className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"
         >
-          Apply filters
+          {t("apply")}
         </button>
       </noscript>
     </form>

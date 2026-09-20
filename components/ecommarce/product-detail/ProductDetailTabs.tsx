@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ProductReviews from "@/components/ecommarce/ProductReviews";
 import ProductRichText from "@/components/ecommarce/product-detail/ProductRichText";
+import { useTranslations } from "next-intl";
 
 type ProductAttribute = {
   id: number;
@@ -27,13 +28,9 @@ type ProductSpecificationGroup = Array<{
   items: Array<{ id: number; label: string; value: string }>;
 }>;
 
-const tabs = [
-  { id: "specifications", label: "Specification" },
-  { id: "description", label: "Description" },
-  { id: "reviews", label: "Reviews" },
-] as const;
+const tabs = ["specifications", "description", "reviews"] as const;
 
-type TabId = (typeof tabs)[number]["id"];
+type TabId = (typeof tabs)[number];
 
 export default function ProductDetailTabs({
   productId,
@@ -52,34 +49,35 @@ export default function ProductDetailTabs({
   information: ProductInformation;
   reviewCount: number;
 }) {
+  const t = useTranslations("StorefrontProduct.tabs");
   const [activeTab, setActiveTab] = useState<TabId>("specifications");
 
   return (
     <section className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
       <div
         role="tablist"
-        aria-label="Product details"
+        aria-label={t("label")}
         className="flex overflow-x-auto border-b border-border px-3 sm:px-5"
       >
         {tabs.map((tab) => {
-          const selected = activeTab === tab.id;
+          const selected = activeTab === tab;
           return (
             <button
-              key={tab.id}
-              id={`product-tab-${tab.id}`}
+              key={tab}
+              id={`product-tab-${tab}`}
               type="button"
               role="tab"
               aria-selected={selected}
-              aria-controls={`product-panel-${tab.id}`}
-              onClick={() => setActiveTab(tab.id)}
+              aria-controls={`product-panel-${tab}`}
+              onClick={() => setActiveTab(tab)}
               className={`relative h-12 shrink-0 px-4 text-[12px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92] sm:px-6 ${
                 selected
                   ? "text-[#174a92] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#2563eb]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {tab.label}
-              {tab.id === "reviews" ? ` (${reviewCount})` : ""}
+              {t(tab)}
+              {tab === "reviews" ? ` (${reviewCount})` : ""}
             </button>
           );
         })}
@@ -93,7 +91,7 @@ export default function ProductDetailTabs({
             aria-labelledby="product-tab-specifications"
           >
             <h2 className="text-[16px] font-bold uppercase tracking-wide text-foreground">
-              Specifications
+              {t("specificationsTitle")}
             </h2>
             <dl className="mt-4 overflow-hidden rounded-lg border border-border text-[12px] sm:text-[13px]">
               {information.map((item, index) => (
@@ -173,14 +171,14 @@ export default function ProductDetailTabs({
             aria-labelledby="product-tab-description"
           >
             <h2 className="text-[16px] font-bold uppercase tracking-wide text-foreground">
-              Description
+              {t("description")}
             </h2>
             <ProductRichText
               content={description}
               className="mt-4 text-[13px] leading-7 text-muted-foreground sm:text-[14px]"
               fallback={(
                 <p className="mt-4 text-[13px] leading-7 text-muted-foreground sm:text-[14px]">
-                  Product description will be available soon.
+                  {t("descriptionFallback")}
                 </p>
               )}
             />

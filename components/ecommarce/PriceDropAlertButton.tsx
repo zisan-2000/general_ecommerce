@@ -6,6 +6,7 @@ import { Bell, BellOff, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useSession } from "@/lib/auth-client";
+import { useTranslations } from "next-intl";
 
 type Props = {
   productId: number | string;
@@ -28,6 +29,7 @@ export default function PriceDropAlertButton({
   compact = false,
   className,
 }: Props) {
+  const t = useTranslations("StorefrontProduct.priceAlert");
   const router = useRouter();
   const { status } = useSession();
   const numericProductId = toNumericId(productId);
@@ -81,7 +83,7 @@ export default function PriceDropAlertButton({
         });
         if (!response.ok) throw new Error("Failed to remove alert");
         setEnabled(false);
-        toast.success("Price drop alert turned off.");
+        toast.success(t("disabled"));
         return;
       }
 
@@ -95,10 +97,10 @@ export default function PriceDropAlertButton({
       });
       if (!response.ok) throw new Error("Failed to save alert");
       setEnabled(true);
-      toast.success("You will be notified when the price drops.");
+      toast.success(t("enabled"));
     } catch (error) {
       console.error(error);
-      toast.error("Price drop alert could not be updated.");
+      toast.error(t("error"));
     } finally {
       setLoading(false);
     }
@@ -125,7 +127,7 @@ export default function PriceDropAlertButton({
         <Bell className="h-4 w-4" aria-hidden="true" />
       )}
       <span className={compact ? "hidden sm:inline" : ""}>
-        {enabled ? "Alert On" : "Notify Price Drop"}
+        {enabled ? t("on") : t("notify")}
       </span>
     </button>
   );

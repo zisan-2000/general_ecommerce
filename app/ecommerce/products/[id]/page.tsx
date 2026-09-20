@@ -24,6 +24,7 @@ import {
   toAbsoluteUrl,
   truncateText,
 } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 type ProductPageProps = { params: Promise<{ id: string }> };
 const getProduct = cache(getStorefrontProductDetail);
@@ -34,10 +35,11 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     getProduct(rawId),
     getSiteSettingsForSeo(),
   ]);
-  if (!product) return { title: "Product not found" };
+  const t = await getTranslations("StorefrontProduct.page");
+  if (!product) return { title: t("metadata.notFound") };
   const description = truncateText(
     stripHtml(product.shortDesc || product.description) ||
-      `Buy ${product.name} online in Bangladesh.`,
+      t("metadata.buyOnline", { name: product.name }),
   );
   const canonical = `/ecommerce/products/${product.id}`;
   const image = toAbsoluteUrl(product.image || "/placeholder.svg");
@@ -63,6 +65,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
+  const t = await getTranslations("StorefrontProduct.page");
   const { id: rawId } = await params;
   const product = await getProduct(rawId);
   if (!product) notFound();
@@ -119,18 +122,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const purchaseProduct = toProductPurchaseData(product);
   const categoryHref = `/ecommerce/products?category=${encodeURIComponent(product.category.slug)}`;
   const productInformation: Array<{ label: string; value: string }> = [
-    { label: "Product ID", value: String(product.id) },
-    { label: "Category", value: product.category.name },
-    ...(product.brand ? [{ label: "Brand", value: product.brand.name }] : []),
+    { label: t("information.productId"), value: String(product.id) },
+    { label: t("information.category"), value: product.category.name },
+    ...(product.brand ? [{ label: t("information.brand"), value: product.brand.name }] : []),
     ...(product.bookMetadata?.writer
-      ? [{ label: "Writer", value: product.bookMetadata.writer.name }]
+      ? [{ label: t("information.writer"), value: product.bookMetadata.writer.name }]
       : []),
     ...(product.bookMetadata?.publisher
-      ? [{ label: "Publisher", value: product.bookMetadata.publisher.name }]
+      ? [{ label: t("information.publisher"), value: product.bookMetadata.publisher.name }]
       : []),
-    { label: "Type", value: product.type },
-    ...(product.weight ? [{ label: "Weight", value: String(product.weight) }] : []),
-    ...(dimensions ? [{ label: "Dimensions", value: dimensions }] : []),
+    { label: t("information.type"), value: t(`types.${product.type.toLowerCase()}` as any) },
+    ...(product.weight ? [{ label: t("information.weight"), value: String(product.weight) }] : []),
+    ...(dimensions ? [{ label: t("information.dimensions"), value: dimensions }] : []),
   ];
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -174,10 +177,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
         }}
       />
       <div className="container px-3 py-4 sm:px-6 lg:py-5">
-        <nav className="mb-4 flex flex-wrap items-center gap-2 text-[12px] text-muted-foreground" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-primary">Home</Link>
+        <nav className="mb-4 flex flex-wrap items-center gap-2 text-[12px] text-muted-foreground" aria-label={t("breadcrumb.label")}>
+          <Link href="/" className="hover:text-primary">{t("breadcrumb.home")}</Link>
           <span aria-hidden="true">›</span>
-          <Link href="/ecommerce/products" className="hover:text-primary">Products</Link>
+          <Link href="/ecommerce/products" className="hover:text-primary">{t("breadcrumb.products")}</Link>
           <span aria-hidden="true">›</span>
           <Link href={categoryHref} className="hover:text-primary">
             {product.category.name}
@@ -234,8 +237,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
         {hasRelatedProducts ? (
           <section className="mt-8 xl:mt-10">
             <div className="mb-5 flex items-end justify-between gap-4">
-              <div><p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">You may also like</p><h2 className="mt-1.5 text-xl font-bold text-foreground">Recommended products</h2></div>
-              <Link href={categoryHref} className="text-[12px] font-bold text-primary hover:underline">View category</Link>
+              <div><p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{t("recommendations.eyebrow")}</p><h2 className="mt-1.5 text-xl font-bold text-foreground">{t("recommendations.title")}</h2></div>
+              <Link href={categoryHref} className="text-[12px] font-bold text-primary hover:underline">{t("recommendations.viewCategory")}</Link>
             </div>
             <CatalogProductGrid
               products={relatedProducts}

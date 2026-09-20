@@ -16,18 +16,19 @@ import {
   type CatalogSort,
 } from "@/lib/storefront-catalog";
 import { getSiteSettingsForSeo, getSiteUrl } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 type ProductsPageProps = {
   searchParams: Promise<CatalogSearchParams>;
 };
 
-const SORT_LABELS: Array<{ value: CatalogSort; label: string }> = [
-  { value: "relevance", label: "Most relevant" },
-  { value: "newest", label: "Newest" },
-  { value: "popular", label: "Popular" },
-  { value: "price-asc", label: "Price: Low to High" },
-  { value: "price-desc", label: "Price: High to Low" },
-  { value: "name-asc", label: "Name: A–Z" },
+const SORT_OPTIONS: Array<{ value: CatalogSort; labelKey: string }> = [
+  { value: "relevance", labelKey: "sort.relevance" },
+  { value: "newest", labelKey: "sort.newest" },
+  { value: "popular", labelKey: "sort.popular" },
+  { value: "price-asc", labelKey: "sort.priceAsc" },
+  { value: "price-desc", labelKey: "sort.priceDesc" },
+  { value: "name-asc", labelKey: "sort.nameAsc" },
 ];
 
 /**
@@ -74,16 +75,17 @@ export async function generateMetadata({
     searchParams.then(parseCatalogFilters),
     getSiteSettingsForSeo(),
   ]);
+  const t = await getTranslations("StorefrontCatalog.page");
   const qualifier = filters.q
-    ? `Search results for “${filters.q}”`
+    ? t("metadata.searchResults", { query: filters.q })
     : filters.category
-      ? `${filters.category.replaceAll("-", " ")} products`
-      : "All Products";
+      ? t("metadata.categoryProducts", { category: filters.category.replaceAll("-", " ") })
+      : t("allProducts");
 
   return {
     title: { absolute: `${qualifier} — ${settings.siteTitle}` },
     description:
-      `Browse ${settings.siteTitle} products with category, brand, price and availability filters.`,
+      t("metadata.description", { site: settings.siteTitle }),
     alternates: {
       canonical: catalogCanonicalUrl(filters),
     },
@@ -101,6 +103,13 @@ function paginationPages(page: number, totalPages: number) {
 }
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const t = await getTranslations("StorefrontCatalog.page");
+  const productTypeLabel = (type: string) => {
+    const key = type.toLowerCase();
+    return ["physical", "digital", "service", "bundle"].includes(key)
+      ? t(`productTypes.${key}` as any)
+      : type.charAt(0) + type.slice(1).toLowerCase();
+  };
   const parsedFilters = parseCatalogFilters(await searchParams);
   const [data, settings] = await Promise.all([
     getStorefrontCatalog(parsedFilters),
@@ -136,7 +145,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   if (filters.q) {
     activeFilterLinks.push({
       key: "search",
-      label: `Search: ${filters.q}`,
+      label: t("active.search", { query: filters.q }),
       href: catalogUrl(filters, { q: "", page: 1 }),
     });
   }
@@ -162,14 +171,17 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   if (filters.type) {
     activeFilterLinks.push({
       key: "type",
-      label: filters.type.charAt(0) + filters.type.slice(1).toLowerCase(),
+      label: productTypeLabel(filters.type),
       href: catalogUrl(filters, { type: "", page: 1 }),
     });
   }
   if (filters.minPrice !== null || filters.maxPrice !== null) {
     activeFilterLinks.push({
       key: "price",
-      label: `Price: ${filters.minPrice ?? 0}–${filters.maxPrice ?? "Any"}`,
+      label: t("active.price", {
+        min: filters.minPrice ?? 0,
+        max: filters.maxPrice ?? t("any"),
+      }),
       href: catalogUrl(filters, { minPrice: null, maxPrice: null, page: 1 }),
     });
   }
@@ -212,14 +224,14 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   if (filters.inStock) {
     activeFilterLinks.push({
       key: "stock",
-      label: "In stock",
+      label: t("inStock"),
       href: catalogUrl(filters, { inStock: false, page: 1 }),
     });
   }
   if (filters.featured) {
     activeFilterLinks.push({
       key: "featured",
-      label: "Featured",
+      label: t("featured"),
       href: catalogUrl(filters, { featured: false, page: 1 }),
     });
   }
@@ -235,7 +247,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${settings.siteTitle} product catalog`,
+    name: t("metadata.catalogName", { site: settings.siteTitle }),
     numberOfItems: pagination.total,
     mainEntity: {
       "@type": "ItemList",
@@ -278,14 +290,13 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
               <PackageSearch className="h-4 w-4" aria-hidden="true" />
-              Product catalog
+              {t("eyebrow")}
             </span>
             <h1 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              Find the right product for you
+              {t("heading")}
             </h1>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-              Search the complete catalog, compare current prices and narrow the
-              results by category, brand, product type or availability.
+              {t("description")}
             </p>
           </div>
         </section>
@@ -303,20 +314,20 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             >
               <span className="flex items-center gap-2 font-bold">
                 <Filter className="h-4 w-4 text-primary" aria-hidden="true" />
-                Filters
+                {t("filters")}
                 {activeFilterCount ? (
                   <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold text-primary-foreground">
                     {activeFilterCount}
                   </span>
                 ) : null}
               </span>
-              <span className="text-xs font-semibold text-primary">Show / hide</span>
+              <span className="text-xs font-semibold text-primary">{t("showHide")}</span>
             </label>
 
             <div className="hidden shrink-0 items-center justify-between border-b px-4 py-4 lg:flex">
               <div className="flex items-center gap-2">
                 <Filter className="h-4 w-4 text-primary" aria-hidden="true" />
-                <h2 className="font-bold">Filters</h2>
+                <h2 className="font-bold">{t("filters")}</h2>
                 {activeFilterCount ? (
                   <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold text-primary-foreground">
                     {activeFilterCount}
@@ -328,7 +339,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   href="/ecommerce/products"
                   className="text-xs font-semibold text-primary hover:underline"
                 >
-                  Clear
+                  {t("clear")}
                 </Link>
               ) : null}
             </div>
@@ -343,18 +354,18 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     href="/ecommerce/products"
                     className="text-xs font-semibold text-primary hover:underline"
                   >
-                    Clear all filters
+                    {t("clearAllFilters")}
                   </Link>
                 </div>
               ) : null}
               <label className="mb-4 block space-y-2 text-sm font-semibold">
-                Search
+                {t("search")}
                 <span className="relative block">
                   <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <input
                     name="q"
                     defaultValue={filters.q}
-                    placeholder="Name, SKU or brand"
+                    placeholder={t("searchPlaceholder")}
                     maxLength={100}
                     className="h-10 w-full rounded-lg border bg-background pl-9 pr-3 text-sm font-normal outline-none focus:border-primary"
                   />
@@ -362,17 +373,17 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               </label>
 
               <FilterSection
-                title="Category"
+                title={t("category")}
                 defaultOpen
                 badge={filters.category ? 1 : 0}
               >
                 <select
                   name="category"
                   defaultValue={filters.category}
-                  aria-label="Category"
+                  aria-label={t("category")}
                   className="h-10 w-full rounded-lg border bg-background px-3 text-sm"
                 >
-                  <option value="">All categories</option>
+                  <option value="">{t("allCategories")}</option>
                   {facets.categories.map((category) => (
                     <option key={category.id} value={category.slug}>
                       {"— ".repeat(Math.min(category.depth, 3))}
@@ -383,7 +394,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               </FilterSection>
 
               <FilterSection
-                title="Brands"
+                title={t("brands")}
                 defaultOpen
                 badge={filters.brands.length}
               >
@@ -413,24 +424,24 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 </div>
               </FilterSection>
 
-              <FilterSection title="Product type" badge={filters.type ? 1 : 0}>
+              <FilterSection title={t("productType")} badge={filters.type ? 1 : 0}>
                 <select
                   name="type"
                   defaultValue={filters.type}
-                  aria-label="Product type"
+                  aria-label={t("productType")}
                   className="h-10 w-full rounded-lg border bg-background px-3 text-sm"
                 >
-                  <option value="">All types</option>
+                  <option value="">{t("allTypes")}</option>
                   {facets.productTypes.map((type) => (
                     <option key={type} value={type}>
-                      {type.charAt(0) + type.slice(1).toLowerCase()}
+                      {productTypeLabel(type)}
                     </option>
                   ))}
                 </select>
               </FilterSection>
 
               <FilterSection
-                title="Price range"
+                title={t("priceRange")}
                 defaultOpen
                 badge={
                   filters.minPrice !== null || filters.maxPrice !== null ? 1 : 0
@@ -444,8 +455,8 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     max={CATALOG_MAX_PRICE}
                     step="0.01"
                     defaultValue={filters.minPrice ?? ""}
-                    placeholder={`Min ${facets.priceRange.min}`}
-                    aria-label="Minimum price"
+                    placeholder={t("minPrice", { value: facets.priceRange.min })}
+                    aria-label={t("minimumPrice")}
                     className="h-10 rounded-lg border bg-background px-3 text-sm"
                   />
                   <input
@@ -455,15 +466,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     max={CATALOG_MAX_PRICE}
                     step="0.01"
                     defaultValue={filters.maxPrice ?? ""}
-                    placeholder={`Max ${facets.priceRange.max}`}
-                    aria-label="Maximum price"
+                    placeholder={t("maxPrice", { value: facets.priceRange.max })}
+                    aria-label={t("maximumPrice")}
                     className="h-10 rounded-lg border bg-background px-3 text-sm"
                   />
                 </div>
               </FilterSection>
 
               <FilterSection
-                title="Availability"
+                title={t("availability")}
                 defaultOpen
                 badge={
                   [filters.inStock, filters.featured].filter(Boolean).length
@@ -478,7 +489,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                       defaultChecked={filters.inStock}
                       className="h-4 w-4 accent-primary"
                     />
-                    In stock only
+                    {t("inStockOnly")}
                   </label>
                   <label className="flex cursor-pointer items-center gap-2">
                     <input
@@ -488,7 +499,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                       defaultChecked={filters.featured}
                       className="h-4 w-4 accent-primary"
                     />
-                    Featured products
+                    {t("featuredProducts")}
                   </label>
                 </div>
               </FilterSection>
@@ -520,7 +531,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                             />
                             <span className="truncate">
                               {group.type === "BOOLEAN"
-                                ? entry.value === "true" ? "Yes" : "No"
+                                ? entry.value === "true" ? t("yes") : t("no")
                                 : entry.value}
                             </span>
                           </span>
@@ -571,22 +582,22 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
 
               <div className="space-y-3 pt-3">
                 <label className="block space-y-2 text-sm font-semibold">
-                  Sort by
+                  {t("sortBy")}
                   <select
                     name="sort"
                     defaultValue={filters.sort}
                     className="h-10 w-full rounded-lg border bg-background px-3 text-sm font-normal"
                   >
-                    {SORT_LABELS.map((option) => (
+                    {SORT_OPTIONS.map((option) => (
                       <option key={option.value} value={option.value}>
-                        {option.label}
+                        {t(option.labelKey as any)}
                       </option>
                     ))}
                   </select>
                 </label>
 
                 <label className="block space-y-2 text-sm font-semibold">
-                  Products per page
+                  {t("productsPerPage")}
                   <select
                     name="perPage"
                     defaultValue={String(filters.perPage)}
@@ -607,18 +618,18 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               <div>
                 <h2 className="font-bold">
                   {filters.q
-                    ? `Results for “${filters.q}”`
-                    : selectedCategory?.name ?? "All products"}
+                    ? t("resultsFor", { query: filters.q })
+                    : selectedCategory?.name ?? t("allProducts")}
                 </h2>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Showing {firstResult}–{lastResult} of {pagination.total} products
+                  {t("showingResults", { first: firstResult, last: lastResult, total: pagination.total })}
                   {selectedBrandNames.length
                     ? ` · ${selectedBrandNames.join(", ")}`
                     : ""}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {SORT_LABELS.slice(0, 4).map((option) => (
+                {SORT_OPTIONS.slice(0, 4).map((option) => (
                   <Link
                     key={option.value}
                     href={catalogUrl(filters, { sort: option.value, page: 1 })}
@@ -629,7 +640,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                         : "bg-background hover:border-primary hover:text-primary"
                     }`}
                   >
-                    {option.label}
+                    {t(option.labelKey as any)}
                   </Link>
                 ))}
               </div>
@@ -638,16 +649,16 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             {activeFilterLinks.length ? (
               <div
                 className="mb-4 flex flex-wrap items-center gap-2"
-                aria-label="Active product filters"
+                aria-label={t("active.label")}
               >
                 <span className="text-xs font-semibold text-muted-foreground">
-                  Active:
+                  {t("active.title")}:
                 </span>
                 {activeFilterLinks.map((filter) => (
                   <Link
                     key={filter.key}
                     href={filter.href}
-                    aria-label={`Remove ${filter.label} filter`}
+                    aria-label={t("active.remove", { label: filter.label })}
                     className="inline-flex items-center gap-1 rounded-full border bg-card px-3 py-1.5 text-xs font-semibold transition hover:border-primary hover:text-primary"
                   >
                     {filter.label}
@@ -658,7 +669,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   href="/ecommerce/products"
                   className="px-2 py-1 text-xs font-semibold text-primary hover:underline"
                 >
-                  Clear all
+                  {t("clearAll")}
                 </Link>
               </div>
             ) : null}
@@ -672,15 +683,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             ) : (
               <div className="rounded-3xl border border-dashed bg-muted/20 px-6 py-16 text-center">
                 <PackageSearch className="mx-auto h-12 w-12 text-muted-foreground" />
-                <h2 className="mt-4 text-xl font-bold">No products found</h2>
+                <h2 className="mt-4 text-xl font-bold">{t("empty.title")}</h2>
                 <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
-                  Try a broader search or remove one or more filters.
+                  {t("empty.description")}
                 </p>
                 <Link
                   href="/ecommerce/products"
                   className="mt-5 inline-flex rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"
                 >
-                  View all products
+                  {t("empty.viewAll")}
                 </Link>
               </div>
             )}
@@ -688,7 +699,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             {pagination.totalPages > 1 ? (
               <nav
                 className="mt-8 flex flex-wrap items-center justify-center gap-2"
-                aria-label="Product catalog pagination"
+                aria-label={t("pagination.label")}
               >
                 <Link
                   href={catalogUrl(filters, {
@@ -701,7 +712,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                       : "hover:border-primary hover:text-primary"
                   }`}
                 >
-                  Previous
+                  {t("pagination.previous")}
                 </Link>
                 {pages.map((page, index) => {
                   const previous = pages[index - 1];
@@ -735,7 +746,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                       : "hover:border-primary hover:text-primary"
                   }`}
                 >
-                  Next
+                  {t("pagination.next")}
                 </Link>
               </nav>
             ) : null}

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "@/lib/auth-client"; // তুমি header এ যেটা use করছো
 import { Star } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 type ReviewUser = {
   id: string;
@@ -41,6 +42,7 @@ function Stars({
   size?: number;
   readonly?: boolean;
 }) {
+  const t = useTranslations("StorefrontProduct.reviews");
   const [hover, setHover] = useState<number | null>(null);
   const display = hover ?? value;
 
@@ -61,7 +63,7 @@ function Stars({
               "p-0.5 rounded",
               !readonly && "hover:scale-105 transition"
             )}
-            aria-label={`Rate ${v} star`}
+            aria-label={t("rateStar", { value: v })}
           >
             <Star
               style={{ width: size, height: size }}
@@ -77,6 +79,8 @@ function Stars({
 }
 
 export default function ProductReviews({ productId }: { productId: number }) {
+  const t = useTranslations("StorefrontProduct.reviews");
+  const locale = useLocale();
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -170,7 +174,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
 
       const data = await res.json();
       if (!res.ok) {
-        alert(data?.error || "Failed to submit review");
+        alert(t("errors.submit"));
         return;
       }
 
@@ -189,10 +193,10 @@ export default function ProductReviews({ productId }: { productId: number }) {
       setRating(data.rating ?? rating);
       setComment(data.comment ?? comment);
 
-      alert(myExisting ? "Review updated!" : "Review submitted!");
+      alert(myExisting ? t("success.updated") : t("success.submitted"));
     } catch (e) {
       console.error(e);
-      alert("Something went wrong");
+      alert(t("errors.generic"));
     } finally {
       setSubmitting(false);
     }
@@ -204,12 +208,12 @@ export default function ProductReviews({ productId }: { productId: number }) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="text-sm font-semibold text-foreground">
-            Customer Reviews
+            {t("title")}
           </div>
           <div className="mt-1 flex items-center gap-2">
             <Stars value={Math.round(avg)} readonly />
             <span className="text-xs text-muted-foreground">
-              {avg.toFixed(1)} average rating
+              {t("averageRating", { rating: avg.toFixed(1) })}
             </span>
           </div>
         </div>
@@ -218,30 +222,30 @@ export default function ProductReviews({ productId }: { productId: number }) {
       {/* Write review */}
       <div className="rounded-xl border border-border bg-background p-4">
         <div className="text-sm font-semibold text-foreground">
-          {session?.user ? "Write a review" : "Login to write a review"}
+          {session?.user ? t("write") : t("loginToWrite")}
         </div>
 
         {!session?.user ? (
           <div className="mt-3 flex items-center gap-3">
             <p className="text-sm text-muted-foreground">
-              You must be logged in to submit a review.
+              {t("loginRequired")}
             </p>
             <button
               type="button"
               onClick={() => router.push("/signin")}
               className="h-10 px-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-95 transition"
             >
-              Sign In
+              {t("signIn")}
             </button>
           </div>
         ) : (
           <>
             <div className="mt-3 flex items-center gap-3">
-              <span className="text-sm text-muted-foreground">Rating:</span>
+              <span className="text-sm text-muted-foreground">{t("rating")}:</span>
               <Stars value={rating} onChange={setRating} />
               {myExisting ? (
                 <span className="text-xs text-muted-foreground">
-                  (You already reviewed — updating will overwrite it)
+                  ({t("overwriteNote")})
                 </span>
               ) : null}
             </div>
@@ -249,7 +253,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
             <textarea
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              placeholder="Write your opinion..."
+              placeholder={t("placeholder")}
               className="mt-3 w-full min-h-[110px] rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary"
             />
 
@@ -259,7 +263,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
               onClick={submit}
               className="mt-3 h-10 px-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-95 transition disabled:opacity-50"
             >
-              {submitting ? "Submitting..." : myExisting ? "Update Review" : "Submit Review"}
+              {submitting ? t("submitting") : myExisting ? t("update") : t("submit")}
             </button>
           </>
         )}
@@ -268,13 +272,13 @@ export default function ProductReviews({ productId }: { productId: number }) {
       {/* Review list */}
       <div className="rounded-xl border border-border bg-background overflow-hidden">
         <div className="px-4 py-3 border-b border-border font-semibold text-sm">
-          Reviews
+          {t("reviews")}
         </div>
 
         {loading ? (
-          <div className="p-4 text-sm text-muted-foreground">Loading...</div>
+          <div className="p-4 text-sm text-muted-foreground">{t("loading")}</div>
         ) : reviews.length === 0 ? (
-          <div className="p-4 text-sm text-muted-foreground">No reviews yet.</div>
+          <div className="p-4 text-sm text-muted-foreground">{t("empty")}</div>
         ) : (
           <div className="divide-y divide-border">
             {reviews.map((r) => (
@@ -282,7 +286,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
                 <div className="flex items-center justify-between gap-3">
                   <div className="min-w-0">
                     <div className="text-sm font-semibold text-foreground truncate">
-                      {r.user?.name || "Anonymous"}
+                      {r.user?.name || t("anonymous")}
                     </div>
                     <div className="mt-1">
                       <Stars value={r.rating} readonly size={16} />
@@ -290,7 +294,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
                   </div>
 
                   <div className="text-xs text-muted-foreground">
-                    {new Date(r.createdAt).toLocaleDateString("en-US", {
+                    {new Date(r.createdAt).toLocaleDateString(locale, {
                       year: "numeric",
                       month: "short",
                       day: "2-digit",
@@ -316,11 +320,11 @@ export default function ProductReviews({ productId }: { productId: number }) {
             disabled={page <= 1}
             onClick={() => setPage((p) => Math.max(1, p - 1))}
           >
-            Prev
+            {t("previous")}
           </button>
 
           <div className="text-xs text-muted-foreground">
-            Page {page} of {pages}
+            {t("page", { page, pages })}
           </div>
 
           <button
@@ -329,7 +333,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
             disabled={page >= pages}
             onClick={() => setPage((p) => Math.min(pages, p + 1))}
           >
-            Next
+            {t("next")}
           </button>
         </div>
       </div>

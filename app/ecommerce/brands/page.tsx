@@ -4,18 +4,21 @@ import Link from "next/link";
 import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import { getStorefrontCatalogFacets } from "@/lib/storefront-catalog";
 import { getSiteSettingsForSeo } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettingsForSeo();
+  const t = await getTranslations("StorefrontCatalog.brands");
 
   return {
-    title: { absolute: `Shop by Brand — ${settings.siteTitle}` },
-    description: `Explore available ${settings.siteTitle} products by brand.`,
+    title: { absolute: `${t("metadata.title")} — ${settings.siteTitle}` },
+    description: t("metadata.description", { site: settings.siteTitle }),
     alternates: { canonical: "/ecommerce/brands" },
   };
 }
 
 export default async function BrandsPage() {
+  const t = await getTranslations("StorefrontCatalog.brands");
   const { brands } = await getStorefrontCatalogFacets();
   const availableBrands = brands.filter((brand) => brand.productCount > 0);
 
@@ -25,14 +28,13 @@ export default async function BrandsPage() {
         <section className="rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-5 py-8 sm:px-8 sm:py-12">
           <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
             <BadgeCheck className="h-4 w-4" aria-hidden="true" />
-            Brand directory
+            {t("eyebrow")}
           </span>
           <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-5xl">
-            Shop trusted brands
+            {t("title")}
           </h1>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Open any brand to see its live catalog with the same category, price,
-            availability and sorting controls.
+            {t("description")}
           </p>
         </section>
 
@@ -48,7 +50,7 @@ export default async function BrandsPage() {
                   {brand.logo ? (
                     <Image
                       src={brand.logo}
-                      alt={`${brand.name} logo`}
+                      alt={t("logoAlt", { name: brand.name })}
                       fill
                       sizes="180px"
                       className="object-contain transition duration-300 group-hover:scale-105"
@@ -62,11 +64,11 @@ export default async function BrandsPage() {
                 <div className="mt-4 w-full">
                   <h2 className="truncate font-bold">{brand.name}</h2>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    {brand.productCount} products
+                    {t("productCount", { count: brand.productCount })}
                   </p>
                 </div>
                 <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-primary">
-                  View products
+                  {t("viewProducts")}
                   <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </span>
               </Link>
@@ -74,7 +76,7 @@ export default async function BrandsPage() {
           </div>
         ) : (
           <div className="mt-8 rounded-3xl border border-dashed p-12 text-center text-muted-foreground">
-            No brands with active products are available yet.
+            {t("empty")}
           </div>
         )}
       </div>

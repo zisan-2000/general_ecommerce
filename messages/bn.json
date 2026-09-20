@@ -8778,6 +8778,61 @@
       "continueShopping": "কেনাকাটা চালিয়ে যান"
     }
   },
+  "StorefrontCatalog": {
+    "page": {
+      "eyebrow": "পণ্য ক্যাটালগ", "heading": "আপনার জন্য সঠিক পণ্য খুঁজুন", "description": "সম্পূর্ণ ক্যাটালগে খুঁজুন, বর্তমান মূল্য তুলনা করুন এবং ক্যাটাগরি, ব্র্যান্ড, পণ্যের ধরন বা প্রাপ্যতা অনুযায়ী ফলাফল সীমিত করুন।", "filters": "ফিল্টার", "showHide": "দেখান / লুকান", "clear": "মুছুন", "clearAll": "সব মুছুন", "clearAllFilters": "সব ফিল্টার মুছুন", "search": "খুঁজুন", "searchPlaceholder": "নাম, SKU বা ব্র্যান্ড", "category": "ক্যাটাগরি", "allCategories": "সব ক্যাটাগরি", "brands": "ব্র্যান্ড", "productType": "পণ্যের ধরন", "allTypes": "সব ধরন", "priceRange": "মূল্যসীমা", "minPrice": "সর্বনিম্ন {value}", "maxPrice": "সর্বোচ্চ {value}", "minimumPrice": "সর্বনিম্ন মূল্য", "maximumPrice": "সর্বোচ্চ মূল্য", "availability": "প্রাপ্যতা", "inStock": "স্টকে আছে", "inStockOnly": "শুধু স্টকে থাকা পণ্য", "featured": "ফিচার্ড", "featuredProducts": "ফিচার্ড পণ্য", "yes": "হ্যাঁ", "no": "না", "sortBy": "সাজান", "productsPerPage": "প্রতি পাতায় পণ্য", "resultsFor": "“{query}”-এর ফলাফল", "allProducts": "সব পণ্য", "showingResults": "{total}টি পণ্যের মধ্যে {first}–{last} দেখানো হচ্ছে", "any": "যেকোনো",
+      "sort": { "relevance": "সবচেয়ে প্রাসঙ্গিক", "newest": "নতুন", "popular": "জনপ্রিয়", "priceAsc": "মূল্য: কম থেকে বেশি", "priceDesc": "মূল্য: বেশি থেকে কম", "nameAsc": "নাম: ক–হ" },
+      "productTypes": { "physical": "ফিজিক্যাল", "digital": "ডিজিটাল", "service": "সেবা", "bundle": "বান্ডেল" },
+      "active": { "label": "সক্রিয় পণ্য ফিল্টার", "title": "সক্রিয়", "search": "অনুসন্ধান: {query}", "price": "মূল্য: {min}–{max}", "remove": "{label} ফিল্টার সরান" },
+      "empty": { "title": "কোনো পণ্য পাওয়া যায়নি", "description": "আরও সাধারণভাবে খুঁজুন অথবা এক বা একাধিক ফিল্টার সরান।", "viewAll": "সব পণ্য দেখুন" },
+      "pagination": { "label": "পণ্য ক্যাটালগের পৃষ্ঠা", "previous": "আগের", "next": "পরের" },
+      "metadata": { "searchResults": "“{query}”-এর অনুসন্ধান ফলাফল", "categoryProducts": "{category} পণ্য", "description": "ক্যাটাগরি, ব্র্যান্ড, মূল্য ও প্রাপ্যতার ফিল্টার দিয়ে {site}-এর পণ্য দেখুন।", "catalogName": "{site} পণ্য ক্যাটালগ" }
+    },
+    "filters": { "updating": "পণ্য আপডেট হচ্ছে…", "updatingShort": "আপডেট হচ্ছে…", "automatic": "ফিল্টার স্বয়ংক্রিয়ভাবে আপডেট হয়", "showProducts": "পণ্য দেখুন", "apply": "ফিল্টার প্রয়োগ করুন" },
+    "grid": {
+      "compareSelected": "তুলনার জন্য {count}টি পণ্য নির্বাচিত", "compareNow": "এখন তুলনা করুন",
+      "login": { "title": "পণ্য সংরক্ষণ করতে সাইন ইন করুন", "description": "সাইন ইন করলে আপনার উইশলিস্ট সব জায়গায় সিঙ্ক থাকবে।", "cancel": "বাতিল", "signIn": "সাইন ইন" },
+      "errors": { "wishlist": "উইশলিস্ট আপডেট করা যায়নি।", "outOfStock": "এই পণ্যটি স্টকে নেই।", "addToCart": "পণ্যটি কার্টে যোগ করা যায়নি।", "compareLimit": "সর্বোচ্চ ৪টি পণ্য তুলনা করতে পারবেন।" },
+      "success": { "wishlistRemoved": "উইশলিস্ট থেকে সরানো হয়েছে।", "wishlistAdded": "উইশলিস্টে যোগ হয়েছে।", "addedToCart": "“{name}” কার্টে যোগ হয়েছে।", "comparisonAdded": "তুলনায় যোগ হয়েছে।", "comparisonRemoved": "তুলনা থেকে সরানো হয়েছে।" }
+    },
+    "card": { "viewProduct": "{name} দেখুন", "save": "সাশ্রয়: {amount}", "bestSeller": "বেস্ট সেলার", "removeWishlist": "উইশলিস্ট থেকে সরান", "addWishlist": "উইশলিস্টে যোগ করুন", "outOfStock": "স্টক শেষ", "model": "মডেল", "unavailable": "বর্তমানে পাওয়া যাচ্ছে না", "readyToOrder": "অর্ডারের জন্য প্রস্তুত", "reviewCount": "{count}টি রিভিউ", "availableColors": "উপলভ্য রং", "colorVariant": "{color} রঙের ভ্যারিয়েন্ট", "includes": "অন্তর্ভুক্ত: {items}", "viewDetailsFor": "{name}-এর বিস্তারিত দেখুন", "viewDetails": "বিস্তারিত দেখুন", "addToCart": "কার্টে যোগ করুন", "compared": "তুলনায় আছে", "compare": "তুলনা করুন" },
+    "brands": { "eyebrow": "ব্র্যান্ড ডিরেক্টরি", "title": "বিশ্বস্ত ব্র্যান্ড থেকে কিনুন", "description": "যেকোনো ব্র্যান্ড খুলে ক্যাটাগরি, মূল্য, প্রাপ্যতা ও সাজানোর সুবিধাসহ লাইভ ক্যাটালগ দেখুন।", "logoAlt": "{name} লোগো", "productCount": "{count}টি পণ্য", "viewProducts": "পণ্য দেখুন", "empty": "সক্রিয় পণ্যসহ কোনো ব্র্যান্ড এখনও পাওয়া যায়নি।", "metadata": { "title": "ব্র্যান্ড অনুযায়ী কিনুন", "description": "ব্র্যান্ড অনুযায়ী {site}-এর উপলভ্য পণ্য দেখুন।" } }
+  },
+  "StorefrontProduct": {
+    "page": {
+      "metadata": { "notFound": "পণ্য পাওয়া যায়নি", "buyOnline": "বাংলাদেশে অনলাইনে {name} কিনুন।" },
+      "breadcrumb": { "label": "ব্রেডক্রাম্ব", "home": "হোম", "products": "পণ্য" },
+      "information": { "productId": "পণ্য আইডি", "category": "ক্যাটাগরি", "brand": "ব্র্যান্ড", "writer": "লেখক", "publisher": "প্রকাশক", "type": "ধরন", "weight": "ওজন", "dimensions": "মাত্রা" },
+      "types": { "physical": "ফিজিক্যাল", "digital": "ডিজিটাল", "service": "সেবা", "bundle": "বান্ডেল" },
+      "recommendations": { "eyebrow": "এগুলোও পছন্দ হতে পারে", "title": "প্রস্তাবিত পণ্য", "viewCategory": "ক্যাটাগরি দেখুন" }
+    },
+    "purchase": {
+      "save": "সাশ্রয়: {amount}", "viewImage": "পণ্যের ছবি {number} দেখুন", "ratingLabel": "৫-এর মধ্যে {rating} তারকা", "reviews": "{count}টি রিভিউ", "share": "শেয়ার", "stock": "স্টক", "inStock": "স্টকে আছে", "outOfStock": "স্টক শেষ", "brand": "ব্র্যান্ড", "model": "মডেল", "warranty": "ওয়ারেন্টি", "chooseOption": "একটি অপশন বাছুন", "option": "অপশন {id}", "stockLeft": "{count}টি বাকি", "hotline": "হটলাইন", "discountPrice": "ছাড়ের মূল্য", "youSave": "আপনি {amount} সাশ্রয় করছেন", "emiStarts": "ইএমআই শুরু*", "installments": "সর্বোচ্চ ১২টি মাসিক কিস্তি", "decreaseQuantity": "পরিমাণ কমান", "increaseQuantity": "পরিমাণ বাড়ান", "addToCart": "কার্টে যোগ করুন", "wishlist": "উইশলিস্ট", "compare": "তুলনা", "buyNow": "নিরাপদ চেকআউটে এখনই কিনুন", "compareSelected": "নির্বাচিতগুলো তুলনা করুন ({count})",
+      "errors": { "addToCart": "পণ্যটি কার্টে যোগ করা যায়নি।", "compareLimit": "সর্বোচ্চ ৪টি পণ্য তুলনা করতে পারবেন।", "wishlist": "উইশলিস্ট আপডেট করা যায়নি।", "share": "পণ্যের লিংক শেয়ার করা যায়নি।" },
+      "success": { "addedToCart": "“{name}” কার্টে যোগ হয়েছে।", "comparisonAdded": "তুলনায় যোগ হয়েছে।", "comparisonRemoved": "তুলনা থেকে সরানো হয়েছে।", "wishlistRemoved": "উইশলিস্ট থেকে সরানো হয়েছে।", "wishlistAdded": "উইশলিস্টে যোগ হয়েছে।", "linkCopied": "পণ্যের লিংক কপি হয়েছে।" }
+    },
+    "tabs": { "label": "পণ্যের বিস্তারিত", "specifications": "স্পেসিফিকেশন", "description": "বিবরণ", "reviews": "রিভিউ", "specificationsTitle": "স্পেসিফিকেশন", "descriptionFallback": "পণ্যের বিবরণ শিগগিরই পাওয়া যাবে।" },
+    "questions": {
+      "title": "প্রশ্ন ও উত্তর", "description": "সামঞ্জস্য, স্পেসিফিকেশন বা কেনাকাটা সম্পর্কে প্রশ্ন করুন।", "askQuestion": "প্রশ্ন করুন", "placeholder": "এই পণ্য সম্পর্কে আপনি কী জানতে চান?", "submit": "প্রশ্ন জমা দিন", "signInToAsk": "প্রশ্ন করতে সাইন ইন করুন", "loading": "প্রশ্ন লোড হচ্ছে...", "empty": "এখনও কোনো প্রশ্ন নেই। প্রথম প্রশ্নটি করুন।", "questionPrefix": "প্র", "answerPrefix": "উ", "customer": "গ্রাহক", "answeredBy": "উত্তর দিয়েছেন {name}", "storeTeam": "স্টোর টিম", "awaitingAnswer": "স্টোর টিমের উত্তরের অপেক্ষায়।", "updateAnswer": "প্রকাশিত উত্তর আপডেট করুন", "writeAnswer": "অফিশিয়াল উত্তর লিখুন", "saving": "সংরক্ষণ হচ্ছে...", "publishAnswer": "উত্তর প্রকাশ করুন",
+      "errors": { "load": "প্রশ্ন লোড করা যায়নি।", "completeQuestion": "একটি সম্পূর্ণ প্রশ্ন লিখুন।", "submit": "প্রশ্ন জমা দেওয়া যায়নি।", "answer": "উত্তর সংরক্ষণ করা যায়নি।" },
+      "success": { "submitted": "আপনার প্রশ্ন জমা হয়েছে।", "answerPublished": "উত্তর প্রকাশ হয়েছে।" }
+    },
+    "conversion": {
+      "emi": { "title": "ইএমআই পরিকল্পনা", "from": "{amount} থেকে", "choosePeriod": "কিস্তির সময়কাল বাছুন", "months": "{count} মাস", "perMonth": "/ মাস", "note": "এটি আনুমানিক হিসাব। ব্যাংক ফি ও যোগ্যতা ভিন্ন হতে পারে।" },
+      "delivery": { "title": "ডেলিভারি অনুমান", "checkArea": "এলাকা যাচাই", "district": "জেলা", "area": "ডেলিভারি এলাকা", "checking": "যাচাই হচ্ছে...", "check": "ডেলিভারি যাচাই করুন", "free": "ফ্রি ডেলিভারি", "cost": "{amount} ডেলিভারি", "businessDays": "{count} কার্যদিবস", "confirmedAtCheckout": "চেকআউটে ডেলিভারির সময় নিশ্চিত হবে" },
+      "areas": { "dhaka": "ঢাকা", "outsideDhaka": "ঢাকার বাইরে" },
+      "errors": { "districtRequired": "ডেলিভারি দেখতে আপনার জেলা লিখুন।", "quoteFailed": "ডেলিভারি খরচ হিসাব করা যায়নি।" }
+    },
+    "bundle": { "configureLabel": "এই বান্ডেল কনফিগার করুন", "title": "আপনার বান্ডেল তৈরি করুন", "description": "স্টোর অনুমোদিত পণ্য বাছুন। মূল্য ও স্টক তাৎক্ষণিক আপডেট হবে।", "price": "আপনার বান্ডেলের মূল্য", "baseConfiguration": "বেস কনফিগারেশন", "fromBase": "বেস থেকে {difference}", "available": "{count}টি উপলভ্য", "ready": "কনফিগারেশন প্রস্তুত", "selectionRequired": "নির্বাচন প্রয়োজন", "required": "আবশ্যিক", "optional": "ঐচ্ছিক", "includedEveryBundle": "প্রতিটি বান্ডেলে অন্তর্ভুক্ত", "chooseCount": "{count}টি বাছুন", "chooseRange": "{min} থেকে {max}টি বাছুন", "itemValue": "পণ্যের মূল্য {amount}", "outOfStock": "স্টক শেষ", "maximumSelected": "সর্বোচ্চ নির্বাচন হয়েছে", "priceUpdates": "নির্বাচিত পণ্য অনুযায়ী মূল্য আপডেট হয়", "included": "অন্তর্ভুক্ত", "selectToContinue": "চালিয়ে যেতে {count}টি অপশন বাছুন।", "removeOptional": "এই ঐচ্ছিক পণ্যটি সরান", "quantityPerBundle": "প্রতি বান্ডেলে পরিমাণ", "decreaseQuantity": "{group}-এর পরিমাণ কমান", "increaseQuantity": "{group}-এর পরিমাণ বাড়ান", "notSelected": "নির্বাচিত নয়" },
+    "related": { "title": "সম্পর্কিত পণ্য", "viewAll": "সব দেখুন", "save": "সাশ্রয়: {amount}", "browseAll": "সব সম্পর্কিত পণ্য দেখুন" },
+    "reviews": {
+      "rateStar": "{value} তারকা দিন", "title": "গ্রাহক রিভিউ", "averageRating": "গড় রেটিং {rating}", "write": "রিভিউ লিখুন", "loginToWrite": "রিভিউ লিখতে লগইন করুন", "loginRequired": "রিভিউ জমা দিতে লগইন করতে হবে।", "signIn": "সাইন ইন", "rating": "রেটিং", "overwriteNote": "আপনি ইতিমধ্যে রিভিউ দিয়েছেন—আপডেট করলে আগেরটি বদলে যাবে", "placeholder": "আপনার মতামত লিখুন...", "submitting": "জমা হচ্ছে...", "update": "রিভিউ আপডেট করুন", "submit": "রিভিউ জমা দিন", "reviews": "রিভিউ", "loading": "লোড হচ্ছে...", "empty": "এখনও কোনো রিভিউ নেই।", "anonymous": "নামহীন", "previous": "আগের", "page": "পৃষ্ঠা {page} / {pages}", "next": "পরের",
+      "errors": { "submit": "রিভিউ জমা দেওয়া যায়নি।", "generic": "কিছু সমস্যা হয়েছে।" }, "success": { "updated": "রিভিউ আপডেট হয়েছে!", "submitted": "রিভিউ জমা হয়েছে!" }
+    },
+    "priceAlert": { "disabled": "মূল্য কমার অ্যালার্ট বন্ধ হয়েছে।", "enabled": "মূল্য কমলে আপনাকে জানানো হবে।", "error": "মূল্য কমার অ্যালার্ট আপডেট করা যায়নি।", "on": "অ্যালার্ট চালু", "notify": "মূল্য কমলে জানান" },
+    "error": { "title": "পণ্যের বিস্তারিত লোড করা যায়নি", "description": "আবার চেষ্টা করুন অথবা পণ্য ক্যাটালগে ফিরে যান।", "retry": "আবার চেষ্টা করুন", "browse": "পণ্য দেখুন" },
+    "notFound": { "title": "পণ্য পাওয়া যায়নি", "description": "পণ্যটি অনুপলভ্য হতে পারে অথবা লিংকটি ভুল।", "browse": "উপলভ্য পণ্য দেখুন" }
+  },
   "ScmAuto": {
         "k_f586059328a9": "1. কাউন্টারপার্টি এবং ডেলিভারি",
         "k_97fae3277194": "1. কাউন্টারপার্টি এবং সুযোগ",

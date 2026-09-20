@@ -9413,6 +9413,61 @@
     "payment": { "title": "支付", "back": "返回", "totalPayable": "应付总额", "cashOnDelivery": "货到付款", "manualPayment": "手动支付", "sslDescription": "通过 SSLCommerz 安全支付", "manualDescription": "手动支付（需要截图和交易编号）", "codDescription": "收到商品时付款", "selected": "已选择", "sendMoneyTo": "汇款至", "transactionId": "交易编号 *", "transactionPlaceholder": "请输入交易编号", "screenshot": "支付截图 *", "uploading": "正在上传...", "screenshotAlt": "支付截图预览", "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。", "noPaymentNow": "目前无需付款。", "placeOrder": "提交订单" },
     "paymentResult": { "success": "支付成功", "cancelled": "支付已取消", "unsuccessful": "支付失败", "verified": "您的支付已通过验证。", "unpaid": "您的订单仍未支付。", "orderNumber": "订单 #{id}", "viewOrders": "查看订单", "continueShopping": "继续购物" }
   },
+  "StorefrontCatalog": {
+    "page": {
+      "eyebrow": "商品目录", "heading": "找到适合您的商品", "description": "搜索完整目录、比较当前价格，并按类别、品牌、商品类型或库存情况筛选结果。", "filters": "筛选", "showHide": "显示 / 隐藏", "clear": "清除", "clearAll": "全部清除", "clearAllFilters": "清除所有筛选", "search": "搜索", "searchPlaceholder": "名称、SKU 或品牌", "category": "类别", "allCategories": "所有类别", "brands": "品牌", "productType": "商品类型", "allTypes": "所有类型", "priceRange": "价格范围", "minPrice": "最低 {value}", "maxPrice": "最高 {value}", "minimumPrice": "最低价格", "maximumPrice": "最高价格", "availability": "库存情况", "inStock": "有货", "inStockOnly": "仅显示有货", "featured": "精选", "featuredProducts": "精选商品", "yes": "是", "no": "否", "sortBy": "排序方式", "productsPerPage": "每页商品数", "resultsFor": "“{query}”的结果", "allProducts": "所有商品", "showingResults": "显示 {total} 件商品中的 {first}–{last}", "any": "不限",
+      "sort": { "relevance": "最相关", "newest": "最新", "popular": "热门", "priceAsc": "价格：从低到高", "priceDesc": "价格：从高到低", "nameAsc": "名称：A–Z" },
+      "productTypes": { "physical": "实体商品", "digital": "数字商品", "service": "服务", "bundle": "组合商品" },
+      "active": { "label": "已启用的商品筛选", "title": "已启用", "search": "搜索：{query}", "price": "价格：{min}–{max}", "remove": "移除 {label} 筛选" },
+      "empty": { "title": "未找到商品", "description": "请尝试更宽泛的搜索或移除一个或多个筛选条件。", "viewAll": "查看所有商品" },
+      "pagination": { "label": "商品目录分页", "previous": "上一页", "next": "下一页" },
+      "metadata": { "searchResults": "“{query}”的搜索结果", "categoryProducts": "{category} 商品", "description": "使用类别、品牌、价格和库存筛选浏览 {site} 商品。", "catalogName": "{site} 商品目录" }
+    },
+    "filters": { "updating": "正在更新商品…", "updatingShort": "正在更新…", "automatic": "筛选会自动更新", "showProducts": "显示商品", "apply": "应用筛选" },
+    "grid": {
+      "compareSelected": "已选择 {count} 件商品进行比较", "compareNow": "立即比较",
+      "login": { "title": "登录后保存商品", "description": "登录后，您的愿望清单会保持同步。", "cancel": "取消", "signIn": "登录" },
+      "errors": { "wishlist": "愿望清单更新失败。", "outOfStock": "此商品已缺货。", "addToCart": "无法将商品加入购物车。", "compareLimit": "最多可比较 4 件商品。" },
+      "success": { "wishlistRemoved": "已从愿望清单移除。", "wishlistAdded": "已加入愿望清单。", "addedToCart": "“{name}”已加入购物车。", "comparisonAdded": "已加入比较。", "comparisonRemoved": "已从比较中移除。" }
+    },
+    "card": { "viewProduct": "查看 {name}", "save": "节省：{amount}", "bestSeller": "畅销商品", "removeWishlist": "从愿望清单移除", "addWishlist": "加入愿望清单", "outOfStock": "缺货", "model": "型号", "unavailable": "暂不可用", "readyToOrder": "可立即下单", "reviewCount": "{count} 条评价", "availableColors": "可选颜色", "colorVariant": "{color} 颜色款式", "includes": "包含 {items}", "viewDetailsFor": "查看 {name} 的详情", "viewDetails": "查看详情", "addToCart": "加入购物车", "compared": "已比较", "compare": "比较" },
+    "brands": { "eyebrow": "品牌目录", "title": "选购可信品牌", "description": "打开任意品牌，即可使用相同的类别、价格、库存和排序选项查看实时目录。", "logoAlt": "{name} 标志", "productCount": "{count} 件商品", "viewProducts": "查看商品", "empty": "目前没有包含在售商品的品牌。", "metadata": { "title": "按品牌选购", "description": "按品牌浏览 {site} 的可用商品。" } }
+  },
+  "StorefrontProduct": {
+    "page": {
+      "metadata": { "notFound": "未找到商品", "buyOnline": "在孟加拉国在线购买 {name}。" },
+      "breadcrumb": { "label": "面包屑导航", "home": "首页", "products": "商品" },
+      "information": { "productId": "商品编号", "category": "类别", "brand": "品牌", "writer": "作者", "publisher": "出版社", "type": "类型", "weight": "重量", "dimensions": "尺寸" },
+      "types": { "physical": "实体商品", "digital": "数字商品", "service": "服务", "bundle": "组合商品" },
+      "recommendations": { "eyebrow": "您可能还喜欢", "title": "推荐商品", "viewCategory": "查看类别" }
+    },
+    "purchase": {
+      "save": "节省：{amount}", "viewImage": "查看商品图片 {number}", "ratingLabel": "5 星中得 {rating} 星", "reviews": "{count} 条评价", "share": "分享", "stock": "库存", "inStock": "有货", "outOfStock": "缺货", "brand": "品牌", "model": "型号", "warranty": "保修", "chooseOption": "选择一个选项", "option": "选项 {id}", "stockLeft": "剩余 {count} 件", "hotline": "热线", "discountPrice": "优惠价", "youSave": "您节省 {amount}", "emiStarts": "分期起价*", "installments": "最多 12 期月供", "decreaseQuantity": "减少数量", "increaseQuantity": "增加数量", "addToCart": "加入购物车", "wishlist": "愿望清单", "compare": "比较", "buyNow": "通过安全结账立即购买", "compareSelected": "比较已选商品（{count}）",
+      "errors": { "addToCart": "无法将商品加入购物车。", "compareLimit": "最多可比较 4 件商品。", "wishlist": "愿望清单更新失败。", "share": "无法分享商品链接。" },
+      "success": { "addedToCart": "“{name}”已加入购物车。", "comparisonAdded": "已加入比较。", "comparisonRemoved": "已从比较中移除。", "wishlistRemoved": "已从愿望清单移除。", "wishlistAdded": "已加入愿望清单。", "linkCopied": "商品链接已复制。" }
+    },
+    "tabs": { "label": "商品详情", "specifications": "规格", "description": "描述", "reviews": "评价", "specificationsTitle": "规格参数", "descriptionFallback": "商品描述即将提供。" },
+    "questions": {
+      "title": "问答", "description": "询问兼容性、规格或购买相关问题。", "askQuestion": "提出问题", "placeholder": "您想了解此商品的哪些信息？", "submit": "提交问题", "signInToAsk": "登录后提问", "loading": "正在加载问题...", "empty": "暂无问题，欢迎第一个提问。", "questionPrefix": "问", "answerPrefix": "答", "customer": "客户", "answeredBy": "由 {name} 回答", "storeTeam": "商店团队", "awaitingAnswer": "正在等待商店团队回复。", "updateAnswer": "更新已发布的回答", "writeAnswer": "撰写官方回答", "saving": "正在保存...", "publishAnswer": "发布回答",
+      "errors": { "load": "无法加载问题。", "completeQuestion": "请输入完整的问题。", "submit": "无法提交问题。", "answer": "无法保存回答。" },
+      "success": { "submitted": "您的问题已提交。", "answerPublished": "回答已发布。" }
+    },
+    "conversion": {
+      "emi": { "title": "分期计划", "from": "低至 {amount}", "choosePeriod": "选择分期期数", "months": "{count} 个月", "perMonth": "/ 月", "note": "仅供参考，银行费用和资格可能有所不同。" },
+      "delivery": { "title": "预计配送", "checkArea": "检查区域", "district": "地区", "area": "配送区域", "checking": "正在检查...", "check": "检查配送", "free": "免费配送", "cost": "配送费 {amount}", "businessDays": "{count} 个工作日", "confirmedAtCheckout": "配送时间将在结账时确认" },
+      "areas": { "dhaka": "达卡", "outsideDhaka": "达卡以外" },
+      "errors": { "districtRequired": "请输入地区以检查配送。", "quoteFailed": "无法计算配送报价。" }
+    },
+    "bundle": { "configureLabel": "配置此组合", "title": "创建您的组合", "description": "从商店批准的商品中选择，价格和库存会即时更新。", "price": "组合价格", "baseConfiguration": "基础配置", "fromBase": "较基础配置 {difference}", "available": "可用 {count} 件", "ready": "配置已就绪", "selectionRequired": "需要选择", "required": "必选", "optional": "可选", "includedEveryBundle": "每个组合均包含", "chooseCount": "选择 {count} 项", "chooseRange": "选择 {min} 至 {max} 项", "itemValue": "商品价值 {amount}", "outOfStock": "缺货", "maximumSelected": "已达选择上限", "priceUpdates": "价格随所选商品更新", "included": "已包含", "selectToContinue": "请选择 {count} 个选项后继续。", "removeOptional": "移除此可选商品", "quantityPerBundle": "每个组合的数量", "decreaseQuantity": "减少 {group} 数量", "increaseQuantity": "增加 {group} 数量", "notSelected": "未选择" },
+    "related": { "title": "相关商品", "viewAll": "查看全部", "save": "节省：{amount}", "browseAll": "浏览所有相关商品" },
+    "reviews": {
+      "rateStar": "评 {value} 星", "title": "客户评价", "averageRating": "平均评分 {rating}", "write": "撰写评价", "loginToWrite": "登录后撰写评价", "loginRequired": "您必须登录才能提交评价。", "signIn": "登录", "rating": "评分", "overwriteNote": "您已评价过，更新将覆盖原评价", "placeholder": "写下您的看法...", "submitting": "正在提交...", "update": "更新评价", "submit": "提交评价", "reviews": "评价", "loading": "正在加载...", "empty": "暂无评价。", "anonymous": "匿名", "previous": "上一页", "page": "第 {page} 页，共 {pages} 页", "next": "下一页",
+      "errors": { "submit": "评价提交失败。", "generic": "出现错误。" }, "success": { "updated": "评价已更新！", "submitted": "评价已提交！" }
+    },
+    "priceAlert": { "disabled": "降价提醒已关闭。", "enabled": "商品降价时会通知您。", "error": "无法更新降价提醒。", "on": "提醒已开启", "notify": "降价时通知我" },
+    "error": { "title": "无法加载商品详情", "description": "请重试或返回商品目录。", "retry": "重试", "browse": "浏览商品" },
+    "notFound": { "title": "未找到商品", "description": "此商品可能已下架，或链接不正确。", "browse": "浏览可用商品" }
+  },
   "ScmAuto": {
     "k_f586059328a9": "1. 交易方与交付",
     "k_97fae3277194": "1. 交易方与范围",

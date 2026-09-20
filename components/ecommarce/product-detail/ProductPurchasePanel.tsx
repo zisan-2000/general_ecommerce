@@ -34,12 +34,13 @@ import {
 import BundleConfigurator, {
   type BundleConfigurationPreview,
 } from "@/components/ecommarce/product-detail/BundleConfigurator";
+import { useLocale, useTranslations } from "next-intl";
 
-const money = (value: number, currency: string) => {
+const money = (value: number, currency: string, locale: string) => {
   if (currency.toUpperCase() === "BDT") {
-    return `৳${Math.round(value).toLocaleString("en-US")}`;
+    return `৳${Math.round(value).toLocaleString(locale)}`;
   }
-  return new Intl.NumberFormat("en-BD", {
+  return new Intl.NumberFormat(locale, {
     style: "currency",
     currency: /^[A-Z]{3}$/.test(currency) ? currency : "BDT",
     maximumFractionDigits: 0,
@@ -75,6 +76,8 @@ export default function ProductPurchasePanel({
   product: ProductPurchaseData;
   details: PurchasePanelDetails;
 }) {
+  const t = useTranslations("StorefrontProduct.purchase");
+  const locale = useLocale();
   const { COMPARE: compareEnabled } = useStorefrontFeatures();
   const router = useRouter();
   const { status } = useSession();
@@ -170,23 +173,23 @@ export default function ProductPurchasePanel({
 
   const addProduct = async () => {
     if (stock <= 0) return;
-    if (await addSelectedProduct()) toast.success(`“${product.name}” added to cart.`);
-    else toast.error("Product could not be added to cart.");
+    if (await addSelectedProduct()) toast.success(t("success.addedToCart", { name: product.name }));
+    else toast.error(t("errors.addToCart"));
   };
 
   const buyNow = async () => {
     if (stock <= 0) return;
     if (await addSelectedProduct()) router.push("/ecommerce/checkout");
-    else toast.error("Product could not be added to cart.");
+    else toast.error(t("errors.addToCart"));
   };
 
   const toggleCompare = () => {
     const result = compare.toggle(product.id);
     if (result.limitReached) {
-      toast.error("You can compare up to 4 products.");
+      toast.error(t("errors.compareLimit"));
       return;
     }
-    toast.success(result.added ? "Added to comparison." : "Removed from comparison.");
+    toast.success(result.added ? t("success.comparisonAdded") : t("success.comparisonRemoved"));
   };
 
   const toggleWishlist = async () => {
@@ -207,13 +210,13 @@ export default function ProductPurchasePanel({
               body: JSON.stringify({ productId: product.id }),
             },
       );
-      if (!response.ok) throw new Error("Wishlist update failed");
+      if (!response.ok) throw new Error(t("errors.wishlist"));
       if (wishlisted) removeFromWishlist(product.id);
       else addToWishlist(product.id);
-      toast.success(wishlisted ? "Removed from wishlist." : "Added to wishlist.");
+      toast.success(wishlisted ? t("success.wishlistRemoved") : t("success.wishlistAdded"));
     } catch (error) {
       console.error(error);
-      toast.error("Wishlist update failed.");
+      toast.error(t("errors.wishlist"));
     }
   };
 
@@ -223,11 +226,11 @@ export default function ProductPurchasePanel({
       if (navigator.share) await navigator.share({ title: product.name, url });
       else {
         await navigator.clipboard.writeText(url);
-        toast.success("Product link copied.");
+        toast.success(t("success.linkCopied"));
       }
     } catch (error) {
       if (error instanceof DOMException && error.name === "AbortError") return;
-      toast.error("Product link could not be shared.");
+      toast.error(t("errors.share"));
     }
   };
 
@@ -238,7 +241,7 @@ export default function ProductPurchasePanel({
             <div className="relative h-[310px] overflow-hidden rounded-md bg-white sm:h-[390px]">
               {savings > 0 ? (
                 <span className="absolute left-2 top-2 z-10 rounded bg-emerald-700 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm">
-                  Save: {money(savings, product.currency)}
+                  {t("save", { amount: money(savings, product.currency, locale) })}
                 </span>
               ) : null}
               <Image
@@ -258,7 +261,7 @@ export default function ProductPurchasePanel({
                     key={image}
                     type="button"
                     onClick={() => setActiveImage(image)}
-                    aria-label={`View product image ${index + 1}`}
+                    aria-label={t("viewImage", { number: index + 1 })}
                     aria-pressed={activeImage === image}
                     className={`relative h-14 w-14 shrink-0 overflow-hidden rounded border bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] sm:h-[60px] sm:w-[60px] ${
                       activeImage === image
@@ -285,7 +288,7 @@ export default function ProductPurchasePanel({
             </h1>
 
             <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] text-muted-foreground">
-              <span className="inline-flex items-center gap-0.5" aria-label={`${product.ratingAvg.toFixed(1)} out of 5 stars`}>
+              <span className="inline-flex items-center gap-0.5" aria-label={t("ratingLabel", { rating: product.ratingAvg.toFixed(1) })}>
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star
                     key={index}
@@ -298,22 +301,22 @@ export default function ProductPurchasePanel({
                   />
                 ))}
               </span>
-              <span>{product.ratingCount} Reviews</span>
+              <span>{t("reviews", { count: product.ratingCount })}</span>
               <button
                 type="button"
                 onClick={share}
                 className="inline-flex h-7 items-center gap-1 rounded border border-border px-2 text-[11px] font-medium text-primary hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <Share2 className="h-3.5 w-3.5" aria-hidden="true" />
-                Share
+                {t("share")}
               </button>
             </div>
 
             <div className="mt-3 flex flex-wrap gap-1.5 text-[11px]">
               <span className="rounded border border-border px-2.5 py-1.5 text-muted-foreground">
-                Stock: {" "}
+                {t("stock")}: {" "}
                 <strong className={stock > 0 ? "text-emerald-700" : "text-rose-600"}>
-                  {stock > 0 ? "In Stock" : "Out of Stock"}
+                  {stock > 0 ? t("inStock") : t("outOfStock")}
                 </strong>
               </span>
               <span className="rounded border border-border px-2.5 py-1.5 text-muted-foreground">
@@ -326,17 +329,17 @@ export default function ProductPurchasePanel({
               ) : null}
               {details.brandName ? (
                 <span className="rounded border border-border px-2.5 py-1.5 text-muted-foreground">
-                  Brand: <strong className="text-foreground">{details.brandName}</strong>
+                  {t("brand")}: <strong className="text-foreground">{details.brandName}</strong>
                 </span>
               ) : null}
               {model ? (
                 <span className="rounded border border-border px-2.5 py-1.5 text-muted-foreground">
-                  Model: <strong className="text-foreground">{model}</strong>
+                  {t("model")}: <strong className="text-foreground">{model}</strong>
                 </span>
               ) : null}
               {warranty ? (
                 <span className="rounded border border-border px-2.5 py-1.5 text-muted-foreground">
-                  Warranty: <strong className="text-foreground">{warranty}</strong>
+                  {t("warranty")}: <strong className="text-foreground">{warranty}</strong>
                 </span>
               ) : null}
             </div>
@@ -366,7 +369,7 @@ export default function ProductPurchasePanel({
 
             {product.variants.filter((variant) => variant.active).length > 1 ? (
               <fieldset className="mt-3">
-                <legend className="text-[12px] font-bold text-foreground">Choose an option</legend>
+                <legend className="text-[12px] font-bold text-foreground">{t("chooseOption")}</legend>
                 <div className="mt-2 grid gap-2 sm:grid-cols-2">
                   {product.variants
                     .filter((variant) => variant.active)
@@ -376,7 +379,7 @@ export default function ProductPurchasePanel({
                           .map(([key, value]) => `${key}: ${value}`)
                           .join(" · ") ||
                         variant.sku ||
-                        `Option ${variant.id}`;
+                        t("option", { id: variant.id });
                       return (
                         <button
                           key={variant.id}
@@ -394,7 +397,7 @@ export default function ProductPurchasePanel({
                             <Check className="h-4 w-4 shrink-0" aria-hidden="true" />
                           ) : (
                             <span className="ml-2 shrink-0 text-[10px] text-muted-foreground">
-                              {variant.stock} left
+                              {t("stockLeft", { count: variant.stock })}
                             </span>
                           )}
                         </button>
@@ -412,7 +415,7 @@ export default function ProductPurchasePanel({
                     className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-[11px] font-medium text-muted-foreground hover:border-primary/40 hover:bg-accent"
                   >
                     <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
-                    <span>Hotline</span>
+                    <span>{t("hotline")}</span>
                     <strong className="text-primary">{details.contactNumber}</strong>
                   </a>
                 ) : null}
@@ -430,31 +433,31 @@ export default function ProductPurchasePanel({
 
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
               <div className="rounded-md border border-border bg-muted/60 p-3">
-                <p className="text-[11px] font-medium text-muted-foreground">Discount Price</p>
+                <p className="text-[11px] font-medium text-muted-foreground">{t("discountPrice")}</p>
                 <div className="mt-2 flex flex-wrap items-baseline gap-2">
                   <strong className="text-[21px] text-rose-600">
-                    {money(price, product.currency)}
+                    {money(price, product.currency, locale)}
                   </strong>
                   {originalPrice && originalPrice > price ? (
                     <span className="text-[12px] text-muted-foreground line-through">
-                      {money(originalPrice, product.currency)}
+                      {money(originalPrice, product.currency, locale)}
                     </span>
                   ) : null}
                 </div>
                 {savings > 0 ? (
                   <p className="mt-1 text-[11px] font-medium text-emerald-700">
-                    You save {money(savings, product.currency)}
+                    {t("youSave", { amount: money(savings, product.currency, locale) })}
                   </p>
                 ) : null}
               </div>
               <div className="rounded-md border border-border bg-muted/60 p-3">
-                <p className="text-[11px] font-medium text-muted-foreground">EMI Starts From*</p>
+                <p className="text-[11px] font-medium text-muted-foreground">{t("emiStarts")}</p>
                 <strong className="mt-2 block text-[20px] text-[#2563eb]">
-                  {money(emiMonthly, product.currency)}
+                  {money(emiMonthly, product.currency, locale)}
                 </strong>
                 <p className="mt-1 inline-flex items-center gap-1 text-[11px] text-[#174a92]">
                   <CreditCard className="h-3.5 w-3.5" aria-hidden="true" />
-                  Up to 12 monthly installments
+                  {t("installments")}
                 </p>
               </div>
             </div>
@@ -476,7 +479,7 @@ export default function ProductPurchasePanel({
                   onClick={() => setQuantity((value) => Math.max(1, value - 1))}
                   disabled={quantity <= 1}
                   className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-muted disabled:opacity-40"
-                  aria-label="Decrease quantity"
+                  aria-label={t("decreaseQuantity")}
                 >
                   <Minus className="h-4 w-4" aria-hidden="true" />
                 </button>
@@ -488,7 +491,7 @@ export default function ProductPurchasePanel({
                   onClick={() => setQuantity((value) => Math.min(Math.max(1, stock), value + 1))}
                   disabled={stock <= 0 || quantity >= stock}
                   className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-muted disabled:opacity-40"
-                  aria-label="Increase quantity"
+                  aria-label={t("increaseQuantity")}
                 >
                   <Plus className="h-4 w-4" aria-hidden="true" />
                 </button>
@@ -500,7 +503,7 @@ export default function ProductPurchasePanel({
                 className="inline-flex h-10 min-w-[180px] flex-1 items-center justify-center gap-2 rounded bg-primary px-5 text-[12px] font-bold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground"
               >
                 <ShoppingCart className="h-4 w-4" aria-hidden="true" />
-                {stock > 0 ? "Add to Cart" : "Out of Stock"}
+                {stock > 0 ? t("addToCart") : t("outOfStock")}
               </button>
               <button
                 type="button"
@@ -512,7 +515,7 @@ export default function ProductPurchasePanel({
                   className={`h-4 w-4 ${wishlisted ? "fill-rose-500 text-rose-500" : ""}`}
                   aria-hidden="true"
                 />
-                <span className="hidden sm:inline">Wishlist</span>
+                <span className="hidden sm:inline">{t("wishlist")}</span>
               </button>
               <PriceDropAlertButton
                 productId={product.id}
@@ -532,7 +535,7 @@ export default function ProductPurchasePanel({
                   aria-pressed={compare.isCompared(product.id)}
                 >
                   <GitCompareArrows className="h-4 w-4" aria-hidden="true" />
-                  <span className="hidden sm:inline">Compare</span>
+                  <span className="hidden sm:inline">{t("compare")}</span>
                 </button>
               ) : null}
             </div>
@@ -544,14 +547,14 @@ export default function ProductPurchasePanel({
                 disabled={stock <= 0 || (product.type === "BUNDLE" && !bundlePreview?.valid)}
                 className="text-[11px] font-semibold text-primary hover:underline disabled:text-muted-foreground"
               >
-                Buy now with secure checkout
+                {t("buyNow")}
               </button>
               {compareEnabled && compare.count > 0 ? (
                 <Link
                   href={compare.href}
                   className="text-[11px] font-semibold text-primary hover:underline"
                 >
-                  Compare selected ({compare.count})
+                  {t("compareSelected", { count: compare.count })}
                 </Link>
               ) : null}
             </div>

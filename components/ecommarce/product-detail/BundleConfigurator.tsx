@@ -8,6 +8,7 @@ import {
   calculateConfiguredBundlePricing,
   getBundleOptionUnitPrice,
 } from "@/lib/bundle-configuration-pricing";
+import { useLocale, useTranslations } from "next-intl";
 
 type BundleGroup = ProductPurchaseData["bundleGroups"][number];
 
@@ -20,10 +21,10 @@ export type BundleConfigurationPreview = {
   summary: string[];
 };
 
-const money = (value: number, currency: string) =>
+const money = (value: number, currency: string, locale: string) =>
   currency.toUpperCase() === "BDT"
-    ? `৳${Math.round(value).toLocaleString("en-US")}`
-    : new Intl.NumberFormat("en-US", { style: "currency", currency }).format(value);
+    ? `৳${Math.round(value).toLocaleString(locale)}`
+    : new Intl.NumberFormat(locale, { style: "currency", currency }).format(value);
 
 function initialSelections(groups: BundleGroup[]) {
   return Object.fromEntries(
@@ -50,6 +51,8 @@ export default function BundleConfigurator({
   stockLimit: number | null;
   onChange: (preview: BundleConfigurationPreview) => void;
 }) {
+  const t = useTranslations("StorefrontProduct.bundle");
+  const locale = useLocale();
   const [selected, setSelected] = useState(() => initialSelections(groups));
 
   const preview = useMemo<BundleConfigurationPreview>(() => {
@@ -96,7 +99,7 @@ export default function BundleConfigurator({
           omitted: true,
         });
       }
-      summary.push(`${group.name}: ${names.length ? names.join(", ") : "Not selected"}`);
+      summary.push(`${group.name}: ${names.length ? names.join(", ") : t("notSelected")}`);
     }
     const componentCapacity = demand.size
       ? Math.min(...Array.from(demand.values()).map((item) => Math.floor(item.stock / item.quantity)))
@@ -114,7 +117,7 @@ export default function BundleConfigurator({
       valid,
       summary,
     };
-  }, [basePrice, groups, selected, stockLimit]);
+  }, [basePrice, groups, selected, stockLimit, t]);
 
   useEffect(() => onChange(preview), [onChange, preview]);
 
@@ -149,27 +152,27 @@ export default function BundleConfigurator({
   };
 
   return (
-    <div className="mt-4 space-y-4" aria-label="Configure this bundle">
+    <div className="mt-4 space-y-4" aria-label={t("configureLabel")}>
       <div className="rounded-xl border border-primary/20 bg-primary/5 p-4">
         <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-            <h2 className="text-base font-bold">Build your bundle</h2>
-            <p className="mt-1 text-xs text-muted-foreground">Choose from the store-approved products. Your price and stock update instantly.</p>
+            <h2 className="text-base font-bold">{t("title")}</h2>
+            <p className="mt-1 text-xs text-muted-foreground">{t("description")}</p>
         </div>
           <div className="text-right" aria-live="polite">
-            <p className="text-xs font-medium text-muted-foreground">Your bundle price</p>
-            <p className="text-xl font-black text-primary">{money(preview.finalPrice, currency)}</p>
+            <p className="text-xs font-medium text-muted-foreground">{t("price")}</p>
+            <p className="text-xl font-black text-primary">{money(preview.finalPrice, currency, locale)}</p>
             <p className={`text-xs font-semibold ${preview.finalPrice > basePrice ? "text-amber-700" : preview.finalPrice < basePrice ? "text-emerald-700" : "text-muted-foreground"}`}>
               {preview.finalPrice === basePrice
-                ? "Base configuration"
-                : `${preview.finalPrice > basePrice ? "+" : "−"}${money(Math.abs(preview.finalPrice - basePrice), currency)} from base`}
+                ? t("baseConfiguration")
+                : t("fromBase", { difference: `${preview.finalPrice > basePrice ? "+" : "−"}${money(Math.abs(preview.finalPrice - basePrice), currency, locale)}` })}
             </p>
           </div>
         </div>
         <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-          <span className="rounded-full bg-background px-3 py-1 font-semibold text-foreground">{preview.availableQuantity} available</span>
+          <span className="rounded-full bg-background px-3 py-1 font-semibold text-foreground">{t("available", { count: preview.availableQuantity })}</span>
           <span className={`rounded-full px-3 py-1 font-semibold ${preview.valid ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-800"}`}>
-            {preview.valid ? "Configuration ready" : "Selection required"}
+            {preview.valid ? t("ready") : t("selectionRequired")}
           </span>
         </div>
       </div>
@@ -184,14 +187,14 @@ export default function BundleConfigurator({
         return (
           <fieldset key={group.id} className={`rounded-xl border p-4 ${selectionValid ? "border-border" : "border-amber-400 bg-amber-50/50"}`}>
             <legend className="px-1 text-sm font-bold">
-              {group.name} {group.required ? <span className="text-rose-600" aria-label="required">*</span> : <span className="font-normal text-muted-foreground">(optional)</span>}
+              {group.name} {group.required ? <span className="text-rose-600" aria-label={t("required")}>*</span> : <span className="font-normal text-muted-foreground">({t("optional")})</span>}
             </legend>
             <p className="mb-3 text-xs text-muted-foreground">
               {group.selectionType === "FIXED"
-                ? "Included in every bundle"
+                ? t("includedEveryBundle")
                 : group.minSelect === group.maxSelect
-                  ? `Choose ${group.maxSelect}`
-                  : `Choose ${group.minSelect} to ${group.maxSelect}`}
+                  ? t("chooseCount", { count: group.maxSelect })
+                  : t("chooseRange", { min: group.minSelect, max: group.maxSelect })}
             </p>
             <div className="grid gap-2 sm:grid-cols-2">
               {group.options.map((option) => {
@@ -233,17 +236,17 @@ export default function BundleConfigurator({
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-xs font-semibold">{option.product.name}</span>
                       {variantText ? <span className="block truncate text-[11px] text-muted-foreground">{variantText}</span> : null}
-                      <span className="block text-[11px] text-muted-foreground">Item value {money(unitPrice, currency)}</span>
+                      <span className="block text-[11px] text-muted-foreground">{t("itemValue", { amount: money(unitPrice, currency, locale) })}</span>
                       <span className="block text-[11px] font-semibold text-primary">
                         {unavailable
-                          ? "Out of stock"
+                          ? t("outOfStock")
                           : selectionLimitReached
-                            ? "Maximum selected"
+                            ? t("maximumSelected")
                             : !showIndividualAdjustment
-                              ? "Price updates from selected items"
+                              ? t("priceUpdates")
                             : displayedAdjustment === 0
-                          ? "Included"
-                          : `${displayedAdjustment > 0 ? "+" : "−"}${money(Math.abs(displayedAdjustment), currency)}`}
+                          ? t("included")
+                          : `${displayedAdjustment > 0 ? "+" : "−"}${money(Math.abs(displayedAdjustment), currency, locale)}`}
                       </span>
                     </span>
                     <span className={`grid h-5 w-5 shrink-0 place-items-center border ${group.maxSelect === 1 ? "rounded-full" : "rounded"} ${active ? "border-primary bg-primary text-primary-foreground" : "border-muted-foreground/40"}`}>
@@ -255,7 +258,7 @@ export default function BundleConfigurator({
             </div>
             {!selectionValid ? (
               <p className="mt-2 flex items-center gap-1.5 text-xs font-medium text-amber-800" role="alert">
-                <AlertCircle className="h-3.5 w-3.5" />Select {minimum === group.maxSelect ? minimum : `${minimum}–${group.maxSelect}`} option{group.maxSelect === 1 ? "" : "s"} to continue.
+                <AlertCircle className="h-3.5 w-3.5" />{t("selectToContinue", { count: minimum === group.maxSelect ? String(minimum) : `${minimum}–${group.maxSelect}` })}
               </p>
             ) : null}
             {!group.required && state.optionIds.length > 0 ? (
@@ -267,15 +270,15 @@ export default function BundleConfigurator({
                 }))}
                 className="mt-2 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
               >
-                Remove this optional item
+                {t("removeOptional")}
               </button>
             ) : null}
             {group.allowQuantityChange && state.optionIds.length > 0 ? (
               <div className="mt-2 flex items-center gap-2 text-xs">
-                <span className="font-medium">Quantity per bundle</span>
-                <button type="button" onClick={() => changeQuantity(group, -1)} disabled={state.quantity <= group.minQuantity} className="rounded border p-1 disabled:opacity-40" aria-label={`Decrease ${group.name} quantity`}><Minus className="h-3 w-3" /></button>
+                <span className="font-medium">{t("quantityPerBundle")}</span>
+                <button type="button" onClick={() => changeQuantity(group, -1)} disabled={state.quantity <= group.minQuantity} className="rounded border p-1 disabled:opacity-40" aria-label={t("decreaseQuantity", { group: group.name })}><Minus className="h-3 w-3" /></button>
                 <strong>{state.quantity}</strong>
-                <button type="button" onClick={() => changeQuantity(group, 1)} disabled={state.quantity >= group.maxQuantity} className="rounded border p-1 disabled:opacity-40" aria-label={`Increase ${group.name} quantity`}><Plus className="h-3 w-3" /></button>
+                <button type="button" onClick={() => changeQuantity(group, 1)} disabled={state.quantity >= group.maxQuantity} className="rounded border p-1 disabled:opacity-40" aria-label={t("increaseQuantity", { group: group.name })}><Plus className="h-3 w-3" /></button>
               </div>
             ) : null}
           </fieldset>

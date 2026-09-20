@@ -1,29 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { StorefrontCatalogProduct } from "@/lib/storefront-catalog";
+import { getLocale, getTranslations } from "next-intl/server";
 
-function money(value: number) {
-  return `৳${Math.round(value).toLocaleString("en-US")}`;
+function money(value: number, locale: string) {
+  return `৳${Math.round(value).toLocaleString(locale)}`;
 }
 
-export default function RelatedProductRail({
+export default async function RelatedProductRail({
   products,
   categoryHref,
 }: {
   products: StorefrontCatalogProduct[];
   categoryHref: string;
 }) {
+  const [t, locale] = await Promise.all([
+    getTranslations("StorefrontProduct.related"),
+    getLocale(),
+  ]);
   if (products.length === 0) return null;
 
   return (
     <aside className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
       <div className="flex shrink-0 items-center justify-between border-b border-border px-4 py-3.5">
-        <h2 className="text-[14px] font-bold text-foreground">Related Products</h2>
+        <h2 className="text-[14px] font-bold text-foreground">{t("title")}</h2>
         <Link
           href={categoryHref}
           className="text-[11px] font-semibold text-primary hover:underline"
         >
-          View all
+          {t("viewAll")}
         </Link>
       </div>
 
@@ -55,17 +60,17 @@ export default function RelatedProductRail({
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-baseline gap-2">
                   <strong className="text-[13px] text-rose-600">
-                    {money(product.price)}
+                    {money(product.price, locale)}
                   </strong>
                   {product.originalPrice && product.originalPrice > product.price ? (
                     <span className="text-[10px] text-muted-foreground line-through">
-                      {money(product.originalPrice)}
+                      {money(product.originalPrice, locale)}
                     </span>
                   ) : null}
                 </span>
                 {savings > 0 ? (
                   <span className="mt-0.5 block text-[10px] font-medium text-emerald-700">
-                    Save: {money(savings)}
+                    {t("save", { amount: money(savings, locale) })}
                   </span>
                 ) : null}
               </span>
@@ -78,7 +83,7 @@ export default function RelatedProductRail({
         href={categoryHref}
         className="flex h-11 shrink-0 items-center justify-center border-t border-border bg-muted text-[11px] font-bold text-primary transition hover:bg-accent"
       >
-        Browse all related products
+        {t("browseAll")}
       </Link>
     </aside>
   );
