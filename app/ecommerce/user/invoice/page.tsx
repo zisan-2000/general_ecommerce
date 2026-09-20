@@ -7,6 +7,7 @@ import AccountHeader from "../AccountHeader";
 import AccountMenu from "../AccountMenu";
 import { Home, Download, FileText, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useLocale, useTranslations } from "next-intl";
 
 type ApiOrder = any;
 
@@ -18,13 +19,15 @@ type OrderRow = {
   paymentStatus: string;
 };
 
-const formatDateTime = (iso: string) => {
+const formatDateTime = (iso: string, locale: string) => {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleString();
+  return d.toLocaleString(locale);
 };
 
 export default function InvoicePage() {
+  const t = useTranslations("CustomerAccount");
+  const locale = useLocale();
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<OrderRow[]>([]);
   const [downloadingId, setDownloadingId] = useState<string | null>(null);
@@ -43,13 +46,13 @@ export default function InvoicePage() {
         const data = await res.json().catch(() => ({}));
 
         if (res.status === 401) {
-          toast.error("Please login to view invoices.", { duration: 3500 });
+          toast.error(t("invoices.errors.login"), { duration: 3500 });
           setRows([]);
           return;
         }
 
         if (!res.ok) {
-          toast.error(data?.error || "Failed to load orders.", {
+          toast.error(t("invoices.errors.load"), {
             duration: 3500,
           });
           setRows([]);
@@ -69,7 +72,7 @@ export default function InvoicePage() {
         setRows(mapped);
       } catch (e) {
         console.error(e);
-        toast.error("Failed to load invoices.", { duration: 3500 });
+        toast.error(t("invoices.errors.load"), { duration: 3500 });
         setRows([]);
       } finally {
         setLoading(false);
@@ -90,7 +93,7 @@ export default function InvoicePage() {
 
     try {
       setDownloadingId(orderId);
-      toast.loading("Generating invoice…", { id: toastId });
+      toast.loading(t("invoices.generating"), { id: toastId });
 
       const res = await fetch(`/api/invoice/${orderId}`, {
         method: "GET",
@@ -99,14 +102,14 @@ export default function InvoicePage() {
 
       if (!res.ok) {
         const d = await res.json().catch(() => ({}));
-        throw new Error(d?.error || "Failed to generate invoice.");
+        throw new Error(t("invoices.errors.generate"));
       }
 
       const blob = await res.blob();
 
       // If server returns JSON mistakenly, prevent downloading a broken file
       if (blob.type && !blob.type.includes("pdf")) {
-        throw new Error("Invoice response is not a PDF. Please try again.");
+        throw new Error(t("invoices.errors.invalidPdf"));
       }
 
       const url = window.URL.createObjectURL(blob);
@@ -120,10 +123,10 @@ export default function InvoicePage() {
 
       window.URL.revokeObjectURL(url);
 
-      toast.success("Invoice downloaded successfully.", { id: toastId });
+      toast.success(t("invoices.downloaded"), { id: toastId });
     } catch (e: any) {
       console.error(e);
-      toast.error(e?.message || "Invoice download failed.", { id: toastId });
+      toast.error(e?.message || t("invoices.errors.download"), { id: toastId });
     } finally {
       setDownloadingId(null);
     }
@@ -139,17 +142,17 @@ export default function InvoicePage() {
             className="flex items-center gap-1 hover:text-foreground transition-colors"
           >
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>›</span>
           <Link
             href="/ecommerce/user"
             className="hover:text-foreground transition-colors"
           >
-            Account
+            {t("common.account")}
           </Link>
           <span>›</span>
-          <span className="text-foreground">Invoices</span>
+          <span className="text-foreground">{t("invoices.title")}</span>
         </div>
       </div>
 
@@ -161,26 +164,26 @@ export default function InvoicePage() {
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex items-center gap-3 mb-6">
           <FileText className="h-5 w-5 text-muted-foreground" />
-          <h2 className="text-2xl font-medium">Invoices</h2>
+          <h2 className="text-2xl font-medium">{t("invoices.title")}</h2>
         </div>
 
         {loading ? (
           <Card className="p-6 bg-card text-card-foreground border border-border rounded-2xl">
-            <p className="text-sm text-muted-foreground">Loading invoices...</p>
+            <p className="text-sm text-muted-foreground">{t("invoices.loading")}</p>
           </Card>
         ) : empty ? (
           <Card className="p-8 bg-card text-card-foreground border border-border rounded-2xl text-center">
-            <h3 className="text-lg font-semibold mb-1">No invoices found</h3>
+            <h3 className="text-lg font-semibold mb-1">{t("invoices.emptyTitle")}</h3>
             <p className="text-sm text-muted-foreground">
-              You don’t have any orders yet.
+              {t("invoices.emptyDescription")}
             </p>
           </Card>
         ) : (
           <Card className="p-0 bg-card text-card-foreground border border-border rounded-2xl overflow-hidden">
             <div className="px-5 py-4 border-b border-border flex items-center justify-between">
-              <p className="font-semibold">Order Invoices</p>
+              <p className="font-semibold">{t("invoices.orderInvoices")}</p>
               <p className="text-xs text-muted-foreground">
-                Download PDF invoice for any order
+                {t("invoices.description")}
               </p>
             </div>
 
@@ -195,21 +198,21 @@ export default function InvoicePage() {
                   >
                     <div className="text-sm">
                       <p className="font-medium">
-                        Order ID: <span className="font-mono">{o.id}</span>
+                        {t("invoices.orderId")}: <span className="font-mono">{o.id}</span>
                       </p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Date: {formatDateTime(o.createdAt)}
+                        {t("invoices.date")}: {formatDateTime(o.createdAt, locale)}
                       </p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Status: {o.status} • Payment: {o.paymentStatus}
+                        {t("invoices.status")}: {t(`statuses.${o.status.toLowerCase()}` as any)} • {t("invoices.payment")}: {t(`statuses.${o.paymentStatus.toLowerCase()}` as any)}
                       </p>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <div className="text-right">
-                        <p className="text-xs text-muted-foreground">Total</p>
+                        <p className="text-xs text-muted-foreground">{t("common.total")}</p>
                         <p className="font-semibold">
-                          TK. {Number(o.total || 0).toFixed(2)}
+                          {new Intl.NumberFormat(locale, { style: "currency", currency: "BDT" }).format(Number(o.total || 0))}
                         </p>
                       </div>
 
@@ -222,12 +225,12 @@ export default function InvoicePage() {
                         {isDownloading ? (
                           <>
                             <Loader2 className="h-4 w-4 animate-spin" />
-                            Downloading…
+                            {t("invoices.downloading")}
                           </>
                         ) : (
                           <>
                             <Download className="h-4 w-4" />
-                            Download PDF
+                            {t("invoices.downloadPdf")}
                           </>
                         )}
                       </button>

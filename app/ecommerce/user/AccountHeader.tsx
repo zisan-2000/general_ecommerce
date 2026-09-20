@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { User } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ProfileData {
   name: string | null;
@@ -10,6 +11,7 @@ interface ProfileData {
 }
 
 export default function AccountHeader() {
+  const t = useTranslations("CustomerAccount.header");
   const { data: session } = useSession();
   const [profile, setProfile] = useState<ProfileData | null>(null);
 
@@ -41,7 +43,7 @@ export default function AccountHeader() {
     session?.user?.name ||
     (session?.user?.email
       ? session.user.email.split("@")[0]
-      : "User");
+      : t("user"));
 
   const userImage = profile?.image || null;
 
@@ -52,7 +54,7 @@ export default function AccountHeader() {
           {userImage ? (
             <img
               src={userImage}
-              alt="User"
+              alt={t("profileImage")}
               className="h-full w-full object-cover"
             />
           ) : (
@@ -61,9 +63,9 @@ export default function AccountHeader() {
         </div>
 
         <div>
-          <p className="text-sm text-muted-foreground">Hello,</p>
+          <p className="text-sm text-muted-foreground">{t("hello")}</p>
           <h1 className="text-2xl md:text-3xl font-semibold text-foreground">
-            {loading ? "Loading..." : userName}
+            {loading ? t("loading") : userName}
           </h1>
         </div>
       </div>

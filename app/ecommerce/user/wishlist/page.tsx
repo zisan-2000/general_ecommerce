@@ -11,6 +11,7 @@ import AccountHeader from "../AccountHeader";
 import { useCart } from "@/components/ecommarce/CartContext";
 import ProductCard from "@/components/ecommarce/ProductCard";
 import PriceDropAlertButton from "@/components/ecommarce/PriceDropAlertButton";
+import { useLocale, useTranslations } from "next-intl";
 
 type ApiWishlistItem = {
   id: number;
@@ -45,6 +46,8 @@ const toNumber = (value: unknown) => {
 };
 
 export default function WishlistPage() {
+  const t = useTranslations("CustomerAccount");
+  const locale = useLocale();
   const { addToCart } = useCart();
   const [items, setItems] = useState<WishlistProduct[]>([]);
   const [loading, setLoading] = useState(true);
@@ -61,13 +64,13 @@ export default function WishlistPage() {
         const data = await res.json().catch(() => ({}));
 
         if (res.status === 401) {
-          toast.error("Please login to view your wishlist.", { duration: 3500 });
+          toast.error(t("wishlist.errors.login"), { duration: 3500 });
           setItems([]);
           return;
         }
 
         if (!res.ok) {
-          toast.error(data?.error || "Failed to load wishlist.", { duration: 3500 });
+          toast.error(t("wishlist.errors.load"), { duration: 3500 });
           setItems([]);
           return;
         }
@@ -103,7 +106,7 @@ export default function WishlistPage() {
         setItems(mapped);
       } catch (err) {
         console.error("Error fetching wishlist:", err);
-        toast.error("Failed to load wishlist.", { duration: 3500 });
+        toast.error(t("wishlist.errors.load"), { duration: 3500 });
         setItems([]);
       } finally {
         setLoading(false);
@@ -122,21 +125,21 @@ export default function WishlistPage() {
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
-        toast.error(data?.error || "Failed to remove item.", { duration: 3500 });
+        toast.error(t("wishlist.errors.remove"), { duration: 3500 });
         return;
       }
 
       setItems((prev) => prev.filter((product) => product.id !== productId));
-      toast.success("Removed from wishlist.", { duration: 2500 });
+      toast.success(t("wishlist.removed"), { duration: 2500 });
     } catch (err) {
       console.error("Error removing wishlist item:", err);
-      toast.error("Failed to remove item.", { duration: 3500 });
+      toast.error(t("wishlist.errors.remove"), { duration: 3500 });
     }
   };
 
   const handleAddToCart = (product: WishlistProduct) => {
     addToCart(product.id);
-    toast.success(`Added "${product.name}" to cart.`, { duration: 2500 });
+    toast.success(t("wishlist.addedToCart", { name: product.name }), { duration: 2500 });
   };
 
   const empty = useMemo(() => !loading && items.length === 0, [loading, items.length]);
@@ -147,14 +150,14 @@ export default function WishlistPage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="flex items-center gap-1 transition-colors hover:text-foreground">
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>/</span>
           <Link href="/ecommerce/user" className="transition-colors hover:text-foreground">
-            Account
+            {t("common.account")}
           </Link>
           <span>/</span>
-          <span className="text-foreground">My Wish List</span>
+          <span className="text-foreground">{t("wishlist.title")}</span>
         </div>
       </div>
 
@@ -164,25 +167,25 @@ export default function WishlistPage() {
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="mb-6 flex items-center gap-3">
           <Heart className="h-5 w-5 text-muted-foreground" />
-          <h2 className="text-2xl font-medium">My Wish List</h2>
+          <h2 className="text-2xl font-medium">{t("wishlist.title")}</h2>
         </div>
 
         {loading ? (
           <Card className="rounded-2xl border border-border bg-card p-6 text-card-foreground">
-            <p className="text-sm text-muted-foreground">Loading wishlist...</p>
+            <p className="text-sm text-muted-foreground">{t("wishlist.loading")}</p>
           </Card>
         ) : empty ? (
           <Card className="rounded-2xl border border-border bg-card p-8 text-center text-card-foreground">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted">
               <Heart className="h-6 w-6 text-muted-foreground" />
             </div>
-            <h3 className="mb-1 text-lg font-semibold">Your wishlist is empty</h3>
+            <h3 className="mb-1 text-lg font-semibold">{t("wishlist.emptyTitle")}</h3>
             <p className="mb-5 text-sm text-muted-foreground">
-              Start adding items you like and they will appear here.
+              {t("wishlist.emptyDescription")}
             </p>
             <Link href="/">
               <Button className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90">
-                Continue Shopping
+                {t("wishlist.continueShopping")}
               </Button>
             </Link>
           </Card>
@@ -205,8 +208,12 @@ export default function WishlistPage() {
                   onWishlistClick={() => handleRemoveItem(item.id)}
                   onAddToCart={() => handleAddToCart(item)}
                   showMeta={false}
-                  formatPrice={(value) => `\u09F3${value.toFixed(2)}`}
-                  addToCartLabel="Add to Cart"
+                  formatPrice={(value) =>
+                    new Intl.NumberFormat(locale, {
+                      style: "currency",
+                      currency: "BDT",
+                    }).format(value)
+                  }
                   className="rounded-2xl"
                 />
                 <PriceDropAlertButton

@@ -16,6 +16,7 @@ import {
   FileTextIcon,
 } from "lucide-react";
 import AccountHeader from "./AccountHeader";
+import { useTranslations } from "next-intl";
 
 type Tile = {
   title: string;
@@ -93,6 +94,7 @@ function TileCard({ title, href, icon, badgeCount = 0 }: Tile) {
 }
 
 export default function UserDashboardPage() {
+  const t = useTranslations("CustomerAccount");
   const { data: session, status } = useSession();
   const [unreadCount, setUnreadCount] = useState(0);
 
@@ -121,41 +123,41 @@ export default function UserDashboardPage() {
   const userName =
     session?.user?.name ||
     (session?.user?.email ? session.user.email.split("@")[0] : "") ||
-    "User";
+    t("header.user");
 
   const tiles: Tile[] = [
     {
-      title: "Orders",
+      title: t("menu.orders"),
       href: "/ecommerce/user/orders",
       icon: <ShoppingBag className="h-5 w-5" />,
     },
     {
-      title: "Invoice",
+      title: t("menu.invoices"),
       href: "/ecommerce/user/invoice",
       icon: <FileTextIcon className="h-4 w-4" />,
     },
     {
-      title: "Edit Profile",
+      title: t("menu.editProfile"),
       href: "/ecommerce/user/profile",
       icon: <User className="h-5 w-5" />,
     },
     {
-      title: "Password",
+      title: t("dashboard.password"),
       href: "/ecommerce/user/change-password",
       icon: <Lock className="h-5 w-5" />,
     },
     {
-      title: "Addresses",
+      title: t("menu.addresses"),
       href: "/ecommerce/user/addresses",
       icon: <MapPin className="h-5 w-5" />,
     },
     {
-      title: "Wish List",
+      title: t("menu.wishlist"),
       href: "/ecommerce/user/wishlist",
       icon: <Heart className="h-5 w-5" />,
     },
     {
-      title: "Notifications",
+      title: t("menu.notifications"),
       href: "/ecommerce/user/notifications",
       icon: <Bell className="h-5 w-5" />,
       badgeCount: unreadCount,
@@ -185,10 +187,10 @@ export default function UserDashboardPage() {
       <div className="px-6 pt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="transition-colors hover:text-foreground">
-            Home
+            {t("common.home")}
           </Link>
           <ChevronRight className="h-4 w-4 text-muted-foreground/70" />
-          <span className="text-foreground">Account</span>
+          <span className="text-foreground">{t("common.account")}</span>
         </div>
       </div>
 
@@ -196,7 +198,7 @@ export default function UserDashboardPage() {
         <div className="rounded-3xl border border-border/70 bg-card/80 p-5 shadow-sm">
           <AccountHeader />
           <p className="mt-3 text-xs text-muted-foreground">
-            Signed in as {userName}
+            {t("dashboard.signedInAs", { name: userName })}
           </p>
         </div>
 

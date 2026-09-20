@@ -7,6 +7,7 @@ import { ChevronRight, Home } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import AccountMenu from "../AccountMenu";
 import AccountHeader from "../AccountHeader";
+import { useLocale, useTranslations } from "next-intl";
 
 interface CartItem {
   id: number | string;
@@ -56,56 +57,56 @@ interface Order {
   paymentStatus: string;
 }
 
-const formatDateTime = (iso: string) => {
+const formatDateTime = (iso: string, locale: string) => {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleString();
+  return d.toLocaleString(locale);
 };
 
 const getOrderStatusConfig = (status: string) => {
   const s = status?.toUpperCase();
   if (s === "DELIVERED") {
     return {
-      label: "Delivered",
+      labelKey: "delivered",
       className:
         "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300",
     };
   }
   if (s === "RETURNED") {
     return {
-      label: "Returned",
+      labelKey: "returned",
       className:
         "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900 dark:bg-violet-950/40 dark:text-violet-300",
     };
   }
   if (s === "FAILED") {
     return {
-      label: "Failed",
+      labelKey: "failed",
       className:
         "border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900 dark:bg-rose-950/40 dark:text-rose-300",
     };
   }
   if (s === "SHIPPED" || s === "PROCESSING" || s === "CONFIRMED") {
     return {
-      label:
+      labelKey:
         s === "SHIPPED"
-          ? "Shipped"
+          ? "shipped"
           : s === "PROCESSING"
-            ? "Processing"
-            : "Confirmed",
+            ? "processing"
+            : "confirmed",
       className:
         "border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300",
     };
   }
   if (s === "CANCELLED") {
     return {
-      label: "Cancelled",
+      labelKey: "cancelled",
       className:
         "border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900 dark:bg-rose-950/40 dark:text-rose-300",
     };
   }
   return {
-    label: "Pending",
+    labelKey: "pending",
     className:
       "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-300",
   };
@@ -115,20 +116,20 @@ const getPaymentStatusConfig = (paymentStatus: string) => {
   const s = paymentStatus?.toUpperCase();
   if (s === "PAID") {
     return {
-      label: "Paid",
+      labelKey: "paid",
       className:
         "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300",
     };
   }
   if (s === "REFUNDED") {
     return {
-      label: "Refunded",
+      labelKey: "refunded",
       className:
         "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900 dark:bg-violet-950/40 dark:text-violet-300",
     };
   }
   return {
-    label: "Unpaid",
+    labelKey: "unpaid",
     className:
       "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-300",
   };
@@ -187,6 +188,8 @@ function OrdersPageSkeleton() {
 }
 
 export default function OrdersPage() {
+  const t = useTranslations("CustomerAccount");
+  const locale = useLocale();
   const { data: session } = useSession();
 
   const [orders, setOrders] = useState<Order[]>([]);
@@ -199,7 +202,7 @@ export default function OrdersPage() {
   const userName =
     session?.user?.name ||
     (session?.user?.email ? session.user.email.split("@")[0] : "") ||
-    "User";
+    t("header.user");
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -214,13 +217,13 @@ export default function OrdersPage() {
         });
 
         if (res.status === 401) {
-          setError("You need to login to view your orders.");
+          setError(t("orders.errors.login"));
           setOrders([]);
           return;
         }
 
         if (!res.ok) {
-          setError("Failed to load orders.");
+          setError(t("orders.errors.load"));
           setOrders([]);
           return;
         }
@@ -238,7 +241,7 @@ export default function OrdersPage() {
                         oi.variantId === null || oi.variantId === undefined
                           ? null
                           : Number(oi.variantId),
-                      name: oi.product?.name ?? "Unknown product",
+                      name: oi.product?.name ?? t("orders.unknownProduct"),
                       price: Number(oi.price ?? 0),
                       quantity: Math.max(1, Number(oi.quantity ?? 1)),
                       image: oi.product?.image ?? "",
@@ -277,7 +280,7 @@ export default function OrdersPage() {
         setOrders(mapped);
       } catch (err) {
         console.error(err);
-        setError("Failed to load orders.");
+        setError(t("orders.errors.load"));
         setOrders([]);
       } finally {
         setLoading(false);
@@ -285,7 +288,7 @@ export default function OrdersPage() {
     };
 
     fetchOrders();
-  }, []);
+  }, [t]);
 
   const orderedList = useMemo(() => orders, [orders]);
 
@@ -298,7 +301,7 @@ export default function OrdersPage() {
             className="flex items-center gap-1 transition-colors hover:text-foreground"
           >
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
 
           <ChevronRight className="h-4 w-4 text-muted-foreground/70" />
@@ -307,12 +310,12 @@ export default function OrdersPage() {
             href="/ecommerce/user"
             className="transition-colors hover:text-foreground"
           >
-            Account
+            {t("common.account")}
           </Link>
 
           <ChevronRight className="h-4 w-4 text-muted-foreground/70" />
 
-          <span className="text-foreground">Order History</span>
+          <span className="text-foreground">{t("orders.title")}</span>
         </div>
       </div>
 
@@ -322,15 +325,15 @@ export default function OrdersPage() {
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="mb-6">
           <h2 className="text-3xl font-semibold tracking-tight">
-            Order History
+            {t("orders.title")}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Track your recent orders, payment state, and delivery progress.
+            {t("orders.description")}
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
             {userName}
             {starPoints || storeCredit
-              ? ` • ${starPoints} stars • TK. ${storeCredit.toFixed(2)} credit`
+              ? ` • ${t("orders.rewards", { stars: starPoints, credit: new Intl.NumberFormat(locale, { style: "currency", currency: "BDT" }).format(storeCredit) })}`
               : ""}
           </p>
         </div>
@@ -344,7 +347,7 @@ export default function OrdersPage() {
         ) : orderedList.length === 0 ? (
           <Card className="border-dashed border-border/70 bg-card/80 p-8 text-center shadow-sm">
             <p className="text-sm text-muted-foreground">
-              You have not made any previous orders yet.
+              {t("orders.empty")}
             </p>
           </Card>
         ) : (
@@ -362,7 +365,7 @@ export default function OrdersPage() {
                   <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div className="text-sm">
                       <p>
-                        <span className="font-medium">Order ID: </span>
+                        <span className="font-medium">{t("orders.orderId")}: </span>
                         <Link
                           href={`/ecommerce/user/orders/${order.invoiceId}`}
                           className="font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80 hover:no-underline"
@@ -371,14 +374,14 @@ export default function OrdersPage() {
                         </Link>
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Placed on: {formatDateTime(order.createdAt)}
+                        {t("orders.placedOn")}: {formatDateTime(order.createdAt, locale)}
                       </p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        Customer:{" "}
+                        {t("orders.customer")}: {" "}
                         <span className="font-medium text-foreground">
                           {order.customer.name}
                         </span>{" "}
-                        | Mobile: {order.customer.mobile}
+                        | {t("orders.mobile")}: {order.customer.mobile}
                       </p>
                     </div>
 
@@ -386,19 +389,19 @@ export default function OrdersPage() {
                       <span
                         className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${statusCfg.className}`}
                       >
-                        {statusCfg.label}
+                        {t(`statuses.${statusCfg.labelKey}` as any)}
                       </span>
                       <span
                         className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${paymentCfg.className}`}
                       >
-                        Payment: {paymentCfg.label}
+                        {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}
                       </span>
 
                       <Link
                         href={`/ecommerce/user/orders/${order.invoiceId}`}
                         className="text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80 hover:no-underline"
                       >
-                        Track My Order →
+                        {t("orders.trackOrder")} →
                       </Link>
                     </div>
                   </div>
@@ -418,7 +421,7 @@ export default function OrdersPage() {
                             />
                           ) : (
                             <span className="px-2 text-center text-[10px] text-muted-foreground">
-                              No Image
+                              {t("orders.noImage")}
                             </span>
                           )}
                         </div>
@@ -426,7 +429,7 @@ export default function OrdersPage() {
                         <div className="flex-1 text-sm">
                           <p className="line-clamp-1 font-medium">{item.name}</p>
                           <p className="mt-1 text-xs text-muted-foreground">
-                            TK. {item.price.toFixed(2)} × {item.quantity}
+                            {new Intl.NumberFormat(locale, { style: "currency", currency: "BDT" }).format(item.price)} × {item.quantity}
                           </p>
                           {item.bundleSummary.length > 0 && (
                             <ul className="mt-2 space-y-0.5 text-xs text-muted-foreground">
@@ -443,10 +446,10 @@ export default function OrdersPage() {
                   <div className="mt-2 flex justify-end border-t border-border/60 pt-3">
                     <div className="text-right text-sm">
                       <p className="text-xs text-muted-foreground">
-                        Order Total
+                        {t("orders.orderTotal")}
                       </p>
                       <p className="text-base font-semibold text-foreground">
-                        TK. {order.total.toFixed(2)}
+                        {new Intl.NumberFormat(locale, { style: "currency", currency: "BDT" }).format(order.total)}
                       </p>
                     </div>
                   </div>

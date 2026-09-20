@@ -9,6 +9,7 @@ import AccountHeader from "../AccountHeader";
 import { Home, Plus, Minus, Pencil, Check, X } from "lucide-react";
 import { toast } from "sonner";
 import { ALLOWED_SHIPPING_AREAS, normalizeShippingArea } from "@/lib/shipping-areas";
+import { useTranslations } from "next-intl";
 
 type AddressRow = {
   id: number;
@@ -61,6 +62,7 @@ const toLines = (v: any): string[] => {
 };
 
 export default function AddressesPage() {
+  const t = useTranslations("CustomerAccount");
   const { data: session, status } = useSession();
 
   const [loading, setLoading] = useState(true);
@@ -76,7 +78,14 @@ export default function AddressesPage() {
 
   const userName =
     session?.user?.name ||
-    (session?.user?.email ? session.user.email.split("@")[0] : "User");
+    (session?.user?.email ? session.user.email.split("@")[0] : t("header.user"));
+
+  const areaLabel = (area: string) => {
+    if (area === "Dhaka") return t("addresses.areas.dhaka");
+    if (area === "Outside Dhaka") return t("addresses.areas.outsideDhaka");
+    if (area === "Outside Bangladesh") return t("addresses.areas.outsideBangladesh");
+    return area;
+  };
 
   const [form, setForm] = useState<AddressForm>({
     id: null,
@@ -106,13 +115,13 @@ export default function AddressesPage() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status === 401) {
-        toast.error("Unauthorized. Please login.", { duration: 3500 });
+        toast.error(t("common.unauthorized"), { duration: 3500 });
         setList([]);
         return;
       }
 
       if (!res.ok) {
-        toast.error(data?.error || "Failed to load addresses.", {
+        toast.error(t("addresses.errors.load"), {
           duration: 3500,
         });
         setList([]);
@@ -134,7 +143,7 @@ export default function AddressesPage() {
 
       setList(mapped);
     } catch {
-      toast.error("Failed to load addresses.", { duration: 3500 });
+      toast.error(t("addresses.errors.load"), { duration: 3500 });
       setList([]);
     } finally {
       setLoading(false);
@@ -172,7 +181,7 @@ export default function AddressesPage() {
       setLoadingCountries(true);
       const res = await fetch("/api/geo/countries", { cache: "no-store" });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Failed to load countries");
+      if (!res.ok) throw new Error(t("addresses.errors.countries"));
 
       const listData: CountryOption[] = Array.isArray(data) ? data : [];
       setCountries(listData);
@@ -185,7 +194,7 @@ export default function AddressesPage() {
         setForm((prev) => ({ ...prev, country: selected.name }));
       }
     } catch {
-      toast.error("Failed to load countries.", { duration: 3000 });
+      toast.error(t("addresses.errors.countries"), { duration: 3000 });
     } finally {
       setLoadingCountries(false);
     }
@@ -202,11 +211,11 @@ export default function AddressesPage() {
         cache: "no-store",
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Failed to load districts");
+      if (!res.ok) throw new Error(t("addresses.errors.districts"));
       setDistricts(Array.isArray(data) ? data : []);
     } catch {
       setDistricts([]);
-      toast.error("Failed to load districts.", { duration: 3000 });
+      toast.error(t("addresses.errors.districts"), { duration: 3000 });
     } finally {
       setLoadingDistricts(false);
     }
@@ -277,7 +286,7 @@ export default function AddressesPage() {
     e.preventDefault();
 
     if (requiredMissing) {
-      toast.error("Please fill in all required fields (*)", { duration: 3500 });
+      toast.error(t("addresses.errors.required"), { duration: 3500 });
       return;
     }
 
@@ -287,11 +296,11 @@ export default function AddressesPage() {
     const safeArea = normalizeShippingArea(form.area);
 
     if (cleanedDetails.length === 0) {
-      toast.error("Address 1 is required.", { duration: 3500 });
+      toast.error(t("addresses.errors.addressRequired"), { duration: 3500 });
       return;
     }
     if (!safeArea) {
-      toast.error("Please select a valid area.", { duration: 3500 });
+      toast.error(t("addresses.errors.validArea"), { duration: 3500 });
       return;
     }
 
@@ -320,12 +329,12 @@ export default function AddressesPage() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status === 401) {
-        toast.error("Unauthorized. Please login.", { duration: 3500 });
+        toast.error(t("common.unauthorized"), { duration: 3500 });
         return;
       }
 
       if (!res.ok) {
-        toast.error(data?.error || "Failed to save address.", {
+        toast.error(t("addresses.errors.save"), {
           duration: 3500,
         });
         return;
@@ -333,8 +342,8 @@ export default function AddressesPage() {
 
       toast.success(
         isUpdate
-          ? "Address updated successfully ✅"
-          : "Address added successfully ✅",
+          ? t("addresses.success.updated")
+          : t("addresses.success.added"),
         {
           duration: 2500,
         },
@@ -343,7 +352,7 @@ export default function AddressesPage() {
       resetForm();
       await refresh();
     } catch {
-      toast.error("Failed to save address. Please try again.", {
+      toast.error(t("addresses.errors.save"), {
         duration: 3500,
       });
     } finally {
@@ -361,17 +370,17 @@ export default function AddressesPage() {
             className="flex items-center gap-1 hover:text-foreground transition-colors"
           >
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>›</span>
           <Link
             href="/ecommerce/user"
             className="hover:text-foreground transition-colors"
           >
-            Account
+            {t("common.account")}
           </Link>
           <span>›</span>
-          <span className="text-foreground">Addresses</span>
+          <span className="text-foreground">{t("addresses.title")}</span>
         </div>
       </div>
 
@@ -382,9 +391,9 @@ export default function AddressesPage() {
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-medium mb-2">Saved Addresses</h2>
+            <h2 className="text-2xl font-medium mb-2">{t("addresses.saved")}</h2>
             <p className="text-sm text-muted-foreground">
-              Manage your delivery addresses for faster checkout.
+              {t("addresses.description")}
             </p>
           </div>
           <button
@@ -392,7 +401,7 @@ export default function AddressesPage() {
             className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
           >
             <Plus className="h-4 w-4" />
-            Add New Address
+            {t("addresses.addNew")}
           </button>
         </div>
 
@@ -401,7 +410,7 @@ export default function AddressesPage() {
           {loading ? (
             <Card className="p-6 bg-card text-card-foreground border border-border rounded-2xl">
               <p className="text-sm text-muted-foreground">
-                Loading addresses...
+                {t("addresses.loading")}
               </p>
             </Card>
           ) : list.length === 0 ? (
@@ -410,17 +419,17 @@ export default function AddressesPage() {
                 <Home className="h-8 w-8 text-muted-foreground" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
-                No saved addresses
+                {t("addresses.emptyTitle")}
               </h3>
               <p className="text-sm text-muted-foreground mb-6">
-                Add your first address to make checkout faster.
+                {t("addresses.emptyDescription")}
               </p>
               <button
                 onClick={openAddModal}
                 className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
               >
                 <Plus className="h-4 w-4" />
-                Add Your First Address
+                {t("addresses.addFirst")}
               </button>
             </Card>
           ) : (
@@ -436,13 +445,13 @@ export default function AddressesPage() {
                         <p className="font-semibold">{a.label}</p>
                         {a.isDefault && (
                           <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full border border-border bg-muted">
-                            <Check className="h-3.5 w-3.5" /> Default
+                            <Check className="h-3.5 w-3.5" /> {t("addresses.default")}
                           </span>
                         )}
                       </div>
 
                       <p className="text-xs text-muted-foreground mt-1">
-                        {a.area}, {a.district}, {a.country}
+                        {areaLabel(a.area)}, {a.district}, {a.country}
                       </p>
 
                       <div className="mt-2 space-y-1">
@@ -464,7 +473,7 @@ export default function AddressesPage() {
                         className="h-9 px-4 rounded-md border border-border bg-background hover:bg-muted transition-colors text-sm font-semibold inline-flex items-center gap-2"
                       >
                         <Pencil className="h-4 w-4" />
-                        Edit
+                        {t("common.edit")}
                       </button>
                     </div>
                   </div>
@@ -483,17 +492,17 @@ export default function AddressesPage() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-2xl font-medium text-foreground">
-                  {editingId ? "Edit Address" : "Add New Address"}
+                  {editingId ? t("addresses.edit") : t("addresses.addNew")}
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Please enter the required details to{" "}
-                  {editingId ? "update" : "add"} an address.
+                  {editingId ? t("addresses.modalUpdateDescription") : t("addresses.modalAddDescription")}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={resetForm}
                 className="h-8 w-8 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
+                aria-label={t("common.close")}
               >
                 <X className="h-4 w-4" />
               </button>
@@ -504,7 +513,7 @@ export default function AddressesPage() {
               {/* Name (from session) */}
               <div className="space-y-1">
                 <p className="text-xs font-semibold text-foreground">
-                  Name <span className="text-destructive">*</span>
+                  {t("addresses.name")} <span className="text-destructive">*</span>
                 </p>
                 <input
                   value={userName}
@@ -512,27 +521,27 @@ export default function AddressesPage() {
                   className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none opacity-90"
                 />
                 <p className="text-xs text-muted-foreground">
-                  This name is taken from your account session.
+                  {t("addresses.nameHint")}
                 </p>
               </div>
 
               {/* Label */}
               <div className="space-y-1">
                 <p className="text-xs font-semibold text-foreground">
-                  Label <span className="text-destructive">*</span>
+                  {t("addresses.label")} <span className="text-destructive">*</span>
                 </p>
                 <input
                   value={form.label}
                   onChange={(e) => setField("label", e.target.value)}
                   className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="e.g. Home / Office"
+                  placeholder={t("addresses.labelPlaceholder")}
                 />
               </div>
 
               {/* Address lines (dynamic) */}
               <div className="space-y-2">
                 <p className="text-xs font-semibold text-foreground">
-                  Address Lines <span className="text-destructive">*</span>
+                  {t("addresses.addressLines")} <span className="text-destructive">*</span>
                 </p>
 
                 <div className="space-y-3">
@@ -546,7 +555,7 @@ export default function AddressesPage() {
                           value={line}
                           onChange={(e) => setDetailLine(idx, e.target.value)}
                           className="flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-                          placeholder={`Address ${idx + 1}${isFirst ? " (required)" : ""}`}
+                          placeholder={t("addresses.addressLine", { number: idx + 1, required: isFirst ? t("addresses.requiredSuffix") : "" })}
                         />
 
                         {/* + button only on last row */}
@@ -555,8 +564,8 @@ export default function AddressesPage() {
                             type="button"
                             onClick={addDetailLine}
                             className="h-10 w-10 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
-                            aria-label="Add address line"
-                            title="Add"
+                            aria-label={t("addresses.addLine")}
+                            title={t("common.add")}
                           >
                             <Plus className="h-4 w-4" />
                           </button>
@@ -568,8 +577,8 @@ export default function AddressesPage() {
                             type="button"
                             onClick={() => removeDetailLine(idx)}
                             className="h-10 w-10 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
-                            aria-label="Remove address line"
-                            title="Remove"
+                            aria-label={t("addresses.removeLine")}
+                            title={t("common.remove")}
                           >
                             <Minus className="h-4 w-4" />
                           </button>
@@ -580,15 +589,14 @@ export default function AddressesPage() {
                 </div>
 
                 <p className="text-xs text-muted-foreground">
-                  Address 1 is required. You can add more lines using{" "}
-                  <strong>+</strong>.
+                  {t("addresses.linesHint")} <strong>+</strong>.
                 </p>
               </div>
 
               {/* Country */}
               <div className="space-y-1">
                 <p className="text-xs font-semibold text-foreground">
-                  Country <span className="text-destructive">*</span>
+                  {t("addresses.country")} <span className="text-destructive">*</span>
                 </p>
                 <select
                   value={countryCode}
@@ -603,8 +611,8 @@ export default function AddressesPage() {
                 >
                   <option value="">
                     {loadingCountries
-                      ? "Loading countries..."
-                      : "Select country"}
+                      ? t("addresses.loadingCountries")
+                      : t("addresses.selectCountry")}
                   </option>
                   {countries.map((country) => (
                     <option key={country.iso2} value={country.iso2}>
@@ -618,7 +626,7 @@ export default function AddressesPage() {
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-1">
                   <p className="text-xs font-semibold text-foreground">
-                    District <span className="text-destructive">*</span>
+                    {t("addresses.district")} <span className="text-destructive">*</span>
                   </p>
                   {districts.length > 0 ? (
                     <select
@@ -629,8 +637,8 @@ export default function AddressesPage() {
                     >
                       <option value="">
                         {loadingDistricts
-                          ? "Loading districts..."
-                          : "Select district / state"}
+                          ? t("addresses.loadingDistricts")
+                          : t("addresses.selectDistrict")}
                       </option>
                       {districts.map((district) => (
                         <option
@@ -646,14 +654,14 @@ export default function AddressesPage() {
                       value={form.district}
                       onChange={(e) => setField("district", e.target.value)}
                       className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="e.g. Dhaka"
+                      placeholder={t("addresses.districtPlaceholder")}
                     />
                   )}
                 </div>
 
                 <div className="space-y-1">
                   <p className="text-xs font-semibold text-foreground">
-                    Area <span className="text-destructive">*</span>
+                    {t("addresses.area")} <span className="text-destructive">*</span>
                   </p>
                   <select
                     value={form.area}
@@ -662,7 +670,7 @@ export default function AddressesPage() {
                   >
                     {ALLOWED_SHIPPING_AREAS.map((areaOption) => (
                       <option key={areaOption} value={areaOption}>
-                        {areaOption}
+                        {areaLabel(areaOption)}
                       </option>
                     ))}
                   </select>
@@ -672,7 +680,7 @@ export default function AddressesPage() {
               {/* Default Address */}
               <div className="flex gap-4 items-center">
                 <div className="text-sm font-medium flex items-center text-foreground mb-2">
-                  Default Address
+                  {t("addresses.defaultAddress")}
                 </div>
                 <div className="flex gap-4">
                   <label className="flex items-center gap-2 text-sm">
@@ -682,7 +690,7 @@ export default function AddressesPage() {
                       checked={form.isDefault === true}
                       onChange={() => setField("isDefault", true)}
                     />
-                    <span>Yes</span>
+                    <span>{t("common.yes")}</span>
                   </label>
 
                   <label className="flex items-center gap-2 text-sm">
@@ -692,7 +700,7 @@ export default function AddressesPage() {
                       checked={form.isDefault === false}
                       onChange={() => setField("isDefault", false)}
                     />
-                    <span>No</span>
+                    <span>{t("common.no")}</span>
                   </label>
                 </div>
               </div>
@@ -704,7 +712,7 @@ export default function AddressesPage() {
                   onClick={resetForm}
                   className="h-10 px-6 rounded-md border border-border bg-background text-foreground text-sm font-semibold hover:bg-muted transition-colors"
                 >
-                  Cancel
+                  {t("common.cancel")}
                 </button>
 
                 <button
@@ -713,10 +721,10 @@ export default function AddressesPage() {
                   className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                 >
                   {saving
-                    ? "Saving..."
+                    ? t("common.saving")
                     : editingId
-                      ? "Update Address"
-                      : "Save Address"}
+                      ? t("addresses.update")
+                      : t("addresses.save")}
                 </button>
               </div>
             </form>

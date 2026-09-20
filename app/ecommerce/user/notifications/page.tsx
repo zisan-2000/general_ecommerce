@@ -6,6 +6,7 @@ import { Bell, CheckCheck, Home } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import AccountHeader from "../AccountHeader";
 import AccountMenu from "../AccountMenu";
+import { useLocale, useTranslations } from "next-intl";
 
 type CustomerNotification = {
   id: number;
@@ -16,16 +17,18 @@ type CustomerNotification = {
   createdAt: string;
 };
 
-function formatDate(value: string) {
+function formatDate(value: string, locale: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("en-BD", {
+  return new Intl.DateTimeFormat(locale, {
     dateStyle: "medium",
     timeStyle: "short",
   }).format(date);
 }
 
 export default function CustomerNotificationsPage() {
+  const t = useTranslations("CustomerAccount");
+  const locale = useLocale();
   const [items, setItems] = useState<CustomerNotification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -91,14 +94,14 @@ export default function CustomerNotificationsPage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="flex items-center gap-1 transition-colors hover:text-foreground">
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>/</span>
           <Link href="/ecommerce/user" className="transition-colors hover:text-foreground">
-            Account
+            {t("common.account")}
           </Link>
           <span>/</span>
-          <span className="text-foreground">Notifications</span>
+          <span className="text-foreground">{t("notifications.title")}</span>
         </div>
       </div>
 
@@ -110,9 +113,9 @@ export default function CustomerNotificationsPage() {
           <div className="flex items-center gap-3">
             <Bell className="h-5 w-5 text-muted-foreground" />
             <div>
-              <h2 className="text-2xl font-medium">Notifications</h2>
+              <h2 className="text-2xl font-medium">{t("notifications.title")}</h2>
               <p className="text-sm text-muted-foreground">
-                {unreadCount > 0 ? `${unreadCount} unread` : "All caught up"}
+                {unreadCount > 0 ? t("notifications.unread", { count: unreadCount }) : t("notifications.allCaughtUp")}
               </p>
             </div>
           </div>
@@ -123,23 +126,23 @@ export default function CustomerNotificationsPage() {
               className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-xs font-semibold hover:bg-accent"
             >
               <CheckCheck className="h-4 w-4" aria-hidden="true" />
-              Mark all read
+              {t("notifications.markAllRead")}
             </button>
           ) : null}
         </div>
 
         {loading ? (
           <Card className="rounded-2xl border border-border bg-card p-6 text-sm text-muted-foreground">
-            Loading notifications...
+            {t("notifications.loading")}
           </Card>
         ) : items.length === 0 ? (
           <Card className="rounded-2xl border border-border bg-card p-8 text-center text-card-foreground">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-muted">
               <Bell className="h-6 w-6 text-muted-foreground" />
             </div>
-            <h3 className="mb-1 text-lg font-semibold">No notifications yet</h3>
+            <h3 className="mb-1 text-lg font-semibold">{t("notifications.emptyTitle")}</h3>
             <p className="text-sm text-muted-foreground">
-              Price drop alerts will appear here when a watched product gets cheaper.
+              {t("notifications.emptyDescription")}
             </p>
           </Card>
         ) : (
@@ -156,7 +159,7 @@ export default function CustomerNotificationsPage() {
                     <p className="text-sm font-semibold">{item.title}</p>
                     <p className="mt-1 text-sm text-muted-foreground">{item.message}</p>
                     <p className="mt-2 text-xs text-muted-foreground">
-                      {formatDate(item.createdAt)}
+                      {formatDate(item.createdAt, locale)}
                     </p>
                   </div>
                   {item.status === "UNREAD" ? (

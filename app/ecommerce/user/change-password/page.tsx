@@ -7,8 +7,10 @@ import AccountMenu from "../AccountMenu";
 import AccountHeader from "../AccountHeader";
 import { Home, Eye, EyeOff, Lock } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 export default function ChangePasswordPage() {
+  const t = useTranslations("CustomerAccount");
   const [currentPassword, setCurrentPassword] = useState("");
   const [currentOk, setCurrentOk] = useState(false);
   const [verifying, setVerifying] = useState(false);
@@ -61,7 +63,7 @@ export default function ChangePasswordPage() {
 
     const myReqId = ++reqIdRef.current;
 
-    const t = setTimeout(async () => {
+    const timeoutId = setTimeout(async () => {
       try {
         setVerifying(true);
 
@@ -77,7 +79,7 @@ export default function ChangePasswordPage() {
 
         if (!res.ok || !data?.ok) {
           setCurrentOk(false);
-          showError(data?.error || "Current password is incorrect");
+          showError(t("password.errors.currentIncorrect"));
           return;
         }
 
@@ -85,23 +87,23 @@ export default function ChangePasswordPage() {
       } catch (e: any) {
         if (myReqId !== reqIdRef.current) return;
         setCurrentOk(false);
-        showError("Failed to verify current password");
+        showError(t("password.errors.verify"));
       } finally {
         if (myReqId === reqIdRef.current) setVerifying(false);
       }
     }, 500);
 
-    return () => clearTimeout(t);
+    return () => clearTimeout(timeoutId);
   }, [currentPassword]);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!currentOk) return showError("Current password is incorrect.");
+    if (!currentOk) return showError(t("password.errors.currentIncorrect"));
     if (newPassword.length < 6)
-      return showError("New password must be at least 6 characters.");
+      return showError(t("password.errors.minimum"));
     if (mismatch)
-      return showError("Re-type password does not match.");
+      return showError(t("password.errors.mismatch"));
 
     try {
       setSaving(true);
@@ -118,7 +120,7 @@ export default function ChangePasswordPage() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status === 401) {
-        showError("Unauthorized. Please login.");
+        showError(t("common.unauthorized"));
         return;
       }
 
@@ -126,19 +128,19 @@ export default function ChangePasswordPage() {
         setCurrentOk(false);
         setNewPassword("");
         setRePassword("");
-        showError(data?.error || "Failed to update password.");
+        showError(t("password.errors.update"));
         return;
       }
 
       // ✅ SUCCESS TOAST
-      showSuccess("Password updated successfully ✅");
+      showSuccess(t("password.success"));
 
       setCurrentPassword("");
       setNewPassword("");
       setRePassword("");
       setCurrentOk(false);
     } catch {
-      showError("Password update failed.");
+      showError(t("password.errors.update"));
     } finally {
       setSaving(false);
     }
@@ -151,14 +153,14 @@ export default function ChangePasswordPage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="flex items-center gap-1 hover:text-foreground">
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>›</span>
           <Link href="/ecommerce/user" className="hover:text-foreground">
-            Account
+            {t("common.account")}
           </Link>
           <span>›</span>
-          <span className="text-foreground">Change Password</span>
+          <span className="text-foreground">{t("password.title")}</span>
         </div>
       </div>
 
@@ -166,14 +168,14 @@ export default function ChangePasswordPage() {
       <AccountMenu />
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-medium mb-6">Change Password</h2>
+        <h2 className="text-2xl font-medium mb-6">{t("password.title")}</h2>
 
         <Card className="p-6 bg-card text-card-foreground border border-border rounded-2xl">
           <form onSubmit={onSubmit} className="space-y-6">
             {/* Old Password */}
             <div>
               <p className="text-xs uppercase text-muted-foreground mb-1">
-                Old Password
+                {t("password.current")}
               </p>
 
               <div className="relative">
@@ -182,12 +184,13 @@ export default function ChangePasswordPage() {
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
                   className="w-full rounded-xl border border-border bg-background px-3 py-2 pr-12 text-sm focus:ring-2 focus:ring-ring"
-                  placeholder="Enter current password"
+                  placeholder={t("password.currentPlaceholder")}
                 />
                 <button
                   type="button"
                   onClick={() => setShowCurrent(!showCurrent)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                  aria-label={showCurrent ? t("password.hide") : t("password.show")}
                 >
                   {showCurrent ? <EyeOff size={16} /> : <Eye size={16} />}
                 </button>
@@ -196,10 +199,10 @@ export default function ChangePasswordPage() {
               <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
                 <Lock size={12} />
                 {verifying
-                  ? "Checking password..."
+                  ? t("password.checking")
                   : currentOk
-                  ? "Old password verified ✅"
-                  : "Type old password to unlock fields"}
+                  ? t("password.verified")
+                  : t("password.unlockHint")}
               </p>
             </div>
 
@@ -207,7 +210,7 @@ export default function ChangePasswordPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <p className="text-xs uppercase text-muted-foreground mb-1">
-                  New Password
+                  {t("password.new")}
                 </p>
                 <div className="relative">
                   <input
@@ -216,13 +219,14 @@ export default function ChangePasswordPage() {
                     onChange={(e) => setNewPassword(e.target.value)}
                     disabled={!canEditNew}
                     className="w-full rounded-xl border border-border bg-background px-3 py-2 pr-12 text-sm disabled:opacity-60"
-                    placeholder="Enter your new password"
+                    placeholder={t("password.newPlaceholder")}
                   />
                   <button
                     type="button"
                     onClick={() => setShowNew(!showNew)}
                     disabled={!canEditNew}
                     className="absolute right-3 top-1/2 -translate-y-1/2"
+                    aria-label={showNew ? t("password.hide") : t("password.show")}
                   >
                     {showNew ? <EyeOff size={16} /> : <Eye size={16} />}
                   </button>
@@ -231,7 +235,7 @@ export default function ChangePasswordPage() {
 
               <div>
                 <p className="text-xs uppercase text-muted-foreground mb-1">
-                  Re-type Password
+                  {t("password.confirm")}
                 </p>
                 <div className="relative">
                   <input
@@ -240,13 +244,14 @@ export default function ChangePasswordPage() {
                     onChange={(e) => setRePassword(e.target.value)}
                     disabled={!canEditNew}
                     className="w-full rounded-xl border border-border bg-background px-3 py-2 pr-12 text-sm disabled:opacity-60"
-                    placeholder="Re-type your new password"
+                    placeholder={t("password.confirmPlaceholder")}
                   />
                   <button
                     type="button"
                     onClick={() => setShowRe(!showRe)}
                     disabled={!canEditNew}
                     className="absolute right-3 top-1/2 -translate-y-1/2"
+                    aria-label={showRe ? t("password.hide") : t("password.show")}
                   >
                     {showRe ? <EyeOff size={16} /> : <Eye size={16} />}
                   </button>
@@ -254,7 +259,7 @@ export default function ChangePasswordPage() {
 
                 {mismatch && canEditNew && (
                   <p className="text-xs text-muted-foreground mt-2">
-                    Passwords do not match
+                    {t("password.errors.mismatch")}
                   </p>
                 )}
               </div>
@@ -266,7 +271,7 @@ export default function ChangePasswordPage() {
                 disabled={!canSubmit}
                 className="h-10 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 disabled:opacity-60"
               >
-                {saving ? "Updating..." : "Update Password"}
+                {saving ? t("password.updating") : t("password.update")}
               </button>
             </div>
           </form>

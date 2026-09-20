@@ -8,6 +8,7 @@ import AccountMenu from "../AccountMenu";
 import AccountHeader from "../AccountHeader";
 import { Home, User } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 interface ProfileData {
   id: string;
@@ -20,6 +21,7 @@ interface ProfileData {
 }
 
 export default function ProfilePage() {
+  const t = useTranslations("CustomerAccount");
   const { data: session } = useSession();
 
   const [loading, setLoading] = useState(true);
@@ -51,11 +53,11 @@ export default function ProfilePage() {
 
         const res = await fetch("/api/user/profile", { cache: "no-store" });
         if (res.status === 401) {
-          showError("Unauthorized. Please login.");
+          showError(t("common.unauthorized"));
           return;
         }
         if (!res.ok) {
-          showError("Failed to load profile.");
+          showError(t("profile.errors.load"));
           return;
         }
 
@@ -66,7 +68,7 @@ export default function ProfilePage() {
         setPhone(data.phone ?? "");
         setImage(data.image ?? "");
       } catch {
-        showError("Something went wrong.");
+        showError(t("common.error"));
       } finally {
         setLoading(false);
       }
@@ -96,20 +98,20 @@ export default function ProfilePage() {
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
-        showError(data?.message || "Image upload failed.");
+        showError(t("profile.errors.upload"));
         return;
       }
 
       const url: string | undefined = data?.url;
       if (!url) {
-        showError("Upload succeeded but URL not returned.");
+        showError(t("profile.errors.missingUrl"));
         return;
       }
 
       setImage(url);
-      toast.success("Image uploaded successfully 📷", { duration: 2500 });
+      toast.success(t("profile.success.uploaded"), { duration: 2500 });
     } catch {
-      showError("Image upload error.");
+      showError(t("profile.errors.upload"));
     } finally {
       setUploadingImage(false);
       e.target.value = "";
@@ -137,12 +139,12 @@ export default function ProfilePage() {
       const data = await res.json().catch(() => ({}));
 
       if (res.status === 401) {
-        showError("Unauthorized. Please login.");
+        showError(t("common.unauthorized"));
         return;
       }
 
       if (!res.ok) {
-        showError(data?.error || "Failed to update profile.");
+        showError(t("profile.errors.update"));
         return;
       }
 
@@ -152,11 +154,11 @@ export default function ProfilePage() {
       setImage(data.image ?? "");
 
       // ✅ Professional success toast
-      toast.success("Profile updated successfully ✅", {
+      toast.success(t("profile.success.updated"), {
         duration: 3000,
       });
     } catch {
-      showError("Update failed.");
+      showError(t("profile.errors.update"));
     } finally {
       setSaving(false);
     }
@@ -169,14 +171,14 @@ export default function ProfilePage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="flex items-center gap-1 hover:text-foreground">
             <Home className="h-4 w-4" />
-            <span>Home</span>
+            <span>{t("common.home")}</span>
           </Link>
           <span>›</span>
           <Link href="/ecommerce/user" className="hover:text-foreground">
-            Account
+            {t("common.account")}
           </Link>
           <span>›</span>
-          <span className="text-foreground">Edit Account</span>
+          <span className="text-foreground">{t("profile.title")}</span>
         </div>
       </div>
 
@@ -184,11 +186,11 @@ export default function ProfilePage() {
       <AccountMenu />
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-medium mb-6">Edit Account</h2>
+        <h2 className="text-2xl font-medium mb-6">{t("profile.title")}</h2>
 
         {loading ? (
           <Card className="p-6 bg-card text-card-foreground border border-border">
-            <p className="text-sm text-muted-foreground">Loading profile...</p>
+            <p className="text-sm text-muted-foreground">{t("profile.loading")}</p>
           </Card>
         ) : (
           <Card className="p-6 bg-card text-card-foreground border border-border rounded-2xl">
@@ -197,7 +199,7 @@ export default function ProfilePage() {
                 {/* Name */}
                 <div>
                   <p className="text-xs uppercase text-muted-foreground mb-1">
-                    Name
+                    {t("profile.name")}
                   </p>
                   <input
                     value={name}
@@ -210,7 +212,7 @@ export default function ProfilePage() {
                 {/* Email */}
                 <div>
                   <p className="text-xs uppercase text-muted-foreground mb-1">
-                    Email
+                    {t("profile.email")}
                   </p>
                   <div className="rounded-xl border border-border bg-background px-3 py-2 text-sm">
                     {userEmail || "—"}
@@ -220,7 +222,7 @@ export default function ProfilePage() {
                 {/* Phone */}
                 <div>
                   <p className="text-xs uppercase text-muted-foreground mb-1">
-                    Mobile Number
+                    {t("profile.phone")}
                   </p>
                   <input
                     value={phone}
@@ -233,7 +235,7 @@ export default function ProfilePage() {
                 {/* Image */}
                 <div>
                   <p className="text-xs uppercase text-muted-foreground mb-2">
-                    Profile Image
+                    {t("profile.image")}
                   </p>
 
                   <input
@@ -245,7 +247,7 @@ export default function ProfilePage() {
 
                   {uploadingImage && (
                     <p className="text-xs text-muted-foreground mt-2">
-                      Uploading...
+                      {t("profile.uploading")}
                     </p>
                   )}
 
@@ -254,7 +256,7 @@ export default function ProfilePage() {
                       {image ? (
                         <img
                           src={image}
-                          alt="Preview"
+                          alt={t("profile.preview")}
                           className="h-full w-full object-cover"
                         />
                       ) : (
@@ -271,7 +273,7 @@ export default function ProfilePage() {
                   disabled={saving}
                   className="h-10 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 disabled:opacity-60"
                 >
-                  {saving ? "Saving..." : "Save Changes"}
+                  {saving ? t("common.saving") : t("profile.saveChanges")}
                 </button>
               </div>
             </form>

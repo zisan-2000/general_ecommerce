@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { DeliveryConfirmationForm } from "@/components/customer/DeliveryConfirmationForm";
 import ProductReviews from "@/components/ecommarce/ProductReviews";
+import { useLocale, useTranslations } from "next-intl";
 
 interface CartItem {
   id: number | string;
@@ -108,11 +109,15 @@ interface Shipment {
   } | null;
 }
 
-const formatDate = (date: string | null | undefined) => {
-  if (!date) return "Processing...";
+const formatDate = (
+  date: string | null | undefined,
+  locale: string,
+  fallback: string,
+) => {
+  if (!date) return fallback;
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return date;
-  return d.toLocaleDateString("en-US", {
+  return d.toLocaleDateString(locale, {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -123,41 +128,41 @@ const getOrderStatusConfig = (status: string) => {
   const s = status?.toUpperCase();
   if (s === "DELIVERED") {
     return {
-      label: "Delivered",
+      labelKey: "delivered",
       className: "bg-emerald-100 text-emerald-800 border border-emerald-200",
     };
   }
   if (s === "RETURNED") {
     return {
-      label: "Returned",
+      labelKey: "returned",
       className: "bg-violet-100 text-violet-800 border border-violet-200",
     };
   }
   if (s === "FAILED") {
     return {
-      label: "Failed",
+      labelKey: "failed",
       className: "bg-rose-100 text-rose-800 border border-rose-200",
     };
   }
   if (s === "SHIPPED" || s === "PROCESSING" || s === "CONFIRMED") {
     return {
-      label:
+      labelKey:
         s === "SHIPPED"
-          ? "Shipped"
+          ? "shipped"
           : s === "PROCESSING"
-            ? "Processing"
-            : "Confirmed",
+            ? "processing"
+            : "confirmed",
       className: "bg-blue-100 text-blue-800 border border-blue-200",
     };
   }
   if (s === "CANCELLED") {
     return {
-      label: "Cancelled",
+      labelKey: "cancelled",
       className: "bg-red-100 text-red-800 border border-red-200",
     };
   }
   return {
-    label: "Pending",
+    labelKey: "pending",
     className: "bg-amber-100 text-amber-800 border border-amber-200",
   };
 };
@@ -166,18 +171,18 @@ const getPaymentStatusConfig = (paymentStatus: string) => {
   const s = paymentStatus?.toUpperCase();
   if (s === "PAID") {
     return {
-      label: "Paid",
+      labelKey: "paid",
       className: "bg-emerald-50 text-emerald-700 border border-emerald-200",
     };
   }
   if (s === "REFUNDED") {
     return {
-      label: "Refunded",
+      labelKey: "refunded",
       className: "bg-violet-50 text-violet-700 border border-violet-200",
     };
   }
   return {
-    label: "Unpaid",
+    labelKey: "unpaid",
     className: "bg-rose-50 text-rose-700 border border-rose-200",
   };
 };
@@ -359,6 +364,13 @@ function OrderDetailsSkeleton() {
 }
 
 export default function OrderDetailsPage() {
+  const t = useTranslations("CustomerAccount");
+  const locale = useLocale();
+  const money = (value: number) =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: "BDT",
+    }).format(value);
   const params = useParams();
   const invoiceId = params?.invoiceId as string | undefined;
 
@@ -387,7 +399,7 @@ export default function OrderDetailsPage() {
 
   useEffect(() => {
     if (!invoiceId) {
-      setError("Order ID not found.");
+      setError(t("orderDetail.errors.missingId"));
       setLoading(false);
       return;
     }
@@ -404,13 +416,13 @@ export default function OrderDetailsPage() {
         });
 
         if (res.status === 401) {
-          setError("You must be logged in to view this order.");
+          setError(t("orderDetail.errors.login"));
           setOrder(null);
           return;
         }
 
         if (res.status === 404) {
-          setError("No order found.");
+          setError(t("orderDetail.errors.notFound"));
           setOrder(null);
           return;
         }
@@ -418,7 +430,7 @@ export default function OrderDetailsPage() {
         if (!res.ok) {
           const data = await res.json().catch(() => null);
           console.error("Failed to fetch order:", data || res.statusText);
-          setError("Failed to load order.");
+          setError(t("orderDetail.errors.load"));
           setOrder(null);
           return;
         }
@@ -474,7 +486,7 @@ export default function OrderDetailsPage() {
               oi.variantId === null || oi.variantId === undefined
                 ? null
                 : Number(oi.variantId),
-            name: oi.product?.name ?? "Unknown product",
+            name: oi.product?.name ?? t("orders.unknownProduct"),
             price: Number(oi.price ?? 0),
             quantity: Math.max(1, Number(oi.quantity ?? 1)),
             image: imageFromProducts || fallbackImage,
@@ -542,7 +554,7 @@ export default function OrderDetailsPage() {
         setOrder(mapped);
       } catch (err) {
         console.error("Error fetching order:", err);
-        setError("Failed to load order.");
+        setError(t("orderDetail.errors.load"));
         setOrder(null);
       } finally {
         setLoading(false);
@@ -550,7 +562,7 @@ export default function OrderDetailsPage() {
     };
 
     fetchOrder();
-  }, [invoiceId]);
+  }, [invoiceId, t]);
 
   useEffect(() => {
     if (!invoiceId) return;
@@ -647,9 +659,9 @@ export default function OrderDetailsPage() {
       return [
         {
           id: 1,
-          label: "Order Cancelled",
-          description: "This order has been cancelled.",
-          dateLabel: formatDate(shipment?.updatedAt || order.createdAt),
+          label: t("orderDetail.journey.cancelled"),
+          description: t("orderDetail.journey.cancelledDescription"),
+          dateLabel: formatDate(shipment?.updatedAt || order.createdAt, locale, t("statuses.processing")),
           icon: ShieldCheck,
           color: "red",
         },
@@ -658,42 +670,43 @@ export default function OrderDetailsPage() {
 
     const placed: Stage = {
       id: 1,
-      label: "Order Placed",
-      description: "We received your order and it is being processed.",
-      dateLabel: formatDate(order.createdAt),
+      label: t("orderDetail.journey.placed"),
+      description: t("orderDetail.journey.placedDescription"),
+      dateLabel: formatDate(order.createdAt, locale, t("statuses.processing")),
       icon: ShieldCheck,
       color: "emerald",
     };
 
     const shipped: Stage = {
       id: 2,
-      label: "Shipped",
+      label: t("statuses.shipped"),
       description: shipment?.courier
-        ? `Handed over to courier (${shipment.courier})${
-            shipment.trackingNumber
-              ? `, Tracking: ${shipment.trackingNumber}`
-              : ""
-          }.`
-        : "Order has been shipped from our warehouse.",
-      dateLabel: formatDate(shipment?.shippedAt || shipment?.createdAt),
+        ? t("orderDetail.journey.shippedCourier", {
+            courier: shipment.courier,
+            tracking: shipment.trackingNumber
+              ? t("orderDetail.journey.trackingSuffix", { number: shipment.trackingNumber })
+              : "",
+          })
+        : t("orderDetail.journey.shippedDescription"),
+      dateLabel: formatDate(shipment?.shippedAt || shipment?.createdAt, locale, t("statuses.processing")),
       icon: Package,
       color: "blue",
     };
 
     const outForDelivery: Stage = {
       id: 3,
-      label: "Out for Delivery",
-      description: "Courier is on the way to your delivery address.",
-      dateLabel: formatDate(shipment?.expectedDate || shipment?.shippedAt),
+      label: t("statuses.outForDelivery"),
+      description: t("orderDetail.journey.outForDeliveryDescription"),
+      dateLabel: formatDate(shipment?.expectedDate || shipment?.shippedAt, locale, t("statuses.processing")),
       icon: Truck,
       color: "orange",
     };
 
     const delivered: Stage = {
       id: 4,
-      label: "Delivered",
-      description: "Order delivered to your address.",
-      dateLabel: formatDate(shipment?.deliveredAt),
+      label: t("statuses.delivered"),
+      description: t("orderDetail.journey.deliveredDescription"),
+      dateLabel: formatDate(shipment?.deliveredAt, locale, t("statuses.processing")),
       icon: CheckCircle,
       color: "green",
     };
@@ -706,7 +719,7 @@ export default function OrderDetailsPage() {
     order: Order,
     shipment: Shipment | null,
   ) => {
-    if (stages.length === 1 && stages[0].label === "Order Cancelled") return 0;
+    if (stages.length === 1) return 0;
 
     const sStatus = shipment?.status?.toUpperCase() ?? "PENDING";
     const oStatus = order.status?.toUpperCase();
@@ -732,12 +745,12 @@ export default function OrderDetailsPage() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="card-theme px-6 py-4 text-sm text-muted-foreground text-center space-y-3">
-          <p>{error || "Order not found."}</p>
+          <p>{error || t("orderDetail.errors.notFound")}</p>
           <Link
             href="/ecommerce/user/orders"
             className="text-sm text-primary hover:underline"
           >
-            Back to My Orders
+            {t("orderDetail.backToMyOrders")}
           </Link>
         </Card>
       </div>
@@ -769,7 +782,7 @@ export default function OrderDetailsPage() {
     ) &&
     !shipment?.deliveryProof;
   const canLeaveReview =
-    statusCfg.label === "Delivered" ||
+    order.status?.toUpperCase() === "DELIVERED" ||
     shipment?.status?.toUpperCase() === "DELIVERED";
   const proofToken =
     shipment?.deliveryConfirmationToken ||
@@ -839,12 +852,12 @@ export default function OrderDetailsPage() {
     );
 
     if (!canRequestRefund || !refundDeadline) {
-      setRefundError("Refunds are available only within 7 days of delivery.");
+      setRefundError(t("orderDetail.refund.errors.window"));
       return;
     }
 
     if (!refundReason.trim() || refundReason.trim().length < 10) {
-      setRefundError("Please add a clear reason for the refund.");
+      setRefundError(t("orderDetail.refund.errors.reason"));
       return;
     }
 
@@ -854,7 +867,7 @@ export default function OrderDetailsPage() {
     );
 
     if (nextQuantity <= 0) {
-      setRefundError("No refundable quantity is left for this item.");
+      setRefundError(t("orderDetail.refund.errors.quantity"));
       return;
     }
 
@@ -876,7 +889,7 @@ export default function OrderDetailsPage() {
       const payload = await res.json().catch(() => null);
 
       if (!res.ok) {
-        setRefundError(payload?.error || "Failed to submit refund request.");
+        setRefundError(t("orderDetail.refund.errors.submit"));
         return;
       }
 
@@ -919,7 +932,7 @@ export default function OrderDetailsPage() {
       closeRefundModal();
     } catch (error) {
       console.error("Failed to submit refund request:", error);
-      setRefundError("Failed to submit refund request.");
+      setRefundError(t("orderDetail.refund.errors.submit"));
       setRefundSubmitting(false);
     } finally {
       setRefundSubmitting(false);
@@ -948,32 +961,32 @@ export default function OrderDetailsPage() {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Back to Orders
+            {t("orderDetail.backToOrders")}
           </Link>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <h1 className="text-3xl font-bold text-foreground">
-                Order Details
+                {t("orderDetail.title")}
               </h1>
               <p className="text-muted-foreground mt-2">
-                Track your order progress and details
+                {t("orderDetail.description")}
               </p>
             </div>
 
-            <div className="bg-card text-card-foreground px-4 py-3 rounded-lg border border-border shadow-sm text-sm">s
-              <p className="text-muted-foreground">Order Date</p>
-              <p className="font-semibold">{formatDate(order.createdAt)}</p>
+            <div className="bg-card text-card-foreground px-4 py-3 rounded-lg border border-border shadow-sm text-sm">
+              <p className="text-muted-foreground">{t("orderDetail.orderDate")}</p>
+              <p className="font-semibold">{formatDate(order.createdAt, locale, t("statuses.processing"))}</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${statusCfg.className}`}
                 >
-                  Status: {statusCfg.label}
+                  {t("orderDetail.status")}: {t(`statuses.${statusCfg.labelKey}` as any)}
                 </span>
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${paymentCfg.className}`}
                 >
-                  Payment: {paymentCfg.label}
+                  {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}
                 </span>
               </div>
             </div>
@@ -993,15 +1006,15 @@ export default function OrderDetailsPage() {
 
                 <div className="flex-1 min-w-0">
                   <p className="text-[15px] font-medium text-foreground">
-                    {statusCfg.label === "Delivered"
-                      ? "Order delivered"
-                      : `Order status: ${statusCfg.label}`}
+                    {order.status?.toUpperCase() === "DELIVERED"
+                      ? t("orderDetail.orderDelivered")
+                      : t("orderDetail.orderStatus", { status: t(`statuses.${statusCfg.labelKey}` as any) })}
                   </p>
                   <p className="text-[13px] text-muted-foreground mt-0.5 truncate">
-                    Payment: {paymentCfg.label}&nbsp;·&nbsp;Method:{" "}
+                    {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}&nbsp;·&nbsp;{t("orderDetail.method")}:{" "}
                     {order.paymentMethod}
                     {order.transactionId
-                      ? ` · TxID: ${order.transactionId}`
+                      ? ` · ${t("orderDetail.transactionId")}: ${order.transactionId}`
                       : ""}
                   </p>
                 </div>
@@ -1009,7 +1022,7 @@ export default function OrderDetailsPage() {
                 <span
                   className={`flex-shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${statusCfg.className}`}
                 >
-                  {statusCfg.label}
+                  {t(`statuses.${statusCfg.labelKey}` as any)}
                 </span>
               </div>
 
@@ -1017,7 +1030,7 @@ export default function OrderDetailsPage() {
               <div className="flex flex-wrap items-center justify-between gap-3 px-6 py-3.5">
                 <div>
                   <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
-                    Order number
+                    {t("orderDetail.orderNumber")}
                   </p>
                   <p className="font-mono text-sm font-medium text-foreground">
                     #{order.invoiceId}
@@ -1027,7 +1040,7 @@ export default function OrderDetailsPage() {
                 <span
                   className={`rounded-full border px-2.5 py-1 text-xs font-medium ${paymentCfg.className}`}
                 >
-                  Payment: {paymentCfg.label}
+                  {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}
                 </span>
               </div>
             </Card>
@@ -1035,7 +1048,7 @@ export default function OrderDetailsPage() {
             <Card className="card-theme p-0 shadow-sm">
               <div className="px-6 py-3 border-b border-border">
                 <h2 className="text-sm md:text-base font-semibold text-foreground">
-                  Order Summary
+                  {t("orderDetail.summary")}
                 </h2>
               </div>
 
@@ -1054,7 +1067,7 @@ export default function OrderDetailsPage() {
                         />
                       ) : (
                         <span className="text-[10px] text-muted-foreground px-2 text-center">
-                          No Image
+                          {t("orders.noImage")}
                         </span>
                       )}
                     </div>
@@ -1066,13 +1079,13 @@ export default function OrderDetailsPage() {
                         </p>
                         <div className="flex flex-wrap gap-3 text-[13px] text-muted-foreground">
                           <span>
-                            Price:{" "}
+                            {t("orderDetail.price")}: {" "}
                             <span className="font-semibold text-foreground">
-                              TK. {item.price.toFixed(2)}
+                              {money(item.price)}
                             </span>
                           </span>
                           <span>
-                            Qty:{" "}
+                            {t("orderDetail.quantityShort")}: {" "}
                             <span className="font-semibold text-foreground">
                               {item.quantity}
                             </span>
@@ -1088,9 +1101,9 @@ export default function OrderDetailsPage() {
                       </div>
 
                       <p className="text-[12px] text-muted-foreground mt-2">
-                        Line Total:{" "}
+                        {t("orderDetail.lineTotal")}: {" "}
                         <span className="font-semibold text-foreground">
-                          TK. {(item.price * item.quantity).toFixed(2)}
+                          {money(item.price * item.quantity)}
                         </span>
                       </p>
                       {canLeaveReview && (
@@ -1101,7 +1114,7 @@ export default function OrderDetailsPage() {
                           }
                           className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
                         >
-                          Leave a review
+                          {t("orderDetail.leaveReview")}
                         </button>
                       )}
                     </div>
@@ -1112,15 +1125,15 @@ export default function OrderDetailsPage() {
               <div className="px-6 py-4 border-t border-border flex justify-end">
                 <div className="text-sm space-y-1 text-right">
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
-                    <span>Subtotal</span>
+                    <span>{t("orderDetail.subtotal")}</span>
                     <span className="text-foreground">
-                      TK. {subTotal.toFixed(2)}
+                      {money(subTotal)}
                     </span>
                   </div>
                   {discountTotal > 0 && (
                     <div className="flex justify-between gap-8 text-[13px] text-emerald-600">
                       <span>
-                        Coupon Discount
+                        {t("orderDetail.couponDiscount")}
                         {order.coupon && (
                           <span className="text-muted-foreground ml-1">
                             ({order.coupon.code})
@@ -1128,26 +1141,26 @@ export default function OrderDetailsPage() {
                         )}
                       </span>
                       <span className="text-emerald-600">
-                        -TK. {discountTotal.toFixed(2)}
+                        -{money(discountTotal)}
                       </span>
                     </div>
                   )}
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
-                    <span>Delivery Charge</span>
+                    <span>{t("orderDetail.deliveryCharge")}</span>
                     <span className="text-foreground">
-                      TK. {deliveryCharge.toFixed(2)}
+                      {money(deliveryCharge)}
                     </span>
                   </div>
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
-                    <span>VAT</span>
+                    <span>{t("orderDetail.vat")}</span>
                     <span className="text-foreground">
-                      TK. {vatTotal.toFixed(2)}
+                      {money(vatTotal)}
                     </span>
                   </div>
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
-                    <span>Payable Amount</span>
+                    <span>{t("orderDetail.payableAmount")}</span>
                     <span className="font-semibold text-foreground">
-                      TK. {order.total.toFixed(2)}
+                      {money(order.total)}
                     </span>
                   </div>
                 </div>
@@ -1159,7 +1172,7 @@ export default function OrderDetailsPage() {
               <div className="flex items-center gap-3 mb-8">
                 <Receipt className="w-6 h-6 text-foreground" />
                 <h3 className="text-xl font-bold text-foreground">
-                  Order Journey
+                  {t("orderDetail.journey.title")}
                 </h3>
               </div>
 
@@ -1184,29 +1197,29 @@ export default function OrderDetailsPage() {
 
                   const shipmentStatus = shipment?.status?.toUpperCase();
                   const orderStatus = order.status?.toUpperCase();
-                  const isDeliveredStage = stage.label === "Delivered";
+                  const isDeliveredStage = stage.id === 4;
                   const isDeliveredFinal =
                     shipmentStatus === "DELIVERED" ||
                     orderStatus === "DELIVERED";
                   const isReturnedFinal =
                     shipmentStatus === "RETURNED" || orderStatus === "RETURNED";
 
-                  let badgeText = "Pending";
+                  let badgeText = t("statuses.pending");
                   let badgeClass =
                     "bg-muted text-muted-foreground border-border";
 
                   if (isReturnedFinal && isDeliveredStage) {
-                    badgeText = "Returned";
+                    badgeText = t("statuses.returned");
                     badgeClass = "bg-red-50 text-red-700 border-red-200";
                   } else if (
                     isCompleted ||
                     (isDeliveredStage && isDeliveredFinal)
                   ) {
-                    badgeText = "Completed";
+                    badgeText = t("statuses.completed");
                     badgeClass =
                       "bg-emerald-50 text-emerald-700 border-emerald-200";
                   } else if (isCurrent && isActive) {
-                    badgeText = "In Progress";
+                    badgeText = t("statuses.inProgress");
                     badgeClass = "bg-blue-50 text-blue-700 border-blue-200";
                   }
 
@@ -1256,14 +1269,14 @@ export default function OrderDetailsPage() {
               <div className="flex items-center gap-3 mb-6">
                 <MapPin className="w-5 h-5 text-primary" />
                 <h3 className="font-semibold text-foreground">
-                  Delivery Information
+                  {t("orderDetail.deliveryInformation")}
                 </h3>
               </div>
 
               <div className="space-y-4">
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
-                    Customer Name
+                    {t("orderDetail.customerName")}
                   </p>
                   <p className="font-semibold text-foreground">
                     {order.customer.name}
@@ -1272,7 +1285,7 @@ export default function OrderDetailsPage() {
 
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
-                    Contact Number
+                    {t("orderDetail.contactNumber")}
                   </p>
                   <p className="font-semibold text-foreground">
                     {order.customer.mobile}
@@ -1281,21 +1294,21 @@ export default function OrderDetailsPage() {
 
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
-                    Email Address
+                    {t("orderDetail.emailAddress")}
                   </p>
                   <p className="font-semibold text-foreground break-all">
-                    {order.customer.email || "N/A"}
+                    {order.customer.email || t("common.notAvailable")}
                   </p>
                 </div>
 
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
-                    Delivery Address
+                    {t("orderDetail.deliveryAddress")}
                   </p>
                   <p className="font-semibold text-foreground leading-relaxed">
                     {order.customer.deliveryAddress ||
                       order.customer.address ||
-                      "N/A"}
+                      t("common.notAvailable")}
                   </p>
                 </div>
               </div>
@@ -1309,10 +1322,10 @@ export default function OrderDetailsPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-                      Delivery Proof
+                      {t("orderDetail.deliveryProof.title")}
                     </p>
                     <h3 className="mt-1 font-semibold text-foreground">
-                      Customer confirmation
+                      {t("orderDetail.deliveryProof.confirmation")}
                     </h3>
                   </div>
                 </div>
@@ -1322,9 +1335,9 @@ export default function OrderDetailsPage() {
                 {shipment?.deliveryProof ? (
                   <>
                     <p className="text-sm text-muted-foreground">
-                      Delivery was confirmed on{" "}
+                      {t("orderDetail.deliveryProof.confirmedOn")} {" "}
                       <span className="font-medium text-foreground">
-                        {formatDate(shipment?.deliveryProof?.confirmedAt)}
+                        {formatDate(shipment?.deliveryProof?.confirmedAt, locale, t("statuses.processing"))}
                       </span>
                       .
                     </p>
@@ -1333,27 +1346,25 @@ export default function OrderDetailsPage() {
                       onClick={() => setProofModalOpen(true)}
                       className="inline-flex w-full items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700"
                     >
-                      View delivery proof
+                      {t("orderDetail.deliveryProof.view")}
                     </button>
                   </>
                 ) : canConfirmDelivery ? (
                   <>
                     <p className="text-sm text-muted-foreground">
-                      Once the courier shares the delivery PIN, complete the
-                      proof form to confirm you received the parcel.
+                      {t("orderDetail.deliveryProof.instructions")}
                     </p>
                     <button
                       type="button"
                       onClick={() => setProofModalOpen(true)}
                       className="inline-flex w-full items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700"
                     >
-                      Open delivery confirmation
+                      {t("orderDetail.deliveryProof.open")}
                     </button>
                   </>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    Delivery confirmation will appear here when the shipment is
-                    out for delivery.
+                    {t("orderDetail.deliveryProof.pending")}
                   </p>
                 )}
               </div>
@@ -1364,10 +1375,10 @@ export default function OrderDetailsPage() {
                 <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
                   <div className="mb-4">
                     <h3 className="text-lg font-semibold uppercase tracking-[0.18em] text-amber-700 shadow-md">
-                      Review This Product
+                      {t("orderDetail.review.title")}
                     </h3>
                     <p className="text-sm mt-2 text-muted-foreground">
-                      Write a review for delivered products
+                      {t("orderDetail.review.description")}
                     </p>
                   </div>
 
@@ -1381,7 +1392,7 @@ export default function OrderDetailsPage() {
                         }
                         className="inline-flex w-full items-center justify-center rounded-full bg-amber-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-700"
                       >
-                        Review {item.name}
+                        {t("orderDetail.review.action", { name: item.name })}
                       </button>
                     ))}
                   </div>
@@ -1394,11 +1405,10 @@ export default function OrderDetailsPage() {
                 <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
                   <div className="mb-4">
                     <h3 className="text-lg font-semibold uppercase tracking-[0.18em] text-red-700 shadow-md">
-                      Refund
+                      {t("orderDetail.refund.title")}
                     </h3>
                     <p className="text-sm mt-2 text-muted-foreground">
-                      Request a refund for any product in this order within 7
-                      days after delivery.
+                      {t("orderDetail.refund.description")}
                     </p>
                   </div>
 
@@ -1419,7 +1429,7 @@ export default function OrderDetailsPage() {
                               key={item.id}
                               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-muted px-5 py-3 text-sm font-semibold text-muted-foreground"
                             >
-                              Refund window closed for {item.name}
+                              {t("orderDetail.refund.windowClosedFor", { name: item.name })}
                             </div>
                           );
                         }
@@ -1430,7 +1440,7 @@ export default function OrderDetailsPage() {
                               key={item.id}
                               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-muted px-5 py-3 text-sm font-semibold text-muted-foreground"
                             >
-                              {item.name} already refunded
+                              {t("orderDetail.refund.alreadyRefunded", { name: item.name })}
                             </div>
                           );
                         }
@@ -1442,7 +1452,7 @@ export default function OrderDetailsPage() {
                             onClick={() => openRefundModal(item)}
                             className="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
                           >
-                            Refund {item.name}
+                            {t("orderDetail.refund.action", { name: item.name })}
                           </button>
                         );
                       })(),
@@ -1458,18 +1468,18 @@ export default function OrderDetailsPage() {
                   <ShieldCheck className="w-8 h-8 text-primary" />
                 </div>
 
-                <h4 className="font-bold mb-2">Order Status & Payment</h4>
+                <h4 className="font-bold mb-2">{t("orderDetail.statusAndPayment")}</h4>
 
                 <p className="text-sm opacity-80 mb-4">
-                  Current Status: <strong>{statusCfg.label}</strong>
+                  {t("orderDetail.currentStatus")}: <strong>{t(`statuses.${statusCfg.labelKey}` as any)}</strong>
                   <br />
-                  Payment: <strong>{paymentCfg.label}</strong> (
+                  {t("orders.payment")}: <strong>{t(`statuses.${paymentCfg.labelKey}` as any)}</strong> (
                   {order.paymentMethod})
                 </p>
 
                 <div className="bg-card text-card-foreground rounded-lg p-3 border border-border">
                   <p className="text-xs opacity-80 font-mono">
-                    TRACKING ID: {order.invoiceId}
+                    {t("orderDetail.trackingId")}: {order.invoiceId}
                   </p>
                 </div>
               </div>
@@ -1492,6 +1502,7 @@ export default function OrderDetailsPage() {
                 type="button"
                 onClick={() => setProofModalOpen(false)}
                 className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -1504,7 +1515,7 @@ export default function OrderDetailsPage() {
                 </div>
               ) : (
                 <div className="rounded-2xl border border-border bg-muted/30 p-4 text-sm text-muted-foreground">
-                  Delivery confirmation link is unavailable for this shipment.
+                  {t("orderDetail.deliveryProof.unavailable")}
                 </div>
               )}
             </div>
@@ -1524,13 +1535,13 @@ export default function OrderDetailsPage() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                  Review New Product
+                  {t("orderDetail.review.modalEyebrow")}
                 </p>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">
                   {reviewProduct.name}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Submit your rating and review without leaving this page.
+                  {t("orderDetail.review.modalDescription")}
                 </p>
               </div>
 
@@ -1538,6 +1549,7 @@ export default function OrderDetailsPage() {
                 type="button"
                 onClick={closeReviewModal}
                 className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -1562,15 +1574,15 @@ export default function OrderDetailsPage() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red-700">
-                  Refund Request
+                  {t("orderDetail.refund.request")}
                 </p>
                 <h3 className="mt-1 text-lg font-semibold text-foreground">
                   {refundItem.name}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Refunds are allowed only within 7 days after delivery.
+                  {t("orderDetail.refund.windowDescription")}
                   {refundDeadline ? (
-                    <> Deadline: {formatDate(refundDeadline.toISOString())}</>
+                    <> {t("orderDetail.refund.deadline")}: {formatDate(refundDeadline.toISOString(), locale, t("statuses.processing"))}</>
                   ) : null}
                 </p>
               </div>
@@ -1579,6 +1591,7 @@ export default function OrderDetailsPage() {
                 type="button"
                 onClick={closeRefundModal}
                 className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -1588,17 +1601,17 @@ export default function OrderDetailsPage() {
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-border bg-card p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    Refund details
+                    {t("orderDetail.refund.details")}
                   </p>
                   <div className="mt-3 space-y-2 text-sm text-muted-foreground">
                     <p>
-                      Quantity ordered:{" "}
+                      {t("orderDetail.refund.quantityOrdered")}: {" "}
                       <span className="font-semibold text-foreground">
                         {refundItem.quantity}
                       </span>
                     </p>
                     <p>
-                      Refundable quantity:{" "}
+                      {t("orderDetail.refund.refundableQuantity")}: {" "}
                       <span className="font-semibold text-foreground">
                         {Math.max(
                           refundItem.quantity -
@@ -1608,9 +1621,9 @@ export default function OrderDetailsPage() {
                       </span>
                     </p>
                     <p>
-                      Status:{" "}
+                      {t("orderDetail.status")}: {" "}
                       <span className="font-semibold text-foreground">
-                        {canRequestRefund ? "Eligible" : "Refund window closed"}
+                        {canRequestRefund ? t("statuses.eligible") : t("orderDetail.refund.windowClosed")}
                       </span>
                     </p>
                   </div>
@@ -1622,7 +1635,7 @@ export default function OrderDetailsPage() {
                       htmlFor="refund-quantity"
                       className="text-sm font-medium text-foreground"
                     >
-                      Quantity
+                      {t("orderDetail.refund.quantity")}
                     </label>
                     <Input
                       id="refund-quantity"
@@ -1647,13 +1660,13 @@ export default function OrderDetailsPage() {
                   htmlFor="refund-reason"
                   className="text-sm font-medium text-foreground"
                 >
-                  Reason
+                  {t("orderDetail.refund.reason")}
                 </label>
                 <Textarea
                   id="refund-reason"
                   value={refundReason}
                   onChange={(e) => setRefundReason(e.target.value)}
-                  placeholder="Tell us why you need a refund..."
+                  placeholder={t("orderDetail.refund.reasonPlaceholder")}
                   className="min-h-[140px]"
                 />
               </div>
@@ -1670,7 +1683,7 @@ export default function OrderDetailsPage() {
                   onClick={closeRefundModal}
                   className="inline-flex items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-muted"
                 >
-                  Cancel
+                  {t("common.cancel")}
                 </button>
                 <button
                   type="button"
@@ -1678,7 +1691,7 @@ export default function OrderDetailsPage() {
                   onClick={submitRefundRequest}
                   className="inline-flex items-center justify-center rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {refundSubmitting ? "Submitting..." : "Submit Refund"}
+                  {refundSubmitting ? t("common.submitting") : t("orderDetail.refund.submit")}
                 </button>
               </div>
             </div>

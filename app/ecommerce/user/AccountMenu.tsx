@@ -11,6 +11,7 @@ import {
   Heart,
   FileTextIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type MenuItem = {
   label: string;
@@ -19,16 +20,17 @@ type MenuItem = {
 };
 
 export default function AccountMenu() {
+  const t = useTranslations("CustomerAccount.menu");
   const pathname = usePathname();
 
   const items: MenuItem[] = [
-    { label: "Orders", href: "/ecommerce/user/orders", icon: <ShoppingBag className="h-4 w-4" /> },
-    { label: "Invoice", href: "/ecommerce/user/invoice", icon: <FileTextIcon className="h-4 w-4" /> }, 
-    { label: "Edit Profile", href: "/ecommerce/user/profile", icon: <User className="h-4 w-4" /> },
-    { label: "Change Password", href: "/ecommerce/user/change-password", icon: <Lock className="h-4 w-4" /> },
-    { label: "Addresses", href: "/ecommerce/user/addresses", icon: <MapPin className="h-4 w-4" /> },
-    { label: "Wish List", href: "/ecommerce/user/wishlist", icon: <Heart className="h-4 w-4" /> },
-    { label: "Notifications", href: "/ecommerce/user/notifications", icon: <Bell className="h-4 w-4" /> },
+    { label: t("orders"), href: "/ecommerce/user/orders", icon: <ShoppingBag className="h-4 w-4" /> },
+    { label: t("invoices"), href: "/ecommerce/user/invoice", icon: <FileTextIcon className="h-4 w-4" /> },
+    { label: t("editProfile"), href: "/ecommerce/user/profile", icon: <User className="h-4 w-4" /> },
+    { label: t("changePassword"), href: "/ecommerce/user/change-password", icon: <Lock className="h-4 w-4" /> },
+    { label: t("addresses"), href: "/ecommerce/user/addresses", icon: <MapPin className="h-4 w-4" /> },
+    { label: t("wishlist"), href: "/ecommerce/user/wishlist", icon: <Heart className="h-4 w-4" /> },
+    { label: t("notifications"), href: "/ecommerce/user/notifications", icon: <Bell className="h-4 w-4" /> },
   ];
 
   return (
