@@ -46,7 +46,16 @@
       "stock": "{count, plural, =0 {No units currently in stock} =1 {# unit currently in stock} other {# units currently in stock}}",
       "previous": "Previous flash sale products",
       "next": "Next flash sale products",
-      "viewAll": "View All"
+      "viewAll": "View All",
+      "page": {
+        "title": "Flash Sale",
+        "description": "Limited-time product offers at special prices.",
+        "backToHome": "Back to home",
+        "subtitle": "Every price and timer is updated from the live sale schedule.",
+        "noDeals": "No live flash deals right now",
+        "noDealsDescription": "New limited-time offers will appear here automatically.",
+        "browseProducts": "Browse products"
+      }
     },
     "ProductSections": {
       "featured": {

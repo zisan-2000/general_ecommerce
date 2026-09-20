@@ -46,7 +46,16 @@
       "stock": "{count, plural, =0 {Saat ini tidak ada unit dalam stok} =1 {# unit saat ini tersedia} other {# unit saat ini tersedia}}",
       "previous": "Produk flash sale sebelumnya",
       "next": "Produk flash sale berikutnya",
-      "viewAll": "Lihat Semua"
+      "viewAll": "Lihat Semua",
+      "page": {
+        "title": "Flash Sale",
+        "description": "Penawaran produk waktu terbatas dengan harga khusus.",
+        "backToHome": "Kembali ke beranda",
+        "subtitle": "Setiap harga dan penghitung waktu diperbarui dari jadwal penjualan langsung.",
+        "noDeals": "Tidak ada penawaran flash langsung saat ini",
+        "noDealsDescription": "Penawaran waktu terbatas baru akan muncul di sini secara otomatis.",
+        "browseProducts": "Telusuri produk"
+      }
     },
     "ProductSections": {
       "featured": {
