@@ -5,6 +5,7 @@ import {
   CATEGORY_NAVIGATION_DEFAULTS,
   getCategoryDescendantIds,
   getEffectiveCategoryNavigationIds,
+  getHeaderCategoryNavigationIds,
   getEffectivelyActiveCategoryIds,
 } from "../lib/category-navigation.ts";
 
@@ -71,7 +72,25 @@ test("header navigation has no technology-specific category order", async () => 
   assert.doesNotMatch(header, /DESKTOP_CATEGORY_ORDER/);
   assert.match(header, /showInHeader/);
   assert.match(header, /sortOrder/);
-  assert.match(header, /getEffectiveCategoryNavigationIds/);
+  assert.match(header, /getHeaderCategoryNavigationIds/);
+});
+
+test("header roots include active children and grandchildren without individual placement flags", () => {
+  const categories = [
+    category(512, null, { name: "Food" }),
+    category(513, 512, { name: "Fruits & Vegetables", showInHeader: false }),
+    category(514, 513, { name: "Fruits", showInHeader: false }),
+    category(516, 512, { name: "Meat & Fish", showInHeader: false }),
+    category(517, 516, { name: "Chicken & Poultry", showInHeader: false }),
+    category(600, 512, { isActive: false }),
+    category(601, 600),
+    category(700, null, { showInHeader: false }),
+    category(701, 700),
+    category(800, 999),
+    category(900, 901),
+    category(901, 900),
+  ];
+  assert.deepEqual([...getHeaderCategoryNavigationIds(categories)], [512, 513, 514, 516, 517]);
 });
 
 test("footer and homepage consume category placement configuration", async () => {

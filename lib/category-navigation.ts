@@ -184,3 +184,14 @@ export function getEffectiveCategoryNavigationIds(
 export function sortCategoryNavigation<T extends CategoryNavigationRecord>(categories: T[]) {
   return [...categories].sort(compareCategoryNavigation);
 }
+
+/** Header placement selects root menus; active descendants populate their submenus. */
+export function getHeaderCategoryNavigationIds(categories: CategoryNavigationRecord[]) {
+  return getEffectiveCategoryNavigationIds(
+    categories.map((category) => ({
+      ...category,
+      showInHeader: category.parentId === null ? category.showInHeader : true,
+    })),
+    "header",
+  );
+}

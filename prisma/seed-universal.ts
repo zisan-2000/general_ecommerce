@@ -1,12 +1,16 @@
 import bcrypt from "bcrypt";
 import { PrismaClient } from "../generated/prisma";
-import { SYSTEM_PERMISSIONS, SYSTEM_ROLE_DEFINITIONS } from "../lib/rbac-config";
+import {
+  SYSTEM_PERMISSIONS,
+  SYSTEM_ROLE_DEFINITIONS,
+} from "../lib/rbac-config";
 import { seedUniversalStorefront } from "./seed-data/universal";
 import { seedStorefrontDemo } from "./seed-data/storefront";
 import { seedScmDemo } from "./seed-data/scm";
 import { seedWarehouseDemo } from "./seed-data/warehouse";
 import { seedManagementDemo } from "./seed-data/management";
 import { seedInvestorDemo } from "./seed-data/investor";
+import { seedProductSeedFile } from "./seed-data/productseed-import";
 
 const prisma = new PrismaClient();
 
@@ -222,6 +226,9 @@ async function main() {
   // while the public catalog exposes only the curated storefront.
   const storefront = await seedStorefrontDemo(prisma, adminUserId);
   console.log("Storefront demo seed ensured.", storefront);
+
+  const productSeed = await seedProductSeedFile(prisma);
+  console.log("Product seed file imported.", productSeed);
 }
 
 main()

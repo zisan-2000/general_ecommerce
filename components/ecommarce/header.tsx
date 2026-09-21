@@ -5,6 +5,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
+import { createPortal } from "react-dom";
 
 import React, {
   useCallback,
@@ -53,7 +54,7 @@ import { useProductCompare } from "@/hooks/use-product-compare";
 import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
 import {
   compareCategoryNavigation,
-  getEffectiveCategoryNavigationIds,
+  getHeaderCategoryNavigationIds,
 } from "@/lib/category-navigation";
 
 import {
@@ -242,7 +243,7 @@ type SiteSettings = {
 };
 
 function buildCategoryTree(list: CategoryDTO[]): CategoryNode[] {
-  const visibleIds = getEffectiveCategoryNavigationIds(list, "header");
+  const visibleIds = getHeaderCategoryNavigationIds(list);
   const visible = list.filter((category) => visibleIds.has(category.id));
   const map = new Map<number, CategoryNode>();
 
@@ -673,6 +674,7 @@ export default function Header({
   const navCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const navScrollRef = useRef<HTMLDivElement | null>(null);
+  const navMenuRef = useRef<HTMLDivElement | null>(null);
 
   const mobileSearchInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -1005,6 +1007,7 @@ export default function Header({
   };
 
   const goCategoryFromDesktop = (slug: string) => {
+    setNavHoverCatId(null);
     router.push(`/ecommerce/products?category=${encodeURIComponent(slug)}`);
   };
 
@@ -1054,6 +1057,33 @@ export default function Header({
       setNavHoverCatId(null);
     }, 120);
   }, [clearNavCloseTimer]);
+
+  useEffect(() => clearNavCloseTimer, [clearNavCloseTimer]);
+
+  useEffect(() => {
+    if (navHoverCatId === null) return;
+
+    const closeMenu = () => {
+      clearNavCloseTimer();
+      setNavHoverCatId(null);
+    };
+    const onScroll = (event: Event) => {
+      // Scrolling inside a child menu must not dismiss it.
+      if (event.target instanceof Node && navMenuRef.current?.contains(event.target)) return;
+      closeMenu();
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+    window.addEventListener("scroll", onScroll, true);
+    window.addEventListener("resize", closeMenu);
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("scroll", onScroll, true);
+      window.removeEventListener("resize", closeMenu);
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [navHoverCatId, clearNavCloseTimer]);
 
   useEffect(() => {
     if (!mobileSearchOpen) return;
@@ -1556,9 +1586,11 @@ export default function Header({
           </div>
         </div>
 
-        {hoveredNavCat && hoveredNavCat.children.length > 0 && (
+        {hasMounted && hoveredNavCat && hoveredNavCat.children.length > 0 && createPortal(
           <div
-            className="fixed z-[10000]"
+            ref={navMenuRef}
+            dir={getLocaleDirection(locale as AppLocale)}
+            className="fixed z-[10000] hidden md:block"
             style={{ left: navMenuPos.left, top: navMenuPos.top }}
             onMouseEnter={clearNavCloseTimer}
             onMouseLeave={scheduleNavClose}
@@ -1654,7 +1686,8 @@ export default function Header({
                 })}
               </div>
             </div>
-          </div>
+          </div>,
+          document.body,
         )}
       </nav>
 
