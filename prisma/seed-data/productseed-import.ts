@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { z } from "zod";
 import { Prisma } from "../../generated/prisma";
 import type { PrismaClient } from "../../generated/prisma";
 import { refreshVariantStock, syncVariantWarehouseStock } from "../../lib/inventory";
@@ -32,6 +33,8 @@ type ProductSeedProduct = {
   sku: string;
   categorySlug: string;
   brandName: string | null;
+  model?: string | null;
+  warranty?: string | null;
   basePrice: number;
   originalPrice: number | null;
   currency: string;
@@ -52,17 +55,66 @@ type ProductSeedFile = {
   products: ProductSeedProduct[];
 };
 
-function loadProductSeed(): ProductSeedFile {
-  const filePath = resolve(process.cwd(), "prisma/seed-data/productseed.json");
-  return JSON.parse(readFileSync(filePath, "utf8")) as ProductSeedFile;
+const priceSchema = z.number().finite().nonnegative().lt(100000000);
+const productSeedSchema = z.object({
+  categories: z.array(z.object({
+    name: z.string().min(1), slug: z.string().min(1), parentSlug: z.string().nullable(),
+    image: z.string().nullable(), isActive: z.boolean(), sortOrder: z.number().int(),
+    showInHeader: z.boolean(), showInFooter: z.boolean(), featured: z.boolean(),
+  })),
+  products: z.array(z.object({
+    name: z.string().min(1), slug: z.string().min(1), sku: z.string().min(1),
+    categorySlug: z.string().min(1), brandName: z.string().nullable(),
+    model: z.string().nullable().optional(), warranty: z.string().nullable().optional(),
+    basePrice: priceSchema, originalPrice: priceSchema.nullable(), currency: z.string().length(3),
+    stock: z.number().int().nonnegative(), available: z.boolean(), featured: z.boolean(),
+    image: z.string(), gallery: z.array(z.string()), shortDesc: z.string().nullable(),
+    description: z.string(), weight: z.number().nullable(),
+    dimensions: z.record(z.string(), z.number()).nullable(),
+    variants: z.array(z.object({
+      sku: z.string().min(1), price: priceSchema, stock: z.number().int().nonnegative(),
+      options: z.record(z.string(), z.string()), isDefault: z.boolean().optional(),
+      costPrice: priceSchema.optional(), colorImage: z.string().optional(),
+    })),
+    sourceProductUrl: z.string().url().optional(),
+    sourceImageUrl: z.string().url().optional(), localImageFile: z.string().optional(),
+  })),
+});
+
+export function validateProductSeed(value: unknown): ProductSeedFile {
+  const seed = productSeedSchema.parse(value);
+  const categories = new Set<string>();
+  for (const category of seed.categories) {
+    if (categories.has(category.slug)) throw new Error(`Duplicate category: ${category.slug}`);
+    if (category.parentSlug && !categories.has(category.parentSlug)) {
+      throw new Error(`Missing parent category or parent ordered after child: ${category.parentSlug}`);
+    }
+    categories.add(category.slug);
+  }
+  for (const key of ["slug", "sku", "sourceProductUrl"] as const) {
+    const values = seed.products.map((product) => product[key]).filter(Boolean);
+    if (new Set(values).size !== values.length) throw new Error(`Duplicate product ${key}`);
+  }
+  for (const product of seed.products) {
+    if (!categories.has(product.categorySlug)) throw new Error(`Missing product category: ${product.categorySlug}`);
+    if (product.localImageFile !== undefined && product.localImageFile !== `public${product.image}`) {
+      throw new Error(`Inconsistent local image path: ${product.slug}`);
+    }
+  }
+  return seed;
+}
+
+export function loadProductSeed(file = "prisma/seed-data/productseed.json"): ProductSeedFile {
+  const filePath = resolve(process.cwd(), file);
+  return validateProductSeed(JSON.parse(readFileSync(filePath, "utf8")));
 }
 
 function nullableText(value: string | null | undefined) {
   return value?.trim() || null;
 }
 
-export async function seedProductSeedFile(prisma: PrismaClient) {
-  const seed = loadProductSeed();
+export async function seedProductSeedFile(prisma: PrismaClient, file?: string) {
+  const seed = loadProductSeed(file);
   const categoryIds = new Map<string, number>();
   const brandIds = new Map<string, number>();
 
@@ -145,6 +197,8 @@ export async function seedProductSeedFile(prisma: PrismaClient) {
         brandId,
         description: item.description,
         shortDesc: nullableText(item.shortDesc),
+        ...(item.model !== undefined ? { model: nullableText(item.model) } : {}),
+        ...(item.warranty !== undefined ? { warranty: nullableText(item.warranty) } : {}),
         basePrice: item.basePrice,
         originalPrice: item.originalPrice,
         currency: item.currency,
@@ -164,6 +218,8 @@ export async function seedProductSeedFile(prisma: PrismaClient) {
         brandId,
         description: item.description,
         shortDesc: nullableText(item.shortDesc),
+        model: nullableText(item.model),
+        warranty: nullableText(item.warranty),
         basePrice: item.basePrice,
         originalPrice: item.originalPrice,
         currency: item.currency,

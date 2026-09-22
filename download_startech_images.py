@@ -6,20 +6,19 @@ Install:
 
 From the general_ecommerce repository root:
     python download_startech_images.py \
-      --json prisma/seed-data/productseed.json \
+      --json prisma/startech_productseed.json \
       --project-root .
 
 Selective examples:
-    python download_startech_images.py --json prisma/seed-data/productseed.json --project-root . --category laptop-notebook
-    python download_startech_images.py --json prisma/seed-data/productseed.json --project-root . --limit 50
-    python download_startech_images.py --json prisma/seed-data/productseed.json --project-root . --overwrite
+    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --category laptop-and-notebook
+    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --limit 10
+    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --overwrite
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 import time
 from pathlib import Path
@@ -83,18 +82,28 @@ def infer_dest(product: dict, project_root: Path) -> Path | None:
 
 def download(session: requests.Session, url: str, dest: Path):
     dest.parent.mkdir(parents=True, exist_ok=True)
-    r = session.get(url, timeout=45, stream=True)
-    r.raise_for_status()
-    ctype = r.headers.get("content-type", "").lower()
-    if ctype and not ctype.startswith("image/"):
-        raise ValueError(f"URL did not return an image: {ctype}")
-    with dest.open("wb") as f:
-        for chunk in r.iter_content(64 * 1024):
-            if chunk:
-                f.write(chunk)
+    partial = dest.with_name(dest.name + ".part")
+    try:
+        with session.get(url, timeout=45, stream=True) as r:
+            r.raise_for_status()
+            ctype = r.headers.get("content-type", "").lower()
+            if ctype and not ctype.startswith("image/"):
+                raise ValueError(f"URL did not return an image: {ctype}")
+            with partial.open("wb") as f:
+                for chunk in r.iter_content(64 * 1024):
+                    if chunk:
+                        f.write(chunk)
+        if not partial.stat().st_size:
+            raise ValueError("Empty image response")
+        partial.replace(dest)
+    finally:
+        partial.unlink(missing_ok=True)
 
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description="Download images from Star Tech seed JSON into Next.js public/.")
     ap.add_argument("--json", required=True, help="Generated productseed.json")
     ap.add_argument("--project-root", default=".", help="general_ecommerce repository root")
@@ -104,6 +113,8 @@ def main() -> int:
     ap.add_argument("--overwrite", action="store_true")
     ap.add_argument("--update-json", action="store_true", help="Persist discovered sourceImageUrl values")
     args = ap.parse_args()
+    if args.limit < 0 or args.delay < 0:
+        ap.error("--limit and --delay must be nonnegative")
 
     json_path = Path(args.json)
     data = json.loads(json_path.read_text(encoding="utf-8"))
@@ -130,15 +141,16 @@ def main() -> int:
     changed = False
 
     for idx, p in enumerate(selected, start=1):
+        progress = f"[{idx}/{len(selected)}]"
         name = str(p.get("name") or f"product-{idx}")
         dest = infer_dest(p, root)
         if not dest:
-            print(f"SKIP no local image path: {name}")
+            print(f"{progress} SKIP no local image path: {name}")
             skipped += 1
             continue
 
-        if dest.exists() and not args.overwrite:
-            print(f"SKIP exists: {dest}")
+        if dest.is_file() and dest.stat().st_size > 0 and not args.overwrite:
+            print(f"{progress} SKIP exists: {dest}")
             skipped += 1
             continue
 
@@ -152,22 +164,22 @@ def main() -> int:
                         p["sourceImageUrl"] = src
                         changed = True
                 except Exception as exc:  # noqa: BLE001
-                    print(f"ERR image discovery {name}: {exc}", file=sys.stderr)
+                    print(f"{progress} ERR image discovery {name}: {exc}", file=sys.stderr)
                     failed += 1
                     continue
 
         if not isinstance(src, str) or not src.strip():
-            print(f"ERR no source image: {name}", file=sys.stderr)
+            print(f"{progress} ERR no source image: {name}", file=sys.stderr)
             failed += 1
             continue
 
         try:
             download(session, src, dest)
             ok += 1
-            print(f"OK {idx}/{len(selected)} {name} -> {dest.relative_to(root)}")
+            print(f"{progress} OK {name} -> {dest.relative_to(root)}")
         except Exception as exc:  # noqa: BLE001
             failed += 1
-            print(f"ERR {name}: {exc}", file=sys.stderr)
+            print(f"{progress} ERR {name}: {exc}", file=sys.stderr)
 
         if args.delay:
             time.sleep(args.delay)
