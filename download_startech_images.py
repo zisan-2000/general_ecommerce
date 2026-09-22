@@ -6,13 +6,13 @@ Install:
 
 From the general_ecommerce repository root:
     python download_startech_images.py \
-      --json prisma/startech_productseed.json \
+      --json prisma/TechProductSeed.json \
       --project-root .
 
 Selective examples:
-    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --category laptop-and-notebook
-    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --limit 10
-    python download_startech_images.py --json prisma/startech_productseed.json --project-root . --overwrite
+    python download_startech_images.py --json prisma/TechProductSeed.json --project-root . --category laptop-and-notebook
+    python download_startech_images.py --json prisma/TechProductSeed.json --project-root . --limit 10
+    python download_startech_images.py --json prisma/TechProductSeed.json --project-root . --overwrite
 """
 
 from __future__ import annotations

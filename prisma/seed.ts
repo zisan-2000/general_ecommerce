@@ -9,7 +9,11 @@ import { seedInvestorDemo } from "./seed-data/investor";
 import { seedWarehouseDemo } from "./seed-data/warehouse";
 import { seedManagementDemo } from "./seed-data/management";
 import { seedStorefrontDemo } from "./seed-data/storefront";
-import { seedGroceryBundles } from "./seed-data/grocery-bundles";
+import {
+  loadProductSeed,
+  seedProductSeedFile,
+  TECH_PRODUCT_SEED_FILE,
+} from "./seed-data/productseed-import";
 
 const prisma = new PrismaClient();
 
@@ -312,6 +316,7 @@ async function ensureInvestorPortalUsers(createdById?: string | null) {
 }
 
 async function main() {
+  loadProductSeed(TECH_PRODUCT_SEED_FILE);
   const adminEmail = "admin@example.com";
   const adminPassword = "admin123";
 
@@ -402,8 +407,9 @@ async function main() {
   await seedStorefrontDemo(prisma, admin?.id ?? null);
   console.log("✅ Technology-only storefront demo seed ensured");
 
-  const groceryBundles = await seedGroceryBundles(prisma);
-  console.log("✅ Monthly grocery bundle seed ensured", groceryBundles);
+  // Import after storefront archival so these products remain visible.
+  const techSeed = await seedProductSeedFile(prisma, TECH_PRODUCT_SEED_FILE);
+  console.log("Tech product catalog imported.", techSeed);
 }
 
 main()

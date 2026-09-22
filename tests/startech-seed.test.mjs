@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { loadProductSeed, validateProductSeed, seedProductSeedFile } from "../prisma/seed-data/productseed-import.ts";
+import { loadProductSeed, validateProductSeed, seedProductSeedFile, TECH_PRODUCT_SEED_FILE } from "../prisma/seed-data/productseed-import.ts";
 
-const startech = "prisma/startech_productseed.json";
+const startech = TECH_PRODUCT_SEED_FILE;
 
 test("both catalogs pass the real importer without a database connection", () => {
   for (const file of [startech, "prisma/seed-data/productseed.json"]) {
@@ -28,9 +28,25 @@ test("invalid identities and references fail before any writes", () => {
 test("upserts persist model/warranty and retain existing warehouse stock", async () => {
   const products = [];
   const variants = [];
+  const brandSlugs = new Set();
+  let reusedNamedBrand = false;
   const prisma = {
     category: { upsert: async () => ({ id: 1 }) },
-    brand: { upsert: async () => ({ id: 1 }) },
+    brand: {
+      findUnique: async ({ where }) => where.name === "Orico" ? { id: 23 } : null,
+      update: async ({ where, data }) => {
+        assert.equal(where.id, 23);
+        assert.deepEqual(data, { deleted: false });
+        reusedNamedBrand = true;
+        return { id: 23 };
+      },
+      upsert: async ({ where, create }) => {
+        assert.equal(where.slug, create.slug);
+        assert.ok(!brandSlugs.has(where.slug), "case variants must reuse a brand");
+        brandSlugs.add(where.slug);
+        return { id: brandSlugs.size + 100 };
+      },
+    },
     product: { upsert: async (args) => { products.push(args); return { id: products.length }; } },
     productVariant: {
       findFirst: async () => ({ id: 1 }),
@@ -52,4 +68,6 @@ test("upserts persist model/warranty and retain existing warehouse stock", async
     }
   });
   assert.equal(variants.at(-1).stock, 19);
+  assert.ok(reusedNamedBrand);
+  assert.equal(summary.brands, brandSlugs.size + 1);
 });
