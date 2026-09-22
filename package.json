@@ -66,6 +66,8 @@
     "verify:business-network-m1-to-m15": "npm run test:business-network-m1-to-m15 && npm run verify:business-network-database && npm run lint && npm run typecheck",
     "verify:business-network-release": "npm run verify:business-network-m1-to-m15 && npm run build:prod",
     "seed:storefront": "tsx prisma/seed-storefront.ts",
+    "seed:grocery-bundles": "tsx prisma/seed-grocery-bundles.ts",
+    "verify:grocery-bundles-db": "tsx scripts/verify-grocery-bundles.ts",
     "seed:laptops": "tsx prisma/laptop-seed.ts",
     "seed:pc-builder": "node --no-warnings --experimental-strip-types scripts/seed-pc-builder.mjs",
     "repair:pc-builder-db": "node scripts/repair-pc-builder-database.mjs",

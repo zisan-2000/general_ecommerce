@@ -9,6 +9,7 @@ import { seedInvestorDemo } from "./seed-data/investor";
 import { seedWarehouseDemo } from "./seed-data/warehouse";
 import { seedManagementDemo } from "./seed-data/management";
 import { seedStorefrontDemo } from "./seed-data/storefront";
+import { seedGroceryBundles } from "./seed-data/grocery-bundles";
 
 const prisma = new PrismaClient();
 
@@ -400,6 +401,9 @@ async function main() {
   // while the public catalog exposes only the curated technology storefront.
   await seedStorefrontDemo(prisma, admin?.id ?? null);
   console.log("✅ Technology-only storefront demo seed ensured");
+
+  const groceryBundles = await seedGroceryBundles(prisma);
+  console.log("✅ Monthly grocery bundle seed ensured", groceryBundles);
 }
 
 main()
