@@ -11,8 +11,12 @@ import {
 } from "@/lib/delivery-proof";
 import { shipmentDeliveryAssignmentSummarySelect } from "@/lib/delivery-assignments";
 import { appendShipmentStatusLog } from "@/lib/report-history";
-import { canAccessWarehouseWithPermission, resolveWarehouseScope } from "@/lib/warehouse-scope";
+import {
+  canAccessWarehouseWithPermission,
+  resolveWarehouseScope,
+} from "@/lib/warehouse-scope";
 import { logActivity } from "@/lib/activity-log";
+import { createOrderNotification } from "@/lib/order-notifications";
 import { canWarehouseFulfillOrder } from "@/lib/order-warehouse-stock";
 
 function hasShipmentManagementAccess(access: AccessContext) {
@@ -20,7 +24,9 @@ function hasShipmentManagementAccess(access: AccessContext) {
 }
 
 function hasGlobalShipmentManagementAccess(access: AccessContext) {
-  return access.hasGlobal("shipments.manage") || access.hasGlobal("logistics.manage");
+  return (
+    access.hasGlobal("shipments.manage") || access.hasGlobal("logistics.manage")
+  );
 }
 
 function canAccessShipmentWarehouse(
@@ -108,10 +114,12 @@ function buildShipmentInclude() {
   } as const;
 }
 
-function withDeliveryConfirmationMeta<T extends {
-  deliveryConfirmationToken?: string | null;
-  deliveryConfirmationPin?: string | null;
-}>(shipment: T, canReadAll: boolean) {
+function withDeliveryConfirmationMeta<
+  T extends {
+    deliveryConfirmationToken?: string | null;
+    deliveryConfirmationPin?: string | null;
+  },
+>(shipment: T, canReadAll: boolean) {
   const confirmationUrl = shipment.deliveryConfirmationToken
     ? buildDeliveryConfirmationUrl(shipment.deliveryConfirmationToken)
     : null;
@@ -119,7 +127,9 @@ function withDeliveryConfirmationMeta<T extends {
   return {
     ...shipment,
     deliveryConfirmationUrl: confirmationUrl,
-    deliveryConfirmationPin: canReadAll ? shipment.deliveryConfirmationPin ?? null : undefined,
+    deliveryConfirmationPin: canReadAll
+      ? (shipment.deliveryConfirmationPin ?? null)
+      : undefined,
   };
 }
 
@@ -149,7 +159,8 @@ export async function GET(request: NextRequest) {
     const access = await getAccessContext(
       session.user as { id?: string; role?: string } | undefined,
     );
-    const canReadAll = hasShipmentManagementAccess(access) || access.has("orders.read_all");
+    const canReadAll =
+      hasShipmentManagementAccess(access) || access.has("orders.read_all");
     const canReadOwn = canReadAll || access.has("orders.read_own");
     if (!canReadOwn) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -168,11 +179,16 @@ export async function GET(request: NextRequest) {
     const where: Record<string, unknown> = {};
     if (!canReadAll) {
       where.order = { userId: access.userId ?? userId };
-    } else if (!hasGlobalShipmentManagementAccess(access) && !access.hasGlobal("orders.read_all")) {
+    } else if (
+      !hasGlobalShipmentManagementAccess(access) &&
+      !access.hasGlobal("orders.read_all")
+    ) {
       const warehouseScope = resolveWarehouseScope(
         access,
         hasShipmentManagementAccess(access)
-          ? (access.has("shipments.manage") ? "shipments.manage" : "logistics.manage")
+          ? access.has("shipments.manage")
+            ? "shipments.manage"
+            : "logistics.manage"
           : "orders.read_all",
       );
       if (warehouseScope.mode === "none") {
@@ -192,8 +208,10 @@ export async function GET(request: NextRequest) {
       }
     }
     if (status) where.status = status;
-    if (orderId && !Number.isNaN(Number(orderId))) where.orderId = Number(orderId);
-    if (courierId && !Number.isNaN(Number(courierId))) where.courierId = Number(courierId);
+    if (orderId && !Number.isNaN(Number(orderId)))
+      where.orderId = Number(orderId);
+    if (courierId && !Number.isNaN(Number(courierId)))
+      where.courierId = Number(courierId);
 
     const skip = Math.max(page - 1, 0) * Math.max(limit, 1);
     const take = Math.max(limit, 1);
@@ -222,7 +240,10 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error("Error fetching shipments:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }
 
@@ -261,13 +282,19 @@ export async function POST(request: NextRequest) {
       );
     }
     if (warehouseId !== null && Number.isNaN(warehouseId)) {
-      return NextResponse.json({ error: "Invalid warehouseId" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Invalid warehouseId" },
+        { status: 400 },
+      );
     }
 
     if (!hasGlobalShipmentManagementAccess(access)) {
       if (!warehouseId || Number.isNaN(warehouseId)) {
         return NextResponse.json(
-          { error: "warehouseId is required for warehouse-scoped shipment creation" },
+          {
+            error:
+              "warehouseId is required for warehouse-scoped shipment creation",
+          },
           { status: 400 },
         );
       }
@@ -315,7 +342,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Order not found" }, { status: 404 });
     }
     if (!courier || !courier.isActive) {
-      return NextResponse.json({ error: "Courier not found or inactive" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Courier not found or inactive" },
+        { status: 400 },
+      );
     }
     if (existingShipment) {
       return NextResponse.json(
@@ -328,7 +358,9 @@ export async function POST(request: NextRequest) {
       !(await canWarehouseFulfillOrder(prisma, orderId, warehouseId))
     ) {
       return NextResponse.json(
-        { error: "Selected warehouse does not have enough stock for this order" },
+        {
+          error: "Selected warehouse does not have enough stock for this order",
+        },
         { status: 400 },
       );
     }
@@ -342,6 +374,15 @@ export async function POST(request: NextRequest) {
         courierId: courier.id,
         status: "PENDING",
       },
+    });
+
+    await createOrderNotification({
+      tx: prisma,
+      userId: order.userId,
+      orderId: order.id,
+      title: "Shipment created",
+      message: `Shipment for order #${order.id} has been created.`,
+      metadata: { event: "SHIPMENT_CREATED", shipmentId: localShipment.id },
     });
 
     await appendShipmentStatusLog(prisma, {
@@ -480,13 +521,19 @@ export async function POST(request: NextRequest) {
         {
           error: "Courier API create failed",
           shipment: failed,
-          details: providerError instanceof Error ? providerError.message : "Unknown error",
+          details:
+            providerError instanceof Error
+              ? providerError.message
+              : "Unknown error",
         },
         { status: 502 },
       );
     }
   } catch (error) {
     console.error("Error creating shipment:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }

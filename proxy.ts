@@ -98,7 +98,10 @@ const adminPagePermissionRules: PermissionRule[] = [
   },
   {
     prefix: "/admin/scm/vendor-approvals",
-    permissions: ["supplier.profile_requests.read", "supplier.profile_requests.review"],
+    permissions: [
+      "supplier.profile_requests.read",
+      "supplier.profile_requests.review",
+    ],
     globalOnly: true,
   },
   {
@@ -422,7 +425,11 @@ const adminPagePermissionRules: PermissionRule[] = [
   },
   {
     prefix: "/admin/investors/activity-log",
-    permissions: ["investor.activity_log.read", "settings.activitylog.read", "settings.manage"],
+    permissions: [
+      "investor.activity_log.read",
+      "settings.activitylog.read",
+      "settings.manage",
+    ],
     globalOnly: true,
   },
   {
@@ -494,7 +501,10 @@ const adminPagePermissionRules: PermissionRule[] = [
       "settings.shipping.manage",
     ],
   },
-  { prefix: "/admin/operations/users", permissions: ["users.read", "users.manage"] },
+  {
+    prefix: "/admin/operations/users",
+    permissions: ["users.read", "users.manage"],
+  },
   { prefix: "/admin/operations/products", permissions: ["products.manage"] },
   { prefix: "/admin/operations/orders", permissions: ["orders.read_all"] },
   { prefix: "/admin/chats", permissions: ["chats.manage"] },
@@ -682,7 +692,10 @@ const apiPermissionRules: PermissionRule[] = [
   {
     prefix: "/api/scm/supplier-profile-requests",
     methods: ["GET"],
-    permissions: ["supplier.profile_requests.read", "supplier.profile_requests.review"],
+    permissions: [
+      "supplier.profile_requests.read",
+      "supplier.profile_requests.review",
+    ],
     globalOnly: true,
   },
   {
@@ -1971,6 +1984,15 @@ export default async function proxy(request: NextRequest) {
 
     if (!session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    // The order handler authenticates the user ID and restricts this view to
+    // their purchases. Staff RBAC permissions apply to the back-office list.
+    if (
+      (pathname === "/api/orders" || pathname.startsWith("/api/orders/")) &&
+      method === "GET" &&
+      request.nextUrl.searchParams.get("scope") === "own"
+    ) {
+      return NextResponse.next();
     }
     const apiPermissionKeys = matchedApiRule.globalOnly
       ? globalPermissionKeys

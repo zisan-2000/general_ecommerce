@@ -210,7 +210,7 @@ export default function OrdersPage() {
         setLoading(true);
         setError(null);
 
-        const res = await fetch("/api/orders?limit=50", {
+        const res = await fetch("/api/orders?scope=own&limit=50", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           cache: "no-store",

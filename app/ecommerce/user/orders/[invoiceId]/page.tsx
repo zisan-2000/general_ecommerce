@@ -409,7 +409,7 @@ export default function OrderDetailsPage() {
         setLoading(true);
         setError(null);
 
-        const res = await fetch(`/api/orders/${invoiceId}`, {
+        const res = await fetch(`/api/orders/${invoiceId}?scope=own`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           cache: "no-store",
@@ -492,7 +492,8 @@ export default function OrderDetailsPage() {
             image: imageFromProducts || fallbackImage,
             bundleSummary: Array.isArray(oi.bundleConfiguration?.summary)
               ? oi.bundleConfiguration.summary.filter(
-                  (entry: unknown): entry is string => typeof entry === "string",
+                  (entry: unknown): entry is string =>
+                    typeof entry === "string",
                 )
               : [],
           };
@@ -661,7 +662,11 @@ export default function OrderDetailsPage() {
           id: 1,
           label: t("orderDetail.journey.cancelled"),
           description: t("orderDetail.journey.cancelledDescription"),
-          dateLabel: formatDate(shipment?.updatedAt || order.createdAt, locale, t("statuses.processing")),
+          dateLabel: formatDate(
+            shipment?.updatedAt || order.createdAt,
+            locale,
+            t("statuses.processing"),
+          ),
           icon: ShieldCheck,
           color: "red",
         },
@@ -684,11 +689,17 @@ export default function OrderDetailsPage() {
         ? t("orderDetail.journey.shippedCourier", {
             courier: shipment.courier,
             tracking: shipment.trackingNumber
-              ? t("orderDetail.journey.trackingSuffix", { number: shipment.trackingNumber })
+              ? t("orderDetail.journey.trackingSuffix", {
+                  number: shipment.trackingNumber,
+                })
               : "",
           })
         : t("orderDetail.journey.shippedDescription"),
-      dateLabel: formatDate(shipment?.shippedAt || shipment?.createdAt, locale, t("statuses.processing")),
+      dateLabel: formatDate(
+        shipment?.shippedAt || shipment?.createdAt,
+        locale,
+        t("statuses.processing"),
+      ),
       icon: Package,
       color: "blue",
     };
@@ -697,7 +708,11 @@ export default function OrderDetailsPage() {
       id: 3,
       label: t("statuses.outForDelivery"),
       description: t("orderDetail.journey.outForDeliveryDescription"),
-      dateLabel: formatDate(shipment?.expectedDate || shipment?.shippedAt, locale, t("statuses.processing")),
+      dateLabel: formatDate(
+        shipment?.expectedDate || shipment?.shippedAt,
+        locale,
+        t("statuses.processing"),
+      ),
       icon: Truck,
       color: "orange",
     };
@@ -706,7 +721,11 @@ export default function OrderDetailsPage() {
       id: 4,
       label: t("statuses.delivered"),
       description: t("orderDetail.journey.deliveredDescription"),
-      dateLabel: formatDate(shipment?.deliveredAt, locale, t("statuses.processing")),
+      dateLabel: formatDate(
+        shipment?.deliveredAt,
+        locale,
+        t("statuses.processing"),
+      ),
       icon: CheckCircle,
       color: "green",
     };
@@ -975,18 +994,24 @@ export default function OrderDetailsPage() {
             </div>
 
             <div className="bg-card text-card-foreground px-4 py-3 rounded-lg border border-border shadow-sm text-sm">
-              <p className="text-muted-foreground">{t("orderDetail.orderDate")}</p>
-              <p className="font-semibold">{formatDate(order.createdAt, locale, t("statuses.processing"))}</p>
+              <p className="text-muted-foreground">
+                {t("orderDetail.orderDate")}
+              </p>
+              <p className="font-semibold">
+                {formatDate(order.createdAt, locale, t("statuses.processing"))}
+              </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${statusCfg.className}`}
                 >
-                  {t("orderDetail.status")}: {t(`statuses.${statusCfg.labelKey}` as any)}
+                  {t("orderDetail.status")}:{" "}
+                  {t(`statuses.${statusCfg.labelKey}` as any)}
                 </span>
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${paymentCfg.className}`}
                 >
-                  {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}
+                  {t("orders.payment")}:{" "}
+                  {t(`statuses.${paymentCfg.labelKey}` as any)}
                 </span>
               </div>
             </div>
@@ -1008,11 +1033,14 @@ export default function OrderDetailsPage() {
                   <p className="text-[15px] font-medium text-foreground">
                     {order.status?.toUpperCase() === "DELIVERED"
                       ? t("orderDetail.orderDelivered")
-                      : t("orderDetail.orderStatus", { status: t(`statuses.${statusCfg.labelKey}` as any) })}
+                      : t("orderDetail.orderStatus", {
+                          status: t(`statuses.${statusCfg.labelKey}` as any),
+                        })}
                   </p>
                   <p className="text-[13px] text-muted-foreground mt-0.5 truncate">
-                    {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}&nbsp;·&nbsp;{t("orderDetail.method")}:{" "}
-                    {order.paymentMethod}
+                    {t("orders.payment")}:{" "}
+                    {t(`statuses.${paymentCfg.labelKey}` as any)}&nbsp;·&nbsp;
+                    {t("orderDetail.method")}: {order.paymentMethod}
                     {order.transactionId
                       ? ` · ${t("orderDetail.transactionId")}: ${order.transactionId}`
                       : ""}
@@ -1040,7 +1068,8 @@ export default function OrderDetailsPage() {
                 <span
                   className={`rounded-full border px-2.5 py-1 text-xs font-medium ${paymentCfg.className}`}
                 >
-                  {t("orders.payment")}: {t(`statuses.${paymentCfg.labelKey}` as any)}
+                  {t("orders.payment")}:{" "}
+                  {t(`statuses.${paymentCfg.labelKey}` as any)}
                 </span>
               </div>
             </Card>
@@ -1079,13 +1108,13 @@ export default function OrderDetailsPage() {
                         </p>
                         <div className="flex flex-wrap gap-3 text-[13px] text-muted-foreground">
                           <span>
-                            {t("orderDetail.price")}: {" "}
+                            {t("orderDetail.price")}:{" "}
                             <span className="font-semibold text-foreground">
                               {money(item.price)}
                             </span>
                           </span>
                           <span>
-                            {t("orderDetail.quantityShort")}: {" "}
+                            {t("orderDetail.quantityShort")}:{" "}
                             <span className="font-semibold text-foreground">
                               {item.quantity}
                             </span>
@@ -1101,7 +1130,7 @@ export default function OrderDetailsPage() {
                       </div>
 
                       <p className="text-[12px] text-muted-foreground mt-2">
-                        {t("orderDetail.lineTotal")}: {" "}
+                        {t("orderDetail.lineTotal")}:{" "}
                         <span className="font-semibold text-foreground">
                           {money(item.price * item.quantity)}
                         </span>
@@ -1126,9 +1155,7 @@ export default function OrderDetailsPage() {
                 <div className="text-sm space-y-1 text-right">
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
                     <span>{t("orderDetail.subtotal")}</span>
-                    <span className="text-foreground">
-                      {money(subTotal)}
-                    </span>
+                    <span className="text-foreground">{money(subTotal)}</span>
                   </div>
                   {discountTotal > 0 && (
                     <div className="flex justify-between gap-8 text-[13px] text-emerald-600">
@@ -1153,9 +1180,7 @@ export default function OrderDetailsPage() {
                   </div>
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
                     <span>{t("orderDetail.vat")}</span>
-                    <span className="text-foreground">
-                      {money(vatTotal)}
-                    </span>
+                    <span className="text-foreground">{money(vatTotal)}</span>
                   </div>
                   <div className="flex justify-between gap-8 text-[13px] text-muted-foreground">
                     <span>{t("orderDetail.payableAmount")}</span>
@@ -1335,9 +1360,13 @@ export default function OrderDetailsPage() {
                 {shipment?.deliveryProof ? (
                   <>
                     <p className="text-sm text-muted-foreground">
-                      {t("orderDetail.deliveryProof.confirmedOn")} {" "}
+                      {t("orderDetail.deliveryProof.confirmedOn")}{" "}
                       <span className="font-medium text-foreground">
-                        {formatDate(shipment?.deliveryProof?.confirmedAt, locale, t("statuses.processing"))}
+                        {formatDate(
+                          shipment?.deliveryProof?.confirmedAt,
+                          locale,
+                          t("statuses.processing"),
+                        )}
                       </span>
                       .
                     </p>
@@ -1429,7 +1458,9 @@ export default function OrderDetailsPage() {
                               key={item.id}
                               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-muted px-5 py-3 text-sm font-semibold text-muted-foreground"
                             >
-                              {t("orderDetail.refund.windowClosedFor", { name: item.name })}
+                              {t("orderDetail.refund.windowClosedFor", {
+                                name: item.name,
+                              })}
                             </div>
                           );
                         }
@@ -1440,7 +1471,9 @@ export default function OrderDetailsPage() {
                               key={item.id}
                               className="inline-flex w-full items-center justify-center rounded-full border border-border bg-muted px-5 py-3 text-sm font-semibold text-muted-foreground"
                             >
-                              {t("orderDetail.refund.alreadyRefunded", { name: item.name })}
+                              {t("orderDetail.refund.alreadyRefunded", {
+                                name: item.name,
+                              })}
                             </div>
                           );
                         }
@@ -1452,7 +1485,9 @@ export default function OrderDetailsPage() {
                             onClick={() => openRefundModal(item)}
                             className="inline-flex w-full items-center justify-center rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
                           >
-                            {t("orderDetail.refund.action", { name: item.name })}
+                            {t("orderDetail.refund.action", {
+                              name: item.name,
+                            })}
                           </button>
                         );
                       })(),
@@ -1468,13 +1503,17 @@ export default function OrderDetailsPage() {
                   <ShieldCheck className="w-8 h-8 text-primary" />
                 </div>
 
-                <h4 className="font-bold mb-2">{t("orderDetail.statusAndPayment")}</h4>
+                <h4 className="font-bold mb-2">
+                  {t("orderDetail.statusAndPayment")}
+                </h4>
 
                 <p className="text-sm opacity-80 mb-4">
-                  {t("orderDetail.currentStatus")}: <strong>{t(`statuses.${statusCfg.labelKey}` as any)}</strong>
+                  {t("orderDetail.currentStatus")}:{" "}
+                  <strong>{t(`statuses.${statusCfg.labelKey}` as any)}</strong>
                   <br />
-                  {t("orders.payment")}: <strong>{t(`statuses.${paymentCfg.labelKey}` as any)}</strong> (
-                  {order.paymentMethod})
+                  {t("orders.payment")}:{" "}
+                  <strong>{t(`statuses.${paymentCfg.labelKey}` as any)}</strong>{" "}
+                  ({order.paymentMethod})
                 </p>
 
                 <div className="bg-card text-card-foreground rounded-lg p-3 border border-border">
@@ -1582,7 +1621,15 @@ export default function OrderDetailsPage() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   {t("orderDetail.refund.windowDescription")}
                   {refundDeadline ? (
-                    <> {t("orderDetail.refund.deadline")}: {formatDate(refundDeadline.toISOString(), locale, t("statuses.processing"))}</>
+                    <>
+                      {" "}
+                      {t("orderDetail.refund.deadline")}:{" "}
+                      {formatDate(
+                        refundDeadline.toISOString(),
+                        locale,
+                        t("statuses.processing"),
+                      )}
+                    </>
                   ) : null}
                 </p>
               </div>
@@ -1605,13 +1652,13 @@ export default function OrderDetailsPage() {
                   </p>
                   <div className="mt-3 space-y-2 text-sm text-muted-foreground">
                     <p>
-                      {t("orderDetail.refund.quantityOrdered")}: {" "}
+                      {t("orderDetail.refund.quantityOrdered")}:{" "}
                       <span className="font-semibold text-foreground">
                         {refundItem.quantity}
                       </span>
                     </p>
                     <p>
-                      {t("orderDetail.refund.refundableQuantity")}: {" "}
+                      {t("orderDetail.refund.refundableQuantity")}:{" "}
                       <span className="font-semibold text-foreground">
                         {Math.max(
                           refundItem.quantity -
@@ -1621,9 +1668,11 @@ export default function OrderDetailsPage() {
                       </span>
                     </p>
                     <p>
-                      {t("orderDetail.status")}: {" "}
+                      {t("orderDetail.status")}:{" "}
                       <span className="font-semibold text-foreground">
-                        {canRequestRefund ? t("statuses.eligible") : t("orderDetail.refund.windowClosed")}
+                        {canRequestRefund
+                          ? t("statuses.eligible")
+                          : t("orderDetail.refund.windowClosed")}
                       </span>
                     </p>
                   </div>
@@ -1691,7 +1740,9 @@ export default function OrderDetailsPage() {
                   onClick={submitRefundRequest}
                   className="inline-flex items-center justify-center rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {refundSubmitting ? t("common.submitting") : t("orderDetail.refund.submit")}
+                  {refundSubmitting
+                    ? t("common.submitting")
+                    : t("orderDetail.refund.submit")}
                 </button>
               </div>
             </div>

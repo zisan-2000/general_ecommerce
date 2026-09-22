@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { Prisma } from "../../generated/prisma";
 import type { PrismaClient } from "../../generated/prisma";
+import { refreshVariantStock, syncVariantWarehouseStock } from "../../lib/inventory";
 
 type ProductSeedCategory = {
   name: string;
@@ -208,14 +209,29 @@ export async function seedProductSeedFile(prisma: PrismaClient) {
         costPrice: variantSeed.costPrice ?? null,
       };
 
-      if (existingVariant) {
-        await prisma.productVariant.update({
-          where: { id: existingVariant.id },
-          data,
+      await prisma.$transaction(async (tx) => {
+        const variant = existingVariant
+          ? await tx.productVariant.update({
+              where: { id: existingVariant.id },
+              data,
+            })
+          : await tx.productVariant.create({ data });
+        const configured = await tx.stockLevel.count({
+          where: { productVariantId: variant.id },
         });
-      } else {
-        await prisma.productVariant.create({ data });
-      }
+        if (configured) {
+          // Re-importing must preserve live warehouse quantities/reservations.
+          await refreshVariantStock(tx, variant.id);
+        } else {
+          await syncVariantWarehouseStock({
+            tx,
+            productId: product.id,
+            productVariantId: variant.id,
+            quantity: variant.stock,
+            reason: "Product seed initial warehouse stock",
+          });
+        }
+      });
     }
   }
 

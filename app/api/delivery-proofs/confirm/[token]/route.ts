@@ -8,6 +8,7 @@ import { appendShipmentStatusLog } from "@/lib/report-history";
 import { OrderStatus } from "@/generated/prisma";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
+import { createOrderNotification } from "@/lib/order-notifications";
 
 function getClientIp(request: NextRequest) {
   const forwarded = request.headers.get("x-forwarded-for");
@@ -56,7 +57,10 @@ export async function GET(
     });
 
     if (!shipment) {
-      return NextResponse.json({ error: "Confirmation link not found" }, { status: 404 });
+      return NextResponse.json(
+        { error: "Confirmation link not found" },
+        { status: 404 },
+      );
     }
 
     return NextResponse.json({
@@ -75,7 +79,10 @@ export async function GET(
     });
   } catch (error) {
     console.error("Error loading delivery confirmation:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }
 
@@ -131,15 +138,25 @@ export async function POST(
       }
 
       if (!isDeliveryConfirmationStatus(shipment.status)) {
-        return { error: "Delivery confirmation is not available yet", status: 400 as const };
+        return {
+          error: "Delivery confirmation is not available yet",
+          status: 400 as const,
+        };
       }
 
-      if (!shipment.deliveryConfirmationPin || pin !== shipment.deliveryConfirmationPin) {
+      if (
+        !shipment.deliveryConfirmationPin ||
+        pin !== shipment.deliveryConfirmationPin
+      ) {
         return { error: "Invalid delivery PIN", status: 400 as const };
       }
 
       if (shipment.deliveryProof) {
-        return { proof: shipment.deliveryProof, shipment, duplicate: true as const };
+        return {
+          proof: shipment.deliveryProof,
+          shipment,
+          duplicate: true as const,
+        };
       }
 
       const proof = await tx.deliveryProof.create({
@@ -162,6 +179,14 @@ export async function POST(
         orderId: shipment.orderId,
         nextStatus: OrderStatus.DELIVERED,
         reason: `Order #${shipment.orderId} delivered through customer confirmation`,
+      });
+      await createOrderNotification({
+        tx,
+        userId: shipment.order.userId,
+        orderId: shipment.orderId,
+        title: "Order delivered",
+        message: `Your order #${shipment.orderId} has been delivered.`,
+        metadata: { event: "ORDER_DELIVERED", shipmentId: shipment.id },
       });
       if (transition.changed) {
         await syncCommissionEntriesForOrderStatus({
@@ -204,7 +229,10 @@ export async function POST(
     });
 
     if ("error" in result) {
-      return NextResponse.json({ error: result.error }, { status: result.status });
+      return NextResponse.json(
+        { error: result.error },
+        { status: result.status },
+      );
     }
 
     revalidateStorefrontCatalog();
@@ -219,6 +247,9 @@ export async function POST(
     );
   } catch (error) {
     console.error("Error submitting delivery proof:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }

@@ -4,7 +4,10 @@ import { gateProductType } from "@/lib/store-feature-gates-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
-import { deductVariantInventory, reserveVariantInventory } from "@/lib/inventory";
+import {
+  deductVariantInventory,
+  reserveVariantInventory,
+} from "@/lib/inventory";
 import { prisma } from "@/lib/prisma";
 import { getAccessContext } from "@/lib/rbac";
 import { calculateShippingQuote } from "@/lib/shipping";
@@ -16,6 +19,7 @@ import {
 } from "@/lib/coupons";
 import { resolveWarehouseScope } from "@/lib/warehouse-scope";
 import { logActivity } from "@/lib/activity-log";
+import { createOrderNotification } from "@/lib/order-notifications";
 import {
   createPaymentInitToken,
   findSslcommerzGateway,
@@ -202,18 +206,24 @@ function assertWarehouseDemandAvailable(
 export async function GET(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
-    if (!session?.user) {
+    if (!session?.user?.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
     const userId = (session.user as any).id as string;
-    const access = await getAccessContext(
-      session.user as { id?: string; role?: string } | undefined,
-    );
-    const canReadAll = access.has("orders.read_all");
-    const canReadOwn = canReadAll || access.has("orders.read_own");
+    const { searchParams } = new URL(request.url);
+    // Every signed-in shopper can view their own purchases, including staff
+    // accounts without back-office order permissions.
+    const ownOrdersOnly = searchParams.get("scope") === "own";
+    const access = ownOrdersOnly
+      ? null
+      : await getAccessContext(
+          session.user as { id?: string; role?: string } | undefined,
+        );
+    const canReadAll = access?.has("orders.read_all") ?? false;
+    const canReadOwn =
+      ownOrdersOnly || canReadAll || access?.has("orders.read_own");
     if (!canReadOwn)
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-    const { searchParams } = new URL(request.url);
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "10", 10);
     const statusParam = searchParams.get("status");
@@ -226,7 +236,7 @@ export async function GET(request: NextRequest) {
         pagination: { page, limit, total: 0, pages: 0 },
       });
     if (!canReadAll) where.userId = userId;
-    else if (!access.hasGlobal("orders.read_all")) {
+    else if (access && !access.hasGlobal("orders.read_all")) {
       const warehouseScope = resolveWarehouseScope(access, "orders.read_all");
       if (warehouseScope.mode === "none") return emptyOrderListResponse();
       if (warehouseScope.mode === "assigned")
@@ -302,7 +312,10 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(request: NextRequest, options: OrderPostOptions = {}) {
+export async function POST(
+  request: NextRequest,
+  options: OrderPostOptions = {},
+) {
   try {
     const rateLimit = await rateLimitRequest(request, {
       scope: "order-create",
@@ -381,7 +394,9 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
           ? Number(item.variantId)
           : null,
       quantity: Number(item.quantity),
-      bundleSelections: Array.isArray(item.bundleSelections) ? item.bundleSelections : [],
+      bundleSelections: Array.isArray(item.bundleSelections)
+        ? item.bundleSelections
+        : [],
     }));
     const idempotency = buildOrderIdempotencyContext({
       clientKey: request.headers.get("idempotency-key"),
@@ -521,7 +536,9 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
 
     let subtotal = 0;
     const orderItemsData = normalizedItems.map((item) => {
-      const product = products.find((candidate: any) => candidate.id === item.productId);
+      const product = products.find(
+        (candidate: any) => candidate.id === item.productId,
+      );
       if (!product) throw new Error(`Product not found: ${item.productId}`);
       if (product.deleted || !product.available) {
         throw new Error(`Product not available: ${product.name}`);
@@ -538,25 +555,41 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
             `Insufficient stock for ${product.name}. Available: ${configuration.availableQuantity}`,
           );
         }
-        const inventoryDemands = configuration.components.flatMap((component) => {
-          if (component.variantId === null) return [];
-          const group = product.bundleGroups.find((candidate: any) => candidate.id === component.groupId);
-          const option = group?.options.find((candidate: any) => candidate.id === component.optionId);
-          if (!option || option.product.type !== "PHYSICAL") return [];
-          const variant = option.variant ??
-            option.product.variants.find((candidate: any) => candidate.isDefault) ??
-            option.product.variants[0] ?? null;
-          if (!variant) throw new Error(`Inventory not configured for: ${component.productName}`);
-          return [{
-            quantity: component.quantity * item.quantity,
-            product: option.product,
-            variant,
-          }];
-        });
+        const inventoryDemands = configuration.components.flatMap(
+          (component) => {
+            if (component.variantId === null) return [];
+            const group = product.bundleGroups.find(
+              (candidate: any) => candidate.id === component.groupId,
+            );
+            const option = group?.options.find(
+              (candidate: any) => candidate.id === component.optionId,
+            );
+            if (!option || option.product.type !== "PHYSICAL") return [];
+            const variant =
+              option.variant ??
+              option.product.variants.find(
+                (candidate: any) => candidate.isDefault,
+              ) ??
+              option.product.variants[0] ??
+              null;
+            if (!variant)
+              throw new Error(
+                `Inventory not configured for: ${component.productName}`,
+              );
+            return [
+              {
+                quantity: component.quantity * item.quantity,
+                product: option.product,
+                variant,
+              },
+            ];
+          },
+        );
         const bundleConfiguration = {
           ...configuration,
           summary: configuration.components.map(
-            (component) => `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
+            (component) =>
+              `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
           ),
         };
         subtotal += configuration.finalPrice * item.quantity;
@@ -579,10 +612,16 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
 
       const targetVariant =
         item.variantId !== null
-          ? product.variants.find((variant: any) => variant.id === item.variantId) ?? null
-          : product.variants.find((variant: any) => variant.isDefault) ?? product.variants[0] ?? null;
-      if (!targetVariant) throw new Error(`Inventory not configured for: ${product.name}`);
-      if (!targetVariant.active) throw new Error(`Variant inactive for: ${product.name}`);
+          ? (product.variants.find(
+              (variant: any) => variant.id === item.variantId,
+            ) ?? null)
+          : (product.variants.find((variant: any) => variant.isDefault) ??
+            product.variants[0] ??
+            null);
+      if (!targetVariant)
+        throw new Error(`Inventory not configured for: ${product.name}`);
+      if (!targetVariant.active)
+        throw new Error(`Variant inactive for: ${product.name}`);
       if (item.variantId !== null && targetVariant.productId !== product.id) {
         throw new Error(`Variant mismatch for: ${product.name}`);
       }
@@ -604,12 +643,15 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
         variant: targetVariant,
         bundleConfiguration: null,
         bundleComponents: [],
-        inventoryDemands: product.type === "PHYSICAL"
-          ? [{ quantity: item.quantity, product, variant: targetVariant }]
-          : [],
+        inventoryDemands:
+          product.type === "PHYSICAL"
+            ? [{ quantity: item.quantity, product, variant: targetVariant }]
+            : [],
       };
     });
-    const inventoryDemands = orderItemsData.flatMap((item) => item.inventoryDemands);
+    const inventoryDemands = orderItemsData.flatMap(
+      (item) => item.inventoryDemands,
+    );
     assertWarehouseDemandAvailable(inventoryDemands);
 
     const shippingQuote = await calculateShippingQuote({
@@ -692,6 +734,15 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
         },
       });
 
+      await createOrderNotification({
+        tx,
+        userId,
+        orderId: orderRecord.id,
+        title: "Order placed",
+        message: `Your order #${orderRecord.id} has been placed successfully.`,
+        metadata: { event: "ORDER_PLACED", orderId: orderRecord.id },
+      });
+
       for (const [index, item] of orderItemsData.entries()) {
         await tx.orderItem.create({
           data: {
@@ -701,7 +752,8 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
             quantity: item.quantity,
             price: item.price,
             costPriceSnapshot:
-              item.variant?.costPrice !== null && item.variant?.costPrice !== undefined
+              item.variant?.costPrice !== null &&
+              item.variant?.costPrice !== undefined
                 ? Number(item.variant.costPrice)
                 : null,
             currency: item.currency,
@@ -840,7 +892,7 @@ export async function POST(request: NextRequest, options: OrderPostOptions = {})
     }
     if (
       typeof error?.message === "string" &&
-       (error.message.startsWith("Product") ||
+      (error.message.startsWith("Product") ||
         error.message.startsWith("Bundle") ||
         error.message.includes("choice") ||
         error.message.includes("quantity must") ||

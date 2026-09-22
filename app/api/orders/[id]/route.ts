@@ -6,6 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { getAccessContext } from "@/lib/rbac";
 import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 import { logActivity } from "@/lib/activity-log";
+import { createOrderNotification } from "@/lib/order-notifications";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { OrderStatus } from "@/generated/prisma";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
@@ -50,8 +51,8 @@ const ORDER_STATUS_TRANSITIONS: AllowedOrderStatusTransitions = {
 
 // GET /api/orders/:id
 export async function GET(
-  _request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const resolvedParams = await params;
@@ -61,21 +62,23 @@ export async function GET(
     }
 
     const userId = (session.user as any).id as string;
-    const access = await getAccessContext(
-      session.user as { id?: string; role?: string } | undefined,
-    );
-    const canReadAll = access.has("orders.read_all");
-    const canReadOwn = canReadAll || access.has("orders.read_own");
+    const ownOrdersOnly =
+      new URL(request.url).searchParams.get("scope") === "own";
+    const access = ownOrdersOnly
+      ? null
+      : await getAccessContext(
+          session.user as { id?: string; role?: string } | undefined,
+        );
+    const canReadAll = access?.has("orders.read_all") ?? false;
+    const canReadOwn =
+      ownOrdersOnly || canReadAll || access?.has("orders.read_own");
     if (!canReadOwn) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
     const orderId = Number(resolvedParams.id);
     if (Number.isNaN(orderId)) {
-      return NextResponse.json(
-        { error: "Invalid order id" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid order id" }, { status: 400 });
     }
 
     const order = await prisma.order.findUnique({
@@ -121,13 +124,17 @@ export async function GET(
     if (!canReadAll && order.userId !== userId) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
-    if (canReadAll && !access.hasGlobal("orders.read_all")) {
+    if (canReadAll && access && !access.hasGlobal("orders.read_all")) {
       const linkedWarehouseIds = await prisma.shipment.findMany({
         where: { orderId },
         select: { warehouseId: true },
       });
       const hasAllowedWarehouse = linkedWarehouseIds.some((shipment) =>
-        canAccessWarehouseWithPermission(access, "orders.read_all", shipment.warehouseId),
+        canAccessWarehouseWithPermission(
+          access,
+          "orders.read_all",
+          shipment.warehouseId,
+        ),
       );
       if (!hasAllowedWarehouse) {
         return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -139,7 +146,7 @@ export async function GET(
     console.error("Error fetching order:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -149,7 +156,7 @@ export async function GET(
 // Body: { status?: OrderStatus, paymentStatus?: PaymentStatus, transactionId?: string }
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const resolvedParams = await params;
@@ -167,10 +174,7 @@ export async function PATCH(
 
     const orderId = Number(resolvedParams.id);
     if (Number.isNaN(orderId)) {
-      return NextResponse.json(
-        { error: "Invalid order id" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid order id" }, { status: 400 });
     }
 
     const body = await request.json();
@@ -180,6 +184,7 @@ export async function PATCH(
       where: { id: orderId },
       select: {
         id: true,
+        userId: true,
         status: true,
         paymentStatus: true,
         transactionId: true,
@@ -198,7 +203,11 @@ export async function PATCH(
         select: { warehouseId: true },
       });
       const hasAllowedWarehouse = linkedWarehouseIds.some((shipment) =>
-        canAccessWarehouseWithPermission(access, "orders.update", shipment.warehouseId),
+        canAccessWarehouseWithPermission(
+          access,
+          "orders.update",
+          shipment.warehouseId,
+        ),
       );
       if (!hasAllowedWarehouse) {
         return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -223,7 +232,7 @@ export async function PATCH(
       if (!validOrderStatuses.includes(status)) {
         return NextResponse.json(
           { error: "Invalid order status" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -235,7 +244,7 @@ export async function PATCH(
           {
             error: `Invalid status transition: ${existingOrder.status} -> ${status}`,
           },
-          { status: 400 }
+          { status: 400 },
         );
       }
       requestedStatus = status as OrderStatus;
@@ -247,7 +256,7 @@ export async function PATCH(
       if (!validPaymentStatuses.includes(paymentStatus)) {
         return NextResponse.json(
           { error: "Invalid payment status" },
-          { status: 400 }
+          { status: 400 },
         );
       }
       data.paymentStatus = paymentStatus;
@@ -260,7 +269,7 @@ export async function PATCH(
     if (!requestedStatus && Object.keys(data).length === 0) {
       return NextResponse.json(
         { error: "No valid fields to update" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -281,13 +290,45 @@ export async function PATCH(
         statusChanged = transition.changed;
         updatedOrder = transition.order;
       } else {
-        updatedOrder = await tx.order.findUniqueOrThrow({ where: { id: orderId } });
+        updatedOrder = await tx.order.findUniqueOrThrow({
+          where: { id: orderId },
+        });
       }
 
       if (Object.keys(data).length > 0) {
         updatedOrder = await tx.order.update({
           where: { id: orderId },
           data,
+        });
+      }
+
+      if (requestedStatus && statusChanged) {
+        await createOrderNotification({
+          tx,
+          userId: existingOrder.userId,
+          orderId,
+          title: "Order status updated",
+          message: `Your order #${orderId} is now ${requestedStatus.replaceAll("_", " ").toLowerCase()}.`,
+          metadata: {
+            event: "ORDER_STATUS_CHANGED",
+            from: previousStatus,
+            to: requestedStatus,
+          },
+        });
+      }
+
+      if (paymentStatus && paymentStatus !== existingOrder.paymentStatus) {
+        await createOrderNotification({
+          tx,
+          userId: existingOrder.userId,
+          orderId,
+          title: "Payment status updated",
+          message: `Payment for order #${orderId} is now ${paymentStatus.toLowerCase()}.`,
+          metadata: {
+            event: "ORDER_PAYMENT_STATUS_CHANGED",
+            from: existingOrder.paymentStatus,
+            to: paymentStatus,
+          },
         });
       }
 
@@ -340,7 +381,7 @@ export async function PATCH(
     console.error("Error updating order:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

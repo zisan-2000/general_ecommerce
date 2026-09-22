@@ -12,6 +12,7 @@ import { shipmentDeliveryAssignmentSummarySelect } from "@/lib/delivery-assignme
 import { appendShipmentStatusLog } from "@/lib/report-history";
 import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 import { logActivity } from "@/lib/activity-log";
+import { createOrderNotification } from "@/lib/order-notifications";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { OrderStatus } from "@/generated/prisma";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
@@ -27,7 +28,9 @@ function hasShipmentManagementAccess(access: AccessContext) {
 }
 
 function hasGlobalShipmentManagementAccess(access: AccessContext) {
-  return access.hasGlobal("shipments.manage") || access.hasGlobal("logistics.manage");
+  return (
+    access.hasGlobal("shipments.manage") || access.hasGlobal("logistics.manage")
+  );
 }
 
 function canAccessShipmentWarehouse(
@@ -107,10 +110,12 @@ function buildShipmentInclude() {
   } as const;
 }
 
-function withDeliveryConfirmationMeta<T extends {
-  deliveryConfirmationToken?: string | null;
-  deliveryConfirmationPin?: string | null;
-}>(shipment: T, canReadAll: boolean) {
+function withDeliveryConfirmationMeta<
+  T extends {
+    deliveryConfirmationToken?: string | null;
+    deliveryConfirmationPin?: string | null;
+  },
+>(shipment: T, canReadAll: boolean) {
   const confirmationUrl = shipment.deliveryConfirmationToken
     ? buildDeliveryConfirmationUrl(shipment.deliveryConfirmationToken)
     : null;
@@ -118,7 +123,9 @@ function withDeliveryConfirmationMeta<T extends {
   return {
     ...shipment,
     deliveryConfirmationUrl: confirmationUrl,
-    deliveryConfirmationPin: canReadAll ? shipment.deliveryConfirmationPin ?? null : undefined,
+    deliveryConfirmationPin: canReadAll
+      ? (shipment.deliveryConfirmationPin ?? null)
+      : undefined,
   };
 }
 
@@ -148,7 +155,8 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     const access = await getAccessContext(
       session.user as { id?: string; role?: string } | undefined,
     );
-    const canReadAll = hasShipmentManagementAccess(access) || access.has("orders.read_all");
+    const canReadAll =
+      hasShipmentManagementAccess(access) || access.has("orders.read_all");
     const canReadOwn = canReadAll || access.has("orders.read_own");
     if (!canReadOwn) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -159,7 +167,7 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     if (Number.isNaN(id)) {
       return NextResponse.json(
         { error: "Invalid shipment id" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -171,7 +179,7 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     if (!shipment) {
       return NextResponse.json(
         { error: "Shipment not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -184,7 +192,10 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       !hasGlobalShipmentManagementAccess(access) &&
       !access.hasGlobal("orders.read_all")
     ) {
-      const canReadShipment = canAccessShipmentWarehouse(access, shipment.warehouseId);
+      const canReadShipment = canAccessShipmentWarehouse(
+        access,
+        shipment.warehouseId,
+      );
       const canReadOrder = canAccessWarehouseWithPermission(
         access,
         "orders.read_all",
@@ -195,12 +206,14 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       }
     }
 
-    return NextResponse.json(withDeliveryConfirmationMeta(shipment, canReadAll));
+    return NextResponse.json(
+      withDeliveryConfirmationMeta(shipment, canReadAll),
+    );
   } catch (error) {
     console.error("Error fetching shipment:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -244,7 +257,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     if (Number.isNaN(id) || id <= 0) {
       return NextResponse.json(
         { error: "Invalid shipment id" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -265,7 +278,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     if (!existingShipment) {
       return NextResponse.json(
         { error: "Shipment not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -282,7 +295,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     } catch (jsonError) {
       return NextResponse.json(
         { error: "Invalid JSON in request body" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -327,7 +340,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     if (courierId !== undefined) {
       const courierIdNum = Number(courierId);
       if (Number.isNaN(courierIdNum) || courierIdNum <= 0) {
-        return NextResponse.json({ error: "Invalid courierId" }, { status: 400 });
+        return NextResponse.json(
+          { error: "Invalid courierId" },
+          { status: 400 },
+        );
       }
       const courierEntity = await prisma.courier.findUnique({
         where: { id: courierIdNum },
@@ -353,14 +369,20 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       } else {
         const warehouseIdNum = Number(warehouseId);
         if (Number.isNaN(warehouseIdNum) || warehouseIdNum <= 0) {
-          return NextResponse.json({ error: "Invalid warehouseId" }, { status: 400 });
+          return NextResponse.json(
+            { error: "Invalid warehouseId" },
+            { status: 400 },
+          );
         }
         const warehouseEntity = await prisma.warehouse.findUnique({
           where: { id: warehouseIdNum },
           select: { id: true },
         });
         if (!warehouseEntity) {
-          return NextResponse.json({ error: "Warehouse not found" }, { status: 400 });
+          return NextResponse.json(
+            { error: "Warehouse not found" },
+            { status: 400 },
+          );
         }
         if (!canAccessShipmentWarehouse(access, warehouseEntity.id)) {
           return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -397,7 +419,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
           select: { id: true },
         });
         if (!assignedUser) {
-          return NextResponse.json({ error: "Assigned user not found" }, { status: 400 });
+          return NextResponse.json(
+            { error: "Assigned user not found" },
+            { status: 400 },
+          );
         }
         data.assignedToUserId = assignedUser.id;
         if (assignedAt === undefined) {
@@ -414,14 +439,20 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       } else {
         const shippingRateIdNum = Number(shippingRateId);
         if (Number.isNaN(shippingRateIdNum) || shippingRateIdNum <= 0) {
-          return NextResponse.json({ error: "Invalid shippingRateId" }, { status: 400 });
+          return NextResponse.json(
+            { error: "Invalid shippingRateId" },
+            { status: 400 },
+          );
         }
         const shippingRateEntity = await prisma.shippingRate.findUnique({
           where: { id: shippingRateIdNum },
           select: { id: true },
         });
         if (!shippingRateEntity) {
-          return NextResponse.json({ error: "Shipping rate not found" }, { status: 400 });
+          return NextResponse.json(
+            { error: "Shipping rate not found" },
+            { status: 400 },
+          );
         }
         data.shippingRateId = shippingRateEntity.id;
       }
@@ -429,7 +460,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     if (priority !== undefined) {
       const priorityNum = Number(priority);
       if (!Number.isInteger(priorityNum)) {
-        return NextResponse.json({ error: "priority must be an integer" }, { status: 400 });
+        return NextResponse.json(
+          { error: "priority must be an integer" },
+          { status: 400 },
+        );
       }
       data.priority = priorityNum;
     }
@@ -442,7 +476,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       }
       const amountNum = Number(value);
       if (!Number.isFinite(amountNum)) {
-        return NextResponse.json({ error: `${field} must be a valid number` }, { status: 400 });
+        return NextResponse.json(
+          { error: `${field} must be a valid number` },
+          { status: 400 },
+        );
       }
       data[field] = amountNum;
     }
@@ -462,14 +499,20 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       if (!validShipmentStatuses.includes(status)) {
         return NextResponse.json(
           { error: "Invalid shipment status" },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
       const allowedTransitions: Record<string, string[]> = {
         PENDING: ["ASSIGNED", "CANCELLED"],
         ASSIGNED: ["IN_TRANSIT", "OUT_FOR_DELIVERY", "FAILED", "CANCELLED"],
-        IN_TRANSIT: ["OUT_FOR_DELIVERY", "DELIVERED", "FAILED", "RETURNED", "CANCELLED"],
+        IN_TRANSIT: [
+          "OUT_FOR_DELIVERY",
+          "DELIVERED",
+          "FAILED",
+          "RETURNED",
+          "CANCELLED",
+        ],
         OUT_FOR_DELIVERY: ["DELIVERED", "FAILED", "RETURNED", "CANCELLED"],
         DELIVERED: ["RETURNED"],
         FAILED: ["ASSIGNED", "CANCELLED"],
@@ -498,7 +541,9 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       data.pickedAt = pickedAt ? new Date(pickedAt) : null;
     }
     if (outForDeliveryAt !== undefined) {
-      data.outForDeliveryAt = outForDeliveryAt ? new Date(outForDeliveryAt) : null;
+      data.outForDeliveryAt = outForDeliveryAt
+        ? new Date(outForDeliveryAt)
+        : null;
     }
     if (expectedDate !== undefined) {
       data.expectedDate = expectedDate ? new Date(expectedDate) : null;
@@ -507,13 +552,16 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       data.deliveredAt = deliveredAt ? new Date(deliveredAt) : null;
     }
     if (deliveredLatitude !== undefined) {
-      data.deliveredLatitude = deliveredLatitude === null ? null : Number(deliveredLatitude);
+      data.deliveredLatitude =
+        deliveredLatitude === null ? null : Number(deliveredLatitude);
     }
     if (deliveredLongitude !== undefined) {
-      data.deliveredLongitude = deliveredLongitude === null ? null : Number(deliveredLongitude);
+      data.deliveredLongitude =
+        deliveredLongitude === null ? null : Number(deliveredLongitude);
     }
     if (deliveredAccuracy !== undefined) {
-      data.deliveredAccuracy = deliveredAccuracy === null ? null : Number(deliveredAccuracy);
+      data.deliveredAccuracy =
+        deliveredAccuracy === null ? null : Number(deliveredAccuracy);
     }
     if (data.status === "ASSIGNED" && data.assignedAt === undefined) {
       data.assignedAt = new Date();
@@ -521,7 +569,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     if (data.status === "IN_TRANSIT" && data.pickedAt === undefined) {
       data.pickedAt = new Date();
     }
-    if (data.status === "OUT_FOR_DELIVERY" && data.outForDeliveryAt === undefined) {
+    if (
+      data.status === "OUT_FOR_DELIVERY" &&
+      data.outForDeliveryAt === undefined
+    ) {
       data.outForDeliveryAt = new Date();
     }
     if (data.status === "DELIVERED" && data.deliveredAt === undefined) {
@@ -578,6 +629,24 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
           toStatus: updatedShipment.status,
           source: "ADMIN_UPDATE",
         });
+
+        const order = await tx.order.findUnique({
+          where: { id: existingShipment.orderId },
+          select: { userId: true },
+        });
+        await createOrderNotification({
+          tx,
+          userId: order?.userId,
+          orderId: existingShipment.orderId,
+          title: "Shipment status updated",
+          message: `Shipment for order #${existingShipment.orderId} is now ${nextStatus.replaceAll("_", " ").toLowerCase()}.`,
+          metadata: {
+            event: "SHIPMENT_STATUS_CHANGED",
+            shipmentId: id,
+            from: prevStatus,
+            to: nextStatus,
+          },
+        });
       }
 
       await ensureShipmentDeliveryConfirmation(tx, updatedShipment.id);
@@ -606,12 +675,14 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       after: updated ? toShipmentLogSnapshot(updated as any) : null,
     });
 
-    return NextResponse.json(withDeliveryConfirmationMeta(updated as any, true));
+    return NextResponse.json(
+      withDeliveryConfirmationMeta(updated as any, true),
+    );
   } catch (error) {
     console.error("Error updating shipment:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -635,7 +706,7 @@ export async function DELETE(req: NextRequest, { params }: RouteParams) {
     if (Number.isNaN(id) || id <= 0) {
       return NextResponse.json(
         { error: "Invalid shipment id" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -647,7 +718,7 @@ export async function DELETE(req: NextRequest, { params }: RouteParams) {
     if (!existingShipment) {
       return NextResponse.json(
         { error: "Shipment not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -679,7 +750,7 @@ export async function DELETE(req: NextRequest, { params }: RouteParams) {
     console.error("Error deleting shipment:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

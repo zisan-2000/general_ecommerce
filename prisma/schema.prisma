@@ -349,8 +349,8 @@ model Product {
   publisherId             Int?
   description             String
   shortDesc               String?
-  model                    String?
-  warranty                 String?
+  model                   String?
+  warranty                String?
   basePrice               Decimal                           @db.Decimal(10, 2)
   originalPrice           Decimal?                          @db.Decimal(10, 2)
   flashSaleEnabled        Boolean                           @default(false)
@@ -408,8 +408,8 @@ model Product {
   bundleItems             ProductBundleItem[]               @relation("BundleProducts")
   includedInBundles       ProductBundleItem[]               @relation("IncludedProducts")
   bundleGroups            BundleGroup[]                     @relation("BundleGroups")
-  bundleGroupOptions      BundleGroupOption[]                @relation("BundleOptionProducts")
-  orderBundleComponents   OrderBundleComponent[]             @relation("OrderBundleComponentProducts")
+  bundleGroupOptions      BundleGroupOption[]               @relation("BundleOptionProducts")
+  orderBundleComponents   OrderBundleComponent[]            @relation("OrderBundleComponentProducts")
 
   @@index([deleted, available, createdAt])
   @@index([deleted, available, soldCount])
@@ -489,8 +489,8 @@ model BundleGroupOption {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
-  group   BundleGroup    @relation(fields: [groupId], references: [id], onDelete: Cascade)
-  product Product        @relation("BundleOptionProducts", fields: [productId], references: [id], onDelete: Restrict)
+  group   BundleGroup     @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  product Product         @relation("BundleOptionProducts", fields: [productId], references: [id], onDelete: Restrict)
   variant ProductVariant? @relation("BundleOptionVariants", fields: [variantId], references: [id], onDelete: Restrict)
 
   @@unique([groupId, sortOrder])
@@ -516,8 +516,8 @@ model ProductVariant {
   lowStockThreshold            Int                               @default(10)
   costPrice                    Decimal?                          @db.Decimal(10, 2)
   cartItems                    CartItem[]
-  bundleGroupOptions           BundleGroupOption[]              @relation("BundleOptionVariants")
-  orderBundleComponents        OrderBundleComponent[]           @relation("OrderBundleComponentVariants")
+  bundleGroupOptions           BundleGroupOption[]               @relation("BundleOptionVariants")
+  orderBundleComponents        OrderBundleComponent[]            @relation("OrderBundleComponentVariants")
   dailySnapshots               InventoryDailySnapshot[]
   inventoryLogs                InventoryLog[]
   warehouseDailySnapshots      InventoryWarehouseDailySnapshot[]
@@ -820,28 +820,28 @@ model Payment {
 }
 
 model OrderItem {
-  id                       Int                  @id @default(autoincrement())
+  id                       Int                    @id @default(autoincrement())
   orderId                  Int
   productId                Int
   variantId                Int?
-  quantity                 Int                  @default(1)
-  price                    Decimal              @db.Decimal(14, 2)
-  currency                 String               @default("BDT") @db.VarChar(3)
-  VatAmount                Decimal?             @db.Decimal(14, 2)
-  discountAmount           Decimal?             @db.Decimal(14, 2)
-  createdAt                DateTime             @default(now())
-  updatedAt                DateTime             @updatedAt
-  costPriceSnapshot        Decimal?             @db.Decimal(14, 2)
+  quantity                 Int                    @default(1)
+  price                    Decimal                @db.Decimal(14, 2)
+  currency                 String                 @default("BDT") @db.VarChar(3)
+  VatAmount                Decimal?               @db.Decimal(14, 2)
+  discountAmount           Decimal?               @db.Decimal(14, 2)
+  createdAt                DateTime               @default(now())
+  updatedAt                DateTime               @updatedAt
+  costPriceSnapshot        Decimal?               @db.Decimal(14, 2)
   priceSource              BusinessPriceSource?
-  publicUnitPriceSnapshot  Decimal?             @db.Decimal(14, 2)
-  businessDiscountSnapshot Decimal?             @db.Decimal(14, 2)
+  publicUnitPriceSnapshot  Decimal?               @db.Decimal(14, 2)
+  businessDiscountSnapshot Decimal?               @db.Decimal(14, 2)
   bundleConfiguration      Json?
   digitalDeliveries        DigitalDelivery[]
-  order                    Order                @relation(fields: [orderId], references: [id])
-  product                  Product              @relation(fields: [productId], references: [id])
-  variant                  ProductVariant?      @relation(fields: [variantId], references: [id])
+  order                    Order                  @relation(fields: [orderId], references: [id])
+  product                  Product                @relation(fields: [productId], references: [id])
+  variant                  ProductVariant?        @relation(fields: [variantId], references: [id])
   refunds                  Refund[]
-  serviceBooking           ServiceBooking?      @relation("OrderItemServiceBooking")
+  serviceBooking           ServiceBooking?        @relation("OrderItemServiceBooking")
   shipmentItems            ShipmentItem[]
   commissionEntries        CommissionEntry[]
   bundleComponents         OrderBundleComponent[]
@@ -934,19 +934,19 @@ model ProductQuestion {
 }
 
 model CartItem {
-  id             Int             @id @default(autoincrement())
-  userId         String
-  productId      Int
-  quantity       Int             @default(1)
-  variantId      Int?
-  lineKey        String          @default("standard") @db.VarChar(80)
+  id                  Int             @id @default(autoincrement())
+  userId              String
+  productId           Int
+  quantity            Int             @default(1)
+  variantId           Int?
+  lineKey             String          @default("standard") @db.VarChar(80)
   bundleConfiguration Json?
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
-  lastReminderAt DateTime?
-  product        Product         @relation(fields: [productId], references: [id])
-  user           User            @relation(fields: [userId], references: [id])
-  variant        ProductVariant? @relation(fields: [variantId], references: [id])
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  lastReminderAt      DateTime?
+  product             Product         @relation(fields: [productId], references: [id])
+  user                User            @relation(fields: [userId], references: [id])
+  variant             ProductVariant? @relation(fields: [variantId], references: [id])
 
   @@unique([userId, productId, variantId, lineKey])
   @@index([variantId])
@@ -4977,6 +4977,7 @@ enum InvestorInternalNotificationStatus {
 enum CustomerNotificationType {
   PRICE_DROP
   CART_REMINDER
+  ORDER_UPDATE
 }
 
 enum CustomerNotificationStatus {
