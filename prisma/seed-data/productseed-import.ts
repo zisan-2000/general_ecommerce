@@ -55,6 +55,8 @@ type ProductSeedFile = {
   products: ProductSeedProduct[];
 };
 
+export const TECH_PRODUCT_SEED_FILE = "prisma/TechProductSeed.json";
+
 const priceSchema = z.number().finite().nonnegative().lt(100000000);
 const productSeedSchema = z.object({
   categories: z.array(z.object({
@@ -77,12 +79,20 @@ const productSeedSchema = z.object({
       costPrice: priceSchema.optional(), colorImage: z.string().optional(),
     })),
     sourceProductUrl: z.string().url().optional(),
-    sourceImageUrl: z.string().url().optional(), localImageFile: z.string().optional(),
+    // Empty source URLs are valid for a DB import; the downloader discovers them.
+    sourceImageUrl: z.union([z.string().url(), z.literal("")]).optional(),
+    localImageFile: z.string().optional(),
   })),
 });
 
 export function validateProductSeed(value: unknown): ProductSeedFile {
-  const seed = productSeedSchema.parse(value);
+  const parsed = productSeedSchema.safeParse(value);
+  if (!parsed.success) {
+    const details = parsed.error.issues.slice(0, 5)
+      .map((issue) => `${issue.path.join(".")}: ${issue.message}`).join("; ");
+    throw new Error(`Invalid product seed (${parsed.error.issues.length} issues): ${details}`);
+  }
+  const seed = parsed.data;
   const categories = new Set<string>();
   for (const category of seed.categories) {
     if (categories.has(category.slug)) throw new Error(`Duplicate category: ${category.slug}`);
@@ -91,7 +101,9 @@ export function validateProductSeed(value: unknown): ProductSeedFile {
     }
     categories.add(category.slug);
   }
-  for (const key of ["slug", "sku", "sourceProductUrl"] as const) {
+  // Source URLs are provenance, not database identifiers: distinct SKUs in the
+  // supplied tech catalog can share a vendor page. Keep every unique SKU/slug.
+  for (const key of ["slug", "sku"] as const) {
     const values = seed.products.map((product) => product[key]).filter(Boolean);
     if (new Set(values).size !== values.length) throw new Error(`Duplicate product ${key}`);
   }
@@ -171,21 +183,24 @@ export async function seedProductSeedFile(prisma: PrismaClient, file?: string) {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "");
-      const brand = await prisma.brand.upsert({
-        where: { name: brandName },
-        update: {
-          slug: brandSlug,
-          deleted: false,
-        },
-        create: {
-          name: brandName,
-          slug: brandSlug,
-          deleted: false,
-        },
-        select: { id: true },
-      });
-      brandId = brand.id;
-      brandIds.set(brandName, brand.id);
+      brandId = brandIds.get(brandSlug) ?? null;
+      if (!brandId) {
+        const namedBrand = await prisma.brand.findUnique({
+          where: { name: brandName }, select: { id: true },
+        });
+        // Reuse case variants such as ORICO/Orico without colliding on slug.
+        const brand = namedBrand
+          ? await prisma.brand.update({
+              where: { id: namedBrand.id }, data: { deleted: false }, select: { id: true },
+            })
+          : await prisma.brand.upsert({
+              where: { slug: brandSlug }, update: { deleted: false },
+              create: { name: brandName, slug: brandSlug, deleted: false },
+              select: { id: true },
+            });
+        brandId = brand.id;
+        brandIds.set(brandSlug, brand.id);
+      }
     }
 
     const product = await prisma.product.upsert({

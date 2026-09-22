@@ -10,7 +10,7 @@ import { seedScmDemo } from "./seed-data/scm";
 import { seedWarehouseDemo } from "./seed-data/warehouse";
 import { seedManagementDemo } from "./seed-data/management";
 import { seedInvestorDemo } from "./seed-data/investor";
-import { loadProductSeed, seedProductSeedFile } from "./seed-data/productseed-import";
+import { loadProductSeed, seedProductSeedFile, TECH_PRODUCT_SEED_FILE } from "./seed-data/productseed-import";
 
 const prisma = new PrismaClient();
 
@@ -200,17 +200,16 @@ async function ensureSeedAdmin() {
 async function main() {
   const args = process.argv.slice(2);
   if (args.some((arg) => arg !== "--products-only")) {
-    throw new Error("Supported option: --products-only (imports only the Star Tech catalog)");
+    throw new Error("Supported option: --products-only (imports only TechProductSeed.json)");
   }
-  const startechFile = "prisma/startech_productseed.json";
   // Validate before any database writes. The catalog-only mode avoids demo
   // credentials, demo records, and storefront archival of unrelated products.
-  loadProductSeed(startechFile);
+  loadProductSeed(TECH_PRODUCT_SEED_FILE);
   if (args.includes("--products-only")) {
     const warehouse = await prisma.warehouse.findFirst({ select: { id: true } });
     if (!warehouse) throw new Error("Create a warehouse before importing stocked products.");
-    const summary = await seedProductSeedFile(prisma, startechFile);
-    console.log("Star Tech catalog imported.", summary);
+    const summary = await seedProductSeedFile(prisma, TECH_PRODUCT_SEED_FILE);
+    console.log("Tech product catalog imported.", summary);
     return;
   }
 
@@ -246,8 +245,8 @@ async function main() {
   const productSeed = await seedProductSeedFile(prisma);
   console.log("Product seed file imported.", productSeed);
 
-  const startechSeed = await seedProductSeedFile(prisma, startechFile);
-  console.log("Star Tech catalog imported.", startechSeed);
+  const techSeed = await seedProductSeedFile(prisma, TECH_PRODUCT_SEED_FILE);
+  console.log("Tech product catalog imported.", techSeed);
 }
 
 main()

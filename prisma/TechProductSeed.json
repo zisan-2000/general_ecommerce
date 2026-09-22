@@ -191,6 +191,17 @@
       "showInFooter": false,
       "featured": false,
       "sourceCategoryUrl": "https://www.startech.com.bd/appliance"
+    },
+    {
+      "name": "Laptop Accessories",
+      "slug": "laptop-accessories",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 170,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
     }
   ],
   "products": [
