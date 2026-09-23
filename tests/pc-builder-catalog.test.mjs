@@ -46,6 +46,7 @@ test("storefront catalog uses stable cursor pagination instead of deep offsets",
   assert.match(source, /searchPcBuilderCatalogPage/);
   assert.match(source, /cursorWhere/);
   assert.match(source, /serializePcBuilderCatalogCursor/);
+  assert.match(source, /pcBuilderEnabled:\s*true/);
   assert.doesNotMatch(source, /skip:\s*\(page - 1\) \* pageSize/);
 });
 

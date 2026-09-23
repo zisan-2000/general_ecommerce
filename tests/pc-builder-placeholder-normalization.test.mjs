@@ -43,6 +43,16 @@ test("critical token specs reject punctuation variants of N/A", () => {
   }
 });
 
+test("a missing compatibility value produces one actionable issue", () => {
+  const issues = validatePcBuilderProductReadiness(
+    "memory",
+    product({}),
+  );
+
+  assert.equal(issues.length, 1);
+  assert.match(issues[0].message, /is missing a memory type/);
+});
+
 test("token-list specs reject N/A fragments but retain real supported values", () => {
   const invalid = validatePcBuilderProductReadiness(
     "case",
