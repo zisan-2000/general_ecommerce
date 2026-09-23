@@ -103,6 +103,7 @@ test("availability route enforces readiness only on inactive-to-active transitio
 
   assert.match(route, /validatePcBuilderProductForActivation/);
   assert.match(route, /parsed\.value\.available\s*&&\s*!existing\.available/);
+  assert.match(route, /existing\.pcBuilderEnabled/);
   assert.match(route, /PC_BUILDER_SPECS_INCOMPLETE/);
   assert.match(route, /return corePatch\(forwarded, ctx\)/);
 });

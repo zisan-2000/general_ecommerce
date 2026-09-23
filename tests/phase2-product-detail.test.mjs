@@ -132,7 +132,7 @@ test("product questions enforce rate limiting and staff permission checks", asyn
 });
 
 test("product descriptions preserve sanitized admin rich text", async () => {
-  const [pageSource, tabsSource] = await Promise.all([
+  const [pageSource, tabsSource, richTextSource, purchasePanelSource] = await Promise.all([
     readFile(new URL("../app/ecommerce/products/[id]/page.tsx", import.meta.url), "utf8"),
     readFile(
       new URL(
@@ -141,10 +141,27 @@ test("product descriptions preserve sanitized admin rich text", async () => {
       ),
       "utf8",
     ),
+    readFile(
+      new URL(
+        "../components/ecommarce/product-detail/ProductRichText.tsx",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+    readFile(
+      new URL(
+        "../components/ecommarce/product-detail/ProductPurchasePanel.tsx",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
   ]);
 
   assert.match(pageSource, /description=\{product\.description \|\| product\.shortDesc \|\| ""\}/);
-  assert.match(tabsSource, /DOMPurify\.sanitize/);
-  assert.match(tabsSource, /dangerouslySetInnerHTML=\{\{ __html: sanitizedContent \}\}/);
+  assert.match(pageSource, /shortDescription: product\.shortDesc/);
+  assert.match(richTextSource, /DOMPurify\.sanitize/);
+  assert.match(richTextSource, /dangerouslySetInnerHTML=\{\{ __html: sanitizedContent \}\}/);
+  assert.match(tabsSource, /<ProductRichText/);
+  assert.match(purchasePanelSource, /content=\{details\.shortDescription\}/);
   assert.doesNotMatch(tabsSource, /\{description \|\| "Product description/);
 });

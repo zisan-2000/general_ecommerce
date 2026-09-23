@@ -112,4 +112,8 @@ test("create and edit routes persist ordered generic specifications", async () =
   assert.match(builder, /Merge and Update Matching Fields/);
   assert.match(builder, /Replace All Specifications/);
   assert.match(builder, /Copy Laptop Format/);
+  assert.match(builder, /<div key=\{groupIndex\}/);
+  assert.match(builder, /<div key=\{itemIndex\}/);
+  assert.doesNotMatch(builder, /key=\{`\$\{groupIndex\}-\$\{group\.name\}`\}/);
+  assert.doesNotMatch(builder, /key=\{`\$\{itemIndex\}-\$\{item\.label\}`\}/);
 });
