@@ -1,0 +1,5285 @@
+{
+  "root": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\monitor",
+  "dryRun": false,
+  "deleteAllWebp": false,
+  "webpFilesFound": 878,
+  "startedAtUnix": 1790249394.6833298,
+  "files": [
+    {
+      "webp": "acer/acer-eb321hq-abi-ips-lcd-monitor.webp",
+      "matchingPng": "acer/acer-eb321hq-abi-ips-lcd-monitor.png",
+      "webpBytes": 26966,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-ek220q-e3bi-100hz-fhd-monitor.webp",
+      "matchingPng": "acer/acer-ek220q-e3bi-100hz-fhd-monitor.png",
+      "webpBytes": 26882,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-ek240y-p6-monitor.webp",
+      "matchingPng": "acer/acer-ek240y-p6-monitor.png",
+      "webpBytes": 31000,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-k202qbi-19-5-inch-monitor.webp",
+      "matchingPng": "acer/acer-k202qbi-19-5-inch-monitor.png",
+      "webpBytes": 21604,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-nitro-ed270-x0-curved-gaming-monitor.webp",
+      "matchingPng": "acer/acer-nitro-ed270-x0-curved-gaming-monitor.png",
+      "webpBytes": 27450,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-nitro-ed320qr-s3-curved-gaming-monitor.webp",
+      "matchingPng": "acer/acer-nitro-ed320qr-s3-curved-gaming-monitor.png",
+      "webpBytes": 11602,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-nitro-vg240y-x1-gaming-monitor.webp",
+      "matchingPng": "acer/acer-nitro-vg240y-x1-gaming-monitor.png",
+      "webpBytes": 33902,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-nitro-vg270-x1-gaming-monitor.webp",
+      "matchingPng": "acer/acer-nitro-vg270-x1-gaming-monitor.png",
+      "webpBytes": 33902,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-predator-xb253q-f-monitor.webp",
+      "matchingPng": "acer/acer-predator-xb253q-f-monitor.png",
+      "webpBytes": 49574,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-predator-xb253q-f3-monitor.webp",
+      "matchingPng": "acer/acer-predator-xb253q-f3-monitor.png",
+      "webpBytes": 51808,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-sa222q-monitor.webp",
+      "matchingPng": "acer/acer-sa222q-monitor.png",
+      "webpBytes": 22832,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-sa242y-p1-monitor.webp",
+      "matchingPng": "acer/acer-sa242y-p1-monitor.png",
+      "webpBytes": 27778,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-sa272-p1-monitor.webp",
+      "matchingPng": "acer/acer-sa272-p1-monitor.png",
+      "webpBytes": 35502,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-sa272u-p1-monitor.webp",
+      "matchingPng": "acer/acer-sa272u-p1-monitor.png",
+      "webpBytes": 15458,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-sa322q-fhd-ips-monitor.webp",
+      "matchingPng": "acer/acer-sa322q-fhd-ips-monitor.png",
+      "webpBytes": 29360,
+      "status": "deleted"
+    },
+    {
+      "webp": "acer/acer-vero-cb272k-4k-monitor.webp",
+      "matchingPng": "acer/acer-vero-cb272k-4k-monitor.png",
+      "webpBytes": 21346,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-md2404-f-24-inch-180hz-gaming-monitor.webp",
+      "matchingPng": "aiwa/aiwa-md2404-f-24-inch-180hz-gaming-monitor.png",
+      "webpBytes": 21658,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-md2419-v-monitor.webp",
+      "matchingPng": "aiwa/aiwa-md2419-v-monitor.png",
+      "webpBytes": 13962,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-md2734-k-monitor.webp",
+      "matchingPng": "aiwa/aiwa-md2734-k-monitor.png",
+      "webpBytes": 20510,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-mf2219-b-22-inch-100hz-monitor.webp",
+      "matchingPng": "aiwa/aiwa-mf2219-b-22-inch-100hz-monitor.png",
+      "webpBytes": 35566,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-mf2219-v-100hz-monitor.webp",
+      "matchingPng": "aiwa/aiwa-mf2219-v-100hz-monitor.png",
+      "webpBytes": 20732,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-mf2419-v-monitor.webp",
+      "matchingPng": "aiwa/aiwa-mf2419-v-monitor.png",
+      "webpBytes": 13306,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-mf2528-b-100hz-monitor.webp",
+      "matchingPng": "aiwa/aiwa-mf2528-b-100hz-monitor.png",
+      "webpBytes": 16454,
+      "status": "deleted"
+    },
+    {
+      "webp": "aiwa/aiwa-mf2719-v-monitor.webp",
+      "matchingPng": "aiwa/aiwa-mf2719-v-monitor.png",
+      "webpBytes": 20870,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-22b20jh2-fhd-monitor.webp",
+      "matchingPng": "aoc/aoc-22b20jh2-fhd-monitor.png",
+      "webpBytes": 20128,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24b20jh2-100hz-fhd-ips-monitor.webp",
+      "matchingPng": "aoc/aoc-24b20jh2-100hz-fhd-ips-monitor.png",
+      "webpBytes": 20128,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24b36x-monitor.webp",
+      "matchingPng": "aoc/aoc-24b36x-monitor.png",
+      "webpBytes": 31764,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g11e2-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-24g11e2-gaming-monitor.png",
+      "webpBytes": 23660,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g11ze-260hz-monitor.webp",
+      "matchingPng": "aoc/aoc-24g11ze-260hz-monitor.png",
+      "webpBytes": 35820,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g11ze-monitor.webp",
+      "matchingPng": "aoc/aoc-24g11ze-monitor.png",
+      "webpBytes": 35820,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g4-180hz-fhd-ips-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-24g4-180hz-fhd-ips-gaming-monitor.png",
+      "webpBytes": 30484,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g4-200hz-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-24g4-200hz-gaming-monitor.png",
+      "webpBytes": 30484,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-24g50z2-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-24g50z2-gaming-monitor.png",
+      "webpBytes": 16740,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-25b26h-100hz-fhd-ips-monitor.webp",
+      "matchingPng": "aoc/aoc-25b26h-100hz-fhd-ips-monitor.png",
+      "webpBytes": 22136,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-25b36h-24-5-inch-120hz-fhd-ips-monitor.webp",
+      "matchingPng": "aoc/aoc-25b36h-24-5-inch-120hz-fhd-ips-monitor.png",
+      "webpBytes": 22136,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-25b36x-monitor.webp",
+      "matchingPng": "aoc/aoc-25b36x-monitor.png",
+      "webpBytes": 25408,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-25g4k-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-25g4k-gaming-monitor.png",
+      "webpBytes": 20054,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27b1h2-100hz-fhd-ips-monitor.webp",
+      "matchingPng": "aoc/aoc-27b1h2-100hz-fhd-ips-monitor.png",
+      "webpBytes": 36012,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27b30h-27-inch-120hz-ips-monitor.webp",
+      "matchingPng": "aoc/aoc-27b30h-27-inch-120hz-ips-monitor.png",
+      "webpBytes": 20508,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27b36h-27-inch-monitor.webp",
+      "matchingPng": "aoc/aoc-27b36h-27-inch-monitor.png",
+      "webpBytes": 27632,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27b36x-monitor.webp",
+      "matchingPng": "aoc/aoc-27b36x-monitor.png",
+      "webpBytes": 28828,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27g4-180hz-fhd-ips-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-27g4-180hz-fhd-ips-gaming-monitor.png",
+      "webpBytes": 30484,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27g4h-monitor.webp",
+      "matchingPng": "aoc/aoc-27g4h-monitor.png",
+      "webpBytes": 31176,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-27g50f-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-27g50f-gaming-monitor.png",
+      "webpBytes": 33840,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-ag275qze-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-ag275qze-gaming-monitor.png",
+      "webpBytes": 15346,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-ag275qxw-27-inch-180hz-qhd-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-ag275qxw-27-inch-180hz-qhd-gaming-monitor.png",
+      "webpBytes": 45182,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-ag493qcx-curved-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-ag493qcx-curved-gaming-monitor.png",
+      "webpBytes": 17422,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-ag276fk-27-inch-520hz-fhd-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-ag276fk-27-inch-520hz-fhd-gaming-monitor.png",
+      "webpBytes": 20748,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-ag276qkd-26-5-inch-480hz-qhd-oled-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-ag276qkd-26-5-inch-480hz-qhd-oled-gaming-monitor.png",
+      "webpBytes": 33040,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-ag276qzd2-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-ag276qzd2-gaming-monitor.png",
+      "webpBytes": 15100,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-ag326ud-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-ag326ud-gaming-monitor.png",
+      "webpBytes": 19752,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-pd34-240hz-wqhd-qd-oled-curved-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-pd34-240hz-wqhd-qd-oled-curved-monitor.png",
+      "webpBytes": 23488,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-pro-pd49-240hz-dual-qhd-qd-oled-curved-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-pro-pd49-240hz-dual-qhd-qd-oled-curved-monitor.png",
+      "webpBytes": 34550,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-q27g3zn-27-inch-qhd-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-q27g3zn-27-inch-qhd-gaming-monitor.png",
+      "webpBytes": 27812,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-agon-q27g4f-27-inch-180hz-qhd-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-agon-q27g4f-27-inch-180hz-qhd-gaming-monitor.png",
+      "webpBytes": 27568,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-c27g4h2-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-c27g4h2-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 32220,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-c27g4z-curved-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-c27g4z-curved-gaming-monitor.png",
+      "webpBytes": 22958,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-cs25g-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-cs25g-gaming-monitor.png",
+      "webpBytes": 18414,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-cu34g3x-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-cu34g3x-gaming-monitor.png",
+      "webpBytes": 21282,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q24b35-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q24b35-gaming-monitor.png",
+      "webpBytes": 42822,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q25g4s-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q25g4s-gaming-monitor.png",
+      "webpBytes": 19550,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27b30s3-monitor.webp",
+      "matchingPng": "aoc/aoc-q27b30s3-monitor.png",
+      "webpBytes": 23900,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g11e-210hz-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g11e-210hz-gaming-monitor.png",
+      "webpBytes": 18578,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g11e-27-inch-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g11e-27-inch-gaming-monitor.png",
+      "webpBytes": 18578,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g3h-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g3h-gaming-monitor.png",
+      "webpBytes": 27812,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g3h2-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g3h2-gaming-monitor.png",
+      "webpBytes": 24548,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g4-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g4-gaming-monitor.png",
+      "webpBytes": 23874,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g40e-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g40e-gaming-monitor.png",
+      "webpBytes": 22400,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g42ze-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g42ze-gaming-monitor.png",
+      "webpBytes": 41692,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27g4p-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27g4p-gaming-monitor.png",
+      "webpBytes": 23874,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-q27p10-27-inch-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-q27p10-27-inch-gaming-monitor.png",
+      "webpBytes": 16466,
+      "status": "deleted"
+    },
+    {
+      "webp": "aoc/aoc-u27g10-gaming-monitor.webp",
+      "matchingPng": "aoc/aoc-u27g10-gaming-monitor.png",
+      "webpBytes": 21618,
+      "status": "deleted"
+    },
+    {
+      "webp": "apple/apple-pro-display-xdr-monitor.webp",
+      "matchingPng": "apple/apple-pro-display-xdr-monitor.png",
+      "webpBytes": 42862,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a1-gamut-slim-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a1-gamut-slim-portable-monitor.png",
+      "webpBytes": 22312,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a1-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a1-portable-monitor.png",
+      "webpBytes": 21310,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a1-pro-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a1-pro-portable-monitor.png",
+      "webpBytes": 23690,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a1s-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a1s-portable-monitor.png",
+      "webpBytes": 52404,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a1t-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a1t-portable-monitor.png",
+      "webpBytes": 52374,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-a3c-pro-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-a3c-pro-portable-monitor.png",
+      "webpBytes": 32282,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-e1-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-e1-portable-monitor.png",
+      "webpBytes": 35306,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-e1s-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-e1s-portable-monitor.png",
+      "webpBytes": 33838,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-g1-game-max-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-g1-game-max-portable-monitor.png",
+      "webpBytes": 19804,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-m1rc-gaming-monitor.webp",
+      "matchingPng": "arzopa/arzopa-m1rc-gaming-monitor.png",
+      "webpBytes": 31014,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-s1-table-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-s1-table-portable-monitor.png",
+      "webpBytes": 33826,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z1c-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z1c-portable-monitor.png",
+      "webpBytes": 14774,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z1fc-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z1fc-portable-monitor.png",
+      "webpBytes": 39532,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z1rc-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z1rc-portable-monitor.png",
+      "webpBytes": 32908,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z3fc-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z3fc-portable-monitor.png",
+      "webpBytes": 29852,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z5rc-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z5rc-portable-monitor.png",
+      "webpBytes": 18132,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-z7rc-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-z7rc-portable-monitor.png",
+      "webpBytes": 20106,
+      "status": "deleted"
+    },
+    {
+      "webp": "arzopa/arzopa-zt1-portable-monitor.webp",
+      "matchingPng": "arzopa/arzopa-zt1-portable-monitor.png",
+      "webpBytes": 9482,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-be27acgn-monitor.webp",
+      "matchingPng": "asus/asus-be27acgn-monitor.png",
+      "webpBytes": 20382,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-oled-pa279cdv-27-inch-4k-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-oled-pa279cdv-27-inch-4k-monitor.png",
+      "webpBytes": 25296,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa248qv-gen2-pa248qfv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa248qv-gen2-pa248qfv-monitor.png",
+      "webpBytes": 40306,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa278cgrv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa278cgrv-monitor.png",
+      "webpBytes": 40252,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa278cgv-2k-ips-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa278cgv-2k-ips-monitor.png",
+      "webpBytes": 44966,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa278qgv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa278qgv-monitor.png",
+      "webpBytes": 23276,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa279crv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa279crv-monitor.png",
+      "webpBytes": 44064,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa279cv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa279cv-monitor.png",
+      "webpBytes": 33766,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa27jcv-27-inch-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa27jcv-27-inch-monitor.png",
+      "webpBytes": 21868,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa329crv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa329crv-monitor.png",
+      "webpBytes": 28556,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa329cv-32-inch-4k-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa329cv-32-inch-4k-monitor.png",
+      "webpBytes": 20902,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa32qcv-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa32qcv-monitor.png",
+      "webpBytes": 30154,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-display-pa348cgv-34-inch-monitor.webp",
+      "matchingPng": "asus/asus-proart-display-pa348cgv-34-inch-monitor.png",
+      "webpBytes": 33908,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-pa278qev-professional-monitor.webp",
+      "matchingPng": "asus/asus-proart-pa278qev-professional-monitor.png",
+      "webpBytes": 40848,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-pa27ucge-monitor.webp",
+      "matchingPng": "asus/asus-proart-pa27ucge-monitor.png",
+      "webpBytes": 22478,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-pa328cgv-32-inch-professional-monitor.webp",
+      "matchingPng": "asus/asus-proart-pa328cgv-32-inch-professional-monitor.png",
+      "webpBytes": 28480,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-proart-pa34vcnv-34-inch-curved-monitor.webp",
+      "matchingPng": "asus/asus-proart-pa34vcnv-34-inch-curved-monitor.png",
+      "webpBytes": 35364,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg27acdms-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg27acdms-monitor.png",
+      "webpBytes": 31484,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg27aqdmg-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg27aqdmg-27-inch-gaming-monitor.png",
+      "webpBytes": 55418,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg27aqwmg-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg27aqwmg-monitor.png",
+      "webpBytes": 26850,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg27ucdmg-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg27ucdmg-gaming-monitor.png",
+      "webpBytes": 29324,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg32ucds-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg32ucds-gaming-monitor.png",
+      "webpBytes": 32500,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg34wcdg-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg34wcdg-gaming-monitor.png",
+      "webpBytes": 35896,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-oled-xg34wcdms-34-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-oled-xg34wcdms-34-inch-gaming-monitor.png",
+      "webpBytes": 37028,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-pulsar-xg27aqngv-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-pulsar-xg27aqngv-gaming-monitor.png",
+      "webpBytes": 22080,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg256q-25-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg256q-25-inch-gaming-monitor.png",
+      "webpBytes": 17410,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg279cns-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg279cns-gaming-monitor.png",
+      "webpBytes": 17650,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acg-180hz-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acg-180hz-gaming-monitor.png",
+      "webpBytes": 26244,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acmeg-g-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acmeg-g-gaming-monitor.png",
+      "webpBytes": 33224,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acmeg-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acmeg-monitor.png",
+      "webpBytes": 24142,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acmes-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acmes-monitor.png",
+      "webpBytes": 47234,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acmes-w-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acmes-w-monitor.png",
+      "webpBytes": 25782,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acms-27-inch-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acms-27-inch-monitor.png",
+      "webpBytes": 67412,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acs-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acs-27-inch-gaming-monitor.png",
+      "webpBytes": 24176,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27acs-w-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27acs-w-gaming-monitor.png",
+      "webpBytes": 15032,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27ucg-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27ucg-27-inch-gaming-monitor.png",
+      "webpBytes": 26646,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27ucg-w-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27ucg-w-27-inch-gaming-monitor.png",
+      "webpBytes": 25024,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27ucs-4k-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27ucs-4k-gaming-monitor.png",
+      "webpBytes": 39744,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg27wcs-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg27wcs-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 30870,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg309cm-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg309cm-gaming-monitor.png",
+      "webpBytes": 28236,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-strix-xg32ucg-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-strix-xg32ucg-gaming-monitor.png",
+      "webpBytes": 25232,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg27aqdp-480hz-2k-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg27aqdp-480hz-2k-gaming-monitor.png",
+      "webpBytes": 46908,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg27aqwp-g-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg27aqwp-g-gaming-monitor.png",
+      "webpBytes": 16602,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg27aqwp-w-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg27aqwp-w-monitor.png",
+      "webpBytes": 24860,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg27ucdm-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg27ucdm-gaming-monitor.png",
+      "webpBytes": 37970,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg32ucdm-gen3-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg32ucdm-gen3-gaming-monitor.png",
+      "webpBytes": 53118,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg34wcdm-curved-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg34wcdm-curved-gaming-monitor.png",
+      "webpBytes": 37778,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg39wcdm-39-inch-curved-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg39wcdm-39-inch-curved-monitor.png",
+      "webpBytes": 21170,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-oled-pg48uq-4k-woled-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-oled-pg48uq-4k-woled-gaming-monitor.png",
+      "webpBytes": 24466,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-pg259qnr-fhd-esports-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-pg259qnr-fhd-esports-gaming-monitor.png",
+      "webpBytes": 33026,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-pg27aqdm-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-pg27aqdm-gaming-monitor.png",
+      "webpBytes": 27354,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-pg32ucdm-32-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-pg32ucdm-32-inch-gaming-monitor.png",
+      "webpBytes": 45030,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-pg42uq-4k-oled-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-pg42uq-4k-oled-monitor.png",
+      "webpBytes": 59068,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-rog-swift-pg49wcd-49-inch-curved-gaming-monitor.webp",
+      "matchingPng": "asus/asus-rog-swift-pg49wcd-49-inch-curved-gaming-monitor.png",
+      "webpBytes": 15036,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg246h1a-24-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg246h1a-24-inch-gaming-monitor.png",
+      "webpBytes": 14114,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249q3a-fhd-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249q3a-fhd-monitor.png",
+      "webpBytes": 13374,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249q3r-fhd-ips-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249q3r-fhd-ips-monitor.png",
+      "webpBytes": 14892,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249q5r-24-inch-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249q5r-24-inch-monitor.png",
+      "webpBytes": 11570,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249qe5a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249qe5a-gaming-monitor.png",
+      "webpBytes": 9784,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249ql3a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249ql3a-gaming-monitor.png",
+      "webpBytes": 17232,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249qm5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249qm5a-monitor.png",
+      "webpBytes": 19944,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249qm5f-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249qm5f-monitor.png",
+      "webpBytes": 19944,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg249qml5a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg249qml5a-gaming-monitor.png",
+      "webpBytes": 26688,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg259q5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg259q5a-monitor.png",
+      "webpBytes": 14530,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg259ql5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg259ql5a-monitor.png",
+      "webpBytes": 16328,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg259qmrl5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg259qmrl5a-monitor.png",
+      "webpBytes": 19944,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg279q5r-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg279q5r-gaming-monitor.png",
+      "webpBytes": 10680,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg279qe5a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg279qe5a-gaming-monitor.png",
+      "webpBytes": 59158,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg279qm5a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg279qm5a-gaming-monitor.png",
+      "webpBytes": 11994,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aq5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aq5a-monitor.png",
+      "webpBytes": 15700,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aqe5a-27-inch-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aqe5a-27-inch-monitor.png",
+      "webpBytes": 28192,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aql3a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aql3a-gaming-monitor.png",
+      "webpBytes": 13558,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aql5a-27-inch-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aql5a-27-inch-monitor.png",
+      "webpBytes": 24514,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aql5f-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aql5f-monitor.png",
+      "webpBytes": 10684,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aqm5a-series-5-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aqm5a-series-5-monitor.png",
+      "webpBytes": 9784,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27aqme5f-27-inch-2k-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27aqme5f-27-inch-2k-monitor.png",
+      "webpBytes": 18412,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg27uq1a-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg27uq1a-gaming-monitor.png",
+      "webpBytes": 14810,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg32aqa1a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg32aqa1a-monitor.png",
+      "webpBytes": 15158,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg32vqm5b-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg32vqm5b-monitor.png",
+      "webpBytes": 22642,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg34wq5a-curved-gaming-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg34wq5a-curved-gaming-monitor.png",
+      "webpBytes": 34174,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-tuf-gaming-vg34wqml5a-monitor.webp",
+      "matchingPng": "asus/asus-tuf-gaming-vg34wqml5a-monitor.png",
+      "webpBytes": 17092,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va249hg-monitor.webp",
+      "matchingPng": "asus/asus-va249hg-monitor.png",
+      "webpBytes": 12366,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va249qgs-120hz-business-monitor.webp",
+      "matchingPng": "asus/asus-va249qgs-120hz-business-monitor.png",
+      "webpBytes": 19790,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va249qgs-w-24-inch-monitor.webp",
+      "matchingPng": "asus/asus-va249qgs-w-24-inch-monitor.png",
+      "webpBytes": 20366,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va249qgse-24-inch-fhd-monitor.webp",
+      "matchingPng": "asus/asus-va249qgse-24-inch-fhd-monitor.png",
+      "webpBytes": 15200,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va279hg-monitor.webp",
+      "matchingPng": "asus/asus-va279hg-monitor.png",
+      "webpBytes": 14796,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va279qgs-27-inch-business-monitor.webp",
+      "matchingPng": "asus/asus-va279qgs-27-inch-business-monitor.png",
+      "webpBytes": 19790,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va27aq-monitor.webp",
+      "matchingPng": "asus/asus-va27aq-monitor.png",
+      "webpBytes": 10822,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va27aqse-monitor.webp",
+      "matchingPng": "asus/asus-va27aqse-monitor.png",
+      "webpBytes": 14842,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-va27uqsb-27-inch-4k-monitor.webp",
+      "matchingPng": "asus/asus-va27uqsb-27-inch-4k-monitor.png",
+      "webpBytes": 18984,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vp227hf-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vp227hf-gaming-monitor.png",
+      "webpBytes": 48160,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vp229hf-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vp229hf-gaming-monitor.png",
+      "webpBytes": 9958,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vp327q-32-inch-4k-monitor.webp",
+      "matchingPng": "asus/asus-vp327q-32-inch-4k-monitor.png",
+      "webpBytes": 39106,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vu249hfi-w-monitor.webp",
+      "matchingPng": "asus/asus-vu249hfi-w-monitor.png",
+      "webpBytes": 36138,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vu279hfi-w-monitor.webp",
+      "matchingPng": "asus/asus-vu279hfi-w-monitor.png",
+      "webpBytes": 36138,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vy249hf-r-eye-care-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vy249hf-r-eye-care-gaming-monitor.png",
+      "webpBytes": 14442,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vy249hgr-23-8-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vy249hgr-23-8-inch-gaming-monitor.png",
+      "webpBytes": 30980,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vy279he-w-monitor.webp",
+      "matchingPng": "asus/asus-vy279he-w-monitor.png",
+      "webpBytes": 30888,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vy279hg2-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vy279hg2-27-inch-gaming-monitor.png",
+      "webpBytes": 35518,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vy279hgr-eye-care-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vy279hgr-eye-care-gaming-monitor.png",
+      "webpBytes": 35518,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vz249hfa-24-inch-monitor.webp",
+      "matchingPng": "asus/asus-vz249hfa-24-inch-monitor.png",
+      "webpBytes": 28090,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vz249hg-monitor.webp",
+      "matchingPng": "asus/asus-vz249hg-monitor.png",
+      "webpBytes": 10134,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vz24ehf-eye-care-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vz24ehf-eye-care-gaming-monitor.png",
+      "webpBytes": 17116,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vz279hg-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vz279hg-gaming-monitor.png",
+      "webpBytes": 48160,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-vz27ehf-27-inch-gaming-monitor.webp",
+      "matchingPng": "asus/asus-vz27ehf-27-inch-gaming-monitor.png",
+      "webpBytes": 17116,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-zenscreen-mb166cr-portable-monitor.webp",
+      "matchingPng": "asus/asus-zenscreen-mb166cr-portable-monitor.png",
+      "webpBytes": 15766,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-zenscreen-mb169ck-16-inch-monitor.webp",
+      "matchingPng": "asus/asus-zenscreen-mb169ck-16-inch-monitor.png",
+      "webpBytes": 14036,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-zenscreen-mb16ncg-portable-monitor.webp",
+      "matchingPng": "asus/asus-zenscreen-mb16ncg-portable-monitor.png",
+      "webpBytes": 20266,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-zenscreen-ms27uc-monitor.webp",
+      "matchingPng": "asus/asus-zenscreen-ms27uc-monitor.png",
+      "webpBytes": 22934,
+      "status": "deleted"
+    },
+    {
+      "webp": "asus/asus-zenscreen-ms32uc-32-inch-monitor.webp",
+      "matchingPng": "asus/asus-zenscreen-ms32uc-32-inch-monitor.png",
+      "webpBytes": 67412,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-designvue-pd2706ua-monitor.webp",
+      "matchingPng": "benq/benq-designvue-pd2706ua-monitor.png",
+      "webpBytes": 29822,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ew270q-gaming-monitor.webp",
+      "matchingPng": "benq/benq-ew270q-gaming-monitor.png",
+      "webpBytes": 17206,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ew2790u-27-inch-monitor.webp",
+      "matchingPng": "benq/benq-ew2790u-27-inch-monitor.png",
+      "webpBytes": 22004,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ew2880u-28-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-ew2880u-28-inch-gaming-monitor.png",
+      "webpBytes": 32916,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ew3290u-32-inch-monitor.webp",
+      "matchingPng": "benq/benq-ew3290u-32-inch-monitor.png",
+      "webpBytes": 22004,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2291-monitor.webp",
+      "matchingPng": "benq/benq-gw2291-monitor.png",
+      "webpBytes": 12398,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2480l-23-8-inch-60hz-full-hd-monitor.webp",
+      "matchingPng": "benq/benq-gw2480l-23-8-inch-60hz-full-hd-monitor.png",
+      "webpBytes": 19732,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2486tc-monitor.webp",
+      "matchingPng": "benq/benq-gw2486tc-monitor.png",
+      "webpBytes": 12082,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2490-fhd-monitor.webp",
+      "matchingPng": "benq/benq-gw2490-fhd-monitor.png",
+      "webpBytes": 22056,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2490t-fhd-monitor.webp",
+      "matchingPng": "benq/benq-gw2490t-fhd-monitor.png",
+      "webpBytes": 19014,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2490tc-gaming-monitor.webp",
+      "matchingPng": "benq/benq-gw2490tc-gaming-monitor.png",
+      "webpBytes": 14006,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2491-monitor.webp",
+      "matchingPng": "benq/benq-gw2491-monitor.png",
+      "webpBytes": 10238,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2786tc-monitor.webp",
+      "matchingPng": "benq/benq-gw2786tc-monitor.png",
+      "webpBytes": 24500,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790-fhd-monitor.webp",
+      "matchingPng": "benq/benq-gw2790-fhd-monitor.png",
+      "webpBytes": 53932,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790c-monitor.webp",
+      "matchingPng": "benq/benq-gw2790c-monitor.png",
+      "webpBytes": 16656,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790q-27-inch-qhd-monitor.webp",
+      "matchingPng": "benq/benq-gw2790q-27-inch-qhd-monitor.png",
+      "webpBytes": 13562,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790qt-27-inch-monitor.webp",
+      "matchingPng": "benq/benq-gw2790qt-27-inch-monitor.png",
+      "webpBytes": 36664,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790t-fhd-monitor.webp",
+      "matchingPng": "benq/benq-gw2790t-fhd-monitor.png",
+      "webpBytes": 12328,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2790tc-gaming-monitor.webp",
+      "matchingPng": "benq/benq-gw2790tc-gaming-monitor.png",
+      "webpBytes": 14006,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw2791-27-inch-monitor.webp",
+      "matchingPng": "benq/benq-gw2791-27-inch-monitor.png",
+      "webpBytes": 10238,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-gw3290qt-eye-care-monitor.webp",
+      "matchingPng": "benq/benq-gw3290qt-eye-care-monitor.png",
+      "webpBytes": 36664,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ma270u-4k-monitor.webp",
+      "matchingPng": "benq/benq-ma270u-4k-monitor.png",
+      "webpBytes": 14558,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ma270up-4k-monitor.webp",
+      "matchingPng": "benq/benq-ma270up-4k-monitor.png",
+      "webpBytes": 12708,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ma320u-4k-monitor.webp",
+      "matchingPng": "benq/benq-ma320u-4k-monitor.png",
+      "webpBytes": 14558,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-ma320up-4k-monitor.webp",
+      "matchingPng": "benq/benq-ma320up-4k-monitor.png",
+      "webpBytes": 12708,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex240-23-8-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex240-23-8-inch-gaming-monitor.png",
+      "webpBytes": 21322,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex240n-23-8-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex240n-23-8-gaming-monitor.png",
+      "webpBytes": 21322,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex251-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex251-gaming-monitor.png",
+      "webpBytes": 15938,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex270m-27-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex270m-27-inch-gaming-monitor.png",
+      "webpBytes": 31078,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex270qm-27-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex270qm-27-inch-gaming-monitor.png",
+      "webpBytes": 31078,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex271-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex271-gaming-monitor.png",
+      "webpBytes": 13564,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex2710q-27-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex2710q-27-inch-gaming-monitor.png",
+      "webpBytes": 31078,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex2710q-27-inch-qhd-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex2710q-27-inch-qhd-monitor.png",
+      "webpBytes": 19732,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex321ux-32-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex321ux-32-inch-gaming-monitor.png",
+      "webpBytes": 23822,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex3410r-34-inch-curved-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex3410r-34-inch-curved-gaming-monitor.png",
+      "webpBytes": 26310,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-mobiuz-ex480uz-48-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-mobiuz-ex480uz-48-inch-gaming-monitor.png",
+      "webpBytes": 28548,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2705q-27-inch-2k-qhd-monitor.webp",
+      "matchingPng": "benq/benq-pd2705q-27-inch-2k-qhd-monitor.png",
+      "webpBytes": 23902,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2705u-27-inch-4k-uhd-monitor.webp",
+      "matchingPng": "benq/benq-pd2705u-27-inch-4k-uhd-monitor.png",
+      "webpBytes": 36140,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2705ua-27-inch-designer-monitor.webp",
+      "matchingPng": "benq/benq-pd2705ua-27-inch-designer-monitor.png",
+      "webpBytes": 41570,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2706qn-monitor.webp",
+      "matchingPng": "benq/benq-pd2706qn-monitor.png",
+      "webpBytes": 33016,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2706u-monitor.webp",
+      "matchingPng": "benq/benq-pd2706u-monitor.png",
+      "webpBytes": 36740,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd2725u-27-inch-designer-monitor.webp",
+      "matchingPng": "benq/benq-pd2725u-27-inch-designer-monitor.png",
+      "webpBytes": 34092,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd3205u-32-inch-4k-uhd-monitor.webp",
+      "matchingPng": "benq/benq-pd3205u-32-inch-4k-uhd-monitor.png",
+      "webpBytes": 39606,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-pd3205ua-32-inch-monitor.webp",
+      "matchingPng": "benq/benq-pd3205ua-32-inch-monitor.png",
+      "webpBytes": 41724,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-photovue-sw242q-monitor.webp",
+      "matchingPng": "benq/benq-photovue-sw242q-monitor.png",
+      "webpBytes": 26594,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-photovue-sw272q-27-inch-monitor.webp",
+      "matchingPng": "benq/benq-photovue-sw272q-27-inch-monitor.png",
+      "webpBytes": 18086,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-photovue-sw272qn-27-inch-2k-monitor.webp",
+      "matchingPng": "benq/benq-photovue-sw272qn-27-inch-2k-monitor.png",
+      "webpBytes": 35988,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-rd240q-wqxga-type-c-programming-monitor.webp",
+      "matchingPng": "benq/benq-rd240q-wqxga-type-c-programming-monitor.png",
+      "webpBytes": 22798,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-rd280u-4k-plus-type-c-programming-monitor.webp",
+      "matchingPng": "benq/benq-rd280u-4k-plus-type-c-programming-monitor.png",
+      "webpBytes": 22798,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-rd280ua-4k-plus-type-c-programming-monitor.webp",
+      "matchingPng": "benq/benq-rd280ua-4k-plus-type-c-programming-monitor.png",
+      "webpBytes": 22798,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2546k-25-inch-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2546k-25-inch-gaming-monitor.png",
+      "webpBytes": 39546,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2546x-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2546x-gaming-monitor.png",
+      "webpBytes": 8882,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2566k-360hz-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2566k-360hz-gaming-monitor.png",
+      "webpBytes": 39546,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2566k-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2566k-gaming-monitor.png",
+      "webpBytes": 15074,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2566x-plus-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2566x-plus-gaming-monitor.png",
+      "webpBytes": 11378,
+      "status": "deleted"
+    },
+    {
+      "webp": "benq/benq-zowie-xl2586x-540hz-gaming-monitor.webp",
+      "matchingPng": "benq/benq-zowie-xl2586x-540hz-gaming-monitor.png",
+      "webpBytes": 18002,
+      "status": "deleted"
+    },
+    {
+      "webp": "corsair/corsair-xeneon-315qhd165-32-inch-gaming-monitor.webp",
+      "matchingPng": "corsair/corsair-xeneon-315qhd165-32-inch-gaming-monitor.png",
+      "webpBytes": 45106,
+      "status": "deleted"
+    },
+    {
+      "webp": "corsair/corsair-xeneon-edge-14-inch-touchscreen-white.webp",
+      "matchingPng": "corsair/corsair-xeneon-edge-14-inch-touchscreen-white.png",
+      "webpBytes": 9242,
+      "status": "deleted"
+    },
+    {
+      "webp": "corsair/corsair-xeneon-edge-touchscreen.webp",
+      "matchingPng": "corsair/corsair-xeneon-edge-touchscreen.png",
+      "webpBytes": 42714,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm19-a202y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm19-a202y-monitor.png",
+      "webpBytes": 12956,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm19-l200n-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm19-l200n-monitor.png",
+      "webpBytes": 15726,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a201y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a201y-monitor.png",
+      "webpBytes": 10218,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a201yf-100hz-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a201yf-100hz-monitor.png",
+      "webpBytes": 29128,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a201yfs-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a201yfs-fhd-monitor.png",
+      "webpBytes": 29128,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a201yfw-21-ips-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a201yfw-21-ips-fhd-monitor.png",
+      "webpBytes": 22584,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a201yw-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a201yw-monitor.png",
+      "webpBytes": 22984,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a211y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a211y-monitor.png",
+      "webpBytes": 20768,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-a220-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-a220-fhd-monitor.png",
+      "webpBytes": 20170,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-b201sw-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-b201sw-monitor.png",
+      "webpBytes": 16296,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-c201p-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-c201p-monitor.png",
+      "webpBytes": 41800,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-c201pl-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-c201pl-monitor.png",
+      "webpBytes": 14626,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm22-l200v-21-45-inch-fhd-eled-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm22-l200v-21-45-inch-fhd-eled-monitor.png",
+      "webpBytes": 12682,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-a200y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-a200y-monitor.png",
+      "webpBytes": 13908,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-a221y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-a221y-monitor.png",
+      "webpBytes": 20322,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-a221yw-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-a221yw-monitor.png",
+      "webpBytes": 15012,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-b201e-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-b201e-monitor.png",
+      "webpBytes": 17682,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-b201s-b3-24-inch-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-b201s-b3-24-inch-monitor.png",
+      "webpBytes": 25374,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-b221-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-b221-monitor.png",
+      "webpBytes": 21612,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-c221p-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-c221p-monitor.png",
+      "webpBytes": 25316,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm24-p301a-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm24-p301a-monitor.png",
+      "webpBytes": 31128,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm25-b211b-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm25-b211b-fhd-monitor.png",
+      "webpBytes": 11380,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm25-e231-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm25-e231-gaming-monitor.png",
+      "webpBytes": 23934,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm25-e231bn-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm25-e231bn-gaming-monitor.png",
+      "webpBytes": 23246,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-a221y-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-a221y-monitor.png",
+      "webpBytes": 20322,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-a221yw-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-a221yw-gaming-monitor.png",
+      "webpBytes": 18314,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-b211b-27-inch-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-b211b-27-inch-monitor.png",
+      "webpBytes": 13964,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-b221-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-b221-monitor.png",
+      "webpBytes": 21612,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-b221s-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-b221s-monitor.png",
+      "webpBytes": 26118,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-b221w-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-b221w-gaming-monitor.png",
+      "webpBytes": 14106,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-b301-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-b301-monitor.png",
+      "webpBytes": 21924,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-c221p-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-c221p-monitor.png",
+      "webpBytes": 25316,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-c301b-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-c301b-monitor.png",
+      "webpBytes": 13924,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e240a-27-inch-300hz-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e240a-27-inch-300hz-gaming-monitor.png",
+      "webpBytes": 33346,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e240a-27-inch-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e240a-27-inch-gaming-monitor.png",
+      "webpBytes": 38414,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e240c-curved-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e240c-curved-gaming-monitor.png",
+      "webpBytes": 16122,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e331a-27-inch-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e331a-27-inch-gaming-monitor.png",
+      "webpBytes": 27590,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e331ay-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e331ay-monitor.png",
+      "webpBytes": 11360,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e341a-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e341a-gaming-monitor.png",
+      "webpBytes": 19996,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e341ay-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e341ay-gaming-monitor.png",
+      "webpBytes": 19996,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-e431a-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-e431a-monitor.png",
+      "webpBytes": 31968,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-p301a-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-p301a-monitor.png",
+      "webpBytes": 31128,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm27-u401a-27-inch-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm27-u401a-27-inch-monitor.png",
+      "webpBytes": 12214,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm30-e330ca-30-inch-curved-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm30-e330ca-30-inch-curved-gaming-monitor.png",
+      "webpBytes": 24658,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm30-e330cw-curved-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm30-e330cw-curved-monitor.png",
+      "webpBytes": 17540,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm32-e330ca-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm32-e330ca-monitor.png",
+      "webpBytes": 31144,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm32-g043a-4k-qd-oled-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm32-g043a-4k-qd-oled-gaming-monitor.png",
+      "webpBytes": 26436,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm32-p301a-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm32-p301a-monitor.png",
+      "webpBytes": 21720,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm34-e330ca-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm34-e330ca-monitor.png",
+      "webpBytes": 28208,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm43-f400n-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm43-f400n-monitor.png",
+      "webpBytes": 18740,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm49-ew410ca-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm49-ew410ca-gaming-monitor.png",
+      "webpBytes": 20928,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm55-f400-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm55-f400-monitor.png",
+      "webpBytes": 22122,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-lm55-f400n-55-inch-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-lm55-f400n-55-inch-monitor.png",
+      "webpBytes": 15524,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-pm16-f201pd-portable-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-pm16-f201pd-portable-monitor.png",
+      "webpBytes": 23710,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-dhi-pm16-f201sdt-touch-portable-monitor.webp",
+      "matchingPng": "dahua/dahua-dhi-pm16-f201sdt-touch-portable-monitor.png",
+      "webpBytes": 23710,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm22-b201s-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-lm22-b201s-fhd-monitor.png",
+      "webpBytes": 24944,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm24-b201s-monitor.webp",
+      "matchingPng": "dahua/dahua-lm24-b201s-monitor.png",
+      "webpBytes": 22772,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm25-b221b-ips-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-lm25-b221b-ips-fhd-monitor.png",
+      "webpBytes": 11380,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm25-e241a-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-lm25-e241a-gaming-monitor.png",
+      "webpBytes": 28616,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm27-b221b-ips-fhd-monitor.webp",
+      "matchingPng": "dahua/dahua-lm27-b221b-ips-fhd-monitor.png",
+      "webpBytes": 11380,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm27-e230c-curved-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-lm27-e230c-curved-gaming-monitor.png",
+      "webpBytes": 27752,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm27-go34a-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-lm27-go34a-gaming-monitor.png",
+      "webpBytes": 31644,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm27-p501-27-5k-eled-ips-monitor.webp",
+      "matchingPng": "dahua/dahua-lm27-p501-27-5k-eled-ips-monitor.png",
+      "webpBytes": 14432,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm32-c301b-monitor.webp",
+      "matchingPng": "dahua/dahua-lm32-c301b-monitor.png",
+      "webpBytes": 15192,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm32-f200-monitor.webp",
+      "matchingPng": "dahua/dahua-lm32-f200-monitor.png",
+      "webpBytes": 16946,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm32-f200n-monitor.webp",
+      "matchingPng": "dahua/dahua-lm32-f200n-monitor.png",
+      "webpBytes": 18236,
+      "status": "deleted"
+    },
+    {
+      "webp": "dahua/dahua-lm34-e330c-gaming-monitor.webp",
+      "matchingPng": "dahua/dahua-lm34-e330c-gaming-monitor.png",
+      "webpBytes": 20138,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-20-d2020h-monitor.webp",
+      "matchingPng": "dell/dell-20-d2020h-monitor.png",
+      "webpBytes": 30422,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-20-e2020h-monitor.webp",
+      "matchingPng": "dell/dell-20-e2020h-monitor.png",
+      "webpBytes": 29946,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-e2425h-monitor.webp",
+      "matchingPng": "dell/dell-e2425h-monitor.png",
+      "webpBytes": 21688,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-e2425hm-monitor.webp",
+      "matchingPng": "dell/dell-e2425hm-monitor.png",
+      "webpBytes": 28752,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-p2225h-monitor.webp",
+      "matchingPng": "dell/dell-p2225h-monitor.png",
+      "webpBytes": 11024,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-p2226h-monitor.webp",
+      "matchingPng": "dell/dell-p2226h-monitor.png",
+      "webpBytes": 22116,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-p2426h-24-inch-type-c-monitor.webp",
+      "matchingPng": "dell/dell-p2426h-24-inch-type-c-monitor.png",
+      "webpBytes": 29862,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-p2726h-27-inch-type-c-monitor.webp",
+      "matchingPng": "dell/dell-p2726h-27-inch-type-c-monitor.png",
+      "webpBytes": 30540,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-pro-24-plus-p2425h-monitor.webp",
+      "matchingPng": "dell/dell-pro-24-plus-p2425h-monitor.png",
+      "webpBytes": 18280,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-pro-27-plus-p2725h-monitor.webp",
+      "matchingPng": "dell/dell-pro-27-plus-p2725h-monitor.png",
+      "webpBytes": 13096,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-s2425h-100hz-monitor.webp",
+      "matchingPng": "dell/dell-s2425h-100hz-monitor.png",
+      "webpBytes": 11038,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-s2722dgm-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "dell/dell-s2722dgm-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 28588,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-s3222dgm-monitor.webp",
+      "matchingPng": "dell/dell-s3222dgm-monitor.png",
+      "webpBytes": 18292,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2225h-monitor.webp",
+      "matchingPng": "dell/dell-se2225h-monitor.png",
+      "webpBytes": 12180,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2225hm-22-inch-monitor.webp",
+      "matchingPng": "dell/dell-se2225hm-22-inch-monitor.png",
+      "webpBytes": 15468,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2425hm-monitor.webp",
+      "matchingPng": "dell/dell-se2425hm-monitor.png",
+      "webpBytes": 14574,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2426h-monitor.webp",
+      "matchingPng": "dell/dell-se2426h-monitor.png",
+      "webpBytes": 20978,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2725hm-27-inch-monitor.webp",
+      "matchingPng": "dell/dell-se2725hm-27-inch-monitor.png",
+      "webpBytes": 14568,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-se2726h-monitor.webp",
+      "matchingPng": "dell/dell-se2726h-monitor.png",
+      "webpBytes": 21124,
+      "status": "deleted"
+    },
+    {
+      "webp": "dell/dell-ultrasharp-u2723qe-monitor.webp",
+      "matchingPng": "dell/dell-ultrasharp-u2723qe-monitor.png",
+      "webpBytes": 36848,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2200-22-inch-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2200-22-inch-monitor.png",
+      "webpBytes": 31688,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2200-f-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2200-f-monitor.png",
+      "webpBytes": 23686,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2200a-22-inch-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2200a-22-inch-monitor.png",
+      "webpBytes": 31688,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2200a-w-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2200a-w-monitor.png",
+      "webpBytes": 21760,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2400a-f-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2400a-f-monitor.png",
+      "webpBytes": 29314,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2400a-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2400a-monitor.png",
+      "webpBytes": 29314,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt27-2k-c-curved-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt27-2k-c-curved-monitor.png",
+      "webpBytes": 17054,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt2700-c-gaming-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt2700-c-gaming-monitor.png",
+      "webpBytes": 26720,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt3200-4k-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt3200-4k-monitor.png",
+      "webpBytes": 14424,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt3200-c-curved-gaming-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt3200-c-curved-gaming-monitor.png",
+      "webpBytes": 14948,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-gt3400-d-curved-gaming-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-gt3400-d-curved-gaming-monitor.png",
+      "webpBytes": 23818,
+      "status": "deleted"
+    },
+    {
+      "webp": "eurovision/eurovision-ev-sv3200-4s1-monitor.webp",
+      "matchingPng": "eurovision/eurovision-ev-sv3200-4s1-monitor.png",
+      "webpBytes": 28464,
+      "status": "deleted"
+    },
+    {
+      "webp": "feuvision/feuvision-fsid24bfiy-monitor.webp",
+      "matchingPng": "feuvision/feuvision-fsid24bfiy-monitor.png",
+      "webpBytes": 13300,
+      "status": "deleted"
+    },
+    {
+      "webp": "fopo/fopo-14-inch-quad-screen-portable-monitor.webp",
+      "matchingPng": "fopo/fopo-14-inch-quad-screen-portable-monitor.png",
+      "webpBytes": 32418,
+      "status": "deleted"
+    },
+    {
+      "webp": "fopo/fopo-14-inch-tri-screen-portable-monitor.webp",
+      "matchingPng": "fopo/fopo-14-inch-tri-screen-portable-monitor.png",
+      "webpBytes": 11060,
+      "status": "deleted"
+    },
+    {
+      "webp": "fopo/fopo-16-inch-quad-screen-portable-monitor.webp",
+      "matchingPng": "fopo/fopo-16-inch-quad-screen-portable-monitor.png",
+      "webpBytes": 32512,
+      "status": "deleted"
+    },
+    {
+      "webp": "fopo/fopo-16-inch-tri-screen-portable-monitor.webp",
+      "matchingPng": "fopo/fopo-16-inch-tri-screen-portable-monitor.png",
+      "webpBytes": 37686,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-bafang-21-5-inch-100hz-monitor.webp",
+      "matchingPng": "geesuu/geesuu-bafang-21-5-inch-100hz-monitor.png",
+      "webpBytes": 33084,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-bafang-23-8-inch-144hz-monitor.webp",
+      "matchingPng": "geesuu/geesuu-bafang-23-8-inch-144hz-monitor.png",
+      "webpBytes": 27688,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-bafang-27-inch-144hz-monitor.webp",
+      "matchingPng": "geesuu/geesuu-bafang-27-inch-144hz-monitor.png",
+      "webpBytes": 27634,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-blazewheel-m238gf-monitor.webp",
+      "matchingPng": "geesuu/geesuu-blazewheel-m238gf-monitor.png",
+      "webpBytes": 31944,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-blazewheel-mg270l2q-monitor.webp",
+      "matchingPng": "geesuu/geesuu-blazewheel-mg270l2q-monitor.png",
+      "webpBytes": 55832,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-cloudwing-g20fm1-monitor.webp",
+      "matchingPng": "geesuu/geesuu-cloudwing-g20fm1-monitor.png",
+      "webpBytes": 64638,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-cloudwing-m238l1f-144hz-monitor.webp",
+      "matchingPng": "geesuu/geesuu-cloudwing-m238l1f-144hz-monitor.png",
+      "webpBytes": 31944,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-cloudwing-m238l1f-ips-monitor.webp",
+      "matchingPng": "geesuu/geesuu-cloudwing-m238l1f-ips-monitor.png",
+      "webpBytes": 31944,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-cloudwing-m238l1f-monitor.webp",
+      "matchingPng": "geesuu/geesuu-cloudwing-m238l1f-monitor.png",
+      "webpBytes": 31944,
+      "status": "deleted"
+    },
+    {
+      "webp": "geesuu/geesuu-liuhe-m156l1f-portable-monitor.webp",
+      "matchingPng": "geesuu/geesuu-liuhe-m156l1f-portable-monitor.png",
+      "webpBytes": 33314,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-aorus-co49dq-49-inch-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-aorus-co49dq-49-inch-curved-gaming-monitor.png",
+      "webpBytes": 14126,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-aorus-fo32u2p-4k-oled-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-aorus-fo32u2p-4k-oled-gaming-monitor.png",
+      "webpBytes": 51722,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g24f-2-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g24f-2-gaming-monitor.png",
+      "webpBytes": 40252,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g25f2-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g25f2-gaming-monitor.png",
+      "webpBytes": 19306,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g25f2a-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g25f2a-gaming-monitor.png",
+      "webpBytes": 13130,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g27fc-a-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g27fc-a-curved-gaming-monitor.png",
+      "webpBytes": 43882,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g34wqc-180hz-curved-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g34wqc-180hz-curved-monitor.png",
+      "webpBytes": 27538,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g34wqc2-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g34wqc2-monitor.png",
+      "webpBytes": 24896,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-g34wqcp-34-inch-curved-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-g34wqcp-34-inch-curved-monitor.png",
+      "webpBytes": 20128,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-go27q24g-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-go27q24g-gaming-monitor.png",
+      "webpBytes": 27670,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs25f14-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs25f14-monitor.png",
+      "webpBytes": 20234,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs25f2-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs25f2-gaming-monitor.png",
+      "webpBytes": 24444,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27f2-27-ips-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27f2-27-ips-monitor.png",
+      "webpBytes": 11914,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27fa-27-inch-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27fa-27-inch-gaming-monitor.png",
+      "webpBytes": 24410,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27fc-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27fc-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 51198,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27fc2-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27fc2-monitor.png",
+      "webpBytes": 12428,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27q-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27q-gaming-monitor.png",
+      "webpBytes": 39388,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27qa-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27qa-gaming-monitor.png",
+      "webpBytes": 23972,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs27qca-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs27qca-monitor.png",
+      "webpBytes": 26336,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-gs32q-31-5-inch-qhd-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-gs32q-31-5-inch-qhd-gaming-monitor.png",
+      "webpBytes": 30100,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m27q2-qd-ice-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m27q2-qd-ice-monitor.png",
+      "webpBytes": 35086,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m27qa-27-inch-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m27qa-27-inch-gaming-monitor.png",
+      "webpBytes": 28432,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m27qa-ice-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m27qa-ice-gaming-monitor.png",
+      "webpBytes": 19344,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m27up-4k-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m27up-4k-gaming-monitor.png",
+      "webpBytes": 38444,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m27up-ice-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m27up-ice-gaming-monitor.png",
+      "webpBytes": 38640,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m28u-4k-uhd-kvm-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m28u-4k-uhd-kvm-gaming-monitor.png",
+      "webpBytes": 34396,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m32qc-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m32qc-curved-gaming-monitor.png",
+      "webpBytes": 39678,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m32u-4k-uhd-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m32u-4k-uhd-gaming-monitor.png",
+      "webpBytes": 36180,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-m32uc-4k-uhd-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-m32uc-4k-uhd-curved-gaming-monitor.png",
+      "webpBytes": 40454,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-mo27q28g-oled-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-mo27q28g-oled-gaming-monitor.png",
+      "webpBytes": 28728,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigabyte/gigabyte-mo34wqc2-curved-gaming-monitor.webp",
+      "matchingPng": "gigabyte/gigabyte-mo34wqc2-curved-gaming-monitor.png",
+      "webpBytes": 25694,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-gs-21-5fhd500s8-gaming-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-gs-21-5fhd500s8-gaming-monitor.png",
+      "webpBytes": 16344,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-gs-215fhd500s9-monitor-white.webp",
+      "matchingPng": "gigasonic/gigasonic-gs-215fhd500s9-monitor-white.png",
+      "webpBytes": 48656,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-gs-215fhd500s9-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-gs-215fhd500s9-monitor.png",
+      "webpBytes": 55454,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rb-g185s-300c-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rb-g185s-300c-monitor.png",
+      "webpBytes": 18102,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rb-g19s-300c-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rb-g19s-300c-monitor.png",
+      "webpBytes": 14020,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rb-g19s-400c-19-inch-hd-led-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rb-g19s-400c-19-inch-hd-led-monitor.png",
+      "webpBytes": 26928,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rb-g20s-400c-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rb-g20s-400c-monitor.png",
+      "webpBytes": 26928,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rb-g215s-400c-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rb-g215s-400c-monitor.png",
+      "webpBytes": 11582,
+      "status": "deleted"
+    },
+    {
+      "webp": "gigasonic/gigasonic-rda-1707w-monitor.webp",
+      "matchingPng": "gigasonic/gigasonic-rda-1707w-monitor.png",
+      "webpBytes": 11782,
+      "status": "deleted"
+    },
+    {
+      "webp": "hikvision/hikvision-ds-d5022f2-6p2-monitor-white.webp",
+      "matchingPng": "hikvision/hikvision-ds-d5022f2-6p2-monitor-white.png",
+      "webpBytes": 19944,
+      "status": "deleted"
+    },
+    {
+      "webp": "hikvision/hikvision-ds-d5022f2-cbd-monitor.webp",
+      "matchingPng": "hikvision/hikvision-ds-d5022f2-cbd-monitor.png",
+      "webpBytes": 24118,
+      "status": "deleted"
+    },
+    {
+      "webp": "hikvision/hikvision-ds-d5024f2-bp2-monitor.webp",
+      "matchingPng": "hikvision/hikvision-ds-d5024f2-bp2-monitor.png",
+      "webpBytes": 21170,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e22-g5-21-5-inch-fhd-ips-monitor.webp",
+      "matchingPng": "hp/hp-e22-g5-21-5-inch-fhd-ips-monitor.png",
+      "webpBytes": 16142,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e24q-g5-qhd-monitor.webp",
+      "matchingPng": "hp/hp-e24q-g5-qhd-monitor.png",
+      "webpBytes": 10714,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e24t-g5-touch-monitor.webp",
+      "matchingPng": "hp/hp-e24t-g5-touch-monitor.png",
+      "webpBytes": 18426,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e27-g5-27-inch-fhd-ips-monitor.webp",
+      "matchingPng": "hp/hp-e27-g5-27-inch-fhd-ips-monitor.png",
+      "webpBytes": 17926,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e27k-g5-4k-type-c-monitor.webp",
+      "matchingPng": "hp/hp-e27k-g5-4k-type-c-monitor.png",
+      "webpBytes": 10012,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e27q-g5-27-inch-qhd-ips-monitor.webp",
+      "matchingPng": "hp/hp-e27q-g5-27-inch-qhd-ips-monitor.png",
+      "webpBytes": 8474,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-e32k-g5-32-inch-4k-type-c-monitor.webp",
+      "matchingPng": "hp/hp-e32k-g5-32-inch-4k-type-c-monitor.png",
+      "webpBytes": 27638,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-omen-24-gaming-monitor.webp",
+      "matchingPng": "hp/hp-omen-24-gaming-monitor.png",
+      "webpBytes": 9850,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-omen-27-27-inch-gaming-monitor.webp",
+      "matchingPng": "hp/hp-omen-27-27-inch-gaming-monitor.png",
+      "webpBytes": 19000,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-omen-32c-curved-gaming-monitor.webp",
+      "matchingPng": "hp/hp-omen-32c-curved-gaming-monitor.png",
+      "webpBytes": 31620,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-omen-34c-34-inch-curved-gaming-monitor.webp",
+      "matchingPng": "hp/hp-omen-34c-34-inch-curved-gaming-monitor.png",
+      "webpBytes": 36770,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-p24v-g5-23-8-inch-fhd-monitor.webp",
+      "matchingPng": "hp/hp-p24v-g5-23-8-inch-fhd-monitor.png",
+      "webpBytes": 56840,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-p34hc-g4-34-inch-curved-monitor.webp",
+      "matchingPng": "hp/hp-p34hc-g4-34-inch-curved-monitor.png",
+      "webpBytes": 30294,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-3-pro-322pe-monitor.webp",
+      "matchingPng": "hp/hp-series-3-pro-322pe-monitor.png",
+      "webpBytes": 19872,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-3-pro-322pf-monitor.webp",
+      "matchingPng": "hp/hp-series-3-pro-322pf-monitor.png",
+      "webpBytes": 14466,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-3-pro-324pe-24-inch-100hz-ips-fhd-monitor.webp",
+      "matchingPng": "hp/hp-series-3-pro-324pe-24-inch-100hz-ips-fhd-monitor.png",
+      "webpBytes": 12736,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-3-pro-324pf-monitor.webp",
+      "matchingPng": "hp/hp-series-3-pro-324pf-monitor.png",
+      "webpBytes": 13564,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-3-pro-327pe-27-100hz-ips-fhd-monitor.webp",
+      "matchingPng": "hp/hp-series-3-pro-327pe-27-100hz-ips-fhd-monitor.png",
+      "webpBytes": 14330,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-524da-24-inch-100hz-ips-fhd-monitor.webp",
+      "matchingPng": "hp/hp-series-5-524da-24-inch-100hz-ips-fhd-monitor.png",
+      "webpBytes": 32458,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-524sa-monitor.webp",
+      "matchingPng": "hp/hp-series-5-524sa-monitor.png",
+      "webpBytes": 35258,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-524sw-monitor-white.webp",
+      "matchingPng": "hp/hp-series-5-524sw-monitor-white.png",
+      "webpBytes": 13374,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-527da-27-100hz-ips-fhd-monitor.webp",
+      "matchingPng": "hp/hp-series-5-527da-27-100hz-ips-fhd-monitor.png",
+      "webpBytes": 28620,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-527sa-monitor.webp",
+      "matchingPng": "hp/hp-series-5-527sa-monitor.png",
+      "webpBytes": 15686,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-527sh-monitor.webp",
+      "matchingPng": "hp/hp-series-5-527sh-monitor.png",
+      "webpBytes": 13462,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-527sw-monitor.webp",
+      "matchingPng": "hp/hp-series-5-527sw-monitor.png",
+      "webpBytes": 21490,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-532sf-monitor.webp",
+      "matchingPng": "hp/hp-series-5-532sf-monitor.png",
+      "webpBytes": 19206,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-514pn-14-inch-75hz-portable-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-514pn-14-inch-75hz-portable-monitor.png",
+      "webpBytes": 40374,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-524pf-fhd-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-524pf-fhd-monitor.png",
+      "webpBytes": 11452,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-524pn-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-524pn-monitor.png",
+      "webpBytes": 12444,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-527pf-27-fhd-120hz-ips-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-527pf-27-fhd-120hz-ips-monitor.png",
+      "webpBytes": 4366,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-527pq-2k-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-527pq-2k-monitor.png",
+      "webpBytes": 12444,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-534pm-curved-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-534pm-curved-monitor.png",
+      "webpBytes": 11886,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-5-pro-549pm-49-inch-curved-monitor.webp",
+      "matchingPng": "hp/hp-series-5-pro-549pm-49-inch-curved-monitor.png",
+      "webpBytes": 25786,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-524sf-fhd-ips-monitor.webp",
+      "matchingPng": "hp/hp-series-524sf-fhd-ips-monitor.png",
+      "webpBytes": 25092,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-series-527sf-fhd-ips-monitor.webp",
+      "matchingPng": "hp/hp-series-527sf-fhd-ips-monitor.png",
+      "webpBytes": 25092,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-v22v-g5-21-5-inch-fhd-monitor.webp",
+      "matchingPng": "hp/hp-v22v-g5-21-5-inch-fhd-monitor.png",
+      "webpBytes": 37988,
+      "status": "deleted"
+    },
+    {
+      "webp": "hp/hp-vision-pro-s24e-monitor.webp",
+      "matchingPng": "hp/hp-vision-pro-s24e-monitor.png",
+      "webpBytes": 15160,
+      "status": "deleted"
+    },
+    {
+      "webp": "huawei/huawei-mateview-ssn-24bz-se-monitor.webp",
+      "matchingPng": "huawei/huawei-mateview-ssn-24bz-se-monitor.png",
+      "webpBytes": 23672,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-27e6qca-monitor.webp",
+      "matchingPng": "koorui/koorui-27e6qca-monitor.png",
+      "webpBytes": 47924,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-34e6uc-34-inch-180hz-curved-monitor.webp",
+      "matchingPng": "koorui/koorui-34e6uc-34-inch-180hz-curved-monitor.png",
+      "webpBytes": 41264,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-34e6uc-curved-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-34e6uc-curved-gaming-monitor.png",
+      "webpBytes": 41148,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-e2411k-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-e2411k-gaming-monitor.png",
+      "webpBytes": 27998,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-e2721h-monitor.webp",
+      "matchingPng": "koorui/koorui-e2721h-monitor.png",
+      "webpBytes": 13038,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-e2721k-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-e2721k-gaming-monitor.png",
+      "webpBytes": 35240,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2421v-monitor.webp",
+      "matchingPng": "koorui/koorui-g2421v-monitor.png",
+      "webpBytes": 46904,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2511e-monitor.webp",
+      "matchingPng": "koorui/koorui-g2511e-monitor.png",
+      "webpBytes": 40910,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2511p-monitor.webp",
+      "matchingPng": "koorui/koorui-g2511p-monitor.png",
+      "webpBytes": 34298,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2721e-2k-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-g2721e-2k-gaming-monitor.png",
+      "webpBytes": 34670,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2721p-monitor.webp",
+      "matchingPng": "koorui/koorui-g2721p-monitor.png",
+      "webpBytes": 28408,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g2722p-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-g2722p-gaming-monitor.png",
+      "webpBytes": 45134,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-g3221sc-monitor.webp",
+      "matchingPng": "koorui/koorui-g3221sc-monitor.png",
+      "webpBytes": 46808,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-n07-27-inch-4k-monitor.webp",
+      "matchingPng": "koorui/koorui-n07-27-inch-4k-monitor.png",
+      "webpBytes": 28334,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-s2721pm-27-inch-2k-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-s2721pm-27-inch-2k-gaming-monitor.png",
+      "webpBytes": 41088,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-s2721xo-27-inch-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-s2721xo-27-inch-gaming-monitor.png",
+      "webpBytes": 30214,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-s2741lm-27-inch-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-s2741lm-27-inch-gaming-monitor.png",
+      "webpBytes": 29694,
+      "status": "deleted"
+    },
+    {
+      "webp": "koorui/koorui-s3241xo-32-inch-4k-gaming-monitor.webp",
+      "matchingPng": "koorui/koorui-s3241xo-32-inch-4k-gaming-monitor.png",
+      "webpBytes": 28388,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-d19-10-wled-monitor.webp",
+      "matchingPng": "lenovo/lenovo-d19-10-wled-monitor.png",
+      "webpBytes": 16438,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-d20-30-19-5-inch-monitor.webp",
+      "matchingPng": "lenovo/lenovo-d20-30-19-5-inch-monitor.png",
+      "webpBytes": 22806,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-d22e-20-monitor.webp",
+      "matchingPng": "lenovo/lenovo-d22e-20-monitor.png",
+      "webpBytes": 33168,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-d32-40-32-inch-fhd-monitor.webp",
+      "matchingPng": "lenovo/lenovo-d32-40-32-inch-fhd-monitor.png",
+      "webpBytes": 28166,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-g27-30-27-inch-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-g27-30-27-inch-gaming-monitor.png",
+      "webpBytes": 34182,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-g27q-30-27-inch-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-g27q-30-27-inch-gaming-monitor.png",
+      "webpBytes": 34182,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-g32qc-30-curved-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-g32qc-30-curved-gaming-monitor.png",
+      "webpBytes": 60480,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l22-42-21-5-inch-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l22-42-21-5-inch-monitor.png",
+      "webpBytes": 30974,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l22-4e-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l22-4e-monitor.png",
+      "webpBytes": 26018,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l22e-40-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l22e-40-monitor.png",
+      "webpBytes": 18178,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l22i-40-borderless-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l22i-40-borderless-monitor.png",
+      "webpBytes": 34604,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24-4c-24-inch-fhd-ips-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24-4c-24-inch-fhd-ips-monitor.png",
+      "webpBytes": 31174,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24-4e-fhd-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24-4e-fhd-monitor.png",
+      "webpBytes": 40934,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24d-4c-24-inch-fhd-ips-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24d-4c-24-inch-fhd-ips-monitor.png",
+      "webpBytes": 26936,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24i-40-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24i-40-monitor.png",
+      "webpBytes": 23952,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24i-4a-fhd-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24i-4a-fhd-monitor.png",
+      "webpBytes": 9688,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l24q-35-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l24q-35-monitor.png",
+      "webpBytes": 17890,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l27-4c-24-inch-fhd-ips-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l27-4c-24-inch-fhd-ips-monitor.png",
+      "webpBytes": 33904,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l27-4e-27-inch-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l27-4e-27-inch-monitor.png",
+      "webpBytes": 31780,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l27i-40-fhd-ips-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l27i-40-fhd-ips-monitor.png",
+      "webpBytes": 36700,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l27i-4a-fhd-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l27i-4a-fhd-monitor.png",
+      "webpBytes": 9688,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-l27q-4a-monitor.webp",
+      "matchingPng": "lenovo/lenovo-l27q-4a-monitor.png",
+      "webpBytes": 8594,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-24-10-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-24-10-gaming-monitor.png",
+      "webpBytes": 35470,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-25-10-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-25-10-monitor.png",
+      "webpBytes": 25766,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-27-10-27-inch-fhd-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-27-10-27-inch-fhd-gaming-monitor.png",
+      "webpBytes": 36328,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-27q-10-27-inch-2k-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-27q-10-27-inch-2k-gaming-monitor.png",
+      "webpBytes": 33470,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-27qd-10-27-inch-2k-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-27qd-10-27-inch-2k-gaming-monitor.png",
+      "webpBytes": 30924,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-27u-10-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-27u-10-gaming-monitor.png",
+      "webpBytes": 25972,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-r24e-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-r24e-gaming-monitor.png",
+      "webpBytes": 27724,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-r27fc-30-curved-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-r27fc-30-curved-gaming-monitor.png",
+      "webpBytes": 23368,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-r27q-30-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-r27q-30-monitor.png",
+      "webpBytes": 15866,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-r27qe-gen-2-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-r27qe-gen-2-gaming-monitor.png",
+      "webpBytes": 26558,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-legion-r32qc-30-curved-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-legion-r32qc-30-curved-gaming-monitor.png",
+      "webpBytes": 26082,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-loq-27-10-27-inch-gaming-monitor.webp",
+      "matchingPng": "lenovo/lenovo-loq-27-10-27-inch-gaming-monitor.png",
+      "webpBytes": 34718,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-thinkvision-e22-28-monitor.webp",
+      "matchingPng": "lenovo/lenovo-thinkvision-e22-28-monitor.png",
+      "webpBytes": 20274,
+      "status": "deleted"
+    },
+    {
+      "webp": "lenovo/lenovo-thinkvision-s27i-30-monitor.webp",
+      "matchingPng": "lenovo/lenovo-thinkvision-s27i-30-monitor.png",
+      "webpBytes": 21554,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-22mk600m-full-hd-monitor.webp",
+      "matchingPng": "lg/lg-22mk600m-full-hd-monitor.png",
+      "webpBytes": 19136,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24mr400-b-fhd-monitor.webp",
+      "matchingPng": "lg/lg-24mr400-b-fhd-monitor.png",
+      "webpBytes": 18756,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24ms500-b-24-inch-monitor.webp",
+      "matchingPng": "lg/lg-24ms500-b-24-inch-monitor.png",
+      "webpBytes": 16394,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24ms570b-b-24-inch-100hz-monitor.webp",
+      "matchingPng": "lg/lg-24ms570b-b-24-inch-100hz-monitor.png",
+      "webpBytes": 17504,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24u411a-b-monitor.webp",
+      "matchingPng": "lg/lg-24u411a-b-monitor.png",
+      "webpBytes": 9434,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24u411b-b-24-inch-monitor.webp",
+      "matchingPng": "lg/lg-24u411b-b-24-inch-monitor.png",
+      "webpBytes": 20334,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-24u631a-b-monitor.webp",
+      "matchingPng": "lg/lg-24u631a-b-monitor.png",
+      "webpBytes": 15450,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-25ms500-b-fhd-ips-monitor.webp",
+      "matchingPng": "lg/lg-25ms500-b-fhd-ips-monitor.png",
+      "webpBytes": 17654,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27gp95r-b-27-inch-ultragear-gaming-monitor.webp",
+      "matchingPng": "lg/lg-27gp95r-b-27-inch-ultragear-gaming-monitor.png",
+      "webpBytes": 27574,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27gr95qe-b-27-inch-ultragear-oled-gaming-monitor.webp",
+      "matchingPng": "lg/lg-27gr95qe-b-27-inch-ultragear-oled-gaming-monitor.png",
+      "webpBytes": 22320,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27mr400-b-fhd-monitor.webp",
+      "matchingPng": "lg/lg-27mr400-b-fhd-monitor.png",
+      "webpBytes": 18756,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27ms500-b-fhd-ips-monitor.webp",
+      "matchingPng": "lg/lg-27ms500-b-fhd-ips-monitor.png",
+      "webpBytes": 15974,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27ms570b-b-27-inch-100hz-monitor.webp",
+      "matchingPng": "lg/lg-27ms570b-b-27-inch-100hz-monitor.png",
+      "webpBytes": 23370,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27qn880-27-inch-2k-monitor.webp",
+      "matchingPng": "lg/lg-27qn880-27-inch-2k-monitor.png",
+      "webpBytes": 16986,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27sr50f-w-27-inch-monitor.webp",
+      "matchingPng": "lg/lg-27sr50f-w-27-inch-monitor.png",
+      "webpBytes": 19438,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27u411a-b-monitor.webp",
+      "matchingPng": "lg/lg-27u411a-b-monitor.png",
+      "webpBytes": 17740,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27u631a-b-27-inch-monitor.webp",
+      "matchingPng": "lg/lg-27u631a-b-27-inch-monitor.png",
+      "webpBytes": 13972,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-27up850k-w-27-uhd-professional-monitor.webp",
+      "matchingPng": "lg/lg-27up850k-w-27-uhd-professional-monitor.png",
+      "webpBytes": 26200,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-28mq780-b-monitor.webp",
+      "matchingPng": "lg/lg-28mq780-b-monitor.png",
+      "webpBytes": 47758,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-32mr50c-b-fhd-curved-monitor.webp",
+      "matchingPng": "lg/lg-32mr50c-b-fhd-curved-monitor.png",
+      "webpBytes": 24874,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-32sr85u-w-smart-monitor.webp",
+      "matchingPng": "lg/lg-32sr85u-w-smart-monitor.png",
+      "webpBytes": 32102,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-32u631a-b-32-2k-ips-monitor.webp",
+      "matchingPng": "lg/lg-32u631a-b-32-2k-ips-monitor.png",
+      "webpBytes": 13142,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-32un880-b-32-inch-ultrafine-ergo-monitor.webp",
+      "matchingPng": "lg/lg-32un880-b-32-inch-ultrafine-ergo-monitor.png",
+      "webpBytes": 39702,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-32un880k-b-monitor.webp",
+      "matchingPng": "lg/lg-32un880k-b-monitor.png",
+      "webpBytes": 25902,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34u640b-b-34-inch-ultrawide-curved-monitor.webp",
+      "matchingPng": "lg/lg-34u640b-b-34-inch-ultrawide-curved-monitor.png",
+      "webpBytes": 33862,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34u650a-b-monitor.webp",
+      "matchingPng": "lg/lg-34u650a-b-monitor.png",
+      "webpBytes": 14956,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34wq650-34-inch-100hz-monitor.webp",
+      "matchingPng": "lg/lg-34wq650-34-inch-100hz-monitor.png",
+      "webpBytes": 14672,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34wq75c-b-curved-ultrawide-qhd-monitor.webp",
+      "matchingPng": "lg/lg-34wq75c-b-curved-ultrawide-qhd-monitor.png",
+      "webpBytes": 40472,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34wr55qc-b-34-inch-curved-monitor.webp",
+      "matchingPng": "lg/lg-34wr55qc-b-34-inch-curved-monitor.png",
+      "webpBytes": 26388,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-34wr55qk-b-curved-monitor.webp",
+      "matchingPng": "lg/lg-34wr55qk-b-curved-monitor.png",
+      "webpBytes": 18212,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-38wr85qc-w-38-inch-curved-monitor.webp",
+      "matchingPng": "lg/lg-38wr85qc-w-38-inch-curved-monitor.png",
+      "webpBytes": 17324,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-43sq700s-w-4k-smart-monitor.webp",
+      "matchingPng": "lg/lg-43sq700s-w-4k-smart-monitor.png",
+      "webpBytes": 22656,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-49u950a-w-49-inch-monitor.webp",
+      "matchingPng": "lg/lg-49u950a-w-49-inch-monitor.png",
+      "webpBytes": 20688,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-49wq95c-w-49-inch-curved-monitor.webp",
+      "matchingPng": "lg/lg-49wq95c-w-49-inch-curved-monitor.png",
+      "webpBytes": 18348,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultrafine-27us500-w-27-inch-monitor.webp",
+      "matchingPng": "lg/lg-ultrafine-27us500-w-27-inch-monitor.png",
+      "webpBytes": 8396,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultrafine-32un650k-w-32-inch-monitor.webp",
+      "matchingPng": "lg/lg-ultrafine-32un650k-w-32-inch-monitor.png",
+      "webpBytes": 17670,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-24gs65f-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-24gs65f-b-gaming-monitor.png",
+      "webpBytes": 23968,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-25g523b-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-25g523b-b-gaming-monitor.png",
+      "webpBytes": 32738,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27g523b-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27g523b-b-gaming-monitor.png",
+      "webpBytes": 32738,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27gm950b-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27gm950b-b-gaming-monitor.png",
+      "webpBytes": 23306,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27gn60r-27-inch-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27gn60r-27-inch-gaming-monitor.png",
+      "webpBytes": 32122,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27gs65f-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27gs65f-b-gaming-monitor.png",
+      "webpBytes": 22832,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27gs75q-b-2k-ips-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27gs75q-b-2k-ips-gaming-monitor.png",
+      "webpBytes": 39380,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-27gs95qe-b-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-27gs95qe-b-monitor.png",
+      "webpBytes": 20444,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-32g810sa-w-4k-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-32g810sa-w-4k-gaming-monitor.png",
+      "webpBytes": 19180,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-32gs95ue-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-32gs95ue-gaming-monitor.png",
+      "webpBytes": 14456,
+      "status": "deleted"
+    },
+    {
+      "webp": "lg/lg-ultragear-32gs95uv-b-gaming-monitor.webp",
+      "matchingPng": "lg/lg-ultragear-32gs95uv-b-gaming-monitor.png",
+      "webpBytes": 29046,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g244f-e2-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g244f-e2-gaming-monitor.png",
+      "webpBytes": 21820,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g24c4-e2-23-6-inch-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g24c4-e2-23-6-inch-gaming-monitor.png",
+      "webpBytes": 15288,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g255f-ips-fhd-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g255f-ips-fhd-gaming-monitor.png",
+      "webpBytes": 22516,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g255pf-e2-180hz-ips-fhd-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g255pf-e2-180hz-ips-fhd-gaming-monitor.png",
+      "webpBytes": 23058,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g274f-27-inch-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g274f-27-inch-gaming-monitor.png",
+      "webpBytes": 20424,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-g274qpf-e2-ips-wqhd-gaming-monitor.webp",
+      "matchingPng": "msi/msi-g274qpf-e2-ips-wqhd-gaming-monitor.png",
+      "webpBytes": 21518,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-255f-e20-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-255f-e20-gaming-monitor.png",
+      "webpBytes": 20916,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-255f-x24-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-255f-x24-gaming-monitor.png",
+      "webpBytes": 34248,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-255pxf-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-255pxf-gaming-monitor.png",
+      "webpBytes": 20330,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-255xf-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-255xf-gaming-monitor.png",
+      "webpBytes": 25674,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-255xfv-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-255xfv-gaming-monitor.png",
+      "webpBytes": 28604,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-271qpx-qd-oled-e2-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-271qpx-qd-oled-e2-gaming-monitor.png",
+      "webpBytes": 35592,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-271qpx-qd-oled-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-271qpx-qd-oled-gaming-monitor.png",
+      "webpBytes": 35592,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-272qp-qd-oled-x24-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-272qp-qd-oled-x24-gaming-monitor.png",
+      "webpBytes": 30260,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-273qp-qd-oled-x24-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-273qp-qd-oled-x24-gaming-monitor.png",
+      "webpBytes": 32838,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274f-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-274f-gaming-monitor.png",
+      "webpBytes": 22410,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274qpf-e20-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-274qpf-e20-gaming-monitor.png",
+      "webpBytes": 31826,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274qrf-qd-e2-ips-wqhd-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-274qrf-qd-e2-ips-wqhd-gaming-monitor.png",
+      "webpBytes": 25004,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274qrfw-e20-monitor.webp",
+      "matchingPng": "msi/msi-mag-274qrfw-e20-monitor.png",
+      "webpBytes": 46656,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274qrfw-wqhd-monitor.webp",
+      "matchingPng": "msi/msi-mag-274qrfw-wqhd-monitor.png",
+      "webpBytes": 21852,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274upf-27-inch-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-274upf-27-inch-gaming-monitor.png",
+      "webpBytes": 21514,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-274upf-e2-4k-160hz-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-274upf-e2-4k-160hz-gaming-monitor.png",
+      "webpBytes": 20400,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-275f-27-inch-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-275f-27-inch-gaming-monitor.png",
+      "webpBytes": 31954,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-275qf-e20-monitor.webp",
+      "matchingPng": "msi/msi-mag-275qf-e20-monitor.png",
+      "webpBytes": 25368,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-275qf-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-275qf-gaming-monitor.png",
+      "webpBytes": 19712,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-275upd-e14-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-275upd-e14-gaming-monitor.png",
+      "webpBytes": 25010,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-276cxf-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-276cxf-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 31844,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-321cqf-e18-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-321cqf-e18-gaming-monitor.png",
+      "webpBytes": 27118,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-321cupdf-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-321cupdf-gaming-monitor.png",
+      "webpBytes": 34148,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-321upx-qd-oled-4k-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-321upx-qd-oled-4k-gaming-monitor.png",
+      "webpBytes": 37500,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-32cq6f-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-32cq6f-curved-gaming-monitor.png",
+      "webpBytes": 28044,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-342cqr-e2-34-inch-uwqhd-180hz-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-342cqr-e2-34-inch-uwqhd-180hz-curved-gaming-monitor.png",
+      "webpBytes": 18546,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-342cqrf-e20-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-342cqrf-e20-curved-gaming-monitor.png",
+      "webpBytes": 17508,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-345cqr-uwqhd-180hz-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mag-345cqr-uwqhd-180hz-curved-gaming-monitor.png",
+      "webpBytes": 19938,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mag-345cqrf-e20-34-inch-monitor.webp",
+      "matchingPng": "msi/msi-mag-345cqrf-e20-34-inch-monitor.png",
+      "webpBytes": 24190,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md2412pw-23-8-inch-monitor.webp",
+      "matchingPng": "msi/msi-modern-md2412pw-23-8-inch-monitor.png",
+      "webpBytes": 21104,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md271ul-27-inch-monitor.webp",
+      "matchingPng": "msi/msi-modern-md271ul-27-inch-monitor.png",
+      "webpBytes": 17736,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md272qxpw-27-inch-100hz-ips-wqhd-monitor.webp",
+      "matchingPng": "msi/msi-modern-md272qxpw-27-inch-100hz-ips-wqhd-monitor.png",
+      "webpBytes": 19586,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md272upsw-4k-monitor.webp",
+      "matchingPng": "msi/msi-modern-md272upsw-4k-monitor.png",
+      "webpBytes": 27292,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md272xpw-27-inch-monitor.webp",
+      "matchingPng": "msi/msi-modern-md272xpw-27-inch-monitor.png",
+      "webpBytes": 23788,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-modern-md342cqpw-curved-monitor.webp",
+      "matchingPng": "msi/msi-modern-md342cqpw-curved-monitor.png",
+      "webpBytes": 21870,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-271qr-qd-oled-x50-monitor.webp",
+      "matchingPng": "msi/msi-mpg-271qr-qd-oled-x50-monitor.png",
+      "webpBytes": 42300,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-271qrx-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-271qrx-gaming-monitor.png",
+      "webpBytes": 31198,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-272urx-qd-oled-27-inch-monitor.webp",
+      "matchingPng": "msi/msi-mpg-272urx-qd-oled-27-inch-monitor.png",
+      "webpBytes": 34990,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-274urdfw-e16m-monitor.webp",
+      "matchingPng": "msi/msi-mpg-274urdfw-e16m-monitor.png",
+      "webpBytes": 44134,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-321urx-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-321urx-gaming-monitor.png",
+      "webpBytes": 49726,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-322urx-qd-oled-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-322urx-qd-oled-gaming-monitor.png",
+      "webpBytes": 34586,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-341cqpx-qd-oled-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-341cqpx-qd-oled-curved-gaming-monitor.png",
+      "webpBytes": 28632,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-341cqr-qd-oled-x36-34-inch-monitor.webp",
+      "matchingPng": "msi/msi-mpg-341cqr-qd-oled-x36-34-inch-monitor.png",
+      "webpBytes": 34298,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-346cqrf-x24-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-346cqrf-x24-curved-gaming-monitor.png",
+      "webpBytes": 20766,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-491cqp-qd-oled-dqhd-curved-gaming-monitor.webp",
+      "matchingPng": "msi/msi-mpg-491cqp-qd-oled-dqhd-curved-gaming-monitor.png",
+      "webpBytes": 67168,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-mpg-491cqpx-qd-oled-monitor.webp",
+      "matchingPng": "msi/msi-mpg-491cqpx-qd-oled-monitor.png",
+      "webpBytes": 23014,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-max-271qphw-e14-monitor.webp",
+      "matchingPng": "msi/msi-pro-max-271qphw-e14-monitor.png",
+      "webpBytes": 19978,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp161-e2-portable-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp161-e2-portable-monitor.png",
+      "webpBytes": 14904,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp223-e2-business-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp223-e2-business-monitor.png",
+      "webpBytes": 23584,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp225-e12l-22-inch-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp225-e12l-22-inch-fhd-monitor.png",
+      "webpBytes": 26990,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp225-e12vl-22-inch-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp225-e12vl-22-inch-fhd-monitor.png",
+      "webpBytes": 24778,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp225-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp225-fhd-monitor.png",
+      "webpBytes": 25624,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp242-e14a-gaming-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp242-e14a-gaming-monitor.png",
+      "webpBytes": 20084,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp242a-e2-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp242a-e2-monitor.png",
+      "webpBytes": 28244,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp242pmg-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp242pmg-fhd-monitor.png",
+      "webpBytes": 20220,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp243l-e14-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp243l-e14-monitor.png",
+      "webpBytes": 21100,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp243w-e14-gaming-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp243w-e14-gaming-monitor.png",
+      "webpBytes": 25236,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp243x-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp243x-fhd-monitor.png",
+      "webpBytes": 20048,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251-24-5-inch-100hz-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251-24-5-inch-100hz-fhd-monitor.png",
+      "webpBytes": 27870,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251-e14a-24-inch-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251-e14a-24-inch-monitor.png",
+      "webpBytes": 22810,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251-e14l-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251-e14l-monitor.png",
+      "webpBytes": 23110,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251-e2-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251-e2-monitor.png",
+      "webpBytes": 29574,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251l-e2-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251l-e2-monitor.png",
+      "webpBytes": 34626,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251p-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251p-monitor.png",
+      "webpBytes": 26572,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251w-e14a-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251w-e14a-monitor.png",
+      "webpBytes": 23068,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp251w-e2-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp251w-e2-fhd-monitor.png",
+      "webpBytes": 19816,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp272pmg-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp272pmg-fhd-monitor.png",
+      "webpBytes": 22642,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp273a-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp273a-monitor.png",
+      "webpBytes": 21122,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp273aw-27-inch-fhd-ips-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp273aw-27-inch-fhd-ips-monitor.png",
+      "webpBytes": 19116,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp273w-e14a-gaming-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp273w-e14a-gaming-monitor.png",
+      "webpBytes": 24114,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275-e14l-gaming-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275-e14l-gaming-monitor.png",
+      "webpBytes": 26914,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275-e2-27-inch-120hz-ips-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275-e2-27-inch-120hz-ips-fhd-monitor.png",
+      "webpBytes": 22546,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275p-ips-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275p-ips-fhd-monitor.png",
+      "webpBytes": 28274,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275pg-e14-27-inch-fhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275pg-e14-27-inch-fhd-monitor.png",
+      "webpBytes": 25208,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275pg-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275pg-monitor.png",
+      "webpBytes": 19648,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275q-e14-gaming-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275q-e14-gaming-monitor.png",
+      "webpBytes": 23520,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275q-wqhd-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275q-wqhd-monitor.png",
+      "webpBytes": 24154,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275qpg-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275qpg-monitor.png",
+      "webpBytes": 13598,
+      "status": "deleted"
+    },
+    {
+      "webp": "msi/msi-pro-mp275w-e2-27-inch-monitor.webp",
+      "matchingPng": "msi/msi-pro-mp275w-e2-27-inch-monitor.png",
+      "webpBytes": 29520,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f100d-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f100d-monitor.png",
+      "webpBytes": 12916,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f100dw-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f100dw-monitor.png",
+      "webpBytes": 8954,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f120dw-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f120dw-monitor.png",
+      "webpBytes": 34460,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f120u-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f120u-monitor.png",
+      "webpBytes": 14606,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f144bk-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f144bk-gaming-monitor.png",
+      "webpBytes": 20392,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg24f180cw-gaming-curved-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg24f180cw-gaming-curved-monitor.png",
+      "webpBytes": 35718,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg25f180w-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg25f180w-gaming-monitor.png",
+      "webpBytes": 13114,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg27q180dw-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg27q180dw-gaming-monitor.png",
+      "webpBytes": 25376,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg27q180w-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg27q180w-gaming-monitor.png",
+      "webpBytes": 17488,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg27q200dw-27-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg27q200dw-27-gaming-monitor.png",
+      "webpBytes": 17546,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg34b165wqc-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg34b165wqc-gaming-monitor.png",
+      "webpBytes": 18026,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcg34b180wqc-curved-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcg34b180wqc-curved-gaming-monitor.png",
+      "webpBytes": 18940,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgm-king22-ips-fhd-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgm-king22-ips-fhd-monitor.png",
+      "webpBytes": 12260,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgm-king22-monitor-white.webp",
+      "matchingPng": "pc-power/pc-power-pcgm-king22-monitor-white.png",
+      "webpBytes": 17974,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgm22-fhd-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgm22-fhd-monitor.png",
+      "webpBytes": 15710,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgm22ub-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgm22ub-monitor.png",
+      "webpBytes": 19488,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgmx24f165b-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgmx24f165b-monitor.png",
+      "webpBytes": 24386,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgmx25f200b-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgmx25f200b-monitor.png",
+      "webpBytes": 19854,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcgmx27q120b-gaming-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcgmx27q120b-gaming-monitor.png",
+      "webpBytes": 24828,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcm22frx-100hz-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcm22frx-100hz-monitor.png",
+      "webpBytes": 18388,
+      "status": "deleted"
+    },
+    {
+      "webp": "pc-power/pc-power-pcm24frx-monitor.webp",
+      "matchingPng": "pc-power/pc-power-pcm24frx-monitor.png",
+      "webpBytes": 14860,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-221v8lb-monitor.webp",
+      "matchingPng": "philips/philips-221v8lb-monitor.png",
+      "webpBytes": 11472,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-222b9ta-monitor.webp",
+      "matchingPng": "philips/philips-222b9ta-monitor.png",
+      "webpBytes": 22014,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-22e1n1100-monitor.webp",
+      "matchingPng": "philips/philips-22e1n1100-monitor.png",
+      "webpBytes": 10118,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-22e1n1100la-100hz-monitor.webp",
+      "matchingPng": "philips/philips-22e1n1100la-100hz-monitor.png",
+      "webpBytes": 15700,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-22e1n1200a-fhd-monitor.webp",
+      "matchingPng": "philips/philips-22e1n1200a-fhd-monitor.png",
+      "webpBytes": 10972,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-22e1n1200aw-monitor.webp",
+      "matchingPng": "philips/philips-22e1n1200aw-monitor.png",
+      "webpBytes": 13288,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e1n1200a-monitor.webp",
+      "matchingPng": "philips/philips-24e1n1200a-monitor.png",
+      "webpBytes": 19434,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e1n2100a-monitor.webp",
+      "matchingPng": "philips/philips-24e1n2100a-monitor.png",
+      "webpBytes": 13144,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e1n2100aw-monitor.webp",
+      "matchingPng": "philips/philips-24e1n2100aw-monitor.png",
+      "webpBytes": 19514,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e1n2300a-24-inch-monitor.webp",
+      "matchingPng": "philips/philips-24e1n2300a-24-inch-monitor.png",
+      "webpBytes": 9386,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e2g2200-monitor.webp",
+      "matchingPng": "philips/philips-24e2g2200-monitor.png",
+      "webpBytes": 14498,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-24e2n1100-fhd-monitor.webp",
+      "matchingPng": "philips/philips-24e2n1100-fhd-monitor.png",
+      "webpBytes": 25306,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-271v8b-27-inch-monitor.webp",
+      "matchingPng": "philips/philips-271v8b-27-inch-monitor.png",
+      "webpBytes": 17024,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e1n1200a-monitor.webp",
+      "matchingPng": "philips/philips-27e1n1200a-monitor.png",
+      "webpBytes": 19434,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e1n1800a-27-inch-monitor.webp",
+      "matchingPng": "philips/philips-27e1n1800a-27-inch-monitor.png",
+      "webpBytes": 10640,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e1n2100a-monitor.webp",
+      "matchingPng": "philips/philips-27e1n2100a-monitor.png",
+      "webpBytes": 18320,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e1n2100aw-monitor.webp",
+      "matchingPng": "philips/philips-27e1n2100aw-monitor.png",
+      "webpBytes": 19514,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e2n1500-2k-monitor.webp",
+      "matchingPng": "philips/philips-27e2n1500-2k-monitor.png",
+      "webpBytes": 41556,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-27e2n2500-27-inch-monitor.webp",
+      "matchingPng": "philips/philips-27e2n2500-27-inch-monitor.png",
+      "webpBytes": 40354,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-322e1cb-32-inch-curved-monitor.webp",
+      "matchingPng": "philips/philips-322e1cb-32-inch-curved-monitor.png",
+      "webpBytes": 21170,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-325e8-32-inch-monitor.webp",
+      "matchingPng": "philips/philips-325e8-32-inch-monitor.png",
+      "webpBytes": 12472,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-32e1n3500-monitor.webp",
+      "matchingPng": "philips/philips-32e1n3500-monitor.png",
+      "webpBytes": 30378,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-34b2u6603ch-2k-curved-monitor.webp",
+      "matchingPng": "philips/philips-34b2u6603ch-2k-curved-monitor.png",
+      "webpBytes": 17910,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-brilliance-438p1-monitor.webp",
+      "matchingPng": "philips/philips-brilliance-438p1-monitor.png",
+      "webpBytes": 21876,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-creator-series-27e2f7901-27-inch-professional-monitor.webp",
+      "matchingPng": "philips/philips-creator-series-27e2f7901-27-inch-professional-monitor.png",
+      "webpBytes": 17980,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-24m1n3200za-24-inch-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-24m1n3200za-24-inch-gaming-monitor.png",
+      "webpBytes": 15016,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-24m2n3200a-180hz-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-24m2n3200a-180hz-gaming-monitor.png",
+      "webpBytes": 19920,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-25m2n3200-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-25m2n3200-gaming-monitor.png",
+      "webpBytes": 16106,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-27m1n3200za-27-inch-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-27m1n3200za-27-inch-gaming-monitor.png",
+      "webpBytes": 19906,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-27m2n5500-27-inch-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-27m2n5500-27-inch-gaming-monitor.png",
+      "webpBytes": 14528,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-27m2n5500q-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-27m2n5500q-gaming-monitor.png",
+      "webpBytes": 26708,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-evnia-27m2n8500-gaming-monitor.webp",
+      "matchingPng": "philips/philips-evnia-27m2n8500-gaming-monitor.png",
+      "webpBytes": 24144,
+      "status": "deleted"
+    },
+    {
+      "webp": "philips/philips-momentum-279m1rv-gaming-monitor.webp",
+      "matchingPng": "philips/philips-momentum-279m1rv-gaming-monitor.png",
+      "webpBytes": 35692,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-emdx-a-lh32emdiagb-32-inch-color-e-paper-monitor.webp",
+      "matchingPng": "samsung/samsung-emdx-a-lh32emdiagb-32-inch-color-e-paper-monitor.png",
+      "webpBytes": 34368,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-ls19a330nhw-19-inch-monitor.webp",
+      "matchingPng": "samsung/samsung-ls19a330nhw-19-inch-monitor.png",
+      "webpBytes": 25612,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-ls22d300gaw-21-5-inch-monitor.webp",
+      "matchingPng": "samsung/samsung-ls22d300gaw-21-5-inch-monitor.png",
+      "webpBytes": 12376,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-ls24d300gaw-23-8-inch-monitor.webp",
+      "matchingPng": "samsung/samsung-ls24d300gaw-23-8-inch-monitor.png",
+      "webpBytes": 12376,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-ls27d300gaw-fhd-monitor.webp",
+      "matchingPng": "samsung/samsung-ls27d300gaw-fhd-monitor.png",
+      "webpBytes": 19704,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-c49g95tssw-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-c49g95tssw-gaming-monitor.png",
+      "webpBytes": 22624,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g4-27-inch-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g4-27-inch-gaming-monitor.png",
+      "webpBytes": 33678,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g5-32-inch-curved-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g5-32-inch-curved-gaming-monitor.png",
+      "webpBytes": 51132,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g5-32-inch-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g5-32-inch-gaming-monitor.png",
+      "webpBytes": 29258,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g5-curved-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g5-curved-gaming-monitor.png",
+      "webpBytes": 51132,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g5-ls32fg502ew-32-inch-qhd-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g5-ls32fg502ew-32-inch-qhd-monitor.png",
+      "webpBytes": 36244,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g9-49-inch-240hz-curved-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g9-49-inch-240hz-curved-monitor.png",
+      "webpBytes": 34688,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g9-49-inch-curved-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g9-49-inch-curved-gaming-monitor.png",
+      "webpBytes": 44874,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-g9-49-inch-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-g9-49-inch-gaming-monitor.png",
+      "webpBytes": 24818,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-neo-g9-curved-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-neo-g9-curved-gaming-monitor.png",
+      "webpBytes": 31126,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-odyssey-oled-g6-g60sf-27-inch-2k-500hz-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-odyssey-oled-g6-g60sf-27-inch-2k-500hz-gaming-monitor.png",
+      "webpBytes": 34602,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-s27d300gac-monitor.webp",
+      "matchingPng": "samsung/samsung-s27d300gac-monitor.png",
+      "webpBytes": 23650,
+      "status": "deleted"
+    },
+    {
+      "webp": "samsung/samsung-viewfinity-s9-s95uc-curved-gaming-monitor.webp",
+      "matchingPng": "samsung/samsung-viewfinity-s9-s95uc-curved-gaming-monitor.png",
+      "webpBytes": 38198,
+      "status": "deleted"
+    },
+    {
+      "webp": "thermaltake/thermaltake-tgm-v49cdq-curved-gaming-monitor.webp",
+      "matchingPng": "thermaltake/thermaltake-tgm-v49cdq-curved-gaming-monitor.png",
+      "webpBytes": 4218,
+      "status": "deleted"
+    },
+    {
+      "webp": "thermaltake/thermaltake-tpm-i27fuk-gaming-monitor.webp",
+      "matchingPng": "thermaltake/thermaltake-tpm-i27fuk-gaming-monitor.png",
+      "webpBytes": 20458,
+      "status": "deleted"
+    },
+    {
+      "webp": "thermaltake/thermaltake-tpm-o49cdq-curved-gaming-monitor.webp",
+      "matchingPng": "thermaltake/thermaltake-tpm-o49cdq-curved-gaming-monitor.png",
+      "webpBytes": 6330,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-cu27f160m-evo-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-cu27f160m-evo-gaming-monitor.png",
+      "webpBytes": 18524,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-dq27f240l-27-inch-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-dq27f240l-27-inch-gaming-monitor.png",
+      "webpBytes": 24558,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-dq27f280e-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-dq27f280e-monitor.png",
+      "webpBytes": 27514,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-dq27f500e-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-dq27f500e-gaming-monitor.png",
+      "webpBytes": 18444,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-dq34c240l-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-dq34c240l-monitor.png",
+      "webpBytes": 11072,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-du32f240e-4k-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-du32f240e-4k-gaming-monitor.png",
+      "webpBytes": 15738,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-ju27f160l-4k-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-ju27f160l-4k-gaming-monitor.png",
+      "webpBytes": 18902,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-kq27f240l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-kq27f240l-gaming-monitor.png",
+      "webpBytes": 22872,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-lq25f165-25-inch-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-lq25f165-25-inch-gaming-monitor.png",
+      "webpBytes": 13112,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-lq27f180-27-inch-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-lq27f180-27-inch-gaming-monitor.png",
+      "webpBytes": 14046,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-cf25f300-w-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-cf25f300-w-gaming-monitor.png",
+      "webpBytes": 25862,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-cq27f240m-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-cq27f240m-gaming-monitor.png",
+      "webpBytes": 11284,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-dq27f240e-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-dq27f240e-gaming-monitor.png",
+      "webpBytes": 19968,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-dq27f300l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-dq27f300l-gaming-monitor.png",
+      "webpBytes": 20180,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-jf24f200p-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-jf24f200p-gaming-monitor.png",
+      "webpBytes": 19952,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-jq27f180p-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-jq27f180p-gaming-monitor.png",
+      "webpBytes": 19952,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-lf25f180-25-inch-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-lf25f180-25-inch-gaming-monitor.png",
+      "webpBytes": 21648,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-zpf25f240-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-zpf25f240-gaming-monitor.png",
+      "webpBytes": 25986,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-zq27f210-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-zq27f210-gaming-monitor.png",
+      "webpBytes": 20728,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-zq27f210l-bd-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-zq27f210l-bd-gaming-monitor.png",
+      "webpBytes": 31536,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-zq27f210l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-zq27f210l-gaming-monitor.png",
+      "webpBytes": 31536,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-thor-zu27f160l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-thor-zu27f160l-gaming-monitor.png",
+      "webpBytes": 27454,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zf27f144-bd-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zf27f144-bd-monitor.png",
+      "webpBytes": 10396,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq25f180-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq25f180-monitor.png",
+      "webpBytes": 30234,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq25f180l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq25f180l-gaming-monitor.png",
+      "webpBytes": 32576,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq27f240l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq27f240l-gaming-monitor.png",
+      "webpBytes": 28452,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq27f260-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq27f260-gaming-monitor.png",
+      "webpBytes": 29084,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq27f340l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq27f340l-gaming-monitor.png",
+      "webpBytes": 28452,
+      "status": "deleted"
+    },
+    {
+      "webp": "thunderobot/thunderobot-zq27f400l-gaming-monitor.webp",
+      "matchingPng": "thunderobot/thunderobot-zq27f400l-gaming-monitor.png",
+      "webpBytes": 34918,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-c30sk-pro-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-c30sk-pro-gaming-monitor.png",
+      "webpBytes": 12580,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-c34a1r-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-c34a1r-gaming-monitor.png",
+      "webpBytes": 72902,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-kf2710s-monitor.webp",
+      "matchingPng": "titan-army/titan-army-kf2710s-monitor.png",
+      "webpBytes": 29486,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2510g2-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2510g2-monitor.png",
+      "webpBytes": 44928,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2511g-plus-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2511g-plus-monitor.png",
+      "webpBytes": 19096,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2710r2-plus-27-inch-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2710r2-plus-27-inch-gaming-monitor.png",
+      "webpBytes": 39022,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2710s-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2710s-monitor.png",
+      "webpBytes": 34182,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2710s-plus-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2710s-plus-gaming-monitor.png",
+      "webpBytes": 16172,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2711v-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2711v-gaming-monitor.png",
+      "webpBytes": 15212,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p2712r-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p2712r-monitor.png",
+      "webpBytes": 26434,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p275mr-plus-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p275mr-plus-monitor.png",
+      "webpBytes": 27692,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p275mv-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p275mv-gaming-monitor.png",
+      "webpBytes": 64112,
+      "status": "deleted"
+    },
+    {
+      "webp": "titan-army/titan-army-p276mv-4k-gaming-monitor.webp",
+      "matchingPng": "titan-army/titan-army-p276mv-4k-gaming-monitor.png",
+      "webpBytes": 13544,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-22vfhd100hz-fhd-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-22vfhd100hz-fhd-monitor.png",
+      "webpBytes": 15708,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-ts22ips100b-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-ts22ips100b-monitor.png",
+      "webpBytes": 17128,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-ts22ips100w-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-ts22ips100w-monitor.png",
+      "webpBytes": 17264,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-ts22ips120b-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-ts22ips120b-monitor.png",
+      "webpBytes": 10064,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-ts5322-21-5-inch-led-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-ts5322-21-5-inch-led-monitor.png",
+      "webpBytes": 15708,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-tsq22f120b-120hz-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-tsq22f120b-120hz-monitor.png",
+      "webpBytes": 14846,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-tsq22f120w-120hz-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-tsq22f120w-120hz-monitor.png",
+      "webpBytes": 12942,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-tsq24f144b-144hz-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-tsq24f144b-144hz-monitor.png",
+      "webpBytes": 19044,
+      "status": "deleted"
+    },
+    {
+      "webp": "trendsonic/trendsonic-tss27f240b-240hz-monitor.webp",
+      "matchingPng": "trendsonic/trendsonic-tss27f240b-240hz-monitor.png",
+      "webpBytes": 19044,
+      "status": "deleted"
+    },
+    {
+      "webp": "uniview/uniview-mw-3265-f-65-inch-4k-monitor.webp",
+      "matchingPng": "uniview/uniview-mw-3265-f-65-inch-4k-monitor.png",
+      "webpBytes": 33856,
+      "status": "deleted"
+    },
+    {
+      "webp": "uniview/uniview-mw-lc22-g-fhd-monitor.webp",
+      "matchingPng": "uniview/uniview-mw-lc22-g-fhd-monitor.png",
+      "webpBytes": 12638,
+      "status": "deleted"
+    },
+    {
+      "webp": "uniview/uniview-mw-lc24-g-gaming-monitor.webp",
+      "matchingPng": "uniview/uniview-mw-lc24-g-gaming-monitor.png",
+      "webpBytes": 14622,
+      "status": "deleted"
+    },
+    {
+      "webp": "uniview/uniview-mw-lc27-g-gaming-monitor.webp",
+      "matchingPng": "uniview/uniview-mw-lc27-g-gaming-monitor.png",
+      "webpBytes": 16202,
+      "status": "deleted"
+    },
+    {
+      "webp": "uniview/uniview-unv-mw-lc24-mx-24-inch-200hz-gaming-monitor.webp",
+      "matchingPng": "uniview/uniview-unv-mw-lc24-mx-24-inch-200hz-gaming-monitor.png",
+      "webpBytes": 3986,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-s24ifr144-monitor.webp",
+      "matchingPng": "value-top/value-top-s24ifr144-monitor.png",
+      "webpBytes": 17220,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-s24ifr144w-monitor.webp",
+      "matchingPng": "value-top/value-top-s24ifr144w-monitor.png",
+      "webpBytes": 16844,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-s27ifr100-27-inch-monitor.webp",
+      "matchingPng": "value-top/value-top-s27ifr100-27-inch-monitor.png",
+      "webpBytes": 19474,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-s27ifr100w-monitor.webp",
+      "matchingPng": "value-top/value-top-s27ifr100w-monitor.png",
+      "webpBytes": 6322,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-x22ifr100-monitor.webp",
+      "matchingPng": "value-top/value-top-x22ifr100-monitor.png",
+      "webpBytes": 14326,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-x24ifr120-monitor.webp",
+      "matchingPng": "value-top/value-top-x24ifr120-monitor.png",
+      "webpBytes": 12574,
+      "status": "deleted"
+    },
+    {
+      "webp": "value-top/value-top-x27ifr120-monitor.webp",
+      "matchingPng": "value-top/value-top-x27ifr120-monitor.png",
+      "webpBytes": 17450,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-colorpro-vp2456a-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-colorpro-vp2456a-monitor.png",
+      "webpBytes": 15266,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-colorpro-vp2756a-2k-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-colorpro-vp2756a-2k-monitor.png",
+      "webpBytes": 14266,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-colorpro-vp2788-5k-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-colorpro-vp2788-5k-monitor.png",
+      "webpBytes": 12232,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-omni-vx2758a-2k-pro-2-170hz-2k-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-omni-vx2758a-2k-pro-2-170hz-2k-gaming-monitor.png",
+      "webpBytes": 29904,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-omni-vx2758a-2k-pro-2-27-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-omni-vx2758a-2k-pro-2-27-inch-gaming-monitor.png",
+      "webpBytes": 12654,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-td2455-touch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-td2455-touch-monitor.png",
+      "webpBytes": 14822,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2025-h-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2025-h-monitor.png",
+      "webpBytes": 9386,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va220-h-22-inch-100hz-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va220-h-22-inch-100hz-monitor.png",
+      "webpBytes": 9626,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2209-h-2-100hz-fhd-ips-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2209-h-2-100hz-fhd-ips-monitor.png",
+      "webpBytes": 20336,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2214-h-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2214-h-monitor.png",
+      "webpBytes": 12826,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va221a-h-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va221a-h-monitor.png",
+      "webpBytes": 12916,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va240a-h-24-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va240a-h-24-inch-monitor.png",
+      "webpBytes": 12348,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2432-h-w-ips-fhd-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2432-h-w-ips-fhd-monitor.png",
+      "webpBytes": 13870,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2432-mhd-3-24-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2432-mhd-3-24-inch-monitor.png",
+      "webpBytes": 13582,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2432-mhd-ips-fhd-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2432-mhd-ips-fhd-monitor.png",
+      "webpBytes": 13458,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2432a-h-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2432a-h-monitor.png",
+      "webpBytes": 13038,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va24g1-h-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va24g1-h-monitor.png",
+      "webpBytes": 12696,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2708-2k-mhd-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2708-2k-mhd-monitor.png",
+      "webpBytes": 11604,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2708-4k-hd-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2708-4k-hd-monitor.png",
+      "webpBytes": 11946,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2708-4k-mhd-27-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2708-4k-mhd-27-monitor.png",
+      "webpBytes": 11946,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va270a-h-27-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va270a-h-27-inch-monitor.png",
+      "webpBytes": 10992,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2732-mhd-3-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2732-mhd-3-monitor.png",
+      "webpBytes": 11612,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va2732a-h-27-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va2732a-h-27-inch-monitor.png",
+      "webpBytes": 13362,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va3209-2k-mhd-32-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va3209-2k-mhd-32-inch-monitor.png",
+      "webpBytes": 12604,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-va3209-mh-32-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-va3209-mh-32-inch-monitor.png",
+      "webpBytes": 13282,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vp2456-fhd-ips-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vp2456-fhd-ips-monitor.png",
+      "webpBytes": 22232,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vp2756-2k-qhd-ips-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vp2756-2k-qhd-ips-monitor.png",
+      "webpBytes": 47930,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vp2756-4k-uhd-ips-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vp2756-4k-uhd-ips-monitor.png",
+      "webpBytes": 49854,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vp2766-2k-w-27-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vp2766-2k-w-27-inch-monitor.png",
+      "webpBytes": 16274,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vp3481a-colorpro-curved-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vp3481a-colorpro-curved-monitor.png",
+      "webpBytes": 14310,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2416-24-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2416-24-inch-gaming-monitor.png",
+      "webpBytes": 16152,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2428-24-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2428-24-inch-gaming-monitor.png",
+      "webpBytes": 25912,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2428aj-bl-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2428aj-bl-monitor.png",
+      "webpBytes": 10414,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2479-hd-pro-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2479-hd-pro-gaming-monitor.png",
+      "webpBytes": 15578,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2479a-hd-pro-24-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2479a-hd-pro-24-monitor.png",
+      "webpBytes": 13518,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2480-2k-shd-2-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2480-2k-shd-2-monitor.png",
+      "webpBytes": 12946,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx24g30-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx24g30-gaming-monitor.png",
+      "webpBytes": 12054,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx24g30-w-240hz-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx24g30-w-240hz-gaming-monitor.png",
+      "webpBytes": 20456,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2532-320hz-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2532-320hz-gaming-monitor.png",
+      "webpBytes": 18434,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2537-420hz-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2537-420hz-gaming-monitor.png",
+      "webpBytes": 17054,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2719-pc-mhd-27-inch-curved-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2719-pc-mhd-27-inch-curved-gaming-monitor.png",
+      "webpBytes": 17046,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2728j-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2728j-gaming-monitor.png",
+      "webpBytes": 23196,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2757-2k-pro-4-27-qhd-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2757-2k-pro-4-27-qhd-monitor.png",
+      "webpBytes": 13222,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2757a-hd-pro-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2757a-hd-pro-monitor.png",
+      "webpBytes": 11812,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2758a-2k-pro-3-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2758a-2k-pro-3-monitor.png",
+      "webpBytes": 11710,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx2779-hd-pro-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx2779-hd-pro-gaming-monitor.png",
+      "webpBytes": 15934,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx27g31a-27-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx27g31a-27-inch-gaming-monitor.png",
+      "webpBytes": 18496,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx27g33-2k-27-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx27g33-2k-27-inch-gaming-monitor.png",
+      "webpBytes": 16826,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx27g81j-2k-w-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx27g81j-2k-w-gaming-monitor.png",
+      "webpBytes": 10472,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-vx3418c-2k-34-inch-curved-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-vx3418c-2k-34-inch-curved-gaming-monitor.png",
+      "webpBytes": 14046,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg2409a-24-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg2409a-24-inch-gaming-monitor.png",
+      "webpBytes": 22528,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg2709a-27-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg2709a-27-inch-gaming-monitor.png",
+      "webpBytes": 14466,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg272-2k-oled-27-inch-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg272-2k-oled-27-inch-gaming-monitor.png",
+      "webpBytes": 18128,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg2730d-4k-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg2730d-4k-gaming-monitor.png",
+      "webpBytes": 15458,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg2736-2k-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg2736-2k-gaming-monitor.png",
+      "webpBytes": 49730,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg2737-gaming-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg2737-gaming-monitor.png",
+      "webpBytes": 13476,
+      "status": "deleted"
+    },
+    {
+      "webp": "viewsonic/viewsonic-xg275d1-4k-27-inch-monitor.webp",
+      "matchingPng": "viewsonic/viewsonic-xg275d1-4k-27-inch-monitor.png",
+      "webpBytes": 14140,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-cined-wd27gi06-27-inch-gaming-monitor.webp",
+      "matchingPng": "walton/walton-cined-wd27gi06-27-inch-gaming-monitor.png",
+      "webpBytes": 37654,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-cined-wd27gi07-27-inch-gaming-monitor.webp",
+      "matchingPng": "walton/walton-cined-wd27gi07-27-inch-gaming-monitor.png",
+      "webpBytes": 30054,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-cinexa-wd27eg200-gaming-monitor.webp",
+      "matchingPng": "walton/walton-cinexa-wd27eg200-gaming-monitor.png",
+      "webpBytes": 19968,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-cinexa-wdf15e24i-monitor.webp",
+      "matchingPng": "walton/walton-cinexa-wdf15e24i-monitor.png",
+      "webpBytes": 29374,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-cinexa-wdi08uk27-27-inch-monitor.webp",
+      "matchingPng": "walton/walton-cinexa-wdi08uk27-27-inch-monitor.png",
+      "webpBytes": 9338,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd215i09-21-45-inch-monitor.webp",
+      "matchingPng": "walton/walton-wd215i09-21-45-inch-monitor.png",
+      "webpBytes": 19236,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd215i10-100hz-monitor.webp",
+      "matchingPng": "walton/walton-wd215i10-100hz-monitor.png",
+      "webpBytes": 14308,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd215i10-120hz-monitor.webp",
+      "matchingPng": "walton/walton-wd215i10-120hz-monitor.png",
+      "webpBytes": 14308,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd238i11-monitor-silver.webp",
+      "matchingPng": "walton/walton-wd238i11-monitor-silver.png",
+      "webpBytes": 11852,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd238i11-monitor.webp",
+      "matchingPng": "walton/walton-wd238i11-monitor.png",
+      "webpBytes": 11596,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd238i12-23-8-inch-ips-monitor.webp",
+      "matchingPng": "walton/walton-wd238i12-23-8-inch-ips-monitor.png",
+      "webpBytes": 11298,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wd238v03-va-fhd-monitor.webp",
+      "matchingPng": "walton/walton-wd238v03-va-fhd-monitor.png",
+      "webpBytes": 17172,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wdf13c22i-monitor.webp",
+      "matchingPng": "walton/walton-wdf13c22i-monitor.png",
+      "webpBytes": 8504,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wdf14d24i-monitor.webp",
+      "matchingPng": "walton/walton-wdf14d24i-monitor.png",
+      "webpBytes": 13574,
+      "status": "deleted"
+    },
+    {
+      "webp": "walton/walton-wdq16f24i-monitor.webp",
+      "matchingPng": "walton/walton-wdq16f24i-monitor.png",
+      "webpBytes": 19662,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-g-pro-27-27-inch-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-g-pro-27-27-inch-gaming-monitor.png",
+      "webpBytes": 20786,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-1a-100hz-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-1a-100hz-monitor.png",
+      "webpBytes": 13462,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-a27q-2025-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-a27q-2025-monitor.png",
+      "webpBytes": 19740,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-a27q-2026-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-a27q-2026-monitor.png",
+      "webpBytes": 11686,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-a27q-27-inch-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-a27q-27-inch-monitor.png",
+      "webpBytes": 13536,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-a27u-27-inch-4k-uhd-ips-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-a27u-27-inch-4k-uhd-ips-monitor.png",
+      "webpBytes": 14726,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-a27u-type-c-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-a27u-type-c-monitor.png",
+      "webpBytes": 23842,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-display-x27gq-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-display-x27gq-gaming-monitor.png",
+      "webpBytes": 15570,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g24-180hz-ips-fhd-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g24-180hz-ips-fhd-gaming-monitor.png",
+      "webpBytes": 12918,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g24-240hz-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g24-240hz-gaming-monitor.png",
+      "webpBytes": 38454,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g25-300hz-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g25-300hz-gaming-monitor.png",
+      "webpBytes": 16010,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g25-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g25-gaming-monitor.png",
+      "webpBytes": 16010,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27-27-inch-180hz-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27-27-inch-180hz-gaming-monitor.png",
+      "webpBytes": 21164,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27-27-inch-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27-27-inch-monitor.png",
+      "webpBytes": 27292,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27q-2025-edition-180hz-2k-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27q-2025-edition-180hz-2k-gaming-monitor.png",
+      "webpBytes": 20180,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27q-2026-edition-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27q-2026-edition-gaming-monitor.png",
+      "webpBytes": 20574,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27q-2026-multifunction-bracket-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27q-2026-multifunction-bracket-monitor.png",
+      "webpBytes": 32452,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27q-240hz-qhd-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27q-240hz-qhd-gaming-monitor.png",
+      "webpBytes": 26352,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g27u-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g27u-gaming-monitor.png",
+      "webpBytes": 31040,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g34wq-2026-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g34wq-2026-monitor.png",
+      "webpBytes": 27592,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-g34wq-34-inch-curved-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-g34wq-34-inch-curved-gaming-monitor.png",
+      "webpBytes": 10924,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-p27fbb-ra-27-inch-professional-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-p27fbb-ra-27-inch-professional-monitor.png",
+      "webpBytes": 28984,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-v22fab-ra-fhd-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-v22fab-ra-fhd-monitor.png",
+      "webpBytes": 12642,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-x27a-27-inch-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-x27a-27-inch-gaming-monitor.png",
+      "webpBytes": 14752,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-redmi-x27g-180hz-gaming-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-redmi-x27g-180hz-gaming-monitor.png",
+      "webpBytes": 16232,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-rmmnt27nu-27-inch-4k-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-rmmnt27nu-27-inch-4k-monitor.png",
+      "webpBytes": 12936,
+      "status": "deleted"
+    },
+    {
+      "webp": "xiaomi/xiaomi-xmmnt27nu-27-inch-4k-monitor.webp",
+      "matchingPng": "xiaomi/xiaomi-xmmnt27nu-27-inch-4k-monitor.png",
+      "webpBytes": 38920,
+      "status": "deleted"
+    }
+  ],
+  "summary": {
+    "deleted": 878,
+    "wouldDelete": 0,
+    "skippedNoMatchingPng": 0,
+    "failed": 0,
+    "bytesDeleted": 21242150
+  },
+  "finishedAtUnix": 1790249394.8859298
+}
