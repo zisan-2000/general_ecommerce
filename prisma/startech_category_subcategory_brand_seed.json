@@ -1,0 +1,7499 @@
+{
+  "source": {
+    "repository": "zisan-2000/general_ecommerce",
+    "branch": "main",
+    "root": "public/images/products",
+    "generatedFrom": "Git folder hierarchy"
+  },
+  "schemaVersion": 1,
+  "notes": [
+    "subcategories[].brands[] is derived from category/subcategory/brand folder depth.",
+    "directChildren[] contains leaf folders directly under a category; these may represent a subcategory or a brand depending on the Star Tech section.",
+    "special folders such as _direct, _other and _uncategorized are separated from normal seed brands."
+  ],
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "imagePath": "/images/products/accessories",
+      "subcategories": [
+        {
+          "name": "Uncategorized",
+          "slug": "_uncategorized",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Adata",
+              "slug": "adata"
+            },
+            {
+              "name": "Akg",
+              "slug": "akg"
+            },
+            {
+              "name": "Amalink",
+              "slug": "amalink"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Cable",
+              "slug": "cable"
+            },
+            {
+              "name": "Charg",
+              "slug": "charg"
+            },
+            {
+              "name": "Cougar",
+              "slug": "cougar"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Inbertec",
+              "slug": "inbertec"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Star",
+              "slug": "star"
+            },
+            {
+              "name": "Tecnoware",
+              "slug": "tecnoware"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Bluetooth Adapter",
+          "slug": "bluetooth-adapter",
+          "brands": [
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Bluetooth",
+              "slug": "bluetooth"
+            },
+            {
+              "name": "Bt 450",
+              "slug": "bt-450"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Microware",
+              "slug": "microware"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Trendnet",
+              "slug": "trendnet"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Bluetooth Headphone",
+          "slug": "bluetooth-headphone",
+          "brands": [
+            {
+              "name": "Honor",
+              "slug": "honor"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Bluetooth Speaker",
+          "slug": "bluetooth-speaker",
+          "brands": [
+            {
+              "name": "Acefast",
+              "slug": "acefast"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Earfun",
+              "slug": "earfun"
+            },
+            {
+              "name": "Edifier",
+              "slug": "edifier"
+            },
+            {
+              "name": "F&d",
+              "slug": "f&d"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Foneng",
+              "slug": "foneng"
+            },
+            {
+              "name": "Harman Kardon",
+              "slug": "harman-kardon"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hifuture",
+              "slug": "hifuture"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Honor",
+              "slug": "honor"
+            },
+            {
+              "name": "Ikarao",
+              "slug": "ikarao"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Jiayou",
+              "slug": "jiayou"
+            },
+            {
+              "name": "Joyroom",
+              "slug": "joyroom"
+            },
+            {
+              "name": "Ldnio",
+              "slug": "ldnio"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Marshall",
+              "slug": "marshall"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Monster",
+              "slug": "monster"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "Qcy",
+              "slug": "qcy"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Recci",
+              "slug": "recci"
+            },
+            {
+              "name": "Remax",
+              "slug": "remax"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "Tecno",
+              "slug": "tecno"
+            },
+            {
+              "name": "Thonet Vander",
+              "slug": "thonet-vander"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "thunderobot"
+            },
+            {
+              "name": "Tozo",
+              "slug": "tozo"
+            },
+            {
+              "name": "Tribit",
+              "slug": "tribit"
+            },
+            {
+              "name": "Unikyy",
+              "slug": "unikyy"
+            },
+            {
+              "name": "Weofly",
+              "slug": "weofly"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xpert",
+              "slug": "xpert"
+            },
+            {
+              "name": "Xtra",
+              "slug": "xtra"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            },
+            {
+              "name": "Yison",
+              "slug": "yison"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Cable",
+          "slug": "cable",
+          "brands": [
+            {
+              "name": "Acefast",
+              "slug": "acefast"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Awei",
+              "slug": "awei"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Belkin",
+              "slug": "belkin"
+            },
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Charg",
+              "slug": "charg"
+            },
+            {
+              "name": "Choetech",
+              "slug": "choetech"
+            },
+            {
+              "name": "Desktop",
+              "slug": "desktop"
+            },
+            {
+              "name": "Dtech",
+              "slug": "dtech"
+            },
+            {
+              "name": "Emeet",
+              "slug": "emeet"
+            },
+            {
+              "name": "Energizer",
+              "slug": "energizer"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Fjgear",
+              "slug": "fjgear"
+            },
+            {
+              "name": "Foneng",
+              "slug": "foneng"
+            },
+            {
+              "name": "Google",
+              "slug": "google"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Jiayou",
+              "slug": "jiayou"
+            },
+            {
+              "name": "Joyroom",
+              "slug": "joyroom"
+            },
+            {
+              "name": "Ldnio",
+              "slug": "ldnio"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Megastar",
+              "slug": "megastar"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Oneplus",
+              "slug": "oneplus"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Prolink",
+              "slug": "prolink"
+            },
+            {
+              "name": "Qcy",
+              "slug": "qcy"
+            },
+            {
+              "name": "Recci",
+              "slug": "recci"
+            },
+            {
+              "name": "Riversong",
+              "slug": "riversong"
+            },
+            {
+              "name": "Rode",
+              "slug": "rode"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Tecno",
+              "slug": "tecno"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            },
+            {
+              "name": "Vyvylabs",
+              "slug": "vyvylabs"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xtra",
+              "slug": "xtra"
+            },
+            {
+              "name": "Yison",
+              "slug": "yison"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            },
+            {
+              "name": "Zoook",
+              "slug": "zoook"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Capture Card",
+          "slug": "capture-card",
+          "brands": [
+            {
+              "name": "Avermedia",
+              "slug": "avermedia"
+            },
+            {
+              "name": "Elgato",
+              "slug": "elgato"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Card Reader",
+          "slug": "card-reader",
+          "brands": [
+            {
+              "name": "Amalink",
+              "slug": "amalink"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Hiksemi",
+              "slug": "hiksemi"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Ulanzi",
+              "slug": "ulanzi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Converter",
+          "slug": "converter",
+          "brands": [
+            {
+              "name": "Amalink",
+              "slug": "amalink"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Belkin",
+              "slug": "belkin"
+            },
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "Dtech",
+              "slug": "dtech"
+            },
+            {
+              "name": "Fjgear",
+              "slug": "fjgear"
+            },
+            {
+              "name": "Gopro",
+              "slug": "gopro"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Ldnio",
+              "slug": "ldnio"
+            },
+            {
+              "name": "Linksys",
+              "slug": "linksys"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Optoma",
+              "slug": "optoma"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Qgeem",
+              "slug": "qgeem"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Surpass",
+              "slug": "surpass"
+            },
+            {
+              "name": "Trendnet",
+              "slug": "trendnet"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Valdus",
+              "slug": "valdus"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Vga",
+              "slug": "vga"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Digital Voice Recorder",
+          "slug": "digital-voice-recorder",
+          "brands": [
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Philips",
+              "slug": "philips"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Zoom",
+              "slug": "zoom"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "HDD SSD Enclosure",
+          "slug": "hdd-ssd-enclosure",
+          "brands": [
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Cooler Master",
+              "slug": "cooler-master"
+            },
+            {
+              "name": "Jeyi",
+              "slug": "jeyi"
+            },
+            {
+              "name": "Ocpc",
+              "slug": "ocpc"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Orico 2020u3",
+              "slug": "orico-2020u3"
+            },
+            {
+              "name": "Oscoo",
+              "slug": "oscoo"
+            },
+            {
+              "name": "Patriot",
+              "slug": "patriot"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Headphone",
+          "slug": "headphone",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Acefast",
+              "slug": "acefast"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Akg",
+              "slug": "akg"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Audio Technica",
+              "slug": "audio-technica"
+            },
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Awei",
+              "slug": "awei"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Beyerdynamic",
+              "slug": "beyerdynamic"
+            },
+            {
+              "name": "Bose",
+              "slug": "bose"
+            },
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Dareu",
+              "slug": "dareu"
+            },
+            {
+              "name": "Earfun",
+              "slug": "earfun"
+            },
+            {
+              "name": "Edifier",
+              "slug": "edifier"
+            },
+            {
+              "name": "Eksa",
+              "slug": "eksa"
+            },
+            {
+              "name": "Emeet",
+              "slug": "emeet"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Fastrack",
+              "slug": "fastrack"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Haylou",
+              "slug": "haylou"
+            },
+            {
+              "name": "Hifuture",
+              "slug": "hifuture"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Hyperx",
+              "slug": "hyperx"
+            },
+            {
+              "name": "Imice",
+              "slug": "imice"
+            },
+            {
+              "name": "Inbertec",
+              "slug": "inbertec"
+            },
+            {
+              "name": "Inphic",
+              "slug": "inphic"
+            },
+            {
+              "name": "Jabra",
+              "slug": "jabra"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Jedel",
+              "slug": "jedel"
+            },
+            {
+              "name": "Joyroom",
+              "slug": "joyroom"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Maono",
+              "slug": "maono"
+            },
+            {
+              "name": "Mchose",
+              "slug": "mchose"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Oneodio",
+              "slug": "oneodio"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "PC Power",
+              "slug": "pc-power"
+            },
+            {
+              "name": "Powercolor",
+              "slug": "powercolor"
+            },
+            {
+              "name": "Qcy",
+              "slug": "qcy"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "razer"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Remax",
+              "slug": "remax"
+            },
+            {
+              "name": "Rode",
+              "slug": "rode"
+            },
+            {
+              "name": "Royal Kludge",
+              "slug": "royal-kludge"
+            },
+            {
+              "name": "Sennheiser",
+              "slug": "sennheiser"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "T Wolf",
+              "slug": "t-wolf"
+            },
+            {
+              "name": "Thonet And Vander",
+              "slug": "thonet-and-vander"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "thunderobot"
+            },
+            {
+              "name": "Tribit",
+              "slug": "tribit"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            },
+            {
+              "name": "Weofly",
+              "slug": "weofly"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xbox",
+              "slug": "xbox"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            },
+            {
+              "name": "Yison",
+              "slug": "yison"
+            },
+            {
+              "name": "Zoook",
+              "slug": "zoook"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Headphone Stand",
+          "slug": "headphone-stand",
+          "brands": [
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Hubs Docks",
+          "slug": "hubs-docks",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Amalink",
+              "slug": "amalink"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Awei",
+              "slug": "awei"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Belkin",
+              "slug": "belkin"
+            },
+            {
+              "name": "Choetech",
+              "slug": "choetech"
+            },
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "Dtech",
+              "slug": "dtech"
+            },
+            {
+              "name": "Energizer",
+              "slug": "energizer"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Ldnio",
+              "slug": "ldnio"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Remax",
+              "slug": "remax"
+            },
+            {
+              "name": "Surpass",
+              "slug": "surpass"
+            },
+            {
+              "name": "Targus",
+              "slug": "targus"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            },
+            {
+              "name": "Twinmos",
+              "slug": "twinmos"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "X Leo",
+              "slug": "x-leo"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Keyboard",
+          "slug": "keyboard",
+          "brands": [
+            {
+              "name": "1stplayer",
+              "slug": "1stplayer"
+            },
+            {
+              "name": "8bitdo",
+              "slug": "8bitdo"
+            },
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Bajeal",
+              "slug": "bajeal"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Cougar",
+              "slug": "cougar"
+            },
+            {
+              "name": "Dareu",
+              "slug": "dareu"
+            },
+            {
+              "name": "Dell",
+              "slug": "dell"
+            },
+            {
+              "name": "Durgod",
+              "slug": "durgod"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Furycube",
+              "slug": "furycube"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hyperx",
+              "slug": "hyperx"
+            },
+            {
+              "name": "Imice",
+              "slug": "imice"
+            },
+            {
+              "name": "Inphic",
+              "slug": "inphic"
+            },
+            {
+              "name": "Jedel",
+              "slug": "jedel"
+            },
+            {
+              "name": "Keychron",
+              "slug": "keychron"
+            },
+            {
+              "name": "Lingbao",
+              "slug": "lingbao"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "M1",
+              "slug": "m1"
+            },
+            {
+              "name": "Magegee",
+              "slug": "magegee"
+            },
+            {
+              "name": "Matias",
+              "slug": "matias"
+            },
+            {
+              "name": "Mchose",
+              "slug": "mchose"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Microsoft",
+              "slug": "microsoft"
+            },
+            {
+              "name": "Mofii",
+              "slug": "mofii"
+            },
+            {
+              "name": "Monka",
+              "slug": "monka"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Nzxt",
+              "slug": "nzxt"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "PC Power",
+              "slug": "pc-power"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "razer"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Royal Kludge",
+              "slug": "royal-kludge"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "T Wolf",
+              "slug": "t-wolf"
+            },
+            {
+              "name": "Targus",
+              "slug": "targus"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "thunderobot"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            },
+            {
+              "name": "Zifriend",
+              "slug": "zifriend"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Memory Card",
+          "slug": "memory-card",
+          "brands": [
+            {
+              "name": "Adata",
+              "slug": "adata"
+            },
+            {
+              "name": "Apacer",
+              "slug": "apacer"
+            },
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Ezviz",
+              "slug": "ezviz"
+            },
+            {
+              "name": "Hiksemi",
+              "slug": "hiksemi"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Jovision",
+              "slug": "jovision"
+            },
+            {
+              "name": "Kingston",
+              "slug": "kingston"
+            },
+            {
+              "name": "Lexar",
+              "slug": "lexar"
+            },
+            {
+              "name": "Nikon",
+              "slug": "nikon"
+            },
+            {
+              "name": "Ocpc",
+              "slug": "ocpc"
+            },
+            {
+              "name": "Pny",
+              "slug": "pny"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Sandisk",
+              "slug": "sandisk"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Team",
+              "slug": "team"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            },
+            {
+              "name": "Twinmos",
+              "slug": "twinmos"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Microphone",
+          "slug": "microphone",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Acefast",
+              "slug": "acefast"
+            },
+            {
+              "name": "Akg",
+              "slug": "akg"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Audio Technica",
+              "slug": "audio-technica"
+            },
+            {
+              "name": "Avermedia",
+              "slug": "avermedia"
+            },
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Dji",
+              "slug": "dji"
+            },
+            {
+              "name": "Elgato",
+              "slug": "elgato"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Fifine",
+              "slug": "fifine"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Hohem",
+              "slug": "hohem"
+            },
+            {
+              "name": "Hollyland",
+              "slug": "hollyland"
+            },
+            {
+              "name": "Htdz",
+              "slug": "htdz"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Lewitt",
+              "slug": "lewitt"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Maono",
+              "slug": "maono"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Mirfak",
+              "slug": "mirfak"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Neumann",
+              "slug": "neumann"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Panasonic",
+              "slug": "panasonic"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Rode",
+              "slug": "rode"
+            },
+            {
+              "name": "Saramonic",
+              "slug": "saramonic"
+            },
+            {
+              "name": "Sennheiser",
+              "slug": "sennheiser"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "Synco",
+              "slug": "synco"
+            },
+            {
+              "name": "Takstar",
+              "slug": "takstar"
+            },
+            {
+              "name": "Tev",
+              "slug": "tev"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Ulanzi",
+              "slug": "ulanzi"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            },
+            {
+              "name": "Yanmai",
+              "slug": "yanmai"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Mouse",
+          "slug": "mouse",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Apple",
+              "slug": "apple"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Cougar",
+              "slug": "cougar"
+            },
+            {
+              "name": "Dareu",
+              "slug": "dareu"
+            },
+            {
+              "name": "Deepcool",
+              "slug": "deepcool"
+            },
+            {
+              "name": "Durgod",
+              "slug": "durgod"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Furycube",
+              "slug": "furycube"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Hyperx",
+              "slug": "hyperx"
+            },
+            {
+              "name": "Imice",
+              "slug": "imice"
+            },
+            {
+              "name": "Inphic",
+              "slug": "inphic"
+            },
+            {
+              "name": "Jedel",
+              "slug": "jedel"
+            },
+            {
+              "name": "Keychron",
+              "slug": "keychron"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Lingbao",
+              "slug": "lingbao"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Mchose",
+              "slug": "mchose"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Microsoft",
+              "slug": "microsoft"
+            },
+            {
+              "name": "Mofii",
+              "slug": "mofii"
+            },
+            {
+              "name": "Monka",
+              "slug": "monka"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Nzxt",
+              "slug": "nzxt"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Onten",
+              "slug": "onten"
+            },
+            {
+              "name": "PC Power",
+              "slug": "pc-power"
+            },
+            {
+              "name": "Powercolor",
+              "slug": "powercolor"
+            },
+            {
+              "name": "Prolink",
+              "slug": "prolink"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "razer"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Royal Kludge",
+              "slug": "royal-kludge"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "T Wolf",
+              "slug": "t-wolf"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "thunderobot"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Xigmatek",
+              "slug": "xigmatek"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Mouse Pad",
+          "slug": "mouse-pad",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Blisspads",
+              "slug": "blisspads"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Deepcool",
+              "slug": "deepcool"
+            },
+            {
+              "name": "Elgato",
+              "slug": "elgato"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Inphic",
+              "slug": "inphic"
+            },
+            {
+              "name": "Meetion",
+              "slug": "meetion"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "razer"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "steelseries"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "thunderobot"
+            },
+            {
+              "name": "X Raypad",
+              "slug": "x-raypad"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Pen Drive",
+          "slug": "pen-drive",
+          "brands": [
+            {
+              "name": "Adata",
+              "slug": "adata"
+            },
+            {
+              "name": "Apacer",
+              "slug": "apacer"
+            },
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Eaget",
+              "slug": "eaget"
+            },
+            {
+              "name": "Hiksemi",
+              "slug": "hiksemi"
+            },
+            {
+              "name": "Kingston",
+              "slug": "kingston"
+            },
+            {
+              "name": "Lexar",
+              "slug": "lexar"
+            },
+            {
+              "name": "Netac",
+              "slug": "netac"
+            },
+            {
+              "name": "Oscoo",
+              "slug": "oscoo"
+            },
+            {
+              "name": "Pny",
+              "slug": "pny"
+            },
+            {
+              "name": "SAN",
+              "slug": "san"
+            },
+            {
+              "name": "Sandisk",
+              "slug": "sandisk"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Team",
+              "slug": "team"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            },
+            {
+              "name": "Twinmos",
+              "slug": "twinmos"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Power Strip",
+          "slug": "power-strip",
+          "brands": [
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Aptech",
+              "slug": "aptech"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Belkin",
+              "slug": "belkin"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Hoco",
+              "slug": "hoco"
+            },
+            {
+              "name": "Huntkey",
+              "slug": "huntkey"
+            },
+            {
+              "name": "Ldnio",
+              "slug": "ldnio"
+            },
+            {
+              "name": "Maxline",
+              "slug": "maxline"
+            },
+            {
+              "name": "Nano",
+              "slug": "nano"
+            },
+            {
+              "name": "Orico",
+              "slug": "orico"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Presenter",
+          "slug": "presenter",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Inphic",
+              "slug": "inphic"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Micropack",
+              "slug": "micropack"
+            },
+            {
+              "name": "Prolink",
+              "slug": "prolink"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Targus",
+              "slug": "targus"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Sound Card",
+          "slug": "sound-card",
+          "brands": [
+            {
+              "name": "Orico",
+              "slug": "orico"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Soundbar",
+          "slug": "soundbar",
+          "brands": [
+            {
+              "name": "Baseus",
+              "slug": "baseus"
+            },
+            {
+              "name": "Bose",
+              "slug": "bose"
+            },
+            {
+              "name": "Digitalx",
+              "slug": "digitalx"
+            },
+            {
+              "name": "F And D",
+              "slug": "f-and-d"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "T Wolf",
+              "slug": "t-wolf"
+            },
+            {
+              "name": "Thonet And Vander",
+              "slug": "thonet-and-vander"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Speaker Home Theater",
+          "slug": "speaker-home-theater",
+          "brands": [
+            {
+              "name": "Aula",
+              "slug": "aula"
+            },
+            {
+              "name": "Awei",
+              "slug": "awei"
+            },
+            {
+              "name": "Bose",
+              "slug": "bose"
+            },
+            {
+              "name": "Edifier",
+              "slug": "edifier"
+            },
+            {
+              "name": "F And D",
+              "slug": "f-and-d"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Jedel",
+              "slug": "jedel"
+            },
+            {
+              "name": "Krk",
+              "slug": "krk"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Microlab",
+              "slug": "microlab"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "onikuma"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "oraimo"
+            },
+            {
+              "name": "Perfect",
+              "slug": "perfect"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "razer"
+            },
+            {
+              "name": "Recci",
+              "slug": "recci"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Solitine",
+              "slug": "solitine"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "T Wolf",
+              "slug": "t-wolf"
+            },
+            {
+              "name": "Thonet And Vander",
+              "slug": "thonet-and-vander"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Xo",
+              "slug": "xo"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Xtrike Me",
+              "slug": "xtrike-me"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Thermal Paste",
+          "slug": "thermal-paste",
+          "brands": [
+            {
+              "name": "Arctic",
+              "slug": "arctic"
+            },
+            {
+              "name": "Cooler Master",
+              "slug": "cooler-master"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Deepcool",
+              "slug": "deepcool"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Gamemax",
+              "slug": "gamemax"
+            },
+            {
+              "name": "Maxtor",
+              "slug": "maxtor"
+            },
+            {
+              "name": "Noctua",
+              "slug": "noctua"
+            },
+            {
+              "name": "Ocypus",
+              "slug": "ocypus"
+            },
+            {
+              "name": "Thermal",
+              "slug": "thermal"
+            },
+            {
+              "name": "Thermalright",
+              "slug": "thermalright"
+            },
+            {
+              "name": "Thermaltake",
+              "slug": "thermaltake"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Webcam",
+          "slug": "webcam",
+          "brands": [
+            {
+              "name": "A4tech",
+              "slug": "a4tech"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Avermedia",
+              "slug": "avermedia"
+            },
+            {
+              "name": "Boya",
+              "slug": "boya"
+            },
+            {
+              "name": "Elgato",
+              "slug": "elgato"
+            },
+            {
+              "name": "Emeet",
+              "slug": "emeet"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Magpie",
+              "slug": "magpie"
+            },
+            {
+              "name": "Optoma",
+              "slug": "optoma"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            },
+            {
+              "name": "Verbatim",
+              "slug": "verbatim"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Wrist Rest",
+          "slug": "wrist-rest",
+          "brands": [
+            {
+              "name": "Ajazz",
+              "slug": "ajazz"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Keychron",
+              "slug": "keychron"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Redragon",
+              "slug": "redragon"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [],
+      "specialFolders": []
+    },
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "imagePath": "/images/products/appliance",
+      "subcategories": [
+        {
+          "name": "AC",
+          "slug": "ac",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Daewoo",
+              "slug": "Daewoo"
+            },
+            {
+              "name": "Daikin",
+              "slug": "Daikin"
+            },
+            {
+              "name": "EcoFlow",
+              "slug": "EcoFlow"
+            },
+            {
+              "name": "Elite",
+              "slug": "Elite"
+            },
+            {
+              "name": "General",
+              "slug": "General"
+            },
+            {
+              "name": "Gree",
+              "slug": "Gree"
+            },
+            {
+              "name": "Haier",
+              "slug": "Haier"
+            },
+            {
+              "name": "Haiko",
+              "slug": "Haiko"
+            },
+            {
+              "name": "Hisense",
+              "slug": "Hisense"
+            },
+            {
+              "name": "Hitachi",
+              "slug": "Hitachi"
+            },
+            {
+              "name": "Hyundai",
+              "slug": "Hyundai"
+            },
+            {
+              "name": "Kelvinator",
+              "slug": "Kelvinator"
+            },
+            {
+              "name": "LG",
+              "slug": "LG"
+            },
+            {
+              "name": "Midea",
+              "slug": "Midea"
+            },
+            {
+              "name": "Panasonic",
+              "slug": "Panasonic"
+            },
+            {
+              "name": "Samsung",
+              "slug": "Samsung"
+            },
+            {
+              "name": "Sharp",
+              "slug": "Sharp"
+            },
+            {
+              "name": "SINGER",
+              "slug": "SINGER"
+            },
+            {
+              "name": "SMART",
+              "slug": "SMART"
+            },
+            {
+              "name": "TCL",
+              "slug": "TCL"
+            },
+            {
+              "name": "Walton",
+              "slug": "Walton"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "Xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Air Cooler",
+          "slug": "air-cooler",
+          "brands": [
+            {
+              "name": "Gree",
+              "slug": "Gree"
+            },
+            {
+              "name": "Vision",
+              "slug": "Vision"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Air Fryer",
+          "slug": "air-fryer",
+          "brands": [
+            {
+              "name": "Oraimo",
+              "slug": "Oraimo"
+            },
+            {
+              "name": "Philips",
+              "slug": "Philips"
+            },
+            {
+              "name": "Pigeon",
+              "slug": "Pigeon"
+            },
+            {
+              "name": "Sharp",
+              "slug": "Sharp"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "Xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Blender Grinder",
+          "slug": "blender-grinder",
+          "brands": [
+            {
+              "name": "BOSCH",
+              "slug": "BOSCH"
+            },
+            {
+              "name": "Havells",
+              "slug": "Havells"
+            },
+            {
+              "name": "KENWOOD",
+              "slug": "KENWOOD"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "Oraimo"
+            },
+            {
+              "name": "Panasonic",
+              "slug": "Panasonic"
+            },
+            {
+              "name": "Philips",
+              "slug": "Philips"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "Tefal",
+              "slug": "Tefal"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Cooker",
+          "slug": "cooker",
+          "brands": [
+            {
+              "name": "Pressure Cooker",
+              "slug": "Pressure Cooker"
+            },
+            {
+              "name": "Rice Cooke",
+              "slug": "Rice Cooke"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Fan",
+          "slug": "fan",
+          "brands": [
+            {
+              "name": "Ceiling Fan",
+              "slug": "Ceiling Fan"
+            },
+            {
+              "name": "Charger Fan",
+              "slug": "Charger Fan"
+            },
+            {
+              "name": "Stand Fan",
+              "slug": "Stand Fan"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Fridge",
+          "slug": "fridge",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "BOSCH",
+              "slug": "BOSCH"
+            },
+            {
+              "name": "Haier",
+              "slug": "Haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "Hisense"
+            },
+            {
+              "name": "Hitachi",
+              "slug": "Hitachi"
+            },
+            {
+              "name": "Kelvinator",
+              "slug": "Kelvinator"
+            },
+            {
+              "name": "LG",
+              "slug": "LG"
+            },
+            {
+              "name": "Midea",
+              "slug": "Midea"
+            },
+            {
+              "name": "Rangs",
+              "slug": "Rangs"
+            },
+            {
+              "name": "Samsung",
+              "slug": "Samsung"
+            },
+            {
+              "name": "Sharp",
+              "slug": "Sharp"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "Smart",
+              "slug": "Smart"
+            },
+            {
+              "name": "Whirlpool",
+              "slug": "Whirlpool"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Geyser",
+          "slug": "geyser",
+          "brands": [
+            {
+              "name": "Ariston",
+              "slug": "Ariston"
+            },
+            {
+              "name": "Haier",
+              "slug": "Haier"
+            },
+            {
+              "name": "Havells",
+              "slug": "Havells"
+            },
+            {
+              "name": "IEGA",
+              "slug": "IEGA"
+            },
+            {
+              "name": "Midea",
+              "slug": "Midea"
+            },
+            {
+              "name": "Rangs",
+              "slug": "Rangs"
+            },
+            {
+              "name": "Shameem",
+              "slug": "Shameem"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "TESY",
+              "slug": "TESY"
+            },
+            {
+              "name": "Tropica",
+              "slug": "Tropica"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Oven",
+          "slug": "oven",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "BOSCH",
+              "slug": "BOSCH"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "Oraimo"
+            },
+            {
+              "name": "Samsung",
+              "slug": "Samsung"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "Whirlpool",
+              "slug": "Whirlpool"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Sewing Machine",
+          "slug": "sewing-machine",
+          "brands": [
+            {
+              "name": "JACK",
+              "slug": "JACK"
+            },
+            {
+              "name": "SINGER",
+              "slug": "SINGER"
+            },
+            {
+              "name": "ZOJE",
+              "slug": "ZOJE"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Washing Machine",
+          "slug": "washing-machine",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Haier",
+              "slug": "Haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "Hisense"
+            },
+            {
+              "name": "Hitachi",
+              "slug": "Hitachi"
+            },
+            {
+              "name": "LG",
+              "slug": "LG"
+            },
+            {
+              "name": "Samsung",
+              "slug": "Samsung"
+            },
+            {
+              "name": "Sharp",
+              "slug": "Sharp"
+            },
+            {
+              "name": "Singer",
+              "slug": "Singer"
+            },
+            {
+              "name": "TCL",
+              "slug": "TCL"
+            },
+            {
+              "name": "Walton",
+              "slug": "Walton"
+            },
+            {
+              "name": "Whirlpool",
+              "slug": "Whirlpool"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "Xiaomi"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Air Curtain",
+          "slug": "air-curtain",
+          "imagePath": "/images/products/appliance/air-curtain",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Air Purifier",
+          "slug": "air-purifier",
+          "imagePath": "/images/products/appliance/air-purifier",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Coffee Maker",
+          "slug": "coffee-maker",
+          "imagePath": "/images/products/appliance/coffee-maker",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Dehumidifier",
+          "slug": "dehumidifier",
+          "imagePath": "/images/products/appliance/dehumidifier",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Dishwasher",
+          "slug": "dishwasher",
+          "imagePath": "/images/products/appliance/dishwasher",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Electric Cooker",
+          "slug": "electric-cooker",
+          "imagePath": "/images/products/appliance/electric-cooker",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Electric Kettle",
+          "slug": "electric-kettle",
+          "imagePath": "/images/products/appliance/electric-kettle",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Gas Stove",
+          "slug": "gas-stove",
+          "imagePath": "/images/products/appliance/gas-stove",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Iron",
+          "slug": "iron",
+          "imagePath": "/images/products/appliance/iron",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Juicer",
+          "slug": "juicer",
+          "imagePath": "/images/products/appliance/juicer",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Kitchen Hood",
+          "slug": "kitchen-hood",
+          "imagePath": "/images/products/appliance/kitchen-hood",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "imagePath": "/images/products/appliance/light",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Room Heater",
+          "slug": "room-heater",
+          "imagePath": "/images/products/appliance/room-heater",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Toaster",
+          "slug": "toaster",
+          "imagePath": "/images/products/appliance/toaster",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Vacuum Cleaner",
+          "slug": "vacuum-cleaner",
+          "imagePath": "/images/products/appliance/vacuum-cleaner",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "imagePath": "/images/products/camera",
+      "subcategories": [
+        {
+          "name": "Action Camera",
+          "slug": "Action Camera",
+          "brands": [
+            {
+              "name": "ACEFAST",
+              "slug": "ACEFAST"
+            },
+            {
+              "name": "AUSEK",
+              "slug": "AUSEK"
+            },
+            {
+              "name": "Blisbond",
+              "slug": "Blisbond"
+            },
+            {
+              "name": "DJI",
+              "slug": "DJI"
+            },
+            {
+              "name": "Insta360",
+              "slug": "Insta360"
+            },
+            {
+              "name": "ORDRO",
+              "slug": "ORDRO"
+            },
+            {
+              "name": "SJCAM",
+              "slug": "SJCAM"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Dash Cam",
+          "slug": "dash-cam",
+          "brands": [
+            {
+              "name": "70mai",
+              "slug": "70mai"
+            },
+            {
+              "name": "Transcend",
+              "slug": "Transcend"
+            },
+            {
+              "name": "WiWU",
+              "slug": "WiWU"
+            },
+            {
+              "name": "XO",
+              "slug": "XO"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Body Camera",
+          "slug": "body-camera",
+          "imagePath": "/images/products/camera/body-camera",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Camera Lenses",
+          "slug": "camera-lenses",
+          "imagePath": "/images/products/camera/camera-lenses",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Instant Camera",
+          "slug": "instant-camera",
+          "imagePath": "/images/products/camera/instant-camera",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Component",
+      "slug": "component",
+      "imagePath": "/images/products/component",
+      "subcategories": [
+        {
+          "name": "Casing",
+          "slug": "casing",
+          "brands": [
+            {
+              "name": "Carbono",
+              "slug": "carbono"
+            },
+            {
+              "name": "Casing",
+              "slug": "Casing"
+            },
+            {
+              "name": "Cougar",
+              "slug": "Cougar"
+            },
+            {
+              "name": "Deepcool",
+              "slug": "deepcool"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "Gigabyte"
+            },
+            {
+              "name": "MaxGreen",
+              "slug": "MaxGreen"
+            },
+            {
+              "name": "Monarch",
+              "slug": "monarch"
+            },
+            {
+              "name": "Nzxt",
+              "slug": "nzxt"
+            },
+            {
+              "name": "Xigmatek",
+              "slug": "Xigmatek"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "Xtreme"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Casing Cooler",
+          "slug": "casing-cooler",
+          "brands": [
+            {
+              "name": "Antec",
+              "slug": "antec"
+            },
+            {
+              "name": "ARCTIC",
+              "slug": "ARCTIC"
+            },
+            {
+              "name": "Asus",
+              "slug": "Asus"
+            },
+            {
+              "name": "CoolerMaster",
+              "slug": "CoolerMaster"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "PC Power",
+              "slug": "PC Power"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "Xtreme"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Cpu Cooler",
+          "slug": "cpu-cooler",
+          "brands": [
+            {
+              "name": "1stplayer",
+              "slug": "1stplayer"
+            },
+            {
+              "name": "Antec",
+              "slug": "antec"
+            },
+            {
+              "name": "Arctic",
+              "slug": "arctic"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Cooler Master",
+              "slug": "cooler-master"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Cougar",
+              "slug": "cougar"
+            },
+            {
+              "name": "Deepcool",
+              "slug": "deepcool"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Nzxt",
+              "slug": "nzxt"
+            },
+            {
+              "name": "Ocypus",
+              "slug": "ocypus"
+            },
+            {
+              "name": "Team",
+              "slug": "team"
+            },
+            {
+              "name": "Uphere",
+              "slug": "uphere"
+            },
+            {
+              "name": "Value Top",
+              "slug": "value-top"
+            },
+            {
+              "name": "Xigmatek",
+              "slug": "xigmatek"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Yeston",
+              "slug": "yeston"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Graphics Card",
+          "slug": "graphics-card",
+          "brands": [
+            {
+              "name": "Abit",
+              "slug": "abit"
+            },
+            {
+              "name": "Afox",
+              "slug": "afox"
+            },
+            {
+              "name": "Arktek",
+              "slug": "arktek"
+            },
+            {
+              "name": "Asus",
+              "slug": "Asus"
+            },
+            {
+              "name": "Colorful",
+              "slug": "colorful"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Gunnir",
+              "slug": "gunnir"
+            },
+            {
+              "name": "Inno3d",
+              "slug": "inno3d"
+            },
+            {
+              "name": "Manli",
+              "slug": "manli"
+            },
+            {
+              "name": "Maxsun",
+              "slug": "maxsun"
+            },
+            {
+              "name": "MSI",
+              "slug": "MSI"
+            },
+            {
+              "name": "NVIDIA",
+              "slug": "NVIDIA"
+            },
+            {
+              "name": "Ocpc",
+              "slug": "ocpc"
+            },
+            {
+              "name": "Peladn",
+              "slug": "peladn"
+            },
+            {
+              "name": "Pny",
+              "slug": "pny"
+            },
+            {
+              "name": "Powercolor",
+              "slug": "powercolor"
+            },
+            {
+              "name": "Sapphire",
+              "slug": "sapphire"
+            },
+            {
+              "name": "Unika",
+              "slug": "unika"
+            },
+            {
+              "name": "Yeston",
+              "slug": "Yeston"
+            },
+            {
+              "name": "Zotac",
+              "slug": "zotac"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Hard Disk Drive",
+          "slug": "hard-disk-drive",
+          "brands": [
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Seagate",
+              "slug": "seagate"
+            },
+            {
+              "name": "Toshiba",
+              "slug": "toshiba"
+            },
+            {
+              "name": "Western Digital",
+              "slug": "western-digital"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Motherboard",
+          "slug": "motherboard",
+          "brands": [
+            {
+              "name": "Asrock Amd",
+              "slug": "asrock-amd"
+            },
+            {
+              "name": "Asrock Intel",
+              "slug": "asrock-intel"
+            },
+            {
+              "name": "Asus Amd",
+              "slug": "asus-amd"
+            },
+            {
+              "name": "Asus Intel",
+              "slug": "asus-intel"
+            },
+            {
+              "name": "Colorful Amd",
+              "slug": "colorful-amd"
+            },
+            {
+              "name": "Colorful Intel",
+              "slug": "colorful-intel"
+            },
+            {
+              "name": "Gigabyte Amd",
+              "slug": "gigabyte-amd"
+            },
+            {
+              "name": "Gigabyte Intel",
+              "slug": "gigabyte-intel"
+            },
+            {
+              "name": "Msi Amd",
+              "slug": "msi-amd"
+            },
+            {
+              "name": "Msi Intel",
+              "slug": "msi-intel"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Optical Disk Drive",
+          "slug": "optical-disk-drive",
+          "brands": [
+            {
+              "name": "External Optical Disk Drive",
+              "slug": "external-optical-disk-drive"
+            },
+            {
+              "name": "Internal Optical Disk Drive",
+              "slug": "internal-optical-disk-drive"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Portable Hard Disk Drive",
+          "slug": "portable-hard-disk-drive",
+          "brands": [
+            {
+              "name": "Lacie",
+              "slug": "lacie"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Portable SSD",
+          "slug": "portable-ssd",
+          "brands": [
+            {
+              "name": "Crucial",
+              "slug": "crucial"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Power Supply",
+          "slug": "power-supply",
+          "brands": [
+            {
+              "name": "Antec",
+              "slug": "antec"
+            },
+            {
+              "name": "Gamdias",
+              "slug": "gamdias"
+            },
+            {
+              "name": "Golden Field",
+              "slug": "golden-field"
+            },
+            {
+              "name": "Maxgreen",
+              "slug": "maxgreen"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Processor",
+          "slug": "processor",
+          "brands": [
+            {
+              "name": "Amd",
+              "slug": "amd"
+            },
+            {
+              "name": "Intel",
+              "slug": "intel"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "RAM Desktop",
+          "slug": "ram-desktop",
+          "brands": [
+            {
+              "name": "Aitc",
+              "slug": "aitc"
+            },
+            {
+              "name": "Corsair",
+              "slug": "Corsair"
+            },
+            {
+              "name": "G Skill",
+              "slug": "g-skill"
+            },
+            {
+              "name": "Kingbank",
+              "slug": "kingbank"
+            },
+            {
+              "name": "Kingston",
+              "slug": "kingston"
+            },
+            {
+              "name": "Lexar",
+              "slug": "lexar"
+            },
+            {
+              "name": "Netac",
+              "slug": "netac"
+            },
+            {
+              "name": "Oscoo",
+              "slug": "oscoo"
+            },
+            {
+              "name": "Team",
+              "slug": "Team"
+            },
+            {
+              "name": "Twinmos",
+              "slug": "twinmos"
+            },
+            {
+              "name": "V Color",
+              "slug": "v-color"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "RAM Laptop",
+          "slug": "ram-laptop",
+          "brands": [
+            {
+              "name": "Adata",
+              "slug": "adata"
+            },
+            {
+              "name": "Corsair",
+              "slug": "corsair"
+            },
+            {
+              "name": "Kingston",
+              "slug": "kingston"
+            },
+            {
+              "name": "PNY",
+              "slug": "PNY"
+            },
+            {
+              "name": "Team",
+              "slug": "team"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "SSD",
+          "slug": "ssd",
+          "brands": [
+            {
+              "name": "Addlink",
+              "slug": "addlink"
+            },
+            {
+              "name": "Biostar",
+              "slug": "biostar"
+            },
+            {
+              "name": "Colourful",
+              "slug": "colourful"
+            },
+            {
+              "name": "Corsair",
+              "slug": "Corsair"
+            },
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Kingston",
+              "slug": "Kingston"
+            },
+            {
+              "name": "Miphi",
+              "slug": "miphi"
+            },
+            {
+              "name": "Netac",
+              "slug": "Netac"
+            },
+            {
+              "name": "OCPC",
+              "slug": "OCPC"
+            },
+            {
+              "name": "Seagate",
+              "slug": "Seagate"
+            },
+            {
+              "name": "Team",
+              "slug": "Team"
+            },
+            {
+              "name": "Transcend",
+              "slug": "transcend"
+            },
+            {
+              "name": "Western Digital",
+              "slug": "Western Digital"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "SSD Cooler",
+          "slug": "ssd cooler",
+          "imagePath": "/images/products/component/ssd cooler",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Vertical GPU Holder",
+          "slug": "vertical-gpu-holder",
+          "imagePath": "/images/products/component/vertical-gpu-holder",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Water Liquid Cooling",
+          "slug": "water-liquid-cooling",
+          "imagePath": "/images/products/component/water-liquid-cooling",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Desktop",
+      "slug": "desktop",
+      "imagePath": "/images/products/desktop",
+      "subcategories": [
+        {
+          "name": "All In One PC",
+          "slug": "all-in-one-pc",
+          "brands": [
+            {
+              "name": "Aoc",
+              "slug": "aoc"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Dell",
+              "slug": "dell"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Teclast",
+              "slug": "teclast"
+            },
+            {
+              "name": "Value Top",
+              "slug": "value-top"
+            },
+            {
+              "name": "Walton",
+              "slug": "walton"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Brand PC",
+          "slug": "brand-pc",
+          "brands": [
+            {
+              "name": "Acer",
+              "slug": "acer"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Dell",
+              "slug": "dell"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Gaming PC",
+          "slug": "gaming-pc",
+          "brands": [
+            {
+              "name": "Intel PC",
+              "slug": "intel-pc"
+            },
+            {
+              "name": "Ryzen PC",
+              "slug": "ryzen-pc"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Portable Mini PC",
+          "slug": "portable-mini-pc",
+          "brands": [
+            {
+              "name": "Asus",
+              "slug": "asus"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Star PC",
+          "slug": "star-pc",
+          "brands": [
+            {
+              "name": "Intel PC",
+              "slug": "intel-pc"
+            },
+            {
+              "name": "Ryzen PC",
+              "slug": "ryzen-pc"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Ai PC",
+          "slug": "ai-pc",
+          "imagePath": "/images/products/desktop/ai-pc",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Apple Imac",
+          "slug": "apple-imac",
+          "imagePath": "/images/products/desktop/apple-imac",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Apple Mac Mini",
+          "slug": "apple-mac-mini",
+          "imagePath": "/images/products/desktop/apple-mac-mini",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Apple Mac Pro",
+          "slug": "apple-mac-pro",
+          "imagePath": "/images/products/desktop/apple-mac-pro",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Apple Mac Studio",
+          "slug": "apple-mac-studio",
+          "imagePath": "/images/products/desktop/apple-mac-studio",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Gadget",
+      "slug": "gadget",
+      "imagePath": "/images/products/gadget",
+      "subcategories": [],
+      "directChildren": [
+        {
+          "name": "Analog Watch",
+          "slug": "analog-watch",
+          "imagePath": "/images/products/gadget/analog-watch",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Calculator",
+          "slug": "calculator",
+          "imagePath": "/images/products/gadget/calculator",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Car Charger",
+          "slug": "car-charger",
+          "imagePath": "/images/products/gadget/car-charger",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Daily Lifestyle",
+          "slug": "daily-lifestyle",
+          "imagePath": "/images/products/gadget/daily-lifestyle",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Drones",
+          "slug": "drones",
+          "imagePath": "/images/products/gadget/drones",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Earbuds",
+          "slug": "earbuds",
+          "imagePath": "/images/products/gadget/earbuds",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Earphone",
+          "slug": "earphone",
+          "imagePath": "/images/products/gadget/earphone",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Gimbal",
+          "slug": "gimbal",
+          "imagePath": "/images/products/gadget/gimbal",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Health Monitor",
+          "slug": "health-monitor",
+          "imagePath": "/images/products/gadget/health-monitor",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Mini Fan",
+          "slug": "mini-fan",
+          "imagePath": "/images/products/gadget/mini-fan",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Neckband",
+          "slug": "neckband",
+          "imagePath": "/images/products/gadget/neckband",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Power Bank",
+          "slug": "power-bank",
+          "imagePath": "/images/products/gadget/power-bank",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Power Tools",
+          "slug": "power-tools",
+          "imagePath": "/images/products/gadget/power-tools",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart Band",
+          "slug": "smart-band",
+          "imagePath": "/images/products/gadget/smart-band",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart Glasses",
+          "slug": "smart-glasses",
+          "imagePath": "/images/products/gadget/smart-glasses",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart Ring",
+          "slug": "smart-ring",
+          "imagePath": "/images/products/gadget/smart-ring",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart Watch",
+          "slug": "smart-watch",
+          "imagePath": "/images/products/gadget/smart-watch",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Stream Deck",
+          "slug": "stream-deck",
+          "imagePath": "/images/products/gadget/stream-deck",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Studio Equipment",
+          "slug": "studio-equipment",
+          "imagePath": "/images/products/gadget/studio-equipment",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Trimmer",
+          "slug": "trimmer",
+          "imagePath": "/images/products/gadget/trimmer",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "TV Box",
+          "slug": "tv-box",
+          "imagePath": "/images/products/gadget/tv-box",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": [
+        "_uncategorized"
+      ]
+    },
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "imagePath": "/images/products/gaming",
+      "subcategories": [
+        {
+          "name": "Gamepad",
+          "slug": "gamepad",
+          "brands": [
+            {
+              "name": "8bitdo",
+              "slug": "8bitdo"
+            },
+            {
+              "name": "A4tech",
+              "slug": "A4tech"
+            },
+            {
+              "name": "Ajazz",
+              "slug": "Ajazz"
+            },
+            {
+              "name": "Aolion",
+              "slug": "Aolion"
+            },
+            {
+              "name": "Corsair",
+              "slug": "Corsair"
+            },
+            {
+              "name": "Dareu",
+              "slug": "Dareu"
+            },
+            {
+              "name": "Fantech",
+              "slug": "Fantech"
+            },
+            {
+              "name": "Gamesir",
+              "slug": "Gamesir"
+            },
+            {
+              "name": "Havit",
+              "slug": "Havit"
+            },
+            {
+              "name": "Logitech",
+              "slug": "Logitech"
+            },
+            {
+              "name": "Microsoft",
+              "slug": "Microsoft"
+            },
+            {
+              "name": "Nintendo",
+              "slug": "Nintendo"
+            },
+            {
+              "name": "Onikuma",
+              "slug": "Onikuma"
+            },
+            {
+              "name": "Playstation 5",
+              "slug": "Playstation 5"
+            },
+            {
+              "name": "PS4",
+              "slug": "PS4"
+            },
+            {
+              "name": "PXN",
+              "slug": "PXN"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "Rapoo"
+            },
+            {
+              "name": "Razer",
+              "slug": "Razer"
+            },
+            {
+              "name": "Redragon",
+              "slug": "Redragon"
+            },
+            {
+              "name": "Steelseries",
+              "slug": "Steelseries"
+            },
+            {
+              "name": "Thunderobot",
+              "slug": "Thunderobot"
+            },
+            {
+              "name": "X Box",
+              "slug": "X-box"
+            },
+            {
+              "name": "XO",
+              "slug": "XO"
+            },
+            {
+              "name": "Xtrike",
+              "slug": "Xtrike"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Gaming Chair",
+          "slug": "gaming-chair",
+          "brands": [
+            {
+              "name": "Corsair",
+              "slug": "Corsair"
+            },
+            {
+              "name": "Cougar",
+              "slug": "Cougar"
+            },
+            {
+              "name": "Fantech",
+              "slug": "Fantech"
+            },
+            {
+              "name": "Gamemax",
+              "slug": "Gamemax"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "Gigabyte"
+            },
+            {
+              "name": "Havit",
+              "slug": "Havit"
+            },
+            {
+              "name": "Phantom",
+              "slug": "Phantom"
+            },
+            {
+              "name": "Razer",
+              "slug": "Razer"
+            },
+            {
+              "name": "Thermaltake",
+              "slug": "Thermaltake"
+            },
+            {
+              "name": "Xtrike",
+              "slug": "Xtrike"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Gaming Console",
+          "slug": "gaming-console",
+          "brands": [
+            {
+              "name": "Asus",
+              "slug": "Asus"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "Lenovo"
+            },
+            {
+              "name": "Nintendo",
+              "slug": "Nintendo"
+            },
+            {
+              "name": "PlayStation",
+              "slug": "PlayStation"
+            },
+            {
+              "name": "SJGAM",
+              "slug": "SJGAM"
+            },
+            {
+              "name": "Steam Deck",
+              "slug": "Steam Deck"
+            },
+            {
+              "name": "Xbox",
+              "slug": "Xbox"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Games",
+          "slug": "games",
+          "imagePath": "/images/products/gaming/games",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Gaming Desk",
+          "slug": "gaming-desk",
+          "imagePath": "/images/products/gaming/gaming-desk",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Headphone",
+          "slug": "headphone",
+          "imagePath": "/images/products/gaming/headphone",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Keyboard",
+          "slug": "keyboard",
+          "imagePath": "/images/products/gaming/keyboard",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Mouse",
+          "slug": "mouse",
+          "imagePath": "/images/products/gaming/mouse",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Mouse Pad",
+          "slug": "mouse-pad",
+          "imagePath": "/images/products/gaming/mouse-pad",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Racing Wheel",
+          "slug": "racing-wheel",
+          "imagePath": "/images/products/gaming/racing-wheel",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "VR",
+          "slug": "vr",
+          "imagePath": "/images/products/gaming/vr",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Laptop",
+      "slug": "laptop",
+      "imagePath": "/images/products/laptop",
+      "subcategories": [
+        {
+          "name": "All Laptop",
+          "slug": "all-laptop",
+          "brands": [
+            {
+              "name": "Acer",
+              "slug": "acer"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Chuwi",
+              "slug": "chuwi"
+            },
+            {
+              "name": "Dell",
+              "slug": "dell"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Macbook",
+              "slug": "macbook"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Tecno",
+              "slug": "tecno"
+            },
+            {
+              "name": "Walton",
+              "slug": "walton"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Gaming Laptop",
+          "slug": "gaming-laptop",
+          "brands": [
+            {
+              "name": "Acer",
+              "slug": "acer"
+            },
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Gigabyte",
+              "slug": "gigabyte"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            }
+          ],
+          "specialFolders": [
+            "_other"
+          ]
+        },
+        {
+          "name": "Laptop Accessories",
+          "slug": "laptop-accessories",
+          "brands": [
+            {
+              "name": "Caddy",
+              "slug": "caddy"
+            },
+            {
+              "name": "Display",
+              "slug": "display"
+            },
+            {
+              "name": "Laptop Battery",
+              "slug": "laptop-battery"
+            },
+            {
+              "name": "Laptop Charger Adapter",
+              "slug": "laptop-charger-adapter"
+            },
+            {
+              "name": "Laptop Cooler",
+              "slug": "laptop-cooler"
+            },
+            {
+              "name": "Laptop Desk",
+              "slug": "laptop-desk"
+            },
+            {
+              "name": "Laptop Keyboard",
+              "slug": "laptop-keyboard"
+            },
+            {
+              "name": "Laptop Stand",
+              "slug": "laptop-stand"
+            }
+          ],
+          "specialFolders": [
+            "_other"
+          ]
+        },
+        {
+          "name": "Laptop Bag",
+          "slug": "laptop-bag",
+          "brands": [
+            {
+              "name": "Arctic Hunter",
+              "slug": "arctic-hunter"
+            },
+            {
+              "name": "Bwoo",
+              "slug": "bwoo"
+            },
+            {
+              "name": "Fantech",
+              "slug": "fantech"
+            },
+            {
+              "name": "Maxgreen",
+              "slug": "maxgreen"
+            },
+            {
+              "name": "Targus",
+              "slug": "targus"
+            },
+            {
+              "name": "Tucano",
+              "slug": "tucano"
+            },
+            {
+              "name": "Wiwu",
+              "slug": "wiwu"
+            }
+          ],
+          "specialFolders": [
+            "_other"
+          ]
+        },
+        {
+          "name": "Premium Ultrabook",
+          "slug": "premium-ultrabook",
+          "brands": [
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "lenovo"
+            },
+            {
+              "name": "Microsoft",
+              "slug": "microsoft"
+            },
+            {
+              "name": "Msi",
+              "slug": "msi"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [],
+      "specialFolders": []
+    },
+    {
+      "name": "Monitor",
+      "slug": "monitor",
+      "imagePath": "/images/products/monitor",
+      "subcategories": [],
+      "directChildren": [
+        {
+          "name": "Acer",
+          "slug": "acer",
+          "imagePath": "/images/products/monitor/acer",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Aiwa",
+          "slug": "aiwa",
+          "imagePath": "/images/products/monitor/aiwa",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Aoc",
+          "slug": "aoc",
+          "imagePath": "/images/products/monitor/aoc",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Apple",
+          "slug": "apple",
+          "imagePath": "/images/products/monitor/apple",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Arzopa",
+          "slug": "arzopa",
+          "imagePath": "/images/products/monitor/arzopa",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Asus",
+          "slug": "asus",
+          "imagePath": "/images/products/monitor/asus",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Benq",
+          "slug": "benq",
+          "imagePath": "/images/products/monitor/benq",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Corsair",
+          "slug": "corsair",
+          "imagePath": "/images/products/monitor/corsair",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Dahua",
+          "slug": "dahua",
+          "imagePath": "/images/products/monitor/dahua",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Dell",
+          "slug": "dell",
+          "imagePath": "/images/products/monitor/dell",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Eurovision",
+          "slug": "eurovision",
+          "imagePath": "/images/products/monitor/eurovision",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Feuvision",
+          "slug": "feuvision",
+          "imagePath": "/images/products/monitor/feuvision",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Fopo",
+          "slug": "fopo",
+          "imagePath": "/images/products/monitor/fopo",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Geesuu",
+          "slug": "geesuu",
+          "imagePath": "/images/products/monitor/geesuu",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Gigabyte",
+          "slug": "gigabyte",
+          "imagePath": "/images/products/monitor/gigabyte",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Gigasonic",
+          "slug": "gigasonic",
+          "imagePath": "/images/products/monitor/gigasonic",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Hikvision",
+          "slug": "hikvision",
+          "imagePath": "/images/products/monitor/hikvision",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Hp",
+          "slug": "hp",
+          "imagePath": "/images/products/monitor/hp",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Huawei",
+          "slug": "huawei",
+          "imagePath": "/images/products/monitor/huawei",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Koorui",
+          "slug": "koorui",
+          "imagePath": "/images/products/monitor/koorui",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Lenovo",
+          "slug": "lenovo",
+          "imagePath": "/images/products/monitor/lenovo",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Lg",
+          "slug": "lg",
+          "imagePath": "/images/products/monitor/lg",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Msi",
+          "slug": "msi",
+          "imagePath": "/images/products/monitor/msi",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "PC Power",
+          "slug": "pc-power",
+          "imagePath": "/images/products/monitor/pc-power",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Philips",
+          "slug": "philips",
+          "imagePath": "/images/products/monitor/philips",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Samsung",
+          "slug": "samsung",
+          "imagePath": "/images/products/monitor/samsung",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart",
+          "slug": "smart",
+          "imagePath": "/images/products/monitor/smart",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Thermaltake",
+          "slug": "thermaltake",
+          "imagePath": "/images/products/monitor/thermaltake",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Thunderobot",
+          "slug": "thunderobot",
+          "imagePath": "/images/products/monitor/thunderobot",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Titan Army",
+          "slug": "titan-army",
+          "imagePath": "/images/products/monitor/titan-army",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Trendsonic",
+          "slug": "trendsonic",
+          "imagePath": "/images/products/monitor/trendsonic",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Uniview",
+          "slug": "uniview",
+          "imagePath": "/images/products/monitor/uniview",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Value Top",
+          "slug": "value-top",
+          "imagePath": "/images/products/monitor/value-top",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Viewsonic",
+          "slug": "viewsonic",
+          "imagePath": "/images/products/monitor/viewsonic",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Walton",
+          "slug": "walton",
+          "imagePath": "/images/products/monitor/walton",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Xiaomi",
+          "slug": "xiaomi",
+          "imagePath": "/images/products/monitor/xiaomi",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "imagePath": "/images/products/networking",
+      "subcategories": [
+        {
+          "name": "Access Point",
+          "slug": "access-point",
+          "brands": [
+            {
+              "name": "Bdcom",
+              "slug": "bdcom"
+            },
+            {
+              "name": "Cambium",
+              "slug": "cambium"
+            },
+            {
+              "name": "Cisco",
+              "slug": "cisco"
+            },
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "Edgecore",
+              "slug": "edgecore"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Huawei",
+              "slug": "huawei"
+            },
+            {
+              "name": "IP Com",
+              "slug": "ip-com"
+            },
+            {
+              "name": "Mikrotik",
+              "slug": "mikrotik"
+            },
+            {
+              "name": "Netgear",
+              "slug": "netgear"
+            },
+            {
+              "name": "Ruijie",
+              "slug": "ruijie"
+            },
+            {
+              "name": "Tenda",
+              "slug": "tenda"
+            },
+            {
+              "name": "Totolink",
+              "slug": "totolink"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Trendnet",
+              "slug": "trendnet"
+            },
+            {
+              "name": "Ubiquiti",
+              "slug": "ubiquiti"
+            },
+            {
+              "name": "Zyxel",
+              "slug": "zyxel"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Media Converter",
+          "slug": "media-converter",
+          "brands": [
+            {
+              "name": "Cote",
+              "slug": "cote"
+            },
+            {
+              "name": "D Link",
+              "slug": "d-link"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Network Switch",
+          "slug": "network-switch",
+          "brands": [
+            {
+              "name": "Bdcom",
+              "slug": "bdcom"
+            },
+            {
+              "name": "C Data",
+              "slug": "c-data"
+            },
+            {
+              "name": "Cisco",
+              "slug": "cisco"
+            },
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "D Link",
+              "slug": "d-link"
+            },
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Genata",
+              "slug": "genata"
+            },
+            {
+              "name": "Gigalink",
+              "slug": "gigalink"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "hikvision"
+            },
+            {
+              "name": "Huawei",
+              "slug": "huawei"
+            },
+            {
+              "name": "IP Com",
+              "slug": "ip-com"
+            },
+            {
+              "name": "Levelone",
+              "slug": "levelone"
+            },
+            {
+              "name": "Mercusys",
+              "slug": "mercusys"
+            },
+            {
+              "name": "Mikrotik",
+              "slug": "mikrotik"
+            },
+            {
+              "name": "Netgear",
+              "slug": "netgear"
+            },
+            {
+              "name": "Netis",
+              "slug": "netis"
+            },
+            {
+              "name": "Nexakey",
+              "slug": "nexakey"
+            },
+            {
+              "name": "Ruijie",
+              "slug": "ruijie"
+            },
+            {
+              "name": "Solitine",
+              "slug": "solitine"
+            },
+            {
+              "name": "Tenda",
+              "slug": "tenda"
+            },
+            {
+              "name": "Totolink",
+              "slug": "totolink"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Trendnet",
+              "slug": "trendnet"
+            },
+            {
+              "name": "Vsol",
+              "slug": "vsol"
+            },
+            {
+              "name": "Zyxel",
+              "slug": "zyxel"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Networking Cable",
+          "slug": "networking-cable",
+          "brands": [
+            {
+              "name": "Fiber Optic Cable",
+              "slug": "fiber-optic-cable"
+            },
+            {
+              "name": "Utp Cable",
+              "slug": "utp-cable"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Pocket Router",
+          "slug": "pocket-router",
+          "brands": [
+            {
+              "name": "Mercusys",
+              "slug": "mercusys"
+            },
+            {
+              "name": "Olax",
+              "slug": "olax"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Vemo",
+              "slug": "vemo"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Router",
+          "slug": "router",
+          "brands": [
+            {
+              "name": "Asus",
+              "slug": "asus"
+            },
+            {
+              "name": "Bdcom",
+              "slug": "bdcom"
+            },
+            {
+              "name": "Cisco",
+              "slug": "cisco"
+            },
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "D Link",
+              "slug": "d-link"
+            },
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "hikvision"
+            },
+            {
+              "name": "Huawei",
+              "slug": "Huawei"
+            },
+            {
+              "name": "Mercusys",
+              "slug": "mercusys"
+            },
+            {
+              "name": "Mikrotik",
+              "slug": "mikrotik"
+            },
+            {
+              "name": "Netis",
+              "slug": "netis"
+            },
+            {
+              "name": "Olax",
+              "slug": "Olax"
+            },
+            {
+              "name": "Others",
+              "slug": "others"
+            },
+            {
+              "name": "Prolink",
+              "slug": "prolink"
+            },
+            {
+              "name": "Robiwifi",
+              "slug": "robiwifi"
+            },
+            {
+              "name": "Ruijie",
+              "slug": "ruijie"
+            },
+            {
+              "name": "Tenda",
+              "slug": "tenda"
+            },
+            {
+              "name": "Totolink",
+              "slug": "totolink"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Vsol",
+              "slug": "vsol"
+            },
+            {
+              "name": "Zyxel",
+              "slug": "zyxel"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Wifi Adapter",
+          "slug": "wifi-adapter",
+          "brands": [
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "D Link",
+              "slug": "d-link"
+            },
+            {
+              "name": "Dtech",
+              "slug": "dtech"
+            },
+            {
+              "name": "Mercusys",
+              "slug": "mercusys"
+            },
+            {
+              "name": "Tenda",
+              "slug": "tenda"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Trendnet",
+              "slug": "trendnet"
+            },
+            {
+              "name": "Ugreen",
+              "slug": "ugreen"
+            },
+            {
+              "name": "Vention",
+              "slug": "vention"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            },
+            {
+              "name": "Yuanxin",
+              "slug": "yuanxin"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Wifi Range Extender",
+          "slug": "wifi-range-extender",
+          "brands": [
+            {
+              "name": "Cudy",
+              "slug": "cudy"
+            },
+            {
+              "name": "D Link",
+              "slug": "d-link"
+            },
+            {
+              "name": "Huawei",
+              "slug": "huawei"
+            },
+            {
+              "name": "Mercusys",
+              "slug": "mercusys"
+            },
+            {
+              "name": "Ruijie",
+              "slug": "ruijie"
+            },
+            {
+              "name": "Tenda",
+              "slug": "tenda"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "tp-link"
+            },
+            {
+              "name": "Ubiquiti",
+              "slug": "ubiquiti"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Cable Tester",
+          "slug": "cable-tester",
+          "imagePath": "/images/products/networking/cable-tester",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Connector",
+          "slug": "connector",
+          "imagePath": "/images/products/networking/connector",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Crimping Tool",
+          "slug": "crimping-tool",
+          "imagePath": "/images/products/networking/crimping-tool",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Faceplate",
+          "slug": "faceplate",
+          "imagePath": "/images/products/networking/faceplate",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Firewall",
+          "slug": "firewall",
+          "imagePath": "/images/products/networking/firewall",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Lan Card",
+          "slug": "lan-card",
+          "imagePath": "/images/products/networking/lan-card",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Modular Jack",
+          "slug": "modular-jack",
+          "imagePath": "/images/products/networking/modular-jack",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Network Transceivers",
+          "slug": "network-transceivers",
+          "imagePath": "/images/products/networking/network-transceivers",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "OLT",
+          "slug": "olt",
+          "imagePath": "/images/products/networking/olt",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "ONU",
+          "slug": "onu",
+          "imagePath": "/images/products/networking/onu",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Patch Cord",
+          "slug": "patch-cord",
+          "imagePath": "/images/products/networking/patch-cord",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Patch Panel",
+          "slug": "patch-panel",
+          "imagePath": "/images/products/networking/patch-panel",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Poe Injector",
+          "slug": "poe-injector",
+          "imagePath": "/images/products/networking/poe-injector",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Splicer Machine",
+          "slug": "splicer-machine",
+          "imagePath": "/images/products/networking/splicer-machine",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Starlink",
+          "slug": "starlink",
+          "imagePath": "/images/products/networking/starlink",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "imagePath": "/images/products/office-equipment",
+      "subcategories": [
+        {
+          "name": "Barcode Scanner",
+          "slug": "barcode-scanner",
+          "brands": [
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Honeywell",
+              "slug": "honeywell"
+            },
+            {
+              "name": "Sewoo",
+              "slug": "sewoo"
+            },
+            {
+              "name": "Sunlux",
+              "slug": "sunlux"
+            },
+            {
+              "name": "Winson",
+              "slug": "winson"
+            },
+            {
+              "name": "Yumite",
+              "slug": "yumite"
+            },
+            {
+              "name": "Zebex",
+              "slug": "zebex"
+            },
+            {
+              "name": "Zebra",
+              "slug": "zebra"
+            },
+            {
+              "name": "Zkteco",
+              "slug": "zkteco"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Binding Machine",
+          "slug": "binding-machine",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Cartridge",
+          "slug": "cartridge",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Cash Drawer",
+          "slug": "cash-drawer",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Conference System",
+          "slug": "conference-system",
+          "brands": [
+            {
+              "name": "Aver",
+              "slug": "aver"
+            },
+            {
+              "name": "Avermedia",
+              "slug": "avermedia"
+            },
+            {
+              "name": "Benq",
+              "slug": "benq"
+            },
+            {
+              "name": "Cmx",
+              "slug": "cmx"
+            },
+            {
+              "name": "Emeet",
+              "slug": "emeet"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Htdz",
+              "slug": "htdz"
+            },
+            {
+              "name": "Jabra",
+              "slug": "jabra"
+            },
+            {
+              "name": "Logitech",
+              "slug": "logitech"
+            },
+            {
+              "name": "Maxhub",
+              "slug": "maxhub"
+            },
+            {
+              "name": "Poly",
+              "slug": "poly"
+            },
+            {
+              "name": "Rapoo",
+              "slug": "rapoo"
+            },
+            {
+              "name": "Screenbeam",
+              "slug": "screenbeam"
+            },
+            {
+              "name": "Tev",
+              "slug": "tev"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Digital Weight Machine",
+          "slug": "digital-weight-machine",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Id Card Printer",
+          "slug": "id-card-printer",
+          "brands": [
+            {
+              "name": "Evolis",
+              "slug": "evolis"
+            },
+            {
+              "name": "Hid",
+              "slug": "hid"
+            },
+            {
+              "name": "Zebra",
+              "slug": "zebra"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Ink Bottle",
+          "slug": "ink-bottle",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Interactive Flat Panel",
+          "slug": "interactive-flat-panel",
+          "brands": [
+            {
+              "name": "Armor",
+              "slug": "armor"
+            },
+            {
+              "name": "Benq",
+              "slug": "benq"
+            },
+            {
+              "name": "Boxlight",
+              "slug": "boxlight"
+            },
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "hikvision"
+            },
+            {
+              "name": "Hitachi",
+              "slug": "hitachi"
+            },
+            {
+              "name": "Horion",
+              "slug": "horion"
+            },
+            {
+              "name": "Iboard",
+              "slug": "iboard"
+            },
+            {
+              "name": "Infocus",
+              "slug": "infocus"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Lumevax",
+              "slug": "lumevax"
+            },
+            {
+              "name": "Maxhub",
+              "slug": "maxhub"
+            },
+            {
+              "name": "Metz",
+              "slug": "metz"
+            },
+            {
+              "name": "Newline",
+              "slug": "newline"
+            },
+            {
+              "name": "Optoma",
+              "slug": "optoma"
+            },
+            {
+              "name": "Panasonic",
+              "slug": "panasonic"
+            },
+            {
+              "name": "Viewsonic",
+              "slug": "viewsonic"
+            },
+            {
+              "name": "Zkteco",
+              "slug": "zkteco"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "IP Phone",
+          "slug": "ip-phone",
+          "brands": [
+            {
+              "name": "Avaya",
+              "slug": "avaya"
+            },
+            {
+              "name": "Cisco",
+              "slug": "cisco"
+            },
+            {
+              "name": "Dinstar",
+              "slug": "dinstar"
+            },
+            {
+              "name": "Fanvil",
+              "slug": "fanvil"
+            },
+            {
+              "name": "Flyingvoice",
+              "slug": "flyingvoice"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Mitel",
+              "slug": "mitel"
+            },
+            {
+              "name": "Snom",
+              "slug": "snom"
+            },
+            {
+              "name": "Yealink",
+              "slug": "yealink"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Kiosk",
+          "slug": "kiosk",
+          "brands": [
+            {
+              "name": "Armor",
+              "slug": "armor"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "hikvision"
+            },
+            {
+              "name": "Innovtech",
+              "slug": "innovtech"
+            },
+            {
+              "name": "Viewsonic",
+              "slug": "viewsonic"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Label Printer",
+          "slug": "label-printer",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "G Printer",
+              "slug": "g-printer"
+            },
+            {
+              "name": "Godex",
+              "slug": "godex"
+            },
+            {
+              "name": "Others",
+              "slug": "others"
+            },
+            {
+              "name": "Rongta",
+              "slug": "rongta"
+            },
+            {
+              "name": "Sewoo",
+              "slug": "sewoo"
+            },
+            {
+              "name": "Tigo",
+              "slug": "tigo"
+            },
+            {
+              "name": "Tsc",
+              "slug": "tsc"
+            },
+            {
+              "name": "Xprinter",
+              "slug": "xprinter"
+            },
+            {
+              "name": "Zebra",
+              "slug": "zebra"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Laminating Machine",
+          "slug": "laminating-machine",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Large Format Printer",
+          "slug": "large-format-printer",
+          "brands": [
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Laser Printer",
+          "slug": "laser-printer",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Fujifilm",
+              "slug": "fujifilm"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Pantum",
+              "slug": "pantum"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Money Counting Machine",
+          "slug": "money-counting-machine",
+          "brands": [
+            {
+              "name": "Apollo",
+              "slug": "apollo"
+            },
+            {
+              "name": "Chihua",
+              "slug": "chihua"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Domens",
+              "slug": "domens"
+            },
+            {
+              "name": "Henry",
+              "slug": "henry"
+            },
+            {
+              "name": "Julong",
+              "slug": "julong"
+            },
+            {
+              "name": "Kington",
+              "slug": "kington"
+            },
+            {
+              "name": "Maxsell",
+              "slug": "maxsell"
+            },
+            {
+              "name": "Safescan",
+              "slug": "safescan"
+            },
+            {
+              "name": "Tay Chian",
+              "slug": "tay-chian"
+            },
+            {
+              "name": "Universal",
+              "slug": "universal"
+            },
+            {
+              "name": "Yumite",
+              "slug": "yumite"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Pa System",
+          "slug": "pa-system",
+          "brands": [
+            {
+              "name": "Cmx",
+              "slug": "cmx"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Jbl",
+              "slug": "jbl"
+            },
+            {
+              "name": "Tev",
+              "slug": "tev"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Pabx System",
+          "slug": "pabx-system",
+          "brands": [
+            {
+              "name": "Dinstar",
+              "slug": "dinstar"
+            },
+            {
+              "name": "Grandstream",
+              "slug": "grandstream"
+            },
+            {
+              "name": "Mitel",
+              "slug": "mitel"
+            },
+            {
+              "name": "Panasonic",
+              "slug": "panasonic"
+            },
+            {
+              "name": "Synway",
+              "slug": "synway"
+            },
+            {
+              "name": "Zycoo",
+              "slug": "zycoo"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Paper Shredder",
+          "slug": "paper-shredder",
+          "brands": [
+            {
+              "name": "Aurora",
+              "slug": "aurora"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Ofitech",
+              "slug": "ofitech"
+            },
+            {
+              "name": "Xtreme",
+              "slug": "xtreme"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Photocopier",
+          "slug": "photocopier",
+          "brands": [
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Ricoh",
+              "slug": "ricoh"
+            },
+            {
+              "name": "Sharp",
+              "slug": "sharp"
+            },
+            {
+              "name": "Toshiba",
+              "slug": "toshiba"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Pos Printer",
+          "slug": "pos-printer",
+          "brands": [
+            {
+              "name": "Bixolon",
+              "slug": "bixolon"
+            },
+            {
+              "name": "Ciontek",
+              "slug": "ciontek"
+            },
+            {
+              "name": "Citizen",
+              "slug": "citizen"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "G Printer",
+              "slug": "g-printer"
+            },
+            {
+              "name": "Rongta",
+              "slug": "rongta"
+            },
+            {
+              "name": "Sewoo",
+              "slug": "sewoo"
+            },
+            {
+              "name": "Sprt",
+              "slug": "sprt"
+            },
+            {
+              "name": "Sunmi",
+              "slug": "sunmi"
+            },
+            {
+              "name": "Tigo",
+              "slug": "tigo"
+            },
+            {
+              "name": "Xprinter",
+              "slug": "xprinter"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Printer",
+          "slug": "printer",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Fujifilm",
+              "slug": "fujifilm"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Pantum",
+              "slug": "pantum"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Printer Drum",
+          "slug": "printer-drum",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Printer Paper",
+          "slug": "printer-paper",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Projector",
+          "slug": "projector",
+          "brands": [
+            {
+              "name": "Acer",
+              "slug": "acer"
+            },
+            {
+              "name": "Anker",
+              "slug": "anker"
+            },
+            {
+              "name": "Aun",
+              "slug": "aun"
+            },
+            {
+              "name": "Benq",
+              "slug": "benq"
+            },
+            {
+              "name": "Blisbond",
+              "slug": "blisbond"
+            },
+            {
+              "name": "Boxlight",
+              "slug": "boxlight"
+            },
+            {
+              "name": "Cheerlux",
+              "slug": "cheerlux"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Havit",
+              "slug": "havit"
+            },
+            {
+              "name": "Infocus",
+              "slug": "infocus"
+            },
+            {
+              "name": "Magcubic",
+              "slug": "magcubic"
+            },
+            {
+              "name": "Optoma",
+              "slug": "optoma"
+            },
+            {
+              "name": "Viewsonic",
+              "slug": "viewsonic"
+            },
+            {
+              "name": "Vivitek",
+              "slug": "vivitek"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Xinji",
+              "slug": "xinji"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Ribbon",
+          "slug": "ribbon",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Scanner",
+          "slug": "scanner",
+          "brands": [
+            {
+              "name": "Avision",
+              "slug": "avision"
+            },
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Epson",
+              "slug": "epson"
+            },
+            {
+              "name": "Fujitsu",
+              "slug": "fujitsu"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Kodak",
+              "slug": "kodak"
+            },
+            {
+              "name": "Plustek",
+              "slug": "plustek"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Signage",
+          "slug": "signage",
+          "brands": [
+            {
+              "name": "Benq",
+              "slug": "benq"
+            },
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "hikvision"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Maxhub",
+              "slug": "maxhub"
+            },
+            {
+              "name": "Viewsonic",
+              "slug": "viewsonic"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Toner",
+          "slug": "toner",
+          "brands": [
+            {
+              "name": "Brother",
+              "slug": "brother"
+            },
+            {
+              "name": "Canon",
+              "slug": "canon"
+            },
+            {
+              "name": "Deli",
+              "slug": "deli"
+            },
+            {
+              "name": "Fujifilm",
+              "slug": "fujifilm"
+            },
+            {
+              "name": "G And G",
+              "slug": "g-and-g"
+            },
+            {
+              "name": "Hp",
+              "slug": "hp"
+            },
+            {
+              "name": "Longprint",
+              "slug": "longprint"
+            },
+            {
+              "name": "Others",
+              "slug": "others"
+            },
+            {
+              "name": "Pantum",
+              "slug": "pantum"
+            },
+            {
+              "name": "Power Print",
+              "slug": "power-print"
+            },
+            {
+              "name": "Print Rite",
+              "slug": "print-rite"
+            },
+            {
+              "name": "Ricoh",
+              "slug": "ricoh"
+            },
+            {
+              "name": "Safeway",
+              "slug": "safeway"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Sharp",
+              "slug": "sharp"
+            },
+            {
+              "name": "Starink",
+              "slug": "starink"
+            },
+            {
+              "name": "Toshiba",
+              "slug": "toshiba"
+            },
+            {
+              "name": "True Trust",
+              "slug": "true-trust"
+            }
+          ],
+          "specialFolders": [
+            "_direct"
+          ]
+        },
+        {
+          "name": "Video Wall",
+          "slug": "video-wall",
+          "brands": [],
+          "specialFolders": [
+            "_direct"
+          ]
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Telephone Set",
+          "slug": "telephone-set",
+          "imagePath": "/images/products/office-equipment/telephone-set",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Power",
+      "slug": "power",
+      "imagePath": "/images/products/power",
+      "subcategories": [
+        {
+          "name": "Mini UPS",
+          "slug": "mini-ups",
+          "brands": [
+            {
+              "name": "Marsiva",
+              "slug": "Marsiva"
+            },
+            {
+              "name": "Maxgreen",
+              "slug": "Maxgreen"
+            },
+            {
+              "name": "PC Power",
+              "slug": "Pc Power"
+            },
+            {
+              "name": "Power Guard",
+              "slug": "Power Guard"
+            },
+            {
+              "name": "Solitine",
+              "slug": "Solitine"
+            },
+            {
+              "name": "WGP",
+              "slug": "WGP"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Online UPS",
+          "slug": "online-ups",
+          "brands": [
+            {
+              "name": "APC",
+              "slug": "APC"
+            },
+            {
+              "name": "Apollo",
+              "slug": "Apollo"
+            },
+            {
+              "name": "Digital X",
+              "slug": "Digital X"
+            },
+            {
+              "name": "EnSmart",
+              "slug": "EnSmart"
+            },
+            {
+              "name": "Kehua",
+              "slug": "Kehua"
+            },
+            {
+              "name": "KSTAR",
+              "slug": "KSTAR"
+            },
+            {
+              "name": "Marsiva",
+              "slug": "Marsiva"
+            },
+            {
+              "name": "Maxgreen",
+              "slug": "Maxgreen"
+            },
+            {
+              "name": "Must",
+              "slug": "Must"
+            },
+            {
+              "name": "Power Guard",
+              "slug": "Power Guard"
+            },
+            {
+              "name": "Power Pac",
+              "slug": "Power Pac"
+            },
+            {
+              "name": "Santak",
+              "slug": "Santak"
+            },
+            {
+              "name": "Vertiv",
+              "slug": "Vertiv"
+            },
+            {
+              "name": "Zigor",
+              "slug": "Zigor"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Portable Power Station",
+          "slug": "portable-power-station",
+          "brands": [
+            {
+              "name": "Anker",
+              "slug": "Anker"
+            },
+            {
+              "name": "Bluetti",
+              "slug": "Bluetti"
+            },
+            {
+              "name": "Ecoflow",
+              "slug": "Ecoflow"
+            },
+            {
+              "name": "Ecosonic",
+              "slug": "Ecosonic"
+            },
+            {
+              "name": "Hithium",
+              "slug": "Hithium"
+            },
+            {
+              "name": "Marsiva",
+              "slug": "Marsiva"
+            },
+            {
+              "name": "Oraimo",
+              "slug": "Oraimo"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "UPS",
+          "slug": "ups",
+          "brands": [
+            {
+              "name": "Apollo",
+              "slug": "Apollo"
+            },
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Digital X",
+              "slug": "Digital X"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Ideal",
+              "slug": "Ideal"
+            },
+            {
+              "name": "KENSON",
+              "slug": "KENSON"
+            },
+            {
+              "name": "KSTAR",
+              "slug": "KSTAR"
+            },
+            {
+              "name": "MARSRIVA",
+              "slug": "MARSRIVA"
+            },
+            {
+              "name": "MaxGreen",
+              "slug": "MaxGreen"
+            },
+            {
+              "name": "Must",
+              "slug": "Must"
+            },
+            {
+              "name": "PC Power",
+              "slug": "PC Power"
+            },
+            {
+              "name": "Power Guard",
+              "slug": "Power Guard"
+            },
+            {
+              "name": "Power Pac",
+              "slug": "Power Pac"
+            },
+            {
+              "name": "Prolink",
+              "slug": "Prolink"
+            },
+            {
+              "name": "SANTAK",
+              "slug": "SANTAK"
+            },
+            {
+              "name": "Vertiv",
+              "slug": "Vertiv"
+            },
+            {
+              "name": "ZKTeco",
+              "slug": "ZKTeco"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Inverter",
+          "slug": "inverter",
+          "imagePath": "/images/products/power/inverter",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "IPS",
+          "slug": "ips",
+          "imagePath": "/images/products/power/ips",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Solar Panel",
+          "slug": "solar-panel",
+          "imagePath": "/images/products/power/solar-panel",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "UPS Battery",
+          "slug": "ups-battery",
+          "imagePath": "/images/products/power/ups-battery",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "imagePath": "/images/products/security-camera",
+      "subcategories": [
+        {
+          "name": "Access Control",
+          "slug": "access-control",
+          "brands": [
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Nexakey",
+              "slug": "Nexakey"
+            },
+            {
+              "name": "Onspot",
+              "slug": "Onspot"
+            },
+            {
+              "name": "Tipsoi",
+              "slug": "Tipsoi"
+            },
+            {
+              "name": "Zkteco",
+              "slug": "Zkteco"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Cc Camera",
+          "slug": "cc-camera",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Uniview",
+              "slug": "Uniview"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Cc Camera Package",
+          "slug": "cc-camera-package",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Door Lock",
+          "slug": "door-lock",
+          "brands": [
+            {
+              "name": "EZVIZ",
+              "slug": "EZVIZ"
+            },
+            {
+              "name": "Nexakey",
+              "slug": "Nexakey"
+            },
+            {
+              "name": "Ngtech",
+              "slug": "Ngtech"
+            },
+            {
+              "name": "Orvibo",
+              "slug": "Orvibo"
+            },
+            {
+              "name": "Ovalin",
+              "slug": "Ovalin"
+            },
+            {
+              "name": "SmartLife",
+              "slug": "SmartLife"
+            },
+            {
+              "name": "Smartx",
+              "slug": "Smartx"
+            },
+            {
+              "name": "STATA",
+              "slug": "STATA"
+            },
+            {
+              "name": "Zkteco",
+              "slug": "Zkteco"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "DVR",
+          "slug": "dvr",
+          "brands": [
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "IP Camera",
+          "slug": "ip-camera",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            },
+            {
+              "name": "Tenda",
+              "slug": "Tenda"
+            },
+            {
+              "name": "Tiandy",
+              "slug": "Tiandy"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "Tp-Link"
+            },
+            {
+              "name": "Uniview",
+              "slug": "Uniview"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "IP Camera Package",
+          "slug": "ip-camera-package",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "Tp-Link"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "NVR",
+          "slug": "nvr",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "EZVIZ",
+              "slug": "EZVIZ"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Imou",
+              "slug": "Imou"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            },
+            {
+              "name": "Tenda",
+              "slug": "Tenda"
+            },
+            {
+              "name": "Tiandy",
+              "slug": "Tiandy"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "Tp Link"
+            },
+            {
+              "name": "Uniview",
+              "slug": "Uniview"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Portable Wifi Camera",
+          "slug": "portable-wifi-camera",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "EZVIZ",
+              "slug": "EZVIZ"
+            },
+            {
+              "name": "IMILAB",
+              "slug": "IMILAB"
+            },
+            {
+              "name": "Imou",
+              "slug": "Imou"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            },
+            {
+              "name": "Lenovo",
+              "slug": "Lenovo"
+            },
+            {
+              "name": "Meari",
+              "slug": "Meari"
+            },
+            {
+              "name": "Newland",
+              "slug": "Newland"
+            },
+            {
+              "name": "Orvibo",
+              "slug": "Orvibo"
+            },
+            {
+              "name": "Realme",
+              "slug": "Realme"
+            },
+            {
+              "name": "Tenda",
+              "slug": "Tenda"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "Tp-Link"
+            },
+            {
+              "name": "Vimtag",
+              "slug": "Vimtag"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            },
+            {
+              "name": "Zkteco",
+              "slug": "Zkteco"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Ptz Camera",
+          "slug": "ptz-camera",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "dahua"
+            },
+            {
+              "name": "Hikvision",
+              "slug": "Hikvision"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            },
+            {
+              "name": "Tiandy",
+              "slug": "Tiandy"
+            },
+            {
+              "name": "Tp Link",
+              "slug": "Tp-Link"
+            },
+            {
+              "name": "Uniview",
+              "slug": "Uniview"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "XVR",
+          "slug": "xvr",
+          "brands": [
+            {
+              "name": "Dahua",
+              "slug": "Dahua"
+            },
+            {
+              "name": "Jovision",
+              "slug": "Jovision"
+            },
+            {
+              "name": "Uniview",
+              "slug": "Uniview"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Cc Camera Accessories",
+          "slug": "cc-camera-accessories",
+          "imagePath": "/images/products/security-camera/cc-camera-accessories",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Digital Locker Vault",
+          "slug": "digital-locker-vault",
+          "imagePath": "/images/products/security-camera/digital-locker-vault",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Entrance Control",
+          "slug": "entrance-control",
+          "imagePath": "/images/products/security-camera/entrance-control",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "KVM Switch",
+          "slug": "kvm-switch",
+          "imagePath": "/images/products/security-camera/kvm-switch",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Smart Door Bell",
+          "slug": "smart-door-bell",
+          "imagePath": "/images/products/security-camera/smart-door-bell",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "imagePath": "/images/products/server-networking",
+      "subcategories": [],
+      "directChildren": [
+        {
+          "name": "Das Storage",
+          "slug": "das-storage",
+          "imagePath": "/images/products/server-networking/das-storage",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "GPU Server",
+          "slug": "gpu-server",
+          "imagePath": "/images/products/server-networking/gpu-server",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "NAS Storage",
+          "slug": "nas-storage",
+          "imagePath": "/images/products/server-networking/nas-storage",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "SAN Storage",
+          "slug": "san-storage",
+          "imagePath": "/images/products/server-networking/san-storage",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server",
+          "slug": "server",
+          "imagePath": "/images/products/server-networking/server",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server And Storage",
+          "slug": "server-and-storage",
+          "imagePath": "/images/products/server-networking/server-and-storage",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server HDD",
+          "slug": "server-hdd",
+          "imagePath": "/images/products/server-networking/server-hdd",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server HDD Bay",
+          "slug": "server-hdd-bay",
+          "imagePath": "/images/products/server-networking/server-hdd-bay",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server Rack",
+          "slug": "server-rack",
+          "imagePath": "/images/products/server-networking/server-rack",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server RAM",
+          "slug": "server-ram",
+          "imagePath": "/images/products/server-networking/server-ram",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Server SSD",
+          "slug": "server-ssd",
+          "imagePath": "/images/products/server-networking/server-ssd",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Workstation",
+          "slug": "workstation",
+          "imagePath": "/images/products/server-networking/workstation",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Software",
+      "slug": "software",
+      "imagePath": "/images/products/software",
+      "subcategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "brands": [
+            {
+              "name": "Microsoft Windows",
+              "slug": "Microsoft Windows"
+            },
+            {
+              "name": "Red Hat",
+              "slug": "Red Hat"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "imagePath": "/images/products/software/adobe",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "imagePath": "/images/products/software/antivirus",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Anydesk",
+          "slug": "anydesk",
+          "imagePath": "/images/products/software/anydesk",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Autodesk",
+          "slug": "autodesk",
+          "imagePath": "/images/products/software/autodesk",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Bangla Typing Software",
+          "slug": "bangla-typing-software",
+          "imagePath": "/images/products/software/bangla-typing-software",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "imagePath": "/images/products/software/cloud-solutions",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Mail Server Solution",
+          "slug": "mail-server-solution",
+          "imagePath": "/images/products/software/mail-server-solution",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Microsoft",
+          "slug": "Microsoft",
+          "imagePath": "/images/products/software/Microsoft",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "imagePath": "/images/products/software/office-application",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Tablet PC",
+      "slug": "tablet-pc",
+      "imagePath": "/images/products/tablet-pc",
+      "subcategories": [],
+      "directChildren": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "imagePath": "/images/products/tablet-pc/amazon",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Chuwi",
+          "slug": "Chuwi",
+          "imagePath": "/images/products/tablet-pc/Chuwi",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Google",
+          "slug": "Google",
+          "imagePath": "/images/products/tablet-pc/Google",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "HONOR",
+          "slug": "HONOR",
+          "imagePath": "/images/products/tablet-pc/HONOR",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "HUAWEI",
+          "slug": "HUAWEI",
+          "imagePath": "/images/products/tablet-pc/HUAWEI",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Huion",
+          "slug": "Huion",
+          "imagePath": "/images/products/tablet-pc/Huion",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Infinix",
+          "slug": "Infinix",
+          "imagePath": "/images/products/tablet-pc/Infinix",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Ipad",
+          "slug": "ipad",
+          "imagePath": "/images/products/tablet-pc/ipad",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Kids Tablet",
+          "slug": "kids-tablet",
+          "imagePath": "/images/products/tablet-pc/kids-tablet",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Lenovo",
+          "slug": "Lenovo",
+          "imagePath": "/images/products/tablet-pc/Lenovo",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "OnePlus",
+          "slug": "OnePlus",
+          "imagePath": "/images/products/tablet-pc/OnePlus",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Remarkable",
+          "slug": "remarkable",
+          "imagePath": "/images/products/tablet-pc/remarkable",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Samsung",
+          "slug": "Samsung",
+          "imagePath": "/images/products/tablet-pc/Samsung",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Teclast",
+          "slug": "Teclast",
+          "imagePath": "/images/products/tablet-pc/Teclast",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Tecno",
+          "slug": "Tecno",
+          "imagePath": "/images/products/tablet-pc/Tecno",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Walton",
+          "slug": "Walton",
+          "imagePath": "/images/products/tablet-pc/Walton",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "Xiaomi",
+          "slug": "Xiaomi",
+          "imagePath": "/images/products/tablet-pc/Xiaomi",
+          "classification": "leaf-folder"
+        },
+        {
+          "name": "ZTE",
+          "slug": "ZTE",
+          "imagePath": "/images/products/tablet-pc/ZTE",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    },
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "imagePath": "/images/products/television-shop",
+      "subcategories": [
+        {
+          "name": "4k TV",
+          "slug": "4k-tv",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Haier",
+              "slug": "haier"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Realview",
+              "slug": "realview"
+            },
+            {
+              "name": "Rowa",
+              "slug": "rowa"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Tcl",
+              "slug": "tcl"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Haier",
+              "slug": "haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "hisense"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Realview",
+              "slug": "realview"
+            },
+            {
+              "name": "Rowa",
+              "slug": "rowa"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Singer",
+              "slug": "singer"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Tcl",
+              "slug": "tcl"
+            },
+            {
+              "name": "Transtec",
+              "slug": "transtec"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Haier",
+              "slug": "haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "hisense"
+            },
+            {
+              "name": "Realview",
+              "slug": "realview"
+            },
+            {
+              "name": "Rowa",
+              "slug": "rowa"
+            },
+            {
+              "name": "Singer",
+              "slug": "singer"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Tcl",
+              "slug": "tcl"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Led TV",
+          "slug": "led-tv",
+          "brands": [
+            {
+              "name": "Haier",
+              "slug": "haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "hisense"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Realview",
+              "slug": "realview"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Singer",
+              "slug": "singer"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Tcl",
+              "slug": "tcl"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "brands": [
+            {
+              "name": "Beko",
+              "slug": "beko"
+            },
+            {
+              "name": "Haier",
+              "slug": "haier"
+            },
+            {
+              "name": "Hisense",
+              "slug": "hisense"
+            },
+            {
+              "name": "Lg",
+              "slug": "lg"
+            },
+            {
+              "name": "Realview",
+              "slug": "realview"
+            },
+            {
+              "name": "Rowa",
+              "slug": "rowa"
+            },
+            {
+              "name": "Samsung",
+              "slug": "samsung"
+            },
+            {
+              "name": "Singer",
+              "slug": "singer"
+            },
+            {
+              "name": "Smart",
+              "slug": "smart"
+            },
+            {
+              "name": "Sony",
+              "slug": "sony"
+            },
+            {
+              "name": "Tcl",
+              "slug": "tcl"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        },
+        {
+          "name": "TV Box",
+          "slug": "tv-box",
+          "brands": [
+            {
+              "name": "Apple",
+              "slug": "Apple"
+            },
+            {
+              "name": "Google",
+              "slug": "Google"
+            },
+            {
+              "name": "Transpeed",
+              "slug": "Transpeed"
+            },
+            {
+              "name": "TX",
+              "slug": "TX"
+            },
+            {
+              "name": "Xiaomi",
+              "slug": "xiaomi"
+            }
+          ],
+          "specialFolders": []
+        }
+      ],
+      "directChildren": [
+        {
+          "name": "TV Stand Wall Mount",
+          "slug": "tv-stand-wall-mount",
+          "imagePath": "/images/products/television-shop/tv-stand-wall-mount",
+          "classification": "leaf-folder"
+        }
+      ],
+      "specialFolders": []
+    }
+  ]
+}
