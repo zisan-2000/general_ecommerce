@@ -10,8 +10,8 @@ from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bs4 import BeautifulSoup
-from startech_catalog_builder import canonical, parse_product, validate
-from download_startech_images import download, infer_dest, main as download_main
+from scripts.python.startech_catalog_builder import canonical, parse_product, validate
+from scripts.python.download_startech_images import download, infer_dest, main as download_main
 
 
 class CatalogTests(unittest.TestCase):

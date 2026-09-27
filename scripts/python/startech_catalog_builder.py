@@ -26,7 +26,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from download_startech_images import HEADERS
+from scripts.python.download_startech_images import HEADERS
 
 BASE = "https://www.startech.com.bd"
 DEFAULT_JSON = "prisma/startech_productseed.json"
