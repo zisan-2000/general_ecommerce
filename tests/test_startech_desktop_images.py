@@ -7,7 +7,7 @@ from unittest.mock import Mock
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import download_startech_desktop_images as desktop
+import scripts.python.download_startech_desktop_images as desktop
 
 
 class DesktopDownloaderTests(unittest.TestCase):
