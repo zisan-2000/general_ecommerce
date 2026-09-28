@@ -3823,6 +3823,9 @@ model sitesettings {
   locale                String?  @db.VarChar(35)
   storeType             String?  @db.VarChar(32)
   footerDescription     String?
+  homeFooterDescriptionEnabled Boolean @default(false)
+  homeFooterDescriptionTitle   String?
+  homeFooterDescription        String?
   contactNumber         String?
   contactEmail          String?
   address               String?

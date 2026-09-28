@@ -40,6 +40,9 @@ export type SiteSettingsInput = {
   locale: string;
   storeType: StoreType;
   footerDescription: string | null;
+  homeFooterDescriptionEnabled: boolean;
+  homeFooterDescriptionTitle: string | null;
+  homeFooterDescription: string | null;
   contactNumber: string | null;
   contactEmail: string | null;
   address: string | null;
@@ -84,6 +87,8 @@ const MAX_LENGTHS = {
   keyword: 64,
   image: 2048,
   footerDescription: 1000,
+  homeFooterDescriptionTitle: 160,
+  homeFooterDescription: 50000,
   contactNumber: 64,
   contactEmail: 254,
   address: 1000,
@@ -93,6 +98,12 @@ const MAX_LENGTHS = {
 function cleanOptional(value: unknown, maxLength: number) {
   if (value === null || value === undefined) return null;
   const normalized = String(value).replace(/\s+/g, " ").trim();
+  return normalized ? normalized.slice(0, maxLength) : null;
+}
+
+function cleanRichTextOptional(value: unknown, maxLength: number) {
+  if (value === null || value === undefined) return null;
+  const normalized = String(value).trim();
   return normalized ? normalized.slice(0, maxLength) : null;
 }
 
@@ -234,6 +245,15 @@ export function parseSiteSettingsInput(
         body.footerDescription,
         MAX_LENGTHS.footerDescription,
       ),
+      homeFooterDescriptionEnabled: body.homeFooterDescriptionEnabled === true,
+      homeFooterDescriptionTitle: cleanOptional(
+        body.homeFooterDescriptionTitle,
+        MAX_LENGTHS.homeFooterDescriptionTitle,
+      ),
+      homeFooterDescription: cleanRichTextOptional(
+        body.homeFooterDescription,
+        MAX_LENGTHS.homeFooterDescription,
+      ),
       contactNumber: cleanOptional(body.contactNumber, MAX_LENGTHS.contactNumber),
       contactEmail,
       address: cleanOptional(body.address, MAX_LENGTHS.address),
@@ -302,6 +322,15 @@ export function resolveSiteSettings(
     footerDescription: cleanOptional(
       settings?.footerDescription,
       MAX_LENGTHS.footerDescription,
+    ),
+    homeFooterDescriptionEnabled: settings?.homeFooterDescriptionEnabled === true,
+    homeFooterDescriptionTitle: cleanOptional(
+      settings?.homeFooterDescriptionTitle,
+      MAX_LENGTHS.homeFooterDescriptionTitle,
+    ),
+    homeFooterDescription: cleanRichTextOptional(
+      settings?.homeFooterDescription,
+      MAX_LENGTHS.homeFooterDescription,
     ),
     contactNumber: cleanOptional(settings?.contactNumber, MAX_LENGTHS.contactNumber),
     contactEmail: cleanOptional(settings?.contactEmail, MAX_LENGTHS.contactEmail),

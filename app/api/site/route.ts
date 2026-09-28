@@ -30,6 +30,9 @@ function toSiteSettingsLogSnapshot(settings: {
   locale: string | null;
   storeType: string | null;
   footerDescription: string | null;
+  homeFooterDescriptionEnabled: boolean;
+  homeFooterDescriptionTitle: string | null;
+  homeFooterDescription: string | null;
   contactNumber: string | null;
   contactEmail: string | null;
   address: string | null;
@@ -56,6 +59,9 @@ function toSiteSettingsLogSnapshot(settings: {
     locale: settings.locale,
     storeType: settings.storeType,
     footerDescription: settings.footerDescription,
+    homeFooterDescriptionEnabled: settings.homeFooterDescriptionEnabled,
+    homeFooterDescriptionTitle: settings.homeFooterDescriptionTitle,
+    homeFooterDescription: settings.homeFooterDescription,
     contactNumber: settings.contactNumber,
     contactEmail: settings.contactEmail,
     address: settings.address,
@@ -94,6 +100,9 @@ export async function GET(req: Request) {
           locale: SITE_SETTINGS_DEFAULTS.locale,
           storeType: SITE_SETTINGS_DEFAULTS.storeType,
           footerDescription: null,
+          homeFooterDescriptionEnabled: false,
+          homeFooterDescriptionTitle: null,
+          homeFooterDescription: null,
           contactNumber: null,
           contactEmail: null,
           address: null,
@@ -246,6 +255,9 @@ export async function DELETE(req: Request) {
         locale: SITE_SETTINGS_DEFAULTS.locale,
         storeType: SITE_SETTINGS_DEFAULTS.storeType,
         footerDescription: null,
+        homeFooterDescriptionEnabled: false,
+        homeFooterDescriptionTitle: null,
+        homeFooterDescription: null,
         contactNumber: null,
         contactEmail: null,
         address: null,

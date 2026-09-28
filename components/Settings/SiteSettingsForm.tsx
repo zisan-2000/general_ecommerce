@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { X } from "lucide-react";
+import TinymceEditor from "@/components/tinymceEditor";
 
 type SiteSettings = {
   id?: number;
@@ -26,6 +27,9 @@ type SiteSettings = {
   locale?: string | null;
   storeType?: string | null;
   footerDescription?: string | null;
+  homeFooterDescriptionEnabled?: boolean;
+  homeFooterDescriptionTitle?: string | null;
+  homeFooterDescription?: string | null;
   contactNumber?: string | null;
   contactEmail?: string | null;
   address?: string | null;
@@ -117,6 +121,9 @@ export default function SiteSettingsForm() {
           locale: data.locale,
           storeType: data.storeType,
           footerDescription: data.footerDescription,
+          homeFooterDescriptionEnabled: data.homeFooterDescriptionEnabled === true,
+          homeFooterDescriptionTitle: data.homeFooterDescriptionTitle,
+          homeFooterDescription: data.homeFooterDescription,
           contactNumber: data.contactNumber,
           contactEmail: data.contactEmail,
           address: data.address,
@@ -422,6 +429,61 @@ export default function SiteSettingsForm() {
                 className="w-full border rounded-md px-3 py-2 bg-background min-h-[100px]"
                 rows={4}
               />
+            </div>
+
+            <div className="space-y-4 border-t pt-5">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <Label htmlFor="home-footer-description-enabled">
+                    Home page footer description
+                  </Label>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Show a collapsible rich-text description above the storefront footer.
+                  </p>
+                </div>
+                <label className="inline-flex shrink-0 cursor-pointer items-center gap-2 text-sm font-medium">
+                  <input
+                    id="home-footer-description-enabled"
+                    type="checkbox"
+                    checked={data.homeFooterDescriptionEnabled === true}
+                    onChange={(event) =>
+                      setData((current) => ({
+                        ...current,
+                        homeFooterDescriptionEnabled: event.target.checked,
+                      }))
+                    }
+                    className="h-4 w-4 rounded border-input text-primary focus:ring-primary"
+                  />
+                  Enable
+                </label>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="home-footer-description-title">Accordion title</Label>
+                <Input
+                  id="home-footer-description-title"
+                  maxLength={160}
+                  value={data.homeFooterDescriptionTitle || ""}
+                  onChange={(event) =>
+                    setData((current) => ({
+                      ...current,
+                      homeFooterDescriptionTitle: event.target.value,
+                    }))
+                  }
+                  placeholder="About our store"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label>Accordion content</Label>
+                <TinymceEditor
+                  value={data.homeFooterDescription || ""}
+                  onChange={(homeFooterDescription) =>
+                    setData((current) => ({ ...current, homeFooterDescription }))
+                  }
+                  height={360}
+                />
+              </div>
             </div>
 
             <div className="space-y-4">
