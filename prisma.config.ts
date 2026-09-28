@@ -1,13 +1,13 @@
-import nextEnv from "@next/env";
+import { loadEnvConfig } from "@next/env";
 import type { PrismaConfig } from "prisma";
 
-nextEnv.loadEnvConfig(process.cwd());
+loadEnvConfig(process.cwd());
 
 export default {
   schema: "prisma/schema.prisma",
   migrations: {
     path: "prisma/migrations-release",
-    seed: "tsx prisma/seed-universal.ts",
+    seed: "tsx prisma/seed.ts",
   },
   experimental: {
     externalTables: true,

@@ -649,7 +649,7 @@
       "currency": "BDT",
       "weight": 68.0,
       "dimensions": null,
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,

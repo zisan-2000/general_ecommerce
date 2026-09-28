@@ -2005,7 +2005,7 @@
         "height": 34.7,
         "unit": "cm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2420,7 +2420,7 @@
         "height": 154.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2632,7 +2632,7 @@
         "height": 154.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -3056,7 +3056,7 @@
       "currency": "BDT",
       "weight": null,
       "dimensions": null,
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -3241,7 +3241,7 @@
       "currency": "BDT",
       "weight": null,
       "dimensions": null,
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -3431,7 +3431,7 @@
         "height": 169.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -3643,7 +3643,7 @@
         "height": 169.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -5983,7 +5983,7 @@
         "height": 339.5,
         "unit": "inches"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -6201,7 +6201,7 @@
         "height": 274.8,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -7058,7 +7058,7 @@
         "height": 308.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -7275,7 +7275,7 @@
         "height": 530.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -7497,7 +7497,7 @@
         "height": 530.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -7931,7 +7931,7 @@
         "height": 340.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -8153,7 +8153,7 @@
         "height": 530.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -8370,7 +8370,7 @@
         "height": 530.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,

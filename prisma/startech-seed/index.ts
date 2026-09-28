@@ -1,4 +1,5 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { loadEnvConfig } from "@next/env";
 import { createHash } from "node:crypto";
 import { dirname, isAbsolute, relative, resolve } from "node:path";
 import { Prisma, PrismaClient } from "../../generated/prisma";
@@ -22,6 +23,7 @@ import { ensureVariantCodes } from "../../lib/product-codes";
  *   npm run seed:startech
  */
 
+loadEnvConfig(process.cwd());
 const prisma = new PrismaClient();
 
 // Reuse important categories that already exist in the current storefront seed.
@@ -688,16 +690,17 @@ async function seedFile(seed: SeedFile, report: SeedReport) {
   );
 }
 
-async function main() {
+export async function seedStartech(input = "prisma/StarTec Product Seed") {
   const startedAt = performance.now();
   const report: SeedReport = {
     productIds: new Set<number>(),
     categoryIds: new Set<number>(),
     skippedProducts: 0,
   };
-  const path = resolve(process.argv[2] || "prisma/startech-seed/index.json");
+  const path = resolve(input);
   const files = seedPaths(path);
   const seeds = files.map((file) => ({ file, seed: readSeed(file) }));
+  if (!seeds.length) throw new Error(`No product seed JSON files found in ${path}`);
   const knownSlugs = new Set(seeds.flatMap(({ seed }) => seed.products.map((product) => product.slug)));
   for (const { file, seed } of seeds) appendUnmatched(file, seed, knownSlugs);
   console.log(`Importing ${seeds.length} groups, ${seeds.reduce((count, { seed }) => count + seed.products.length, 0)} products (including unmatched)`);
@@ -720,6 +723,29 @@ async function main() {
 }
 
 function seedPaths(path: string): string[] {
+  if (statSync(path).isDirectory()) {
+    const entries = readdirSync(path, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name));
+    const aggregate = resolve(path, "_all.json");
+    const covered = existsSync(aggregate) ? readSeed(aggregate).products : [];
+    const slugs = new Set(covered.map((product) => product.slug));
+    const skus = new Set(covered.map((product) => product.sku).filter(Boolean));
+    const files = existsSync(aggregate) ? [aggregate] : [];
+    for (const entry of entries) {
+      const file = resolve(path, entry.name);
+      if (entry.isDirectory()) {
+        files.push(...seedPaths(file));
+      } else if (entry.isFile() && entry.name.endsWith(".json") && file !== aggregate) {
+        const parsed = JSON.parse(readFileSync(file, "utf8"));
+        // Ignore progress, statistics, manifests, and other non-product JSON.
+        if (!Array.isArray(parsed.categories) || !Array.isArray(parsed.products)) continue;
+        // Split copies already covered by _all.json do not need another import.
+        if (existsSync(aggregate) && parsed.products.every((product: SeedProduct) =>
+          slugs.has(product.slug) || (product.sku && skus.has(product.sku)))) continue;
+        files.push(file);
+      }
+    }
+    return files;
+  }
   const parsed = JSON.parse(readFileSync(path, "utf8"));
   if (!Array.isArray(parsed.groups)) return [path];
   const base = dirname(path);
@@ -742,7 +768,11 @@ function seedPaths(path: string): string[] {
     });
 }
 
-main()
+export async function disconnectStartech() {
+  await prisma.$disconnect();
+}
+
+if (require.main === module) seedStartech(process.argv[2])
   .catch((error) => {
     console.error(error);
     process.exitCode = 1;

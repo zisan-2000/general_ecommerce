@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 3,
+  "groups": [
+    {
+      "file": "accessories/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "appliance/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "camera/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "component/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "desktops/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "gadget/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "gaming/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "laptop-notebook/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "monitor/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "networking/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "office-equipment/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "power/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "security-camera/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "server-networking/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "software/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "tablet-pc/_all.json",
+      "status": "completed"
+    },
+    {
+      "file": "television-shop/_all.json",
+      "status": "completed"
+    }
+  ]
+}

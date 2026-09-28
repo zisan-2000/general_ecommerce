@@ -271,7 +271,7 @@
         "height": 18.7,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -631,7 +631,7 @@
       "currency": "BDT",
       "weight": 0.08020000000000001,
       "dimensions": null,
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1274,7 +1274,7 @@
         "height": 15.0,
         "unit": "mm"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1428,7 +1428,7 @@
         "height": 0.8,
         "unit": "in"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,

@@ -65,7 +65,7 @@
         "height": 0.3,
         "unit": "inches"
       },
-      "available": false,
+      "available": true,
       "featured": false,
       "soldCount": 0,
       "ratingAvg": 0,
