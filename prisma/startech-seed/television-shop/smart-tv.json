@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790522928,
+    "signature": "b0a01c5ca0b967ee2e13cd836f0c09959511b5100d389e9472f92f70741ff198"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 16,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Smart TV",
+      "slug": "smart-tv",
+      "parentSlug": "television-shop",
+      "image": null,
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}

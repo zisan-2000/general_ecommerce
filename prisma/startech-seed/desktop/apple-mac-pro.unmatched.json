@@ -1,0 +1,22 @@
+[
+  {
+    "ok": false,
+    "stem": "apple-mac-pro-m2-ultra-tower-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\86dcfa00097fb6b8be22d6d24b2d8fe81078e7dffeac746f96e22fb05ece6912.html'",
+    "sourceImages": [
+      "/images/products/desktop/apple-mac-pro/apple-mac-pro-m2-ultra-tower-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/apple-mac-pro/apple-mac-pro-m2-ultra-tower-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "apple-mac-pro",
+        "subcategoryName": "Apple Mac Pro",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

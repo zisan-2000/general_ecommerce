@@ -1,0 +1,202 @@
+[
+  {
+    "ok": false,
+    "stem": "evolis-avansia-id-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0988ea3d61af1829667e77ccafd6654727d5c81cf98d1a18003bde64d856fe22.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/evolis/evolis-avansia-id-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-avansia-id-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "evolis",
+        "folderBrandName": "Evolis",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "evolis-primacy-2-id-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\50528e03c8297df4e2d7b7d8e2d00c23f8a00e1b2ffa4e9e5db9e55cb5f1b912.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-id-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-id-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "evolis",
+        "folderBrandName": "Evolis",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "evolis-primacy-2-simplex-expert-id-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30cb99a7f06cb8ba2c0b4b22c8c97aff112f42240ef43b23caeb3e706e29b0d1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-simplex-expert-id-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-simplex-expert-id-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "evolis",
+        "folderBrandName": "Evolis",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "evolis-zenius-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6097f70ff9cacecd6bf48da610cbf77566d5e875943e42407ad6b36294faf186.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/evolis/evolis-zenius-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-zenius-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "evolis",
+        "folderBrandName": "Evolis",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hid-fargo-dtc1250e-fd-ap-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7ec4a0ff565b1a7b0eb84819bc31d0bbaf2c9c88a90a14e01ebc607ae870d0c3.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/hid/hid-fargo-dtc1250e-fd-ap-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/hid/hid-fargo-dtc1250e-fd-ap-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "hid",
+        "folderBrandName": "Hid",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zebra-zc100-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ac2091752615b4a636f298397df2dcf65e72fd11b5561575e843055e4c91184.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/zebra/zebra-zc100-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc100-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "zebra",
+        "folderBrandName": "Zebra",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zebra-zc300-dual-sided-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d299c3ffec50a1403eacbc1362a7f49e2eb80a5bb4acc8d652379022cec6ac00.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-dual-sided-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-dual-sided-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "zebra",
+        "folderBrandName": "Zebra",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zebra-zc300-id-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d67ac569b518eca371766cb179c0c0ec1deecbe0f251c6e5d1b39b4395d41c9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-id-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-id-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "zebra",
+        "folderBrandName": "Zebra",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zebra-zxp-series-7-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\49cb39116d24f7bdc22a94a2cd0e09af9203288f3faca341d5d92ac26d55e25d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp-series-7-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp-series-7-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "zebra",
+        "folderBrandName": "Zebra",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zebra-zxp3-digital-id-card-printer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6de4e2bc29b3abdd7bc45df8c8a28cde0d436ac467ecb7dd9484406455e199ef.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp3-digital-id-card-printer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp3-digital-id-card-printer.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "id-card-printer",
+        "subcategoryName": "Id Card Printer",
+        "folderBrandSlug": "zebra",
+        "folderBrandName": "Zebra",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

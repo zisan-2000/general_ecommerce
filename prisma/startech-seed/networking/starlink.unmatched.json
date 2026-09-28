@@ -1,0 +1,422 @@
+[
+  {
+    "ok": false,
+    "stem": "starlink-flat-high-performance",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3a35f1c19b93776339a42815bed9bf675b4bcfb018d6e85d7726b16e2d9a906.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-flat-high-performance.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-flat-high-performance.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-gen-3-mesh-wi-fi-6-router",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a1f5d256589314ed3cad6ef52de91b133918901638c4423dd594d252fcc88a9b.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-gen-3-mesh-wi-fi-6-router.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-gen-3-mesh-wi-fi-6-router.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-gen-3-router-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2948e6b0ea551e89c6a7f473d9c898908a1d3cdaf68df9c263a896f1958f9957.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-gen-3-router-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-gen-3-router-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5785e56f8da2aaaf9de5e56050d9d992cf1ce35f4003c9f4ef3e28dc53ccdc35.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-15-meter-dc-power-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f7f69963d9bb205f887237ff677c747475679e1a36dc22558edeab53c32f28be.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-15-meter-dc-power-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-15-meter-dc-power-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-15-meter-ethernet-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f5c21cc76d0db14eb704574c3cc7c44b70e985110ebb73e1351ec43ecce2e68.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-15-meter-ethernet-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-15-meter-ethernet-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-30-meter-dc-power-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\772c2029e9d1c121602d7376dc563ebff50f06036c371e4b8fb8400acb921330.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-30-meter-dc-power-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-30-meter-dc-power-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-5-meter-type-c-power-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a98afa24c7908325fb3fc1887258f3fed06913b0d81eded8cc352d91f50a290.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-5-meter-type-c-power-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-5-meter-type-c-power-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-mobility-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1a23bed5dbacd7724af8a0556b1621ef03a0f797be09a69d49d81cc09b889de2.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-mobility-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-mobility-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-pipe-adapter-and-flat-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d3af277f06359092fae4e11d3bbe898f0d2a0e1cf819826c5f622d3a1e6b211.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-pipe-adapter-and-flat-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-pipe-adapter-and-flat-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-travel-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\23c540b90343baa82a8f4403a01cab69e1d23bbdb5273319fe37763469128ef3.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-travel-kit.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-travel-kit.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-vehicle-roof-rack-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\adabefcea8462519527dc82e8f68fdf875eb5fa15a35ed765c86f6d8e038870b.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-vehicle-roof-rack-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-vehicle-roof-rack-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-mini-wall-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9602d09f752f8c98c671e1ef02ef24bc5ff0516333899e6f383e4dee16786e0d.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-mini-wall-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-mini-wall-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-15-meter-rj45-ethernet-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\642f94fa3eaa4b492e647cbd86717f572682a7d8e17f63ebf54711330f042750.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-15-meter-rj45-ethernet-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-15-meter-rj45-ethernet-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-4-x",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f48162733950f37820dbc64ec66c7b16ac2ad2f3f7057061dfdf9e3026b3f67c.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-4-x.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-4-x.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-45-meter-rj45-ethernet-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b984b99f0fe3f74f3ce567586e3a23f954e20c01f8d92639eb018220d8ef10b.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-45-meter-rj45-ethernet-cable.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-45-meter-rj45-ethernet-cable.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-mobility-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\594fb0bba651cb713a2064995149672628876c548f4775bb7cae320ff628b1d6.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-mobility-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-mobility-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-pipe-adapter-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b732fc6e002252e2211426793f0cc60759c5398cd1f477d229c3c07c1efe85c6.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-pipe-adapter-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-pipe-adapter-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-power-supply-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3ff656a6e6fef17490ee803b5659f1edcdd0b9c4e0c176eb3c0730a8c40b77b.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-power-supply-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-power-supply-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-roof-rack-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b2cbd06a69e1d73f5c0c265925beaf62511c853832c3588372b844c5818284f.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-roof-rack-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-roof-rack-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "starlink-standard-wall-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b7af71f501be3334eaebeae2a1bcbc6d7e85941477d5fbed258ea8a9d7d862b8.html'",
+    "sourceImages": [
+      "/images/products/networking/starlink/starlink-standard-wall-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/starlink/starlink-standard-wall-mount.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "starlink",
+        "subcategoryName": "Starlink",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

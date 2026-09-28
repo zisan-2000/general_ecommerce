@@ -1,0 +1,222 @@
+[
+  {
+    "ok": false,
+    "stem": "oraimo-smartiron-portable-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\516e6b74239e362b962e9c395df78c313b974105078f2b6e2d90c79088a261d7.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/oraimo-smartiron-portable-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/oraimo-smartiron-portable-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-smartsteamer-garment-steamer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ae8eca9abb093874cd96ceeb644d4f233837e01fc2a0bbad00f608021a15ed27.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/oraimo-smartsteamer-garment-steamer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/oraimo-smartsteamer-garment-steamer.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-steamcore-lite-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\81f9360dd291fb18fc06c8552bbf234c6a4df954a7bcccf2e0e34286b4778ef8.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/oraimo-steamcore-lite-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/oraimo-steamcore-lite-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-dst060020-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\29fdf733a3a416fcedee1237d8407299e507f37e10d85759d23bb5f560e63956.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/philips-dst060020-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/philips-dst060020-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-gc0091-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f399d5d1adebd9b3c2952bd806d6514f0f1fb43234abd7f572d02e971afc639c.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/philips-gc0091-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/philips-gc0091-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-gc15702-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3467bd2f29cc33e23c1695fc5e7a6df2a6cf11f5d34f23de0252acbcddcbd538.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/philips-gc15702-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/philips-gc15702-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-gc181-80-1000-watt-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f816580692a291953f239607166d16571bdebabfc88bec80527c0ca81f9e8f3d.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/philips-gc181-80-1000-watt-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/philips-gc181-80-1000-watt-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd118228-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bfa8f650981990ac60400ed599d11e8b9ddb09b3c1cfd8e8b33e3361ef28832e.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/philips-hd118228-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/philips-hd118228-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-pg-112-1000w-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b4699803aedfdb769ced0471dfc1a25e509077c34dbefed730f223db16266892.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/pigeon-pg-112-1000w-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/pigeon-pg-112-1000w-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-pg-191-1000w-dry-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f7adfe8574d3691c78d2f3a8dd97537f191f7c8734b00bc5a858e86cc287a3da.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/pigeon-pg-191-1000w-dry-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/pigeon-pg-191-1000w-dry-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-seh-i05sds-steam-iron",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f50391a49e5e40c878a3f254aaa0f984927133c67b9fe5d827c3e11cdbfb7fe.html'",
+    "sourceImages": [
+      "/images/products/appliance/iron/smart-seh-i05sds-steam-iron.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/iron/smart-seh-i05sds-steam-iron.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "iron",
+        "subcategoryName": "Iron",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

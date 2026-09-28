@@ -1,0 +1,1062 @@
+[
+  {
+    "ok": false,
+    "stem": "airrobo-t20-plus-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00e8dfdc54ce8946d9cf4e4fd936aed5857f1973b95cae480ca9adf6badfea3c.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/airrobo-t20-plus-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/airrobo-t20-plus-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "anker-eufy-g50-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\048b2a59a57c4b75d416e24903e56984ee00cf4df21da57eb6544db1e1bb8ff1.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/anker-eufy-g50-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/anker-eufy-g50-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "anker-eufy-omni-c28-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df300e103b2ddd2563c9d9aea3911b4cfb99a20d1c14012ab36e108f6030fe94.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/anker-eufy-omni-c28-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/anker-eufy-omni-c28-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-360-vis-nav-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\487a7050d47896767e326d35d10ccd301fa3dee231ac35cf19b10d532b479b73.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-360-vis-nav-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-360-vis-nav-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-gen5detect-absolute-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3926e56a0a152c25a9804c0bbb2cbcd472e8b8c2c297c362eed98f8561dce385.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-gen5detect-absolute-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-gen5detect-absolute-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-pencilvac-fluffycones-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\32e1d2a05d336d7263f3866a1ce38f5a9917da4d8466af9ff3175105bbd267d3.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-pencilvac-fluffycones-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-pencilvac-fluffycones-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-v12-detect-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b43e956af3536caac9c28cbd4797f9d5435d25fc2140342106750e7de31799d.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-v12-detect-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-v12-detect-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-v15-detect-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5facfb23bb1e1ed74ba626047d4c73f438272d65f3639d1bd92ebe11926ca0ee.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-v15-detect-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-v15-detect-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-v15s-detect-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\23f9586b90857fdba2e50877b6a2d114d6555ef323beabc24dae62843b6367d1.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-v15s-detect-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-v15s-detect-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-v16-piston-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e0b6379475b773d5d50f46a1e449d7ccd33b5ec02d4eac3eb81d90c58f94f2b0.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-v16-piston-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-v16-piston-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-v8-115aw-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f3f9b6ed71cdd6435cee4f2a2f5f13103215f164c51c24728a38c1a9a1be62f.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/dyson-v8-115aw-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/dyson-v8-115aw-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecovacs-deebot-t30c-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f5efbff6ef8979814779bf36c2426251c6aa8872852b29523deca0d7dc73c0a.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t30c-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t30c-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecovacs-deebot-t50s-pro-omni-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3851ec2816675dc618b2de39e2c269e5f3c21d3687397e4ad19e96cd90caa77.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t50s-pro-omni-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t50s-pro-omni-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecovacs-deebot-t90-pro-omni-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3b9988206cb13413d5dbcc9453dec01e279c8ba33f146c5be834e01d17e4429.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t90-pro-omni-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-t90-pro-omni-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecovacs-deebot-x8-pro-omni-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b873010a9fc8e0c82bbf182820d44f4e6f155b18f0af998888e00917e2b24fa1.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-x8-pro-omni-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/ecovacs-deebot-x8-pro-omni-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecovacs-winbot-w3-omni-robot-window-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc326532d35860a030621b410270e547314ab069a77fa9db1ceb266b19c9f60d.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/ecovacs-winbot-w3-omni-robot-window-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/ecovacs-winbot-w3-omni-robot-window-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-cv-950f-2100w-vacuum-cleaner-18-ltr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e648ae69c8d79ef1bed1472509cd32c7862067cc65ecfbc24a5cada46711b73.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/hitachi-cv-950f-2100w-vacuum-cleaner-18-ltr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/hitachi-cv-950f-2100w-vacuum-cleaner-18-ltr.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-cv-960f-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66543906c92e43e2ac8450602708f2ff726a9a8c96661e22485f313e992c0dab.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/hitachi-cv-960f-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/hitachi-cv-960f-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-cv-9800yj-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5a4b4893cd033fbf5a7bca7e3fc4071bf6e9e09b8db240d95c808fc21c140745.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/hitachi-cv-9800yj-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/hitachi-cv-9800yj-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-cv-se230v-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f2661d5158f567fa78668b73ee595035e565fd48da2aced27e0a32c715dd6da.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/hitachi-cv-se230v-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/hitachi-cv-se230v-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jonr-p20-pro-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6673498768bc7fc4a9fb5a5efea6f8a3cc1765ef667a7b4069d175aae5172958.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/jonr-p20-pro-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/jonr-p20-pro-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-cordforce-flex-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a900542aedfc2bf86e30866069f08db925360dc318588857be2bffae9c4ec4b9.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/oraimo-cordforce-flex-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/oraimo-cordforce-flex-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-cybervac-2-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7a77b1f57b48d8af9d7c1e2515255ebd760b184fe18e041d103a7ccbf6d2659.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/oraimo-cybervac-2-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/oraimo-cybervac-2-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-cg711-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d693bde047cb01fba0c84f0a8e9d979b153dfaace46953cf02c5bb6642d953cc.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-cg711-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-cg711-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-cl601-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ea54c48531403036edebf96b2d6d94a6c5bfba4bdf018ad03f35643fabb0c1d6.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl601-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl601-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-cl603-bagless-canister-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e3cf7eedbc176588b0bbec638a85028ca4a801e5700f0296bbabc1594acce61.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl603-bagless-canister-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl603-bagless-canister-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-cl605-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fa78a6f720d15bb161ac88ab69cb51cbf7f746c4c601f5ab813c77aad82682ad.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl605-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl605-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-cl607-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e5cf3422a30836eb3bb10542b9f6933328738a92a3f84b7c0f0b4da738483e8.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl607-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-cl607-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl620-drum-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f25001eb99185baf9bbc4be686b8428b40467798294c750ac171f7cef969cff6.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl620-drum-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl620-drum-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl631-tank-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2eb705238ae0d865f4ac2453ceb527290b63288977c90d71552ff9822edf77a1.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl631-tank-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl631-tank-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl633-tank-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0e01b8031597d639c1c1a6b57f8bb36c7b1a787bdcc5d93d553b3ac9a1e23a8.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl633-tank-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl633-tank-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl635-tank-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\44337ca2076dba03bb5f237cf3c94d08e77d4f858b524c03e37e78e92aa4d60e.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl635-tank-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl635-tank-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl690-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd8aa90d0be073f78b2a439c82578fb41574b43d647522dd542dd72c8d144ebb.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl690-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl690-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mc-yl799-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d1e8e6f92a3eb7813821a38ad95df53e87e0fa77fd0a2fd07e93fd40d04db32.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl799-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/panasonic-mc-yl799-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "saachi-nl-vc-1107-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\989966f58a6e834f69aecc053fe89f0f3d7ab62270be4631533e5bb42ce4ce20.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/saachi-nl-vc-1107-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/saachi-nl-vc-1107-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-ec-bg2405a-g-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b06386645a9b8e2cdb829ada7acf121e3b30f3e9c2ff66c460f3bf41880c2613.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/sharp-ec-bg2405a-g-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/sharp-ec-bg2405a-g-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-ec-ca1820-20l-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6aa2302072d6df58e21108a506972cb960735a3bf462190988fc8b143557589.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/sharp-ec-ca1820-20l-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/sharp-ec-ca1820-20l-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-ec-ca2422-z-22-ltr-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec22eb857fa2b1d912e0b31424a0c7b9acf907115a4ebe849e66d948fb39410b.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/sharp-ec-ca2422-z-22-ltr-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/sharp-ec-ca2422-z-22-ltr-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-e5-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\803bf70707ba9c750f7dc0036c3995611221253db568d4fbd5555b0c24b3510e.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-e5-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-e5-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-h40-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5f95ceac4eb88822bf0680b304ec30e8a65c143d81738ffa2cc2e2a31d3cce65.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-h40-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-h40-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-p30-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2a54b369bd92084e2cc9df4e117b972b9fdc09189453602d0165cd054e2e7b9b.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-p30-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-p30-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\68a201bb2869aff524b9fbf4d271126f50d02696abc649f95c0fbd10cc866fe4.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-5.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-5.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-5-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7092bb45dd7375fd770a5d20d2003e6e0d3e081792b8826743df09ab95f45eba.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-5-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-5-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-6",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f874de32ba5086df531c6ef5569a7bdd57b9cce4a95b28e0b174e2165446c7f.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-6-max",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3dd400b201737c1703356ed439b41e3bee8a568e97585d1b082b40d13aac5edf.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6-max.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6-max.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-6-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df8182519e5a71970e96109c53d626d9462a2e6172a4d8740fc104472b51ea8b.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-6-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-h50",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb9de58968c302236a4ae057b5d87cd320918ed2114d52ca4af65a46147422a0.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-h50.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-h50.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-robot-vacuum-h50-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1603539e6979eb8828b09b3a0cce0a5498dac31949386eb2ab93948abdbb43bf.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-h50-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-robot-vacuum-h50-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-s40-pro-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2960b3d812fc7d8f482c5f811655128574486fe8402682689ccf35baf227e4bc.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-s40-pro-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-s40-pro-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-s40-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3c3ae51a4578770d8d3406899853ee0c647f707964988062df355b0f2237fef.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-s40-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-s40-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-truclean-w30-pro-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7fdde125ded0fc4014741923e2242d1b641fbda74de0e11ebfac9cf07fe2ba21.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-truclean-w30-pro-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-truclean-w30-pro-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-x20-pro-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a35d4e3d105f6000056df1697c2e88eba2800cc2bdb54b5bbdd318b2b7dd836f.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-x20-pro-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-x20-pro-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-x20-robot-vacuum-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9869b54920347b570dfbb3ce00e1581f711d604fc02e06558e5355ca57bce99.html'",
+    "sourceImages": [
+      "/images/products/appliance/vacuum-cleaner/xiaomi-x20-robot-vacuum-cleaner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/vacuum-cleaner/xiaomi-x20-robot-vacuum-cleaner.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "vacuum-cleaner",
+        "subcategoryName": "Vacuum Cleaner",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

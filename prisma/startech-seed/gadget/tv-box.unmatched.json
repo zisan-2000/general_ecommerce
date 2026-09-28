@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "apple-tv-4k-128gb-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\977d6cd5993dbe21447561e079fe9480267c0944fcd09ef39a0127cd8a31a6f5.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/apple-tv-4k-128gb-tv-box.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/apple-tv-4k-128gb-tv-box.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-tv-4k-32gb-6th-gen-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bb2b9373786b2ba3cb0e5500554d2a6a2167f0c2213a1e680030fa63b614d37a.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/apple-tv-4k-32gb-6th-gen-tv-box.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/apple-tv-4k-32gb-6th-gen-tv-box.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-tv-4k-64gb-6th-gen-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\35eadf0a09be3a5cd05b6fd5f570bee5d0902f6194f34476ec5412293675bd15.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/apple-tv-4k-64gb-6th-gen-tv-box.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/apple-tv-4k-64gb-6th-gen-tv-box.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-tv-hd-32gb-4th-generation-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ac086eda6461073998e23291f28cee6c2736489609ed15361319a15acef237a2.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/apple-tv-hd-32gb-4th-generation-tv-box.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/apple-tv-hd-32gb-4th-generation-tv-box.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "google-chromecast-with-google-tv",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b96e1c3d00b2bbb1f298dcb3d00e15d849130e7d9e9ebce10093c63450e986e7.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/google-chromecast-with-google-tv.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/google-chromecast-with-google-tv.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transpeed-x88-mini-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e6ceaa162e3acfda33996c14ab8a47f213c3557b6e68f0774bd926dd4c539746.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/transpeed-x88-mini-tv-box.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/transpeed-x88-mini-tv-box.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tx10-pro-android-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7457a80317f05601d8462e47caf8820c88d71172bf97266d871a69a97336b101.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/tx10-pro-android-tv-box.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/tx10-pro-android-tv-box.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tx20-pro-android-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ad915ff18b583d825adedce62e30dbb8767b09038388b9f2caf067a2acfb207.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/tx20-pro-android-tv-box.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/tx20-pro-android-tv-box.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tx3-mini-a-android-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a1329044d12821948ddca79a0c32173b11ad47bf27df41a2ffe6c4329ac30867.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/tx3-mini-a-android-tv-box.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/tx3-mini-a-android-tv-box.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tx60-pro-smart-android-tv-box",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e4374136d2f52f67689cd3cafc8a683770eee51d02a3f26bc88a85318343da72.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/tx60-pro-smart-android-tv-box.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/tx60-pro-smart-android-tv-box.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mi-mdz-27-eu-tv-stick",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\110056dfe6aa5ba19955030d1666de94f38a646ed0cca477ac82baef6179908a.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/xiaomi-mi-mdz-27-eu-tv-stick.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/xiaomi-mi-mdz-27-eu-tv-stick.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-tv-box-s-2nd-gen",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0864e839ccd44e8a85d8b925bbe693d5019c0f42f701f39d7f58aefce5af558d.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/xiaomi-tv-box-s-2nd-gen.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/xiaomi-tv-box-s-2nd-gen.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-tv-box-s-3rd-gen",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\675421c0020281ebfc82d5f1ced00c873be53318b54e441a14f132197c0f3890.html'",
+    "sourceImages": [
+      "/images/products/gadget/tv-box/xiaomi-tv-box-s-3rd-gen.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/tv-box/xiaomi-tv-box-s-3rd-gen.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "tv-box",
+        "subcategoryName": "TV Box",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1122 @@
+[
+  {
+    "ok": false,
+    "stem": "bosch-mg8724a1ki-truemixx-pro-1000w-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a10ea308a7ea462dc9c0e1c5ea75654200034a5dff0d1b68fdf82c5f12eee0eb.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/BOSCH/bosch-mg8724a1ki-truemixx-pro-1000w-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/BOSCH/bosch-mg8724a1ki-truemixx-pro-1000w-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-mgm8836bin-truemixx-pro-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a101af9f4a86540e40a8876b869075ba9d3ab1baada39e31b39e0030ed751426.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/BOSCH/bosch-mgm8836bin-truemixx-pro-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/BOSCH/bosch-mgm8836bin-truemixx-pro-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-mj4412a1gi-750w-juicer-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77aa20f809ce2bf2fb91067bf977d7a5bd209cd24ccc4b5cc5d90c44006ebac5.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/BOSCH/bosch-mj4412a1gi-750w-juicer-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/BOSCH/bosch-mj4412a1gi-750w-juicer-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "havells-momenta-nv-750-750w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d316154d69d55c8c6b5496264301016a017e1faef25ed341dcf357f8acbe12be.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Havells/havells-momenta-nv-750-750w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Havells/havells-momenta-nv-750-750w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "havells",
+        "folderBrandName": "Havells",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "havells-momenta-nv-900-900w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\669c30c4a0de6601f4fd331ebbf93cb73428b11d234b9a3d6c9e807cae279b4a.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Havells/havells-momenta-nv-900-900w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Havells/havells-momenta-nv-900-900w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "havells",
+        "folderBrandName": "Havells",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "havells-supermix-nv-700-700w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7a073a23a29f51e6c7d77a9e640426d3af20615a4840dffc69996d1cfaf14ce9.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Havells/havells-supermix-nv-700-700w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Havells/havells-supermix-nv-700-700w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "havells",
+        "folderBrandName": "Havells",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kenwood-handmix-lite-hmp30-a0wh-hand-mixer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ffca9dae38e5233b2a14df9625bd5f63e89916758d9b7211787f4040091b72c4.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/KENWOOD/kenwood-handmix-lite-hmp30-a0wh-hand-mixer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/KENWOOD/kenwood-handmix-lite-hmp30-a0wh-hand-mixer.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "kenwood",
+        "folderBrandName": "KENWOOD",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kenwood-hm680-350w-chefette-hand-mixer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5d377738b5c0bacc03e099d9fabc01267786fc6a86da0a6037024e1515187a5.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/KENWOOD/kenwood-hm680-350w-chefette-hand-mixer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/KENWOOD/kenwood-hm680-350w-chefette-hand-mixer.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "kenwood",
+        "folderBrandName": "KENWOOD",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kenwood-kvl-8300s-1700w-kitchen-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0fd69a2b82118f9d2db2a41f5bc524a55507610c9fdf27a62a7c0dc974f8cbae.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/KENWOOD/kenwood-kvl-8300s-1700w-kitchen-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/KENWOOD/kenwood-kvl-8300s-1700w-kitchen-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "kenwood",
+        "folderBrandName": "KENWOOD",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kenwood-kvl85-004si-1200w-kitchen-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\633e01a5d00837359c9b242f88a9a7eaa54286b7ba0b4e90149b936450f616c4.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/KENWOOD/kenwood-kvl85-004si-1200w-kitchen-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/KENWOOD/kenwood-kvl85-004si-1200w-kitchen-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "kenwood",
+        "folderBrandName": "KENWOOD",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kenwood-xl-kwl90-004si-1400w-titanium-kitchen-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d5bee739b28bd363974be1482eb6e1bad2f133a12c2d89b2efec46a3f60e9006.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/KENWOOD/kenwood-xl-kwl90-004si-1400w-titanium-kitchen-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/KENWOOD/kenwood-xl-kwl90-004si-1400w-titanium-kitchen-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "kenwood",
+        "folderBrandName": "KENWOOD",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-omniblend-2-obl-881a-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cede1659c326e313360cb426638f0105938084b08586d4e2aa9e2d51236d2220.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Oraimo/oraimo-omniblend-2-obl-881a-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Oraimo/oraimo-omniblend-2-obl-881a-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-omniblend-obl-581a-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d359fd95a067c2809e20352bd238cad27f41fec84c8b02940f09dc00e2cd2e83.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Oraimo/oraimo-omniblend-obl-581a-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Oraimo/oraimo-omniblend-obl-581a-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-smartblender-sleek-oh-b2n-15l-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3cd988ef5e3b362d3248e09eec2f2a0b52ce647416499b9fb8b3d5b3b82871a.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Oraimo/oraimo-smartblender-sleek-oh-b2n-15l-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Oraimo/oraimo-smartblender-sleek-oh-b2n-15l-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ac300-3-jar-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0e0374cf2824e668aab439c25712af8b2088c93cc9d354e528c6799bddbd14c.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac300-3-jar-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac300-3-jar-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ac400-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c61c806e478d1f42775c561420e29fec79aa69f84a8e835e34c237e12429dc6f.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac400-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac400-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ac460-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2c5928a19ba7a28f3211f09a2504b4e20910043d7022240459af6c13fa92c213.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac460-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac460-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ac555-super-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9b8644a0cd32e26f0e64de22b33d7092b569702a1021a0535ce1d3e3448329f.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac555-super-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac555-super-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ac560-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\67e0a13646bb5c0d22e48cb33fa8224e5873976f0acf6219a013a96bfa2ddf4b.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac560-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ac560-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ae375-super-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0eaea64097bcdf57a447456b5832a42f3f04bb19d0be3993003df32f104c38b.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae375-super-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae375-super-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ae465-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\599e1c8bfb19c511d4f43e91e5a8184321276fb81e14823a3655d14a65a08be1.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae465-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae465-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ae475-2000w-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\126dfbd7e1e627e0d32cf67c91a39f25d091f6ddcc91b3688f26521157cb123c.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae475-2000w-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ae475-2000w-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-av325-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1761e6b3a78d72f347d305348087804e46d6a7ffb5dd289f1e582961e9192afd.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-av325-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-av325-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-av425-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\745271df40fcd6627ad732c090bdf2736277073ccb52e0e1ae774ec280106e03.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-av425-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-av425-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-gc3550-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\085acd2121f4ec1341fc8a4199b4c31fb4db077ab807ef74b1ea13df9029be07.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-gc3550-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-gc3550-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ge3750-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\acffb48db7423009b1345208328ab472d6bea2ffa2b2ab1333442b406aae98d3.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ge3750-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ge3750-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-gs1-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59570240e208de7ec4b2d60c2e919b0fccc1ccf9c374b9c540342be8a0aedd7b.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-gs1-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-gs1-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ss1-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\44a2b119bf5330dc477a83dc6d228a6dbc84dae379a42e5824c10319d5b1a3e6.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ss1-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ss1-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-mx-ss40-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84db1731d4f4a5a0ca592795c1ecf383c49505d34b2c1ac9ed635e28dc24c72c.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ss40-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Panasonic/panasonic-mx-ss40-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-5000-series-2l-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b789599c8b6049dd05948f1061aa73024ace8697ffaa7c9691d1da2bf856ab72.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-5000-series-2l-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-5000-series-2l-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl100002-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3156d31b98faa57e51167549bb2f26ea8682e8a0286ec6a073b80213b74fc98.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl100002-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl100002-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl1600-00-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d3417e145b6c878070aafafae353b99ae27cce4ec0364e5006a2eb53bf9afdf.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl1600-00-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl1600-00-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl1606-03-500w-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3c9a099dbc97e8780b049d650db6d9044633fc2f839032b4a5b0837f9b6a0e2.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl1606-03-500w-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl1606-03-500w-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl168000-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4810cbe0373f9d8fdcb488d60a99a884ea92ff03529001f901fc6c58813da66.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl168000-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl168000-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl168200-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a20f42fe4e74f451b08fa15fb01e25636a1e6cfda3d7bca8c756534e4bd91183.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl168200-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl168200-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7505-00-500w-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9cd51a4359572846e3fa769674ac20941fa166526338fa37c15f12daf9819958.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7505-00-500w-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7505-00-500w-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7505-500w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\deb28779b8c9797b3bfa6b1d2513444abb64efca76ca048f8ab7a2c3fba1a178.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7505-500w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7505-500w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7704-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e77b2e3b1437362a4ac1ed7d1be445a77af0eb80c08e806c511afe860f6d2acb.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7704-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7704-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7756-00-750-watt-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\157182c70d4eb86dc07e737a4aa9b939ec773a6c2e96936431c0e4f00891f19e.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7756-00-750-watt-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7756-00-750-watt-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7757-01-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\173079a869589f2d1ed1089bce5e0244ab3f983322548549ce0793fb01f2a553.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7757-01-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7757-01-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl7757-750w-3-jar-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\67e1f35b0fd9ebce0b72d5d8329bfd7f2ca7831c964ad7ba5c834b279c745ae5.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl7757-750w-3-jar-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl7757-750w-3-jar-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl777301-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5002d8b64d32192dd00bfb998b25b0e6e12cac246a98ba2cf9ac37a92b290eaa.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl777301-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl777301-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hl777302-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3b8507c90b3477059dcdc1db2b4175be213bc6b6e17603da34f6b5b89b25afa8.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hl777302-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hl777302-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hr-2520-00-hand-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0e9b678614953df4021432aeed71641bea26d018bd39c2eaf17bae5718067976.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hr-2520-00-hand-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hr-2520-00-hand-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hr-7778-7000-food-processor",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cf2b1e4b08c8df13808be31d2a55bc4d493886def7b9f970c96dec6d0577e6c.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hr-7778-7000-food-processor.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hr-7778-7000-food-processor.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hr1351-90-hand-blander",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d5eb723c046df271fc71eaf593eb17651396576e20d2bd5c7f77ad3127ec508.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hr1351-90-hand-blander.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hr1351-90-hand-blander.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hr2041-10-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\76fcc0806b088a85474e0638ccd3c43e62657244ae28fa7fe2538a716fc5bfe3.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hr2041-10-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hr2041-10-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hr3705-hand-mixer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f39d41259ac573f8d4c65450e65b24a1b55ad94e98f54ea815beecd52a499482.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Philips/philips-hr3705-hand-mixer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Philips/philips-hr3705-hand-mixer.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "philips",
+        "folderBrandName": "Philips",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-elite-red-650w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\20705778ff20c4c3bd6df33d6160c8b2be571d5a966ae1dbea1c5d40f7673818.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Singer/singer-elite-red-650w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Singer/singer-elite-red-650w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-optima-lite-m-550w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e049e52abe161f71a0d2743de0ba7f2d3243ecc449dd8573947acce6eecad785.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Singer/singer-optima-lite-m-550w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Singer/singer-optima-lite-m-550w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-pro-red-550w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3cd28b763de8bc9223723e9a53b94b990073f67138c4d61fae32660033a9395b.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Singer/singer-pro-red-550w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Singer/singer-pro-red-550w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-ultima-mrn-750w-blender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db75c78f208e098f4eb92287c523727de9acd5bc2963f075df69c7cb0221a6be.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Singer/singer-ultima-mrn-750w-blender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Singer/singer-ultima-mrn-750w-blender.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-apexgrind-plus-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\abb7869bc582aadef241847cf6aab961101178f8a0539cf42b47f99a886072fa.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Tefal/tefal-apexgrind-plus-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Tefal/tefal-apexgrind-plus-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "tefal",
+        "folderBrandName": "Tefal",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-chef-assist-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4fb9b7e28fd6efaf2e7d1646a26d7d53b287bef173900b835c64e7555009937f.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Tefal/tefal-chef-assist-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Tefal/tefal-chef-assist-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "tefal",
+        "folderBrandName": "Tefal",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-grindmax-hd-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6d0f881584cd078d8564fdeb2e8229a476217a1c6772a51f1288773148f91c1.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Tefal/tefal-grindmax-hd-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Tefal/tefal-grindmax-hd-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "tefal",
+        "folderBrandName": "Tefal",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-puregrind-mixer-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1fb0b50fd1d363df5d8b6008be6243761c8c9b8422fe45aee648e64cd3fe7c09.html'",
+    "sourceImages": [
+      "/images/products/appliance/blender-grinder/Tefal/tefal-puregrind-mixer-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/blender-grinder/Tefal/tefal-puregrind-mixer-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "blender-grinder",
+        "subcategoryName": "Blender Grinder",
+        "folderBrandSlug": "tefal",
+        "folderBrandName": "Tefal",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

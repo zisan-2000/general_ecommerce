@@ -1,0 +1,282 @@
+[
+  {
+    "ok": false,
+    "stem": "asus-expertcenter-pn53-barebone-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cbe76bcfe74fc5675e8e2737de7ba3825dec59eb1dbc582253bfc0a997a57ea9.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn53-barebone-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn53-barebone-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-expertcenter-pn64-core-i3-12th-gen-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1caa552e61872462934a0b9adc9bb0ec5ff7670926dbcab9873dfe2959b447fd.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i3-12th-gen-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i3-12th-gen-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-expertcenter-pn64-core-i5-12th-gen-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ff949d66bef6571eaa82bd3d340a6809778f07bb09fc3e204844040d3ea26243.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i5-12th-gen-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i5-12th-gen-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-13-pro-core-i3-13th-gen-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66390a5793e809ff54c4e58e8abdf30f1600545abd73211c957c5ba1215b1aa0.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-13th-gen-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-13th-gen-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-13-pro-core-i3-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\949b8d82c434919f0a39e5be7ca9f298971d946045255438dff0b197767a9d54.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-13-pro-core-i5-13th-gen-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77b2546cfc8021d92f789a8534b8cbbca22852d4c8e17f7f5aca5ea01a3ae7db.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-13th-gen-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-13th-gen-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-13-pro-core-i5-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9c8eedda5750130ee47b0890d5a1ce4a05fb968d67e32ff4dd67e561efc86f90.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-13-pro-portable-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\74013036bae71ed2d58f8fd1c849113db039cf05159fb124c20ee0213bb10f94.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-portable-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-portable-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-14-essential-core-3-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c31bd09a874eb8ed2a31c760636854fd7bb27838c04d1a1c4bfb5ead6a73bfba.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-14-essential-core-3-n355-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1c8c9c46da1bb3a2fab1dc9fab04edf1ad5735a3ca6f7441d9c49b6fc515a548.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-n355-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-n355-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-14-essential-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\470e97d8b297e0d3358adad23b83db6f6f8158df899813e44bd3645c165e8293.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-15-pro-core-5-210h-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1edf60f54b9f2b6b4f3b9c4215e1f5bbe0f881ef2acc0eec9408e32d1c79f301.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-5-210h-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-5-210h-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-nuc-15-pro-core-i3-13th-gen-mini-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f693b15afcd822d5a6bb0f688b770eb33a71fdfbb1abcfa8e63c66b4fbdb2492.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-i3-13th-gen-mini-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-i3-13th-gen-mini-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ef6506563dfafd676c4fedafd866598d4ac6c996bfb281e05865b39a63b92485.html'",
+    "sourceImages": [
+      "/images/products/desktop/portable-mini-pc/asus/asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/portable-mini-pc/asus/asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "portable-mini-pc",
+        "subcategoryName": "Portable Mini PC",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

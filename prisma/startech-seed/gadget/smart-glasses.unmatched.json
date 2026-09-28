@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "colmi-g06-smart-sunglass",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c45d41e8c8bc6e5dbc9b015386ac007ae5b531072504974be28c49118ef179e5.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/colmi-g06-smart-sunglass.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/colmi-g06-smart-sunglass.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-fury-smart-glass",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d2e213ec23b79e296e5bb08439714f46f76bdda5e8ec785e1bbff2ac32c8e5e.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/meta-fury-smart-glass.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/meta-fury-smart-glass.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-ray-ban-display",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ea1d86866db71074a5c3e2e16dc067f70e7223fe2320203649b321c3e75d4fae.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/meta-ray-ban-display.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/meta-ray-ban-display.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-starfire-kylie-edition",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\48b8014ffbd465235a29e9e39a492bb59f9527acc253599425eb8632030665af.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/meta-starfire-kylie-edition.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/meta-starfire-kylie-edition.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ray-ban-meta-headliner-smart-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\49f1ab82fcd68c7192c3c0be7606d89010424a460ab5359a27813078d0325afc.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/ray-ban-meta-headliner-smart-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/ray-ban-meta-headliner-smart-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ray-ban-meta-skyler-smart-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\210949a6a44ba45a256fef07846efd8ff33bbf68af86dae89e4a3ff3a5d85951.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/ray-ban-meta-skyler-smart-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/ray-ban-meta-skyler-smart-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ray-ban-meta-wayfarer-gen-2-smart-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\06bb46bb822d8f05bd76709742f380798038d8c2eeeb68a559f56c65a9133a86.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/ray-ban-meta-wayfarer-gen-2-smart-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/ray-ban-meta-wayfarer-gen-2-smart-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ray-ban-meta-wayfarer-smart-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1e1b983dfeaf9258554ad30f0b03a14275387d5ce7fe8e7d591ffae6bf5fb281.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/ray-ban-meta-wayfarer-smart-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/ray-ban-meta-wayfarer-smart-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rog-xreal-r1-gaming-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3fa41c2af5223a3fb445edda7264d60800dd1195d418d3c67d3ad72171a8512c.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/rog-xreal-r1-gaming-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/rog-xreal-r1-gaming-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xo-e12-smart-audio-sunglasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71845ed085f707944c1b75764daccbbba4ded2d8d4d785b84082c26f765713c2.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/xo-e12-smart-audio-sunglasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/xo-e12-smart-audio-sunglasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xo-e13-smart-audio-sunglasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7c3b116f29f712fd4fd8e69813dae76500648b6ad4e4d48732fcc8ac8b7e6db.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/xo-e13-smart-audio-sunglasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/xo-e13-smart-audio-sunglasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xo-e9-smart-sunglasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3f434abfc82d20f4771b740318774cec163a42cb4516bf338ae8979b946dc41.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/xo-e9-smart-sunglasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/xo-e9-smart-sunglasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zeblaze-ai-shooting-glasses",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e75d846ae24d1808d3eb26d5ee530e4026ca625ae0050acc402c95c9d2be4b9.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-glasses/zeblaze-ai-shooting-glasses.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-glasses/zeblaze-ai-shooting-glasses.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-glasses",
+        "subcategoryName": "Smart Glasses",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

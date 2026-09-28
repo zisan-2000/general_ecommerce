@@ -1,0 +1,642 @@
+[
+  {
+    "ok": false,
+    "stem": "dell-12tb-10k-rpm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9eb862fc970b3ecf4eca8647b7a838643cd038226be6ef0518b1b35879116d5a.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-12tb-10k-rpm.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-12tb-10k-rpm.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-18tb-10k-rpm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c61598eaa0fe217a859544c02a7d7eee9f079465ec112b09845c896f8a67685.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-18tb-10k-rpm.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-18tb-10k-rpm.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-1tb-hot-plug-hard-drive-cuskit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\465d9d8770975bbbe2d8cdbec8a2bfa081c20edc97c49ebbf8cb9d02aea06609.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-1tb-hot-plug-hard-drive-cuskit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-1tb-hot-plug-hard-drive-cuskit.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-2tb-hot-plug-hard-drive-cuskit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb0e1fc749e0c1d8b63bc09b29cb5dbf2ee0a4236aedb7c3b6978305a00dd44c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-2tb-hot-plug-hard-drive-cuskit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-2tb-hot-plug-hard-drive-cuskit.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-300gb-15k-rpm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e67799d8910101c221803a62dd03944ca607b90a2d72e80f7bc9e6a718c54f01.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-300gb-15k-rpm.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-300gb-15k-rpm.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-300gb-hot-plug-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c62476c875f8009f8851f6c1d26383f597b4ab9412de7f60715a89973dbd35ce.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-300gb-hot-plug-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-300gb-hot-plug-hard-drive.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-4tb-hot-plug-hard-drive-cuskit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de1b337d6076cc2640c1029552805afac3202ad6c2103505b32b246699cda052.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-4tb-hot-plug-hard-drive-cuskit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-4tb-hot-plug-hard-drive-cuskit.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-600gb-15k-rpm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\860cb1a0e4515eeebd2bf7c898bf88965c79408bb29493ef70fc44a06e9a096d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-600gb-15k-rpm.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-600gb-15k-rpm.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-600gb-hot-plug-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0fd479f2b116526a9adecdfebfea91e88eeeacd85aeaf6fbe1372193bc944e7d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-600gb-hot-plug-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-600gb-hot-plug-hard-drive.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-8tb-hot-plug-hard-drive-cuskit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7aa595a6055ed2c80c8f6e7f6740120ade2d41f46af0c30c5c08bc2d5d220e6.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-8tb-hot-plug-hard-drive-cuskit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-8tb-hot-plug-hard-drive-cuskit.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-server-2-poinnt-5-inch-2-point-4-tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db5162965fa139ef1c2f4103764f1c70aa5e86c84fc0b5195be2c2d78eec56ef.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-server-2-poinnt-5-inch-2-point-4-tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-server-2-poinnt-5-inch-2-point-4-tb-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-server-2-point-5-inch-300gb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73de8a50f0cd821baa3d600d9ece3c8bfd9425f27ee44fbeb369dec3acd5407d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-300gb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-300gb-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-server-2-point-5-inch-600gb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ae110662309848c866fff22d5e00364b4dc51e382c6d572d63bfb1bd9172f18b.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-600gb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-600gb-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-server-300-gb-3-point-5-inch-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\941df4f914ce7f5307df07959cef63bc27f7051bb297afc642c4223999eb62b4.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-server-300-gb-3-point-5-inch-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-server-300-gb-3-point-5-inch-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-server-600gb-3-point-5-inch-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ead5368b0380da74f4401d76436771b399ab16272dc5d639f94f803498ab0c6e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/dell-server-600gb-3-point-5-inch-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/dell-server-600gb-3-point-5-inch-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-server-1-2tb-server-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3fcf7e61b1a05d4db01aff05009b9cc7c32f7c537184a80c5a247324c6665b1c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/hp-server-1-2tb-server-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/hp-server-1-2tb-server-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-server-600-gb-g8-g9-sas",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a0aec5d610fbdf69d7645c0a4bceed364cf73ec3625c2949dd16e9954ffbfe75.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/hp-server-600-gb-g8-g9-sas.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/hp-server-600-gb-g8-g9-sas.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-has5300-12tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a4c1aa8af1aa59ca92dbb9b953dd4134d6992567bcc3d655c917794a4f0a9fd7.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-has5300-12tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-has5300-12tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-has5300-16tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe7e647d48b4d61743880f3fb8e7a74c139aa8502d381b731282cb7b48fe54ff.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-has5300-16tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-has5300-16tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-has5300-8tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5127a441ca62e43939f9e85cbd56b2911434d37d7ea4d438394baf4dd2af9985.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-has5300-8tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-has5300-8tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat3300-plus-series-4tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ebb29e77f549d6e7b4f4deb63c1ae84e94a3072070274785866f6deaa063037f.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-4tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-4tb-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat3300-plus-series-6tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6ab201cfc64a4eef0ca8c0db6b509d4a7de3fd95b3f0a18dd92229c017a7765.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-6tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-6tb-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat3310-plus-series-12tb-internal-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\818920356d6cf951699a6c321f27627ef613472ee1f3d9406fc94ca4119eb805.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-12tb-internal-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-12tb-internal-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat3310-plus-series-16tb-internal-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\999570f77f128dd0448a566afbb8382fd45cd69647193a9558a0b5d9ce648c18.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-16tb-internal-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-16tb-internal-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat3310-plus-series-8tb-internal-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab3023bd690bf1a7c318101f0c56d0b555ad82370ccbb625cf15f0ad77c75193.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-8tb-internal-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-8tb-internal-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5300-12tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8dacb29088d23938d391d96d0aa62411a78fbbe8cde5cd43983a138616a645a8.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5300-12tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5300-12tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5300-16tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dedecc7394a4e5e7ea9cffb30bed17ff0a98508272368d6bc37d8215e392562e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5300-16tb-enterprise-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5300-16tb-enterprise-hdd.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5300-4tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\777a6a3f04dc82141144a7811c42bcf2617abb20224dc910e3eb303813573d99.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5300-4tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5300-4tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5300-8tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88664fb4f52c3f924bdca97efffeb09d19b756021a4a5e3884826131aeacff66.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5300-8tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5300-8tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5310-18tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b1bcfe37bc9ec33b3feb7d3bc1a6144e9dea55b96595c5cf611d10e2b474a254.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5310-18tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5310-18tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5310-20tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ef938ee2f07c9eddebb7f166fd4e637a006b9956228b4325c6cabb7f19d2c49e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5310-20tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5310-20tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-hat5320-8tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8c0d1c0785d0e88766a56fbaa5161d2929aa0cced813f44816b9e55a5cff81de.html'",
+    "sourceImages": [
+      "/images/products/server-networking/server-hdd/synology-hat5320-8tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/server-hdd/synology-hat5320-8tb-enterprise-hdd.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "server-hdd",
+        "subcategoryName": "Server HDD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

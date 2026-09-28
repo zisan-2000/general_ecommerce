@@ -1,0 +1,742 @@
+[
+  {
+    "ok": false,
+    "stem": "amalink-al-ue65-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\573b0f8d752dbf178288d804233bb8272658885771b335c9dc657eb9d602052f.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/amalink-al-ue65-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/amalink-al-ue65-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-hub-lite-series-type-c-to-rj45-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\81d324781091da7e30d1d127268a9992dd41f658dcada10fd1c49c95e442364a.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/baseus-hub-lite-series-type-c-to-rj45-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/baseus-hub-lite-series-type-c-to-rj45-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-hub-lite-series-usb-a-to-rj45-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\377f6cd1dbe9f8f9b2f2cd05d1cda6a299dec4762993ebd83f214f36246f5864.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/baseus-hub-lite-series-usb-a-to-rj45-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/baseus-hub-lite-series-usb-a-to-rj45-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-hub-lite-series-usb-a-to-rj45-lan-port-1000mbps-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\48b56a6d27c6ad6096160d65e7e7bf85066047f245edfc8720d351046333ab93.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/baseus-hub-lite-series-usb-a-to-rj45-lan-port-1000mbps-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/baseus-hub-lite-series-usb-a-to-rj45-lan-port-1000mbps-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-lite-series-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de058fbbf7c4008cad3edf7eb4695d0d8237b5a32c9efeb6b468cd73d3c379ce.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/baseus-lite-series-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/baseus-lite-series-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-pe10-gigabit-network-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a78498fff9f41b3ab7ba69294945ad9e1ac588475df0e7e6a69d0b42654f0fd.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/cudy-pe10-gigabit-network-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/cudy-pe10-gigabit-network-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-pe25-pci-express-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7fdfbe576b42ab7ee30c3fcda069d8cd06d323fc6684e15b62117b1f0a14ac01.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/cudy-pe25-pci-express-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/cudy-pe25-pci-express-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-ue10c-type-c-to-rj45-lan-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e988f0e4b3b0d8492509083843470bf2984476037e133e8b92ce81fb11f50d7f.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/cudy-ue10c-type-c-to-rj45-lan-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/cudy-ue10c-type-c-to-rj45-lan-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dtech-dt-5036a-usb-to-lan-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\12ed9122340740a07d5000a951f7c21bdd4d215d3663d0b1ac82fbf760546249.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/dtech-dt-5036a-usb-to-lan-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/dtech-dt-5036a-usb-to-lan-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "levelone-wnc-0601-wireless-pci-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7800731c7208f7e9d90524cac6d4c440e2c3347d462af99a771db5413ac98b5e.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/levelone-wnc-0601-wireless-pci-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/levelone-wnc-0601-wireless-pci-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-5225d-usb-30-to-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\53e97836e8e860ee946766db94d6823c508b0b33561aa1792c8a424adcc7ae39.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/onten-otn-5225d-usb-30-to-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/onten-otn-5225d-usb-30-to-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-ua21-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1d589a948c171f76f041f8139223409d92fed399649cdbe05139c157dd2b2c9e.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/onten-otn-ua21-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/onten-otn-ua21-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-pnu-3a1r-network-combination-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\accc1ed14d64d6bd0bf05dbbc657847abfa45e5aabcc29620d64f371a9d4131b.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/orico-pnu-3a1r-network-combination-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/orico-pnu-3a1r-network-combination-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-ptr-su-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8cfd3b2f7746ba08efbbe1ddf36d8cfc7bb9f13c2349289b3b2a4db078e65a3d.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/orico-ptr-su-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/orico-ptr-su-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "qnap-qxg-10g2t-2-port-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cd1e4b7feaa3bb346552678d1ef33748acc5b06cac0ff2888a768fa6259e500b.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/qnap-qxg-10g2t-2-port-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/qnap-qxg-10g2t-2-port-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t2e-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\896b9b44ecfbc36a9975cdf65b7b21deef7577cbb7ded57ee8f302255f4fd4fd.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-archer-t2e-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-archer-t2e-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t4e-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84ccf94c53849689066538635bd85579396b773969991262d4b5b3821046e078.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-archer-t4e-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-archer-t4e-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-pci-express-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f231ae42138c6fc90d2f1c5e7d53544d880f0e8361ca1a46d8ff0da0bdbea089.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-pci-express-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-pci-express-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tg-3468",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c8e4eacab5833507790cf088244280e707195a8d71ecd174318cb8865d754bae.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-tg-3468.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-tg-3468.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-wn881nd-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e6c35ca04541293e054500fcf30329489f4a349e4d52697461719cd10c443a7.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-tl-wn881nd-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-tl-wn881nd-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-ue300c-network-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d609bba2bb1e7450135ccacdaea864722a5df2ffbdc6a0abc43cb87b37f66dec.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-ue300c-network-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-ue300c-network-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-ue306-network-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a679c36f7c974367aa96ac14a151ead1904d77afdf63f389a8b684251a7c40c7.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-ue306-network-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-ue306-network-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-ur-200-network-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fffd528cb18a11b1204f9d874fa6a70d3bca56253cf332371ab330613a319f7d.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/tp-link-ur-200-network-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/tp-link-ur-200-network-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-teg-10gecsfp-10-gigabit-pcie-network-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d828d7c71924c41075dc23e352cfb738b66a08178a7ef6317bb9936b30fabf2.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/trendnet-teg-10gecsfp-10-gigabit-pcie-network-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/trendnet-teg-10gecsfp-10-gigabit-pcie-network-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-teg-10gectx-10-gigabit-pcie-lan-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5c0c428127d3b8a0ec204dffa7c0c54e9cd62a604ab38205ac56210d1d463a67.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/trendnet-teg-10gectx-10-gigabit-pcie-lan-card.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/trendnet-teg-10gectx-10-gigabit-pcie-lan-card.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm199-type-c-to-lan-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9c79e9b9448d99ef1c5eadcc7e8f7a67520bb5a5860f800b63c284995971f27d.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm199-type-c-to-lan-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm199-type-c-to-lan-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm204-1-5m-usb-a-to-rj45-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7033fc361a228cf1aea7a74686483922b9776d416e656ca43b33a2279519dba8.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm204-1-5m-usb-a-to-rj45-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm204-1-5m-usb-a-to-rj45-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm204-3m-usb-a-to-rj45-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc5f857737c812515b71835195bfca3eddc53f53c4496e2dd1e42e1036784bd0.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm204-3m-usb-a-to-rj45-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm204-3m-usb-a-to-rj45-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm209-usb-a-to-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b56f661d351607da653802db2ef2f5188fb2542f5a06b46e8f565367329b0f2.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm209-usb-a-to-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm209-usb-a-to-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm648-type-c-to-rj45-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\57dbf65710dba200a0d77d5d466a617a3966bc6118943824b3685570ef6aaca7.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm648-type-c-to-rj45-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm648-type-c-to-rj45-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm848-type-c-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da83b757c4fe3e85000fdd2b9835814b240f315b4671ba769c137d73bbea01d2.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cm848-type-c-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cm848-type-c-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cr110-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\779731cde88197a36fefb34b90cf77707d430c6c301585c60cefeed7e6fc802b.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cr110-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cr110-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cr111-usb-to-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9968f2f45d3b793e12205dbf53c6e102a4240d1f185a4e27b904cca2ff5d495f.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/ugreen-cr111-usb-to-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/ugreen-cr111-usb-to-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-cegbb-usb-to-100mbps-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b5d3c0ae298afedd9804090af38d8deb29af639bf62bdb6a1b3cbf71bc8c0d05.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/vention-cegbb-usb-to-100mbps-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/vention-cegbb-usb-to-100mbps-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-cehbb-usb-to-gigabit-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\077d70b4f203816f38399ec58ec2accffbc78d9e3bc59933755e57d090ef3a94.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/vention-cehbb-usb-to-gigabit-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/vention-cehbb-usb-to-gigabit-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-cfabb-usb-c-100m-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8397425e54bf524a8bbe7d45eb427f40951e5a36c76df6629e211cf617c705e9.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/vention-cfabb-usb-c-100m-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/vention-cfabb-usb-c-100m-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-d2501-usb-to-rj45-ethernet-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9af5e39210ad5831b74d2b0783ba188707b6c99b3d0fc20be4b71a0769e0b01b.html'",
+    "sourceImages": [
+      "/images/products/networking/lan-card/yuanxin-x-d2501-usb-to-rj45-ethernet-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/lan-card/yuanxin-x-d2501-usb-to-rj45-ethernet-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "lan-card",
+        "subcategoryName": "LAN Card",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

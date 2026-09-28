@@ -1,0 +1,1882 @@
+[
+  {
+    "ok": false,
+    "stem": "amazon-kindle-colorsoft-signature-edition",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb2fd3ad6a05bfe6a80010a47671dab5c86d4044dfd981409e8c22d346c8a703.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/amazon/amazon-kindle-colorsoft-signature-edition.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/amazon/amazon-kindle-colorsoft-signature-edition.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "amazon",
+        "subcategoryName": "Amazon",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amazon-kindle-kids",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6cc0c1bac93746778799991fb2966a2bdb4a405d08fc8df41bb46d4f808b9d4a.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/amazon/amazon-kindle-kids.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/amazon/amazon-kindle-kids.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "amazon",
+        "subcategoryName": "Amazon",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amazon-kindle-paperwhite-12th-gen-16gb",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a31b09c702ca944d65894e64d3297dfa9605d4f2e19747442e77225b24c00c9c.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/amazon/amazon-kindle-paperwhite-12th-gen-16gb.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/amazon/amazon-kindle-paperwhite-12th-gen-16gb.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "amazon",
+        "subcategoryName": "Amazon",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amazon-kindle-scribe-16gb-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e207ef763f07fc457b0d6e9dbe433ce1a9c9c249df7813f35bc76f41e909041f.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/amazon/amazon-kindle-scribe-16gb-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/amazon/amazon-kindle-scribe-16gb-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "amazon",
+        "subcategoryName": "Amazon",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "chuwi-hi10-x2-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\06b379e7eef6f9f4b3e0d1ed7053bbd546b04b5f26f9a1d2879b70c1d180e223.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Chuwi/chuwi-hi10-x2-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Chuwi/chuwi-hi10-x2-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "chuwi",
+        "subcategoryName": "Chuwi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "google-pixel-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d21784f4fb161a41f39b4e079cf9583bec9ae384c994053ff9428a0b2fdb2410.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Google/google-pixel-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Google/google-pixel-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "google",
+        "subcategoryName": "Google",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-10",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\65e44bcb4fb728e486ab516a96ec8281d720d7cd0a1019068812ef84bc7fe89e.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-10.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-10.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-9-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad03184698022bd728335b3c36cc379e419f1f17f69b61fd5912459b6069beb7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-9-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-9-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x7",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c2bcd114e822f800a55265e31a21edfb4171cddbeaea662547c17dc20a15e1b1.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x7.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x7.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x7-lte",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\484c1e9e59141d5175877a7dfd4f4e83c1c16f4c4676b48ad799da8940d03c78.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x7-lte.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x7-lte.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x8a-4gb-128gb-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84ffbd703e991ee56affec489441defda542edc05ce49078815b7fb1eca8a11f.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x8a-4gb-128gb-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x8a-4gb-128gb-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x8a-lte-11-inch-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a988ee16b978576bd94ff37f8b53270b0faf834d7e21bb18646fef292755f061.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x8a-lte-11-inch-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x8a-lte-11-inch-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x8b",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37d84a27d59c4d5c8f415cfb733ca8718a431f97d0ac51862e88a1d9f7d8e165.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x8b.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x8b.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x8b-lte",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8471a96a521b35f1362f283da3ec1f39805ab28362ee295fca61809ef0af765.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x8b-lte.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x8b-lte.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x9a",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\52f3aa87489346cac05a70fb2857c07c02ae23bcd64401e506e2aba4ee405bc1.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x9a.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x9a.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-pad-x9a-lte-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f038eaff7f9bcc373b3340f4e76322b9af77c6b7bafd66eaac022b82bafafa07.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HONOR/honor-pad-x9a-lte-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HONOR/honor-pad-x9a-lte-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "honor",
+        "subcategoryName": "HONOR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-matepad-11-5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dddb69e01dbf6796612c8a3ec8705175e526748e3c90ce80dc9764ec8d034c89.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HUAWEI/huawei-matepad-11-5.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HUAWEI/huawei-matepad-11-5.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "huawei",
+        "subcategoryName": "HUAWEI",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-matepad-12-x",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6448ec0dba7cc406936750bc51c46902a55674d0361372c4028c7c864f1718b.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/HUAWEI/huawei-matepad-12-x.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/HUAWEI/huawei-matepad-12-x.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "huawei",
+        "subcategoryName": "HUAWEI",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huion-kamvas-slate-10-graphics-drawing-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\32176668b384660947626dc2d4a226e243731470db72570e0e238ad501875678.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Huion/huion-kamvas-slate-10-graphics-drawing-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Huion/huion-kamvas-slate-10-graphics-drawing-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "huion",
+        "subcategoryName": "Huion",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "infinix-xpad-20",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7871515650e810334e2bf9c5ff3a80f6c28cc07ad87f250c890a275f643fe266.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Infinix/infinix-xpad-20.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Infinix/infinix-xpad-20.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "infinix",
+        "subcategoryName": "Infinix",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-idea-tab",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7669fd10b7d98f9e1f270c08bc3db857dbd2f74ba58835b50ed2f8d8ce702ccc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-idea-tab.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-idea-tab.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-k10-pro-snapdragon-680-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de64095e4021cc084e33e19011b2460701bcc29ce3b88a85fcaf1b1ec4898c05.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-k10-pro-snapdragon-680-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-k10-pro-snapdragon-680-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-k11-gen-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c06121588e29f7e3eca533b2839e931f3f955386273d6341503d71c80e481e54.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-k11-gen-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-k11-gen-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-k11-j6c6f-plus-android-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7c67e0a7af19f3d404c59739d13f5da40894345aab45a165b4263abd1d498058.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-k11-j6c6f-plus-android-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-k11-j6c6f-plus-android-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-k9-lte",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94797d22834b3fb74ef10649855ced2a5f430662494dc05f19edbfa62e5c8fd9.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-k9-lte.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-k9-lte.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-m9-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\963f5613b8a9d3e7037d5752c48673a51f94ff8fe8e56cdb12a26908301687ce.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-m9-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-m9-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-one",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\93f3e6223864b1b61d354bc8c37af8b1ead57371c9a98466ed8749a81581918f.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-one.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-one.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-p11-gen-2-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b84e0feb1975d53cf359be2153ed46a48c72bebedff1065aaf15816e13bf28ad.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-p11-gen-2-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-p11-gen-2-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-tab-zaeh0026ae",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\74930659b84abb3292df2e14b10f1ebf1523216806829f622c2dd1a673afee69.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-tab-zaeh0026ae.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-tab-zaeh0026ae.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-xiaoxin-pad-11",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61ce2965fdab45430d89b6c337053512766db413a6613e0e6b89fd2f10356b9b.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-11.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-11.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-xiaoxin-pad-12",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56f48c5a1ddcdef605f0a378514843190834eec48af9045da9563568f1dfb9f7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-12.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-12.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-xiaoxin-pad-pro-13",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\64772b5ffa071b36901914c8d16e28a31e8a1c5a1948a86972ae00949f2bd2a2.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-13.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-13.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-xiaoxin-pad-pro-256gb-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1fea186be7bf01d2ad1c2a5bf5bb7ce124ba95e373c4d6cb2abca5291dd635ac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-256gb-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-256gb-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-xiaoxin-pad-pro-gt",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9499f12c9afe9dbc6111a83fc647c56aa5826c1544f1eaa169a9e8f2c32012fd.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-gt.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Lenovo/lenovo-xiaoxin-pad-pro-gt.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "lenovo",
+        "subcategoryName": "Lenovo",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oneplus-pad-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\47c77fe61118d8f07e3455fbcf2735d3842d76025d270f39a941f468ca0f0163.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oneplus-pad-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oneplus-pad-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oneplus-pad-3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8159e549b2319f1618eb7d93c0f688e91e59d2e11c385b21d7e6b9fa464c7da.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oneplus-pad-3.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oneplus-pad-3.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oneplus-pad-4",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\43f7c4b152cb9e18af99b314828eac913cf0bd231fcdadf396d2bb346698e5a9.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oneplus-pad-4.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oneplus-pad-4.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oneplus-pad-go-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8232a5caaa2ebb6c6d9e6b73bd91dbe001d3a3cf16de02c9c1489283fbac07a1.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oneplus-pad-go-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oneplus-pad-go-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oneplus-pad-lite",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\070fa699c343f9730ad0b977568d13a887bb3423fad127a8f09c634dce4e51c7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oneplus-pad-lite.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oneplus-pad-lite.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oppo-pad-3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\72450bab494d28ef424f253c3110958ef06096a3b8504e91e4c7033a45087095.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/OnePlus/oppo-pad-3.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/OnePlus/oppo-pad-3.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "oneplus",
+        "subcategoryName": "OnePlus",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "redmi-pad-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b964c2600057a425506c59f6af64ef955e83ee62ddf35ef77f4850cc207a31e8.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/redmi-pad-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/redmi-pad-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "redmi-pad-2-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ee5db83e424e19a6b535c4a270d68744b8e544eb9478bd9d5cb7c0c61c02a635.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/redmi-pad-2-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/redmi-pad-2-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "remarkable-paper-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e89ff81aaa6b1f6267d04231a3dc2d0d49e57373715c64dd2abf794e9b3a428f.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/remarkable/remarkable-paper-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/remarkable/remarkable-paper-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "remarkable",
+        "subcategoryName": "Remarkable",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-s9-fe-wi-fi-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\06dc95a305786ea5025a24f9889d264aeb50336649a43136ba04b6b43c45eec9.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-s9-fe-wi-fi-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-s9-fe-wi-fi-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-a11",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\223bfaac1d01ff42948319be75afa11d2709b13ebbfcbeb7ca190cbf60c36423.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-a11-plus",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\adb7821156005e7470e7a1a7e8c4926d80afcde4dc8049343e6bd310f2cdb491.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11-plus.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11-plus.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-a11-plus-5g",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ad1de44f7b1d3944772e1aaaa1ada70b595714f3fade2da85f05f9841e26db5.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11-plus-5g.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a11-plus-5g.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-a9-lte-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4a9fa48d6b52c4880d418a4b5177f05bc21f6d4d4b315b93af5f08771f51e4fc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a9-lte-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a9-lte-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-a9-plus-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bbbc72acb8c84d51dff34b8eac8a49d548575cbcb8bfaac977270368ba99211a.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a9-plus-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-a9-plus-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-fe-256gb",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\850adce41c4a4d01f65ed8305f8fee4e7ba7398b6576501286fc09e518a781e7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-256gb.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-256gb.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-fe-plus",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41d4b21fd097b924d426e7d60db1821ec1fa7bedc7d5c979975be8e3577dc098.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-plus.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-plus.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-fe-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54aeef0be09a062dbae6096c246b0871bf231d16a1c4b8e627a0fc20d12bea9f.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-fe-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-lite",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3c74febddc72cb13326b09aef9baecc8be2cdf168d9de668640ee70e13eaceac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-lite.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-lite.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-lite-wifi",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e539f46e50aa55fd221e23b01e51184af66c3b3b6ec86a72514f91813d04b77.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-lite-wifi.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-lite-wifi.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-plus",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4a2a1289ec00f46c451d86c9e28d6a70dfed2f2c49acfbbf990dc231bfbe3ac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-plus.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-plus.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-ultra",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\207da165f043613beb311b393600637a0090dad3003db24e520f2d4273b5856d.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-ultra-512gb-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9c08795d0e5f5f1139552e07e7776b23c6b4f7da4e69577389e6ff254917e0ea.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra-512gb-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra-512gb-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s10-ultra-wifi",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e0c6cf31ddf1025530c6b0c9a7685caaa4ba8ac404a3c7086ee892db93739b4.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra-wifi.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s10-ultra-wifi.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s11",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eefb7dd31b26634e4b8528fec346e2703077a3d789f417ffa246b162bdfe5335.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s11.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s11.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s6-lite-2024-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\edb79a55eab4793040fc164111f9a527fb2fce70abaf22641622dfcd6a58bbbc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s6-lite-2024-tablet.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s6-lite-2024-tablet.jpg",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s9-fe-plus-tablet-wi-fi-sim",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0a15f2abb50fff60c4e95ec05ba8b76de58289ae19293183facfd63025822ac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-plus-tablet-wi-fi-sim.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-plus-tablet-wi-fi-sim.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s9-fe-plus-wi-fi-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ba5e692556f769ef150889d6fa8bc4208a41a4ceb7f6bae72a67558e941a7322.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-plus-wi-fi-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-plus-wi-fi-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s9-fe-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\90138518d40169c66007cc68fa071640598a34c18edfeef1ddbe7d979b60f81c.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-fe-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s9-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\072ee1fbc175586ecb22ba430b18f945d20044b467e861eec5539369c5cf7b77.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-tab-s9-wi-fi-11-inch-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2965cdf53da63399b5f2f1ec1869a792187b92a2225c18c75baea89cc03e4c22.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-wi-fi-11-inch-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Samsung/samsung-galaxy-tab-s9-wi-fi-11-inch-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "samsung",
+        "subcategoryName": "Samsung",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-artpad-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\64860e3750fe722ae188aea6806dd31eec62e5ad2b363e298205c2ac7ceb5fcc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-artpad-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-artpad-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-m50-plus-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3fdefc66aeaf65cbe5ef0fa605b7f0958b4243e34964843cbfcde8b72dc8cac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-m50-plus-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-m50-plus-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-p30-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0cfabcb106f757330747ab1a7f37a38ffae376149b63a334eda8a0d5da689a53.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-p30-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-p30-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-p30t-10-1-inch-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb4befc4f37518aa7048703a48e715d56bed1249f74aa3d3d8953e2793a6cc3e.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-p30t-10-1-inch-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-p30t-10-1-inch-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-p30t-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\379b534648cdd1f39f56efbbf4f8db789f19f418b97a88803d5e67671e4c38b3.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-p30t-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-p30t-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-p50-2025-11-inch-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9c4472baf0d18fbaca66c08e009ba75b187113bb992b5157bfcb376c7fb0c2bc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-p50-2025-11-inch-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-p50-2025-11-inch-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t50-mini-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\467faadee8b5ec8539c359e2f9c2cec6358c9a6289a4aa1e9819aa2a251b59ac.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t50-mini-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t50-mini-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t50-plus-android-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b44b1797449df9c4360878b0a875c08f53cf8fd898643faee75cbf4489372722.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t50-plus-android-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t50-plus-android-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t50-plus-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\754e4d295fecf9772ec54962524e36f2ab21ccd451cb685cc14b7a525dc6443d.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t50-plus-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t50-plus-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t60-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f34713bd4bd194c7b9d1183136aa0cf123e80fa96b8faab55d1359d3558c7ab.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t60-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t60-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t60-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11c0d5120cf8171c680267e15dcf61175864437945a274654e96c28e7163b531.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t60-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t60-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t60ai-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a48add7814be82f771388a14a9404d969ec2ee03d78267a222a1d7a372435278.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t60ai-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t60ai-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t65-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f34bb65538eef8fb9c471b29b109a41c3e537bd15ff7f8afe093071a8f36eba6.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t65-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t65-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "teclast-t70-android-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4106077c715e490c354b8a2910e93aec7b974b4bb7434cce1ebe6cb8cbfb9892.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Teclast/teclast-t70-android-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Teclast/teclast-t70-android-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "teclast",
+        "subcategoryName": "Teclast",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tecno-megapad-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db21a63835daf18f13846d8556359e90290e18e19b885a25484b306ddbdfd609.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Tecno/tecno-megapad-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Tecno/tecno-megapad-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "tecno",
+        "subcategoryName": "Tecno",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tecno-megapad-se",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\050135b654815e15db16882c20596421c102eb8b2816f17a9722b37fe2e164c7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Tecno/tecno-megapad-se.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Tecno/tecno-megapad-se.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "tecno",
+        "subcategoryName": "Tecno",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tecno-megapad-se-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99399c565cc7f93cf605d1f3980e9e4ef82c62a4d014e0cebe6c8903d082d7c3.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Tecno/tecno-megapad-se-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Tecno/tecno-megapad-se-2.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "tecno",
+        "subcategoryName": "Tecno",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-walpad-10h-pro-max-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9a855b207e53a3e0b7f1a3b8f9c86f8fd6b765a3de5c591920e4ae52f723bec.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Walton/walton-walpad-10h-pro-max-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Walton/walton-walpad-10h-pro-max-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "walton",
+        "subcategoryName": "Walton",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-walpad-11g-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3be3bd1901012e8025fd4f4cec6fb1c5905c21ca5fe44bed61d1f2208433182.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Walton/walton-walpad-11g-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Walton/walton-walpad-11g-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "walton",
+        "subcategoryName": "Walton",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-walpad-8g-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a667e52c8a158087db0bb214762f26abe8035a023657cc76c5eeae41bd33a4c6.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Walton/walton-walpad-8g-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Walton/walton-walpad-8g-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "walton",
+        "subcategoryName": "Walton",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-walpad-9g-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d5f48a5b916eea5b565cae2df8bd3b0dd2b0a431f42de67a6c4652b639e654c.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Walton/walton-walpad-9g-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Walton/walton-walpad-9g-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "walton",
+        "subcategoryName": "Walton",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-pad-6s-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\22cfafdefc13d4095130e0a71da18a1c334ad403c0e71a04165b1e016b8aff7d.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-pad-6s-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-pad-6s-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-pad-7",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\663baeb92fa29f589d67c0f9d22cda40f646c6ff17a5b2d741fbabf96d7fc76a.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-pad-7-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ccfe01fb204d50eb0be5ef4dca5992f3b2bc89c95538903bd4800e519333b406.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-pad-7-ultra",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\353b968f44098a019463471c9ca17f344496f0ac2e8e8b2bfdd98f359ad84988.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7-ultra.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-pad-7-ultra.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-pad-8-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\49fdc2ea22ff2df13e9eb792c69398aeba00caa31120ed0a5c70d5ae4af95afb.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-pad-8-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-pad-8-pro.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-redmi-pad-pro-5g",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56b2526432aee6a5ad26da795efe3076291bfa076e343dcca19e48ee618d5d46.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-redmi-pad-pro-5g.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-redmi-pad-pro-5g.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-redmi-pad-pro-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d1de207a2d6b318fc4be2c137807bbfafac73d3409c11e270b12eed69f300dec.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/Xiaomi/xiaomi-redmi-pad-pro-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/Xiaomi/xiaomi-redmi-pad-pro-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "xiaomi",
+        "subcategoryName": "Xiaomi",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zte-nubia-pad-3d-snapdragon-888-12-4-inch-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7ed1f3719caab62e3052fc0d6d01f8e53cbc951fda78010b2e38a284e2ffefb3.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ZTE/zte-nubia-pad-3d-snapdragon-888-12-4-inch-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ZTE/zte-nubia-pad-3d-snapdragon-888-12-4-inch-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "zte",
+        "subcategoryName": "ZTE",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

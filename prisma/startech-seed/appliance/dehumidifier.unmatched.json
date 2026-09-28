@@ -1,0 +1,122 @@
+[
+  {
+    "ok": false,
+    "stem": "delonghi-dns65-tasciugo-ariadry-light-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ef9a761c596a483160177b89877bce7d4765463c6a3bd53b31d8c240e37c189a.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/delonghi-dns65-tasciugo-ariadry-light-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/delonghi-dns65-tasciugo-ariadry-light-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gd-180nl32-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ab9784c027289eb50c7ce10d4912522b40a6f2f0c19413b261e590f3b7ca1a5.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/gree-gd-180nl32-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/gree-gd-180nl32-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gd-20nl-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39dc2f95e6a1a732e52bf0a391899808ee8f7fdbffd34c116f685a62c2abcca9.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/gree-gd-20nl-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/gree-gd-20nl-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gd-24nl-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3f5973f4686cda5fb0fff94cda240af1d9f7e98d8d48f950be7c62b4b8e45cfc.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/gree-gd-24nl-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/gree-gd-24nl-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gd-30nl-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2438e8a1d915a16168ebf3663073cf4592b243508fd39957d738d9112bac2e35.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/gree-gd-30nl-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/gree-gd-30nl-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gd-40nl-dehumidifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afd9d9b23a32ada470f10d3c6fc4c73b6dbdae6f76ed386c7fb1ac3e85b40790.html'",
+    "sourceImages": [
+      "/images/products/appliance/dehumidifier/gree-gd-40nl-dehumidifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/dehumidifier/gree-gd-40nl-dehumidifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "dehumidifier",
+        "subcategoryName": "Dehumidifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

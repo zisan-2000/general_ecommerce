@@ -1,0 +1,1662 @@
+[
+  {
+    "ok": false,
+    "stem": "ak-eb005-1600w-electric-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a10466250ccb6eed21764e8a4c1d5f28c60d3f4c1e8b71536974cab926c91577.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ak-eb005-1600w-electric-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ak-eb005-1600w-electric-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "boss-1200w-electric-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8da5489f73c6dd5e8a4c00f9875273ae4fd8ec0424bfd7a9bcca8f8857a6f021.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/boss-1200w-electric-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/boss-1200w-electric-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "boss-boss0022-1250w-electric-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9432410f0798b2111a99b1163a5655531290626fede448d489a6913901aba00e.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/boss-boss0022-1250w-electric-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/boss-boss0022-1250w-electric-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "boss-bs-313-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a47e41b273a3d1ad8c1306c6392b4e15d36668d2c7b4adfd0d4b701a45e23389.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/boss-bs-313-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/boss-bs-313-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cromn-1800w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\70a3c6036418f1f35d1bc145c6c8cded8a8d1cde29245f7556436655df9be091.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/cromn-1800w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/cromn-1800w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cromnn-1200w-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\916f6f954bfb3087b35c2a34c20d77ce223b8406ce82143527f6cfe316584b77.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/cromnn-1200w-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/cromnn-1200w-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dck-680w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5713eb732543c9aed3484717ba7426434f19d9d19fd48b675ad03a293e58607d.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/dck-680w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/dck-680w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "drawin-1600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\380dc1f9ae4144c6506eb33e45864587ed9bd2c047edd693aeaed424c58c3303.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/drawin-1600w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/drawin-1600w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "drawin-yr-id009-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4178f8146122ab38bc487c72343efdabd604a67e3dddbd4e4de03e8aeadd0175.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/drawin-yr-id009-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/drawin-yr-id009-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ab4018-400w-aspirator-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dff3c24640b58a2af17a8cfa84bf5a9314f4fe52827e2d92a2aedde6503256ef.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ab4018-400w-aspirator-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ab4018-400w-aspirator-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ab4018-650w-aspirator-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e42262f5dc0d11406d8572a3d1fd279ec2338bd742d61b5639e4002237094fdb.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ab4018-650w-aspirator-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ab4018-650w-aspirator-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ab6008-600w-aspirator-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd3879e0f01265f1b73a6fab31da78e738230592b8f2803b32eed38e52e1171b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ab6008-600w-aspirator-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ab6008-600w-aspirator-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ab8008-800w-aspirator-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f31e410c0798d698c9a6ce2b3d5ac3349295651f648ffd369178f84b395ddde.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ab8008-800w-aspirator-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ab8008-800w-aspirator-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-cdli12206-cordless-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37638ec0b2172efca0c2cc8597c3eb7a340ea7665569de34a03c981a3d025542.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-cdli12206-cordless-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-cdli12206-cordless-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-cdli122061-cordless-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\232044afcac990d9fd8284ff609e9fd9fb717201ebfd309c181c027a3083b133.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-cdli122061-cordless-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-cdli122061-cordless-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ed45038-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3e61e760d39583602886a1c37664e13bbdf710337ed865b732d83ac5ed418e4.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ed45038-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ed45038-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-ed550382-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39aba5eb5fe53e11b7e086dad347cc5f909b92aaea3f14ad8c7768725415886b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-ed550382-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-ed550382-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-id6808-13mm-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\68c293321dd3822104cc476b88bbcb1919ad3251580bb6942f28a7dfa2030d7e.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-id6808-13mm-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-id6808-13mm-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-id7118-13mm-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e5a95c4605ed8b808eb9d2d2e6fd15648722e23a7b883a4d4661e08053e8e35c.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-id7118-13mm-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-id7118-13mm-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-id8108-13mm-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9402add860655f63ce8aea8e80d41ed882ec34fee075f4e55637ac2ecf052a16.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-id8108-13mm-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-id8108-13mm-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ingco-id9008-13mm-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bbb64746857ce27717bf908edac32d8ded02d125f2c57b431f60b03519dec3bd.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/ingco-id9008-13mm-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/ingco-id9008-13mm-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-kf31-099-ms28-folding-hex-key-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cee4c3938e22f9985480d81d684441580c9da880e4d8b9a0e3f0d3eb9d652704.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/k-and-f-concept-kf31-099-ms28-folding-hex-key-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/k-and-f-concept-kf31-099-ms28-folding-hex-key-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "makita-cordless-drill-machine-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a11ccd9f18db813bd6b80d3b04b77071f9967150b2c0f96ebde72b75edfa1d63.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/makita-cordless-drill-machine-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/makita-cordless-drill-machine-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "masaki-cordless-drill-machine-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2c44b3d56eff44ba4858a053e0dd63c3595f5341ed09021ecc4b12d73c29b176.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/masaki-cordless-drill-machine-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/masaki-cordless-drill-machine-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "maxtol-pb600-600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1965a5dc66aadf2f7817cacc426848ac844b4f2032cd91640a103175dc0ba6fe.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/maxtol-pb600-600w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/maxtol-pb600-600w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "maxwell-max-600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3c6d1263d33f847b016f14b6c05afb6ba8b0f6544cd12f5aeeb15de733c6a0c.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/maxwell-max-600w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/maxwell-max-600w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mexico-600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c12e272e8915ee755cbe681edb72453222923b0f54b7d778fa8039e92b8e2b06.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/mexico-600w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/mexico-600w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oni-eb005-1600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94814ad0400b0fdf55086364c6a7f1da8c505c9a2951ca242e9ace2dd90c855b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/oni-eb005-1600w-electric-blower.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/oni-eb005-1600w-electric-blower.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orin-1200w-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f0fc9fb139c58b8499354430efd02de2a4c9cc1ee877a54f78080becedd9fd1.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/orin-1200w-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/orin-1200w-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orin-eb005-1600w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afeaa121c174cad066a429c618f419e70211ed4ebc4147ac23d13459775c08c2.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/orin-eb005-1600w-electric-blower.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/orin-eb005-1600w-electric-blower.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl2142-56-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\792729a6a6e07ea87f9acc49801a203f8894ffcf79f6e69207dbd7c6469d34ce.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl2142-56-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl2142-56-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl2142c4-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\15d3188ba66064dbd85d27fdbbc26e4b920fdb077d9919403811b43ec683f9ec.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl2142c4-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl2142c4-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl2143-56-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd68440acbc195d50204950f5a3d494d166b21c114cdd6471e43335989677d48.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl2143-56-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl2143-56-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl2143c4-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6e96eb87238b27ac94ba2ab05873acc0fb3335429ac06ee48d916478d85abe12.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl2143c4-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl2143c4-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl2243-56-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ea347a8fb13ffe6b16c13e33e791db0650dbd4b27cfead7cc03f8d60115759d.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl2243-56-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl2243-56-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl3342rh-56-led-headlamp",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\70110928e894a3f798a6d7139614e94cf0e7e4372475d8e2a677c004e160acca.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl3342rh-56-led-headlamp.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl3342rh-56-led-headlamp.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl3402-56-portable-charger-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6271620295cafe1fca73865eefd753cade3a2b0515eec46d5bde869b7f7cb807.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl3402-56-portable-charger-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl3402-56-portable-charger-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-sfl5102-56-led-torch-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3eb90a21fb13c2d4dffc1bced1981ea4a0b3380869810ce721decf6a376e3f7.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/philips-sfl5102-56-led-torch-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/philips-sfl5102-56-led-torch-light.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "prescott-pt2240001-400w-electric-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8b588c4b23229027e8d0cbbdf2b0e5fa1a36e2d81c6167f1c8e3f9c1514d2804.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/prescott-pt2240001-400w-electric-blower-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/prescott-pt2240001-400w-electric-blower-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smiling-shark-ls-308-flashlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ff1b2a039d3c64020ce56f3d006dc860cfc1bf17e77e34d406aa419151bfb28b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/smiling-shark-ls-308-flashlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/smiling-shark-ls-308-flashlight.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smiling-shark-sd5241-flashlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c47d72e81abdad63f60c6e4ecb8268ad290acc6084578e65edb1eebc005afda2.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/smiling-shark-sd5241-flashlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/smiling-shark-sd5241-flashlight.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smiling-shark-sd7115-torchlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\64a28f77bfddcece59fbe11ae94b560f7a04a2ee17c87e70fea93ce731761098.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/smiling-shark-sd7115-torchlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/smiling-shark-sd7115-torchlight.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "super-0023-blower-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a61ff4145823e3a3c3f8b99fa4818396086dfd242218d1d2fae69b0792d15faf.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/super-0023-blower-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/super-0023-blower-machine.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "super-star-2000w-air-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d638f371474389bc6e46c4780b586abbbd08817c677224b2bd893e5a5681848f.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/super-star-2000w-air-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/super-star-2000w-air-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "super-star-2200w-air-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\20ec21015bce6ca7fb07594a2307beb5ee1c0c94cac97009ee3097ed089025b3.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/super-star-2200w-air-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/super-star-2200w-air-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "superpower-2000w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc34a822d24b125f8616afad5b8885861e3f0568ba9798c07488d8734a947721.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/superpower-2000w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/superpower-2000w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "suprim-83301-1800w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\42860aa9ec1fbd19ce108a6d5a9dd0cf36f622320dab932e44944ef914f0e28c.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/suprim-83301-1800w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/suprim-83301-1800w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-20036-sockets-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c9ce6df46051debc1b77a99079cd822c3e251f611aa8b20c7326d0f5878b7a6a.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-20036-sockets-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-20036-sockets-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79010-cordless-screwdriver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ebfbc2aae54db02e9eab9eddd3f7206a384151a811a5b8ef2cfd8b0ef830e25.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79010-cordless-screwdriver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79010-cordless-screwdriver.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79505-13mm-hammer-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0924d63a4add55fe2a4fe414ba9ccb50031af62786c1ee686b16ff6cc0088c1e.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79505-13mm-hammer-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79505-13mm-hammer-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79532-185mm-circular-saw-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\714dab66cca73f038607dd7ad15df2bfe32893258529c4cf37b0447d2b8d436b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79532-185mm-circular-saw-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79532-185mm-circular-saw-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79542-100mm-angle-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3bdb6276014742218eb489882dbee50965747afe6d030a34fab4b522faeb5a0d.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79542-100mm-angle-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79542-100mm-angle-grinder.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79584-drywall-sander-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c8c2a504866447c69411f289713354d9c7606e11d03d31dbd4c1f845313f916.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79584-drywall-sander-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79584-drywall-sander-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-79685-hammer-drill-with-tool-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a767ab794f532426afbe62d4e5018df1d2fb07b354fc2ef75acaebff2e8daa41.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-79685-hammer-drill-with-tool-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-79685-hammer-drill-with-tool-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-87254-cordless-hammer-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2a2e848ef533fd56607a1bd54613b1288c8096c62e8d55834416760711d0e686.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-87254-cordless-hammer-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-87254-cordless-hammer-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-87360-14-inch-cordless-chain-saw",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04e3781064f83e7db97454c9030f0a9579a3c369dd5ecae7d1ec19c364e724e8.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/tolsen-87360-14-inch-cordless-chain-saw.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/tolsen-87360-14-inch-cordless-chain-saw.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-td55108-550w-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5eb99fbe95155714ee567f1d7a4efaaa4abeb41e25f97b9c92b1e6d61b55a31a.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-td55108-550w-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-td55108-550w-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tdli205582-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3df60e8116719a43395fc483b5a174415128007b7f54e68a55046a88abafe8b8.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tdli205582-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tdli205582-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tg1061356-680w-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9e81ec2c9637361e51d86d4fcee2a6a0213c3aa40eaa6d88c13c6dd109817e8e.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tg1061356-680w-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tg1061356-680w-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tg107136-710w-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\52b924580cdddd2c6aff6cd9ae45d6833e5269e41aa001b335fd7d236589ea77.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tg107136-710w-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tg107136-710w-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli20558-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a5732a407eb26fa9ab96e5f430e449ac47b32b74b03c4b9e9962ceafbed83e2f.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli20558-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli20558-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli205581-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d78f9631770423b2cbac959e73e13da71df0c59a825462cd3da0552f4b8519fd.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli205581-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli205581-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli20602-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9607e7cdf97e043f8749ba0c07e9327d2d9f957cd008daccfa767e8af1c3fa94.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli20602-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli20602-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli20668-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6fbc55212404c6aa702a4bdd3b084ca5e8b668fab3c4fbedb7ae5b81e6933ab.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli20668-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli20668-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli206681-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b48ce9a02126a81d9cd641f36a15c4925a9558c7eee2fa96cb8886198cbc6a9b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli206681-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli206681-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli20768-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\641ff451de1cab1b8dcff94f75b64d81d1c421d2f9f9a73fdac9cb4b81afc5fb.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli20768-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli20768-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli20868-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4717b07696d324f5438ac9b5a3975a9ab6e45cc7f9015885786cba485b65e8b.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli20868-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli20868-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli426981-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\87520ae542b468557aa2f11bcc9693e195559df96f086fe350a67f4706a94700.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli426981-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli426981-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "total-tidli426982-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d934c7817fa67621b992671bab276c8ba32abd394b2a4d7967503ca1633a462.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/total-tidli426982-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/total-tidli426982-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "welloo-ebw32400-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4df28bbe60514be2e98b989daf676bdcd4d1009ae8ecb9a8e5d0df18fe9f9072.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/welloo-ebw32400-electric-blower.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/welloo-ebw32400-electric-blower.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-650w-electric-blower",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6718f7bac1bfb030cfde43857825253769b14711ae563ff1d15a854c2e244f86.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-650w-electric-blower.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-650w-electric-blower.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xdc01-4-8-cordless-screwdriver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ee74ea57b9ee43103078956f6b87bcde61ef7ef40e5dd8dae8d56f1fdad11335.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xdc01-4-8-cordless-screwdriver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xdc01-4-8-cordless-screwdriver.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xjz04-10a-10mm-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e08d9bbec7782caa2378cb42e12a5669682b2cf6030d633fdd85a357d0ba0f20.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xjz04-10a-10mm-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xjz04-10a-10mm-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xmb03-82x2-800w-planer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb874e02ea601d4d430b7b01db3a9b4dd072d76c83434175793e23b11fe74bb4.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xmb03-82x2-800w-planer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xmb03-82x2-800w-planer.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xmy01-185-1500w-circular-saw-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3d6842402a3c1aac213187aa32bb948b7645443525b0174102546f7852447a4.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xmy01-185-1500w-circular-saw-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xmy01-185-1500w-circular-saw-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xpl01-6a-drywall-screwdriver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\870deda95cb11a81435d1df75ea0de2b8fe5b91c1728332e447f871f67ed68ba.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xpl01-6a-drywall-screwdriver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xpl01-6a-drywall-screwdriver.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xsm06-125-125mm-angle-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\626d7fd6c4b9effb8a736413ba2230de904d834dfa46146d61d796d125c59b87.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xsm06-125-125mm-angle-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xsm06-125-125mm-angle-grinder.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xsm07-100-100mm-angle-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d40b1afbb8e39633d514b3c0a32600336415121def5b737a8644ec83d14e3199.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xsm07-100-100mm-angle-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xsm07-100-100mm-angle-grinder.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xsm11-100-100mm-angle-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\03c529f8d20ecf0e4591d53b23c886591dcfe163426cf422b38632c3ef6c9f84.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xsm11-100-100mm-angle-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xsm11-100-100mm-angle-grinder.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xzc07-26-26mm-rotary-hammer-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\243f98834d970372bef9ac8985af82a1689808e4c3b0434ff39e32830d7b180e.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xzc07-26-26mm-rotary-hammer-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xzc07-26-26mm-rotary-hammer-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xcort-xzg01-0810-demolition-hammer-drill-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd4cdbeb3a7553a12edd89ab40a4c2320ac2850e1f63bad49edcf349771fec1d.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xcort-xzg01-0810-demolition-hammer-drill-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xcort-xzg01-0810-demolition-hammer-drill-machine.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-nextool-ne0126-nato-outdoor-flashlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94d141603b33c0725a3e9af90c00fb8202642fdb3350ad40aad98a63374b40c2.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xiaomi-nextool-ne0126-nato-outdoor-flashlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xiaomi-nextool-ne0126-nato-outdoor-flashlight.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-nextool-ne20030-flashlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\af5baf195010496a03490190efedcad659c4760c9c57c3d6e1a2cae8963dd3fe.html'",
+    "sourceImages": [
+      "/images/products/gadget/power-tools/xiaomi-nextool-ne20030-flashlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/power-tools/xiaomi-nextool-ne20030-flashlight.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "power-tools",
+        "subcategoryName": "Power Tools",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

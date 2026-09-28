@@ -1,0 +1,442 @@
+[
+  {
+    "ok": false,
+    "stem": "amazfit-band-7",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd62912582d2339c6730b0062f2daaf3141f1c7c1573b5fa5534656c07510c22.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/amazfit-band-7.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/amazfit-band-7.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "garmin-cirqa-smart-band",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\08a13d583c3a6f03a84c167d20b68b2490b5b48defbddf2cbd3d0a70c8bcd96b.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/garmin-cirqa-smart-band.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/garmin-cirqa-smart-band.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "google-fitbit-air",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6605987d5ab375e47167f48decc0d42bcddd0cac5d5653a69f628b0755a9d455.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/google-fitbit-air.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/google-fitbit-air.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-band-9-amoled-fitness-tracker-smart-band",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ca76c6c4846455cbeea4f4191806efdff724d996600041a1c6d539e9d05af6e.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/honor-band-9-amoled-fitness-tracker-smart-band.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/honor-band-9-amoled-fitness-tracker-smart-band.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "honor-choice-moecen-band",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54d033f69ab94adbbfd9320be1002fae7949a66024002369f34fffb98b32243f.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/honor-choice-moecen-band.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/honor-choice-moecen-band.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-10",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1a487050b7d0b3e3e8ea1e21d3cd12e8482f88be3c73897fdb9e425344818865.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-10.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-10.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-11",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\011c0366bccd99150ea75c1d6eef232f67c0c85ab38030ab62eeb7a2bed9aa49.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-11.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-11.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-11-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf48ec3a284e0658786cd37ccc3820480a76bbfffd7abdb57dbf3b425e7e2985.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-11-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-11-pro.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-6",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b21360e0cfdf2c601bf200444afb4377f2cadf2fee4cd28c044c6b32404653c2.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-6.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-6.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-8",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2d1c43ead577f25a7c2b383da048fa11160bf82646c0fa8c903b9cf55f83adb4.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-8.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-8.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-band-9-amoled-fitness-tracker-smart-band",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f860ba705a870cd8211cf0c8c7c35ebee25304118ad3c23ff878aa3868a24601.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/huawei-band-9-amoled-fitness-tracker-smart-band.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/huawei-band-9-amoled-fitness-tracker-smart-band.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kieslect-biokoop-fitness-tracker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\75486623161d22d24d36516a29152985bee6a8bac1e18f0cd2a5930616568a0e.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/kieslect-biokoop-fitness-tracker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/kieslect-biokoop-fitness-tracker.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whoop-life-fitness-tracker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f5ca4380440c12e5769b8910f7ef830f3e64bb8d65339752d8449fbf7baabe5f.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/whoop-life-fitness-tracker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/whoop-life-fitness-tracker.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whoop-peak-fitness-tracker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3ee6659f54123f3d26a8cda1f7e7d635f632cf78ecbbccb492bdf5d5f613689.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/whoop-peak-fitness-tracker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/whoop-peak-fitness-tracker.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mi-band-7-pro-fitness-tracker-cn-edition",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d5b6515b513e02f0db6fbbfd351811f932339d82ddf5278bb980b03d42775f45.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-mi-band-7-pro-fitness-tracker-cn-edition.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-mi-band-7-pro-fitness-tracker-cn-edition.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mi-band-8-smart-bracelet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\67c87a8e32d2778f3dcf99ec0499740f5ab115423002d43654057ee062c22260.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-mi-band-8-smart-bracelet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-mi-band-8-smart-bracelet.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mi-smart-band-9",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bad5588875ecb49331f8ac5795fbe0bffa912c1d621ec1b6326a1040f0f1b259.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-mi-smart-band-9.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-mi-smart-band-9.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-band-10",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c862e81d64a9e2bdde3abadb7efdeefa458e65aa332d88edfcbc26b4f9020d85.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-smart-band-10.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-smart-band-10.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-band-7",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\51ffc1b1103eabf9d9302529ee6f504dce102db19256111203423349ac196f2f.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-smart-band-7.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-smart-band-7.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-band-8-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfb8cc9857aacb43e5f9fe088af109a6d129184db34d7b0b9559dc667b630c71.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-smart-band-8-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-smart-band-8-pro.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-band-9-active",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6d95fd90bb0294a94ba6ceabda0588b1d39e314d09f0defa8021f18ee1eb750.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-smart-band-9-active.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-smart-band-9-active.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-band-9-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ccca898dc9e9bca678698616fa923c9db4ca9080b984b443a6e737b5a54e37e9.html'",
+    "sourceImages": [
+      "/images/products/gadget/smart-band/xiaomi-smart-band-9-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/smart-band/xiaomi-smart-band-9-pro.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "smart-band",
+        "subcategoryName": "Smart Band",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

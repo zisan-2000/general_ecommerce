@@ -1,0 +1,1402 @@
+[
+  {
+    "ok": false,
+    "stem": "corsair-ex100u-1tb-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\586214977b6692568fee8a31bfabefe47e6188dbd30909959abbbb621889043a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex100u-1tb-type-c-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex100u-1tb-type-c-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "corsair-ex100u-2tb-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\191422bf721bbd97db201d722eb92faafb90a72d7b0f2b650d6fc1809b4eb0c4.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex100u-2tb-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex100u-2tb-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "corsair-ex100u-4tb-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\435196934519e8abdbb2e3bd350aca57c2a1b47d1e47f11a982d9c593dd0964b.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex100u-4tb-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex100u-4tb-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "corsair-ex300u-1tb-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\016893496d8f0a79611ee61feb97c3bc9e16211cfaafd1d8e23f4bedc52a0b13.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex300u-1tb-type-c-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex300u-1tb-type-c-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "corsair-ex400u-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e66fc77eeebe57284d25d9bb53570fe2e787125eb5b390eab0495cd1d82c302.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex400u-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex400u-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "corsair-ex400u-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0aa2d65842b9c5f73582166296f02542ff25ca2f42af1e6e0f0b386f11650c01.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/corsair-ex400u-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/corsair-ex400u-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "crucial-x8-1tb-usb-3-2-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e48486d86f0bc4e8972810bc390bb07f4179b47d5dec7a42595633e1345682de.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/crucial/crucial-x8-1tb-usb-3-2-type-c-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/crucial/crucial-x8-1tb-usb-3-2-type-c-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": "crucial",
+        "folderBrandName": "Crucial",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "crucial-x8-2tb-usb-3-2-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5a9ff1dff6eb7fdc506943a5b8df29e0de4e2e3c46c5dfa3fd50f87fbf3e0925.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/crucial/crucial-x8-2tb-usb-3-2-type-c-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/crucial/crucial-x8-2tb-usb-3-2-type-c-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": "crucial",
+        "folderBrandName": "Crucial",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kingston-xs1000-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\337781579c71b2d033ec966bcbcbb8da599e878bbb22950e579210ccac4a0392.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/kingston-xs1000-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/kingston-xs1000-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl300-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\686b6c44d1051293747f8672443344e1c227f9e868bdc2946841229acf87c29c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl300-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl300-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl300-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\434683e2d35228a3d5b6f579b67eb0cff3bc5f41eab412b90c4a2f17f5dd51d6.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl300-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl300-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl500-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6a268873850a52b84df6d55b5b0897529c32d6e371edc823ee337cddb7fbcd9.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl500-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl500-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl500-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d1076ce9d72b17a4a0b2382a257079c63982bbf2da87901715841330f5565aa5.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl500-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl500-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl600-1tb-blazing-fast-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7dc2dfb676705d0fb188d4e221942118b85d4578c6002e5f3540af2d6a769c71.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl600-1tb-blazing-fast-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl600-1tb-blazing-fast-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl600-512gb-blazing-fast-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e155d355633bcf9021c48cf8806f751337e2143fd119edf312f8c70b55d7153c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl600-512gb-blazing-fast-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl600-512gb-blazing-fast-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lexar-sl660-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c16e797e31f7a427f7444f9b0c4672133e1a99fa755b96c8e390a345e5d74fa5.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/lexar-sl660-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/lexar-sl660-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-z-slim-128gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f427f8a13075c5e892e661215c50f487681de132d16bc9c5a05e4d01146a2f67.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-z-slim-128gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-z-slim-128gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-z-slim-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd7beb684fc35347528c35dff977dbcabdfb31bbfb252be6f75cabf5eeddf019.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-z-slim-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-z-slim-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-z-slim-250gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\21315550f7e7ab589c782ce1c8cb0cd26f93e63d7adb491a83ee637d8c7f8ed4.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-z-slim-250gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-z-slim-250gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-z-slim-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0390dd32d4431e85d579fbfea96f6d09eedc979b6a2d5b5025a445fc6e37cef7.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-z-slim-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-z-slim-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-z-slim-500gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\198e4724f28e4295ba15c7c68835d70a39a7f8fcfb1b9312d3d1a0fb528443c2.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-z-slim-500gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-z-slim-500gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-zx-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61ddd1992ec535e0a22bb2feb6c1e9f59b29b6022c420d46ccda192c93a7b120.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-zx-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-zx-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-zx-250gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\408667b1f94ac92b1feb21050a45714cbb517e85a6c82f067e2931736ff8428a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-zx-250gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-zx-250gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-zx-500gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ab804eb71c110e0d7d00c4bc4ad90cb79ec4286b82faaf5845cfac9b30d194b.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-zx-500gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-zx-500gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-zx20-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3c4f844bcffa7c37568a2a0871a209a5a54965ce4689e10d8fdc3786acd4a633.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-zx20-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-zx20-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-zx20-ii-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf9e6ce73eab292b5dbf9fc5ec394eac6a68c07429dfb62221e2359ceeabe58e.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/netac-zx20-ii-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/netac-zx20-ii-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md003-256gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3fd171db4912c9d72c0e4fb04d8e471ee8de6ec22380dd1698bd5a8e001726df.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md003-256gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md003-256gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md003-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1699664c1d145107cf27b3dd6125ade0ced85f3a3f6f2bf11fba3c4c7767c4a2.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md003-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md003-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md005m-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b93ab585414ec3aaf5dfb5cde1d450a859da66af58db09cff16a8574e716a127.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md005m-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md005m-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md005m-256gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\67c4d9e8fa8982d4c7bf61b76218b311ae47e5a69248e6fcb1635aff250c824d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md005m-256gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md005m-256gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md005m-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\49f73b7054fce2bf24faab479fac00d8bbbe0ea630ec609b06dea96cc72dce8d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md005m-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md005m-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-md008-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0097f2d48fa035dbb782c8b6c399fdbece249f2b47a8df65506d8940c5c1d698.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-md008-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-md008-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-t10-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6bfa815cce07935b2dc9222fe632d10d141a32c3319b202448f1ec61a7e1081a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-t10-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-t10-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oscoo-t10-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3d9b406a6033c99ff858556cb4c03c9c15451502b57a1b023e513cf85a44218.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/oscoo-t10-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/oscoo-t10-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-1tb-usb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3602852d00ed6bdc4a162137d0bcc055ff8b1c27825514e1a95303e9d764247.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-1tb-usb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-1tb-usb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-2tb-usb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4852423ddd6959216999dfe6cd39e4ed753b7db03bf984b5a54607657f6ea870.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-2tb-usb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-2tb-usb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-shield-1tb-usb-portable-ssd-beige",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e66ae0eb7b18b64999741fcb77264e0ccc695183470bfc457215d8ce10081250.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-shield-1tb-usb-portable-ssd-beige.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-shield-1tb-usb-portable-ssd-beige.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-shield-2tb-portable-ssd-beige",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\643b9284ec17540987eed5f96dacf77703dd850eb07a67e438443ecb52cacfcd.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-shield-2tb-portable-ssd-beige.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-shield-2tb-portable-ssd-beige.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-shield-2tb-usb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d2c5c6425db0d8e5dcc857ed5108ff88c1030c3779dec4f1051ae7ed3208867.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-shield-2tb-usb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-shield-2tb-usb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-t7-shield-usb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8765335947471f00344568eca7be39373facaf72feee416f46d75ccf4f42ffe2.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/samsung-t7-shield-usb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/samsung-t7-shield-usb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c06eda1bc1af7e83848f50fb807b7bc0070bb2a18789a6e8c398dede4fa1faa1.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b12a89a98cb7ee7b381ac69c836903973780b80710081f467e2840e4fc92b71a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-1tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-2tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bbefda7ac7efb0c48080169c8f136994a04852a968af2bd8c01144249370e9cc.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-2tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-2tb-usb-3-2-gen-2-type-c-portable-ssd-updated-firmware.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-pro-v2-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f1877a85447456439ec3846321ac9d246b413015484991a7023b3b4fd2ac21e7.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-pro-v2-1tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-pro-v2-1tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-pro-v2-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\385b64d0e0e27d6d38087986cd1b0a02d4e7dbd16c4555befcf93eec8f2ee7dd.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-pro-v2-2tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-pro-v2-2tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-v2-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73aa44e418ec3126dc33abfab9fd15fea0a5aea6eab7e9a749f78613cc37f20d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-v2-1tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-v2-1tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-v2-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ce79f314d467e55ed697bc067b9446f0f083b202fe7d7b430b130e11cb41626.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-v2-2tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-v2-2tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-v2-4tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1add037970c22e334d5e179a9de422582f58b34671df7e6a770ec9a8064afdc3.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-v2-4tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-v2-4tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-extreme-v2-4tb-type-c-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5dd9e9b7c8d4965a0ea97ab7040eb2122de974be7d28b70f12c4780db31ffb25.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/sandisk-extreme-v2-4tb-type-c-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/sandisk-extreme-v2-4tb-type-c-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-1tb-portable-external-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\92ee750d56d08ba89e95e374964c2bab0213266dbdc269703f5ed34f777535f0.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-expansion-1tb-portable-external-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-expansion-1tb-portable-external-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-1tb-portable-black-external-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bda1b8a35994193e2495c12de296056b40ed954fcfed72a4c739115d0566520.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-one-touch-1tb-portable-black-external-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-one-touch-1tb-portable-black-external-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-1tb-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79baeac3cbd244228d47214e1453493ae82cd903009b5d371021dfd1cfff0914.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-one-touch-1tb-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-one-touch-1tb-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-2tb-usb-type-c-external-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd282084c5e7872ac97648b21c868069d0afe0291ae1dbbde9fe74eb98b25c71.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-one-touch-2tb-usb-type-c-external-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-one-touch-2tb-usb-type-c-external-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ultra-compact-2tb-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2554cb8b8f37df386d235bf88ada5c849273905659c56010b732878088f0a464.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-ultra-compact-2tb-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-ultra-compact-2tb-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ultra-compact-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e412dd4d145870200ef2274c483f976516b6ab49a73a1723d63a96b3611490e.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/seagate-ultra-compact-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/seagate-ultra-compact-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "silicon-power-pc60-480gb-external-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8d48527728d4e784ddf59d77a50b1dbb1c415c69544b15fe4bfdfb0d4b61987.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/silicon-power-pc60-480gb-external-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/silicon-power-pc60-480gb-external-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-cinemapr-p31-1tb-external-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e8f30da02de2431bc7e49d47a8f0621d48b9c17125528fffe182385568ce016.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-cinemapr-p31-1tb-external-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-cinemapr-p31-1tb-external-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd1000-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cafd009616e3957f623414a2ebb88b0ede354d754c44f565d88d509a7d3e8f53.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd1000-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd1000-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd1000-512gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3a78849ebe750ce165477fe7f146a5a51e1823db9a698676ce3cf32bdb864b3.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd1000-512gb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd1000-512gb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20-eco-mini-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b230a6da2bd918487cca5a7c3ec4dbc5dd9ef3c0db089e9ac4d965cd606a2273.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20-eco-mini-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20-eco-mini-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20-eco-mini-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bfb1be6afa0102410e7cfc7f3f9087d469833957c947bd3123806bd3b16cbebf.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20-eco-mini-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20-eco-mini-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20-mini-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\208f5185ce7687e91ed2d5201cbcaaac19efe3f254e1e4e59b20bf9c94d87123.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20-mini-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20-mini-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20-mini-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c164792fe15b946c52db047607e33378ef8fcc46e77c543efa066da37b2c8382.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20-mini-2tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20-mini-2tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20m-1tb-magsafe-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\93559b1504b2dbeb3c7ad5e35d699b75a51628eb0babf7bbc2ccc6a113c2a4bd.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20m-1tb-magsafe-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20m-1tb-magsafe-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-pd20m-2tb-magsafe-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\744d80b0af8d4f3328eeefe3fd1925376a7bc4cb6abc7b61c84312978a77cfee.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-pd20m-2tb-magsafe-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-pd20m-2tb-magsafe-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-t-force-m200-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1742281870dda24c6b08f6f951064e5c58d469b5aed6a2e7f7cb37d36730d173.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-t-force-m200-1tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-t-force-m200-1tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-t-force-m200-250gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\217e37fae6cf4d0e03726271a3e88f70421ca92b574081e4b452b9277ca90698.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-t-force-m200-250gb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-t-force-m200-250gb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-t-force-m200-2tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d2a93238d018f931e51e38f9b95c930c0cfcbaad120b4c3c6a9fc9f1e496548.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-t-force-m200-2tb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-t-force-m200-2tb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "team-t-force-m200-500gb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\34b384f31b7bd977c74646c01922e10a64d87c6378b99300e126f40685661f85.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/team-t-force-m200-500gb-portable-ssd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/team-t-force-m200-500gb-portable-ssd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm766-1tb-portable-ssd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ff45ff165abb5ec70fc033239434d0899fb2e70d220769218bcc6c507d8620d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-ssd/ugreen-cm766-1tb-portable-ssd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-ssd/ugreen-cm766-1tb-portable-ssd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-ssd",
+        "subcategoryName": "Portable SSD",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

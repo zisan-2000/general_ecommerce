@@ -1,0 +1,2806 @@
+{
+  "schemaVersion": 2,
+  "groups": [
+    {
+      "category": "accessories",
+      "subcategory": "bluetooth-adapter",
+      "file": "accessories/bluetooth-adapter.json",
+      "unmatchedFile": "accessories/bluetooth-adapter.unmatched.json",
+      "products": 53,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "126f5f469e9e98a282ca1c94739540f66f070d940376d6a3486a2755fe0f3b1d"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "bluetooth-headphone",
+      "file": "accessories/bluetooth-headphone.json",
+      "unmatchedFile": "accessories/bluetooth-headphone.unmatched.json",
+      "products": 7,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "67848bbd8d444b749c8aa03dc864f890f240bcade059ecbe84ceaaaa9f1d28fb"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "bluetooth-speaker",
+      "file": "accessories/bluetooth-speaker.json",
+      "unmatchedFile": "accessories/bluetooth-speaker.unmatched.json",
+      "products": 382,
+      "unmatched": 54,
+      "status": "completed",
+      "signature": "80acace41876aaf0eb7d9dcd7dcb94d041787a1d431ae84eb699bd4ee7d92413"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "cable",
+      "file": "accessories/cable.json",
+      "unmatchedFile": "accessories/cable.unmatched.json",
+      "products": 584,
+      "unmatched": 3,
+      "status": "completed",
+      "signature": "9e7df77e5fbdc6ef2b0a702d32517810eda32a235df91951625c8f5b91e96f63"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "capture-card",
+      "file": "accessories/capture-card.json",
+      "unmatchedFile": "accessories/capture-card.unmatched.json",
+      "products": 14,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "d5cd498414c514a78865f44919c2e31b24a4840b779f38b95416972216fd1667"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "card-reader",
+      "file": "accessories/card-reader.json",
+      "unmatchedFile": "accessories/card-reader.unmatched.json",
+      "products": 33,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "c1e276285f95cb2078f9a28a5069299e2c258fd6856cc19fe50d62eb41594815"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "converter",
+      "file": "accessories/converter.json",
+      "unmatchedFile": "accessories/converter.unmatched.json",
+      "products": 278,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "c11b054c0fbb89ce2731959ce7a7f156fec53a81161681ec82be031180c86d8f"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "digital-voice-recorder",
+      "file": "accessories/digital-voice-recorder.json",
+      "unmatchedFile": "accessories/digital-voice-recorder.unmatched.json",
+      "products": 21,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "d7ce95563e8ec33a7f13b11657df8fac729202a37d9dfc3029811775c9b99897"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "hdd-ssd-enclosure",
+      "file": "accessories/hdd-ssd-enclosure.json",
+      "unmatchedFile": "accessories/hdd-ssd-enclosure.unmatched.json",
+      "products": 89,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "dbbe32a2f03bdec0d37bc072ea46aaa28537b172d8708021c365e8b0cf9ee493"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "headphone-stand",
+      "file": "accessories/headphone-stand.json",
+      "unmatchedFile": "accessories/headphone-stand.unmatched.json",
+      "products": 8,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "4d647647531b63aaded4354c6d79ed00c4fb1a2b69633179ee2ff22277ed1c91"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "headphone",
+      "file": "accessories/headphone.json",
+      "unmatchedFile": "accessories/headphone.unmatched.json",
+      "products": 747,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "06f11fa94aebf2af2e8b6726f8252da9973d1da96d2a586aeb42634da2c04058"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "hubs-docks",
+      "file": "accessories/hubs-docks.json",
+      "unmatchedFile": "accessories/hubs-docks.unmatched.json",
+      "products": 369,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "89c4e2b5b8f9236da126c2f49a48981521f36e05cc1a70c892b475a9a983072c"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "keyboard",
+      "file": "accessories/keyboard.json",
+      "unmatchedFile": "accessories/keyboard.unmatched.json",
+      "products": 947,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "7f9b812ee9c2248d6c58090a4533e0e19aefebffe9658710fc9ee05b05132bd3"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "memory-card",
+      "file": "accessories/memory-card.json",
+      "unmatchedFile": "accessories/memory-card.unmatched.json",
+      "products": 150,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "04ff2796e69fe66bdf67f486b01e7447f18dc8047035a2b8667510ea802168ae"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "microphone",
+      "file": "accessories/microphone.json",
+      "unmatchedFile": "accessories/microphone.unmatched.json",
+      "products": 355,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "2ea3b437edbe3c1baca1e5e5ab7a893f48dfff55454ec11930f3d61071ffbdeb"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "mouse-pad",
+      "file": "accessories/mouse-pad.json",
+      "unmatchedFile": "accessories/mouse-pad.unmatched.json",
+      "products": 102,
+      "unmatched": 68,
+      "status": "completed",
+      "signature": "b6e6b13a7c2cfd40ed6d5d495273da297f34f1830428dfecff3390b730d5beb5"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "mouse",
+      "file": "accessories/mouse.json",
+      "unmatchedFile": "accessories/mouse.unmatched.json",
+      "products": 757,
+      "unmatched": 0,
+      "status": "completed",
+      "signature": "841b594c69061923183cb0d48c3579165df28382eaeaeed8f3fa01279a938b75"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "pen-drive",
+      "file": "accessories/pen-drive.json",
+      "unmatchedFile": "accessories/pen-drive.unmatched.json",
+      "products": 0,
+      "unmatched": 206,
+      "status": "completed",
+      "signature": "e2cb0a2bdb5410deabc13f64b3be9f5080f5c95f6c801842233e4a60c1e8a5d1"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "power-strip",
+      "file": "accessories/power-strip.json",
+      "unmatchedFile": "accessories/power-strip.unmatched.json",
+      "products": 0,
+      "unmatched": 61,
+      "status": "completed",
+      "signature": "049285bd795d79e00323946fc864a679e94bbacbdadf3adf20b1f88b0941075e"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "presenter",
+      "file": "accessories/presenter.json",
+      "unmatchedFile": "accessories/presenter.unmatched.json",
+      "products": 0,
+      "unmatched": 21,
+      "status": "completed",
+      "signature": "ee9c5b7dedd4ba39cff139194ba702426c106860167de2cb9655f2041810e659"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "sound-card",
+      "file": "accessories/sound-card.json",
+      "unmatchedFile": "accessories/sound-card.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "6707c31d5dbffb52733e26a4c9a0fb52e05d7672ae4d9d3a916901b0cc6faf00"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "soundbar",
+      "file": "accessories/soundbar.json",
+      "unmatchedFile": "accessories/soundbar.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "680980bbe8a3e413dd140b928efacd0a4ea9e86cb541bce6825c997e225af7b0"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "speaker-home-theater",
+      "file": "accessories/speaker-home-theater.json",
+      "unmatchedFile": "accessories/speaker-home-theater.unmatched.json",
+      "products": 0,
+      "unmatched": 392,
+      "status": "completed",
+      "signature": "f745e6c9cdfd1eade69a001973349bb56b1ee184206285ac818c1c98ebae845d"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "thermal-paste",
+      "file": "accessories/thermal-paste.json",
+      "unmatchedFile": "accessories/thermal-paste.unmatched.json",
+      "products": 0,
+      "unmatched": 54,
+      "status": "completed",
+      "signature": "ee0b712ebd5f4fa5ee218fb0102b9542430f2343b50d72d39364aa88818b0c2e"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "webcam",
+      "file": "accessories/webcam.json",
+      "unmatchedFile": "accessories/webcam.unmatched.json",
+      "products": 0,
+      "unmatched": 44,
+      "status": "completed",
+      "signature": "dd28731f3ecf406c0607e311a295147e10e9333d2b5f79a0f46fb9a0a1f1a9f0"
+    },
+    {
+      "category": "accessories",
+      "subcategory": "wrist-rest",
+      "file": "accessories/wrist-rest.json",
+      "unmatchedFile": "accessories/wrist-rest.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "513d2db6c2fbaff745399d65217a0656ae50c7b624c09d40d5391e28bf417d52"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "ac",
+      "file": "appliance/ac.json",
+      "unmatchedFile": "appliance/ac.unmatched.json",
+      "products": 0,
+      "unmatched": 188,
+      "status": "completed",
+      "signature": "5a50b0c644db7a3decd5d96cf488a28fb38c8ba9537a9cb29742378ed23c8466"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "air-cooler",
+      "file": "appliance/air-cooler.json",
+      "unmatchedFile": "appliance/air-cooler.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "8fc06a08c316d829a83e8ff8e694b9a399c14d8f28a6abfb341005a0e8699e52"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "air-curtain",
+      "file": "appliance/air-curtain.json",
+      "unmatchedFile": "appliance/air-curtain.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "0e5541041f5d4303f1469a0b5f352999f62c0755693a9d932ea3756270fe7002"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "air-fryer",
+      "file": "appliance/air-fryer.json",
+      "unmatchedFile": "appliance/air-fryer.unmatched.json",
+      "products": 0,
+      "unmatched": 29,
+      "status": "completed",
+      "signature": "19aefb108d13dc10ec5193f0c9978b5f23d20415c71e48f81046a4ea7764f29d"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "air-purifier",
+      "file": "appliance/air-purifier.json",
+      "unmatchedFile": "appliance/air-purifier.unmatched.json",
+      "products": 0,
+      "unmatched": 37,
+      "status": "completed",
+      "signature": "9272ffc0374d4e5d6ad26ffd876577ba881e532b7056d0aaffc6e1e0f21a07b3"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "blender-grinder",
+      "file": "appliance/blender-grinder.json",
+      "unmatchedFile": "appliance/blender-grinder.unmatched.json",
+      "products": 0,
+      "unmatched": 56,
+      "status": "completed",
+      "signature": "9e6073fc131cce8dd65a9f3cef75b35d579e68d2a3c64a24276f671878e75314"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "coffee-maker",
+      "file": "appliance/coffee-maker.json",
+      "unmatchedFile": "appliance/coffee-maker.unmatched.json",
+      "products": 0,
+      "unmatched": 32,
+      "status": "completed",
+      "signature": "3277b7f2c9e4c4bae0b0ae9cfcb6e29e2b148325a2591b4dbbf9c5ae55a012ef"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "cooker",
+      "file": "appliance/cooker.json",
+      "unmatchedFile": "appliance/cooker.unmatched.json",
+      "products": 0,
+      "unmatched": 54,
+      "status": "completed",
+      "signature": "719d8f64658d64a5526fb27cf62caee8b8c144195009f7dd13d482a12c8433fb"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "dehumidifier",
+      "file": "appliance/dehumidifier.json",
+      "unmatchedFile": "appliance/dehumidifier.unmatched.json",
+      "products": 0,
+      "unmatched": 6,
+      "status": "completed",
+      "signature": "08499af3410769bb37cd834900b59c00a11e606b6f095206b5b253e33a9a0039"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "dishwasher",
+      "file": "appliance/dishwasher.json",
+      "unmatchedFile": "appliance/dishwasher.unmatched.json",
+      "products": 0,
+      "unmatched": 3,
+      "status": "completed",
+      "signature": "103220456a47444cd9daa40b3251aa8334f65e6f15d2cb367ade0a21a8ff4136"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "electric-cooker",
+      "file": "appliance/electric-cooker.json",
+      "unmatchedFile": "appliance/electric-cooker.unmatched.json",
+      "products": 0,
+      "unmatched": 5,
+      "status": "completed",
+      "signature": "db685c6cef8675574c207a601535aa03553204a5c9df6a64d21bc416107300e8"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "electric-kettle",
+      "file": "appliance/electric-kettle.json",
+      "unmatchedFile": "appliance/electric-kettle.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "c71f8dfecf133f28ade91f6ddad9b233cfa2264e7e604e94176ab08dd35fc8ab"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "fan",
+      "file": "appliance/fan.json",
+      "unmatchedFile": "appliance/fan.unmatched.json",
+      "products": 0,
+      "unmatched": 172,
+      "status": "completed",
+      "signature": "3178c62d2584920bd6ad21e5463066aa4231d3356f7e6e6632e3a9fa394abdb9"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "fridge",
+      "file": "appliance/fridge.json",
+      "unmatchedFile": "appliance/fridge.unmatched.json",
+      "products": 0,
+      "unmatched": 219,
+      "status": "completed",
+      "signature": "873f92bd36205d68e3894073a2ba3436ca1966a233929f8a875b5de3cdd71bd8"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "gas-stove",
+      "file": "appliance/gas-stove.json",
+      "unmatchedFile": "appliance/gas-stove.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "f38ff368ef600b59a3c1dc907e1de28691bb13c3efea25fd56fc689556527b27"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "geyser",
+      "file": "appliance/geyser.json",
+      "unmatchedFile": "appliance/geyser.unmatched.json",
+      "products": 0,
+      "unmatched": 53,
+      "status": "completed",
+      "signature": "cd06fe58fb456b8f7dcbab2530111115c6d700f6860941a5c54a7d911eb8f885"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "iron",
+      "file": "appliance/iron.json",
+      "unmatchedFile": "appliance/iron.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "0fd88f02629aa9a5e8465cbf6f6c1663c2246cea6e1b997bf73c96b3ae151a08"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "juicer",
+      "file": "appliance/juicer.json",
+      "unmatchedFile": "appliance/juicer.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "d7c54caa148da1622e2b983580dd9a716a6893cd8fa4350d2beaf027561bce74"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "kitchen-hood",
+      "file": "appliance/kitchen-hood.json",
+      "unmatchedFile": "appliance/kitchen-hood.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "e0f19b0e991f4776628eb70cadae403211c469912988e7bab45fb0bbdabe31e0"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "light",
+      "file": "appliance/light.json",
+      "unmatchedFile": "appliance/light.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "a69a2a407fa29232eaadf2f0e4dc45cea3b68e0bc1b4a490f5e155f2cfee41dd"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "oven",
+      "file": "appliance/oven.json",
+      "unmatchedFile": "appliance/oven.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "c3daefb05b2c2b1f3953c0cbaac0979e9a6194c14186c78829b58955560395a7"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "room-heater",
+      "file": "appliance/room-heater.json",
+      "unmatchedFile": "appliance/room-heater.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "fc7a8d3d250dd3a102d87eb801eec808fa4a7a5d34f52186d3f80d91817035ca"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "sewing-machine",
+      "file": "appliance/sewing-machine.json",
+      "unmatchedFile": "appliance/sewing-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 23,
+      "status": "completed",
+      "signature": "cddd025e8c638ccd4215c0103fe87f745acfdd65d3c18a727f3ddc18e9818557"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "toaster",
+      "file": "appliance/toaster.json",
+      "unmatchedFile": "appliance/toaster.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "4a6b4162b95226649cf3987fe523c3e9dc047fa7a6a3f7eae74d81eecdaec673"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "vacuum-cleaner",
+      "file": "appliance/vacuum-cleaner.json",
+      "unmatchedFile": "appliance/vacuum-cleaner.unmatched.json",
+      "products": 0,
+      "unmatched": 53,
+      "status": "completed",
+      "signature": "0bb7b9877712d96eb54d0d82ef4e27e87faafbef8b80768b83f68b58adead662"
+    },
+    {
+      "category": "appliance",
+      "subcategory": "washing-machine",
+      "file": "appliance/washing-machine.json",
+      "unmatchedFile": "appliance/washing-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 82,
+      "status": "completed",
+      "signature": "48d9cc75af6aae63c3c60786a3052e4f455a6dc1b6417ec405304d1f58c54d00"
+    },
+    {
+      "category": "camera",
+      "subcategory": "action-camera",
+      "file": "camera/action-camera.json",
+      "unmatchedFile": "camera/action-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 55,
+      "status": "completed",
+      "signature": "0628eb692f89443b8a602436b9059c0312f540a844639994eba21a11210beb86"
+    },
+    {
+      "category": "camera",
+      "subcategory": "body-camera",
+      "file": "camera/body-camera.json",
+      "unmatchedFile": "camera/body-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 28,
+      "status": "completed",
+      "signature": "6958d9f70c31fec54d23e51a9ad53ef8da64ea4a1a631c8839b715296f6a5435"
+    },
+    {
+      "category": "camera",
+      "subcategory": "camera-lenses",
+      "file": "camera/camera-lenses.json",
+      "unmatchedFile": "camera/camera-lenses.unmatched.json",
+      "products": 0,
+      "unmatched": 151,
+      "status": "completed",
+      "signature": "f725d1736f9133414ca49df5f58342c9d471d84e6f7d2c386140e9aaf6dfb415"
+    },
+    {
+      "category": "camera",
+      "subcategory": "dash-cam",
+      "file": "camera/dash-cam.json",
+      "unmatchedFile": "camera/dash-cam.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "1aaf241b334a240b92308eef79a7d96f6b9558d42d3459ad0b445890dd3005c8"
+    },
+    {
+      "category": "camera",
+      "subcategory": "instant-camera",
+      "file": "camera/instant-camera.json",
+      "unmatchedFile": "camera/instant-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 5,
+      "status": "completed",
+      "signature": "87238f951a203cea8159a2a99009617770fa680dbb7fe62bcf3b0aa7a1584e37"
+    },
+    {
+      "category": "component",
+      "subcategory": "casing-cooler",
+      "file": "component/casing-cooler.json",
+      "unmatchedFile": "component/casing-cooler.unmatched.json",
+      "products": 0,
+      "unmatched": 177,
+      "status": "completed",
+      "signature": "b4c36471f776c36ed2a6a445320fabed20bc6331618252d7c63a3e9b6de0e322"
+    },
+    {
+      "category": "component",
+      "subcategory": "casing",
+      "file": "component/casing.json",
+      "unmatchedFile": "component/casing.unmatched.json",
+      "products": 0,
+      "unmatched": 537,
+      "status": "completed",
+      "signature": "6c6d317f97ce3b0a46d7ea3c1baf75466336e4e8bcbcd72cd22f5028792c8af6"
+    },
+    {
+      "category": "component",
+      "subcategory": "cpu-cooler",
+      "file": "component/cpu-cooler.json",
+      "unmatchedFile": "component/cpu-cooler.unmatched.json",
+      "products": 0,
+      "unmatched": 553,
+      "status": "completed",
+      "signature": "b478dc3b49605afa00cc74815d972e6b76529eb3ef5cc46de6ed99e4f8ff86d1"
+    },
+    {
+      "category": "component",
+      "subcategory": "graphics-card",
+      "file": "component/graphics-card.json",
+      "unmatchedFile": "component/graphics-card.unmatched.json",
+      "products": 0,
+      "unmatched": 498,
+      "status": "completed",
+      "signature": "86e578679b6dcd949c30c127c2a72a25159946a9022f2d261328b4e73b7d5f63"
+    },
+    {
+      "category": "component",
+      "subcategory": "hard-disk-drive",
+      "file": "component/hard-disk-drive.json",
+      "unmatchedFile": "component/hard-disk-drive.unmatched.json",
+      "products": 0,
+      "unmatched": 119,
+      "status": "completed",
+      "signature": "50a83669aefb19dd6b852f93bc26e7290b545792af2aca2c4bda33e9a11d3cd8"
+    },
+    {
+      "category": "component",
+      "subcategory": "motherboard",
+      "file": "component/motherboard.json",
+      "unmatchedFile": "component/motherboard.unmatched.json",
+      "products": 0,
+      "unmatched": 512,
+      "status": "completed",
+      "signature": "ffe13eea6ca0617f5c44edc0f7093e0973044d7b98dfc57a35ba1ee48f3a718b"
+    },
+    {
+      "category": "component",
+      "subcategory": "optical-disk-drive",
+      "file": "component/optical-disk-drive.json",
+      "unmatchedFile": "component/optical-disk-drive.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "972f5b91f0b4f3a5bde569bb19680fa71319a272482f51cf6986d8e6e24c98c6"
+    },
+    {
+      "category": "component",
+      "subcategory": "portable-hard-disk-drive",
+      "file": "component/portable-hard-disk-drive.json",
+      "unmatchedFile": "component/portable-hard-disk-drive.unmatched.json",
+      "products": 0,
+      "unmatched": 56,
+      "status": "completed",
+      "signature": "daf250738de1fddd12789f23493e8b20f6a79a9dc6ed92ca474ae3723ce8ca90"
+    },
+    {
+      "category": "component",
+      "subcategory": "portable-ssd",
+      "file": "component/portable-ssd.json",
+      "unmatchedFile": "component/portable-ssd.unmatched.json",
+      "products": 0,
+      "unmatched": 70,
+      "status": "completed",
+      "signature": "e07e50be588b1e2c9e1406f06a42ac3d9c5911908ab81e3a5a7272b6a8bbadac"
+    },
+    {
+      "category": "component",
+      "subcategory": "power-supply",
+      "file": "component/power-supply.json",
+      "unmatchedFile": "component/power-supply.unmatched.json",
+      "products": 0,
+      "unmatched": 369,
+      "status": "completed",
+      "signature": "31ed053c96577a6841c291ef56e97346c2141535103c7db05ed88e2f45d5363a"
+    },
+    {
+      "category": "component",
+      "subcategory": "processor",
+      "file": "component/processor.json",
+      "unmatchedFile": "component/processor.unmatched.json",
+      "products": 0,
+      "unmatched": 119,
+      "status": "completed",
+      "signature": "530392f19c19d1244e307a65d4446a81f514af5258f528420cf17d7e544a465c"
+    },
+    {
+      "category": "component",
+      "subcategory": "ram-desktop",
+      "file": "component/ram-desktop.json",
+      "unmatchedFile": "component/ram-desktop.unmatched.json",
+      "products": 0,
+      "unmatched": 530,
+      "status": "completed",
+      "signature": "6d982004329371ac47b2b48eebf635ca2f4a0dfcbeb88b29d51cf46181118680"
+    },
+    {
+      "category": "component",
+      "subcategory": "ram-laptop",
+      "file": "component/ram-laptop.json",
+      "unmatchedFile": "component/ram-laptop.unmatched.json",
+      "products": 0,
+      "unmatched": 159,
+      "status": "completed",
+      "signature": "dbd128d3b3cabdbf7219e2808d3e8c42f8fec2f2aadf521af5104a362c3a48d2"
+    },
+    {
+      "category": "component",
+      "subcategory": "ssd-cooler",
+      "file": "component/ssd-cooler.json",
+      "unmatchedFile": "component/ssd-cooler.unmatched.json",
+      "products": 0,
+      "unmatched": 3,
+      "status": "completed",
+      "signature": "8bb49ef8e737848649550fc639e07395208c1cad03e9696d96b3bfb3ea251c70"
+    },
+    {
+      "category": "component",
+      "subcategory": "ssd",
+      "file": "component/ssd.json",
+      "unmatchedFile": "component/ssd.unmatched.json",
+      "products": 0,
+      "unmatched": 286,
+      "status": "completed",
+      "signature": "c45aab9f28f49fe97e33539312c85c1399f728c30610d79b4f677b11e35fea5b"
+    },
+    {
+      "category": "component",
+      "subcategory": "vertical-gpu-holder",
+      "file": "component/vertical-gpu-holder.json",
+      "unmatchedFile": "component/vertical-gpu-holder.unmatched.json",
+      "products": 0,
+      "unmatched": 24,
+      "status": "completed",
+      "signature": "8258303bdbf5b5f2be25dbec81b808e9c822e2c3fb75c2cced98c5c115dc8f4e"
+    },
+    {
+      "category": "component",
+      "subcategory": "water-liquid-cooling",
+      "file": "component/water-liquid-cooling.json",
+      "unmatchedFile": "component/water-liquid-cooling.unmatched.json",
+      "products": 0,
+      "unmatched": 28,
+      "status": "completed",
+      "signature": "42ae8692ca287147630dc2b768e4f1de003e03d548d51e852739691b72aa5f3d"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "ai-pc",
+      "file": "desktop/ai-pc.json",
+      "unmatchedFile": "desktop/ai-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "f99ee9fcaaf998cb53b7645a016f23ef46efe6ec0de2cf1a30c858158c1139d4"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "all-in-one-pc",
+      "file": "desktop/all-in-one-pc.json",
+      "unmatchedFile": "desktop/all-in-one-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 54,
+      "status": "completed",
+      "signature": "12ab267246b71ac3b29d582244b85f73fcede3f51ae9f8ec0707cd43c1d80a13"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "apple-imac",
+      "file": "desktop/apple-imac.json",
+      "unmatchedFile": "desktop/apple-imac.unmatched.json",
+      "products": 0,
+      "unmatched": 4,
+      "status": "completed",
+      "signature": "e3b38c6c3925b438e80389adf59ecec6de35136624d65bc166068afa7c43b82f"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "apple-mac-mini",
+      "file": "desktop/apple-mac-mini.json",
+      "unmatchedFile": "desktop/apple-mac-mini.unmatched.json",
+      "products": 0,
+      "unmatched": 5,
+      "status": "completed",
+      "signature": "c2397c04814b480d6f848aad9885c4a49e71688d90a0f43b10ba5e26c37b1c85"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "apple-mac-pro",
+      "file": "desktop/apple-mac-pro.json",
+      "unmatchedFile": "desktop/apple-mac-pro.unmatched.json",
+      "products": 0,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "668407b35cdc2b2512d0496ccc147c5ee297dc78c3eb899a4e90dcea0129ee4b"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "apple-mac-studio",
+      "file": "desktop/apple-mac-studio.json",
+      "unmatchedFile": "desktop/apple-mac-studio.unmatched.json",
+      "products": 0,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "5e6bafc055e9058da7c474ea6dacfca723e5d22bac8e2ce4855bea2525da98e4"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "brand-pc",
+      "file": "desktop/brand-pc.json",
+      "unmatchedFile": "desktop/brand-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 47,
+      "status": "completed",
+      "signature": "9d24148af315e2aec5a812cf9924202983d98003c59af482a8bd49340db0dba1"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "gaming-pc",
+      "file": "desktop/gaming-pc.json",
+      "unmatchedFile": "desktop/gaming-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 38,
+      "status": "completed",
+      "signature": "047fd92c4a003db6d39b3a8f7be6fcf373b6b0773313757bfacc73e649c71ebd"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "portable-mini-pc",
+      "file": "desktop/portable-mini-pc.json",
+      "unmatchedFile": "desktop/portable-mini-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 14,
+      "status": "completed",
+      "signature": "85950b1b09bec22ca315e48cdcd8f36fbc13b0fdc6d5a8ccbc9a904c75aa5687"
+    },
+    {
+      "category": "desktop",
+      "subcategory": "star-pc",
+      "file": "desktop/star-pc.json",
+      "unmatchedFile": "desktop/star-pc.unmatched.json",
+      "products": 0,
+      "unmatched": 19,
+      "status": "completed",
+      "signature": "5f86d78a009cfe8826cdf4861e4f7b8fbc2fcd0daad651bdf87ed7c2728b0ce0"
+    },
+    {
+      "category": "gadget",
+      "subcategory": null,
+      "file": "gadget/_direct.json",
+      "unmatchedFile": "gadget/_direct.unmatched.json",
+      "products": 0,
+      "unmatched": 50,
+      "status": "completed",
+      "signature": "7ce6a13cfd35cfeb64e03882b6a3aadba9e0ddca6f1dfa8aee77e000707862af"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "analog-watch",
+      "file": "gadget/analog-watch.json",
+      "unmatchedFile": "gadget/analog-watch.unmatched.json",
+      "products": 0,
+      "unmatched": 134,
+      "status": "completed",
+      "signature": "255bc961f32976cf139728258727ef48eaa7161b00656024828a1eeab2759d1c"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "calculator",
+      "file": "gadget/calculator.json",
+      "unmatchedFile": "gadget/calculator.unmatched.json",
+      "products": 0,
+      "unmatched": 50,
+      "status": "completed",
+      "signature": "62d4f63e5d43bfaae6cc80e5b6867c78cffa177041e97982d92220eb2a1f1648"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "car-charger",
+      "file": "gadget/car-charger.json",
+      "unmatchedFile": "gadget/car-charger.unmatched.json",
+      "products": 0,
+      "unmatched": 43,
+      "status": "completed",
+      "signature": "5080f09711ba9c17fc365548d3a47d90d80607dae3ae89b6c315854feea183ce"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "daily-lifestyle",
+      "file": "gadget/daily-lifestyle.json",
+      "unmatchedFile": "gadget/daily-lifestyle.unmatched.json",
+      "products": 0,
+      "unmatched": 219,
+      "status": "completed",
+      "signature": "73656423fa6fab2b7fa26b16ad9a92becc370a2d8587a778d87b59dc9db4b0a3"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "drones",
+      "file": "gadget/drones.json",
+      "unmatchedFile": "gadget/drones.unmatched.json",
+      "products": 0,
+      "unmatched": 70,
+      "status": "completed",
+      "signature": "863291af06b84b041570e8fd8d36e94b4b5e1bf62198c983f394e4c932d67412"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "earbuds",
+      "file": "gadget/earbuds.json",
+      "unmatchedFile": "gadget/earbuds.unmatched.json",
+      "products": 0,
+      "unmatched": 664,
+      "status": "completed",
+      "signature": "fa8ab443e683d82a09ec588de7da257876fdc867499d796973ac50ee719558b2"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "earphone",
+      "file": "gadget/earphone.json",
+      "unmatchedFile": "gadget/earphone.unmatched.json",
+      "products": 0,
+      "unmatched": 151,
+      "status": "completed",
+      "signature": "c8613731270d1da21cdb3dcf77e201f3d3227ba53dd27148cec5c6f5733b21e1"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "gimbal",
+      "file": "gadget/gimbal.json",
+      "unmatchedFile": "gadget/gimbal.unmatched.json",
+      "products": 0,
+      "unmatched": 56,
+      "status": "completed",
+      "signature": "a84f6c1dd21c6a3dd43c73bd437b8def64654b359c385f978b9aa8b5d7830b3f"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "health-monitor",
+      "file": "gadget/health-monitor.json",
+      "unmatchedFile": "gadget/health-monitor.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "06c4f5ab83f240d1f5fbe904d46f076d226ec4f9675f6aec0ccb8598f8fae638"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "mini-fan",
+      "file": "gadget/mini-fan.json",
+      "unmatchedFile": "gadget/mini-fan.unmatched.json",
+      "products": 0,
+      "unmatched": 87,
+      "status": "completed",
+      "signature": "4537ded92d47139a349da9ad8e86f8f39029c195627410fbb8eddec1281de512"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "neckband",
+      "file": "gadget/neckband.json",
+      "unmatchedFile": "gadget/neckband.unmatched.json",
+      "products": 0,
+      "unmatched": 116,
+      "status": "completed",
+      "signature": "525055f2e8bc7edb9dad115a942f49c9f6ff85ab42d54626ae4f980ab03b89bc"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "power-bank",
+      "file": "gadget/power-bank.json",
+      "unmatchedFile": "gadget/power-bank.unmatched.json",
+      "products": 0,
+      "unmatched": 459,
+      "status": "completed",
+      "signature": "b4b88471b465eb9bbd356076ce1392e11c860c9dc05c0a9f782cb54dcc493756"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "power-tools",
+      "file": "gadget/power-tools.json",
+      "unmatchedFile": "gadget/power-tools.unmatched.json",
+      "products": 0,
+      "unmatched": 83,
+      "status": "completed",
+      "signature": "3cbb1d0f1fb3ae77370f7e2777c92ddc385f5c97d66737209f9446b614cafae4"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "smart-band",
+      "file": "gadget/smart-band.json",
+      "unmatchedFile": "gadget/smart-band.unmatched.json",
+      "products": 0,
+      "unmatched": 22,
+      "status": "completed",
+      "signature": "b66e01dcb52b9e15d81371af6d16dab950e693a3fbada986525b2a59d86fcee0"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "smart-glasses",
+      "file": "gadget/smart-glasses.json",
+      "unmatchedFile": "gadget/smart-glasses.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "525fe35b48c2e00f306d30d3d91743fd7d076ac2a2ab206efa7826364acc9374"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "smart-ring",
+      "file": "gadget/smart-ring.json",
+      "unmatchedFile": "gadget/smart-ring.unmatched.json",
+      "products": 0,
+      "unmatched": 6,
+      "status": "completed",
+      "signature": "bb90d65e75794717f304baadb196879fb5ec38a86aeb99d8c3584dbb9e1b1a50"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "smart-watch",
+      "file": "gadget/smart-watch.json",
+      "unmatchedFile": "gadget/smart-watch.unmatched.json",
+      "products": 0,
+      "unmatched": 417,
+      "status": "completed",
+      "signature": "397c4957cad295f0f7fbfe88c25c10bbc0716202d7dff529522e0723a9032090"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "stream-deck",
+      "file": "gadget/stream-deck.json",
+      "unmatchedFile": "gadget/stream-deck.unmatched.json",
+      "products": 0,
+      "unmatched": 5,
+      "status": "completed",
+      "signature": "2cb5f980e6b2c4fe1c3ce6157ecb80ce0ec2a0314e92b21d70dc58f525e618a7"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "studio-equipment",
+      "file": "gadget/studio-equipment.json",
+      "unmatchedFile": "gadget/studio-equipment.unmatched.json",
+      "products": 0,
+      "unmatched": 127,
+      "status": "completed",
+      "signature": "f9fb73aec5db02e4463183fa384a6a33da053394c64446471315f81ec84cca28"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "trimmer",
+      "file": "gadget/trimmer.json",
+      "unmatchedFile": "gadget/trimmer.unmatched.json",
+      "products": 0,
+      "unmatched": 176,
+      "status": "completed",
+      "signature": "cebae349c26a359daefd76b8034e9964b83467eb85d2f1fe335e1a59e8a705e3"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "tv-box",
+      "file": "gadget/tv-box.json",
+      "unmatchedFile": "gadget/tv-box.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "e9f0470d13df998ee53bc06ac75b20e1d183ee5e814510453be9c47d0b7aa9eb"
+    },
+    {
+      "category": "gadget",
+      "subcategory": "uncategorized",
+      "file": "gadget/uncategorized.json",
+      "unmatchedFile": "gadget/uncategorized.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "0fe55ec4f6b21eeac46c9055b13aceaf669d840353bd64975e0aa72ce00914fe"
+    },
+    {
+      "category": "gaming",
+      "subcategory": null,
+      "file": "gaming/_direct.json",
+      "unmatchedFile": "gaming/_direct.unmatched.json",
+      "products": 0,
+      "unmatched": 79,
+      "status": "completed",
+      "signature": "baef5182d742d7f0d847bfd86383308c78ca930be5ea5f0221d85a92a39ed90b"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "gamepad",
+      "file": "gaming/gamepad.json",
+      "unmatchedFile": "gaming/gamepad.unmatched.json",
+      "products": 0,
+      "unmatched": 150,
+      "status": "completed",
+      "signature": "4192fd1b286fb207e0e2dc6d4e2d8358fbe313e6f53b3f389ec458dfc79e501c"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "gaming-chair",
+      "file": "gaming/gaming-chair.json",
+      "unmatchedFile": "gaming/gaming-chair.unmatched.json",
+      "products": 0,
+      "unmatched": 56,
+      "status": "completed",
+      "signature": "6d32969c2e54c73d1cdbc5bc835e51441993904dc16e2bfb032a374e80fe308d"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "gaming-console",
+      "file": "gaming/gaming-console.json",
+      "unmatchedFile": "gaming/gaming-console.unmatched.json",
+      "products": 0,
+      "unmatched": 45,
+      "status": "completed",
+      "signature": "3b13232d14ab820ad87564967fca00cb8a7c03629a5988c6838c202d67bb788a"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "gaming-desk",
+      "file": "gaming/gaming-desk.json",
+      "unmatchedFile": "gaming/gaming-desk.unmatched.json",
+      "products": 0,
+      "unmatched": 7,
+      "status": "completed",
+      "signature": "a217f0bede966943bb8132cd170e0336c3295b414c3017cbdae825864632501c"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "headphone",
+      "file": "gaming/headphone.json",
+      "unmatchedFile": "gaming/headphone.unmatched.json",
+      "products": 0,
+      "unmatched": 212,
+      "status": "completed",
+      "signature": "c4c6416e1b7ace07ee55d8e7de9b6e98f3024e1c9dace1e785e0ca7fd6d7f5d5"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "keyboard",
+      "file": "gaming/keyboard.json",
+      "unmatchedFile": "gaming/keyboard.unmatched.json",
+      "products": 0,
+      "unmatched": 458,
+      "status": "completed",
+      "signature": "b4cd3aeb1b17633306cb178cf5decf604d081a3a0b90ac81a9a688a8a2866fa4"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "mouse-pad",
+      "file": "gaming/mouse-pad.json",
+      "unmatchedFile": "gaming/mouse-pad.unmatched.json",
+      "products": 0,
+      "unmatched": 81,
+      "status": "completed",
+      "signature": "edc7710cd422a7f397244eedbbcdf57a9e60d610469361bded7a0a5d22cf155a"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "mouse",
+      "file": "gaming/mouse.json",
+      "unmatchedFile": "gaming/mouse.unmatched.json",
+      "products": 0,
+      "unmatched": 365,
+      "status": "completed",
+      "signature": "40fd7fd847722c1daca9bf1a649523337c6f07a1e0877f8a04953a8af24af36c"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "racing-wheel",
+      "file": "gaming/racing-wheel.json",
+      "unmatchedFile": "gaming/racing-wheel.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "b09bd0bcf7db6feb909546c314d2cad418b87a3b30fd134e6c95da7153bcf05b"
+    },
+    {
+      "category": "gaming",
+      "subcategory": "vr",
+      "file": "gaming/vr.json",
+      "unmatchedFile": "gaming/vr.unmatched.json",
+      "products": 0,
+      "unmatched": 20,
+      "status": "completed",
+      "signature": "ca82096039d547ecc7420b411fa4492ab40fc185354cbf779fa155f4284ab482"
+    },
+    {
+      "category": "laptop",
+      "subcategory": "all-laptop",
+      "file": "laptop/all-laptop.json",
+      "unmatchedFile": "laptop/all-laptop.unmatched.json",
+      "products": 0,
+      "unmatched": 301,
+      "status": "completed",
+      "signature": "333075f52637e8c9c7094373629f13c0b0b47a4b01325a3a8a48946b8ee160b9"
+    },
+    {
+      "category": "laptop",
+      "subcategory": "gaming-laptop",
+      "file": "laptop/gaming-laptop.json",
+      "unmatchedFile": "laptop/gaming-laptop.unmatched.json",
+      "products": 0,
+      "unmatched": 114,
+      "status": "completed",
+      "signature": "df3a92f73e7cbfd6dff05768f7ce6e61ee06e3d25cd2562862e314c1803c9f17"
+    },
+    {
+      "category": "laptop",
+      "subcategory": "laptop-accessories",
+      "file": "laptop/laptop-accessories.json",
+      "unmatchedFile": "laptop/laptop-accessories.unmatched.json",
+      "products": 0,
+      "unmatched": 1025,
+      "status": "completed",
+      "signature": "d5e907a7fc13afcdc6fac97945b639779f561b548ad9cb665c220edaa62c821f"
+    },
+    {
+      "category": "laptop",
+      "subcategory": "laptop-bag",
+      "file": "laptop/laptop-bag.json",
+      "unmatchedFile": "laptop/laptop-bag.unmatched.json",
+      "products": 0,
+      "unmatched": 51,
+      "status": "completed",
+      "signature": "37ebb69b10e6b279adbbbc4bfb2a2d3dadfb652006b6c89f1b1c1ca89e930cc2"
+    },
+    {
+      "category": "laptop",
+      "subcategory": "premium-ultrabook",
+      "file": "laptop/premium-ultrabook.json",
+      "unmatchedFile": "laptop/premium-ultrabook.unmatched.json",
+      "products": 0,
+      "unmatched": 67,
+      "status": "completed",
+      "signature": "526c9a709a60a30cdfcf7885c1c8d8b59b195e23bb47309377a04c63ade009e6"
+    },
+    {
+      "category": "monitor",
+      "subcategory": null,
+      "file": "monitor/_direct.json",
+      "unmatchedFile": "monitor/_direct.unmatched.json",
+      "products": 0,
+      "unmatched": 937,
+      "status": "completed",
+      "signature": "79028ef078a2af4b6c856ae6aaac8b8c0c8a5a34d5e253ec07447a51f9821a75"
+    },
+    {
+      "category": "networking",
+      "subcategory": "access-point",
+      "file": "networking/access-point.json",
+      "unmatchedFile": "networking/access-point.unmatched.json",
+      "products": 0,
+      "unmatched": 139,
+      "status": "completed",
+      "signature": "8755fe8fe6ba9cd6c4fb8251b274d4a46b999ff45302feb099ce991110572adb"
+    },
+    {
+      "category": "networking",
+      "subcategory": "cable-tester",
+      "file": "networking/cable-tester.json",
+      "unmatchedFile": "networking/cable-tester.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "93a126577cfb4d4829d7c7bb8b700c938c00948236be4c0898384a7edcfde642"
+    },
+    {
+      "category": "networking",
+      "subcategory": "connector",
+      "file": "networking/connector.json",
+      "unmatchedFile": "networking/connector.unmatched.json",
+      "products": 0,
+      "unmatched": 39,
+      "status": "completed",
+      "signature": "d55689e6bf166e5025b91dbebd770390e9df1057e577b9f8ead4c8cca94ffa78"
+    },
+    {
+      "category": "networking",
+      "subcategory": "crimping-tool",
+      "file": "networking/crimping-tool.json",
+      "unmatchedFile": "networking/crimping-tool.unmatched.json",
+      "products": 0,
+      "unmatched": 23,
+      "status": "completed",
+      "signature": "bccfd4410974c7ad170f3f49a1b9f6adde8adf1a71ad3aac83a98c39f9b86d47"
+    },
+    {
+      "category": "networking",
+      "subcategory": "faceplate",
+      "file": "networking/faceplate.json",
+      "unmatchedFile": "networking/faceplate.unmatched.json",
+      "products": 0,
+      "unmatched": 19,
+      "status": "completed",
+      "signature": "21ddc457243532d1acf41d3e0d7dc261e1ba26b99564afbda05afa6ad7965754"
+    },
+    {
+      "category": "networking",
+      "subcategory": "firewall",
+      "file": "networking/firewall.json",
+      "unmatchedFile": "networking/firewall.unmatched.json",
+      "products": 0,
+      "unmatched": 10,
+      "status": "completed",
+      "signature": "a0ae4e3fb6e65bd7fbf193b5607eca3acb5aab7a888f28ade32e2749bed46079"
+    },
+    {
+      "category": "networking",
+      "subcategory": "lan-card",
+      "file": "networking/lan-card.json",
+      "unmatchedFile": "networking/lan-card.unmatched.json",
+      "products": 0,
+      "unmatched": 37,
+      "status": "completed",
+      "signature": "2e91bdb2ec375fdaed3d85e4c0596283b1c4f86ac5ee1b29431cf20d07fca38f"
+    },
+    {
+      "category": "networking",
+      "subcategory": "media-converter",
+      "file": "networking/media-converter.json",
+      "unmatchedFile": "networking/media-converter.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "d098513e00cd9bc036ed1bb1f9a4cabb402e03de6f23535a7bb845367182329e"
+    },
+    {
+      "category": "networking",
+      "subcategory": "modular-jack",
+      "file": "networking/modular-jack.json",
+      "unmatchedFile": "networking/modular-jack.unmatched.json",
+      "products": 0,
+      "unmatched": 29,
+      "status": "completed",
+      "signature": "62e7a44d6c5a6287f130b5fd7b1ada9244dc785a92090ad2db2accd786fc4dae"
+    },
+    {
+      "category": "networking",
+      "subcategory": "network-switch",
+      "file": "networking/network-switch.json",
+      "unmatchedFile": "networking/network-switch.unmatched.json",
+      "products": 0,
+      "unmatched": 464,
+      "status": "completed",
+      "signature": "1ab7b0f2796069de1be0712300ea414e17745192c284cb369f1a2a8bd48f4e12"
+    },
+    {
+      "category": "networking",
+      "subcategory": "network-transceivers",
+      "file": "networking/network-transceivers.json",
+      "unmatchedFile": "networking/network-transceivers.unmatched.json",
+      "products": 0,
+      "unmatched": 37,
+      "status": "completed",
+      "signature": "e48da88b496157602b55154ea87dd04f48dfc8c66cc76054c22e43182fadb339"
+    },
+    {
+      "category": "networking",
+      "subcategory": "networking-cable",
+      "file": "networking/networking-cable.json",
+      "unmatchedFile": "networking/networking-cable.unmatched.json",
+      "products": 0,
+      "unmatched": 112,
+      "status": "completed",
+      "signature": "6d043c6abc3ea9d6d0726ef763454308646957a764936bccffc4db5c0763bc01"
+    },
+    {
+      "category": "networking",
+      "subcategory": "olt",
+      "file": "networking/olt.json",
+      "unmatchedFile": "networking/olt.unmatched.json",
+      "products": 0,
+      "unmatched": 28,
+      "status": "completed",
+      "signature": "64ea6e57183337af4589224ed32dcd2cfd7a8a3e978d64e62a0cda8b4b035fc4"
+    },
+    {
+      "category": "networking",
+      "subcategory": "onu",
+      "file": "networking/onu.json",
+      "unmatchedFile": "networking/onu.unmatched.json",
+      "products": 0,
+      "unmatched": 28,
+      "status": "completed",
+      "signature": "40cdc6ef8adb685b119f40e02028d29b3ad55c453fff4ee44aeebc9460abc6f0"
+    },
+    {
+      "category": "networking",
+      "subcategory": "patch-cord",
+      "file": "networking/patch-cord.json",
+      "unmatchedFile": "networking/patch-cord.unmatched.json",
+      "products": 0,
+      "unmatched": 279,
+      "status": "completed",
+      "signature": "c0c5276976108b3e523e6d6c018cbdb6abf8d0a01dac235988075c3f08b9928c"
+    },
+    {
+      "category": "networking",
+      "subcategory": "patch-panel",
+      "file": "networking/patch-panel.json",
+      "unmatchedFile": "networking/patch-panel.unmatched.json",
+      "products": 0,
+      "unmatched": 38,
+      "status": "completed",
+      "signature": "82877c528a4cecfa6ee2d67c350aac7a02496c326a8d521c8a502083920618c6"
+    },
+    {
+      "category": "networking",
+      "subcategory": "pocket-router",
+      "file": "networking/pocket-router.json",
+      "unmatchedFile": "networking/pocket-router.unmatched.json",
+      "products": 0,
+      "unmatched": 14,
+      "status": "completed",
+      "signature": "93f56b8c3b5593ed9d601c8a733486767f9810c26546ad82d6f957cc03ee62f1"
+    },
+    {
+      "category": "networking",
+      "subcategory": "poe-injector",
+      "file": "networking/poe-injector.json",
+      "unmatchedFile": "networking/poe-injector.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "81d7b5c353b9f94632760aeda6ca8f7ffb1f6936087f18eb6ead9c4779038bd0"
+    },
+    {
+      "category": "networking",
+      "subcategory": "router",
+      "file": "networking/router.json",
+      "unmatchedFile": "networking/router.unmatched.json",
+      "products": 0,
+      "unmatched": 360,
+      "status": "completed",
+      "signature": "f583285dfb98ff5de214c5c210e458ccdd3160d2b8fee6b161a5d3f6d8cf8e50"
+    },
+    {
+      "category": "networking",
+      "subcategory": "splicer-machine",
+      "file": "networking/splicer-machine.json",
+      "unmatchedFile": "networking/splicer-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 6,
+      "status": "completed",
+      "signature": "bc9d3448a52be6cc7cdcbd2596d9bfc4f71970fab4a0124c4283a8431b259b01"
+    },
+    {
+      "category": "networking",
+      "subcategory": "starlink",
+      "file": "networking/starlink.json",
+      "unmatchedFile": "networking/starlink.unmatched.json",
+      "products": 0,
+      "unmatched": 21,
+      "status": "completed",
+      "signature": "8b0a3a715f12497986cfe1be0c5c064069a942ce0851e08b96eb27f734b0c8cf"
+    },
+    {
+      "category": "networking",
+      "subcategory": "wifi-adapter",
+      "file": "networking/wifi-adapter.json",
+      "unmatchedFile": "networking/wifi-adapter.unmatched.json",
+      "products": 0,
+      "unmatched": 56,
+      "status": "completed",
+      "signature": "5151875abba734c7040564c7d704b31c349183a6b43e2df7f5cb7f66de57abe9"
+    },
+    {
+      "category": "networking",
+      "subcategory": "wifi-range-extender",
+      "file": "networking/wifi-range-extender.json",
+      "unmatchedFile": "networking/wifi-range-extender.unmatched.json",
+      "products": 0,
+      "unmatched": 32,
+      "status": "completed",
+      "signature": "10d300959a1f0ea21a94883106516079cc8f6a177cff324ac8db913b3d914dc5"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "barcode-scanner",
+      "file": "office-equipment/barcode-scanner.json",
+      "unmatchedFile": "office-equipment/barcode-scanner.unmatched.json",
+      "products": 0,
+      "unmatched": 67,
+      "status": "completed",
+      "signature": "1f6bae88709304cae60bc892e2b67f977c12e74c68bb21e2446c81b9a2992164"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "binding-machine",
+      "file": "office-equipment/binding-machine.json",
+      "unmatchedFile": "office-equipment/binding-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 7,
+      "status": "completed",
+      "signature": "c5a49de783b96b4d01d39753a8bf9be73c4cde8a6ce08987b7cb3f7a4005de38"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "cartridge",
+      "file": "office-equipment/cartridge.json",
+      "unmatchedFile": "office-equipment/cartridge.unmatched.json",
+      "products": 0,
+      "unmatched": 54,
+      "status": "completed",
+      "signature": "1b9d1449aff3596dd6dfee83de4a95cf027aca0425f9c4e1a4f60c07e0a4b9b3"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "cash-drawer",
+      "file": "office-equipment/cash-drawer.json",
+      "unmatchedFile": "office-equipment/cash-drawer.unmatched.json",
+      "products": 0,
+      "unmatched": 18,
+      "status": "completed",
+      "signature": "7040a2678136832fbf5dcef74418f59b0c2af12ce3fd205afdb82913cd4c7dbb"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "conference-system",
+      "file": "office-equipment/conference-system.json",
+      "unmatchedFile": "office-equipment/conference-system.unmatched.json",
+      "products": 0,
+      "unmatched": 113,
+      "status": "completed",
+      "signature": "9a0ae3573fbaddce933225690cd8449731aeb42554c65cd8d6d04c4ad95fb595"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "digital-weight-machine",
+      "file": "office-equipment/digital-weight-machine.json",
+      "unmatchedFile": "office-equipment/digital-weight-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 4,
+      "status": "completed",
+      "signature": "e5f4fe271a45213d3fad9d823ff0a38d76fececb01e5e36db65a1ce1b86f1283"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "id-card-printer",
+      "file": "office-equipment/id-card-printer.json",
+      "unmatchedFile": "office-equipment/id-card-printer.unmatched.json",
+      "products": 0,
+      "unmatched": 10,
+      "status": "completed",
+      "signature": "efe06205063e02959d7735db515b8c61d783668414e3e4c5711bda9fa46006a8"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "ink-bottle",
+      "file": "office-equipment/ink-bottle.json",
+      "unmatchedFile": "office-equipment/ink-bottle.unmatched.json",
+      "products": 0,
+      "unmatched": 70,
+      "status": "completed",
+      "signature": "7ce20d2bb17752802ce4b0d02722d39edf64ca2440f5683a7e1f3431038c98dc"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "interactive-flat-panel",
+      "file": "office-equipment/interactive-flat-panel.json",
+      "unmatchedFile": "office-equipment/interactive-flat-panel.unmatched.json",
+      "products": 0,
+      "unmatched": 169,
+      "status": "completed",
+      "signature": "22b75cdb3bfd60d6c342cb94ac9d2968d0d75744244aaf39675f5f63ad752eb5"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "ip-phone",
+      "file": "office-equipment/ip-phone.json",
+      "unmatchedFile": "office-equipment/ip-phone.unmatched.json",
+      "products": 0,
+      "unmatched": 141,
+      "status": "completed",
+      "signature": "6ab7621358a82bec965e2873214abf297c842788367f9e070e1d25e310b32094"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "kiosk",
+      "file": "office-equipment/kiosk.json",
+      "unmatchedFile": "office-equipment/kiosk.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "7c60b3d6efb16dcecbffdfbed4ec8e7208731d988ac55abb2e15301b653c77e5"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "label-printer",
+      "file": "office-equipment/label-printer.json",
+      "unmatchedFile": "office-equipment/label-printer.unmatched.json",
+      "products": 0,
+      "unmatched": 62,
+      "status": "completed",
+      "signature": "fe71bb7633204ccadf2b2a18a8b4a4f76d7dd54eae8032a19eff87a2547c9c47"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "laminating-machine",
+      "file": "office-equipment/laminating-machine.json",
+      "unmatchedFile": "office-equipment/laminating-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 16,
+      "status": "completed",
+      "signature": "df274e826111e6ad673616452750d4ad3fef00bd2d4c2117f6ba2b9c4ed65796"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "large-format-printer",
+      "file": "office-equipment/large-format-printer.json",
+      "unmatchedFile": "office-equipment/large-format-printer.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "0f5a9008f665709fb06f70f74523932ba7d8000bae61ae8fcfa3fee72486423e"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "laser-printer",
+      "file": "office-equipment/laser-printer.json",
+      "unmatchedFile": "office-equipment/laser-printer.unmatched.json",
+      "products": 0,
+      "unmatched": 158,
+      "status": "completed",
+      "signature": "18f5402923145f3a590d2ff0d8bf40476dfc89d6a11e652a4f975b279eb8737b"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "money-counting-machine",
+      "file": "office-equipment/money-counting-machine.json",
+      "unmatchedFile": "office-equipment/money-counting-machine.unmatched.json",
+      "products": 0,
+      "unmatched": 35,
+      "status": "completed",
+      "signature": "dd6f11ed543b130a55c604dcf43f857cfc737a83fe6f8c23a20e6d569001f6fc"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "pa-system",
+      "file": "office-equipment/pa-system.json",
+      "unmatchedFile": "office-equipment/pa-system.unmatched.json",
+      "products": 0,
+      "unmatched": 33,
+      "status": "completed",
+      "signature": "cb23f14ce4f2565356270136c0deac66cb04ec6154000e9c41872c72d69b8f8e"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "pabx-system",
+      "file": "office-equipment/pabx-system.json",
+      "unmatchedFile": "office-equipment/pabx-system.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "043b9ba25dcbaaf79460f12de1a9a44bbc31e540806e428504ac54404dea525d"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "paper-shredder",
+      "file": "office-equipment/paper-shredder.json",
+      "unmatchedFile": "office-equipment/paper-shredder.unmatched.json",
+      "products": 0,
+      "unmatched": 32,
+      "status": "completed",
+      "signature": "3be75b722a9c8ac19dacc4cf5132add5ffde18e19a7fff959f608b31ee286098"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "photocopier",
+      "file": "office-equipment/photocopier.json",
+      "unmatchedFile": "office-equipment/photocopier.unmatched.json",
+      "products": 0,
+      "unmatched": 82,
+      "status": "completed",
+      "signature": "fdbee6269d24f9cb03fcdabc6f7d01f18c9ec597bf912cc340c60d13e6916d11"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "pos-printer",
+      "file": "office-equipment/pos-printer.json",
+      "unmatchedFile": "office-equipment/pos-printer.unmatched.json",
+      "products": 0,
+      "unmatched": 96,
+      "status": "completed",
+      "signature": "282c10010f056c74e76de92baaa08c0fd52bcd2eb83cddb0d51a39bfa6b9ddae"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "printer-drum",
+      "file": "office-equipment/printer-drum.json",
+      "unmatchedFile": "office-equipment/printer-drum.unmatched.json",
+      "products": 0,
+      "unmatched": 14,
+      "status": "completed",
+      "signature": "036f426a81073d74524144784f6b211f8c433bb5b6eaa58964cb93088ef7ac59"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "printer-paper",
+      "file": "office-equipment/printer-paper.json",
+      "unmatchedFile": "office-equipment/printer-paper.unmatched.json",
+      "products": 0,
+      "unmatched": 32,
+      "status": "completed",
+      "signature": "3705277dead33af8c551b848beab46ed1032ed84029e0042833ef42a75df4754"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "printer",
+      "file": "office-equipment/printer.json",
+      "unmatchedFile": "office-equipment/printer.unmatched.json",
+      "products": 0,
+      "unmatched": 302,
+      "status": "completed",
+      "signature": "be9c3005a1be11e8b35e9acd15cf80e22eef1eebef82e0013298cba52e2897c9"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "projector",
+      "file": "office-equipment/projector.json",
+      "unmatchedFile": "office-equipment/projector.unmatched.json",
+      "products": 0,
+      "unmatched": 219,
+      "status": "completed",
+      "signature": "41fbb9947e5cd03874c34a4b6dd13d59e47976db40a4467b3211be297fbbd45a"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "ribbon",
+      "file": "office-equipment/ribbon.json",
+      "unmatchedFile": "office-equipment/ribbon.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "83c98cd60dd75a475d34677256573a2878abf16b08374ab6cce21571c367afba"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "scanner",
+      "file": "office-equipment/scanner.json",
+      "unmatchedFile": "office-equipment/scanner.unmatched.json",
+      "products": 0,
+      "unmatched": 83,
+      "status": "completed",
+      "signature": "b505ae1d0993fc5461934a38d95bbefe8857a80b376ced816c899e6057f2b3b2"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "signage",
+      "file": "office-equipment/signage.json",
+      "unmatchedFile": "office-equipment/signage.unmatched.json",
+      "products": 0,
+      "unmatched": 21,
+      "status": "completed",
+      "signature": "2f7945025390b898c2df8b25cb7cf94269164a1ce73078b259cac83896b1a895"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "telephone-set",
+      "file": "office-equipment/telephone-set.json",
+      "unmatchedFile": "office-equipment/telephone-set.unmatched.json",
+      "products": 0,
+      "unmatched": 5,
+      "status": "completed",
+      "signature": "7db0ae9b77c8228f8b68bbc34beff75e04e1501f30317a4735cdec52fb82a55f"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "toner",
+      "file": "office-equipment/toner.json",
+      "unmatchedFile": "office-equipment/toner.unmatched.json",
+      "products": 0,
+      "unmatched": 399,
+      "status": "completed",
+      "signature": "695af4b08449cd632e74b50f0f6df32003edadea47620630c5c6b840a6cd00d5"
+    },
+    {
+      "category": "office-equipment",
+      "subcategory": "video-wall",
+      "file": "office-equipment/video-wall.json",
+      "unmatchedFile": "office-equipment/video-wall.unmatched.json",
+      "products": 0,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "5348a0725a550184779ddfe1692a5444cf544b6785e6340db79ee3b1e0f41aa7"
+    },
+    {
+      "category": "power",
+      "subcategory": "inverter",
+      "file": "power/inverter.json",
+      "unmatchedFile": "power/inverter.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "a3385a3243020213a8b46217383ff8de41e448558d50b44fe94d5aa9a2c2828a"
+    },
+    {
+      "category": "power",
+      "subcategory": "ips",
+      "file": "power/ips.json",
+      "unmatchedFile": "power/ips.unmatched.json",
+      "products": 0,
+      "unmatched": 16,
+      "status": "completed",
+      "signature": "bfca8cd416576a9192d23e9c16e80473a51f244500db10448f1e3448ff9e8abb"
+    },
+    {
+      "category": "power",
+      "subcategory": "mini-ups",
+      "file": "power/mini-ups.json",
+      "unmatchedFile": "power/mini-ups.unmatched.json",
+      "products": 0,
+      "unmatched": 42,
+      "status": "completed",
+      "signature": "2f70d47411fa5c4da72186da3de5a211ee7e30c160c93719b8ab121c4e83ea86"
+    },
+    {
+      "category": "power",
+      "subcategory": "online-ups",
+      "file": "power/online-ups.json",
+      "unmatchedFile": "power/online-ups.unmatched.json",
+      "products": 0,
+      "unmatched": 100,
+      "status": "completed",
+      "signature": "736ed072af5613ddd92b3f18671b6ea98b25d860438c7751f602438e34ac85f0"
+    },
+    {
+      "category": "power",
+      "subcategory": "portable-power-station",
+      "file": "power/portable-power-station.json",
+      "unmatchedFile": "power/portable-power-station.unmatched.json",
+      "products": 0,
+      "unmatched": 38,
+      "status": "completed",
+      "signature": "0cee6dea63b5904b3c1b225d71cb96cbe91f27d5057c48b3c696074268eec83e"
+    },
+    {
+      "category": "power",
+      "subcategory": "solar-panel",
+      "file": "power/solar-panel.json",
+      "unmatchedFile": "power/solar-panel.unmatched.json",
+      "products": 0,
+      "unmatched": 12,
+      "status": "completed",
+      "signature": "29580ad54af303671e6b36c95d6515b214a551d817ac44b73c5ec30b420611f2"
+    },
+    {
+      "category": "power",
+      "subcategory": "ups-battery",
+      "file": "power/ups-battery.json",
+      "unmatchedFile": "power/ups-battery.unmatched.json",
+      "products": 0,
+      "unmatched": 58,
+      "status": "completed",
+      "signature": "2e1e737cd92f409d3a5a8bdb315b67f59a7d5a339c2576fabf5e6dc3091150ed"
+    },
+    {
+      "category": "power",
+      "subcategory": "ups",
+      "file": "power/ups.json",
+      "unmatchedFile": "power/ups.unmatched.json",
+      "products": 0,
+      "unmatched": 113,
+      "status": "completed",
+      "signature": "bf19e92360740cab5ae99fb6de8b173909f51cf9d6e691cd88216308849f0dea"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "access-control",
+      "file": "security-camera/access-control.json",
+      "unmatchedFile": "security-camera/access-control.unmatched.json",
+      "products": 0,
+      "unmatched": 115,
+      "status": "completed",
+      "signature": "0b75a01921a59a49845f2a82f1a57e184928f5a91d1440d62d253d92a91eb940"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "cc-camera-accessories",
+      "file": "security-camera/cc-camera-accessories.json",
+      "unmatchedFile": "security-camera/cc-camera-accessories.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "552eb9b558e6d51d191a7809c58f116f1fdc31e1fc689af0a098e40be6d65b1a"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "cc-camera-package",
+      "file": "security-camera/cc-camera-package.json",
+      "unmatchedFile": "security-camera/cc-camera-package.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "85f38acbb36431a8d6312cf267b13400a75ef8c16b626999c55ce621bcfd7e67"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "cc-camera",
+      "file": "security-camera/cc-camera.json",
+      "unmatchedFile": "security-camera/cc-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 127,
+      "status": "completed",
+      "signature": "53d44546d0a5e84b5dc4904daa61758731bbe22eb847108bf8446fe89c8b8c49"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "digital-locker-vault",
+      "file": "security-camera/digital-locker-vault.json",
+      "unmatchedFile": "security-camera/digital-locker-vault.unmatched.json",
+      "products": 0,
+      "unmatched": 34,
+      "status": "completed",
+      "signature": "f79e7462aff41152f95a3160cc3decf1a3eae17596fcb0eb05ae6c3c2f9a9c11"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "door-lock",
+      "file": "security-camera/door-lock.json",
+      "unmatchedFile": "security-camera/door-lock.unmatched.json",
+      "products": 0,
+      "unmatched": 49,
+      "status": "completed",
+      "signature": "84501a1eeb7e411e42132dbe1fedc415f4f211b2bb4c06117abdf75867191b29"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "dvr",
+      "file": "security-camera/dvr.json",
+      "unmatchedFile": "security-camera/dvr.unmatched.json",
+      "products": 0,
+      "unmatched": 37,
+      "status": "completed",
+      "signature": "0327ebfe4c26620fdb581bef0cec44a0d22bfa89e609b37921c1a9b404ec7ef7"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "entrance-control",
+      "file": "security-camera/entrance-control.json",
+      "unmatchedFile": "security-camera/entrance-control.unmatched.json",
+      "products": 0,
+      "unmatched": 33,
+      "status": "completed",
+      "signature": "c352b5355f42a2cee98357b39829dea714a055dfb84640e369f63aa35ec35425"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "ip-camera-package",
+      "file": "security-camera/ip-camera-package.json",
+      "unmatchedFile": "security-camera/ip-camera-package.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "5ff7a555d6c55ac0b44ad85f81477db6292871e3af7b4fce99c5adfa20fd3923"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "ip-camera",
+      "file": "security-camera/ip-camera.json",
+      "unmatchedFile": "security-camera/ip-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 234,
+      "status": "completed",
+      "signature": "8053aa1bca639572f5aa3851b6ed55255d9b2388be6accc6cef37d7610458f27"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "kvm-switch",
+      "file": "security-camera/kvm-switch.json",
+      "unmatchedFile": "security-camera/kvm-switch.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "ac7ef7aae73c9ffb0ec000fa2beb858ecf4c8036ef8effe155f39c7becf4b609"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "nvr",
+      "file": "security-camera/nvr.json",
+      "unmatchedFile": "security-camera/nvr.unmatched.json",
+      "products": 0,
+      "unmatched": 122,
+      "status": "completed",
+      "signature": "0e8e78a1cf2531e8f8edfa7344b6074878213f5d3df38701040cfc1aa4589ad8"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "portable-wifi-camera",
+      "file": "security-camera/portable-wifi-camera.json",
+      "unmatchedFile": "security-camera/portable-wifi-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 149,
+      "status": "completed",
+      "signature": "bb9c1dc1387a4069280a696b663b9251835af26ce252a4dabb4b207428d4ce0a"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "ptz-camera",
+      "file": "security-camera/ptz-camera.json",
+      "unmatchedFile": "security-camera/ptz-camera.unmatched.json",
+      "products": 0,
+      "unmatched": 31,
+      "status": "completed",
+      "signature": "a17d1926e41de74eecfe9c398d1721bd8c6fffa3ec5c0dbe13b43926ff58d576"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "smart-door-bell",
+      "file": "security-camera/smart-door-bell.json",
+      "unmatchedFile": "security-camera/smart-door-bell.unmatched.json",
+      "products": 0,
+      "unmatched": 16,
+      "status": "completed",
+      "signature": "011c60ebbdcf39685a27751646bf2df6fe7a81255fb7950eaa75b52da5e547ce"
+    },
+    {
+      "category": "security-camera",
+      "subcategory": "xvr",
+      "file": "security-camera/xvr.json",
+      "unmatchedFile": "security-camera/xvr.unmatched.json",
+      "products": 0,
+      "unmatched": 29,
+      "status": "completed",
+      "signature": "2e9107acd53ad4cc04198078e2caad711dee5e6bd2c1de91bbfb7dbafb8c56de"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "das-storage",
+      "file": "server-networking/das-storage.json",
+      "unmatchedFile": "server-networking/das-storage.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "76c302447d7fda3d8e78d578bf33f3f6763bb110dc3e85065683cb3c73aa2453"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "gpu-server",
+      "file": "server-networking/gpu-server.json",
+      "unmatchedFile": "server-networking/gpu-server.unmatched.json",
+      "products": 0,
+      "unmatched": 16,
+      "status": "completed",
+      "signature": "47f135ae3f1ab7717525d2cf20ff672ba650ff720297b67a2a74e73cf4f122e0"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "nas-storage",
+      "file": "server-networking/nas-storage.json",
+      "unmatchedFile": "server-networking/nas-storage.unmatched.json",
+      "products": 0,
+      "unmatched": 40,
+      "status": "completed",
+      "signature": "dd77c49e8d46ac69ee7f3a6e52480a082bf6d641c40f29e00d1a0c9fd1058f04"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "san-storage",
+      "file": "server-networking/san-storage.json",
+      "unmatchedFile": "server-networking/san-storage.unmatched.json",
+      "products": 0,
+      "unmatched": 20,
+      "status": "completed",
+      "signature": "379235c28ef7ac1f5abc96172ba1df485e88809973f1ceb2c2f949507997fe29"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-and-storage",
+      "file": "server-networking/server-and-storage.json",
+      "unmatchedFile": "server-networking/server-and-storage.unmatched.json",
+      "products": 0,
+      "unmatched": 50,
+      "status": "completed",
+      "signature": "8d91e507e8a4fbcb49593145dab6470f93c1408af25ef481fe618be4d0b43da8"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-hdd-bay",
+      "file": "server-networking/server-hdd-bay.json",
+      "unmatchedFile": "server-networking/server-hdd-bay.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "19ee70044447ffcb3d9bccbdddc5d4f99c38990ceb8969cb1c4a4e7705b33997"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-hdd",
+      "file": "server-networking/server-hdd.json",
+      "unmatchedFile": "server-networking/server-hdd.unmatched.json",
+      "products": 0,
+      "unmatched": 32,
+      "status": "completed",
+      "signature": "3e15aad7809bf40778a681b46a7a4c1d33cda4bae689ab2b87c81a8bafba0946"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-rack",
+      "file": "server-networking/server-rack.json",
+      "unmatchedFile": "server-networking/server-rack.unmatched.json",
+      "products": 0,
+      "unmatched": 78,
+      "status": "completed",
+      "signature": "86c23d1294a8448ebf069aca0857f96905b48d08982881f393a877e0ba603a81"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-ram",
+      "file": "server-networking/server-ram.json",
+      "unmatchedFile": "server-networking/server-ram.unmatched.json",
+      "products": 0,
+      "unmatched": 1,
+      "status": "completed",
+      "signature": "30810c210ec351333c2429f361cda2353d873e382314d9c59aac4a559abf7271"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server-ssd",
+      "file": "server-networking/server-ssd.json",
+      "unmatchedFile": "server-networking/server-ssd.unmatched.json",
+      "products": 0,
+      "unmatched": 6,
+      "status": "completed",
+      "signature": "99e4c939dd639cde14ed00fd9c66b738991be17e9a01a691aa2a9920f3d360d2"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "server",
+      "file": "server-networking/server.json",
+      "unmatchedFile": "server-networking/server.unmatched.json",
+      "products": 0,
+      "unmatched": 59,
+      "status": "completed",
+      "signature": "8500e567d4533d8fa245d9487a7a5ba2aebe20a88248a76416d9771a92340479"
+    },
+    {
+      "category": "server-networking",
+      "subcategory": "workstation",
+      "file": "server-networking/workstation.json",
+      "unmatchedFile": "server-networking/workstation.unmatched.json",
+      "products": 0,
+      "unmatched": 36,
+      "status": "completed",
+      "signature": "e2271ff5ffa27886b196bc7e3b3cad53571dcf6941f4d2ec9a10f060eca7eeca"
+    },
+    {
+      "category": "software",
+      "subcategory": null,
+      "file": "software/_direct.json",
+      "unmatchedFile": "software/_direct.unmatched.json",
+      "products": 0,
+      "unmatched": 83,
+      "status": "completed",
+      "signature": "90fd116cfd121e6f6a5aa9210b3317727206208bf8cafbb342d4015ecdf59b57"
+    },
+    {
+      "category": "software",
+      "subcategory": "antivirus",
+      "file": "software/antivirus.json",
+      "unmatchedFile": "software/antivirus.unmatched.json",
+      "products": 0,
+      "unmatched": 15,
+      "status": "completed",
+      "signature": "a4f02addc82a9f3eb8a82622431515c470c40f0000ec85a2d2f8bd67e1fb3870"
+    },
+    {
+      "category": "software",
+      "subcategory": "bangla-typing-software",
+      "file": "software/bangla-typing-software.json",
+      "unmatchedFile": "software/bangla-typing-software.unmatched.json",
+      "products": 0,
+      "unmatched": 2,
+      "status": "completed",
+      "signature": "5b6e6d3087f97b6dae0ea239822c8b7bb7e66e94238f7a9a35e0a4625d83a52e"
+    },
+    {
+      "category": "software",
+      "subcategory": "cloud-solutions",
+      "file": "software/cloud-solutions.json",
+      "unmatchedFile": "software/cloud-solutions.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "c578721c3d1df8fee3da45c555113ef97e7598a2759cfd46f4dafd9227b88dc6"
+    },
+    {
+      "category": "software",
+      "subcategory": "mail-server-solution",
+      "file": "software/mail-server-solution.json",
+      "unmatchedFile": "software/mail-server-solution.unmatched.json",
+      "products": 0,
+      "unmatched": 4,
+      "status": "completed",
+      "signature": "2bbb70cbd2c2f9d63485a4dff1242661b5d8769beba0cfd0dee771071731553b"
+    },
+    {
+      "category": "software",
+      "subcategory": "office-application",
+      "file": "software/office-application.json",
+      "unmatchedFile": "software/office-application.unmatched.json",
+      "products": 0,
+      "unmatched": 9,
+      "status": "completed",
+      "signature": "7005dad56013fcdcbc5ab4b15f40a13f93a75eef56469b973162e6ec93871e56"
+    },
+    {
+      "category": "software",
+      "subcategory": "operating-system",
+      "file": "software/operating-system.json",
+      "unmatchedFile": "software/operating-system.unmatched.json",
+      "products": 0,
+      "unmatched": 11,
+      "status": "completed",
+      "signature": "1f8607693f025bcc30aed84775fa8c78e427df1bfd17f6f8189dd2bf4565894d"
+    },
+    {
+      "category": "tablet-pc",
+      "subcategory": null,
+      "file": "tablet-pc/_direct.json",
+      "unmatchedFile": "tablet-pc/_direct.unmatched.json",
+      "products": 0,
+      "unmatched": 94,
+      "status": "completed",
+      "signature": "216a2d77f6aad5288eb7acac6c4e0658e94dc3fd5e056b4a0e1f65b7d48f81fd"
+    },
+    {
+      "category": "tablet-pc",
+      "subcategory": "ipad",
+      "file": "tablet-pc/ipad.json",
+      "unmatchedFile": "tablet-pc/ipad.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "cbd71815803be45773b5b6e4a78562d592ee8644800eccb77be18d4ffdaef3f5"
+    },
+    {
+      "category": "tablet-pc",
+      "subcategory": "kids-tablet",
+      "file": "tablet-pc/kids-tablet.json",
+      "unmatchedFile": "tablet-pc/kids-tablet.unmatched.json",
+      "products": 0,
+      "unmatched": 3,
+      "status": "completed",
+      "signature": "74cbd14fdfc204e4f560507c409f6bc493201eb80b3402ee562436779ee0d167"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "4k-tv",
+      "file": "television-shop/4k-tv.json",
+      "unmatchedFile": "television-shop/4k-tv.unmatched.json",
+      "products": 0,
+      "unmatched": 125,
+      "status": "completed",
+      "signature": "cf3aa173441d6cf3e395b180ec78de85d40264b15b7e5af7418b02351e03c15f"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "all-tv",
+      "file": "television-shop/all-tv.json",
+      "unmatchedFile": "television-shop/all-tv.unmatched.json",
+      "products": 0,
+      "unmatched": 164,
+      "status": "completed",
+      "signature": "82ac0cf544b32f34d3da6d76577edf97abbf2b000dc71f398614ca4c39c1f7f1"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "android-tv",
+      "file": "television-shop/android-tv.json",
+      "unmatchedFile": "television-shop/android-tv.unmatched.json",
+      "products": 0,
+      "unmatched": 87,
+      "status": "completed",
+      "signature": "ccb174e738f0d161af7ad02bff6b56d28b7644a6170f2230370908e3e3508647"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "led-tv",
+      "file": "television-shop/led-tv.json",
+      "unmatchedFile": "television-shop/led-tv.unmatched.json",
+      "products": 0,
+      "unmatched": 96,
+      "status": "completed",
+      "signature": "95b1dee90f2e00bd042842f8eb7fc8cfa1897befc4d7972e1af0ce140a89e39b"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "smart-tv",
+      "file": "television-shop/smart-tv.json",
+      "unmatchedFile": "television-shop/smart-tv.unmatched.json",
+      "products": 0,
+      "unmatched": 152,
+      "status": "completed",
+      "signature": "b0a01c5ca0b967ee2e13cd836f0c09959511b5100d389e9472f92f70741ff198"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "tv-box",
+      "file": "television-shop/tv-box.json",
+      "unmatchedFile": "television-shop/tv-box.unmatched.json",
+      "products": 0,
+      "unmatched": 13,
+      "status": "completed",
+      "signature": "0ebf5e64f471cc3eda7ca3cd19af397f99af34c7325146c737e853ad2450e05f"
+    },
+    {
+      "category": "television-shop",
+      "subcategory": "tv-stand-wall-mount",
+      "file": "television-shop/tv-stand-wall-mount.json",
+      "unmatchedFile": "television-shop/tv-stand-wall-mount.unmatched.json",
+      "products": 0,
+      "unmatched": 8,
+      "status": "completed",
+      "signature": "945a6b25ead0b3c224b9594d08f60f297d1f4b09993d498160b84978ec20fcb4"
+    }
+  ],
+  "routing": {
+    "appliance/air-curtain": [
+      "appliance",
+      "air-curtain"
+    ],
+    "appliance/air-purifier": [
+      "appliance",
+      "air-purifier"
+    ],
+    "appliance/coffee-maker": [
+      "appliance",
+      "coffee-maker"
+    ],
+    "appliance/dehumidifier": [
+      "appliance",
+      "dehumidifier"
+    ],
+    "appliance/dishwasher": [
+      "appliance",
+      "dishwasher"
+    ],
+    "appliance/electric-cooker": [
+      "appliance",
+      "electric-cooker"
+    ],
+    "appliance/electric-kettle": [
+      "appliance",
+      "electric-kettle"
+    ],
+    "appliance/gas-stove": [
+      "appliance",
+      "gas-stove"
+    ],
+    "appliance/iron": [
+      "appliance",
+      "iron"
+    ],
+    "appliance/juicer": [
+      "appliance",
+      "juicer"
+    ],
+    "appliance/kitchen-hood": [
+      "appliance",
+      "kitchen-hood"
+    ],
+    "appliance/light": [
+      "appliance",
+      "light"
+    ],
+    "appliance/room-heater": [
+      "appliance",
+      "room-heater"
+    ],
+    "appliance/toaster": [
+      "appliance",
+      "toaster"
+    ],
+    "appliance/vacuum-cleaner": [
+      "appliance",
+      "vacuum-cleaner"
+    ],
+    "camera/body-camera": [
+      "camera",
+      "body-camera"
+    ],
+    "camera/camera-lenses": [
+      "camera",
+      "camera-lenses"
+    ],
+    "camera/instant-camera": [
+      "camera",
+      "instant-camera"
+    ],
+    "component/casing-cooler": [
+      "component",
+      "casing-cooler"
+    ],
+    "component/portable-hard-disk-drive": [
+      "component",
+      "portable-hard-disk-drive"
+    ],
+    "component/portable-ssd": [
+      "component",
+      "portable-ssd"
+    ],
+    "component/power-supply": [
+      "component",
+      "power-supply"
+    ],
+    "component/vertical-gpu-holder": [
+      "component",
+      "vertical-gpu-holder"
+    ],
+    "component/water-liquid-cooling": [
+      "component",
+      "water-liquid-cooling"
+    ],
+    "desktop/ai-pc": [
+      "desktop",
+      "ai-pc"
+    ],
+    "desktop/apple-imac": [
+      "desktop",
+      "apple-imac"
+    ],
+    "desktop/apple-mac-mini": [
+      "desktop",
+      "apple-mac-mini"
+    ],
+    "desktop/apple-mac-pro": [
+      "desktop",
+      "apple-mac-pro"
+    ],
+    "desktop/apple-mac-studio": [
+      "desktop",
+      "apple-mac-studio"
+    ],
+    "gadget/analog-watch": [
+      "gadget",
+      "analog-watch"
+    ],
+    "gadget/calculator": [
+      "gadget",
+      "calculator"
+    ],
+    "gadget/car-charger": [
+      "gadget",
+      "car-charger"
+    ],
+    "gadget/daily-lifestyle": [
+      "gadget",
+      "daily-lifestyle"
+    ],
+    "gadget/drones": [
+      "gadget",
+      "drones"
+    ],
+    "gadget/earbuds": [
+      "gadget",
+      "earbuds"
+    ],
+    "gadget/earphone": [
+      "gadget",
+      "earphone"
+    ],
+    "gadget/gimbal": [
+      "gadget",
+      "gimbal"
+    ],
+    "gadget/health-monitor": [
+      "gadget",
+      "health-monitor"
+    ],
+    "gadget/mini-fan": [
+      "gadget",
+      "mini-fan"
+    ],
+    "gadget/neckband": [
+      "gadget",
+      "neckband"
+    ],
+    "gadget/power-bank": [
+      "gadget",
+      "power-bank"
+    ],
+    "gadget/power-tools": [
+      "gadget",
+      "power-tools"
+    ],
+    "gadget/smart-band": [
+      "gadget",
+      "smart-band"
+    ],
+    "gadget/smart-glasses": [
+      "gadget",
+      "smart-glasses"
+    ],
+    "gadget/smart-ring": [
+      "gadget",
+      "smart-ring"
+    ],
+    "gadget/smart-watch": [
+      "gadget",
+      "smart-watch"
+    ],
+    "gadget/stream-deck": [
+      "gadget",
+      "stream-deck"
+    ],
+    "gadget/studio-equipment": [
+      "gadget",
+      "studio-equipment"
+    ],
+    "gadget/trimmer": [
+      "gadget",
+      "trimmer"
+    ],
+    "gadget/tv-box": [
+      "gadget",
+      "tv-box"
+    ],
+    "gadget/uncategorized": [
+      "gadget",
+      "uncategorized"
+    ],
+    "gaming/games": [
+      "gaming",
+      "_direct"
+    ],
+    "gaming/gaming-desk": [
+      "gaming",
+      "gaming-desk"
+    ],
+    "gaming/headphone": [
+      "gaming",
+      "headphone"
+    ],
+    "gaming/keyboard": [
+      "gaming",
+      "keyboard"
+    ],
+    "gaming/mouse": [
+      "gaming",
+      "mouse"
+    ],
+    "gaming/mouse-pad": [
+      "gaming",
+      "mouse-pad"
+    ],
+    "gaming/racing-wheel": [
+      "gaming",
+      "racing-wheel"
+    ],
+    "gaming/vr": [
+      "gaming",
+      "vr"
+    ],
+    "monitor/aiwa": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/arzopa": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/eurovision": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/feuvision": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/fopo": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/geesuu": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/gigasonic": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/koorui": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/titan-army": [
+      "monitor",
+      "_direct"
+    ],
+    "monitor/trendsonic": [
+      "monitor",
+      "_direct"
+    ],
+    "networking/cable-tester": [
+      "networking",
+      "cable-tester"
+    ],
+    "networking/connector": [
+      "networking",
+      "connector"
+    ],
+    "networking/crimping-tool": [
+      "networking",
+      "crimping-tool"
+    ],
+    "networking/faceplate": [
+      "networking",
+      "faceplate"
+    ],
+    "networking/firewall": [
+      "networking",
+      "firewall"
+    ],
+    "networking/lan-card": [
+      "networking",
+      "lan-card"
+    ],
+    "networking/modular-jack": [
+      "networking",
+      "modular-jack"
+    ],
+    "networking/network-transceivers": [
+      "networking",
+      "network-transceivers"
+    ],
+    "networking/olt": [
+      "networking",
+      "olt"
+    ],
+    "networking/onu": [
+      "networking",
+      "onu"
+    ],
+    "networking/patch-cord": [
+      "networking",
+      "patch-cord"
+    ],
+    "networking/patch-panel": [
+      "networking",
+      "patch-panel"
+    ],
+    "networking/poe-injector": [
+      "networking",
+      "poe-injector"
+    ],
+    "networking/splicer-machine": [
+      "networking",
+      "splicer-machine"
+    ],
+    "networking/starlink": [
+      "networking",
+      "starlink"
+    ],
+    "office-equipment/telephone-set": [
+      "office-equipment",
+      "telephone-set"
+    ],
+    "power/inverter": [
+      "power",
+      "inverter"
+    ],
+    "power/ips": [
+      "power",
+      "ips"
+    ],
+    "power/solar-panel": [
+      "power",
+      "solar-panel"
+    ],
+    "power/ups-battery": [
+      "power",
+      "ups-battery"
+    ],
+    "security-camera/cc-camera-accessories": [
+      "security-camera",
+      "cc-camera-accessories"
+    ],
+    "security-camera/digital-locker-vault": [
+      "security-camera",
+      "digital-locker-vault"
+    ],
+    "security-camera/entrance-control": [
+      "security-camera",
+      "entrance-control"
+    ],
+    "security-camera/kvm-switch": [
+      "security-camera",
+      "kvm-switch"
+    ],
+    "security-camera/smart-door-bell": [
+      "security-camera",
+      "smart-door-bell"
+    ],
+    "server-networking/das-storage": [
+      "server-networking",
+      "das-storage"
+    ],
+    "server-networking/gpu-server": [
+      "server-networking",
+      "gpu-server"
+    ],
+    "server-networking/nas-storage": [
+      "server-networking",
+      "nas-storage"
+    ],
+    "server-networking/san-storage": [
+      "server-networking",
+      "san-storage"
+    ],
+    "server-networking/server": [
+      "server-networking",
+      "server"
+    ],
+    "server-networking/server-and-storage": [
+      "server-networking",
+      "server-and-storage"
+    ],
+    "server-networking/server-hdd": [
+      "server-networking",
+      "server-hdd"
+    ],
+    "server-networking/server-hdd-bay": [
+      "server-networking",
+      "server-hdd-bay"
+    ],
+    "server-networking/server-rack": [
+      "server-networking",
+      "server-rack"
+    ],
+    "server-networking/server-ram": [
+      "server-networking",
+      "server-ram"
+    ],
+    "server-networking/server-ssd": [
+      "server-networking",
+      "server-ssd"
+    ],
+    "server-networking/workstation": [
+      "server-networking",
+      "workstation"
+    ],
+    "software/adobe": [
+      "software",
+      "_direct"
+    ],
+    "software/antivirus": [
+      "software",
+      "antivirus"
+    ],
+    "software/anydesk": [
+      "software",
+      "_direct"
+    ],
+    "software/autodesk": [
+      "software",
+      "_direct"
+    ],
+    "software/bangla-typing-software": [
+      "software",
+      "bangla-typing-software"
+    ],
+    "software/cloud-solutions": [
+      "software",
+      "cloud-solutions"
+    ],
+    "software/mail-server-solution": [
+      "software",
+      "mail-server-solution"
+    ],
+    "software/office-application": [
+      "software",
+      "office-application"
+    ],
+    "tablet-pc/amazon": [
+      "tablet-pc",
+      "_direct"
+    ],
+    "tablet-pc/huion": [
+      "tablet-pc",
+      "_direct"
+    ],
+    "tablet-pc/infinix": [
+      "tablet-pc",
+      "_direct"
+    ],
+    "tablet-pc/ipad": [
+      "tablet-pc",
+      "ipad"
+    ],
+    "tablet-pc/kids-tablet": [
+      "tablet-pc",
+      "kids-tablet"
+    ],
+    "tablet-pc/remarkable": [
+      "tablet-pc",
+      "_direct"
+    ],
+    "tablet-pc/zte": [
+      "tablet-pc",
+      "_direct"
+    ],
+    "television-shop/tv-stand-wall-mount": [
+      "television-shop",
+      "tv-stand-wall-mount"
+    ]
+  },
+  "taxonomyHash": "f6efa92fce2893f5a19df29598e23c7eb4d4fa0eea3342e61fe2e7e01e593640"
+}

@@ -1,0 +1,662 @@
+[
+  {
+    "ok": false,
+    "stem": "ahuja-cma-5400-central-mixer-amplifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f29dea8b82c968410d8051847d69084a033302c0d6433738b7ae24d8a388670.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/_direct/ahuja-cma-5400-central-mixer-amplifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/_direct/ahuja-cma-5400-central-mixer-amplifier.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ahuja-ssa-10000-pa-mixer-amplifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3281837f5c7bdd8536461e615ffe581b24cba0c30fab45b83f8302d55592fed6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/_direct/ahuja-ssa-10000-pa-mixer-amplifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/_direct/ahuja-ssa-10000-pa-mixer-amplifier.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ahuja-ssa-5000em-pa-mixer-amplifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a68d00b3c91cbf05b0b733f837ed3dd96497cb97c03927618edab08d6a42545.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/_direct/ahuja-ssa-5000em-pa-mixer-amplifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/_direct/ahuja-ssa-5000em-pa-mixer-amplifier.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ahuja-ssb-120-pa-mixer-amplifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf695a5f7f0f44561fa40b86cff52aab99321f5547a7c7e29d6e8f22d1720300.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/_direct/ahuja-ssb-120-pa-mixer-amplifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/_direct/ahuja-ssb-120-pa-mixer-amplifier.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-clsk-20c-column-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66911d7abe1231a1b21990b5f37c5282124ba82bc81711dcc4af75a5a74a0258.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-clsk-20c-column-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-clsk-20c-column-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-csk-66e-ceiling-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a66a6f44b64b3cffbe7238655f3b9033cbb6afac75687bf9a22d7cf51d373e7d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-csk-66e-ceiling-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-csk-66e-ceiling-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-hsk-15t-outdoor-horn-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\340b9d8c48b52a590569d0c60b10e573c413e7552b8e969dba5e64696f41dee2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-hsk-15t-outdoor-horn-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-hsk-15t-outdoor-horn-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-ts-12-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f19ed290245b4be8c46aa38cc7d5a07a3ffb88c087b1d03a15cfcfced96397d4.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-ts-12-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-ts-12-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-ts-12-portable-pa-system-and-trolley-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\74b8cfbd2ea79526ae76bb50658b1f9dae3c84909bf5da6722ff708333b58830.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-ts-12-portable-pa-system-and-trolley-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-ts-12-portable-pa-system-and-trolley-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-wm-u200c-uhf-wireless-microphone-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\064229e2cdf6bf9f9443727dbb94dbb57be71dd2be3daa2765850275a7e673d2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-wm-u200c-uhf-wireless-microphone-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-wm-u200c-uhf-wireless-microphone-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-wsk-610p-10w-wall-mount-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\013727d75c21a0cfc880a2b43533c3577d7c15a0d42d2a3b4791359f4fd1b43c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-wsk-610p-10w-wall-mount-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-wsk-610p-10w-wall-mount-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmx-wsk-640c-wall-mount-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9045f47c0c1a2bf59a00b5f9597b827fb4c2b92bc87b63ef34f67e1c7f3338d0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/cmx/cmx-wsk-640c-wall-mount-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/cmx/cmx-wsk-640c-wall-mount-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "cmx",
+        "folderBrandName": "Cmx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gsc3505-sip-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41fea2d2a16f21990727572a30af3cd4f4232f33f1c4822359e3f7f473bbbcfc.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3505-sip-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3505-sip-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gsc3506-sip-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7609edbd10e52ad5b2039f8b8277e402e53c814a14664351894f1457aa7fa53.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3506-sip-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3506-sip-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gsc3510-sip-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c0fc4cea78d8d91505617441d230e847b12057d6e451261b4f8da16c0e91e45.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3510-sip-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3510-sip-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gsc3516-sip-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5c80afc5e94d3239bc2d5ca1821b2f8112f39553191bd514edd97729241fdf56.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3516-sip-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/grandstream/grandstream-gsc3516-sip-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon-one-mk2-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\360cce19ba24411a1184929e68c32e32d2c72719614b0278532229d5a1377591.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon-one-mk2-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon-one-mk2-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon208p-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b6e0e8a7eb649a0c7f34b66ab71c3cc9c36c8e979ab374cbe53c4f3af41b537.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon208p-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon208p-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon710-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\55b3f5742a9ce6f8f1bf441eb0a78bb9b507afd01c68944edc6cc80eb2a55070.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon710-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon710-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon712-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9b32e5c64380e00c00550313b19dad9c7a6cb8eacaf8b76c1f1c6a76c7f3c7c4.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon712-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon712-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon715-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d5de2d8bf1baa57d571832ec15e1cfd8030c413467548f0cdcc1c83810138eb2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon715-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon715-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-eon718s-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f86c8dbb59b9f1c409b44ce5bb1eafa2b979d5f35492a4a9e8d547e0effe74ab.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-eon718s-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-eon718s-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-irx108bt-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ca80f52e8d9c250c67b258f8ad7dd4b49bf65522f6d92957c206a0c505df41ac.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-irx108bt-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-irx108bt-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-irx112bt-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4b3329c37481f8f3ff9ca6857edf420ca092b078cf46e30670ea94bf00f21ee0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-irx112bt-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-irx112bt-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-irx115s-pa-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ff1f47b2119fa371aa8c2e59ba6c3e2a9e7d5c160609b5d90e3a321d4248d083.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-irx115s-pa-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-irx115s-pa-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jbl-prx-one-column-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\09f1627944bd3e658f996e426e8d786412d3322b1556f2b097d6e3a9cd0a1177.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/jbl/jbl-prx-one-column-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/jbl/jbl-prx-one-column-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "jbl",
+        "folderBrandName": "Jbl",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-ta-120ii-35w-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d479b7590a6ac23958c87ac0f3eda10d0c6a5afcb30dd07176e1e6f3af5ce909.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-ta-120ii-35w-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-ta-120ii-35w-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-ta-380-80w-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\98520829165872518fedebf37d4d1ef5cf5aeca3a83c477f608213bfc91bc3d5.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-ta-380-80w-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-ta-380-80w-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-ta-680d-220w-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f241d217e134fa702f9ed7bf0f95dd65033f484517ef9f0f9328c1c9416dd51e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-ta-680d-220w-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-ta-680d-220w-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-ta-780d-300w-portable-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\effa69e419f4508bc0de4a5f9d616e086e28d994fbb1f10dab273a6d9b097851.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-ta-780d-300w-portable-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-ta-780d-300w-portable-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-tb-700ii-pa-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8891f2333e48ac7cda9c13c7cfb3354fe35ebf14a91b93b81acdf520a53cd8ef.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-tb-700ii-pa-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-tb-700ii-pa-system.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-tcs-3520-column-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e946653ed5d74b8163bb986ac68ccf606fca995da8eced79507c5c4d02cfdd37.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-tcs-3520-column-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-tcs-3520-column-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tev-tcs-610-ceiling-speaker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39523bbeb85ab3dfe42e61a86e8070975c3ea0ae7d432688721e0e9d79b3c140.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/pa-system/tev/tev-tcs-610-ceiling-speaker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/pa-system/tev/tev-tcs-610-ceiling-speaker.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "pa-system",
+        "subcategoryName": "Pa System",
+        "folderBrandSlug": "tev",
+        "folderBrandName": "Tev",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

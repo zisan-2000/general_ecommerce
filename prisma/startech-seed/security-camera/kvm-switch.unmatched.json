@@ -1,0 +1,222 @@
+[
+  {
+    "ok": false,
+    "stem": "cote-kvm-0819m-8-port-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\601356d50cd0fb1f43076f9fd8084d863035954c500a0f45af69f2fc113e37f4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/cote-kvm-0819m-8-port-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/cote-kvm-0819m-8-port-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-kvm-1619m-16-port-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aaec9df48ed1f94cd8e6e530c8f0abaff75f063e02c115a5cb9fba875c3299dc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/cote-kvm-1619m-16-port-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/cote-kvm-1619m-16-port-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-kvm100-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3270bc6142e4ac194b47184024a95d061663c807cc3ddebe26744b9a3c8eb3c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/onten-otn-kvm100-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/onten-otn-kvm100-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-kvm200-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6eaf39a2d3e7171a17cac7879e1343f3d5b162ee2b3e3fee50ddec644edd3305.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/onten-otn-kvm200-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/onten-otn-kvm200-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-sn-kc6808s-8-port-stacking-vga-kvm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9bf5c26ac9399340ae488e0a9a0387b2c8f181d2eb1bd7ec0aa00cb31cdfc14b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/safenet-sn-kc6808s-8-port-stacking-vga-kvm.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc6808s-8-port-stacking-vga-kvm.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-sn-kc6816s-stacking-vga-kvm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eaffb631a0aab882e636f67bccacb51a985f44b82511fc086c836cd4bc3f84da.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/safenet-sn-kc6816s-stacking-vga-kvm.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc6816s-stacking-vga-kvm.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-sn-kc7808s-tp-kvm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e94aa88cfca28cbeed6adda8799f4f865b65a6e80ac9eabfa8209b90d69af121.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/safenet-sn-kc7808s-tp-kvm.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc7808s-tp-kvm.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-sn-kc7816s-tp-kvm",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\143f6dc442cd95aa305121350e17a9c95aee9b632279d89ce5aa015824f5b800.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/safenet-sn-kc7816s-tp-kvm.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc7816s-tp-kvm.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tk-207k-2-port-usb-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\48ec6725997d9ecaebe9e38fb2c1c7e1adc3ea0c5a5df65a52de2fa9e42c8fc2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/trendnet-tk-207k-2-port-usb-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/trendnet-tk-207k-2-port-usb-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tk-407k-4-port-usb-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84bb9e182b84c59300f27f6dbfd84fd7b5eaae3655bf899b915428a1e45e2ccf.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/trendnet-tk-407k-4-port-usb-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/trendnet-tk-407k-4-port-usb-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tk-803r-8-port-rack-mount-kvm-switch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\18be76aa2200167432554e1d948501d8d17318993d1062b39812fde04395113b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/kvm-switch/trendnet-tk-803r-8-port-rack-mount-kvm-switch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/kvm-switch/trendnet-tk-803r-8-port-rack-mount-kvm-switch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "kvm-switch",
+        "subcategoryName": "KVM Switch",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

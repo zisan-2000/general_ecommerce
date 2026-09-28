@@ -1,0 +1,762 @@
+[
+  {
+    "ok": false,
+    "stem": "belden-ax101456-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a613d9eedb485a1627e9045ea07194d9603872149b89c3a1768f622d04dfd47.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/belden-ax101456-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/belden-ax101456-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-1100-u-gs3-24-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b39ec35c12e87a877000fb8257e77f769576853bd8ccb7347f2a21712979d97c.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-1100-u-gs3-24-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-1100-u-gs3-24-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-1100-u-gs6-24-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d00a588d440511446c29788e2db6fa9571cc9acea729206cb3a2198da8379fcc.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-1100-u-gs6-24-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-1100-u-gs6-24-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-1427632-2-cable-management",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0560e1be1ab75a8dd23c15950911fb5cd69de4fe27d48323e9f4b2aa2e47407.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-1427632-2-cable-management.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-1427632-2-cable-management.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-2269025-1-cable-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\07b19560f9c5cf562667a6824184bf7a5adf4ed1998654dd05cef73265b91c24.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-2269025-1-cable-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-2269025-1-cable-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-760237046-horizontal-cable-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5daf23786ef50936e7bad415e37655441e61b76287cc603cebc7009e43954fa0.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-760237046-horizontal-cable-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-760237046-horizontal-cable-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-fms-k-1-b-i-l1-6-in99-12-sp-fiber-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36acfe49653dc44108f5d87aac572bed9a8ca5372562a08f3ccb2344bb256133.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-fms-k-1-b-i-l1-6-in99-12-sp-fiber-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-fms-k-1-b-i-l1-6-in99-12-sp-fiber-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "commscope-htk-19-ss-1u-cable-management",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8b2d64a9d7b14bddd6c27306cac5d501c93dfac83c295df7a191a7e6b53910fb.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/commscope-htk-19-ss-1u-cable-management.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/commscope-htk-19-ss-1u-cable-management.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-cpp-2106-24p-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36bbe4e352b997b8a495da8f7ed0f04d142350c453e3a9caceeea5dc3828c305.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-cpp-2106-24p-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-cpp-2106-24p-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-cwm-1ufm-1u-cable-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e583f5e6f94fbe0ad1d4f30af6a865ec1041a9a35d1016efcaae7e0f2c2368b.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-cwm-1ufm-1u-cable-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-cwm-1ufm-1u-cable-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-cwm-1ufrp-1u-cable-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d96af7aad762d2ace16c62a4cfb4ebc7211c006dd377a6810f211c96a5b91e00.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-cwm-1ufrp-1u-cable-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-cwm-1ufrp-1u-cable-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-fpp-lc-24p-fiber-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\90c910a5b4bebbb28df952153e3a176e1e01f077dcda6b16bafa640220ad3353.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-fpp-lc-24p-fiber-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-fpp-lc-24p-fiber-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-fpp-sc-24p-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30c7d56f3879ec71ec5748e467817eb5e863faa2fba7c393ba1279332b8f3ab9.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-fpp-sc-24p-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-fpp-sc-24p-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-swmf1upanel-1u-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84fbc03d193c100bee285bcff935edbecb72a9f5249ff8f374c04d2ea35e7a14.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-swmf1upanel-1u-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-swmf1upanel-1u-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-swmf2upanel-2u-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\65f07c42b61654450f2d00b356931af39bbbc60468506d3b484068e0e05b6a3d.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/cote-swmf2upanel-2u-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/cote-swmf2upanel-2u-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-ncm-xx01-b-cable-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9b2c0c6ed4a46cd6fb0013fd1f0629b84dfefb8f33974164effc47d99891ab16.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/d-link-ncm-xx01-b-cable-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/d-link-ncm-xx01-b-cable-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-npp-al1blk241-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\290afda485d498872492b729bac08ddb21a55d15e9fb9c898cb50079763783db.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/d-link-npp-al1blk241-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/d-link-npp-al1blk241-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-npp-c61blk241-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f2989c609270bc4bf8794f4168cfa6fde0cb489fb133992d3426eb66349d96a0.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/d-link-npp-c61blk241-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/d-link-npp-c61blk241-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dintek-1402-04012ch-utp-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4582d32f8ad9d2f2dec85ca41dfed7ac5168cfbad5017ac03c5d70b792a2cea3.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/dintek-1402-04012ch-utp-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/dintek-1402-04012ch-utp-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dintek-1406-00011pc6-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db3e019205ed3623fbb88a3cc3a428bbfd499de858521158570cedda948cd072.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/dintek-1406-00011pc6-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/dintek-1406-00011pc6-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-1cm1u12-cable-management",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6149acb66351d99995cc24d0c4ec5cbd59cbd72fe08df6a72ac0f446014623b.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/hikvision-ds-1cm1u12-cable-management.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/hikvision-ds-1cm1u12-cable-management.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-1cm1u24-cable-management",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4decc623e03c6f2e6169be58e6206cc2cf28c7bb917bf24b17df48b4f7f2bdb1.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/hikvision-ds-1cm1u24-cable-management.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/hikvision-ds-1cm1u24-cable-management.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-1cp0u24-1u-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36508fe326e964cc658361b3da6779092920af3b327502bc0b294abf7ee3ec7f.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/hikvision-ds-1cp0u24-1u-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/hikvision-ds-1cp0u24-1u-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-1cp6u24-1u-unshielded-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\83c2fe225352256413731bb37732d6bac60c708273509d2fcf890c1fa4a6b670.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/hikvision-ds-1cp6u24-1u-unshielded-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/hikvision-ds-1cp6u24-1u-unshielded-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "r-and-m-cat-6-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\732e7b8eef3e6d168d7786a589635c08388edf89907f22bfdf6341692e8a55b5.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/r-and-m-cat-6-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/r-and-m-cat-6-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "r-and-m-cat6-wire-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\40d215ff0145c0c0fe33d23de2f430695c89fd0cfb45853da5b154372cb7a89e.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/r-and-m-cat6-wire-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/r-and-m-cat6-wire-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "r-and-m-r195422-cat6-wire-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fac516f9f683d2681cffe1e66a3b16db8ac7a49116b477db63eb074981c26724.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/r-and-m-r195422-cat6-wire-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/r-and-m-r195422-cat6-wire-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "r-and-m-r305119-cat6-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e487ea34d2a1504c1d1f15c2392403dc976adc5ec1515f28a9401c6362cbf42.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/r-and-m-r305119-cat6-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/r-and-m-r305119-cat6-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rosenberger-1u-metal-cable-manager-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d173e6607d2c543b722c96421565cbe7cbaa51cbd12fa40e95fbf89a26c5f006.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/rosenberger-1u-metal-cable-manager-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/rosenberger-1u-metal-cable-manager-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rosenberger-cp41-431-03-e-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3aaf744fe5b274ea77e257243103649ee601b0bd803830a81244a3b217e5c545.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/rosenberger-cp41-431-03-e-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/rosenberger-cp41-431-03-e-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-10-1240bk-shielded-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0c2f4ff7605fe114303ded3c4309d196ccfcc9e3bc1bfc055f1b676c60c82b4.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/safenet-10-1240bk-shielded-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/safenet-10-1240bk-shielded-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-snpcm1uf0-1u-wire-manager",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1199a38f22dab44c51e78ecd79a25abc85494fdbef72e5bf8a4d2a270e5ea92e.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/safenet-snpcm1uf0-1u-wire-manager.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/safenet-snpcm1uf0-1u-wire-manager.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-kp24-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab2376ec2380f76ba4c2093ba78da517671eb5e55ef9e98d8ea3db3bb8ea1bb3.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/trendnet-tc-kp24-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/trendnet-tc-kp24-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-kp24s-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ab770159c65a83d1e2f3b60015229955b3982d9d50f60c21af2af8050726108.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/trendnet-tc-kp24s-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/trendnet-tc-kp24s-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-kp24sa-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c838438a7cdc68a323e105827185e23da7e89bd8bd3301c1f5ea6991f3b70a5e.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/trendnet-tc-kp24sa-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/trendnet-tc-kp24sa-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-p24c6-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d7c7365df8439540071499bf6476bc86af178e62fa114bdd6dff992c18024eee.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/trendnet-tc-p24c6-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/trendnet-tc-p24c6-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-p48c6-48-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\09aac9c97e6142d7f7bab625ba0ae1a92ce3f7d019287f125610b16598eca2da.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/trendnet-tc-p48c6-48-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/trendnet-tc-p48c6-48-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kgab0-cat6-utp-24-port-patch-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0586e2ff9a6bcea597cb98e17ae2afc26bac961005b92eedec6705a9732fd74.html'",
+    "sourceImages": [
+      "/images/products/networking/patch-panel/vention-kgab0-cat6-utp-24-port-patch-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/patch-panel/vention-kgab0-cat6-utp-24-port-patch-panel.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "patch-panel",
+        "subcategoryName": "Patch Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

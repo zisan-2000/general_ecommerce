@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "asus-bw-16d1ht-16x-blu-ray-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e2d4e2c2eb72637b22c98d810a78823fbc3a8743cd1bf0a39a6704fe2f4fc996.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "internal-optical-disk-drive",
+        "folderBrandName": "Internal Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-sbw-06d2x-u-external-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ee60d1d4097c97c9cc8cc48f45ffaaec0c34466695ee69ff1905b33ee23b11cb.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sbw-06d2x-u-external-dvd-writer.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sbw-06d2x-u-external-dvd-writer.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f3d95b4604f6270eec4bc2c748d358ae8cd9549ea5c6713cd90170c3a7287e1b.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-zendrive-sdrw-08u8m-u-external-dvd-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8eda274cecfeb4598cd0965798e2a9602a3e028f37e727f11e9b32bd02410863.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u8m-u-external-dvd-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u8m-u-external-dvd-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\219ab13a493f3afebe67c011dac8f23f4062882881e11d343b145e2b950e44f1.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7cc1eeb2864242f891f1354024cacc581ae78d24fac5f81a951107d20ff977ad.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-zendrive-u7m-external-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8747b0f7aaa4c4fe978bc3f01e4fedd1e78564d96f88a4630eb02c530998d754.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-u7m-external-dvd-writer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-u7m-external-dvd-writer.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-zendrive-v1m-external-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd2a4e57c9ee7c9f53cba684a826262bde654cbc5aca86114e6ab4bcfc5a875e.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-v1m-external-dvd-writer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-v1m-external-dvd-writer.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lite-on-8x-slim-internal-laptop-dvd-burner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e9dabad3258ca278601cc581d4f51f0e7d20358b3a48f16af2dda57477160451.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/internal-optical-disk-drive/lite-on-8x-slim-internal-laptop-dvd-burner.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/lite-on-8x-slim-internal-laptop-dvd-burner.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "internal-optical-disk-drive",
+        "folderBrandName": "Internal Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-ucd22-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7103396fd291ca87d5bcd450a001629d687ef0583ffb576830e429b252ae7e7c.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/onten-otn-ucd22-dvd-writer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/onten-otn-ucd22-dvd-writer.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-external-cd-driver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b66d6e27d1a51d7659edea22b839d5abaef1024e72d5e31c1a9fd5ed7c05b3c.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-external-cd-driver.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-external-cd-driver.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-xd008-external-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\729148a1aa77ca0698f8383fcd2a63dbd23e0ede60a596eaef2a181baa579651.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd008-external-dvd-writer.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd008-external-dvd-writer.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-xd010-external-dvd-writer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\07da1f00cec0011062fec97b017b059f7d4e87128db62a3827c0cd5646eef461.html'",
+    "sourceImages": [
+      "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd010-external-dvd-writer.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd010-external-dvd-writer.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "optical-disk-drive",
+        "subcategoryName": "Optical Disk Drive",
+        "folderBrandSlug": "external-optical-disk-drive",
+        "folderBrandName": "External Optical Disk Drive",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

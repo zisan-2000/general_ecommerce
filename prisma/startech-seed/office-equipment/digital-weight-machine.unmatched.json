@@ -1,0 +1,82 @@
+[
+  {
+    "ok": false,
+    "stem": "rongta-rls1100-weighing-scale",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afe01de2486d872166d45c6fc81243bede565b1c66c6911df58dd8a8797c8332.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100-weighing-scale.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100-weighing-scale.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "digital-weight-machine",
+        "subcategoryName": "Digital Weight Machine",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rongta-rls1100a-ls-weighing-scale",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\695f30ece5ae7f5cb00cd1c1f4dc342c2ee325ef3602deb3156b897a5b848694.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100a-ls-weighing-scale.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100a-ls-weighing-scale.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "digital-weight-machine",
+        "subcategoryName": "Digital Weight Machine",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rongta-rls1100b-ls-weighing-scale",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d5566ff6bfe19459f8541c80fd079131727886cc7fe939c5360bc54636d68d35.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100b-ls-weighing-scale.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100b-ls-weighing-scale.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "digital-weight-machine",
+        "subcategoryName": "Digital Weight Machine",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rongta-rls1100c-electronic-weighing-scale",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\29fd044cf9dccdf36ec897b7aedb8532a254bb37ce43b0b35e28aed4e96c4cca.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100c-electronic-weighing-scale.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100c-electronic-weighing-scale.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "digital-weight-machine",
+        "subcategoryName": "Digital Weight Machine",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  }
+]

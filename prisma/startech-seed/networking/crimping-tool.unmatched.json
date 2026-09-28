@@ -1,0 +1,462 @@
+[
+  {
+    "ok": false,
+    "stem": "commscope-1725150-6-jack-termination-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c27808b43581a188f3e5df22cf84c2c5d61aa19304b4550f09e22c60627533d5.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/commscope-1725150-6-jack-termination-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/commscope-1725150-6-jack-termination-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-cct-208-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2988c2cf19e29bf2401f1828413d06807c61d7ee13a2908547fb234d70f6fa81.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/cote-cct-208-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/cote-cct-208-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-networking-toolbox-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\02dbe4c2447ebe132e6eb85ed52dd15803be2a88107d1ea90e3a6fc8d0a661e6.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/cote-networking-toolbox-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/cote-networking-toolbox-set.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dintek-6102-01002ch-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aa5ebd8bf137b4762dec0e34c0059dfd050d0546e95cb43bca6aedf0465b6575.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/dintek-6102-01002ch-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/dintek-6102-01002ch-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dintek-6102-01021-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aad39c9c594fb0c59bc3fe7917ac037f501a0d6419452cb6790febee77569d25.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/dintek-6102-01021-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/dintek-6102-01021-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dintek-6103-01005-e-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f78cbdb7e2c9785c96078ac75df798190687f8e9d2b600b92089ed73f366ff5a.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/dintek-6103-01005-e-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/dintek-6103-01005-e-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "informate-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\770597b2aa9f60a968ef4a9ead92367e06365c597f6e12200b66417efded1b73.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/informate-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/informate-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "noyafa-nf-5310b-pocket-digital-multimeter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dad624fcf2456aa76290a290fdba9b9d7a53b7f5b9ee44b539a0ef7f043a0ec9.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/noyafa-nf-5310b-pocket-digital-multimeter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/noyafa-nf-5310b-pocket-digital-multimeter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-e901-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cd20050aea0d8ed512bae07fafbac4302cf3b66b7023d81bb21f2682a10ca786.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/onten-otn-e901-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/onten-otn-e901-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-e902-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\91a496062f4f5c9b76cd49dde09229d39f69069bf25fe5a6c59a6469e3ef2253.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/onten-otn-e902-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/onten-otn-e902-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-e992-network-cable-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\102db3c1189d5cab4aeefb23a96fc7f33f33dfbf49c3077481c8d0c7fc067489.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/onten-otn-e992-network-cable-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/onten-otn-e992-network-cable-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onten-otn-e993-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d6e469a217ef43a53061a37f1b35314ca2e231e8f85a70751c404a4029f5aa00.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/onten-otn-e993-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/onten-otn-e993-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-18-3010bl-wire-trimmer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a8bc1c775543f7c13d1bd852c3d3d7e9f069fbf04036875f1e9a7c1e0a3fe0e.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/safenet-18-3010bl-wire-trimmer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/safenet-18-3010bl-wire-trimmer.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "safenet-18-7000c-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ded40c46969cd4ec2ec66a3946d802a55c83e4d2dfc8ea14eb0f82355e116b7.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/safenet-18-7000c-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/safenet-18-7000c-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-38049-automatic-wire-stripper",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4b12caeb14b54d77c02201dedd7bde07ada5eb4324a797a00d69f3e0bf84246e.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/tolsen-38049-automatic-wire-stripper.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/tolsen-38049-automatic-wire-stripper.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-38056-87-inch-rachet-crimping-plier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8869c3c7b1fa216a55583ab6e3a90a0cb1615163eeae72289342bc6dc33230cb.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/tolsen-38056-87-inch-rachet-crimping-plier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/tolsen-38056-87-inch-rachet-crimping-plier.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tolsen-38058-7-inch-rachet-crimping-plier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec5eeee8e7c5aefa4600b03b3461debd5081a0783c3addcf970858e132eeecbb.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/tolsen-38058-7-inch-rachet-crimping-plier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/tolsen-38058-7-inch-rachet-crimping-plier.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-ct68-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b1845b961638c393c2cbdcb4094fa45c6bf974a21fa91b2f807ca8a8bea8ee9.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/trendnet-tc-ct68-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/trendnet-tc-ct68-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tc-pdt-punch-down-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cc6fe35caeccacef97f8906dc7b88c02b90fe3e0d0c06ff4128fd8f537a2792.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/trendnet-tc-pdt-punch-down-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/trendnet-tc-pdt-punch-down-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-nw136-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d743417a650777b9c666ae865d7d4499ac639ddfcfc07969cf0aaebe8f643cc8.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/ugreen-nw136-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/ugreen-nw136-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-keab0-crimping-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9409e6e2691c7064024f4dbfee1ec0ef4ab1a44b9d06db3d0222813510336701.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/vention-keab0-crimping-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/vention-keab0-crimping-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kebl0-cable-stripper",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\294eb885fd815887426b6ee28476c9ef32399626a3ea827b7d529298cede01a1.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/vention-kebl0-cable-stripper.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/vention-kebl0-cable-stripper.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-keco0-punch-down-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ff3ca6d65216da3cacc4bc644340118a8c80132f86b009e4624b8374f9da1034.html'",
+    "sourceImages": [
+      "/images/products/networking/crimping-tool/vention-keco0-punch-down-tool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/crimping-tool/vention-keco0-punch-down-tool.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "crimping-tool",
+        "subcategoryName": "Crimping Tool",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

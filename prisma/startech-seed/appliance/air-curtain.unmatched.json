@@ -1,0 +1,42 @@
+[
+  {
+    "ok": false,
+    "stem": "gree-3-feet-air-curtain",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1b873e234c411b8a12a7c98fcffed364860de2fe6ef985360140c37504bc6a7c.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-curtain/gree-3-feet-air-curtain.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-curtain/gree-3-feet-air-curtain.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-curtain",
+        "subcategoryName": "Air Curtain",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-4-feet-air-curtain",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\260d11dd8117dd9cca3766f109427c235ce35d9f7958584789ce55b857aa4c88.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-curtain/gree-4-feet-air-curtain.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-curtain/gree-4-feet-air-curtain.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-curtain",
+        "subcategoryName": "Air Curtain",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

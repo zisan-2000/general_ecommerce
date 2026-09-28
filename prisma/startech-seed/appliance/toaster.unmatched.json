@@ -1,0 +1,42 @@
+[
+  {
+    "ok": false,
+    "stem": "delonghi-distinta-cti2103-cp-900w-metallic-toaster",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\452fc3cac23f5d5045472b03400561389bfbbbd47f1c2f0ea029b5cd715973c7.html'",
+    "sourceImages": [
+      "/images/products/appliance/toaster/delonghi-distinta-cti2103-cp-900w-metallic-toaster.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/toaster/delonghi-distinta-cti2103-cp-900w-metallic-toaster.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "toaster",
+        "subcategoryName": "Toaster",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd2582-00-800-watt-pop-up-toaster",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f4b4259ee604261976bab3243e80d705166009001dde31086fd61ff5ce79513.html'",
+    "sourceImages": [
+      "/images/products/appliance/toaster/philips-hd2582-00-800-watt-pop-up-toaster.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/toaster/philips-hd2582-00-800-watt-pop-up-toaster.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "toaster",
+        "subcategoryName": "Toaster",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

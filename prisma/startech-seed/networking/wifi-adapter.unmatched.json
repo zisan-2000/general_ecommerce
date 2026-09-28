@@ -1,0 +1,1122 @@
+[
+  {
+    "ok": false,
+    "stem": "cudy-we1300-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bfd06767b6e483c675c6fd52399ebc6d57359094af765fb41b86216436f4170b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-we1300-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-we1300-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-we3000-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fba24c27a4f09a20a224dfd4fef0ab4958a697397992fa853e14d14adbe36d92.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-we3000-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-we3000-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-we650-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0ad32c42882b305371bcd449d54121b5f75823660d6f159f071cd630c1cb7f9f.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-we650-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-we650-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-we9300-wifi-7-pci-e-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\467363da423cd49798aee83e28481c37b2712a4f37ed7ce2ddfc74b0711c1595.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-we9300-wifi-7-pci-e-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-we9300-wifi-7-pci-e-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-wu1300s-wifi-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f758ecbcf0598d75a8cc8ea9a0988c8c67915243489cbe04c15f9ca4415bfb19.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-wu1300s-wifi-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-wu1300s-wifi-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-wu1400-dual-band-1300mbps-usb-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\76b8a6e16280d10307fadd4c467e7bf437a81df2bcdc210ee6733ea43adc4819.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-wu1400-dual-band-1300mbps-usb-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-wu1400-dual-band-1300mbps-usb-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-wu300-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b1a890f6aa6afc175b4a4302881b121ac33bddd9bcd0935964ec2f710a10176.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-wu300-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-wu300-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-wu650-650mbps-wi-fi-dual-band-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8eadcae44bb3f6dcc24c73edbfb784fd760ef7a5c433f21038cc11723144c967.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-wu650-650mbps-wi-fi-dual-band-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-wu650-650mbps-wi-fi-dual-band-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-wu900-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eba2e55c8731d8043bb36d428b229b4d01f0c54588343a9c0a550c9da3c98285.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/cudy/cudy-wu900-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/cudy/cudy-wu900-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-dwa-131-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9e568d320455ed004566b52cb52b5812052177573611703aa63c4b845f2c765b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/d-link/d-link-dwa-131-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/d-link/d-link-dwa-131-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-dwa-171-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\12d9e9a6c2f7e36ffe730ef42b052895e2da43b6df331bc918d718a2ce7e7a14.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/d-link/d-link-dwa-171-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/d-link/d-link-dwa-171-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dtech-tb-2974-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\26f4159ba738b37bb4b9a9dcd6f7645c3f020f0cc01b1118c06e7ed29475f45c.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/dtech/dtech-tb-2974-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/dtech/dtech-tb-2974-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "dtech",
+        "folderBrandName": "Dtech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-ma14n-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39c6f79b1b52cebfacb273d1e3599d7eac8d580bb359fe8424cf35fb708c7752.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-ma14n-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-ma14n-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-ma20n-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8107f075c4e52d8c171b3efba54047878f39b156e3f28a7fb8c610fc662442f7.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-ma20n-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-ma20n-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-ma30h-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cc73a1e52d75c5882241e44e83eedf65c61db18c03ffe486c8af7a08df2e7fa.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-ma30h-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-ma30h-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-mu6h-ac650-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7f3bac3bd61de1097ad3e1c95a2b7ccbda24167c2cce2325b3316c67c4fb5abc.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-mu6h-ac650-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-mu6h-ac650-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-mw150us-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db878358fe62aff3e8060a4151f1b6fc499e08f70229cdf639055e595855b51d.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-mw150us-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-mw150us-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-mw300uh-300mbps-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\268a817a96b884e6c543310ea5fbf0991253ec9170e316f9104af05bde90f50c.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-mw300uh-300mbps-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-mw300uh-300mbps-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-mw300um-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e5a1a5aed22030eaa88224ccaed19e2458080267cb57cc51bfff62d271c60aa.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/mercusys/mercusys-mw300um-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/mercusys/mercusys-mw300um-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-u1-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\78d7afc0104c94b37a0c748d2dc4653eb984d1cb53ec241fb0c7efef80ed4eef.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tenda/tenda-u1-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tenda/tenda-u1-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-u2-ax300-usb-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0ca490c895ee2dcc0defab6508ca07aa97fc411ba44e7d846a1936daefdd931c.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tenda/tenda-u2-ax300-usb-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tenda/tenda-u2-ax300-usb-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-w311mi-ax300-wireless-nano-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c66bc1194af7f7cc95866db34e7324177fa4aecdf18e8a48ae36454e48062d64.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tenda/tenda-w311mi-ax300-wireless-nano-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tenda/tenda-w311mi-ax300-wireless-nano-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t2u-ac600-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc1e1a802cee29c9ea97e27473056c847d718e3e97485c0850ef9774df2b8264.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2u-ac600-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2u-ac600-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t2u-plus-ac600-600mbps-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37ce6e9bd68b9f255cda165713bc717265bc055b7f37adaccccfbc4a45c87d58.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2u-plus-ac600-600mbps-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2u-plus-ac600-600mbps-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t2ub-nano-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30154c1abce1a5c3656e63452db2716d748cf7971a3ed27a98c5632f9618c10a.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2ub-nano-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t2ub-nano-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t3u-ac1300-mini-wireless-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\43a8a67e90e3eb748aac0106526806b3bb89db3cc33197e2b1ea942333190f21.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t3u-ac1300-mini-wireless-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t3u-ac1300-mini-wireless-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t3u-plus-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc41ad2b40d37d45bbe2bfcd3cec9ca18e424d0226473be6d76000cc9fb3e7bc.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t3u-plus-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t3u-plus-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-t4u-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0bddb5199291adeef018d6c7a3613518d221624a5d21749cedbbf4d35c5b890b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t4u-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-t4u-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-tx1u-nano-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\17e0f38605092d2d096efc02de414b64adbfbc163ce9d681f28d550d9bebae8a.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx1u-nano-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx1u-nano-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-tx20u-nano-ax1800-wi-fi-6-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\defe7c2a3551325ea1be73e356771c48ce59d0b58e8d6751528a55d3727876dc.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx20u-nano-ax1800-wi-fi-6-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx20u-nano-ax1800-wi-fi-6-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-archer-tx20u-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1aa39b0da34f7402b28e32e32b4864226102b1edbb70d05751294b75eb07e767.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx20u-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-archer-tx20u-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-wn725n",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afc0ad24011d18ba9b31150be7b13c59a42800b9bc52d31d239dbb5b349bae10.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-tl-wn725n.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-tl-wn725n.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-wn823n",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad7f06c220da4cb4024ea0aec9211831e60b7c5f0c37b90809e4dadcb6a78940.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-tl-wn823n.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-tl-wn823n.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-wn722n",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f2f93224f00c5a962d5f92046c9baf3134c6a2702337f2cc11b3ae724680b434.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/tp-link/tp-link-wn722n.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/tp-link/tp-link-wn722n.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tbw-108ub-micro-n150-wireless-bluetooth-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99752fe6cffb6315372752b2e978513b19d81f71abce98db1471456cf39908d5.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/trendnet/trendnet-tbw-108ub-micro-n150-wireless-bluetooth-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/trendnet/trendnet-tbw-108ub-micro-n150-wireless-bluetooth-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "trendnet",
+        "folderBrandName": "Trendnet",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tew-808ubm-micro-wireless-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\424e7c0943bc054691e08c2dcc8c53ec737b035c8a7adbfa2244e01c8f54a5fb.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/trendnet/trendnet-tew-808ubm-micro-wireless-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/trendnet/trendnet-tew-808ubm-micro-wireless-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "trendnet",
+        "folderBrandName": "Trendnet",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-ac650-dual-band-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf0d27cf1b05984be2639599eab47da0fec1b951e6a6e843ed0d19c7870c2511.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/ugreen/ugreen-ac650-dual-band-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/ugreen/ugreen-ac650-dual-band-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm492-dual-band-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56efbeb12a99bdc7138843e55d751cfca1d205e183a33c3b266476a07395d580.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/ugreen/ugreen-cm492-dual-band-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/ugreen/ugreen-cm492-dual-band-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm496-dual-band-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c25553b67eb7f64074af871809ca581bcdf3cfd527e17ce196b99438509200d5.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/ugreen/ugreen-cm496-dual-band-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/ugreen/ugreen-cm496-dual-band-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm762-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c33e0dd325e89e46b2b89340ea69c5fe99571c865719ccff1d2b3eda6f93d27.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/ugreen/ugreen-cm762-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/ugreen/ugreen-cm762-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-cm763-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2002205f1e5eff591a6482cf4579896b0dbc6b734a6cd710be491918eb9ab950.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/ugreen/ugreen-cm763-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/ugreen/ugreen-cm763-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-iptb0-rj45-splitter-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\22e0c0641c191b95a62ab9a77964dcf3aae59aa6f30eb3ca6dcb971682c23d9b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/vention/vention-iptb0-rj45-splitter-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/vention/vention-iptb0-rj45-splitter-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "vention",
+        "folderBrandName": "Vention",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kdrb0-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a0b794841a6f8feca7a744865325416f0bbb8fc60f46dcd6781f753ad9f30390.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/vention/vention-kdrb0-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/vention/vention-kdrb0-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "vention",
+        "folderBrandName": "Vention",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kdtb0-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30007056c1e8ce829764a28306bbe2bf2b034c65100813f7702b312252594f6e.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/vention/vention-kdtb0-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/vention/vention-kdtb0-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "vention",
+        "folderBrandName": "Vention",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kdvb0-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f316c200764cb21b8a78913982cdc6b315fb8242ab045fdd18c8a6e0f50bb24.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/vention/vention-kdvb0-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/vention/vention-kdvb0-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "vention",
+        "folderBrandName": "Vention",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vention-kdwb0-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c067406e1bbceee662faf1030bc72f0a5e57677165adfd52be5c97f081c1073b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/vention/vention-kdwb0-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/vention/vention-kdwb0-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "vention",
+        "folderBrandName": "Vention",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-wu350-300mbps-wifi-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e61a46c245e0e6bc4a939a448ae1c0d35474ff21645f9dbf7c9f168ebc1febe8.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/xtreme/xtreme-wu350-300mbps-wifi-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/xtreme/xtreme-wu350-300mbps-wifi-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "xtreme",
+        "folderBrandName": "Xtreme",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-wu650-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c4b1be59e9921dfd2089806b7cf312362da4bac987688f32c8e6769a1e63c878.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/xtreme/xtreme-wu650-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/xtreme/xtreme-wu650-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "xtreme",
+        "folderBrandName": "Xtreme",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-wu650bt-bluetooth-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a379db62efd8de3e188e9f1755680393d754a3888296ec40597b6c7b390e576.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/xtreme/xtreme-wu650bt-bluetooth-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/xtreme/xtreme-wu650bt-bluetooth-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "xtreme",
+        "folderBrandName": "Xtreme",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5501-usb-wi-fi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\806434a4ebabf76999e7e2d23d087a73320126ba182e2af791c813ff8fafd345.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5501-usb-wi-fi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5501-usb-wi-fi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5502-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d00b1f819e6143775bcf2ba4c422f5711d2e344482d40d76fc96e0a67db89081.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5502-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5502-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5503-dual-band-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e4cc72fbe8cb408fb68b5209ed783cd03cd0189d5d960882e60e8ffe5f8ae02f.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5503-dual-band-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5503-dual-band-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5505-usb-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d6e069f833960293c7dedbfd663695c0fa2db7f35f749b7b8b592ddc9895faf.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5505-usb-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5505-usb-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5506-wifi-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\50cee2be1c2c514264adc712e2b36ef02e75d61e2064a4da9e461458b5e2192e.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5506-wifi-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5506-wifi-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5507-dual-band-wi-fi-usb-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d970b080f352bafcd963b17956c1dbe8472bbc33b3e9df13c1d5014472d92bf.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5507-dual-band-wi-fi-usb-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5507-dual-band-wi-fi-usb-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yuanxin-x-5508-dual-band-wi-fi-and-bluetooth-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e46cc49bea286e4c74bac2f3631d3638a61a3b6cf8a83227659dfd07f305541.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5508-dual-band-wi-fi-and-bluetooth-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-adapter/yuanxin/yuanxin-x-5508-dual-band-wi-fi-and-bluetooth-adapter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-adapter",
+        "subcategoryName": "Wifi Adapter",
+        "folderBrandSlug": "yuanxin",
+        "folderBrandName": "Yuanxin",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

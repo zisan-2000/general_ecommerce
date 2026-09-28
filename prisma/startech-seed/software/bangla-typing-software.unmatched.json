@@ -1,0 +1,42 @@
+[
+  {
+    "ok": false,
+    "stem": "bijoy-bayanno-2026-bangla-software",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\261839258222bf9812223378e9bddee68930ce5e864a1449680d8d01c50f039d.html'",
+    "sourceImages": [
+      "/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.png",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "bangla-typing-software",
+        "subcategoryName": "Bangla Typing Software",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bijoy-ekattor-for-mac-bangla-software",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1904aa19efb3e5da8a789e9ede7dd6327695063b25bbcd1d27a71b21137023ce.html'",
+    "sourceImages": [
+      "/images/products/software/bangla-typing-software/bijoy-ekattor-for-mac-bangla-software.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/bangla-typing-software/bijoy-ekattor-for-mac-bangla-software.png",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "bangla-typing-software",
+        "subcategoryName": "Bangla Typing Software",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

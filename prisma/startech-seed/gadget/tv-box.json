@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790517451,
+    "signature": "e9f0470d13df998ee53bc06ac75b20e1d183ee5e814510453be9c47d0b7aa9eb"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gadget",
+      "slug": "gadget",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 16,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "TV Box",
+      "slug": "tv-box",
+      "parentSlug": "television-shop",
+      "image": null,
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}

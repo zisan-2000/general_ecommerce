@@ -1,0 +1,5332 @@
+{
+  "sourceCategoryUrl": "https://www.startech.com.bd/television-shop",
+  "siteReportedProductCount": 165,
+  "uniqueMasterProductsFound": 165,
+  "selectedCategory": null,
+  "requestedForThisRun": 165,
+  "outputRoot": "public/images/products",
+  "categories": [
+    {
+      "name": "All TV",
+      "slug": "all-tv",
+      "url": "https://www.startech.com.bd/television-startech",
+      "matchedProductCount": 164
+    },
+    {
+      "name": "LED TV",
+      "slug": "led-tv",
+      "url": "https://www.startech.com.bd/led-tv",
+      "matchedProductCount": 96
+    },
+    {
+      "name": "Smart TV",
+      "slug": "smart-tv",
+      "url": "https://www.startech.com.bd/smart-tv",
+      "matchedProductCount": 151
+    },
+    {
+      "name": "Android TV",
+      "slug": "android-tv",
+      "url": "https://www.startech.com.bd/android-tv",
+      "matchedProductCount": 90
+    },
+    {
+      "name": "4K TV",
+      "slug": "4k-tv",
+      "url": "https://www.startech.com.bd/4k-tv",
+      "matchedProductCount": 124
+    },
+    {
+      "name": "AKASH Digital TV",
+      "slug": "akash-digital-tv",
+      "url": null,
+      "matchedProductCount": 0
+    },
+    {
+      "name": "TV Stand & Wall Mount",
+      "slug": "tv-stand-wall-mount",
+      "url": "https://www.startech.com.bd/wall-mount",
+      "matchedProductCount": 0
+    }
+  ],
+  "products": [
+    {
+      "name": "Smart SEL-32B24K 32\" HD Basic LED TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-32b24k-32-inch-hd-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-32b24k/sel-32b24k-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-32b24k-32-inch-hd-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-32A24K 32\" HD Android TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-32a24k-tv ",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/smart-sel-32a24k-tv%20"
+    },
+    {
+      "name": "Realview L32D01 32\" HD LED Android Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/realview-l32d01-led-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/realview/l32d01/l32d01-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/realview-l32d01-led-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 32A4S 32\" Direct LED HD Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-32a4s-32-inch-hd-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/32a4s/32a4s-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-32a4s-32-inch-hd-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 32S5K 32\" FHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-32s5k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/32s5k/32s5k-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-32s5k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 32H5000F 32\" HD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-32h5000f-32-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/32h5000f/samsung-32h5000f-official-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-32h5000f-32-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SINGER SLE32GP6100TV 32\" HD Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/singer-sle32gp6100tv-32-inch-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/singer/srtv-sle32gp6100tv/singer-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/singer-sle32gp6100tv-32-inch-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transtec TEG-43KN1S EVO 43\" FHD Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/transtec-teg-43kn1s-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/transtec/teg-32kn1s/teg-32kn1s-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/transtec-teg-43kn1s-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 43S5K 43\" FHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-43s5k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/43s5k/43s5k-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-43s5k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ROWA 43U62 43 Inch 4K Android Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/rowa-43u62-43-inch-4k-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/rowa/43u62/rowa-43u62-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/rowa-43u62-43-inch-4k-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 43F6000F 43\" FHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-43f6000f-43-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43f6000f/samsung-43f6000f-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-43f6000f-43-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SINGER SLE43GP5000TV 43\" FHD Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/singer-sle43gp5000tv-43-inch-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/singer/srtv-sle32gp6100tv/singer-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/singer-sle43gp5000tv-43-inch-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H43S80GUX 43\" QLED 4K UHD Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h43s80gux-43-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h43s80gux/h43s80gux-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h43s80gux-43-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Realview L43D01 43\" 4K QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/realview-l43d01-4k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/realview/l43d01/l43d01-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/realview-l43d01-4k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 43V6C 43\" 4K UHD Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-43v6c-43-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/43v6c/43v6c-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-43v6c-43-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 43U8000H 43\" Crystal 4K UHD AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-43u8000h-43-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8000h/43u8000h-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-43u8000h-43-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 43U8000F 43\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-43u8000f-43-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8000f/samsung-43u8000f-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-43u8000f-43-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 43A6Q 43\" 4K UHD VIDAA Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-43a6q-43-inch-4k-uhd-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/43a6q/43a6q-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-43a6q-43-inch-4k-uhd-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-43G25F 43\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-43g25f-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-43g25f/sel-43g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-43g25f-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ROWA 50U62 50 Inch 4K Android Smart Voice Control Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/rowa-50u62-50-inch-4k-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/rowa/50u62/rowa-50u62-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/rowa-50u62-50-inch-4k-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 43U8510H 43\" 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-43u8510h-43-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8510f/43u8510h-05-1200x630.png",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-43u8510h-43-inch-4k-smart-tv.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier 43P7 PRO 43\" 4K HQLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-43p7-pro-43-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/43p7-pro/43p7-pro-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-43p7-pro-43-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko BU43VH5QGOTV 43\" 4K UHD QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-bu43vh5qgotv-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/bu43vh5qgotv/beko-bu43vh5qgotv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-bu43vh5qgotv-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 43Q65D 43\" QLED 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-43q65d-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43q65d/43q65d-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-43q65d-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SINGER Primax S50-SLE50GU5000TV 50\" 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/singer-primax-s50-sle50gu5000tv-4k-android-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/singer/primax-s50-sle50gu5000tv/primax-s50-sle50gu5000tv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/singer-primax-s50-sle50gu5000tv-4k-android-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-50V24K 50\" 4K Voice Control Android LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-50v24k-50-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-50v24k/sel-50v24k-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-50v24k-50-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-50G25F 50\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-50g25f-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-50g25f/sel-50g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-50g25f-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko BU50VH5QGOTV 50\" 4K UHD QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-bu50vh5qgotv-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/bu50vh5qgotv/beko-bu50vh5qgotv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-bu50vh5qgotv-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ROWA 55U62 55 Inch 4K Android Smart Voice Control Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/rowa-55u62-55-inch-4k-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/rowa/55u62/rowa-55u62-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/rowa-55u62-55-inch-4k-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier 50P7 PRO 50\" 4K HQLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-50p7-pro-50-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/50p7-pro/50p7-pro-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-50p7-pro-50-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-55V24K 55\" 4K Voice Control Android LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-55v24k-55-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-55v24k/sel-55v24k-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-55v24k-55-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 50U8000F 50\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-50u8000f-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/50u8000f/50u8000f-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-50u8000f-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-55G25F 55\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-55g25f-4k-android-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-55g25f/sel-55g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-55g25f-4k-android-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 55A6Q 55″ 4K UHD VIDAA Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-55a6q-55-inch-4k-uhd-vidaa-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/55a6q/55a6q-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-55a6q-55-inch-4k-uhd-vidaa-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV A Pro 55 2026 55 inch QLED 4K UHD Smart Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-a-pro-55-2026",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-a-pro-2026/tv-a-pro-2026-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-a-pro-55-2026.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-43S20M2 43\" LED 4K Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-43s20m2-43-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-43s20m2-43-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SINGER Primax S55-SLE55GU5000TV 55\" 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/singer-primax-s55-sle55gu5000tv-4k-android-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/singer/primax-s55-sle55gu5000tv/primax-s55-sle55gu5000tv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/singer-primax-s55-sle55gu5000tv-4k-android-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko BU55VH5QGOTV 55\" 4K UHD QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-bu55vh5qgotv-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/bu55vh5qgotv/beko-bu55vh5qgotv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-bu55vh5qgotv-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier 55P7 PRO 55\" 4K HQLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-55p7-pro-55-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/55p7-pro/55p7-pro-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-55p7-pro-55-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 55T6D 55\" 4K UHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-55t6d-55-inch-4k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/55t6d/55t6d-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-55t6d-55-inch-4k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ROWA 65U62 65 Inch 4K Android Smart Voice Control Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/rowa-65u62-65-inch-4k-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/rowa/65u62/rowa-65u62-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/rowa-65u62-65-inch-4k-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia KD-55X75K 55 Inch 4K Ultra HD Smart Android TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-kd-55x75k-55-inch-4k-ultra-hd-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/kd-55x75k/bravia-kd-55x75k-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-kd-55x75k-55-inch-4k-ultra-hd-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 55U8500H 55\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-55u8500h-55-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8500h/43u8500h-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-55u8500h-55-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV S Mini LED 55 2026 55 Inch 4K UHD QD-Mini LED Smart Android Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-s-mini-led-55-2026-55-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-s-mini-led-55-2026/tv-s-mini-led-55-2026-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-s-mini-led-55-2026-55-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-50S20M2 50\" LED 4K Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-50s20m2-50-inch-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-50s20m2-50-inch-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H55M80FUX 55\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h55m80fux-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h55m80fux/h55m80fux-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h55m80fux-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG NANO81 55 Inch NanoCell 4K UHD Smart LED TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-55nano81-55-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/55nano81/lg-55nano81-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-55nano81-55-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 55Q7F 55 Inch QLED 4K Vision AI Smart TV 2025 (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-55q7f-55-inch-smart-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55q7f/55q7f-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-55q7f-55-inch-smart-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-65S224KKS 65\" 4K Voice Control Android TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-65s224kks-65-inch-4k-android-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-65s224kks/sel-65s224kks-official-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-65s224kks-65-inch-4k-android-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 65A6Q 65″ 4K UHD VIDAA Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-65a6q-65-inch-4k-uhd-vidaa-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/55a6q/55a6q-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-65a6q-65-inch-4k-uhd-vidaa-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV A Pro 65 2026 65 inch QLED 4K UHD Smart Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-a-pro-65-2026",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-a-pro-2026/tv-a-pro-2026-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-a-pro-65-2026.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG 55UR761H 55\" 4K UHD Commercial Hotel TV",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-55ur761h-55-inch-4k-hotel-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/55ur761h/55ur761h-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-55ur761h-55-inch-4k-hotel-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-55S20M2 55\" LED 4K Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-55s20m2-55-inch-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-55s20m2-55-inch-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier 65P7 PRO 65\" 4K HQLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-65p7-pro-65-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/65p7-pro/65p7-pro-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-65p7-pro-65-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 3 K-55S30 55\" 4K UHD Google Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-3-k-55s30-4k-google-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-3-k-55s30/bravia-3-k-55s30-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-3-k-55s30-4k-google-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia KD-65X75K 65 Inch 4K Ultra HD Smart LED Android TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-kd-65x75k-65-inch-4k-ultra-hd-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/kd-65x75k/bravia-kd-65x75k-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-kd-65x75k-65-inch-4k-ultra-hd-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 55Q8F 55 Inch QLED 4K Vision AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-55q8f-55-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55q8f/55q8f-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-55q8f-55-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 55C6KS 55\" 4K UHD QD Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-55c6ks-55-inch-4k-mini-led-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/55c6ks/55c6ks-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-55c6ks-55-inch-4k-mini-led-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-43S20M2 43\" LED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-43s20m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-43s20m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65U8500H 65\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65u8500h-65-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8500h/43u8500h-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65u8500h-65-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV S Mini LED 65 2026 65 Inch 4K UHD QD-Mini LED Smart Android Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-s-mini-led-65-2026-65-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-s-mini-led-55-2026/tv-s-mini-led-55-2026-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-s-mini-led-65-2026-65-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG NANO81 65 Inch NanoCell 4K UHD Smart LED TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-65nano81-65-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/65nano81/lg-65nano81-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-65nano81-65-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-50S20M2 50\" LED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-50s20m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-50s20m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko BU65VH5QGOTV 65\" 4K UHD QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-bu65vh5qgotv-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/bu65vh5qgotv/beko-bu65vh5qgotv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-bu65vh5qgotv-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65Q70C 65 Inch QLED 4K UHD Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65q70c-65-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55q70c/q70c-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65q70c-65-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65Q7F 65\" QLED 4K Vision AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65q7f-65-inch-smart-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65q7f/65q7f-040-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65q7f-65-inch-smart-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75CU8100 75 Inch Crystal 4K UHD HDR Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75cu8100-75-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43cu8100/43cu8100-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75cu8100-75-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65Q70D 65\" QLED 4K UHD Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65q70d-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55q70d/55q70d-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65q70d-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 65C6KS 65\" 4K UHD QD MiniLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-65c6ks-65-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/65c6ks/65c6ks-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-65c6ks-65-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 75A6Q 75″ 4K UHD VIDAA Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-75a6q-75-inch-4k-uhd-vidaa-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/55a6q/55a6q-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-75a6q-75-inch-4k-uhd-vidaa-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-65S20M2 65\" LED 4K Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-65s20m2-65-inch-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-65s20m2-65-inch-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier 75P7 PRO 75\" 4K HQLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-75p7-pro-75-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/75p7-pro/75p7-pro-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-75p7-pro-75-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 3 K-65S30 65\" 4K UHD Google Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-3-k-65s30-4k-google-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-3-k-55s30/bravia-3-k-55s30-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-3-k-65s30-4k-google-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-75G25F 75\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-75g25f-4k-android-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-75g25f/sel-75g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-75g25f-4k-android-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV S Mini LED 75 2026 75 Inch 4K UHD QD-Mini LED Smart Android Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-s-mini-led-75-2026-75-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-s-mini-led-55-2026/tv-s-mini-led-55-2026-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-s-mini-led-75-2026-75-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65M70H 65\" 4K Mini LED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65m70h-65-inch-4k-mini-led-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65m70h/65m70h-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65m70h-65-inch-4k-mini-led-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-55S20M2 55\" LED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-55s20m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-55s20m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV A Pro 75 2026 75 inch QLED 4K UHD Smart Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-a-pro-75-2026",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-a-pro-2026/tv-a-pro-2026-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-a-pro-75-2026.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75U8500H 75\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75u8500h-75-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8500h/43u8500h-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75u8500h-75-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65QN70F 65\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65qn70f-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65qn70f/65qn70f-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65qn70f-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG OLED evo AI C5 55\" 4K Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-oled-evo-ai-c5-55-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/65-inch-class/oled65c5pua-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-oled-evo-ai-c5-55-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 75C6KS 75\" 4K UHD QD MiniLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-75c6ks-75-inch-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/75c6ks/75c6ks-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-75c6ks-75-inch-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia XR-65X90L 65-inch 4K Ultra HD Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-xr-65x90l-65-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-xr-55x90l/bravia-xr-55x90l-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-xr-65x90l-65-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 2 K-65S20M2 65\" LED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-2-k-65s20m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-2-k-43s20m2/bravia-2-k-43s20m2-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-2-k-65s20m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-85G25F 85\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-85g25f-4k-android-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-85g25f/sel-85g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-85g25f-4k-android-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV S Mini LED 85 2026 85 Inch 4K UHD QD-Mini LED Smart Android Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-s-mini-led-85-2026-85-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-s-mini-led-55-2026/tv-s-mini-led-55-2026-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-s-mini-led-85-2026-85-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85Q7F 85\" QLED 4K UHD Vision AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85q7f-4k-smart-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/75q7f/75q7f-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85q7f-4k-smart-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 55S85F 55\" OLED 4K Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-55s85f-55-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55s85f/samsung-55s85f-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-55s85f-55-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85M70H 85\" 4K Mini LED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85m70h-85-inch-4k-mini-led-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85m70h/85m70h-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85m70h-85-inch-4k-mini-led-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85U8500H 85\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85u8500h-85-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8500h/43u8500h-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85u8500h-85-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG 86UT8050 86\" 4K UHD Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-86ut8050-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/86ut8050/86ut8050-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-86ut8050-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG evo C4 65\" 4K UHD OLED AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-evo-c4-65-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/evo-c4/evo-c4-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-evo-c4-65-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LG OLED evo AI C5 65\" 4K Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/lg-oled-evo-ai-c5-65-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/65-inch-class/oled65c5pua-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/lg-oled-evo-ai-c5-65-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-65XR50 65\" 4K Mini LED Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-65xr50-65-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-65xr50-65-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75QN85C 75\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75qn85c-75-inch-neo-qled-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/75qn85c/75qn85c-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75qn85c-75-inch-neo-qled-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia XR-55X90K 55\" 4K Ultra HD Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-xr-55x90k-55-inch-4k-uhd-smart-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-xr-55x90k/bravia-xr-55x90k-official-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-xr-55x90k-55-inch-4k-uhd-smart-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85Q70D 85 Inch QLED 4K UHD Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85q70d-85-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85q70d/85q70d-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85q70d-85-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia XR-75X90L 75\" 4K UHD Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-xr-75x90l-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-xr-75x90l/bravia-xr-75x90l-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-xr-75x90l-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-55XR50 55\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-55xr50-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-55xr50-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 3 K-85S30 85\" 4K UHD Google Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-3-k-85s30-4k-google-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-3-k-55s30/bravia-3-k-55s30-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-3-k-85s30-4k-google-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65S95F 65\" 4K OLED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65s95f-65-inch-4k-oled-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65s95f/65s95f-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65s95f-65-inch-4k-oled-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75QN90D 75\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75qn90d-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/75qn90d/75qn90d-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75qn90d-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75QN85D 75\" Neo QLED UHD 4K Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75qn85d-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/75qn85d/samsung-75qn85d-official-08-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75qn85d-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65S95H 65\" 4K Class OLED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65s95h-65-inch-4k-oled-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65s95h/65s95h-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65s95h-65-inch-4k-oled-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-75XR50 75\" 4K Mini LED Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-75xr50-75-insh-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-75xr50-75-insh-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 8 K-55XR80 55\" 4K OLED HDR Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-8-k-55xr80-4k-oled-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-8-k-55xr80/bravia-8-k-55xr80-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-8-k-55xr80-4k-oled-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 77S90C 77\" OLED 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-77s90c-77-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55s90c/55s90c-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-77s90c-77-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H100S90FUX 100\" 4K UHD QD-Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h100s90fux-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h100s90fux/h100s90fux-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h100s90fux-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 98U9000H 98\" Crystal 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-98u9000h-98-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/98u9000h/98u9000h-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-98u9000h-98-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV S Mini LED 98 2026 98 Inch 4K UHD QD-Mini LED Smart Android Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-s-mini-led-98-2026-98-inch-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-s-mini-led-55-2026/tv-s-mini-led-55-2026-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-s-mini-led-98-2026-98-inch-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-85XR50 85\" 4K Mini LED Smart Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-85xr50-85-inch-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-85xr50-85-inch-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85QN85C 85\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85qn85c-85-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85qn85c/85qn85c-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85qn85c-85-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85QN85D 85\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85qn85d-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85qn85d/85qn85d-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85qn85d-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 8 K-55XR80M2 55\" QD OLED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-8-k-55xr80m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-8-k-55xr80m2/bravia-8-k-55xr80m2-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-8-k-55xr80m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 98DU9000 98\" 4K Smart LED TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-98du9000-98-inch-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65s85f/65s85f-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-98du9000-98-inch-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 77S95H 77\" 4K Class OLED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-77s95h-77-inch-4k-oled-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/77s95h/77s95h-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-77s95h-77-inch-4k-oled-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-100G25F 100\" 4K Voice Control Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-100g25f-4k-android-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-100g25f/sel-100g25f-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-100g25f-4k-android-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-85XR50 85\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-85xr50-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-85xr50-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 8 K-65XR80M2 65\" QD OLED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-8-k-65xr80m2-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-8-k-55xr80m2/bravia-8-k-55xr80m2-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-8-k-65xr80m2-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 100QN80F 100\" Neo QLED 4K UHD AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-100qn80f-100-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/100qn80f/100qn80f-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-100qn80f-100-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85R95H 85\" 4K Class Micro RGB Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85r95h-85-inch-4k-micro-rgb-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85r95h/85r95h-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85r95h-85-inch-4k-micro-rgb-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia XR-85X95L 85 Inch 4K Ultra HD Full Array LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-xr-85x95l-85-inch-4k-ultra-hd-smart-led-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-xr-85x95l/bravia-xr-85x95l-official-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-xr-85x95l-85-inch-4k-ultra-hd-smart-led-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85QN900D 85\" Neo QLED 8K Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85qn900d-8k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85qn900d/samsung-85qn900d-official-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85qn900d-8k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85QN950F 85\" 8K QLED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85qn950f-85-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85qn950f/85qn950f-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85qn950f-85-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-98XR50 98\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-98xr50-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-98xr50-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko Crystal 9 OLED 120Hz 65\" 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-crystal-9-oled-120hz-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/crystal-9-oled-120hz/beko-crystal-9-oled-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-crystal-9-oled-120hz-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Beko Crystal 9 120Hz 75\" 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/beko-crystal-9-120hz-4k-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/beko/crystal-9-120hz/beko-crystal-9-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/beko-crystal-9-120hz-4k-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "AKASH DTH Full Setup (Basic) with 130+ Live TV Channel and 60+ Full HD Channel",
+      "sourceProductUrl": "https://www.startech.com.bd/akash-dth-full-setup-basic",
+      "categoryPath": [
+        "television-shop",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/akash/akash-set-top-box-basic-1200x630.jpg",
+      "localImageFile": "public/images/products/television-shop/_uncategorized/akash-dth-full-setup-basic.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 32H5000H 32\" HD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-32h5000h-32-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/32h5000h/32h5000h-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-32h5000h-32-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H32S80GFX 32\" QLED FHD Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h32s80gfx-32-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/television/haier/h32s80gfx/h32s80gfx-06-1200x630.webp"
+    },
+    {
+      "name": "ROWA 43S52 43 Inch Full HD Android Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/rowa-43s52-43-inch-android-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/rowa/43s52/rowa-43s52-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/rowa-43s52-43-inch-android-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H43K85GFX 43\" DLED FHD Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h43k85gfx-43-inch-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h43k85gfx/h43k85gfx-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h43k85gfx-43-inch-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H43S80EUX 43\" QLED 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h43s80eux-43-inch-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h43s80eux/haier-h43s80eux-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h43s80eux-43-inch-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi TV A Pro 43 2026 43 inch QLED 4K UHD Smart Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-a-pro-43-2026",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-a-pro-2026/tv-a-pro-2026-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-a-pro-43-2026.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 43P7K 43\" 4K UHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-43p7k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/43p7k/43p7k-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-43p7k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia KD-43X75K 43 Inch 4K Ultra HD Smart Android LED TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-kd-43x75-43-inch-4k-smart-android-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/kd-50x75/kd-50x75-02-1200x630.jpg",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-kd-43x75-43-inch-4k-smart-android-tv.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H50P7UX 50 Inch Voice Control HQLED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h50p7ux-50-inch-hqled-4k-smart-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h50p7ux/haier-h50p7ux-official-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h50p7ux-50-inch-hqled-4k-smart-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H55P7UX 55 Inch Voice Control HQLED 4K Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h55p7ux-55-inch-hqled-4k-smart-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h55p7ux/haier-h55p7ux-official-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h55p7ux-55-inch-hqled-4k-smart-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 50U8500F 50\" 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-50u8500f-50-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/50u8500f/50u8500f-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-50u8500f-50-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65DU7700 65 Inch Crystal 4K UHD Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65du7700-65-inch-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65du7700/samsung-65du7700-official-10-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65du7700-65-inch-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 55P8K 55\" 4K UHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-55p8k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/55p8k/55p8k-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-55p8k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 65P8K 65\" 4K UHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-65p8k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/65p8k/65p8k-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-65p8k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H65M80FUX 65\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h65m80fux-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h55m80fux/h55m80fux-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h65m80fux-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TCL 75P8K 75\" 4K UHD QLED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/tcl-75p8k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/tcl/75p8k/75p8k-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/tcl-75p8k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75U8500H 75\" Crystal 4K UHD LED Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75u8500h-75-4k-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/43u8500h/43u8500h-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75u8500h-75-4k-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H75M80FUX 75\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h75m80fux-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/haier/h55m80fux/h55m80fux-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/haier-h75m80fux-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia KD-75X77L 75 Inch 4K Ultra HD Smart LED Google TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-kd-75x77l-75-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-kd-75x77l/kd-75x77l-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-kd-75x77l-75-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85U8500F 85\" 4K UHD LED Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85u8500f-85-inch-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85u8500f/85u8500f-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85u8500f-85-inch-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85U8500F 85\" 4K UHD LED Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85u8500f-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/85u8500f/85u8500f-09-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85u8500f-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia XR 55A80L 55\" 4K Ultra HD OLED Android Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-xr-55a80l-55-inch-4k-android-smart-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/xr-55a80l/xr-55a80l-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-xr-55a80l-55-inch-4k-android-smart-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 65S95B 65\" LaserSlim Design OLED 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-65s95b-65-inch-oled-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65s95b/65s95b-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-65s95b-65-inch-oled-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-65XR50 65\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-65xr50-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-65xr50-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 85QN90B 85\" Neo QLED UHD 4K Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-85qn90b-85-inch-neo-qled-4k-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/55qn90b/55qn90b-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-85qn90b-85-inch-neo-qled-4k-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 8 K-65XR80 65 Inch 4K HDR OLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-8-k-65xr80-65-inch-4k-hdr-oled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-8-k-65xr80m2/bravia-8-k-65xr80-official-03-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-8-k-65xr80-65-inch-4k-hdr-oled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 83S90D 83\" OLED 4K AI Smart TV (Unofficial)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-83s90d-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/83s90d/83s90d-05-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-83s90d-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 7 K-75XR70 75 Inch 4K HDR QLED Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-7-k-75xr70-75-inch-4k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-7-k-75xr70/bravia-7-k-75xr70-official-04-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-7-k-75xr70-75-inch-4k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 9 K-85XR90 85\" 4K Mini LED QLED HDR Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-9-k-85xr90-4k-qled-google-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-9-k-85xr90/bravia-9-k-85xr90-official-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-9-k-85xr90-4k-qled-google-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Haier H32K85GX 32\" DLED HD Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/haier-h32k85gx-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/television/haier/h32s80gfx/h32s80gfx-06-1200x630.webp"
+    },
+    {
+      "name": "Xiaomi TV A Pro 32 HD Smart Google TV (Global Version)",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-a-pro-32",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/tv-a-pro-2026/tv-a-pro-2026-02-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/xiaomi-tv-a-pro-32.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-32g25f-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/smart/sel-32g25f/sel-32g25f-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/smart-sel-32g25f-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Hisense 43A4S 43\" Direct LED FHD Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/hisense-43a4s-43-inch-fhd-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/hisense/43a4s/43a4s-07-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/hisense-43a4s-43-inch-fhd-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SINGER Primax S43-SLE43GU5000TV 43\" 4K Android Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/singer-primax-s43-sle43gu5000tv-4k-android-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "LED TV",
+          "slug": "led-tv",
+          "url": "https://www.startech.com.bd/led-tv"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/singer/primax-s43-sle43gu5000tv/primax-s43-sle43gu5000tv-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/singer-primax-s43-sle43gu5000tv-4k-android-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transtec TEG-32KN1S EVO 32\" HD Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/transtec-teg-32kn1s-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/transtec/teg-32kn1s/teg-32kn1s-official-01-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/transtec-teg-32kn1s-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung 75M70H 75\" 4K Mini LED Vision AI Smart TV",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-75m70h-75-inch-4k-mini-led-smart-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/samsung/75m70h/75m70h-06-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/samsung-75m70h-75-inch-4k-mini-led-smart-tv.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Bravia 5 K-75XR50 75\" 4K Mini LED Smart Google TV",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-bravia-5-k-75xr50-tv",
+      "categoryPath": [
+        "television-shop",
+        "all-tv"
+      ],
+      "matchedCategories": [
+        {
+          "name": "All TV",
+          "slug": "all-tv",
+          "url": "https://www.startech.com.bd/television-startech"
+        },
+        {
+          "name": "Smart TV",
+          "slug": "smart-tv",
+          "url": "https://www.startech.com.bd/smart-tv"
+        },
+        {
+          "name": "Android TV",
+          "slug": "android-tv",
+          "url": "https://www.startech.com.bd/android-tv"
+        },
+        {
+          "name": "4K TV",
+          "slug": "4k-tv",
+          "url": "https://www.startech.com.bd/4k-tv"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/television/sony/bravia-5-k-55xr50/bravia-5-1200x630.webp",
+      "localImageFile": "public/images/products/television-shop/all-tv/sony-bravia-5-k-75xr50-tv.webp",
+      "status": "downloaded"
+    }
+  ],
+  "summary": {
+    "downloaded": 162,
+    "skippedExisting": 0,
+    "failed": 3,
+    "dryRun": false
+  }
+}

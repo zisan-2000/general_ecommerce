@@ -1,0 +1,402 @@
+[
+  {
+    "ok": false,
+    "stem": "apple-vision-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a7a95c92ea6605c851fbb2141b218168956e71e186a1b1ea34b0a4dac8c0863.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/apple-vision-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/apple-vision-pro.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-vision-pro-m5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab575313d5af1e8d13c372a6b2b47a4906102f9075471d4fde809cfacb3cbe58.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/apple-vision-pro-m5.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/apple-vision-pro-m5.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-2-128-gb-all-in-one-vr-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5485f888803dbadcad11f5dfb6400b1328edcd1f1f45f9ddb8c01e1e46161887.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-2-128-gb-all-in-one-vr-system.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-2-128-gb-all-in-one-vr-system.jpg",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-2-128gb-vr-system-with-resident-evil-4-bundle",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d323e499cede7adf67efd695a84801210e5e1604d144a45fb9d767fbac864a3.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-2-128gb-vr-system-with-resident-evil-4-bundle.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-2-128gb-vr-system-with-resident-evil-4-bundle.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-2-256-gb-all-in-one-vr-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb958ad3d76019b957dbbfc67e3206c984bc54b04a74353f075ca97227d0ae50.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-2-256-gb-all-in-one-vr-system.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-2-256-gb-all-in-one-vr-system.jpg",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-3-512gb-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e740c507542a877eb1bd68d2bba058023fca8139a09fa18797e2f73174162fd4.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-3-512gb-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-3-512gb-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-3-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d30e5f526c30b00d3f1cf508d53858abafeeaa1c57cca72bb17d7cf31c1d6c2.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-3-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-3-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-3s-128gb-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0daa3eeea12d0b1a334bc362d3740b26d2cdd0eddb30028bb3ea2fc985ea4a3.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-3s-128gb-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-3s-128gb-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-3s-256gb-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf4911ffb2c57aa3b4cccacce90ab970d399d64339656c6ac9aacb680fd09b9a.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-3s-256gb-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-3s-256gb-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-3s-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d88585333912322a34ec68670c5a8b22546e3c27700d035aa1bcee414aa6efe2.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-3s-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-3s-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "meta-quest-pro-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8094800d156a5afdf8150e3532ef6eb96a42827d13e9efde136e6c4dfa6cf856.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/meta-quest-pro-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/meta-quest-pro-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-4-all-in-one-128gb-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db8b4cb9f9bfde8e71724853a14665ce65962652e94cdd19c7fe918872cef630.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-4-all-in-one-128gb-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-4-all-in-one-128gb-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-4-all-in-one-256gb-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\46d16da33f988435fadaef2b675dc7fe552f63804f1291be523cae51c00299de.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-4-all-in-one-256gb-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-4-all-in-one-256gb-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-neo-3-256gb-all-in-one-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ffa33b45450fcbb57ab68064b6033626586f608d947f3d141b7d5dea3147c9f3.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-neo-3-256gb-all-in-one-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-neo-3-256gb-all-in-one-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-neo-3-8gb-ram-128gb-rom-all-in-one-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2d3b6053d10292d31f468671433b32250fea839602ad6a22fc7773b9650df474.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-neo-3-8gb-ram-128gb-rom-all-in-one-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-neo-3-8gb-ram-128gb-rom-all-in-one-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-neo-3-8gb-ram-256gb-rom-all-in-one-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb360e13e6bd4b50650c6a94c50cad5a4d7b2af14e58f7abaad32f1d564b7546.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-neo-3-8gb-ram-256gb-rom-all-in-one-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-neo-3-8gb-ram-256gb-rom-all-in-one-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pico-neo-3-all-in-one-vr-headset",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5052287f3d45120960d76a51e901626c92abfe60fd99fdf738117560e25ce9f8.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/pico-neo-3-all-in-one-vr-headset.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/pico-neo-3-all-in-one-vr-headset.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-galaxy-xr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\071b76691de42a353becb608ee17985c1f0b1ef37eb43913f3b33a5b5b74ffea.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/samsung-galaxy-xr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/samsung-galaxy-xr.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sony-playstation-vr2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\10f8796edb527049e4134f931572f03c660cfe64ccef185e497ae0420f64411c.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/sony-playstation-vr2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/sony-playstation-vr2.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sony-playstation-vr2-horizon-call-of-the-mountain-bundle",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b913598da8f6478afc2731f673fa0804bcb35b8cd51eb5c357d7e158931caca1.html'",
+    "sourceImages": [
+      "/images/products/gaming/vr/sony-playstation-vr2-horizon-call-of-the-mountain-bundle.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gaming/vr/sony-playstation-vr2-horizon-call-of-the-mountain-bundle.png",
+        "categorySlug": "gaming",
+        "categoryName": "Gaming",
+        "subcategorySlug": "vr",
+        "subcategoryName": "VR",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

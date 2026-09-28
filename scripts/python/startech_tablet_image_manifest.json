@@ -1,0 +1,1681 @@
+{
+  "sourceCategoryUrl": "https://www.startech.com.bd/tablet-pc",
+  "siteReportedProductCount": 116,
+  "uniqueMasterProductsFound": 116,
+  "selectedCategory": null,
+  "requestedForThisRun": 116,
+  "outputRoot": "public/images/products",
+  "categories": [
+    {
+      "name": "Graphics Tablet",
+      "slug": "graphics-tablet",
+      "url": "https://www.startech.com.bd/graphics-tablet",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Kids Tablet",
+      "slug": "kids-tablet",
+      "url": "https://www.startech.com.bd/kids-tablet",
+      "matchedProductCount": 3
+    },
+    {
+      "name": "iPad",
+      "slug": "ipad",
+      "url": "https://www.startech.com.bd/apple-ipad",
+      "matchedProductCount": 13
+    },
+    {
+      "name": "Lenovo",
+      "slug": "lenovo",
+      "url": "https://www.startech.com.bd/desktops/brand-pc/lenovo-desktop",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Samsung",
+      "slug": "samsung",
+      "url": "https://www.startech.com.bd/samsung-monitor",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "HONOR",
+      "slug": "honor",
+      "url": "https://www.startech.com.bd/honor-laptop-bag",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Xiaomi",
+      "slug": "xiaomi",
+      "url": "https://www.startech.com.bd/xiaomi-laptop-bag-backpack",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Walton",
+      "slug": "walton",
+      "url": "https://www.startech.com.bd/walton-all-in-one-pc",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Huion",
+      "slug": "huion",
+      "url": "https://www.startech.com.bd/huion-graphics-tablet",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "HUAWEI",
+      "slug": "huawei",
+      "url": "https://www.startech.com.bd/huawei-mobile-phone",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Chuwi",
+      "slug": "chuwi",
+      "url": "https://www.startech.com.bd/chuwi-laptop",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Amazon",
+      "slug": "amazon",
+      "url": "https://www.startech.com.bd/amazon-tablet-pc",
+      "matchedProductCount": 8
+    },
+    {
+      "name": "Google",
+      "slug": "google",
+      "url": "https://www.startech.com.bd/google-pixel-phone",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "OnePlus",
+      "slug": "oneplus",
+      "url": "https://www.startech.com.bd/oneplus-mobile-phone",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Teclast",
+      "slug": "teclast",
+      "url": "https://www.startech.com.bd/teclast-all-in-one-pc",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "ZTE",
+      "slug": "zte",
+      "url": "https://www.startech.com.bd/zte-mobile-phone",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Infinix",
+      "slug": "infinix",
+      "url": "https://www.startech.com.bd/infinix-mobile-phone",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "reMarkable",
+      "slug": "remarkable",
+      "url": "https://www.startech.com.bd/remarkable-tablet",
+      "matchedProductCount": 1
+    },
+    {
+      "name": "Tecno",
+      "slug": "tecno",
+      "url": "https://www.startech.com.bd/tecno-laptop",
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Stylus Pen",
+      "slug": "stylus-pen",
+      "url": "https://www.startech.com.bd/tablet-pc/stylus",
+      "matchedProductCount": 0
+    }
+  ],
+  "products": [
+    {
+      "name": "Walton Walpad 8G Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/walton-walpad-8g-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/walton/walpad-8g-pro/walpad-8g-pro-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/walton-walpad-8g-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X7",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x7",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x7/pad-x7-10-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x7.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast P30 Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-p30-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/p30/p30-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-p30-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast P50 2025 11\" Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-p50-2025-11-inch-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/p50-2025-11-inch/p50-2025-11-inch-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-p50-2025-11-inch-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab A11 (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-a11",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-a11/galaxy-tab-a11-01-grey-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-a11.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast P30T",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-p30t-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/p30t-10-1-inch/p30t-10-1-inch-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-p30t-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast P30T 10.1 Inch Unisoc T606 Tablet with All-in-one KIT",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-p30t-10-1-inch-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/p30t-10-1-inch/p30t-10-1-inch-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-p30t-10-1-inch-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast T50 Mini 8GB RAM 128GB ROM 8.7\" WXGA+ IPS Tablet (Sim Supported)",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t50-mini-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t50-mini/t50-mini-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t50-mini-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "RIRO PAD (Sim Supported)",
+      "sourceProductUrl": "https://www.startech.com.bd/riro-pad",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/vivo/riro-pad/riro-pad-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/riro-pad.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Walton Walpad 11G",
+      "sourceProductUrl": "https://www.startech.com.bd/walton-walpad-11g-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/walton/walpad-11g/walpad-11g-0-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/walton-walpad-11g-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab One with Clear Case",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-one",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab-one/tab-one-with-clear-case-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-one.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab K9 LTE",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-k9-lte",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab-k9/tab-k9-lte-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-k9-lte.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Huion Kamvas Slate 10 10.1-Inch FHD+ Android Drawing Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/huion-kamvas-slate-10-graphics-drawing-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/graphics-tablet/huion/kamvas-slate-10/kamvas-slate-10-020-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/huion-kamvas-slate-10-graphics-drawing-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Walton Walpad 10H Pro Max With Keyboard",
+      "sourceProductUrl": "https://www.startech.com.bd/walton-walpad-10h-pro-max-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/walton/walpad-10h-pro-max/walpad-10h-pro-max-with-keyboard-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/walton-walpad-10h-pro-max-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TECLAST T50 Plus",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t50-plus-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t50-plus/t50-plus-03-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t50-plus-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X8b",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x8b",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x8b/honor-pad-x8b-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x8b.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast T60AI 12\" Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t60ai-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t60ai/t60ai-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t60ai-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Redmi Pad 2",
+      "sourceProductUrl": "https://www.startech.com.bd/redmi-pad-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/xiaomi/pad-2/redmi-pad-2-04-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/redmi-pad-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast T65",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t65-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t65/t65-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t65-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X8b LTE",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x8b-lte",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x8b/honor-pad-x8b-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x8b-lte.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast T60 Pro LTE",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t60-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t60-pro/t60-pro-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t60-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab A11+",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-a11-plus",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-a11-plus/galaxy-tab-a11-plus-06-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-a11-plus.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Xiaoxin Pad 11 (MediaTek Dimensity 6300)",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-xiaoxin-pad-11",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/xiaoxin-pad-11/xiaoxin-pad-11-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-xiaoxin-pad-11.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TECNO MEGAPAD SE 2",
+      "sourceProductUrl": "https://www.startech.com.bd/tecno-megapad-se-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/tecno/megapad-se-2/megapad-se-2-deep-grey-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/tecno-megapad-se-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Kindle Paperwhite 12th Gen 16GB 7\" Display with Built-in Light, WiFi",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-kindle-paperwhite-12th-gen-16gb",
+      "categoryPath": [
+        "tablet-pc",
+        "amazon"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/kindle-12th-gen/amazon-kindle-paperwhite-12th-gen-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/amazon/amazon-kindle-paperwhite-12th-gen-16gb.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X9a",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x9a",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x9a/pad-x9a-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x9a.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast T70 14\" Android Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t70-android-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t70/t70-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t70-android-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab A11+ 5G (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-a11-plus-5g",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-a11-plus/galaxy-tab-a11-plus-06-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-a11-plus-5g.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Xiaoxin Pad 12",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-xiaoxin-pad-12",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/xiaoxin-pad-12/xiaoxin-pad-12-luna-grey-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-xiaoxin-pad-12.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S6 Lite 2024 (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s6-lite-2024-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s6-lite/galaxy-tab-s6-lite-1-1200x630.jpg",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s6-lite-2024-tablet.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "TECNO MEGAPAD SE",
+      "sourceProductUrl": "https://www.startech.com.bd/tecno-megapad-se",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/tecno/megapad-se/megapad-se-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/tecno-megapad-se.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TECNO MEGAPAD 2",
+      "sourceProductUrl": "https://www.startech.com.bd/tecno-megapad-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/tecno/megapad-2/megapad-2-03-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/tecno-megapad-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Redmi Pad 2 Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/redmi-pad-2-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/redmi-pad-2-pro/redmi-pad-2-pro-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/redmi-pad-2-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast ArtPad Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-artpad-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/artpad-pro/artpad-pro-09-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-artpad-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 Lite",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-lite-wifi",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-lite/galaxy-tab-s10-lite-05-1200x630.png",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-lite-wifi.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 7",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-7",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/pad-7/pad-7-graphite-grey-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-pad-7.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CHUWI Hi10 X2 Windows 11 Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/chuwi-hi10-x2-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/chuwi/hi10-x2/hi10-x2-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/chuwi-hi10-x2-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Xiaoxin Pad Pro (MediaTek Dimensity 8300)",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-xiaoxin-pad-pro-256gb-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/lenovo/xiaoxin-pad-2024/xiaoxin-pad-pro-seafoam-green-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-xiaoxin-pad-pro-256gb-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 8",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-8",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/pad-8/pad-8-07-1200x630.webp"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 FE",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-fe-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-fe/galaxy-tab-s10-fe-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-fe-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Honor Pad 10 With Keyboard & Pen Lite",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-10",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/honor/pad-10/pad-10-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-10.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OnePlus Pad Go 2",
+      "sourceProductUrl": "https://www.startech.com.bd/oneplus-pad-go-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oneplus/pad-go-2/oneplus-pad-go-2-lavender-drift-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oneplus-pad-go-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Huawei MatePad 11.5 with Keyboard",
+      "sourceProductUrl": "https://www.startech.com.bd/huawei-matepad-11-5",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/huawei/matepad-11-5/matepad-11.5-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/huawei-matepad-11-5.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Kindle Colorsoft Signature Edition 32GB 7\" E-Book Reader",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-kindle-colorsoft-signature-edition",
+      "categoryPath": [
+        "tablet-pc",
+        "amazon"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/kindle-colorsoft/kindle-5-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/amazon/amazon-kindle-colorsoft-signature-edition.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab K11 GEN 2",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-k11-gen-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab-k11-gen-2/tab-k11-gen-2-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-k11-gen-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Xiaoxin Pad Pro GT",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-xiaoxin-pad-pro-gt",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/xiaoxin-pad-pro-gt/xiaoxin-pad-pro-gt-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-xiaoxin-pad-pro-gt.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 7 Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-7-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/xiaomi/pad-7-pro/pad-7-pro-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-pad-7-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Xiaoxin Pad Pro 13",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-xiaoxin-pad-pro-13",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/xiaoxin-pad-pro-13/xiaoxin-pad-pro-13-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-xiaoxin-pad-pro-13.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad 11th Gen (2025)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-11-inch-11th-gen",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-11th-gen-2025/apple-ipad-11th-gen-silver-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-11-inch-11th-gen.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 FE+",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-fe-plus",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-fe-plus/galaxy-tab-s10-fe-plus-001-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-fe-plus.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 5G (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s9-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s9/galaxy-tab-s9-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s9-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Kindle Scribe 16GB 10.2” Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-kindle-scribe-16gb-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "amazon"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/kindle-scribe/kindle-scribe-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/amazon/amazon-kindle-scribe-16gb-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Mini 7 (WiFi)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-mini-7",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/apple/ipad-mini-7/ipad-mini-7-space-gray-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-mini-7.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 8 Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-8-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/xiaomi/pad-8-pro/pad-8-pro-gray-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-pad-8-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S11",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s11",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s11/galaxy-tab-s11-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s11.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OnePlus Pad 4",
+      "sourceProductUrl": "https://www.startech.com.bd/oneplus-pad-4",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oneplus/pad-4/oneplus-pad-4-10-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oneplus-pad-4.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Air M4 11-inch (Wi-Fi)",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-air-m4",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-air-m4/ipad-air-m4-11inch-space-gray-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-air-m4.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ZTE Nubia Pad 3D Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/zte-nubia-pad-3d-snapdragon-888-12-4-inch-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/zte/nubia-pad-3d/nubia-pad-3d-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/zte-nubia-pad-3d-snapdragon-888-12-4-inch-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Air M4 13-inch",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-air-m4-13-inch",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-air-m4-13-inch/ipad-air-m4-13-inch-space-gray-11-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-air-m4-13-inch.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "reMarkable Paper Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/remarkable-paper-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "remarkable"
+      ],
+      "matchedCategories": [
+        {
+          "name": "reMarkable",
+          "slug": "remarkable",
+          "url": "https://www.startech.com.bd/remarkable-tablet"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/remarkable/paper-pro/paper-pro-08-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/remarkable/remarkable-paper-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S11 Ultra with Keyboard",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s11-ultra-with-keyboard",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s11-ultra/galaxy-tab-s11-ultra-01-1200x630.webp"
+    },
+    {
+      "name": "iPad Pro M5 11-inch",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-pro-m5",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m5/11-inch/ipad-pro-m5-11inch-space-black-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-pro-m5.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M5 13-inch",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-pro-m5-13-inch",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m5/13-inch/ipad-pro-m5-13inch-space-black-1-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M5 13-inch (WiFI+Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-pro-m5-13-inch-cellular",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m5/13-inch/ipad-pro-m5-13inch-space-black-1-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch-cellular.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Fire 7 Quad Core 7\" Display Kids Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-fire-7-quad-core-kids-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "kids-tablet"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Kids Tablet",
+          "slug": "kids-tablet",
+          "url": "https://www.startech.com.bd/kids-tablet"
+        },
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/fire-7-kids/fire-7-kids-1200x630.jpg",
+      "localImageFile": "public/images/products/tablet-pc/kids-tablet/amazon-fire-7-quad-core-kids-tablet.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Fire HD 8 Quad Core 8\" Display Kids Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-fire-hd-8-kids-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "kids-tablet"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Kids Tablet",
+          "slug": "kids-tablet",
+          "url": "https://www.startech.com.bd/kids-tablet"
+        },
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/fire-hd-8-kids/fire-hd-8-kids-1200x630.jpg",
+      "localImageFile": "public/images/products/tablet-pc/kids-tablet/amazon-fire-hd-8-kids-tablet.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Google Pixel Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/google-pixel-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/google/pixel-tablet/pixel-tablet-porcelain-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/google-pixel-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab P11 Gen 2",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-p11-gen-2-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/p11-gen-2/p11-gen-2-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-p11-gen-2-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Fire HD 10 Kids 13th Gen 10.1\" FHD Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-fire-hd-10-kids-13th-gen-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "kids-tablet"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Kids Tablet",
+          "slug": "kids-tablet",
+          "url": "https://www.startech.com.bd/kids-tablet"
+        },
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/fire-hd-10-kids/fire-hd-10-kids-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/kids-tablet/amazon-fire-hd-10-kids-13th-gen-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Kindle Kids 11th Gen 16GB 6\" E-Book Reader",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-kindle-kids",
+      "categoryPath": [
+        "tablet-pc",
+        "amazon"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/kindle-kids/kids-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/amazon/amazon-kindle-kids.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Huawei MatePad 12 X",
+      "sourceProductUrl": "https://www.startech.com.bd/huawei-matepad-12-x",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/huawei/matepad-12-x/matepad-12x-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/huawei-matepad-12-x.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Idea Tab",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-idea-tab",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/lenovo/idea-tab/idea-tab-06-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-idea-tab.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OPPO Pad 3",
+      "sourceProductUrl": "https://www.startech.com.bd/oppo-pad-3",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oppo/pad-3/oppo-pad-3-silvler-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oppo-pad-3.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab ZAEH0026AE",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-zaeh0026ae",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab/tab-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-zaeh0026ae.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab K11 / P11 J6C6F Plus Helio G90T 6GB RAM 128GB Storage 11\" 2K Android Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-k11-j6c6f-plus-android-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab-p11-plus/tab-p11-plus-slate-grey-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-k11-j6c6f-plus-android-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab A9 LTE (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-a9-lte-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-a9/galaxy-tab-a9-graphite-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-a9-lte-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Teclast M50 Plus 10.1\" Tablet",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-m50-plus-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/m50-plus/m50-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-m50-plus-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Walton Walpad 9G",
+      "sourceProductUrl": "https://www.startech.com.bd/walton-walpad-9g-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/walton/walpad-9g/walpad-9g-gray-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/walton-walpad-9g-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X8a",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x8a-4gb-128gb-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x8a/pad-x8a-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x8a-4gb-128gb-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X7 LTE with Case",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x7-lte",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x7/pad-x7-10-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x7-lte.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab A9+ (Wi-Fi Only)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-a9-plus-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-a9-plus/galaxy-tab-a9-plus-grey-001-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-a9-plus-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo Tab M9 (Wi-Fi + Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-tab-m9-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/lenovo/tab-m9/tab-m9-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-tab-m9-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Amazon Fire HD 10 13th Gen Octa-Core 10.1\" FHD Tablet with Alexa",
+      "sourceProductUrl": "https://www.startech.com.bd/amazon-fire-hd-10-13th-gen-fhd-tablet ",
+      "categoryPath": [
+        "tablet-pc",
+        "amazon"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Amazon",
+          "slug": "amazon",
+          "url": "https://www.startech.com.bd/amazon-tablet-pc"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/amazon-fire-hd-10-13th-gen-fhd-tablet%20"
+    },
+    {
+      "name": "Teclast T60 8GB RAM 256GB ROM 11.97\" 2K IPS Tablet (Sim Supported)",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t60-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t60/t60-09-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t60-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X8a LTE",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x8a-lte-11-inch-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x8a/pad-x8a-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x8a-lte-11-inch-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "TECLAST T50 Plus Tablet With Keyboard & Cover",
+      "sourceProductUrl": "https://www.startech.com.bd/teclast-t50-plus-android-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/teclast/t50-plus/t50-plus-0001-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/teclast-t50-plus-android-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Lenovo K10 Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/lenovo-k10-pro-snapdragon-680-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/k10-pro/k10-pro-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/lenovo-k10-pro-snapdragon-680-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Redmi Pad Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-redmi-pad-pro-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/redmi-pad-pro/redmi-pad-pro-graphite-grey-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-redmi-pad-pro-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad 9",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-9-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/honor/pad-9/pad-9-005-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-9-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 FE (Wi-Fi Only)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s9-fe-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s9-fe/galaxy-tab-s9-fe-grey-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s9-fe-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "HONOR Pad X9a LTE (SIM Supported)",
+      "sourceProductUrl": "https://www.startech.com.bd/honor-pad-x9a-lte-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/honor/pad-x9a/pad-x9a-05-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/honor-pad-x9a-lte-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Motorola Moto Pad 60 Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/motorola-moto-pad-60-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/motorola/moto-pad-60-pro/moto-pad-60-pro-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/motorola-moto-pad-60-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Redmi Pad Pro 5G",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-redmi-pad-pro-5g",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/redmi-pad-pro-5g/redmi-pad-pro-5g-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-redmi-pad-pro-5g.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 Lite (Wi-Fi + Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-lite",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-lite/galaxy-tab-s10-lite-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-lite.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 FE+ (Wi-Fi Only)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s9-fe-plus-wi-fi-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s9-fe-plus/galaxy-tab-s9-fe-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s9-fe-plus-wi-fi-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 FE 12GB RAM 256GB Storage",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-fe-256gb",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-fe-plus/galaxy-tab-s10-fe-plus-001-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-fe-256gb.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OnePlus Pad 2",
+      "sourceProductUrl": "https://www.startech.com.bd/oneplus-pad-2",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oneplus/pad-2/oneplus-pad-2-002-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oneplus-pad-2.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 (Wi-Fi Only)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s9-wi-fi-11-inch-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s9/galaxy-tab-s9-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s9-wi-fi-11-inch-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OnePlus Pad 3",
+      "sourceProductUrl": "https://www.startech.com.bd/oneplus-pad-3",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oneplus/pad-3/pad-3-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oneplus-pad-3.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 FE 5G (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-s9-fe-wi-fi-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-s9-fe/galaxy-s9-fe-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-s9-fe-wi-fi-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 FE+ (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s9-fe-plus-tablet-wi-fi-sim",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s9-fe-plus/galaxy-tab-s9-fe-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s9-fe-plus-tablet-wi-fi-sim.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 6S Pro",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-6s-pro",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/xiaomi/pad-6s-pro/pad-6s-pro-graphite-gray-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-pad-6s-pro.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Air M3 11-inch (WiFI+Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-air-m3-11-inch-cellular",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-air-m3-11-inch/ipad-air-m3-11inch-blue-04-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch-cellular.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Air M3 11-inch (WiFi)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-air-m3-11-inch",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-air-m3-11-inch/ipad-air-m3-11inch-space-gray-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Xiaomi Pad 7 Ultra",
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-pad-7-ultra",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/xiaomi/pad-7-ultra/pad-7-ultra-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/xiaomi-pad-7-ultra.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 Ultra Wi-Fi Tablet With Keyboard",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-ultra-wifi",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-ultra/galaxy-tab-s10-ultra-with-keyboard-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-ultra-wifi.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S11 Ultra",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s11-ultra",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s11-ultra/galaxy-tab-s11-ultra-01-1200x630.webp"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 Ultra 5G (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-ultra",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-ultra/galaxy-tab-s10-ultra-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-ultra.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M4 13-inch (WiFi)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-pro-m4-13-inch",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m4-13-inch/ipad-pro-m4-13inch-space-black-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M4 11-inch (WiFi+Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-pro-m4-11-inch-cellular",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m4-11-inch/ipad-pro-m4-11inch-space-black-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-pro-m4-11-inch-cellular.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10 Ultra 5G 512GB (Wi-Fi + SIM)",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-ultra-512gb-tablet",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-ultra/galaxy-tab-s10-ultra-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-ultra-512gb-tablet.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M5 11-inch (WiFi+Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/ipad-pro-m5-cellular",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m5/11-inch/ipad-pro-m5-11inch-space-black-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/ipad-pro-m5-cellular.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "iPad Pro M4 13-inch (WiFi+Cellular)",
+      "sourceProductUrl": "https://www.startech.com.bd/apple-ipad-pro-m4-13-inch-cellular",
+      "categoryPath": [
+        "tablet-pc",
+        "ipad"
+      ],
+      "matchedCategories": [
+        {
+          "name": "iPad",
+          "slug": "ipad",
+          "url": "https://www.startech.com.bd/apple-ipad"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-pro-m4-13-inch/ipad-pro-m4-13inch-silver-02-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch-cellular.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "OnePlus Pad Lite",
+      "sourceProductUrl": "https://www.startech.com.bd/oneplus-pad-lite",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/oneplus/pad-lite/oneplus-pad-lite-03-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/oneplus-pad-lite.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samsung Galaxy Tab S10+",
+      "sourceProductUrl": "https://www.startech.com.bd/samsung-galaxy-tab-s10-plus",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/samsung/galaxy-tab-s10-plus/galaxy-tab-s10-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/samsung-galaxy-tab-s10-plus.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Infinix Xpad 20",
+      "sourceProductUrl": "https://www.startech.com.bd/infinix-xpad-20",
+      "categoryPath": [
+        "tablet-pc",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/tablet/infinix/xpad-20/xpad-20-1200x630.webp",
+      "localImageFile": "public/images/products/tablet-pc/_uncategorized/infinix-xpad-20.webp",
+      "status": "downloaded"
+    }
+  ],
+  "summary": {
+    "downloaded": 112,
+    "skippedExisting": 0,
+    "failed": 4,
+    "dryRun": false
+  }
+}

@@ -1,0 +1,2794 @@
+{
+  "sourceRootCategoryUrl": "https://www.startech.com.bd/camera",
+  "selectedCategories": [
+    {
+      "name": "Camera Lenses",
+      "slug": "camera-lenses",
+      "url": "https://www.startech.com.bd/camera/camera-lenses",
+      "siteReportedProductCount": 157,
+      "productsFound": 155
+    },
+    {
+      "name": "Dash Cam",
+      "slug": "dash-cam",
+      "url": "https://www.startech.com.bd/dash-cam",
+      "siteReportedProductCount": 12,
+      "productsFound": 12
+    },
+    {
+      "name": "Body Camera",
+      "slug": "body-camera",
+      "url": "https://www.startech.com.bd/body-camera",
+      "siteReportedProductCount": 24,
+      "productsFound": 24
+    },
+    {
+      "name": "Instant Camera",
+      "slug": "instant-camera",
+      "url": "https://www.startech.com.bd/instant-camera",
+      "siteReportedProductCount": 5,
+      "productsFound": 5
+    }
+  ],
+  "uniqueSelectedProductsFound": 196,
+  "requestedForThisRun": 196,
+  "outputRoot": "public/images/products",
+  "products": [
+    {
+      "name": "Canon EF-S 18-55mm f/3.5-5.6 III Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-s-18-55mm-iii-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-s-18-55mm-iii/ef-s-18-55mm-iii-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-s-18-55mm-iii-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CANON EF-S 18-55mm f/3.5-5.6 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-s-18-55-is-stm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-s-18-55-is-stm/ef-s-18-55-is-stm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-s-18-55-is-stm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E PZ 16-50mm f/3.5-5.6 OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-pz-16-50mm-oss-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-pz-16-50mm/e-pz-16-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-pz-16-50mm-oss-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF 50mm f/1.8 STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-50mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-50mm/ef-50mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-50mm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF-S 18-45mm f/4.5-6.3 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-s-18-45mm-f-4-5-6-3-is-stm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-s-18-45mm-f-4-5-6-3-is-stm/rf-s-18-45mm-f-4-5-6-3-is-stm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-s-18-45mm-f-4-5-6-3-is-stm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon AF-S Nikkor 50mm f/1.8G Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-af-s-nikkor-50mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/50mm/nikon-50mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-af-s-nikkor-50mm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E 55-210mm f/4.5-6.3 OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-55-210mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-55-210/sony-55-210-mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-55-210mm-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 28-60mm f/4-5.6 Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-28-60mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-28-60mm/fe-28-60mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-28-60mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E 50mm f/1.8 OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-50-mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-50/e-50-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-50-mm-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 50mm f/1.8 Full Frame Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-50mm-full-frame-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-50/fe-50-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-50mm-full-frame-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 28-70mm f/3.5-5.6 OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-28-70mm-oss-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-28-70mm/fe-28-70mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-28-70mm-oss-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF-S 55-210mm f/5-7.1 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-s-55-210mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-s-55-210mm/rf-s-55-210mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-s-55-210mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z DX 50-250mm f/4.5-6.3 VR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-dx-50-250mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/z-dx-50-250mm/z-dx-50-250mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-dx-50-250mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 28-75mm f/2.8 Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-28-75mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-28-75mm/nikkor-z-28-75mm-001.-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-28-75mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 85mm F/1.8 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-85mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-85/fe-85-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-85mm-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF-S 10-18mm F4.5-6.3 IS STM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-s-10-18mm-f4-5-6-3-is-stm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-s-10-18mm-f4-5-6-3-is-stm/rf-s-10-18mm-f4-5-6-3-is-stm-06-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-s-10-18mm-f4-5-6-3-is-stm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 24mm f/1.8 Macro IS STM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-24mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-24mm/rf-24mm-0001-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-24mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 85mm f/1.2 L USM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-85mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-85mm-usm/rf-85mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-85mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 24-105mm f/4-7.1 IS STM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-24-105mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-24-105mm/rf-24-105mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-24-105mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 28mm f/2.8 STM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-28mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-28mm/rf-28mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-28mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF-S18-150mm f/3.5-6.3 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-s18-150mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-s18-150mm/rf-s18-150mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-s18-150mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E PZ 18-105mm f/4G OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-pz-18-105mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-pz-18-105/e-pz-18-105-1200x630.jpeg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-pz-18-105mm-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E 18-135mm f/3.5-5.6 OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-18-135mm-oss-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-18-135mm/e-18-135mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-18-135mm-oss-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF 24-105mm f/4L IS USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-24-105mm-l-is-usm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-24-105mm/ef-24-105mm-1-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-24-105mm-l-is-usm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Sonnar T FE 55mm F1.8 ZA Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-sonnar-t-fe-55mm-za-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/sonnar-t-fe-55mm/sonnar-t-fe-55mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-sonnar-t-fe-55mm-za-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-70mm f4 S Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/lens/nikon/NIKKOR%20Z%2024-70mm/NIKKOR%20Z-01-1200x630.webp"
+    },
+    {
+      "name": "Canon RF 35mm f/1.8 Macro IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-35mm-macro-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-35mm/rf-35mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-35mm-macro-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Vario-Tessar T* FE 24-70mm f/4 ZA OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-vario-tessar-t-fe-24-70mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/t-fe-24-70mm/t-fe-24-70mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-vario-tessar-t-fe-24-70mm-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Viltrox AF 85mm f/1.4 Pro FE Lens for Sony E-mount",
+      "sourceProductUrl": "https://www.startech.com.bd/viltrox-af-85mm-f14-pro-fe-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/viltrox/af-85mm-f14-pro-fe/af-85mm-f14-pro-fe-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/viltrox-af-85mm-f14-pro-fe-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Viltrox AF 56mm F1.7 Air APS-C Lens for Sony E-mount",
+      "sourceProductUrl": "https://www.startech.com.bd/viltrox-af-56mm-f17-air-aps-c-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/viltrox/af-56mm-f17-air-aps-c/af-56mm-f17-air-aps-c-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/viltrox-af-56mm-f17-air-aps-c-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 20mm f/1.8 G Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-20mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-20mm/fe-20mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-20mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-200mm f/4-6.3 VR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24-200mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/24-200mm/24-200mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24-200mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 16mm f/1.4 DC DN Contemporary Camera Lens for Sony E-mount",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/16mm-f-1-4-dc-dn/16mmf-1-4-dn-dn-02-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 24-105mm f-4 G OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-24-105mm-f-4-g-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-24-105mm-f-4-g-oss/fe-24-105mm-f-4-g-oss-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-24-105mm-f-4-g-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 90mm f/2.8 Macro G OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-90mm-g-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-90mm/fe-90mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-90mm-g-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-120mm f/4 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24-120mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-24-120mm/24-120mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24-120mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 24mm f/1.4 GM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-24mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-24mm/fe-24mm-lens-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-24mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 20-70mm f/4 G Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-20-70mm-g-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-20-70mm/fe-20-70mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-20-70mm-g-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 85mm f/1.4 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-85mm-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-85mm/fe-85mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-85mm-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sirui Sniper 23mm f/1.2 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sirui-sniper-23mm-f12-af-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sirui/sniper-33mm-f12-af/sniper-33mm-f12-af-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sirui-sniper-23mm-f12-af-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-105mm f/4-7.1 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24-105mm-f-4-7-1-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-24-105mm-f-4-7-1/nikkor-z-24-105mm-f-4-7-1-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24-105mm-f-4-7-1-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 50mm f/1.4 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-50mm-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/sony-fe-50mm/fe-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-50mm-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "7Artisans 85mm f/1.8 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/7artisans-85mm-f18-af-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/7artisans/85mm-f18-af/85mm-f18-af-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/7artisans-85mm-f18-af-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Viltrox AF 35mm f/1.2 LAB FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/viltrox-af-35mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/viltrox/af-35mm/af-35mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/viltrox-af-35mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sirui Aurora 85mm f/1.4 Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sirui-aurora-85mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sirui/aurora-85mm/aurora-85mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sirui-aurora-85mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 35mm f/1.4 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-35mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-35mm-f-1-4/nikkor-z-35mm-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-35mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 200-800mm f/6.3-9 IS USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-200-800mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-200-800mm/rf-200-800mm-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-200-800mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 16mm f/1.8 G Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-16mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-16mm/fe-16mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-16mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 35mm f/1.4 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-35mm-camera-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-35mm-01/fe-35mm-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-35mm-camera-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sirui Sniper 33mm f/1.2 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sirui-sniper-33mm-f12-af-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sirui/sniper-33mm-f12-af/sniper-33mm-f12-af-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sirui-sniper-33mm-f12-af-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sirui Sniper 56mm f/1.2 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sirui-sniper-56mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sirui/sniper-56mm/sniper-56mm-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sirui-sniper-56mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 35mm f/1.8 Full Frame Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-35mm-f-1-8-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-35mm-02/fe-35mm-8-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-35mm-f-1-8-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 24-70mm f/2.8 G Master Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-24-70mm-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-24-70mm/fe-24-70mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-24-70mm-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 16-35mm f/2.8 GM II Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-16-35mm-gm-ii-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-16-35mm-gm-ii/fe-16-35mm-gm-ii-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-16-35mm-gm-ii-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 135mm f/1.8 GM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-135mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-135mm-gm/fe-135mm-gm-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-135mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 180-600mm f/5.6-6.3 VR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-180-600mm-vr-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-180-600mm/nikkor-z-180-600mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-180-600mm-vr-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 200-600mm f/5.6-6.3 G OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-200-600mm-g-oss-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-200-600mm-g/fe-200-600mm-g-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-200-600mm-g-oss-camera-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 70-200mm f/4 G OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-70-200mm-f4-g-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-70-200mm-f4-g-oss/fe-70-200mm-f4-g-oss-001-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-70-200mm-f4-g-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 50-150mm f/2 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-50-150mm-f2-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-50-150mm-f2-gm/fe-50-150mm-f2-gm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-50-150mm-f2-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 85mm f/1.4 GM II Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-85mm-f-1-4-gm-ii-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-85mm-f-1-4-gm-ii/fe-85mm-f-1-4-gm-ii-06-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-85mm-f-1-4-gm-ii-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 1.4x Teleconverter Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-14x-teleconverter-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-14x-teleconverter/fe-14x-teleconverter-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-14x-teleconverter-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 12-24mm f/2.8 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-12-24mm-f-2-8-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-12-24mm-f-2-8-gm/fe-12-24mm-f-2-8-gm-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-12-24mm-f-2-8-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 24-70mm f/2.8 L IS USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-24-70mm-l-is-usm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-24-70mm/rf-24-70mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-24-70mm-l-is-usm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 70-200mm f/2.8L IS USM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-70-200mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-70-200mm/rf-70-200mm-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-70-200mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 70-200mm f/2.8 GM OSS II Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-70-200mm-gm-oss-ii-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-70-200mm/fe-70-200mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-70-200mm-gm-oss-ii-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 100-400mm f/4.5-5.6 GM OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-100-400mm-gm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-100-400mm-gm/fe-100-400mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-100-400mm-gm-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 100-500mm f/4.5-7.1L IS USM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-100-500mm-f-4-5-7-1l-is-usm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-100-500mm/rf100-500mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-100-500mm-f-4-5-7-1l-is-usm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-70mm f/2.8 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24-70mm-f-2-8-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-24-70mm-f-2-8-s/nikkor-z-24-70mm-f-2-8-s-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24-70mm-f-2-8-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 17-28mm f/2.8 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-17-28mm-f-2-8-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-17-28mm-f-2-8/nikkor-z-17-28mm-f-2-8-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-17-28mm-f-2-8-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 135mm f/1.8 S Plena Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-135mm-f-1-8-s-plena-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-135mm-f-1-8-s-plena/nikkor-z-135mm-f-1-8-s-plena-001-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-135mm-f-1-8-s-plena-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z MC 105mm f/2.8 VR S Macro Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-mc-105mm-f-2-8-vr-s-macro-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-mc-105mm-f-2-8-vr-s/nikkor-z-mc-105mm-f-2-8-vr-s-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-mc-105mm-f-2-8-vr-s-macro-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 15-35mm f/2.8 L IS USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-15-35mm-f-2-8-l-is-usm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-15-35mm-f-2-8-l-is-usm/rf-15-35mm-f-2-8-l-is-usm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-15-35mm-f-2-8-l-is-usm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 24-70mm f/2.8 DG DN II Art Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-24-70mm-f-2-8-dg-dn-ii-art-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/24-70mm-f-2-8-dg-dn-ii/24-70mm-f-2-8-dg-dn-ii-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-24-70mm-f-2-8-dg-dn-ii-art-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 28-70mm f/2.8 DG DN Contemporary Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-28-70mm-f-2-8-dg-dn-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/28-70mm-f-2-8-dg-dn/28-70mm-f-2-8-dg-dn-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-28-70mm-f-2-8-dg-dn-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 16-28mm f/2.8 DG DN Contemporary Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-16-28mm-f-2-8-dg-dn-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/16-28mm-f28-dg-dn/16-28mm-f28-dg-dn-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-16-28mm-f-2-8-dg-dn-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Tamron 17-50mm f/4 Di III VXD Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/tamron-17-50mm-f-4-di-iii-vxd-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/tamron/17-50mm-f-4-di-iii-vxd/17-50mm-f-4-di-iii-vxd-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/tamron-17-50mm-f-4-di-iii-vxd-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 18-50mm f/2.8 DC DN Contemporary Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-18-50mm-f-2-8-dc-dn-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://www.startech.com.bd/image/cache/catalog/lens/sigma/18-50mm-f-2-8-dc-dn/18-50mm-f-2-8-dc-dn-01-1200x630.webp"
+    },
+    {
+      "name": "Sony FE 24-50mm F2.8 G Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-24-50mm-f2.8-g-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-24-50mm-f2.8-g/fe-24-50mm-f2.8-g-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-24-50mm-f2-8-g-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 50mm f/1.8 STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-50mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-50mm/rf-50mm-lens-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-50mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 28mm f/2.8 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-28mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-28mm/nikkor-z-28mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-28mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF-S 10-18mm f/4.5-5.6 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-s-10-18mm-is-stm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-s-10-18mm/ef-s-10-18mm-1-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-s-10-18mm-is-stm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 16mm f/2.8 STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-16mm-stm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-16mm/rf-16mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-16mm-stm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 28mm f/2 Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-28mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-28mm/fe-28mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-28mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 85mm f/2 Macro IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-85mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-85mm/rf-85mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-85mm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 24-105mm f/4 L IS USM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-24-105mm-is-usm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-24-105mm-l-is-usm/rf-24-105mm-is-usm-camera-lens-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-24-105mm-is-usm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 50mm f/1.2 GM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-50mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-50mm/fe-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-50mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E 35mm f/1.8 OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-35mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-35/e-35-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-35mm-oss-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XC 15-45mm f/3.5-5.6 OIS PZ Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xc-15-45mm-pz-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xc-15-45mm/xc-15-45mm-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xc-15-45mm-pz-camera-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z DX 16-50mm f/3.5-6.3 VR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-dx-16-50mm-vr-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-dx-16-50mm/NIKKOR%20Z%20DX%2016-50mm-01-1200x630.webp"
+    },
+    {
+      "name": "Canon EF-S 55-250mm f/4-5.6 IS STM Telephoto Zoom Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-s-55-250mm-5.6-is-stm",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/Camera%20Lenses/Canon/Canon%20EF-S%2055-250mm%20IS%20STM-1200x630.jpg"
+    },
+    {
+      "name": "Canon EF 75-300mm f/4-5.6 III Telephoto Zoom Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-75-300mm-III",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/Camera%20Lenses/Canon/Canon%20EF%2075-300mm%20III-1200x630.jpg"
+    },
+    {
+      "name": "Nikon AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-af-s-18-140mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/dx-18-140mm/dx-18-140mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-af-s-18-140mm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24-50mm f/4-6.3 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24-50mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-24-50mm/nikkor-z-24-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24-50mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z DX 24mm f/1.7 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-dx-24mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-dx-24mm/nikkor-z-dx-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-dx-24mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 24-50mm f/4.5-6.3 IS STM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-24-50mm-f-4-5-6-3-is-stm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-24-50mm-f-4-5-6-3-is-stm/rf-24-50mm-f-4-5-6-3-is-stm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-24-50mm-f-4-5-6-3-is-stm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 35mm f/2 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-35mm-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-35mm-r-wr/xf-35mm-r-wr-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-35mm-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF 85mm f/1.8 USM Prime Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-85mm-usm-prime-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-85mm-usm-prime/ef-85mm-1-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-85mm-usm-prime-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF-S 18-135mm IS USM Zoom Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-s-18-135mm-is-usm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-s-18-135mm-is-usm/ef-s-18-135mm-is-usm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-s-18-135mm-is-usm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 28mm f/2.8 SE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-28mm-se-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-28mm-se/nikkor-z-28mm-se-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-28mm-se-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon AF-S NIKKOR 85mm f/1.8G Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-af-s-85mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/af-s-85mm/af-s-85mm-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-af-s-85mm-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 18-55mm f/2.8-4 R LM OIS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-18-55mm/xf-18-55mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 16-80mm f/4 R OIS WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-16-80mm-f-4-r-ois-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-16-80mm/xf-16-80mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-16-80mm-f-4-r-ois-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony E 10-18mm f/4 OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-e-10-18mm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/e-10-18mm/e-10-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-e-10-18mm-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Viltrox AF 75mm F1.2 Lens for Fujifilm X-Mount",
+      "sourceProductUrl": "https://www.startech.com.bd/viltrox-af-75mm-f1-2-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/viltrox/af-75mm-f1-2/af-75mm-f1-2-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/viltrox-af-75mm-f1-2-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 90mm f/2 R LM WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-90mm-f-2-r-lm-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-90mm/xf-90mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-90mm-f-2-r-lm-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 35mm f/1.8 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-35mm-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-35mm/nikkor-z-35mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-35mm-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 85mm f/1.8 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-85mm-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-85mm/nikkor-z-85mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-85mm-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 70-300mm f/4-5.6 R LM OIS WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-70-300mm-f-4-5-6-r-lm-ois-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-70-300mm/xf-70-300mm-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-70-300mm-f-4-5-6-r-lm-ois-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 24mm f/1.8 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-24mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/24mm/nikkor-z-24mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-24mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 56mm f/1.2 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-56mm-f-1-2-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-56mm-f-1-2-r/fujifilm-xf-56mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-56mm-f-1-2-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 70-180mm f/2.8 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-70-180mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-70-180mm/nikkor-z-70-180mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-70-180mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 16-55mm f2.8 R LM WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-16-55mm-r-lm-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-16-55mm-r-lm-wr/xf-16-55mm-r-lm-wr-1-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-16-55mm-r-lm-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon RF 100mm f/2.8 L Macro IS USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-rf-100mm-l-is-usm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/rf-100mm/rf-100mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-rf-100mm-l-is-usm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 14mm f/1.8 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-14mm-gm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-14mm/fe-14mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-14mm-gm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samyang Cine V-AF 24mm T1.9 FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/samyang-cine-v-af-24mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/samyang/cine-v-af-24mm-003-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/samyang-cine-v-af-24mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samyang Cine V-AF 35mm T1.9 FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/samyang-cine-v-af-35mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/samyang/cine-v-af-35mm/cine-v-af-35mm-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/samyang-cine-v-af-35mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samyang Cine V-AF 20mm T1.9 FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/samyang-cine-v-af-20mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/samyang/cine-v-af-20mm/cine-v-af-20mm-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/samyang-cine-v-af-20mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samyang AF 14-24mm f/2.8 FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/samyang-af-14-24mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/samyang/af-14-24mm/samyang-14-24mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/samyang-af-14-24mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Samyang AF 18mm f/2.8 FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/samyang-af-18mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/samyang/af-18mm/af-18mm-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/samyang-af-18mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 28-70mm f/2 GM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-28-70mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-28-70mm-f2/fe-28-70mm-07-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-28-70mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 500mm f/5.6 R LM OIS WR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-500mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-500mm/xf-500mm-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-500mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Viltrox AF 135mm f/1.8 LAB FE Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/viltrox-af-135mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/viltrox/af-135mm/af-135mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/viltrox-af-135mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "7Artisans 35mm f/1.4 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/7artisans-35mm-f14-af-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/7artisans/35mm-f14-af/35mm-f14-af-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/7artisans-35mm-f14-af-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "7Artisans 24mm f/1.8 AF Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/7artisans-24mm-f18-af-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/7artisans/24mm-f18-af/24mm-f18-af-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/7artisans-24mm-f18-af-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 16-35mm f/2.8 GM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-16-35mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-16-35mm/fe-16-35mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-16-35mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 50mm f/1.2 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-50mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/z-50mm/z-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-50mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 70-200mm f/2.8 GM OSS Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-70-200mm-gm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-70-200mm-oss/fe-70-200mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-70-200mm-gm-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 300mm f/2.8 GM OSS Lens (Sony E)",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-300mm-f-2-8-gm-oss-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/fe-300mm-f-2-8-gm-oss/fe-300mm-f-2-8-gm-oss-06-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-300mm-f-2-8-gm-oss-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 400mm f/4.5 VR S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-400mm-vr-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-400mm/nikkor-z-400mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-400mm-vr-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 600mm f/6.3 VR S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-600mm-f-6-3-vr-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-600mm-f-6-3-vr-s/nikkor-z-600mm-f-6-3-vr-s-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-600mm-f-6-3-vr-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 85mm f/1.2 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-85mm-f-1-2-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-85mm-f-1-2-s/nikkor-z-85mm-f-1-2-s-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-85mm-f-1-2-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 10-18mm f/2.8 DC DN Contemporary Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-10-18mm-f-2-8-dc-dn-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/10-18mm-f-2-8-dc-dn/10-18mm-f-2-8-dc-dn-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-10-18mm-f-2-8-dc-dn-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 105mm f/1.4 DG HSM Art Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-105mm-f-1-4-dg-hsm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/105mm-f-1-4-dg-hsm/105mm-f-1-4-dg-hsm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-105mm-f-1-4-dg-hsm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 24-70mm f/2.8 DG DN Art Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-24-70mm-f-2-8-dg-dn-art-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/24-70mm-f-2-8-dg-dn/24-70mm-f-2-8-dg-dn-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-24-70mm-f-2-8-dg-dn-art-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sigma 14-24mm f/2.8 DG DN Art Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sigma-14-24mm-f-2-8-dg-dn-art-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sigma/14-24mm-f-2-8-dg-dn/14-24mm-f-2-8-dg-dn-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sigma-14-24mm-f-2-8-dg-dn-art-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Tamron SP 24-70mm f/2.8 Di VC USD G2 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/tamron-sp-24-70mm-f-2-8-di-vc-usd-g2-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/tamron/sp-24-70mm-f-2-8-di-vc-usd-g2/sp-24-70mm-f-2-8-di-vc-usd-g2-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/tamron-sp-24-70mm-f-2-8-di-vc-usd-g2-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Tamron 50-400mm f/4.5-6.3 Di III VC VXD Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/tamron-50-400mm-f-4-5-6-3-di-iii-vc-vxd-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/tamron/50-400mm-f-4-5-6-3-di-iii-vc-vxd/50-400mm-f-4-5-6-3-di-iii-vc-vxd-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/tamron-50-400mm-f-4-5-6-3-di-iii-vc-vxd-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 50mm f/1.8 S Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-50mm-s-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-50mm-s/nikkor-z-50mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-50mm-s-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony Vario-Tessar T FE 16-35mm f/4 ZA OSS Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-vario-tessar-t-fe-16-35mm-oss-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/vario-tessar-t-fe-16-35mm/vario-tessar-t-fe-16-35mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-vario-tessar-t-fe-16-35mm-oss-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 50mm f/2 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-50mm-f-2-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-50mm/xf-50mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-50mm-f-2-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF 40mm f/2.8 STM Prime Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-40mm-stm-prime-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/canon/ef-40mm-stm-prime/ef-40mm-1-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-40mm-stm-prime-lens.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XC 35mm f/2 Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xc-35mm-f-2-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xc-35mm/xc-35mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xc-35mm-f-2-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 18mm f/2 R Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-18mm-f-2-r-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-18mm/xf-18mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-18mm-f-2-r-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 23mm f/1.4 R Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-23mm-f-1-4-r-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-23mm-f/xf-23mm-f-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-23mm-f-1-4-r-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Sony FE 85mm f/1.4 GM Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/sony-fe-85mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/sony/sony-fe-85mm/sony-fe-85mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/sony-fe-85mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 100-400mm f/4.5-5.6 R LM OIS WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-100-400mm-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-100-400mm/xf-100-400mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-100-400mm-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM GF 32-64mm f/4 R LM WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-gf-32-64mm-f-4-r-lm-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/gf-32-64mm/gf-32-64mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-gf-32-64mm-f-4-r-lm-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM GF 80mm f/1.7 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-gf-80mm-f-1-7-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/gf-80mm/gf-80mm-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-gf-80mm-f-1-7-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Canon EF 100-400mm f/4.5-5.6L IS II USM Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/canon-ef-100-400mm",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/DSLR/Canon/Lens/100lens-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/camera-lenses/canon-ef-100-400mm.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon NIKKOR Z 40mm f/2 Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-nikkor-z-40mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/nikon/nikkor-z-40mm/nikkor-z-40mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-nikkor-z-40mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 27mm f/2.8 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-27mm-f-2-8-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-27mm-f/xf-27mm-f-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-27mm-f-2-8-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 16mm f/1.4 R WR Camera Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-16mm-f-1-4-r-wr-camera-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-16mm-f/xf-16mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-16mm-f-1-4-r-wr-camera-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Nikon AF-S FX NIKKOR 200-500mm f/5.6E ED VR Zoom Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/nikon-af-s-fx-nikkor-200-500mm",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/DSLR/nicon/lense/7-1200x630.png",
+      "localImageFile": "public/images/products/camera/camera-lenses/nikon-af-s-fx-nikkor-200-500mm.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 150-600mm f/5.6-8 R LM OIS WR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-150-600mm-f-5-6-8-r-lm-ois-wr/xf-150-600mm-f-5-6-8-r-lm-ois-wr-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM XF 10-24mm f/4 R OIS WR Lens",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-xf-10-24mm-lens",
+      "sourceCategoryUrl": "https://www.startech.com.bd/camera/camera-lenses",
+      "categoryName": "Camera Lenses",
+      "categorySlug": "camera-lenses",
+      "categoryPath": [
+        "camera",
+        "camera-lenses"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/lens/fujifilm/xf-10-24mm/xf-10-24mm-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/camera-lenses/fujifilm-xf-10-24mm-lens.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "XO XJ03 Full HD Dash Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/xo-xj03-full-hd-dash-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "Empty image response"
+    },
+    {
+      "name": "Transcend DrivePro Body 30 Video Camera Camcorder",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-30-video-camera-camcorder",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-body-30/drivepro-body-30-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-body-30-video-camera-camcorder.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Wiwu Wi-DC201 4K WiFi Dash Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/wiwu-wi-dc201-4k-wifi-dash-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/wiwu/wi-dc201/wi-dc201-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/wiwu-wi-dc201-4k-wifi-dash-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "70mai A400 2K QHD Dash Cam Set",
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-a400-dash-cam",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/70mai/a400/70mai-a400-ivory-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/70mai-a400-dash-cam.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "70mai Dash Cam Pro Plus+ Rear Cam Set",
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-dash-cam-pro-plus-rear-cam-set",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/70mai/dash-cam-pro-plus/dash-cam-pro-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/70mai-dash-cam-pro-plus-rear-cam-set.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "70mai M500 Dash Cam",
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-m500-dash-cam",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/70mai/m500/m500-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/70mai-m500-dash-cam.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro 230 Dash Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-230-dashcam",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-230/drivepro-230-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-230-dashcam.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro 20 Motorcycle Dashcam",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-20-motorcycle-dashcam",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-20/drivepro-20-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-20-motorcycle-dashcam.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "70mai A800S 4K Dash Cam",
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-a800s-4k-dash-cam",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/70mai/a800s/a800s-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/70mai-a800s-4k-dash-cam.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro Body 60 Cylindrical Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-60-cylindrical-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-body-60/drivepro-body-60-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-body-60-cylindrical-camera.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro 550 Dual Lens Dash Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-550-dual-lens-dash-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-550/drivepro-550-01-1200x630.jpg",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-550-dual-lens-dash-camera.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro 550B Dual Lens Dash Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-550b-dash-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/dash-cam",
+      "categoryName": "Dash Cam",
+      "categorySlug": "dash-cam",
+      "categoryPath": [
+        "camera",
+        "dash-cam"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-550b/drivepro-550b-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/dash-cam/transcend-drivepro-550b-dash-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L7 HD Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l7-hd-portable-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/body-camera/l7-/l7-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l7-hd-portable-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "A8 1080P Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/a8-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/body-camera/a8-/a8-07-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/a8-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CS07 1080P Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cs07-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cs07/cs07-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cs07-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L9 HD Night Vision Mini Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l9-mini-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/l9-body-cam/l9-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l9-mini-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CB77 4G Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cb77-4g-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cb77/cb77-4g-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cb77-4g-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SJCAM A50 20MP 4K Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/sjcam-a50-20mp-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/sjcam/a50/sjcam-a50-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/sjcam-a50-20mp-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Y9 Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/y9-portable-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/body-camera/y9-/y9-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/y9-portable-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CS05 1080P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cs05-fhd-1080p-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cs05/cs05-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cs05-fhd-1080p-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L12 Wi-Fi Motion Detection HD Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l12-wi-fi-hd-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/l12/l12-03-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l12-wi-fi-hd-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CS11 2K Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cs11-2k-wifi-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cs11/cs11-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cs11-2k-wifi-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "A18 1080P Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/a18-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/a18/a18-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/a18-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CS06 1080P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cs06-1080p-wifi-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cs06/cs06-05-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cs06-1080p-wifi-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L13 1080P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l13-1080p-wifi-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/l13/l13-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l13-1080p-wifi-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "A100 1080P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/a100-wifi-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/a100/a100-0-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/a100-wifi-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L9P FHD Multipurpose Police Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l9p-fhd-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/body-camera/l9p/l9p-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l9p-fhd-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "S11 4G Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/s11-4g-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cb77/cb77-4g-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/s11-4g-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L15 Ultra HD 4K Wifi Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l15-4k-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cb77/cb77-4g-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l15-4k-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "A32 1080P Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/a32-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/a32/a32-02-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/a32-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "CS12 1440P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/cs12-wifi-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/cs12/cs12-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/cs12-wifi-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "MC81 1080P Wi-Fi Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/mc81-wifi-hd-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/mc81/mc81-02-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/mc81-wifi-hd-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SJCAM A20 Wearable Multipurpose Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/sjcam-a20-portable-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/sjcam/sjcam-a20/a20-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/sjcam-a20-portable-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro Body 30 2K Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-30-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/transcend-drivepro-body-30-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Transcend DrivePro Body 40 2K Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-40-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/dashcam/transcend/drivepro-body-40/drivepro-body-40-04-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/transcend-drivepro-body-40-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "L18 WiFi 2K Portable Body Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/l18-portable-body-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/body-camera",
+      "categoryName": "Body Camera",
+      "categorySlug": "body-camera",
+      "categoryPath": [
+        "camera",
+        "body-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/camera/body-camera/l18/l18-001-1200x630.webp",
+      "localImageFile": "public/images/products/camera/body-camera/l18-portable-body-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM INSTAX mini Instant Film (10 Sheets)",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-instant-film-10-sheets",
+      "sourceCategoryUrl": "https://www.startech.com.bd/instant-camera",
+      "categoryName": "Instant Camera",
+      "categorySlug": "instant-camera",
+      "categoryPath": [
+        "camera",
+        "instant-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/instant-camera/fujifilm/instax-mini-instant-film/instax-mini-instant-film-10-sheets-1200x630.webp",
+      "localImageFile": "public/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film-10-sheets.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM INSTAX mini Instant Film (20 Sheets)",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-instant-film",
+      "sourceCategoryUrl": "https://www.startech.com.bd/instant-camera",
+      "categoryName": "Instant Camera",
+      "categorySlug": "instant-camera",
+      "categoryPath": [
+        "camera",
+        "instant-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/instant-camera/fujifilm/instax-mini-instant-film/instax-mini-instant-film-1200x630.webp",
+      "localImageFile": "public/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM INSTAX mini 12 Instant Film Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-12-instant-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/instant-camera",
+      "categoryName": "Instant Camera",
+      "categorySlug": "instant-camera",
+      "categoryPath": [
+        "camera",
+        "instant-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/instant-camera/fujifilm/instax-mini-12/instax-mini-12-pastel-blue-1200x630.webp",
+      "localImageFile": "public/images/products/camera/instant-camera/fujifilm-instax-mini-12-instant-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM Instax Mini EVO Hybrid Instant Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-evo-instant-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/instant-camera",
+      "categoryName": "Instant Camera",
+      "categorySlug": "instant-camera",
+      "categoryPath": [
+        "camera",
+        "instant-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/instant-camera/fujifilm/instax-mini-evo/instax-mini-evo-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/instant-camera/fujifilm-instax-mini-evo-instant-camera.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "FUJIFILM INSTAX mini 11 Instant Film Camera",
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-11-instant-camera",
+      "sourceCategoryUrl": "https://www.startech.com.bd/instant-camera",
+      "categoryName": "Instant Camera",
+      "categorySlug": "instant-camera",
+      "categoryPath": [
+        "camera",
+        "instant-camera"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/instant-camera/fujifilm/instax-mini-11/instax-mini-11-sky-blue-01-1200x630.webp",
+      "localImageFile": "public/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.webp",
+      "status": "downloaded"
+    }
+  ],
+  "summary": {
+    "downloaded": 190,
+    "skippedExisting": 0,
+    "failed": 6,
+    "dryRun": false
+  }
+}

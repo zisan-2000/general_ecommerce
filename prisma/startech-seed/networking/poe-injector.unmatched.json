@@ -1,0 +1,162 @@
+[
+  {
+    "ok": false,
+    "stem": "tenda-poe-30g-at-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1895c37bb5ea4bdeaac98e3e3c9411eabf1a375b3bd2bb4a8fbc76e24692a183.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/tenda-poe-30g-at-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/tenda-poe-30g-at-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-poe15f",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f4c2da27e3e99731b0f17b8c2598069e5e7e41fda816745a8cb75ef6dd8a16f.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/tenda-poe15f.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/tenda-poe15f.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-linik-omada-tl-poe150s-poe-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a23c5e7201b5931f8dbb31e211fb4b9ffb06c078eeb8d31303904f114a19d993.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/tp-linik-omada-tl-poe150s-poe-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/tp-linik-omada-tl-poe150s-poe-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-linik-omada-tl-poe160s-poe-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f851eeada9d1989d870b984eca971b194fdfbbb5317c3a59a460ae6af7e1f291.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/tp-linik-omada-tl-poe160s-poe-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/tp-linik-omada-tl-poe160s-poe-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-poe150s-poe-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6591b242387efc9f2a097c652dffd01a95f6fa46297449d52b918c6c83743081.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/tp-link-tl-poe150s-poe-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/tp-link-tl-poe150s-poe-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tpe-113gi-poe-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc73d1246b38677bf5f686a67c37b392a2059595a12abfac677b573a2dd4a6f0.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/trendnet-tpe-113gi-poe-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/trendnet-tpe-113gi-poe-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tpe-115gi-poe-injector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00a640b9992281ff4248cc02007bab7f23484b8acb105e921f775fd7fc5043a1.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/trendnet-tpe-115gi-poe-injector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/trendnet-tpe-115gi-poe-injector.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tpe-e100-poe-repeater",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\364f837ab5991c104226be5dac79f0d82655dbb4883a8a9fab6c4a2e3009408b.html'",
+    "sourceImages": [
+      "/images/products/networking/poe-injector/trendnet-tpe-e100-poe-repeater.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/poe-injector/trendnet-tpe-e100-poe-repeater.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "poe-injector",
+        "subcategoryName": "PoE Injector",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

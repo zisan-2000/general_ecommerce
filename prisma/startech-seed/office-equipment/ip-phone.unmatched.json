@@ -1,0 +1,2822 @@
+[
+  {
+    "ok": false,
+    "stem": "avaya-j129-3pcc-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71d2299386eff9f2256e489966a4cf52bdcbcf669100662350117347d118dde0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/avaya/avaya-j129-3pcc-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/avaya/avaya-j129-3pcc-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "avaya",
+        "folderBrandName": "Avaya",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-6821-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\212f97f3c261437c62ffa3c0beab8ed2a9ace2ea8c11e9f8da5aa97c00ef16f0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/cisco/cisco-6821-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/cisco/cisco-6821-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "cisco",
+        "folderBrandName": "Cisco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-7821-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f99b59d22ffc50297c9de77a503509153a5f2b1d6e7b0324e9717f7421c729ff.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/cisco/cisco-7821-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/cisco/cisco-7821-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "cisco",
+        "folderBrandName": "Cisco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-8811-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1af06c87cee0fc67a585bd991076dd4ab893a99aa817fc7ec5f70cc7d3def2e5.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/cisco/cisco-8811-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/cisco/cisco-8811-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "cisco",
+        "folderBrandName": "Cisco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-8845-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7977619cbad9aedfb8f658cd88fac371749daeda791ccb3c6ee00dc9f3d9558b.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/cisco/cisco-8845-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/cisco/cisco-8845-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "cisco",
+        "folderBrandName": "Cisco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-cp-3905-unified-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a71f04eaa65c5496b1d94ab49a9a5222dfbd73f5b2622385ea63c410a71ab90.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/cisco/cisco-cp-3905-unified-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/cisco/cisco-cp-3905-unified-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "cisco",
+        "folderBrandName": "Cisco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60lp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b8e5386bcc8e13673c50efc925f7d6ed5ecc000fbdc6c64879e2b0334b58f3cc.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60lp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60lp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60s-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b1ba526bd4ce1612637f8f13227239242f7614a7eda0ef983278e6d1fb923e5.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60s-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60s-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60sp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\457ab803c8c1f06c7fbea6bff860b9d0074f7a1821352044dc3c992f18282fc9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60sp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60sp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60sp-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e73673069b611919290dc585eefe151a5c365dea22b27f82804a1bad6bc25273.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60sp-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60sp-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a5fd33b55245485d2397949a792fc1c726a8579c6e4d2bcd526d0b468bb2853.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60u-w-wi-fi-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\538f6e6fddffd953ba9804e7515ea7f2a36831b2a44e508c6948756b86a560a1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60u-w-wi-fi-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60u-w-wi-fi-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60up-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\985ea1160aa4cdbd27a8510c425072f8a56801ff2ff87246c9f61b609c5c5c12.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60up-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60up-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c60up-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3ffb14f55d5ad6887b6fd91b6c40c7157745a64866c29634ef26f738a80dbfe.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60up-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c60up-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c61sp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5c0ce03532c72d9ad3f6516c681b4ee1f309aeb64c57df37db9d045c7f0841b4.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c61sp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c61sp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c62up-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e41e0737c8a7047478b271643b6589c535cc422fdc8b8f5cac4b398f52fb6ef2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c62up-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c62up-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c62up-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\16d3aca4fbce53ca6a67272211959e047e3af69c755936a2fb1758349919cc34.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c62up-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c62up-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c63gp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\be3c645cb286695b7459f53478789d7aaedf68b10dfd45e5d2307cb19a429730.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c63gp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c63gp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c63gp-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f07bc4a9ebe3d506da59c300990c34379cb69f9b0cfe180c3a1993f0442434e0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c63gp-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c63gp-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c64gp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3e7d80e6f74e3d4a67bc06df785889c52e7921b013df97de6e6dd1dd001320d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c64gp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c64gp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c64gp-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a0d44ba4742d8ccd6ab27101031e7a8e2ed9dc02e79568b917c2a040cd6057f0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c64gp-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c64gp-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dinstar-c66gp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e87cb337d9c52dc609b98958df289a343c821a683fbf04eabc5511d20f2ea82a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/dinstar/dinstar-c66gp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/dinstar/dinstar-c66gp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "dinstar",
+        "folderBrandName": "Dinstar",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-a310i-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a526e499dda746f5b9d3d36512ff1e9ec7062366373d52510167ae6bc75693ee.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-a310i-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-a310i-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-a320-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3571e9b5bcd10523212163e2069068d999d61bb2f823801ee91a8559f684bc7f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-a320-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-a320-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-h2u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8291f7ccab34c01a4761cfd2efb7038245896a96cbcb979af4533cfc02fd88b0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-h2u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-h2u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v50g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a83c89b4758749d70ed9c3df8583b6adf5c90941422f1f83490208ed2c2c52c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v50g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v50g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v60p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\843f4dfa362e2f17fc67d590cc95d928f0feaeb3bc9adaa2071ee7a73726912f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v60p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v60p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v61g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\07ae765128e71e867c0c5b5b05ae22568b587fe2100d8f9d56d42a09a6704177.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v61g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v61g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v62-essential-business-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\91c269b548bf1372d5f947b5c36f717a8428a1fce6d6158323759be2158c596f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v62-essential-business-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v62-essential-business-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v62-pro-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\391358dd27fb4054e3f6c41b00ae1336927f1e7d04dd89466c4a1e3f02835f15.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v62-pro-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v62-pro-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v64-prime-business-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e9de3215544fe6f6fba778274d708752b47ab90f1d2de27baa647dd0e949426c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v64-prime-business-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v64-prime-business-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v65-prime-business-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4bdb727d21f92f7efaaf285b98c83604f145e43fc872a9e940a5534c5b3c38f9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v65-prime-business-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v65-prime-business-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-v67-smart-video-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ded4ebea36a3f31181ab04613112a82ae21370008966e176b8636a72e61066f0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-v67-smart-video-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-v67-smart-video-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-w610w-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c954c2d090c6c9b150d53a8d6144d34a6758bf05ff3a1a6d3aab2a21eaf28def.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-w610w-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-w610w-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x1p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0074aa0c54dc86379588faa98cd09810cddc9119d7f5976c78aece87c84f1d2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x1sp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aea592feecde536e4ffb9a8480b7fbf39258868962ae51b86c66333a1662e91d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1sp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1sp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x1sp-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a520ac6eec5a297469f35af09d1eb72772292c4c546a6c251e0ba3f18aee17ae.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1sp-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x1sp-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x210-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39aff2f699f16865f51b73c76d8bbe338c33a641e4952c2bacef8ef095561d3a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x210-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x210-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x210i-paging-console-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7fa93850d2307ae584febbf69b59cee24c2ab497033c98da9bf3d254b27e306a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x210i-paging-console-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x210i-paging-console-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x301p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\13c52bfd0c3d4df8f537c938f652e44b22a4c0f4f2d3b2235587a5fad36085b7.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x301p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x301p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x303p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\904d0c3bb318c71fc59c6c4d90a93149163da623e7a0c8e3ecb895deb005a4be.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x303p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x303p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x305-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6a83a1a6755866049663fa6a3298af6fdb9b766c80686d3ab44be181eb3b358.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x305-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x305-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sg-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ba9878ac63cba41adac0b964f440c59cb551f8c1dc3d28ab679d59741859362.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sg-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sg-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sp-lite-entry-level-poe-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7291c24cdb907104b9dc57269b7924083c5c80d19aa7301283d3b7205a0e31e1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-lite-entry-level-poe-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-lite-entry-level-poe-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sp-lite-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8417cd7b262ca4f11c54f532643c1eaad559e8b99399a98a8ab7049539d6e456.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-lite-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-lite-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sp-pro-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ac117c05145501d2cf9e6527f43d79b2951ed21608fe4e6d0000a834625d6467.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-pro-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-pro-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sp-v2-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e845a9e7d37e0c9fa427133a5a9ad98c01f5083c3f3387ff306245a0b69feee3.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-v2-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sp-v2-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3sw-wifi-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db510fca0b7f238d08b2ca19cbd5692053f1b085d934a17fa2a0be1ba2b2545e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sw-wifi-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3sw-wifi-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x3u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b81beffe1798cbedd0abffbb8967dfd689966044788b4356bf6e0c0b6a570973.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x3u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x4-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fb47b258e0476c5cc6214449559eebf1de6f3c3e93a63d83b5775fc36d7feae0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x4g-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1666809231b85ed077d50c6c4070cd357256ab03eca35ae6aa56831b7f275460.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4g-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4g-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x4u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b68494be0a104d0e194fb6cc6bbcae60c6deca361b31f14381c302e3a515cf1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x4u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x5s-gigabit-poe-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\604af286496660a7b9b47106ab0a808d9e65518008be422544980c8ddd2b6d6a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x5s-gigabit-poe-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x5s-gigabit-poe-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x5u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7bb3186aefefcb14aa6ad83b41376823ae686a291b47e22b0d8f9b595944d4df.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x5u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x5u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x6u-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9dbb98ba8f38afa4362569391acc657cfd6452d293d8cc623dbd3719144723b.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x6u-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x6u-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x7-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\295c97b8d8f525e6958fb7856f325832988984478b67564db4e316ab168051d4.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x7a-android-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f22aa48ce43cecd6c9939f43bec5b1d7fced588be5c3596b7710d3d2ad52b86.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7a-android-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7a-android-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fanvil-x7a-android-ip-phone-with-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e0ab7d5ebce1e99cf9a04510a6efa385804cc8e734900cd98a0244fd075b4c14.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7a-android-ip-phone-with-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/fanvil/fanvil-x7a-android-ip-phone-with-camera.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "fanvil",
+        "folderBrandName": "Fanvil",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip11c-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf2acccc8dd8a6da6021add7b84f1ac027ce2703edf83d31c6c96944b1c2b84f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip11c-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip11c-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip11cp-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7548a2edf49749a9609fcdfc7bb158a72982f8d353e96771d774f121da6284ab.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip11cp-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip11cp-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip13g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\824a2eb81ac4281c14396e2aea29d8dabd5976c0accc8e29d13ca8b9ec981bff.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip13g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip13g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip14g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61da74db97699271503edfc7d33457094eaf2e202966d9ddaaa762d47a440ea5.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip14g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip14g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip15g-plus-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4c708dcb9e0376abf7876602c46a84b4f901664fcf5ce3920480b509a6528fd.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip15g-plus-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip15g-plus-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-fip16plus-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4593f67d21894e2be07cc6b49411373883b31254bb373bdc477c29482488bab0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip16plus-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-fip16plus-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p10-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d928c5b69bcb2b43d668b821dd3e9c227f4723a1c6253edbb47c87dced703a8.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p10g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\91baf459d31104c047b942145733065f8a2f5e34eb748004ecb32e0e847aa3f6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p10p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\55bb57cd970ffa888c8db9fed8dca0e1e54251315921f668086e0cd19b206a02.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p10w-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73ad2ab6b8e0bc63d6c6c55b3d9336e0e7512665f448cf2c74a9e031b23268f3.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10w-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p10w-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p11-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\168be552ae6fff70a206d3d1e200cd722906451b1ac21cc0ed473275f33da434.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p11g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a23956c4dfdc61593e68e236929aec3d43a9bd056f40021ff343a2f39a08dc9d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p11p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5dbb01b958579aea7c52c39e4f5c1b70c7eea9e4b04c93e5fa0e920d29aa2d4c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p11w-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\46996ae283a0bfcfa5f1b223d5ec610e8fd6dd5f6f03d26cf6b43be04e02082d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11w-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p11w-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "flyingvoice-p23gw-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\808832ec019058c91aae2b984fc8fd801d51ced831a3b117401b94f372cbda98.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p23gw-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/flyingvoice/flyingvoice-p23gw-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "flyingvoice",
+        "folderBrandName": "Flyingvoice",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gbx20-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36798dc0da23be06ecca2e2ead2ac73aa61ccb7d75fe1f96a7e62969b790f904.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gbx20-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gbx20-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-ghp611w-wireless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8bd2c25f0d4b220d70ea95138e4c5b4fdb0a36fe8ba20b1fac10c8cab40f0650.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-ghp611w-wireless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-ghp611w-wireless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-ghp621w-wireless-hotel-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2727a82f089e99e2b998359b6576fe3676346b702c4541df7ec910fb8fccf267.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-ghp621w-wireless-hotel-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-ghp621w-wireless-hotel-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2601-2-line-2-sip-carrier-grade-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e10cd2b7baff76073964cd5663a10a14b0432b29ffe010234b612ad25026aa0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601-2-line-2-sip-carrier-grade-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601-2-line-2-sip-carrier-grade-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2601p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aa0b45732db79726f5cc946870d47a931d299099b6d0e2197f69b29dcf7a1633.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2601p-ip-phone-without-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\298dbd12ff67b7b697300ebcd828248f8073fc93f60d0cfa460b223156dd48cd.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601p-ip-phone-without-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601p-ip-phone-without-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2601w-wi-fi-essential-hd-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd554008c1db4ef7b24f49a9bd271e6471a8319556ffbee824758d6e17edb13a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601w-wi-fi-essential-hd-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2601w-wi-fi-essential-hd-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2602-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e5cf2d3913802e338715beb111ed6e70d7c8af37c856d90f267f2f4c27da533c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2602g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88a2bf765b77bf48644f0c5de7d2b40bf5353140f76a3fc8655f9d5bf60e1106.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2602p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\55332a9c0a7c3054eabd8157745025004b49986c54cad48e24ca8ca5ed60c6e6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2602p-ip-phone-without-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad286c4d036547fc7cde74f1bfee03c564a605087a9fe44fc671104cba8559f3.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602p-ip-phone-without-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602p-ip-phone-without-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2602w-wifi-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6143e2f02f978775b3eb212f01b2d42075cdce1c0bfb42693a2671b5b3b4f0c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602w-wifi-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2602w-wifi-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2604-ip-phone-with-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ffa9697ff91c427b242618fbd512ccf74afe71f70f08af4a8bfea87d06b49caf.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2604-ip-phone-with-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2604-ip-phone-with-adapter.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2604p-ip-phone-with-poe",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6eec95dd1623fb0acd0239fbd614806f228232d205ee55fd34da94e9059bf975.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2604p-ip-phone-with-poe.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2604p-ip-phone-with-poe.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2612-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e7f1f8b9b62d4ccbbd1bd026275b12079a435aad1226af410874bf4c253f9573.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2612p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\883d7f0f985507cb72c6636a4059cfc25516320765123a58e5bbb2c3119f746f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2612w-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66e0f9a7751aad2efa4b6b2b436f3d516d67de39d1bfbea7c031f81ed855d9af.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612w-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2612w-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2613-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e88befed4fc55d4d2c23918fbca9c1e224556186a81e3a22f1d16d3aa1ba5dd.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2613-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2613-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2614-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd0548266397d7c3efa91e577fb8dfbb6f7208de7adc3c9857aa7a22ba3b7b37.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2614-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2614-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2615-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84124870ef214a2966fc5ee6908377e92161b58010260e46b7fdcffce9bf3cd0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2615-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2615-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2616-hd-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1c71ae0be326b093c19a30c5e18a243666e0ec348288c75f82761f0836c9e426.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2616-hd-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2616-hd-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-grp2624-8-line-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\516d3ba8cc702ee7db67d18533c81ff435d4fd877c4e2d31d6c16e5f31e9a6c3.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2624-8-line-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-grp2624-8-line-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp1610p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77eacfa97526443b3ff2600387c8333d60eccbfc83fdc24a19c3e5af61883b8f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1610p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1610p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp1625-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc5faf1b9912b1349a421470aecec31443d98f164e7ae161dd8aa4245545d0e9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1625-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1625-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp1630-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ae7762704a717f68afdf0c0a6a019868a0d4a5a088ca092f65ab54e9a7b0ddd1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1630-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1630-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp1760w-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b6aba4b482423adbe1ec8e7533faef6b40f8acca2e68b8f2af9dfcbd5e1d83a7.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1760w-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1760w-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp1782-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\26eb6cab3278cb67398c052f8369ded777e0dc05f821a3c303dc8ed55a96e27d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1782-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp1782-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp2130-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6712cad05197bc1263bc525b98327bf08003cf2782ce87715a48a3ea1d3a8314.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2130-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2130-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp2135-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\978692daf6a97bd65387afb1c67fb8a444796c9f92ada193d0f86dffd76d233a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2135-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2135-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxp2160-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5f2511e64416a79f69efe590d2809590ac8e36ddf02c4a3b272e6ba034aba085.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2160-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxp2160-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxv3350-video-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b991359f298de6b6d7f4cc07e12390d7c817fb25a417925ab39343f909be7c57.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3350-video-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3350-video-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxv3370-ip-video-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df5183b9b05c0a2a98b9c8e85bbe90788f84a85430bf1ccf5065591f85fea13d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3370-ip-video-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3370-ip-video-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxv3380-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b674432739a501525bc34f1848b04676551bf9f55c281f8e4a33f4778e04d19.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3380-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3380-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-gxv3450-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\670a43d8a6a17a54274df9e920077e25dbcf1680ad9212c2ca54ec08d5a55a04.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3450-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-gxv3450-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-wp810-wi-fi-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0ce8e3ba2cc7d7e0bb79d95b94190c652c16247d5d5b6903608a985d12e47745.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp810-wi-fi-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp810-wi-fi-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-wp816-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e100176d1c64d633cb26ce213adcf2704c3f3531f909dc451d6b655d8367b1c0.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp816-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp816-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-wp820-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4073d7325df05cb2693d220464c57d5eacc35949252fb8279127a78baecb24fb.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp820-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp820-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-wp822-wi-fi-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8448a54fd66c8c2b80e6554b07950c21eb8b208f8bcf6e24f8b9eef0964be1e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp822-wi-fi-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp822-wi-fi-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "grandstream-wp825-cordless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b36e69c134ee0eb93a9a2a9b7f57094f0fa7a4653579333e7c591577dd6b117.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp825-cordless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/grandstream/grandstream-wp825-cordless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "grandstream",
+        "folderBrandName": "Grandstream",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mitel-6863i-sip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62bf6033249de72f92bb22d563b6da6a8e366237a1e8b278bafb78122e7136fb.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/mitel/mitel-6863i-sip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/mitel/mitel-6863i-sip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "mitel",
+        "folderBrandName": "Mitel",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mitel-6867i-sip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2de781c7d3efec42f91482caff643e5ec6d2a609457914a350bc7afb5335f1f1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/mitel/mitel-6867i-sip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/mitel/mitel-6867i-sip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "mitel",
+        "folderBrandName": "Mitel",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mitel-6873i-sip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed37c024de02ec115ad9c5b42951e1721b89fedc30db3b26a02e3f1d0bd24f91.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/mitel/mitel-6873i-sip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/mitel/mitel-6873i-sip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "mitel",
+        "folderBrandName": "Mitel",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-c520-conference-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d68f60be2c96c109367dfb90b3ac58a73ea72f0b5ccd028dd60ac935b79a170e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-c520-conference-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-c520-conference-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d120-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db58b8aee66c1223cf49e7f9e17a9dad3d63bf6e98c0d23207fc741e82a53757.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d120-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d120-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d150-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6d341fe12c94583bae9ee5d723917831c5f89b3cf59ba6ef0b15f404b5a4c74.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d150-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d150-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d3-extension-module",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62c58a537ff297c2a5dc6ffe2274fbaf699cd861da4e352ec88d1fb7b14796d6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d3-extension-module.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d3-extension-module.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d305-poe-desk-ip-phone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36e6c5f47eb778602af855b9fb196e6f443618a5c6152caf0c14274bef0c6afc.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d305-poe-desk-ip-phone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d305-poe-desk-ip-phone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d335-poe-desk-ip-phone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62cb9077ae027ca48330cff879184f0c01228cbaa18da1ef476255cbfd5391ca.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d335-poe-desk-ip-phone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d335-poe-desk-ip-phone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d345-poe-desk-ip-phone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\12b486d621fea985daba9bf7257484f39cfd96ed22dcd8616cd2b2357eed0881.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d345-poe-desk-ip-phone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d345-poe-desk-ip-phone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d713-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\21b49aef98096ee5feb8a3d875fad8d97c3a4de502d3b29a416398a092d7225b.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d713-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d713-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d717-poe-desk-ip-phone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a5a59016054bae8798e63071f45d7a6804120eb761ad84cd9de0a7676723b459.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d717-poe-desk-ip-phone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d717-poe-desk-ip-phone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-d862-poe-desk-ip-phone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3133d71df900e4869aa13bdd3e8eb2866f2fde43adac00ca67a044818bc5f90.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-d862-poe-desk-ip-phone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-d862-poe-desk-ip-phone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-m30-cordless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e5ab120f56dc8371eedebd73096979b1266af510d8d4455db3e1ae179c459881.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-m30-cordless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-m30-cordless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "snom-m55-cordless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88381025910c7e3c54bea6573939e4135e5db4a5459a34396e677fc726ab526e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/snom/snom-m55-cordless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/snom/snom-m55-cordless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "snom",
+        "folderBrandName": "Snom",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t21p-e2-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\97c24f9416f0c03413dce4b77afc6010beaa6aa5be71537b3eac32089edf579b.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t21p-e2-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t21p-e2-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t29g-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cac9859bf876021c2ebd10a18514d3c373f20ff9556d1102ac618b0ad9b94267.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t29g-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t29g-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t30p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e453b2f5d634f3a46c01b814d2e238182deebf379c841e2b2b18cdc967e13304.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t30p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t30p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t31g-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1eeb4eab36ac9a47e850472520f42961b82981150addc1b4837a078de66e90c2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t31g-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t31g-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t31p-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2675e7e15e1d2290f5441c68a33ed7d91a5ea03fd143b67af1473f5e428485fa.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t31p-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t31p-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t33g-4-line-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0da11ebbc242e8ca808c88d6c5dfa05a24bc5718113063aafa8eb4bebc22958d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t33g-4-line-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t33g-4-line-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t43u-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3e5b2cfd1867161e82e2568291a943dbf2d147f96c12988de10efe5472b210a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t43u-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t43u-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t46u-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0a710d26dc8b76115cd46d750cab7fe72dbb353c5fdb3fcc470553253ef8a615.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t46u-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t46u-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t48u-gigabit-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5467a2e6cf1c92022b696eeefffdf40feb214c2a74c0656e3542568d1e1c9dc5.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t48u-gigabit-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t48u-gigabit-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t58w-pro-smart-business-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9b4d7e4faf7a3f777eb8be0535b59630680251209ec5db5554a0e6f3b5fc83b6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t58w-pro-smart-business-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t58w-pro-smart-business-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-sip-t58w-smart-business-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\563d7aa98427d0d8f6a3745bdb87f167a02ef8271c20d8db8a87efe9ccc5ab73.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t58w-smart-business-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-sip-t58w-smart-business-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-vp59-flagship-smart-video-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4bf4a70bca146bd36f10f44648d26eb4c0129e19372fbf967874c866ad2186de.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-vp59-flagship-smart-video-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-vp59-flagship-smart-video-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-w56h-package-dect-cordless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\42cec48607acbce5a8c2f257cd83b0f3e6dc112c51ba9e9cc5756bb36a7af145.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-w56h-package-dect-cordless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-w56h-package-dect-cordless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "yealink-w79-package-dect-cordless-ip-phone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ac3b5ed43dcdb8b9a4f8223892996450e8702faf07dc4071415048e13fac1408.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/ip-phone/yealink/yealink-w79-package-dect-cordless-ip-phone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/ip-phone/yealink/yealink-w79-package-dect-cordless-ip-phone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "ip-phone",
+        "subcategoryName": "IP Phone",
+        "folderBrandSlug": "yealink",
+        "folderBrandName": "Yealink",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

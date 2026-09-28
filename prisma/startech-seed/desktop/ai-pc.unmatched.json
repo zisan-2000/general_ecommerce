@@ -1,0 +1,22 @@
+[
+  {
+    "ok": false,
+    "stem": "gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d976ea27d94c4bbbf58cea2b600c4786805d80885b2a7f53f2dc4727da037c3.html'",
+    "sourceImages": [
+      "/images/products/desktop/ai-pc/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/ai-pc/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "ai-pc",
+        "subcategoryName": "AI PC",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

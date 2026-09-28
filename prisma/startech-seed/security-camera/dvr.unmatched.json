@@ -1,0 +1,742 @@
+[
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7104hghi-eco-m1-4-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04bb94f0084457bff2ee5174f9925c3a311686332898fdeea443d0f336a20d29.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-eco-m1-4-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-eco-m1-4-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7104hghi-k1-4-ch-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\81ba31aa1f2e7755a01e5b800dabd174bcd5b5aeb66a750a375b3dd74c2b76f9.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-k1-4-ch-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-k1-4-ch-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7104hghi-m1-t-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b75ef18744242acd92a251c6cf4b33a157c821b8ed7c46e9d7091850ab99ad7b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-m1-t-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7104hghi-m1-t-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7108hghi-eco-m1-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8664f768c10720c139836f38af0c022d95066707b8b99760a4f9506df5d8bab0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-eco-m1-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-eco-m1-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7108hghi-f1-n-turbo-hd-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54e7842ea5576de5c6b4abf263c2bc1045d7d63ca655975753e7db426498a1b1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-f1-n-turbo-hd-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-f1-n-turbo-hd-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7108hghi-k1-8-ch-turbo-hd-1080p-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ea48d99b3b44e3b44c229f087c724e02579be4dc36835ec3b449ac940c44ca5.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-k1-8-ch-turbo-hd-1080p-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-k1-8-ch-turbo-hd-1080p-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7108hghi-m1-t-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ba921643eadc7ad02d8610904ae8f7946e7b156528b6699eb8ec28df1d3b391.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-m1-t-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hghi-m1-t-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7108hqhi-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\211bfb2becf626e2fbdaa4891a4a147152789c5e5eb826e67446a87319de9993.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hqhi-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7108hqhi-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7116hghi-f1-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\af8488093e4784d4eab60666483549d54ef77293dc771e045f8eb9e2bcbc1317.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-f1-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-f1-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7116hghi-k1-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\260c67fb65a60d92499747220ab0082a452c82e34df0400542ba18b3c3c94e5a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-k1-16-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-k1-16-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7116hghi-m1-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\688e6547b6fd85407620648c20b5480759bc7e8a3ae665eb4e1f25f1c9c1323a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-m1-16-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-m1-16-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7116hghi-m1t-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\af13ca0c1c3da176bbe17cee47f4d0a71400cd6e1148201a4984ef437dabdfbc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-m1t-16-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hghi-m1t-16-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7116hqhi-k1-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0101ae543ad5794cda5147a0187205577421a3a16782232cddb2e0ca44108ae6.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hqhi-k1-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7116hqhi-k1-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7208hghi-k1-8-ch-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8847c34332e69a5c5e198b2561856133ee76639ffd337b801fead99a8ea214a4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hghi-k1-8-ch-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hghi-k1-8-ch-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7208hqhi-k1-8-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f311951986524ba7906c80c7d8f2bd649e077dadd5faac088c6bf16825596899.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hqhi-k1-8-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hqhi-k1-8-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7208hqhi-k2-8-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d53e0c2456525753f0cda2296fc84c881d3b34f3606c32b7edf491670fbb9113.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hqhi-k2-8-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7208hqhi-k2-8-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7216hghi-k1-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dfb15fe1943f9e0ddbccd5d78f8308a50e7506a07f6ba74531dfbbab31d24e8f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hghi-k1-16-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hghi-k1-16-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7216hqhi-k1-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d1a7e15d157d1d9fd9426f7f30b9579a849433e4f0f57500c8211d84a65cac5.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hqhi-k1-16-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hqhi-k1-16-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7216hqhi-k2-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4168245425ccee009af33fd16d8a933f2843bac52ea1645d8752b8df3f41bf7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hqhi-k2-16-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7216hqhi-k2-16-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7232hghi-k2-32-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b165d80facb705b3204dad415b7c633c215162dcf266692aad0fe02b028b84ac.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hghi-k2-32-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hghi-k2-32-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7232hghi-m2-32-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\248f46d197611cdf405fec709ebde98fec9f63df045d12648aec0316c686c1f9.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hghi-m2-32-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hghi-m2-32-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7232hqhi-k2-32-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79c5cf3205d69ab949c559735d70ebd857a8d0083ec907016373f386ce637e59.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hqhi-k2-32-channel-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7232hqhi-k2-32-channel-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7316hqhi-k4-16-ch-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61e0b5b5191bd6197862a9c5993c1de0c83d17e75a1a580548067fdeeb223ae9.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7316hqhi-k4-16-ch-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7316hqhi-k4-16-ch-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-7332hqhi-k4-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e16ecce11777e8cf2b81b2de22e938bee19cfb8b26205c034e0331b038483ee1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7332hqhi-k4-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ds-7332hqhi-k4-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7104hqhi-m1-s-4-channel-acusense-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1407c00b4f78d7f39ef05ae35e25c1dfa10d9722afb7396b5c577eb91268dc3f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7104hqhi-m1-s-4-channel-acusense-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7104hqhi-m1-s-4-channel-acusense-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7108hqhi-m1-s-8-channel-acusense-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec2db6853543d7227d0feb9826c3afc04373b96f6c0d798e360e57f4c3df5a6c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7108hqhi-m1-s-8-channel-acusense-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7108hqhi-m1-s-8-channel-acusense-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7116hqhi-m1-s-16-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afed8d807fd9f20e91628f17badc915864d8bb5dc082eb82160cb81489758ccc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7116hqhi-m1-s-16-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7116hqhi-m1-s-16-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7116hqhi-m1t-16ch-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3b0202858825676605e6b8eab9f6257f5f983b811466c2645b0bae434a9346d4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7116hqhi-m1t-16ch-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7116hqhi-m1t-16ch-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7204hqhi-m1-s-4-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4aa6aa1a3579eb4b0444d29ff15a7aca729dd8e0fe91a9467e354f688d5fdfb2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7204hqhi-m1-s-4-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7204hqhi-m1-s-4-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7204huhi-m1-s-4-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2bd7b6559c3470fb20ff3f5788f59db7a41dbd454811759fcf9dcbe2e7733893.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7204huhi-m1-s-4-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7204huhi-m1-s-4-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7208hqhi-m1-s-8-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\105fa259ae0011ebea563ac5d9bfc1c725a7c3c7c422be3c18990949a81c5b00.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7208hqhi-m1-s-8-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7208hqhi-m1-s-8-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7208hqhi-m2xt-8-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4bf3cfb3897e951e7ff81ff1c317c9c38ff98eb16505c04eca9b5791b75c337c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7208hqhi-m2xt-8-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7208hqhi-m2xt-8-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7216hqhi-m1xt-16ch-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9e956eabc184664506f0fed64d76325e766d8c0f9567d7a75f37d70b8f698572.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7216hqhi-m1xt-16ch-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7216hqhi-m1xt-16ch-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7216hqhi-m2-s-16ch-acusense-1080p-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\259d724bc828f347fcc91022a7176499e551a2607a7611d7b5e0ef82797c3b16.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7216hqhi-m2-s-16ch-acusense-1080p-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7216hqhi-m2-s-16ch-acusense-1080p-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ids-7232hqhi-m2-xt-32-channel-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a50ea2b8d3a95f7a9161815781cebbf8dcee10d75663650ee8ce9f3bba67eafb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7232hqhi-m2-xt-32-channel-dvr.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Hikvision/hikvision-ids-7232hqhi-m2-xt-32-channel-dvr.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jovision-cloudsee-jvs-d6016-s3-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8b54320325e3be1ec1b8e6c4cce804d6aac47fba5fe8da66a069a69e23e02b9c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Jovision/jovision-cloudsee-jvs-d6016-s3-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Jovision/jovision-cloudsee-jvs-d6016-s3-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "jovision",
+        "folderBrandName": "Jovision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jovision-jvs-d6008-s3-dvr",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cecf461c27135b88a30f97ab5004468a82b5dc4ff3064abdb16c2af18042dea0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/dvr/Jovision/jovision-jvs-d6008-s3-dvr.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/dvr/Jovision/jovision-jvs-d6008-s3-dvr.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "dvr",
+        "subcategoryName": "DVR",
+        "folderBrandSlug": "jovision",
+        "folderBrandName": "Jovision",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

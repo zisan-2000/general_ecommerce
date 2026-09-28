@@ -1,0 +1,762 @@
+[
+  {
+    "ok": false,
+    "stem": "anker-solix-c1000-gen-2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab1e6e578404e51176bc4d22a754cf4340b12d732f0d4c2720e666a461b839a0.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Anker/anker-solix-c1000-gen-2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Anker/anker-solix-c1000-gen-2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "anker",
+        "folderBrandName": "Anker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "anker-solix-c2000-gen-2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0010702e244545b1cf34c668a9b537157f56c01c1dc99e60938395ec9b62e95b.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Anker/anker-solix-c2000-gen-2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Anker/anker-solix-c2000-gen-2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "anker",
+        "folderBrandName": "Anker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "anker-solix-c300-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a46ec9e5dddfb4ec1ce5e32fa2d616aa695fd8db182e03ed3e359db88b8e4f75.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Anker/anker-solix-c300-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Anker/anker-solix-c300-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "anker",
+        "folderBrandName": "Anker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-premium-100-v2-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2c6cbf469799d4a6d4799453a6bac923de19983d7907650e77dd3b3929ee0b75.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Bluetti/bluetti-premium-100-v2-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Bluetti/bluetti-premium-100-v2-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "bluetti",
+        "folderBrandName": "Bluetti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-premium-150-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b9e64508e569a3c07a43b361dc7f0061dc55ec92be8039c511eb96460924188b.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Bluetti/bluetti-premium-150-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Bluetti/bluetti-premium-150-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "bluetti",
+        "folderBrandName": "Bluetti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-premium-200-v2-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4451bab63955fd51588f8ca827db8120be867fb4a9635c1ba6e1ee77e07180c1.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Bluetti/bluetti-premium-200-v2-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Bluetti/bluetti-premium-200-v2-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "bluetti",
+        "folderBrandName": "Bluetti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-premium-30-v2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56466a002f5acf67f0d365b9e06f87d770bce203c99e80fbbba633602405d905.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Bluetti/bluetti-premium-30-v2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Bluetti/bluetti-premium-30-v2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "bluetti",
+        "folderBrandName": "Bluetti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-2-max-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3cd5b9f9a176e280d50fa5c701bfe255d585b8232330ed5ac6562419fb7e93c.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-2-max-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-2-max-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d22385019b4ae985e0a040ee1ff389d273fbc79bc9c015a59f2d0acf399ea27.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-3-air-1000-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7f91d17d7b3c82ee97de7bd0e3dfba7ef5c49ff6af28696033f4a437c384a15f.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-air-1000-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-air-1000-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-3-air-2000-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f04ae91478dc7cbb590f2d8d99608924ecf827c77bcef06977622233ffa4f7ff.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-air-2000-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-air-2000-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-3-max-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3acefd7e4ed2d771837163a7c39bbfa8a2cecb8b9d5cc6d955a75747204aec5e.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-max-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-max-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-3-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5cd33bf6a17c23a93b3433faada621bfb0f374e2ce191ddbb3a99eec60ab014d.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-3-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-pro-3-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37e4192a207443c5f15427195d9eb9715a9931faadb4a7ab1738ff0bfe37e481.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-3-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-3-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-pro-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0888f091422bb24f8c88b3052cdad57d0ec2a9ee3d5d6bf70214ea7e1b3f16c9.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-delta-pro-ultra-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f4b7c02cead12ec891d72c7994f87a9078360f90e08b953e898cb0c0712ff5b.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-ultra-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-delta-pro-ultra-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-e2000-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad0a97418246433db9aa1f4d9975f9d356d98ef4f97a6b0c924c637fdf42c408.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-e2000-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-e2000-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-e980-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bbd61e19ff043f3b0d1d851ead8439cf0c727c9b147ec0742e1eb00e6f4f8c9c.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-e980-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-e980-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-2-max-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b87c20ad0ceca85fbb3e4dddec539d5f89af03bc85945fb8892550814014afa0.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-max-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-max-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3989f477bf219340a73d8a489ad449298a7e14f5b428ba8c021ec636eccc3fb9.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-2-pro-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\485b947e11f537d74d6be032dfbe01aa3fc200e954f1f36c6dbc3f1576480cc9.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-pro-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-2-pro-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-3-max-plus-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8b36a6703f456b1a10e3dec84eff61b1392ecb31e631c72ff34ed6ca98f27981.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-max-plus-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-max-plus-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-3-plus-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d951872d619d7f6fa03096567d472527ee9944547fb7ecd1366d3c6fc5c51645.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-plus-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-plus-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-river-3-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\83b13798302d0e323ef77d1715ae29519055a51bc0783c956b0e95db89e4ac9d.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecoflow/ecoflow-river-3-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecosonic-ap-1500-1500w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\32c6b58d4fb63aa55a846b126fa8921a8644ec854ef195c9dda1bfd327051f68.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-1500-1500w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-1500-1500w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecosonic",
+        "folderBrandName": "Ecosonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecosonic-ap-3500-3500w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c2ebb9bc5d8bf33a4a01435122e45de95ea3a7a3f4cb7ccb6dac2c7da832b14a.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-3500-3500w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-3500-3500w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecosonic",
+        "folderBrandName": "Ecosonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecosonic-ap-500-500w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3bf1e2c8a0523939f81216b717b58b495b3fa89050c30b15ec7a6b7c9238155a.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-500-500w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecosonic/ecosonic-ap-500-500w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecosonic",
+        "folderBrandName": "Ecosonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecosonic-sl63-l2-800w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b8eacad6036c49a04ca8aa43521715cee654a539e1f6882082523989673de658.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecosonic/ecosonic-sl63-l2-800w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecosonic/ecosonic-sl63-l2-800w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecosonic",
+        "folderBrandName": "Ecosonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecosonic-sl82-l2-300w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0f88d63a7a4ede03cf5a5457b37884a5e70616b8b2c5f7dbadf0427d038f4257.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Ecosonic/ecosonic-sl82-l2-300w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Ecosonic/ecosonic-sl82-l2-300w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "ecosonic",
+        "folderBrandName": "Ecosonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hithium-heroee-1-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c8b14f419c4fc937854fa5da73bac786c8922396e495032adac0341267f750ba.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Hithium/hithium-heroee-1-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Hithium/hithium-heroee-1-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "hithium",
+        "folderBrandName": "Hithium",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hithium-heroee-2-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\06925f308c78eca67222140a67850563e1f7578766763a21018a8e23aff9d2fa.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Hithium/hithium-heroee-2-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Hithium/hithium-heroee-2-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "hithium",
+        "folderBrandName": "Hithium",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hithium-heroee-light-1-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\22a7f66e86f402f28ff0c7c2b0ca8e3df79a1bc464767c92e23ca509f71a4f34.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Hithium/hithium-heroee-light-1-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Hithium/hithium-heroee-light-1-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "hithium",
+        "folderBrandName": "Hithium",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hithium-heroee-maxpower-8-aio-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a31a77035c092f967772405198cb4681ad04fc5d8ccc94874a234abec56e22f2.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Hithium/hithium-heroee-maxpower-8-aio-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Hithium/hithium-heroee-maxpower-8-aio-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "hithium",
+        "folderBrandName": "Hithium",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-mp10-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7232f7b9fd506bf1ca327d0db1c168eaf5ad9c235b1b529ead49836f45d73494.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Marsiva/marsriva-mp10-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Marsiva/marsriva-mp10-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-mp3s-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\03582d3641e4d804acb79b4b07dbb056728ce96aadd695017c1d61f6f2e69a56.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Marsiva/marsriva-mp3s-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Marsiva/marsriva-mp3s-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-mp6-plus-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\28c7f3b9137bc50d270ac3ca94e46ad28a82b5b0e31c5c04ef29a1248c789c5e.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Marsiva/marsriva-mp6-plus-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Marsiva/marsriva-mp6-plus-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-mp6-pro-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ca1e798e7197e597b3fab10ddc12daebcf33fc10003d138f6cd2868cc2032456.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Marsiva/marsriva-mp6-pro-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Marsiva/marsriva-mp6-pro-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-energy-kili-500w-portable-power-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3343c71824a2583bb19b47154aae1b5fd158d658febdcb7baf90e2edc9dba87.html'",
+    "sourceImages": [
+      "/images/products/power/portable-power-station/Oraimo/oraimo-energy-kili-500w-portable-power-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/portable-power-station/Oraimo/oraimo-energy-kili-500w-portable-power-station.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "portable-power-station",
+        "subcategoryName": "Portable Power Station",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

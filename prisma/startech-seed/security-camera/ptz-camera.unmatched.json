@@ -1,0 +1,622 @@
+[
+  {
+    "ok": false,
+    "stem": "dahua-sd2a200hb-gn-a-pv-s2-2mp-full-color-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b7c87765e6aaaa8b2d662af13ceb04cc909a466de0e3af1d219c72185867be6.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a200hb-gn-a-pv-s2-2mp-full-color-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a200hb-gn-a-pv-s2-2mp-full-color-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd2a200hb-gn-aw-pv-s2-2mp-full-color-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84faafd3795a68f3b0b310d34a95e14052b3b2b14a5fc9de9867e85edfdc6493.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a200hb-gn-aw-pv-s2-2mp-full-color-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a200hb-gn-aw-pv-s2-2mp-full-color-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd2a500hb-gn-aw-pv-s2-5mp-full-color-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59ca469b6507f33e9d9d5479edb7f46e412a6327ecb5361dc3f6d68448a01231.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a500hb-gn-aw-pv-s2-5mp-full-color-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd2a500hb-gn-aw-pv-s2-5mp-full-color-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd49225db-hny-2mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eadaf226348d7bc620ad31776011dccc6887f8174fd4e22d3a61d2d47b302633.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd49225db-hny-2mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd49225db-hny-2mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd49225xa-hnr-network-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f6eb05c54ac9d090af6e1caa09a726f64b895e26e3db5b09b70d8035ae369ab.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd49225xa-hnr-network-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd49225xa-hnr-network-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd5a225gb-hnr-2mp-network-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\57caf7ba8e25295d553deefa4ed003f79d4e2006c79a274d5a72f26dd866a64a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a225gb-hnr-2mp-network-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a225gb-hnr-2mp-network-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd5a432gb-hnr-4mp-network-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce114d8942a64f0d0282b1e1033fe0f11ddcb948dfc34e377fc4ddf02dcee21d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a432gb-hnr-4mp-network-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a432gb-hnr-4mp-network-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-sd5a432xa-hnr-network-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c18ed34e645e8ac0e451b1b922e1114b6296348da8082f36479e890adff9798d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a432xa-hnr-network-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/dahua/dahua-sd5a432xa-hnr-network-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-2de5225iw-ae-2mp-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d286cbfb9dde6f2e87084d4ab99e462358248c2bb9c9c16d178dead25c11798.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Hikvision/hikvision-ds-2de5225iw-ae-2mp-camera.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Hikvision/hikvision-ds-2de5225iw-ae-2mp-camera.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-2de5425iw-ae-t5-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d4e02985b7e46d7abe38a22becdab100fc3304b62a847156bad3bf4afe884bd1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Hikvision/hikvision-ds-2de5425iw-ae-t5-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Hikvision/hikvision-ds-2de5425iw-ae-t5-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jovision-jvs-n43-z25-4mp-ai-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d9c515c779c0087be350bfa45acfb7cf3397c7bdeeef7216c56ed4cee307bcc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Jovision/jovision-jvs-n43-z25-4mp-ai-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Jovision/jovision-jvs-n43-z25-4mp-ai-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "jovision",
+        "folderBrandName": "Jovision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jovision-jvs-n53-z30-ip-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39d15f8beeec46321f331f0cecf8dc787b35d4045d16e4ad6fb69e6b867e5ae3.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Jovision/jovision-jvs-n53-z30-ip-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Jovision/jovision-jvs-n53-z30-ip-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "jovision",
+        "folderBrandName": "Jovision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tiandy-tc-h324s-2mp-ir-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\be48421f3a8e0bdc561187bbbbecf189369bdd64483842c30c89fd66044f20db.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tiandy/tiandy-tc-h324s-2mp-ir-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tiandy/tiandy-tc-h324s-2mp-ir-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tiandy",
+        "folderBrandName": "Tiandy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tiandy-tc-h344s-4mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\074a60fc7f1a559ee3dd9179d339dca60ad3ec6a706d082c11e0581e5f727e33.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tiandy/tiandy-tc-h344s-4mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tiandy/tiandy-tc-h344s-4mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tiandy",
+        "folderBrandName": "Tiandy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-vigi-c540-4mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\55c74dd2cd3a7317c94f3b0a02a47e9291876f865df077bfa359dca3b3a75f17.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540-4mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540-4mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-vigi-c540-w-4mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c31d8e781a37a7339135b561ffee7b36cf038d208a2f9fca68a8a5abb758978a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540-w-4mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540-w-4mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-vigi-c540s-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5e0297f4735e1dda9b92a572824d3ec5c8c98483264f1f68a13960a688ddbf8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540s-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540s-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-vigi-c540v-4mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3cdfd232d6b402441c3de16e677f5ed39c0d9d857a8415900ff7cac13c694365.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540v-4mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Tp-Link/tp-link-vigi-c540v-4mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6222er-x30-2mp-ptz-dome-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\17ee9464a136ae82eac93b618eccb1763d535bf5bbfb2b080847375de9890ba3.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6222er-x30-2mp-ptz-dome-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6222er-x30-2mp-ptz-dome-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6222er-x30p-2mp-ptz-dome-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0e686369c7bf8edddf0ba67b1185679d72fd498b92bb025ac89222a29c456202.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6222er-x30p-2mp-ptz-dome-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6222er-x30p-2mp-ptz-dome-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6253sr-x33-3mp-ptz-dome-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf9e448dabb303d0bdc59b76391b29e7139f877e5ad76c965423071e70ace2de.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6253sr-x33-3mp-ptz-dome-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6253sr-x33-3mp-ptz-dome-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6322sr-x22p-d-ptz-dome-network-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79e94a46c356b221c16c93d312b41c49c28b09c30d28b82a2ac637664f14476c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6322sr-x22p-d-ptz-dome-network-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6322sr-x22p-d-ptz-dome-network-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6322sr-x33up-d-ptz-network-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5874ea62d646af017a498bac6205ef345a5560ba9a5e5ec9117eb92bbfecab1a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6322sr-x33up-d-ptz-network-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6322sr-x33up-d-ptz-network-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6325lfw-ax5c-vg-5mp-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41f5143de08c24de90379ca5b8d5ae41110037a2f1eedfc538437e5e5378187f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6325lfw-ax5c-vg-5mp-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6325lfw-ax5c-vg-5mp-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6424sr-x25-vf-ptz-dome-network-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\98c7910320b9839e2bf3b6b35124172cccd57a0363893322f045b8cc3a3254ad.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6424sr-x25-vf-ptz-dome-network-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6424sr-x25-vf-ptz-dome-network-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc6622sr-x33-vf-ptz-network-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3b320d728e84117bc20bc276614222f49d5885aa8c9fed4aa847796026ea10b4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6622sr-x33-vf-ptz-network-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc6622sr-x33-vf-ptz-network-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc675lfw-ax4dupkc-vg-5mp-mini-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c9e054ad227e698b055ecd936544bc9bca8886bf9e3e68350cc8871137e6f12d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc675lfw-ax4dupkc-vg-5mp-mini-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc675lfw-ax4dupkc-vg-5mp-mini-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc742sr9-pz30-32g-ptz-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b4b5c76d1c19996ebff1343e47b4d24283a8af5075c21f4e97dc310cc275c83f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc742sr9-pz30-32g-ptz-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc742sr9-pz30-32g-ptz-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-ipc744sr5-pf60-32g-pt-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\85a6cb9e815e42fd6b8a941f542b0cbab3737fef73f822625d630b15f8a16a89.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc744sr5-pf60-32g-pt-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-ipc744sr5-pf60-32g-pt-camera.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-kb-1100-joystick-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4a620701e04706639c98282bafccac7d557e90e3dd8cdcaee46b8cdc9cfd0274.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-kb-1100-joystick-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-kb-1100-joystick-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "uniview-tr-we45-a-in-ptz-dome-wall-mount",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8161c7c39b420c0cdf224b93961abe7ef62c9ffd261126f40254604d0a70673f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ptz-camera/Uniview/uniview-tr-we45-a-in-ptz-dome-wall-mount.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ptz-camera/Uniview/uniview-tr-we45-a-in-ptz-dome-wall-mount.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ptz-camera",
+        "subcategoryName": "Ptz Camera",
+        "folderBrandSlug": "uniview",
+        "folderBrandName": "Uniview",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

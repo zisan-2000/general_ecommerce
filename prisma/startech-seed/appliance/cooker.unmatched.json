@@ -1,0 +1,1082 @@
+[
+  {
+    "ok": false,
+    "stem": "bosch-piv975dc1e-induction-cooktop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88df3718af681dff9ab198ac58ab87529692810d053a624d20eef396f31ca6ad.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/bosch-piv975dc1e-induction-cooktop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/bosch-piv975dc1e-induction-cooktop.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-pxx975dc1e-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\76a80f15703e9c860bfaa48a73f44f2479bbb50ae36bb3400c4c82fa29699d82.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/bosch-pxx975dc1e-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/bosch-pxx975dc1e-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jusal-6l-pressure-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bac9ee1c48b6a0c62fc4e2b39a9081952b7c86085340d5e6e36abf5646700374.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jusal-6l-pressure-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f07d44bd4aaf471dbb9b75ae05bb5f85f005084c2a4cb738397637c2ee49318.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jusal-6l-pressure-cooker-copy-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a31cffa07b7c2200b3dbf24abac8e3e316518e2e61ccc36b2660cc24d08fd492.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy (2).png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy (2).png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "jusal-6l-pressure-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3308dacd3f1f8ac7e0a75eff2c7e8e3741b798c20abd4d0476d8bf265410fffd.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-instacooker-2100w-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2fd9d10ada47a9423521612d516a971fa3db590b59e2cb7f9432cbca0d4ec9a6.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-instacooker-2100w-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-instacooker-2100w-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-3l-electric-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a15507f0d3353968e1c9db3d03fff90f178c4930b0f68984f41650d5bd4ac059.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-3l-electric-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e295fd0723699c6daf1119076fa2531d5a0199e48a084714902b4d5e266e782.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-3l-electric-cooker-copy-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59a1200e8d8ccd2ac6331442a75708efa669d7da8fde9c6fbdf905ad1b4d4250.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy (2).png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy (2).png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-3l-electric-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\acdcda95e406e9b0a752b0080c4e800175c8d0be94785b9ad571dfc6bd422e5a.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-s1-lite-electric-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2d9955e195fe2d812b5afa1440f955f3bfe40c81d2c70db8c9863b4a7fd7778b.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb9b9d89d253f8d3039d08477b2dc4b4b019f332e7ab8af5469c8ee615a79d5c.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b7320ed1c2b52e241100233019d89873acbef0c7890ce5394993846b83e44ed9.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy (2).png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy (2).png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\15a581d857f6fafb868dfa4bbfac41f80ea9bb64856afee026b7fbb251bddac3.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-w22gs-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7dc2f56bebe46b98691cad44cb822345ce96857255552695888d630f7b63f5f8.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6836018caeb050afe7fa21f699973de8ccdc0a3a9f3f45b1de7dce85e4cb6d3d.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\09f9eda9cd5ebb4e1eae775ab4528e6578cac8c108df787f63c5062063609601.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy (2).png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy (2).png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd2ab05f05dfe8a0c245f5f866994d4caddde4daabcf07ba049f08da0e01f38d.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-y18-j-slr-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\195cd08104ce7fb9cb7b416859705dbb92737a2ac8034c1e654b826b165e522e.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\891f37363e4205ff1643bf7ac45bc513a675cc4425b1e7b653eebdc59ad8ae5f.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\488d884c6d196fd89b9bb26c6583ff3ac7544601ee39eadd9a41879a658e174b.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd4929-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a8cf625d361fe5d9e03ba0dde1e7b1facfc335f4b61d8ade9967d468f9b82176.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/philips-hd4929-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/philips-hd4929-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd4944-00-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f02401a8d2fc742c892453bbe49a1c5539376a73c15782bbdd3621b939537f1.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/philips-hd4944-00-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/philips-hd4944-00-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-eva-plus-infrared-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fef24bbf1c3972a1862c47389e1b213583ffd2f92be46a467d679672e66e97bf.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-eva-plus-infrared-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/pigeon-eva-plus-infrared-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-joy-plus-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7a844c6c7acbdc952853715718ccbe212fbe48cafa147ef25a8753fdce03e9d7.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-joy-plus-rice-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f816647be88843490e3b70f15b9dccee13e6198ad6414d85886e5afcaa603f93.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pigeon-joy-plus-rice-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b689a53df9b8ea6396c6875148db5466d94f647940154d1981a130400c2f5c7.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "saffron-5l-pressure-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\10375444e9e3d0ec3731a13bb84452b678a95763a8955826bd6e5676f0ef296d.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "saffron-5l-pressure-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\746367833cbc95be38a72d14cb2fd3d169b40049aa52027e971955f605039096.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "saffron-5l-pressure-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1c626fa352889fa6b543cd57a98f72cdadc95d177f1cd8a39996385a77141207.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-18cookmate-blk-1-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11bb164ae8961c913cdd3a5273302144e90b2479ea63444f0e115a5183a5fae6.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb40bf72ffd05ee3b51f9c3e803b90328ebb8f9996adc6ed5a1440f2d98f05ae.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy-copy",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0cd188ef96c460831d6c6311c9df2af372984d992e15d8d8be2bd2cd32cd4946.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy - Copy.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy - Copy.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-28steamchef-msgl-blk-2-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\552722c02b8f065cadba1315669df042c30b9dc0af4914ae4ddf6ad914dbf08a.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-msgl-blk-2-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-msgl-blk-2-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-28steamchef-msgl-tmr-2-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4b87a868b3b4598d646d3b206e09c0bde8f4777b6b5e3cbf4ba7a5e51226d9b1.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-msgl-tmr-2-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-msgl-tmr-2-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-28steamchef-ssmt-rbk-2-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb1716342e9ae365eb3c18c3d57f700765cc3752fa284698a6055a1b0329d7dc.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-ssmt-rbk-2-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-28steamchef-ssmt-rbk-2-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b1800express-pro-1-8-l-rice-cooker-yellow",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8570a9959d9a5d0b0c687726c3f77ff26d3934018a5e8456d183a12aee8905d.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b1800express-pro-1-8-l-rice-cooker-yellow.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b1800express-pro-1-8-l-rice-cooker-yellow.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b2800ammo-pro-2-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d9d40b288a4334de1bf401fe4ad1524236be4975414c205492c698e30a32637.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b2800ammo-pro-2-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b2800ammo-pro-2-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b2800delux-2-8-l-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5af20860970a4bea9d33454428b5e6646444d22a68876fb2f1b0bc94c614bfa2.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b2800delux-2-8-l-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b2800delux-2-8-l-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b2800delux-2-8-l-rice-cooker-pink",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c7605d6857b03d0d7318e238255024d1b2c99555844a0a0e5af2cdfe3ed6caa.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b2800delux-2-8-l-rice-cooker-pink.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b2800delux-2-8-l-rice-cooker-pink.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b888champ-2-8-l-rice-cooker-white",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d15a54ef0c50971318dfef0ba6630b658c1831eb083de6ab6de13f991736969a.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b888champ-2-8-l-rice-cooker-white.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b888champ-2-8-l-rice-cooker-white.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-b9918prime-1-8-l-rice-cooker-navy-blue",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8881c3e717d5cde39c2160773ef9592c5baed88a912626988119da7c0c8e7031.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-b9918prime-1-8-l-rice-cooker-navy-blue.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/singer-b9918prime-1-8-l-rice-cooker-navy-blue.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-ic227s-infrared-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a706736e247cf6a33fbf89fd29877e92c3490c75520492c91e3b9ed2e59a959.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic227s-infrared-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic227s-infrared-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-ic352s-infrared-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c121caabbe494054854a181ba3c6b89472b97b2e519b270ffe087317786f92e9.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic352s-infrared-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic352s-infrared-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-ic353r-infrared-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5410c0ac5ec5d265146c82567df2a94ca00945eb365de1d7cbd74a1838714345.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic353r-infrared-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/smart-sek-ic353r-infrared-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-pc55ss-pressure-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bbcd6eb242d1a7e787f4919e89a90653b5c6911af2349fd974215add7bd7b020.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/smart-sek-pc55ss-pressure-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/smart-sek-pc55ss-pressure-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-pc65ss-pressure-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\82c0bb8e89a4779afacfbc34a29f0f28d372b577d82f3d0b7c45d28a24d968c3.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Pressure Cooker/smart-sek-pc65ss-pressure-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Pressure Cooker/smart-sek-pc65ss-pressure-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "pressure-cooker",
+        "folderBrandName": "Pressure Cooker",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-rc18fs-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3868df7c5f08bc4ff0062d179f17563e85b576f109200543977b6136f606662.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/smart-sek-rc18fs-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/smart-sek-rc18fs-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-sek-rc28fs-rice-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc4b61bf5fa9cf8ecdc87b8eaf87c1c6588cae6178b5e7d2ca3b4b383b82b17d.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/smart-sek-rc28fs-rice-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/smart-sek-rc28fs-rice-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-everyday-slim-ih-2200w-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a8b51b951594c13ff1a9602ecd8557095f1c926518fc12570ab0721c305ee092.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/tefal-everyday-slim-ih-2200w-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/tefal-everyday-slim-ih-2200w-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tefal-express-ih-1600w-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5d5215d69d9001c25a82daddf880e26f2ec03e689878f4a64e93b2b2b0d90f85.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/tefal-express-ih-1600w-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/tefal-express-ih-1600w-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mijia-induction-cooker-youth-edition",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\69dc05662919cb5bb393357df381f3dc85e933bd0bd7588bcc60e92e381cbf7c.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/xiaomi-mijia-induction-cooker-youth-edition.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/xiaomi-mijia-induction-cooker-youth-edition.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mijia-n1-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\80fbe0b88cdac9617857d16729aa12e8b6c43f7f62fcf1bf34faca90a93f8377.html'",
+    "sourceImages": [
+      "/images/products/appliance/cooker/Rice Cooke/xiaomi-mijia-n1-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/cooker/Rice Cooke/xiaomi-mijia-n1-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "cooker",
+        "subcategoryName": "Cooker",
+        "folderBrandSlug": "rice-cooke",
+        "folderBrandName": "Rice Cooke",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "ok": false,
+    "stem": "70mai-a400-dash-cam",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11460606bfda579be49f6b4726dce010a321889e53bfd5b282ab50d9819e0588.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/70mai/70mai-a400-dash-cam.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/70mai/70mai-a400-dash-cam.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "70mai",
+        "folderBrandName": "70mai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "70mai-a800s-4k-dash-cam",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fdb1e1bda546491f01361e4231090eec4725642cc643d658578fa05e2b163c48.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/70mai/70mai-a800s-4k-dash-cam.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/70mai/70mai-a800s-4k-dash-cam.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "70mai",
+        "folderBrandName": "70mai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "70mai-dash-cam-pro-plus-rear-cam-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ec4c572eb798883931d270f88da18fb4713db3fe02b9a31da6ea6641502cb6c.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/70mai/70mai-dash-cam-pro-plus-rear-cam-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/70mai/70mai-dash-cam-pro-plus-rear-cam-set.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "70mai",
+        "folderBrandName": "70mai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "70mai-m500-dash-cam",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c1c283fba621a7991d3ffd4f06326959dc22eac5d9239cfbc5c8216b9ff01519.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/70mai/70mai-m500-dash-cam.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/70mai/70mai-m500-dash-cam.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "70mai",
+        "folderBrandName": "70mai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-20-motorcycle-dashcam",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6db4003bf9f64b531514b814b9c63372f3efb0c048ee65fa33b73d649054dfd3.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-20-motorcycle-dashcam.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-20-motorcycle-dashcam.jpg",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-230-dashcam",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f2356b142feafb2c854fc56d4c61091d11c10fe48aa93b600b09cc75bfb1a237.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-230-dashcam.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-230-dashcam.jpg",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-550-dual-lens-dash-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a8dcb87316c90e2418b3876fcc81a873098f2da7dbe1c435360cc8ef16dd3f0a.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550-dual-lens-dash-camera.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550-dual-lens-dash-camera.jpg",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-550b-dash-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce5a97801b081b5d4a7760c6d9e33ee8c211e612578338ae3cd4a53d26a59e20.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550b-dash-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550b-dash-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-body-30-video-camera-camcorder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6555e812b92ba9dfc86d81600266b54053f8c06ab596931887e4a5a7d2617b08.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-30-video-camera-camcorder.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-30-video-camera-camcorder.jpg",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "transcend-drivepro-body-60-cylindrical-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\793aa4cb00d4571f6c3ba967338f658d15d04da4678a5d31860314e5d9fac543.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-60-cylindrical-camera.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-60-cylindrical-camera.jpg",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "transcend",
+        "folderBrandName": "Transcend",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wiwu-wi-dc201-4k-wifi-dash-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\219f3158c5c8a11c51ae71a70d48143553ae8ec9cf2a2a8131f210117082e2f1.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/WiWU/wiwu-wi-dc201-4k-wifi-dash-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/WiWU/wiwu-wi-dc201-4k-wifi-dash-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "wiwu",
+        "folderBrandName": "Wiwu",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xo-xj03-full-hd-dash-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed0382f327c4a69391408d1630f5d28ad4fd2166b6dd3e21d7329ff1221af996.html'",
+    "sourceImages": [
+      "/images/products/camera/dash-cam/XO/xo-xj03-full-hd-dash-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/dash-cam/XO/xo-xj03-full-hd-dash-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "dash-cam",
+        "subcategoryName": "Dash Cam",
+        "folderBrandSlug": "xo",
+        "folderBrandName": "Xo",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

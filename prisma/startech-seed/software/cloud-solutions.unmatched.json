@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "microsoft-365-apps-for-enterprise",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2bb14032b3faa6e6dc1e3aac83da638d93b8ce8d0489613860f9ed6cd29e70c.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-365-business-standard",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\58508179702084bd5928eafe7e28bca236d6dfaa9ee7dd631c5e0e36b97a40aa.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-business-standard.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-business-standard.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-365-enterprise-e3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5a5cc7e7251c629d2b82b3bacb429bb8ce98cc0ad32bf460f62a11658482c501.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-enterprise-e3.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-enterprise-e3.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-365-enterprise-e5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a99d18262cbf755fc5223cf9931a85b49afb37477ab34569e103ea496ffc6c35.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-enterprise-e5.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-enterprise-e5.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-365-f1",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\418726a8f8a33cf6194a24fee91cf611650c7a2a469dc4186c0b29500e5ebb04.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-f1.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-f1.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-365-f3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9e6b42287c2857d5ad6113c00a765898ab003c776d3599709ac7cf939b13b70e.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-365-f3.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-365-f3.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-office-365-enterprise-e1",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c227223ae830b5a967a677fa930e93537965a39584636611cfc8d93872373fa0.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e1.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e1.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-office-365-enterprise-e3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59a616a9ac0444c0b278ef3c76f253a393f83551b770c2c00a0595bcafeb59c7.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e3.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e3.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-office-365-enterprise-e5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\074570c389e1e0f9aae63937826ff30bb48f986e6dee0c2fa0e0020eac68466c.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e5.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e5.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "microsoft-office-365-f3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3271bc8d72e8ed3d5ee5ad3cd50517f96df2b0a1b5013702b543d92d8c1a7842.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/microsoft-office-365-f3.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/microsoft-office-365-f3.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ms-office-365",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\89656261e1a94443740cc66ff4628c06989bf43ad87d585b288913fccc273cd8.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/ms-office-365.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/ms-office-365.png",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ms-office-365-business-premium",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9508cf09bd14476ae887aacfe77057e9fab0992801ec4b90e209c57b5a716f92.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/ms-office-365-business-premium.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/ms-office-365-business-premium.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "office-365-business-essential",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f5ffea0a351308b673140febe74d559dfa73270c158df999ae7f7431d6faca6.html'",
+    "sourceImages": [
+      "/images/products/software/cloud-solutions/office-365-business-essential.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/software/cloud-solutions/office-365-business-essential.jpg",
+        "categorySlug": "software",
+        "categoryName": "Software",
+        "subcategorySlug": "cloud-solutions",
+        "subcategoryName": "Cloud Solutions",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

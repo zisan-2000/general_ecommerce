@@ -1,0 +1,562 @@
+[
+  {
+    "ok": false,
+    "stem": "ekwb-6-pack-hdc-12-ek-quantum-torque",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2df2ae5420f86efb616192419e1af597a7247cbe516922d947c4bce5c5067fd5.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-6-pack-hdc-12-ek-quantum-torque.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-6-pack-hdc-12-ek-quantum-torque.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-classic-260-pump-reservoir-combo",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6dd07d659fe3b1b9fd68d0f0df250a84057162f304cc2e90dc9a847bea26d43c.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-classic-260-pump-reservoir-combo.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-260-pump-reservoir-combo.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-classic-nickel-edition-p360-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e4ae3bfa4a5dfce2c13eee04b9a5abaa8422ea2f68189da8580c92c2d2b5ea2.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-edition-p360-kit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-edition-p360-kit.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-classic-nickel-p240-d-rgb-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\75ee45928d433c0786e954b71647099d1c8d91aa9e205a62c92ce3a3617127a6.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-p240-d-rgb-kit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-p240-d-rgb-kit.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-coolstream-pe-360-radiator",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd3932aaacf92aa7c9661a0b538ffd51c5b98258a1cdb4eb992f7329373915ff.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-coolstream-pe-360-radiator.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-coolstream-pe-360-radiator.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-cloud-white-coolant",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c83b9cb8e4bbe67e4276364c066103583a2de9e930aae4e1231879180a916dfb.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-cloud-white-coolant.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-cloud-white-coolant.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-dye-pack",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5c5646d51ae8c26a09b34d48184d35789fa4be76dc507d0e01c76afa0d431c00.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-dye-pack.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-dye-pack.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\65284c21472472787e941913eba4f0eb8c23c186fc7d9a84c0185729ecde1de0.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-solid-coolant",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d497a3edf73ed7a3b5cf826386fd7f7fda179db21d38028369ecc7e986b30d3.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-coolant.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-coolant.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\32902807154927f182ebbd1f71cee53545dc3733779ed74e15af1ae5e6be282c.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-cryofuel-solid-scarlet-red-coolants",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f7bba4c8599f939cb98684c90790951d0dad829ec59b986f88c8a2b768939396.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-scarlet-red-coolants.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-scarlet-red-coolants.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-d-rgb-6-way-splitter-cable",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\964b3f7636f838f2d4b90be324349d6962d8e1a75c6f8839fb4d1e81d214d517.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-d-rgb-6-way-splitter-cable.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-d-rgb-6-way-splitter-cable.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-dura-clear-3m-retail",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7407dacb2ece75c8d8ffdf66994a4938a202c1720c2f9753d42c5c531415e76a.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-dura-clear-3m-retail.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-dura-clear-3m-retail.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-hd-petg-tube",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c2af8a0ed0d36b217bcea3e014c50eda0bb99a9dd83fb0fe60bbc3a66ed4ffa4.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-hd-petg-tube.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-petg-tube.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-hd-tube",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00bb6186e63b02cccc193c3b0c2e713b824453e0c724e4e38a38b61686c779e7.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-hd-tube-diy-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\05ef28c7974e73b0e722697903fa651698cd732ee72b1d16322292687482b4b0.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-diy-kit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-diy-kit.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-hd-tube-reamer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\544e16547f85744f22f096e0d6353062ebe4f1af2521e63c74a698f1d3230d5f.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-reamer.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-reamer.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-loop-modulus-tube-bending-tool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94c4f61214bf332490db1611555d1477fb9b7c0cada85dc2b8c261d38911bb2b.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-loop-modulus-tube-bending-tool.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-modulus-tube-bending-tool.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-loop-multi-allen-key",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed835ac2b543f87aa2f80f92b9639f875eb1772667e17efbc550510780434894.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-loop-multi-allen-key.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-multi-allen-key.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-loop-soft-12-16mm-3mm-tube",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30d883938fe1d8fcb21191c36a7f5cafd58c15b44f2b0b9ca6c2ad672c914710.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-loop-soft-12-16mm-3mm-tube.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-soft-12-16mm-3mm-tube.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-quantum-90-degree-torque-rotary",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2d0064ba49353554219b646e96eb43136d07233c73c5292d39f86fdcb8d5d3ae.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-90-degree-torque-rotary.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-90-degree-torque-rotary.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-quantum-d-rgb-p360-power-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56123d92e815e17dddcd16613c3795b1709e3523901ace6d57148a0116ff1de7.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-d-rgb-p360-power-kit.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-d-rgb-p360-power-kit.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-quantum-inertia-d5-pwm-plexi",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b31f494fa1d68681360dd9fe3f9f9df7ed7e0d3f2b7058bf57f07ed479057406.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-inertia-d5-pwm-plexi.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-inertia-d5-pwm-plexi.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-quantum-torque-hdc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ddd341b712b5e4faa12981e43081df5504df7cbee33eb55df708a3f1e7213c8.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-torque-hdc.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-torque-hdc.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-res-x3-250-reservoir",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\daa8de6eb40d99a4c45818104d0b842ce2a035899a1047f2d148bac21b281ac9.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-res-x3-250-reservoir.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-res-x3-250-reservoir.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-ek-xtop-ddc-elite-plexi",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2d6e8b49caaf4bc23601311b80e5db78cbc5c74440cf9529831f7a260d6c0a7.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-ek-xtop-ddc-elite-plexi.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-ek-xtop-ddc-elite-plexi.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-filling-1000ml-bottle",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e2591be0905f1ab6444727bea7ccf8676b55961e895253c4dc78f93337af7c0a.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-filling-1000ml-bottle.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-filling-1000ml-bottle.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ekwb-pvc-tube-clamp",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\64205c877d09bd0a54d70edd160e42be5f0cec7b36d47dbc642c934a18ff106d.html'",
+    "sourceImages": [
+      "/images/products/component/water-liquid-cooling/ekwb-pvc-tube-clamp.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/water-liquid-cooling/ekwb-pvc-tube-clamp.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "water-liquid-cooling",
+        "subcategoryName": "Water Liquid Cooling",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

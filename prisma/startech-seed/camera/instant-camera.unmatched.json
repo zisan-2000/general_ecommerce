@@ -1,0 +1,102 @@
+[
+  {
+    "ok": false,
+    "stem": "fujifilm-instax-mini-11-instant-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e33d51b27f5ee76b48acba11239dd4a027525a677f56ea3efe68c42dc95634c.html'",
+    "sourceImages": [
+      "/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "instant-camera",
+        "subcategoryName": "Instant Camera",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fujifilm-instax-mini-12-instant-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ee6092a4eb8206aebc1ffbad02b24807859aa5132b395306ac880a1d26c10d9.html'",
+    "sourceImages": [
+      "/images/products/camera/instant-camera/fujifilm-instax-mini-12-instant-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-12-instant-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "instant-camera",
+        "subcategoryName": "Instant Camera",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fujifilm-instax-mini-evo-instant-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6cce0bf67a23cb0a389457b04f3f1f6cd7fc543802d075659d3e664beef3f031.html'",
+    "sourceImages": [
+      "/images/products/camera/instant-camera/fujifilm-instax-mini-evo-instant-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-evo-instant-camera.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "instant-camera",
+        "subcategoryName": "Instant Camera",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fujifilm-instax-mini-instant-film",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\052076f34579ff98e0ddb4dea03442a5c3a8d475745d860baa069228aeeab395.html'",
+    "sourceImages": [
+      "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "instant-camera",
+        "subcategoryName": "Instant Camera",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fujifilm-instax-mini-instant-film-10-sheets",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f4ee18e66bdd530c9e0034ea81ea0d6774aeec071a2678db9dfd0186c13d6c65.html'",
+    "sourceImages": [
+      "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film-10-sheets.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film-10-sheets.png",
+        "categorySlug": "camera",
+        "categoryName": "Camera",
+        "subcategorySlug": "instant-camera",
+        "subcategoryName": "Instant Camera",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

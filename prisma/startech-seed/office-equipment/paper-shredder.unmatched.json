@@ -1,0 +1,642 @@
+[
+  {
+    "ok": false,
+    "stem": "aurora-as1060sb-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\60abc27d65807344a11c730b4923657b62bc106ecaa65a3d87cb704a1f5cc0a2.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/aurora/aurora-as1060sb-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/aurora/aurora-as1060sb-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "aurora",
+        "folderBrandName": "Aurora",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "aurora-as1219cs-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6083fab21622453334056cc3ea9a75a5f2ef2c431468d3062a139407df16032.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/aurora/aurora-as1219cs-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/aurora/aurora-as1219cs-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "aurora",
+        "folderBrandName": "Aurora",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "aurora-as2030cd-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5caacc004ea45222dc7156b91d50d47671976bc99e2528a616d87900fcd36d09.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/aurora/aurora-as2030cd-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/aurora/aurora-as2030cd-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "aurora",
+        "folderBrandName": "Aurora",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9902-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ebbb2310f327e19b5046a2087dfb6032623fb5b8313d9c2efb098e4be0dba3f6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9902-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9902-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9904-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59cc5d13932bb73fa5a8b561d0613cba12e118494f050e521f69689c327c2ec4.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9904-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9904-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9905-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\022d53856b80569786ac9b24d310ac02d41fc9319cb5f4133fd0a051cfdbf416.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9905-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9905-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9906-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36a897cb39df27c3e67c7a7157b7338503ee097f39520ecf0aca2ceaeb2b4006.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9906-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9906-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9914-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\23b9abf4c1cc8d46224c60f79d70e208de45533d229d3e20d983aeacf7ae422c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9914-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9914-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9915-anion-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45846c31ef8aba93160160244c96b3aeabe407f29a021bfa0e1325489400f7d6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9915-anion-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9915-anion-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-9932-mini-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\204ca0bf17c460d0e3091fed45abb80b7611517854df6df85d52440dba99b32e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-9932-mini-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-9932-mini-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e14400-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d6971023dd07717d12a6a13b5c3e6bf002c5ee9ec693107795b3f5073e74a24f.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e14400-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e14400-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e14403-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\13819213cd83713696c54494bb90c35a29927d50924d91feadadeeb2975f4972.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e14403-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e14403-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e9903-eu-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\93b920f2ad79ad479d35e230c2b08b869d7391885f43b41392dd2823652272b8.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e9903-eu-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e9903-eu-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e9911-eu-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df7c463593136ce5597abbbd2a97879207aa190bd80a9c58cffa2b68d6b605c8.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e9911-eu-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e9911-eu-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e9917-eu-anion-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d75fd04bb15f755d90dafab8b2f4481da8f14e2227f0284ecf91fa3672971e67.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e9917-eu-anion-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e9917-eu-anion-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-e9952-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4c5de93b5bb2bbd21ff9e934bdbc0b3a5a0cbc703159814124b45591eb9ebd8d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-e9952-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-e9952-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et001-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d44660df118e01a41ca32f3cc2cb53488c229fd4ba66f95ca2a9c438fc77e35.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et001-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et001-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et016-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a660351212edd235e97c91bfa809de654e38e08f6d29c2acacbbc637ed90375.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et016-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et016-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et048-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\004b8d7c575c383b3b913b7aca0302686856ca201f4a5b25fb3a3931001f97b9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et048-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et048-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et081-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d7085a1527849f38a339816d7686db5c2bbaa0e935273ae0c95e49db5122730.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et081-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et081-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et089-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a573dd369559b400da89d831c02fc19f71618b156cd6d14346003f5fe76733e6.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et089-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et089-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "deli-et099-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc2302759839d243a2bc906190377f3ce10bbc9cf38daaef39a7b027176244f9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/deli/deli-et099-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/deli/deli-et099-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "deli",
+        "folderBrandName": "Deli",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-oa760mi-micro-cut-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37ef0a112b3f13de42e9d3797cef0a1b34d37fb271eda4475641cacf8f34357e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-oa760mi-micro-cut-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-oa760mi-micro-cut-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os1201d-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d2810d202d4a5f856d058ab2929cfb67591ef89b9a1e015c6051c1a678af8c15.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1201d-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1201d-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os1205c-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e03c87eb6cbde31b1804b3abda0a866cd37e578d764d1532ba4c7b129477cee.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1205c-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1205c-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os1501cf-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\28fbad3a7c0ce479037c7d6f5ab1b80fc4278b50a59bf9028419727bbdd3554d.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1501cf-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1501cf-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os1801ci-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b65e966366a9b8f06d7cbc3485f3f55630ce068e58eaefe70072b6b84266b985.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1801ci-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os1801ci-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os2502ci-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8336069de55f7f17da3c0d883b9a9d0727762cc280ac595b2d720c297b1062f9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os2502ci-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os2502ci-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os610c-cross-cut-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0cd929eb3b07193d7434379a61c74619587564881da766cc9483b5ffe740ee8c.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os610c-cross-cut-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os610c-cross-cut-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ofitech-os808-9m-micro-cut-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9dd38927be36c3c6afac1dbaae579c8c4b84dd94e412a5a471572eba5428b99e.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os808-9m-micro-cut-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/ofitech/ofitech-os808-9m-micro-cut-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "ofitech",
+        "folderBrandName": "Ofitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-os1501-12c-maxshred-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\46cf319beeb4e5a569367d75b7144976cdabc0e4cd461d2680a3a8845b0a079a.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/xtreme/xtreme-os1501-12c-maxshred-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/xtreme/xtreme-os1501-12c-maxshred-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "xtreme",
+        "folderBrandName": "Xtreme",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-os2502ci-paper-shredder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\97751ed8c6bfed41d53a30338577445b50d71b3af24c9ba522bfb5d1c1eb8351.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/paper-shredder/xtreme/xtreme-os2502ci-paper-shredder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/paper-shredder/xtreme/xtreme-os2502ci-paper-shredder.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "paper-shredder",
+        "subcategoryName": "Paper Shredder",
+        "folderBrandSlug": "xtreme",
+        "folderBrandName": "Xtreme",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

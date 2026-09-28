@@ -1,0 +1,242 @@
+[
+  {
+    "ok": false,
+    "stem": "bluetti-pv100-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cbceef199f7e948336c51299b35cc6d6982658aa77bba4ba0f4e793053b93ae2.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/bluetti-pv100-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/bluetti-pv100-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-pv200-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4863cdff79fdd4ddf9d29eda26859b952b868c3c62da1e1d96d4991670cad3d1.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/bluetti-pv200-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/bluetti-pv200-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bluetti-sora-220w-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4df43078ff0b9b0976019698f6e5c48f19f03b0675c305a07896f82f6bf4f3a8.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/bluetti-sora-220w-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/bluetti-sora-220w-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-110w-portable-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e29ebbfe9f10c2b22750d81f4096b2f15b5ed259932723090a34a9a3de0fe8a5.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-110w-portable-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-110w-portable-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-125w-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe32689d04311491aac913df226d88f73b57b78bf07cd8b42511ce42251eeee3.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-125w-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-125w-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-160w-portable-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a63eee901cea7e8f39368b7f511634a2a40ad3062bdb2d7f649a2e465040fca4.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-160w-portable-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-160w-portable-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-220w-portable-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f35b82cd86e3fc12c5720c722bf27f2eeacf91739c6c18f42e5bd01f8e15efed.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-220w-portable-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-220w-portable-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-400w-portable-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd21f7eebd2863f90b926927e76f3b0d6c7fd440a372ce34725adb34810e29e6.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-400w-portable-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-400w-portable-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-45w-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\804764a87c7680d75d365e9778023d96c62868d05f414e1ede8038b34a417478.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-45w-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-45w-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-60w-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c280a4fd87ae24ed33635ecf25e56e55e62d14efc682fdc32cbfc0ac700c9daf.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/ecoflow-60w-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/ecoflow-60w-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hithium-hc200-solar-panel",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11b34eea4f268f864b0019d0492e29386fcce92bebd219e03ae023ba3f1e9640.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/hithium-hc200-solar-panel.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/hithium-hc200-solar-panel.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "la-400w-40w-solar-street-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bee21dbf8318ff01d528cd1d8a2aa48e41f148cc6a34103659a00db60e4dcc2.html'",
+    "sourceImages": [
+      "/images/products/power/solar-panel/la-400w-40w-solar-street-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/solar-panel/la-400w-40w-solar-street-light.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "solar-panel",
+        "subcategoryName": "Solar Panel",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

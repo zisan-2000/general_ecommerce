@@ -1,0 +1,722 @@
+[
+  {
+    "ok": false,
+    "stem": "beko-mcf32410x-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d362f05401df3840ba10571de7dd6987473dbdc0d132c2c2d81c2bcbb270f2a.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/beko/beko-mcf32410x-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/beko/beko-mcf32410x-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "beko-mcf32410x-oven-silver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88cbe31506151281aa4f84c5a3e79feb04c0bc25ec163182c832fed3bfb48987.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/beko/beko-mcf32410x-oven-silver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/beko/beko-mcf32410x-oven-silver.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "beko-mgf30330s-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\63ed2f1600de91beacb954718afebd8f64ee26186057d50f09edb2373d078f87.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/beko/beko-mgf30330s-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/beko/beko-mgf30330s-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "beko-mgf30330s-oven-silver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd360ffc1f52b01bec3ee238d3a23428758af5b5d7b31e0c1197ef4af169dba2.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/beko/beko-mgf30330s-oven-silver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/beko/beko-mgf30330s-oven-silver.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-series-2-hbf113br0q-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\889216cf1d552f414e29b6cffa417ea7880f1e3af14505d8770848017b5f1b73.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/BOSCH/bosch-series-2-hbf113br0q-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/BOSCH/bosch-series-2-hbf113br0q-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-series-2-vbc011br0m-electric-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\582a751fc9a3f3cf815b5e4c21d6f951b1d0d15f283a69df77bdaa47aef556f8.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/BOSCH/bosch-series-2-vbc011br0m-electric-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/BOSCH/bosch-series-2-vbc011br0m-electric-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-series-8-cmg7241b1m-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eada46287680dfe552ac2d111c1dbee9bb2c78466d5511297389fa1d77ad63fe.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/BOSCH/bosch-series-8-cmg7241b1m-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/BOSCH/bosch-series-8-cmg7241b1m-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-series-8-hbg7341b1m-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\28b2aa9ff3d62464d848fab3b979496382e33003a77a07e3051a4f6b42bc9090.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/BOSCH/bosch-series-8-hbg7341b1m-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/BOSCH/bosch-series-8-hbg7341b1m-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "bosch",
+        "folderBrandName": "BOSCH",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-infiwave-lite-23l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3b29125c8f1b66d863d3dcccd09c9756bcfa733b63620a9b9be862fe8a4e02a5.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Oraimo/oraimo-infiwave-lite-23l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Oraimo/oraimo-infiwave-lite-23l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-infiwave-lite-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bd77f63b6cc40c0ed5136cda11199ff8e4823de1cae60059c736c55280d64a8.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Oraimo/oraimo-infiwave-lite-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Oraimo/oraimo-infiwave-lite-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "oraimo-infiwave-nova-27l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e48f7ccd97eaa79da69ec4cd77da1b76fe7e02e3204f94e8339224cafec1ebc2.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Oraimo/oraimo-infiwave-nova-27l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Oraimo/oraimo-infiwave-nova-27l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "oraimo",
+        "folderBrandName": "Oraimo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-ce76jd-m-d2-21l-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bef9802ba253e757263e00c706e46cf4e83b880c4f96ac2fe6ea69807415f24f.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-ce76jd-m-d2-21l-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-ce76jd-m-d2-21l-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-mc28h5023ak-d2-28l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3538c895d57544a907e2c62eee8260a2519e52aaa94665dd332b1c8305ad59dd.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-mc28h5023ak-d2-28l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-mc28h5023ak-d2-28l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-mc28h5025vk-d2-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe264a2e083d9bf0743f51228bb7e0bfde6f730df86ee15e420cc2b67994e54c.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-mc28h5025vk-d2-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-mc28h5025vk-d2-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-mc28h5025vs-d2-28l-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5bd512137a893d4a1e7d5e1645c06de10e6efb5d429abae5e8500c8774748723.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-mc28h5025vs-d2-28l-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-mc28h5025vs-d2-28l-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-mg23k3515ak-d2-23l-grill-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\02737098d3f67193e759bc0df35a94a756f791a202808a92cbadeb8d320f7ad8.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-mg23k3515ak-d2-23l-grill-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-mg23k3515ak-d2-23l-grill-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-ms23k3513ak-d2-23l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da13c537144e73e9071b3130b4c3221bf0ec85196691118785707845b1ba5a7d.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Samsung/samsung-ms23k3513ak-d2-23l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Samsung/samsung-ms23k3513ak-d2-23l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw20mdsolp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b0c0f5dd3e63f9d4b2d23d2787fc8e912bd88b723b173dd78839acd02356c3b.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw20mdsolp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw20mdsolp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw23ga9lp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ceadd3aa9630f5dff0c6c4767bacf8af496b17941af738c45dfffeb040e5dd95.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw23ga9lp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw23ga9lp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw23msolp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99e03898d4afe642217b68ef91c8acc7396ab3953bd449d8a2a3836d4a0eabc5.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw23msolp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw23msolp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw25emsolp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45ab7145371cf26c68def17112676b2cf644ad084150017f0b447dd3439ec575.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw25emsolp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw25emsolp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw25gchlp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6d18fa47f606436e5eb601fdaa5877108ba363f756c600179b716b5f90e2edf.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw25gchlp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw25gchlp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw30amsolp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\38454eec581bfa7e26c72395e7481dfd316547b7cfb515086f49344997a92c1c.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw30amsolp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw30amsolp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw30gc2nlp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7c049e9595220ea5541c953aabd51dbf1b9bd2c36aac7d89242777dcde4480ec.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw30gc2nlp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw30gc2nlp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw30gcb8lp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\760631a923ea0b444209d7887455dab4a211067d0c122e7c1bb95225afd9780e.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw30gcb8lp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw30gcb8lp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smw35gcb5lp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfb2c00540e27e8c3c8de2eb0fddb03769a990110edeea6b4e454506076fce1a.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smw35gcb5lp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smw35gcb5lp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-smwg30g6lp-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ef635e0cc6975030080dff1b6e6420760f3711ee7c0389e87961f5062a2d799.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Singer/singer-smwg30g6lp-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Singer/singer-smwg30g6lp-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-jet-crisp-gt-288bl-25l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c0ab6b8efd29f11cf01cf00e923556114145c67e2c57d66cd1d2d4a70ecf6c7.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-jet-crisp-gt-288bl-25l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-jet-crisp-gt-288bl-25l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-classic-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfeb77d8a98eb412089bde7d6d4331f18c60cb1e78717a0ab4529b09ee70e35c.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-classic-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-classic-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-convection-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3595b2231d17c6e9135c7f607e99b4ce95442e19f75a6af8cd403fed31fbccc.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-convection-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-convection-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad10bbc5d6c74ac21f584e2fb6c43d48585aa9f6c8828465fdcf46c4963c1865.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-pro-25ge-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d226315965da7468d0290430f199267111a0eabeb77fb1a11c8bac98255d200.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-25ge-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-25ge-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-pro-26ce-24l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0759bd150bfc48cc5e38cf5c2b1b9cfeb49197adb6d4f3668972119bab80bcb3.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-26ce-24l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-26ce-24l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-pro-30-ge-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\44e7218518096730ce62566f6c83fbc73ad3dbc475e56ee79a72ea42c2e0322a.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-30-ge-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-30-ge-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-magicook-pro-31ces-29l-microwave-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\065618cf22f501353bf3010c6e059fa878e46d2e777181d4d6e5f290cbaacf15.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-31ces-29l-microwave-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-magicook-pro-31ces-29l-microwave-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "whirlpool-supreme-chef-oven",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b9cb1d443773188e3f3e14c61451e68c5d3b6daa9753f250b0cfe871ea4a0c5.html'",
+    "sourceImages": [
+      "/images/products/appliance/oven/Whirlpool/whirlpool-supreme-chef-oven.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/oven/Whirlpool/whirlpool-supreme-chef-oven.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "oven",
+        "subcategoryName": "Oven",
+        "folderBrandSlug": "whirlpool",
+        "folderBrandName": "Whirlpool",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

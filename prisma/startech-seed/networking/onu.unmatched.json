@@ -1,0 +1,562 @@
+[
+  {
+    "ok": false,
+    "stem": "aptech-x25-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd4b16cf79dad4118a154cf3b124d84e1c85306dc8b7703da5e41798d94d9bb0.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/aptech-x25-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/aptech-x25-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bdcom-gp1702-1g-gpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\86c488c81e88a8cf7518f9beb6021b260cd3b40f0120b6cbdb982cfe684feb1e.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/bdcom-gp1702-1g-gpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/bdcom-gp1702-1g-gpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bdcom-gp1704-2f-e-wifi-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\048fc4ad438bd64ee5a1a32429769e0c6aef009007c5dcaaf7a9a4fc597dc6b1.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/bdcom-gp1704-2f-e-wifi-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/bdcom-gp1704-2f-e-wifi-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bdcom-gp1705-2g-wifi-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\03219df03fcc5f30ae475b209ddb4d2033216fc6f31bc79f21f7d7d30144dc8b.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/bdcom-gp1705-2g-wifi-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/bdcom-gp1705-2g-wifi-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bdcom-p1501ds-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\642fb2d7ef0c3f61c432db9b4b81456677335bc0fbb113e2bc433a12969be585.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/bdcom-p1501ds-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/bdcom-p1501ds-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd504g-x-r410-4-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\197fa7d84cd334f6f4f60362dd7c3172d8b492719eb9e704cc6c713ae4ac7ab1.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd504g-x-r410-4-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd504g-x-r410-4-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd504g-x-r411-4-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a53591d619f8431862c994fc92c7dd611a129ff5ed4879ce539b6c44a647641e.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd504g-x-r411-4-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd504g-x-r411-4-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-e-f361-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ce8e84519656271577ad307a667522e2a3b7e8a17ee4a387c799228526b268c.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-e-f361-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-e-f361-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-e-f680-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0918fad298a7874538b052b5089c60b49691e93e3b1f711fc369ff5a069062b3.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-e-f680-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-e-f680-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-g-f361-single-port-g-pon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\927506b0b3008cbe024b8e4ed110ce9ca993f9d6edab912f8703df12cf6a5b53.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-g-f361-single-port-g-pon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-g-f361-single-port-g-pon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-g-f680-single-port-g-pon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0563119d3f11101c669f316dfbd9eda1f5256cd6fb3c37bddd1173a58ee92e1f.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-g-f680-single-port-g-pon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-g-f680-single-port-g-pon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-x-f361-single-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d631599752da9955af168dc0d4673984fa43d974a49cc84b539a9b87750eff12.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-x-f361-single-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-x-f361-single-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd511g-x-f680-single-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6e61f666d0e6f46159fba17bb58ae95f7fec4c65e313e4718f909238aa23578d.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd511g-x-f680-single-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd511g-x-f680-single-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8966b50a6b40c7b934ffd205859a05ca0629edc16a749670e5fbd12375decc2a.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dbc-1ge-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a50c126603be37297b1d1ab52a48c456310a2a88e1bf5a3ad5e5355f70b5846b.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/dbc-1ge-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/dbc-1ge-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "fiber-link-jhhl-e801zb-single-port-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\129bdeba8b59baf1ce0ea74d034d30994c3309dae1ffb985b3645cb266870074.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/fiber-link-jhhl-e801zb-single-port-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/fiber-link-jhhl-e801zb-single-port-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "phyhome-fhr1100gzb-epon-1g-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ca24e5d2e04fec6f76a55382cbca0d39d31345d09508dd33c7faf12da8d942a5.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/phyhome-fhr1100gzb-epon-1g-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/phyhome-fhr1100gzb-epon-1g-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "phyhome-p3-1ge-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b598b50458649598452eae771b2abe17cc409eef2b6d9d6279e0b0017ca3649a.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/phyhome-p3-1ge-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/phyhome-p3-1ge-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-xp01-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fb73572b4ea635ab6c5e91843bb6a048ddbf764e0a45efa882108b4c65e8d7df.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/solitine-sol-xp01-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/solitine-sol-xp01-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-g103-1-port-network-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00821c72ab61a772cba9db944c8f06afc3e6e51329691ba2ef9b221817be5f80.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/tenda-g103-1-port-network-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/tenda-g103-1-port-network-terminal.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-hg1-gpon-single-port-network-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\44913f20de3e919fe9c80b5008b971bb67611bf0d2ba777395eb1d00caf488da.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/tenda-hg1-gpon-single-port-network-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/tenda-hg1-gpon-single-port-network-terminal.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tx-6610-gigabit-gpon-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3acc97437adfc66a94e8e350f75f88bfc1464faa8ca5fe82ffcc229054398abc.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/tp-link-tx-6610-gigabit-gpon-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/tp-link-tx-6610-gigabit-gpon-terminal.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-xz000-g7-xpon-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a3abeec1678de93862c65cb60c506bdea5abc68be08622d70aa0586111e1c3f.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/tp-link-xz000-g7-xpon-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/tp-link-xz000-g7-xpon-terminal.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vsol-v2801rd-single-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\34efe892e10e09e3ce07a4973a2ab9b64a1a59e9b0dcd8cb6d98aad3980fe804.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/vsol-v2801rd-single-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/vsol-v2801rd-single-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vsol-v2801re-single-port-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c64344b98548aace1fafd45dceb0adbe1121764c6c5ed91f702de3fbacfbc34e.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/vsol-v2801re-single-port-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/vsol-v2801re-single-port-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vsol-v2801se-1ge-secure-epon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc7373ec5ef1f5e749a321d4312227bfef3b5cb66828147299a70ec1329c3e13.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/vsol-v2801se-1ge-secure-epon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/vsol-v2801se-1ge-secure-epon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vsol-v2801sg-single-port-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ece5c00396dd3253f3949eb3ef27908e3979834ff5d6831f04082bebf56dcdae.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/vsol-v2801sg-single-port-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/vsol-v2801sg-single-port-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xtreme-xt1ge-xp-a-1g-xpon-onu",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\079331c6e69212532b983fe76cc44a784b7002d063e4a2140686622ebe4525f9.html'",
+    "sourceImages": [
+      "/images/products/networking/onu/xtreme-xt1ge-xp-a-1g-xpon-onu.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/onu/xtreme-xt1ge-xp-a-1g-xpon-onu.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "onu",
+        "subcategoryName": "ONU",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

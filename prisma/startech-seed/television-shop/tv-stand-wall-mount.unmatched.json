@@ -1,0 +1,162 @@
+[
+  {
+    "ok": false,
+    "stem": "tv-wall-mount-kit-24-to-32-inch-support",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2270483e7ba436ec3a748cc2471bb75d575ffdb26f0a462c58a47de2bb1bad0b.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-24-to-32-inch-support.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-24-to-32-inch-support.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tv-wall-mount-kit-40-to-55-inch-support",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\663f25c2bcfee3537f34de28b8bc5295b618780a5e390b28376a690fb28245ca.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-40-to-55-inch-support.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-40-to-55-inch-support.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tv-wall-mount-kit-55-to-75-inch-support",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a3cb400f5df3daad444cde17fbaf8f5a396f5dae3f360939c2ea5f2e93e2c413.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-55-to-75-inch-support.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-55-to-75-inch-support.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tv-wall-mount-kit-75-to-100-inch-support",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1666a966c308f0fd2178054d4f1ab764c1b5ceee35fcc6e75d127ddb8ac3fa3f.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-100-inch-support.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-100-inch-support.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tv-wall-mount-kit-75-to-85-inch-support",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ef43316f42f6b566199dbb2d8a65d381bfa7e2547667cb4fb8fb8a8ccb4f254.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-85-inch-support.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-85-inch-support.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "universal-tv-stand",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5cc07949bdc056f4a12bf8eb2fc9f3eb1b01d5fdb101363e5fdbbf8cee26312f.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "universal-tv-stand-for-43-100-inch-television",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d193c7ae25120eff00b423ac11739b23f549d93462b59f304a4402d8ca67d31a.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand-for-43-100-inch-television.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand-for-43-100-inch-television.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zeno-t750-ceiling-mount-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a27546f8fc425f864e7e928415610492dcc12df9f5ed05d6607a400f196f6e60.html'",
+    "sourceImages": [
+      "/images/products/television-shop/tv-stand-wall-mount/zeno-t750-ceiling-mount-kit.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/television-shop/tv-stand-wall-mount/zeno-t750-ceiling-mount-kit.png",
+        "categorySlug": "television-shop",
+        "categoryName": "Television Shop",
+        "subcategorySlug": "tv-stand-wall-mount",
+        "subcategoryName": "TV Stand Wall Mount",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

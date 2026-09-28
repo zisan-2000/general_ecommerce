@@ -1,0 +1,2382 @@
+[
+  {
+    "ok": false,
+    "stem": "hikvision-ds80hkvs-vx1-8tb-sata-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2748cdb57451acc132d1fe51551b0c4512463a737407c2aab32fca651f862ed6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/Hikvision/hikvision-ds80hkvs-vx1-8tb-sata-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/Hikvision/hikvision-ds80hkvs-vx1-8tb-sata-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-1tb-sata-laptop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0836d5ab5e0858f4dd788f0652f213bf12d477805dc3fbe3a397a9fc89e051d7.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-1tb-sata-laptop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-1tb-sata-laptop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-2tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d53018cebba63a70259fcd52a4f6d813f9530ae5d303190fffe3aa2022c82190.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-2tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-2tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-4tb-5900rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b07d88fbcb0f6a1bd903e21f2a860a4d64819a0173eebf02eed7747cab8783f4.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-4tb-5900rpm-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-4tb-5900rpm-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-6tb-5900rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4c9cc55b7883473a09f1f0ff9d1bc1963003ff6d53b2371ed9a8c51c9279d586.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-6tb-5900rpm-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-6tb-5900rpm-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-barracuda-1tb-sata-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0383b2ab08f0449fffb084fdcf1d4df01a589b7e9a387d12a3ff7edd2469d4b.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-1tb-sata-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-1tb-sata-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-barracuda-2tb-7200rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f922472c16dc66343c64575019456032e9fd7ca697751340037a7914ce2fd3a9.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-2tb-7200rpm-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-2tb-7200rpm-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-barracuda-2tb-sata-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6b6289a74de1613b63e64ae2908700f0685e7f3bdec22c0e40f022a5098f2128.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-2tb-sata-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-2tb-sata-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-barracuda-6tb-desktop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\104302129645648d2409a8e87a797a0554260d2f7c8f93a88072204664c0c189.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-6tb-desktop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-6tb-desktop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-barracuda-8tb-desktop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\889646e2069d39004522d4c930ef559ef362153a3440ac2c7d30f1668accf92d.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-8tb-desktop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-barracuda-8tb-desktop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-7e10-10tb-sata-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dfb0641d8a5e921c126a0ba1f34c889c10af8fb7197a4c326b70298e0e5d38b0.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-10tb-sata-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-10tb-sata-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-7e10-4tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8256b384c690a9731198de8fc46da2987528e759488d8b86ecef01d2ad371eba.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-4tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-4tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-7e10-4tb-sas-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fa54b4f35c7502a42214d81f1edb198c76e523b95fda143b1551c360f5de7fb7.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-4tb-sas-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-4tb-sas-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-7e10-8tb-sata-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5f72248c100c1d579c447f3c2600f5fe2b083aee7131e4dd36fb38935abdda03.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-8tb-sata-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e10-8tb-sata-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-7e8-4tb-512n-sata-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0006bff62fa443852030cc9b959f68374b15998ac410739fc8a6d7623053f585.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e8-4tb-512n-sata-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-7e8-4tb-512n-sata-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x16-14tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9c72515d1a4b30a61367fe6878a55ebb519bc99ef18d51ecab9402c1302455c.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x16-14tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x16-14tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x16-16tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8340e95c7f1e2060abadbdd7cf6479df432b9f3824776cca13ce72905656f54.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x16-16tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x16-16tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x18-10tb-7200rpm-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\025379e7c3b8795ad154c31905acb1c06a53be1f65d6b9582c4c07ae539d9d86.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-10tb-7200rpm-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-10tb-7200rpm-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x18-12tb-7200rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88cb3e556ee6008e6754f50fe58a596181e8e5b29b7fcb567ed45db42e4ae8f1.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-12tb-7200rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-12tb-7200rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x18-16tb-sata-iii-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\68ce410c92258a2ed922a5f7635a14fb34d71e0e796bf736450f6f8ad060c851.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-16tb-sata-iii-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-16tb-sata-iii-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x18-18tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a18ecbfd5967cf2057c08dac0420c689c868706245fd735d4a306a59554d92cc.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-18tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x18-18tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x22-22tb-7200rpm-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0545b3492b716b8df21cd1bdbd9ac83304678a194cbfa208afacd604210959f.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x22-22tb-7200rpm-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x22-22tb-7200rpm-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x24-12tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\115882252f6ea146b8036c234014547f3f83104e482f6edc9347576f62a1978c.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-12tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-12tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x24-16tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\52745e79e881bd3e76432847befa9d5589e837b7397d15d782c41c6a71b12a10.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-16tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-16tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x24-20tb-sata-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b853879a9cf13627bcc880b25d30cecf863aaeaf51c2a21bed01f2e317843d9.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-20tb-sata-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-20tb-sata-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-exos-x24-24tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\812dc3599109210389152bce5c8626f59aeae69e9959ae38524cea9297be5de8.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-24tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-exos-x24-24tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-10tb-7200rpm-nas-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d059da8c1af18b64e09dae90e0e383426c323c52971ad42596989445292c5415.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-10tb-7200rpm-nas-hard-disk.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-10tb-7200rpm-nas-hard-disk.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-10tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\78be462b87c6a95ea95f4e5db10cfa2e1ac43b92b7be0b7ac5b9385aa6e8d6bf.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-10tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-10tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-12tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04d79b7d8a0b5429c164c57da5a8c69d4bc3e344ad8e04b82942430d662789e9.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-12tb-nas-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-12tb-nas-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-12tb-sata-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab7751b69582833205349b9b51d63817fc42b8ae49e1a1359122a7d79c063b62.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-12tb-sata-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-12tb-sata-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-2tb-sata-nas-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\80220e7668e9615cc0909cdb4062e071c440452baba6d03ef907b83b459e7819.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-2tb-sata-nas-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-2tb-sata-nas-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-4tb-5400rpm-sata-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\038c874ecfc8ccdccf07c7531bde19f2f428e73d5e7684eb4e01ffd34e061428.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-4tb-5400rpm-sata-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-4tb-5400rpm-sata-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-4tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ec320c5bf8f4c00f9681987090394048e8560f03c0846307f8c23e53d2620a6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-4tb-nas-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-4tb-nas-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-6tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\454e85bd04c99d0daf4fd68c53bf337f1d18b161f02760764946e46e14b1759c.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-nas-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-nas-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-6tb-nas-internal-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3bc71a8bedd26683924812ca0ab55023e04e5dc34858a1930e400f51ba5e505c.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-nas-internal-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-nas-internal-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-6tb-sata-5400rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6993e61754b71b037ac6a7a18b13bd3a315af9593cb6504996a2c8de5644c728.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-sata-5400rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-6tb-sata-5400rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-8tb-nas-desktop-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ba752a524bbdaeb930a2b200213e3a1b4129d089de4a9d548be392b614ce4624.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-8tb-nas-desktop-hard-disk.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-8tb-nas-desktop-hard-disk.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-10tb-sata-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da8cd02d9dd51312b99ef8f4bcdef4dd9a7dd7e5b457178503fe4bf61194a2a6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-10tb-sata-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-10tb-sata-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-12tb-sata-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a9859744fcbd98ad17f57c890875511d7aca0338f517e9dc02465c797354c05.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-12tb-sata-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-12tb-sata-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-16tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a38e1e83c01e27e39f9a1f9bdc0aeae54546caafc3b1ab2f6df62e54f1d3755.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-16tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-16tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-16tb-sata-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\077ce553fd1d643e8781d7c9e90e8fbec3f0d29b6668993a5415a48da6f5b050.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-16tb-sata-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-16tb-sata-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-18tb-nas-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db2adb389c9c90b949574f16f085c9ec69d66f1ee2cacbcad762a0f5a3c3a10b.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-18tb-nas-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-18tb-nas-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-20tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0e79de1eca0f5af17ab5448de94748f64d21232eb0b3ef856d7795f27e17e542.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-20tb-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-20tb-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-4tb-nas-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\477f2a126f8a84d8bc3121a729027d2eb913423f005892dbba8224fa7a7e2f49.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-4tb-nas-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-4tb-nas-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-6tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a9215d7cc7959eab62d6870f389166ed10fb92202e86f982a7a4bce629b15270.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-6tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-6tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-8tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62e569b0fe0de6f9f843c5bfd8f3dfed676d4b18244665c89fe098b9a9fc8ca8.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-8tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-8tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-ironwolf-pro-8tb-sata-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f2d2ae9c78fc157722c06f354b35cd050ca098314413f6d39d5e20e563bcb110.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-8tb-sata-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-ironwolf-pro-8tb-sata-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-10tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\779e8c8a5d5ce6ca6f452d5f776e4c2453a8273239ead1e7f5f9eca9280db00f.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-10tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-10tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-12tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a56bee28d404dfcda4b58a1beda11fcc3b493db97f1fbbefa2e52d46868ef47.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-12tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-12tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-1tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\65f453a26fd40e882d6a695505be038e0fbc3c69ad40b3a7e06de1ce8c1ec168.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-1tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-1tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-2tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\65c9832e06ae27c39654bc01fdbf890f4ceaecacd4e96eccd76d2f89f71dcded.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-2tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-2tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-2tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\079a0e1d879d9748943b0359b00ab99090871a09448fbacc465c736aef6d1f7d.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-2tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-2tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-4tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d131f0b10e03906083c3afb0878e1ce4f4d4a8d1726f613e5e77411b53236d09.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-4tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-4tb-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-4tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dccd2628d206a50b9f6508c2c9a48310b7dc321100152db40cc7304d268133c4.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-4tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-4tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-6tb-5400-rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab2ca196b9a4eb8c99ce7dc46f1c716409b21d42ab0f0132b26887fe245abfbf.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-5400-rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-5400-rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-6tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0a6020a5deeed98b649bcdb794f784918ac45b9314b6b172ffd2ac1f42bdd41.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-6tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\88d94d0fc45d238e75dfe72d68adfd492855dc88aa79f456c206f0fa12972898.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-6tb-surveillance-internal-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\64011fc43ac36c6da37e55b728573fe63887621fbe3d5a3330f11c0fa35e1500.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-surveillance-internal-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-6tb-surveillance-internal-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-8tb-7200rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d519cfaade533d35bd9b6441a58ae063632132cf1790529f060725b05d976b3.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-8tb-7200rpm-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-8tb-7200rpm-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-8tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e22c7b717ad613c8caf19221fc8f1943e44c5b3de76725ed758aa2308d52d482.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-8tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-8tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-ai-10tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d17a268ae1bdbe99d422124dc5ae874f090b31f1c903e97f0c50962e992f5d3f.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-10tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-10tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-ai-12tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aa657440fa6c3d2bb67ff4ba966057c3baa4b185c50bdd716a3bee051ce3ccc4.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-12tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-12tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-ai-16tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4273fa2a9e981fb278401497764f2549f19f4aa5bd5a5d7e38ec4b7c23a41a77.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-16tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-16tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-ai-20tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6c184cbd7eda6dcd6b8d2a5edac7e1e16e7adeb58505a3735f162455ddcc22a.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-20tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-20tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-ai-8tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73ffc6edda43bfa136d5e8cf2cb45305cbf453d59873b38aac11f146c6ac2382.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-8tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-ai-8tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-skyhawk-lite-2tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e57a436d1875a18fa3bd872999e64b94fd1f5e11fc16982e0f518bd597d7e988.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-lite-2tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagate-skyhawk-lite-2tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagte-4tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d8a671382f6e3e8fb21164f62e3f51c7b2dabb20aa5d019befadebd32b1fbf2.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/seagate/seagte-4tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/seagate/seagte-4tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "seagate",
+        "folderBrandName": "Seagate",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-dt01aba100v-1tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\092d1375e8e2f729d0d070dad7a682ccbc937ea121bf7ffc01c4b1251d907b67.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-dt01aba100v-1tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-dt01aba100v-1tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg06-enterprise-10tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\74ffb6db9e9550c81c22508b75cd20e8f6152f18c78dd867b9cb74ac31f64708.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg06-enterprise-10tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg06-enterprise-10tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg06-enterprise-8tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fb6ca7e11bee2b161a07ee56f741df808fb0da9f35a105eac5ac11f98f9b1ae2.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg06-enterprise-8tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg06-enterprise-8tb-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg07aca-enterprise-12tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1cb601e1790c5fedd33c4eb2107d7a428d9272eb7f0d1f6e61465262a3b1b96b.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg07aca-enterprise-12tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg07aca-enterprise-12tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg07aca-enterprise-14tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\328f24956c888e2a3d22420c90f5f21600bc1319ed0ffc66d4b8f106ff78aef1.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg07aca-enterprise-14tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg07aca-enterprise-14tb-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg08-enterprise-16tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f7a6dbc6131f9a7a07a6abea2de247d34d4ed715d473d1980368ed7853fbcc0.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg08-enterprise-16tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg08-enterprise-16tb-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg08-enterprise-18tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a85ff7f96a00d95f100136c3daef6c30e1555d18e16ad776c2c5000f035bd13.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg08-enterprise-18tb-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg08-enterprise-18tb-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg10-d-10tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8690e2c04d6a330e45f1c9cd6acdf9a0fcfd88020fe9e4b2f877738e2989e34c.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-10tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-10tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg10-d-4tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a597554f35f816373795f8cc991e1ca94c440f7849ea55096940cf024559bea9.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-4tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-4tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg10-d-6tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dcd2025ebc1df38c9f006760b458eb4cb1503bb826dcb5f449f238d8e0221be9.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-6tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-6tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-mg10-d-8tb-enterprise-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e617962a6b21462dc83311851c35f02562d3288dcb7905dca235156b43cd3123.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-8tb-enterprise-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-mg10-d-8tb-enterprise-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-n300-10tb-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\92d7539dc68d18ae7b8bd80e11ad95af15a073399dc7814c2ed26638d09d465b.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-10tb-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-10tb-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-n300-4tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\47ec31e1dbefb0e854fda062be9f0b94877da51aff026c15ad8f77dc79966a65.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-4tb-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-4tb-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-n300-8tb-7200rpm-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d917692bec0b0496965bb7d7b2e2df9859e8e0eeb7b559cd2bdbca7fc078e718.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-8tb-7200rpm-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-n300-8tb-7200rpm-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-p300-1tb-internal-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a2fe7b1acacdc24a800df983bf75d519d4fabe39ee96c444a11fab1770e05c5.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-1tb-internal-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-1tb-internal-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-p300-2tb-desktop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\55131e7d1672215b9bbbe64f4df57044c392ff664f7aa10d2002a4464a956a9f.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-2tb-desktop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-2tb-desktop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-p300-2tb-sata-7200rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4dd03cb08c359eadcb944c1bd00702469a4cb5fbe061bb7cee4809a1cac6d5b6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-2tb-sata-7200rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-2tb-sata-7200rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-p300-4tb-desktop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30a47f7256ee5abd1f214cca5a38165384b3bdf3db24e79fbdde6660d18d3957.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-4tb-desktop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-4tb-desktop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-p300-6tb-desktop-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f2d85d2d68655bce98bf19dc615c96516e26bea71226754d7e50c048db599cd.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-6tb-desktop-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-p300-6tb-desktop-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-1tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f7cd7ed046ddc5e39856b5df0f480fc278a3f2a833eabbd0748aa9d3cb822da5.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-1tb-surveillance-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-1tb-surveillance-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-2tb-5400rpm-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2a621a6f2644d34f760c86bd3728b6f5de6119a261392303eadcf599f74f1c89.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-2tb-5400rpm-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-2tb-5400rpm-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-2tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b1626760a738b994c54046464f427b9a72c5e67f823a0d895f253b1d7786134.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-2tb-surveillance-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-2tb-surveillance-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-4tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\037902ff53ad8cbdde9e350d7a9f90f07a5d19a9651ecbb6b805026e56d277d8.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-4tb-surveillance-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-4tb-surveillance-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-4tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\70c7e2a4ff0c23acd948d9e8c4bed2924a80dc0d56066ad8cddb11a7c88a72a0.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-4tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-4tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-6tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e686155a803b16162c73e4c3e23e58bd4003968fa1467a43a0ddc53c62194dd.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-6tb-surveillance-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-6tb-surveillance-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-pro-10tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afb10b0c2276a9198980eb94da9f76c7a5aed47699cbeabba4796eceeb9bf287.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-10tb-surveillance-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-10tb-surveillance-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-pro-10tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\51344472f20beafbb2914f5c3613a9b1d1db5b4f06b320f16d3f183cefebfca0.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-10tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-10tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-pro-6tb-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eba4c6108f3a799390340eb0d2eadc6d5eb6f5dc8ff5aeff0b5d495351e383e3.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-6tb-surveillance-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-6tb-surveillance-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-s300-pro-8tb-7200rpm-surveillance-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\acea91e2d5df77965bb221056c8c0ff217b9311aeb418b475de04660e9d281a8.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-8tb-7200rpm-surveillance-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-s300-pro-8tb-7200rpm-surveillance-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-surveillance-s300-10tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2c8cc8a52ab385b3741f7e46991ec408df9612b9ca1109a2ec65b6005ac0e369.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-surveillance-s300-10tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-surveillance-s300-10tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-tomcat-nearline-4tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a93d0eea81a15a54cad7fdbd08a2c3f777eb1fd29b1ee6019963c241323d8e40.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-tomcat-nearline-4tb-nas-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-tomcat-nearline-4tb-nas-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-tomcat-nearline-8tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39afd247c39f70f18eb0da36367df51b063c9f0ffde2aa3d460188ed32f8e513.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-tomcat-nearline-8tb-nas-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-tomcat-nearline-8tb-nas-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-x300-10tb-sata-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\27e784213c9318c50e230cef13e6d24a26487e8c164b6eb670e937614fcddf20.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-10tb-sata-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-10tb-sata-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-x300-4tb-performance-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e7b5a3bab044404bd7b57e2c3f02c8ade11ff63923fd2929877e8012505ca70.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-4tb-performance-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-4tb-performance-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-x300-performance-6tb-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a255f92f8e3f65b9c3f413ad1f0854b11543404a53bfbd5eeb7da804984a613.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-performance-6tb-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/toshiba/toshiba-x300-performance-6tb-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "toshiba",
+        "folderBrandName": "Toshiba",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wd-4tb-purple-wd40purx-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e8d8701d86842ab7ec593c77aef59f8631a56ba8f2ef714885b5556fc3d5bc1.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/wd-4tb-purple-wd40purx-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/wd-4tb-purple-wd40purx-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-10tb-purple-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00156f69a573593db536bb06c8ec4287e37b191f5ff5ef0d7380570075ab9c95.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-10tb-purple-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-10tb-purple-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-1tb-purple-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e4d6d475fa35cdd0a900c0b30efa25cdef5c2c3eb5c0750f0206129afd81969.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-1tb-purple-hard-disk.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-1tb-purple-hard-disk.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-2tb-blue-7200rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8234081064c80b1ed7c650cad0c0be919b1cad2cf123efb317189696cc467446.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-blue-7200rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-blue-7200rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-2tb-blue-hdd-wd20ezrz",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d7f4218a8a1714f9373f24a6ca9ed4ce30972f8b65a32aaa50e2f17e67c1609e.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-blue-hdd-wd20ezrz.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-blue-hdd-wd20ezrz.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-2tb-purple-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ecab1e3dad5fbac028b780080f1cfa32293fb50e566854c771273fff23030e3.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-purple-hard-disk.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-2tb-purple-hard-disk.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-4tb-blue-5400rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4042db2389930d1e0bc27247548ba7b0629e2c27f28500aa4bf5e9fa6b7951a6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-4tb-blue-5400rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-4tb-blue-5400rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-4tb-nas-red-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\21b082d82cd46239a2ad7d26f466a4b05c6a7331cf3d374a3c86f9f6d61eda56.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-4tb-nas-red-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-4tb-nas-red-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-6tb-blue-5400rpm-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c822b5fa745df2283f1cc6462177fe050b44007cea87cfe35dbd20835c520073.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-6tb-blue-5400rpm-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-6tb-blue-5400rpm-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-6tb-red-hdd-wd60efrx",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\29a13bc0b783284b4e201662e03190c70fd44aad3042c427236b5a642d14d7a1.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-6TB-red-hdd-wd60efrx.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-6TB-red-hdd-wd60efrx.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-black-2tb-sata-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9fd1ab292096fac5edd74d58e0e96f02ba1d8cefc69007d2ae04348825bb5879.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-black-2tb-sata-hard-disk.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-black-2tb-sata-hard-disk.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-blue-1tb-sata-hard-disk",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f002eb7d1d76421a6e4da2c76e0e153fdfbf3a95cd897fc3a06a7b8b6cdf7380.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-blue-1tb-sata-hard-disk.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-blue-1tb-sata-hard-disk.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-purple-6tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da42c1d4980ea735268dca5f3bae2d032cba4c3c2a19af537d67f0ea8c68975b.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-6tb-surveillance-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-6tb-surveillance-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-purple-pro-10tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bb218c27a1269bdf1494e5565228be88a1a62f27a0feb1fe0822e18b77f68bdb.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-pro-10tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-pro-10tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-purple-pro-8tb-surveillance-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c19c09c84b1123cf18ddc9d5435fcc13432e1dcd837305a91360a4c0f1db3deb.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-pro-8tb-surveillance-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-purple-pro-8tb-surveillance-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-red-2tb-nas-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\24dfeacb104448b9265a8b62e7a485d7b7ead1888f931ed56c6a5a28f23fa434.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-red-2tb-nas-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-red-2tb-nas-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-wd60purz",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7cf2dde718ffe6cd2e607bc05d35806ff02d85dbc97340a14bfd76db6d8296f6.html'",
+    "sourceImages": [
+      "/images/products/component/hard-disk-drive/western-digital/western-digital-wd60purz.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/hard-disk-drive/western-digital/western-digital-wd60purz.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "hard-disk-drive",
+        "subcategoryName": "Hard Disk Drive",
+        "folderBrandSlug": "western-digital",
+        "folderBrandName": "Western Digital",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

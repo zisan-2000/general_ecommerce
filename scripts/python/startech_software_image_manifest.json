@@ -1,0 +1,1715 @@
+{
+  "sourceCategoryUrl": "https://www.startech.com.bd/software",
+  "siteReportedProductCount": 91,
+  "uniqueMasterProductsFound": 91,
+  "selectedCategory": null,
+  "requestedForThisRun": 91,
+  "outputRoot": "public/images/products",
+  "categories": [
+    {
+      "name": "Operating System",
+      "slug": "operating-system",
+      "url": "https://www.startech.com.bd/operating-system",
+      "matchedProductCount": 13
+    },
+    {
+      "name": "Office Application",
+      "slug": "office-application",
+      "url": "https://www.startech.com.bd/office-application",
+      "matchedProductCount": 9
+    },
+    {
+      "name": "Database",
+      "slug": "database",
+      "url": null,
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Server Solution",
+      "slug": "server-solution",
+      "url": null,
+      "matchedProductCount": 0
+    },
+    {
+      "name": "Mail Server Solution",
+      "slug": "mail-server-solution",
+      "url": "https://www.startech.com.bd/mail-server-solution",
+      "matchedProductCount": 4
+    },
+    {
+      "name": "Cloud Solutions",
+      "slug": "cloud-solutions",
+      "url": "https://www.startech.com.bd/cloud-solution",
+      "matchedProductCount": 13
+    },
+    {
+      "name": "Antivirus",
+      "slug": "antivirus",
+      "url": "https://www.startech.com.bd/software/antivirus",
+      "matchedProductCount": 15
+    },
+    {
+      "name": "Bangla Typing Software",
+      "slug": "bangla-typing-software",
+      "url": "https://www.startech.com.bd/bangla-typing-software",
+      "matchedProductCount": 2
+    },
+    {
+      "name": "Adobe",
+      "slug": "adobe",
+      "url": "https://www.startech.com.bd/software/adobe",
+      "matchedProductCount": 19
+    },
+    {
+      "name": "VMware",
+      "slug": "vmware",
+      "url": "https://www.startech.com.bd/software/vmware",
+      "matchedProductCount": 1
+    },
+    {
+      "name": "AutoDesk",
+      "slug": "autodesk",
+      "url": "https://www.startech.com.bd/software/autodesk",
+      "matchedProductCount": 9
+    },
+    {
+      "name": "AnyDesk",
+      "slug": "anydesk",
+      "url": "https://www.startech.com.bd/anydesk-software",
+      "matchedProductCount": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "Bijoy Bayanno 2026 Bangla Typing Software For Windows",
+      "sourceProductUrl": "https://www.startech.com.bd/bijoy-bayanno-2026-bangla-software",
+      "categoryPath": [
+        "software",
+        "bangla-typing-software"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Bangla Typing Software",
+          "slug": "bangla-typing-software",
+          "url": "https://www.startech.com.bd/bangla-typing-software"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/bijoy/bayanno-2020/bayanno-1200x630.webp",
+      "localImageFile": "public/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Home Security Essential Internet Security for 1 User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-security-essential-antivirus",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/home-security-essential/home-security-essential-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-home-security-essential-antivirus.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Internet Security Single User with 03 Years License",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-antivirus-one-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/eset/one-user/eset-1-user-2021-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-internet-security-antivirus-one-user.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Internet Security 3 User for 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-3-user-for-1-year",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/internet-security/eset-internet-security-1-user1-year-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-internet-security-3-user-for-1-year.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 F1 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f1",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-enterprise/microsoft-365-f1-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-f1.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Bijoy Ekattor For Mac Bangla Software",
+      "sourceProductUrl": "https://www.startech.com.bd/bijoy-ekattor-for-mac-bangla-software",
+      "categoryPath": [
+        "software",
+        "bangla-typing-software"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Bangla Typing Software",
+          "slug": "bangla-typing-software",
+          "url": "https://www.startech.com.bd/bangla-typing-software"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/bijoy/ekattor/ekattor-for-mac-001-1200x630.webp",
+      "localImageFile": "public/images/products/software/bangla-typing-software/bijoy-ekattor-for-mac-bangla-software.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Business Basic (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/office-365-business-essential",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/microsoft/ms-office/office-365/Microsoft-365-Business-Basic-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/office-365-business-essential.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office 365 F3 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-f3",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/office-365-f3-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-office-365-f3.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows Server 2025 - Device CAL",
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-device-cal",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2025-device-cal-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/windows-server-2025-device-cal.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Small Business Security (1 Server, 5 Windows PC)",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/eset-small-business-security/eset-small-business-security-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-small-business-security.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows Server 2025 - User CAL",
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-user-cal",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2025-user-cal-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/windows-server-2025-user-cal.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe InCopy CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-incopy-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/incopy/adobe-incopy-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-incopy-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard Device CAL",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-device-cal",
+      "categoryPath": [
+        "software",
+        "mail-server-solution"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Mail Server Solution",
+          "slug": "mail-server-solution",
+          "url": "https://www.startech.com.bd/mail-server-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/mail-server/microsoft/exchange-server-2019-standard-device-cal-1200x630.jpg",
+      "localImageFile": "public/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-device-cal.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Personal For 1 User (01 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365-personal-oem",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/365-personal-1200x630.jpg",
+      "localImageFile": "public/images/products/software/office-application/ms-office-365-personal-oem.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 10 users",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-10-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/eset-small-business-security/eset-small-business-security-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-small-business-security-10-user.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 F3 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f3",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-enterprise/microsoft-365-f3-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-f3.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard User CAL",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-user-cal",
+      "categoryPath": [
+        "software",
+        "mail-server-solution"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Mail Server Solution",
+          "slug": "mail-server-solution",
+          "url": "https://www.startech.com.bd/mail-server-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/mail-server/microsoft/exchange-server-2019-standard-user-cal-1200x630.jpg",
+      "localImageFile": "public/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-user-cal.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office 365 Enterprise E1 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e1",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/office-365-enterprise-e1-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e1.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Apps for Business (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/microsoft/ms-office/office-365/365-1200x630.png",
+      "localImageFile": "public/images/products/software/cloud-solutions/ms-office-365.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 15 users",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-15-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/eset-small-business-security/eset-small-business-security-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-small-business-security-15-user.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Apps for Enterprise (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-apps-for-enterprise",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/microsoft/ms-office/office-365/apps-for-enterprise-01-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Business Standard (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-business-standard",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-business/microsoft-365-business-standard-1200x630.jpeg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-business-standard.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Windows Server 2025 Remote Desktop Services - 1 Device CAL (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-2025-remote-desktop-services",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/server-system/microsoft-windows-server-2025-remote-desktop-services/microsoft-windows-server-2025-remote-desktop-services-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/microsoft-windows-server-2025-remote-desktop-services.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Windows 11 Professional",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-11-professional",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/operating-system/windows-11-pro/windows-11-pro-02-1200x630.jpg",
+      "localImageFile": "public/images/products/software/operating-system/microsoft-windows-11-professional.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Windows Server Standard 2025 - 2 Core License Pack",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-standard-2025-2-core-license-pack",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/microsoft-windows-server-standard-2025-2-core-license-pack-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/microsoft-windows-server-standard-2025-2-core-license-pack.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows GGWA - Windows 11 Professional - Legalization GetGenuine (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/windows-ggwa-windows-11-professional ",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/windows-ggwa-windows-11-professional%20"
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 25 users",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-25-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/eset-small-business-security/eset-small-business-security-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-small-business-security-25-user.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Acrobat Standard DC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-acrobat-standard-dc-for-teams",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/adobe-acrobat/adobe-acrobat-dc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-acrobat-standard-dc-for-teams.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Business Premium (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365-business-premium",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-business/365-business-premium-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/ms-office-365-business-premium.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office 365 Enterprise E3 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e3",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/365-enterprise-e3-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e3.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office Home and Business 2024 English APAC EM Medialess",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-home-and-business",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/home-and-business-2024-1200x630.webp",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office-home-and-business.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Fresco CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-fresco-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/fresco/adobe-fresco-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-fresco-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Acrobat Pro DC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-acrobat-pro-dc-for-teams",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/Adobe/adobe-acrobat-pro-dc-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe XD CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-xd-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/adobe-xd/adobe-xd-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-xd-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office 365 Enterprise E5 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e5",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/enterprise-e5-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e5.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Audition CC - Pro for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-audition-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/audition/adobe-audition-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-audition-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Dimension for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-dimension-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/dimension/adobe-dimension-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-dimension-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Windows Server 2019 Standard OEI DVD",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-2019-oem",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2019-1200x630.jpg",
+      "localImageFile": "public/images/products/software/operating-system/microsoft-windows-server-2019-oem.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Enterprise E3 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e3",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-enterprise/enterprise-e3-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-enterprise-e3.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Acrobat Sign for Business",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-acrobat-sign",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/software/adobe/acrobat-sign/adobe-acrobat-sign%20(1)-1200x630.webp"
+    },
+    {
+      "name": "Office LTSC Standard 2021",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-standard-open-licence",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/office-standard-open-licence-01-1200x630.jpg",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office-standard-open-licence.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe After Effects CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-after-effects-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/after-effects/adobe-after-effects-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-after-effects-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe InDesign CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-indesign-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/indesign/adobe-indesign-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-indesign-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Photoshop CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-photoshop-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/photoshop/adobe-photoshop-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-photoshop-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Illustrator CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-illustrator-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/illustrator/adobe-illustrator-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-illustrator-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Premiere Pro for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-premier-pro-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/premier-pro/adobe-premiere-pro-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-premier-pro-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Visual Studio Professional 2022",
+      "sourceProductUrl": "https://www.startech.com.bd/visual-studio-professional-2022",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/studio-professional-2022/studio-professional-2022-1200x630.webp",
+      "localImageFile": "public/images/products/software/office-application/visual-studio-professional-2022.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Dreamweaver CC for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-dreamweaver-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/dreamweaver/adobe-dreamweaver-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-dreamweaver-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Lightroom CC - Pro for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-lightroom-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/lightroom/adobe-photoshop-lightroom-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-lightroom-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Enterprise E5 (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e5",
+      "categoryPath": [
+        "software",
+        "cloud-solutions"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Cloud Solutions",
+          "slug": "cloud-solutions",
+          "url": "https://www.startech.com.bd/cloud-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/cloud-solution/microsoft-365-enterprise/enterprise-e5-1200x630.jpg",
+      "localImageFile": "public/images/products/software/cloud-solutions/microsoft-365-enterprise-e5.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Animate CC - Pro for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-animate-cc",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/animate/adobe-animate-cc-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-animate-cc.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk AutoCAD LT 2025 Commercial New Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-autocad-lt-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/autocad-lt/autocad-lt-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-autocad-lt-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe FrameMaker for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-framemaker",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/framemaker/adobe-framemaker-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-framemaker.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Office LTSC Professional Plus 2024",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-professional-plus",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/office-ltsc-pro-plus-2024/office-ltsc-pro-plus-2024-1200x630.webp",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office-professional-plus.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard",
+      "categoryPath": [
+        "software",
+        "mail-server-solution"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Mail Server Solution",
+          "slug": "mail-server-solution",
+          "url": "https://www.startech.com.bd/mail-server-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/mail-server/microsoft/exchange-server-2019-standard-1200x630.jpg",
+      "localImageFile": "public/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows Server 2025 Datacenter - 2 Core (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-datacenter-2-core",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2025-datacenter-2-core-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/windows-server-2025-datacenter-2-core.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft SQL Server 2022 Standard (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-sql-server-2022-standard",
+      "categoryPath": [
+        "software",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/sql-server-2022-standard-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/_uncategorized/microsoft-sql-server-2022-standard.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows Server 2025 Standard - 16 Core License Pack",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2025-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/microsoft-windows-server.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Creative Cloud Pro for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-creative-cloud-for-teams-all-apps",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/creative-cloud/adobe-creative-cloud-all-apps-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-creative-cloud-for-teams-all-apps.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Adobe Substance 3D Collection for Teams",
+      "sourceProductUrl": "https://www.startech.com.bd/adobe-substance-3d-collection-for-teams",
+      "categoryPath": [
+        "software",
+        "adobe"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Adobe",
+          "slug": "adobe",
+          "url": "https://www.startech.com.bd/software/adobe"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/adobe/substance-3d/substance-3d-collection-for-teams-1200x630.webp",
+      "localImageFile": "public/images/products/software/adobe/adobe-substance-3d-collection-for-teams.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk InfraWorks 2025 Commercial New Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-infraworks-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/infraworks/infraworks-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-infraworks-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk 3ds Max 2025 Commercial New Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-3ds-max-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/3ds-max/3ds-max-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-3ds-max-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk Maya 2025 Commercial New Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-maya-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/maya/maya-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-maya-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "AutoCAD - including specialized toolsets AD Commercial New Single-user ELD Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-autocad-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/autocad/autocad-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-autocad-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk Media & Entertainment Collection Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-media-and-entertainment-collection",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/media-entertainment/media-entertainment-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-media-and-entertainment-collection.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk Architecture Engineering & Construction Collection Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-architecture-engineering-and-construction-collection",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/architecture-engineering-construction/architecture-engineering-construction-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-architecture-engineering-and-construction-collection.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk Civil 3D 2025 Commercial New Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-civil-3d-single-user-annual-subscription",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/civil-3d/civil-3d-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-civil-3d-single-user-annual-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Autodesk Product Design & Manufacturing Collection Single-user ELD - Annual Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/autodesk-product-design-and-manufacturing-collection",
+      "categoryPath": [
+        "software",
+        "autodesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AutoDesk",
+          "slug": "autodesk",
+          "url": "https://www.startech.com.bd/software/autodesk"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/autodesk/product-design-manufacturing/product-design-manufacturing-2023-1200x630.webp",
+      "localImageFile": "public/images/products/software/autodesk/autodesk-product-design-and-manufacturing-collection.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft SQL Server 2022 Standard 2 Core License Pack (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-sql-server-2022-standard-2-core-license-pack",
+      "categoryPath": [
+        "software",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/sql-server-2022-standard-2-core-01-1200x630.png",
+      "localImageFile": "public/images/products/software/_uncategorized/microsoft-sql-server-2022-standard-2-core-license-pack.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Enterprise",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-enterprise",
+      "categoryPath": [
+        "software",
+        "mail-server-solution"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Mail Server Solution",
+          "slug": "mail-server-solution",
+          "url": "https://www.startech.com.bd/mail-server-solution"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/mail-server/microsoft/exchange-server-2019-enterprise-1200x630.jpg",
+      "localImageFile": "public/images/products/software/mail-server-solution/microsoft-exchange-server-2019-enterprise.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Windows Server 2025 Datacenter - 16 Core License Pack",
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-datacenter-16-core-license-pack",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/windows-server-2025-datacenter-16-core-license-pack-1200x630.webp",
+      "localImageFile": "public/images/products/software/operating-system/windows-server-2025-datacenter-16-core-license-pack.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft SQL Server 2022 Enterprise 2 Core License Pack (CSP Perpetual)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-sql-server-2022-enterprise-2-core-license-pack",
+      "categoryPath": [
+        "software",
+        "_uncategorized"
+      ],
+      "matchedCategories": [],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/window/sql-server-2022-enterprise-2-core-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/_uncategorized/microsoft-sql-server-2022-enterprise-2-core-license-pack.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Eset Endpoint Security E-License (Volume 05 to As per Customer Requirement)",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-endpoint-protection-advance",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/Soft/Eset/ESET_Endpoint_Protection_Advanced_2-3d-multi-230x230-1200x630.png",
+      "localImageFile": "public/images/products/software/antivirus/eset-endpoint-protection-advance.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "VMware vSphere 6 Essentials Plus Kit for 3 hosts (Max 2 processors per host)",
+      "sourceProductUrl": "https://www.startech.com.bd/vmware-vsphere-6 ",
+      "categoryPath": [
+        "software",
+        "vmware"
+      ],
+      "matchedCategories": [
+        {
+          "name": "VMware",
+          "slug": "vmware",
+          "url": "https://www.startech.com.bd/software/vmware"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/vmware-vsphere-6%20"
+    },
+    {
+      "name": "Red Hat Enterprise Linux Server Standard (Annual Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/red-hat-enterprise-linux-server",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/operating-system/redhat/red-hat-enterprise-linux-server/red-hat-enterprise-linux-server-1200x630.jpg",
+      "localImageFile": "public/images/products/software/operating-system/red-hat-enterprise-linux-server.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Red Hat Enterprise Linux Server Premium (Annual Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/red-hat-enterprise-linux-server-premium",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/operating-system/redhat/red-hat-enterprise-linux-server/red-hat-enterprise-linux-server-1200x630.jpg",
+      "localImageFile": "public/images/products/software/operating-system/red-hat-enterprise-linux-server-premium.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Eset Endpoint Encryption (Volume 05 to As per Customer Requirement)",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-endpoint-encryption",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/endpoint-encryption/endpoint-encryption-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-endpoint-encryption.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Protect Entry E-License Subscription",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-protect-entry-e-license-subscription",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/eset-protect-entry/eset-protect-entry-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-protect-entry-e-license-subscription.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "AnyDesk Solo License 1 User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/anydesk-solo-license-1-user",
+      "categoryPath": [
+        "software",
+        "anydesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AnyDesk",
+          "slug": "anydesk",
+          "url": "https://www.startech.com.bd/anydesk-software"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/anydesk/anydesk-solo/anydesk-solo-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/anydesk/anydesk-solo-license-1-user.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "AnyDesk Advanced License 2 User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/anydesk-advanced-license-2-user ",
+      "categoryPath": [
+        "software",
+        "anydesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AnyDesk",
+          "slug": "anydesk",
+          "url": "https://www.startech.com.bd/anydesk-software"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/anydesk-advanced-license-2-user%20"
+    },
+    {
+      "name": "AnyDesk Standard License 1 User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/anydesk-standard-license-1-user",
+      "categoryPath": [
+        "software",
+        "anydesk"
+      ],
+      "matchedCategories": [
+        {
+          "name": "AnyDesk",
+          "slug": "anydesk",
+          "url": "https://www.startech.com.bd/anydesk-software"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/anydesk/anydesk-solo/anydesk-solo-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/anydesk/anydesk-standard-license-1-user.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET NOD32 Antivirus One User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-legendary-nod32-antivirus",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/nod32/nod32-6-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-legendary-nod32-antivirus.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Cyber Security Pro Internet Security for Mac",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-cyber-security-pro-internet-security-for-mac",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/eset/cyber-security/cyber-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-cyber-security-pro-internet-security-for-mac.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Internet Security 5 User 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-antivirus-5-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/eset/5-user/eset-5-user-2021-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-internet-security-antivirus-5-user.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Home Office Security Pack New 1-year 10-user",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-office-security-pack-new-1-year-10-user",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/data/BoxShot-ESOS-857x1000-1200x630.jpg",
+      "localImageFile": "public/images/products/software/antivirus/eset-home-office-security-pack-new-1-year-10-user.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft 365 Family For 6 User (1 Year Subscription)",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-family",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/365-family-1200x630.jpg",
+      "localImageFile": "public/images/products/software/office-application/microsoft-365-family.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Office Professional Plus 2021 English",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-professional-plus-2021",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/office-professional-plus-01-1200x630.webp",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office-professional-plus-2021.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Windows 10 Professional 64bit",
+      "sourceProductUrl": "https://www.startech.com.bd/win-pro-10-64bit-eng-intl-1pk-dsp-oei-dvd",
+      "categoryPath": [
+        "software",
+        "operating-system"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Operating System",
+          "slug": "operating-system",
+          "url": "https://www.startech.com.bd/operating-system"
+        }
+      ],
+      "sourceImageUrl": null,
+      "localImageFile": null,
+      "status": "failed",
+      "error": "403 Client Error: Forbidden for url: https://www.startech.com.bd/image/cache/catalog/Soft/windows/win%2010%20pro-1-1200x630.jpg"
+    },
+    {
+      "name": "Microsoft Office Home and Business 2016 for Mac",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office2016-for-mac",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/microsoft-office2016-for-mac-1200x630.jpg",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office2016-for-mac.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Microsoft Office Home and Business 2019",
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-home-and-business-2019",
+      "categoryPath": [
+        "software",
+        "office-application"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Office Application",
+          "slug": "office-application",
+          "url": "https://www.startech.com.bd/office-application"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/ms-office/office-home-business-2019-english-1200x630.jpg",
+      "localImageFile": "public/images/products/software/office-application/microsoft-office-home-and-business-2019.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "ESET Home Security Essential 2 User for 1 Year",
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-security-essential-2-user-for-1-year",
+      "categoryPath": [
+        "software",
+        "antivirus"
+      ],
+      "matchedCategories": [
+        {
+          "name": "Antivirus",
+          "slug": "antivirus",
+          "url": "https://www.startech.com.bd/software/antivirus"
+        }
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/software/antivirus/eset/home-security-essential/home-security-essential-1200x630.webp",
+      "localImageFile": "public/images/products/software/antivirus/eset-home-security-essential-2-user-for-1-year.webp",
+      "status": "downloaded"
+    }
+  ],
+  "summary": {
+    "downloaded": 86,
+    "skippedExisting": 0,
+    "failed": 5,
+    "dryRun": false
+  }
+}

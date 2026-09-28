@@ -1,0 +1,655 @@
+{
+  "sourceCategoryUrl": "https://www.startech.com.bd/ups-battery",
+  "categoryPath": [
+    "power",
+    "ups-battery"
+  ],
+  "siteReportedProductCount": 58,
+  "uniqueProductsFound": 58,
+  "products": [
+    {
+      "name": "KENSON KS4 4V 4.5AH Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks4-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks4/ks4-01-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks4-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Voltan 12V 7.5AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/voltan-12v-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/voltan/12v-ups/12v-ups-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/voltan-12v-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12-7.5AH 12V 7.5AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-7-5ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-7-5ah/ks12-7-5ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-7-5ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12-9AH 12V 9AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-9ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-9ah/ks12-9ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-9ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "MaxGreen MG12-7.5 12V 7.5A UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-mg12-7-5-12v-7-5a-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/maxgreen/mg12-7-5/mg12-7-5-01-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/maxgreen-mg12-7-5-12v-7-5a-ups-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "MaxGreen MG12-9 12V 9A UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-mg12-9-12v-9a-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/maxgreen/mg12-9/mg12-9-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/maxgreen-mg12-9-12v-9a-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WP12-12 12V 12Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wp12-12-12v-12ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wp12-12/wp12-12-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wp12-12-12v-12ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG LG7-12 12V 9Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-lg7-12-12v-9ah-rechargeable-sla-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/lg7-12-12v-9ah/lg7-12-12v-9ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/long-lg7-12-12v-9ah-rechargeable-sla-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Voltan 12V 9AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/voltan-12v-9ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/voltan/12v-9ah/12v-9ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/voltan-12v-9ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 12AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-12ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-12ah/ks12-12ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-12ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 18AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-18ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-18ah/ks12-18ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-18ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "MaxGreen MG12-18 12V 18A UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-mg12-18-12v-18a-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/maxgreen/mg12-18/mg12-18-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/maxgreen-mg12-18-12v-18a-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS18-12 12V 18Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss18-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss18-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12-26AH 12V 26AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-26ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-26ah/ks12-26ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-26ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "MaxGreen MG12-26 12V 26A UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-mg12-26-12v-26a-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/maxgreen/mg12-26/mg12-26-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/maxgreen-mg12-26-12v-26a-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WP18-12SHR 12V 18Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wp18-12shr-12v-18ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wp18-12shr/wp18-12shr-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wp18-12shr-12v-18ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 80AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-80ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/kenson/ks12-12v-80ah/ks12-12v-80ah-02-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-80ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 40AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-40ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-40ah/ks12-40ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-40ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPS26-12N 12V 26Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wps26-12n-12v-26ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wps26-12n/wps26-12n-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wps26-12n-12v-26ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPS40-12N 12V 40Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wps40-12n-12v-40ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wps40-12n/wps40-12n-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wps40-12n-12v-40ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 65AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-65ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-65ah/ks12-65ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-65ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "MaxGreen MG12-65 12V 65Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-mg12-65-12v-65ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/maxgreen/mg12-65/mg12-65-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/maxgreen-mg12-65-12v-65ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 70AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-70ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-70ah/ks12-70ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-70ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SANTAK CASTLE C12V 12V-100Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/santak-castle-c12v-100ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/santak/castle-c12v-100ah/castle-c12v-100ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/santak-castle-c12v-100ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SANTAK CASTLE C12V 12V-65Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/santak-castle-c12v-65ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/santak/castle-c12v-65ah/castle-c12v-65ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/santak-castle-c12v-65ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SANTAK CASTLE C12V 12V-38Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/santak-castle-c12v-38ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/santak/castle-c12v-38ah/castle-c12v-38ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/santak-castle-c12v-38ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SANTAK CASTLE C12V 12V-18Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/santak-castle-c12v-18ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/santak/castle-c12v-18ah/castle-c12v-18ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/santak-castle-c12v-18ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-PBL12-150 12V 150Ah Sealed Lead-Acid UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-pbl12-150-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/marsriva/mr-pbl12-150/mr-pbl12-150-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-pbl12-150-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "SANTAK CASTLE C12V 12V-26Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/santak-castle-c12v-26ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/santak/12v-26ah/12V-26ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/santak-castle-c12v-26ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG LG7-12 12V 65Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-lg7-12-12v-65ah-sealed-lead-acid-battery-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/lg7-12-65ah/lg7-12-64ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/long-lg7-12-12v-65ah-sealed-lead-acid-battery-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 100AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-100ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-100ah/ks12-100ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-100ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12 12V 120AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-12v-120ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-12v-120ah/ks12-120ah-1200x630.png",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-12v-120ah-ups-battery.png",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPL100-12RN 12V 100Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wpl100-12rn-12v-100ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wpl100-12rn/wpl100-12rn-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wpl100-12rn-12v-100ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12-150AH 12V UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-150ah-12v-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-150ah/ks12-150ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-150ah-12v-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPL150-12N 12V 150Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wpl150-12n-12v-150ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wpl150-12n/wpl150-12n-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wpl150-12n-12v-150ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPL120-12RN 12V 120Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wpl120-12rn-12v-120ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wpl120-12rn/wpl120-12rn-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wpl120-12rn-12v-120ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "KENSON KS12-200AH 12V UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kenson-ks12-200ah-12v-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/kenson/ks12-200ah/ks12-200ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kenson-ks12-200ah-12v-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG WPL200-12BN 12V 200Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-wpl200-12bn-12v-200ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/wpl200-12bn/wpl200-12bn-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-wpl200-12bn-12v-200ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Voltan 12V 8.2AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/voltan-12v-8-2ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/voltan/12v-8-2ah/12v-8-2ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/voltan-12v-8-2ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KSTAR 12V 8.5AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kstar-12v-8-5ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/kstar/kstar-12v-8-5ah/kstar-12v-8-5ah-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kstar-12v-8-5ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG KPH80-12N 12V 80Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-kph80-12n-12v-80ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/kph80-12n/kph80-12n-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-kph80-12n-12v-80ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS8.2-12 12V 8.2Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss8-2-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss8-2-12/ss8-2-12-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss8-2-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "LONG LG7-12 12V 7Ah Rechargeable Sealed Lead Acid Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/long-lg7-12-12v-7ah-sealed-lead-acid-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/long/lg7-12/lg7-12-1200x630.jpg",
+      "localImageFile": "public/images/products/power/ups-battery/long-lg7-12-12v-7ah-sealed-lead-acid-battery.jpg",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS26-12 12V 26Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss26-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss26-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS40-12 12V 40Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss40-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss40-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS65-12 12V 65Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss65-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss65-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Must LP15-12100 12.8V 100Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/must-lp15-12100-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/must/lp15-12100/lp15-12100-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/must-lp15-12100-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Must LP16-24100 25.6V 100Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/must-lp16-24100-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/must/lp16-24100/lp16-24100-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/must-lp16-24100-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-LBP12-200-LAR 12.8V 200Ah LiFePO4 UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-lbp12-200-lar-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/marsriva/mr-lbp12-200-lar/mr-lbp12-200-lar-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-lbp12-200-lar-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-PBU12-9 12V 9Ah Sealed Lead-acid UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-pbu12-9-12v-9ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/marsriva/mr-pbu12-9/mr-pbu12-9-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-pbu12-9-12v-9ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-PBU12-7 12V 7Ah Sealed Lead-acid UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-pbu12-7-12v-7ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/marsriva/mr-pbu12-7/mr-pbu12-7-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-pbu12-7-12v-7ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-LBP12-100-LAR 12.8V 100Ah LiFePO4 UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-lbp12-100-lar-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/marsriva/mr-lbp12-100-lar/mr-lbp12-100-lar-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-lbp12-100-lar-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS12-12 12V 12Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss12-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss12-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS7.2-12 12V 7.2Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss7-2-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss7-2-12/ss7-2-12-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss7-2-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Power Guard SS9-12 12V 9Ah UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/power-guard-ss9-12-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/power-guard/ss9-12/ss9-12-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/power-guard-ss9-12-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "KSTAR 12V 9AH UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/kstar-12v-9ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups-battery/kstar/kstar-12v-9ah/12v-9ah-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/kstar-12v-9ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-PBL12-200 12V 200Ah Sealed Lead-Acid UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-pbl12-200-12v-200ah-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/marsriva/mr-pbl12-200/mr-pbl12-200-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-pbl12-200-12v-200ah-ups-battery.webp",
+      "status": "downloaded"
+    },
+    {
+      "name": "Marsriva MR-PBL12-100 12V 100Ah Sealed Lead-Acid UPS Battery",
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-pbl12-100-12v-ups-battery",
+      "categoryPath": [
+        "power",
+        "ups-battery"
+      ],
+      "sourceImageUrl": "https://www.startech.com.bd/image/cache/catalog/ups/marsriva/mr-pbl12-100/mr-pbl12-100-01-1200x630.webp",
+      "localImageFile": "public/images/products/power/ups-battery/marsriva-mr-pbl12-100-12v-ups-battery.webp",
+      "status": "downloaded"
+    }
+  ],
+  "summary": {
+    "downloaded": 58,
+    "skippedExisting": 0,
+    "failed": 0,
+    "dryRun": false
+  }
+}

@@ -1,0 +1,982 @@
+[
+  {
+    "ok": false,
+    "stem": "ezviz-dl05-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d66f241d1dcc9814569a3425fe96461c27846e76ca1cc5f501a070d2b394a1ea.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/EZVIZ/ezviz-dl05-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/EZVIZ/ezviz-dl05-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "ezviz",
+        "folderBrandName": "Ezviz",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-nx-280as-magnetic-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8ff16ea5b26ca4c2220a04fbd9ca33755e90a30a41874b6c05a449ab016efde.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Nexakey/nexakey-nx-280as-magnetic-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Nexakey/nexakey-nx-280as-magnetic-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ngteco-sl01-z350-vpn-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a45f45a6ccf04d20f6c8e7481d31e77affbd17563504da8a3c026a3aeb61446c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Ngtech/ngteco-sl01-z350-vpn-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Ngtech/ngteco-sl01-z350-vpn-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "ngtech",
+        "folderBrandName": "Ngtech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ngteco-sl04-gl40n-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd733bffcdd50329b881c705f1c50ae1fbc1ded88c94e140ad7697abfcb9dd79.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Ngtech/ngteco-sl04-gl40n-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Ngtech/ngteco-sl04-gl40n-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "ngtech",
+        "folderBrandName": "Ngtech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-c1-smart-wifi-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aae6a205e029e51ebd4059a3e7a37f3d3aa05f06ede039c9a94f710268cad848.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Orvibo/orvibo-c1-smart-wifi-door-lock.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Orvibo/orvibo-c1-smart-wifi-door-lock.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "orvibo",
+        "folderBrandName": "Orvibo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-olock-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d90dda3639c801efbb0a806648c95313843be2c65f71232ebc8a5db357c8d17.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Orvibo/orvibo-olock-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Orvibo/orvibo-olock-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "orvibo",
+        "folderBrandName": "Orvibo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ovalin-edge-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\164ef2a63d68384573f97befc917c8c4c9bb9abb78cfb13b548284a6c42e94a4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Ovalin/ovalin-edge-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Ovalin/ovalin-edge-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "ovalin",
+        "folderBrandName": "Ovalin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-f1-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\36ef6abd5b75a8cdf402647860ba5279927067cf6bd913252b835f05da909635.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-f1-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-f1-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-f2-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5fc38acd43172b3fde0b2ed4baee4946f5c145949952db784807fedfac9940ca.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-f2-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-f2-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-g1-pro-smart-glass-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ea0b6d4e5432a134f3b091eb227eb3eb604b5094cb8f7b1e81f679058b92c992.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-g1-pro-smart-glass-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-g1-pro-smart-glass-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-g2-smart-glass-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dbe985f027485409740cc9c7fa1cfd8c1815f057831c863e622a0d07e84c9645.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-g2-smart-glass-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-g2-smart-glass-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-k1-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6b3401fb81e13628509a39a847fc5c38a3b3037e297d9775018f100e10051f4f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-k1-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-k1-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-m1-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\127da821f1d130ed96bf33c1ac21c1c0f3a858451a3c4c6a16302eb945020fc7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-m1-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-m1-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-t1-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8c327678d8c89897f9b696f094dfde1f8dfb5d5dadecfa412d9ecf96f51a4430.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-t1-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-t1-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-x1-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4ffff99510e11fb8d4ea4115fc94c5229f012db0ffd3ce59168943def202c785.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-x1-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-x1-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-x2-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71c83fbe366ffcaacc157159ce343cdc75dd1d0d3134e76af7b1dcf758bfb597.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-x2-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-x2-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-y1-pro-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\900c401b847c1d92e9f416929847d1e42587986920136d67ebfbdc378357c5d7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-y1-pro-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-y1-pro-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-y2-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d4c0f47937dc234731aeaa9263f9aa6ddcb3320f3b517f5be3fccf7f15a88d7a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-y2-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-y2-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartlife-z2-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d35c051071d824bb0db225a643001eb3246da9fe075e0d2930efc8e1fe93e5c7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/SmartLife/smartlife-z2-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/SmartLife/smartlife-z2-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartlife",
+        "folderBrandName": "SmartLife",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-578-wifi-fingerprint-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00f6a28e096431423a63a616f819d28b55608bf19d657eb4d4647cef4a4590aa.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-578-wifi-fingerprint-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-578-wifi-fingerprint-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-628-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\57b2b834e05bc611adb22adf7ec02f9d35ea65bb5d317331754ab2dda1d15937.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-628-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-628-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-718pro-wifi-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a32e7b8afc08a5eef1e5f3b5de5341732980b8ea1dacc2d55ce28c8bfaa9122d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-718pro-wifi-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-718pro-wifi-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-cl01-drawer-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f72a085feac08220f8705956f58252c23bfed7d94920843c6e4f6e16f7d38b7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl01-drawer-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl01-drawer-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-cl02-drawer-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a99526ca32be7486c2344b7da42791a450a23b1adf9f890bc4335f055f4e1758.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl02-drawer-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl02-drawer-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-cl02v2-drawer-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8fc3e21522b345db290e33a627a354c4f0fe110153be9351059a94e15dd8c655.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl02v2-drawer-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-cl02v2-drawer-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-cp92-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3707451e5eebe746d3c36da1f4181234b1f3ecfaa8eb9dd5130160af5cbb5c1a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-cp92-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-cp92-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-d2-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d474ad5dd40392b90716acbd4a123deed12683c14abd856378eb6d8cc58bb7e1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-d2-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-d2-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-dbl05-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\404ddb45d70b794c070056b0ec42f0b6a4d1ea3e061a596f381ffdf698042c71.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-dbl05-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-dbl05-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-i1pro-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3705e9a367e41fae23985b0f13dcaf750a34b09a252c7cf191700fcd42e8fcba.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-i1pro-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-i1pro-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-n5-3d-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d5898938e36c442b914ffef14d57cd3c859bac797b2d89c04f04675d504889a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-n5-3d-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-n5-3d-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-n5ty-wifi-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5257234791026f205911f2990e6cc2536412097eeaf0ab777ae5eba43c49d514.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-n5ty-wifi-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-n5ty-wifi-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-z2pro-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b38ac5e331e9c354b085ca2174f14043ae9d39d42058bd67b4d88ca377030a21.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-z2pro-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-z2pro-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smartx-sx-z3d-eco-tuya-wifi-face-recognition-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f8b78754b96b8ec6e595473cb52b5133f7e1973c1313a566fd078d635a94ce37.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Smartx/smartx-sx-z3d-eco-tuya-wifi-face-recognition-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Smartx/smartx-sx-z3d-eco-tuya-wifi-face-recognition-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "smartx",
+        "folderBrandName": "Smartx",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-bolt-smart-digital-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c356e94b6daafcbaef33b338f95e468d9b0ed47fce4085d38f50cd5f5d43288f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-bolt-smart-digital-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-bolt-smart-digital-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-door-lock-clutch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c943e9924373130d3da42fb6d12df2bb5e462d6ae12f912554c8396a42b74093.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-door-lock-clutch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-door-lock-clutch.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-tap-pro-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\757403f18506930ded357c6c9a096ff3e5c89ba6179caff69ad815fd5339f16b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-tap-pro-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-tap-pro-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-x9-lite-smart-digital-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\073d173800930fe5acd05d9bccb7c8b816f381b443a7255a69ec2371452223a2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-x9-lite-smart-digital-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-x9-lite-smart-digital-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-x9-plus-smart-digital-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0445ae6a37a9611b4c7b115485f54f4c3a9743ace6b5b2e31571e0cca5708dae.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-x9-plus-smart-digital-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-x9-plus-smart-digital-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "stata-x9-smart-digital-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84ae9229cd88e63381fe345d6acd74f661bf8d9607638cef5172ec784eebb6f8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/STATA/stata-x9-smart-digital-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/STATA/stata-x9-smart-digital-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "stata",
+        "folderBrandName": "STATA",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-al-180d-electromagnetic-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c99a0217a41842b49d193301e3701e7558514f527e1e01e7743334e56e0c6d1c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-al-180d-electromagnetic-door-lock.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-al-180d-electromagnetic-door-lock.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-al-280d-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\60d094c092a3f3dfdd23bf84578d9ced4f25dcbd5437787ce0de4055f07230a2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-al-280d-door-lock.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-al-280d-door-lock.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-gl300-glass-door-smart-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ff3729d7c1b7ddda49c7ad929a0004ca320a04611192d86e62922d61bc94c06.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-gl300-glass-door-smart-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-gl300-glass-door-smart-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-gl300w-glass-door-smart-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bb61f34a27dceb6bae12823cf2d208bd18500224814e0ac3e0bb42a563c999be.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-gl300w-glass-door-smart-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-gl300w-glass-door-smart-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-hbl100-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\850d05fa4dffde51f5ed5912633253d1cf2b6393fefb54b303c97aef734c9f50.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-hbl100-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-hbl100-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-hbl200b-smart-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\068b0fdbb49b7fc0294479968e61e9887437a9327c9ed026574a3dbca20f9db0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-hbl200b-smart-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-hbl200b-smart-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-lm-1802-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd02863aae7bb68835dfff8ad334ef31ba6ec3e3dd91f54c6925e0396aec0db1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-1802-door-lock.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-1802-door-lock.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-lm-2802-electromagnetic-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41086a41df6c0357fb35e85e28951bf697c71ab6efe98a15a4d15d0733f0c9aa.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-2802-electromagnetic-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-2802-electromagnetic-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-lm-2805-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cbbab3baf517b0b9ee18e2d0f2dfb958f757816d99febc123f476730334168f1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-2805-door-lock.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-lm-2805-door-lock.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-tl800-wi-fi-smart-digital-door-lock",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ff3a99bbbdfbaed50b885df50cab08c61b3bfa3350a15e7b4971f265fbbc370.html'",
+    "sourceImages": [
+      "/images/products/security-camera/door-lock/Zkteco/zkteco-tl800-wi-fi-smart-digital-door-lock.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/door-lock/Zkteco/zkteco-tl800-wi-fi-smart-digital-door-lock.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "door-lock",
+        "subcategoryName": "Door Lock",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

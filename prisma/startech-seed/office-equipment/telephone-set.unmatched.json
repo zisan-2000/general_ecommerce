@@ -1,0 +1,102 @@
+[
+  {
+    "ok": false,
+    "stem": "panasonic-kx-at7730sx-telephone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\877aff2f84afdb6109cacc4ec31d44909c431b5e0d35a3eaa498abd8090c7386.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/telephone-set/panasonic-kx-at7730sx-telephone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/telephone-set/panasonic-kx-at7730sx-telephone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "telephone-set",
+        "subcategoryName": "Telephone Set",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-kx-t7705sx-corded-telephone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\22aa053a6b9904e318fb5e8eb91ae44d54dc0fd9ffb57d23de979efaafc69658.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/telephone-set/panasonic-kx-t7705sx-corded-telephone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/telephone-set/panasonic-kx-t7705sx-corded-telephone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "telephone-set",
+        "subcategoryName": "Telephone Set",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-kx-ts500mx-telephone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bb15c78d9d8e19a69d296e9c0f4b5fa6797516998de268c9e7fd1fccf35ddad1.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-telephone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-telephone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "telephone-set",
+        "subcategoryName": "Telephone Set",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-kx-ts500mx-white-telephone-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0a0595f68f27fa3fc6bae9fceaf974dce345b9cd3e516f451dbc066faf948f46.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-white-telephone-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-white-telephone-set.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "telephone-set",
+        "subcategoryName": "Telephone Set",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-kx-ts880mxb-telephone",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d278f8f6d658549bc9e7edf5ae2e378b23487234a809369188a61e558f11b9b9.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/telephone-set/panasonic-kx-ts880mxb-telephone.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts880mxb-telephone.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "telephone-set",
+        "subcategoryName": "Telephone Set",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

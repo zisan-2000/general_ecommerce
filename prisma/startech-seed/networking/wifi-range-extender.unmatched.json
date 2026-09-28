@@ -1,0 +1,642 @@
+[
+  {
+    "ok": false,
+    "stem": "cudy-re1200-ac1200-dual-band-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\48b70e4d9ba6ab02d0b445f1e4a24f821d26de665e570bb62e4edd966bb398bf.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/cudy/cudy-re1200-ac1200-dual-band-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/cudy/cudy-re1200-ac1200-dual-band-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-re1500-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b39f39ae00bc90183224e12d8dbff827ca8706e9752ba5613db2c538b9729e4d.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/cudy/cudy-re1500-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/cudy/cudy-re1500-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-re300-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4c719e010c77edae02b28a6ac0b39f2bc8d5a983d32f68a0288305155dfd533f.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/cudy/cudy-re300-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/cudy/cudy-re300-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cudy-re3000-dual-band-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\956a3a3a391b0fd601602209b75a7780f2db619ba776a53dea089b76b7f543e7.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/cudy/cudy-re3000-dual-band-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/cudy/cudy-re3000-dual-band-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "cudy",
+        "folderBrandName": "Cudy",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-dap-1360-wireless-n-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd691f3199b2adc33ca8124823a3e0183fbf02caaba06757b4e3dcec55a8d85f.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/d-link/d-link-dap-1360-wireless-n-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/d-link/d-link-dap-1360-wireless-n-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dlink-dap-1325-wifi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\704920573a630d43c5c68c8475e762bf91c6526f6b2faa82e7ef22130991c7a9.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/d-link/dlink-dap-1325-wifi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/d-link/dlink-dap-1325-wifi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-ekitengine-ac650-128ap-access-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\85d59a754c223ef57b05e86d51bebb76b393663bc07ab0fa956d7871fde59889.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/huawei/huawei-ekitengine-ac650-128ap-access-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/huawei/huawei-ekitengine-ac650-128ap-access-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "huawei",
+        "folderBrandName": "Huawei",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "huawei-ekitengine-ac650-256ap-access-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\715fdc52156d4bba664072b3048bae577911800ff87fe82ff2d3e3d9ba514049.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/huawei/huawei-ekitengine-ac650-256ap-access-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/huawei/huawei-ekitengine-ac650-256ap-access-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "huawei",
+        "folderBrandName": "Huawei",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-me30-wifi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5200ae3a6afa6c821a07952a02524642bd3b19e5096059f1647c2ae7bafbfa9e.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/mercusys/mercusys-me30-wifi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/mercusys/mercusys-me30-wifi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "mercusys-mw300re-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\915ad1b331e5a0329e72dd0f01812f2826febe05e6ce7684aae5cdc8cbe5df02.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/mercusys/mercusys-mw300re-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/mercusys/mercusys-mw300re-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "mercusys",
+        "folderBrandName": "Mercusys",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-est310-v2-wireless-bridge",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a35f6eef210f14625e570feab1feb2cd441d7070192b37a1b777613d5aa1ee82.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-est310-v2-wireless-bridge.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-est310-v2-wireless-bridge.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-est350-v2-wireless-bridge",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfe96278696c00fad168e1ee809b735582e82dafe79627ab7bd030c9d3db3a71.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-est350-v2-wireless-bridge.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-est350-v2-wireless-bridge.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-lic-ws-128-wireless-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\085d6433a0a8a8f4599d2bd32306f3c82e98074ab4e4f59a4d6fdb42f425effc.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-128-wireless-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-128-wireless-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-lic-ws-16-wireless-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\efc2f565863774fe386a55d825a959a7df3a55e846776903985294785d3094d1.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-16-wireless-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-16-wireless-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-lic-ws-32-wireless-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5895226bb02647a532340fc3ff1fbc8c5d136a9c77b0b12ed4412f52c3916740.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-32-wireless-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-lic-ws-32-wireless-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ruijie-rg-ws6008-wireless-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f844445ad32468e2650c10fbcdb4213be4b881e2ad7e377ee9397b241d66c75.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-ws6008-wireless-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ruijie/ruijie-rg-ws6008-wireless-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ruijie",
+        "folderBrandName": "Ruijie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-a18-repeater",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aafc9f591493e321b24dfd01a440a5eb7d1b2907f9ac15c773896af3178784fb.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tenda/tenda-a18-repeater.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tenda/tenda-a18-repeater.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-a301-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\363af91f628cab96b16584ff1470266fa91e7a309609af0b61789fcef801e66a.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tenda/tenda-a301-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tenda/tenda-a301-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tenda-a9-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eedb57f40cca222d8314e88d2a68dc4442550d40d3f9cddfaeb0309d65bbc6d7.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tenda/tenda-a9-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tenda/tenda-a9-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-re190-v5-wifi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6294bbc031535e307bc4ffb469234c93fa614eb04d1a840339a9d87c84ce0d6.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tp-link/tp-link-re190-v5-wifi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tp-link/tp-link-re190-v5-wifi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-re200-ac750-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ad9175045c7617f08324f49ec69de4b6c3548edad6ddf6c95c641e6b4883ac6.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tp-link/tp-link-re200-ac750-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tp-link/tp-link-re200-ac750-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-re305-wifi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\914a3e8869531ef2278a8b7becdd21cecb27e75584edb38de0624a0f45f5587b.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tp-link/tp-link-re305-wifi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tp-link/tp-link-re305-wifi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-wa850re-300mbps-universal-wi-fi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dcd9c82e4cf107d4748d3d8586b293bf7b6baad3e0c9db130c2b59dd3a6d177d.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tp-link/tp-link-tl-wa850re-300mbps-universal-wi-fi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tp-link/tp-link-tl-wa850re-300mbps-universal-wi-fi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-wa855re-network-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\627dbbd1bd6c125baf8181d07bd03fb233de14074d7a9f42dcdb7bf3eb561363.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tp-link/tp-link-tl-wa855re-network-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tp-link/tp-link-tl-wa855re-network-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "trendnet-tew-wlc100-wireless-lan-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0613848dafe7ce25318679b5790a684ceeba98a92d39703706050d0f82b5699f.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/tenda/trendnet-tew-wlc100-wireless-lan-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/tenda/trendnet-tew-wlc100-wireless-lan-controller.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "tenda",
+        "folderBrandName": "Tenda",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ubiquiti-airfiber-af-5xhd-outdoor-radio-device",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\411ab8bcef657b5e900cf3feb8fc4f5e77d98638d8c93dd9d407c4a712ac2866.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-airfiber-af-5xhd-outdoor-radio-device.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-airfiber-af-5xhd-outdoor-radio-device.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ubiquiti",
+        "folderBrandName": "Ubiquiti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ubiquiti-dream-machine-professional-gateway-console",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cefb419fcfb0e7a0526c14b9c5c521045ee2dc072ef4b1d8986ad46dea0cbd24.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-dream-machine-professional-gateway-console.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-dream-machine-professional-gateway-console.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ubiquiti",
+        "folderBrandName": "Ubiquiti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ubiquiti-dream-machine-special-edition-gateway-console",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfd830de22aad51831a3c53b24a4aa77e3063739b4b348e2a47d8df2637944b9.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-dream-machine-special-edition-gateway-console.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-dream-machine-special-edition-gateway-console.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ubiquiti",
+        "folderBrandName": "Ubiquiti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ubiquiti-nsm5-eu-outdoor-nano-station-radio-device",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0535ca68ee6d6f450370aa1c8943d3a938217434ab776decc3816b4c9a4d4a7.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-nsm5-eu-outdoor-nano-station-radio-device.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/ubiquiti/ubiquiti-nsm5-eu-outdoor-nano-station-radio-device.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "ubiquiti",
+        "folderBrandName": "Ubiquiti",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wavlink-wl-wn578r2-aerial-s2-n300-repeater",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\680307ca0e467fdd4574026c549a972400fe4509535ec0648ce4c97e05f30871.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/d-link/wavlink-wl-wn578r2-aerial-s2-n300-repeater.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/d-link/wavlink-wl-wn578r2-aerial-s2-n300-repeater.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mi-ra75-ac1200-wifi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f07efc0f8a8f30014a838869e2fe64bf2f43ff8c2ea74d13d79de4765c4be0bd.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/xiaomi/xiaomi-mi-ra75-ac1200-wifi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/xiaomi/xiaomi-mi-ra75-ac1200-wifi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "xiaomi",
+        "folderBrandName": "Xiaomi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-rd10m-n300-wi-fi-range-extender",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\67b9784168ac2545e09adede971cfa3b000f2e2e8b04045e5dbeb787177802f0.html'",
+    "sourceImages": [
+      "/images/products/networking/wifi-range-extender/xiaomi/xiaomi-rd10m-n300-wi-fi-range-extender.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/wifi-range-extender/xiaomi/xiaomi-rd10m-n300-wi-fi-range-extender.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "wifi-range-extender",
+        "subcategoryName": "Wifi Range Extender",
+        "folderBrandSlug": "xiaomi",
+        "folderBrandName": "Xiaomi",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

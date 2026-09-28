@@ -1,0 +1,102 @@
+[
+  {
+    "ok": false,
+    "stem": "bosch-pke611ba2e-electric-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4d24c0099b00e1f6a315c4babbb0b970fc9960fe681629e3d4396f2e82e0b50e.html'",
+    "sourceImages": [
+      "/images/products/appliance/electric-cooker/bosch-pke611ba2e-electric-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/electric-cooker/bosch-pke611ba2e-electric-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "electric-cooker",
+        "subcategoryName": "Electric Cooker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-pke611d17m-electric-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c16bb73a92498cb308b0ae52ef6bc7dc78296be0d02519dd68973521ab6f68f4.html'",
+    "sourceImages": [
+      "/images/products/appliance/electric-cooker/bosch-pke611d17m-electric-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/electric-cooker/bosch-pke611d17m-electric-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "electric-cooker",
+        "subcategoryName": "Electric Cooker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "candy-cde-32-x-electric-hob",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0cb85c728b025ae9ed64a2bbe7271fe10b82c88763d17c348597ce287b2b1c0e.html'",
+    "sourceImages": [
+      "/images/products/appliance/electric-cooker/candy-cde-32-x-electric-hob.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/electric-cooker/candy-cde-32-x-electric-hob.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "electric-cooker",
+        "subcategoryName": "Electric Cooker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elba-e31-050-bk-induction-hob",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\128a2b2035be99767c2ee00d84560e3d2e8e6999e45af359adb3cc16a22f4b1b.html'",
+    "sourceImages": [
+      "/images/products/appliance/electric-cooker/elba-e31-050-bk-induction-hob.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/electric-cooker/elba-e31-050-bk-induction-hob.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "electric-cooker",
+        "subcategoryName": "Electric Cooker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd4934-00-induction-cooker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f34bebb72dff53eca3fc97d7917631d85a7be5d2bc2edb995df8accac1f043be.html'",
+    "sourceImages": [
+      "/images/products/appliance/electric-cooker/philips-hd4934-00-induction-cooker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/electric-cooker/philips-hd4934-00-induction-cooker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "electric-cooker",
+        "subcategoryName": "Electric Cooker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

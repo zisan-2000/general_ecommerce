@@ -1,0 +1,662 @@
+[
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3b220x-dp65-2-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b9626e2dbe539707fafd0612b103ed48c08826e328a6f9587d1f8e7dda4fdbd.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-dp65-2-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-dp65-2-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3b220x-l-m-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\abdfe662c0452af8f50c420055821b6ffebd4ec750b1a64c7884a2c1a1cf422c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-l-m-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-l-m-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3b220x-m-m-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6c47a359002421810ea10e5a1859b7bd15e4b9ac357471e8af273938c2fcf7c8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-m-m-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-m-m-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3b220x-r-m-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e2505c9514b31f29d1b52eecfb1c727a0aa20273461d1ff8bb02472426b35cb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-r-m-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3b220x-r-m-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3g411x-r-mpg-dm55-tripod-turnstile",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bfed42097b2fd6554709b98cc58c100a191d4996104c3a7146977728d80dbf52.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3g411x-r-mpg-dm55-tripod-turnstile.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3g411x-r-mpg-dm55-tripod-turnstile.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3g501lx-r-tripod-turnstile",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb54c632edd841717146714dbfceb959c48a881f82f26b2ec0006993711a5664.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3g501lx-r-tripod-turnstile.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3g501lx-r-tripod-turnstile.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3y220x-l1-mpg-dp55-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3b97ecd66ce2a99e79a4dc0da9f56a5c217d8e73e0f9fa844ab52bc4a1a12faa.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-l1-mpg-dp55-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-l1-mpg-dp55-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3y220x-l2-mpg-dp55-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79778440054b0a2286247035b2719a8ebe2825faee64d617c9672cb90b30b56d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-l2-mpg-dp55-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-l2-mpg-dp55-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3y220x-m1-mpg-dp55-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2fcb1c92468caef898be34afc88080c3d49f2ab93122eabba5acae73e9ebcad6.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-m1-mpg-dp55-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-m1-mpg-dp55-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3y220x-m2-mpg-dp55-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2e957bed225eb3bdcf9201fd4bb409ff307d627d7eac5f80426d759918854ca0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-m2-mpg-dp55-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-m2-mpg-dp55-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k3y220x-r-mpg-dp55-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\755fb588b091b5cedd78d0d02245aaf33d9e3ac5026b7a7c78b10eda94e291f5.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-r-mpg-dp55-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k3y220x-r-mpg-dp55-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k5671-zu-face-recognition-module",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d96f0fbe3c1e7145551c50f722e359d66da4968effca4047cfa22e1bd2a6646.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-k5671-zu-face-recognition-module.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-k5671-zu-face-recognition-module.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-tmg300-dl-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f9facdf57693396c64f44760fbcae38d6f16f87dc4f618d8000659ba4054d765.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-tmg300-dl-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-tmg300-dl-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-tmg301-dl-folding-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8432baea062c032ac496cdfc19c0bce59dfc6ed28f6f46aaaa7692500b5bffb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-tmg301-dl-folding-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-tmg301-dl-folding-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-tmg301-dr-folding-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bedd2392c700342f53e597b5916aa7eb3addf7c79327ef5983bfd8fac5b25ee8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-tmg301-dr-folding-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-tmg301-dr-folding-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-tmg4b0-ra-barrier-gate",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c66fd2ca0fba211458278038accbf8ecaf00eac58a7ca65914bfe72938dfc7ec.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-ds-tmg4b0-ra-barrier-gate.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-ds-tmg4b0-ra-barrier-gate.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-isd-sg5030sa-cl-x-ray-security-inspection-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\758a9a766caa4deabe018b1de8494b0d48683345c732ed8a27eb9953843698bb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-isd-sg5030sa-cl-x-ray-security-inspection-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-isd-sg5030sa-cl-x-ray-security-inspection-system.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-isd-sg6550sa-2cl-x-ray-inspection-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\86e85dd377167e82698309683286cc48f4e45b378b99617d460ecd4c07be08b4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-isd-sg6550sa-2cl-x-ray-inspection-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-isd-sg6550sa-2cl-x-ray-inspection-system.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-isd-smg106-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11009bf824d2ec30aed7ea4d973cc516fa542cbc9f601a7653eb8994ee98e07a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-isd-smg106-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-isd-smg106-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-isd-smg1118l-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5c2f30026a11410492ced185fb59f1cd8eaa30857e218657c1c3d13519439012.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-isd-smg1118l-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-isd-smg1118l-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-np-sh100-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c6c22c1fc5c92c39f09a1acfe5792bb134ce3b8c0d0a33404acf5f21d391070d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/hikvision-np-sh100-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/hikvision-np-sh100-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-pb4130lr-parking-barrier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\82a6514bffab7d5bb57799a97c8e3879e8294545b127a65b2bb88dd109e1f3dc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-pb4130lr-parking-barrier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-pb4130lr-parking-barrier.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-ts2000-pro-turnstiles",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e2c19d554f4642b4660f2e99c3844068a78dde9f085d35e00b1a7bfb0b2e8495.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-ts2000-pro-turnstiles.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-ts2000-pro-turnstiles.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d100s-hand-held-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79b855284483bcf47a8a4de334b91b386f433aaad58cca3bf8229d51b4b5dd69.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d100s-hand-held-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d100s-hand-held-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d1010l-walk-through-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a33b2c7f428c729eb5ce576f5ccd1bb5ceb9be03f66c078a3c8cc6ff46c5fd28.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d1010l-walk-through-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d1010l-walk-through-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d1065-walk-through-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fa6bea263eda7ea07abf04bc934a7077f615228141de952328720798a8e9ed49.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d1065-walk-through-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d1065-walk-through-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d1065s-walk-through-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8df4d0584755d62856b1232f5f152dc90d8af67855d897cf420c6a6528ac1336.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d1065s-walk-through-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d1065s-walk-through-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d180s-hand-held-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\670cb86bfcfa27658681cb5e5da456bcdc780936831596eb9a5d8712b273e996.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d180s-hand-held-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d180s-hand-held-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d2180-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8eb580109c30bf631de0a1cfe0a970192f0c66c718b31915c5c2ea4706aedbf.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d2180-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d2180-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d3180-walk-through-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dd777a75e481f164c4d344139b425e13bb40846148563427f50a2dbad4bf4833.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d3180-walk-through-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d3180-walk-through-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-d4330-walk-through-33-zones-metal-detector",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d11d8e84f83233cbb527b855561e053e58b7aac09c02580482de229cfde01506.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-d4330-walk-through-33-zones-metal-detector.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-d4330-walk-through-33-zones-metal-detector.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zk-ts2022-pro-tripod-turnstile",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc24a4a0d84c1628c3b4043ea40440d0d6254180d420dcee8f8f54610f045dd2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zk-ts2022-pro-tripod-turnstile.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zk-ts2022-pro-tripod-turnstile.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-zkx5030a-single-energy-x-ray-baggage-scanner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\253c483cf2805e951071dfb08680afd8d9e4b66c890fd12242fa40688a2a9379.html'",
+    "sourceImages": [
+      "/images/products/security-camera/entrance-control/zkteco-zkx5030a-single-energy-x-ray-baggage-scanner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/entrance-control/zkteco-zkx5030a-single-energy-x-ray-baggage-scanner.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "entrance-control",
+        "subcategoryName": "Entrance Control",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

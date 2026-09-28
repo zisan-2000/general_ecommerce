@@ -1,0 +1,802 @@
+[
+  {
+    "ok": false,
+    "stem": "asustor-as6508t-lockerstor-8-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d6c006a94600c2ac4980a16d3e5419b62ab87b82036070195f446474f4957e41.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-as6508t-lockerstor-8-storage.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-as6508t-lockerstor-8-storage.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-as6602t-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\534fc62bda1ce0266e8b9f4ac281a0dfbeda200fa93232c15ebc230874b76faf.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-as6602t-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-as6602t-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-as6604t-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b37cae8003cf337b38865eaf139f61e5a7f72c36980c6dd6a2d58a4a1fe88d2.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-as6604t-nas-storage.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-as6604t-nas-storage.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-as7112rdx-lockerstor-12r-pro-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\703eccadd16ab3529258019e2aad5f42332f0563e8f591576425e169b691da10.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-as7112rdx-lockerstor-12r-pro-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-as7112rdx-lockerstor-12r-pro-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-as7116rdx-lockerstor-16r-pro-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71f65e9c4c98e69d5448312b5a85421a09f4b96adc65c6eaa50fa5e98a0f9a18.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-as7116rdx-lockerstor-16r-pro-nas-enclosure.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-as7116rdx-lockerstor-16r-pro-nas-enclosure.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-drivestor-2-lite-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\70a2ecc36ff34125b74f56e82fa6d0d35ef9e98da6ac6d21796354e20fca5899.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-drivestor-2-lite-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-drivestor-2-lite-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-drivestor-4-pro-as3304t-nas",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5cec91f35aa9d31b6c50c9c5e6f55b713a8a1a543020003d47ff1cca4579e800.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-drivestor-4-pro-as3304t-nas.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-drivestor-4-pro-as3304t-nas.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-drivestor-4-pro-gen2-as3304t-v2-nas",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ddce376b6a9ca44c7267b692ac7b7954daead6e7f7836f739a5caa6268b0e863.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-drivestor-4-pro-gen2-as3304t-v2-nas.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-drivestor-4-pro-gen2-as3304t-v2-nas.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-lockerstor-4-gen2-as6704t-nas",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ddf303ac851feb2db0cd2c19321c58448582d859b3ac7df4ca694df19f6546f3.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-lockerstor-4-gen2-as6704t-nas.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-lockerstor-4-gen2-as6704t-nas.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asustor-lockerstor-6-gen2-as6706t-nas",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aa82d079f8b409c5551d808de9a5718328f3343116cb04d517ac74c1638746b3.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/asustor-lockerstor-6-gen2-as6706t-nas.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/asustor-lockerstor-6-gen2-as6706t-nas.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-metabox-pro-5-bay-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bab05a4ca5e1d50b2e52ee5eb9d26ed00ab54d08d405555bf0870e0d1745d174.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/orico-metabox-pro-5-bay-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/orico-metabox-pro-5-bay-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-metabox-pro-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a13f40cfd3b0bc4eb54019cf244709caba280479245d87f4af1afe1e665ed29.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/orico-metabox-pro-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/orico-metabox-pro-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-metacube-pro-5-bay-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\14d8266fd44cc62e060bc93ad91308bab7bfd72c93b97101ea88a41e852fbe5e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/orico-metacube-pro-5-bay-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/orico-metacube-pro-5-bay-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "qnap-ts-673a-8g-6-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45242f15eb72a74bdcf345d5a6466d27ea45f502523b283ace16e426a38f1d80.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/qnap-ts-673a-8g-6-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/qnap-ts-673a-8g-6-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "qnap-ts-832pxu-rp-4g-8-bay-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f03f93ccb6aa31dd840bf27923ba929600972c32d8a189bfc8a90839b72f3254.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/qnap-ts-832pxu-rp-4g-8-bay-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/qnap-ts-832pxu-rp-4g-8-bay-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "qnap-ts-h1677axu-rp-r7-32g-16-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\491dec1fdb22ab7b3ed24807c1dd9bd9fda7c3fca06717af963f0c7d68429a88.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/qnap-ts-h1677axu-rp-r7-32g-16-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/qnap-ts-h1677axu-rp-r7-32g-16-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds120j-1-bay-nas-server",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\002aafdef19c3637466e69fee7ea17d49477ac8311a608349952ea6111d1f5b0.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds120j-1-bay-nas-server.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds120j-1-bay-nas-server.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds124-1-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b43cc0b7e05d2ab390f9d4b786f29df8d03eece47e4394259585dacb2f74c2e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds124-1-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds124-1-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds1525-plus-5-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0784d94f24e8c8fc5d89e0a13a0c8756ee1f603359f350a6ae4eb274a215ccc.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds1525-plus-5-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds1525-plus-5-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds1621-plus-6-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7bcae9a66263dd0e3ea3f18f9a4953eff94d075df39cd87896799714934097c8.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds1621-plus-6-bay-nas-enclosure.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds1621-plus-6-bay-nas-enclosure.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds1821-plus-8-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cbfc8ab9d490e931e44fe395ed08de6616b0bc0d574dcd9d30954f1bbb13c5c5.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds1821-plus-8-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds1821-plus-8-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds1823xs-plus-8-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1482bc1417a71180b71c8cd6745f29215d4b05adeb9e66f1d5e67c52350a4e0f.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds1823xs-plus-8-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds1823xs-plus-8-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds1825-plus-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eef2e1723ae9a3e02bf77fa06590944cd70207a35c85cfcf1cee3fc01679b85d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds1825-plus-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds1825-plus-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds218-2-bay-nas-server",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\91f86ab41f534386403ac89494f109bd1c7c5bbc0338ddbecf77f3afd63a1c23.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds218-2-bay-nas-server.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds218-2-bay-nas-server.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds220-plus-2-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\17f1c967b935e0d53d04f8c888bc4ab8151d37a593572cebe9cc73250b5a560d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds220-plus-2-bay-nas-enclosure.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds220-plus-2-bay-nas-enclosure.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds220j-2-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0b4048407e6a0ddf280d1cc3a094682d2d3839e82fd32a441b1606a4bf5c23a1.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds220j-2-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds220j-2-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds223-2-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84037f7bd4bc11565e7524c2f4ddf282a07f62166b42bcc2eaea663a3f0c35f1.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds223-2-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds223-2-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds223j-2-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e3a62e436ff416a13c9c3ec726136eec3f6b8e9a17c2027c96e7b8c05440655.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds223j-2-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds223j-2-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds225plus-2-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\60ae9b1a48e7a5462063eb29c0a1991e2f0b3e73a0104411cb8dc33fad3895fe.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds225plus-2-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds225plus-2-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds3622xs-plus-12-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7fe91889e031d005edc730ed573ac9f862e580e23c86e8f5752b21fad3bed24a.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds3622xs-plus-12-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds3622xs-plus-12-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds423-plus-4-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ba268c88551f39f53b770dce89b7efe34a49622021330b7fb0aa8d7dff7f54c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds423-plus-4-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds423-plus-4-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds425-plus-4-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1008a0e03c3b39bccc51d50c02222f9faf5e119a1f1bd711295b72b8e437d590.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds425-plus-4-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds425-plus-4-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds920-plus-4-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e19b945ebb5e75b6bf6a4a60f77ae5aca819a56c50be1230ae34f62a636a7543.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds920-plus-4-bay-nas-enclosure.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds920-plus-4-bay-nas-enclosure.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-diskstation-ds925-plus-4-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c8cfe5896fa30877b84d67b55775bf9aa7b9c0c8afed607e93ffe10832383958.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-diskstation-ds925-plus-4-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-diskstation-ds925-plus-4-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-flashstation-fs6400-24-bays-nas-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb47848115117b12bb098ab80cd4257307895acbcfaf2da3805571d689135cac.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-flashstation-fs6400-24-bays-nas-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-flashstation-fs6400-24-bays-nas-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-rackstation-rs3621rpxs-server-storage",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6c13568b08634511daaee3e11251db4491d7a43b00aaa2b8f18e2ba27b6a42e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-rackstation-rs3621rpxs-server-storage.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-rackstation-rs3621rpxs-server-storage.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-rackstation-rs820rp-plus-4-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73a6cdf1d44d0eb700b19a3b2f7891dbd93da996bfcf3fb5ae3f77e9859ab166.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-rackstation-rs820rp-plus-4-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-rackstation-rs820rp-plus-4-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-rackstation-rs822-plus-4-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a2366329122131d00d939c9a86f3b0be117b5edf68071dc45c555974eb735509.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-rackstation-rs822-plus-4-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-rackstation-rs822-plus-4-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-rackstation-rs822rp-plus-4-bay-nas-enclosure",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\defbef4c4326e349d82b5a1e5305eafd23068fd9820a952f3b1159314bcbb4e2.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-rackstation-rs822rp-plus-4-bay-nas-enclosure.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-rackstation-rs822rp-plus-4-bay-nas-enclosure.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "synology-rks-02-sliding-rail-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\73fa944faa06fefbf635270d3b60fd875784b85ed6fef945063318a55b1a3e7d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/nas-storage/synology-rks-02-sliding-rail-kit.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/nas-storage/synology-rks-02-sliding-rail-kit.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "nas-storage",
+        "subcategoryName": "NAS Storage",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

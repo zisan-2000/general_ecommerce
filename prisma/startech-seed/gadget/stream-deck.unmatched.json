@@ -1,0 +1,102 @@
+[
+  {
+    "ok": false,
+    "stem": "elgato-stream-deck",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cbc0d99c248273c9e959140e3fc562d9b3356589795f1a0a3cc59542397edccb.html'",
+    "sourceImages": [
+      "/images/products/gadget/stream-deck/elgato-stream-deck.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/stream-deck/elgato-stream-deck.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "stream-deck",
+        "subcategoryName": "Stream Deck",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elgato-stream-deck-neo",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\86306b24735a32b411547ec966257c348e594eea53beea6bef8b3cc40637fcaf.html'",
+    "sourceImages": [
+      "/images/products/gadget/stream-deck/elgato-stream-deck-neo.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/stream-deck/elgato-stream-deck-neo.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "stream-deck",
+        "subcategoryName": "Stream Deck",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "loupedeck-ct-editing-console",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bef7b556d17d2810d2728a055c621db25dd5423203d29a8b2b12f9e2559a2a62.html'",
+    "sourceImages": [
+      "/images/products/gadget/stream-deck/loupedeck-ct-editing-console.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/stream-deck/loupedeck-ct-editing-console.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "stream-deck",
+        "subcategoryName": "Stream Deck",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "loupedeck-live-console",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\469f4f1cf03bbf5a3f69fd68d5374c979282dc914a9d61c9174eda7f2dbfcab7.html'",
+    "sourceImages": [
+      "/images/products/gadget/stream-deck/loupedeck-live-console.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/stream-deck/loupedeck-live-console.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "stream-deck",
+        "subcategoryName": "Stream Deck",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "loupedeck-photo-and-video-editing-console",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2625a8ca76f468d90b9f226b893151aeacb0dc03dcd180f330a6af9fd00fff0e.html'",
+    "sourceImages": [
+      "/images/products/gadget/stream-deck/loupedeck-photo-and-video-editing-console.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/stream-deck/loupedeck-photo-and-video-editing-console.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "stream-deck",
+        "subcategoryName": "Stream Deck",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

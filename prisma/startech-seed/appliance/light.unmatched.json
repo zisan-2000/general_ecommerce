@@ -1,0 +1,162 @@
+[
+  {
+    "ok": false,
+    "stem": "la-600w-60w-solar-street-light",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fa1744a48870c53a9ea2e6da8cd158499641cfb3364a9906baf8705164383f58.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/la-600w-60w-solar-street-light.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/la-600w-60w-solar-street-light.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dcz15131-15w-magnetic-spotlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc5674742519e1a510d7967869ea04e3a9f7d43cd7a88a068709ae776510f3ff.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dcz15131-15w-magnetic-spotlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dcz15131-15w-magnetic-spotlight.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dcz15132-15w-magnetic-spotlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6e6c8bc7db3975518fffdfdc64788df31c150c3632498bbf79be625986636c42.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dcz15132-15w-magnetic-spotlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dcz15132-15w-magnetic-spotlight.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dd10z15a-magnetic-hanging-lamp",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b7090f57ac107d75eac35afa5c1450bfff5bfe1860c4e8023b73103ea232bf6.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dd10z15a-magnetic-hanging-lamp.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dd10z15a-magnetic-hanging-lamp.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dg10sa-8w-magnetic-spotlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c289fc72fbcd6387153b3bebbd2e771aaa78592fe0da54e0309e47ecfa6053f.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dg10sa-8w-magnetic-spotlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dg10sa-8w-magnetic-spotlight.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dt60z07b-smart-downlight-s3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\930ac8fb35272013583c030db5ca4c0033eeb176168d380c9e0abfc07c74755b.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dt60z07b-smart-downlight-s3.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dt60z07b-smart-downlight-s3.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dt60z07d-smart-downlight-s3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d71696ae3af891d2740a5c0438da0695744f9bf2d1b4a98ca11aed9ca7a5543.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dt60z07d-smart-downlight-s3.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dt60z07d-smart-downlight-s3.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orvibo-dtn06058-motion-sensor-downlight",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\615739b1f5ed0b9f97e7ac1646754f796c468f4661b64f75168075fb4f62775f.html'",
+    "sourceImages": [
+      "/images/products/appliance/light/orvibo-dtn06058-motion-sensor-downlight.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/light/orvibo-dtn06058-motion-sensor-downlight.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "light",
+        "subcategoryName": "Light",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

@@ -1,0 +1,382 @@
+[
+  {
+    "ok": false,
+    "stem": "amd-ryzen-3-2200g-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b7ed46c9e6255737acf0b1d2d5a4ed55a05498a02bcc4053cabb23cbad61926f.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-2200g-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-2200g-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-3-3200g-budget-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d6de6606e6a61068437631f9989e602a30d2e635154db7bf90aef788c3c141c3.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-3200g-budget-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-3200g-budget-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-3-3200g-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f2c970b9c9b58ee000e8bac8e7095aa0ae89f6feeec2a9ad14c041e094988c56.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-3200g-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-3-3200g-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-2400g-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a38ab0276629eaa68c316836bd8dd53fb1c0ba0415a3f37c2d748ac691052f82.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-2400g-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-2400g-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-3400g-processor-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ef1018cf1fe1c93e53846b2b5b7c242ed14faebc4c89c671b0506529b12aef8c.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-3400g-processor-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-3400g-processor-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-5600g-budget-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ff758edcb4d694572cef78df75c2ad1b2099cc90d4ed1d7fa2c62b2adda8978.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-5600g-budget-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-5600g-budget-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-7500f-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b75e936d9709716f66a1da0c49adc6df422f9bdc73b02e2691e9ea2d05f50fba.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-7500f-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-7500f-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-7500f-processor-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\392ae8c43cf7c52d8a8dbed2462969b3566a6073a9b361cd935a348f748befc1.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-7500f-processor-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-7500f-processor-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-8400f-gaming-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a4e059597afb1a590bcdbe53ba353513a03baa56c7cf8b6b81a11b28075c96be.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-8400f-gaming-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-8400f-gaming-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-5-8500g-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d82ac924c9632fd96a9d04cf6d7597294e423fc616b802f7493cebd22fba0ceb.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-8500g-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-5-8500g-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-7-5700g-custom-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf92b8da7ab94f6ae831b5094baaa7207226d4fe75e37760e3aaeb03a6f99802.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-5700g-custom-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-5700g-custom-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-7-5700g-custom-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41492ac5b517f0873193b8df02a674a5dd461553bca5a69442f54abd9895044b.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-5700g-custom-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-5700g-custom-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amd-ryzen-7-9800x3d-gaming-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\922ac874fc786053cffb0757f043f2e8ebb710f760a5e76a81ff2b4e03d7525f.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-9800x3d-gaming-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/ryzen-pc/amd-ryzen-7-9800x3d-gaming-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "ryzen-pc",
+        "folderBrandName": "Ryzen PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-10th-gen-core-i5-10400-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b49157252d19545a6788a049b1b7792278463f850eff234341835738b6d34b5a.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-10th-gen-core-i5-10400-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-10th-gen-core-i5-10400-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-12th-gen-core-i5-12400-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad24435e93590fc9981807e412b6c78079310f879993ad093bd57b3cba4e3c0f.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-12th-gen-core-i5-12400-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-12th-gen-core-i5-12400-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-13th-gen-core-i5-13400-budget-desktop-pc-with-monitor",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3c77e131181472fec2f44b6b53a76cb9736fee1c4d192f0dd156dccf938027ab.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-13th-gen-core-i5-13400-budget-desktop-pc-with-monitor.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-13th-gen-core-i5-13400-budget-desktop-pc-with-monitor.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-core-i3-12100-12th-gen-budget-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\39a79d1db8e04fb62a38d1bf80baf6b3bfcb034cd073c42dcb0e406f46b88260.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-core-i3-12100-12th-gen-budget-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-core-i3-12100-12th-gen-budget-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-core-i5-14500-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\43d92d14443c36e343cce4759c8049556da6a76a3c5fb97a3b29ff31c7c86b80.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-core-i5-14500-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-core-i5-14500-desktop-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "intel-core-ultra-9-285k-gaming-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ff1f555f37ca99f6f9d15c2c07a353735d6e694440274f7b8899153671ab9660.html'",
+    "sourceImages": [
+      "/images/products/desktop/star-pc/intel-pc/intel-core-ultra-9-285k-gaming-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/desktop/star-pc/intel-pc/intel-core-ultra-9-285k-gaming-pc.png",
+        "categorySlug": "desktop",
+        "categoryName": "Desktop",
+        "subcategorySlug": "star-pc",
+        "subcategoryName": "Star PC",
+        "folderBrandSlug": "intel-pc",
+        "folderBrandName": "Intel PC",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

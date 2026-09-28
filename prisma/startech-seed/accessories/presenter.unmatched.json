@@ -1,0 +1,422 @@
+[
+  {
+    "ok": false,
+    "stem": "a4tech-lp15-wireless-laser-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3c77db780990c6f2d959ded9e032604d8ab5aaeeea023af8ad3c4c8b359dde5c.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/a4tech/a4tech-lp15-wireless-laser-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/a4tech/a4tech-lp15-wireless-laser-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "a4tech",
+        "folderBrandName": "A4tech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-orange-dot-green-laser-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\59d63cecec7f700736fb08d55d2a44fa6ac2d49ef362b06f11bbba6cc04af3e0.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/baseus/baseus-orange-dot-green-laser-wireless-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/baseus/baseus-orange-dot-green-laser-wireless-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "baseus",
+        "folderBrandName": "Baseus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "baseus-orange-dot-red-laser-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45767a3724c121e82ab9aa20d302306fa4f242f87257e64632a2096aab0d646f.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/baseus/baseus-orange-dot-red-laser-wireless-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/baseus/baseus-orange-dot-red-laser-wireless-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "baseus",
+        "folderBrandName": "Baseus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "inphic-pl1-laser-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62808e3d7340655ab471599555d0776c3421138e5033adba9d37c8940cb8d03a.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/inphic/inphic-pl1-laser-wireless-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/inphic/inphic-pl1-laser-wireless-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "inphic",
+        "folderBrandName": "Inphic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "logitech-910-spotlight-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2bd4960d405e6e70632a006b16dac19f44cc522d4c10e7a3831e42e306e2b560.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/logitech/logitech-910-spotlight-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/logitech/logitech-910-spotlight-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "logitech",
+        "folderBrandName": "Logitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "logitech-spotlight-2-advanced-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\952ab4c50b1469a8ce13693e8627dcd57540fadc7915a38969d0dbc1d954e279.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/logitech/logitech-spotlight-2-advanced-wireless-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/logitech/logitech-spotlight-2-advanced-wireless-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "logitech",
+        "folderBrandName": "Logitech",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "micropack-wpm-03-multimedia-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ea8c9e928965fe5f00143400e6217e3f5c07039e7dc762b65932490587ff34d.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/micropack/micropack-wpm-03-multimedia-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/micropack/micropack-wpm-03-multimedia-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "micropack",
+        "folderBrandName": "Micropack",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "micropack-wpm-06-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f890702bd6cd0f5dfc4320448cf936582ced12813c6c8293fb1a8f9f3319693c.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/micropack/micropack-wpm-06-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/micropack/micropack-wpm-06-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "micropack",
+        "folderBrandName": "Micropack",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "micropack-wpm-09g-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\febc15bd58a07ec41f1dd6b08627daa6b978ae27370bd70729367daa413a9b68.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/micropack/micropack-wpm-09g-wireless-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/micropack/micropack-wpm-09g-wireless-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "micropack",
+        "folderBrandName": "Micropack",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "prolink-pwp102g-wireless-presenter-with-air-mouse",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\26fc4d01633fb9428e3e935548dfccaf23ba6b2e97a14d3fb0d02cf8faef4bac.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/prolink/prolink-pwp102g-wireless-presenter-with-air-mouse.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/prolink/prolink-pwp102g-wireless-presenter-with-air-mouse.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "prolink",
+        "folderBrandName": "Prolink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "prolink-pwp106g-wireless-presenter-with-green-laser",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e0b1cb80651c05fcfaa4456178e66ff48e77f3a88df08320f1e28da0c561c45.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/prolink/prolink-pwp106g-wireless-presenter-with-green-laser.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/prolink/prolink-pwp106g-wireless-presenter-with-green-laser.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "prolink",
+        "folderBrandName": "Prolink",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rapoo-xr100-wireless-laser-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bb3f819ff26cf602745f04f676a0c9927e00f88ffc406e294ab20c1dbc542618.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/rapoo/rapoo-xr100-wireless-laser-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/rapoo/rapoo-xr100-wireless-laser-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "rapoo",
+        "folderBrandName": "Rapoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rapoo-xr200-wireless-laser-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e193a760cc578f0f4bbb36172d88f0850a114e30ffe08b32883f1cf0891fb20a.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/rapoo/rapoo-xr200-wireless-laser-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/rapoo/rapoo-xr200-wireless-laser-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "rapoo",
+        "folderBrandName": "Rapoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "rapoo-xr310-spotlight-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\78d6308e898e636db8f107982c247f96dcec1a9d55dc1d9aa73e2036f215928e.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/rapoo/rapoo-xr310-spotlight-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/rapoo/rapoo-xr310-spotlight-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "rapoo",
+        "folderBrandName": "Rapoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "targus-amp09-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6c529b20d1abb5316bea0c24b7eb183c8af39c982f1da5905b6e02b2cb59ff90.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/targus/targus-amp09-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/targus/targus-amp09-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "targus",
+        "folderBrandName": "Targus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "targus-amp16ap-53-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\503c3a200ad0142f5a2a17a52e1f427b3cd287c6dc549db2c0b790cac0c356b8.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/targus/targus-amp16ap-53-wireless-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/targus/targus-amp16ap-53-wireless-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "targus",
+        "folderBrandName": "Targus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "targus-amp17ap-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de6f119533616c7fecefa5bdcc4175fa3e80a3dbbd8258df76ff77647bc1cb01.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/targus/targus-amp17ap-wireless-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/targus/targus-amp17ap-wireless-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "targus",
+        "folderBrandName": "Targus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "targus-p30-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ae6c1e014926da53f9fddb00f053894119ff63ab96be754fe8352841c0d2933b.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/targus/targus-p30-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/targus/targus-p30-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "targus",
+        "folderBrandName": "Targus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "targus-wireless-usb-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b8f22fb13a144cabca562d21888b8a13fe27591300c9d4697058b4aaa3e58728.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/targus/targus-wireless-usb-presenter.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/targus/targus-wireless-usb-presenter.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "targus",
+        "folderBrandName": "Targus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-lp479-wireless-presenter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8bb08240715819bfa2d5184c1087ee3c2cc30287e1291e9e6ace0f3079ed8a3f.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/ugreen/ugreen-lp479-wireless-presenter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/ugreen/ugreen-lp479-wireless-presenter.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "ugreen",
+        "folderBrandName": "Ugreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xo-cf27-ppt-rechargeable-flip-pen",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f92e21fe3dffc46ac3bfc07588b7c4dc45b41664077117942b33f9311b860906.html'",
+    "sourceImages": [
+      "/images/products/accessories/presenter/xo/xo-cf27-ppt-rechargeable-flip-pen.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/presenter/xo/xo-cf27-ppt-rechargeable-flip-pen.png",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "presenter",
+        "subcategoryName": "Presenter",
+        "folderBrandSlug": "xo",
+        "folderBrandName": "Xo",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

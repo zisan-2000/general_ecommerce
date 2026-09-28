@@ -1,0 +1,842 @@
+[
+  {
+    "ok": false,
+    "stem": "marsriva-et1-8000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fc0e968688da0ac42ce77dcd274cfe1e058f4d2535ad78fc3e3c780f4786c4b8.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-et1-8000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-et1-8000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-et3-8400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\db060896038ff93e1db874adae88ca6734a5c5a7ea0753653d86635138c27fd4.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-et3-8400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-et3-8400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp2-10000mah-smart-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\607392e5b3b0249c8cbf57cb5f5d8be05d16da3f4a3a38406edf4af9a9a29e6e.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp2-10000mah-smart-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp2-10000mah-smart-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp3-10000mah-smart-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66beaa5f3e76c0edc6baa1bdb0ff72027b6483309d05d420f13f89704ec0a5fa.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp3-10000mah-smart-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp3-10000mah-smart-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp3-ec-8000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe187042d044db46a2c6b5eeec909b792e97e66987844a345e6c5320cc5fe1ee.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-8000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-8000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp3-ec-8400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e4842cd9985160ddd39497b13e5b5caea2b0f079503e257dc562b6f79e068eaa.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-8400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-8400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp3-ec-v2-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d07af7abe4fcd52a0ada062f699d0190d3cf95af215640067b0ddcbb36a0838.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-v2-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp3-ec-v2-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp3-pro-8400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8cf1d120947bde78f67f6f8116c10e06b9cf7418b559220009558bb646df7b99.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp3-pro-8400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp3-pro-8400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp4-10000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5eb93bd88d9ef4a4343e0940f9850dca84f90a6d35017d6d97d0541e9e38d62a.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp4-10000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp4-10000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp4-max-20000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\96977e32ddb2a5a035c1368ea64091ee969dfacc575d46c8c39c2349bfe85000.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp4-max-20000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp4-max-20000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp5-8800mah-smart-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0de8866b9fad94b302cdf14a784091c5bfc6a529ef3b95d666ddc892872d6e4e.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp5-8800mah-smart-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp5-8800mah-smart-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp5-max-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e6d0f3d5364d829bbe09ceafa23c9176b35b2b27ee472a395ab3286ff787f61.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp5-max-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp5-max-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp6-ec-8400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\414169825862907508b3021a038c79705207edd06c93ecbc5798c79473223d1f.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp6-ec-8400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp6-ec-8400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp6-max-20000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e506cc8d8904076bc973bec768e87c6a7faf9a11ac82a71e335dcadab4efc9fd.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp6-max-20000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp6-max-20000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp7-17600mah-smart-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2c75df1237792c275f0edb89c3d205cdd1808be7382a6898518ae837eb5ba66b.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp7-17600mah-smart-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp7-17600mah-smart-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp7-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\451dbf75b7e436727d89d52c84a3ee3d961a3e260a169626358b3aff3493c75c.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp7-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp7-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp7-pro-8400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fea8ee2e73c6323e866b82b810f31cb9f96d01703dbae07ce50122baffe18583.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp7-pro-8400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp7-pro-8400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp7-pro-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\daaf4a55210da44d68036fbd331773d0534a5283970ccf0fa87b053bc29a1ad3.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp7-pro-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp7-pro-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp9-20000mah-smart-mini-dc-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df459eebe6d9e48ee210afbbc3b8ef9b4e48d808b877ba52adf470f0826d7bfa.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp9-20000mah-smart-mini-dc-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp9-20000mah-smart-mini-dc-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp9-24000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\37fd77a8c4e51185b07a39e50a1e1acf71d736840aad001e7777eab4c491365e.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp9-24000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp9-24000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "marsriva-kp9-pro-24000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3c4f1c9e8980a477357e0bce324a6cfa9b326a1597ca3c546901711683e6cc79.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Marsiva/marsriva-kp9-pro-24000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Marsiva/marsriva-kp9-pro-24000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "marsiva",
+        "folderBrandName": "Marsiva",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "maxgreen-du-b10400-10400mah-mini-ups-for-router",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a99aa531462de486e6c7105e686408e09003e85f1c919b7f5db9a6ebdd83c937.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Maxgreen/maxgreen-du-b10400-10400mah-mini-ups-for-router.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Maxgreen/maxgreen-du-b10400-10400mah-mini-ups-for-router.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "maxgreen",
+        "folderBrandName": "MaxGreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "maxgreen-du-b8000-8000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fbb423d91abcc9ed1f5340457aef339999a4ce704d80d62447615b66c7c3ea42.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Maxgreen/maxgreen-du-b8000-8000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Maxgreen/maxgreen-du-b8000-8000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "maxgreen",
+        "folderBrandName": "MaxGreen",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-dcp018-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8eedf4ae2821931190490a628137973cad8badba4cdf7ce96692cabac7e8bec0.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-dcp018-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-dcp018-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018lcd-10400mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e7908d07c075318e693ed47581aea06140b14d088dbe089b532d0aae4fd991e9.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-10400mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-10400mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018lcd-13200mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc77fcc57aae48c65becb2082184bec7a83c25f4511fb9eaeaf4a7985e37586d.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-13200mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-13200mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018lcd-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b469c1be5a1607dd0d612f79f433fecdb54d5a318769e9ddd3553c3956de1910.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018lcd-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018led-13200mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc2d5b8712e9c017a23cd522bb964fab2677c1293d94c01473645126c7466d3f.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018led-13200mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018led-13200mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018led-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a47e65a95b2d0e8ef7a9b1c5511c0642eb395aed71eb755781eb579ce8fc570.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018led-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018led-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018ll-20000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\25893d5e75dbe032420c459313907e1cfef37d212e8fd6ccbf90243fb14614c7.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018ll-20000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018ll-20000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "pc-power-pcmu1018p-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\38ae1430343fa7b991a0b707807b632132b44ed7253527882ecbf058014a66b3.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018p-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Pc Power/pc-power-pcmu1018p-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "pc-power",
+        "folderBrandName": "PC Power",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "power-guard-eco-1825-10000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6afab0c50078b60f22a9aa9366aa292fd6f0d5ee2aadc2a14aa154c535ca49dd.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Power Guard/power-guard-eco-1825-10000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Power Guard/power-guard-eco-1825-10000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "power-guard",
+        "folderBrandName": "Power Guard",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "power-guard-eco-430-pro-8000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4b4b54440a90fdf3fdbfa45844e48aecf649b441f3ffaac6e8b80a44df3d0f64.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Power Guard/power-guard-eco-430-pro-8000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Power Guard/power-guard-eco-430-pro-8000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "power-guard",
+        "folderBrandName": "Power Guard",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-2324a-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\544430b812fb89c1bd3cdfa9c78b5b61408823fff5711223f298ee11e3d47d14.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-2324a-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-2324a-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-604-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f51751ae6fdf36dd07c5b8ef88a6d21353dcfa69cdacada7dd1ce08375a8ba65.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-604-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-604-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-700bs-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\52a9a9e1c096179ce0ae7d1531845eced9c645eb113af5f0c2571d44a9a9cf85.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-700bs-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-700bs-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-702-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\703dd2434ac72bcbfd439bbc866b4b4d3a93ae95f4039e5c1afeb294e369bf9d.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-702-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-702-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-702max-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84e9cb04d2bbffa80585e7914480b0491935ccc7cf15fc7c5ad7724b01498045.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-702max-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-702max-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "solitine-sol-709-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5334c5d76569b334b179a3706c2aae5964802d5bccd64301ee0dcbd8e0d19f4.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/Solitine/solitine-sol-709-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/Solitine/solitine-sol-709-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "solitine",
+        "folderBrandName": "Solitine",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wgp-optima-103g-8000mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce1209befc19cce2f8513a390a8bf98ebc8ec787aa3de65b29a79c014158c846.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/WGP/wgp-optima-103g-8000mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/WGP/wgp-optima-103g-8000mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "wgp",
+        "folderBrandName": "WGP",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wgp-optima-302-10500mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5dbcf52aca952e3cd5f4871a1706009e92674df22b8f9a6556a832daa2a8c1ec.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/WGP/wgp-optima-302-10500mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/WGP/wgp-optima-302-10500mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "wgp",
+        "folderBrandName": "WGP",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wgp-optima-302-13500mah-mini-ups",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94706142a9bc4fb5b31a565097382945947bbfb706453c588e424803eb9f4681.html'",
+    "sourceImages": [
+      "/images/products/power/mini-ups/WGP/wgp-optima-302-13500mah-mini-ups.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/power/mini-ups/WGP/wgp-optima-302-13500mah-mini-ups.png",
+        "categorySlug": "power",
+        "categoryName": "Power",
+        "subcategorySlug": "mini-ups",
+        "subcategoryName": "Mini UPS",
+        "folderBrandSlug": "wgp",
+        "folderBrandName": "WGP",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

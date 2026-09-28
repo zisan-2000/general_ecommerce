@@ -1,0 +1,2302 @@
+[
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1201aef-fingerprint-reader",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\29b1ecac4452a934693e7da445fc35d40faaf51801dd9785aa036d5bff62b254.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1801-card-reader",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d1904f11cbd31a8dc07d23c817e2ca0167eaef8d66a292fccedab5e8b2fdd242.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1801-card-reader.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1801-card-reader.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1801e-card-reader",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ecc0df50aa2532507a7e5ee17f86efdbd87da4f0046f1f3aaa02dbd9bb7be308.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1801e-card-reader.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1801e-card-reader.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1a8503ef-fingerprint-time-attendance-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\78c4074a1c96665c34cdf21d9440619296f21f0e0253d80114f3b460986ba586.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1a8503ef-fingerprint-time-attendance-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1a8503ef-fingerprint-time-attendance-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t320efwx-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d0010916c444ae68cbcc85571756279cf04b632ea8ac373f8264cfc616d6037.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efwx-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efwx-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t320efwx-b-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1eb47d69985655eff8fea13b4e15c558534c10c4bab6b7b016c30d9188f11c36.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efwx-b-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efwx-b-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t320efx-face-recognition-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f906513cb56341d58659b2c41f76ad18c424f3d12405efcbc41d496d41d0b69.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efx-face-recognition-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320efx-face-recognition-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t320ex-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\17e071a06cd5e0df3d89222a78a8e0765ecdc19bb6218e16cf9187c5d43563f6.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320ex-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t320ex-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t321efwx-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6ce465b08cd1dc0d7860f7793fa9c4f090bd66438c004855968ed25131e5edfc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efwx-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efwx-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t321efwx-b-face-recognition-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1eb83b2e5417ad23dcad61ee815bfc9cac2bcf95f3f883ac0fb752ad4e13bf24.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efwx-b-face-recognition-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efwx-b-face-recognition-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t321efx-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a108853b529afc55ebe055b808446ada67a092445c47649ed158e787da024989.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efx-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321efx-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t321ex-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3c6c99b94912b8ab63ed088ad04bf203e06b3ff8df0b1a282809a26ed3e5e19.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321ex-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t321ex-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t341cmf-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d23dcf8a5aa1a079b9a013f99829fa9efe4eff9964b52e53574f14a6c0ddf33b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t341cmf-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t341cmf-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t341cmfw-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30eddf0ec980b9f8d444440145b604666bfb626be1a386fa364e9c417b9d595a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t341cmfw-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t341cmfw-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t342efwx-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1d6d2126cd0d783995bac69875d4c8b3939343b1136566682fa8b159e4376027.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342efwx-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342efwx-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t342efwx-e1-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fa5d0c4e1f6632237a36a62eb851440f4e18314cc2aa3a7514127b3be1e1ba64.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342efwx-e1-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342efwx-e1-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t342ex-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2393e9e95af990dd2553119f8498929e17f4ba7d37ab5eee151e5f80354dd6f2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342ex-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342ex-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t342ex-e1-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c2e8c2a3cdd47d9e05e4916a242d14f1ac02523f794ab7d01c6592439c8c5951.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342ex-e1-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t342ex-e1-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t343efwx-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a0daf84c9b874ef196365e5c098fa3cca9b5810de7586c2d146a0440f5c9f300.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343efwx-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343efwx-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t343ex-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\01e7c87f9fe87cc276c9c8430cbbb9d96952f9ec0dade73e08d7021cfaae3fde.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343ex-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343ex-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t343ex-face-recognition-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\efcf63bd5313007cfc155a0b0d5648094fbeae6812684ca0d7e404b6ac7b3a0b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343ex-face-recognition-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t343ex-face-recognition-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t344ebfwx-e1-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ef66581a21d814611b95e8b7efc74845ab7c8cf424fba973b292d8023b3a747.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t344ebfwx-e1-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t344ebfwx-e1-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t642ef-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b1dcbd897eecf74746b94270109228810d3ca61c8e17b38537881b6b8450f24b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t642ef-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t642ef-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-ds-k1t8005efwx-b-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e6fa45a05cbbf3edc8550db1e744f4727133d97a558fcde253992bbd5cb08878.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t8005efwx-b-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1t8005efwx-b-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-a86h-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5d008228cf41cbeaff6392a0d6a8e533ce9ea797d8c007ae2d31aa0144754a1b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Nexakey/nexakey-a86h-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Nexakey/nexakey-a86h-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-k2-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4fb5546489b13b2a00b9ed2b0321246fda35ccabf6a512545801ca3faa48cdf1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Nexakey/nexakey-k2-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Nexakey/nexakey-k2-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-k2rr-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a1806ce608a40b28d85129e502086aa5823ff3f9581e1d634d3e7b5d0aea3b1a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Nexakey/nexakey-k2rr-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Nexakey/nexakey-k2rr-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-k2rr-x2-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\24362e0cb7e21afac5c9e5d43408ee679a3b7773945c05f7c0dc58e363197368.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Nexakey/nexakey-k2rr-x2-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Nexakey/nexakey-k2rr-x2-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nexakey-nx-2052-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\60cdfb89ac8c9cb3b948cf118599dcaef51a96efc860b837cdb888df15c8824e.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Nexakey/nexakey-nx-2052-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Nexakey/nexakey-nx-2052-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "nexakey",
+        "folderBrandName": "Nexakey",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-os456f-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77edc8ce031be93949db7248c6631d7fa790f0b93216b6aa2f6e2eb841cf4c32.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-os456f-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-os456f-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-os930f-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d3ab6ed97fb46056ac8fcba1c3efb302bac7cb270d29c2adbd22884fb161dcdb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-os930f-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-os930f-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-osf42-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfa6db1f8e54ad18e944ecd1f56dc90b0971dc1cf02aa7f17553c3f7698dfe8e.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-osf42-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-osf42-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-osf75-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\85a98a4149a39d4b638b7a53495e91ff0deb8bf3fc93edd2261da22eb19c1f59.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-osf75-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-osf75-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-osf92-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9fc40d2cb14813b956bc816b748b7b4b3d1bfbfc54fdb022ddfe592305c613b2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-OSF92-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-OSF92-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "onspot-osf93-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\786c7a9c7f1958898cee0ea7e0a0ae7810a367ccbeda49e2c8282790f10ed751.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Onspot/onspot-OSF93-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Onspot/onspot-OSF93-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "onspot",
+        "folderBrandName": "Onspot",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-3-pro-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cf1dfa5e7d4f0c94e450ed85b518697c0476529ab18b3aca9f5819a7a78b1b54.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-3-pro-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-3-pro-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-5-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ee6ede3a8c7cda400c282d4f7a9d56c5581b60d89b4aafdcb8177811890fac9.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-5-lite-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a87f92c3ff6c2fe35b1579c3a19c31bfcefcd995bf6ce6fb5775b05e3d5163e.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-lite-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-lite-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-5-pro-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\181cfa900f37a17a0af3e7789ed6eb71863283ae468ccc2c46597267e2a200dc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-pro-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-pro-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-5-pro-fp-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ab298697a677a2930e6a5ae1e2ac738efeec5d0b059392a557321a7b0362405c.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-pro-fp-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-5-pro-fp-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-7-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4eb68328145f2e41d036ec6404f4a598f3e97d5c51e45f1ce00ec19affa2feff.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-7-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-7-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-8-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9dc86852e019b8b6298b6a2f0874f744bbb5ed2a557ee005f09e41fe8938bce9.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-8-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-8-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-fastface-go-lite-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b925771fe5a58424936770f071328495a99d9a97f783ce27c539dabc5a0e21ce.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-go-lite-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-fastface-go-lite-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-prompt-p205-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7af5ce3f35a3f3eb43f39e5e4860d3004f3220e7bd24b91add85394fb2077826.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p205-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p205-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-prompt-p310-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\df867999b65adfa5079d8ed26a633e6fbf8477050498c571d82fff7fd9a516ab.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p310-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p310-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-prompt-p40-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3ece1412916980a4b5c11f196809bb6ce1d7cae1d0048e1e2cc167813d57c8cf.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p40-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-prompt-p40-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tipsoi-tf-80-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62336ad6ebad06c90ee0a38e993856afbea5f17af13bffc54c9ac400a5fd7037.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Tipsoi/tipsoi-tf-80-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Tipsoi/tipsoi-tf-80-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "tipsoi",
+        "folderBrandName": "Tipsoi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zk-f18-access-control-with-card-finger-print",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2f17560b3e2d3237efc3162a2db9de793b63cc3a899f9a0c894121e48e51c322.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zk-f18-access-control-with-card-finger-print.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zk-f18-access-control-with-card-finger-print.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-ex-800b-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e29ff7352b306d4fb68a368bc6bb5c8dd396e234b8d7c9eeed73dac5e09358ab.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-ex-800b-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-ex-800b-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-ex-802-exit-button",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8fad9dbeb8c9c55b53fc05c3f6f8fa60d9a668e3adcf224676d421bf5490dce3.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-ex-802-exit-button.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-ex-802-exit-button.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-f19-fingerprint-standalone-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d550652972a6f708bb9111493dd00c985e8bfe357d23cc3e52227646d4110f1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-f19-fingerprint-standalone-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-f19-fingerprint-standalone-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-f22-fingerprint-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\782cc6eeedb1c8d657ebc4da626c6f49680dff4e123aa25fac8cfda57da054e8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-f22-fingerprint-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-f22-fingerprint-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-f34-lite-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a5590a267ca4c17cb94436ba59567ec2698706ec37bd7ded0b757de706b585d7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-f34-lite-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-f34-lite-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-f35-fingerprint-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ca435934f1619924f1a70d838da27e1bd8cb651cb7c9f893a5c7598a4a0ab6ca.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-f35-fingerprint-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-f35-fingerprint-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-fr1200-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79c34aeb840ad6b0a6bc426eae17965d53d14c012a8728d4a5bade29dc0ffa39.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-fr1200-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-fr1200-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-fr1300-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4127780681444c1e5a7f8b7d7f5d24c9bf364ba762df8984f955f65f007c4891.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-fr1300-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-fr1300-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-fr1500-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6be6b5c1af0420f671ac7ab95914c1a9305e013ed6c740b1f708b9aa4735ece4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-fr1500-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-fr1500-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-fv18-multi-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\15b305c2bab91ea7c066d2a04826f17d61530240e049d5950c9af86894aa331a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-fv18-multi-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-fv18-multi-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-g4-pro-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2fc18e1627be57443992b6beafad8302b96685ad648758da50aec49c2cb843e2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-g4-pro-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-g4-pro-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock-580-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b477aa213686f7fe02b2c6e3164ee6d90a9380b19c6f82dd093b9f3704578a5a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock-580-access-control-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock-580-access-control-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock-990-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da0b14ed53aea5e90aa03726a5242d60822043694dc49b300b1754bf0bf9aa92.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock-990-access-control-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock-990-access-control-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock260-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a67254c7ae82ca30b6ff0605c44184c83d381252853c388ccf00a75b051b236.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock260-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock260-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock700-fingerprint-time-attendance-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\05ced602470b8c3b50cae30c09acf4344bdd0e82ae3f06b2059558b2e177e7d0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock700-fingerprint-time-attendance-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock700-fingerprint-time-attendance-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock880-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c94cc5f3cbdb96b1c92594fc948baca78fc7b097eeebf826989c1bb3cf932778.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock880-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock880-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock880-wifi-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\722733437f4defb1e0b36b494c094547ffbe6c29207ed3438ce93a084ccc8ecc.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock880-wifi-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock880-wifi-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock9000-g-time-attendance-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9cdcd56d403086c7953db7d1014d970e03fad5eb391523679aa4eaab2ebc7a69.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock9000-g-time-attendance-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock9000-g-time-attendance-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-iclock9000-g-wifi-attendance-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\772f0352719a6b13dc9901796d3c8ff374a0780b007dabd922172d2e1192f36a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-iclock9000-g-wifi-attendance-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-iclock9000-g-wifi-attendance-machine.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-in05-a-fingerprint-recognition-wifi-access-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ef8bd0e08e133667e1cc880e73948541f9158bdd0a4d9f5225a311e4e7c217c2.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-in05-a-fingerprint-recognition-wifi-access-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-in05-a-fingerprint-recognition-wifi-access-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-k40-attendance-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\82ffb932bc7d50996a4df3fc326a642b46146a540ae0bb64045ff531180563cd.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-k40-attendance-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-k40-attendance-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-k50a-attendance-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3e94870c2364262f49c30bf47c8a331e65ea257f79a216d78ac20bfef10645fa.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-k50a-attendance-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-k50a-attendance-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-k60-fingerprint-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de93c7c37d9d7180f644b3878ab03cd9021a01c32626150c7a10b5835c273a44.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-k60-fingerprint-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-k60-fingerprint-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-k90-fingerprint-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\275c244c472e35b37b1872fd8a208f362aad2a248955921c509a11214cf1c911.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-k90-fingerprint-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-k90-fingerprint-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-live20r-fingerprint-scanner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\46a10d5dcd52b94bd65f6f2a77b1a9011976a3e7f48e96cca68c54060dbbfc28.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-live20r-fingerprint-scanner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-live20r-fingerprint-scanner.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-m2-lr-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\93eaa9efc1459f4347ccbcf2df212709c1ee8b5dabdc8b78ef57326e321c5c1f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-m2-lr-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-m2-lr-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-ma300-fingerprint-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\58c3f5cac1774f30509e6fae7e301e363208cbad355c00dc422dbaaa4ebbb8b0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-ma300-fingerprint-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-ma300-fingerprint-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb10-vl-hybrid-biometric-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a462ce2470462f6ebfc5ecbfee516bdb3a9dc0116b6cd6a71b771654bb029dad.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb10-vl-hybrid-biometric-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb10-vl-hybrid-biometric-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb10-vl-wifi-biometric-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ca3c15e0f69ab2486149c947f152788aa0e6bf24f4d130bf1b771ec73f767362.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb10-vl-wifi-biometric-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb10-vl-wifi-biometric-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb160-face-finger-recognition-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d1196c15c53a4d80522964edc94099c309bdf083ac3b91ece7300e75e3d0d2a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb160-face-finger-recognition-system.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb160-face-finger-recognition-system.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb20-vl-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d1d315ad1d252c7fbf140ea557c1e401418adf901b2f366da8ab3e6e02ab0418.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb20-vl-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb20-vl-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb2000-multi-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e311b9ee71fba409b5aaaf854d696cc957104c74ceb34e3ef1f09f8ad4351374.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb2000-multi-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb2000-multi-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb2000-wifi-multi-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\acb5571aa933bceccd68d27b66fa82ad78e3c60212b6c3d1385ce4524a397677.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb2000-wifi-multi-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb2000-wifi-multi-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb30-mult-biometric-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1e9f0c444244db5a48a75431d607b78d84099e40ab04047548a710e6cc6af7a8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb30-mult-biometric-access-control-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb30-mult-biometric-access-control-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb460-attendance-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\874a58d8ea1b684b850b330c90d98d46ca1e6f45c265c880027b30c7dd3393de.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb460-attendance-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb460-attendance-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-mb560-vl-multi-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\83aff8e60780f5014e963d400c945f285968b4964176f82006d6875ba84c85ca.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-mb560-vl-multi-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-mb560-vl-multi-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-pa10-hybrid-biometrics-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3428f7b9c0ffdfe782428fcbc7fc4956eb28105ba613b6134986d4f9e4f9c912.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-pa10-hybrid-biometrics-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-pa10-hybrid-biometrics-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-s922-portable-fingerprint-time-attendance-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8c8baefd01351d9f8b613023292c4b4f6d5bd7952e23f011786896ee91f8b91b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-s922-portable-fingerprint-time-attendance-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-s922-portable-fingerprint-time-attendance-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-2a-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\40ec6b0447047b81e9c68afbd48a652be630812c93992f39e8cfbe54ab4ecec6.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-2a-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-2a-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-2a-wifi-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\da8484586d8d352f55e5d42f53a5bd1ec062b952657b7d19c92ae9e2c382caa8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-2a-wifi-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-2a-wifi-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-3a-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c688c06938330a0557aa7d65e8b92c53851332c3e866638e0bc22ef93c3a96ca.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-3a-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-3a-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-3a-wifi-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\85384139485db8291849907d8d1ed7dcfeda2850efc0592e809a3ec024a1d437.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-3a-wifi-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-3a-wifi-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-4a-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5cd65ff1c7815b0cb01ee2a359698976f5f6cc2855c2422d224cb7b9c36ce518.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-4a-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-4a-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-7a-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c292657d91c7a3e6eeb7746f58848b4fd22e0795cad1eac16a1ce568f2d6ea9d.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7a-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7a-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-7a-plus-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\939cc7290c7fe1624c2f69acd46d37d272da6d5d1a43c177253d0a848cf27f21.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7a-plus-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7a-plus-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-7b-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d41f847c8d85ec66f88a889cf4e73c1cd1f728c29cdc5bc1fedfbe6b5be560a5.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7b-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-7b-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-8a-plus-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0529d51018992f2af974561da6a1dc94f53c8760d3622a386cff1287c738756b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-8a-plus-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-8a-plus-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-m2-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b64cc22382c4fc3fb33efab1755b36cc50182a549363358fab70ea6e27b450e7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-m2-wifi-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54c415bef6fbbc45e31155333508c2cab66f969c44826892e41240f0fcc45b19.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2-wifi-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2-wifi-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-m2f-lr-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ba2a32d49f0f83ca9107e68307d50de9576141d5e961b518f7500ef0fa92fe83.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2f-lr-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-m2f-lr-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-senseface-t1-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e96c2fd3026518cf896aa692f162f699dfc57587e78e0d9a5c035be5fd19b5b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-t1-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-senseface-t1-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-sensefp-m1-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\89f7986951defdf1f4f2a8ba0dacad439f60c915487c2a0b71a87a8c08f3a78b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-sensefp-m1-biometric-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-sensefp-m1-biometric-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-sface900-multi-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a33e6e79f61c873a344d0aaa5f5cf7f6f42a72a8b92a2f5d5e396c5e355386ef.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-sface900-multi-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-sface900-multi-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-slk20r-biometric-fingerprint-scanner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3826c8deba6ce1048f92a6872e095c71670eef1348015a68af8eff9fb83167b8.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-slk20r-biometric-fingerprint-scanner.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-slk20r-biometric-fingerprint-scanner.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-speedface-v3l-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6c8c6f334ae31b0ce4be55e7eb3c8f1f46642be344722bb524d589f62c863f7b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v3l-biometric-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v3l-biometric-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-speedface-v5l-biometric-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a9220a39da45f96d9ed4f36d90de212112ac28706b7e325257c3110a4e99e3a0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v5l-biometric-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v5l-biometric-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-speedface-v5l-wifi-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\13434f548146e281595acd4fa0d9c6ba5662f1ed883654d85f4260dec39963ac.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v5l-wifi-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-speedface-v5l-wifi-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-tf1700-fingerprint-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7db1d981c880c2f41b922978f71e8c18f735eb6ddfd4fddb74fdb5ebfe7293b0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-tf1700-fingerprint-access-control.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-tf1700-fingerprint-access-control.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-tleb101-r-exit-button-with-remote",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77005bd704e8d76fa73fb9d2784de17b704d3f4e66c6df72ed772e77499ea242.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-tleb101-r-exit-button-with-remote.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-tleb101-r-exit-button-with-remote.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface302-multi-biometric-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a84f28b4ecd3530244ff8ec8e42b1c895ac6624386d50dc7bcec004006dd32e4.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface302-multi-biometric-access-control-terminal.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface302-multi-biometric-access-control-terminal.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface602-attendance-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b82a49bf27f61b01702be602853dad74bc30880834d4ba3fde423ba9487641a3.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface602-attendance-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface602-attendance-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface800-multi-biometric-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71896678b3d5db2a0ba7d2379d432f878802c84b2b2d9ac20907245ee1bb272e.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface800-multi-biometric-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface800-multi-biometric-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface800-plus-access-control",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\734d6c0698cb17a94a874e94585fe4c986c963fd503b33459ca1e870eec4477f.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface800-plus-access-control.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface800-plus-access-control.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface902-access-control-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0c0bafde74397cb3c5ff19edafbc7f99850c6d1f563cffb332b18593f9757162.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface902-access-control-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface902-access-control-system.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-uface902-plus-access-control-system",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4c9f1a4b6d84c2805a2a6ce7d28bbc9b7ea5d46133192857ab67468520d9dca7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-uface902-plus-access-control-system.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-uface902-plus-access-control-system.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-x7-offline-access-control-terminal",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\72809ea1481dfd16a1e0d0f2cc26c1d2cad5c215a769dd28ea16ce77db259d02.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-x7-offline-access-control-terminal.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-x7-offline-access-control-terminal.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "zkteco-x8s-fingerprint-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1b434e5671e7cd3cccfdf9154a74556b5c38059b28810388bc57e2b95bb354c7.html'",
+    "sourceImages": [
+      "/images/products/security-camera/access-control/Zkteco/zkteco-x8s-fingerprint-machine.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/access-control/Zkteco/zkteco-x8s-fingerprint-machine.jpg",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "access-control",
+        "subcategoryName": "Access Control",
+        "folderBrandSlug": "zkteco",
+        "folderBrandName": "Zkteco",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

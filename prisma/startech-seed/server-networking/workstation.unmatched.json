@@ -1,0 +1,722 @@
+[
+  {
+    "ok": false,
+    "stem": "amd-ryzen-ai-halo-developer-platform",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5078a7172e2b44d9d974863de197f01892ec7f02c5064666365d23ae8e9a2702.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/amd-ryzen-ai-halo-developer-platform.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/amd-ryzen-ai-halo-developer-platform.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "antec-core-apex-ai-max-plus-395-mini-ai-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed0eda93a5b2ad406dfd08ed09c02b136f360a5c5726d527598426ba3b15d478.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/antec-core-apex-ai-max-plus-395-mini-ai-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/antec-core-apex-ai-max-plus-395-mini-ai-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "antec-core-pro-ai-9-hx-470-ai-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\124c89b186067dd978a4394cc764e2beeaaf446eee22dedc8bf2fbe4a7d2c0ea.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/antec-core-pro-ai-9-hx-470-ai-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/antec-core-pro-ai-9-hx-470-ai-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-3420",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a2ff6a2d62957a045bab94b4fa91994d3ad80165c6ceb6fb885718ba2c9180d9.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-3420.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-3420.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-3660-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e0fa3c981ec7697fa409ba4ecce54970fa8fe470151b1b8a756fceb6f5b8b0aa.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-3660-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-3660-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-5820-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc62d1f32d5cf7fc33e585f71b6bec560f208e399ad5c79771813dea1c1c1cff.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-5820-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-5820-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-5860-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ba681db1f660c224ae0db66e98c162feb30900acdac2e31c2fc16417bec109c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-5860-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-5860-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-7820-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bdb57d0c5d70e8427eb88a6293721092cc153995241e1e7835d31633706a8930.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-7820-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-7820-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-7920-rack-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\14bf78c57b94483062b81a6d67575ed3f9dd7b6854b0e920a8ea921f8723739e.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-7920-rack-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-7920-rack-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-7920-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a71de1bffe7bcd916cfb35029a9c3045987f26f57ed3622d2886ed55c72fbc80.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-7920-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-7920-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-7960-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad840f391ab8edcc0c7bc822de22ff4f81b2cfed0bb94914dea0c754aa01277c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-7960-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-7960-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-r3930-rack-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b894db9bda9dc46107c58d6310ef0547ea02d46e8a8feba6d9d6715c891cb88c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-r3930-rack-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-r3930-rack-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-t3650-core-i7-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4db583279c9e7573d01c4ead845a9ea87fac646d7cf0fc627e5698b7e950420f.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-t3650-core-i7-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-t3650-core-i7-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-t3660-core-i7-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4d783a54d7fdbb2c2d3b1385b7e8d10c67f34580b2852d44cf25375c8947c4f0.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-t3660-core-i7-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-t3660-core-i7-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dell-precision-tower-3620-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04968c9adcc9cc08b3d13be6a9d87760619c68b94966a4846dea224d737a1127.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/dell-precision-tower-3620-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/dell-precision-tower-3620-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z1-g9r-core-i7-14th-gen-tower-desktop-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4895658bffbd3121a63e7c6d5454f0b51b4b148769767f36970c993025322716.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z1-g9r-core-i7-14th-gen-tower-desktop-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z1-g9r-core-i7-14th-gen-tower-desktop-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z1-tower-g1i-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8716efac7751aa8bfbe17212095404042f1d366627cb4ac4c78098291a5b89ee.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z1-tower-g1i-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z1-tower-g1i-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-g9-core-i9-14th-gen-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5f35d6652a3d14c07d41bf9deca35c5569aad13ec3eeac767d0407851ee6a5ae.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-g9-core-i9-14th-gen-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-g9-core-i9-14th-gen-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-g9-sff-core-i7-14th-gen-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a4db880ec3e9f65dfbc7e7024c05dbace6534caa9cc68577bf5bcbb5eb8a435d.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-g9-sff-core-i7-14th-gen-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-g9-sff-core-i7-14th-gen-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-sff-g1i-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\66403204ef60b34f7af6956fdd37878878d18cc9a06254de0a7afceb01d2adff.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-sff-g1i-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-sff-g1i-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-tower-g1i-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f451d94d3b91332284d8762391bc7ff41002d9ec6877b8dd68d310c01ad5237c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-tower-g1i-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-tower-g1i-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-tower-g9-core-i7-13th-gen-16gb-ram-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7ce68082f261a9b160ee53d7afb89ff27f0e4af34f98db4459d9cd283be499c2.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-tower-g9-core-i7-13th-gen-16gb-ram-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-tower-g9-core-i7-13th-gen-16gb-ram-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z2-tower-g9-core-i9-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b53f4d6eb728340408d6129def9a628295c8b1220c03dd3ad28b3d898340c3c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z2-tower-g9-core-i9-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z2-tower-g9-core-i9-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z4-g5-tower-intel-xeon-w5-2445-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6073f073cd418980be2e6fc6bff9183d612246c1595225bacbd547e7d4c5b5c1.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z4-g5-tower-intel-xeon-w5-2445-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z4-g5-tower-intel-xeon-w5-2445-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-z4-g5-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a01a6eedbaa4297ac691a58c277586325927becf2bb5347213a439d5d8ebd089.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/hp-z4-g5-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/hp-z4-g5-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p3-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d3c77df108b31549c8ac5554556bcc3ec80a5471ba38d1d34e6d6a6165fb2c2.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p3-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p3-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p340-core-i7-10th-gen-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1aa4c45647ddb949d9b484635ba8b1ad9273e3ceb30ed9f6cf17d520d976238b.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p340-core-i7-10th-gen-tower-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p340-core-i7-10th-gen-tower-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p340-intel-xeon-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\25aa9fccf1a209565c352e87d5154cf50f90094bb1c27439be92f128accdf1b0.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p340-intel-xeon-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p340-intel-xeon-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p340-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\57405ea48171af276455175d7a2215606461f78b3cd1781b6d0ecadde66415d2.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p340-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p340-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p350-tower-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aedb24b889e728d99ce9f9e9cbf2229c3d5ea3a9cf7433048d15e1b01195a684.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p350-tower-workstation.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p350-tower-workstation.jpg",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-thinkstation-p620-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fb67fc7c7a229f0b6106ba2af9f74e923cb22f2bd85d53d62a42a1854093ad1f.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/lenovo-thinkstation-p620-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/lenovo-thinkstation-p620-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-edgexpert-ms-c931-ai-supercomputer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe3b09421207f00bbc6907fb8ebe25badad10dd9b57852040b5acbec916fbd96.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/msi-edgexpert-ms-c931-ai-supercomputer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/msi-edgexpert-ms-c931-ai-supercomputer.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-meg-vision-x-ai-2nd-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9ed7d6975e1cfa2f191efd22a26b22a0ab3433aa79cd48e52b36beab29d0265f.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/msi-meg-vision-x-ai-2nd-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/msi-meg-vision-x-ai-2nd-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-meg-vision-x-ai-2nd-rtx-5080-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b74319afd00b2fc9b601c46b567720719d8c20a02ee26c2becdad2bc4244d0b3.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/msi-meg-vision-x-ai-2nd-rtx-5080-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/msi-meg-vision-x-ai-2nd-rtx-5080-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-pro-max-edge-ai-plus-11m-ai-pc",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\30b319a619b14817c2e5e4b76f0150761021aadbd63c9e535799aada3169baf3.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/msi-pro-max-edge-ai-plus-11m-ai-pc.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/msi-pro-max-edge-ai-plus-11m-ai-pc.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nvidia-dgx-spark-ai-supercomputer-workstation",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d7d7f3daca9e7c190b351962a24e3093296fe1a6bd54a470c1c0eb7d228ef4c.html'",
+    "sourceImages": [
+      "/images/products/server-networking/workstation/nvidia-dgx-spark-ai-supercomputer-workstation.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/server-networking/workstation/nvidia-dgx-spark-ai-supercomputer-workstation.png",
+        "categorySlug": "server-networking",
+        "categoryName": "Server Networking",
+        "subcategorySlug": "workstation",
+        "subcategoryName": "Workstation",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "dahua-2-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a466e70198bdf1fd6515f4c754122a1346e2e626f1f0d2644b795cc24309b47a.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Dahua/dahua-2-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-2-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-3unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77387df98ed0a4b8fc11f8f631ceed09f39da00a706016e82e311c34bedc5066.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Dahua/dahua-3unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-3unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-4-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\94e7c37b1eef84ce236b72c8a2157e677ed4fd36dda742d07aea5df840092124.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Dahua/dahua-4-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-4-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-5-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4d677f31fa40cc27b4ff43621e7314dd3ad2df46abddd8a437da1106fdd17deb.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Dahua/dahua-5-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-5-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dahua-6-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ffd44b39789c02928311a394d893bb097ccb049dd7ddc024037ed64326a06dbf.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Dahua/dahua-6-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-6-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "dahua",
+        "folderBrandName": "Dahua",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-2-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0e8ff035fac572c8d0bd4d5b27a231d0ff5570e312fdce6b1addcdc991079c5.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-2-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-2-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-3-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\550c1397b8b8aa4f0be66cc0258698cd67f8e1daee3a442ff2b04f3dbf9dc453.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-3-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-3-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-4-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\184f14b071333de313558061171cd6e0e5725ed141a9f6e07b9da280c0a9c8ef.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-4-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-4-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-5-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99bbdb5e40b81130bcaa703a6c4c638b19e3fe7906c07477305103b0026d8c35.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-5-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-5-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hikvision-6-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\635c8850f90c35bc25130ee8554e44ce86b75d1b11f932837b4a2eb1fbf38c91.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-6-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-6-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "hikvision",
+        "folderBrandName": "Hikvision",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-2-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8962562398e7e3231a043a78175ac4e74cc53d0d452d2bc0fd1e73e46f1191b.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-2-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-2-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-4-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f9f6b029a360db5379eb2af6a25d5994da17c11b04c7fa026cb263456a9ab5a1.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-4-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-4-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-6-unit-ip-camera-package",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\417998931d836b7dc301f54e86fb59ccedd4edbe618b589936d20114c55513c0.html'",
+    "sourceImages": [
+      "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-6-unit-ip-camera-package.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-6-unit-ip-camera-package.png",
+        "categorySlug": "security-camera",
+        "categoryName": "Security Camera",
+        "subcategorySlug": "ip-camera-package",
+        "subcategoryName": "IP Camera Package",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

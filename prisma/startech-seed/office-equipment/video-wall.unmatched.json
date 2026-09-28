@@ -1,0 +1,22 @@
+[
+  {
+    "ok": false,
+    "stem": "optoma-proscene-fhdc135-all-in-one-display",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\03be4f9da96cc8424329b3e89174c80c53f3264dd46b831cde8d49f429ca1489.html'",
+    "sourceImages": [
+      "/images/products/office-equipment/video-wall/_direct/optoma-proscene-fhdc135-all-in-one-display.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/office-equipment/video-wall/_direct/optoma-proscene-fhdc135-all-in-one-display.png",
+        "categorySlug": "office-equipment",
+        "categoryName": "Office Equipment",
+        "subcategorySlug": "video-wall",
+        "subcategoryName": "Video Wall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  }
+]

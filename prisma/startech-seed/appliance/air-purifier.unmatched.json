@@ -1,0 +1,742 @@
+[
+  {
+    "ok": false,
+    "stem": "beko-eba-6000-w-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4a4af1d9a1729d05b7a96a39a743043ef91b49af118fecc0c69d121aea460377.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/beko-eba-6000-w-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/beko-eba-6000-w-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ac230-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8088f3693527d5a80d5e8e682ab5f96bf51491c6970c08a29e475dba6fb3d201.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/delonghi-ac230-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/delonghi-ac230-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-bp04-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c9c4d46384481a5acc1ceddd26f4e6e34100f06de1a61efbcbd37872b7c0ff02.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/dyson-bp04-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/dyson-bp04-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-bp06-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2836d832a8741e367e95ab9c942a59320f6c55d2d22745f1b17eed4bfd8b7d2.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/dyson-bp06-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/dyson-bp06-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-hj10-hushjet-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b6e2e602d6a99cf66bd80ab131c3fb0683318f2ca6884bdb5800ee96e6bfc6c.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/dyson-hj10-hushjet-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/dyson-hj10-hushjet-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-pc2-de-nox-tp12-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f8b6e7460e32ef76a4b80f60c6ce58ad75c6450788ebd0bc730da62ebc265825.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/dyson-pc2-de-nox-tp12-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/dyson-pc2-de-nox-tp12-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dyson-ph05-humidifier-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe9f5da4cada568f5dbbea7f1bd8e71d7340264cd43dbb4e26e3c8be57047672.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/dyson-ph05-humidifier-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/dyson-ph05-humidifier-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-gcf-350asnb-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc9098425504e8c3a702cca28fd636c490f27e76db5805b79fde0e5cc166fcda.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/gree-gcf-350asnb-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/gree-gcf-350asnb-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-ep-p50j-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\401babb501631755e414c2ef39182bbfc4818df46fa0557633ed53abecda8b55.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/hitachi-ep-p50j-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/hitachi-ep-p50j-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-ep-tz50wg-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e073cea03961c30f895ed9e1ae4c4f5135e0628941a34309152e75b3a2bd75b9.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/hitachi-ep-tz50wg-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/hitachi-ep-tz50wg-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-f-pxj30-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0160f43a9dc80483ffd924a3ef0b9c42c0a2181972d769c23a9de340032bd506.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/panasonic-f-pxj30-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/panasonic-f-pxj30-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-f-vxr50awl-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a79dfaa4399d45170914dd4088858877ec28c1115482e21bde4bc52272f8605f.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/panasonic-f-vxr50awl-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/panasonic-f-vxr50awl-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-1000i-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4581275fd000ef56e15d9b087deebaa977edfa247819787776cd63971a1fe19a.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-1000i-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-1000i-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-3000i-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a038c5b1fb1c65253c473f345a5a418e17b1e2384f10bad32c0b2ca748be868.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-3000i-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-3000i-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-600i-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7a8cd3f311120f17255089557d700ce58d7648ca770a08a43c2325fd7f6c5ab9.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-600i-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-600i-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-800i-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a118dfe5955527705dceee4865ea5df6ab42035d3b33f8660058589e235ee62.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-800i-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-800i-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-pureprotect-mini-900-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\531bbf1590d092be12e7cdc2089112d24f7b87aacd34e51e5b788f583d26687c.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-pureprotect-mini-900-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-pureprotect-mini-900-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-pureprotect-pro-3200-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a1446e6031e32e7563b77899970b25a437c18451f8b41544d92384bc2292edc4.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-pureprotect-pro-3200-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-pureprotect-pro-3200-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-pureprotect-pro-4200-series-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9a9d63c051f60071eaf40374c85828353f82c03250cc65f71445490382821b94.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/philips-pureprotect-pro-4200-series-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/philips-pureprotect-pro-4200-series-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-ax60r5080wd-eu-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cf0f2450fcbaa5090d309ae26496b454e1e2b6abae0bd4493a4fd6340a1080d.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/samsung-ax60r5080wd-eu-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/samsung-ax60r5080wd-eu-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-gm30l-b-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5623c401c5fc6144367d6c42384c9f1566f35804e9260ca776865deab67cbfb5.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-gm30l-b-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-gm30l-b-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j30e-b-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce5e3463fdf35fbe5b140676732037fb476de24816c5cd38fe56599747d30a21.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j30e-b-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j30e-b-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j30ta-b-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\851954d0763555a5e1a626b794281be86bbc8190352d8a2c2661fad5c79a61e9.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j30ta-b-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j30ta-b-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j40e-w-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3bf92bf0f4a0a84294b9c3f696ec9186a582ba6cc6dc4075f4cbaeb00605751.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j40e-w-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j40e-w-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j50e-h-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8c6912cba34b1232bd9c72412f4eb94a419271ab200cc904ca851b44ef0cd4c1.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j50e-h-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j50e-h-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j60e-w-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\accc2003336e3fd67a8d35116e9ca4ed46bc0081f58da667ce63f5feeb22179b.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j60e-w-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j60e-w-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-j80e-h-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a58af2c07fcf2fd1f903345b2ac3614b2f2d86a64a5c89e8aedbaab3ff459ae.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-j80e-h-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-j80e-h-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fp-jm30e-b-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb4b11adae1c1bb0663fcfea481e9d7150eabda672065094b34666a50f47c409.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fp-jm30e-b-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fp-jm30e-b-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-fpjm30lb-air-purifie",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04721ababcbc272ecac4a315bac67c9f2373907b2659523b021b9ac19d47b88b.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-fpjm30lb-air-purifie.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-fpjm30lb-air-purifie.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-ki-n40e-h-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\92b512d0cbe9afadea109e34205db82a8277f8954a64cdffc4f363a27fc80033.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-ki-n40e-h-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-ki-n40e-h-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-ki-n50e-h-air-purifier",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\92dd2e4277812449f3c8bc7a4a48b4e3156e39741c1b81c08b237a38a0217c29.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/sharp-ki-n50e-h-air-purifier.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/sharp-ki-n50e-h-air-purifier.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-mijia-humidifier-2-lite",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d25e36a0350da32055c2dcb9265372107b0fb945c019c983fed3dfdf02777c0.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-mijia-humidifier-2-lite.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-mijia-humidifier-2-lite.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-air-purifier-4-compact",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\383ab503ac66576627ba1b89a72dd8330e2401daed4b84c92df85c681b3aa667.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-compact.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-compact.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-air-purifier-4-compact-filter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\87f05f4483d8a924a5fb28e3845a40a7c01346efd12ee96eec10d87901052d07.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-compact-filter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-compact-filter.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-air-purifier-4-lite",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5c4dc2461bfc2a68ce232f1d6fd2afa09ec0b51b8cf56c8b0bf2cba8a8669b8.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-lite.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-lite.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-air-purifier-4-lite-eu-variant",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e54d78bd0942a5341c57fa46d0406b8a1a4c063b0126eb8da2e7af7fee4c4481.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-lite-eu-variant.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-smart-air-purifier-4-lite-eu-variant.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-smart-humidifier-2",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\956a03b69273eb0496ac64fcbbd566a476088dcd9a90e8aa86a2eae692fcf605.html'",
+    "sourceImages": [
+      "/images/products/appliance/air-purifier/xiaomi-smart-humidifier-2.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/air-purifier/xiaomi-smart-humidifier-2.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "air-purifier",
+        "subcategoryName": "Air Purifier",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

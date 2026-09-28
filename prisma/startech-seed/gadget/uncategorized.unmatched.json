@@ -1,0 +1,722 @@
+[
+  {
+    "ok": false,
+    "stem": "casio-mtp-vd02d-1eudf-watch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e9854c3c7965cb263334585afdcff074a14e4300f0f58f1374c3c197e19652b0.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/casio-mtp-vd02d-1eudf-watch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/casio-mtp-vd02d-1eudf-watch.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cmf-buds-earbuds",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0a3fd4c7ab0762633bf292dd00dfee1ca0fc41026951693a98d6603099b5143e.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/cmf-buds-earbuds.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/cmf-buds-earbuds.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-d-rtk-2-gnss-mobile-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8dbf884be47ff4f01da46bf9c3b1b24625cb3670da042661c77c7c0504c520d2.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-d-rtk-2-gnss-mobile-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-d-rtk-2-gnss-mobile-station.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-d-rtk-2-high-precision-gnss-mobile-station-tripod",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a9016e4ed15d28c5105110bf69c01f55adfce42e784f504db3d81fe99314b58.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-d-rtk-2-high-precision-gnss-mobile-station-tripod.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-d-rtk-2-high-precision-gnss-mobile-station-tripod.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-fpv-remote-controller-3",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\80562b0a00d6c1e5148a3c02519369dadac24581d789039a4e4c2106c1cc5bd4.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-fpv-remote-controller-3.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-fpv-remote-controller-3.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-matrice-300-bs60-intelligent-battery-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\95c11266775088cbf2dc4ba9407e6279b605d74ab8e675921cbb245f46daf511.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-matrice-300-bs60-intelligent-battery-station.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-matrice-300-bs60-intelligent-battery-station.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-matrice-300-tb60-intelligent-flight-battery",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\225dbb66b8b245dff77f57e12748bcc6364d34c48082d2dd14700f58c5d791a3.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-matrice-300-tb60-intelligent-flight-battery.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-matrice-300-tb60-intelligent-flight-battery.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-mavic-air-2-intelligent-flight-battery",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5f994a0c9d0d1e23037b4d083d46e25cc1c96f3e2ba961f916c97fe9b0aae6f9.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-mavic-air-2-intelligent-flight-battery.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-mavic-air-2-intelligent-flight-battery.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-mini-3-pro-fly-more-kit",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3cc6c0e50f845ce773335d09e65a4c75bde0da6838b2998428f9fb41ba71f17d.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-mini-3-pro-fly-more-kit.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-mini-3-pro-fly-more-kit.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-mini-3-pro-fly-more-kit-plus",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7aef79d4001cae81ccf6707f4643d00281744d4dead41018d130506a830aedbe.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-mini-3-pro-fly-more-kit-plus.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-mini-3-pro-fly-more-kit-plus.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-rc-pro-remote-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d64c15f0b6c215d1063be1303891ad255600b8fcd6d36936811da4583a7641bf.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-rc-pro-remote-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-rc-pro-remote-controller.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-rc-remote-controller",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\31b82abf0ccce186802ec29a551ecfeb03b77c2024ff5e3c96b29f906da09d92.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-rc-remote-controller.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-rc-remote-controller.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-zenmuse-h20-triple-sensor-drone-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fea57e923bedbad3b6bf002c145f20da1de3e1bcdfc4dea3128d074fae5adcef.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-zenmuse-h20-triple-sensor-drone-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-zenmuse-h20-triple-sensor-drone-camera.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-zenmuse-h20n-uav-load-gimbal-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\03de6775d529677011deebd5367ef9bc488d1611dc4f1d9aba061ca01763b1c4.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-zenmuse-h20n-uav-load-gimbal-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-zenmuse-h20n-uav-load-gimbal-camera.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-zenmuse-h20t-drone-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\364bab53201d3ee8421ce9b692fb6303f8304e767ee9abd918490ddded125772.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-zenmuse-h20t-drone-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-zenmuse-h20t-drone-camera.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-zenmuse-l1-drone-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a13f063860202ec0ebb0b64df6ba98aabac9bb387e001cb82e9b533f6141571a.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-zenmuse-l1-drone-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-zenmuse-l1-drone-camera.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "dji-zenmuse-p1-drone-camera",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\35a65666614219f40ac030f682f9680ddb73652a313c662f015474ec7e9c4b36.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/dji-zenmuse-p1-drone-camera.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/dji-zenmuse-p1-drone-camera.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "havit-lcd-screen-laptop-cleaner",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bfefae3bec813a21dc7f32a925f02937f5a01aa41a89a168ec8d616499a1b1f0.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/havit-lcd-screen-laptop-cleaner.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/havit-lcd-screen-laptop-cleaner.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-avata-drone-hd-filter-set-cpl-nd8-nd16",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c90b9d1b86154fe5d0d685f0135a7bf75c2b8ba1047194c4d749101d9b1d37e8.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-avata-drone-hd-filter-set-cpl-nd8-nd16.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-avata-drone-hd-filter-set-cpl-nd8-nd16.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-drone-air-2s-filter-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf91a7a092480fad22be12baf6abbeac216c4ded3293e21027bbd33d2f8bc2d2.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-drone-air-2s-filter-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-drone-air-2s-filter-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-drone-mini-3-pro-and-mini-3-filter-set-cpl-nd8-nd16",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\735c59ea668ef42a16ccbf6415c3d80a59e15579367afc756cabcd412e320ee0.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-drone-mini-3-pro-and-mini-3-filter-set-cpl-nd8-nd16.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-drone-mini-3-pro-and-mini-3-filter-set-cpl-nd8-nd16.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-mavic-3-classic-hd-filter-set-cpl-nd8-nd16",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77acb89431bd2406aefceeb5d673a7e203316c2140e4185e95af123a5a1d2906.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-mavic-3-classic-hd-filter-set-cpl-nd8-nd16.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-mavic-3-classic-hd-filter-set-cpl-nd8-nd16.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-mavic-3-pro-cpl-nd8-nd16-filter-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\410e8ed23d4a0c9be91589fae37a5204a7cbc520b8e597ce12678a6e73ef504d.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-mavic-3-pro-cpl-nd8-nd16-filter-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-mavic-3-pro-cpl-nd8-nd16-filter-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "k-and-f-concept-dji-osmo-action3-hd-filter-set",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5e61d1f382da83fd7383923050c931254a2fabddad94324f18705f33cd6e476.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/k-and-f-concept-dji-osmo-action3-hd-filter-set.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/k-and-f-concept-dji-osmo-action3-hd-filter-set.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-cse-5u-40w-5-port-smart-desktop-charger",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\80a93ceebb10d9c6609082f145e3c2ddb4ad7dfaeccadf8be4cf1cc331caeacc.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/orico-cse-5u-40w-5-port-smart-desktop-charger.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/orico-cse-5u-40w-5-port-smart-desktop-charger.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-25w-pd-super-fast-3-pin-travel-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\28b37937ce2a0d25a22aaf1f7d3aed0780dfbf3e094976dcd116a7521d983a22.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/samsung-25w-pd-super-fast-3-pin-travel-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/samsung-25w-pd-super-fast-3-pin-travel-adapter.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-25w-usb-type-c-pd-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\955d1392dc84633592b9ed834509975b43b79e11056569c636b922e81f42a6ef.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/samsung-25w-usb-type-c-pd-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/samsung-25w-usb-type-c-pd-adapter.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-45w-usb-type-c-3pin-travel-adapter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3bc6dff9be89878054dd68cb2742663ff002e2f2baf7992c20f7e83288683287.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/samsung-45w-usb-type-c-3pin-travel-adapter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/samsung-45w-usb-type-c-3pin-travel-adapter.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-travel-adapter-45w",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b34a51f1db80b426517d5d960cabefc9900edaf4315bdb0e74fd52aaaa809323.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/samsung-travel-adapter-45w.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/samsung-travel-adapter-45w.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ugreen-3-port-usb-charging-station",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0d2163591f4d9adadef93360eb1acabdc923026336a455d6a087854a05d021f1.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/ugreen-3-port-usb-charging-station.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/ugreen-3-port-usb-charging-station.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vgr-v-516-hair-straightener",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6a964ceeb41dede1825d0eda427421437849eb4aeae26ac5f7d613590df76aec.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/vgr-v-516-hair-straightener.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/vgr-v-516-hair-straightener.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vgr-v-619-nose-trimmer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\92ef6dad6a00d9575a686de618c29ea30f34943f95a44704d15f3cd4d0d4d36e.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/vgr-v-619-nose-trimmer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/vgr-v-619-nose-trimmer.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vgr-v-627-nose-trimmer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\477fa213ceafb005afe0eb0e599d2c3f6b9ef06f632e5f968d651fff874b2912.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/vgr-v-627-nose-trimmer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/vgr-v-627-nose-trimmer.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "vgr-v-656-hair-trimmer",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2243d713ebd9a6a21ecc400084cfead4ca60953be6e7037a15e5212df6277b26.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/vgr-v-656-hair-trimmer.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/vgr-v-656-hair-trimmer.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wiwu-fmk-05-foldable-mini-keyboard",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9f684fb60fec3eb6d64ef34d600078db3131575a7ec84eb9fba0f5bee886389f.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/wiwu-fmk-05-foldable-mini-keyboard.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/wiwu-fmk-05-foldable-mini-keyboard.png",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wiwu-smart-folio-bluetooth-keyboard-cover",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\720428c97619b480fb6cc2f8cd8c174a911446aa712125f6885db1fc747f6521.html'",
+    "sourceImages": [
+      "/images/products/gadget/_uncategorized/wiwu-smart-folio-bluetooth-keyboard-cover.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/gadget/_uncategorized/wiwu-smart-folio-bluetooth-keyboard-cover.jpg",
+        "categorySlug": "gadget",
+        "categoryName": "Gadget",
+        "subcategorySlug": "uncategorized",
+        "subcategoryName": "Uncategorized",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

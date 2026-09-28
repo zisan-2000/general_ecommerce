@@ -1,0 +1,62 @@
+[
+  {
+    "ok": false,
+    "stem": "amazon-fire-7-quad-core-kids-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f46991f692bcabbd9b874f76e06a1d603ca1fec5fd474cc34ef2e2cbc3f383d3.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/kids-tablet/amazon-fire-7-quad-core-kids-tablet.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/kids-tablet/amazon-fire-7-quad-core-kids-tablet.jpg",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "kids-tablet",
+        "subcategoryName": "Kids Tablet",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amazon-fire-hd-10-kids-13th-gen-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e0093715c08e1df1336a7609bb55cc71ff5b01b90407b64b847574f792adc846.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/kids-tablet/amazon-fire-hd-10-kids-13th-gen-tablet.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/kids-tablet/amazon-fire-hd-10-kids-13th-gen-tablet.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "kids-tablet",
+        "subcategoryName": "Kids Tablet",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "amazon-fire-hd-8-kids-tablet",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f75d8071638b7fe218c5074ecc629f01c3bda3861a09c6dc2c42936cd6d6cbc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/kids-tablet/amazon-fire-hd-8-kids-tablet.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/kids-tablet/amazon-fire-hd-8-kids-tablet.jpg",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "kids-tablet",
+        "subcategoryName": "Kids Tablet",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

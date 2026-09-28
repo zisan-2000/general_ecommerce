@@ -1,0 +1,262 @@
+[
+  {
+    "ok": false,
+    "stem": "apple-ipad-11-inch-11th-gen",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d66a1b2dd51250b149235177b22f582617a1e741ac22c60815c81a846573d5fd.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-11-inch-11th-gen.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-11-inch-11th-gen.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-ipad-air-m3-11-inch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c8987ee302e561b30311a88dc265e75c37bd4d6836be01a3e5a03bb2b1077faf.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-ipad-air-m3-11-inch-cellular",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d82dbbf91282cd10569fe848afa5000caefc6065a58e827a06374345419e509b.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch-cellular.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-air-m3-11-inch-cellular.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-ipad-mini-7",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00cefbc5146ce37498a26a509dc875f2869bd5a6411a8b109ded5a033a8adcc8.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-mini-7.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-mini-7.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-ipad-pro-m4-13-inch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf665006c64dc34a330bc1e009c6815cc9caa3963b1e445f334507b38bd74fc7.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "apple-ipad-pro-m4-13-inch-cellular",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\26ff27f512147a3019af32a523363cad308168386a25e54f7316d9ca679b8781.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch-cellular.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/apple-ipad-pro-m4-13-inch-cellular.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-air-m4",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7935256aaa3925360f90eea0d0384d7da4b41e03d6c9ffc67eb703a7967e3e2c.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-air-m4.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-air-m4.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-air-m4-13-inch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5fef121463476ea4f6adfc6fcfbd5e304608001cf64b7d839d8c8400a8273ddc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-air-m4-13-inch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-air-m4-13-inch.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-pro-m4-11-inch-cellular",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\998d8866811d43bb50677bc923e4147094921ab5dcf998736f56e5038effa69c.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-pro-m4-11-inch-cellular.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-pro-m4-11-inch-cellular.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-pro-m5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\34ab486f8ac6344c4874d63a12d04ef55e0598ab2312bbcab3fca810cbc7e415.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-pro-m5.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-pro-m5.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-pro-m5-13-inch",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\23145c43f34321946995c3b93c469f4681d1eb3139387f3cf709d3ea864ecfbe.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-pro-m5-13-inch-cellular",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5e0a5c75ed13510d77f9b71c63cf69c62c920d01df38283e3129468eb2466e93.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch-cellular.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-pro-m5-13-inch-cellular.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ipad-pro-m5-cellular",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f539055925cc9b7c6b610ebfcbd2ee610f1035f908035805f5a04cc74d5be8fc.html'",
+    "sourceImages": [
+      "/images/products/tablet-pc/ipad/ipad-pro-m5-cellular.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/tablet-pc/ipad/ipad-pro-m5-cellular.png",
+        "categorySlug": "tablet-pc",
+        "categoryName": "Tablet PC",
+        "subcategorySlug": "ipad",
+        "subcategoryName": "Ipad",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1122 @@
+[
+  {
+    "ok": false,
+    "stem": "asus-fx-1tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b49bd0fe2af63e7288d632f6e41c805fe713d5240d67bcd47466f06d914a379d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/asus-fx-1tb-external-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/asus-fx-1tb-external-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-fx-2tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c24afa0c6fe979f05eb4e709d76529d36a8b6339fb40c4b48e51cd7b7bab87b8.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/asus-fx-2tb-external-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/asus-fx-2tb-external-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lacie-2tb-rugged-usb-c-external-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b94d2c2076dfba50ae4a9eaab97fa2c5ae4769f30c8c6c04eca88a753e7a052f.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/lacie/lacie-2tb-rugged-usb-c-external-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/lacie/lacie-2tb-rugged-usb-c-external-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": "lacie",
+        "folderBrandName": "Lacie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lacie-4tb-rugged-usb-c-external-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f68416ddc9beca81897070074a5ddc4b2827aae3df235747387707f57b1805c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/lacie/lacie-4tb-rugged-usb-c-external-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/lacie/lacie-4tb-rugged-usb-c-external-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": "lacie",
+        "folderBrandName": "Lacie",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-k330-1tb-usb-30-portable-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\95d67cb1f2630f4879daa641ba4f28f03a264892f4deabe9b590c5c4cf8eb08a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/netac-k330-1tb-usb-30-portable-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/netac-k330-1tb-usb-30-portable-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-k330-2tb-usb-30-portable-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\98eded767d5bc194e1ba23fee08c326acde4aa6cabe754f82a510edd33b2324c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/netac-k330-2tb-usb-30-portable-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/netac-k330-2tb-usb-30-portable-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "netac-k338-4tb-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04f6083de888bd6e02e82e0d4311c65d7d1e9222cb4fadc68f69e3160756fc7c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/netac-k338-4tb-portable-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/netac-k338-4tb-portable-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sandisk-g-drive-project-6tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c7cf7330d3fee26836ac4bd816ea0d6b8d8785217a09fb95e565d5e7115a7cf1.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/sandisk-g-drive-project-6tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/sandisk-g-drive-project-6tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-14tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b9c1fa64bc0e8978f11fdfc436d7d2d5bfc8248f692578918e57c0975f9f36fe.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-expansion-14tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-expansion-14tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-20tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f52d254ff584337153bd02cf885edd61ab9802a4dbe5c14b96f5c775be00da84.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-expansion-20tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-expansion-20tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-24tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4bdef5ca9a02fc5b6094f1d31acc89d751743a83fe3dad36db55b032d660835a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-expansion-24tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-expansion-24tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-6tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d506cb2099b17da22975ed0a355bd1c451fc24af0a497b81dc9cf5856fe7ac2.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-expansion-6tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-expansion-6tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-expansion-8tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\75e49142a7e3895baff36a51d78f00e807732f26d38d968ae91d4dc998bf3867.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-expansion-8tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-expansion-8tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-4tb-black-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56fded226988c94a1a7fb6fa6c8d8d6e5be33b989cbf0141f00dd2769ccaae85.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-4tb-black-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-4tb-black-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-5tb-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2212669a7578061b91cb7e70efb86dd37d1cc093b5138080b8eec35b1a853f81.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-5tb-portable-hdd-blue",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b8fe277235c0a8de3caac261e284daf63705cb4c345716e68183b22670459f6.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd-blue.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd-blue.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-5tb-portable-hdd-silver",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\41c09e5dc8d560cdf6659e91d5eed75bb4e34f806174c4392fa0ba239c2befde.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd-silver.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-portable-hdd-silver.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-5tb-usb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\93017f861c027fb5365a43f39b45ed29be8740bf5e1d17a103ecf0f8cac913f2.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-usb-external-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-5tb-usb-external-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-10tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8df65665474b22d22472aecfe1d06b00d2fdd613539c60c62b518a61d9615408.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-10tb-external-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-10tb-external-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-12tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d7261a9c109d1f6b39c9a5f4b1e68a98f376ed7f7c1383ba4c80f4244282574b.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-12tb-external-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-12tb-external-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-12tb-portable-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\388e9011aac0db73506339ffc1fa9329a2b87a57ab47b067c5da2f8a1f71e665.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-12tb-portable-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-12tb-portable-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-16tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3854d5cfa40e4a3edc0c870075a2f4d8a259e38d0ab74e519ae3a04b100e183b.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-16tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-16tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-20tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\043093518f7e16cc4a8e5fd78dea7d756303e9c30ee65dcf3161621ea02daa38.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-20tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-20tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-6tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9daf224d03433d94250953a7e6f3ff48dd55c509adeb69ec43a9a8f9ccefba3e.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-6tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-6tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "seagate-one-touch-hub-8tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dbff33ef070c663099308af3521496b068d70a92f557d948e79eb95bf9ed0a27.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-8tb-external-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/seagate-one-touch-hub-8tb-external-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-advance-1tb-usb-32-external-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4e691ab24420d63219e22702dd86559f38bbccb3c6e8d17530153e014a024b40.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-advance-1tb-usb-32-external-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-advance-1tb-usb-32-external-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-advance-2tb-usb-3-2-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed3dee42c7d5b0456174bf0596fd116209012c7cee243f18e17934ca511ee147.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-advance-2tb-usb-3-2-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-advance-2tb-usb-3-2-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-basic-1tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f63ac80cc7b60049dc8df1f9623fe56fcb126a252058c1d3b12ffe66be330896.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-1tb-external-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-1tb-external-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-basic-2tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec1e7dd48cf477c533f3f4baf926024ce20b203938316727c9851e710388a3f0.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-2tb-external-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-2tb-external-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-basic-a5-1tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0af24bcb1f28dc03abd8da66cf63150c785ad28d8e1f15efe56866db56644685.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-a5-1tb-external-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-a5-1tb-external-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-basic-a5-2tb-external-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fe1f5742bf6aa3adde1a73832a00f86ec63c102104a9960abe0e36d37de96a0a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-a5-2tb-external-hard-disk-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-basic-a5-2tb-external-hard-disk-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-flex-4tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c11c965a6f565ce6a92a329514db5a1b4cf8f0c53bbd60b2b020d0e91c367f08.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-flex-4tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-flex-4tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-gaming-4tb-external-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\40a3ddb340638c797fc1bd4de110e38d3ee1e429bf416fd5dea2b32efe6e3328.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-gaming-4tb-external-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-gaming-4tb-external-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-ready-1tb-usb-32-external-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\afc72766b35823b5791eee8850c689885b4b85faabffd0f3fff60faa00de5791.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-1tb-usb-32-external-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-1tb-usb-32-external-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-ready-2tb-usb-32-external-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2777582b5afca01557781f5a102a1ff6ba50f609fce160fa8154f428cb56da9.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-2tb-usb-32-external-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-2tb-usb-32-external-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "toshiba-canvio-ready-4tb-usb-3-2-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c23fdc9aafa888eb19fca71b8202c95124ecc744ef2dc1b7d904616d5f743aa7.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-4tb-usb-3-2-hard-drive.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/toshiba-canvio-ready-4tb-usb-3-2-hard-drive.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wd-my-book-4tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\05939bf3c67f4972d81e67c4713aab08dbadcc3af0188dde9956890e8b73017c.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/wd-my-book-4tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/wd-my-book-4tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wd-my-book-6tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\381626560388e1c49713a4ac276891677044a79d765759d1dc0c3b168020871b.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/wd-my-book-6tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/wd-my-book-6tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wd-my-book-8tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\740b7ec197335b78b57c113a0080ae1965004d7b1e017cee3d19eb130ff248b4.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/wd-my-book-8tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/wd-my-book-8tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "wd-my-cloud-home-4tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b882eaf0ce2d128eacf1fb1b58386997622ebf1aaf81c7957cec0cc17ad09324.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/wd-my-cloud-home-4tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/wd-my-cloud-home-4tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-5tb-my-passport-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61af5fd54fcd51f85726dd69d731bb03a75db6049d658d0f60328ed59ec12b78.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-5tb-my-passport-portable-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-5tb-my-passport-portable-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-elements-4tb-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2f21f89ea5fa2dc21ee31912ea8d500f3f32f4515957777b3d97deb83d910238.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-elements-4tb-portable-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-elements-4tb-portable-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-book-12tb-hard-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7f27f4308f21c390beb51d5b527a0e3aae0041865227c5f5c9d7e093e653acab.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-book-12tb-hard-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-book-12tb-hard-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-book-14tb-portable-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c74943d78de5f6906eafb06cfa3b62e0ced58eb88546829e24975f10295b456a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-book-14tb-portable-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-book-14tb-portable-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-book-16tb-portable-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf8a84fd5fb32777c916832c29f05c8e4b79f4a55010c93e535c08acb60d0121.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-book-16tb-portable-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-book-16tb-portable-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-book-18tb-portable-hard-disk-drive",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\91962b22a244153226f9126e50eb0ba4e1f38731da95da16cffeaa64e328bd9d.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-book-18tb-portable-hard-disk-drive.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-book-18tb-portable-hard-disk-drive.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-cloud-home-8tb-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a1f91658ffee46427e5cc31ce9d55432665646fbf74df13edc8b2eb2eab09520.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-cloud-home-8tb-hdd.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-cloud-home-8tb-hdd.jpg",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-1tb-portable-hdd-red",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\619eb16551e80165d88de9b4b3e019621404ed2d28c0b9c5de91615835753381.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-1tb-portable-hdd-red.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-1tb-portable-hdd-red.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-1tb-portable-hdd-sky",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c3aff8efc4f48286ef38f512704decc1e933755e8763a04f6b1231fe08945f5a.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-1tb-portable-hdd-sky.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-1tb-portable-hdd-sky.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-2tb-portable-hdd-red",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f5e258c51da3e684f2fd00ffbe557972a5211bf713c8f90ee47dbb0e8cc6cfd.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-red.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-red.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-2tb-portable-hdd-sky",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec22f9e504b58f49b17ff19589c61af8e96d0fb7da1fc14d6911da68868ea9bb.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-sky.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-sky.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-2tb-portable-hdd-white",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bbf8ce6b341eeb8d50e47c26fe103ac3cd0c1647cbecd9d05df329aa9225b07.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-white.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-portable-hdd-white.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-2tb-type-c-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7526a3a1adba55549d8aea461087c0724005f1e1e235c89581d40108ddfff587.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-type-c-portable-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-type-c-portable-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-2tb-type-c-portable-hdd-grey",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8e2658781a40cc8dd26af8ff36abcbc910a8d29115b786e3d1450bb3a9464d55.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-type-c-portable-hdd-grey.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-2tb-type-c-portable-hdd-grey.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-4tb-portable-hdd-red",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\12d575bc789185f032a475116501c9736835b39920c82272b906320f3194186e.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-4tb-portable-hdd-red.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-4tb-portable-hdd-red.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "western-digital-my-passport-5tb-type-c-portable-hdd",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\491fad5b064d27454126a76b2e49125c434d7d4790689fe0c1190fc5ae6789a7.html'",
+    "sourceImages": [
+      "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-5tb-type-c-portable-hdd.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/component/portable-hard-disk-drive/western-digital-my-passport-5tb-type-c-portable-hdd.png",
+        "categorySlug": "component",
+        "categoryName": "Component",
+        "subcategorySlug": "portable-hard-disk-drive",
+        "subcategoryName": "Portable Hard Disk Drive",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

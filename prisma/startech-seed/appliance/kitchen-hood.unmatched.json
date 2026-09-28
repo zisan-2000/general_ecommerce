@@ -1,0 +1,222 @@
+[
+  {
+    "ok": false,
+    "stem": "bosch-dhu665cgb-serie-4-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ccda3a7ed37320829028be04d58691f62cb55289f1ac8a5adce83214480d1e10.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dhu665cgb-serie-4-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dhu665cgb-serie-4-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-dib97im50-series-4-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99bb03b1dd1b0fec30f9a9d7449fea10b0105562deed15c82aaae4e70b8561d8.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dib97im50-series-4-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dib97im50-series-4-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-dwb94bc51b-90cm-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bcc467cb6e9d175e4ebe116973230cc97fad7135d52d1a9f1c80f72dc8a26280.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dwb94bc51b-90cm-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dwb94bc51b-90cm-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-dwk66aj60m-series-4-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f42e58be3ce7b7afc583eccce218efd437784bef587f916a4b2428c5f6f1eceb.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dwk66aj60m-series-4-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dwk66aj60m-series-4-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-dwp64cc50m-serie-2-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\51a7d4cba1a12802d7753107e781b2798d93b0f1b879eb545546f27d61ec444b.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dwp64cc50m-serie-2-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dwp64cc50m-serie-2-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "bosch-dwp94cc50m-serie-2-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8bc8b838a3a91723d1b666b32402b9e663f1524a79a726bbe6d83acaa28db83f.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/bosch-dwp94cc50m-serie-2-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/bosch-dwp94cc50m-serie-2-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "candy-cbt-6240-x-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cb3454de19df54757980d09bb1c9b25c5bac0bba78ff03796d16c429facf37b6.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/candy-cbt-6240-x-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/candy-cbt-6240-x-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "candy-cbt-9240-x-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\10b49fde64ff729bc680ee7cd23f90ad3d9b7459037fab0f88ff3faf904aef21.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/candy-cbt-9240-x-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/candy-cbt-9240-x-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elba-ech602ss-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\74cfdde58c05e4e47d85b62bbe4d9ae924b3f1496fff37b5bd5521e07264e5c8.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/elba-ech602ss-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/elba-ech602ss-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elba-ech930ss-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\98cba5569ac0eb7f37c65d1e343e8a310383d6bab4cbc62281637ec3ac25526a.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/elba-ech930ss-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/elba-ech930ss-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elica-majestic-bl-a-60-kitchen-hood",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c58221489abb9ffe5b5d550ca5e06f505245294544188b384e4f7756515a87c5.html'",
+    "sourceImages": [
+      "/images/products/appliance/kitchen-hood/elica-majestic-bl-a-60-kitchen-hood.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/kitchen-hood/elica-majestic-bl-a-60-kitchen-hood.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "kitchen-hood",
+        "subcategoryName": "Kitchen Hood",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

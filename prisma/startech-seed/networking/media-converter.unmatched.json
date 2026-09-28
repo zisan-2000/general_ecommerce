@@ -1,0 +1,222 @@
+[
+  {
+    "ok": false,
+    "stem": "cote-cmc-ge-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6e9145e7c6253dbb7a7271c8c3279413c4b43bf0b2429ba7803e15074c6b0afa.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/cote/cote-cmc-ge-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/cote/cote-cmc-ge-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "cote",
+        "folderBrandName": "Cote",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cote-cmcc-14-mc-chassis",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4586e5ab3f3d7ecc757027dd28e607e20a8d7120c48ddc1d9e9155c1161c6fb1.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/cote/cote-cmcc-14-mc-chassis.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/cote/cote-cmcc-14-mc-chassis.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "cote",
+        "folderBrandName": "Cote",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "d-link-htb-3100-fiber-optic-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fc2e854a85e0be3d00b42e3ee87dbabebafadaae3c4d92d2a500f3177235d136.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/d-link/d-link-htb-3100-fiber-optic-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/d-link/d-link-htb-3100-fiber-optic-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "d-link",
+        "folderBrandName": "D Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-mc111cs-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd008a5ec839963119773f0e9b3eaf0983e1c2c1c9d000368fe80065e54eb1b9.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-mc111cs-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-mc111cs-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-mc112cs-wdm-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\351deb379664dc7fab7be6500504980d80dbfd1f80e2c248e5566a44f568dd86.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-mc112cs-wdm-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-mc112cs-wdm-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-fc111a-20-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc14179de956397d58f5cb96749c78cd835f4ff3d117084070666e5e72ef772f.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111a-20-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111a-20-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-fc111b-20-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\491bd36da7694e744aadb2240244b0965fee2f0aff0512b02779a9deaec00818.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111b-20-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111b-20-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-fc1420-14-slot-rackmount-chassis",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cd74e10bea7193401c3b8d0d034f67e6975f7b9f0caa397fe214003b94ad1c1.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-fc1420-14-slot-rackmount-chassis.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc1420-14-slot-rackmount-chassis.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-fc311a-20-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3de8542a6be60854202810ee88272c06b6fc1212245ebe1440270da6940a89db.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311a-20-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311a-20-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-fc311b-20-media-converter",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc4ef5008ca1aaa47567be9721425566bb28cbc6b9706d032622270f5a6ad56e.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311b-20-media-converter.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311b-20-media-converter.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tp-link-tl-mc1400-rackmount-chassis",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e69f48edfcf9e6ddf8f808c176d4f191d293698780572e19e72e763b2831c776.html'",
+    "sourceImages": [
+      "/images/products/networking/media-converter/tp-link/tp-link-tl-mc1400-rackmount-chassis.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-mc1400-rackmount-chassis.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "media-converter",
+        "subcategoryName": "Media Converter",
+        "folderBrandSlug": "tp-link",
+        "folderBrandName": "Tp Link",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

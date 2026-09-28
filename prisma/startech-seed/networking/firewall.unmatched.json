@@ -1,0 +1,202 @@
+[
+  {
+    "ok": false,
+    "stem": "cisco-firepower-1010-8-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d2f1a6adb2cbd6c7c960ddd2a5976474855b07646ed78166ae1748473ae8c953.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/cisco-firepower-1010-8-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/cisco-firepower-1010-8-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-firepower-1120-8-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ea31fd40a95a6047c42454645378e574990f16b747d50cc18ca70d29c9cf4bf.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/cisco-firepower-1120-8-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/cisco-firepower-1120-8-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-firepower-1140-8-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8297e3b8bc34b2901ab26950c79e52b04d669d648c3786b7a4fce0338548da9.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/cisco-firepower-1140-8-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/cisco-firepower-1140-8-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-firepower-1150-8-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54b7344905079ff1d00e0413ec4bf38ec8d4699562c6eba15a2e1e6a5e4eebea.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/cisco-firepower-1150-8-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/cisco-firepower-1150-8-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "cisco-firepower-2110-16-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec3350d1168e73f86e7ef469b5572b87ebd7dc338fe625e57d39491e8209a5a8.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/cisco-firepower-2110-16-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/cisco-firepower-2110-16-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sonicwall-nsa-2700-16-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b0a6d5d7c173abb1550ff0e800a8003d92410ea13d43f13bfdd70ea1d14e06bc.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sonicwall-nsa-3700-24-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\798ee10441eb93ea5d50c6569bf8f086b16b01a2110e8e8114da023306b484a6.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/sonicwall-nsa-3700-24-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/sonicwall-nsa-3700-24-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sonicwall-tz270-8-port-essential-edition-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\89da65e12fb12d64ffe585061b4c5c992171f7cc5c12d78dc40de5d828b987f4.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/sonicwall-tz270-8-port-essential-edition-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/sonicwall-tz270-8-port-essential-edition-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sonicwall-tz270-8-port-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd805b6ae1fb1ef59c2b24c95c6e8eab1ef0b15c731358d55246a7b04d807aa2.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/sonicwall-tz270-8-port-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/sonicwall-tz270-8-port-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sonicwall-tz370-8-port-advanced-edition-firewall",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d3238f3ca256bb3670a62a33c87d9dc6c1a7acfb40b04042a081017550fa322.html'",
+    "sourceImages": [
+      "/images/products/networking/firewall/sonicwall-tz370-8-port-advanced-edition-firewall.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/networking/firewall/sonicwall-tz370-8-port-advanced-edition-firewall.png",
+        "categorySlug": "networking",
+        "categoryName": "Networking",
+        "subcategorySlug": "firewall",
+        "subcategoryName": "Firewall",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]
