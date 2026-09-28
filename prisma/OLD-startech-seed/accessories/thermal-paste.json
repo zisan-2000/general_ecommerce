@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790513008,
+    "signature": "ee0b712ebd5f4fa5ee218fb0102b9542430f2343b50d72d39364aa88818b0c2e"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Thermal Paste",
+      "slug": "thermal-paste",
+      "parentSlug": "accessories",
+      "image": null,
+      "isActive": true,
+      "sortOrder": 23,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}

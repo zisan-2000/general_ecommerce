@@ -1,0 +1,642 @@
+[
+  {
+    "ok": false,
+    "stem": "delonghi-dinamica-ecam350-15-b-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a504041dcd9a2334efa2317c00b48d80edc148c1d2fd939840c605cbe570889.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-dinamica-ecam350-15-b-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-dinamica-ecam350-15-b-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec-860-m-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\72e46e23d36b4040649eb509b8416a07bdd16788a4c6c13d16b9ca11299b2083.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec-860-m-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec-860-m-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec230-stilosa-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6719eac7f78d383b8356332e16b32dfc5fc01a3bebbcebf84083ff14d05e89cf.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec230-stilosa-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec230-stilosa-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec685-dedica-style-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\839dc1d86ab8f59028f578bac12c426b1e65ec99c1061d4a4f2472b612fff59f.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec685-dedica-style-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec685-dedica-style-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec785-dedica-metallics-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\410cef62726323669d23e632a3c77a0e136443737b7a3f15e20d5bb565b2766b.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec785-dedica-metallics-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec785-dedica-metallics-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec885-dedica-arte-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\079edaba9e94110f928100897fa0c0532b49fb52eb39c773ba6e4dea85466c19.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec885-dedica-arte-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec885-dedica-arte-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ec885-m-dedica-arte-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4229a3685a636704be30b7ac7b30a5165e3ee2abaeb3a41256e64e59531f9795.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ec885-m-dedica-arte-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ec885-m-dedica-arte-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ecam22-110-magnifica-s-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a269f7d7577429ea213f86061e3852809ce9e0c7940f34e50bc9bd36e6821a03.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ecam22-110-magnifica-s-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ecam22-110-magnifica-s-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ecam250-magnifica-s-smart-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a97bdef49334f1db20ca91c4e1edfc4dff6e0d3cfb5f595241ff140c9ecd010.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ecam250-magnifica-s-smart-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ecam250-magnifica-s-smart-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ecam29081-magnifica-evo-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd280b2a6481317f3622b5493a4b15105af457b9a576f2e5f10fdc3c2a2357fc.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ecam29081-magnifica-evo-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ecam29081-magnifica-evo-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ecam45-760-w-eletta-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4d47c1215a20c718d71d633fceb7b4a2de41ca85cf8c83f67a9cd36350c9ec21.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ecam45-760-w-eletta-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ecam45-760-w-eletta-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-ecam650-85-primadonna-elite-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\07020b2881937feab5906177c1d4ab56924d908d7df9d2baf42f76970e8913d8.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-ecam650-85-primadonna-elite-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-ecam650-85-primadonna-elite-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-emf2-alicia-latte-milk-frother",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00811abe66e3f90a8243b9d398dd033f961f9de941e59501aa4f602e85f57e05.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-emf2-alicia-latte-milk-frother.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-emf2-alicia-latte-milk-frother.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-epam960-75-glm-maestosa-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\553292ccb2eb6e6fc41f863e99df9799b9061fc86a7ca76f3c543534647c985a.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-epam960-75-glm-maestosa-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-epam960-75-glm-maestosa-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-exam44055-rivelia-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce7e496ccf62a65dedadef8d29a2fa0551536ab4d2f63eeae85be69505cc01a7.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-exam44055-rivelia-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-exam44055-rivelia-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-icm12011-active-line-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\520ada9923578331d1acccfdc189b73f2a8a4da358b959da737520bb38933205.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-icm12011-active-line-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-icm12011-active-line-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-kg521-dedica-coffee-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8739ea2a7086c94c60b67f8d77d9e726d34d76c9eea123053fa0fc27aecb3a6.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-kg521-dedica-coffee-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-kg521-dedica-coffee-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-kg89-burr-coffee-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ae3285e2311493e3acb0ec829a55d058d416314424dde230e8bcc65084e6675f.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-kg89-burr-coffee-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-kg89-burr-coffee-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-la-specialista-arte-ec9155-r-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b058a11a628bc6ca441baa9cb3bd0baaa43dfda30096ea768b4b4317cca40f8d.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-la-specialista-arte-ec9155-r-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-la-specialista-arte-ec9155-r-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-la-specialista-prestigio-ec9355-m-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f3465cbaf4fd90fe47a41f55546e1efb67c5b7b5a165efa468b054706906ee90.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-la-specialista-prestigio-ec9355-m-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-la-specialista-prestigio-ec9355-m-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-magnifica-s-ecam22-110-b-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\83ee379e6f1580cc7237126bf2d59b0897ff071362423c7b2fa1ba98fae81a9f.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-magnifica-s-ecam22-110-b-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-magnifica-s-ecam22-110-b-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "delonghi-primadonna-eabi-6600-automatic-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8c4f27c0d3c2c3f7333c1e757970af6f68ac63b808e7f95ec0589c98154e7cba.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/delonghi-primadonna-eabi-6600-automatic-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/delonghi-primadonna-eabi-6600-automatic-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nuova-simonelli-appia-life-1-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ee410b8a1fcdf35b2a53ca107be7f7c47a73de0a72f621565647299f476f1768.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/nuova-simonelli-appia-life-1-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/nuova-simonelli-appia-life-1-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nuova-simonelli-appia-life-standard-2-group-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aea86c69fc8695688bc324af38104565694e43d6fa43b7088905902c2552c805.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/nuova-simonelli-appia-life-standard-2-group-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/nuova-simonelli-appia-life-standard-2-group-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nuova-simonelli-aurelia-wave-2-group-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c79605a8cba46ed32451237c0e3571e189747f28ef337653c1a01aa828e4b979.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/nuova-simonelli-aurelia-wave-2-group-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/nuova-simonelli-aurelia-wave-2-group-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nuova-simonelli-mdxs-b-coffee-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7ec49fdbfe26d57f521228c500d11ed3e74e3bd2ac94a9059ca71fd89de2c418.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/nuova-simonelli-mdxs-b-coffee-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/nuova-simonelli-mdxs-b-coffee-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "nuova-simonelli-mdxs-core-coffee-grinder",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0e1c84f1ddbb0661d416e8fa82b6a497de197c4ec5e740cdb1fa36ba3cb85623.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/nuova-simonelli-mdxs-core-coffee-grinder.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/nuova-simonelli-mdxs-core-coffee-grinder.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-ep2220-10-2200-series-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\35f5818d168ef6b0e9ef5b73a2183bb0a1b383ae26d781f67b00ddfa181fe4d6.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/philips-ep2220-10-2200-series-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/philips-ep2220-10-2200-series-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-ep2230-10-2200-series-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8b1d65722d7af634a3942f59474210cd2415bdc7df50820b601699eb0ea99195.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/philips-ep2230-10-2200-series-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/philips-ep2230-10-2200-series-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-ep4346-70-4300-series-coffee-machine",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bf48b9962abfe80ca9b463d0da17772bdfe669ffe71720288026a1d9062e81d7.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/philips-ep4346-70-4300-series-coffee-machine.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/philips-ep4346-70-4300-series-coffee-machine.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd7430-90-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\780ade220531b4db1e8acf8321227b9068d573ca780afa1387f09f7f9f6fd873.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/philips-hd7430-90-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/philips-hd7430-90-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "philips-hd7432-coffee-maker",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a62f86c45dad729476c0cd94c4ce6bfb2218a616f2e4438c39c966ebef2ab6ab.html'",
+    "sourceImages": [
+      "/images/products/appliance/coffee-maker/philips-hd7432-coffee-maker.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/coffee-maker/philips-hd7432-coffee-maker.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "coffee-maker",
+        "subcategoryName": "Coffee Maker",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "subcategory-direct"
+      }
+    ]
+  }
+]

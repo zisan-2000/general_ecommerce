@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790513510,
+    "signature": "0fd88f02629aa9a5e8465cbf6f6c1663c2246cea6e1b997bf73c96b3ae151a08"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}

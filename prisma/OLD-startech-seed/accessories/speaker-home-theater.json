@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790512981,
+    "signature": "f745e6c9cdfd1eade69a001973349bb56b1ee184206285ac818c1c98ebae845d"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Speaker Home Theater",
+      "slug": "speaker-home-theater",
+      "parentSlug": "accessories",
+      "image": null,
+      "isActive": true,
+      "sortOrder": 22,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}

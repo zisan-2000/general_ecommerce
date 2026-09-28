@@ -1,0 +1,3762 @@
+[
+  {
+    "ok": false,
+    "stem": "beko-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c580109efa71f72dba6c29f907ba32faf3ecb708bbcdfd5554654b94ec3f5426.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/beko/beko-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/beko/beko-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "beko-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c2f15af71d03c2377091947afc71940907bcd0ea1eb360ce85e57de925e890d8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/beko/beko-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/beko/beko-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "beko",
+        "folderBrandName": "Beko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daewoo-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a6a847e26d3d7ef3d551f8d6f5b87b84d649bb789da01114d403e76a6eda78d9.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daewoo/daewoo-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daewoo/daewoo-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daewoo",
+        "folderBrandName": "Daewoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daewoo-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\919865790f662c435e5a1f322d3d2f40cef77021f6349ca616013052ea7a9bca.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daewoo/daewoo-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daewoo/daewoo-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daewoo",
+        "folderBrandName": "Daewoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daewoo-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9201bac3c8cb54778cddf3fdcb98c66587107402bc2f617c8e312153130841a6.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daewoo/daewoo-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daewoo/daewoo-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daewoo",
+        "folderBrandName": "Daewoo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-5-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2b2302340c2b2b0c3cb538b15da3ad79e0fdda1af1b8f1f05df213ade8bc3956.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-5-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-5-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3d2b952b9f88a5a5474653e0ade7b67d4abb5453c25cb5642a7c630248544c20.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-5-ton-premium-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\905502a45b10f2bffcae0092b434f261dff1a1899e32229caeaca452e20aa886.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-5-ton-premium-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-5-ton-premium-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-8-ton-premium-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6805ed5e445d9a81781e64adf5768fa3ab7b95e0345f93527dea4ec011b0c42b.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-8-ton-premium-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-8-ton-premium-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e6b90e3bf13380ef75c2a7295f90365222b32a2ffa51d9dbc545e44365a28733.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c804ea7cbb7eb25dea9da024fbddf2a9b0820fab9cc2f4930221aa06dea9d345.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-2-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b44a780dad41a6d4c0a3b49e92da7e1e32456166ab5238dac5b2aca673f0f744.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-2-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-2-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "daikin-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c105d65aba3f782c6a03beeee6d4bf17c9e63d293919f603d342b5a18ca7e25d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Daikin/daikin-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Daikin/daikin-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "daikin",
+        "folderBrandName": "Daikin",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "ecoflow-wave-3-combo",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d9c5323b21beafa96f3260af9e8a8960ac2df8295c02b994b7923595e51b2356.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/EcoFlow/ecoflow-wave-3-combo.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/EcoFlow/ecoflow-wave-3-combo.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "ecoflow",
+        "folderBrandName": "EcoFlow",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elite-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\be9c5d93d4b47c93b47f6c82d47555d5bf0bbfb417ef15c2c8d8e21dc490c658.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Elite/elite-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Elite/elite-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "elite",
+        "folderBrandName": "Elite",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elite-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b58ed4414eabedf4f12019311408a3411a334e665578dcdaa0924f913e08d2a5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Elite/elite-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Elite/elite-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "elite",
+        "folderBrandName": "Elite",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "elite-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\47ae165be04f7f68bfba4b43d5508fff28120281a87bb58438ef45250207a042.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Elite/elite-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Elite/elite-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "elite",
+        "folderBrandName": "Elite",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\595bbe8f2f0f0096970c70b281cede74825485e125104b92b6c8b35c11d0f337.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f6315231fb8e840e033901a3fde3d88a2937a9b47906f841b663511cc7156f6f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-1-5-ton-non-inverter-ac-asga18feta",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ec7fe52ed5fd4237c1b75fa9e364bddab40dde9d563c2f6fb30d86ac0076169d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac-asga18feta.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac-asga18feta.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-1-5-ton-non-inverter-ac-asga18seft",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3bb67c8247dd93769d2086f930c7064cd186e8bbe32466ca2c3415f612300257.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac-asga18seft.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-1-5-ton-non-inverter-ac-asga18seft.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\84d7a96d2f70e8c9fafd6e6646107da6ed6e994aca438e0ec614becd2d7aa0db.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-2-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de16217d577fb03a1ac707f37fcb03b73906f315953fee59ab7c6265dc4aecfe.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-2-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-2-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-2-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d452cfe3b84067d6d5b23ad1e78789974e04f19508d455d13de5e383d568bea7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-2-5-ton-non-inverter-ac.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-2-5-ton-non-inverter-ac.jpg",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4af1bb25e879a751fa5afbef5c0bb7699cb0e06d80b43a6a087c5c3c70a90024.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e4d101240e02c5bbdd1e6419b5674a4bf283d5bf0fa7f09df96b3e8233e08bb8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "general-2-ton-non-inverter-ac-asga24seft",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2a6868220da27daa1b75aabe23cd7af53469e945fa74ac5d186d2f1d4821fa8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/General/general-2-ton-non-inverter-ac-asga24seft.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/General/general-2-ton-non-inverter-ac-asga24seft.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "general",
+        "folderBrandName": "General",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\11e16978b901782d6155af07e708d63ca800c07264338f1c70597a165a502fb5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-charmo-inverter-ac-gs-18xcmv410-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\42df1b583d03919978f39a66a88660d895002151a513646a852f30748864b66c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-charmo-inverter-ac-gs-18xcmv410-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-charmo-inverter-ac-gs-18xcmv410-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-hot-and-cool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\80721cfaa1d1bbf6cc8e64a46ac32fe661626246304e21807e2febfb4cab7cb1.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-hot-and-cool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-hot-and-cool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-hot-and-cool-ac-gsh-18xfv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3206ad6b31c8da0980965feb2b4c341a4272ba2e120e12718a28b3b68994c6e4.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-hot-and-cool-ac-gsh-18xfv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-hot-and-cool-ac-gsh-18xfv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-inverter-ac-gs-18xcoa1v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f6f48dca278bc747f4bb68b20c68f09174870ead6cc23a085bb6b6eca3355d9.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xcoa1v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xcoa1v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-inverter-ac-gs-18xlmv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\566aeb1cc80d7a1212b19f1e6153f41786ec8ed481cab91da1ad99d62b9047c2.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xlmv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xlmv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-inverter-ac-gs-18xsma4v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1cbdc5d9ac9dacdbee7a231da6ef3bec8ff860ec1c84e50d6cdcab5f55cb12ea.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xsma4v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xsma4v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-inverter-ac-gs-18xzna3v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5bbca5ff6be2fedadb9d0ce036cbdd063e6f5a58e4d4cf90ffaed44a0dee5c48.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xzna3v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gs-18xzna3v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-inverter-ac-gsh-18xclv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\861acd3c135547f332f3497463dd253b9ab6f6f195e6c6fc76ba917e8646a541.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gsh-18xclv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-inverter-ac-gsh-18xclv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-non-inverter-ac-gs-18xcoa5",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\563711ab698c88c53b83a26845531cb81a1fce0e4f86cb7ad09051c2b08992a6.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-non-inverter-ac-gs-18xcoa5.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-non-inverter-ac-gs-18xcoa5.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-5-ton-non-inverter-ac-gs-18xsma1",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bae86a81aac0716cf6f1a5f33d0fd24731a56c6b759b3d513e04b2388b804c57.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-5-ton-non-inverter-ac-gs-18xsma1.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-5-ton-non-inverter-ac-gs-18xsma1.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-hot-and-cool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\56b7f212da467a4c681fe50a7d1bf26d89af6f900a31b161e5637b3ee0df648e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-hot-and-cool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-hot-and-cool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bcf7fcf9aa8b8c0d3cecb87522c6775b6a1b0512a691c080b47ad1a590969f64.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-inverter-ac-gs-12xcoa1v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3fbea63d799f3ec48dfe526e84b18cdac8b86dccb1a8a00805717d255d5bac90.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xcoa1v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xcoa1v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-inverter-ac-gs-12xsma4v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\99ec230444a9f6a5fe2b255d5422efda8f4a686967af0e17e2b1fe20cf55f60f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xsma4v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xsma4v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-inverter-ac-gs-12xzna3v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\399677137529029b6b164ca0e80160f3c0aaca1d0dd39056f63ce9fce8d5c45f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xzna3v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gs-12xzna3v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-inverter-ac-gsh-12xclv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2608b9410f561bca6d8b81523f6acf932d39a8ff0b8edddf19beaa84563eb628.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gsh-12xclv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-inverter-ac-gsh-12xclv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9461d2177ea4bce2ecd6d56a48b18eb400786afa0bf1ef79a6ab726ccf15b440.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-non-inverter-ac-gs-12xcm32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\999d5d4f8982d9afff152553bd748daddf3d6c3411c390765f616d87164bf923.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xcm32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xcm32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-non-inverter-ac-gs-12xlm32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9577c380ec951923b582205e970794f9f83cb7710daeb16eee202c8a88d304cd.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xlm32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xlm32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-non-inverter-ac-gs-12xsma1",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ee76c41c744c7084b914be79527f5a293afc64e326535ad51ed5bff6e39b93f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xsma1.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-non-inverter-ac-gs-12xsma1.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-1-ton-portable-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\581be19e5f08578e46671c82c3866002731988efc9f285b0014acbc59b1a3fcf.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-1-ton-portable-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-1-ton-portable-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-5-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fedf83d35d20901cd0bb5ce0297f1fe5f68d041cc3a772ed7d42fa48737cab7d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-5-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-5-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-5-ton-charmo-inverter-ac-gs-30xcmv410-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d08cf4bd0d465c2290b707eb964d330f84149db6747500bc53e57009c9464edb.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-5-ton-charmo-inverter-ac-gs-30xcmv410-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-5-ton-charmo-inverter-ac-gs-30xcmv410-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1eb6534aa1d18dc2b4ab4b336853c4d5e12406172757a3edf39a0b40d687eb94.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-5-ton-inverter-ac-gs-30xpuv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7e401b7c3b9d67832c79099827db6f329f05cd74762410805e89603c54ab20ec.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-5-ton-inverter-ac-gs-30xpuv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-5-ton-inverter-ac-gs-30xpuv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-charmo-inverter-ac-gs-24xcmv410-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7150274894dfad246106695b9c76f29deb86f8a3e566ebbcdcd8ffb0d350dd5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-charmo-inverter-ac-gs-24xcmv410-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-charmo-inverter-ac-gs-24xcmv410-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-floor-standing-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d8a5f1d0be158952521c4d529116c61dd834d7f3cf52950945c77d01c673dfb1.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-floor-standing-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-floor-standing-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-hot-and-cool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a567f6fd7560ba192e089ab1acd22db74e30dbb584f0fe575a40681f9edcfa24.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-hot-and-cool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-hot-and-cool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-inverter-ac-gs-24xcoa1v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\744ea276f7a09fae92598fea49c2e8eb35640d07d480ce81884c90c3bab6c03e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xcoa1v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xcoa1v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-inverter-ac-gs-24xsma4v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\731ec268674c6fa68179bb39f33a3bbff81e5ae635cc744153c65f4ab12299e2.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xsma4v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xsma4v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-inverter-ac-gs-24xzna3v",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1c2091a6098cbd29b9864111a2c867eb7ef424149c91cc71a4b46982565afd65.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xzna3v.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gs-24xzna3v.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-inverter-ac-gsh-24xclv32",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\54752ed8fc74ef81bc41f8b4d058fb42dbb932811ef9b7e23e5b997fb4d899e5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gsh-24xclv32.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-inverter-ac-gsh-24xclv32.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f7bb3e8efd33a8f8d7435ca32b8e32f507249c82a2d83ef53938a997e851bc82.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-2-ton-non-inverter-ac-gs-24xsma1",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bfe0a8dc0e80e7b6233006439202cd6ece23cdcb233d7e8ef499a2a2064ee60.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-2-ton-non-inverter-ac-gs-24xsma1.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-2-ton-non-inverter-ac-gs-24xsma1.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-3-ton-ceiling-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b27aec65a480fab3ff3b8c9596d8e67097e37f7c8f1f3abcdab0f5a074437d6d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-3-ton-ceiling-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-3-ton-ceiling-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-3-ton-floor-standing-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e7f9cb4ceae43f9e04e65ba674d90c259405bbeb3c6d5a72755cddc0b5900540.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-3-ton-floor-standing-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-3-ton-floor-standing-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-3-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f29874a78d7badc3a1113d539888b55bdb070748f5ef48ce8bb43790bd6fa8e5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-3-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-3-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-4-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e832db958a3262ac513d31848ecdfa17bbe518d726cc5ae91395c3c15a0547c8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-4-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-4-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-4-ton-ceiling-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\accf1a68c886e6b9e237e1f185fa3819cd1d3470b1dbab0b8e8912870fba750b.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-4-ton-ceiling-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-4-ton-ceiling-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-4-ton-floor-standing-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\75c77e0cd0c43f16eb4049fe6bdb06766417484ca8e1af0ef2a2f5ed2ec30a3c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-4-ton-floor-standing-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-4-ton-floor-standing-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-5-ton-ceiling-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0a8f5759ddd9d1ccb9e141e8d428129dcfe7786d8a77a3aba0dd6bfb5e87c9e3.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-5-ton-ceiling-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-5-ton-ceiling-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-5-ton-floor-standing-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f5ffadbaf5616117596c88696da79c9a51d0c62d9bc345d8f941dfc689c83592.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-5-ton-floor-standing-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-5-ton-floor-standing-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-5-ton-floor-standing-ac-gfh-60xts410",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3a66e733367b54f041b504165f45206ffe69d02f502fc38ebc6b982db66933b6.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-5-ton-floor-standing-ac-gfh-60xts410.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-5-ton-floor-standing-ac-gfh-60xts410.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gree-7-5-ton-floor-standing-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0edb780bf08f8de7d6b6c06c8bb8ac5093db827d2582688d99515e0908a4eb63.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Gree/gree-7-5-ton-floor-standing-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Gree/gree-7-5-ton-floor-standing-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "gree",
+        "folderBrandName": "Gree",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-1-ton-cleancool-pro-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e347b5831c961aef33c8fa7d58bb2493ad3ea278b94954f61c7a96ba105960ea.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-1-ton-cleancool-pro-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-1-ton-cleancool-pro-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dfac81cd3274d6a3eed75fbceb688f7a162b070bef6fd1c2f4b0f026532bbc3f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-1-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cfefde4ccb65af2c0cfe096c818ae57191db4145fd118ad82e2fcdfdf49e45e5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-1-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-1-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\69dd454bf640c35bdf24181318028b4f45ac3986c5582d0e0f700f8de4b44b70.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-5-ton-non-inverter-ac-hsu-18aquacool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\50e85c474ff762a201156eeb4f28fba636a525f2e86d2965c56b883dacc70df5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-5-ton-non-inverter-ac-hsu-18aquacool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-5-ton-non-inverter-ac-hsu-18aquacool.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-5-ton-turboaqua-fix-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ee727cf54042006564114046529643071164e878b8ab77eb45880fab222cd67c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-5-ton-turboaqua-fix-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-5-ton-turboaqua-fix-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-antirustcool-inverter-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\35120c18fa19e36aba760acbe812e11378fb62a1d3eb1ab898fcb826de097128.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-antirustcool-inverter-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-antirustcool-inverter-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-cleancool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a370ceb96e94ac47dc481a51e49d7876c3c5b2d7baac0f435e87d348aaf9cb14.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-cleancool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-cleancool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-energycool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\08646b5fdb07126762e1956895dba8e548ca8fc14a9e5f9c962fc7e2fc0d2de5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-energycool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-energycool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-gravity-ai-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1137d580527fb4359a2304a81508d2b1779e37e33262a133bcfd36246b376a6a.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-gravity-ai-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-gravity-ai-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-hot-and-cool-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8f86a4d6655b6af075053cd9ded1da4ae17e75d7530168f31e3ee2cebdc85ea6.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-hot-and-cool-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-hot-and-cool-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-inverter-ac-hsu-19heatcool-inv-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f979bbd06523cbe420ea191948d9a6887e9190f13d812b3e3c9d10eff7758936.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-inverter-ac-hsu-19heatcool-inv-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-inverter-ac-hsu-19heatcool-inv-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-inverter-ac-hsu-19uvcool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\68d96413a9940d702e0abe4263a19eb5e1bfe2df7dea2f0447e647c3e69b8e6c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-inverter-ac-hsu-19uvcool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-inverter-ac-hsu-19uvcool.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-puricool-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\def983c61603eeac614bbdf363eeda1a35814f479e41eeb2fc16ac39c74ee920.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-puricool-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-puricool-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-6-ton-solar-hybrid-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\596b8838f6db7c1f28a02d6764988418b7cbcd61dfb501b69c2787e7b62b19e7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-6-ton-solar-hybrid-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-6-ton-solar-hybrid-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-ton-antirustcool-inverter-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c09ec8e8fbc36d9fbda28ebef39d4bb1df61a7c29bced1ee392a626a33eaf429.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-ton-antirustcool-inverter-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-ton-antirustcool-inverter-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-ton-gravity-ai-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\86d9431c38813229204fc6ae4c3b920c1cd015173e872c8eb4b9c7011723bb89.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-ton-gravity-ai-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-ton-gravity-ai-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-ton-inverter-ac-hsu-12cleancool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fd42e8f2df3c356ed162800068241cf5b285e6b838c014a2ddcf7f8c498ec634.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-ton-inverter-ac-hsu-12cleancool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-ton-inverter-ac-hsu-12cleancool.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-ton-inverter-ac-hsu-12uvcool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ed9f9274b2e4e344f520096da8062eba62bfdae9f63040eef7302d89635f7eb5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-ton-inverter-ac-hsu-12uvcool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-ton-inverter-ac-hsu-12uvcool.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-1-ton-turboaqua-fix-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9fa4e2a7305826940e709e4314eca1a65866290628a66b565182e7b5ee25c7f7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-1-ton-turboaqua-fix-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-1-ton-turboaqua-fix-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-5-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6d7da0728f001c85f51802b78214e6f682a217d83ed9015d33c9a9688dba1419.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-5-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-5-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-antirustcool-inverter-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7c510b054d52f390c90a858b104ebb13c114d0423ef672de0668ca02641e8185.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-antirustcool-inverter-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-antirustcool-inverter-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-gravity-ai-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\af22ef86ef440ff58452d28497ef43cc65207c353524a1fca28c9cef2da7a7a9.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-gravity-ai-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-gravity-ai-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62995f5edbb580457cf480defe9e92a86bc1bfa7ba40ac879cac90ce4462aa1e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-inverter-ac-hsu-24cleancool",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3521de3961624bda87497b0dda0b3664b01b17cb1f94866bbf1f7129ebc49874.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac-hsu-24cleancool.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac-hsu-24cleancool.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-inverter-ac-hsu-24uvcool-inv-pro",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\637e2a739980c86bd7bced5fca224746126c51a8b44787aba7255b0f33217d70.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac-hsu-24uvcool-inv-pro.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-inverter-ac-hsu-24uvcool-inv-pro.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-2-ton-turboaqua-fix-pro-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0fca3e96ef15150b974fbc583c8ee300f4d8437639949f77aaf49eb2af90933.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-2-ton-turboaqua-fix-pro-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-2-ton-turboaqua-fix-pro-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-3-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45d154de17c14ebc65d7668897cf29f718ba9fcb04311f2abcb5151723253136.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-3-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-3-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-3-ton-inverter-ceiling-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9735b45543eb858dca4bf839e47c5e395d87517e0461a398511cd7a19b8dd793.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-3-ton-inverter-ceiling-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-3-ton-inverter-ceiling-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-4-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a33da95b63511903b34cdeaa55317c67b81d0688a1b15cb58fc17f152ae1386.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-4-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-4-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haier-4-ton-inverter-ceiling-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\50c39dc5bf7be453b674a06dc80afe7b365338dd0fc5deea9b30d69e8029be38.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haier/haier-4-ton-inverter-ceiling-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haier/haier-4-ton-inverter-ceiling-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haier",
+        "folderBrandName": "Haier",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haiko-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9b9a1aea938ee31155ee8dcdccb6af223f0df689ff44ccbf2a48805f9c99530a.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haiko/haiko-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haiko/haiko-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haiko",
+        "folderBrandName": "Haiko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haiko-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61f99e1cdc470fc20faf900d88446fdaca9bfeeb20993130bece5660f28fa06a.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haiko/haiko-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haiko/haiko-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haiko",
+        "folderBrandName": "Haiko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "haiko-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\47222830a7fe114596da92ab2d8770bc619bbba9a61cc3dae91e5b06b24374a5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Haiko/haiko-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Haiko/haiko-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "haiko",
+        "folderBrandName": "Haiko",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1bacaf30b09e226d9c084e55764070ecf7fe9c2c1183d9ececdc41fa6360445b.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-5-ton-inverter-ac-as18tw4rgskb02du",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b7b2f701292d00b8d8bc6122a6f36a55bee18b0f6833c61f029ab48aad9f14db.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-5-ton-inverter-ac-as18tw4rgskb02du.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-5-ton-inverter-ac-as18tw4rgskb02du.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ea9a4856d1142b9077455a0d6fd8cbac50e2d6aec4227825a71016b297f8aed7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-5-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\77dcb57876739dfda6db1d33c870ebb57fd228938834b8b13d3775242545f4fa.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-5-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-5-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6240684bcc342b15912f3ea7052b371b3199fb3362217980d57963d57dccdb7e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1f53dc1e972989821fa277954f6642b6add03652373ced5f2caf3014fa56b3bd.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-2-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0be089421cf5e6a379dcf055662daf4ded033c213f7663dd71aa3b438000659e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-2-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-2-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c079222d67ceb464a64f2fc8859bbbbd6f7603de0475b2724a94325b27283e26.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e3e7f3cb5ebfac18c9da12ddcc5c96707df570c3cad6da9f3ae8a1a1640b2956.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-2-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\12a6e6c0bde3b5aed319aebe4c736dcc9214db4acf7f048eb67827a8ec7edca8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-2-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-2-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-3-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b5623fbe4b864bdb9fe6c4965b06b64db410093b3bed91151012f173e228dbc4.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-3-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-3-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-4-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4a38ba9be711a1cbb4c4f03e0631455352ecb79e77576793ad1cbe3bce27bc81.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-4-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-4-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hisense-5-ton-cassette-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a17e1ab50051652584c557efa701894cec274d98ad81ccab53d0427b18e52f0c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hisense/hisense-5-ton-cassette-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hisense/hisense-5-ton-cassette-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hisense",
+        "folderBrandName": "Hisense",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f98868593c0e544d4e5bbb434f633442539903c37f146bc397380c5cc3e27fb.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hitachi",
+        "folderBrandName": "Hitachi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a4cbf12874d4cc668a2a2b45a7169acf258ad25c59742630349baec02475e78f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hitachi/hitachi-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hitachi/hitachi-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hitachi",
+        "folderBrandName": "Hitachi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hitachi-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e26ba43da1f5688b89a68d9fd03e02a0ccedd77f75e8c31984dcab1cc922e99a.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hitachi/hitachi-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hitachi/hitachi-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hitachi",
+        "folderBrandName": "Hitachi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hyundai-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2140c887db6338a86153b86e1af668b25451b384b7fdad92aeaf37b606f0f35b.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hyundai/hyundai-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hyundai/hyundai-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hyundai",
+        "folderBrandName": "Hyundai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hyundai-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b472d1e483c7522afeb364a4b273c687ab3bdcfdc3093a5623f289606de46646.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hyundai/hyundai-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hyundai/hyundai-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hyundai",
+        "folderBrandName": "Hyundai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hyundai-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c751ac6aed4d10a958c1663fee9c9f24ed6cb5a03d5a67c645172dd6260ae146.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Hyundai/hyundai-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Hyundai/hyundai-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "hyundai",
+        "folderBrandName": "Hyundai",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4892c1233d47873211c941b6c67c0d05b7b99d75035326b0e491879bfea29be7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-heat-cool-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\25c14b624c74b1d2bd583c3aef346dcaba66738456c28fb564bc3e870b581eb7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-heat-cool-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-heat-cool-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0cea6f2ced35151d6305c2f405b4aaa05275a6071a602d652c8ae5d9bef3f6b.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-inverter-ac-golden",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b440d1681b2574b8de924a54b264bc8f602d0f02440ec42981473c6be4709977.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-inverter-ac-golden.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-inverter-ac-golden.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-split-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ddea958b550c9609ab967658effb45d948620054859ec6e9176e416b2b4fdea.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-split-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-split-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-5-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a4f9a4251a77edea7cc2fbba41926653eec0a30ea9003a5507767801fc857353.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-5-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\42482b150a1fc8cb3544adadd3a26e304df70c0053dd49785d94eaaf28f61d89.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-ton-heat-cool-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\beb6c4db0642d1ec44d9483118e0085b30753ead7b59ff9e2af5a3342ca9464e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-heat-cool-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-heat-cool-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0ea286ff95326f0023cc5935e6010fc8540f99cab8ce87d5b7da51ab5c8757aa.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-ton-inverter-ac-golden",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7e31aaa60018a9d19f835b6ae00cb973750c136d58a83ed38c34547a50014c97.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-inverter-ac-golden.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-inverter-ac-golden.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-1-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7bc259f4efbe24e59211699cf644284842378550e3f2827272ec91a49a82548e.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-1-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8a1cbf63c8190f24685c5e363d01088878f2075a53cfdfb54e061fae7976d75a.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-heat-cool-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dca403f1f97f0494fc83036a0b53621d82136b1096214ff169cfe6eb0900cbab.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-heat-cool-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-heat-cool-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a696ba5a8c880200bfd84462414979942faa6db2f03c6440c0886c06371247a6.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-inverter-ac-golden",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0907f9ad1318c9f068c04a1bb7d44fcc995e85386fd870929d08f01bc1a37505.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-inverter-ac-golden.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-inverter-ac-golden.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-split-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5dbb7aefe6476ce868116f72242e187c3da14645e5e15d44d729a7ce16c5143f.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-split-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-split-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "kelvinator-2-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\622555346fb20f6f6b79a2a9d0228d1186ad4f4da4f71376a0959d0a82a0895c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Kelvinator/kelvinator-2-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "kelvinator",
+        "folderBrandName": "Kelvinator",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lg-1-5-ton-dual-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a7cde8200323f8b344ed22686467cebc5780cdf176f1e22cfc69c163db4a09b5.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/LG/lg-1-5-ton-dual-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/LG/lg-1-5-ton-dual-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "lg",
+        "folderBrandName": "LG",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lg-2-ton-dual-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\62d79ef9374b9a9c09a8378ba05addb2b39fab9c240393e80b3affdd14da2815.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/LG/lg-2-ton-dual-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/LG/lg-2-ton-dual-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "lg",
+        "folderBrandName": "LG",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\515c438d44f7ce38942da4c83a51917c172d9bfbc0d4e9fbacf378383524c864.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\777364a4023b142b6e6e5e6047c279a1b126f480ac5c695ae746717c6995126c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f1df349f162061b05bb87f6faa5eea0e8f928fb53ced2b0efc3cb7c3ffff765d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\61d505db0edc49e547e5391611a1858ba5bde5694277882695fb2d64e68cfd42.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-1-ton-portable-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c154006983c6966aca863d747fa6f3f49b0eca5dec63b0178f3b080d303b7319.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-1-ton-portable-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-1-ton-portable-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\693dedb2fa0467e6ae5028539ccb0fcde207029526b37ffd8703e1c345f1dc14.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "midea-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9d5a3b00a9e39583b5b10873755e8ea273218c59c84e1f219637022f072ca044.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Midea/midea-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Midea/midea-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "midea",
+        "folderBrandName": "Midea",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\48a99440e7d14fcbb01e3d2e272fc9e384a055dc2ac8b8ab6a963ede9e6be8c7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Panasonic/panasonic-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Panasonic/panasonic-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-1-5-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c02d87bb881ccf07989ce170738aad2a596031912839e2ff459b578a69d6ba13.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Panasonic/panasonic-1-5-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Panasonic/panasonic-1-5-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "panasonic-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8eea311fd05738eaeac23ee93288df665b01b18870bfac1c5bfbe488cc467ae1.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Panasonic/panasonic-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Panasonic/panasonic-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "panasonic",
+        "folderBrandName": "Panasonic",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4cb90f8b30658489329c260c77ca603c37f07375013fdee2092e0f67aa616a70.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-1-5-ton-inverter-ac-ar18tvhydwkufe",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6b7e68912b30c056145dfb5afab6ce7fdae72500741b510ff64dbb4eaf3fa6cb.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-1-5-ton-inverter-ac-ar18tvhydwkufe.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-1-5-ton-inverter-ac-ar18tvhydwkufe.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b2d75c51c096c39f5ecb0fe06ec642d355502ac2084afdbd580e0302783e89cf.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-1-ton-inverter-ac-ar12cvfyawkufe",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\69b0631f5e4b5360fc4e91700476a50ac21f54619b40c0361c28aaeb64200241.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-1-ton-inverter-ac-ar12cvfyawkufe.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-1-ton-inverter-ac-ar12cvfyawkufe.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9781f5f195089ca7544a84328f32d4a2a01acba30cc4216ff98105692d4dd317.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "samsung-2-ton-inverter-ac-ar24tvhydwkufe",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce63e7c7da9fa96c1f360eebc5ad65543c8249f65458c632c45f17664e807fcd.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Samsung/samsung-2-ton-inverter-ac-ar24tvhydwkufe.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Samsung/samsung-2-ton-inverter-ac-ar24tvhydwkufe.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "samsung",
+        "folderBrandName": "Samsung",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9297620fb9ea77eaaba99d4725744ffca451df3cc6933ff02e45c9fa061db0a2.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Sharp/sharp-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Sharp/sharp-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "sharp",
+        "folderBrandName": "Sharp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1eaffd827edd074e056831b63f5013c0fff47eeea8a869d4bdf1176a5c5c0681.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Sharp/sharp-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Sharp/sharp-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "sharp",
+        "folderBrandName": "Sharp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "sharp-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8038d544527b5853a1440e3b18b0edadc4933faa86e84179a7a89f93c06d80a0.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Sharp/sharp-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Sharp/sharp-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "sharp",
+        "folderBrandName": "Sharp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c0b59eb7a2a0edccb2c2509fb91d643701fd5ff24dee649735024df3bf470adc.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SINGER/singer-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SINGER/singer-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\dc9388c9b2e90938f6686cc55167ad309aded660e43bd0a2b0ef50ac8b972a7c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SINGER/singer-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SINGER/singer-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "singer-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e62021c5ece33c7c7fc7dee8431c3000efc3060e7d1c8044fc588033723b3cee.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SINGER/singer-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SINGER/singer-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "singer",
+        "folderBrandName": "SINGER",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\171897c71c712e2961b68a88993dec25b82508f504913787e11dd0f3b335238c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3aadde302d2625dd570995d6af3cefc7635ac7aa30cb3361fefe8f9a16f31df0.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\13360e3722f2891dae55424e5e4df13bdf04098ad91cc9038e0049a0dca59483.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\50ea01bd80cc47e3c21d73d57fa08d2b9f7304de2fc6198c53b930b284c19801.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\81bb852c34411d3e11b98065ecab54b02354d2772621e827d1e914dfa3d07c47.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "smart-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f11471a732cdce82dad29603dd352c5a6b9aae4dde803af2e8f240e8195fae83.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/SMART/smart-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/SMART/smart-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "smart",
+        "folderBrandName": "Smart",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\efe8905c5a8da9217de5b2450179731182d33ac3e3e12d2aa99ba95a3c805acf.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-1-5-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\45edb9c456d47d857fa03c908a8f9c670d813382a53aea776ce0bd98ab657c8c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-1-5-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-1-5-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bd847ac24dbfa68b7620ba22b6bf7a3cac13aa8063e87a0f77df180ff7e64d37.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-1-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c67d5e9b3f8083f63269ca8bda169cd4b73f89d5e8fbc59b3000c64899c43d3c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-1-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-1-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\830f83d9c9b6ab46eb8eccb6acc6f32fc8830e04bfb229b763cd9e527ebe822d.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "tcl-2-ton-wifi-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\836eb76f1f9fec66c030bd7e92a8c060c6b8b782e292a5eb9b9d5641d3bb5677.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/TCL/tcl-2-ton-wifi-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/TCL/tcl-2-ton-wifi-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "tcl",
+        "folderBrandName": "TCL",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-1-25-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\027ad9a292016a5490bbfafa2ed9227ea5630764df23283e9d25cb155522c469.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-1-25-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-1-25-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-1-5-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\195f5dc2f68d9c694d14b9a63f7429c9e2c18e90becd3d096d800b20b9f70e72.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-1-5-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-1-5-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-1-5-ton-inverter-ac-frost-clean",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\acc8b2fe56b6a31480732bf4541c444d4180aa8f01e9434e86bccefdf7c4fe0c.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-1-5-ton-inverter-ac-frost-clean.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-1-5-ton-inverter-ac-frost-clean.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-1-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1c4e488b9bff49e6c25ec309f9b6eca48f30cd290d71809e4838411417d747fa.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-1-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-1-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-1-ton-inverter-ac-frost-clean",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bdba9468d068b54781fdbc3522b9488ba70929f8c9425d25054e26399d0a86f2.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-1-ton-inverter-ac-frost-clean.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-1-ton-inverter-ac-frost-clean.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-2-ton-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0567ec50fac8d6a7c9237e10be45a0884ee640ee405c895f6dabe4dd3ad896f7.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-2-ton-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-2-ton-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "walton-2-ton-inverter-ac-frost-clean",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\738474c782b81b0c7e26ae5a498f5f1b9b26cd00653109858fbda77d75cf9aa8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Walton/walton-2-ton-inverter-ac-frost-clean.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Walton/walton-2-ton-inverter-ac-frost-clean.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "walton",
+        "folderBrandName": "Walton",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-1-5-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\79c011c498d4de872da9ca673c5ac659be158d57a4ec100e43cff3d113160f25.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Xiaomi/xiaomi-1-5-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Xiaomi/xiaomi-1-5-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "xiaomi",
+        "folderBrandName": "Xiaomi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-1-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\09a4d16b722dd427d7571ab3a8972f7aab5fba1a5fdea0040b32ce81e67641ee.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Xiaomi/xiaomi-1-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Xiaomi/xiaomi-1-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "xiaomi",
+        "folderBrandName": "Xiaomi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "xiaomi-2-ton-non-inverter-ac",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\57a1fc4148f303a210c9cc09a35451b42617701e761b03319776561f6f441cc8.html'",
+    "sourceImages": [
+      "/images/products/appliance/ac/Xiaomi/xiaomi-2-ton-non-inverter-ac.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/appliance/ac/Xiaomi/xiaomi-2-ton-non-inverter-ac.png",
+        "categorySlug": "appliance",
+        "categoryName": "Appliance",
+        "subcategorySlug": "ac",
+        "subcategoryName": "AC",
+        "folderBrandSlug": "xiaomi",
+        "folderBrandName": "Xiaomi",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]

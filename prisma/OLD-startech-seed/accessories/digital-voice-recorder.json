@@ -1,0 +1,3368 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790510664,
+    "signature": "d7ce95563e8ec33a7f13b11657df8fac729202a37d9dfc3029811775c9b99897"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": "/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Digital Voice Recorder",
+      "slug": "digital-voice-recorder",
+      "parentSlug": "accessories",
+      "image": "/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png",
+      "isActive": true,
+      "sortOrder": 7,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Boya",
+      "slug": "boya",
+      "logo": null
+    },
+    {
+      "name": "PHILIPS",
+      "slug": "philips",
+      "logo": null
+    },
+    {
+      "name": "Sony",
+      "slug": "sony",
+      "logo": null
+    },
+    {
+      "name": "Zoom",
+      "slug": "zoom",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Boya Notra AI Voice Recorder",
+      "slug": "boya-notra-ai-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-49246",
+      "description": "<h2>Boya Notra AI Voice Recorder</h2><p>The <strong>Boya Notra AI Voice Recorder</strong> is a powerful, pocket-sized device designed for professionals and creators. It supports three recording modes. They are ambient, phone call, and Bluetooth. With 64 GB local storage plus unlimited cloud, it ensures your files are always accessible. Equipped with two MEMS microphones and one VPU, it captures audio clearly within a 10-meter range. AI-powered noise cancellation reduces background sounds by up to -30 dB. The Boya Notra AI Voice Recorder offers seamless file transfer via Bluetooth, Wi-Fi, and USB-C. Its 24-hour battery life and 365-day standby make it a reliable recording companion.</p><h3>Advanced AI Integration</h3><p>The Boya Notra AI Voice Recorder works with leading AI models including ChatGPT, Claude, Gemini, and Grok. This integration transforms spoken words into accurate transcripts, summaries, and mind maps. With support for 140+ languages, it adapts to global communication needs. One-press highlighting allows quick capture of key moments during meetings or lectures. The Boya Notra AI Voice Recorder also provides 60+ templates for structured notes, tasks, and reports. Its ASK AI feature lets you query information instantly, enhancing productivity. This smart functionality ensures you stay focused on conversations instead of manual note-taking.</p><h3>Superior Recording and Sharing</h3><p>The Boya Notra AI Voice Recorder delivers clear audio with its AI noise cancellation engine, cutting distractions like typing or air conditioning. Ambient mode is excellent for lectures or interviews, while Bluetooth mode captures earbud audio effortlessly. Recordings transfer quickly to the app or web, ensuring easy access and review. Export options include MP3, WAV, TXT, DOCX, PDF, Markdown, and JPEG. The Boya Notra AI Voice Recorder protects privacy with strong encryption and secure authentication. Even if misplaced, your recordings remain safe in your account. This ensures peace of mind for professionals handling sensitive information.</p><h3>Compact Design and Battery Power</h3><p>Smaller than a credit card, the Boya Notra AI Voice Recorder is crafted from microblasted aluminum alloy. It feels light yet solid, staying cool during long sessions. Available in timeless black and silver, or vibrant cosmic orange and purple, it suits every style. Its magnetic attachment is MagSafe-compatible, snapping onto phones, laptops, or whiteboards with ease. Charging via USB-C takes only two hours for a full cycle. With 24 hours of continuous recording and 365 days of standby, the Boya Notra AI Voice Recorder ensures uninterrupted performance. This blend of portability and endurance makes it a smart work partner.</p><h2>Buy Boya Notra AI Voice Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Boya Notra AI Voice Recorder</strong> from Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/boya-digital-voice-recorder\" target=\"\">Boya Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Boya Notra AI Voice Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Notra</li><li>Microphones: 2 MEMS + 1 VPU</li><li>Recording Mode: Ambient, Phone Call, Bluetooth</li><li>Supported AI Models: ChatGPT, Claude, Gemini, Grok</li><li>Storage: 64 GB Local + Unlimited Cloud</li></ul>",
+      "model": "Notra",
+      "warranty": "No Warranty",
+      "basePrice": 16500.0,
+      "originalPrice": 17800.0,
+      "currency": "BDT",
+      "weight": 0.045,
+      "dimensions": {
+        "length": 63.0,
+        "width": 63.0,
+        "height": 6.8,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Boya",
+      "variantOptions": [
+        {
+          "name": "Microphone Type",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 MEMS + 1 VPU",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Switch",
+          "position": 1,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Noise/Signal",
+          "position": 2,
+          "values": [
+            {
+              "value": "Noise Cancellation: Yes (AI-powered, up to -30 dB)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Dimension",
+          "position": 3,
+          "values": [
+            {
+              "value": "63 × 63 × 6.8 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight",
+          "position": 4,
+          "values": [
+            {
+              "value": "45 g",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 5,
+          "values": [
+            {
+              "value": "Bluetooth, Wi-Fi, USB-C",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 6,
+          "values": [
+            {
+              "value": "Up to 24 hours recording",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 7,
+          "values": [
+            {
+              "value": "Magnetic Attachment Yes (MagSafe-compatible)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "PC",
+          "position": 8,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Smartphone",
+          "position": 9,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 10,
+          "values": [
+            {
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49246",
+          "price": 16500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Microphone Type": "2 MEMS + 1 VPU",
+            "Switch": "Yes",
+            "Noise/Signal": "Noise Cancellation: Yes (AI-powered, up to -30 dB)",
+            "Dimension": "63 × 63 × 6.8 mm",
+            "Weight": "45 g",
+            "Connector": "Bluetooth, Wi-Fi, USB-C",
+            "Battery": "Up to 24 hours recording",
+            "Others": "Magnetic Attachment Yes (MagSafe-compatible)",
+            "PC": "Yes",
+            "Smartphone": "Yes",
+            "Warranty": "No Warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 15840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Microphone Type",
+              "value": "2 MEMS + 1 VPU",
+              "position": 0
+            },
+            {
+              "label": "Switch",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Noise/Signal",
+              "value": "Noise Cancellation: Yes (AI-powered, up to -30 dB)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "63 × 63 × 6.8 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "45 g",
+              "position": 1
+            },
+            {
+              "label": "Connector",
+              "value": "Bluetooth, Wi-Fi, USB-C",
+              "position": 2
+            },
+            {
+              "label": "Battery",
+              "value": "Up to 24 hours recording",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Magnetic Attachment Yes (MagSafe-compatible)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 2,
+          "items": [
+            {
+              "label": "PC",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Smartphone",
+              "value": "Yes",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/boya-notra-ai-voice-recorder",
+      "sourceProductCode": "49246",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Notra",
+        "Microphones: 2 MEMS + 1 VPU",
+        "Recording Mode: Ambient, Phone Call, Bluetooth",
+        "Supported AI Models: ChatGPT, Claude, Gemini, Grok",
+        "Storage: 64 GB Local + Unlimited Cloud"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/boya/boya-notra-ai-voice-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "boya",
+          "folderBrandName": "Boya",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "boya-notra-ai-voice-recorder",
+        "candidateTitle": "Boya Notra AI Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "boya"
+    },
+    {
+      "name": "Philips DVT1160 Digital Voice Recorder",
+      "slug": "philips-dvt1160-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-50815",
+      "description": "<h2>Philips DVT1160 Digital Voice Recorder</h2><p>The Philips <strong>DVT1160</strong> Digital Voice Recorder is designed for professionals, students, and everyday note-takers. This <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Voice Recorder</a> offers 8GB of built-in NAND Flash memory supporting up to 48 hours in HQ mode, 150 hours in SP mode, and 590 hours in LP mode. Three recording formats are available including WAV with ADPCM and PCM encoding for flexible audio quality and file size management. </p><p>HQ mode records at 384 kbps with a 24kHz sample rate, while SP and LP modes use 128 kbps and 32 kbps respectively. The Philips Digital Voice Recorder features a single built-in microphone channel with selectable high and low sensitivity settings for different recording environments. The Philips DVT1160 Digital Voice Recorder has voice-activated recording starts and stops automatically based on detected sound, conserving storage and battery life intelligently. </p><p>Instant one-touch recording lets you capture important moments without navigating through complicated menus or settings. The Philips Voice Recorder plays back audio through a 28mm round speaker delivering 1W output power for clear, audible playback. The <strong>Philips DVT1160</strong> Voice Recorder has a 3.5mm headphone jack connects standard earphones for private listening during playback sessions. </p><p>A 33mm segment LCD display shows recording status, remaining time, real-time clock, and file information clearly during operation. Useful playback features include variable playback speed, A-B repeat, file lock, and up to 10 index markers per recording. Keypad lock prevents accidental button presses during recording or transport, ensuring sessions stay uninterrupted. </p><p>The Philips DVT1160 Digital Voice Recorder runs on two included AAA batteries delivering up to 44 hours of continuous battery life. High-speed USB 2.0 connectivity enables fast file transfer to Windows 10, Windows 8, Windows 7, and macOS computers. USB mass storage compatibility means no additional software is needed for basic file access and management.</p><h2>Buy Philips DVT1160 Digital Voice Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Philips DVT1160 Digital Voice Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/philips-digital-voice-recorder\" target=\"\">Philips Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Philips DVT1160 Digital Voice Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DVT1160</li><li>Voice-activation function, Optimized for Notes</li><li>Time-Stamped Recording, Real-Time Clock</li><li>Built in 8GB NAND Flash Memory, File lock</li><li>Instant One-Touch Recording, Keypad lock</li></ul>",
+      "model": "DVT1160",
+      "warranty": "no warranty",
+      "basePrice": 9500.0,
+      "originalPrice": 12000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "PHILIPS",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "DVT1160",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50815",
+          "price": 9500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "DVT1160"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DVT1160",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/philips-dvt1160-digital-voice-recorder",
+      "sourceProductCode": "50815",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DVT1160",
+        "Voice-activation function, Optimized for Notes",
+        "Time-Stamped Recording, Real-Time Clock",
+        "Built in 8GB NAND Flash Memory, File lock",
+        "Instant One-Touch Recording, Keypad lock"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1160-digital-voice-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/philips/philips-dvt1160-digital-voice-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1160-digital-voice-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1160-digital-voice-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "philips",
+          "folderBrandName": "Philips",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "philips-dvt1160-digital-voice-recorder",
+        "candidateTitle": "Philips DVT1160 Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "philips"
+    },
+    {
+      "name": "Philips DVT1170 Digital Voice Recorder",
+      "slug": "philips-dvt1170-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-51106",
+      "description": "<h2>Philips DVT1170 Digital Voice Recorder</h2><p>The Philips <strong>DVT1170</strong> Digital Voice Recorder for capturing interviews, conversations, or meetings, it ensures great sound quality. This <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Voice Recorder</a> features a high-quality 360° microphone for excellent, clear sound quality. It captures audio in uncompressed WAV format, perfect for interviews, memos, and meetings. The Philips DVT1170 Voice Recorder includes audio scene presets that optimize settings automatically for any environment. </p><p>These scenes cover memo, meeting, and music recording modes for versatile use. Voice-activated recording allows hands-free operation, starting and stopping automatically based on sound. Time-stamped files make organizing and navigating recordings quick and effortless. This Philips Digital Voice Recorder offers one-touch operation, letting you start recording instantly. With 8GB of internal memory, you can record extended sessions without interruption. The microSD card slot supports expansion up to 128GB for additional storage. Battery runtime is impressive, offering up to 70 hours using two AAA batteries. </p><p>The Philips DVT1170 Digital Voice Recorder features a 1.34-inch segment LCD screen for easy viewing. Connectivity includes a 3.5mm headphone jack, microphone socket, and USB Type-C port. Recording quality options include 384 kbps and 1536 kbps for flexible audio needs. The built-in oval speaker delivers 1W output with a wide frequency response. Additional conveniences include keypad lock, variable playback speed, and real-time clock display. </p><p>Bookmark functions allow up to ten markers per file for easy navigation. File repeat and A-B repeat features add further playback flexibility and control. This Philips Voice Recorder works seamlessly with Windows and macOS operating systems. Its silver design feels compact, portable, and professional for everyday use. The Philips DVT1170 Voice Recorder suits students, professionals, and journalists needing dependable audio capture.</p><h2>Buy Philips DVT1170 Digital Voice Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Philips DVT1170 Digital Voice Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/philips-digital-voice-recorder\" target=\"\">Philips Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Philips DVT1170 Digital Voice Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DVT1170</li><li>High-Quality 360° Microphone</li><li>Clear voice recording in WAV format</li><li>8GB of Internal Memory, One-Touch Operation</li><li>microSD card slot up to 128GB for expanded capacity</li></ul>",
+      "model": "DVT1170",
+      "warranty": "no warranty",
+      "basePrice": 10500.0,
+      "originalPrice": 13000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "PHILIPS",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "DVT1170",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51106",
+          "price": 10500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "DVT1170"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 10080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DVT1170",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/philips-dvt1170-digital-voice-recorder",
+      "sourceProductCode": "51106",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DVT1170",
+        "High-Quality 360° Microphone",
+        "Clear voice recording in WAV format",
+        "8GB of Internal Memory, One-Touch Operation",
+        "microSD card slot up to 128GB for expanded capacity"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1170-digital-voice-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/philips/philips-dvt1170-digital-voice-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1170-digital-voice-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1170-digital-voice-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "philips",
+          "folderBrandName": "Philips",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "philips-dvt1170-digital-voice-recorder",
+        "candidateTitle": "Philips DVT1170 Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "philips"
+    },
+    {
+      "name": "Philips DVT1600 Digital VoiceTracer Audio Recorder Pen",
+      "slug": "philips-dvt1600-audio-recorder-pen",
+      "type": "PHYSICAL",
+      "sku": "ST-52107",
+      "description": "<h2>Philips DVT1600 Digital VoiceTracer Audio Recorder Pen</h2><p>The Philips <strong>DVT1600 </strong>Digital VoiceTracer Audio Recorder Pen is a sleek and portable device designed for clear and reliable audio capture. Featuring an omnidirectional microphone with one‑click recording, this Philips Voice Recorder Pen makes it simple to record lectures, meetings, interviews, and personal notes with professional clarity. Delivering high‑quality audio at 512 kbps bit rate and 16 kHz sample rate, the Philips Audio Recording Pen stores recordings in PCM (WAV) format for uncompromised sound quality. With up to 129 hours of recording time and 32 GB of built‑in storage, the Philips DVT1600 Digital VoiceTracer Pen provides ample space for long sessions without worrying about memory limits. Equipped with a built‑in rechargeable battery and Type‑C charging, the Philips DVT1600 Recorder Pen ensures convenience and long‑lasting performance. Compact and lightweight, it is easy to carry, making it a practical tool for professionals, students, and anyone who needs dependable voice recording on the go. Combining portability, advanced recording quality, and user‑friendly design, the Philips DVT1600 Digital VoiceTracer Audio Recorder Pen is an excellent choice for those seeking a reliable and modern Philips Voice Recorder Pen with professional functionality.</p><h2>Buy Philips DVT1600 Digital VoiceTracer Audio Recorder Pen from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Philips DVT1600 Digital VoiceTracer Audio Recorder Pen</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/philips-digital-voice-recorder\">Philips Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Deshi Plus Shop</a> to get yours at lowest price. The Philips DVT1600 Digital VoiceTracer Audio Recorder Pen comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DVT1600</li><li>Omnidirectional Microphone; One Click Recording</li><li>Bit Rate: 512kbps; Sample Rate: 16 kHz</li><li>Recording Time: Up to 129 Hours</li><li>Storage: 32 GB; Built in Battery; Type-C Charging</li></ul>",
+      "model": "DVT1600",
+      "warranty": "no warranty",
+      "basePrice": 12000.0,
+      "originalPrice": 14500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "PHILIPS",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "DVT1600",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Bit Rate",
+          "position": 1,
+          "values": [
+            {
+              "value": "512kbps; Sample Rate: 16 kHz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Recording Time",
+          "position": 2,
+          "values": [
+            {
+              "value": "Up to 129 Hours",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 3,
+          "values": [
+            {
+              "value": "32 GB; Built in Battery; Type-C Charging",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52107",
+          "price": 12000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "DVT1600",
+            "Bit Rate": "512kbps; Sample Rate: 16 kHz",
+            "Recording Time": "Up to 129 Hours",
+            "Storage": "32 GB; Built in Battery; Type-C Charging"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DVT1600",
+              "position": 0
+            },
+            {
+              "label": "Bit Rate",
+              "value": "512kbps; Sample Rate: 16 kHz",
+              "position": 1
+            },
+            {
+              "label": "Recording Time",
+              "value": "Up to 129 Hours",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "32 GB; Built in Battery; Type-C Charging",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/philips-dvt1600-audio-recorder-pen",
+      "sourceProductCode": "52107",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DVT1600",
+        "Omnidirectional Microphone; One Click Recording",
+        "Bit Rate: 512kbps; Sample Rate: 16 kHz",
+        "Recording Time: Up to 129 Hours",
+        "Storage: 32 GB; Built in Battery; Type-C Charging"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1600-audio-recorder-pen.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/philips/philips-dvt1600-audio-recorder-pen.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1600-audio-recorder-pen.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt1600-audio-recorder-pen.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "philips",
+          "folderBrandName": "Philips",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "philips-dvt1600-audio-recorder-pen",
+        "candidateTitle": "Philips DVT1600 Digital VoiceTracer Audio Recorder Pen"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "philips"
+    },
+    {
+      "name": "Philips DVT2075 Digital Voice Recorder",
+      "slug": "philips-dvt2075-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-51108",
+      "description": "<h2>Philips DVT2075 Digital Voice Recorder</h2><p>The Philips <strong>DVT2075</strong> Digital Voice Recorder is a professional-grade stereo recording device built for interviews, meetings, dictation, and high-quality audio capture. This <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Voice Recorder</a> features dual high-sensitivity built-in stereo microphones that capture a true stereo field with clean, accurate sound across dynamic recording environments. Recording formats include MP3 at 64, 128, and 192 kbps and lossless PCM WAV at 1536 kbps with 48kHz/16-bit quality for versatile audio output flexibility. </p><p>Four audio scene presets covering Memo, Meeting, Music, and Personal automatically optimize recording settings to match each specific environment and use case. The Philips DVT2075 Digital Voice Recorder has a Personal scene allows custom file format configuration to suit individual recording preferences and workflows precisely. The Philips Digital Voice Recorder includes 8GB of built-in NAND Flash memory supporting up to 270 hours of MP3 recording at 64 kbps or 11 hours of lossless PCM recording. </p><p>A microSD card slot expands storage capacity up to 128GB for virtually unlimited recording duration during extended assignments. A built-in rechargeable 700mAh Li-ion polymer battery delivers up to 35 hours of recording time and fully recharges in just 2 hours via USB-C. The Philips DVT2075 Voice Recorder has Voice-activated recording starts and stops automatically based on detected sound, conserving battery and storage during silent periods. Instant one-touch recording activates by pressing and holding the record button for immediate hands-free capture without menu navigation. </p><p>The Philips Voice Recorder features a 36mm color LCD display with 128×128 pixel resolution showing recording status, remaining time, and real-time clock information. An oval 20×30mm speaker with 1W output power delivers clear, audible playback during file review sessions. Bookmarks support up to 10 markers per file, while auto-divide, A-B repeat, file repeat, and variable playback speed add comprehensive playback management. </p><p>A 3.5mm headphone jack and 3.5mm stereo microphone input expand connectivity for private listening and external microphone use. The Philips DVT2075 Digital Voice Recorder has high-speed USB-C and USB mass storage enable fast file transfer to Windows and macOS computers. Sembly AI Notes software integration turns recordings into accurate transcripts and summaries significantly faster than manual typing.</p><h2>Buy Philips DVT2075 Digital Voice Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Philips DVT2075 Digital Voice Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/philips-digital-voice-recorder\" target=\"\">Philips Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Philips DVT2075 Digital Voice Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DVT2075</li><li>Dual high-sensitivity microphones, Sembly AI Notes</li><li>High-Sensitivity Stereo Mics, One-Touch Recording</li><li>8GB Internal Memory, microSD Card Slot</li><li>Up to 35 Hours of Battery Life, Audio Scene Presets</li></ul>",
+      "model": "DVT2075",
+      "warranty": "no warranty",
+      "basePrice": 11500.0,
+      "originalPrice": 14000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "PHILIPS",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "DVT2075",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51108",
+          "price": 11500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "DVT2075"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DVT2075",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/philips-dvt2075-digital-voice-recorder",
+      "sourceProductCode": "51108",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DVT2075",
+        "Dual high-sensitivity microphones, Sembly AI Notes",
+        "High-Sensitivity Stereo Mics, One-Touch Recording",
+        "8GB Internal Memory, microSD Card Slot",
+        "Up to 35 Hours of Battery Life, Audio Scene Presets"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt2075-digital-voice-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/philips/philips-dvt2075-digital-voice-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/philips/philips-dvt2075-digital-voice-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/philips/philips-dvt2075-digital-voice-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "philips",
+          "folderBrandName": "Philips",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "philips-dvt2075-digital-voice-recorder",
+        "candidateTitle": "Philips DVT2075 Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "philips"
+    },
+    {
+      "name": "Sony ICD-PX240 4GB Digital Voice Recorder",
+      "slug": "sony-icd-px240-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-11524",
+      "description": "<h2><span style=\"font-weight: bold;\">Sony ICD-PX240 4GB Digital Voice Recorder</span></h2><p style=\"text-align: justify; \">Sony ICD-PX240 Digital Voice Recorder is built in 4GB Memory and Monaural Microphone. This voice recorder has AAA x2 type battery, Dry Battery ( Alkaline, Size AAA ), MP3 playback and recording format. In this voicer recorder, Record MP3 audio and play it back through a 300mW speaker, Long battery life enables up to 32hrs recording (MP3 8kbps), 4GB of memory lets you store up to 1043hrs (MP3 8kbps). This voice recorder has Headphone Jack, Microphone In, USB Port interface.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ICD-PX240</li><li>Interface: Headphone Jack, Microphone, USB Port</li><li>File System: Move, Divide</li><li>Memory: 4GB</li><li>Audio format: MP3</li></ul>",
+      "model": "ICD-PX240",
+      "warranty": null,
+      "basePrice": 5600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "ICD-PX240",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "Headphone Jack, Microphone, USB Port",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "File System",
+          "position": 2,
+          "values": [
+            {
+              "value": "Move, Divide",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 3,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Audio format",
+          "position": 4,
+          "values": [
+            {
+              "value": "MP3",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-11524",
+          "price": 5600.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "ICD-PX240",
+            "Interface": "Headphone Jack, Microphone, USB Port",
+            "File System": "Move, Divide",
+            "Memory": "4GB",
+            "Audio format": "MP3"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5376.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ICD-PX240",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "Headphone Jack, Microphone, USB Port",
+              "position": 1
+            },
+            {
+              "label": "File System",
+              "value": "Move, Divide",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "4GB",
+              "position": 3
+            },
+            {
+              "label": "Audio format",
+              "value": "MP3",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-icd-px240-digital-voice-recorder",
+      "sourceProductCode": "11524",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ICD-PX240",
+        "Interface: Headphone Jack, Microphone, USB Port",
+        "File System: Move, Divide",
+        "Memory: 4GB",
+        "Audio format: MP3"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px240-digital-voice-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-icd-px240-digital-voice-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px240-digital-voice-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px240-digital-voice-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-icd-px240-digital-voice-recorder",
+        "candidateTitle": "Sony ICD-PX240 4GB Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Sony ICD-PX370 4GB Digital Voice Recorder",
+      "slug": "sony-icd-px370-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-20839",
+      "description": "<h2><span style=\"font-weight: bold;\">Sony ICD-PX370 4GB Digital Voice Recorder</span></h2><p style=\"text-align: justify; \">Sony ICD-PX370 Record MP3 comes with 4GB Memory Stores, MP3 128 kbps Stereo, Stereo 3.5mm Input &amp; output. This Voice Recorder featured with Dry Battery type (Provided) AAA x 2, Built-in Microphone, Monaural, Calendar Search, Maximum files (total) 5000, Maximum files per folder 199, Menu Language English / Spanish / French, PC Connectivity, Playback Format MP3, Recording Format MP3. With this Digital Voice Recorder you can Record MP3 audio quickly and simply. In this Digital Voice Recorder, it's Long battery life enables up to 57 hrs recording (MP3 128 kbps stereo). It helps to Optimized Voice Rec reduces ambient noise for clearer recordings. The Scene Select lets you optimize settings for music, meetings, and so many things. The Sony ICD-PX370 has A-B Repeat, Digital Pitch Control (Speed Control), Digital Voice Up, Divide, Easy Search, Erase, File Copy, Move File, Noise Cut, Protect, Track Mark Playback &amp; Edit options.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ICD-PX370</li><li>MP3 128 kbps Stereo, Stereo 3.5mm Input &amp; output</li><li>Record MP3 audio quickly and simply</li><li>Dry Battery, 4GB Memory Stores</li><li>Built-in Monaural Microphone</li></ul>",
+      "model": "ICD-PX370",
+      "warranty": null,
+      "basePrice": 6000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "ICD-PX370",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20839",
+          "price": 6000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "ICD-PX370"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ICD-PX370",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-icd-px370-digital-voice-recorder",
+      "sourceProductCode": "20839",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ICD-PX370",
+        "MP3 128 kbps Stereo, Stereo 3.5mm Input & output",
+        "Record MP3 audio quickly and simply",
+        "Dry Battery, 4GB Memory Stores",
+        "Built-in Monaural Microphone"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px370-digital-voice-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-icd-px370-digital-voice-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px370-digital-voice-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px370-digital-voice-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-icd-px370-digital-voice-recorder",
+        "candidateTitle": "Sony ICD-PX370 4GB Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Sony ICD-PX470 4GB Digital Voice Recorder",
+      "slug": "sony-icd-px470-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-11527",
+      "description": "<h2>Sony ICD-PX470 4GB Digital Voice Recorder</h2><p style=\"\">Sony ICD-PX470 Digital Voice Recorder comes with 4GB memory, which gives you a max recording time of 59h35m when recording in stereo at MP3 128kbps, and also expand your memory capacity with a micro SD card for up to 32GB of additional memory equivalent to over 536 hours (Micro SD 32GB MP3 128kbps) of recording time.. This Voice recorder has a USB direct connection for quick file transfer, which helps you to transfer files to or from your computer is fast and convenient. Just plug the ICD-PX470 straight into a free USB port for an immediate connection, and no USB cable is needed. In this voice recorder, the recordings are marked by date, so you can easily find which ones were made on a specific day. Bring up the calendar to browse through days and find the recording you're looking for. This voice recorder has a low-cut filter to eliminate unwanted noise. In this voice recorder, the Auto Voice Recording reduces background noise, and it has an adjustable microphone range for clearer voices. This Sony voice recorder also built-in mic at MP3 192/128kbps, the supplied AAA battery will last for up to 55 hours. That's over two full days of non-stop recording in between battery changes, perfect for recording at long conferences and events. The Sony ICD-PX470 4GB Digital Voice Recorder has No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Sony ICD-PX470</li><li>USB Direct Connection (built-in)</li><li>Micro SD card slot</li><li>Low Cut Filter</li><li>Calendar Search</li></ul>",
+      "model": "Sony ICD-PX470",
+      "warranty": null,
+      "basePrice": 12500.0,
+      "originalPrice": 15000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "Sony ICD-PX470",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-11527",
+          "price": 12500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "Sony ICD-PX470"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Sony ICD-PX470",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-icd-px470-digital-voice-recorder",
+      "sourceProductCode": "11527",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Sony ICD-PX470",
+        "USB Direct Connection (built-in)",
+        "Micro SD card slot",
+        "Low Cut Filter",
+        "Calendar Search"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px470-digital-voice-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-icd-px470-digital-voice-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px470-digital-voice-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-icd-px470-digital-voice-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-icd-px470-digital-voice-recorder",
+        "candidateTitle": "Sony ICD-PX470 4GB Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Sony PCM-A10 High-Resolution Portable Digital Voice Recorder",
+      "slug": "sony-pcm-a10-portable-linear-pcm-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-17666",
+      "description": "<h2>Sony PCM-A10 High-Resolution Portable Digital Voice Recorder</h2><p style=\"\">Sony PCM-A10 High-Resolution Portable Linear PCM Recorder can capture sound at up to 96kHz/24-bit, a serious step up from the 44.1kHz frequency and 16-bit rate of CD. Enjoy lossless audio with the clarity and dynamics that the artist intended, with FLAC playback support. It comes with 16GB of built-in memory. You can expand the internal memory using a microSDHC or microSDXC card to store more recordings. It has a built-in USB connector that lets you plug your recorder into your PC directly, for easy charging and cable-free transfer of your recordings. Record and play with absolute precision. Capture songs and sessions in better than CD sound quality and enjoy everything you've recorded in High-Resolution Audio. You can control recordings wirelessly via easy smartphone control with REC Remote. You can start and stop recordings, adjust levels and settings, and even add track marks, all using your smartphone. The REC Remote app, available on Google Play for Android or the App Store for iOS devices, lets you control your recorder wirelessly using Bluetooth technology. It features wireless playback so listen to your headphones and speakers via Bluetooth. Relive your recordings in high quality on your Bluetooth devices. The simple, one-touch connectivity of NFC technology means just a tap will connect them. It is compact and light, you can make high-quality recordings wherever you are. Capture band rehearsals, live events, or moments of inspiration. With 15 hours of battery life (in high-quality LPCM 96kHz/24-bit recording mode) you never miss a beat. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PCM-A10</li><li>Records Up to 96 kHz/24-Bit</li><li>Bluetooth Wireless Playback</li><li>3-Way Adjustable Microphone</li><li>16GB Built-In Memory</li></ul>",
+      "model": "PCM-A10",
+      "warranty": "No warranty",
+      "basePrice": 25500.0,
+      "originalPrice": 29000.0,
+      "currency": "BDT",
+      "weight": 0.082,
+      "dimensions": {
+        "length": 39.2,
+        "width": 109.5,
+        "height": 16.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "Microphone Type",
+          "position": 0,
+          "values": [
+            {
+              "value": "Built-In Stereo Pair, Mid/Side, ORTF, or X/Y Configurations",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Frequency Range",
+          "position": 1,
+          "values": [
+            {
+              "value": "LPCM: 40 Hz to 40 kHz (At 96 kHz) 40 Hz to 21 kHz (At 48 kHz) 40 Hz to 20 kHz (At 44.1 kHz) MP3: 40 Hz to 20 kHz (At 320 kb/s) 40 Hz to 18 kHz (At 192 kb/s) 40 Hz to 16 kHz (At 128 kb/s) 40 Hz to 14 kHz (At 48 kb/s)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Dimension",
+          "position": 2,
+          "values": [
+            {
+              "value": "Approx 39.2 x 109.5 x 16.0 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight",
+          "position": 3,
+          "values": [
+            {
+              "value": "Approx 82 g",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 4,
+          "values": [
+            {
+              "value": "NPUT AND OUTPUT TERMINALS: Microphone/External input jack (minijack, stereo) Headphone jack (minijack, stereo) USB connector (Type-A) High-Speed USB compatible microSD memory card slot BLUETOOTH: Communication method: Bluetooth Standard version 4.0 Maximum communication range: approx. 10 m (33 ft) Frequency band: 2.4 GHz band (2.4000 GHz - 2.4835 GHz) Compatible Bluetooth profiles: A2DP/AVRCP/SPP Supported Codec: SBC NFC: Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 5,
+          "values": [
+            {
+              "value": "Built-In Lithium Battery",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "DSLR",
+          "position": 6,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Smartphone",
+          "position": 7,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 8,
+          "values": [
+            {
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-17666",
+          "price": 25500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Microphone Type": "Built-In Stereo Pair, Mid/Side, ORTF, or X/Y Configurations",
+            "Frequency Range": "LPCM: 40 Hz to 40 kHz (At 96 kHz) 40 Hz to 21 kHz (At 48 kHz) 40 Hz to 20 kHz (At 44.1 kHz) MP3: 40 Hz to 20 kHz (At 320 kb/s) 40 Hz to 18 kHz (At 192 kb/s) 40 Hz to 16 kHz (At 128 kb/s) 40 Hz to 14 kHz (At 48 kb/s)",
+            "Dimension": "Approx 39.2 x 109.5 x 16.0 mm",
+            "Weight": "Approx 82 g",
+            "Connector": "NPUT AND OUTPUT TERMINALS: Microphone/External input jack (minijack, stereo) Headphone jack (minijack, stereo) USB connector (Type-A) High-Speed USB compatible microSD memory card slot BLUETOOTH: Communication method: Bluetooth Standard version 4.0 Maximum communication range: approx. 10 m (33 ft) Frequency band: 2.4 GHz band (2.4000 GHz - 2.4835 GHz) Compatible Bluetooth profiles: A2DP/AVRCP/SPP Supported Codec: SBC NFC: Yes",
+            "Battery": "Built-In Lithium Battery",
+            "DSLR": "Yes",
+            "Smartphone": "Yes",
+            "Warranty": "No warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 24480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Microphone Type",
+              "value": "Built-In Stereo Pair, Mid/Side, ORTF, or X/Y Configurations",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency Range",
+              "value": "LPCM: 40 Hz to 40 kHz (At 96 kHz) 40 Hz to 21 kHz (At 48 kHz) 40 Hz to 20 kHz (At 44.1 kHz) MP3: 40 Hz to 20 kHz (At 320 kb/s) 40 Hz to 18 kHz (At 192 kb/s) 40 Hz to 16 kHz (At 128 kb/s) 40 Hz to 14 kHz (At 48 kb/s)",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "Approx 39.2 x 109.5 x 16.0 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "Approx 82 g",
+              "position": 2
+            },
+            {
+              "label": "Connector",
+              "value": "NPUT AND OUTPUT TERMINALS: Microphone/External input jack (minijack, stereo) Headphone jack (minijack, stereo) USB connector (Type-A) High-Speed USB compatible microSD memory card slot BLUETOOTH: Communication method: Bluetooth Standard version 4.0 Maximum communication range: approx. 10 m (33 ft) Frequency band: 2.4 GHz band (2.4000 GHz - 2.4835 GHz) Compatible Bluetooth profiles: A2DP/AVRCP/SPP Supported Codec: SBC NFC: Yes",
+              "position": 3
+            },
+            {
+              "label": "Battery",
+              "value": "Built-In Lithium Battery",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 2,
+          "items": [
+            {
+              "label": "DSLR",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Smartphone",
+              "value": "Yes",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-pcm-a10-portable-linear-pcm-recorder",
+      "sourceProductCode": "17666",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PCM-A10",
+        "Records Up to 96 kHz/24-Bit",
+        "Bluetooth Wireless Playback",
+        "3-Way Adjustable Microphone",
+        "16GB Built-In Memory"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-pcm-a10-portable-linear-pcm-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-pcm-a10-portable-linear-pcm-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-pcm-a10-portable-linear-pcm-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-pcm-a10-portable-linear-pcm-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-pcm-a10-portable-linear-pcm-recorder",
+        "candidateTitle": "Sony PCM-A10 High-Resolution Portable Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Sony TX660 Digital Voice Recorder",
+      "slug": "sony-tx660-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ICDTX660",
+      "description": "<h2 style=\"text-align: justify; \">Sony TX660 Digital Voice Recorder</h2><p style=\"text-align: justify; \">Sony TX660 Digital Voice Recorder comes with a lightweight and ultra-thin design, Sleek, metallic design. The Sony TX660 Digital Voice Recorder has 16 GB of built-in memory, that helps to Record for a maximum of 636 hours in one go, or store up to 5,000 separate files. This Digital Voice Recorder featured with an OLED Display that is 41% larger than the ICD-TX650 Voice Recorder, so that you can keep track of your recordings and read text more easily than ever. The Sony TX660 Digital Voice Recorder has an easier-to-see recording status LED light that can be seen from above, and you can check your recording at a glance. This Digital Voice Recorder has a USB Type-C port for convenient connectivity. This Sony TX660 Digital Voice Recorder has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: ICDTX660</li><li>Model: TX660</li><li>16GB built-in memory</li><li>Sleek, metallic design</li><li>USB Type-C Connectivity</li><li>Store maximum 5000 files</li></ul>",
+      "model": "TX660",
+      "warranty": null,
+      "basePrice": 21500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "MPN",
+          "position": 0,
+          "values": [
+            {
+              "value": "ICDTX660",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Model",
+          "position": 1,
+          "values": [
+            {
+              "value": "TX660",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ICDTX660",
+          "price": 21500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "MPN": "ICDTX660",
+            "Model": "TX660"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 20640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "ICDTX660",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "TX660",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-tx660-digital-voice-recorder",
+      "sourceProductCode": "18490",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "ICDTX660",
+      "sourceKeyFeatures": [
+        "MPN: ICDTX660",
+        "Model: TX660",
+        "16GB built-in memory",
+        "Sleek, metallic design",
+        "USB Type-C Connectivity",
+        "Store maximum 5000 files"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-tx660-digital-voice-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-tx660-digital-voice-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-tx660-digital-voice-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-tx660-digital-voice-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-tx660-digital-voice-recorder",
+        "candidateTitle": "Sony TX660 Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Sony UX570F 4GB Digital Voice Recorder",
+      "slug": "sony-ux570f-digital-voice-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-37939",
+      "description": "<h2>Sony UX570F 4GB Digital Voice Recorder</h2><p>The Sony <strong>UX570F</strong> <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Voice Recorder</a> is a portable, feature-rich device that allows for smooth audio recording and playback. With its 4GB of internal memory and its microSD card slot's capacity to extend storage up to 32GB, this recorder offers plenty of room for storing recordings. For recording, it supports a variety of audio formats, including MP3 and Linear PCM; MP3 format is accessible for playback. For improved usage, the Sony UX570F Digital Voice Recorder also has helpful features, including radio recording, A-B repeat, and a recording monitor. Even in low light, effortless navigation is made possible by the crisp graphics provided by the OLED display with LCD backlight. The S-Microphone feature of the Sony UX570F Digital Voice Recorder captures faint or distant sounds with remarkable clarity, and the Auto Voice and Auto Music Recording features help to improve sound quality by lowering background noise. Through the elimination of undesirable sounds, the digital noise-canceling and noise-cut functions significantly improve audio quality. Fast and simple file transfers are ensured via USB PC connections, and the direct USB connection does away with the need for extra wires. The capacity to store up to 5,000 files, with a maximum of 199 files per folder, digital pitch control, file move and copy capabilities, and other important features round out the list. Without requiring a PC, the Sony UX570F Digital Voice Recorder also offers helpful features like file security, file division, and folder name changing. Furthermore, the UX570F is adaptable to a range of recording requirements with its sophisticated capabilities, which include calendar search, scene selection, and sync recording. For professionals in need of a dependable and user-friendly voice recorder, the Sony UX570F with its integrated lithium battery is the perfect choice.</p><h2>Buy Sony UX570F 4GB Digital Voice Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Sony UX570F 4GB Digital Voice Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/sony-digital-voice-recorder\" target=\"\">Sony Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Sony UX570F Digital Voice Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: UX570F</li><li>Record in MP3/LPCM with a high sensitivity S-Microphone</li><li>Auto Voice Recording</li><li>Built-in lithium battery</li><li>Up to 4GB of built-in storage</li></ul>",
+      "model": "UX570F",
+      "warranty": "no warranty",
+      "basePrice": 15500.0,
+      "originalPrice": 18500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Sony",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "UX570F",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37939",
+          "price": 15500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "UX570F"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "UX570F",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-ux570f-digital-voice-recorder",
+      "sourceProductCode": "37939",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: UX570F",
+        "Record in MP3/LPCM with a high sensitivity S-Microphone",
+        "Auto Voice Recording",
+        "Built-in lithium battery",
+        "Up to 4GB of built-in storage"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/sony/sony-ux570f-digital-voice-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/sony/sony-ux570f-digital-voice-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/sony/sony-ux570f-digital-voice-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/sony/sony-ux570f-digital-voice-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "sony",
+          "folderBrandName": "Sony",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-ux570f-digital-voice-recorder",
+        "candidateTitle": "Sony UX570F 4GB Digital Voice Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "sony"
+    },
+    {
+      "name": "Zoom H1 Essential 2-Track Handy Audio Recorder",
+      "slug": "zoom-h1-essential-handy-audio-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-39744",
+      "description": "<h2>Zoom H1 Essential 2-Track Handy Audio Recorder</h2><p>The Zoom <strong>H1 Essential</strong> 2-Track Handy <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Audio Recorder</a> is ideal for podcasters, musicians, and content producers. By supporting 32-bit float recording, this digital voice recorder ensures high-quality audio capture without requiring level adjustment. It can tolerate up to 120 dB thanks to its integrated X/Y microphones, which makes it appropriate for a variety of recording settings. More creative control over recordings is made possible by the <strong>Zoom H1essential</strong> which has overdubbing and playback speed adjustment features. Its vibrant OLED display makes settings and levels easily visible, and its mono mode is perfect for interviews conducted while on the road. The H1 Essential produces high-quality audio with a maximum sampling rate of 96 kHz and support for audio file formats like BWF, iXML, and WAV. For fast reference playback, it has a built-in speaker and two input channels. With compatibility for microSDXC cards up to 1TB, the Zoom H1 Essential Digital Voice Recorder offers enough of storage for prolonged recording sessions. A 3.5 mm TRS line/mic input, a 3.5 mm TRS headphone/line output, and a USB-C connection for use as a stereo audio interface are among the connectivity possibilities. Two AAA batteries can power the Zoom H1 essential portable voice recorder for up to ten hours, or it can be charged by an AC/DC power adapter or USB bus power. Its small size makes it portable and stable when mounted on a tripod. Additionally, the Zoom H1 Essential Audio Recorder has a headphone output power of 20 mW per channel into 32 ohms and plug-in power for external microphones.</p><img alt=\"Zoom H1 Essential 2-Track Handy Audio Recorder\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/microphone/zoom/h1-essential/h1-essential-00.webp\" width=\"920\"/><h2>Buy Zoom H1 Essential Handy Audio Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Zoom H1 Essential Handy Audio Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/zoom-digital-voice-recorder\" style=\"\" target=\"\">Zoom Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Zoom H1 Essential Handy Audio Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: H1 Essential</li><li>32-Bit Float: No Level Adjustment Needed</li><li>Onboard X/Y Mics Handle up to 120 dB</li><li>Mono Mode for On-The-Go Interviews</li><li>Vivid OLED Display, Function as a USB-C Microphone</li></ul>",
+      "model": "H1 Essential",
+      "warranty": "no warranty",
+      "basePrice": 15000.0,
+      "originalPrice": 18000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "H1 Essential",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "32-Bit Float",
+          "position": 1,
+          "values": [
+            {
+              "value": "No Level Adjustment Needed",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39744",
+          "price": 15000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "H1 Essential",
+            "32-Bit Float": "No Level Adjustment Needed"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "H1 Essential",
+              "position": 0
+            },
+            {
+              "label": "32-Bit Float",
+              "value": "No Level Adjustment Needed",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h1-essential-handy-audio-recorder",
+      "sourceProductCode": "39744",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: H1 Essential",
+        "32-Bit Float: No Level Adjustment Needed",
+        "Onboard X/Y Mics Handle up to 120 dB",
+        "Mono Mode for On-The-Go Interviews",
+        "Vivid OLED Display, Function as a USB-C Microphone"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h1-essential-handy-audio-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h1-essential-handy-audio-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h1-essential-handy-audio-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h1-essential-handy-audio-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h1-essential-handy-audio-recorder",
+        "candidateTitle": "Zoom H1 Essential 2-Track Handy Audio Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H2 Handy Recorder",
+      "slug": "zoom-h2-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-49270",
+      "description": "<h2>Zoom H2 Handy Recorder</h2><p>The <strong>Zoom H2 Handy Recorder</strong> delivers unmatched flexibility for creators seeking professional audio capture. With three internal microphones and selectable pickup patterns, it adapts to diverse recording needs. Offering 32-bit float recording, external mic input, and USB mic functionality, it ensures pristine sound without gain adjustments. The Zoom H2 Handy Recorder supports micro SDXC cards up to 2TB, enabling extended sessions. Powered by AA batteries, AC adapter, or USB mobile battery, it provides up to 11 hours of operation. Compact, lightweight, and creator-focused, the Zoom H2 Handy Recorder is a powerful solution for musicians, podcasters, and content producers.</p> <h3>Advanced Microphone System</h3> <p>The Zoom H2 Handy Recorder features two cardioid mics facing front and rear, plus a bi-directional mic for side capture. Users can select pickup patterns at 120°, 90°, or mono, tailoring sound to any environment. Mid-Side recording allows adjustment of stereo width during post-production, offering control over ambient noise. This microphone system ensures clear, professional audio for interviews, live performances, or studio sessions. The Zoom H2 Handy Recorder empowers creators with precision and adaptability across multiple recording scenarios.</p> <h3>Connectivity and Control</h3> <p>Equipped with a 3.5mm stereo input, the Zoom H2 Handy Recorder supports lavalier microphones, keyboards, and audio players. Simultaneous recording with internal and external sources enhances creative possibilities. A built-in mixer enables quick track-level adjustments, while the onboard speaker provides instant playback. Remote control via iOS app and Bluetooth adds convenience for mobile creators. The Zoom H2 Handy Recorder also functions as a 32-bit float USB microphone for Windows, Mac, iOS, and Android, ensuring seamless integration with digital workflows.</p> <h3>Storage and Accessibility</h3> <p>The Zoom H2 Handy Recorder supports micro SDHC and SDXC cards up to 2TB, allowing days of uninterrupted audio capture. Accessibility features include audible menu navigation for visually impaired users, with multiple language options available. A low-cut filter, auto record, pre-record, and playback speed adjustment enhance usability. The Zoom H2 Handy Recorder’s color LCD display ensures easy monitoring, while its portability makes it a reliable tool for creators worldwide. With extended battery life and high-capacity storage, it is a trusted companion for professional audio recording.</p><h2>Buy Zoom H2 Handy Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Zoom H2 Handy Recorder</strong> from Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/zoom-digital-voice-recorder\" target=\"\">Zoom Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Zoom H2 Handy Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zoom H2</li><li>Ultra-Portable Design</li><li>3 Integrated Microphones</li><li>Selectable Recording Patterns</li><li>Records to SD/SDHC Cards</li></ul>",
+      "model": "Zoom H2",
+      "warranty": "No Warranty",
+      "basePrice": 22000.0,
+      "originalPrice": 26000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Microphone Type",
+          "position": 0,
+          "values": [
+            {
+              "value": "Portable",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "values": [
+            {
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49270",
+          "price": 22000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Microphone Type": "Portable",
+            "Warranty": "No Warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 21120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Microphone Type",
+              "value": "Portable",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h2-recorder",
+      "sourceProductCode": "49270",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zoom H2",
+        "Ultra-Portable Design",
+        "3 Integrated Microphones",
+        "Selectable Recording Patterns",
+        "Records to SD/SDHC Cards"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h2-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h2-recorder",
+        "candidateTitle": "Zoom H2 Handy Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H2n Handy Recorder",
+      "slug": "zoom-h2n-handy-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-7693",
+      "description": "<h2>Zoom H2n Handy Recorder</h2>\n<div class=\"video-wrapper\"><br/></div>\n<div class=\"video-wrapper\"></div>\n<h4>THE WORKHORSE OF FIELD RECORDERS</h4>\n<h3>THE ZOOM H2N</h3>\n<h4>Handy Recorder</h4>\n<p>The H2n Handy Recorder is the only portable recording device to come with five built-in microphones and four different recording modes: X/Y, Mid-Side, 2-channel surround and 4-channel surround. Other advanced features include automatic gain control and onboard MS decoding, plus effects like compression, limiting and low cut filtering. You can even use the H2n as a multi-purpose USB microphone!  </p>\n<h3>Using the H2n</h3>\n<p>With its multiple microphones and recording modes, the H2n can handle just about every kind of application. Here are just a few ways it can be used:</p>\n<p>Live recording of concerts and rehearsals, in either stereo or surround sound</p>\n<p>Location videographyâ€”the H2n gives you plenty of options in postproduction</p>\n<p>Creating audio for YouTube videos</p>\n<p>Generating lasting audio documents of important events</p>\n<p>As a USB microphone providing input to recording software</p>\n<h3>Five microphones, four ways of recording</h3>\n<p>The H2n offers not one, not two, but five built-in microphones. Two of them are arranged as an X/Y pair, while the other three are configured in an MS (\"Mid-Side\") pattern. They can be used separately for X/Y or MS stereo recording, or combined to create stunning 2- or 4-channel surround sound. </p>\n<h3>Mid-Side for variable stereo width</h3>\n<p>Mid-Side recording is an incredible technique that allows you to actually adjust the width of the stereo image after it has been recorded, while maintaining perfect mono compatibility, making it especially useful for film, video and television projects.</p>\n<h3>X/Y for natural-sounding stereo</h3>\n<p>The X/Y technique provides a great way to cover a wide area while still capturing sound sources in the center with clarity and definition, making it perfect for all types of live stereo recording. The H2n's built-in X/Y microphone provides two matched unidirectional microphones set at a 90 degree angle relative to one another, optimum for most stereo recording applications. </p>\n<h3>Surround sound for lifelike realism</h3>\n<p>The H2n allows you to combine the signals from both the X/Y and MS microphones in order to create surround sound recordings of everything you hearâ€”not just those sounds coming from in front of you, but from all directions. </p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zoom H2n</li><li>Ultra-Portable Design</li><li>5 Integrated Microphones</li><li>4 Selectable Recording Patterns</li><li>Records to SD/SDHC Cards</li></ul>",
+      "model": "Zoom H2n",
+      "warranty": null,
+      "basePrice": 18500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "Zoom H2n",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7693",
+          "price": 18500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "Zoom H2n"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 17760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Zoom H2n",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h2n-handy-recorder",
+      "sourceProductCode": "7693",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zoom H2n",
+        "Ultra-Portable Design",
+        "5 Integrated Microphones",
+        "4 Selectable Recording Patterns",
+        "Records to SD/SDHC Cards"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2n-handy-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h2n-handy-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2n-handy-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h2n-handy-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h2n-handy-recorder",
+        "candidateTitle": "Zoom H2n Handy Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H4 Essential 4-Track Handy Audio Recorder",
+      "slug": "zoom-h4-essential-handy-audio-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-39743",
+      "description": "<h2>Zoom H4 Essential 4-Track Handy Audio Recorder</h2><p>The Zoom <strong>H4 Essential</strong> is a portable, 4-track <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">digital audio recorder</a> designed for podcasters, musicians, and content producers. By supporting 32-bit float recording, this compact audio recorder ensures clip-free audio capture and does away with the necessity for level adjustment. The onboard X/Y microphones are ideal for recording noisy environments because they can handle sound levels of up to 130 dB. With the two XLR-1/4\" TRS combo inputs with preamps that the <strong>Zoom H4essential</strong> has, users may easily connect a range of audio sources. The device's versatility is increased by its ability to operate as a 4x2 USB-C audio interface and its integrated mixer and waveform display, which offer fine control over audio levels. Because of its compact design, the Zoom H4 Essential Digital Voice Recorder is perfect for handheld use. For increased stability, it may also be put on a tripod. It can be controlled remotely using the H4essential Control App for iOS because it is compatible with the BTA-1 Bluetooth adapter. With two AA batteries, the voice recorder can run for up to 10 hours, guaranteeing uninterrupted long recording sessions. It supports microSDXC cards up to 1TB for plenty of storage and has a 2-inch monochrome OLED display for great visual feedback. The Zoom H4 Essential 4-Track Handy Audio Recorder supports BWF, iXML, and WAV audio file formats and has recording capabilities of 44.1, 48, and 96 kHz sampling rates at up to 32-bit float. A 3.5 mm line/mic input, two combo XLR-1/4\" inputs, and a 3.5 mm headphone/line output are among the many connectivity choices available. Additionally, the apparatus provides 48V phantom power for condenser microphones. Whether used for podcasting, music recording, or audio-for-video, the Zoom H4 Essential 4-Track Handy Audio Recorder offers the versatility and capabilities required for high-quality audio production.</p><img alt=\"Zoom H4 Essential 4-Track Handy Audio Recorder\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/microphone/zoom/h4-essential/h4-essential-00.webp\" width=\"920\"/><h2>Buy Zoom H4 Essential Handy Audio Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Zoom H4 Essential Handy Audio Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/zoom-digital-voice-recorder\" style=\"\" target=\"\">Zoom Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Zoom H4 Essential Handy Audio Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: H4 Essential</li><li>32-Bit Float: No Level Adjustment Needed</li><li>Onboard X/Y Mics Handle up to 130 dB</li><li>2 XLR-1/4″ TRS Combo Inputs with Preamps</li><li>Function as a 4×2 USB-C Audio Interface</li></ul>",
+      "model": "H4 Essential",
+      "warranty": "no warranty",
+      "basePrice": 25500.0,
+      "originalPrice": 30000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "H4 Essential",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "32-Bit Float",
+          "position": 1,
+          "values": [
+            {
+              "value": "No Level Adjustment Needed",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39743",
+          "price": 25500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "H4 Essential",
+            "32-Bit Float": "No Level Adjustment Needed"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 24480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "H4 Essential",
+              "position": 0
+            },
+            {
+              "label": "32-Bit Float",
+              "value": "No Level Adjustment Needed",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h4-essential-handy-audio-recorder",
+      "sourceProductCode": "39743",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: H4 Essential",
+        "32-Bit Float: No Level Adjustment Needed",
+        "Onboard X/Y Mics Handle up to 130 dB",
+        "2 XLR-1/4″ TRS Combo Inputs with Preamps",
+        "Function as a 4×2 USB-C Audio Interface"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4-essential-handy-audio-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h4-essential-handy-audio-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4-essential-handy-audio-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4-essential-handy-audio-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h4-essential-handy-audio-recorder",
+        "candidateTitle": "Zoom H4 Essential 4-Track Handy Audio Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H4n Pro 4-Track Portable Audio Recorder",
+      "slug": "zoom-h4n-pro-4-channel-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-7695",
+      "description": "<h2 style=\"text-align: justify;\"><span style=\"font-weight: 700;\">Zoom H4n Pro 4-Track Portable Audio Recorder</span><br/></h2><p style=\"text-align: justify;\">Zoom H4n Pro 4-Track Portable Recorder featured with Four-track simultaneous recording, High-fidelity mic preamps, Built-in X/Y stereo microphones, adjustable between 90Ëš and 120Ëš, Record up to 140 dB SPL with X/Y microphones, Two mic/line level inputs with XLR/TRS combo connectors, Stereo 1/8\" Mic In mini phone jack, +24 or +48V phantom power for main inputs and Plug-in power (2.5V) via Mic/Line In mini phone jack. This Zoom H4n Pro 4-Track Portable Recorder has an Output/headphone jack with dedicated volume control, Records directly to SD and SDHC cards up to 32 GB. It supports up to 24-bit/96 kHz audio in BWF-compliant WAV or a variety of MP3 formats. Here, Built-in effects, including compression/limiting, low-cut filtering, modulation, reverb/delay, and amp models, 2-in/2-out USB audio interface for PC/Mac computers, Mounts to mic stand or tripod, or directly to DSLR with optional Hot Shoe adapter with Runs on 2 standard AA alkaline or NiMH rechargeable batteries with up to 6 hours of operation (up to 10 hours in Stamina mode). This latest Zoom H4n Pro 4-Track Portable Recorder has no warranty.</p><div class=\"video-wrapper\" style=\"text-align: justify; \"></div><h3 style=\"text-align: justify; \">The Filmmaker's Favorite</h3><p style=\"text-align: justify; \">The H4n Pro is packed with features that make it perfect for capturing audio for film. The onboard X/Y microphones deliver spectacular stereo imaging, and two combo input jacks allow you to use your favorite microphones as well. It also includes a headphone/line out jack to easily send high-definition stereo directly to your camera.</p><h3 style=\"text-align: justify; \">Unmatched In Concert</h3><p style=\"text-align: justify; \">The Pro is perfect for capturing live performances. Capable of handling up to 140 dB SPL, it can record everything from ear-splitting heavy metal to bass-heavy EDM. Take a line-level* stereo feed from your mixing console and capture room ambience with the X/Y microphones to put your listeners front row center.</p><h3 style=\"text-align: justify; \">Podcasters and Journalists</h3><p style=\"text-align: justify; \">The H4n Pro provides the essential combination of micâ€™ing versatility, portability, and superior audio necessary for impactful storytelling. With support for plug-in power, you can use a lavalier to mic up your subject for podcasts or interviews. Record time-stamped WAV files to sync with video footage in post-production, or embed superior audio directly on your video in real-time through a â…›\" stereo feed.</p><h3 style=\"text-align: justify; \">Mobile Studio</h3><p style=\"text-align: justify; \">With overdubbing and punch-in features, as well as studio-grade instrument effects and emulators, you can create songs from start to finish. The Pro also functions as a 2-input/2-output USB audio interface for PC or Mac. Launch your favorite recording/editing software or use the included Cubase LE to start creating.</p><h3 style=\"text-align: justify; \">High-Performance Mic Preamps</h3><p style=\"text-align: justify; \">The Pro features the same high performance, low-noise mic preamps as our acclaimed Zoom H5 and H6 Handy Recorders, with recording and playback at resolutions up to 24-bit/96 kHz. The improved noise floor (-120 dBu EIN) captures audio at lower volumes with less noise and fewer artifacts.</p><h3 style=\"text-align: justify; \">Built-in Stereo Recording</h3><p style=\"text-align: justify; \">X/Y stereo recording covers a wide area while capturing sound sources in the center with clarity and definition. The angle of its two unidirectional condenser mics can easily be changed from 90 degrees for a tightly focused stereo image to 120 degrees for a wider image simply by twisting the mic capsules.The H4n Pro provides an onboard MS decoder for Mid-Side recording with external microphones. This allows you to adjust the width of the stereo image, making it especially useful for sound design and broadcasting.</p><h3 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Inputs and Outputs</span></h3><h3 style=\"text-align: justify; \">Inputs</h3><p style=\"text-align: justify; \">The two locking combo connectors accept either XLR or Â¼\" balanced/unbalanced phone cables, handling mic- and line-level signals as well as instrument-level signals. Phantom Power of +24 or +48 volts can be applied to both inputs. Plus, thereâ€™s a stereo 1/8â€� Mic jack for external audio sources, including lavalier microphones requiring 2.5 volts of plug-in power.</p><h3 style=\"text-align: justify; \">Form Factor</h3><p style=\"text-align: justify; \">A new rubberized, ergonomic body is perfect for use in the field or with a camera, while new locking XLR/TRS connectors ensure your mic cables stay secure. Highly portable, the H4n Pro can travel anywhere for convenient mobile recording.</p><h3 style=\"text-align: justify; \">Three Ways to Record</h3><p style=\"text-align: justify; \">STEREO MODE uses the built-in X/Y microphones (or external mics) and is convenient for recording live performances, acoustic instruments, dialogue, and more.</p><p style=\"text-align: justify; \">In 4CH MODE, you can record with the built-in X/Y mics and two external inputs simultaneously, great for getting live room sound and a stereo board feed at the same time.</p><p style=\"text-align: justify; \">MTR MODE (Multi-track Mode) turns your device into a four-track studio, with built-in effects, overdub functions, and the ability to work with previously recorded sound files.</p><h3 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Recording Functions</span></h3><h3 style=\"text-align: justify; \">Pre-Record (for STEREO/4CH mode)</h3><p style=\"text-align: justify; \">Pre-Record ensures that you'll never miss the start of a great take. The device is continuously listening, keeping the previous two seconds* of audio whenever you hit RECORD.*One second when recording at 96k or working 4CH mode.</p><h3 style=\"text-align: justify; \">Auto-Record (for STEREO/4CH mode)</h3><p style=\"text-align: justify; \">Auto-Record automatically starts recording when a user-set sound level is detected. There's also an Auto-Record Stop function, which ends the recording as soon as the incoming signal drops below the user-set stop level.</p><h3 style=\"text-align: justify; \">Remote Control</h3><p style=\"text-align: justify; \">Use the optional RC4 remote to control the H4n Pro. The RC4 allows you to start and stop recording, fast forward and rewind through your files, switch the input source, and set recording/playback levels at a distance while eliminating handling noise.</p><h3 style=\"text-align: justify; \">Onboard Effects</h3><p style=\"text-align: justify; \">The Pro offers studio-grade effects and emulators to enhance your recordings. Choose from a variety of effects, including compression, limiting, reverb, delay, echo, a low-cut filter, and more.There's an onboard metronome and tuner, along with dozens of amp models and effects crafted for guitar and bass. Additionally, you can loop playback and adjust pitch and speed independently, making the H4n Pro a perfect </p><h3 style=\"text-align: justify; \">Supported File Types</h3><p style=\"text-align: justify; \">The Pro records audio in both WAV and MP3 formats. It supports 16- and 24-bit WAV audio at sampling rates of 44.1, 48, or 96 kHz. The WAV files are automatically time-stamped, making them Broadcast Wave Format (BWF) compliant, allowing precise synchronization in post-production.</p><h3 style=\"text-align: justify; \">Battery Life and Recording Times </h3><p style=\"text-align: justify; \">The H4n Pro runs on 2 AA batteries, providing up to 6 hours in normal operation, or up to 10 hours when operating in STAMINA mode. An optional AD-14 AC adapter allows the H4n Pro to be powered from any standard wall outlet.The H4n Pro accepts SD and SDHC cards up to 32 gigabytes. The charts below show maximum recording times for different file types and card sizes.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zoom H4n Pro</li><li>Adjustable Stereo X/Y Microphone</li><li>Can Record 4 Tracks Simultaneously</li><li>2xXLR/1/4&quot;Combination Input Jack</li><li>3.5mm Mic Input 2.5V Plug-In Power</li></ul>",
+      "model": "Zoom H4n Pro",
+      "warranty": "No warranty",
+      "basePrice": 24300.0,
+      "originalPrice": 29500.0,
+      "currency": "BDT",
+      "weight": 0.294,
+      "dimensions": {
+        "length": 73.0,
+        "width": 157.2,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Sound Level",
+          "position": 0,
+          "values": [
+            {
+              "value": "140 dB SPL",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Frequency Range",
+          "position": 1,
+          "values": [
+            {
+              "value": "44.1 / 48 / 96 kHz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sensitivity",
+          "position": 2,
+          "values": [
+            {
+              "value": "-45 dB/1 Pa at 1 kHz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Impedance",
+          "position": 3,
+          "values": [
+            {
+              "value": "INPUT IMPEDANCE: (Using balanced input) 3 kΩ or more, pin 2 hot (Using unbalanced input) 470 kΩ or more EXTERNAL MIC: Input impedance: 2 kΩ or more LINE Output load impedance: 10 kΩ or more",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Dimension",
+          "position": 4,
+          "values": [
+            {
+              "value": "73 (W) × 157.2 (D) × 37 (H) mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight",
+          "position": 5,
+          "values": [
+            {
+              "value": "294 g",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 6,
+          "values": [
+            {
+              "value": "Two mic/line level inputs with XLR/TRS combo connectors",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Module",
+          "position": 7,
+          "values": [
+            {
+              "value": "48V, 24V, OFF MTR Mode: PRE AMP module, EFX module",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "DSLR",
+          "position": 8,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "PC",
+          "position": 9,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Smartphone",
+          "position": 10,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 11,
+          "values": [
+            {
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7695",
+          "price": 24300.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Sound Level": "140 dB SPL",
+            "Frequency Range": "44.1 / 48 / 96 kHz",
+            "Sensitivity": "-45 dB/1 Pa at 1 kHz",
+            "Output Impedance": "INPUT IMPEDANCE: (Using balanced input) 3 kΩ or more, pin 2 hot (Using unbalanced input) 470 kΩ or more EXTERNAL MIC: Input impedance: 2 kΩ or more LINE Output load impedance: 10 kΩ or more",
+            "Dimension": "73 (W) × 157.2 (D) × 37 (H) mm",
+            "Weight": "294 g",
+            "Connector": "Two mic/line level inputs with XLR/TRS combo connectors",
+            "Power Module": "48V, 24V, OFF MTR Mode: PRE AMP module, EFX module",
+            "DSLR": "Yes",
+            "PC": "Yes",
+            "Smartphone": "Yes",
+            "Warranty": "No warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 23328.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sound Level",
+              "value": "140 dB SPL",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency Range",
+              "value": "44.1 / 48 / 96 kHz",
+              "position": 0
+            },
+            {
+              "label": "Sensitivity",
+              "value": "-45 dB/1 Pa at 1 kHz",
+              "position": 1
+            },
+            {
+              "label": "Output Impedance",
+              "value": "INPUT IMPEDANCE: (Using balanced input) 3 kΩ or more, pin 2 hot (Using unbalanced input) 470 kΩ or more EXTERNAL MIC: Input impedance: 2 kΩ or more LINE Output load impedance: 10 kΩ or more",
+              "position": 2
+            },
+            {
+              "label": "Dimension",
+              "value": "73 (W) × 157.2 (D) × 37 (H) mm",
+              "position": 3
+            },
+            {
+              "label": "Weight",
+              "value": "294 g",
+              "position": 4
+            },
+            {
+              "label": "Connector",
+              "value": "Two mic/line level inputs with XLR/TRS combo connectors",
+              "position": 5
+            },
+            {
+              "label": "Power Module",
+              "value": "48V, 24V, OFF MTR Mode: PRE AMP module, EFX module",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 2,
+          "items": [
+            {
+              "label": "DSLR",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "PC",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Smartphone",
+              "value": "Yes",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h4n-pro-4-channel-recorder",
+      "sourceProductCode": "7695",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zoom H4n Pro",
+        "Adjustable Stereo X/Y Microphone",
+        "Can Record 4 Tracks Simultaneously",
+        "2xXLR/1/4\"Combination Input Jack",
+        "3.5mm Mic Input 2.5V Plug-In Power"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4n-pro-4-channel-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h4n-pro-4-channel-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4n-pro-4-channel-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h4n-pro-4-channel-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h4n-pro-4-channel-recorder",
+        "candidateTitle": "Zoom H4n Pro 4-Track Portable Audio Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H5 4-Track Portable Recorder",
+      "slug": "zoom-h5-4-track-portable-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-16716",
+      "description": "<h2 style=\"text-align: justify; \">Zoom H5 4-Track Portable Recorder</h2><p style=\"text-align: justify; \">Zoom H5 4-Track Portable Recorder featured with Four tracks of simultaneous recording and interchangeable mic capsules make the H5 flexible and powerful enough to meet the evolving needs of todayâ€™s creators. This Zoom H5 4-Track Portable Recorder is Ideal for documentaries, podcasting, audio for video, and professional sound design, the Zoom H5 portable handheld recorder lets you quickly record up to four input signals regardless of your audio experience. The design of the XYH-5 mic capsule allows the H5 to handle up to 140 dB SPL equivalent to the sound of a jet aircraft from less than 200 feet away. And to keep your levels under control, the H5 offers compression and limiting. The Zoom H5â€™s rubberized housing and shock-mounted microphones minimize vibration and handling noise, while a low-cut filter helps eliminate wind noise and other kinds of low-frequency rumble. It utilizes the same high-quality, low-noise preamps as our flagship H6, ensuring great-sounding recordings in all sonic environments. In this Zoom H5 4-Track Portable Recorder,  XLR/TRS combo inputs can handle both mic- and line-level signals for microphones, wireless receivers, mixers, keyboards and more. Each input has a dedicated gain control knob. The supplied XYH-5 capsule also provides an additional mic/ line input via a â…›\" mini phone jack. This Four-track simultaneous recording and also Records directly to SD and SDHC cards up to 32 GB Up to 24-bit/96 kHz audio in BWF-compliant WAV or a variety of MP3 formats. Two mic/line inputs with XLR/TRS combo connectors, each with selectable phantom power and -20 dB pad. Here, Built-in effects, including low-cut filtering, compression, and limiting, Auto-record, Pre-record, and Backup-record functions mean that you'll never miss that perfect take Multichannel and stereo USB audio interface for PC/ Mac/ iPad with LoopBack function, Powered by two AA batteries or via USB, Over 15 hours of operation with alkaline batteries.</p><h3 style=\"text-align: justify; \">General:</h3><p style=\"text-align: justify; \">This Portable Recorder featured with SD card: 16MB to 2GB, SDHC card: 4GB to 32GB, and Backlit LCD (128 x 64 pixels)</p><h3 style=\"text-align: justify; \">Inputs: </h3><p style=\"text-align: justify; \">Here, input portion featured with 400mw 8 Î© mono built in speMic type: Unidirectional, Sensitivity: -45 dB, 1 kHz at 1 Pa, Input gain: -âˆž to 52 dB, Max sound pressure input: 140 dB SPL. Connector: 1/8\" stereo mini jack, Output Level: 20 mW +20 mW into 32 Î© load for Phone Output.</p><h3 style=\"text-align: justify; \">Recording Formats: </h3><p style=\"text-align: justify; \">Here, Recording Formats featured with WAV (BWF-compliant), Sampling frequency: 44.1/48/96 kHz, Bit rate: 16/24 (Stereo), Maximum simultaneous recording tracks: 2, MP3, Sampling frequency:  44.1kHzBit rate: 48/ 56 /64 / 80/ 96/ 112/ 32/ 160/ 192/ 224/ 256/ 320 kbps, WAV (BWF-compliant)Sampling frequency: 44.1/48 kHz, Bit rate: 16/24 (Mono/Stereo) &amp; Maximum simultaneous recording tracks: 6 (L/R + INPUT 1/2 + L/R backup).</p><h3 style=\"text-align: justify; \">USB:</h3><p style=\"text-align: justify; \">Here, USB 2.0 High Speed, Sampling frequency: 44.1/48kHz, Bit rate: 16/24 bit, Inputs / Outputs: 4 / 2, Class: USB 2.0 Full Speed, Sampling frequency: 44.1/48kHz, Bit rate: 16 bit, Inputs / Outputs: 2 / 2, USB bus powered operation possible (iPad operation supported in Stereo mode only) are available.</p><h3 style=\"text-align: justify; \">Power Requirements:</h3><p style=\"text-align: justify; \">In this AA size (LR6) battery x 2, AC adapter: AD-17 (DC5V/1A/USB-type) (optional) &amp; USB bus power are included. </p><p style=\"text-align: justify; \">This latest Zoom H5 4-Track Portable Recorder has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: H5</li><li>For Audio Record, Music, and Podcasting</li><li>Includes detachable X/Y capsule</li><li>Shock-mounted mics, Two mic</li><li>Four-track simultaneous recording</li></ul>",
+      "model": "H5",
+      "warranty": "No warranty",
+      "basePrice": 31500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Sound Level",
+          "position": 0,
+          "values": [
+            {
+              "value": "140 dB SPL",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Includes",
+          "position": 1,
+          "values": [
+            {
+              "value": "detachable X/Y capsule (XYH-5) capable of handling 140 dB SPL",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Frequency Range",
+          "position": 2,
+          "values": [
+            {
+              "value": "44.1/48kHz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sensitivity",
+          "position": 3,
+          "values": [
+            {
+              "value": "-45 dB, 1 kHz at 1 Pa",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 4,
+          "values": [
+            {
+              "value": "1/8\" stereo mini jack",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 5,
+          "values": [
+            {
+              "value": "AA size (LR6) battery x 2",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Audio recorders",
+          "position": 6,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "DSLR",
+          "position": 7,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "PC",
+          "position": 8,
+          "values": [
+            {
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 9,
+          "values": [
+            {
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16716",
+          "price": 31500.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Sound Level": "140 dB SPL",
+            "Includes": "detachable X/Y capsule (XYH-5) capable of handling 140 dB SPL",
+            "Frequency Range": "44.1/48kHz",
+            "Sensitivity": "-45 dB, 1 kHz at 1 Pa",
+            "Connector": "1/8\" stereo mini jack",
+            "Battery": "AA size (LR6) battery x 2",
+            "Audio recorders": "Yes",
+            "DSLR": "Yes",
+            "PC": "Yes",
+            "Warranty": "No warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 30240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sound Level",
+              "value": "140 dB SPL",
+              "position": 0
+            },
+            {
+              "label": "Includes",
+              "value": "detachable X/Y capsule (XYH-5) capable of handling 140 dB SPL",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency Range",
+              "value": "44.1/48kHz",
+              "position": 0
+            },
+            {
+              "label": "Sensitivity",
+              "value": "-45 dB, 1 kHz at 1 Pa",
+              "position": 1
+            },
+            {
+              "label": "Connector",
+              "value": "1/8\" stereo mini jack",
+              "position": 2
+            },
+            {
+              "label": "Battery",
+              "value": "AA size (LR6) battery x 2",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 2,
+          "items": [
+            {
+              "label": "Audio recorders",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "DSLR",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "PC",
+              "value": "Yes",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h5-4-track-portable-recorder",
+      "sourceProductCode": "16716",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: H5",
+        "For Audio Record, Music, and Podcasting",
+        "Includes detachable X/Y capsule",
+        "Shock-mounted mics, Two mic",
+        "Four-track simultaneous recording"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h5-4-track-portable-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h5-4-track-portable-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h5-4-track-portable-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h5-4-track-portable-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h5-4-track-portable-recorder",
+        "candidateTitle": "Zoom H5 4-Track Portable Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H6 Essential 6-Track Handy Audio Recorder",
+      "slug": "zoom-h6-essential-handy-audio-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-39740",
+      "description": "<h2>Zoom H6 Essential 6-Track Handy Audio Recorder</h2><p>The Zoom <strong>H6 Essential</strong> is a portable, six-track <a href=\"https://www.startech.com.bd/accessories/digital-voice-recorder\" style=\"color: rgb(0, 0, 0);\" target=\"\">digital audio recorder</a>. producing high-quality audio in a range of contexts, such as podcasting, music recording, audio-for-video, and transcription. With its twin A/D converters and 6-track 32-bit float recorder, the Digital Audio Recorder ensures clip-free recording by doing away with the need to adjust gain. It has a replaceable Mic Capsule System 3.0 with 32-bit float support and can record at a sampling rate of up to 96 kHz. Clear and accurate audio is produced by the Zoom H6 Essential Digital Voice Recorder's X/Y Mic Capsule, which records sound up to 135 dB SPL. The <strong>Zoom H6essential</strong> is made to be simple to use and versatile. It has four XLR/TRS combination inputs with locking connectors, a color LCD screen, an integrated mixer for altering audio levels, and a built-in speaker for fast reference playback. 3.5mm headphone and line outputs are included, along with a USB-C port for connecting to iOS, Android, Mac, and PC devices. The Zoom H6 Essential Handy Audio Recorder can record on an SD card with a capacity of up to 1TB and function as an audio interface at the same time. The visually handicapped can easily utilize it because to its features. With AA batteries or USB-C bus power, the Zoom H6 essential voice recorder can run for up to 10 hours. Incorporate virtual loopback for overdubbing, streaming, and Bluetooth connectivity (via the optional BTA-1 adapter) for remote control and synchronizing with wireless timecode devices using the H6essential Control App for iOS. Professionals and hobbyists alike will find the Zoom H6 Essential 6-Track Handy Audio Recorder to be a great option due to its sturdy construction and wide range of features.</p><img alt=\"Zoom H6 Essential 6-Track Handy Audio Recorder\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/microphone/zoom/h6-essential/h6-essential-00.webp\" width=\"920\"/><h2>Buy Zoom H6 Essential Handy Audio Recorder from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Zoom H6 Essential Handy Audio Recorder</strong> From Deshi Plus. We have a large collection of latest <a href=\"https://www.startech.com.bd/zoom-digital-voice-recorder\" style=\"\" target=\"\">Zoom Digital Voice Recorder</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Zoom H6 Essential Handy Audio Recorder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: H6 Essential</li><li>6-Track 32-bit Float Recorder with Dual A/D Converters</li><li>Records up to 96 kHZ Sample Rate, Built-in Mixer</li><li>Interchangable Mic Capsule System 3.0 with 32-bit Float Support</li><li>Included X/Y Mic Capsule Captures up to 135 dB SPL</li></ul>",
+      "model": "H6 Essential",
+      "warranty": "no warranty",
+      "basePrice": 33000.0,
+      "originalPrice": 38000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "H6 Essential",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39740",
+          "price": 33000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "H6 Essential"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 31680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "H6 Essential",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h6-essential-handy-audio-recorder",
+      "sourceProductCode": "39740",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: H6 Essential",
+        "6-Track 32-bit Float Recorder with Dual A/D Converters",
+        "Records up to 96 kHZ Sample Rate, Built-in Mixer",
+        "Interchangable Mic Capsule System 3.0 with 32-bit Float Support",
+        "Included X/Y Mic Capsule Captures up to 135 dB SPL"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-essential-handy-audio-recorder.png",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-essential-handy-audio-recorder.png",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-essential-handy-audio-recorder.png"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-essential-handy-audio-recorder.png",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h6-essential-handy-audio-recorder",
+        "candidateTitle": "Zoom H6 Essential 6-Track Handy Audio Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H6 Handy Recorder",
+      "slug": "zoom-h6-handy-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-7696",
+      "description": "<div class=\"video-wrapper\"></div><div class=\"video-wrapper\"><br/></div><h3>ZOOM H6</h3><h4>It will change the way you think about recording forever.</h4><p>Here at Zoom we've been building innovative products for the past thirty years. But with the revolutionary H6 six-track recorder, the bar is raised further still. Four interchangeable input capsules â€“ X/Y, MS, Shotgun, and Dual XLR/TRS Combo â€“ make the H6 the ultimate chameleon of the audio world, and its advanced preamps make it the best-sounding one too. Whatever your application â€“ live recording, professional film/video work, live broadcast or electronic news gathering â€“ the H6 can handle it with ease.</p><h3>Capture the performance on a whole new level</h3><p>Do more than just record the show: Document the experience. Use the X/Y capsule to capture the overall sound in stereo, then use the other four inputs for a direct feed from the mixing board, or for external spot mics to pick up specific instruments and the room sound. With the H6, you can relive that great performance night after night</p><h3>Get the sound that completes the scene</h3><p>Whether you slide it onto your camera strap or attach it directly to your DSLR with our Hot Shoe mount, the H6 is audio recorder for location videography. Its supplied MSH-6 mic capsule and onboard MS decoding, plus the ability to record up to 6 tracks simultaneously, gives you plenty of options in post-production\t</p><h3>Deliver the full story, down to the last detail</h3><p>Extend your range with the optional SGH-6 Shotgun mic. Get every word of that headline-making interview. Capture breaking news with maximum impact, then mix and prepare the audio for broadcast while still in the field. With the H6, you can do onsite reporting that really resonates.</p><h3>Make every chord, every note, every riff really sing</h3><p>Plug in the optional EXH-6 Dual XLR/TRS capsule and your H6 becomes a personal 6-track studio with six discrete line- or mic-level inputs, each with its own volume control and pad. Record and overdub up to 99 takes in high-resolution audio, then mix down to a stereo MP3 for posting to your favorite website. With the H6, the road from great idea to perfect track just got a lot shorter.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zoom H6</li><li>Four Mic/Line Inputs</li><li>Record 6 Simultaneous Channel</li><li>Records up to 24-Bit/96 kHz</li><li>Doubles as USB Audio Interface</li></ul>",
+      "model": "Zoom H6",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Model",
+          "position": 0,
+          "values": [
+            {
+              "value": "Zoom H6",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7696",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Model": "Zoom H6"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Zoom H6",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h6-handy-recorder",
+      "sourceProductCode": "7696",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zoom H6",
+        "Four Mic/Line Inputs",
+        "Record 6 Simultaneous Channel",
+        "Records up to 24-Bit/96 kHz",
+        "Doubles as USB Audio Interface"
+      ],
+      "needsReview": true,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-handy-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-handy-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-handy-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h6-handy-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h6-handy-recorder",
+        "candidateTitle": "Zoom H6 Handy Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom H8 8-Input, 12-Track Portable Handy Recorder",
+      "slug": "zoom-h8-portable-handy-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-16619",
+      "description": "<h2 style=\"text-align: justify; \">Zoom H8 8-Input, 12-Track Portable Handy Recorder</h2><p style=\"text-align: justify; \">Zoom H8 Portable Handy Recorder comes with customized applications for field recording, music and podcasting. It has 3 distinct interfaces for field recording, music and podcasting. It comes with Interchangeable input capsules. It features 12-track simultaneous recording with four mic inputs and two XLR/TRS combo connectors. 12 simultaneous recording tracks, interchangeable capsules, and an App-driven touchscreen interface, the H8 is designed to meet all your audio recording needs. It has gain control knobs and -20dB pads for each input. Supplied XYH-6 X/Y capsule provides secondary input via a stereo 1/8â€� Mic/Line In mini phone jack. It features Phantom power for four main XLR inputs: +12/+24/+48V. This capsule provides two matched high-quality unidirectional mics, for capturing signal directly in front of the recorder. With the Zoom mic capsule system, you can easily swap capsules to ensure youâ€™re always using the right mic for the job. It comes with a large colour LCD touchscreen display for easy access. Whether youâ€™re capturing audio on location, recording music, or producing a podcast, the H8 colour touchscreen adapts to your projectâ€™s needs with three App-driven interface options. All with the touch of your finger. It records directly to SD, SDHC and SDXC cards up to 512GB. It can capture up to 24-bit /96kHz audio in BWF-compliant WAV or a variety of MP3 formats. It has Auto-record, Pre-record and Backup-record functions mean that you'll never miss that perfect take. It comes with built-in effects, including low-cut filtering, compression, and limiting. It has a multichannel and stereo USB audio interface for PC/Mac/iPad. You can monitor level meters and hit REC, PLAY, and STOP in each H8 application mode. Just insert the BTA-1 to your H8 and connect to your iOS device. You can get more than 20 hours of recording time from just 4 AA batteries. Or record forever with the optional AD-17 adapter. It has no warranty.</p><div class=\"video-wrapper\"> </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: H8</li><li>Interchangeable input capsules</li><li>12-track simultaneous recording</li><li>Large color LCD touchscreen display</li><li>Up to 24-bit /96kHz audio</li></ul>",
+      "model": "H8",
+      "warranty": "No warranty",
+      "basePrice": 40000.0,
+      "originalPrice": 45000.0,
+      "currency": "BDT",
+      "weight": 0.354,
+      "dimensions": {
+        "length": 116.4,
+        "width": 163.3,
+        "height": 48.6,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Dimension",
+          "position": 0,
+          "values": [
+            {
+              "value": "116.4 mm (W) × 163.3 mm (D) × 48.6 mm (H)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight",
+          "position": 1,
+          "values": [
+            {
+              "value": "354 g",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 2,
+          "values": [
+            {
+              "value": "MIC IN: ZOOM mic connector INPUT 1-4: XLR jacks (2: HOT) INPUT A/B:L XLR/TRS combo jacks (XLR: 2 hot, TRS: TIP hot) LINE OUT: 3.5 mm stereo mini PHONE OUT: 3.5 mm stereo mini",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Module",
+          "position": 3,
+          "values": [
+            {
+              "value": "+24 V/+48 V (independent ON/OFF for INPUTS 1–4, A and B)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 4,
+          "values": [
+            {
+              "value": "4 AA batteries (alkaline, NiMH or lithium)AC adapter (ZOOM AD-17): DC 5 V/1AUSB bus power",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 5,
+          "values": [
+            {
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16619",
+          "price": 40000.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Dimension": "116.4 mm (W) × 163.3 mm (D) × 48.6 mm (H)",
+            "Weight": "354 g",
+            "Connector": "MIC IN: ZOOM mic connector INPUT 1-4: XLR jacks (2: HOT) INPUT A/B:L XLR/TRS combo jacks (XLR: 2 hot, TRS: TIP hot) LINE OUT: 3.5 mm stereo mini PHONE OUT: 3.5 mm stereo mini",
+            "Power Module": "+24 V/+48 V (independent ON/OFF for INPUTS 1–4, A and B)",
+            "Battery": "4 AA batteries (alkaline, NiMH or lithium)AC adapter (ZOOM AD-17): DC 5 V/1AUSB bus power",
+            "Warranty": "No warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 38400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Specs",
+          "position": 0,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "116.4 mm (W) × 163.3 mm (D) × 48.6 mm (H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "354 g",
+              "position": 1
+            },
+            {
+              "label": "Connector",
+              "value": "MIC IN: ZOOM mic connector INPUT 1-4: XLR jacks (2: HOT) INPUT A/B:L XLR/TRS combo jacks (XLR: 2 hot, TRS: TIP hot) LINE OUT: 3.5 mm stereo mini PHONE OUT: 3.5 mm stereo mini",
+              "position": 2
+            },
+            {
+              "label": "Power Module",
+              "value": "+24 V/+48 V (independent ON/OFF for INPUTS 1–4, A and B)",
+              "position": 3
+            },
+            {
+              "label": "Battery",
+              "value": "4 AA batteries (alkaline, NiMH or lithium)AC adapter (ZOOM AD-17): DC 5 V/1AUSB bus power",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-h8-portable-handy-recorder",
+      "sourceProductCode": "16619",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: H8",
+        "Interchangeable input capsules",
+        "12-track simultaneous recording",
+        "Large color LCD touchscreen display",
+        "Up to 24-bit /96kHz audio"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h8-portable-handy-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-h8-portable-handy-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-h8-portable-handy-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-h8-portable-handy-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-h8-portable-handy-recorder",
+        "candidateTitle": "Zoom H8 8-Input, 12-Track Portable Handy Recorder"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    },
+    {
+      "name": "Zoom Q2N-4K Handy Video Recorder with X/Y Microphone",
+      "slug": "zoom-q2n-4k-handy-video-recorder",
+      "type": "PHYSICAL",
+      "sku": "ST-16713",
+      "description": "<h2 style=\"text-align: justify; \">Zoom Q2N-4K Handy Video Recorder with X/Y Microphone\n\n</h2>\n<p style=\"text-align: justify; \">Zoom Q2N-4K Handy Video Recorder comes with X/Y Microphone that combines unrivaled audio with crisp 4K imaging to completely capture your rehearsals, performances and live streams like never before. You can Easily capture your full band or solo act using five field of view (FOV) settings, it's 150-degree lens and color LCD make it easy to frame the perfect shot. \n\n</p>\n<p style=\"text-align: justify; \">Here, At the touch of a button, the Q2n-4K captures premium video recording at up to 4K Ultra HD resolution. The Handy Video Recorder has  4K/ 30fps, 4K/ 25fps, 4K/ 24fps, 1080p/ 60fps, 1080p/ 50fps, 1080p/ 30fps, 1080p/ 25fps, 1080p/ 24fps, 720p/ 30fps, 720p/ 25fps In this Video Recorder, Stage lights can overexpose your video and can ruin a good take and also high dynamic range (HDR) technology automatically adjusts the exposure, so your lighting effects donâ€™t blow out the shot. Here, 12 â€˜Sceneâ€™ presets allow you to record your performances in a wide range of environments, including â€œJazz Clubâ€�, â€œConcert Lightâ€�, â€œDance Clubâ€�, and â€œOutdoorâ€�. The Q2n-4K even features an â€œAutoâ€� scene setting, which will detect your current lighting and select the appropriate balance for you. This Video Recorder has HDMI video output for connection to HDTVs, selectable between NTSC and PAL, Records video (with audio) in MOV format, Analog-style level control with onscreen digital metering, Auto Gain function gives automatic control over audio input level, Stereo input for use with external devices plus support for plug-in power and Headphone/line-level output for fast audio monitoring. \n\n</p>\n<p style=\"text-align: justify; \">The Zoom Q2N-4K Handy Video Recorder has USB mic function (with low-latency direct monitoring) when used with computers and iOS devices (Apple Camera Connection Kit or Lightning to USB Camera Adapter required for use with iOS devices), Operates with two AA batteries with Built-in standard tripod mount and Support for three HD video modes: 720p, 1080p and 4K. This latest Zoom Q2N-4K Handy Video Recorder with X/Y Microphone has no warranty\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Q2N</li><li>High-quality 150Â° wide-angle lens</li><li>Built-in X/Y stereo microphones</li><li>12 â€˜Sceneâ€™ options, Color LCD</li><li>5 field of view (FOV) settings</li></ul>",
+      "model": "Q2N",
+      "warranty": "No Warranty",
+      "basePrice": 27700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.124,
+      "dimensions": {
+        "length": 58.7,
+        "width": 68.5,
+        "height": 83.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 200,
+      "brandName": "Zoom",
+      "variantOptions": [
+        {
+          "name": "Noise/Signal",
+          "position": 0,
+          "values": [
+            {
+              "value": "low-frequency noise and rumble",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Impedance",
+          "position": 1,
+          "values": [
+            {
+              "value": "+39 dB 2 kΩ",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Dimension",
+          "position": 2,
+          "values": [
+            {
+              "value": "Main unit (maximum dimensions): 58.7 mm (D) × 68.5 mm (W) × 83.0 mm (H)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight",
+          "position": 3,
+          "values": [
+            {
+              "value": "124 g",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 4,
+          "values": [
+            {
+              "value": "Combined headphone/line stereo mini jack HDMI micro Type D stereo mini jack (supports plug-in power)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 5,
+          "values": [
+            {
+              "value": "BCQ2n battery case",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Headphone Amplifier",
+          "position": 6,
+          "values": [
+            {
+              "value": "Q2n-4K’s 1/8” stereo output jack.",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 7,
+          "values": [
+            {
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16713",
+          "price": 27700.0,
+          "currency": "BDT",
+          "stock": 200,
+          "options": {
+            "Noise/Signal": "low-frequency noise and rumble",
+            "Output Impedance": "+39 dB 2 kΩ",
+            "Dimension": "Main unit (maximum dimensions): 58.7 mm (D) × 68.5 mm (W) × 83.0 mm (H)",
+            "Weight": "124 g",
+            "Connector": "Combined headphone/line stereo mini jack HDMI micro Type D stereo mini jack (supports plug-in power)",
+            "Battery": "BCQ2n battery case",
+            "Headphone Amplifier": "Q2n-4K’s 1/8” stereo output jack.",
+            "Warranty": "No Warranty"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 26592.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Noise/Signal",
+              "value": "low-frequency noise and rumble",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Output Impedance",
+              "value": "+39 dB 2 kΩ",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "Main unit (maximum dimensions): 58.7 mm (D) × 68.5 mm (W) × 83.0 mm (H)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "124 g",
+              "position": 2
+            },
+            {
+              "label": "Connector",
+              "value": "Combined headphone/line stereo mini jack HDMI micro Type D stereo mini jack (supports plug-in power)",
+              "position": 3
+            },
+            {
+              "label": "Battery",
+              "value": "BCQ2n battery case",
+              "position": 4
+            },
+            {
+              "label": "Headphone Amplifier",
+              "value": "Q2n-4K’s 1/8” stereo output jack.",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoom-q2n-4k-handy-video-recorder",
+      "sourceProductCode": "16713",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Q2N",
+        "High-quality 150Â° wide-angle lens",
+        "Built-in X/Y stereo microphones",
+        "12 â€˜Sceneâ€™ options, Color LCD",
+        "5 field of view (FOV) settings"
+      ],
+      "needsReview": false,
+      "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-q2n-4k-handy-video-recorder.jpg",
+      "gallery": [],
+      "localImageFile": "public/images/products/accessories/digital-voice-recorder/zoom/zoom-q2n-4k-handy-video-recorder.jpg",
+      "sourceImages": [
+        "/images/products/accessories/digital-voice-recorder/zoom/zoom-q2n-4k-handy-video-recorder.jpg"
+      ],
+      "sourceHierarchy": [
+        {
+          "image": "/images/products/accessories/digital-voice-recorder/zoom/zoom-q2n-4k-handy-video-recorder.jpg",
+          "categorySlug": "accessories",
+          "categoryName": "Accessories",
+          "subcategorySlug": "digital-voice-recorder",
+          "subcategoryName": "Digital Voice Recorder",
+          "folderBrandSlug": "zoom",
+          "folderBrandName": "Zoom",
+          "sourceKind": "brand"
+        }
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoom-q2n-4k-handy-video-recorder",
+        "candidateTitle": "Zoom Q2N-4K Handy Video Recorder with X/Y Microphone"
+      },
+      "categorySlug": "digital-voice-recorder",
+      "brandSlugHint": "zoom"
+    }
+  ]
+}

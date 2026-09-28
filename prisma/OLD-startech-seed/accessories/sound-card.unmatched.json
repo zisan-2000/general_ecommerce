@@ -1,0 +1,42 @@
+[
+  {
+    "ok": false,
+    "stem": "orico-sc2-usb-external-sound-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\35d8a1b9d117eeecc288b941f9e3c4915f6a2d03a33a882fd5fcd39b2ea4a555.html'",
+    "sourceImages": [
+      "/images/products/accessories/sound-card/orico/orico-sc2-usb-external-sound-card.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/sound-card/orico/orico-sc2-usb-external-sound-card.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "sound-card",
+        "subcategoryName": "Sound Card",
+        "folderBrandSlug": "orico",
+        "folderBrandName": "Orico",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "orico-skt3-usb-external-sound-card",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\90873e7ad311043412271e13f679fb3191dd8ee72557c7a83a9366d84c19019c.html'",
+    "sourceImages": [
+      "/images/products/accessories/sound-card/orico/orico-skt3-usb-external-sound-card.jpg"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/accessories/sound-card/orico/orico-skt3-usb-external-sound-card.jpg",
+        "categorySlug": "accessories",
+        "categoryName": "Accessories",
+        "subcategorySlug": "sound-card",
+        "subcategoryName": "Sound Card",
+        "folderBrandSlug": "orico",
+        "folderBrandName": "Orico",
+        "sourceKind": "brand"
+      }
+    ]
+  }
+]
