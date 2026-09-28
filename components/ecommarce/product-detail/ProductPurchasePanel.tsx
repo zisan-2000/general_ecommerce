@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, type MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -93,6 +93,8 @@ export default function ProductPurchasePanel({
   const [activeImage, setActiveImage] = useState<string | null>(
     defaultVariant?.colorImage ?? product.image ?? product.gallery[0] ?? null,
   );
+  const [isImageZoomed, setIsImageZoomed] = useState(false);
+  const [imageZoomOrigin, setImageZoomOrigin] = useState({ x: 50, y: 50 });
   const selectedVariant =
     product.variants.find((variant) => variant.id === selectedVariantId) ?? null;
   const images = useMemo(
@@ -147,7 +149,25 @@ export default function ProductPurchasePanel({
   const selectVariant = (variant: ProductPurchaseVariant) => {
     setSelectedVariantId(variant.id);
     setQuantity(1);
-    if (variant.colorImage) setActiveImage(variant.colorImage);
+    if (variant.colorImage) {
+      setActiveImage(variant.colorImage);
+      setIsImageZoomed(false);
+      setImageZoomOrigin({ x: 50, y: 50 });
+    }
+  };
+
+  const selectImage = (image: string) => {
+    setActiveImage(image);
+    setIsImageZoomed(false);
+    setImageZoomOrigin({ x: 50, y: 50 });
+  };
+
+  const updateImageZoomOrigin = (event: MouseEvent<HTMLDivElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    setImageZoomOrigin({
+      x: ((event.clientX - bounds.left) / bounds.width) * 100,
+      y: ((event.clientY - bounds.top) / bounds.height) * 100,
+    });
   };
 
   const addSelectedProduct = () =>
@@ -238,7 +258,18 @@ export default function ProductPurchasePanel({
     <section className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
         <div className="grid lg:grid-cols-[minmax(340px,0.95fr)_minmax(0,1.25fr)]">
           <div className="border-b border-border p-4 lg:border-b-0 lg:border-r sm:p-5">
-            <div className="relative h-[310px] overflow-hidden rounded-md bg-white sm:h-[390px]">
+            <div
+              className="relative h-[310px] overflow-hidden rounded-md bg-white cursor-zoom-in sm:h-[390px]"
+              onMouseEnter={(event) => {
+                updateImageZoomOrigin(event);
+                setIsImageZoomed(true);
+              }}
+              onMouseMove={updateImageZoomOrigin}
+              onMouseLeave={() => {
+                setIsImageZoomed(false);
+                setImageZoomOrigin({ x: 50, y: 50 });
+              }}
+            >
               {savings > 0 ? (
                 <span className="absolute left-2 top-2 z-10 rounded bg-emerald-700 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm">
                   {t("save", { amount: money(savings, product.currency, locale) })}
@@ -250,7 +281,11 @@ export default function ProductPurchasePanel({
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-contain p-4 sm:p-6"
+                className="object-contain p-4 transition-transform duration-200 ease-out motion-reduce:transition-none sm:p-6"
+                style={{
+                  transform: isImageZoomed ? "scale(2.1)" : "scale(1)",
+                  transformOrigin: `${imageZoomOrigin.x}% ${imageZoomOrigin.y}%`,
+                }}
               />
             </div>
 
@@ -260,7 +295,7 @@ export default function ProductPurchasePanel({
                   <button
                     key={image}
                     type="button"
-                    onClick={() => setActiveImage(image)}
+                    onClick={() => selectImage(image)}
                     aria-label={t("viewImage", { number: index + 1 })}
                     aria-pressed={activeImage === image}
                     className={`relative h-14 w-14 shrink-0 overflow-hidden rounded border bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] sm:h-[60px] sm:w-[60px] ${
